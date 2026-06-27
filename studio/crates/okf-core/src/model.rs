@@ -237,15 +237,16 @@ pub enum Predicate {
     HasPhenotype,
     Measures,
     AssociatedWith,
+    UsedToStudy,
     ReportedIn,
     Unknown(String),
 }
 
-pub const PREDICATES: [&str; 23] = [
+pub const PREDICATES: [&str; 24] = [
     "is_a", "part_of", "member_of", "derives_from", "located_in", "expressed_in", "encodes",
     "interacts_with", "binds", "regulates", "catalyzes", "converts_to", "participates_in", "causes",
     "predisposes_to", "treats", "prevents", "contraindicated_in", "affects_response_to",
-    "has_phenotype", "measures", "associated_with", "reported_in",
+    "has_phenotype", "measures", "associated_with", "used_to_study", "reported_in",
 ];
 
 /// The two symmetric predicates (rendered without a direction cue).
@@ -289,6 +290,7 @@ impl Predicate {
             "has_phenotype" => fwd(Predicate::HasPhenotype),
             "measures" => fwd(Predicate::Measures),
             "associated_with" => fwd(Predicate::AssociatedWith),
+            "used_to_study" => fwd(Predicate::UsedToStudy),
             "reported_in" => fwd(Predicate::ReportedIn),
             // --- deprecated inverse aliases: forward predicate, reversed direction ---
             "encoded_by" => rev(Predicate::Encodes),
@@ -323,6 +325,7 @@ impl Predicate {
             Predicate::HasPhenotype => "has_phenotype",
             Predicate::Measures => "measures",
             Predicate::AssociatedWith => "associated_with",
+            Predicate::UsedToStudy => "used_to_study",
             Predicate::ReportedIn => "reported_in",
             Predicate::Unknown(s) => s,
         }

@@ -87,6 +87,10 @@ The gene.
             assert!(nt.color().starts_with('#'));
         }
         assert_eq!(model::NODE_TYPES.len(), 28);
-        assert_eq!(model::PREDICATES.len(), 23);
+        assert_eq!(model::PREDICATES.len(), 24);
+        let p = model::Predicate::parse("used_to_study");
+        assert!(!p.reversed);
+        assert_eq!(p.predicate.as_str(), "used_to_study");
+        assert!(p.predicate.is_valid());
     }
 }
