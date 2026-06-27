@@ -70,7 +70,7 @@ The subtypes material below — what subtypes are for, what they are not, and ex
 
 ---
 
-## Subtypes Guidance
+## Subtypes: Further Guidance
 
 `subtype` is the single agent-coined field that adds specificity within a node type or predicate (e.g., `subtype: protein` on a node; a `subtype` on an edge). Unlike the 28 node types and 23 predicates, subtypes are not a closed vocabulary — the agent coins the value. They are the primary tool TB-3 invokes for adding specificity within a correctly-chosen type or predicate. A node's `subtype` refines what the entity *is*; an edge's `subtype` refines what the relationship *is*. This section collects guidance on how to use them well; it applies equally to node subtypes and edge subtypes.
 
