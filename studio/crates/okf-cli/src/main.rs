@@ -3,6 +3,7 @@
 
 use anyhow::{Context, Result};
 use clap::{Parser, Subcommand};
+use okf_core::git::{today_iso, ChangeKind, GitRepo};
 use okf_core::lint::Severity;
 use std::collections::BTreeMap;
 use std::path::PathBuf;
@@ -65,6 +66,41 @@ enum Cmd {
         #[arg(long)]
         json: bool,
     },
+    /// Append a dated log.md entry AND commit, atomically (the sole step-committer).
+    LogSync {
+        path: PathBuf,
+        #[arg(long)]
+        kind: String,
+        #[arg(long)]
+        summary: String,
+        #[arg(long)]
+        delta: Option<String>,
+    },
+    /// Lower-level: stage all + commit (non-logged lifecycle commit).
+    Commit {
+        path: PathBuf,
+        #[arg(long)]
+        kind: String,
+        #[arg(long)]
+        summary: String,
+        #[arg(long)]
+        delta: Option<String>,
+    },
+    /// Show commit history (newest-first).
+    Log {
+        path: PathBuf,
+        #[arg(long, default_value_t = 20)]
+        limit: usize,
+        #[arg(long)]
+        json: bool,
+    },
+    /// Forward-only restore to a prior commit.
+    Restore {
+        path: PathBuf,
+        sha: String,
+        #[arg(long)]
+        summary: Option<String>,
+    },
 }
 
 fn main() {
@@ -85,7 +121,44 @@ fn run() -> Result<()> {
         Cmd::Get { path, identifier } => cmd_get(path, identifier),
         Cmd::Export { path, out, name } => cmd_export(path, out, name),
         Cmd::Predicates { json } => cmd_predicates(json),
+        Cmd::LogSync { path, kind, summary, delta } => cmd_log_sync(path, kind, summary, delta),
+        Cmd::Commit { path, kind, summary, delta } => cmd_commit(path, kind, summary, delta),
+        Cmd::Log { path, limit, json } => cmd_log(path, limit, json),
+        Cmd::Restore { path, sha, summary } => cmd_restore(path, sha, summary),
     }
+}
+
+fn cmd_log_sync(path: PathBuf, kind: String, summary: String, delta: Option<String>) -> Result<()> {
+    let sha = okf_core::log_sync::log_sync(&path, ChangeKind::parse(&kind), &summary, delta.as_deref(), &today_iso())
+        .map_err(anyhow::Error::msg)?;
+    eprintln!("[{}] {} — {}", kind, summary, &sha[..8.min(sha.len())]);
+    Ok(())
+}
+
+fn cmd_commit(path: PathBuf, kind: String, summary: String, delta: Option<String>) -> Result<()> {
+    let sha = GitRepo::open(&path)
+        .commit_all(ChangeKind::parse(&kind), &summary, delta.as_deref())
+        .map_err(anyhow::Error::msg)?;
+    eprintln!("{}", &sha[..8.min(sha.len())]);
+    Ok(())
+}
+
+fn cmd_log(path: PathBuf, limit: usize, json: bool) -> Result<()> {
+    let entries = GitRepo::open(&path).log(limit).map_err(anyhow::Error::msg)?;
+    if json {
+        println!("{}", serde_json::to_string_pretty(&entries)?);
+    } else {
+        for e in &entries {
+            println!("{}  [{}] {}  {}", &e.commit_sha[..8.min(e.commit_sha.len())], e.kind.as_str(), e.summary, e.delta.as_deref().unwrap_or(""));
+        }
+    }
+    Ok(())
+}
+
+fn cmd_restore(path: PathBuf, sha: String, summary: Option<String>) -> Result<()> {
+    let new = GitRepo::open(&path).restore_to(&sha, summary.as_deref()).map_err(anyhow::Error::msg)?;
+    eprintln!("restored; new commit {}", &new[..8.min(new.len())]);
+    Ok(())
 }
 
 fn cmd_predicates(json: bool) -> Result<()> {

@@ -120,3 +120,17 @@ fn predicates_lists_24() {
     assert!(v["predicates"].as_array().unwrap().iter().any(|p| p == "used_to_study"));
     assert_eq!(v["node_types"].as_array().unwrap().len(), 28);
 }
+
+#[test]
+fn cli_log_sync_then_log() {
+    let dir = tempfile::tempdir().unwrap();
+    std::fs::write(dir.path().join("log.md"), "# Change log\n").unwrap();
+    let ok = Command::new(okf())
+        .args(["log-sync", dir.path().to_str().unwrap(), "--kind", "ingest", "--summary", "seed"])
+        .output().unwrap();
+    assert!(ok.status.success(), "{}", String::from_utf8_lossy(&ok.stderr));
+    let log = Command::new(okf())
+        .args(["log", dir.path().to_str().unwrap(), "--json"]).output().unwrap();
+    let v: serde_json::Value = serde_json::from_slice(&log.stdout).unwrap();
+    assert_eq!(v[0]["kind"], "ingest");
+}

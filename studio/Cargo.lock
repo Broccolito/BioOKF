@@ -2378,6 +2378,7 @@ dependencies = [
  "clap",
  "okf-core",
  "serde_json",
+ "tempfile",
 ]
 
 [[package]]
