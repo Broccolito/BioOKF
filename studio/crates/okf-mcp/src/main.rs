@@ -50,6 +50,25 @@ param!(SearchParam {
     #[doc = "Full-text query."] query: String,
     #[doc = "Max hits (default 10)."] limit: Option<usize>,
 });
+param!(LogSyncParam {
+    #[doc = "Path to the bundle directory."] bundle: String,
+    #[doc = "ingest|convert|link|merge|lint|index|restore|manual"] kind: String,
+    #[doc = "Summary of what changed."] summary: String,
+    #[doc = "Optional delta line (e.g. '+3 nodes')."] delta: Option<String>,
+});
+param!(LogParam {
+    #[doc = "Path to the bundle directory."] bundle: String,
+    #[doc = "Max entries (default 20)."] limit: Option<usize>,
+});
+param!(RestoreParam {
+    #[doc = "Path to the bundle directory."] bundle: String,
+    #[doc = "Commit sha to restore to."] sha: String,
+    #[doc = "Optional summary."] summary: Option<String>,
+});
+param!(RootKbParam {
+    #[doc = "Root directory that contains bundles."] root: String,
+    #[doc = "KB id to make active."] kb_id: String,
+});
 
 #[derive(Clone)]
 pub struct OkfServer {
@@ -191,6 +210,48 @@ impl OkfServer {
         use okf_core::model::{AGENT_TYPES, KNOWLEDGE_LEVELS, NODE_TYPES, PREDICATES};
         let v = serde_json::json!({"node_types": NODE_TYPES, "predicates": PREDICATES, "knowledge_levels": KNOWLEDGE_LEVELS, "agent_types": AGENT_TYPES});
         ok(serde_json::to_string_pretty(&v).unwrap_or_default())
+    }
+
+    #[tool(name = "okf_log_sync", description = "Append a dated log.md entry AND commit atomically (the sole step-committer). kind = ingest|convert|link|merge|lint|index|restore|manual.")]
+    pub async fn log_sync(&self, p: Parameters<LogSyncParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        use okf_core::git::{today_iso, ChangeKind};
+        match okf_core::log_sync::log_sync(Path::new(&p.0.bundle), ChangeKind::parse(&p.0.kind), &p.0.summary, p.0.delta.as_deref(), &today_iso()) {
+            Ok(sha) => ok(format!("committed {} [{}] {}", &sha[..8.min(sha.len())], p.0.kind, p.0.summary)),
+            Err(e) => ok(format!("ERROR: {e}")),
+        }
+    }
+
+    #[tool(name = "okf_log", description = "Show commit history (newest-first) as JSON.")]
+    pub async fn log(&self, p: Parameters<LogParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        match okf_core::git::GitRepo::open(&p.0.bundle).log(p.0.limit.unwrap_or(20)) {
+            Ok(es) => ok(serde_json::to_string_pretty(&es).unwrap_or_default()),
+            Err(e) => ok(format!("ERROR: {e}")),
+        }
+    }
+
+    #[tool(name = "okf_restore", description = "Forward-only restore the bundle to a prior commit sha.")]
+    pub async fn restore(&self, p: Parameters<RestoreParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        match okf_core::git::GitRepo::open(&p.0.bundle).restore_to(&p.0.sha, p.0.summary.as_deref()) {
+            Ok(sha) => ok(format!("restored; new commit {}", &sha[..8.min(sha.len())])),
+            Err(e) => ok(format!("ERROR: {e}")),
+        }
+    }
+
+    #[tool(name = "okf_set_active", description = "Set which KB is active under <root>.")]
+    pub async fn set_active(&self, p: Parameters<RootKbParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        match okf_core::active::set_active(Path::new(&p.0.root), Some(&p.0.kb_id)) {
+            Ok(()) => ok(format!("active KB = {}", p.0.kb_id)),
+            Err(e) => ok(format!("ERROR: {e}")),
+        }
+    }
+
+    #[tool(name = "okf_get_active", description = "Get the active KB id + resolved path under <root>.")]
+    pub async fn get_active(&self, p: Parameters<RootParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        let root = Path::new(&p.0.root);
+        match okf_core::active::get_active(root) {
+            Some(id) => ok(serde_json::json!({"id": id, "path": okf_core::registry::resolve(root, &id)}).to_string()),
+            None => ok(serde_json::json!({ "id": null }).to_string()),
+        }
     }
 }
 

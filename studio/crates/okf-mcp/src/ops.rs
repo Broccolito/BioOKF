@@ -129,8 +129,21 @@ pub fn scaffold(bundle: &Path, name: &str) -> Result<String, String> {
     write_absent("log.md", format!("# Change log — {name}\n"))?;
     write_absent(
         "schema.md",
-        "# BioOKF operating schema (v0.5)\n\n28 node types, 23 forward-only predicates. See the canonical schema.md.\n".to_string(),
+        "# BioOKF operating schema (v0.5)\n\n28 node types, 24 forward-only predicates. See the canonical schema.md.\n".to_string(),
     )?;
+
+    // version-track + register + activate the new bundle (mirror the CLI).
+    let repo = okf_core::git::GitRepo::open(bundle);
+    if repo.ensure_repo().is_ok() {
+        let _ = repo.commit_all(okf_core::git::ChangeKind::Manual, &format!("create knowledge base {name}"), None);
+    }
+    if let (Some(id), Some(root)) = (bundle.file_name().map(|s| s.to_string_lossy().to_lowercase()), bundle.parent()) {
+        if okf_core::registry::validate_kb_id(&id).is_ok() {
+            let abs = std::fs::canonicalize(bundle).unwrap_or_else(|_| bundle.to_path_buf());
+            let _ = okf_core::registry::register(root, &id, &abs.to_string_lossy());
+            let _ = okf_core::active::set_active(root, Some(&id));
+        }
+    }
     Ok(format!("scaffolded BioOKF bundle '{name}' at {}", bundle.display()))
 }
 
