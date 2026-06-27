@@ -8,6 +8,7 @@
 
 pub mod bundle;
 pub mod export;
+pub mod git;
 pub mod graph;
 pub mod lint;
 pub mod model;
@@ -16,6 +17,7 @@ pub mod search;
 pub mod validate;
 
 pub use bundle::Bundle;
+pub use git::{ChangeKind, GitRepo, HistoryEntry, Txn};
 pub use graph::{Graph, GraphEdge, GraphNode};
 pub use lint::{lint, Finding, LintReport, Severity};
 pub use model::{Edge, Node, NodeType, Predicate};
