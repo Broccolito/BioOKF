@@ -293,15 +293,26 @@ fn parse_edge(item: &Yaml) -> Option<Edge> {
         }
     }
 
+    // negation: a `not_<X>` predicate (parsed above) OR a legacy `negated: true`
+    // qualifier on a negatable positive — both normalize to the canonical `not_<X>`.
+    let negated_flag = get(m, "negated").and_then(|v| v.as_bool()).unwrap_or(false);
+    let mut predicate = parsed.predicate;
+    if negated_flag {
+        if let Some(neg) = predicate.negated_form() {
+            predicate = neg;
+        }
+    }
+    let negated = predicate.is_negative() || negated_flag;
+
     Some(Edge {
-        predicate: parsed.predicate,
+        predicate,
         raw_predicate,
         reversed: parsed.reversed,
         object,
         knowledge_level: get(m, "knowledge_level").and_then(as_string),
         agent_type: get(m, "agent_type").and_then(as_string),
         primary_source,
-        negated: get(m, "negated").and_then(|v| v.as_bool()).unwrap_or(false),
+        negated,
         direction: get(m, "direction").and_then(as_string),
         publications: get(m, "publications").map(as_string_list).unwrap_or_default(),
         stats,

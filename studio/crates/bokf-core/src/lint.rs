@@ -223,7 +223,17 @@ fn lint_edge(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, path: &Opt
             Severity::Error,
             "predicate.invalid",
             subj,
-            format!("`{}` is not one of the 24 controlled predicates", e.raw_predicate),
+            format!("`{}` is not one of the {} controlled predicates", e.raw_predicate, PREDICATES.len()),
+            path.clone(),
+        );
+    }
+    // negation is only allowed on the curated negatable predicates
+    if e.negated && !e.predicate.is_negative() && e.predicate.is_valid() {
+        r.push(
+            Severity::Error,
+            "edge.not_negatable",
+            subj,
+            format!("`{}` is not a negatable predicate — only effect predicates (treats, causes, binds, associated_with, expressed_in, regulates, has_phenotype, …) may be negated", e.predicate.as_str()),
             path.clone(),
         );
     }
@@ -285,7 +295,7 @@ fn lint_domain_range(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, pa
     let warn = |r: &mut LintReport, msg: String| {
         r.push(Severity::Warn, "edge.range", subj, msg, path.clone());
     };
-    match e.predicate {
+    match e.predicate.base() {
         Predicate::Treats | Predicate::Prevents => {
             if !matches!(obj.node_type, Disease | Phenotype) {
                 warn(r, format!("`{}` should target a Disease/Phenotype, but `{}` is a {}", e.predicate.as_str(), e.object, obj.node_type.as_str()));
@@ -293,7 +303,7 @@ fn lint_domain_range(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, pa
         }
         Predicate::HasPhenotype => {
             if !matches!(obj.node_type, Phenotype) {
-                warn(r, format!("`has_phenotype` should target a Phenotype, but `{}` is a {}", e.object, obj.node_type.as_str()));
+                warn(r, format!("`{}` should target a Phenotype, but `{}` is a {}", e.predicate.as_str(), e.object, obj.node_type.as_str()));
             }
         }
         Predicate::Encodes => {
@@ -317,13 +327,13 @@ fn lint_domain_range(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, pa
 
 fn lint_contradictions(r: &mut LintReport, bundle: &Bundle) {
     use std::collections::HashMap;
-    // key: (subject, predicate, object) -> set of negation flags seen
+    // key: (subject, BASE predicate, object) -> (positive_seen, negative_seen)
     let mut seen: HashMap<(String, String, String), (bool, bool)> = HashMap::new();
     for n in &bundle.nodes {
         for e in &n.edges {
-            let key = (n.identifier.clone(), e.predicate.as_str().to_string(), e.object.clone());
+            let key = (n.identifier.clone(), e.predicate.base().as_str().to_string(), e.object.clone());
             let entry = seen.entry(key).or_insert((false, false));
-            if e.negated {
+            if e.predicate.is_negative() || e.negated {
                 entry.1 = true;
             } else {
                 entry.0 = true;
@@ -336,7 +346,7 @@ fn lint_contradictions(r: &mut LintReport, bundle: &Bundle) {
                 Severity::Warn,
                 "edge.contradiction",
                 &subj,
-                format!("contradictory edges: both `{pred} -> {obj}` and its negation are asserted"),
+                format!("contradictory edges: both `{pred}` and `not_{pred}` are asserted for `{obj}`"),
                 None,
             );
         }
@@ -399,5 +409,37 @@ mod tests {
         let g2 = "---\ntype: Gene\nidentifier: KRAS\nsubtype: protein-coding\n---\n# KRAS\n";
         let r = lint_docs(&[("gene/braf.md", g1), ("gene/kras.md", g2)]);
         assert!(r.findings.iter().any(|f| f.rule == "subtype.similar" && f.message.contains("protein")), "{:?}", r.findings);
+    }
+
+    #[test]
+    fn not_predicate_is_valid_and_range_checked() {
+        // not_treats targeting a Gene (out of range, same as treats) -> edge.range, NOT predicate.invalid
+        let drug = "---\ntype: Molecule\nidentifier: DrugX\nsubtype: drug\nedges:\n  - predicate: not_treats\n    object: BRAF\n    knowledge_level: statistical_association\n    agent_type: data_analysis_pipeline\n    primary_source: Trial\n---\n# DrugX\n";
+        let gene = "---\ntype: Gene\nidentifier: BRAF\nsubtype: protein_coding\n---\n# BRAF\n";
+        let src = "---\ntype: Study\nidentifier: Trial\nsubtype: rct\nraw_source: [raw/t]\n---\n# t\n";
+        let r = lint_docs(&[("molecule/drugx.md", drug), ("gene/braf.md", gene), ("study/trial.md", src)]);
+        assert!(!r.findings.iter().any(|f| f.rule == "predicate.invalid"), "{:?}", r.findings);
+        assert!(r.findings.iter().any(|f| f.rule == "edge.range" && f.message.contains("not_treats")), "{:?}", r.findings);
+    }
+
+    #[test]
+    fn negated_on_nonnegatable_predicate_errors() {
+        // `is_a` + negated:true is not a negatable predicate
+        let g = "---\ntype: Gene\nidentifier: BRAF\nsubtype: protein_coding\nedges:\n  - predicate: is_a\n    object: Oncogene\n    negated: true\n    knowledge_level: knowledge_assertion\n    agent_type: manual_agent\n    primary_source: Src\n---\n# BRAF\n";
+        let oncogene = "---\ntype: MolecularClass\nidentifier: Oncogene\nsubtype: gene_set\n---\n# o\n";
+        let src = "---\ntype: Publication\nidentifier: Src\nsubtype: article\nraw_source: [raw/s]\n---\n# s\n";
+        let r = lint_docs(&[("gene/braf.md", g), ("molecularclass/oncogene.md", oncogene), ("publication/src.md", src)]);
+        assert!(r.findings.iter().any(|f| f.rule == "edge.not_negatable"), "{:?}", r.findings);
+    }
+
+    #[test]
+    fn positive_and_negative_edge_contradict() {
+        // treats and not_treats for the same subject -> object
+        let drug = "---\ntype: Molecule\nidentifier: DrugX\nsubtype: drug\nedges:\n  - predicate: treats\n    object: Asthma\n    knowledge_level: statistical_association\n    agent_type: data_analysis_pipeline\n    primary_source: TrialA\n  - predicate: not_treats\n    object: Asthma\n    knowledge_level: statistical_association\n    agent_type: data_analysis_pipeline\n    primary_source: TrialB\n---\n# DrugX\n";
+        let dis = "---\ntype: Disease\nidentifier: Asthma\nsubtype: respiratory\n---\n# a\n";
+        let a = "---\ntype: Study\nidentifier: TrialA\nsubtype: rct\nraw_source: [raw/a]\n---\n# a\n";
+        let b = "---\ntype: Study\nidentifier: TrialB\nsubtype: rct\nraw_source: [raw/b]\n---\n# b\n";
+        let r = lint_docs(&[("molecule/drugx.md", drug), ("disease/asthma.md", dis), ("study/a.md", a), ("study/b.md", b)]);
+        assert!(r.findings.iter().any(|f| f.rule == "edge.contradiction"), "{:?}", r.findings);
     }
 }

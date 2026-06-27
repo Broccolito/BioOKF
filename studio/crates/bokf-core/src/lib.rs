@@ -92,10 +92,18 @@ The gene.
             assert!(nt.color().starts_with('#'));
         }
         assert_eq!(model::NODE_TYPES.len(), 28);
-        assert_eq!(model::PREDICATES.len(), 24);
+        assert_eq!(model::PREDICATES.len(), 35);
         let p = model::Predicate::parse("used_to_study");
         assert!(!p.reversed);
         assert_eq!(p.predicate.as_str(), "used_to_study");
         assert!(p.predicate.is_valid());
+        // negative (polarity) predicates round-trip + base/negatable helpers
+        let np = model::Predicate::parse("not_treats");
+        assert_eq!(np.predicate.as_str(), "not_treats");
+        assert!(np.predicate.is_negative());
+        assert_eq!(np.predicate.base(), model::Predicate::Treats);
+        assert!(model::Predicate::Treats.is_negatable());
+        assert!(!model::Predicate::IsA.is_negatable());
+        assert_eq!(model::NEGATABLE.len(), 11);
     }
 }

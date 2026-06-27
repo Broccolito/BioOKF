@@ -231,10 +231,10 @@ fn cmd_predicates(json: bool) -> Result<()> {
     use bokf_core::model::{AGENT_TYPES, KNOWLEDGE_LEVELS, NODE_TYPES, PREDICATES};
     if json {
         let v = serde_json::json!({
-            "node_types": NODE_TYPES,
-            "predicates": PREDICATES,
-            "knowledge_levels": KNOWLEDGE_LEVELS,
-            "agent_types": AGENT_TYPES,
+            "node_types": NODE_TYPES.as_slice(),
+            "predicates": PREDICATES.as_slice(),
+            "knowledge_levels": KNOWLEDGE_LEVELS.as_slice(),
+            "agent_types": AGENT_TYPES.as_slice(),
         });
         println!("{}", serde_json::to_string_pretty(&v)?);
     } else {

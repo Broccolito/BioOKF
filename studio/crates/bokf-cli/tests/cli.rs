@@ -112,12 +112,13 @@ edges:
 }
 
 #[test]
-fn predicates_lists_24() {
+fn predicates_lists_all() {
     let out = Command::new(bokf()).args(["predicates", "--json"]).output().unwrap();
     assert!(out.status.success());
     let v: serde_json::Value = serde_json::from_slice(&out.stdout).unwrap();
-    assert_eq!(v["predicates"].as_array().unwrap().len(), 24);
+    assert_eq!(v["predicates"].as_array().unwrap().len(), 35);
     assert!(v["predicates"].as_array().unwrap().iter().any(|p| p == "used_to_study"));
+    assert!(v["predicates"].as_array().unwrap().iter().any(|p| p == "not_treats"));
     assert_eq!(v["node_types"].as_array().unwrap().len(), 28);
 }
 

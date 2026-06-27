@@ -41,6 +41,18 @@ Direction is always **this document → object**. The 24 are **forward-only** �
 inverse predicates; to express a reverse relation, author the forward edge on the other node
 (a gene's `encodes`, never a protein's `encoded_by`).
 
+**Negation (polarity).** A genuine *negative* finding stated in the source — "X does **not** treat
+Y", "**no** association between X and Y", "drug A does **not** bind target B" — is authored with the
+canonical negative predicate **`not_<X>`**. Only the **11 effect predicates** that are actually
+tested-and-refuted in source text are negatable: `binds`, `interacts_with`, `causes`,
+`predisposes_to`, `prevents`, `treats`, `affects_response_to`, `associated_with`, `expressed_in`,
+`regulates`, `has_phenotype` — giving 11 `not_*` predicates (**35 total**). Negating a
+structural/definitional/provenance predicate (`is_a`, `part_of`, `encodes`, `measures`,
+`reported_in`, `used_to_study`, …) is meaningless under open-world semantics — absence already
+covers it — and is rejected. A `not_<X>` **inherits `<X>`'s domain/range and symmetry**; asserting
+both `<X>` and `not_<X>` for the same subject→object is a contradiction. (A legacy `negated: true`
+qualifier on a negatable predicate is accepted on read and normalized to `not_<X>`.)
+
 ## Type vs subtype
 
 **`type` is the mandatory, controlled concept; `subtype` is the one you coin yourself.** Exactly

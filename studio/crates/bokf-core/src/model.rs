@@ -212,7 +212,8 @@ impl NodeType {
     }
 }
 
-/// The 23 forward-only edge predicates, plus `Unknown` for an invalid token.
+/// The forward-only edge predicates: 24 positive + 11 negative (`not_<X>`), plus
+/// `Unknown` for an invalid token.
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub enum Predicate {
     IsA,
@@ -239,18 +240,43 @@ pub enum Predicate {
     AssociatedWith,
     UsedToStudy,
     ReportedIn,
+    // --- negative (polarity) predicates: canonical `not_<X>` for the negatable set ---
+    NotBinds,
+    NotInteractsWith,
+    NotCauses,
+    NotPredisposesTo,
+    NotPrevents,
+    NotTreats,
+    NotAffectsResponseTo,
+    NotAssociatedWith,
+    NotExpressedIn,
+    NotRegulates,
+    NotHasPhenotype,
     Unknown(String),
 }
 
-pub const PREDICATES: [&str; 24] = [
+pub const PREDICATES: [&str; 35] = [
     "is_a", "part_of", "member_of", "derives_from", "located_in", "expressed_in", "encodes",
     "interacts_with", "binds", "regulates", "catalyzes", "converts_to", "participates_in", "causes",
     "predisposes_to", "treats", "prevents", "contraindicated_in", "affects_response_to",
     "has_phenotype", "measures", "associated_with", "used_to_study", "reported_in",
+    // negative (polarity) predicates — canonical `not_<X>` for the 11 negatable predicates
+    "not_binds", "not_interacts_with", "not_causes", "not_predisposes_to", "not_prevents",
+    "not_treats", "not_affects_response_to", "not_associated_with", "not_expressed_in",
+    "not_regulates", "not_has_phenotype",
 ];
 
-/// The two symmetric predicates (rendered without a direction cue).
-pub const SYMMETRIC: [&str; 2] = ["interacts_with", "associated_with"];
+/// The positive predicates that may carry a negation (curated; canonical form `not_<X>`).
+/// Negating structural/definitional/provenance predicates is meaningless under
+/// open-world semantics, so only these effect predicates are negatable.
+pub const NEGATABLE: [&str; 11] = [
+    "binds", "interacts_with", "causes", "predisposes_to", "prevents", "treats",
+    "affects_response_to", "associated_with", "expressed_in", "regulates", "has_phenotype",
+];
+
+/// The symmetric predicates (rendered without a direction cue): positives + their negatives.
+pub const SYMMETRIC: [&str; 4] =
+    ["interacts_with", "associated_with", "not_interacts_with", "not_associated_with"];
 
 /// Outcome of parsing a possibly-inverse predicate token.
 pub struct PredicateParse {
@@ -292,6 +318,18 @@ impl Predicate {
             "associated_with" => fwd(Predicate::AssociatedWith),
             "used_to_study" => fwd(Predicate::UsedToStudy),
             "reported_in" => fwd(Predicate::ReportedIn),
+            // --- negative (polarity) predicates ---
+            "not_binds" => fwd(Predicate::NotBinds),
+            "not_interacts_with" => fwd(Predicate::NotInteractsWith),
+            "not_causes" => fwd(Predicate::NotCauses),
+            "not_predisposes_to" => fwd(Predicate::NotPredisposesTo),
+            "not_prevents" => fwd(Predicate::NotPrevents),
+            "not_treats" => fwd(Predicate::NotTreats),
+            "not_affects_response_to" => fwd(Predicate::NotAffectsResponseTo),
+            "not_associated_with" => fwd(Predicate::NotAssociatedWith),
+            "not_expressed_in" => fwd(Predicate::NotExpressedIn),
+            "not_regulates" => fwd(Predicate::NotRegulates),
+            "not_has_phenotype" => fwd(Predicate::NotHasPhenotype),
             // --- deprecated inverse aliases: forward predicate, reversed direction ---
             "encoded_by" => rev(Predicate::Encodes),
             "caused_by" => rev(Predicate::Causes),
@@ -327,6 +365,17 @@ impl Predicate {
             Predicate::AssociatedWith => "associated_with",
             Predicate::UsedToStudy => "used_to_study",
             Predicate::ReportedIn => "reported_in",
+            Predicate::NotBinds => "not_binds",
+            Predicate::NotInteractsWith => "not_interacts_with",
+            Predicate::NotCauses => "not_causes",
+            Predicate::NotPredisposesTo => "not_predisposes_to",
+            Predicate::NotPrevents => "not_prevents",
+            Predicate::NotTreats => "not_treats",
+            Predicate::NotAffectsResponseTo => "not_affects_response_to",
+            Predicate::NotAssociatedWith => "not_associated_with",
+            Predicate::NotExpressedIn => "not_expressed_in",
+            Predicate::NotRegulates => "not_regulates",
+            Predicate::NotHasPhenotype => "not_has_phenotype",
             Predicate::Unknown(s) => s,
         }
     }
@@ -336,7 +385,72 @@ impl Predicate {
     }
 
     pub fn is_symmetric(&self) -> bool {
-        matches!(self, Predicate::InteractsWith | Predicate::AssociatedWith)
+        matches!(
+            self,
+            Predicate::InteractsWith
+                | Predicate::AssociatedWith
+                | Predicate::NotInteractsWith
+                | Predicate::NotAssociatedWith
+        )
+    }
+
+    /// True for the `not_<X>` negative (polarity) predicates.
+    pub fn is_negative(&self) -> bool {
+        matches!(
+            self,
+            Predicate::NotBinds
+                | Predicate::NotInteractsWith
+                | Predicate::NotCauses
+                | Predicate::NotPredisposesTo
+                | Predicate::NotPrevents
+                | Predicate::NotTreats
+                | Predicate::NotAffectsResponseTo
+                | Predicate::NotAssociatedWith
+                | Predicate::NotExpressedIn
+                | Predicate::NotRegulates
+                | Predicate::NotHasPhenotype
+        )
+    }
+
+    /// The positive predicate underlying a `not_<X>` (identity for positives/unknown).
+    pub fn base(&self) -> Predicate {
+        match self {
+            Predicate::NotBinds => Predicate::Binds,
+            Predicate::NotInteractsWith => Predicate::InteractsWith,
+            Predicate::NotCauses => Predicate::Causes,
+            Predicate::NotPredisposesTo => Predicate::PredisposesTo,
+            Predicate::NotPrevents => Predicate::Prevents,
+            Predicate::NotTreats => Predicate::Treats,
+            Predicate::NotAffectsResponseTo => Predicate::AffectsResponseTo,
+            Predicate::NotAssociatedWith => Predicate::AssociatedWith,
+            Predicate::NotExpressedIn => Predicate::ExpressedIn,
+            Predicate::NotRegulates => Predicate::Regulates,
+            Predicate::NotHasPhenotype => Predicate::HasPhenotype,
+            other => other.clone(),
+        }
+    }
+
+    /// The negative form of a negatable positive predicate (`None` if not negatable).
+    pub fn negated_form(&self) -> Option<Predicate> {
+        Some(match self {
+            Predicate::Binds => Predicate::NotBinds,
+            Predicate::InteractsWith => Predicate::NotInteractsWith,
+            Predicate::Causes => Predicate::NotCauses,
+            Predicate::PredisposesTo => Predicate::NotPredisposesTo,
+            Predicate::Prevents => Predicate::NotPrevents,
+            Predicate::Treats => Predicate::NotTreats,
+            Predicate::AffectsResponseTo => Predicate::NotAffectsResponseTo,
+            Predicate::AssociatedWith => Predicate::NotAssociatedWith,
+            Predicate::ExpressedIn => Predicate::NotExpressedIn,
+            Predicate::Regulates => Predicate::NotRegulates,
+            Predicate::HasPhenotype => Predicate::NotHasPhenotype,
+            _ => return None,
+        })
+    }
+
+    /// True for a positive predicate that may be negated.
+    pub fn is_negatable(&self) -> bool {
+        self.negated_form().is_some()
     }
 }
 

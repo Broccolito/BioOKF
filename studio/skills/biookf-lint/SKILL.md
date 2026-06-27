@@ -9,7 +9,8 @@ description: Use when validating or repairing a BioOKF knowledge base — run th
 
 ## Fix order
 1. **Errors first** (the bundle is non-conformant until these are 0):
-   - `type.invalid` / `predicate.invalid` → change to one of the 28 / 24.
+   - `type.invalid` / `predicate.invalid` → change to one of the 28 types / 35 predicates (24 positive + 11 `not_<X>` negatives).
+   - `edge.not_negatable` → you negated a predicate that isn't negatable; only the 11 effect predicates (treats, causes, binds, associated_with, expressed_in, regulates, has_phenotype, prevents, predisposes_to, interacts_with, affects_response_to) take `not_<X>` — drop the negation or re-model.
    - `identifier.duplicate` → rename one (add a parenthetical facet, e.g. `IL6 (gene)` vs `IL6 (protein)`).
    - `edge.missing_*` / `edge.invalid_*` (knowledge_level/agent_type/primary_source) → add/correct the provenance triplet.
    - `parse` → fix the YAML (usually an unquoted `": "` in a value).

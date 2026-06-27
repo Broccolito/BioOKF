@@ -8,7 +8,7 @@ description: Use for any question about BioOKF Studio itself — what it is, the
 **BioOKF Studio** is an MCP server + CLI + visualizer for **BioOKF** knowledge bases. The agentic layer (the MCP tools + these skills) is the backbone; the Tauri GUI is just a front-end that visualizes the same data.
 
 ## The format (BioOKF v0.5)
-A bundle is a Git-shippable tree of Markdown files: `raw/` (immutable sources), `knowledge/<type>/<slug>.md` (typed concept docs = the graph), `index.md` (catalog), `log.md` (history). Each concept doc = YAML frontmatter + Markdown body. **28** controlled node types, **24** forward-only edge predicates, node-based provenance (`primary_source` names a source node). BioOKF is the strict biomedical profile of the Open Knowledge Format (OKF).
+A bundle is a Git-shippable tree of Markdown files: `raw/` (immutable sources), `knowledge/<type>/<slug>.md` (typed concept docs = the graph), `index.md` (catalog), `log.md` (history). Each concept doc = YAML frontmatter + Markdown body. **28** controlled node types, **24** forward-only edge predicates (+ **11** `not_<X>` negatives for the negatable effect predicates → 35 total), node-based provenance (`primary_source` names a source node). BioOKF is the strict biomedical profile of the Open Knowledge Format (OKF).
 
 ## The pieces
 - **bokf-core** — the library: parse, normalize (accepts v0.4/legacy and emits v0.5), derive graph, lint, BM25 search.

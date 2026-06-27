@@ -205,10 +205,10 @@ impl BokfServer {
         }
     }
 
-    #[tool(name = "bokf_predicates", description = "Print the active BioOKF vocabulary: 28 node types, 24 predicates, knowledge_level/agent_type enums.")]
+    #[tool(name = "bokf_predicates", description = "Print the active BioOKF vocabulary: 28 node types, 35 predicates (24 positive + 11 negative not_<X>), knowledge_level/agent_type enums.")]
     pub async fn predicates(&self) -> Result<CallToolResult, rmcp::model::ErrorData> {
         use bokf_core::model::{AGENT_TYPES, KNOWLEDGE_LEVELS, NODE_TYPES, PREDICATES};
-        let v = serde_json::json!({"node_types": NODE_TYPES, "predicates": PREDICATES, "knowledge_levels": KNOWLEDGE_LEVELS, "agent_types": AGENT_TYPES});
+        let v = serde_json::json!({"node_types": NODE_TYPES.as_slice(), "predicates": PREDICATES.as_slice(), "knowledge_levels": KNOWLEDGE_LEVELS.as_slice(), "agent_types": AGENT_TYPES.as_slice()});
         ok(serde_json::to_string_pretty(&v).unwrap_or_default())
     }
 
