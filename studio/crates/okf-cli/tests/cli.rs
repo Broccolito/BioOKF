@@ -148,3 +148,34 @@ fn scaffold_registers_inits_and_activates() {
     let v: serde_json::Value = serde_json::from_slice(&ga.stdout).unwrap();
     assert_eq!(v["id"], "ms-kb");
 }
+
+#[test]
+fn end_to_end_scaffold_write_logsync_log_restore() {
+    let root = tempfile::tempdir().unwrap();
+    let bundle = root.path().join("demo-kb");
+    let run = |args: &[&str]| Command::new(okf()).args(args).output().unwrap();
+
+    assert!(run(&["scaffold", bundle.to_str().unwrap(), "--name", "Demo"]).status.success());
+    let ga = run(&["get-active", root.path().to_str().unwrap(), "--json"]);
+    let v: serde_json::Value = serde_json::from_slice(&ga.stdout).unwrap();
+    assert_eq!(v["id"], "demo-kb");
+
+    // write a node + log-sync it
+    let k = bundle.join("knowledge/gene");
+    std::fs::create_dir_all(&k).unwrap();
+    std::fs::write(k.join("il6.md"), "---\ntype: Gene\nidentifier: IL6\nsubtype: protein_coding\n---\n# IL6\n").unwrap();
+    assert!(run(&["log-sync", bundle.to_str().unwrap(), "--kind", "ingest", "--summary", "add IL6", "--delta", "+1 node"]).status.success());
+
+    // history has the scaffold commit + the ingest
+    let log = run(&["log", bundle.to_str().unwrap(), "--json"]);
+    let entries: serde_json::Value = serde_json::from_slice(&log.stdout).unwrap();
+    assert_eq!(entries[0]["kind"], "ingest");
+    let first_sha = entries.as_array().unwrap().last().unwrap()["commit_sha"].as_str().unwrap().to_string();
+
+    // restore to the scaffold commit: IL6 is gone, history grew with a restore entry
+    assert!(run(&["restore", bundle.to_str().unwrap(), &first_sha]).status.success());
+    assert!(!k.join("il6.md").exists());
+    let log2 = run(&["log", bundle.to_str().unwrap(), "--json"]);
+    let e2: serde_json::Value = serde_json::from_slice(&log2.stdout).unwrap();
+    assert_eq!(e2[0]["kind"], "restore");
+}
