@@ -64,3 +64,18 @@ fn txn_squashes_to_one_entry() {
     assert_eq!(repo.log(1).unwrap()[0].summary, "ingest Paper X");
     assert!(dir.path().join("n2.md").exists());
 }
+
+#[test]
+fn log_sync_appends_and_commits_atomically() {
+    let dir = tempfile::tempdir().unwrap();
+    std::fs::write(dir.path().join("log.md"), "# Change log\n").unwrap();
+    std::fs::write(dir.path().join("seed.md"), "x").unwrap();
+    let sha = okf_core::log_sync::log_sync(dir.path(), ChangeKind::Ingest, "first source", Some("+1 source · 5 nodes"), "2026-06-27").unwrap();
+    let log = std::fs::read_to_string(dir.path().join("log.md")).unwrap();
+    assert!(log.contains("## 2026-06-27"));
+    assert!(log.contains("ingest | first source"));
+    assert!(log.contains("+1 source · 5 nodes"));
+    let repo = GitRepo::open(dir.path());
+    assert_eq!(repo.log(1).unwrap()[0].commit_sha, sha);
+    assert_eq!(repo.log(1).unwrap()[0].kind, ChangeKind::Ingest);
+}

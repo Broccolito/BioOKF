@@ -11,6 +11,7 @@ pub mod export;
 pub mod git;
 pub mod graph;
 pub mod lint;
+pub mod log_sync;
 pub mod model;
 pub mod parse;
 pub mod search;
