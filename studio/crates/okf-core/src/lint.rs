@@ -157,7 +157,7 @@ fn lint_edge(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, path: &Opt
             Severity::Error,
             "predicate.invalid",
             subj,
-            format!("`{}` is not one of the 23 controlled predicates", e.raw_predicate),
+            format!("`{}` is not one of the 24 controlled predicates", e.raw_predicate),
             path.clone(),
         );
     }
@@ -240,6 +240,11 @@ fn lint_domain_range(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, pa
                 warn(r, format!("`reported_in` should target a Publication/Study/Dataset/Agent, but `{}` is a {}", e.object, obj.node_type.as_str()));
             }
         }
+        Predicate::UsedToStudy => {
+            if !matches!(obj.node_type, Disease | Phenotype | BiologicalPathway | BiologicalFunction | Gene | Variant | Molecule) {
+                warn(r, format!("`used_to_study` should target a studied entity (Disease/Phenotype/BiologicalPathway/BiologicalFunction/Gene/Variant/Molecule), but `{}` is a {}", e.object, obj.node_type.as_str()));
+            }
+        }
         _ => {}
     }
 }
@@ -269,5 +274,39 @@ fn lint_contradictions(r: &mut LintReport, bundle: &Bundle) {
                 None,
             );
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::bundle::Bundle;
+
+    fn lint_docs(docs: &[(&str, &str)]) -> crate::lint::LintReport {
+        let dir = tempfile::tempdir().unwrap();
+        for (rel, body) in docs {
+            let p = dir.path().join("knowledge").join(rel);
+            std::fs::create_dir_all(p.parent().unwrap()).unwrap();
+            std::fs::write(&p, body).unwrap();
+        }
+        crate::lint::lint(&Bundle::open(dir.path()).unwrap())
+    }
+
+    #[test]
+    fn used_to_study_range_violation_warns() {
+        // used_to_study -> Disease is in range; used_to_study -> Publication is out of range.
+        let study = "---\ntype: Study\nidentifier: T2D GWAS\nsubtype: gwas\nraw_source: [raw/x]\nedges:\n  - predicate: used_to_study\n    object: Type 2 Diabetes\n    knowledge_level: knowledge_assertion\n    agent_type: data_analysis_pipeline\n    primary_source: T2D GWAS\n  - predicate: used_to_study\n    object: Some Paper\n    knowledge_level: knowledge_assertion\n    agent_type: data_analysis_pipeline\n    primary_source: T2D GWAS\n---\n# T2D GWAS\n";
+        let disease = "---\ntype: Disease\nidentifier: Type 2 Diabetes\nsubtype: metabolic\n---\n# T2D\n";
+        let paper = "---\ntype: Publication\nidentifier: Some Paper\nsubtype: article\nraw_source: [raw/p]\n---\n# p\n";
+        let r = lint_docs(&[
+            ("study/gwas.md", study),
+            ("disease/t2d.md", disease),
+            ("publication/paper.md", paper),
+        ]);
+        assert!(
+            r.findings.iter().any(|f| f.rule == "edge.range" && f.message.contains("used_to_study")),
+            "expected an edge.range warning for used_to_study -> Publication; got {:?}",
+            r.findings
+        );
+        assert!(!r.findings.iter().any(|f| f.rule == "predicate.invalid"));
     }
 }
