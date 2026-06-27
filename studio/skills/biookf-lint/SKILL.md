@@ -9,7 +9,7 @@ description: Use when validating or repairing a BioOKF knowledge base — run th
 
 ## Fix order
 1. **Errors first** (the bundle is non-conformant until these are 0):
-   - `type.invalid` / `predicate.invalid` → change to one of the 28 / 23.
+   - `type.invalid` / `predicate.invalid` → change to one of the 28 / 24.
    - `identifier.duplicate` → rename one (add a parenthetical facet, e.g. `IL6 (gene)` vs `IL6 (protein)`).
    - `edge.missing_*` / `edge.invalid_*` (knowledge_level/agent_type/primary_source) → add/correct the provenance triplet.
    - `parse` → fix the YAML (usually an unquoted `": "` in a value).
@@ -21,7 +21,9 @@ description: Use when validating or repairing a BioOKF knowledge base — run th
    - `edge.range` → fix the domain/range (e.g. `treats` must target a Disease/Phenotype).
    - `node.orphan` → connect it (often a missing `reported_in` edge).
    - `edge.contradiction` → reconcile or annotate which claim is authoritative.
-3. **Infos** are advisory (`subtype.missing`, `predicate.inverse`, `edge.missing_direction`) — address opportunistically.
+   - `edge.duplicate` → identical `predicate`+`object` from the **same** `primary_source`; merge the sources onto one edge or drop the redundant one (a *different* source is a legitimate parallel edge, not a dup).
+   - `type.path_mismatch` → the node's `type` disagrees with its `knowledge/<type>/` directory; re-file it (or fix the type) — a misclassification signal.
+3. **Infos** are advisory (`subtype.missing`, `predicate.inverse`, `edge.missing_direction`, `subtype.similar` → unify near-duplicate subtype tokens like `protein_coding`/`protein-coding`) — address opportunistically.
 
 ## How to fix
 For each offending page: `bokf_read_page` → edit → `bokf_validate_page` → `bokf_write_page`. Re-run `bokf_lint` until Errors = 0. Record what you changed with `bokf_append_log`.

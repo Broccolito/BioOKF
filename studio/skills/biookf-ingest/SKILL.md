@@ -14,7 +14,7 @@ You are curating a **BioOKF v0.5** bundle. Drive the `biookf` MCP tools (or the 
 3. **Extract typed entities.** For each biomedical thing discussed, create or UPDATE a concept doc. `type` MUST be one of the 28; coin a lowercase `subtype`. **Reuse an existing `identifier` — never fork** (search first with `bokf_search`).
 4. **Validate before writing.** Call `bokf_validate_page` on the draft, then `bokf_write_page` to `knowledge/<type>/<slug>.md`.
 5. **Enrich `xref`** with ontology CURIEs where known (HGNC, MONDO, UniProt…). Optional; backfill later.
-6. **Add edges with provenance.** Each claim → an `edges:` entry: `predicate` (one of 23, forward-only), `object` (target identifier), and the triplet `knowledge_level` / `agent_type` / `primary_source` (the **source node's identifier**). Put every number on the edge (`p_value`, `effect_size`+`effect_metric`, `ci_lower/upper`, `sample_size`, `direction` for regulates/expressed_in). Add a `reported_in` edge to the source node so provenance is traversable.
+6. **Add edges with provenance.** Each claim → an `edges:` entry: `predicate` (one of 24, forward-only), `object` (target identifier), and the triplet `knowledge_level` / `agent_type` / `primary_source` (the **source node's identifier**). Put every number on the edge (`p_value`, `effect_size`+`effect_metric`, `ci_lower/upper`, `sample_size`, `direction` for regulates/expressed_in). Add a `reported_in` edge to the source node so provenance is traversable.
 7. **Bookkeep.** Update `index.md` (`bokf_write_page`) and append a dated entry to `log.md` (`bokf_append_log`). Then `bokf_lint` and fix any Errors.
 
 ## Concept-doc template

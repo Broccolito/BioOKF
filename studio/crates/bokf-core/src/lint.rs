@@ -134,6 +134,37 @@ pub fn lint(bundle: &Bundle) -> LintReport {
         for e in &n.edges {
             lint_edge(&mut r, bundle, n, e, &path);
         }
+
+        // misclassification: node filed under a type directory that disagrees with its type
+        if let Some(dir) = n.path.parent().and_then(|p| p.file_name()).and_then(|s| s.to_str()) {
+            let dir_l = dir.to_lowercase();
+            let is_type_dir = NODE_TYPES.iter().any(|t| t.eq_ignore_ascii_case(&dir_l));
+            if is_type_dir && n.node_type.is_valid() && !n.node_type.as_str().eq_ignore_ascii_case(&dir_l) {
+                r.push(
+                    Severity::Warn,
+                    "type.path_mismatch",
+                    &n.identifier,
+                    format!("node typed `{}` is filed under `{dir_l}/` — type and directory disagree (possible misclassification)", n.node_type.as_str()),
+                    path.clone(),
+                );
+            }
+        }
+
+        // duplicate edges: identical predicate + object + primary_source on the same node
+        // (a different primary_source is a legitimate parallel provenance edge, not a dup)
+        let mut seen_edges = std::collections::HashSet::new();
+        for e in &n.edges {
+            let key = (e.predicate.as_str().to_string(), e.object.clone(), e.primary_source.clone().unwrap_or_default());
+            if !seen_edges.insert(key) {
+                r.push(
+                    Severity::Warn,
+                    "edge.duplicate",
+                    &n.identifier,
+                    format!("duplicate edge `{} -> {}` from the same source (merge sources or remove the redundant one)", e.predicate.as_str(), e.object),
+                    path.clone(),
+                );
+            }
+        }
     }
 
     // --- orphans ---
@@ -145,7 +176,42 @@ pub fn lint(bundle: &Bundle) -> LintReport {
     // --- contradictions (same subject/predicate/object, opposite negation) ---
     lint_contradictions(&mut r, bundle);
 
+    // --- near-duplicate subtypes within a type (merge candidates) ---
+    lint_similar_subtypes(&mut r, bundle);
+
     r
+}
+
+/// Within each node type, flag distinct `subtype` tokens that normalize to the same
+/// form (e.g. `protein_coding` vs `protein-coding` vs `ProteinCoding`) — merge candidates.
+fn lint_similar_subtypes(r: &mut LintReport, bundle: &Bundle) {
+    use std::collections::{BTreeMap, BTreeSet};
+    let norm = |s: &str| -> String { s.chars().filter(|c| c.is_ascii_alphanumeric()).map(|c| c.to_ascii_lowercase()).collect() };
+    let mut by_type: BTreeMap<String, BTreeMap<String, BTreeSet<String>>> = BTreeMap::new();
+    for n in &bundle.nodes {
+        if let Some(st) = &n.subtype {
+            by_type
+                .entry(n.node_type.as_str().to_string())
+                .or_default()
+                .entry(norm(st))
+                .or_default()
+                .insert(st.clone());
+        }
+    }
+    for (ty, groups) in by_type {
+        for (_norm, raws) in groups {
+            if raws.len() > 1 {
+                let list: Vec<String> = raws.into_iter().collect();
+                r.push(
+                    Severity::Info,
+                    "subtype.similar",
+                    &ty,
+                    format!("type `{ty}` uses near-duplicate subtypes {list:?} — consider merging to one canonical token"),
+                    None,
+                );
+            }
+        }
+    }
 }
 
 fn lint_edge(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, path: &Option<String>) {
@@ -308,5 +374,30 @@ mod tests {
             r.findings
         );
         assert!(!r.findings.iter().any(|f| f.rule == "predicate.invalid"));
+    }
+
+    #[test]
+    fn flags_duplicate_edge_same_source() {
+        let gene = "---\ntype: Gene\nidentifier: BRAF\nsubtype: protein_coding\nedges:\n  - predicate: associated_with\n    object: Melanoma\n    knowledge_level: statistical_association\n    agent_type: text_mining_agent\n    primary_source: Demo\n  - predicate: associated_with\n    object: Melanoma\n    knowledge_level: statistical_association\n    agent_type: text_mining_agent\n    primary_source: Demo\n---\n# BRAF\n";
+        let disease = "---\ntype: Disease\nidentifier: Melanoma\nsubtype: neoplasm\n---\n# M\n";
+        let src = "---\ntype: Publication\nidentifier: Demo\nsubtype: article\nraw_source: [raw/d]\n---\n# d\n";
+        let r = lint_docs(&[("gene/braf.md", gene), ("disease/melanoma.md", disease), ("publication/demo.md", src)]);
+        assert!(r.findings.iter().any(|f| f.rule == "edge.duplicate"), "{:?}", r.findings);
+    }
+
+    #[test]
+    fn flags_type_path_mismatch() {
+        // a Gene filed under knowledge/disease/
+        let gene = "---\ntype: Gene\nidentifier: BRAF\nsubtype: protein_coding\n---\n# BRAF\n";
+        let r = lint_docs(&[("disease/braf.md", gene)]);
+        assert!(r.findings.iter().any(|f| f.rule == "type.path_mismatch"), "{:?}", r.findings);
+    }
+
+    #[test]
+    fn flags_similar_subtypes() {
+        let g1 = "---\ntype: Gene\nidentifier: BRAF\nsubtype: protein_coding\n---\n# BRAF\n";
+        let g2 = "---\ntype: Gene\nidentifier: KRAS\nsubtype: protein-coding\n---\n# KRAS\n";
+        let r = lint_docs(&[("gene/braf.md", g1), ("gene/kras.md", g2)]);
+        assert!(r.findings.iter().any(|f| f.rule == "subtype.similar" && f.message.contains("protein")), "{:?}", r.findings);
     }
 }
