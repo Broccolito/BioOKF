@@ -470,10 +470,12 @@ file/matrix/collection* is a `Dataset`.
 
 ---
 
-## 6\. The EDGE universe (23 types)
+## 6\. The EDGE universe (24 positive + 11 negative `not_<X>` = 35; `schema.md` authoritative)
 
-Cross-document relationships are **typed edges**. `predicate` MUST be one of the following 23
-values (**unchanged since v0.1**), organized under the five **UMLS super-relation families**
+Cross-document relationships are **typed edges**. The v0.4 core **23** are tabulated below;
+`schema.md` (authoritative, implemented in `bokf-core`) extends these to **24 positive** (adds
+`used_to_study`) and adds **11 `not_<X>` negatives** for the negatable effect predicates
+(**35 total**). The core 23 are organized under the five **UMLS super-relation families**
 (the canonical finite-but-exhaustive relation backbone). Direction is **subject (host
 document) → object** unless marked *symmetric*. The 23 are **forward-only**: there are **no
 inverse predicates** — express a reverse relationship by authoring the forward edge on the *other*
@@ -1037,6 +1039,15 @@ predicates; every refinement is a domain/range extension or an attribute.
 > as the node design and folds in the boundary / class-vs-instance / alias refinements from the
 > rename line, then applies the v0.4 naming + clarity changes below. The deprecated-alias table
 > lets bundles from *either* lineage validate without rewriting.
+
+### v0.5.1 (2026-06-27) — predicate reconciliation (24 positive + 11 negative → 35)
+
+- **`used_to_study` added** (24th positive predicate) and **11 `not_<X>` negatives** for the
+  negatable effect predicates (`binds`, `interacts_with`, `causes`, `predisposes_to`, `prevents`,
+  `treats`, `affects_response_to`, `associated_with`, `expressed_in`, `regulates`, `has_phenotype`)
+  → **35 predicates**. `schema.md` and `bokf-core` are authoritative; §6's table above still
+  enumerates the v0.4 core 23. A legacy `negated: true` qualifier normalizes to `not_<X>` on read.
+  Negating a non-negatable (structural/provenance) predicate is rejected (`edge.not_negatable`).
 
 ### v0.5 (2026-06-27) — node-based provenance (no entities/predicates added; 28 / 23 unchanged)
 

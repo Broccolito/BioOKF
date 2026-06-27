@@ -4,7 +4,7 @@
 > a `CLAUDE.md` for an LLM Wiki. Drop it at the root of any BioOKF bundle. It tells an LLM
 > agent (or a human) the conventions and the workflows to follow. The normative format is
 > [SPEC.md](SPEC.md); this is the operational distillation. **v0.5** keeps the **28** typed node
-> categories, takes the edge predicates to **24** (adds `used_to_study`), and makes **provenance node-based**: an edge's
+> categories, takes the edge predicates to **24** positive (adds `used_to_study`) plus **11** `not_<X>` negatives (**35** total), and makes **provenance node-based**: an edge's
 > `primary_source` now names a source **node** by its `identifier` — one of the bundle's own
 > `Publication`/`Study`/`Dataset`/`Agent` nodes — instead of an `infores:` CURIE; source nodes anchor
 > to the immutable bytes via an optional **`raw_source`** (`raw/…` paths); the old node-level
@@ -31,7 +31,7 @@ edit anything in `raw/`.
 `GeographicLocation`, `Concept`, `Other`.
 If something fits none, use `Other` with a `note:` — never invent a type.
 
-2. **Every relationship is a typed `edges:` entry whose `predicate` is one of these 24:**
+2. **Every relationship is a typed `edges:` entry whose `predicate` is one of these 24 positive predicates (a negative finding uses a `not_<X>` negative — see Negation):**
 `is_a`, `part_of`, `member_of`, `derives_from`, `located_in`, `expressed_in`, `encodes`,
 `interacts_with`, `binds`, `regulates`, `catalyzes`, `converts_to`, `participates_in`,
 `causes`, `predisposes_to`, `treats`, `prevents`, `contraindicated_in`,
@@ -169,9 +169,11 @@ Everything else (synonyms, statistics, qualifiers) is optional but **encouraged*
 have a number (p-value, OR/HR, IC50, fold-change, sensitivity), put it on the edge as a named
 attribute, never only in prose. See [SPEC.md §7](SPEC.md#7-attributes-required-vs-optional).
 
-## Edges: domain/range notes (24 predicates)
+## Edges: domain/range notes (24 positive predicates; `not_<X>` negatives inherit)
 
-The predicate set is **24** as of v0.5 — the v0.1–v0.4 core of 23 plus `used_to_study`. The 28
+The positive predicate set is **24** as of v0.5 — the v0.1–v0.4 core of 23 plus `used_to_study` —
+plus **11** `not_<X>` negatives for the negatable effect predicates (**35 total**); each `not_<X>`
+inherits its base predicate's domain/range and symmetry. The 28
 node types ride these predicates via domain/range extensions — the key ones:
 
 - `located_in` — anatomical **or** genomic **or** geographic: domain += `Variant`,

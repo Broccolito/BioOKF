@@ -21,7 +21,7 @@ npx playwright test app/tests/visual.spec.mjs # frontend assertions (needs @play
 `cargo test -p bokf-core`:
 - `parses_frontmatter_split`, `parses_a_node_with_edges_and_normalizes_legacy`
   (title+id→identifier merge; inverse predicate `caused_by`→`causes` + reversed flag),
-  `node_type_palette_is_complete` (28 types / 23 predicates, all colored).
+  `node_type_palette_is_complete` (28 types / 35 predicates incl. 11 `not_<X>` negatives, all colored).
 - Integration `tests/examples.rs` on the real `examples/` bundle: opens it (self-healing YAML
   repairs the malformed `sider.md`), derives a graph whose every edge endpoint resolves,
   lints (produces findings, never panics), and BM25-searches ("interleukin").
@@ -38,9 +38,10 @@ Manual: `bokf validate <file>` (valid/invalid + issue list), `bokf get <bundle> 
 ## 3. Backend — `bokf-mcp` (MCP server)  ✅ verified
 
 A real MCP stdio handshake (`initialize` → `tools/list` → `tools/call`) confirms the server
-advertises **11 tools** (`bokf_scaffold`, `bokf_list_pages`, `bokf_read_page`, `bokf_write_page`,
+advertises **17 tools** (`bokf_scaffold`, `bokf_list_pages`, `bokf_read_page`, `bokf_write_page`,
 `bokf_validate_page`, `bokf_append_log`, `bokf_lint`, `bokf_graph`, `bokf_search`, `bokf_stats`,
-`bokf_list_bases`) and returns correct results for `bokf_stats` and `bokf_search` on the examples
+`bokf_list_bases`, `bokf_predicates`, `bokf_log_sync`, `bokf_log`, `bokf_restore`, `bokf_set_active`,
+`bokf_get_active`) and returns correct results for `bokf_stats` and `bokf_search` on the examples
 bundle. `get_info()` ships the agent-facing operating brief + the ingest/query/lint procedures.
 
 ## 4. Agentic loops on the real corpus  ✅ 4/4 clean

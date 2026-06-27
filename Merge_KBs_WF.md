@@ -12,8 +12,9 @@
 > [`docs/04-classification_guidelines.md`](../Repo/docs/04-classification_guidelines.md) (identity
 > vs role, the facet rules) for judging when two entities are truly the same concept.
 >
-> **Note on the predicate set.** As in ingestion, follow `schema.md`'s **24** predicates; ⚠️ `SPEC.md`
-> §6 still lists **23** — reconcile separately.
+> **Note on the predicate set.** As in ingestion, follow `schema.md`'s **24** positive predicates +
+> **11** `not_<X>` negatives (**35 total**); `SPEC.md` §6 still lists the v0.4 core — `schema.md` is
+> authoritative.
 
 ## Governing rules (apply throughout)
 

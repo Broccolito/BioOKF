@@ -15,10 +15,10 @@
 >   deciding any ambiguous type.**
 > - [`SPEC.md`](../Repo/SPEC.md) — the normative format when the operating doc is silent.
 >
-> **Note on the predicate set.** Follow `schema.md`: **24** predicates (the v0.1–v0.4 core of 23
-> plus `used_to_study`). ⚠️ `SPEC.md` §6 still enumerates **23** and calls them "unchanged"; the
-> two are out of sync and should be reconciled separately. Until then, **`schema.md` is
-> authoritative for this workflow.**
+> **Note on the predicate set.** Follow `schema.md`: **24** positive predicates (the v0.1–v0.4 core
+> of 23 plus `used_to_study`) **plus 11 `not_<X>` negatives** for the negatable effect predicates
+> (**35 total**). `SPEC.md` §6 still enumerates the v0.4 core; **`schema.md` is authoritative for
+> this workflow** (it is the implemented set in `bokf-core`).
 
 ## Operating principles (apply throughout)
 
