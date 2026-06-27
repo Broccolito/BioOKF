@@ -6,6 +6,7 @@
 //! truth shared by the CLI (`okf`), the MCP server (`okf-mcp`), and the Tauri
 //! visualizer — the GUI is only a front-end over this backend.
 
+pub mod active;
 pub mod bundle;
 pub mod export;
 pub mod git;
@@ -14,6 +15,7 @@ pub mod lint;
 pub mod log_sync;
 pub mod model;
 pub mod parse;
+pub mod registry;
 pub mod search;
 pub mod validate;
 
