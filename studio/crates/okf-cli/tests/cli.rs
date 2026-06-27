@@ -134,3 +134,17 @@ fn cli_log_sync_then_log() {
     let v: serde_json::Value = serde_json::from_slice(&log.stdout).unwrap();
     assert_eq!(v[0]["kind"], "ingest");
 }
+
+#[test]
+fn scaffold_registers_inits_and_activates() {
+    let root = tempfile::tempdir().unwrap();
+    let bundle = root.path().join("ms-kb");
+    let s = Command::new(okf())
+        .args(["scaffold", bundle.to_str().unwrap(), "--name", "MS KB"]).output().unwrap();
+    assert!(s.status.success(), "{}", String::from_utf8_lossy(&s.stderr));
+    assert!(bundle.join(".git").exists());
+    let ga = Command::new(okf())
+        .args(["get-active", root.path().to_str().unwrap(), "--json"]).output().unwrap();
+    let v: serde_json::Value = serde_json::from_slice(&ga.stdout).unwrap();
+    assert_eq!(v["id"], "ms-kb");
+}

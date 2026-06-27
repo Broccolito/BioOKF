@@ -101,6 +101,24 @@ enum Cmd {
         #[arg(long)]
         summary: Option<String>,
     },
+    /// Set the active KB id under <root>.
+    SetActive { root: PathBuf, kb_id: String },
+    /// Print the active KB id + resolved path under <root>.
+    GetActive {
+        root: PathBuf,
+        #[arg(long)]
+        json: bool,
+    },
+    /// Register/list/unregister a known bundle under <root>.
+    Register {
+        root: PathBuf,
+        kb_id: Option<String>,
+        path: Option<PathBuf>,
+        #[arg(long)]
+        list: bool,
+        #[arg(long)]
+        unregister: Option<String>,
+    },
 }
 
 fn main() {
@@ -125,7 +143,55 @@ fn run() -> Result<()> {
         Cmd::Commit { path, kind, summary, delta } => cmd_commit(path, kind, summary, delta),
         Cmd::Log { path, limit, json } => cmd_log(path, limit, json),
         Cmd::Restore { path, sha, summary } => cmd_restore(path, sha, summary),
+        Cmd::SetActive { root, kb_id } => cmd_set_active(root, kb_id),
+        Cmd::GetActive { root, json } => cmd_get_active(root, json),
+        Cmd::Register { root, kb_id, path, list, unregister } => cmd_register(root, kb_id, path, list, unregister),
     }
+}
+
+fn cmd_set_active(root: PathBuf, kb_id: String) -> Result<()> {
+    okf_core::active::set_active(&root, Some(&kb_id)).map_err(anyhow::Error::msg)?;
+    eprintln!("active KB = {kb_id}");
+    Ok(())
+}
+
+fn cmd_get_active(root: PathBuf, json: bool) -> Result<()> {
+    match okf_core::active::get_active(&root) {
+        Some(id) => {
+            let path = okf_core::registry::resolve(&root, &id);
+            if json {
+                println!("{}", serde_json::json!({"id": id, "path": path}));
+            } else {
+                println!("{id}  {}", path.as_deref().unwrap_or("(unregistered path)"));
+            }
+        }
+        None => {
+            if json {
+                println!("{}", serde_json::json!({ "id": null }));
+            } else {
+                println!("(no active KB — run `okf set-active`)");
+            }
+        }
+    }
+    Ok(())
+}
+
+fn cmd_register(root: PathBuf, kb_id: Option<String>, path: Option<PathBuf>, list: bool, unregister: Option<String>) -> Result<()> {
+    if list {
+        for b in okf_core::registry::list(&root) {
+            println!("{}  {}", b.id, b.path);
+        }
+        return Ok(());
+    }
+    if let Some(id) = unregister {
+        okf_core::registry::unregister(&root, &id).map_err(anyhow::Error::msg)?;
+        return Ok(());
+    }
+    match (kb_id, path) {
+        (Some(id), Some(p)) => okf_core::registry::register(&root, &id, &p.to_string_lossy()).map_err(anyhow::Error::msg)?,
+        _ => anyhow::bail!("register needs <kb_id> <path>, or --list, or --unregister <id>"),
+    }
+    Ok(())
 }
 
 fn cmd_log_sync(path: PathBuf, kind: String, summary: String, delta: Option<String>) -> Result<()> {
@@ -322,8 +388,23 @@ fn cmd_scaffold(path: PathBuf, name: String) -> Result<()> {
     write_if_absent(&path.join("log.md"), &format!("# Change log — {name}\n"))?;
     write_if_absent(
         &path.join("schema.md"),
-        "# BioOKF operating schema (v0.5)\n\nSee the canonical schema.md for the 28 node types and 23 predicates.\n",
+        "# BioOKF operating schema (v0.5)\n\nSee the canonical schema.md for the 28 node types and 24 predicates.\n",
     )?;
+
+    // version-track + register + activate the new bundle (so the first post-scaffold
+    // convert/ingest is not denied by the require-active guardrail).
+    let repo = GitRepo::open(&path);
+    if repo.ensure_repo().is_ok() {
+        let _ = repo.commit_all(ChangeKind::Manual, &format!("create knowledge base {name}"), None);
+    }
+    let kb_id = path.file_name().map(|s| s.to_string_lossy().to_lowercase());
+    if let (Some(id), Some(root)) = (kb_id, path.parent()) {
+        if okf_core::registry::validate_kb_id(&id).is_ok() {
+            let abs = std::fs::canonicalize(&path).unwrap_or_else(|_| path.clone());
+            let _ = okf_core::registry::register(root, &id, &abs.to_string_lossy());
+            let _ = okf_core::active::set_active(root, Some(&id));
+        }
+    }
     eprintln!("scaffolded bundle at {}", path.display());
     Ok(())
 }
