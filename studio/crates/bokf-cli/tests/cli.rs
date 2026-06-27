@@ -1,16 +1,16 @@
 //! End-to-end CLI test: scaffold a bundle, author valid + invalid concept docs,
-//! and verify `okf lint` / `graph` / `search` behave correctly.
+//! and verify `bokf lint` / `graph` / `search` behave correctly.
 
 use std::path::PathBuf;
 use std::process::Command;
 
-fn okf() -> &'static str {
-    env!("CARGO_BIN_EXE_okf")
+fn bokf() -> &'static str {
+    env!("CARGO_BIN_EXE_bokf")
 }
 
 fn tmp_bundle(name: &str) -> PathBuf {
     let mut d = std::env::temp_dir();
-    d.push(format!("okf-cli-test-{name}-{}", std::process::id()));
+    d.push(format!("bokf-cli-test-{name}-{}", std::process::id()));
     let _ = std::fs::remove_dir_all(&d);
     d
 }
@@ -25,7 +25,7 @@ fn scaffold_lint_graph_search_roundtrip() {
     let dir = tmp_bundle("roundtrip");
 
     // scaffold
-    let out = Command::new(okf()).args(["scaffold", dir.to_str().unwrap(), "--name", "Test KB"]).output().unwrap();
+    let out = Command::new(bokf()).args(["scaffold", dir.to_str().unwrap(), "--name", "Test KB"]).output().unwrap();
     assert!(out.status.success(), "scaffold failed: {}", String::from_utf8_lossy(&out.stderr));
     assert!(dir.join("index.md").exists());
     assert!(dir.join("knowledge").is_dir());
@@ -71,20 +71,20 @@ edges:
 "#);
 
     // lint should be clean (0 errors)
-    let out = Command::new(okf()).args(["lint", dir.to_str().unwrap(), "--json"]).output().unwrap();
+    let out = Command::new(bokf()).args(["lint", dir.to_str().unwrap(), "--json"]).output().unwrap();
     let report: serde_json::Value = serde_json::from_slice(&out.stdout).unwrap();
     let errors = report["findings"].as_array().unwrap().iter().filter(|f| f["severity"] == "error").count();
     assert_eq!(errors, 0, "expected 0 errors, report: {}", String::from_utf8_lossy(&out.stdout));
     assert!(out.status.success(), "clean bundle should exit 0");
 
     // graph: BRAF -> Melanoma edge present
-    let out = Command::new(okf()).args(["graph", dir.to_str().unwrap()]).output().unwrap();
+    let out = Command::new(bokf()).args(["graph", dir.to_str().unwrap()]).output().unwrap();
     let g: serde_json::Value = serde_json::from_slice(&out.stdout).unwrap();
     let edges = g["edges"].as_array().unwrap();
     assert!(edges.iter().any(|e| e["source"] == "BRAF" && e["target"] == "Melanoma" && e["predicate"] == "associated_with"));
 
     // search finds BRAF
-    let out = Command::new(okf()).args(["search", dir.to_str().unwrap(), "kinase", "--json"]).output().unwrap();
+    let out = Command::new(bokf()).args(["search", dir.to_str().unwrap(), "kinase", "--json"]).output().unwrap();
     let hits: serde_json::Value = serde_json::from_slice(&out.stdout).unwrap();
     assert!(hits.as_array().unwrap().iter().any(|h| h["identifier"] == "BRAF"));
 
@@ -101,7 +101,7 @@ edges:
 ---
 # Bad
 "#);
-    let out = Command::new(okf()).args(["lint", dir.to_str().unwrap(), "--json"]).output().unwrap();
+    let out = Command::new(bokf()).args(["lint", dir.to_str().unwrap(), "--json"]).output().unwrap();
     let report: serde_json::Value = serde_json::from_slice(&out.stdout).unwrap();
     let rules: Vec<String> = report["findings"].as_array().unwrap().iter().map(|f| f["rule"].as_str().unwrap_or("").to_string()).collect();
     assert!(rules.iter().any(|r| r == "type.invalid"), "should flag invalid type");
@@ -113,7 +113,7 @@ edges:
 
 #[test]
 fn predicates_lists_24() {
-    let out = Command::new(okf()).args(["predicates", "--json"]).output().unwrap();
+    let out = Command::new(bokf()).args(["predicates", "--json"]).output().unwrap();
     assert!(out.status.success());
     let v: serde_json::Value = serde_json::from_slice(&out.stdout).unwrap();
     assert_eq!(v["predicates"].as_array().unwrap().len(), 24);
@@ -125,11 +125,11 @@ fn predicates_lists_24() {
 fn cli_log_sync_then_log() {
     let dir = tempfile::tempdir().unwrap();
     std::fs::write(dir.path().join("log.md"), "# Change log\n").unwrap();
-    let ok = Command::new(okf())
+    let ok = Command::new(bokf())
         .args(["log-sync", dir.path().to_str().unwrap(), "--kind", "ingest", "--summary", "seed"])
         .output().unwrap();
     assert!(ok.status.success(), "{}", String::from_utf8_lossy(&ok.stderr));
-    let log = Command::new(okf())
+    let log = Command::new(bokf())
         .args(["log", dir.path().to_str().unwrap(), "--json"]).output().unwrap();
     let v: serde_json::Value = serde_json::from_slice(&log.stdout).unwrap();
     assert_eq!(v[0]["kind"], "ingest");
@@ -139,11 +139,11 @@ fn cli_log_sync_then_log() {
 fn scaffold_registers_inits_and_activates() {
     let root = tempfile::tempdir().unwrap();
     let bundle = root.path().join("ms-kb");
-    let s = Command::new(okf())
+    let s = Command::new(bokf())
         .args(["scaffold", bundle.to_str().unwrap(), "--name", "MS KB"]).output().unwrap();
     assert!(s.status.success(), "{}", String::from_utf8_lossy(&s.stderr));
     assert!(bundle.join(".git").exists());
-    let ga = Command::new(okf())
+    let ga = Command::new(bokf())
         .args(["get-active", root.path().to_str().unwrap(), "--json"]).output().unwrap();
     let v: serde_json::Value = serde_json::from_slice(&ga.stdout).unwrap();
     assert_eq!(v["id"], "ms-kb");
@@ -153,7 +153,7 @@ fn scaffold_registers_inits_and_activates() {
 fn end_to_end_scaffold_write_logsync_log_restore() {
     let root = tempfile::tempdir().unwrap();
     let bundle = root.path().join("demo-kb");
-    let run = |args: &[&str]| Command::new(okf()).args(args).output().unwrap();
+    let run = |args: &[&str]| Command::new(bokf()).args(args).output().unwrap();
 
     assert!(run(&["scaffold", bundle.to_str().unwrap(), "--name", "Demo"]).status.success());
     let ga = run(&["get-active", root.path().to_str().unwrap(), "--json"]);

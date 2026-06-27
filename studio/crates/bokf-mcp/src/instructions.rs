@@ -23,20 +23,20 @@ PROVENANCE IS NODE-BASED (v0.5)
 Each claim's `primary_source` names a source node by identifier. A source node is either an ingested document (a Publication/Study/Dataset with `raw_source: [raw/...]`) or an external reference (e.g. HGNC, Gene Ontology, DrugBank — a node with its `infores:`/ontology CURIE in `xref`, no raw_source). Create each external-reference source node ONCE and reuse its identifier. Also add a `reported_in` edge to make provenance traversable.
 
 === INGEST A SOURCE ===
-1. Save the source under `raw/` unchanged (use okf_write outside knowledge/ is not allowed; ingested bytes are placed by the host — when given a raw path, treat it as already present).
+1. Save the source under `raw/` unchanged (use bokf_write outside knowledge/ is not allowed; ingested bytes are placed by the host — when given a raw path, treat it as already present).
 2. Read/parse it fully.
 3. Create a Publication/Study/Dataset node FOR THE SOURCE, with `raw_source` listing its raw/ path(s).
-4. For each biomedical entity discussed, create or UPDATE its typed concept doc (reuse an existing identifier — never fork). Use okf_validate_page to check a draft before writing, then okf_write_page.
+4. For each biomedical entity discussed, create or UPDATE its typed concept doc (reuse an existing identifier — never fork). Use bokf_validate_page to check a draft before writing, then bokf_write_page.
 5. Add `xref` CURIEs where known (optional enrichment).
 6. For each claim, add a typed `edges:` entry with the provenance triplet + any statistics, and a `reported_in` edge to the source node.
-7. Update index.md (okf_write_page) and append a dated entry to log.md (okf_append_log).
+7. Update index.md (bokf_write_page) and append a dated entry to log.md (bokf_append_log).
 A single source typically creates/updates 10-15 concept pages.
 
 === ANSWER A QUERY ===
-Read index.md -> okf_search to find relevant pages -> okf_read_page to open them -> follow `edges:` (and use okf_graph for neighborhood) -> synthesize a CITED answer (cite node identifiers + their sources). Filter by knowledge_level for clinical questions. Prefer graph-shaped reasoning ("what treats a Disease associated_with this Gene?"). Never invent facts not in the pages.
+Read index.md -> bokf_search to find relevant pages -> bokf_read_page to open them -> follow `edges:` (and use bokf_graph for neighborhood) -> synthesize a CITED answer (cite node identifiers + their sources). Filter by knowledge_level for clinical questions. Prefer graph-shaped reasoning ("what treats a Disease associated_with this Gene?"). Never invent facts not in the pages.
 
 === LINT ===
-Run okf_lint. It flags: invalid type/predicate; missing/duplicate/opaque identifiers; edge objects that don't resolve; missing or invalid provenance triplet; primary_source that isn't a source node; unanchored source nodes; domain/range violations; orphans; contradictions. Fix Errors first (rewrite the offending page with okf_write_page), then Warnings. A missing `xref` is an enrichment opportunity, not an error; `subtype` is never linted.
+Run bokf_lint. It flags: invalid type/predicate; missing/duplicate/opaque identifiers; edge objects that don't resolve; missing or invalid provenance triplet; primary_source that isn't a source node; unanchored source nodes; domain/range violations; orphans; contradictions. Fix Errors first (rewrite the offending page with bokf_write_page), then Warnings. A missing `xref` is an enrichment opportunity, not an error; `subtype` is never linted.
 
-TOOLS: okf_list_bases, okf_scaffold, okf_list_pages, okf_read_page, okf_write_page, okf_validate_page, okf_append_log, okf_lint, okf_graph, okf_search, okf_stats, okf_predicates. Always okf_validate_page a concept doc before okf_write_page, and okf_lint after a batch of writes.
+TOOLS: bokf_list_bases, bokf_scaffold, bokf_list_pages, bokf_read_page, bokf_write_page, bokf_validate_page, bokf_append_log, bokf_lint, bokf_graph, bokf_search, bokf_stats, bokf_predicates. Always bokf_validate_page a concept doc before bokf_write_page, and bokf_lint after a batch of writes.
 "#;

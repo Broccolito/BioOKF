@@ -1,4 +1,4 @@
-use okf_core::registry;
+use bokf_core::registry;
 
 #[test]
 fn register_resolve_and_reject_dupes_and_bad_ids() {
@@ -15,10 +15,10 @@ fn register_resolve_and_reject_dupes_and_bad_ids() {
 #[test]
 fn set_get_clear_active() {
     let dir = tempfile::tempdir().unwrap();
-    assert!(okf_core::active::get_active(dir.path()).is_none());
-    okf_core::active::set_active(dir.path(), Some("ms-kb")).unwrap();
-    assert_eq!(okf_core::active::get_active(dir.path()).as_deref(), Some("ms-kb"));
-    assert!(okf_core::active::set_active(dir.path(), Some("Bad_Id")).is_err());
-    okf_core::active::set_active(dir.path(), None).unwrap();
-    assert!(okf_core::active::get_active(dir.path()).is_none());
+    assert!(bokf_core::active::get_active(dir.path()).is_none());
+    bokf_core::active::set_active(dir.path(), Some("ms-kb")).unwrap();
+    assert_eq!(bokf_core::active::get_active(dir.path()).as_deref(), Some("ms-kb"));
+    assert!(bokf_core::active::set_active(dir.path(), Some("Bad_Id")).is_err());
+    bokf_core::active::set_active(dir.path(), None).unwrap();
+    assert!(bokf_core::active::get_active(dir.path()).is_none());
 }

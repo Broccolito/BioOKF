@@ -1,5 +1,5 @@
 //! BioOKF Studio — the Tauri desktop app. A thin front-end: every command
-//! delegates to `okf-core`, so the GUI is a pure visualizer/dashboard over the
+//! delegates to `bokf-core`, so the GUI is a pure visualizer/dashboard over the
 //! same backend the CLI and MCP server use.
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
@@ -39,7 +39,7 @@ fn resolve(id: &str) -> Option<PathBuf> {
 fn list_bases() -> Result<serde_json::Value, String> {
     let mut out = Vec::new();
     for p in candidate_bundles() {
-        if let Ok(info) = okf_core::export::base_info(&p) {
+        if let Ok(info) = bokf_core::export::base_info(&p) {
             out.push(info);
         }
     }
@@ -49,22 +49,22 @@ fn list_bases() -> Result<serde_json::Value, String> {
 #[tauri::command]
 fn get_bundle(id: String) -> Result<serde_json::Value, String> {
     let path = resolve(&id).ok_or_else(|| format!("unknown bundle: {id}"))?;
-    okf_core::export::bundle_doc(&path, None).map_err(|e| e.to_string())
+    bokf_core::export::bundle_doc(&path, None).map_err(|e| e.to_string())
 }
 
 #[tauri::command]
 fn lint_bundle(id: String) -> Result<serde_json::Value, String> {
     let path = resolve(&id).ok_or_else(|| format!("unknown bundle: {id}"))?;
-    let bundle = okf_core::open_bundle(&path).map_err(|e| e.to_string())?;
-    let report = okf_core::lint(&bundle);
+    let bundle = bokf_core::open_bundle(&path).map_err(|e| e.to_string())?;
+    let report = bokf_core::lint(&bundle);
     serde_json::to_value(&report).map_err(|e| e.to_string())
 }
 
 #[tauri::command]
 fn search_bundle(id: String, query: String, limit: Option<usize>) -> Result<serde_json::Value, String> {
     let path = resolve(&id).ok_or_else(|| format!("unknown bundle: {id}"))?;
-    let bundle = okf_core::open_bundle(&path).map_err(|e| e.to_string())?;
-    let index = okf_core::SearchIndex::build(&bundle);
+    let bundle = bokf_core::open_bundle(&path).map_err(|e| e.to_string())?;
+    let index = bokf_core::SearchIndex::build(&bundle);
     let hits = index.search(&query, limit.unwrap_or(10));
     serde_json::to_value(&hits).map_err(|e| e.to_string())
 }

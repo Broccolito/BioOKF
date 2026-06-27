@@ -159,7 +159,7 @@ checksum = "72b3254f16251a8381aa12e40e3c4d2f0199f8c6508fbecb9d91f575e0fbb8c6"
 name = "biookf-studio"
 version = "0.1.0"
 dependencies = [
- "okf-core",
+ "bokf-core",
  "serde",
  "serde_json",
  "tauri",
@@ -220,6 +220,43 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "cdeb9d870516001442e364c5220d3574d2da8dc765554b4a617230d33fa58ef5"
 dependencies = [
  "objc2",
+]
+
+[[package]]
+name = "bokf-cli"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "bokf-core",
+ "clap",
+ "serde_json",
+ "tempfile",
+]
+
+[[package]]
+name = "bokf-core"
+version = "0.1.0"
+dependencies = [
+ "regex",
+ "serde",
+ "serde_json",
+ "serde_yaml",
+ "tempfile",
+ "thiserror 2.0.18",
+ "uuid",
+]
+
+[[package]]
+name = "bokf-mcp"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "bokf-core",
+ "rmcp",
+ "schemars 1.2.1",
+ "serde",
+ "serde_json",
+ "tokio",
 ]
 
 [[package]]
@@ -2368,43 +2405,6 @@ dependencies = [
  "objc2-app-kit",
  "objc2-core-foundation",
  "objc2-foundation",
-]
-
-[[package]]
-name = "okf-cli"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "clap",
- "okf-core",
- "serde_json",
- "tempfile",
-]
-
-[[package]]
-name = "okf-core"
-version = "0.1.0"
-dependencies = [
- "regex",
- "serde",
- "serde_json",
- "serde_yaml",
- "tempfile",
- "thiserror 2.0.18",
- "uuid",
-]
-
-[[package]]
-name = "okf-mcp"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "okf-core",
- "rmcp",
- "schemars 1.2.1",
- "serde",
- "serde_json",
- "tokio",
 ]
 
 [[package]]

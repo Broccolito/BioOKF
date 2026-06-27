@@ -5,7 +5,7 @@ description: Use when validating or repairing a BioOKF knowledge base — run th
 
 # Skill: biookf-lint
 
-`okf_lint` returns a JSON report of `findings` with `severity` (error/warn/info), `rule`, `subject`, `message`, `path`.
+`bokf_lint` returns a JSON report of `findings` with `severity` (error/warn/info), `rule`, `subject`, `message`, `path`.
 
 ## Fix order
 1. **Errors first** (the bundle is non-conformant until these are 0):
@@ -24,6 +24,6 @@ description: Use when validating or repairing a BioOKF knowledge base — run th
 3. **Infos** are advisory (`subtype.missing`, `predicate.inverse`, `edge.missing_direction`) — address opportunistically.
 
 ## How to fix
-For each offending page: `okf_read_page` → edit → `okf_validate_page` → `okf_write_page`. Re-run `okf_lint` until Errors = 0. Record what you changed with `okf_append_log`.
+For each offending page: `bokf_read_page` → edit → `bokf_validate_page` → `bokf_write_page`. Re-run `bokf_lint` until Errors = 0. Record what you changed with `bokf_append_log`.
 
 A missing `xref` is an enrichment opportunity, never an error. `subtype` is never linted against a list.

@@ -1,16 +1,16 @@
 [package]
-name = "okf-mcp"
+name = "bokf-mcp"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
-description = "okf-mcp — the BioOKF MCP server (stdio) that AI tools drive"
+description = "bokf-mcp — the BioOKF MCP server (stdio) that AI tools drive"
 
 [[bin]]
-name = "okf-mcp"
+name = "bokf-mcp"
 path = "src/main.rs"
 
 [dependencies]
-okf-core = { path = "../okf-core" }
+bokf-core = { path = "../bokf-core" }
 rmcp = { workspace = true }
 tokio = { workspace = true }
 serde = { workspace = true }

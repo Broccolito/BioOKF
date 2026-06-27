@@ -2,7 +2,7 @@
 name = "biookf-studio"
 version = "0.1.0"
 edition = "2021"
-description = "BioOKF Studio — Tauri desktop visualizer over okf-core"
+description = "BioOKF Studio — Tauri desktop visualizer over bokf-core"
 license = "Apache-2.0"
 
 [[bin]]
@@ -13,7 +13,7 @@ path = "src/main.rs"
 tauri-build = { version = "2", features = [] }
 
 [dependencies]
-okf-core = { path = "../../crates/okf-core" }
+bokf-core = { path = "../../crates/bokf-core" }
 tauri = { version = "2", features = ["macos-private-api"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"

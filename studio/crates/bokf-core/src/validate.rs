@@ -1,5 +1,5 @@
 //! Single-document validation (validate-before-write). Shared by the CLI
-//! (`okf validate`) and the MCP server (`okf_validate_page`) so the agent can
+//! (`bokf validate`) and the MCP server (`bokf_validate_page`) so the agent can
 //! check a draft before committing it.
 
 use crate::model::*;

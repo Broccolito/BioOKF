@@ -1,5 +1,5 @@
 [workspace]
-members = ["crates/okf-core", "crates/okf-cli", "crates/okf-mcp", "app/src-tauri"]
+members = ["crates/bokf-core", "crates/bokf-cli", "crates/bokf-mcp", "app/src-tauri"]
 resolver = "2"
 
 [workspace.package]

@@ -1,8 +1,8 @@
 //! Filesystem operations behind the MCP tools, with path-safety guards. These
 //! are the thin idempotent primitives the AI agent drives; all heavy logic lives
-//! in `okf-core`.
+//! in `bokf-core`.
 
-use okf_core::parse::parse_node;
+use bokf_core::parse::parse_node;
 use std::path::{Path, PathBuf};
 
 /// Validate a page path for WRITING: under `knowledge/` or a reserved root file;
@@ -133,15 +133,15 @@ pub fn scaffold(bundle: &Path, name: &str) -> Result<String, String> {
     )?;
 
     // version-track + register + activate the new bundle (mirror the CLI).
-    let repo = okf_core::git::GitRepo::open(bundle);
+    let repo = bokf_core::git::GitRepo::open(bundle);
     if repo.ensure_repo().is_ok() {
-        let _ = repo.commit_all(okf_core::git::ChangeKind::Manual, &format!("create knowledge base {name}"), None);
+        let _ = repo.commit_all(bokf_core::git::ChangeKind::Manual, &format!("create knowledge base {name}"), None);
     }
     if let (Some(id), Some(root)) = (bundle.file_name().map(|s| s.to_string_lossy().to_lowercase()), bundle.parent()) {
-        if okf_core::registry::validate_kb_id(&id).is_ok() {
+        if bokf_core::registry::validate_kb_id(&id).is_ok() {
             let abs = std::fs::canonicalize(bundle).unwrap_or_else(|_| bundle.to_path_buf());
-            let _ = okf_core::registry::register(root, &id, &abs.to_string_lossy());
-            let _ = okf_core::active::set_active(root, Some(&id));
+            let _ = bokf_core::registry::register(root, &id, &abs.to_string_lossy());
+            let _ = bokf_core::active::set_active(root, Some(&id));
         }
     }
     Ok(format!("scaffolded BioOKF bundle '{name}' at {}", bundle.display()))

@@ -4,7 +4,7 @@
 use std::path::PathBuf;
 
 fn examples_root() -> PathBuf {
-    // studio/crates/okf-core -> ../../.. -> BioOKF repo root
+    // studio/crates/bokf-core -> ../../.. -> BioOKF repo root
     PathBuf::from(env!("CARGO_MANIFEST_DIR"))
         .join("../../../examples")
         .canonicalize()
@@ -13,7 +13,7 @@ fn examples_root() -> PathBuf {
 
 #[test]
 fn opens_examples_bundle() {
-    let bundle = okf_core::open_bundle(examples_root()).expect("open bundle");
+    let bundle = bokf_core::open_bundle(examples_root()).expect("open bundle");
     // 6 concept docs ship under examples/knowledge/
     assert!(bundle.nodes.len() >= 6, "expected >=6 nodes, got {}", bundle.nodes.len());
     assert!(bundle.parse_errors.is_empty(), "parse errors: {:?}", bundle.parse_errors);
@@ -23,7 +23,7 @@ fn opens_examples_bundle() {
 
 #[test]
 fn derives_graph_from_examples() {
-    let g = okf_core::graph_of(examples_root()).expect("graph");
+    let g = bokf_core::graph_of(examples_root()).expect("graph");
     assert!(!g.nodes.is_empty());
     assert!(!g.edges.is_empty());
     // every edge endpoint exists as a node (real or external stub)
@@ -36,8 +36,8 @@ fn derives_graph_from_examples() {
 
 #[test]
 fn lints_examples_bundle() {
-    let bundle = okf_core::open_bundle(examples_root()).expect("open");
-    let report = okf_core::lint(&bundle);
+    let bundle = bokf_core::open_bundle(examples_root()).expect("open");
+    let report = bokf_core::lint(&bundle);
     // v0.4 examples use infores: primary_source + CURIE objects -> lint should
     // produce findings (warnings), and must not panic.
     assert!(!report.findings.is_empty(), "expected lint findings on legacy examples");
@@ -51,8 +51,8 @@ fn lints_examples_bundle() {
 
 #[test]
 fn searches_examples_bundle() {
-    let bundle = okf_core::open_bundle(examples_root()).expect("open");
-    let index = okf_core::SearchIndex::build(&bundle);
+    let bundle = bokf_core::open_bundle(examples_root()).expect("open");
+    let index = bokf_core::SearchIndex::build(&bundle);
     let hits = index.search("interleukin cytokine", 5);
     assert!(!hits.is_empty(), "expected search hits for 'interleukin'");
     assert!(hits[0].score > 0.0);

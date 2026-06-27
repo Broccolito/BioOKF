@@ -1,15 +1,15 @@
-//! `okf` — the BioOKF command-line tool. Thin wrapper over `okf-core`; this is
+//! `bokf` — the BioOKF command-line tool. Thin wrapper over `bokf-core`; this is
 //! the primary terminal surface an AI agent (or human) drives.
 
 use anyhow::{Context, Result};
 use clap::{Parser, Subcommand};
-use okf_core::git::{today_iso, ChangeKind, GitRepo};
-use okf_core::lint::Severity;
+use bokf_core::git::{today_iso, ChangeKind, GitRepo};
+use bokf_core::lint::Severity;
 use std::collections::BTreeMap;
 use std::path::PathBuf;
 
 #[derive(Parser)]
-#[command(name = "okf", version, about = "BioOKF knowledge-base toolkit")]
+#[command(name = "bokf", version, about = "BioOKF knowledge-base toolkit")]
 struct Cli {
     #[command(subcommand)]
     cmd: Cmd,
@@ -150,15 +150,15 @@ fn run() -> Result<()> {
 }
 
 fn cmd_set_active(root: PathBuf, kb_id: String) -> Result<()> {
-    okf_core::active::set_active(&root, Some(&kb_id)).map_err(anyhow::Error::msg)?;
+    bokf_core::active::set_active(&root, Some(&kb_id)).map_err(anyhow::Error::msg)?;
     eprintln!("active KB = {kb_id}");
     Ok(())
 }
 
 fn cmd_get_active(root: PathBuf, json: bool) -> Result<()> {
-    match okf_core::active::get_active(&root) {
+    match bokf_core::active::get_active(&root) {
         Some(id) => {
-            let path = okf_core::registry::resolve(&root, &id);
+            let path = bokf_core::registry::resolve(&root, &id);
             if json {
                 println!("{}", serde_json::json!({"id": id, "path": path}));
             } else {
@@ -169,7 +169,7 @@ fn cmd_get_active(root: PathBuf, json: bool) -> Result<()> {
             if json {
                 println!("{}", serde_json::json!({ "id": null }));
             } else {
-                println!("(no active KB — run `okf set-active`)");
+                println!("(no active KB — run `bokf set-active`)");
             }
         }
     }
@@ -178,24 +178,24 @@ fn cmd_get_active(root: PathBuf, json: bool) -> Result<()> {
 
 fn cmd_register(root: PathBuf, kb_id: Option<String>, path: Option<PathBuf>, list: bool, unregister: Option<String>) -> Result<()> {
     if list {
-        for b in okf_core::registry::list(&root) {
+        for b in bokf_core::registry::list(&root) {
             println!("{}  {}", b.id, b.path);
         }
         return Ok(());
     }
     if let Some(id) = unregister {
-        okf_core::registry::unregister(&root, &id).map_err(anyhow::Error::msg)?;
+        bokf_core::registry::unregister(&root, &id).map_err(anyhow::Error::msg)?;
         return Ok(());
     }
     match (kb_id, path) {
-        (Some(id), Some(p)) => okf_core::registry::register(&root, &id, &p.to_string_lossy()).map_err(anyhow::Error::msg)?,
+        (Some(id), Some(p)) => bokf_core::registry::register(&root, &id, &p.to_string_lossy()).map_err(anyhow::Error::msg)?,
         _ => anyhow::bail!("register needs <kb_id> <path>, or --list, or --unregister <id>"),
     }
     Ok(())
 }
 
 fn cmd_log_sync(path: PathBuf, kind: String, summary: String, delta: Option<String>) -> Result<()> {
-    let sha = okf_core::log_sync::log_sync(&path, ChangeKind::parse(&kind), &summary, delta.as_deref(), &today_iso())
+    let sha = bokf_core::log_sync::log_sync(&path, ChangeKind::parse(&kind), &summary, delta.as_deref(), &today_iso())
         .map_err(anyhow::Error::msg)?;
     eprintln!("[{}] {} — {}", kind, summary, &sha[..8.min(sha.len())]);
     Ok(())
@@ -228,7 +228,7 @@ fn cmd_restore(path: PathBuf, sha: String, summary: Option<String>) -> Result<()
 }
 
 fn cmd_predicates(json: bool) -> Result<()> {
-    use okf_core::model::{AGENT_TYPES, KNOWLEDGE_LEVELS, NODE_TYPES, PREDICATES};
+    use bokf_core::model::{AGENT_TYPES, KNOWLEDGE_LEVELS, NODE_TYPES, PREDICATES};
     if json {
         let v = serde_json::json!({
             "node_types": NODE_TYPES,
@@ -248,7 +248,7 @@ fn cmd_predicates(json: bool) -> Result<()> {
 
 fn cmd_validate(file: PathBuf) -> Result<()> {
     let content = std::fs::read_to_string(&file).with_context(|| format!("reading {}", file.display()))?;
-    let v = okf_core::validate::validate_doc(&content);
+    let v = bokf_core::validate::validate_doc(&content);
     if v.valid {
         println!("VALID — type={} identifier={:?} {} edge(s)", v.node_type, v.identifier, v.edge_count);
     } else {
@@ -264,7 +264,7 @@ fn cmd_validate(file: PathBuf) -> Result<()> {
 }
 
 fn cmd_get(path: PathBuf, identifier: String) -> Result<()> {
-    let bundle = okf_core::open_bundle(&path)?;
+    let bundle = bokf_core::open_bundle(&path)?;
     match bundle.get(&identifier) {
         Some(n) => {
             println!("{}", serde_json::to_string_pretty(n)?);
@@ -278,7 +278,7 @@ fn cmd_get(path: PathBuf, identifier: String) -> Result<()> {
 }
 
 fn cmd_export(path: PathBuf, out: PathBuf, name: Option<String>) -> Result<()> {
-    let doc = okf_core::export::bundle_doc(&path, name)?;
+    let doc = bokf_core::export::bundle_doc(&path, name)?;
     if let Some(parent) = out.parent() {
         std::fs::create_dir_all(parent)?;
     }
@@ -293,8 +293,8 @@ fn cmd_export(path: PathBuf, out: PathBuf, name: Option<String>) -> Result<()> {
 }
 
 fn cmd_lint(path: PathBuf, json: bool) -> Result<()> {
-    let bundle = okf_core::open_bundle(&path).with_context(|| format!("opening {}", path.display()))?;
-    let report = okf_core::lint(&bundle);
+    let bundle = bokf_core::open_bundle(&path).with_context(|| format!("opening {}", path.display()))?;
+    let report = bokf_core::lint(&bundle);
     if json {
         println!("{}", serde_json::to_string_pretty(&report)?);
     } else {
@@ -322,7 +322,7 @@ fn cmd_lint(path: PathBuf, json: bool) -> Result<()> {
 }
 
 fn cmd_graph(path: PathBuf, out: Option<PathBuf>) -> Result<()> {
-    let graph = okf_core::graph_of(&path)?;
+    let graph = bokf_core::graph_of(&path)?;
     let json = serde_json::to_string_pretty(&graph.to_json())?;
     match out {
         Some(p) => {
@@ -335,8 +335,8 @@ fn cmd_graph(path: PathBuf, out: Option<PathBuf>) -> Result<()> {
 }
 
 fn cmd_search(path: PathBuf, query: String, limit: usize, json: bool) -> Result<()> {
-    let bundle = okf_core::open_bundle(&path)?;
-    let index = okf_core::SearchIndex::build(&bundle);
+    let bundle = bokf_core::open_bundle(&path)?;
+    let index = bokf_core::SearchIndex::build(&bundle);
     let hits = index.search(&query, limit);
     if json {
         println!("{}", serde_json::to_string_pretty(&hits)?);
@@ -350,7 +350,7 @@ fn cmd_search(path: PathBuf, query: String, limit: usize, json: bool) -> Result<
 }
 
 fn cmd_stats(path: PathBuf) -> Result<()> {
-    let bundle = okf_core::open_bundle(&path)?;
+    let bundle = bokf_core::open_bundle(&path)?;
     let mut by_type: BTreeMap<String, usize> = BTreeMap::new();
     let mut by_pred: BTreeMap<String, usize> = BTreeMap::new();
     let mut edge_count = 0;
@@ -399,10 +399,10 @@ fn cmd_scaffold(path: PathBuf, name: String) -> Result<()> {
     }
     let kb_id = path.file_name().map(|s| s.to_string_lossy().to_lowercase());
     if let (Some(id), Some(root)) = (kb_id, path.parent()) {
-        if okf_core::registry::validate_kb_id(&id).is_ok() {
+        if bokf_core::registry::validate_kb_id(&id).is_ok() {
             let abs = std::fs::canonicalize(&path).unwrap_or_else(|_| path.clone());
-            let _ = okf_core::registry::register(root, &id, &abs.to_string_lossy());
-            let _ = okf_core::active::set_active(root, Some(&id));
+            let _ = bokf_core::registry::register(root, &id, &abs.to_string_lossy());
+            let _ = bokf_core::active::set_active(root, Some(&id));
         }
     }
     eprintln!("scaffolded bundle at {}", path.display());

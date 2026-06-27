@@ -1,4 +1,4 @@
-use okf_core::git::{ChangeKind, GitRepo};
+use bokf_core::git::{ChangeKind, GitRepo};
 
 #[test]
 fn ensure_repo_then_commit_roundtrip() {
@@ -15,7 +15,7 @@ fn ensure_repo_then_commit_roundtrip() {
 
 #[test]
 fn today_iso_is_well_formed() {
-    let d = okf_core::git::today_iso();
+    let d = bokf_core::git::today_iso();
     assert_eq!(d.len(), 10);
     assert_eq!(&d[4..5], "-");
     assert_eq!(&d[7..8], "-");
@@ -70,7 +70,7 @@ fn log_sync_appends_and_commits_atomically() {
     let dir = tempfile::tempdir().unwrap();
     std::fs::write(dir.path().join("log.md"), "# Change log\n").unwrap();
     std::fs::write(dir.path().join("seed.md"), "x").unwrap();
-    let sha = okf_core::log_sync::log_sync(dir.path(), ChangeKind::Ingest, "first source", Some("+1 source · 5 nodes"), "2026-06-27").unwrap();
+    let sha = bokf_core::log_sync::log_sync(dir.path(), ChangeKind::Ingest, "first source", Some("+1 source · 5 nodes"), "2026-06-27").unwrap();
     let log = std::fs::read_to_string(dir.path().join("log.md")).unwrap();
     assert!(log.contains("## 2026-06-27"));
     assert!(log.contains("ingest | first source"));

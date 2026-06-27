@@ -1,7 +1,7 @@
-//! okf-mcp — the BioOKF MCP server (stdio). Exposes thin, idempotent primitives
-//! over `okf-core` that an AI client (Claude/Codex) drives to ingest, query, and
+//! bokf-mcp — the BioOKF MCP server (stdio). Exposes thin, idempotent primitives
+//! over `bokf-core` that an AI client (Claude/Codex) drives to ingest, query, and
 //! lint BioOKF bundles. The Tauri GUI and CLI are alternate front-ends over the
-//! same `okf-core`; this server is the agentic backbone.
+//! same `bokf-core`; this server is the agentic backbone.
 
 mod instructions;
 mod ops;
@@ -71,18 +71,18 @@ param!(RootKbParam {
 });
 
 #[derive(Clone)]
-pub struct OkfServer {
+pub struct BokfServer {
     tool_router: ToolRouter<Self>,
 }
 
-impl Default for OkfServer {
+impl Default for BokfServer {
     fn default() -> Self {
         Self::new()
     }
 }
 
 #[tool_handler(router = self.tool_router)]
-impl ServerHandler for OkfServer {
+impl ServerHandler for BokfServer {
     fn get_info(&self) -> ServerInfo {
         ServerInfo {
             server_info: Implementation {
@@ -112,52 +112,52 @@ fn from_result(r: Result<String, String>) -> Result<CallToolResult, rmcp::model:
 }
 
 #[tool_router(router = tool_router)]
-impl OkfServer {
+impl BokfServer {
     pub fn new() -> Self {
         Self { tool_router: Self::tool_router() }
     }
 
-    #[tool(name = "okf_list_bases", description = "List BioOKF bundles found under a root directory.")]
+    #[tool(name = "bokf_list_bases", description = "List BioOKF bundles found under a root directory.")]
     pub async fn list_bases(&self, p: Parameters<RootParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
         from_result(ops::list_bases(Path::new(&p.0.root)).map(|v| v.join("\n")))
     }
 
-    #[tool(name = "okf_scaffold", description = "Create an empty BioOKF bundle (raw/, knowledge/, index.md, log.md, schema.md).")]
+    #[tool(name = "bokf_scaffold", description = "Create an empty BioOKF bundle (raw/, knowledge/, index.md, log.md, schema.md).")]
     pub async fn scaffold(&self, p: Parameters<ScaffoldParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
         let name = p.0.name.unwrap_or_else(|| "Untitled knowledge base".to_string());
         from_result(ops::scaffold(Path::new(&p.0.bundle), &name))
     }
 
-    #[tool(name = "okf_list_pages", description = "List the concept-document pages under knowledge/.")]
+    #[tool(name = "bokf_list_pages", description = "List the concept-document pages under knowledge/.")]
     pub async fn list_pages(&self, p: Parameters<BundleParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
         from_result(ops::list_pages(Path::new(&p.0.bundle)).map(|v| v.join("\n")))
     }
 
-    #[tool(name = "okf_read_page", description = "Read one page (concept doc, raw source, or index/log/schema).")]
+    #[tool(name = "bokf_read_page", description = "Read one page (concept doc, raw source, or index/log/schema).")]
     pub async fn read_page(&self, p: Parameters<ReadParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
         from_result(ops::read_page(Path::new(&p.0.bundle), &p.0.page))
     }
 
-    #[tool(name = "okf_write_page", description = "Create/overwrite a concept doc (or index/log/schema); validates concept docs on write.")]
+    #[tool(name = "bokf_write_page", description = "Create/overwrite a concept doc (or index/log/schema); validates concept docs on write.")]
     pub async fn write_page(&self, p: Parameters<WriteParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
         from_result(ops::write_page(Path::new(&p.0.bundle), &p.0.page, &p.0.content))
     }
 
-    #[tool(name = "okf_validate_page", description = "Validate a concept-document draft (type/identifier/predicates/provenance) WITHOUT writing it.")]
+    #[tool(name = "bokf_validate_page", description = "Validate a concept-document draft (type/identifier/predicates/provenance) WITHOUT writing it.")]
     pub async fn validate_page(&self, p: Parameters<ValidateParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
         from_result(ops::validate_page(&p.0.content))
     }
 
-    #[tool(name = "okf_append_log", description = "Append a dated entry to the bundle's log.md (newest-first).")]
+    #[tool(name = "bokf_append_log", description = "Append a dated entry to the bundle's log.md (newest-first).")]
     pub async fn append_log(&self, p: Parameters<AppendLogParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
         from_result(ops::append_log(Path::new(&p.0.bundle), &p.0.date, &p.0.entry))
     }
 
-    #[tool(name = "okf_lint", description = "Lint a bundle against BioOKF v0.5 conformance rules; returns a JSON report.")]
+    #[tool(name = "bokf_lint", description = "Lint a bundle against BioOKF v0.5 conformance rules; returns a JSON report.")]
     pub async fn lint(&self, p: Parameters<BundleParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        match okf_core::open_bundle(&p.0.bundle) {
+        match bokf_core::open_bundle(&p.0.bundle) {
             Ok(b) => {
-                let r = okf_core::lint(&b);
+                let r = bokf_core::lint(&b);
                 let summary = serde_json::json!({
                     "errors": r.errors(), "warnings": r.warnings(), "infos": r.infos(),
                     "findings": r.findings,
@@ -168,19 +168,19 @@ impl OkfServer {
         }
     }
 
-    #[tool(name = "okf_graph", description = "Return the render-ready graph (nodes + directional edges) as JSON.")]
+    #[tool(name = "bokf_graph", description = "Return the render-ready graph (nodes + directional edges) as JSON.")]
     pub async fn graph(&self, p: Parameters<BundleParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        match okf_core::graph_of(&p.0.bundle) {
+        match bokf_core::graph_of(&p.0.bundle) {
             Ok(g) => ok(serde_json::to_string_pretty(&g.to_json()).unwrap_or_default()),
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
 
-    #[tool(name = "okf_search", description = "BM25 full-text search over the bundle's concept documents.")]
+    #[tool(name = "bokf_search", description = "BM25 full-text search over the bundle's concept documents.")]
     pub async fn search(&self, p: Parameters<SearchParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        match okf_core::open_bundle(&p.0.bundle) {
+        match bokf_core::open_bundle(&p.0.bundle) {
             Ok(b) => {
-                let idx = okf_core::SearchIndex::build(&b);
+                let idx = bokf_core::SearchIndex::build(&b);
                 let hits = idx.search(&p.0.query, p.0.limit.unwrap_or(10));
                 ok(serde_json::to_string_pretty(&hits).unwrap_or_default())
             }
@@ -188,9 +188,9 @@ impl OkfServer {
         }
     }
 
-    #[tool(name = "okf_stats", description = "Summary statistics: node/edge counts by type and predicate.")]
+    #[tool(name = "bokf_stats", description = "Summary statistics: node/edge counts by type and predicate.")]
     pub async fn stats(&self, p: Parameters<BundleParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        match okf_core::open_bundle(&p.0.bundle) {
+        match bokf_core::open_bundle(&p.0.bundle) {
             Ok(b) => {
                 let mut by_type = std::collections::BTreeMap::<String, usize>::new();
                 let mut edges = 0usize;
@@ -205,51 +205,51 @@ impl OkfServer {
         }
     }
 
-    #[tool(name = "okf_predicates", description = "Print the active BioOKF vocabulary: 28 node types, 24 predicates, knowledge_level/agent_type enums.")]
+    #[tool(name = "bokf_predicates", description = "Print the active BioOKF vocabulary: 28 node types, 24 predicates, knowledge_level/agent_type enums.")]
     pub async fn predicates(&self) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        use okf_core::model::{AGENT_TYPES, KNOWLEDGE_LEVELS, NODE_TYPES, PREDICATES};
+        use bokf_core::model::{AGENT_TYPES, KNOWLEDGE_LEVELS, NODE_TYPES, PREDICATES};
         let v = serde_json::json!({"node_types": NODE_TYPES, "predicates": PREDICATES, "knowledge_levels": KNOWLEDGE_LEVELS, "agent_types": AGENT_TYPES});
         ok(serde_json::to_string_pretty(&v).unwrap_or_default())
     }
 
-    #[tool(name = "okf_log_sync", description = "Append a dated log.md entry AND commit atomically (the sole step-committer). kind = ingest|convert|link|merge|lint|index|restore|manual.")]
+    #[tool(name = "bokf_log_sync", description = "Append a dated log.md entry AND commit atomically (the sole step-committer). kind = ingest|convert|link|merge|lint|index|restore|manual.")]
     pub async fn log_sync(&self, p: Parameters<LogSyncParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        use okf_core::git::{today_iso, ChangeKind};
-        match okf_core::log_sync::log_sync(Path::new(&p.0.bundle), ChangeKind::parse(&p.0.kind), &p.0.summary, p.0.delta.as_deref(), &today_iso()) {
+        use bokf_core::git::{today_iso, ChangeKind};
+        match bokf_core::log_sync::log_sync(Path::new(&p.0.bundle), ChangeKind::parse(&p.0.kind), &p.0.summary, p.0.delta.as_deref(), &today_iso()) {
             Ok(sha) => ok(format!("committed {} [{}] {}", &sha[..8.min(sha.len())], p.0.kind, p.0.summary)),
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
 
-    #[tool(name = "okf_log", description = "Show commit history (newest-first) as JSON.")]
+    #[tool(name = "bokf_log", description = "Show commit history (newest-first) as JSON.")]
     pub async fn log(&self, p: Parameters<LogParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        match okf_core::git::GitRepo::open(&p.0.bundle).log(p.0.limit.unwrap_or(20)) {
+        match bokf_core::git::GitRepo::open(&p.0.bundle).log(p.0.limit.unwrap_or(20)) {
             Ok(es) => ok(serde_json::to_string_pretty(&es).unwrap_or_default()),
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
 
-    #[tool(name = "okf_restore", description = "Forward-only restore the bundle to a prior commit sha.")]
+    #[tool(name = "bokf_restore", description = "Forward-only restore the bundle to a prior commit sha.")]
     pub async fn restore(&self, p: Parameters<RestoreParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        match okf_core::git::GitRepo::open(&p.0.bundle).restore_to(&p.0.sha, p.0.summary.as_deref()) {
+        match bokf_core::git::GitRepo::open(&p.0.bundle).restore_to(&p.0.sha, p.0.summary.as_deref()) {
             Ok(sha) => ok(format!("restored; new commit {}", &sha[..8.min(sha.len())])),
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
 
-    #[tool(name = "okf_set_active", description = "Set which KB is active under <root>.")]
+    #[tool(name = "bokf_set_active", description = "Set which KB is active under <root>.")]
     pub async fn set_active(&self, p: Parameters<RootKbParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        match okf_core::active::set_active(Path::new(&p.0.root), Some(&p.0.kb_id)) {
+        match bokf_core::active::set_active(Path::new(&p.0.root), Some(&p.0.kb_id)) {
             Ok(()) => ok(format!("active KB = {}", p.0.kb_id)),
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
 
-    #[tool(name = "okf_get_active", description = "Get the active KB id + resolved path under <root>.")]
+    #[tool(name = "bokf_get_active", description = "Get the active KB id + resolved path under <root>.")]
     pub async fn get_active(&self, p: Parameters<RootParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
         let root = Path::new(&p.0.root);
-        match okf_core::active::get_active(root) {
-            Some(id) => ok(serde_json::json!({"id": id, "path": okf_core::registry::resolve(root, &id)}).to_string()),
+        match bokf_core::active::get_active(root) {
+            Some(id) => ok(serde_json::json!({"id": id, "path": bokf_core::registry::resolve(root, &id)}).to_string()),
             None => ok(serde_json::json!({ "id": null }).to_string()),
         }
     }
@@ -258,8 +258,8 @@ impl OkfServer {
 #[tokio::main]
 async fn main() -> Result<()> {
     // stdout is the JSON-RPC stream; all logging must go to stderr.
-    let service = OkfServer::new().serve(stdio()).await.inspect_err(|e| {
-        eprintln!("okf-mcp serve error: {e:?}");
+    let service = BokfServer::new().serve(stdio()).await.inspect_err(|e| {
+        eprintln!("bokf-mcp serve error: {e:?}");
     })?;
     service.waiting().await?;
     Ok(())
