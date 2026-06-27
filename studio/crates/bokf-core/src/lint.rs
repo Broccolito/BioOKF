@@ -165,6 +165,31 @@ pub fn lint(bundle: &Bundle) -> LintReport {
                 );
             }
         }
+
+        // value-as-identifier: a bare measurement value is edge data, never a node
+        if looks_like_measurement_value(&n.identifier) {
+            r.push(Severity::Warn, "value.as_identifier", &n.identifier,
+                "identifier looks like a measurement value, not a standalone entity (values live on edges, never as nodes)".to_string(), path.clone());
+        }
+        // `Other` requires a `note:` explaining why no controlled type fits
+        if matches!(n.node_type, NodeType::Other) && n.note.is_none() {
+            r.push(Severity::Warn, "other.missing_note", &n.identifier,
+                "type `Other` requires a `note:` explaining why no controlled type fits".to_string(), path.clone());
+        }
+        // provenance link: a non-source node should carry a `reported_in` edge
+        if !n.node_type.is_provenance()
+            && !n.edges.iter().any(|e| matches!(e.predicate.base(), Predicate::ReportedIn))
+        {
+            r.push(Severity::Warn, "node.no_reported_in", &n.identifier,
+                "node has no `reported_in` edge linking it to a source".to_string(), path.clone());
+        }
+        // raw_source paths must resolve to a real file under the bundle
+        for rs in &n.raw_source {
+            if !bundle.root.join(rs).exists() {
+                r.push(Severity::Warn, "source.raw_missing_file", &n.identifier,
+                    format!("raw_source `{rs}` does not exist under the bundle"), path.clone());
+            }
+        }
     }
 
     // --- orphans ---
@@ -283,6 +308,48 @@ fn lint_edge(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, path: &Opt
     if matches!(e.predicate, Predicate::Regulates | Predicate::ExpressedIn) && e.direction.is_none() {
         r.push(Severity::Info, "edge.missing_direction", subj, format!("`{}` should carry a `direction` (increased/decreased)", e.predicate.as_str()), path.clone());
     }
+
+    // §7.3 quantitative sanity
+    if let (Some(lo), Some(hi)) = (stat_num(e, "ci_lower"), stat_num(e, "ci_upper")) {
+        if lo > hi {
+            r.push(Severity::Warn, "edge.stat_ci", subj, format!("ci_lower ({lo}) > ci_upper ({hi})"), path.clone());
+        }
+    }
+    if let Some(p) = stat_num(e, "p_value") {
+        if !(0.0..=1.0).contains(&p) {
+            r.push(Severity::Warn, "edge.stat_pvalue", subj, format!("p_value {p} is outside [0, 1]"), path.clone());
+        }
+    }
+}
+
+/// True when an identifier is a bare measurement value (e.g. `183 cm`, `2.9`, `45%`) — edge
+/// data masquerading as a node. Conservative: requires a leading number and at most a 1–3 letter
+/// (or `%`) unit, so real entities like `2-AG`, `5-HT`, `TP53` are not flagged.
+fn looks_like_measurement_value(id: &str) -> bool {
+    let s = id.trim();
+    let mut chars = s.chars().peekable();
+    match chars.peek() {
+        Some(c) if c.is_ascii_digit() => {}
+        _ => return false,
+    }
+    let mut seen_dot = false;
+    while let Some(&c) = chars.peek() {
+        if c.is_ascii_digit() {
+            chars.next();
+        } else if c == '.' && !seen_dot {
+            seen_dot = true;
+            chars.next();
+        } else {
+            break;
+        }
+    }
+    let rest: String = chars.collect();
+    let rest = rest.trim();
+    rest.is_empty() || rest == "%" || (rest.len() <= 3 && rest.chars().all(|c| c.is_ascii_alphabetic()))
+}
+
+fn stat_num(e: &Edge, key: &str) -> Option<f64> {
+    e.stats.get(key).and_then(|v| v.as_f64().or_else(|| v.as_i64().map(|i| i as f64)))
 }
 
 fn lint_domain_range(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, path: &Option<String>) {
@@ -441,5 +508,30 @@ mod tests {
         let b = "---\ntype: Study\nidentifier: TrialB\nsubtype: rct\nraw_source: [raw/b]\n---\n# b\n";
         let r = lint_docs(&[("molecule/drugx.md", drug), ("disease/asthma.md", dis), ("study/a.md", a), ("study/b.md", b)]);
         assert!(r.findings.iter().any(|f| f.rule == "edge.contradiction"), "{:?}", r.findings);
+    }
+
+    #[test]
+    fn value_as_identifier_flagged_but_not_real_entities() {
+        let val = "---\ntype: BiomedicalMeasure\nidentifier: 183 cm\nsubtype: anthropometric\n---\n# h\n";
+        let mol = "---\ntype: Molecule\nidentifier: 2-AG\nsubtype: lipid\n---\n# m\n";
+        let r = lint_docs(&[("biomedicalmeasure/h.md", val), ("molecule/2ag.md", mol)]);
+        assert!(r.findings.iter().any(|f| f.rule == "value.as_identifier" && f.subject == "183 cm"), "{:?}", r.findings);
+        assert!(!r.findings.iter().any(|f| f.rule == "value.as_identifier" && f.subject == "2-AG"), "{:?}", r.findings);
+    }
+
+    #[test]
+    fn other_requires_note() {
+        let other = "---\ntype: Other\nidentifier: Some thing\nsubtype: misc\n---\n# x\n";
+        let r = lint_docs(&[("other/x.md", other)]);
+        assert!(r.findings.iter().any(|f| f.rule == "other.missing_note"), "{:?}", r.findings);
+    }
+
+    #[test]
+    fn ci_ordering_flagged() {
+        let g = "---\ntype: Molecule\nidentifier: DrugZ\nsubtype: drug\nedges:\n  - predicate: treats\n    object: Flu\n    knowledge_level: statistical_association\n    agent_type: data_analysis_pipeline\n    primary_source: T1\n    ci_lower: 1.2\n    ci_upper: 0.8\n  - predicate: reported_in\n    object: T1\n    knowledge_level: knowledge_assertion\n    agent_type: manual_agent\n    primary_source: T1\n---\n# DrugZ\n";
+        let dis = "---\ntype: Disease\nidentifier: Flu\nsubtype: infection\n---\n# f\n";
+        let t1 = "---\ntype: Study\nidentifier: T1\nsubtype: rct\nraw_source: [raw/t1]\n---\n# t\n";
+        let r = lint_docs(&[("molecule/drugz.md", g), ("disease/flu.md", dis), ("study/t1.md", t1)]);
+        assert!(r.findings.iter().any(|f| f.rule == "edge.stat_ci"), "{:?}", r.findings);
     }
 }

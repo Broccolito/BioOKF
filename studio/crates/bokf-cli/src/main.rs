@@ -119,6 +119,14 @@ enum Cmd {
         #[arg(long)]
         unregister: Option<String>,
     },
+    /// Deterministic accountability gate: lint + structure checks; exits 1 on any error.
+    Verify {
+        path: PathBuf,
+        #[arg(long)]
+        workflow: Option<String>,
+        #[arg(long)]
+        json: bool,
+    },
 }
 
 fn main() {
@@ -146,7 +154,46 @@ fn run() -> Result<()> {
         Cmd::SetActive { root, kb_id } => cmd_set_active(root, kb_id),
         Cmd::GetActive { root, json } => cmd_get_active(root, json),
         Cmd::Register { root, kb_id, path, list, unregister } => cmd_register(root, kb_id, path, list, unregister),
+        Cmd::Verify { path, workflow, json } => cmd_verify(path, workflow, json),
     }
+}
+
+fn cmd_verify(path: PathBuf, workflow: Option<String>, json: bool) -> Result<()> {
+    let bundle = bokf_core::open_bundle(&path).with_context(|| format!("opening {}", path.display()))?;
+    let report = bokf_core::lint(&bundle);
+    let ok = report.errors() == 0;
+    let wf = workflow.unwrap_or_else(|| "any".to_string());
+    if json {
+        let v = serde_json::json!({
+            "ok": ok,
+            "workflow": wf,
+            "errors": report.errors(),
+            "warnings": report.warnings(),
+            "infos": report.infos(),
+            "has_index": bundle.has_index_md,
+            "has_log": bundle.has_log_md,
+            "findings": report.findings,
+        });
+        println!("{}", serde_json::to_string_pretty(&v)?);
+    } else {
+        println!(
+            "verify [{wf}]: {} — {} errors · {} warnings · {} infos (index.md={}, log.md={})",
+            if ok { "PASS" } else { "FAIL" },
+            report.errors(),
+            report.warnings(),
+            report.infos(),
+            bundle.has_index_md,
+            bundle.has_log_md
+        );
+        for f in report.findings.iter().filter(|f| f.severity != Severity::Info) {
+            let tag = if f.severity == Severity::Error { "ERROR" } else { "WARN " };
+            println!("  {tag} [{}] {}: {}", f.rule, f.subject, f.message);
+        }
+    }
+    if !ok {
+        std::process::exit(1);
+    }
+    Ok(())
 }
 
 fn cmd_set_active(root: PathBuf, kb_id: String) -> Result<()> {

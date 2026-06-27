@@ -69,6 +69,10 @@ param!(RootKbParam {
     #[doc = "Root directory that contains bundles."] root: String,
     #[doc = "KB id to make active."] kb_id: String,
 });
+param!(VerifyParam {
+    #[doc = "Path to the bundle directory."] bundle: String,
+    #[doc = "Workflow context: ingest|merge (optional)."] workflow: Option<String>,
+});
 
 #[derive(Clone)]
 pub struct BokfServer {
@@ -251,6 +255,24 @@ impl BokfServer {
         match bokf_core::active::get_active(root) {
             Some(id) => ok(serde_json::json!({"id": id, "path": bokf_core::registry::resolve(root, &id)}).to_string()),
             None => ok(serde_json::json!({ "id": null }).to_string()),
+        }
+    }
+
+    #[tool(name = "bokf_verify", description = "Deterministic accountability gate: lint + structure checks; returns ok=true iff zero errors. Use at the end of an ingest/merge run.")]
+    pub async fn verify(&self, p: Parameters<VerifyParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        match bokf_core::open_bundle(&p.0.bundle) {
+            Ok(b) => {
+                let r = bokf_core::lint(&b);
+                let v = serde_json::json!({
+                    "ok": r.errors() == 0,
+                    "workflow": p.0.workflow.unwrap_or_else(|| "any".into()),
+                    "errors": r.errors(), "warnings": r.warnings(), "infos": r.infos(),
+                    "has_index": b.has_index_md, "has_log": b.has_log_md,
+                    "findings": r.findings,
+                });
+                ok(serde_json::to_string_pretty(&v).unwrap_or_default())
+            }
+            Err(e) => ok(format!("ERROR opening bundle: {e}")),
         }
     }
 }

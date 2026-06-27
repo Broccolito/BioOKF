@@ -151,6 +151,24 @@ fn scaffold_registers_inits_and_activates() {
 }
 
 #[test]
+fn verify_gate_passes_clean_fails_dirty() {
+    let dir = tmp_bundle("verify");
+    std::fs::create_dir_all(dir.join("raw")).unwrap();
+    std::fs::write(dir.join("raw/s.md"), "raw").unwrap();
+    write(&dir.join("knowledge/publication/src.md"), "---\ntype: Publication\nidentifier: Src\nsubtype: article\nraw_source: [raw/s.md]\n---\n# s\n");
+    write(&dir.join("knowledge/gene/braf.md"), "---\ntype: Gene\nidentifier: BRAF\nsubtype: protein_coding\nedges:\n  - predicate: reported_in\n    object: Src\n    knowledge_level: knowledge_assertion\n    agent_type: manual_agent\n    primary_source: Src\n---\n# BRAF\n");
+    let out = Command::new(bokf()).args(["verify", dir.to_str().unwrap(), "--json"]).output().unwrap();
+    let v: serde_json::Value = serde_json::from_slice(&out.stdout).unwrap();
+    assert_eq!(v["ok"], true, "{}", String::from_utf8_lossy(&out.stdout));
+    assert!(out.status.success());
+    // dirty: an invalid type -> error -> gate fails
+    write(&dir.join("knowledge/other/bad.md"), "---\ntype: NotAType\nidentifier: Bad\n---\n# b\n");
+    let out2 = Command::new(bokf()).args(["verify", dir.to_str().unwrap()]).output().unwrap();
+    assert!(!out2.status.success());
+    let _ = std::fs::remove_dir_all(&dir);
+}
+
+#[test]
 fn end_to_end_scaffold_write_logsync_log_restore() {
     let root = tempfile::tempdir().unwrap();
     let bundle = root.path().join("demo-kb");
