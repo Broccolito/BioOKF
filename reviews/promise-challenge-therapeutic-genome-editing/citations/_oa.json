@@ -1,0 +1,1107 @@
+{
+  "article": {
+    "slug": "s41586-020-1978-5",
+    "doi": "10.1038/s41586-020-1978-5",
+    "title": "The promise and challenge of therapeutic genome editing",
+    "url": "https://www.nature.com/articles/s41586-020-1978-5",
+    "abbrev": "promise-challenge-therapeutic-genome-editing",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/promise-challenge-therapeutic-genome-editing"
+  },
+  "n_refs": 115,
+  "n_with_doi": 113,
+  "n_oa": 75,
+  "records": [
+    {
+      "doi": "10.1126/science.1225829",
+      "title": "",
+      "year": "2012",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6286148?pdf=render",
+      "file": "10.1126_science.1225829.md"
+    },
+    {
+      "doi": "10.1126/science.1231143",
+      "title": "",
+      "year": "2013",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1232033",
+      "title": "",
+      "year": "2013",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3712628?pdf=render",
+      "file": "10.1126_science.1232033.md"
+    },
+    {
+      "doi": "10.7554/elife.00471",
+      "title": "",
+      "year": "2013",
+      "journal": "eLife",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://elifesciences.org/articles/00471.bib",
+      "file": "10.7554_elife.00471.md"
+    },
+    {
+      "doi": "10.1038/nbt.2507",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aat5011",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6455913?pdf=render",
+      "file": "10.1126_science.aat5011.md"
+    },
+    {
+      "doi": "10.1016/j.jmb.2018.09.013",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Mol. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1080/07388551.2018.1554621",
+      "title": "",
+      "year": "2019",
+      "journal": "Crit. Rev. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.molcel.2018.09.018",
+      "title": "",
+      "year": "2018",
+      "journal": "Mol. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1097276518307895/pdf",
+      "file": "10.1016_j.molcel.2018.09.018.md"
+    },
+    {
+      "doi": "10.1056/nejmra1706910",
+      "title": "",
+      "year": "2019",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.110.2865.543",
+      "title": "",
+      "year": "1949",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/180326a0",
+      "title": "",
+      "year": "1957",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s13311-018-00687-z",
+      "title": "",
+      "year": "2018",
+      "journal": "Neurotherapeutics",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://link.springer.com/content/pdf/10.1007/s13311-018-00687-z.pdf",
+      "file": "10.1007_s13311-018-00687-z.md"
+    },
+    {
+      "doi": "10.1146/annurev-med-081117-010451",
+      "title": "",
+      "year": "2019",
+      "journal": "Annu. Rev. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1254445",
+      "title": "",
+      "year": "2014",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4398027?pdf=render",
+      "file": "10.1126_science.1254445.md"
+    },
+    {
+      "doi": "10.1038/nbt.1755",
+      "title": "",
+      "year": "2011",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1182/blood.v122.21.2904.2904",
+      "title": "",
+      "year": "2013",
+      "journal": "Blood",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.omtm.2016.12.009",
+      "title": "",
+      "year": "2017",
+      "journal": "Mol. Ther. Methods Clin. Dev.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2329050117300037/pdf",
+      "file": "10.1016_j.omtm.2016.12.009.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.aaj2013",
+      "title": "",
+      "year": "2017",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://discovery.ucl.ac.uk/1538479/1/QASIM%20aaj2013_final%20OA%20wq.pdf",
+      "file": "10.1126_scitranslmed.aaj2013.md"
+    },
+    {
+      "doi": "10.1073/pnas.1208507109",
+      "title": "",
+      "year": "2012",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/109/39/E2579.full.pdf",
+      "file": "10.1073_pnas.1208507109.md"
+    },
+    {
+      "doi": "10.1016/0092-8674(83)90331-8",
+      "title": "",
+      "year": "1983",
+      "journal": "Cell",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1128/mcb.24.21.9305-9316.2004",
+      "title": "",
+      "year": "2004",
+      "journal": "Mol. Cell. Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC522275?pdf=render",
+      "file": "10.1128_mcb.24.21.9305-9316.2004.md"
+    },
+    {
+      "doi": "10.1016/j.molcel.2018.02.028",
+      "title": "",
+      "year": "2018",
+      "journal": "Mol. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1097276518301734/pdf",
+      "file": "10.1016_j.molcel.2018.02.028.md"
+    },
+    {
+      "doi": "10.1038/nature17946",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4873371?pdf=render",
+      "file": "10.1038_nature17946.md"
+    },
+    {
+      "doi": "10.1126/science.aaf8729",
+      "title": "",
+      "year": "2016",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2018.08.057",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867418311188/pdf",
+      "file": "10.1016_j.cell.2018.08.057.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1711-4",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6907074?pdf=render",
+      "file": "10.1038_s41586-019-1711-4.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2013.02.022",
+      "title": "",
+      "year": "2013",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867413002110/pdf",
+      "file": "10.1016_j.cell.2013.02.022.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2014.09.029",
+      "title": "",
+      "year": "2014",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867414011787/pdf",
+      "file": "10.1016_j.cell.2014.09.029.md"
+    },
+    {
+      "doi": "10.1038/s41580-019-0131-5",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7079207?pdf=render",
+      "file": "10.1038_s41580-019-0131-5.md"
+    },
+    {
+      "doi": "10.1016/j.jmb.2018.06.037",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Mol. Biol.",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1016/j.jmb.2018.06.037",
+      "file": "10.1016_j.jmb.2018.06.037.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1161-z",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6657343?pdf=render",
+      "file": "10.1038_s41586-019-1161-z.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1314-0",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1182/blood-2017-10-811505",
+      "title": "",
+      "year": "2018",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ashpublications.org/blood/article-pdf/131/17/1960/1406045/blood811505.pdf",
+      "file": "10.1182_blood-2017-10-811505.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0208237",
+      "title": "",
+      "year": "2019",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0208237&type=printable",
+      "file": "10.1371_journal.pone.0208237.md"
+    },
+    {
+      "doi": "10.1038/mtna.2016.52",
+      "title": "",
+      "year": "2016",
+      "journal": "Mol. Ther. Nucleic Acids",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2162253117300690/pdf",
+      "file": "10.1038_mtna.2016.52.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2018.03.016",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867418302964/pdf",
+      "file": "10.1016_j.cell.2018.03.016.md"
+    },
+    {
+      "doi": "10.1002/jgm.2928",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Gene Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41588-018-0085-0",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Genet.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aao0932",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1182/blood-2018-07-863951",
+      "title": "",
+      "year": "2019",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ashpublications.org/blood/article-pdf/133/8/852/1557834/blood863951.pdf",
+      "file": "10.1182_blood-2018-07-863951.md"
+    },
+    {
+      "doi": "10.1002/stem.2935",
+      "title": "",
+      "year": "2019",
+      "journal": "Stem Cells",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/stem.2935",
+      "file": "10.1002_stem.2935.md"
+    },
+    {
+      "doi": "10.1073/pnas.1512503112",
+      "title": "",
+      "year": "2015",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/112/33/10437.full.pdf",
+      "file": "10.1073_pnas.1512503112.md"
+    },
+    {
+      "doi": "10.1038/nature20134",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5898607?pdf=render",
+      "file": "10.1038_nature20134.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.aaf9336",
+      "title": "",
+      "year": "2016",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://escholarship.org/content/qt7530b5tk/qt7530b5tk.pdf",
+      "file": "10.1126_scitranslmed.aaf9336.md"
+    },
+    {
+      "doi": "10.1038/s41591-019-0401-y",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/scitranslmed.aan8081",
+      "title": "",
+      "year": "2017",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5749406?pdf=render",
+      "file": "10.1126_scitranslmed.aan8081.md"
+    },
+    {
+      "doi": "10.1038/nature24644",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5726555?pdf=render",
+      "file": "10.1038_nature24644.md"
+    },
+    {
+      "doi": "10.1126/science.aau1549",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6205228?pdf=render",
+      "file": "10.1126_science.aau1549.md"
+    },
+    {
+      "doi": "10.1126/science.aav9973",
+      "title": "",
+      "year": "2019",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7301308?pdf=render",
+      "file": "10.1126_science.aav9973.md"
+    },
+    {
+      "doi": "10.1182/blood-2014-12-615492",
+      "title": "",
+      "year": "2015",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ashpublications.org/blood/article-pdf/126/15/1777/1389342/1777.pdf",
+      "file": "10.1182_blood-2014-12-615492.md"
+    },
+    {
+      "doi": "10.1016/j.ymthe.2018.03.002",
+      "title": "",
+      "year": "2018",
+      "journal": "Mol. Ther.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1525001618301102/pdf",
+      "file": "10.1016_j.ymthe.2018.03.002.md"
+    },
+    {
+      "doi": "10.1038/s41591-018-0327-9",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.celrep.2018.02.014",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2211124718301827/pdf",
+      "file": "10.1016_j.celrep.2018.02.014.md"
+    },
+    {
+      "doi": "10.1016/j.celrep.2016.09.080",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2211124716313365/pdf",
+      "file": "10.1016_j.celrep.2016.09.080.md"
+    },
+    {
+      "doi": "10.1016/j.braindev.2017.03.024",
+      "title": "",
+      "year": "2017",
+      "journal": "Brain Dev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1056/nejmoa1706198",
+      "title": "",
+      "year": "2017",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa1706198?articleTools=true",
+      "file": "10.1056_nejmoa1706198.md"
+    },
+    {
+      "doi": "10.1038/nbt.3469",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4786489?pdf=render",
+      "file": "10.1038_nbt.3469.md"
+    },
+    {
+      "doi": "10.12688/f1000research.11243.1",
+      "title": "",
+      "year": "2017",
+      "journal": "F1000Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://f1000research.com/articles/6-2153/v1/pdf",
+      "file": "10.12688_f1000research.11243.1.md"
+    },
+    {
+      "doi": "10.1038/ncomms14454",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms14454.pdf",
+      "file": "10.1038_ncomms14454.md"
+    },
+    {
+      "doi": "10.1126/science.aad5143",
+      "title": "",
+      "year": "2016",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aad5177",
+      "title": "",
+      "year": "2016",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3389/fimmu.2018.02080",
+      "title": "",
+      "year": "2018",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6141737?pdf=render",
+      "file": "10.3389_fimmu.2018.02080.md"
+    },
+    {
+      "doi": "10.1038/ncomms14500",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms14500.pdf",
+      "file": "10.1038_ncomms14500.md"
+    },
+    {
+      "doi": "10.1038/s41591-018-0326-x",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7199589?pdf=render",
+      "file": "10.1038_s41591-018-0326-x.md"
+    },
+    {
+      "doi": "10.1016/j.omtm.2018.06.006",
+      "title": "",
+      "year": "2018",
+      "journal": "Mol. Ther. Methods Clin. Dev.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2329050118300603/pdf",
+      "file": "10.1016_j.omtm.2018.06.006.md"
+    },
+    {
+      "doi": "10.1007/978-1-4939-9065-8_6",
+      "title": "",
+      "year": "2019",
+      "journal": "Methods Mol. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/978-1-4939-9065-8_5",
+      "title": "",
+      "year": "2019",
+      "journal": "Methods Mol. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1089/hgtb.2018.228",
+      "title": "",
+      "year": "2019",
+      "journal": "Hum. Gene Ther. Methods",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.liebertpub.com/doi/pdf/10.1089/hgtb.2018.228",
+      "file": "10.1089_hgtb.2018.228.md"
+    },
+    {
+      "doi": "10.1002/anie.201610209",
+      "title": "",
+      "year": "2017",
+      "journal": "Angew. Chem. Int. Edn",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5521011?pdf=render",
+      "file": "10.1002_anie.201610209.md"
+    },
+    {
+      "doi": "10.1073/pnas.1520244113",
+      "title": "",
+      "year": "2016",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/113/11/2868.full.pdf",
+      "file": "10.1073_pnas.1520244113.md"
+    },
+    {
+      "doi": "10.1038/s41467-018-04580-3",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-018-04580-3.pdf",
+      "file": "10.1038_s41467-018-04580-3.md"
+    },
+    {
+      "doi": "10.1038/nature25164",
+      "title": "",
+      "year": "2018",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5784267?pdf=render",
+      "file": "10.1038_nature25164.md"
+    },
+    {
+      "doi": "10.1038/nbt.3081",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4289409?pdf=render",
+      "file": "10.1038_nbt.3081.md"
+    },
+    {
+      "doi": "10.1038/nbt.3806",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6649674?pdf=render",
+      "file": "10.1038_nbt.3806.md"
+    },
+    {
+      "doi": "10.1038/mt.2014.30",
+      "title": "",
+      "year": "2014",
+      "journal": "Mol. Ther.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1525001616306967/pdf",
+      "file": "10.1038_mt.2014.30.md"
+    },
+    {
+      "doi": "10.1038/s41551-017-0158-x",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Biomed. Eng.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41551-017-0137-2",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Biomed. Eng.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5968829?pdf=render",
+      "file": "10.1038_s41551-017-0137-2.md"
+    },
+    {
+      "doi": "10.1073/pnas.1811276115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6196543?pdf=render",
+      "file": "10.1073_pnas.1811276115.md"
+    },
+    {
+      "doi": "10.1007/978-1-4939-8831-0_10",
+      "title": "",
+      "year": "2019",
+      "journal": "Methods Mol. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1371/journal.pone.0206360",
+      "title": "",
+      "year": "2018",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0206360&type=printable",
+      "file": "10.1371_journal.pone.0206360.md"
+    },
+    {
+      "doi": "10.1038/mt.2015.192",
+      "title": "",
+      "year": "2016",
+      "journal": "Mol. Ther.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1525001616309741/pdf",
+      "file": "10.1038_mt.2015.192.md"
+    },
+    {
+      "doi": "10.1101/gr.171322.113",
+      "title": "",
+      "year": "2014",
+      "journal": "Genome Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://genome.cshlp.org/content/24/6/1012.full.pdf",
+      "file": "10.1101_gr.171322.113.md"
+    },
+    {
+      "doi": "10.7554/elife.04766",
+      "title": "",
+      "year": "2014",
+      "journal": "eLife",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://elifesciences.org/articles/04766.bib",
+      "file": "10.7554_elife.04766.md"
+    },
+    {
+      "doi": "10.1093/nar/gkx154",
+      "title": "",
+      "year": "2017",
+      "journal": "Nucleic Acids Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/nar/article-pdf/45/11/e98/25366729/gkx154.pdf",
+      "file": "10.1093_nar_gkx154.md"
+    },
+    {
+      "doi": "10.1021/jacs.8b01551",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Am. Chem. Soc.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/jacs.8b10299",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Am. Chem. Soc.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41573-018-0006-z",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Rev. Drug Discov.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6410566?pdf=render",
+      "file": "10.1038_s41573-018-0006-z.md"
+    },
+    {
+      "doi": "10.1016/j.ejps.2016.07.021",
+      "title": "",
+      "year": "2017",
+      "journal": "Eur. J. Pharm. Sci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1039/c7nr05219g",
+      "title": "",
+      "year": "2017",
+      "journal": "Nanoscale",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1146/annurev-biochem-013118-111730",
+      "title": "",
+      "year": "2019",
+      "journal": "Annu. Rev. Biochem.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nbt.4192",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6390938?pdf=render",
+      "file": "10.1038_nbt.4192.md"
+    },
+    {
+      "doi": "10.1158/0008-5472.can-14-3321",
+      "title": "",
+      "year": "2015",
+      "journal": "Cancer Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.7554/elife.27873",
+      "title": "",
+      "year": "2017",
+      "journal": "eLife",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6239432?pdf=render",
+      "file": "10.7554_elife.27873.md"
+    },
+    {
+      "doi": "10.1089/scd.2010.0058",
+      "title": "",
+      "year": "2010",
+      "journal": "Stem Cells Dev.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3128311?pdf=render",
+      "file": "10.1089_scd.2010.0058.md"
+    },
+    {
+      "doi": "10.1182/blood-2015-05-646398",
+      "title": "",
+      "year": "2015",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ashpublications.org/blood/article-pdf/126/14/1683/1389098/1683.pdf",
+      "file": "10.1182_blood-2015-05-646398.md"
+    },
+    {
+      "doi": "10.1038/nature13902",
+      "title": "",
+      "year": "2014",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4270925?pdf=render",
+      "file": "10.1038_nature13902.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2013.06.044",
+      "title": "",
+      "year": "2013",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S009286741300826X/pdf",
+      "file": "10.1016_j.cell.2013.06.044.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2016.08.056",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867416311539/pdf",
+      "file": "10.1016_j.cell.2016.08.056.md"
+    },
+    {
+      "doi": "10.1089/crispr.2019.0052",
+      "title": "",
+      "year": "2019",
+      "journal": "CRISPR J.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41591-018-0204-6",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41591-018-0049-z",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/10138/303675",
+      "file": "10.1038_s41591-018-0049-z.md"
+    },
+    {
+      "doi": "10.1038/s41591-018-0050-6",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.stem.2019.02.019",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell Stem Cell",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1056/nejmoa1817426",
+      "title": "",
+      "year": "2019",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa1817426?articleTools=true",
+      "file": "10.1056_nejmoa1817426.md"
+    },
+    {
+      "doi": "10.1056/nejmra1800729",
+      "title": "",
+      "year": "2019",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s13238-015-0153-5",
+      "title": "",
+      "year": "2015",
+      "journal": "Protein Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://link.springer.com/content/pdf/10.1007/s13238-015-0153-5.pdf",
+      "file": "10.1007_s13238-015-0153-5.md"
+    },
+    {
+      "doi": "10.1038/nature24033",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/nature24033.pdf",
+      "file": "10.1038_nature24033.md"
+    },
+    {
+      "doi": "10.1007/s00438-017-1299-z",
+      "title": "",
+      "year": "2017",
+      "journal": "Mol. Genet. Genomics",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature23305",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/eurheartj/ehy179",
+      "title": "",
+      "year": "2018",
+      "journal": "Eur. Heart J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/eurheartj/article-pdf/39/17/1506/24742854/ehy179.pdf",
+      "file": "10.1093_eurheartj_ehy179.md"
+    },
+    {
+      "doi": "10.1038/s41586-018-0379-5",
+      "title": "",
+      "year": "2018",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-018-0379-5.pdf",
+      "file": "10.1038_s41586-018-0379-5.md"
+    },
+    {
+      "doi": "10.1016/j.ajhg.2017.06.012",
+      "title": "",
+      "year": "2017",
+      "journal": "Am. J. Hum. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0002929717302471/pdf",
+      "file": "10.1016_j.ajhg.2017.06.012.md"
+    }
+  ]
+}

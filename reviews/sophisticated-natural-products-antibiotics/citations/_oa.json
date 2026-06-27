@@ -1,0 +1,1110 @@
+{
+  "article": {
+    "slug": "s41586-024-07530-w",
+    "doi": "10.1038/s41586-024-07530-w",
+    "title": "Sophisticated natural products as antibiotics",
+    "url": "https://www.nature.com/articles/s41586-024-07530-w",
+    "abbrev": "sophisticated-natural-products-antibiotics",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/sophisticated-natural-products-antibiotics"
+  },
+  "n_refs": 115,
+  "n_with_doi": 113,
+  "n_oa": 78,
+  "records": [
+    {
+      "doi": "10.1016/j.cell.2020.02.056",
+      "title": "",
+      "year": "2020",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867420302336/pdf",
+      "file": "10.1016_j.cell.2020.02.056.md"
+    },
+    {
+      "doi": "10.1016/s1473-3099(17)30753-3",
+      "title": "",
+      "year": "2018",
+      "journal": "Lancet Infect. Dis.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://scholarship.law.bu.edu/faculty_scholarship/253",
+      "file": "10.1016_s1473-3099_17_30753-3.md"
+    },
+    {
+      "doi": "10.1016/s0140-6736(21)02724-0",
+      "title": "",
+      "year": "2022",
+      "journal": "Lancet",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S0140673621027240/pdf",
+      "file": "10.1016_s0140-6736_21_02724-0.md"
+    },
+    {
+      "doi": "10.1016/j.jinf.2018.02.007",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Infect.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1186/s12941-017-0191-3",
+      "title": "",
+      "year": "2017",
+      "journal": "Ann. Clin. Microbiol. Antimicrob.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ann-clinmicrob.biomedcentral.com/track/pdf/10.1186/s12941-017-0191-3",
+      "file": "10.1186_s12941-017-0191-3.md"
+    },
+    {
+      "doi": "10.1016/j.resmic.2018.02.002",
+      "title": "",
+      "year": "2018",
+      "journal": "Res. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1146/annurev.mi.39.100185.001541",
+      "title": "",
+      "year": "1985",
+      "journal": "Annu. Rev. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.chembiol.2010.02.010",
+      "title": "",
+      "year": "2010",
+      "journal": "Chem. Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2895992?pdf=render",
+      "file": "10.1016_j.chembiol.2010.02.010.md"
+    },
+    {
+      "doi": "10.1186/s40168-017-0380-5",
+      "title": "",
+      "year": "2017",
+      "journal": "Microbiome",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://microbiomejournal.biomedcentral.com/counter/pdf/10.1186/s40168-017-0380-5",
+      "file": "10.1186_s40168-017-0380-5.md"
+    },
+    {
+      "doi": "10.1038/s41564-018-0307-3",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature14098",
+      "title": "",
+      "year": "2015",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7414797?pdf=render",
+      "file": "10.1038_nature14098.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2023.07.038",
+      "title": "",
+      "year": "2023",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S009286742300853X/pdf",
+      "file": "10.1016_j.cell.2023.07.038.md"
+    },
+    {
+      "doi": "10.1016/j.molcel.2018.03.001",
+      "title": "",
+      "year": "2018",
+      "journal": "Mol. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1097276518301825/pdf",
+      "file": "10.1016_j.molcel.2018.03.001.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1791-1",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7188312?pdf=render",
+      "file": "10.1038_s41586-019-1791-1.md"
+    },
+    {
+      "doi": "10.1038/s41589-022-01102-7",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Chem. Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9844538?pdf=render",
+      "file": "10.1038_s41589-022-01102-7.md"
+    },
+    {
+      "doi": "10.1038/s41564-022-01227-4",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10155127/pdf/nihms-1885104.pdf",
+      "file": "10.1038_s41564-022-01227-4.md"
+    },
+    {
+      "doi": "10.1128/mbio.00700-22",
+      "title": "",
+      "year": "2022",
+      "journal": "mBio",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9239236?pdf=render",
+      "file": "10.1128_mbio.00700-22.md"
+    },
+    {
+      "doi": "10.1038/s41467-022-32858-0",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-022-32858-0.pdf",
+      "file": "10.1038_s41467-022-32858-0.md"
+    },
+    {
+      "doi": "10.1038/s41564-022-01110-2",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Microbiol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://research.wur.nl/en/publications/compendium-of-specialized-metabolite-biosynthetic-diversity-encod",
+      "file": "10.1038_s41564-022-01110-2.md"
+    },
+    {
+      "doi": "10.1021/jm700967e",
+      "title": "",
+      "year": "2008",
+      "journal": "J. Med. Chem.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature22308",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1128/mbio.02785-20",
+      "title": "",
+      "year": "2021",
+      "journal": "mBio",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7845643?pdf=render",
+      "file": "10.1128_mbio.02785-20.md"
+    },
+    {
+      "doi": "10.1038/s41589-020-00674-6",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Chem. Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7897441?pdf=render",
+      "file": "10.1038_s41589-020-00674-6.md"
+    },
+    {
+      "doi": "10.1021/acs.jcim.0c00352",
+      "title": "",
+      "year": "2020",
+      "journal": "J. Chem. Inf. Model.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7768862?pdf=render",
+      "file": "10.1021_acs.jcim.0c00352.md"
+    },
+    {
+      "doi": "10.1038/s41586-023-06760-8",
+      "title": "",
+      "year": "2023",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11254092/pdf/nihms-1996636.pdf",
+      "file": "10.1038_s41586-023-06760-8.md"
+    },
+    {
+      "doi": "10.1038/s41564-019-0604-5",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Microbiol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6953607?pdf=render",
+      "file": "10.1038_s41564-019-0604-5.md"
+    },
+    {
+      "doi": "10.1038/s41586-021-03899-0",
+      "title": "",
+      "year": "2021",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1182749",
+      "title": "",
+      "year": "2010",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": ""
+    },
+    {
+      "doi": "10.1038/s41586-019-1665-6",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-023-06799-7",
+      "title": "",
+      "year": "2024",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-023-06799-7.pdf",
+      "file": "10.1038_s41586-023-06799-7.md"
+    },
+    {
+      "doi": "10.1038/s41586-023-06873-0",
+      "title": "",
+      "year": "2024",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-023-06873-0.pdf",
+      "file": "10.1038_s41586-023-06873-0.md"
+    },
+    {
+      "doi": "10.1039/d1md00200g",
+      "title": "",
+      "year": "2021",
+      "journal": "RSC Med. Chem.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8528271?pdf=render",
+      "file": "10.1039_d1md00200g.md"
+    },
+    {
+      "doi": "10.1038/nrd2202",
+      "title": "",
+      "year": "2007",
+      "journal": "Nat. Rev. Drug Discov.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1128/aac.11.5.852",
+      "title": "",
+      "year": "1977",
+      "journal": "Antimicrob. Agents Chemother.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC352086?pdf=render",
+      "file": "10.1128_aac.11.5.852.md"
+    },
+    {
+      "doi": "10.1128/aac.03579-14",
+      "title": "",
+      "year": "2014",
+      "journal": "Antimicrob. Agents Chemother.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aac.asm.org/content/aac/58/11/6490.full.pdf",
+      "file": "10.1128_aac.03579-14.md"
+    },
+    {
+      "doi": "10.1007/s40121-018-0214-1",
+      "title": "",
+      "year": "2018",
+      "journal": "Infect. Dis. Ther.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://link.springer.com/content/pdf/10.1007%2Fs40121-018-0214-1.pdf",
+      "file": "10.1007_s40121-018-0214-1.md"
+    },
+    {
+      "doi": "10.1038/nbt1206-1504",
+      "title": "",
+      "year": "2006",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.030540597",
+      "title": "",
+      "year": "2000",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC26451?pdf=render",
+      "file": "10.1073_pnas.030540597.md"
+    },
+    {
+      "doi": "10.1021/acsinfecdis.2c00263",
+      "title": "",
+      "year": "2022",
+      "journal": "ACS Infect. Dis.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9942517?pdf=render",
+      "file": "10.1021_acsinfecdis.2c00263.md"
+    },
+    {
+      "doi": "10.1136/gutjnl-2018-317503",
+      "title": "",
+      "year": "2019",
+      "journal": "Gut",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://gut.bmj.com/content/gutjnl/68/6/1108.full.pdf",
+      "file": "10.1136_gutjnl-2018-317503.md"
+    },
+    {
+      "doi": "10.1038/s41575-022-00610-0",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Rev. Gastroenterol. Hepatol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.celrep.2022.110649",
+      "title": "",
+      "year": "2022",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2211124722004016/pdf",
+      "file": "10.1016_j.celrep.2022.110649.md"
+    },
+    {
+      "doi": "10.1056/nejmoa2106516",
+      "title": "",
+      "year": "2022",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa2106516?articleTools=true",
+      "file": "10.1056_nejmoa2106516.md"
+    },
+    {
+      "doi": "10.1186/1757-4749-5-23",
+      "title": "",
+      "year": "2013",
+      "journal": "Gut Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://gutpathogens.biomedcentral.com/counter/pdf/10.1186/1757-4749-5-23",
+      "file": "10.1186_1757-4749-5-23.md"
+    },
+    {
+      "doi": "10.1128/aac.39.11.2484",
+      "title": "",
+      "year": "1995",
+      "journal": "Antimicrob. Agents Chemother.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC162969?pdf=render",
+      "file": "10.1128_aac.39.11.2484.md"
+    },
+    {
+      "doi": "10.1177/1060028013504087",
+      "title": "",
+      "year": "2014",
+      "journal": "Ann. Pharmacother.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3389/fcimb.2021.673100",
+      "title": "",
+      "year": "2021",
+      "journal": "Front. Cell. Infect. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fcimb.2021.673100/pdf",
+      "file": "10.3389_fcimb.2021.673100.md"
+    },
+    {
+      "doi": "10.1128/mbio.01516-20",
+      "title": "",
+      "year": "2020",
+      "journal": "mBio",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7407088?pdf=render",
+      "file": "10.1128_mbio.01516-20.md"
+    },
+    {
+      "doi": "10.3390/antibiotics11091218",
+      "title": "",
+      "year": "2022",
+      "journal": "Antibiotics",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/2079-6382/11/9/1218/pdf?version=1662645992",
+      "file": "10.3390_antibiotics11091218.md"
+    },
+    {
+      "doi": "10.1038/s41586-020-2072-8",
+      "title": "",
+      "year": "2020",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-020-2072-8.pdf",
+      "file": "10.1038_s41586-020-2072-8.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2021.09.011",
+      "title": "",
+      "year": "2021",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8526400?pdf=render",
+      "file": "10.1016_j.cell.2021.09.011.md"
+    },
+    {
+      "doi": "10.1038/nsmb.2992",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4401423?pdf=render",
+      "file": "10.1038_nsmb.2992.md"
+    },
+    {
+      "doi": "10.1016/0006-291x(66)90188-4",
+      "title": "",
+      "year": "1966",
+      "journal": "Biochem. Biophys. Res. Commun.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.bbamem.2015.04.014",
+      "title": "",
+      "year": "2015",
+      "journal": "Biochim. Biophys. Acta",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1056/nejm198807213190307",
+      "title": "",
+      "year": "1988",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.94.12.6480",
+      "title": "",
+      "year": "1997",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC21075?pdf=render",
+      "file": "10.1073_pnas.94.12.6480.md"
+    },
+    {
+      "doi": "10.1038/s41586-022-05019-y",
+      "title": "",
+      "year": "2022",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-022-05019-y.pdf",
+      "file": "10.1038_s41586-022-05019-y.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2023.07.038",
+      "title": "",
+      "year": "2023",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S009286742300853X/pdf",
+      "file": "10.1016_j.cell.2023.07.038.md"
+    },
+    {
+      "doi": "10.1128/aac.01050-16",
+      "title": "",
+      "year": "2016",
+      "journal": "Antimicrob. Agents Chemother.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aac.asm.org/content/aac/60/11/6510.full.pdf",
+      "file": "10.1128_aac.01050-16.md"
+    },
+    {
+      "doi": "10.3181/00379727-55-14461",
+      "title": "",
+      "year": "1944",
+      "journal": "Proc. Soc. Exp. Biol. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nrmicro3155",
+      "title": "",
+      "year": "2014",
+      "journal": "Nat. Rev. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.2013315118",
+      "title": "",
+      "year": "2021",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/doi/full/10.1073/pnas.2013315118",
+      "file": "10.1073_pnas.2013315118.md"
+    },
+    {
+      "doi": "10.1007/bf00332630",
+      "title": "",
+      "year": "1982",
+      "journal": "Mol. Genetics Genomics",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41467-021-21942-6",
+      "title": "",
+      "year": "2021",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-021-21942-6.pdf",
+      "file": "10.1038_s41467-021-21942-6.md"
+    },
+    {
+      "doi": "10.1016/j.sbi.2009.08.003",
+      "title": "",
+      "year": "2009",
+      "journal": "Curr. Opin. Struct. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aaa4690",
+      "title": "",
+      "year": "2015",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/978-3-030-25241-0",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1371/journal.pbio.1000317",
+      "title": "",
+      "year": "2010",
+      "journal": "PLoS Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.1000317&type=printable",
+      "file": "10.1371_journal.pbio.1000317.md"
+    },
+    {
+      "doi": "10.1111/mmi.13607",
+      "title": "",
+      "year": "2017",
+      "journal": "Mol. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/mmi.13607",
+      "file": "10.1111_mmi.13607.md"
+    },
+    {
+      "doi": "10.1073/pnas.1904309116",
+      "title": "",
+      "year": "2019",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/116/32/15901.full.pdf",
+      "file": "10.1073_pnas.1904309116.md"
+    },
+    {
+      "doi": "10.1038/nature14662",
+      "title": "",
+      "year": "2015",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7502270?pdf=render",
+      "file": "10.1038_nature14662.md"
+    },
+    {
+      "doi": "10.1371/journal.pbio.3001194",
+      "title": "",
+      "year": "2021",
+      "journal": "PLoS Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.3001194&type=printable",
+      "file": "10.1371_journal.pbio.3001194.md"
+    },
+    {
+      "doi": "10.1128/spectrum.02948-22",
+      "title": "",
+      "year": "2022",
+      "journal": "Microbiol. Spectr.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9602276?pdf=render",
+      "file": "10.1128_spectrum.02948-22.md"
+    },
+    {
+      "doi": "10.1128/aac.02136-13",
+      "title": "",
+      "year": "2014",
+      "journal": "Antimicrob. Agents Chemother.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aac.asm.org/content/aac/58/3/1410.full.pdf",
+      "file": "10.1128_aac.02136-13.md"
+    },
+    {
+      "doi": "10.1021/np500158q",
+      "title": "",
+      "year": "2014",
+      "journal": "J. Nat. Prod.",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.7270/q22r3t71",
+      "file": "10.1021_np500158q.md"
+    },
+    {
+      "doi": "10.1128/aem.01292-19",
+      "title": "",
+      "year": "2019",
+      "journal": "Appl. Environ. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aem.asm.org/content/aem/85/20/e01292-19.full.pdf",
+      "file": "10.1128_aem.01292-19.md"
+    },
+    {
+      "doi": "10.1038/nm1306",
+      "title": "",
+      "year": "2005",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nsmb.2885",
+      "title": "",
+      "year": "2014",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4190165?pdf=render",
+      "file": "10.1038_nsmb.2885.md"
+    },
+    {
+      "doi": "10.1073/pnas.1805125115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6048506?pdf=render",
+      "file": "10.1073_pnas.1805125115.md"
+    },
+    {
+      "doi": "10.1021/acsinfecdis.9b00245",
+      "title": "",
+      "year": "2019",
+      "journal": "ACS Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.osti.gov/servlets/purl/1575009",
+      "file": "10.1021_acsinfecdis.9b00245.md"
+    },
+    {
+      "doi": "10.1002/cbic.201900787",
+      "title": "",
+      "year": "2020",
+      "journal": "ChemBioChem",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/cbic.201900787",
+      "file": "10.1002_cbic.201900787.md"
+    },
+    {
+      "doi": "10.1038/s41594-019-0304-0",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.7554/elife.52158",
+      "title": "",
+      "year": "2020",
+      "journal": "eLife",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7112952?pdf=render",
+      "file": "10.7554_elife.52158.md"
+    },
+    {
+      "doi": "10.7554/elife.52774",
+      "title": "",
+      "year": "2020",
+      "journal": "eLife",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7112951?pdf=render",
+      "file": "10.7554_elife.52774.md"
+    },
+    {
+      "doi": "10.1073/pnas.1110385108",
+      "title": "",
+      "year": "2011",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s42003-021-01789-9",
+      "title": "",
+      "year": "2021",
+      "journal": "Commun. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s42003-021-01789-9.pdf",
+      "file": "10.1038_s42003-021-01789-9.md"
+    },
+    {
+      "doi": "10.1038/nature12790",
+      "title": "",
+      "year": "2013",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1128/aac.01554-19",
+      "title": "",
+      "year": "2019",
+      "journal": "Antimicrob. Agents Chemother.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aac.asm.org/content/aac/64/1/e01554-19.full.pdf",
+      "file": "10.1128_aac.01554-19.md"
+    },
+    {
+      "doi": "10.1128/aac.00424-18",
+      "title": "",
+      "year": "2018",
+      "journal": "Antimicrob. Agents Chemother.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aac.asm.org/content/aac/62/8/e00424-18.full.pdf",
+      "file": "10.1128_aac.00424-18.md"
+    },
+    {
+      "doi": "10.3389/fmolb.2021.690902",
+      "title": "",
+      "year": "2021",
+      "journal": "Front. Mol. Biosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fmolb.2021.690902/pdf",
+      "file": "10.3389_fmolb.2021.690902.md"
+    },
+    {
+      "doi": "10.1016/j.ijmm.2013.11.009",
+      "title": "",
+      "year": "2014",
+      "journal": "Int. J. Med. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1159/000517718",
+      "title": "",
+      "year": "2021",
+      "journal": "Microb. Physiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.karger.com/Article/Pdf/517718",
+      "file": "10.1159_000517718.md"
+    },
+    {
+      "doi": "10.1126/sciadv.adg3683",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/doi/pdf/10.1126/sciadv.adg3683?download=true",
+      "file": "10.1126_sciadv.adg3683.md"
+    },
+    {
+      "doi": "10.1021/jacs.2c05565",
+      "title": "",
+      "year": "2022",
+      "journal": "J. Am. Chem. Soc.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9588720?pdf=render",
+      "file": "10.1021_jacs.2c05565.md"
+    },
+    {
+      "doi": "10.1038/s41586-021-03455-w",
+      "title": "",
+      "year": "2021",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": ""
+    },
+    {
+      "doi": "10.1039/d1sc02725e",
+      "title": "",
+      "year": "2021",
+      "journal": "Chem. Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pubs.rsc.org/en/content/articlepdf/2021/sc/d1sc02725e",
+      "file": "10.1039_d1sc02725e.md"
+    },
+    {
+      "doi": "10.1002/anie.202214094",
+      "title": "",
+      "year": "2022",
+      "journal": "Angew. Chem. Int. Ed. Engl.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/anie.202214094",
+      "file": "10.1002_anie.202214094.md"
+    },
+    {
+      "doi": "10.1021/jacs.2c05892",
+      "title": "",
+      "year": "2022",
+      "journal": "J. Am. Chem. Soc.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9829381?pdf=render",
+      "file": "10.1021_jacs.2c05892.md"
+    },
+    {
+      "doi": "10.1021/jacs.2c05891",
+      "title": "",
+      "year": "2022",
+      "journal": "J. Am. Chem. Soc.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.drudis.2016.06.012",
+      "title": "",
+      "year": "2016",
+      "journal": "Drug Discov. Today",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1248/cpb1953.3.379",
+      "title": "",
+      "year": "1955",
+      "journal": "Pharm. Bull.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jstage.jst.go.jp/article/cpb1953/3/5/3_5_379/_pdf",
+      "file": "10.1248_cpb1953.3.379.md"
+    },
+    {
+      "doi": "10.7164/antibiotics.42.1513",
+      "title": "",
+      "year": "1989",
+      "journal": "J. Antibiot.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jstage.jst.go.jp/article/antibiotics1968/42/10/42_10_1513/_pdf",
+      "file": "10.7164_antibiotics.42.1513.md"
+    },
+    {
+      "doi": "10.3390/ph15050561",
+      "title": "",
+      "year": "2022",
+      "journal": "Pharmaceuticals",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9144801?pdf=render",
+      "file": "10.3390_ph15050561.md"
+    },
+    {
+      "doi": "10.1099/00221287-100-2-283",
+      "title": "",
+      "year": "1977",
+      "journal": "J. Gen. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/acs.accounts.1c00004",
+      "title": "",
+      "year": "2021",
+      "journal": "Acc. Chem. Res.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9262095?pdf=render",
+      "file": "10.1021_acs.accounts.1c00004.md"
+    },
+    {
+      "doi": "10.1093/cid/ciz826",
+      "title": "",
+      "year": "2019",
+      "journal": "Clin. Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/cid/article-pdf/69/Supplement_7/S538/30678456/ciz826.pdf",
+      "file": "10.1093_cid_ciz826.md"
+    },
+    {
+      "doi": "10.1016/j.antiviral.2009.10.002",
+      "title": "",
+      "year": "2010",
+      "journal": "Antiviral Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.74.12.5463",
+      "title": "",
+      "year": "1977",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC431765?pdf=render",
+      "file": "10.1073_pnas.74.12.5463.md"
+    },
+    {
+      "doi": "10.1038/nm.2015",
+      "title": "",
+      "year": "2009",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3034219?pdf=render",
+      "file": "10.1038_nm.2015.md"
+    },
+    {
+      "doi": "10.1126/science.abm3233",
+      "title": "",
+      "year": "2022",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9993714?pdf=render",
+      "file": "10.1126_science.abm3233.md"
+    },
+    {
+      "doi": "10.1126/science.abp9960",
+      "title": "",
+      "year": "2022",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/scitranslmed.abo7793",
+      "title": "",
+      "year": "2022",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-018-0483-6",
+      "title": "",
+      "year": "2018",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    }
+  ]
+}

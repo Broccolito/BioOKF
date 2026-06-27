@@ -1,0 +1,1281 @@
+{
+  "article": {
+    "slug": "s41586-021-03578-0",
+    "doi": "10.1038/s41586-021-03578-0",
+    "title": "A multilayered immune system through the lens of unconventional T cells",
+    "url": "https://www.nature.com/articles/s41586-021-03578-0",
+    "abbrev": "multilayered-immune-system-lens-unconventional-cells",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/multilayered-immune-system-lens-unconventional-cells"
+  },
+  "meta": {
+    "title": "A multilayered immune system through the lens of unconventional T cells",
+    "authors": [
+      "Toufic Mayassi",
+      "Luis B. Barreiro",
+      "Jamie Rossjohn",
+      "Bana Jabri"
+    ],
+    "published": [
+      2021,
+      7,
+      21
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-021-03578-0",
+    "n_references": 139,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "3578_CR1",
+      "doi": "10.1038/nri1309",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2004",
+      "author": "DI Godfrey",
+      "unstructured": "Godfrey, D. I., MacDonald, H. R., Kronenberg, M., Smyth, M. J. & Van Kaer, L. NKT cells: what\u2019s in a name? Nat. Rev. Immunol. 4, 231\u2013237 (2004)."
+    },
+    {
+      "key": "3578_CR2",
+      "doi": "10.1111/j.0105-2896.2006.00418.x",
+      "title": "",
+      "journal": "Immunol. Rev.",
+      "year": "2006",
+      "author": "L Lu",
+      "unstructured": "Lu, L., Werneck, M. B. F. & Cantor, H. The immunoregulatory effects of Qa-1. Immunol. Rev. 212, 51\u201359 (2006)."
+    },
+    {
+      "key": "3578_CR3",
+      "doi": "10.1016/j.micinf.2006.03.020",
+      "title": "",
+      "journal": "Microbes Infect.",
+      "year": "2006",
+      "author": "A Colmone",
+      "unstructured": "Colmone, A. & Wang, C.-R. H2-M3-restricted T cell response to infection. Microbes Infect. 8, 2277\u20132283 (2006)."
+    },
+    {
+      "key": "3578_CR4",
+      "doi": "10.1146/annurev.immunol.25.022106.141711",
+      "title": "",
+      "journal": "Annu. Rev. Immunol.",
+      "year": "2007",
+      "author": "A Bendelac",
+      "unstructured": "Bendelac, A., Savage, P. B. & Teyton, L. The biology of NKT cells. Annu. Rev. Immunol. 25, 297\u2013336 (2007)."
+    },
+    {
+      "key": "3578_CR5",
+      "doi": "10.1016/s0065-2776(09)01201-2",
+      "title": "",
+      "journal": "Adv. Immunol.",
+      "year": "2009",
+      "author": "NR Cohen",
+      "unstructured": "Cohen, N. R., Garg, S. & Brenner, M. B. Antigen presentation by CD1 lipids, T cells, and NKT cells in microbial immunity. Adv. Immunol. 102, 1\u201394 (2009)."
+    },
+    {
+      "key": "3578_CR6",
+      "doi": "10.1038/nri3007",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2011",
+      "author": "H Cheroutre",
+      "unstructured": "Cheroutre, H., Lambolez, F. & Mucida, D. The light and dark sides of intestinal intraepithelial lymphocytes. Nat. Rev. Immunol. 11, 445\u2013456 (2011)."
+    },
+    {
+      "key": "3578_CR7",
+      "doi": "10.1016/j.smim.2011.06.001",
+      "title": "",
+      "journal": "Semin. Immunol.",
+      "year": "2011",
+      "author": "H-J Kim",
+      "unstructured": "Kim, H.-J. & Cantor, H. Regulation of self-tolerance by Qa-1-restricted CD8+ regulatory T cells. Semin. Immunol. 23, 446\u2013452 (2011)."
+    },
+    {
+      "key": "3578_CR8",
+      "doi": "10.1038/ni.3298",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2015",
+      "author": "DI Godfrey",
+      "unstructured": "Godfrey, D. I., Uldrich, A. P., McCluskey, J., Rossjohn, J. & Moody, D. B. The burgeoning family of unconventional T cells. Nat. Immunol. 16, 1114\u20131123 (2015)."
+    },
+    {
+      "key": "3578_CR9",
+      "doi": "10.1038/s41385-018-0016-5",
+      "title": "",
+      "journal": "Mucosal Immunol.",
+      "year": "2018",
+      "author": "T Mayassi",
+      "unstructured": "Mayassi, T. & Jabri, B. Human intraepithelial lymphocytes. Mucosal Immunol. 11, 1281\u20131289 (2018)."
+    },
+    {
+      "key": "3578_CR10",
+      "doi": "10.1016/j.coi.2019.07.006",
+      "title": "",
+      "journal": "Curr. Opin. Immunol.",
+      "year": "2019",
+      "author": "G Ogg",
+      "unstructured": "Ogg, G., Cerundolo, V. & McMichael, A. J. Capturing the antigen landscape: HLA-E, CD1 and MR1. Curr. Opin. Immunol. 59, 121\u2013129 (2019)."
+    },
+    {
+      "key": "3578_CR11",
+      "doi": "10.1016/j.immuni.2020.09.009",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2020",
+      "author": "F Legoux",
+      "unstructured": "Legoux, F., Salou, M. & Lantz, O. MAIT cell development and functions: the microbial connection. Immunity 53, 710\u2013723 (2020)."
+    },
+    {
+      "key": "3578_CR12",
+      "doi": "10.1038/nri3384",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2013",
+      "author": "P Vantourout",
+      "unstructured": "Vantourout, P. & Hayday, A. Six-of-the-best: unique contributions of \u03b3\u03b4 T cells to immunology. Nat. Rev. Immunol. 13, 88\u2013100 (2013)."
+    },
+    {
+      "key": "3578_CR13",
+      "doi": "10.1038/nri.2017.101",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2017",
+      "author": "MM Nielsen",
+      "unstructured": "Nielsen, M. M., Witherden, D. A. & Havran, W. L. \u03b3\u03b4 T cells in homeostasis and host defence of epithelial barrier tissues. Nat. Rev. Immunol. 17, 733\u2013745 (2017)."
+    },
+    {
+      "key": "3578_CR14",
+      "doi": "10.1371/journal.ppat.1007041",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2018",
+      "author": "N Jouand",
+      "unstructured": "Jouand, N. et al. HCMV triggers frequent and persistent UL40-specific unconventional HLA-E-restricted CD8 T-cell responses with potential autologous and allogeneic peptide recognition. PLoS Pathog. 14, e1007041 (2018)."
+    },
+    {
+      "key": "3578_CR15",
+      "doi": "10.1371/journal.ppat.1006384",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2017",
+      "author": "Y Bian",
+      "unstructured": "Bian, Y. et al. MHC Ib molecule Qa-1 presents Mycobacterium tuberculosis peptide antigens to CD8+ T cells and contributes to protection against infection. PLoS Pathog. 13, e1006384 (2017)."
+    },
+    {
+      "key": "3578_CR16",
+      "doi": "10.1126/science.7538697",
+      "title": "",
+      "journal": "Science",
+      "year": "1995",
+      "author": "A Bendelac",
+      "unstructured": "Bendelac, A. et al. CD1 recognition by mouse NK1+ T lymphocytes. Science 268, 863\u2013865 (1995). This paper demonstrates that NKT cells recognize CD1d."
+    },
+    {
+      "key": "3578_CR17",
+      "doi": "10.1038/nature03408",
+      "title": "",
+      "journal": "Nature",
+      "year": "2005",
+      "author": "J Mattner",
+      "unstructured": "Mattner, J. et al. Exogenous and endogenous glycolipid antigens activate NKT cells during microbial infections. Nature 434, 525\u2013529 (2005). This paper and the following reference show that NKT cells promote defence against bacterial infections by recognizing either self or microbial glycolipids."
+    },
+    {
+      "key": "3578_CR18",
+      "doi": "10.1038/nature03407",
+      "title": "",
+      "journal": "Nature",
+      "year": "2005",
+      "author": "Y Kinjo",
+      "unstructured": "Kinjo, Y. et al. Recognition of bacterial glycosphingolipids by natural killer T cells. Nature 434, 520\u2013525 (2005)."
+    },
+    {
+      "key": "3578_CR19",
+      "doi": "10.1038/nature11605",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "L Kjer-Nielsen",
+      "unstructured": "Kjer-Nielsen, L. et al. MR1 presents microbial vitamin B metabolites to MAIT cells. Nature 491, 717\u2013723 (2012). This paper demonstrates that MR1 presents vitamin B metabolites to MAIT cells."
+    },
+    {
+      "key": "3578_CR20",
+      "doi": "10.1038/nature13160",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "AJ Corbett",
+      "unstructured": "Corbett, A. J. et al. T-cell activation by transitory neo-antigens derived from distinct microbial pathways. Nature 509, 361\u2013365 (2014)."
+    },
+    {
+      "key": "3578_CR21",
+      "doi": "10.1007/bf02919723",
+      "title": "",
+      "journal": "Immunol. Res.",
+      "year": "1991",
+      "author": "SM Shawar",
+      "unstructured": "Shawar, S. M., Rodgers, J. R., Cook, R. G. & Rich, R. R. Specialized function of the nonclassical MHC class I molecule Hmt: a specific receptor for N-formylated peptides. Immunol. Res. 10, 365\u2013375 (1991)."
+    },
+    {
+      "key": "3578_CR22",
+      "doi": "10.1016/s1074-7613(00)80310-6",
+      "title": "",
+      "journal": "Immunity",
+      "year": "1996",
+      "author": "LL Lenz",
+      "unstructured": "Lenz, L. L., Dere, B. & Bevan, M. J. Identification of an H2-M3-restricted Listeria epitope: implications for antigen presentation by M3. Immunity 5, 63\u201372 (1996). This paper shows that the non-classical MHC molecule H2-M3 presents bacterial formylated peptides."
+    },
+    {
+      "key": "3578_CR23",
+      "doi": "10.1038/375155a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1995",
+      "author": "Y Tanaka",
+      "unstructured": "Tanaka, Y. et al. Natural and synthetic non-peptide antigens recognized by human gamma delta T cells. Nature 375, 155\u2013158 (1995)."
+    },
+    {
+      "key": "3578_CR24",
+      "doi": "10.1038/ni.2790",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2014",
+      "author": "A de Jong",
+      "unstructured": "de Jong, A. et al. CD1a-autoreactive T cells recognize natural skin oils that function as headless antigens. Nat. Immunol. 15, 177\u2013185 (2014)."
+    },
+    {
+      "key": "3578_CR25",
+      "doi": "10.1038/ni.3098",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2015",
+      "author": "RW Birkinshaw",
+      "unstructured": "Birkinshaw, R. W. et al. \u03b1\u03b2 T cell antigen receptor recognition of CD1a presenting self lipid ligands. Nat. Immunol. 16, 258\u2013266 (2015). The crystal structures in this paper show the breaking of the co-recognition paradigm as defined by the requirement for a TCR to simultaneously recognize an antigen and the antigen-presenting molecule."
+    },
+    {
+      "key": "3578_CR26",
+      "doi": "10.1073/pnas.1412058112",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2015",
+      "author": "T Dimova",
+      "unstructured": "Dimova, T. et al. Effector V\u03b39V\u03b42 T cells dominate the human fetal \u03b3\u03b4 T-cell repertoire. Proc. Natl Acad. Sci. USA 112, E556\u2013E565 (2015)."
+    },
+    {
+      "key": "3578_CR27",
+      "doi": "10.1126/science.287.5455.1031",
+      "title": "",
+      "journal": "Science",
+      "year": "2000",
+      "author": "P Tomasec",
+      "unstructured": "Tomasec, P. et al. Surface expression of HLA-E, an inhibitor of natural killer cells, enhanced by human cytomegalovirus gpUL40. Science 287, 1031 (2000)."
+    },
+    {
+      "key": "3578_CR28",
+      "doi": "10.1002/eji.1830270517",
+      "title": "",
+      "journal": "Eur. J. Immunol.",
+      "year": "1997",
+      "author": "V Braud",
+      "unstructured": "Braud, V., Jones, E. Y. & McMichael, A. The human major histocompatibility complex class Ib molecule HLA-E binds signal sequence-derived peptides with primary anchor residues at positions 2 and 9. Eur. J. Immunol. 27, 1164\u20131169 (1997)."
+    },
+    {
+      "key": "3578_CR29",
+      "doi": "10.1016/s1074-7613(02)00427-2",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2002",
+      "author": "B Jabri",
+      "unstructured": "Jabri, B. et al. TCR specificity dictates CD94/NKG2A expression by human CTL. Immunity 17, 487\u2013499 (2002)."
+    },
+    {
+      "key": "3578_CR30",
+      "doi": "10.1038/35869",
+      "title": "",
+      "journal": "Nature",
+      "year": "1998",
+      "author": "VM Braud",
+      "unstructured": "Braud, V. M. et al. HLA-E binds to natural killer cell receptors CD94/NKG2A, B and C. Nature 391, 795\u2013799 (1998)."
+    },
+    {
+      "key": "3578_CR31",
+      "doi": "10.1084/jem.20091429",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2010",
+      "author": "CC Oliveira",
+      "unstructured": "Oliveira, C. C. et al. The nonpolymorphic MHC Qa-1b mediates CD8+ T cell surveillance of antigen-processing defects. J. Exp. Med. 207, 207\u2013221 (2010)."
+    },
+    {
+      "key": "3578_CR32",
+      "doi": "10.1016/j.cell.2008.05.009",
+      "title": "",
+      "journal": "Cell",
+      "year": "2008",
+      "author": "S Sakaguchi",
+      "unstructured": "Sakaguchi, S., Yamaguchi, T., Nomura, T. & Ono, M. Regulatory T cells and immune tolerance. Cell 133, 775\u2013787 (2008)."
+    },
+    {
+      "key": "3578_CR33",
+      "doi": "10.1073/pnas.1010890108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "SD Barbee",
+      "unstructured": "Barbee, S. D. et al. Skint-1 is a highly specific, unique selecting component for epidermal T cells. Proc. Natl Acad. Sci. USA 108, 3330\u20133335 (2011). This paper identifies SKINT-1 as the selecting ligand for DETCs."
+    },
+    {
+      "key": "3578_CR34",
+      "doi": "10.1016/j.cell.2016.08.030",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "R Di Marco Barros",
+      "unstructured": "Di Marco Barros, R. et al. Epithelia use butyrophilin-like molecules to shape organ-specific \u03b3\u03b4 t cell compartments. Cell 167, 203\u2013218 (2016). This paper identifies BTNL molecules as the selecting ligands for gut-specific \u03b3\u03b4 T cells."
+    },
+    {
+      "key": "3578_CR35",
+      "doi": "10.1016/j.cell.2018.12.039",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "T Mayassi",
+      "unstructured": "Mayassi, T. et al. Chronic inflammation permanently reshapes tissue-resident immunity in celiac disease. Cell 176, 967\u2013981 (2019). This paper characterizes the functional and transcriptional program of the gut innate-like human BTNL-specific \u03b3\u03b4 T cells and shows how chronic inflammation permanently reshapes these niches."
+    },
+    {
+      "key": "3578_CR36",
+      "doi": "10.1126/science.279.5357.1737",
+      "title": "",
+      "journal": "Science",
+      "year": "1998",
+      "author": "V Groh",
+      "unstructured": "Groh, V., Steinle, A., Bauer, S. & Spies, T. Recognition of stress-induced MHC molecules by intestinal epithelial \u03b3\u03b4 T cells. Science 279, 1737\u20131740 (1998)."
+    },
+    {
+      "key": "3578_CR37",
+      "doi": "10.1182/blood-2008-12-196287",
+      "title": "",
+      "journal": "Blood",
+      "year": "2009",
+      "author": "Y Kong",
+      "unstructured": "Kong, Y. et al. The NKG2D ligand ULBP4 binds to TCR\u03b39/\u03b42 and induces cytotoxicity to tumor cells through both TCR\u03b3\u03b4 and NKG2D. Blood 114, 310\u2013317 (2009)."
+    },
+    {
+      "key": "3578_CR38",
+      "doi": "10.1084/jem.185.7.1223",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1997",
+      "author": "MP Crowley",
+      "unstructured": "Crowley, M. P., Reich, Z., Mavaddat, N., Altman, J. D. & Chien, Y. The recognition of the nonclassical major histocompatibility complex (MHC) class I molecule, T10, by the \u03b3\u03b4 T cell, G8. J. Exp. Med. 185, 1223\u20131230 (1997)."
+    },
+    {
+      "key": "3578_CR39",
+      "doi": "10.1126/science.1106480",
+      "title": "",
+      "journal": "Science",
+      "year": "2005",
+      "author": "S Shin",
+      "unstructured": "Shin, S. et al. Antigen recognition determinants of \u03b3\u03b4 T cell receptors. Science 308, 252\u2013255 (2005)."
+    },
+    {
+      "key": "3578_CR40",
+      "doi": "10.1084/jem.180.3.1097",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1994",
+      "author": "O Lantz",
+      "unstructured": "Lantz, O. & Bendelac, A. An invariant T cell receptor \u03b1 chain is used by a unique subset of major histocompatibility complex class I-specific CD4+ and CD4\u22128\u2212 T cells in mice and humans. J. Exp. Med. 180, 1097\u20131106 (1994)."
+    },
+    {
+      "key": "3578_CR41",
+      "doi": "10.1126/science.278.5343.1626",
+      "title": "",
+      "journal": "Science",
+      "year": "1997",
+      "author": "T Kawano",
+      "unstructured": "Kawano, T. et al. CD1d-restricted and TCR-mediated activation of v\u03b114 NKT cells by glycosylceramides. Science 278, 1626\u20131629 (1997)."
+    },
+    {
+      "key": "3578_CR42",
+      "doi": "10.1084/jem.189.12.1907",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1999",
+      "author": "F Tilloy",
+      "unstructured": "Tilloy, F. et al. An invariant T cell receptor \u03b1 chain defines a novel TAP-independent major histocompatibility complex class Ib-restricted \u03b1/\u03b2 T cell subpopulation in mammals. J. Exp. Med. 189, 1907\u20131921 (1999)."
+    },
+    {
+      "key": "3578_CR43",
+      "doi": "10.1084/jem.178.1.1",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1993",
+      "author": "S Porcelli",
+      "unstructured": "Porcelli, S., Yockey, C. E., Brenner, M. B. & Balk, S. P. Analysis of T cell antigen receptor (TCR) expression by human peripheral blood CD4\u20138\u2013 \u03b1/\u03b2 T cells demonstrates preferential use of several V\u03b2 genes and an invariant TCR \u03b1 chain. J. Exp. Med. 178, 1\u201316 (1993)."
+    },
+    {
+      "key": "3578_CR44",
+      "doi": "10.1038/nature01433",
+      "title": "",
+      "journal": "Nature",
+      "year": "2003",
+      "author": "E Treiner",
+      "unstructured": "Treiner, E. et al. Selection of evolutionarily conserved mucosal-associated invariant T cells by MR1. Nature 422, 164\u2013169 (2003)."
+    },
+    {
+      "key": "3578_CR45",
+      "doi": "10.1038/ni.2630",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2013",
+      "author": "I Van Rhijn",
+      "unstructured": "Van Rhijn, I. et al. A conserved human T cell population targets mycobacterial antigens presented by CD1b. Nat. Immunol. 14, 706\u2013713 (2013)."
+    },
+    {
+      "key": "3578_CR46",
+      "doi": "10.1038/ncomms13257",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "S Gras",
+      "unstructured": "Gras, S. et al. T cell receptor recognition of CD1b presenting a mycobacterial glycolipid. Nat. Commun. 7, 13257 (2016)."
+    },
+    {
+      "key": "3578_CR47",
+      "doi": "10.1038/s41590-018-0253-5",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2018",
+      "author": "D Melandri",
+      "unstructured": "Melandri, D. et al. The \u03b3\u03b4TCR combines innate immunity with adaptive immunity by utilizing spatially distinct regions for agonist selection and antigen responsiveness. Nat. Immunol. 19, 1352\u20131365 (2018)."
+    },
+    {
+      "key": "3578_CR48",
+      "doi": "10.1111/imr.12327",
+      "title": "",
+      "journal": "Immunol. Rev.",
+      "year": "2015",
+      "author": "CD Castro",
+      "unstructured": "Castro, C. D., Luoma, A. M. & Adams, E. J. Coevolution of T-cell receptors with MHC and non-MHC ligands. Immunol. Rev. 267, 30\u201355 (2015)."
+    },
+    {
+      "key": "3578_CR49",
+      "doi": "10.1016/j.cell.2017.12.033",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "JL Linehan",
+      "unstructured": "Linehan, J. L. et al. Non-classical immunity controls microbiota impact on skin immunity and tissue repair. Cell 172, 784\u2013796 (2018). This paper demonstrates the role of H2-M3-restricted T cell responses in regulating the microbiota and wound healing in the skin."
+    },
+    {
+      "key": "3578_CR50",
+      "doi": "10.1016/j.molimm.2020.02.011",
+      "title": "",
+      "journal": "Mol. Immunol.",
+      "year": "2020",
+      "author": "EJ Grant",
+      "unstructured": "Grant, E. J. et al. The unconventional role of HLA-E: the road less traveled. Mol. Immunol. 120, 101\u2013112 (2020)."
+    },
+    {
+      "key": "3578_CR51",
+      "doi": "10.1016/j.immuni.2014.07.008",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2014",
+      "author": "BD McDonald",
+      "unstructured": "McDonald, B. D., Bunker, J. J., Ishizuka, I. E., Jabri, B. & Bendelac, A. Elevated T cell receptor signaling identifies a thymic precursor to the TCR\u03b1\u03b2+CD4\u2212CD8\u03b2\u2212 intraepithelial lymphocyte lineage. Immunity 41, 219\u2013229 (2014)."
+    },
+    {
+      "key": "3578_CR52",
+      "doi": "10.1016/j.immuni.2014.07.010",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2014",
+      "author": "S Mayans",
+      "unstructured": "Mayans, S. et al. \u03b1\u03b2T cell receptors expressed by CD4\u2212CD8\u03b1\u03b2\u2212 intraepithelial T cells drive their fate into a unique lineage with unusual MHC reactivities. Immunity 41, 207\u2013218 (2014)."
+    },
+    {
+      "key": "3578_CR53",
+      "doi": "10.1084/jem.190.6.885",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1999",
+      "author": "SH Park",
+      "unstructured": "Park, S. H. et al. Selection and expansion of CD8\u03b1/\u03b11 T cell receptor \u03b1/\u03b21 intestinal intraepithelial lymphocytes in the absence of both classical major histocompatibility complex class I and nonclassical CD1 molecules. J. Exp. Med. 190, 885\u2013890 (1999)."
+    },
+    {
+      "key": "3578_CR54",
+      "doi": "10.4049/jimmunol.1801091",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2018",
+      "author": "NA Gherardin",
+      "unstructured": "Gherardin, N. A., McCluskey, J., Rossjohn, J. & Godfrey, D. I. The diverse family of MR1-restricted T cells. J. Immunol. 201, 2862\u20132871 (2018)."
+    },
+    {
+      "key": "3578_CR55",
+      "doi": "10.1038/ni.2713",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2013",
+      "author": "AP Uldrich",
+      "unstructured": "Uldrich, A. P. et al. CD1d-lipid antigen recognition by the \u03b3\u03b4 TCR. Nat. Immunol. 14, 1137\u20131145 (2013)."
+    },
+    {
+      "key": "3578_CR56",
+      "doi": "10.1016/j.immuni.2013.11.001",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2013",
+      "author": "AM Luoma",
+      "unstructured": "Luoma, A. M. et al. Crystal structure of V\u03b41 T cell receptor in complex with CD1d-sulfatide shows MHC-like recognition of a self-lipid by human \u03b3\u03b4 T cells. Immunity 39, 1032\u20131042 (2013)."
+    },
+    {
+      "key": "3578_CR57",
+      "doi": "10.1126/science.aav3900",
+      "title": "",
+      "journal": "Science",
+      "year": "2019",
+      "author": "J Le Nours",
+      "unstructured": "Le Nours, J. et al. A class of \u03b3\u03b4 T cell receptors recognize the underside of the antigen-presenting molecule MR1. Science 366, 1522\u20131527 (2019)."
+    },
+    {
+      "key": "3578_CR58",
+      "doi": "10.1126/science.274.5285.209",
+      "title": "",
+      "journal": "Science",
+      "year": "1996",
+      "author": "KC Garcia",
+      "unstructured": "Garcia, K. C. et al. An \u03b1\u03b2 T cell receptor structure at 2.5 A and its orientation in the TCR\u2013MHC complex. Science 274, 209\u2013219 (1996)."
+    },
+    {
+      "key": "3578_CR59",
+      "doi": "10.1038/384134a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1996",
+      "author": "DN Garboczi",
+      "unstructured": "Garboczi, D. N. et al. Structure of the complex between human T-cell receptor, viral peptide and HLA-A2. Nature 384, 134\u2013141 (1996)."
+    },
+    {
+      "key": "3578_CR60",
+      "doi": "10.1146/annurev-immunol-032414-112334",
+      "title": "",
+      "journal": "Annu. Rev. Immunol.",
+      "year": "2015",
+      "author": "J Rossjohn",
+      "unstructured": "Rossjohn, J. et al. T cell antigen receptor recognition of antigen-presenting molecules. Annu. Rev. Immunol. 33, 169\u2013200 (2015)."
+    },
+    {
+      "key": "3578_CR61",
+      "doi": "10.1038/ni.3271",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2015",
+      "author": "DX Beringer",
+      "unstructured": "Beringer, D. X. et al. T cell receptor reversed polarity recognition of a self-antigen major histocompatibility complex. Nat. Immunol. 16, 1153\u20131161 (2015)."
+    },
+    {
+      "key": "3578_CR62",
+      "doi": "10.1016/j.immuni.2016.09.007",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2016",
+      "author": "S Gras",
+      "unstructured": "Gras, S. et al. Reversed T cell receptor docking on a major histocompatibility class I complex limits involvement in the immune response. Immunity 45, 749\u2013760 (2016)."
+    },
+    {
+      "key": "3578_CR63",
+      "doi": "10.1038/s41577-018-0007-5",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2018",
+      "author": "NL La Gruta",
+      "unstructured": "La Gruta, N. L., Gras, S., Daley, S. R., Thomas, P. G. & Rossjohn, J. Understanding the drivers of MHC restriction of T cell receptors. Nat. Rev. Immunol. 18, 467\u2013478 (2018)."
+    },
+    {
+      "key": "3578_CR64",
+      "doi": "10.1146/annurev-immunol-032712-095912",
+      "title": "",
+      "journal": "Annu. Rev. Immunol.",
+      "year": "2013",
+      "author": "EJ Adams",
+      "unstructured": "Adams, E. J. & Luoma, A. M. The adaptable major histocompatibility complex (MHC) fold: structure and function of nonclassical and MHC class I-like molecules. Annu. Rev. Immunol. 31, 529\u2013561 (2013)."
+    },
+    {
+      "key": "3578_CR65",
+      "doi": "10.1038/nri3889",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2015",
+      "author": "I Van Rhijn",
+      "unstructured": "Van Rhijn, I., Godfrey, D. I., Rossjohn, J. & Moody, D. B. Lipid and small-molecule display by CD1 and MR1. Nat. Rev. Immunol. 15, 643\u2013654 (2015)."
+    },
+    {
+      "key": "3578_CR66",
+      "doi": "10.1111/imr.12319",
+      "title": "",
+      "journal": "Immunol. Rev.",
+      "year": "2015",
+      "author": "PM Saunders",
+      "unstructured": "Saunders, P. M. et al. A bird\u2019s eye view of NK cell receptor interactions with their MHC class I ligands. Immunol. Rev. 267, 148\u2013166 (2015)."
+    },
+    {
+      "key": "3578_CR67",
+      "doi": "10.1038/ni1312",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2006",
+      "author": "HL Hoare",
+      "unstructured": "Hoare, H. L. et al. Structural basis for a major histocompatibility complex class Ib-restricted T cell response. Nat. Immunol. 7, 256\u2013264 (2006)."
+    },
+    {
+      "key": "3578_CR68",
+      "doi": "10.1038/nature05907",
+      "title": "",
+      "journal": "Nature",
+      "year": "2007",
+      "author": "NA Borg",
+      "unstructured": "Borg, N. A. et al. CD1d-lipid-antigen recognition by the semi-invariant NKT T-cell receptor. Nature 448, 44\u201349 (2007). This paper provides the first insights into how unconventional TCR recognition differs from that of conventional TCRs in the form of type I NKT TCR\u2013CD1d\u2013lipid complex."
+    },
+    {
+      "key": "3578_CR69",
+      "doi": "10.1038/nri3328",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2012",
+      "author": "J Rossjohn",
+      "unstructured": "Rossjohn, J., Pellicci, D. G., Patel, O., Gapin, L. & Godfrey, D. I. Recognition of CD1d-restricted antigens by natural killer T cells. Nat. Rev. Immunol. 12, 845\u2013857 (2012)."
+    },
+    {
+      "key": "3578_CR70",
+      "doi": "10.1038/ncomms3142",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2013",
+      "author": "O Patel",
+      "unstructured": "Patel, O. et al. Recognition of vitamin B metabolites by mucosal-associated invariant T cells. Nat. Commun. 4, 2142 (2013)."
+    },
+    {
+      "key": "3578_CR71",
+      "doi": "10.1084/jem.20140484",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2014",
+      "author": "SBG Eckle",
+      "unstructured": "Eckle, S. B. G. et al. A molecular basis underpinning the T cell receptor heterogeneity of mucosal-associated invariant T cells. J. Exp. Med. 211, 1585\u20131600 (2014)."
+    },
+    {
+      "key": "3578_CR72",
+      "doi": "10.1038/ni.2372",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2012",
+      "author": "O Patel",
+      "unstructured": "Patel, O. et al. Recognition of CD1d-sulfatide mediated by a type II natural killer T cell antigen receptor. Nat. Immunol. 13, 857\u2013863 (2012)."
+    },
+    {
+      "key": "3578_CR73",
+      "doi": "10.1038/ni.2371",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2012",
+      "author": "E Girardi",
+      "unstructured": "Girardi, E. et al. Type II natural killer T cells use features of both innate-like and conventional T cells to recognize sulfatide self antigens. Nat. Immunol. 13, 851\u2013856 (2012)."
+    },
+    {
+      "key": "3578_CR74",
+      "doi": "10.1016/j.immuni.2015.12.005",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2016",
+      "author": "NA Gherardin",
+      "unstructured": "Gherardin, N. A. et al. Diversity of T cells restricted by the MHC class I-related molecule MR1 facilitates differential antigen recognition. Immunity 44, 32\u201345 (2016)."
+    },
+    {
+      "key": "3578_CR75",
+      "doi": "10.1038/s41590-018-0065-7",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2018",
+      "author": "KS Wun",
+      "unstructured": "Wun, K. S. et al. T cell autoreactivity directed toward CD1c itself rather than toward carried self lipids. Nat. Immunol. 19, 397\u2013406 (2018)."
+    },
+    {
+      "key": "3578_CR76",
+      "doi": "10.1084/jem.182.6.2091",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1995",
+      "author": "A Bendelac",
+      "unstructured": "Bendelac, A. Positive selection of mouse NK1+ T cells by CD1-expressing cortical thymocytes. J. Exp. Med. 182, 2091\u20132096 (1995)."
+    },
+    {
+      "key": "3578_CR77",
+      "doi": "10.4049/jimmunol.1301212",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2013",
+      "author": "N Seach",
+      "unstructured": "Seach, N. et al. Double-positive thymocytes select mucosal-associated invariant T cells. J. Immunol. 191, 6002\u20136009 (2013)."
+    },
+    {
+      "key": "3578_CR78",
+      "doi": "10.1016/j.immuni.2008.07.011",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2008",
+      "author": "AK Savage",
+      "unstructured": "Savage, A. K. et al. The transcription factor PLZF directs the effector program of the NKT cell lineage. Immunity 29, 391\u2013403 (2008). This paper demonstrates the critical role of PLZF in the effector programming of unconventional T cells such as NKT cells and MAIT cells."
+    },
+    {
+      "key": "3578_CR79",
+      "doi": "10.1126/sciimmunol.aay6039",
+      "title": "",
+      "journal": "Sci. Immunol.",
+      "year": "2019",
+      "author": "H-F Koay",
+      "unstructured": "Koay, H.-F. et al. A divergent transcriptional landscape underpins the development and functional branching of MAIT cells. Sci. Immunol. 4, eaay6039 (2019)."
+    },
+    {
+      "key": "3578_CR80",
+      "doi": "10.1016/j.immuni.2007.08.020",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2007",
+      "author": "K Griewank",
+      "unstructured": "Griewank, K. et al. Homotypic interactions mediated by Slamf1 and Slamf6 receptors control NKT cell lineage development. Immunity 27, 751\u2013762 (2007)."
+    },
+    {
+      "key": "3578_CR81",
+      "doi": "10.1038/ni814",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2002",
+      "author": "KB Urdahl",
+      "unstructured": "Urdahl, K. B., Sun, J. C. & Bevan, M. J. Positive selection of MHC class Ib-restricted CD8+ T cells on hematopoietic cells. Nat. Immunol. 3, 772\u2013779 (2002)."
+    },
+    {
+      "key": "3578_CR82",
+      "doi": "10.4049/jimmunol.1200579",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2012",
+      "author": "Y Bediako",
+      "unstructured": "Bediako, Y. et al. SAP is required for the development of innate phenotype in H2-M3-restricted CD8+ T cells. J. Immunol. 189, 4787\u20134796 (2012)."
+    },
+    {
+      "key": "3578_CR83",
+      "doi": "10.1038/s41577-018-0013-7",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2018",
+      "author": "BD McDonald",
+      "unstructured": "McDonald, B. D., Jabri, B. & Bendelac, A. Diverse developmental pathways of intestinal intraepithelial lymphocytes. Nat. Rev. Immunol. 18, 514\u2013525 (2018)."
+    },
+    {
+      "key": "3578_CR84",
+      "doi": "10.1084/jem.20050413",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2005",
+      "author": "DG Wei",
+      "unstructured": "Wei, D. G. et al. Expansion and long-range differentiation of the NKT cell lineage in mice expressing CD1d exclusively on cortical thymocytes. J. Exp. Med. 202, 239\u2013248 (2005)."
+    },
+    {
+      "key": "3578_CR85",
+      "doi": "10.1084/jem.20122588",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2013",
+      "author": "D Guy-Grand",
+      "unstructured": "Guy-Grand, D. et al. Origin, trafficking, and intraepithelial fate of gut-tropic T cells. J. Exp. Med. 210, 1839\u20131854 (2013)."
+    },
+    {
+      "key": "3578_CR86",
+      "doi": "10.1126/science.aax6624",
+      "title": "",
+      "journal": "Science",
+      "year": "2019",
+      "author": "MG Constantinides",
+      "unstructured": "Constantinides, M. G. et al. MAIT cells are imprinted by the microbiota in early life and promote tissue repair. Science 366, eaax6624 (2019). This paper demonstrates that there is a window in early life for the colonization of tissues by MAIT cells and stresses the role of MAIT cells in wound repair."
+    },
+    {
+      "key": "3578_CR87",
+      "doi": "10.1002/eji.200535343",
+      "title": "",
+      "journal": "Eur. J. Immunol.",
+      "year": "2005",
+      "author": "P Mazzarino",
+      "unstructured": "Mazzarino, P. et al. Identification of effector-memory CMV-specific T lymphocytes that kill CMV-infected target cells in an HLA-E-restricted fashion. Eur. J. Immunol. 35, 3240\u20133247 (2005)."
+    },
+    {
+      "key": "3578_CR88",
+      "doi": "10.3389/fimmu.2018.00060",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2018",
+      "author": "EM Doorduijn",
+      "unstructured": "Doorduijn, E. M. et al. T cells engaging the conserved MHC class Ib molecule Qa-1b with TAP-independent peptides are semi-invariant lymphocytes. Front. Immunol. 9, 60 (2018)."
+    },
+    {
+      "key": "3578_CR89",
+      "doi": "10.1038/344068a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1990",
+      "author": "WL Havran",
+      "unstructured": "Havran, W. L. & Allison, J. P. Origin of Thy-1+ dendritic epidermal cells of adult mice from fetal thymic precursors. Nature 344, 68\u201370 (1990)."
+    },
+    {
+      "key": "3578_CR90",
+      "doi": "10.1084/jem.191.11.1895",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2000",
+      "author": "K Benlagha",
+      "unstructured": "Benlagha, K., Weiss, A., Beavis, A., Teyton, L. & Bendelac, A. In vivo identification of glycolipid antigen-specific T cells using fluorescent CD1d tetramers. J. Exp. Med. 191, 1895\u20131904 (2000)."
+    },
+    {
+      "key": "3578_CR91",
+      "doi": "10.1182/blood-2010-08-303339",
+      "title": "",
+      "journal": "Blood",
+      "year": "2011",
+      "author": "M Dusseaux",
+      "unstructured": "Dusseaux, M. et al. Human MAIT cells are xenobiotic-resistant, tissue-targeted, CD161hi IL-17-secreting T cells. Blood 117, 1250\u20131259 (2011)."
+    },
+    {
+      "key": "3578_CR92",
+      "doi": "10.1038/nri.2015.3",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2016",
+      "author": "SN Mueller",
+      "unstructured": "Mueller, S. N. & Mackay, L. K. Tissue-resident memory T cells: local specialists in immune defence. Nat. Rev. Immunol. 16, 79\u201389 (2016)."
+    },
+    {
+      "key": "3578_CR93",
+      "doi": "10.1146/annurev-immunol-042617-053214",
+      "title": "",
+      "journal": "Annu. Rev. Immunol.",
+      "year": "2019",
+      "author": "D Masopust",
+      "unstructured": "Masopust, D. & Soerens, A. G. Tissue-resident T cells and other resident leukocytes. Annu. Rev. Immunol. 37, 521\u2013546 (2019)."
+    },
+    {
+      "key": "3578_CR94",
+      "doi": "10.1126/science.1219328",
+      "title": "",
+      "journal": "Science",
+      "year": "2012",
+      "author": "T Olszak",
+      "unstructured": "Olszak, T. et al. Microbial exposure during early life has persistent effects on natural killer T cell function. Science 336, 489\u2013493 (2012)."
+    },
+    {
+      "key": "3578_CR95",
+      "doi": "10.1111/cei.12045",
+      "title": "",
+      "journal": "Clin. Exp. Immunol.",
+      "year": "2013",
+      "author": "AC Chan",
+      "unstructured": "Chan, A. C. et al. Ex-vivo analysis of human natural killer T cells demonstrates heterogeneity between tissues and within established CD4+ and CD4\u2212 subsets. Clin. Exp. Immunol. 172, 129\u2013137 (2013)."
+    },
+    {
+      "key": "3578_CR96",
+      "doi": "10.4049/jimmunol.1900774",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2020",
+      "author": "L Loh",
+      "unstructured": "Loh, L. et al. Human mucosal-associated invariant T cells in older individuals display expanded TCR\u03b1\u03b2 clonotypes with potent antimicrobial responses. J. Immunol. 1950, 1119\u20131133 (2020)."
+    },
+    {
+      "key": "3578_CR97",
+      "doi": "10.1073/pnas.1322292111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "A Zaid",
+      "unstructured": "Zaid, A. et al. Persistence of skin-resident memory T cells within an epidermal niche. Proc. Natl Acad. Sci. USA 111, 5307\u20135312 (2014)."
+    },
+    {
+      "key": "3578_CR98",
+      "doi": "10.1038/ni1101-997",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2001",
+      "author": "A Hayday",
+      "unstructured": "Hayday, A., Theodoridis, E., Ramsburg, E. & Shires, J. Intraepithelial lymphocytes: exploring the Third Way in immunology. Nat. Immunol. 2, 997\u20131003 (2001)."
+    },
+    {
+      "key": "3578_CR99",
+      "doi": "10.1016/j.celrep.2019.07.039",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2019",
+      "author": "TSC Hinks",
+      "unstructured": "Hinks, T. S. C. et al. Activation and in vivo evolution of the MAIT cell transcriptome in mice and humans reveals tissue repair functionality. Cell Rep. 28, 3249\u20133262.e5 (2019)."
+    },
+    {
+      "key": "3578_CR100",
+      "doi": "10.1146/annurev-cellbio-100616-060725",
+      "title": "",
+      "journal": "Annu. Rev. Cell Dev. Biol.",
+      "year": "2017",
+      "author": "F Legoux",
+      "unstructured": "Legoux, F., Salou, M. & Lantz, O. Unconventional or preset \u03b1\u03b2 T cells: evolutionarily conserved tissue-resident T cells recognizing nonpeptidic ligands. Annu. Rev. Cell Dev. Biol. 33, 511\u2013535 (2017)."
+    },
+    {
+      "key": "3578_CR101",
+      "doi": "10.1002/eji.1830260942",
+      "title": "",
+      "journal": "Eur. J. Immunol.",
+      "year": "1996",
+      "author": "D Guy-Grand",
+      "unstructured": "Guy-Grand, D., Cu\u00e9nod-Jabri, B., Malassis-Seris, M., Selz, F. & Vassalli, P. Complexity of the mouse gut T cell immune system: identification of two distinct natural killer T cell intraepithelial lineages. Eur. J. Immunol. 26, 2248\u20132256 (1996). This paper provides the first evidence that intestinal tissue-resident unconventional intraepithelial T lymphocytes express NK receptors and mediate NK-cell-like killing."
+    },
+    {
+      "key": "3578_CR102",
+      "doi": "10.1084/jem.20081787",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2009",
+      "author": "A Toulon",
+      "unstructured": "Toulon, A. et al. A role for human skin-resident T cells in wound healing. J. Exp. Med. 206, 743\u2013750 (2009)."
+    },
+    {
+      "key": "3578_CR103",
+      "doi": "10.1073/pnas.96.12.6879",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1999",
+      "author": "V Groh",
+      "unstructured": "Groh, V. et al. Broad tumor-associated expression and recognition by tumor-derived \u03b3\u03b4 T cells of MICA and MICB. Proc. Natl Acad. Sci. USA 96, 6879\u20136884 (1999)."
+    },
+    {
+      "key": "3578_CR104",
+      "doi": "10.1016/0966-842x(93)90023-k",
+      "title": "",
+      "journal": "Trends Microbiol.",
+      "year": "1993",
+      "author": "EG Pamer",
+      "unstructured": "Pamer, E. G., Bevan, M. J. & Lindahl, K. F. Do nonclassical, class Ib MHC molecules present bacterial antigens to T cells? Trends Microbiol. 1, 35\u201338 (1993)."
+    },
+    {
+      "key": "3578_CR105",
+      "doi": "10.1038/ni.1890",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2010",
+      "author": "L Le Bourhis",
+      "unstructured": "Le Bourhis, L. et al. Antimicrobial activity of mucosal-associated invariant T cells. Nat. Immunol. 11, 701\u2013708 (2010)."
+    },
+    {
+      "key": "3578_CR106",
+      "doi": "10.1016/j.cell.2017.11.036",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "M Gaya",
+      "unstructured": "Gaya, M. et al. Initiation of antiviral B cell immunity relies on innate signals from spatially positioned NKT cells. Cell 172, 517\u2013533 (2018)."
+    },
+    {
+      "key": "3578_CR107",
+      "doi": "10.1126/science.7973709",
+      "title": "",
+      "journal": "Science",
+      "year": "1994",
+      "author": "R Boismenu",
+      "unstructured": "Boismenu, R. & Havran, W. L. Modulation of epithelial cell growth by intraepithelial \u03b3\u03b4 T cells. Science 266, 1253\u20131255 (1994). This paper was the first study to propose that TCR\u03b3\u03b4 T cells have a role in wound healing."
+    },
+    {
+      "key": "3578_CR108",
+      "doi": "10.1038/nri3919",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2015",
+      "author": "B Jabri",
+      "unstructured": "Jabri, B. & Abadie, V. IL-15 functions as a danger signal to regulate tissue-resident T cells and tissue destruction. Nat. Rev. Immunol. 15, 771\u2013783 (2015)."
+    },
+    {
+      "key": "3578_CR109",
+      "doi": "10.1146/annurev.immunol.18.1.861",
+      "title": "",
+      "journal": "Annu. Rev. Immunol.",
+      "year": "2000",
+      "author": "D Tortorella",
+      "unstructured": "Tortorella, D., Gewurz, B. E., Furman, M. H., Schust, D. J. & Ploegh, H. L. Viral subversion of the immune system. Annu. Rev. Immunol. 18, 861\u2013926 (2000)."
+    },
+    {
+      "key": "3578_CR110",
+      "doi": "10.1182/blood-2011-02-334698",
+      "title": "",
+      "journal": "Blood",
+      "year": "2011",
+      "author": "CJ Turtle",
+      "unstructured": "Turtle, C. J. et al. Innate signals overcome acquired TCR signaling pathway regulation and govern the fate of human CD161hi CD8\u03b1+ semi-invariant T cells. Blood 118, 2752\u20132762 (2011)."
+    },
+    {
+      "key": "3578_CR111",
+      "doi": "10.1172/jci.insight.86292",
+      "title": "",
+      "journal": "JCI Insight",
+      "year": "2016",
+      "author": "CK Slichter",
+      "unstructured": "Slichter, C. K. et al. Distinct activation thresholds of human conventional and innate-like memory T cells. JCI Insight 1, e86292 (2016)."
+    },
+    {
+      "key": "3578_CR112",
+      "doi": "10.1371/journal.ppat.1000106",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2008",
+      "author": "JD Wesley",
+      "unstructured": "Wesley, J. D., Tessmer, M. S., Chaukos, D. & Brossay, L. NK cell-like behavior of V\u03b114i NK T cells during MCMV infection. PLoS Pathog. 4, e1000106 (2008)."
+    },
+    {
+      "key": "3578_CR113",
+      "doi": "10.4049/jimmunol.181.7.4452",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2008",
+      "author": "AJ Tyznik",
+      "unstructured": "Tyznik, A. J. et al. Cutting edge: the mechanism of invariant NKT cell responses to viral danger signals. J. Immunol. 181, 4452\u20134456 (2008)."
+    },
+    {
+      "key": "3578_CR114",
+      "doi": "10.1038/ni1556",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2008",
+      "author": "J Strid",
+      "unstructured": "Strid, J. et al. Acute upregulation of an NKG2D ligand promotes rapid reorganization of a local immune compartment with pleiotropic effects on carcinogenesis. Nat. Immunol. 9, 146\u2013154 (2008)."
+    },
+    {
+      "key": "3578_CR115",
+      "doi": "10.1126/science.1211250",
+      "title": "",
+      "journal": "Science",
+      "year": "2011",
+      "author": "J Strid",
+      "unstructured": "Strid, J., Sobolev, O., Zafirova, B., Polic, B. & Hayday, A. The intraepithelial T cell response to NKG2D-ligands links lymphoid stress surveillance to atopy. Science 334, 1293\u20131297 (2011)."
+    },
+    {
+      "key": "3578_CR116",
+      "doi": "10.1126/scitranslmed.aax9364",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2019",
+      "author": "Y Wu",
+      "unstructured": "Wu, Y. et al. An innate-like V\u03b41+ \u03b3\u03b4 T cell compartment in the human breast is associated with remission in triple-negative breast cancer. Sci. Transl. Med. 11, eaax9364 (2019)."
+    },
+    {
+      "key": "3578_CR117",
+      "doi": "10.4049/jimmunol.163.9.4647",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "1999",
+      "author": "C Carnaud",
+      "unstructured": "Carnaud, C. et al. Cutting edge: cross-talk between cells of the innate immune system: NKT cells rapidly activate NK cells. J. Immunol. 163, 4647\u20134650 (1999)."
+    },
+    {
+      "key": "3578_CR118",
+      "doi": "10.1016/j.immuni.2018.03.009",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2018",
+      "author": "DI Godfrey",
+      "unstructured": "Godfrey, D. I., Le Nours, J., Andrews, D. M., Uldrich, A. P. & Rossjohn, J. Unconventional T cell targets for cancer immunotherapy. Immunity 48, 453\u2013473 (2018)."
+    },
+    {
+      "key": "3578_CR119",
+      "doi": "10.1038/s41590-019-0578-8",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2020",
+      "author": "MD Crowther",
+      "unstructured": "Crowther, M. D. et al. Genome-wide CRISPR\u2013Cas9 screening reveals ubiquitous T cell cancer targeting via the monomorphic MHC class I-related protein MR1. Nat. Immunol. 21, 178\u2013185 (2020)."
+    },
+    {
+      "key": "3578_CR120",
+      "doi": "10.1007/s00251-016-0929-7",
+      "title": "",
+      "journal": "Immunogenetics",
+      "year": "2016",
+      "author": "E-S Edholm",
+      "unstructured": "Edholm, E.-S., Banach, M. & Robert, J. Evolution of innate-like T cells and their selection by MHC class I-like molecules. Immunogenetics 68, 525\u2013536 (2016)."
+    },
+    {
+      "key": "3578_CR121",
+      "doi": "10.1007/s00251-016-0927-9",
+      "title": "",
+      "journal": "Immunogenetics",
+      "year": "2016",
+      "author": "S Mondot",
+      "unstructured": "Mondot, S., Boudinot, P. & Lantz, O. MAIT, MR1, microbes and riboflavin: a paradigm for the co-evolution of invariant TCRs and restricting MHCI-like molecules? Immunogenetics 68, 537\u2013548 (2016)."
+    },
+    {
+      "key": "3578_CR122",
+      "doi": "10.1073/pnas.1600674113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "P Boudinot",
+      "unstructured": "Boudinot, P. et al. Restricting nonclassical MHC genes coevolve with TRAV genes used by innate-like T cells in mammals. Proc. Natl Acad. Sci. USA 113, E2983\u2013E2992 (2016)."
+    },
+    {
+      "key": "3578_CR123",
+      "doi": "10.1038/nrg2703",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2010",
+      "author": "MF Flajnik",
+      "unstructured": "Flajnik, M. F. & Kasahara, M. Origin and evolution of the adaptive immune system: genetic events and selective pressures. Nat. Rev. Genet. 11, 47\u201359 (2010)."
+    },
+    {
+      "key": "3578_CR124",
+      "doi": "10.1038/nri1635",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2005",
+      "author": "JR Rodgers",
+      "unstructured": "Rodgers, J. R. & Cook, R. G. MHC class Ib molecules bridge innate and acquired immunity. Nat. Rev. Immunol. 5, 459\u2013471 (2005)."
+    },
+    {
+      "key": "3578_CR125",
+      "doi": "10.1007/978-1-4614-6111-1_10",
+      "title": "",
+      "journal": "Adv. Exp. Med. Biol.",
+      "year": "2013",
+      "author": "I Van Rhijn",
+      "unstructured": "Van Rhijn, I., Ly, D. & Moody, D. B. CD1a, CD1b, and CD1c in immunity against mycobacteria. Adv. Exp. Med. Biol. 783, 181\u2013197 (2013)."
+    },
+    {
+      "key": "3578_CR126",
+      "doi": "10.1038/s41467-018-07207-9",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "B van Wilgenburg",
+      "unstructured": "van Wilgenburg, B. et al. MAIT cells contribute to protection against lethal influenza infection in vivo. Nat. Commun. 9, 4706 (2018)."
+    },
+    {
+      "key": "3578_CR127",
+      "doi": "10.1126/science.aaw2719",
+      "title": "",
+      "journal": "Science",
+      "year": "2019",
+      "author": "F Legoux",
+      "unstructured": "Legoux, F. et al. Microbial metabolites control the thymic development of mucosal-associated invariant T cells. Science 366, 494\u2013499 (2019)."
+    },
+    {
+      "key": "3578_CR128",
+      "doi": "",
+      "title": "",
+      "journal": "Immunodefic. Rev.",
+      "year": "1992",
+      "author": "A Fischer",
+      "unstructured": "Fischer, A. Severe combined immunodeficiencies. Immunodefic. Rev. 3, 83\u2013100 (1992)."
+    },
+    {
+      "key": "3578_CR129",
+      "doi": "10.1371/journal.pgen.1000562",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2009",
+      "author": "LB Barreiro",
+      "unstructured": "Barreiro, L. B. et al. Evolutionary dynamics of human Toll-like receptors and their different contributions to host defense. PLoS Genet. 5, e1000562 (2009)."
+    },
+    {
+      "key": "3578_CR130",
+      "doi": "10.1038/nrg2698",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2010",
+      "author": "LB Barreiro",
+      "unstructured": "Barreiro, L. B. & Quintana-Murci, L. From evolutionary genetics to human immunology: how selection shapes host defence genes. Nat. Rev. Genet. 11, 17\u201330 (2010)."
+    },
+    {
+      "key": "3578_CR131",
+      "doi": "10.1126/sciimmunol.abc9492",
+      "title": "",
+      "journal": "Sci. Immunol.",
+      "year": "2020",
+      "author": "LJ Howson",
+      "unstructured": "Howson, L. J. et al. Absence of mucosal-associated invariant T cells in a person with a homozygous point mutation in MR1. Sci. Immunol. 5, eabc9492 (2020)."
+    },
+    {
+      "key": "3578_CR132",
+      "doi": "10.1038/s41467-020-20073-8",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "S Harsha Krovi",
+      "unstructured": "Harsha Krovi, S. et al. Thymic iNKT single cell analyses unmask the common developmental program of mouse innate T cells. Nat. Commun. 11, 6238 (2020)."
+    },
+    {
+      "key": "3578_CR133",
+      "doi": "10.1038/nature13047",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "MG Constantinides",
+      "unstructured": "Constantinides, M. G., McDonald, B. D., Verhoef, P. A. & Bendelac, A. A committed precursor to innate lymphoid cells. Nature 508, 397\u2013401 (2014)."
+    },
+    {
+      "key": "3578_CR134",
+      "doi": "10.1084/jem.20020609",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2002",
+      "author": "AS Heinzel",
+      "unstructured": "Heinzel, A. S. et al. HLA-E-dependent presentation of Mtb-derived antigen to human CD8+ T cells. J. Exp. Med. 196, 1473\u20131481 (2002)."
+    },
+    {
+      "key": "3578_CR135",
+      "doi": "10.1084/jem.173.6.1331",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1991",
+      "author": "D Kabelitz",
+      "unstructured": "Kabelitz, D. et al. The primary response of human \u03b3/\u03b4+ T cells to Mycobacterium tuberculosis is restricted to V\u03b39-bearing cells. J. Exp. Med. 173, 1331\u20131338 (1991)."
+    },
+    {
+      "key": "3578_CR136",
+      "doi": "10.1371/journal.pbio.1000407",
+      "title": "",
+      "journal": "PLoS Biol.",
+      "year": "2010",
+      "author": "MC Gold",
+      "unstructured": "Gold, M. C. et al. Human mucosal associated invariant T cells detect bacterially infected cells. PLoS Biol. 8, e1000407 (2010)."
+    },
+    {
+      "key": "3578_CR137",
+      "doi": "10.1016/j.immuni.2011.05.009",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2011",
+      "author": "S Nish",
+      "unstructured": "Nish, S. & Medzhitov, R. Host defense pathways: role of redundancy and compensation in infectious disease phenotypes. Immunity 34, 629\u2013636 (2011)."
+    },
+    {
+      "key": "3578_CR138",
+      "doi": "10.4049/jimmunol.1101268",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2011",
+      "author": "OY Borbulevych",
+      "unstructured": "Borbulevych, O. Y., Santhanagopolan, S. M., Hossain, M. & Baker, B. M. TCRs used in cancer gene therapy cross-react with MART-1/Melan-A tumor antigens via distinct mechanisms. J. Immunol. 187, 2453\u20132463 (2011)."
+    },
+    {
+      "key": "3578_CR139",
+      "doi": "10.1074/jbc.m112.412320",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2012",
+      "author": "KS Wun",
+      "unstructured": "Wun, K. S. et al. Human and mouse type I natural killer T cell antigen receptors exhibit different fine specificities for CD1d-antigen complex. J. Biol. Chem. 287, 39139\u201339148 (2012)."
+    }
+  ]
+}

@@ -1,0 +1,1551 @@
+{
+  "article": {
+    "slug": "s41586-021-04188-6",
+    "doi": "10.1038/s41586-021-04188-6",
+    "title": "The emergence, genomic diversity and global spread of SARS-CoV-2",
+    "url": "https://www.nature.com/articles/s41586-021-04188-6",
+    "abbrev": "emergence-genomic-diversity-global-spread-sars",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/emergence-genomic-diversity-global-spread-sars"
+  },
+  "meta": {
+    "title": "The emergence, genomic diversity and global spread of SARS-CoV-2",
+    "authors": [
+      "Juan Li",
+      "Shengjie Lai",
+      "George F. Gao",
+      "Weifeng Shi"
+    ],
+    "published": [
+      2021,
+      12,
+      8
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-021-04188-6",
+    "n_references": 169,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "4188_CR1",
+      "doi": "10.1056/nejmoa2001017",
+      "title": "",
+      "journal": "N Engl J Med",
+      "year": "2020",
+      "author": "N Zhu",
+      "unstructured": "Zhu, N. et al.A novel coronavirus from patients with pneumonia in China, 2019. N Engl J Med 382, 727\u2013733 (2020). One of the first papers to describe the identification of SARS-CoV-2 in Wuhan in late December 2019, providing the sequences of three full-length viral genomes and the successful isolation of the novel coronavirus."
+    },
+    {
+      "key": "4188_CR2",
+      "doi": "10.1016/s0140-6736(20)30251-8",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2020",
+      "author": "R Lu",
+      "unstructured": "Lu, R. et al.Genomic characterisation and epidemiology of 2019 novel coronavirus: implications for virus origins and receptor binding. Lancet 395, 565\u2013574 (2020). This study describes the genomic structure and phylogenetic position of eight complte and two partial SARS-CoV-2 genome sequences obtained from samples of nine patients from different hospitals in Wuhan in late December, 2019."
+    },
+    {
+      "key": "4188_CR3",
+      "doi": "10.1038/s41586-020-2008-3",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "F Wu",
+      "unstructured": "Wu, F. et al. A new coronavirus associated with human respiratory disease in China. Nature 579, 265\u2013269 (2020)."
+    },
+    {
+      "key": "4188_CR4",
+      "doi": "10.1038/s41586-020-2012-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "P Zhou",
+      "unstructured": "Zhou, P. et al. A pneumonia outbreak associated with a new coronavirus of probable bat origin. Nature 579, 270\u2013273 (2020). In addition to providing the early identification of SARS-CoV-2, this paper includes a description of the closest relative of SARS-CoV-2 identified to date\u2014the bat-derived coronavirus RaTG13."
+    },
+    {
+      "key": "4188_CR5",
+      "doi": "10.46234/ccdcw2020.017",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Tan, W. et al. A novel coronavirus genome identified in a cluster of pneumonia cases - Wuhan, China 2019\u20132020. China CDC Weekly 2, 61\u201362 (2020). Genomic sequencing of the novel coronavirus, initially named after nCoV-19."
+    },
+    {
+      "key": "4188_CR6",
+      "doi": "10.1038/s41564-020-0695-z",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2020",
+      "author": "Coronaviridae Study Group of the International Committee on Taxonomy of Viruses.",
+      "unstructured": "Coronaviridae Study Group of the International Committee on Taxonomy of Viruses. The species Severe acute respiratory syndrome-related coronavirus: classifying 2019-nCoV and naming it SARS-CoV-2. Nat. Microbiol. 5, 536\u2013544 (2020)."
+    },
+    {
+      "key": "4188_CR7",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "WHO. WHO-convened Global Study of Origins of SARS-CoV-2: China Part. Joint WHO\u2013China Study (WHO, 2021)."
+    },
+    {
+      "key": "4188_CR8",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Hill, V. & Rambaut, A. Phylodynamic analysis of SARS-CoV-2. Virological https://virological.org/t/phylodynamic-analysis-of-sars-cov-2-update-2020-03-06/420 (2020)."
+    },
+    {
+      "key": "4188_CR9",
+      "doi": "10.1056/nejmoa2001316",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2020",
+      "author": "Q Li",
+      "unstructured": "Li, Q. et al. Early transmission dynamics in Wuhan, China, of novel coronavirus-infected pneumonia. N. Engl. J. Med. 382, 1199\u20131207 (2020). An early estimate of the epidemiological characteristics at the start of the COVID-19 outbreak, providing important evidence of human-to-human transmission from the middle of December 2019 in Wuhan, China."
+    },
+    {
+      "key": "4188_CR10",
+      "doi": "10.1016/j.cell.2021.08.017",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "EC Holmes",
+      "unstructured": "Holmes, E. C. et al. The origins of SARS-CoV-2: a critical review. Cell 184, 4848\u20134856 (2021)."
+    },
+    {
+      "key": "4188_CR11",
+      "doi": "10.1016/s0140-6736(20)30154-9",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2020",
+      "author": "JF Chan",
+      "unstructured": "Chan, J. F. et al. A familial cluster of pneumonia associated with the 2019 novel coronavirus indicating person-to-person transmission: a study of a family cluster. Lancet 395, 514\u2013523 (2020)."
+    },
+    {
+      "key": "4188_CR12",
+      "doi": "10.1016/j.cell.2020.03.045",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Wang, Q. H. et al. Structural and functional basis of SARS-CoV-2 entry by using human ACE2. Cell 181, 894\u2013904 (2020). Identification and structural basis of the binding of the ACE2 receptor to SARS-CoV-2."
+    },
+    {
+      "key": "4188_CR13",
+      "doi": "10.1126/science.abb2507",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "D Wrapp",
+      "unstructured": "Wrapp, D. et al. Cryo-EM structure of the 2019-nCoV spike in the prefusion conformation. Science 367, 1260\u20131263 (2020)."
+    },
+    {
+      "key": "4188_CR14",
+      "doi": "10.1038/s41591-020-0820-9",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2020",
+      "author": "KG Andersen",
+      "unstructured": "Andersen, K. G., Rambaut, A., Lipkin, W. I., Holmes, E. C. & Garry, R. F. The proximal origin of SARS-CoV-2. Nat. Med. 26, 450\u2013452 (2020). This paper describes the fundamental genomic features of SARS-CoV-2\u2014in particular, the RBD and the furin cleavage site\u2014and outlines the case for its zoonotic origin."
+    },
+    {
+      "key": "4188_CR15",
+      "doi": "10.1128/jvi.00127-20",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2020",
+      "author": "Y Wan",
+      "unstructured": "Wan, Y., Shang, J., Graham, R., Baric, R. S. & Li, F. Receptor recognition by the novel coronavirus from Wuhan: an analysis based on decade-long structural studies of SARS coronavirus. J. Virol. 94, e00127-20 (2020)."
+    },
+    {
+      "key": "4188_CR16",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Garry, R. F. & Gallaher, W. R. Naturally occurring indels in multiple coronavirus spikes. Virological https://virological.org/t/naturally-occurring-indels-in-multiple-coronavirus-spikes/560 (2020)."
+    },
+    {
+      "key": "4188_CR17",
+      "doi": "",
+      "title": "",
+      "journal": "Chin. J. Bioinform.",
+      "year": "2020",
+      "author": "X Li",
+      "unstructured": "Li, X. et al. A furin cleavage site was discovered in the S protein of the 2019 novel coronavirus [in Chinese]. Chin. J. Bioinform. 18, 103\u2013108 (2020)."
+    },
+    {
+      "key": "4188_CR18",
+      "doi": "10.1038/s41594-020-0468-7",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2020",
+      "author": "AG Wrobel",
+      "unstructured": "Wrobel, A. G. et al. SARS-CoV-2 and bat RaTG13 spike glycoprotein structures inform on virus evolution and furin-cleavage effects. Nat. Struct. Mol. Biol. 27, 763\u2013767 (2020)."
+    },
+    {
+      "key": "4188_CR19",
+      "doi": "10.1038/s41586-021-03237-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "BA Johnson",
+      "unstructured": "Johnson, B. A. et al. Loss of furin cleavage site attenuates SARS-CoV-2 pathogenesis. Nature 591, 293\u2013299 (2021)."
+    },
+    {
+      "key": "4188_CR20",
+      "doi": "10.1038/s41586-020-2951-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "P Zhou",
+      "unstructured": "Zhou, P. et al. Addendum: A pneumonia outbreak associated with a new coronavirus of probable bat origin. Nature 588, E6 (2020)."
+    },
+    {
+      "key": "4188_CR21",
+      "doi": "10.1038/s41564-020-0771-4",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2020",
+      "author": "MF Boni",
+      "unstructured": "Boni, M. F. et al. Evolutionary origins of the SARS-CoV-2 sarbecovirus lineage responsible for the COVID-19 pandemic. Nat. Microbiol. 5, 1408\u20131417(2020)."
+    },
+    {
+      "key": "4188_CR22",
+      "doi": "10.1038/s41586-020-2169-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "TT Lam",
+      "unstructured": "Lam, T. T. et al. Identifying SARS-CoV-2-related coronaviruses in Malayan pangolins. Nature 583, 282\u2013285 (2020)."
+    },
+    {
+      "key": "4188_CR23",
+      "doi": "10.1038/s41586-020-2313-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "K Xiao",
+      "unstructured": "Xiao, K. et al. Isolation of SARS-CoV-2-related coronavirus from Malayan pangolins. Nature 583, 286\u2013289(2020)."
+    },
+    {
+      "key": "4188_CR24",
+      "doi": "10.1101/2020.06.22.164442",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Li, X. et al. Pathogenicity, tissue tropism and potential vertical transmission of SARSr-CoV-2 in Malayan pangolins. Preprint at https://doi.org/10.1101/2020.06.22.164442 (2020)."
+    },
+    {
+      "key": "4188_CR25",
+      "doi": "10.1016/j.cub.2020.05.023",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2020",
+      "author": "H Zhou",
+      "unstructured": "Zhou, H. et al. A novel bat coronavirus closely related to SARS-CoV-2 contains natural insertions at the S1/S2 cleavage site of the spike protein. Curr. Biol. 30, 2196\u20132203 (2020)."
+    },
+    {
+      "key": "4188_CR26",
+      "doi": "10.1016/j.cell.2021.06.008",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "H Zhou",
+      "unstructured": "Zhou, H. et al. Identification of novel bat coronaviruses sheds light on the evolutionary origins of SARS-CoV-2 and related viruses. Cell 184, 4380\u20134391 (2021)."
+    },
+    {
+      "key": "4188_CR27",
+      "doi": "10.3201/eid2612.203386",
+      "title": "",
+      "journal": "Emerg. Infect. Dis.",
+      "year": "2020",
+      "author": "S Murakami",
+      "unstructured": "Murakami, S. et al. Detection and characterization of bat sarbecovirus phylogenetically related to SARS-CoV-2, Japan. Emerg. Infect. Dis. 26, 3025\u20133029 (2020)."
+    },
+    {
+      "key": "4188_CR28",
+      "doi": "10.1038/s41467-021-26809-4",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Delaune, D. et al. A novel SARS-CoV-2 related coronavirus in bats from Cambodia. Nat. Commun. 12, 6563 (2021)."
+    },
+    {
+      "key": "4188_CR29",
+      "doi": "10.1038/s41467-021-21240-1",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Wacharapluesadee, S. et al. Evidence for SARS-CoV-2 related coronaviruses circulating in bats and pangolins in Southeast Asia. Nat. Commun. 12, 972 (2021)."
+    },
+    {
+      "key": "4188_CR30",
+      "doi": "10.21203/rs.3.rs-871965/v1",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Temmam, S. et al. Coronaviruses with a SARS-CoV-2-like receptor-binding domain allowing ACE2-mediated entry into human cells isolated from bats of Indochinese peninsula. Preprint at https://doi.org/10.21203/rs.3.rs-871965/v1 (2021)."
+    },
+    {
+      "key": "4188_CR31",
+      "doi": "10.1073/pnas.1201130109",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2012",
+      "author": "M Bouvet",
+      "unstructured": "Bouvet, M. et al. RNA 3\u2032-end mismatch excision by the severe acute respiratory syndrome coronavirus nonstructural protein nsp10/nsp14 exoribonuclease complex. Proc. Natl Acad. Sci. USA 109, 9372\u20139377 (2012)."
+    },
+    {
+      "key": "4188_CR32",
+      "doi": "10.1038/nrg.2017.88",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2018",
+      "author": "JL Gardy",
+      "unstructured": "Gardy, J. L. & Loman, N. J. Towards a genomics-informed, real-time, global pathogen surveillance system. Nat. Rev. Genet. 19, 9\u201320 (2018)."
+    },
+    {
+      "key": "4188_CR33",
+      "doi": "10.1038/s41564-018-0296-2",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2019",
+      "author": "ND Grubaugh",
+      "unstructured": "Grubaugh, N. D. et al. Tracking virus outbreaks in the twenty-first century. Nat. Microbiol. 4, 10\u201319 (2019)."
+    },
+    {
+      "key": "4188_CR34",
+      "doi": "10.1038/s41591-020-1000-7",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2020",
+      "author": "RJ Rockett",
+      "unstructured": "Rockett, R. J. et al. Revealing COVID-19 transmission in Australia by SARS-CoV-2 genome sequencing and agent-based modeling. Nat. Med. 26, 1398\u20131404 (2020)."
+    },
+    {
+      "key": "4188_CR35",
+      "doi": "10.1126/scitranslmed.abe2555",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2020",
+      "author": "A Popa",
+      "unstructured": "Popa, A. et al. Genomic epidemiology of superspreading events in Austria reveals mutational dynamics and transmission properties of SARS-CoV-2. Sci. Transl. Med. 12, eabe2555 (2020)."
+    },
+    {
+      "key": "4188_CR36",
+      "doi": "10.1038/s41591-020-0997-y",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2020",
+      "author": "BB Oude Munnink",
+      "unstructured": "Oude Munnink, B. B. et al. Rapid SARS-CoV-2 whole-genome sequencing and analysis for informed public health decision-making in the Netherlands. Nat. Med. 26, 1405\u20131410 (2020)."
+    },
+    {
+      "key": "4188_CR37",
+      "doi": "10.1038/s41467-020-19248-0",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "D Miller",
+      "unstructured": "Miller, D. et al. Full genome viral sequences inform patterns of SARS-CoV-2 spread into and within Israel. Nat. Commun. 11, 5518 (2020)."
+    },
+    {
+      "key": "4188_CR38",
+      "doi": "10.1126/science.abf2946",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "L du Plessis",
+      "unstructured": "du Plessis, L. et al. Establishment and lineage dynamics of the SARS-CoV-2 epidemic in the UK. Science 371, 708\u2013712 (2021). This milestone paper describes the genomic surveillance of SARS-CoV-2 in the UK and used an analysis of more than 50,000 genome sequences to analyse the structure of SARS-CoV-2 lineages at a fine scale."
+    },
+    {
+      "key": "4188_CR39",
+      "doi": "10.1016/s0140-6736(03)14630-2",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2003",
+      "author": "NS Zhong",
+      "unstructured": "Zhong, N. S. et al. Epidemiology and cause of severe acute respiratory syndrome (SARS) in Guangdong, People\u2019s Republic of China, in February, 2003. Lancet 362, 1353\u20131358 (2003)."
+    },
+    {
+      "key": "4188_CR40",
+      "doi": "10.1016/j.cell.2020.04.023",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "J Lu",
+      "unstructured": "Lu, J. et al. Genomic epidemiology of SARS-CoV-2 in Guangdong Province, China. Cell 181, 997\u20131003 (2020). A detailed description of the genomic epidemiology of SARS-CoV-2 in Guangdong province, China, illustrating how genomic surveillance facilitated outbreak containment in China."
+    },
+    {
+      "key": "4188_CR41",
+      "doi": "10.1128/jvi.00790-20",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2020",
+      "author": "Z Liu",
+      "unstructured": "Liu, Z. et al. Identification of common deletions in the spike protein of severe acute respiratory syndrome coronavirus 2. J. Virol. 94, e00790-20 (2020)."
+    },
+    {
+      "key": "4188_CR42",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Imported coronavirus variant case reported in Guangdong. XINHUA http://www.xinhuanet.com/english/2021-01/03/c_139637931.htm (3\u2009January 2021)."
+    },
+    {
+      "key": "4188_CR43",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Guangdong reports imported coronavirus variant case. XINHUA http://www.xinhuanet.com/english/2021-01/06/c_139646690.htm (6\u2009January 2021)."
+    },
+    {
+      "key": "4188_CR44",
+      "doi": "10.1056/nejmoa2001191",
+      "title": "",
+      "journal": "New Engl. J. Med.",
+      "year": "2020",
+      "author": "ML Holshue",
+      "unstructured": "Holshue, M. L. et al. First case of 2019 novel coronavirus in the United States. New Engl. J. Med. 382, 929\u2013936 (2020)."
+    },
+    {
+      "key": "4188_CR45",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "World Health Organization. Coronavirus disease 2019 (COVID-19) Situation Report \u2013 26 https://www.who.int/docs/default-source/coronaviruse/situation-reports/20200215-sitrep-26-covid-19.pdf?sfvrsn=a4cc6787_2 (WHO, 2020)."
+    },
+    {
+      "key": "4188_CR46",
+      "doi": "10.1126/science.abc8169",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "M Worobey",
+      "unstructured": "Worobey, M. et al. The emergence of SARS-CoV-2 in Europe and North America. Science 370, 564\u2013570 (2020)."
+    },
+    {
+      "key": "4188_CR47",
+      "doi": "10.1126/science.abc1917",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "AS Gonzalez-Reiche",
+      "unstructured": "Gonzalez-Reiche, A. S. et al. Introductions and early spread of SARS-CoV-2 in the New York City area. Science 369, 297\u2013301 (2020). This paper analysed the early transmission dynamics of SARS-CoV-2 in New York City, highlighting viral introductions from Europe to the USA."
+    },
+    {
+      "key": "4188_CR48",
+      "doi": "10.1126/science.abb9263",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "X Deng",
+      "unstructured": "Deng, X. et al. Genomic surveillance reveals multiple introductions of SARS-CoV-2 into Northern California. Science 369, 582\u2013587 (2020)."
+    },
+    {
+      "key": "4188_CR49",
+      "doi": "10.1126/science.abc0523",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "T Bedford",
+      "unstructured": "Bedford, T. et al. Cryptic transmission of SARS-CoV-2 in Washington state. Science 370, 571\u2013575 (2020). This paper describes the cryptic transmission of SARS-CoV-2 in the USA."
+    },
+    {
+      "key": "4188_CR50",
+      "doi": "10.1101/gr.266676.120",
+      "title": "",
+      "journal": "Genome Res.",
+      "year": "2020",
+      "author": "MT Maurano",
+      "unstructured": "Maurano, M. T. et al. Sequencing identifies multiple early introductions of SARS-CoV-2 to the New York City region. Genome Res. 30, 1781\u20131788 (2020)."
+    },
+    {
+      "key": "4188_CR51",
+      "doi": "10.1016/j.cell.2020.04.021",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "JR Fauver",
+      "unstructured": "Fauver, J. R. et al. Coast-to-coast spread of SARS-CoV-2 during the early epidemic in the United States. Cell 181, 990\u2013996 (2020). This study describes the long-distance domestic spread of SARS-CoV-2 in the USA."
+    },
+    {
+      "key": "4188_CR52",
+      "doi": "10.1038/s41467-020-19346-z",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "GK Moreno",
+      "unstructured": "Moreno, G. K. et al. Revealing fine-scale spatiotemporal differences in SARS-CoV-2 introduction and spread. Nat. Commun. 11, 5558 (2020)."
+    },
+    {
+      "key": "4188_CR53",
+      "doi": "10.1093/ve/veaa061",
+      "title": "",
+      "journal": "Virus Evol.",
+      "year": "2020",
+      "author": "S Duchene",
+      "unstructured": "Duchene, S. et al. Temporal signal and the phylodynamic threshold of SARS-CoV-2. Virus Evol. 6, veaa061 (2020)."
+    },
+    {
+      "key": "4188_CR54",
+      "doi": "10.1093/bioinformatics/bty407",
+      "title": "",
+      "journal": "Bioinformatics",
+      "year": "2018",
+      "author": "J Hadfield",
+      "unstructured": "Hadfield, J. et al. Nextstrain: real-time tracking of pathogen evolution. Bioinformatics 34, 4121\u20134123 (2018)."
+    },
+    {
+      "key": "4188_CR55",
+      "doi": "10.1126/sciadv.abb5813",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2020",
+      "author": "S Di Giorgio",
+      "unstructured": "Di Giorgio, S., Martignano, F., Torcia, M. G., Mattiuz, G. & Conticello, S. G. Evidence for host-dependent RNA editing in the transcriptome of SARS-CoV-2. Sci. Adv. 6, eabb5813 (2020)."
+    },
+    {
+      "key": "4188_CR56",
+      "doi": "10.1128/msphere.00408-20",
+      "title": "",
+      "journal": "mSphere",
+      "year": "2020",
+      "author": "P Simmonds",
+      "unstructured": "Simmonds, P. Rampant C\u2192U hypermutation in the genomes of SARS-CoV-2 and other coronaviruses: causes and consequences for their short- and long-term evolutionary trajectories. mSphere 5, e00408-20 (2020)."
+    },
+    {
+      "key": "4188_CR57",
+      "doi": "10.1016/j.tim.2015.06.003",
+      "title": "",
+      "journal": "Trends Microbiol.",
+      "year": "2015",
+      "author": "G Lu",
+      "unstructured": "Lu, G., Wang, Q. & Gao, G. F. Bat-to-human: spike features determining \u2018host jump\u2019 of coronaviruses SARS-CoV, MERS-CoV, and beyond. Trends Microbiol. 23, 468\u2013478 (2015)."
+    },
+    {
+      "key": "4188_CR58",
+      "doi": "10.1016/j.antiviral.2016.07.015",
+      "title": "",
+      "journal": "Antiviral Res.",
+      "year": "2016",
+      "author": "Q Wang",
+      "unstructured": "Wang, Q., Wong, G., Lu, G., Yan, J. & Gao, G. F. MERS-CoV spike protein: targets for vaccines and therapeutics. Antiviral Res. 133, 165\u2013177 (2016)."
+    },
+    {
+      "key": "4188_CR59",
+      "doi": "10.1016/j.cell.2020.06.043",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "B Korber",
+      "unstructured": "Korber, B. et al. Tracking changes in SARS-CoV-2 spike: evidence that D614G increases infectivity of the COVID-19 virus. Cell 182, 812\u2013827 (2020). An important paper that provided the initial evidence that the D614G substitution increased the infectivity\u2014and therefore transmissibility\u2014of SARS-CoV-2."
+    },
+    {
+      "key": "4188_CR60",
+      "doi": "10.1016/j.cell.2020.11.020",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "E Volz",
+      "unstructured": "Volz, E. et al. Evaluating the effects of SARS-CoV-2 spike mutation D614G on transmissibility and pathogenicity. Cell 184, 64\u201375 (2021)."
+    },
+    {
+      "key": "4188_CR61",
+      "doi": "10.1038/s41586-020-2895-3",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "JA Plante",
+      "unstructured": "Plante, J. A. et al. Spike mutation D614G alters SARS-CoV-2 fitness. Nature 592, 116\u2013121 (2020)."
+    },
+    {
+      "key": "4188_CR62",
+      "doi": "10.1038/s41467-020-19808-4",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "L Zhang",
+      "unstructured": "Zhang, L. et al. SARS-CoV-2 spike-protein D614G mutation increases virion spike density and infectivity. Nat. Commun. 11, 6013 (2020)."
+    },
+    {
+      "key": "4188_CR63",
+      "doi": "10.1016/j.cell.2020.09.032",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "L Yurkovetskiy",
+      "unstructured": "Yurkovetskiy, L. et al. Structural and functional analysis of the D614G SARS-CoV-2 spike protein variant. Cell 183, 739\u2013751 (2020)."
+    },
+    {
+      "key": "4188_CR64",
+      "doi": "10.1126/science.abe8499",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "YJ Hou",
+      "unstructured": "Hou, Y. J. et al. SARS-CoV-2 D614G variant exhibits efficient replication ex vivo and transmission in vivo. Science 370, 1464\u20131468 (2020)."
+    },
+    {
+      "key": "4188_CR65",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Lassauni\u00e8re, R. et al. SARS-CoV-2 Spike Mutations Arising in Danish Mink and their Spread to Humans (Working paper of SSI), https://files.ssi.dk/Mink-cluster-5-short-report_AFO2 (2020)."
+    },
+    {
+      "key": "4188_CR66",
+      "doi": "10.1016/j.chom.2020.11.007",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2021",
+      "author": "AJ Greaney",
+      "unstructured": "Greaney, A. J. et al. Complete mapping of mutations to the SARS-CoV-2 spike receptor-binding domain that escape antibody recognition. Cell Host Microbe 29, 44\u201357 (2021)."
+    },
+    {
+      "key": "4188_CR67",
+      "doi": "10.1038/s41586-021-03470-x",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Volz, E. et al. Assessing transmissibility of SARS-CoV-2 lineage B.1.1.7 in England. Nature 593, 266\u2013269 (2021)."
+    },
+    {
+      "key": "4188_CR68",
+      "doi": "10.1126/science.abg3055",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "NG Davies",
+      "unstructured": "Davies, N. G. et al. Estimated transmissibility and impact of SARS-CoV-2 lineage B.1.1.7 in England. Science 372, eabg3055 (2020)."
+    },
+    {
+      "key": "4188_CR69",
+      "doi": "10.1101/2020.12.21.20248640",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Tegally, H. et al. Emergence and rapid spread of a new severe acute respiratory syndrome-related coronavirus 2 (SARSCoV-2) lineage with multiple spike mutations in South Africa. Preprint at https://doi.org/10.1101/2020.12.21.20248640 (2020)."
+    },
+    {
+      "key": "4188_CR70",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Faria, N. R. et al. Genomic characterisation of an emergent SARS-CoV-2 lineage in Manaus: preliminary findings. Virological https://virological.org/t/genomic-characterisation-of-an-emergent-sars-cov-2-lineage-in-manaus-preliminary-findings/586 (2021)."
+    },
+    {
+      "key": "4188_CR71",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Naveca, F. et al. Phylogenetic relationship of SARS-CoV-2 sequences from Amazonas with emerging Brazilian variants harboring mutations E484K and N501Y in the Spike protein. Virological https://virological.org/t/phylogenetic-relationship-of-sars-cov-2-sequences-from-amazonas-with-emerging-brazilian-variants-harboring-mutations-e484k-and-n501y-in-the-spikeprotein/585 (2021)."
+    },
+    {
+      "key": "4188_CR72",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "O\u2019Toole, \u00c1. & Hill, V. SARS-CoV-2 lineages: B.1.617.2 report. https://cov-lineages.org/global_report_B.1.617.2.html (2021)."
+    },
+    {
+      "key": "4188_CR73",
+      "doi": "10.1371/journal.pbio.3001115",
+      "title": "",
+      "journal": "PLoS Biol.",
+      "year": "2021",
+      "author": "OA MacLean",
+      "unstructured": "MacLean, O. A. et al. Natural selection in the evolution of SARS-CoV-2 in bats created a generalist virus and highly capable human pathogen. PLoS Biol. 19, e3001115 (2021)."
+    },
+    {
+      "key": "4188_CR74",
+      "doi": "10.1101/2021.02.23.21252268",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Martin, D. P. et al. The emergence and ongoing convergent evolution of the N501Y lineages coincides with a major global shift in the SARS-CoV-2 selective landscape. Preprint at https://doi.org/10.1101/2021.02.23.21252268 (2021)."
+    },
+    {
+      "key": "4188_CR75",
+      "doi": "10.1126/science.371.6525.108",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "K Kupferschmidt",
+      "unstructured": "Kupferschmidt, K. Viral evolution may herald new pandemic phase. Science 371, 108\u2013109 (2021)."
+    },
+    {
+      "key": "4188_CR76",
+      "doi": "10.1038/s41586-021-03398-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "P Wang",
+      "unstructured": "Wang, P. et al. Antibody resistance of SARS-CoV-2 variants B.1.351 and B.1.1.7. Nature 593, 130\u2013135 (2021)."
+    },
+    {
+      "key": "4188_CR77",
+      "doi": "10.1016/j.cell.2021.06.020",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "C Liu",
+      "unstructured": "Liu, C. et al. Reduced neutralization of SARS-CoV-2 B.1.617 by vaccine and convalescent serum. Cell 184, 4220\u20134236 (2021)."
+    },
+    {
+      "key": "4188_CR78",
+      "doi": "10.1038/s41586-021-03693-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "J Liu",
+      "unstructured": "Liu, J. et al. BNT162b2-elicited neutralization of B.1.617 and other SARS-CoV-2 variants. Nature 596, 273\u2013275 (2021)."
+    },
+    {
+      "key": "4188_CR79",
+      "doi": "10.1038/s41586-021-03412-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "DA Collier",
+      "unstructured": "Collier, D. A. et al. Sensitivity of SARS-CoV-2 B.1.1.7 to mRNA vaccine-elicited antibodies. Nature 593, 136\u2013141 (2021)."
+    },
+    {
+      "key": "4188_CR80",
+      "doi": "10.1101/2021.01.13.426558",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Nelson, G. et al. Molecular dynamic simulation reveals E484K mutation enhances spike RBD-ACE2 affinity and the combination of E484K, K417N and N501Y mutations (501Y.V2 variant) induces conformational change greater than N501Y mutant alone, potentially resulting in an escape mutant. Preprint at https://doi.org/10.1101/2021.01.13.426558 (2021)."
+    },
+    {
+      "key": "4188_CR81",
+      "doi": "10.1038/s41591-021-01285-x",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2021",
+      "author": "CK Wibmer",
+      "unstructured": "Wibmer, C. K. et al. SARS-CoV-2 501Y.V2 escapes neutralization by South African COVID-19 donor plasma. Nat. Med. 27, 622\u2013625 (2021)."
+    },
+    {
+      "key": "4188_CR82",
+      "doi": "10.1016/j.cell.2021.03.013",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "WF Garcia-Beltran",
+      "unstructured": "Garcia-Beltran, W. F. et al. Multiple SARS-CoV-2 variants escape neutralization by vaccine-induced humoral immunity. Cell 184, 2372\u20132383 (2021)."
+    },
+    {
+      "key": "4188_CR83",
+      "doi": "10.1016/j.cell.2021.03.055",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "W Dejnirattisai",
+      "unstructured": "Dejnirattisai, W. et al. Antibody evasion by the P.1 strain of SARS-CoV-2. Cell 184, 2939\u20132954 (2021)."
+    },
+    {
+      "key": "4188_CR84",
+      "doi": "10.1128/mbio.01610-20",
+      "title": "",
+      "journal": "mBio",
+      "year": "2020",
+      "author": "YCF Su",
+      "unstructured": "Su, Y. C. F. et al. Discovery and genomic characterization of a 382-nucleotide deletion in ORF7b and ORF8 during the early evolution of SARS-CoV-2. mBio 11, e01610-20 (2020)."
+    },
+    {
+      "key": "4188_CR85",
+      "doi": "10.1016/s0140-6736(20)31757-8",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2020",
+      "author": "BE Young",
+      "unstructured": "Young, B. E. et al. Effects of a major deletion in the SARS-CoV-2 genome on the severity of infection and the inflammatory response: an observational cohort study. Lancet 396, 603\u2013611 (2020)."
+    },
+    {
+      "key": "4188_CR86",
+      "doi": "10.1080/22221751.2020.1782271",
+      "title": "",
+      "journal": "Emerg. Microbes Infect.",
+      "year": "2020",
+      "author": "YN Gong",
+      "unstructured": "Gong, Y. N. et al. SARS-CoV-2 genomic surveillance in Taiwan revealed novel ORF8-deletion mutant and clade possibly associated with infections in Middle East. Emerg. Microbes Infect. 9, 1457\u20131466 (2020)."
+    },
+    {
+      "key": "4188_CR87",
+      "doi": "10.1038/s41467-020-19345-0",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "P Du",
+      "unstructured": "Du, P. et al. Genomic surveillance of COVID-19 cases in Beijing. Nat. Commun. 11, 5503 (2020)."
+    },
+    {
+      "key": "4188_CR88",
+      "doi": "10.1001/jama.2020.6130",
+      "title": "",
+      "journal": "J. Am. Med. Assoc.",
+      "year": "2020",
+      "author": "A Pan",
+      "unstructured": "Pan, A. et al. Association of public health interventions with the epidemiology of the COVID-19 outbreak in Wuhan, China. J. Am. Med. Assoc. 323, 1915\u20131923 (2020)."
+    },
+    {
+      "key": "4188_CR89",
+      "doi": "10.1038/s41586-020-2554-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "X Hao",
+      "unstructured": "Hao, X. et al. Reconstruction of the full transmission dynamics of COVID-19 in Wuhan. Nature 584, 420\u2013424 (2020). A comprehensive study of the transmission dynamics of COVID-19 in Wuhan, China, through time, providing important lessons learnt from the interventions in the city."
+    },
+    {
+      "key": "4188_CR90",
+      "doi": "10.1038/s41591-020-0949-6",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2020",
+      "author": "X Xu",
+      "unstructured": "Xu, X. et al. Seroprevalence of immunoglobulin M and G antibodies against SARS-CoV-2 in China. Nat. Med. 26, 1193\u20131195 (2020)."
+    },
+    {
+      "key": "4188_CR91",
+      "doi": "10.1001/jamanetworkopen.2020.25717",
+      "title": "",
+      "journal": ". JAMA Netw. Open.",
+      "year": "2020",
+      "author": "A Liu",
+      "unstructured": "Liu, A. et al. Seropositive prevalence of antibodies against SARS-CoV-2 in Wuhan, China. JAMA Netw. Open. 3, e2025717 (2020)."
+    },
+    {
+      "key": "4188_CR92",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Chinese Center for Disease Control and Prevention. Scientific Understanding of the Prevalence of SARS-CoV-2: Q&A on the Results of National COVID-19 Seroepidemiological Survey in China, http://www.chinacdc.cn/yw_9324/202012/t20201228_223494.html (Chinese CDC, 2020)."
+    },
+    {
+      "key": "4188_CR93",
+      "doi": "10.1016/j.lanwpc.2021.100094",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Li, Z. et al. Antibody seroprevalence in the epicenter Wuhan, Hubei, and six selected provinces after containment of the first epidemic wave of COVID-19 in China.Lancet Reg. Health West Pac. 8, 100094 (2021)."
+    },
+    {
+      "key": "4188_CR94",
+      "doi": "10.1126/science.abb3221",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "R Li",
+      "unstructured": "Li, R. et al. Substantial undocumented infection facilitates the rapid dissemination of novel coronavirus (SARS-CoV-2). Science 368, 489\u2013493 (2020)."
+    },
+    {
+      "key": "4188_CR95",
+      "doi": "10.1016/s1473-3099(20)30229-2",
+      "title": "",
+      "journal": "Lancet Infect. Dis.",
+      "year": "2020",
+      "author": "R Niehus",
+      "unstructured": "Niehus, R., De Salazar, P. M., Taylor, A. R. & Lipsitch, M. Using observational data to quantify bias of traveller-derived COVID-19 prevalence estimates in Wuhan, China. Lancet Infect. Dis. 20, 803\u2013808 (2020)."
+    },
+    {
+      "key": "4188_CR96",
+      "doi": "10.1038/s41467-020-19802-w",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "SY Cao",
+      "unstructured": "Cao, S. Y. et al. Post-lockdown SARS-CoV-2 nucleic acid screening in nearly ten million residents of Wuhan, China. Nat. Commun. 11,5917 (2020)."
+    },
+    {
+      "key": "4188_CR97",
+      "doi": "10.1038/s41586-020-2284-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "JS Jia",
+      "unstructured": "Jia, J. S. et al. Population flow drives spatio-temporal distribution of COVID-19 in China. Nature 582, 389\u2013394 (2020)."
+    },
+    {
+      "key": "4188_CR98",
+      "doi": "10.1016/s0140-6736(20)30260-9",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2020",
+      "author": "JT Wu",
+      "unstructured": "Wu, J. T., Leung, K. & Leung, G. M. Nowcasting and forecasting the potential domestic and international spread of the 2019-nCoV outbreak originating in Wuhan, China: a modelling study. Lancet 395, 689\u2013697 (2020)."
+    },
+    {
+      "key": "4188_CR99",
+      "doi": "10.1038/s41586-020-2293-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "S Lai",
+      "unstructured": "Lai, S. et al. Effect of non-pharmaceutical interventions to contain COVID-19 in China. Nature 585, 410\u2013413 (2020). This study quantified the effects of various non-pharmaceutical interventions and their timings on COVID-19, providing early evidence that informed response efforts around the world."
+    },
+    {
+      "key": "4188_CR100",
+      "doi": "10.1126/science.aba9757",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "M Chinazzi",
+      "unstructured": "Chinazzi, M. et al. The effect of travel restrictions on the spread of the 2019 novel coronavirus (COVID-19) outbreak. Science 368, 395\u2013400 (2020)."
+    },
+    {
+      "key": "4188_CR101",
+      "doi": "10.1016/s1473-3099(20)30230-9",
+      "title": "",
+      "journal": "Lancet Infect. Dis.",
+      "year": "2020",
+      "author": "J Zhang",
+      "unstructured": "Zhang, J. et al. Evolving epidemiology and transmission dynamics of coronavirus disease 2019 outside Hubei province, China: a descriptive and modelling study. Lancet Infect. Dis. 20, 793\u2013802 (2020)."
+    },
+    {
+      "key": "4188_CR102",
+      "doi": "10.1126/science.abb4218",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "MUG Kraemer",
+      "unstructured": "Kraemer, M. U. G. et al. The effect of human mobility and control measures on the COVID-19 epidemic in China. Science 368, 493\u2013497 (2020)."
+    },
+    {
+      "key": "4188_CR103",
+      "doi": "10.1016/s0140-6736(20)30746-7",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2020",
+      "author": "K Leung",
+      "unstructured": "Leung, K., Wu, J. T., Liu, D. & Leung, G. M. First-wave COVID-19 transmissibility and severity in China outside Hubei after control measures, and second-wave scenario planning: a modelling impact assessment. Lancet 395, 1382\u20131393 (2020)."
+    },
+    {
+      "key": "4188_CR104",
+      "doi": "10.1093/jtm/taaa139",
+      "title": "",
+      "journal": "J. Travel Med.",
+      "year": "2020",
+      "author": "Z-B Zhang",
+      "unstructured": "Zhang, Z.-B. et al. Countries of origin of imported COVID-19 cases into China and measures to prevent onward transmission. J. Travel Med. 27, taaa139 (2020)."
+    },
+    {
+      "key": "4188_CR105",
+      "doi": "10.46234/ccdcw2021.008",
+      "title": "",
+      "journal": "China CDC Wkly",
+      "year": "2021",
+      "author": "L Bai",
+      "unstructured": "Bai, L. et al. Controlling COVID-19 transmission due to contaminated imported frozen food and food packaging. China CDC Wkly 3, 30\u201333 (2021)."
+    },
+    {
+      "key": "4188_CR106",
+      "doi": "10.1093/nsr/nwaa264",
+      "title": "",
+      "journal": "Natl Sci. Rev.",
+      "year": "2020",
+      "author": "X Pang",
+      "unstructured": "Pang, X. et al. Cold-chain food contamination as the possible origin of COVID-19 resurgence in Beijing. Natl Sci. Rev. 7, 1861\u20131864 (2020)."
+    },
+    {
+      "key": "4188_CR107",
+      "doi": "10.1056/nejmc2032361",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2020",
+      "author": "Y Xing",
+      "unstructured": "Xing, Y., Wong, G. W. K., Ni, W., Hu, X. & Xing, Q. Rapid response to an outbreak in Qingdao, China. N. Engl. J. Med. 383, e129 (2020)."
+    },
+    {
+      "key": "4188_CR108",
+      "doi": "10.1093/jtm/taaa011",
+      "title": "",
+      "journal": "J. Travel Med.",
+      "year": "2020",
+      "author": "II Bogoch",
+      "unstructured": "Bogoch, I. I. et al. Potential for global spread of a novel coronavirus from China. J. Travel Med. 27, taaa0111 (2020)."
+    },
+    {
+      "key": "4188_CR109",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Lai, S., Bogoch, I. I., Watts, A., Khan, K. & Tatem, A. Preliminary risk analysis of 2019 novel coronavirus spread within and beyond China. WorldPop https://www.worldpop.org/events/china (2020)."
+    },
+    {
+      "key": "4188_CR110",
+      "doi": "10.1093/jtm/taaa200",
+      "title": "",
+      "journal": "J. Travel Med.",
+      "year": "2020",
+      "author": "J Yang",
+      "unstructured": "Yang, J. et al. Uncovering two phases of early intercontinental COVID-19 transmission dynamics. J. Travel Med. 27, taaa200 (2020)."
+    },
+    {
+      "key": "4188_CR111",
+      "doi": "10.2807/1560-7917.es.2020.25.4.2000057",
+      "title": "",
+      "journal": "Euro Surveill.",
+      "year": "2020",
+      "author": "G Pullano",
+      "unstructured": "Pullano, G. et al. Novel coronavirus (2019-nCoV) early-stage importation risk to Europe, January 2020. Euro Surveill. 25, 2000057 (2020)."
+    },
+    {
+      "key": "4188_CR112",
+      "doi": "10.1126/science.abb6105",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "H Tian",
+      "unstructured": "Tian, H. et al. An investigation of transmission control measures during the first 50 days of the COVID-19 epidemic in China. Science 368, 638\u2013642 (2020)."
+    },
+    {
+      "key": "4188_CR113",
+      "doi": "10.1073/pnas.2002616117",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2020",
+      "author": "CR Wells",
+      "unstructured": "Wells, C. R. et al. Impact of international travel and border control measures on the global spread of the novel 2019 coronavirus outbreak. Proc. Natl Acad. Sci. USA 117, 7504\u20137509 (2020)."
+    },
+    {
+      "key": "4188_CR114",
+      "doi": "10.1016/s2468-2667(20)30263-2",
+      "title": "",
+      "journal": "Lancet Public Health",
+      "year": "2021",
+      "author": "TW Russell",
+      "unstructured": "Russell, T. W. et al. Effect of internationally imported cases on internal spread of COVID-19: a mathematical modelling study. Lancet Public Health 6, e12\u2013e20 (2021)."
+    },
+    {
+      "key": "4188_CR115",
+      "doi": "10.1016/s0140-6736(20)31407-0",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2020",
+      "author": "S Devi",
+      "unstructured": "Devi, S. COVID-19 resurgence in Iran. Lancet 395, 1896 (2020)."
+    },
+    {
+      "key": "4188_CR116",
+      "doi": "10.1038/s41591-020-0883-7",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2020",
+      "author": "G Giordano",
+      "unstructured": "Giordano, G. et al. Modelling the COVID-19 epidemic and implementation of population-wide interventions in Italy. Nat. Med. 26, 855\u2013860 (2020)."
+    },
+    {
+      "key": "4188_CR117",
+      "doi": "10.1126/science.abc3517",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "H Salje",
+      "unstructured": "Salje, H. et al. Estimating the burden of SARS-CoV-2 in France. Science 369, 208\u2013211 (2020)."
+    },
+    {
+      "key": "4188_CR118",
+      "doi": "10.1038/s41586-020-2405-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "S Flaxman",
+      "unstructured": "Flaxman, S. et al. Estimating the effects of non-pharmaceutical interventions on COVID-19 in Europe. Nature 584, 257\u2013261 (2020)."
+    },
+    {
+      "key": "4188_CR119",
+      "doi": "10.15585/mmwr.mm6928a5",
+      "title": "",
+      "journal": "MMWR Morb. Mortal. Wkly Rep.",
+      "year": "2020",
+      "author": "D Bushman",
+      "unstructured": "Bushman, D. et al. Detection and genetic characterization of community-based SARS-CoV-2 infections \u2014 New York City, March 2020. MMWR Morb. Mortal. Wkly Rep. 69, 918\u2013922 (2020)."
+    },
+    {
+      "key": "4188_CR120",
+      "doi": "10.15585/mmwr.mm6942e2",
+      "title": "",
+      "journal": "MMWR Morb. Mortal. Wkly Rep.",
+      "year": "2020",
+      "author": "LM Rossen",
+      "unstructured": "Rossen, L. M., Branum, A. M., Ahmad, F. B., Sutton, P. & Anderson, R. N. Excess deaths associated with COVID-19, by age and race and ethnicity \u2014 United States, January\u200926\u2013October\u20093, 2020. MMWR Morb. Mortal. Wkly Rep. 69, 1522\u20131527 (2020)."
+    },
+    {
+      "key": "4188_CR121",
+      "doi": "10.1126/science.abd2161",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "DS Candido",
+      "unstructured": "Candido, D. S. et al. Evolution and epidemic spread of SARS-CoV-2 in Brazil. Science 369, 1255\u20131260 (2020)."
+    },
+    {
+      "key": "4188_CR122",
+      "doi": "10.1038/s41591-020-0992-3",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2020",
+      "author": "MF Silveira",
+      "unstructured": "Silveira, M. F. et al. Population-based surveys of antibodies against SARS-CoV-2 in Southern Brazil. Nat. Med. 26, 1196\u20131199 (2020)."
+    },
+    {
+      "key": "4188_CR123",
+      "doi": "10.1016/s2214-109x(20)30300-4",
+      "title": "",
+      "journal": "Lancet Glob. Health",
+      "year": "2020",
+      "author": "R Acharya",
+      "unstructured": "Acharya, R. & Porwal, A. A vulnerability index for the management of and response to the COVID-19 epidemic in India: an ecological study. Lancet Glob. Health 8, e1142\u2013e1151 (2020)."
+    },
+    {
+      "key": "4188_CR124",
+      "doi": "10.1126/science.abd7672",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "R Laxminarayan",
+      "unstructured": "Laxminarayan, R. et al. Epidemiology and transmission dynamics of COVID-19 in two Indian states. Science 370, 691\u2013697 (2020)."
+    },
+    {
+      "key": "4188_CR125",
+      "doi": "10.1038/s41591-020-0961-x",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2020",
+      "author": "M Massinga Loemb\u00e9",
+      "unstructured": "Massinga Loemb\u00e9, M. et al. COVID-19 in Africa: the spread and response. Nat. Med. 26, 999\u20131003 (2020)."
+    },
+    {
+      "key": "4188_CR126",
+      "doi": "10.1016/s0140-6736(20)30411-6",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2020",
+      "author": "M Gilbert",
+      "unstructured": "Gilbert, M. et al. Preparedness and vulnerability of African countries against importations of COVID-19: a modelling study. Lancet 395, 871\u2013877 (2020)."
+    },
+    {
+      "key": "4188_CR127",
+      "doi": "10.1038/s41586-020-03095-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "G Pullano",
+      "unstructured": "Pullano, G. et al. Underdetection of cases of COVID-19 in France threatens epidemic control. Nature 590, 134\u2013139 (2021)."
+    },
+    {
+      "key": "4188_CR128",
+      "doi": "10.1038/s41591-021-01234-8",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2021",
+      "author": "BL Rice",
+      "unstructured": "Rice, B. L. et al. Variation in SARS-CoV-2 outbreaks across sub-Saharan Africa. Nat. Med. 27, 447\u2013453 (2021)."
+    },
+    {
+      "key": "4188_CR129",
+      "doi": "10.1016/s0140-6736(21)00632-2",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2021",
+      "author": "SJ Salyer",
+      "unstructured": "Salyer, S. J. et al. The first and second waves of the COVID-19 pandemic in Africa: a cross-sectional study. Lancet 397, 1265\u20131275 (2021)."
+    },
+    {
+      "key": "4188_CR130",
+      "doi": "10.1126/sciadv.abd6370",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2020",
+      "author": "S Pei",
+      "unstructured": "Pei, S., Kandula, S. & Shaman, J. Differential effects of intervention timing on COVID-19 spread in the United States. Sci. Adv. 6, eabd6370 (2020)."
+    },
+    {
+      "key": "4188_CR131",
+      "doi": "10.1126/science.abd9338",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "JM Brauner",
+      "unstructured": "Brauner, J. M. et al. Inferring the effectiveness of government interventions against COVID-19. Science 371, eabd9338 (2020). A chronological and global dataset was constructed to compare the effectiveness of different NPIs in reducing COVID-19 transmission among countries during the first wave of the COVID-19 pandemic."
+    },
+    {
+      "key": "4188_CR132",
+      "doi": "10.1038/s41562-020-01009-0",
+      "title": "",
+      "journal": "Nat. Hum. Behav.",
+      "year": "2020",
+      "author": "N Haug",
+      "unstructured": "Haug, N. et al. Ranking the effectiveness of worldwide COVID-19 government interventions. Nat. Hum. Behav. 4, 1303\u20131312 (2020)."
+    },
+    {
+      "key": "4188_CR133",
+      "doi": "10.1126/science.abb9789",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "J Dehning",
+      "unstructured": "Dehning, J. et al. Inferring change points in the spread of COVID-19 reveals the effectiveness of interventions. Science 369, eabb9789 (2020)."
+    },
+    {
+      "key": "4188_CR134",
+      "doi": "10.1126/science.abc2535",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "RE Baker",
+      "unstructured": "Baker, R. E., Yang, W. C., Vecchi, G. A., Metcalf, C. J. E. & Grenfell, B. T. Susceptible supply limits the role of climate in the early SARS-CoV-2 pandemic. Science 369, 315\u2013319 (2020)."
+    },
+    {
+      "key": "4188_CR135",
+      "doi": "10.1016/s0140-6736(20)32007-9",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2020",
+      "author": "E Han",
+      "unstructured": "Han, E. et al. Lessons learnt from easing COVID-19 restrictions: an analysis of countries and regions in Asia Pacific and Europe. Lancet 396, 1525\u20131534 (2020)."
+    },
+    {
+      "key": "4188_CR136",
+      "doi": "10.1016/s1473-3099(20)30553-3",
+      "title": "",
+      "journal": "Lancet Infect. Dis.",
+      "year": "2020",
+      "author": "HS Badr",
+      "unstructured": "Badr, H. S. et al. Association between mobility patterns and COVID-19 transmission in the USA: a mathematical modelling study. Lancet Infect. Dis. 20, 1247\u20131254 (2020)."
+    },
+    {
+      "key": "4188_CR137",
+      "doi": "10.1073/pnas.2005476117",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2020",
+      "author": "TA Perkins",
+      "unstructured": "Perkins, T. A. et al. Estimating unobserved SARS-CoV-2 infections in the United States. Proc. Natl Acad. Sci. USA 117, 22597\u201322602 (2020)."
+    },
+    {
+      "key": "4188_CR138",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Centers for Disease Control and Prevention. COVID Data Tracker. https://covid.cdc.gov/covid-data-tracker/#cases_casesper100klast7days (US CDC, 2020)."
+    },
+    {
+      "key": "4188_CR139",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "The Ministry of Health, Brazil. Coronavirus, Brazil. https://covid.saude.gov.br/ (2021)."
+    },
+    {
+      "key": "4188_CR140",
+      "doi": "10.1038/s41586-021-03754-2",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Lemey, P. et al. Untangling introductions and persistence in COVID-19 resurgence in Europe. Nature 595, 713\u2013717 (2021)."
+    },
+    {
+      "key": "4188_CR141",
+      "doi": "10.1101/2020.10.25.20219063",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Hodcroft, E. B. et al. Spread of a SARS-CoV-2 variant through Europe in the summer of 2020. Nature 595, 707\u2013712 (2021)."
+    },
+    {
+      "key": "4188_CR142",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "European Centre for Disease Prevention and Control. COVID-19. https://www.ecdc.europa.eu/en/covid-19-pandemic (ECDC, 2021)."
+    },
+    {
+      "key": "4188_CR143",
+      "doi": "10.1126/science.372.6549.1375",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "K Kupferschmidt",
+      "unstructured": "Kupferschmidt, K. & Wadman, M. Delta variant triggers new phase in the pandemic. Science 372, 1375\u20131376 (2021)."
+    },
+    {
+      "key": "4188_CR144",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "World Health Organization. Weekly epidemiological update on COVID-19 \u2013 29 June 2021. https://www.who.int/publications/m/item/weekly-epidemiological-update-on-covid-19---29-june-2021 (WHO, 2021)."
+    },
+    {
+      "key": "4188_CR145",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "WHO. Tracking SARS-CoV-2 variants, https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/ (2021)."
+    },
+    {
+      "key": "4188_CR146",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Centers for Disease Control and Prevention. SARS-CoV-2 Variant Classifications and Definitions. https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-info.html (US CDC, 2021)."
+    },
+    {
+      "key": "4188_CR147",
+      "doi": "10.1038/s41579-021-00573-0",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2021",
+      "author": "WT Harvey",
+      "unstructured": "Harvey, W. T. et al. SARS-CoV-2 variants, spike mutations and immune escape. Nat. Rev. Microbiol. 19, 409\u2013424 (2021)."
+    },
+    {
+      "key": "4188_CR148",
+      "doi": "10.1016/j.cell.2020.07.012",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "Q Li",
+      "unstructured": "Li, Q. et al. The impact of mutations in SARS-CoV-2 spike on viral infectivity and antigenicity. Cell 182, 1284\u20131294 (2020)."
+    },
+    {
+      "key": "4188_CR149",
+      "doi": "10.1016/j.chom.2021.02.003",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2021",
+      "author": "AJ Greaney",
+      "unstructured": "Greaney, A. J. et al. Comprehensive mapping of mutations in the SARS-CoV-2 receptor-binding domain that affect recognition by polyclonal human plasma antibodies. Cell Host Microbe 29, 463\u2013476 (2021)."
+    },
+    {
+      "key": "4188_CR150",
+      "doi": "10.1126/science.abg8663",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "CM Saad-Roy",
+      "unstructured": "Saad-Roy, C. M. et al. Epidemiological and evolutionary considerations of SARS-CoV-2 vaccine dosing regimes. Science 372, 363\u2013370 (2021)."
+    },
+    {
+      "key": "4188_CR151",
+      "doi": "10.1038/s41586-021-03291-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "SA Kemp",
+      "unstructured": "Kemp, S. A. et al. SARS-CoV-2 evolution during treatment of chronic infection. Nature 592, 277\u2013282 (2021)."
+    },
+    {
+      "key": "4188_CR152",
+      "doi": "10.1038/s41577-021-00544-9",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2021",
+      "author": "S Cobey",
+      "unstructured": "Cobey, S., Larremore, D. B., Grad, Y. H. & Lipsitch, M. Concerns about SARS-CoV-2 evolution should not hold back efforts to expand vaccination. Nat. Rev. Immunol. 21, 330\u2013335 (2021)."
+    },
+    {
+      "key": "4188_CR153",
+      "doi": "10.1126/science.abi4727",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "WP Hanage",
+      "unstructured": "Hanage, W. P. & Russell, C. A. Partial immunity and SARS-CoV-2 mutations. Science 372, 354 (2021)."
+    },
+    {
+      "key": "4188_CR154",
+      "doi": "10.1001/jama.2021.2828",
+      "title": "",
+      "journal": "J. Am. Med. Assoc.",
+      "year": "2021",
+      "author": "CJL Murray",
+      "unstructured": "Murray, C. J. L. & Piot, P. The potential future of the COVID-19 pandemic: will SARS-CoV-2 become a recurrent seasonal infection? J. Am. Med. Assoc. 325, 1249\u20131250 (2021)."
+    },
+    {
+      "key": "4188_CR155",
+      "doi": "10.1038/d41586-021-00396-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "N Phillips",
+      "unstructured": "Phillips, N. The coronavirus is here to stay\u2014here\u2019s what that means. Nature 590, 382\u2013384 (2021)."
+    },
+    {
+      "key": "4188_CR156",
+      "doi": "10.1016/j.cell.2020.10.049",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "VA Avanzato",
+      "unstructured": "Avanzato, V. A. et al. Case study: prolonged infectious SARS-CoV-2 shedding from an asymptomatic immunocompromised individual with cancer. Cell 183, 1901\u20131912 (2020)."
+    },
+    {
+      "key": "4188_CR157",
+      "doi": "10.1056/nejmc2031670",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2020",
+      "author": "T Aydillo",
+      "unstructured": "Aydillo, T. et al. Shedding of viable SARS-CoV-2 after immunosuppressive therapy for cancer. N. Engl. J. Med. 383, 2586\u20132588 (2020)."
+    },
+    {
+      "key": "4188_CR158",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Lawton, G. Exclusive: Two variants have merged into heavily mutated coronavirus. New Scientist https://www.newscientist.com/article/2268014-exclusive-two-variants-have-merged-into-heavily-mutated-coronavirus/ (16\u2009February 2021)."
+    },
+    {
+      "key": "4188_CR159",
+      "doi": "10.1093/bioinformatics/btu033",
+      "title": "",
+      "journal": "Bioinformatics",
+      "year": "2014",
+      "author": "A Stamatakis",
+      "unstructured": "Stamatakis, A. RAxML version 8: a tool for phylogenetic analysis and post-analysis of large phylogenies. Bioinformatics 30, 1312\u20131313 (2014)."
+    },
+    {
+      "key": "4188_CR160",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "GISAID. UK reports New Variant, termed VUI 202012/01. https://www.gisaid.org/references/gisaid-in-the-news/uk-reports-new-variant-termed-vui-20201201/ (2021)."
+    },
+    {
+      "key": "4188_CR161",
+      "doi": "10.1016/j.gpb.2020.09.001",
+      "title": "",
+      "journal": "Genom. Proteom. Bioinform.",
+      "year": "2020",
+      "author": "S Song",
+      "unstructured": "Song, S. et al. The global landscape of SARS-CoV-2 genomes, variants, and haplotypes in 2019nCoVR. Genom. Proteom. Bioinform. 18, 749\u2013759 (2020)."
+    },
+    {
+      "key": "4188_CR162",
+      "doi": "10.1038/s41564-020-0770-5",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2020",
+      "author": "A Rambaut",
+      "unstructured": "Rambaut, A. et al. A dynamic nomenclature proposal for SARS-CoV-2 lineages to assist genomic epidemiology. Nat. Microbiol. 5, 1403\u20131407 (2020)."
+    },
+    {
+      "key": "4188_CR163",
+      "doi": "10.1038/s41586-021-03426-1",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "NG Davies",
+      "unstructured": "Davies, N. G. et al. Increased mortality in community-tested cases of SARS-CoV-2 lineage B.1.1.7. Nature 593, 270\u2013274 (2021)."
+    },
+    {
+      "key": "4188_CR164",
+      "doi": "10.1016/s1473-3099(21)00170-5",
+      "title": "",
+      "journal": "Lancet Infect. Dis.",
+      "year": "2021",
+      "author": "D Frampton",
+      "unstructured": "Frampton, D. et al. Genomic characteristics and clinical effect of the emergent SARS-CoV-2 B.1.1.7 lineage in London, UK: a whole-genome sequencing and hospital-based cohort study. Lancet Infect. Dis. 21, 1246\u20131256 (2021)."
+    },
+    {
+      "key": "4188_CR165",
+      "doi": "10.1016/s2468-2667(21)00055-4",
+      "title": "",
+      "journal": "Lancet Public Health",
+      "year": "2021",
+      "author": "MS Graham",
+      "unstructured": "Graham, M. S. et al. Changes in symptomatology, reinfection, and transmissibility associated with the SARS-CoV-2 variant B.1.1.7: an ecological study. Lancet Public Health 6, e335\u2013e345 (2021)."
+    },
+    {
+      "key": "4188_CR166",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "World Health Organization. Weekly epidemiological update on COVID-19 \u2013 10 August 2021. https://www.who.int/publications/m/item/weekly-epidemiological-update-on-covid-19---10-august-2021 (WHO, 2021)."
+    },
+    {
+      "key": "4188_CR167",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "European Centre for Disease Prevention and Control. Emergence of SARS-CoV-2 B.1.617 variants in India and situation in the EU/EEA. https://www.ecdc.europa.eu/en/publications-data/threat-assessment-emergence-sars-cov-2-b1617-variants (ECDC, 2021)."
+    },
+    {
+      "key": "4188_CR168",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Delta Plus: Key things to know about new coronavirus variant. The Economic Times https://economictimes.indiatimes.com/news/et-explains/delta-plus-key-things-to-know-about-new-coronavirus-variant-in-india/articleshow/83739996.cms (24\u2009June 2021)."
+    },
+    {
+      "key": "4188_CR169",
+      "doi": "10.1126/science.abc4730",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "H Gu",
+      "unstructured": "Gu, H. et al. Adaptation of SARS-CoV-2 in BALB/c mice for testing vaccine efficacy. Science 369, 1603\u20131607 (2020)."
+    }
+  ]
+}

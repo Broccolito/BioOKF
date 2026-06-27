@@ -1,0 +1,1441 @@
+{
+  "article": {
+    "slug": "s41586-023-05905-z",
+    "doi": "10.1038/s41586-023-05905-z",
+    "title": "Computational approaches streamlining drug discovery",
+    "url": "https://www.nature.com/articles/s41586-023-05905-z",
+    "abbrev": "computational-approaches-streamlining-drug-discovery",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/computational-approaches-streamlining-drug-discovery"
+  },
+  "meta": {
+    "title": "Computational approaches streamlining drug discovery",
+    "authors": [
+      "Anastasiia V. Sadybekov",
+      "Vsevolod Katritch"
+    ],
+    "published": [
+      2023,
+      4,
+      26
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-023-05905-z",
+    "n_references": 157,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "5905_CR1",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Austin, D. & Hayford, T. Research and development in the pharmaceutical industry. CBO https://www.cbo.gov/publication/57126 (2021)."
+    },
+    {
+      "key": "5905_CR2",
+      "doi": "10.1016/j.apsb.2022.02.002",
+      "title": "",
+      "journal": "Acta Pharm. Sin. B",
+      "year": "2022",
+      "author": "D Sun",
+      "unstructured": "Sun, D., Gao, W., Hu, H. & Zhou, S. Why 90% of clinical drug development fails and how to improve it? Acta Pharm. Sin. B 12, 3049\u20133062 (2022)."
+    },
+    {
+      "key": "5905_CR3",
+      "doi": "10.12688/f1000research.6653.1",
+      "title": "",
+      "journal": "F1000Res.",
+      "year": "2015",
+      "author": "J Bajorath",
+      "unstructured": "Bajorath, J. Computer-aided drug discovery. F1000Res. 4, F1000 Faculty Rev-1630 (2015)."
+    },
+    {
+      "key": "5905_CR4",
+      "doi": "10.1007/s10822-007-9142-y",
+      "title": "",
+      "journal": "J. Comput. Aided Mol. Des.",
+      "year": "2007",
+      "author": "JH Van Drie",
+      "unstructured": "Van Drie, J. H. Computer-aided drug design: the next 20 years. J. Comput. Aided Mol. Des. 21, 591\u2013601 (2007)."
+    },
+    {
+      "key": "5905_CR5",
+      "doi": "10.2174/156802610790232251",
+      "title": "",
+      "journal": "Curr. Top. Med. Chem.",
+      "year": "2010",
+      "author": "TT Talele",
+      "unstructured": "Talele, T. T., Khedkar, S. A. & Rigby, A. C. Successful applications of computer aided drug discovery: moving drugs from concept to the clinic. Curr. Top. Med. Chem. 10, 127\u2013141 (2010)."
+    },
+    {
+      "key": "5905_CR6",
+      "doi": "10.1007/s12272-015-0640-5",
+      "title": "",
+      "journal": "Arch. Pharmacal. Res.",
+      "year": "2015",
+      "author": "SJY Macalino",
+      "unstructured": "Macalino, S. J. Y., Gosu, V., Hong, S. & Choi, S. Role of computer-aided drug design in modern drug discovery. Arch. Pharmacal. Res. 38, 1686\u20131701 (2015)."
+    },
+    {
+      "key": "5905_CR7",
+      "doi": "10.1016/j.ejmech.2021.113705",
+      "title": "",
+      "journal": "Eur. J. Med. Chem.",
+      "year": "2021",
+      "author": "VT Sabe",
+      "unstructured": "Sabe, V. T. et al. Current trends in computer aided drug design and a highlight of drugs discovered via computational techniques: a review. Eur. J. Med. Chem. 224, 113705 (2021)."
+    },
+    {
+      "key": "5905_CR8",
+      "doi": "10.1038/d41573-022-00025-1",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2022",
+      "author": "MK Jayatunga",
+      "unstructured": "Jayatunga, M. K., Xie, W., Ruder, L., Schulze, U. & Meier, C. AI in small-molecule drug discovery: a coming wave. Nat. Rev. Drug Discov. 21, 175\u2013176 (2022)."
+    },
+    {
+      "key": "5905_CR9",
+      "doi": "10.1038/s41587-019-0224-x",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2019",
+      "author": "A Zhavoronkov",
+      "unstructured": "Zhavoronkov, A. et al. Deep learning enables rapid identification of potent DDR1 kinase inhibitors. Nat. Biotechnol. 37, 1038\u20131040 (2019). This study claims the discovery of a lead candidate in just 21 days, using generative AI, synthesis, and in vitro and in vivo testing of the compounds."
+    },
+    {
+      "key": "5905_CR10",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "US National Library of Medicine. ClinicalTrials.gov https://clinicaltrials.gov/ct2/show/NCT05154240#contactlocation (2022)."
+    },
+    {
+      "key": "5905_CR11",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Schrodinger. Schr\u00f6dinger announces FDA clearance of investigational new drug application for SGR-1505, a MALT1 inhibitor. Schrodinger https://ir.schrodinger.com/node/8621/pdf (2022). This press release states that combined physics-based and ML methods enabled a computational screen of 8.2 billion compounds and the selection of a clinical candidate after 10 months and only 78 molecules synthesized."
+    },
+    {
+      "key": "5905_CR12",
+      "doi": "10.1038/505602a",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "N Jones",
+      "unstructured": "Jones, N. Crystallography: atomic secrets. Nature 505, 602\u2013603 (2014)."
+    },
+    {
+      "key": "5905_CR13",
+      "doi": "10.1126/science.1244142",
+      "title": "",
+      "journal": "Science",
+      "year": "2013",
+      "author": "W Liu",
+      "unstructured": "Liu, W. et al. Serial femtosecond crystallography of G protein\u2013coupled receptors. Science 342, 1521\u20131524 (2013)."
+    },
+    {
+      "key": "5905_CR14",
+      "doi": "10.1038/s41592-019-0395-x",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2019",
+      "author": "BL Nannenga",
+      "unstructured": "Nannenga, B. L. & Gonen, T. The cryo-EM method microcrystal electron diffraction (MicroED). Nat. Methods 16, 369\u2013379 (2019)."
+    },
+    {
+      "key": "5905_CR15",
+      "doi": "10.1038/nature19948",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "R Fernandez-Leiro",
+      "unstructured": "Fernandez-Leiro, R. & Scheres, S. H. Unravelling biological macromolecules with cryo-electron microscopy. Nature 537, 339\u2013346 (2016)."
+    },
+    {
+      "key": "5905_CR16",
+      "doi": "10.1038/nrd.2018.77",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2018",
+      "author": "J-P Renaud",
+      "unstructured": "Renaud, J.-P. et al. Cryo-EM in drug discovery: achievements, limitations and prospects. Nat. Rev. Drug Discov. 17, 471\u2013492 (2018)."
+    },
+    {
+      "key": "5905_CR17",
+      "doi": "10.1016/j.cell.2020.03.003",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "M Congreve",
+      "unstructured": "Congreve, M., de Graaf, C., Swain, N. A. & Tate, C. G. Impact of GPCR structures on drug discovery. Cell 181, 81\u201391 (2020)."
+    },
+    {
+      "key": "5905_CR18",
+      "doi": "10.1038/nrd.2016.230",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2017",
+      "author": "R Santos",
+      "unstructured": "Santos, R. et al. A comprehensive map of molecular drug targets. Nat. Rev. Drug Discov. 16, 19\u201334 (2017)."
+    },
+    {
+      "key": "5905_CR19",
+      "doi": "10.1016/j.isci.2020.101681",
+      "title": "",
+      "journal": "iScience",
+      "year": "2020",
+      "author": "OO Grygorenko",
+      "unstructured": "Grygorenko, O. O. et al. Generating multibillion chemical space of readily accessible screening compounds. iScience 23, 101681 (2020)."
+    },
+    {
+      "key": "5905_CR20",
+      "doi": "10.1038/s41586-019-0917-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "J Lyu",
+      "unstructured": "Lyu, J. et al. Ultra-large library docking for discovering new chemotypes. Nature 566, 224\u2013229 (2019). This is ultra-large docking study also carefully assessed the advantages and potential pitfalls of expanding chemical space."
+    },
+    {
+      "key": "5905_CR21",
+      "doi": "10.1038/s41586-020-2027-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "RM Stein",
+      "unstructured": "Stein, R. M. et al. Virtual discovery of melatonin receptor ligands to modulate circadian rhythms. Nature 579, 609\u2013614 (2020). This study shows ultra-large docking that resulted in subnanomolar hits for a GPCR."
+    },
+    {
+      "key": "5905_CR22",
+      "doi": "10.1038/s41586-021-04175-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "A Alon",
+      "unstructured": "Alon, A. et al. Structures of the sigma2 receptor enable docking for bioactive ligand discovery. Nature 600, 759\u2013764 (2021)."
+    },
+    {
+      "key": "5905_CR23",
+      "doi": "10.1038/s41586-020-2117-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "C Gorgulla",
+      "unstructured": "Gorgulla, C. et al. An open-source drug discovery platform enables ultra-large virtual screens. Nature 580, 663\u2013668 (2020). This study shows an iterative library filtering as a first approach to accelerate ultra-large virtual screening."
+    },
+    {
+      "key": "5905_CR24",
+      "doi": "10.1016/j.isci.2020.102021",
+      "title": "",
+      "journal": "iScience",
+      "year": "2021",
+      "author": "C Gorgulla",
+      "unstructured": "Gorgulla, C. et al. A multi-pronged approach targeting SARS-CoV-2 proteins using ultra-large virtual screening. iScience 24, 102021 (2021)."
+    },
+    {
+      "key": "5905_CR25",
+      "doi": "10.1039/d0sc06805e",
+      "title": "",
+      "journal": "Chem. Sci.",
+      "year": "2021",
+      "author": "DE Graff",
+      "unstructured": "Graff, D. E., Shakhnovich, E. I. & Coley, C. W. Accelerating high-throughput virtual screening through molecular pool-based active learning. Chem. Sci. 12, 7866\u20137881 (2021). This study introduces acceleration of ultra-large screening by iteratively combining DL and docking."
+    },
+    {
+      "key": "5905_CR26",
+      "doi": "10.1038/s41586-021-04220-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "AA Sadybekov",
+      "unstructured": "Sadybekov, A. A. et al. Synthon-based ligand discovery in virtual libraries of over 11 billion compounds. Nature 601, 452\u2013459 (2022). This study introduces the modular concept for screening gigascale spaces, V-SYNTHES, and validates its performance on GPCR and kinase targets."
+    },
+    {
+      "key": "5905_CR27",
+      "doi": "10.1021/acs.chemrev.8b00728",
+      "title": "",
+      "journal": "Chem. Rev.",
+      "year": "2019",
+      "author": "X Yang",
+      "unstructured": "Yang, X., Wang, Y., Byrne, R., Schneider, G. & Yang, S. Concepts of artificial intelligence for computer-assisted drug discovery. Chem. Rev. 119, 10520\u201310594 (2019)."
+    },
+    {
+      "key": "5905_CR28",
+      "doi": "10.1038/s42256-022-00463-x",
+      "title": "",
+      "journal": "Nat. Mach. Intell.",
+      "year": "2022",
+      "author": "M Pandey",
+      "unstructured": "Pandey, M. et al. The transformational role of GPU computing and deep learning in drug discovery. Nat. Mach. Intell. 4, 211\u2013221 (2022)."
+    },
+    {
+      "key": "5905_CR29",
+      "doi": "10.1016/j.drudis.2020.07.024",
+      "title": "",
+      "journal": "Drug Discov. Today",
+      "year": "2020",
+      "author": "V Blay",
+      "unstructured": "Blay, V., Tolani, B., Ho, S. P. & Arkin, M. R. High-throughput screening: today\u2019s biochemical and cell-based approaches. Drug Discov. Today 25, 1807\u20131821 (2020)."
+    },
+    {
+      "key": "5905_CR30",
+      "doi": "10.1002/(sici)1098-1128(199601)16:1<3::aid-med1>3.0.co;2-6",
+      "title": "",
+      "journal": "Med. Res. Rev.",
+      "year": "1996",
+      "author": "RS Bohacek",
+      "unstructured": "Bohacek, R. S., McMartin, C. & Guida, W. C. The art and practice of structure-based drug design: a molecular modeling perspective. Med. Res. Rev. 16, 3\u201350 (1996)."
+    },
+    {
+      "key": "5905_CR31",
+      "doi": "10.1038/s41589-022-01234-w",
+      "title": "",
+      "journal": "Nat. Chem. Biol.",
+      "year": "2023",
+      "author": "J Lyu",
+      "unstructured": "Lyu, J., Irwin, J. J. & Shoichet, B. K. Modeling the expansion of virtual screening libraries. Nat. Chem. Biol. https://doi.org/10.1038/s41589-022-01234-w (2023)."
+    },
+    {
+      "key": "5905_CR32",
+      "doi": "10.1016/j.drudis.2020.09.027",
+      "title": "",
+      "journal": "Drug Discov. Today",
+      "year": "2020",
+      "author": "A Tomberg",
+      "unstructured": "Tomberg, A. & Bostr\u00f6m, J. Can easy chemistry produce complex, diverse, and novel molecules? Drug Discov. Today 25, 2174\u20132181 (2020)."
+    },
+    {
+      "key": "5905_CR33",
+      "doi": "10.1002/jms.4647",
+      "title": "",
+      "journal": "J. Mass Spectrom.",
+      "year": "2021",
+      "author": "RN Muchiri",
+      "unstructured": "Muchiri, R. N. & van Breemen, R. B. Affinity selection\u2013mass spectrometry for the discovery of pharmacologically active compounds from combinatorial libraries and natural products. J. Mass Spectrom. 56, e4647 (2021)."
+    },
+    {
+      "key": "5905_CR34",
+      "doi": "10.1021/acs.chemrev.0c00789",
+      "title": "",
+      "journal": "Chem. Rev.",
+      "year": "2021",
+      "author": "PR Fitzgerald",
+      "unstructured": "Fitzgerald, P. R. & Paegel, B. M. DNA-encoded chemistry: drug discovery from a few good reactions. Chem. Rev. 121, 7155\u20137177 (2021)."
+    },
+    {
+      "key": "5905_CR35",
+      "doi": "10.1146/annurev-biochem-062917-012550",
+      "title": "",
+      "journal": "Annu. Rev. Biochem.",
+      "year": "2018",
+      "author": "D Neri",
+      "unstructured": "Neri, D. & Lerner, R. A. DNA-encoded chemical libraries: a selection system based on endowing organic compounds with amplifiable information. Annu. Rev. Biochem. 87, 479\u2013502 (2018)."
+    },
+    {
+      "key": "5905_CR36",
+      "doi": "10.1021/acs.jmedchem.0c00452",
+      "title": "",
+      "journal": "J. Med. Chem.",
+      "year": "2020",
+      "author": "K McCloskey",
+      "unstructured": "McCloskey, K. et al. Machine learning on DNA-encoded libraries: a new paradigm for hit finding. J. Med. Chem. 63, 8857\u20138866 (2020)."
+    },
+    {
+      "key": "5905_CR37",
+      "doi": "10.1021/acs.jmedchem.8b01048",
+      "title": "",
+      "journal": "J. Med. Chem.",
+      "year": "2019",
+      "author": "WP Walters",
+      "unstructured": "Walters, W. P. Virtual chemical libraries. J. Med. Chem. 62, 1116\u20131124 (2019)."
+    },
+    {
+      "key": "5905_CR38",
+      "doi": "10.1021/acs.jcim.2c00224",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2022",
+      "author": "WA Warr",
+      "unstructured": "Warr, W. A., Nicklaus, M. C., Nicolaou, C. A. & Rarey, M. Exploration of ultralarge compound collections for drug discovery. J. Chem. Inf. Model. 62, 2021\u20132034 (2022). This is a comprehensive review of the history and recent developments of the on-demand and generative chemical spaces."
+    },
+    {
+      "key": "5905_CR39",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Enamine. REAL Database. Enamine https://enamine.net/compound-collections/real-compounds/real-database (2020)."
+    },
+    {
+      "key": "5905_CR40",
+      "doi": "10.1021/ci200379p",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2011",
+      "author": "M Hartenfeller",
+      "unstructured": "Hartenfeller, M. et al. A collection of robust organic synthesis reactions for in silico molecule design. J. Chem. Inf. Model. 51, 3093\u20133098 (2011)."
+    },
+    {
+      "key": "5905_CR41",
+      "doi": "10.1038/s41597-020-00727-4",
+      "title": "",
+      "journal": "Sci. Data",
+      "year": "2020",
+      "author": "H Patel",
+      "unstructured": "Patel, H. et al. SAVI, in silico generation of billions of easily synthesizable compounds through expert-system type rules. Sci. Data 7, 384 (2020)."
+    },
+    {
+      "key": "5905_CR42",
+      "doi": "10.1021/acs.jcim.0c00675",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2020",
+      "author": "JJ Irwin",
+      "unstructured": "Irwin, J. J. et al. ZINC20-A free ultralarge-scale chemical database for ligand discovery. J. Chem. Inf. Model. 60, 6065\u20136073 (2020)."
+    },
+    {
+      "key": "5905_CR43",
+      "doi": "10.1021/co300096q",
+      "title": "",
+      "journal": "ACS Comb. Sci.",
+      "year": "2012",
+      "author": "Q Hu",
+      "unstructured": "Hu, Q. et al. Pfizer Global Virtual Library (PGVL): a chemistry design tool powered by experimentally validated parallel synthesis information. ACS Comb. Sci. 14, 579\u2013589 (2012)."
+    },
+    {
+      "key": "5905_CR44",
+      "doi": "10.1021/acs.jcim.6b00173",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2016",
+      "author": "CA Nicolaou",
+      "unstructured": "Nicolaou, C. A., Watson, I. A., Hu, H. & Wang, J. The Proximal Lilly Collection: mapping, exploring and exploiting feasible chemical space. J. Chem. Inf. Model. 56, 1253\u20131266 (2016)."
+    },
+    {
+      "key": "5905_CR45",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Enamine. REAL Space. Enamine https://enamine.net/library-synthesis/real-compounds/real-space-navigator (2022)."
+    },
+    {
+      "key": "5905_CR46",
+      "doi": "10.1021/acs.jcim.1c01378",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2022",
+      "author": "L Bellmann",
+      "unstructured": "Bellmann, L., Penner, P., Gastreich, M. & Rarey, M. Comparison of combinatorial fragment spaces and its application to ultralarge make-on-demand compound catalogs. J. Chem. Inf. Model. 62, 553\u2013566 (2022)."
+    },
+    {
+      "key": "5905_CR47",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Enamine. Make on-demand building blocks (MADE). Enamine https://enamine.net/building-blocks/made-building-blocks (2022)."
+    },
+    {
+      "key": "5905_CR48",
+      "doi": "10.1016/j.drudis.2019.02.013",
+      "title": "",
+      "journal": "Drug Discov. Today",
+      "year": "2019",
+      "author": "T Hoffmann",
+      "unstructured": "Hoffmann, T. & Gastreich, M. The next level in chemical space navigation: going far beyond enumerable compound libraries. Drug Discov. Today 24, 1148\u20131156 (2019)."
+    },
+    {
+      "key": "5905_CR49",
+      "doi": "10.1021/ci300415d",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2012",
+      "author": "L Ruddigkeit",
+      "unstructured": "Ruddigkeit, L., van Deursen, R., Blum, L. C. & Reymond, J.-L. Enumeration of 166 billion organic small molecules in the chemical universe database GDB-17. J. Chem. Inf. Model. 52, 2864\u20132875 (2012)."
+    },
+    {
+      "key": "5905_CR50",
+      "doi": "10.1021/acsmedchemlett.0c00088",
+      "title": "",
+      "journal": "ACS Med. Chem. Lett.",
+      "year": "2020",
+      "author": "Q Vanhaelen",
+      "unstructured": "Vanhaelen, Q., Lin, Y.-C. & Zhavoronkov, A. The advent of generative chemistry. ACS Med. Chem. Lett. 11, 1496\u20131505 (2020)."
+    },
+    {
+      "key": "5905_CR51",
+      "doi": "10.1124/pharmrev.120.000246",
+      "title": "",
+      "journal": "Pharmacol. Rev.",
+      "year": "2021",
+      "author": "F Ballante",
+      "unstructured": "Ballante, F., Kooistra, A. J., Kampen, S., de Graaf, C. & Carlsson, J. Structure-based virtual screening for ligands of G protein-coupled receptors: what can molecular docking do for you? Pharmacol. Rev. 73, 527\u2013565 (2021)."
+    },
+    {
+      "key": "5905_CR52",
+      "doi": "10.1007/s10822-012-9547-0",
+      "title": "",
+      "journal": "J. Comput. Aided Mol. Des.",
+      "year": "2012",
+      "author": "MA Neves",
+      "unstructured": "Neves, M. A., Totrov, M. & Abagyan, R. Docking and scoring with ICM: the benchmarking results and strategies for improvement. J. Comput. Aided Mol. Des. 26, 675\u2013686 (2012)."
+    },
+    {
+      "key": "5905_CR53",
+      "doi": "10.1002/prot.21086",
+      "title": "",
+      "journal": "Proteins",
+      "year": "2006",
+      "author": "J Meiler",
+      "unstructured": "Meiler, J. & Baker, D. ROSETTALIGAND: protein-small molecule docking with full side-chain flexibility. Proteins 65, 538\u2013548 (2006)."
+    },
+    {
+      "key": "5905_CR54",
+      "doi": "10.1002/pro.5560070411",
+      "title": "",
+      "journal": "Protein Sci.",
+      "year": "1998",
+      "author": "DM Lorber",
+      "unstructured": "Lorber, D. M. & Shoichet, B. K. Flexible ligand docking using conformational ensembles. Protein Sci. 7, 938\u2013950 (1998)."
+    },
+    {
+      "key": "5905_CR55",
+      "doi": "10.1002/jcc.21334",
+      "title": "",
+      "journal": "J. Comput. Chem.",
+      "year": "2010",
+      "author": "O Trott",
+      "unstructured": "Trott, O. & Olson, A. J. AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading. J. Comput. Chem. 31, 455\u2013461 (2010)."
+    },
+    {
+      "key": "5905_CR56",
+      "doi": "10.1021/jm030644s",
+      "title": "",
+      "journal": "J. Med. Chem.",
+      "year": "2004",
+      "author": "TA Halgren",
+      "unstructured": "Halgren, T. A. et al. Glide: a new approach for rapid, accurate docking and scoring. 2. Enrichment factors in database screening. J. Med. Chem. 47, 1750\u20131759 (2004)."
+    },
+    {
+      "key": "5905_CR57",
+      "doi": "10.1021/jm0306430",
+      "title": "",
+      "journal": "J. Med. Chem.",
+      "year": "2004",
+      "author": "RA Friesner",
+      "unstructured": "Friesner, R. A. et al. Glide: a new approach for rapid, accurate docking and scoring. 1. Method and assessment of docking accuracy. J. Med. Chem. 47, 1739\u20131749 (2004)."
+    },
+    {
+      "key": "5905_CR58",
+      "doi": "10.1007/s10822-018-0180-4",
+      "title": "",
+      "journal": "J. Comput. Aided Mol. Des.",
+      "year": "2019",
+      "author": "Z Gaieb",
+      "unstructured": "Gaieb, Z. et al. D3R grand challenge 3: blind prediction of protein-ligand poses and affinity rankings. J. Comput. Aided Mol. Des. 33, 1\u201318 (2019)."
+    },
+    {
+      "key": "5905_CR59",
+      "doi": "10.1007/s10822-020-00289-y",
+      "title": "",
+      "journal": "J. Comput. Aided Mol. Des.",
+      "year": "2020",
+      "author": "CD Parks",
+      "unstructured": "Parks, C. D. et al. D3R grand challenge 4: blind prediction of protein-ligand poses, affinity rankings, and relative binding free energies. J. Comput. Aided Mol. Des. 34, 99\u2013119 (2020)."
+    },
+    {
+      "key": "5905_CR60",
+      "doi": "10.1038/s41596-021-00597-z",
+      "title": "",
+      "journal": "Nat. Protoc.",
+      "year": "2021",
+      "author": "BJ Bender",
+      "unstructured": "Bender, B. J. et al. A practical guide to large-scale docking. Nat. Protoc. 16, 4799\u20134832 (2021)."
+    },
+    {
+      "key": "5905_CR61",
+      "doi": "10.1038/nature19112",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "A Manglik",
+      "unstructured": "Manglik, A. et al. Structure-based discovery of opioid analgesics with reduced side effects. Nature 537, 185\u2013190 (2016)."
+    },
+    {
+      "key": "5905_CR62",
+      "doi": "10.1002/cmdc.202200278",
+      "title": "",
+      "journal": "ChemMedChem",
+      "year": "2022",
+      "author": "JP Cer\u00f3n-Carrasco",
+      "unstructured": "Cer\u00f3n-Carrasco, J. P. When virtual screening yields inactive drugs: dealing with false theoretical friends. ChemMedChem 17, e202200278 (2022)."
+    },
+    {
+      "key": "5905_CR63",
+      "doi": "10.1038/s41598-022-06306-4",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2022",
+      "author": "GG Rossetti",
+      "unstructured": "Rossetti, G. G. et al. Non-covalent SARS-CoV-2 Mpro inhibitors developed from in silico screen hits. Sci. Rep. 12, 2505 (2022)."
+    },
+    {
+      "key": "5905_CR64",
+      "doi": "10.1021/jacs.1c08402",
+      "title": "",
+      "journal": "J. Am. Chem. Soc.",
+      "year": "2022",
+      "author": "A Luttens",
+      "unstructured": "Luttens, A. et al. Ultralarge virtual screening identifies SARS-CoV-2 main protease inhibitors with broad-spectrum activity against coronaviruses. J. Am. Chem. Soc. 144, 2905\u20132920 (2022). This study compares fragment-based and ultra-large screening-based discovery of lead candidates for the challenging target."
+    },
+    {
+      "key": "5905_CR65",
+      "doi": "10.1126/science.abl4784",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "DR Owen",
+      "unstructured": "Owen, D. R. et al. An oral SARS-CoV-2 Mpro inhibitor clinical candidate for the treatment of COVID-19. Science 374, 1586\u20131593 (2021)."
+    },
+    {
+      "key": "5905_CR66",
+      "doi": "10.1007/bf00124387",
+      "title": "",
+      "journal": "J. Comput. Aided Mol. Des.",
+      "year": "1992",
+      "author": "H-J B\u00f6hm",
+      "unstructured": "B\u00f6hm, H.-J. The computer program LUDI: a new method for the de novo design of enzyme inhibitors. J. Comput. Aided Mol. Des. 6, 61\u201378 (1992)."
+    },
+    {
+      "key": "5905_CR67",
+      "doi": "10.1038/s41467-022-33981-8",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "P Beroza",
+      "unstructured": "Beroza, P. et al. Chemical space docking enables large-scale structure-based virtual screening to discover ROCK1 kinase inhibitors. Nat. Commun. 13, 6447 (2022)."
+    },
+    {
+      "key": "5905_CR68",
+      "doi": "10.1002/prot.26257",
+      "title": "",
+      "journal": "Proteins",
+      "year": "2021",
+      "author": "J Jumper",
+      "unstructured": "Jumper, J. et al. Applying and improving AlphaFold at CASP14. Proteins 89, 1711\u20131721 (2021)."
+    },
+    {
+      "key": "5905_CR69",
+      "doi": "10.1038/s41573-019-0024-5",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2019",
+      "author": "J Vamathevan",
+      "unstructured": "Vamathevan, J. et al. Applications of machine learning in drug discovery and development. Nat. Rev. Drug Discov. 18, 463\u2013477 (2019)."
+    },
+    {
+      "key": "5905_CR70",
+      "doi": "10.1038/s41573-019-0050-3",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2020",
+      "author": "P Schneider",
+      "unstructured": "Schneider, P. et al. Rethinking drug design in the artificial intelligence era. Nat. Rev. Drug Discov. 19, 353\u2013364 (2020). This article provides a comprehensive introduction to DL approaches in drug discovery."
+    },
+    {
+      "key": "5905_CR71",
+      "doi": "10.1016/j.drudis.2020.12.003",
+      "title": "",
+      "journal": "Drug Discov. Today",
+      "year": "2021",
+      "author": "M Elbadawi",
+      "unstructured": "Elbadawi, M., Gaisford, S. & Basit, A. W. Advanced machine-learning techniques in drug discovery. Drug Discov. Today 26, 769\u2013777 (2021)."
+    },
+    {
+      "key": "5905_CR72",
+      "doi": "10.1016/j.drudis.2020.12.009",
+      "title": "",
+      "journal": "Drug Discov. Today",
+      "year": "2021",
+      "author": "A Bender",
+      "unstructured": "Bender, A. & Cort\u00e9s-Ciriano, I. Artificial intelligence in drug discovery: what is realistic, what are illusions? Part 1: ways to make an impact, and why we are not there yet. Drug Discov. Today 26, 511\u2013524 (2021)."
+    },
+    {
+      "key": "5905_CR73",
+      "doi": "10.1016/j.tips.2020.03.004",
+      "title": "",
+      "journal": "Trends Pharmacol. Sci.",
+      "year": "2020",
+      "author": "M Davies",
+      "unstructured": "Davies, M. et al. Improving the accuracy of predicted human pharmacokinetics: lessons learned from the AstraZeneca drug pipeline over two decades. Trends Pharmacol. Sci. 41, 390\u2013408 (2020)."
+    },
+    {
+      "key": "5905_CR74",
+      "doi": "10.1021/acs.jcim.9b00460",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2019",
+      "author": "S Schneckener",
+      "unstructured": "Schneckener, S. et al. Prediction of oral bioavailability in rats: transferring insights from in vitro correlations to (deep) machine learning models using in silico model outputs and chemical structure parameters. J. Chem. Inf. Model. 59, 4893\u20134905 (2019)."
+    },
+    {
+      "key": "5905_CR75",
+      "doi": "10.1021/jm4004285",
+      "title": "",
+      "journal": "J. Med. Chem.",
+      "year": "2014",
+      "author": "A Cherkasov",
+      "unstructured": "Cherkasov, A. et al. QSAR modeling: where have you been? Where are you going to? J. Med. Chem. 57, 4977\u20135010 (2014)."
+    },
+    {
+      "key": "5905_CR76",
+      "doi": "10.1038/nature08506",
+      "title": "",
+      "journal": "Nature",
+      "year": "2009",
+      "author": "MJ Keiser",
+      "unstructured": "Keiser, M. J. et al. Predicting new molecular targets for known drugs. Nature 462, 175\u2013181 (2009)."
+    },
+    {
+      "key": "5905_CR77",
+      "doi": "10.1038/ncomms10331",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "E Guney",
+      "unstructured": "Guney, E., Menche, J., Vidal, M. & Bar\u00e1basi, A.-L. Network-based in silico drug efficacy screening. Nat. Commun. 7, 10331 (2016)."
+    },
+    {
+      "key": "5905_CR78",
+      "doi": "10.1038/s41467-021-23165-1",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2021",
+      "author": "A Cicho\u0144ska",
+      "unstructured": "Cicho\u0144ska, A. et al. Crowdsourced mapping of unexplored target space of kinase inhibitors. Nat. Commun. 12, 3307 (2021)."
+    },
+    {
+      "key": "5905_CR79",
+      "doi": "10.1093/nar/gkr777",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2012",
+      "author": "A Gaulton",
+      "unstructured": "Gaulton, A. et al. ChEMBL: a large-scale bioactivity database for drug discovery. Nucleic Acids Res. 40, D1100\u2013D1107 (2012)."
+    },
+    {
+      "key": "5905_CR80",
+      "doi": "10.1016/j.chembiol.2017.11.009",
+      "title": "",
+      "journal": "Cell Chem. Biol.",
+      "year": "2018",
+      "author": "J Tang",
+      "unstructured": "Tang, J. et al. Drug Target Commons: a community effort to build a consensus knowledge base for drug\u2013target interactions. Cell Chem. Biol. 25, 224\u2013229.e222 (2018)."
+    },
+    {
+      "key": "5905_CR81",
+      "doi": "10.1093/bioinformatics/btu626",
+      "title": "",
+      "journal": "Bioinformatics",
+      "year": "2015",
+      "author": "Z Liu",
+      "unstructured": "Liu, Z. et al. PDB-wide collection of binding data: current status of the PDBbind database. Bioinformatics 31, 405\u2013412 (2015)."
+    },
+    {
+      "key": "5905_CR82",
+      "doi": "10.1093/bib/bbab159",
+      "title": "",
+      "journal": "Brief. Bioinform.",
+      "year": "2021",
+      "author": "T Gaudelet",
+      "unstructured": "Gaudelet, T. et al. Utilizing graph machine learning within drug discovery and development. Brief. Bioinform. 22, bbab159 (2021)."
+    },
+    {
+      "key": "5905_CR83",
+      "doi": "10.1371/journal.pone.0249404",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2021",
+      "author": "J Son",
+      "unstructured": "Son, J. & Kim, D. Development of a graph convolutional neural network model for efficient prediction of protein\u2013ligand binding affinities. PLoS ONE 16, e0249404 (2021)."
+    },
+    {
+      "key": "5905_CR84",
+      "doi": "10.1038/s41598-020-61860-z",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2020",
+      "author": "MM Stepniewska-Dziubinska",
+      "unstructured": "Stepniewska-Dziubinska, M. M., Zielenkiewicz, P. & Siedlecki, P. Improving detection of protein\u2013ligand binding sites with 3D segmentation. Sci. Rep. 10, 5035 (2020)."
+    },
+    {
+      "key": "5905_CR85",
+      "doi": "10.1021/acs.jcim.7b00650",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2018",
+      "author": "J Jim\u00e9nez",
+      "unstructured": "Jim\u00e9nez, J., \u0160kali\u010d, M., Mart\u00ednez-Rosell, G. & De Fabritiis, G. KDEEP: protein\u2013ligand absolute binding affinity prediction via 3D-convolutional neural networks. J. Chem. Inf. Model. 58, 287\u2013296 (2018)."
+    },
+    {
+      "key": "5905_CR86",
+      "doi": "10.1021/acs.jcim.0c01306",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2021",
+      "author": "D Jones",
+      "unstructured": "Jones, D. et al. Improved protein\u2013ligand binding affinity prediction with structure-based deep fusion inference. J. Chem. Inf. Model. 61, 1583\u20131592 (2021)."
+    },
+    {
+      "key": "5905_CR87",
+      "doi": "10.1021/acs.jmedchem.2c00487",
+      "title": "",
+      "journal": "J. Med. Chem.",
+      "year": "2022",
+      "author": "M Volkov",
+      "unstructured": "Volkov, M. et al. On the frustration to predict binding affinities from protein\u2013ligand structures with deep neural networks. J. Med. Chem. 65, 7946\u20137958 (2022)."
+    },
+    {
+      "key": "5905_CR88",
+      "doi": "10.1038/s42256-021-00307-0",
+      "title": "",
+      "journal": "Nat. Mach. Intell.",
+      "year": "2021",
+      "author": "M Roberts",
+      "unstructured": "Roberts, M. et al. Common pitfalls and recommendations for using machine learning to detect and prognosticate for COVID-19 using chest radiographs and CT scans. Nat. Mach. Intell. 3, 199\u2013217 (2021)."
+    },
+    {
+      "key": "5905_CR89",
+      "doi": "10.1021/jacs.1c12005",
+      "title": "",
+      "journal": "J. Am. Chem. Soc.",
+      "year": "2022",
+      "author": "W Beker",
+      "unstructured": "Beker, W. et al. Machine learning may sometimes simply capture literature popularity trends: a case study of heterocyclic Suzuki\u2013Miyaura coupling. J. Am. Chem. Soc. 144, 4819\u20134827 (2022)."
+    },
+    {
+      "key": "5905_CR90",
+      "doi": "10.1073/pnas.1901326117",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2020",
+      "author": "B Yu",
+      "unstructured": "Yu, B. & Kumbier, K. Veridical data science. Proc. Natl Acad. Sci. USA 117, 3920\u20133929 (2020). This perspective article lays a foundation for veridical AI."
+    },
+    {
+      "key": "5905_CR91",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Ng, A., Laird, D. & He, L. Data-centric AI competition. DeepLearning AI https://https-deeplearning-ai.github.io/data-centric-comp/ (2021)."
+    },
+    {
+      "key": "5905_CR92",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Miranda, L. J. Towards data-centric machine learning: a short review. LJ Miranda https://ljvmiranda921.github.io/notebook/2021/07/30/data-centric-ml/ (2021)."
+    },
+    {
+      "key": "5905_CR93",
+      "doi": "10.1038/s42256-020-00236-4",
+      "title": "",
+      "journal": "Nat. Mach. Intell.",
+      "year": "2020",
+      "author": "J Jim\u00e9nez-Luna",
+      "unstructured": "Jim\u00e9nez-Luna, J., Grisoni, F. & Schneider, G. Drug discovery with explainable artificial intelligence. Nat. Mach. Intell. 2, 573\u2013584 (2020)."
+    },
+    {
+      "key": "5905_CR94",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Wills, T. AI drug discovery: assessing the first AI-designed drug candidates to go into human clinical trials. CAS https://www.cas.org/resources/cas-insights/drug-discovery/ai-designed-drug-candidates (2022)."
+    },
+    {
+      "key": "5905_CR95",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Meng, C., Seo, S., Cao, D., Griesemer, S. & Liu, Y. When physics meets machine learning: a survey of physics-informed machine learning. Preprint at https://doi.org/10.48550/arXiv.2203.16797 (2022)."
+    },
+    {
+      "key": "5905_CR96",
+      "doi": "10.1016/j.sbi.2023.102559",
+      "title": "",
+      "journal": "Curr. Opin. Struct. Biol.",
+      "year": "2023",
+      "author": "M. Thomas",
+      "unstructured": "Thomas, M., Bender, A. & de Graaf, C. Integrating structure-based approaches in generative molecular design. Curr. Opin. Struct. Biol. 79, 102559 (2023)."
+    },
+    {
+      "key": "5905_CR97",
+      "doi": "10.1038/s41570-022-00363-z",
+      "title": "",
+      "journal": "Nat. Rev. Chem.",
+      "year": "2022",
+      "author": "S Ackloo",
+      "unstructured": "Ackloo, S. et al. CACHE (Critical Assessment of Computational Hit-finding Experiments): a public\u2013private partnership benchmarking initiative to enable the development of computational methods for hit-finding. Nat. Rev. Chem. 6, 287\u2013295 (2022). This is an important community initiative for comprehensive performance assessment of computational drug discovery methods."
+    },
+    {
+      "key": "5905_CR98",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "MolSoft. Rapid isostere discovery engine (RIDE). MolSoft http://molsoft.com/RIDE.html (2022)."
+    },
+    {
+      "key": "5905_CR99",
+      "doi": "10.1038/s41586-021-03819-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "J Jumper",
+      "unstructured": "Jumper, J. et al. Highly accurate protein structure prediction with AlphaFold. Nature 596, 583\u2013589 (2021)."
+    },
+    {
+      "key": "5905_CR100",
+      "doi": "10.1038/s41586-021-03828-1",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "K Tunyasuvunakool",
+      "unstructured": "Tunyasuvunakool, K. et al. Highly accurate protein structure prediction for the human proteome. Nature 596, 590\u2013596 (2021)."
+    },
+    {
+      "key": "5905_CR101",
+      "doi": "10.1126/science.abj8754",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "M Baek",
+      "unstructured": "Baek, M. et al. Accurate prediction of protein structures and interactions using a three-track neural network. Science 373, 871\u2013876 (2021)."
+    },
+    {
+      "key": "5905_CR102",
+      "doi": "10.1038/s41594-022-00849-w",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2022",
+      "author": "M Akdel",
+      "unstructured": "Akdel, M. A structural biology community assessment of AlphaFold2 applications. Nat. Struct. Mol. Biol. 29, 1056\u20131067 (2022)."
+    },
+    {
+      "key": "5905_CR103",
+      "doi": "10.1007/978-1-61779-588-6_8",
+      "title": "",
+      "journal": "Methods Mol. Biol.",
+      "year": "2012",
+      "author": "V Katritch",
+      "unstructured": "Katritch, V., Rueda, M. & Abagyan, R. Ligand-guided receptor optimization. Methods Mol. Biol. 857, 189\u2013205 (2012)."
+    },
+    {
+      "key": "5905_CR104",
+      "doi": "10.1038/nchembio.662",
+      "title": "",
+      "journal": "Nat. Chem. Biol.",
+      "year": "2011",
+      "author": "J Carlsson",
+      "unstructured": "Carlsson, J. et al. Ligand discovery from a dopamine D3 receptor homology model and crystal structure. Nat. Chem. Biol. 7, 769\u2013778 (2011)."
+    },
+    {
+      "key": "5905_CR105",
+      "doi": "10.1039/d2sc05709c",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Ren, F. et al. AlphaFold accelerates artificial intelligence powered drug discovery: efficient discovery of a novel cyclin-dependent kinase 20 (CDK20) small molecule inhibitor. Chem. Sci. 14, 1443\u20131452 (2023)."
+    },
+    {
+      "key": "5905_CR106",
+      "doi": "10.1021/acs.jcim.2c01219",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Zhang, Y. et al. Benchmarking refined and unrefined AlphaFold2 structures for hit discovery. J. Chem. Inf. Model. 63, 1656\u20131667 (2023)."
+    },
+    {
+      "key": "5905_CR107",
+      "doi": "10.1038/s41401-022-00938-y",
+      "title": "",
+      "journal": "Acta Pharmacol. Sin.",
+      "year": "2022",
+      "author": "X-h He",
+      "unstructured": "He, X.-h. et al. AlphaFold2 versus experimental structures: evaluation on G protein-coupled receptors. Acta Pharmacol. Sin. 44, 1\u20137 (2022)."
+    },
+    {
+      "key": "5905_CR108",
+      "doi": "10.15252/msb.202211081",
+      "title": "",
+      "journal": "Mol. Syst. Biol.",
+      "year": "2022",
+      "author": "F Wong",
+      "unstructured": "Wong, F. et al. Benchmarking AlphaFold-enabled molecular docking predictions for antibiotic discovery. Mol. Syst. Biol. 18, e11081 (2022)."
+    },
+    {
+      "key": "5905_CR109",
+      "doi": "10.1038/s41592-022-01685-y",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2023",
+      "author": "ML Hekkelman",
+      "unstructured": "Hekkelman, M. L., de Vries, I., Joosten, R. P. & Perrakis, A. AlphaFill: enriching AlphaFold models with ligands and cofactors. Nat. Methods 20, 205\u2013213 (2023)."
+    },
+    {
+      "key": "5905_CR110",
+      "doi": "10.1021/acs.jctc.1c00810",
+      "title": "",
+      "journal": "J. Chem. Theory Comput.",
+      "year": "2021",
+      "author": "Y Yang",
+      "unstructured": "Yang, Y. et al. Efficient exploration of chemical space with docking and deep learning. J. Chem. Theory Comput. 17, 7106\u20137119 (2021)."
+    },
+    {
+      "key": "5905_CR111",
+      "doi": "10.1038/s41596-021-00659-2",
+      "title": "",
+      "journal": "Nat. Protoc.",
+      "year": "2022",
+      "author": "F Gentile",
+      "unstructured": "Gentile, F. et al. Artificial intelligence-enabled virtual screening of ultra-large chemical libraries with deep docking. Nat. Protoc. 17, 672\u2013697 (2022)."
+    },
+    {
+      "key": "5905_CR112",
+      "doi": "10.1021/acs.jcim.0c00900",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2020",
+      "author": "CEM Schindler",
+      "unstructured": "Schindler, C. E. M. et al. Large-scale assessment of binding free energy calculations in active drug discovery projects. J. Chem. Inf. Model. 60, 5457\u20135474 (2020)."
+    },
+    {
+      "key": "5905_CR113",
+      "doi": "10.26434/chemrxiv-2022-2t0dq-v2",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Chen, W., Cui, D., Abel, R., Friesner, R. A. & Wang, L. Accurate calculation of absolute protein\u2013ligand binding free energies. Preprint at https://doi.org/10.26434/chemrxiv-2022-2t0dq-v2 (2022)."
+    },
+    {
+      "key": "5905_CR114",
+      "doi": "10.1039/d1sc03472c",
+      "title": "",
+      "journal": "Chem. Sci.",
+      "year": "2021",
+      "author": "Y Khalak",
+      "unstructured": "Khalak, Y. et al. Alchemical absolute protein\u2013ligand binding free energies for drug design. Chem. Sci. 12, 13958\u201313971 (2021)."
+    },
+    {
+      "key": "5905_CR115",
+      "doi": "10.1021/acs.jcim.0c00116",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2020",
+      "author": "Z Cournia",
+      "unstructured": "Cournia, Z. et al. Rigorous free energy simulations in virtual screening. J. Chem. Inf. Model. 60, 4153\u20134169 (2020)."
+    },
+    {
+      "key": "5905_CR116",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "xREAL Chemical Space, Chemspace, https://chem-space.com/services#v-synthes (2023)."
+    },
+    {
+      "key": "5905_CR117",
+      "doi": "10.1021/acs.jcim.2c00390",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2022",
+      "author": "M Rarey",
+      "unstructured": "Rarey, M., Nicklaus, M. C. & Warr, W. Special issue on reaction informatics and chemical space. J. Chem. Inf. Model. 62, 2009\u20132010 (2022)."
+    },
+    {
+      "key": "5905_CR118",
+      "doi": "10.1021/acs.jcim.1c00811",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2022",
+      "author": "Y Zabolotna",
+      "unstructured": "Zabolotna, Y. et al. A close-up look at the chemical space of commercially available building blocks for medicinal chemistry. J. Chem. Inf. Model. 62, 2171\u20132185 (2022)."
+    },
+    {
+      "key": "5905_CR119",
+      "doi": "10.1038/s41586-022-05258-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "AL Kaplan",
+      "unstructured": "Kaplan, A. L. et al. Bespoke library docking for 5-HT2A receptor agonists with antidepressant activity. Nature 610, 582\u2013591 (2022)."
+    },
+    {
+      "key": "5905_CR120",
+      "doi": "10.1021/ol0499203",
+      "title": "",
+      "journal": "Org. Lett.",
+      "year": "2004",
+      "author": "A Krasi\u0144ski",
+      "unstructured": "Krasi\u0144ski, A., Fokin, V. V. & Sharpless, K. B. Direct synthesis of 1,5-disubstituted-4-magnesio-1,2,3-triazoles, revisited. Org. Lett. 6, 1237\u20131240 (2004)."
+    },
+    {
+      "key": "5905_CR121",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "The Nobel Prize in Chemistry. nobelprize.org, https://www.nobelprize.org/prizes/chemistry/2022/summary/ (2022)"
+    },
+    {
+      "key": "5905_CR122",
+      "doi": "10.1002/anie.201403758",
+      "title": "",
+      "journal": "Angew. Chem. Int. Ed. Engl.",
+      "year": "2014",
+      "author": "J Dong",
+      "unstructured": "Dong, J., Sharpless, K. B., Kwisnek, L., Oakdale, J. S. & Fokin, V. V. SuFEx-based synthesis of polysulfates. Angew. Chem. Int. Ed. Engl. 53, 9466\u20139470 (2014)."
+    },
+    {
+      "key": "5905_CR123",
+      "doi": "10.1038/s41586-022-04691-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "B Zhang",
+      "unstructured": "Zhang, B. et al. Ni-electrocatalytic Csp3-Csp3 doubly decarboxylative coupling. Nature 606, 313\u2013318 (2022)."
+    },
+    {
+      "key": "5905_CR124",
+      "doi": "",
+      "title": "",
+      "journal": "Aldrichimica Acta",
+      "year": "2009",
+      "author": "EP Gillis",
+      "unstructured": "Gillis, E. P. & Burke, M. D. Iterative cross-couplng with MIDA boronates: towards a general platform for small molecule synthesis. Aldrichimica Acta 42, 17\u201327 (2009)."
+    },
+    {
+      "key": "5905_CR125",
+      "doi": "10.1038/s41586-022-04491-w",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "DJ Blair",
+      "unstructured": "Blair, D. J. et al. Automated iterative Csp3\u2013C bond formation. Nature 604, 92\u201397 (2022). This study provides a chemical approach for automation of the C\u2013C bond formation in small-molecule synthesis."
+    },
+    {
+      "key": "5905_CR126",
+      "doi": "10.1126/science.aaa5414",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "J Li",
+      "unstructured": "Li, J. et al. Synthesis of many different types of organic small molecules using one automated process. Science 347, 1221\u20131226 (2015)."
+    },
+    {
+      "key": "5905_CR127",
+      "doi": "10.1002/anie.201710482",
+      "title": "",
+      "journal": "Angew. Chem. Int. Ed.",
+      "year": "2018",
+      "author": "M Trobe",
+      "unstructured": "Trobe, M. & Burke, M. D. The molecular industrial revolution: automated synthesis of small molecules. Angew. Chem. Int. Ed. 57, 4192\u20134214 (2018)."
+    },
+    {
+      "key": "5905_CR128",
+      "doi": "10.1002/anie.202116108",
+      "title": "",
+      "journal": "Angew. Chem. Int. Ed.",
+      "year": "2022",
+      "author": "A Bubliauskas",
+      "unstructured": "Bubliauskas, A. et al. Digitizing chemical synthesis in 3D printed reactionware. Angew. Chem. Int. Ed. 61, e202116108 (2022)."
+    },
+    {
+      "key": "5905_CR129",
+      "doi": "10.1038/s44160-021-00010-3",
+      "title": "",
+      "journal": "Nat. Synth.",
+      "year": "2022",
+      "author": "K Molga",
+      "unstructured": "Molga, K. et al. A computer algorithm to discover iterative sequences of organic reactions. Nat. Synth. 1, 49\u201358 (2022)."
+    },
+    {
+      "key": "5905_CR130",
+      "doi": "10.1038/nature25978",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "MHS Segler",
+      "unstructured": "Segler, M. H. S., Preuss, M. & Waller, M. P. Planning chemical syntheses with deep neural networks and symbolic AI. Nature 555, 604\u2013610 (2018)."
+    },
+    {
+      "key": "5905_CR131",
+      "doi": "10.1021/acs.jmedchem.2c00334",
+      "title": "",
+      "journal": "J. Med. Chem.",
+      "year": "2022",
+      "author": "B Goldman",
+      "unstructured": "Goldman, B., Kearnes, S., Kramer, T., Riley, P. & Walters, W. P. Defining levels of automated chemical design. J. Med. Chem. 65, 7073\u20137087 (2022)."
+    },
+    {
+      "key": "5905_CR132",
+      "doi": "10.1126/sciadv.abg3338",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2021",
+      "author": "F Grisoni",
+      "unstructured": "Grisoni, F. et al. Combining generative artificial intelligence and on-chip synthesis for de novo drug design. Sci. Adv. 7, eabg3338 (2021)."
+    },
+    {
+      "key": "5905_CR133",
+      "doi": "10.1021/acs.chemrev.5b00631",
+      "title": "",
+      "journal": "Chem. Rev.",
+      "year": "2016",
+      "author": "JR Wagner",
+      "unstructured": "Wagner, J. R. et al. Emerging computational methods for the rational discovery of allosteric drugs. Chem. Rev. 116, 6370\u20136390 (2016)."
+    },
+    {
+      "key": "5905_CR134",
+      "doi": "10.1002/9781118681121.ch4",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Davis, B. J. & Hubbard, R. E. in Structural Biology in Drug Discovery (ed. Renaud, J.-P.) 79\u201398 (2020)."
+    },
+    {
+      "key": "5905_CR135",
+      "doi": "10.3389/fchem.2020.00093",
+      "title": "",
+      "journal": "Front. Chem.",
+      "year": "2020",
+      "author": "LR de Souza Neto",
+      "unstructured": "de Souza Neto, L. R. et al. In silico strategies to support fragment-to-lead optimization in drug discovery. Front. Chem. 8, 93 (2020)."
+    },
+    {
+      "key": "5905_CR136",
+      "doi": "10.1016/j.drudis.2019.12.006",
+      "title": "",
+      "journal": "Drug Discov. Today",
+      "year": "2020",
+      "author": "M Saur",
+      "unstructured": "Saur, M. et al. Fragment-based drug discovery using cryo-EM. Drug Discov. Today 25, 485\u2013490 (2020)."
+    },
+    {
+      "key": "5905_CR137",
+      "doi": "10.1038/s41587-020-00778-3",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2021",
+      "author": "M Kuljanin",
+      "unstructured": "Kuljanin, M. et al. Reimagining high-throughput profiling of reactive cysteines for cell-based screening of large electrophile libraries. Nat. Biotechnol. 39, 630\u2013641 (2021)."
+    },
+    {
+      "key": "5905_CR138",
+      "doi": "10.1021/jm990073x",
+      "title": "",
+      "journal": "J. Med. Chem.",
+      "year": "1999",
+      "author": "I Muegge",
+      "unstructured": "Muegge, I., Martin, Y. C., Hajduk, P. J. & Fesik, S. W. Evaluation of PMF scoring in docking weak ligands to the FK506 binding protein. J. Med. Chem. 42, 2498\u20132503 (1999)."
+    },
+    {
+      "key": "5905_CR139",
+      "doi": "10.1126/sciadv.abf8711",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2021",
+      "author": "M Schuller",
+      "unstructured": "Schuller, M. et al. Fragment binding to the Nsp3 macrodomain of SARS-CoV-2 identified through crystallographic screening and computational docking. Sci. Adv. 7, eabf8711 (2021)."
+    },
+    {
+      "key": "5905_CR140",
+      "doi": "10.1073/pnas.2212931120",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2023",
+      "author": "S Gahbauer",
+      "unstructured": "Gahbauer, S. et al. Iterative computational design and crystallographic screening identifies potent inhibitors targeting the Nsp3 macrodomain of SARS-CoV-2. Proc. Natl Acad. Sci. USA 120, e2212931120 (2023). This article demonstrates the application of both hybrid fragment screening-and-merging design and ultra-large library screening to a challenging viral target."
+    },
+    {
+      "key": "5905_CR141",
+      "doi": "10.1101/2020.10.29.339317",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Achdout, H. et al. Open science discovery of oral non-covalent SARS-CoV-2 main protease inhibitor therapeutics. Preprint at https://doi.org/10.1101/2020.10.29.339317 (2022)."
+    },
+    {
+      "key": "5905_CR142",
+      "doi": "10.1038/s41586-020-2223-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "Z Jin",
+      "unstructured": "Jin, Z. et al. Structure of Mpro from SARS-CoV-2 and discovery of its inhibitors. Nature 582, 289\u2013293 (2020)."
+    },
+    {
+      "key": "5905_CR143",
+      "doi": "10.1002/minf.202000028",
+      "title": "",
+      "journal": "Mol. Inform.",
+      "year": "2020",
+      "author": "AT Ton",
+      "unstructured": "Ton, A. T., Gentile, F., Hsing, M., Ban, F. & Cherkasov, A. Rapid identification of potential inhibitors of SARS-CoV-2 main protease by deep docking of 1.3 billion compounds. Mol. Inform. 39, e2000028 (2020)."
+    },
+    {
+      "key": "5905_CR144",
+      "doi": "10.1016/j.ddtec.2021.08.001",
+      "title": "",
+      "journal": "Drug Discov. Today Technol.",
+      "year": "2021",
+      "author": "L Frye",
+      "unstructured": "Frye, L., Bhat, S., Akinsanya, K. & Abel, R. From computer-aided drug discovery to computer-driven drug discovery. Drug Discov. Today Technol. 39, 111\u2013117 (2021)."
+    },
+    {
+      "key": "5905_CR145",
+      "doi": "10.1126/science.adg6264",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Wadman, M. FDA no longer needs to require animal tests before human drug trials. Science, https://doi.org/10.1126/science.adg6264 (2023)."
+    },
+    {
+      "key": "5905_CR146",
+      "doi": "10.1021/ci500598e",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2015",
+      "author": "N Stiefl",
+      "unstructured": "Stiefl, N. et al. FOCUS\u2014development of a global communication and modeling platform for applied and computational medicinal chemists. J. Chem. Inf. Model. 55, 896\u2013908 (2015)."
+    },
+    {
+      "key": "5905_CR147",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Schrodinger. LiveDesign. Schrodinger https://www.schrodinger.com/sites/default/files/general_ld_rgb_080119_forweb.pdf. (accessed 5 April 2023)"
+    },
+    {
+      "key": "5905_CR148",
+      "doi": "10.1039/d1md00228g",
+      "title": "",
+      "journal": "RSC Med. Chem.",
+      "year": "2022",
+      "author": "S M\u00fcller",
+      "unstructured": "M\u00fcller, S. et al. Target 2035\u2014update on the quest for a probe for every protein. RSC Med. Chem. 13, 13\u201321 (2022)."
+    },
+    {
+      "key": "5905_CR149",
+      "doi": "10.1002/prot.10465",
+      "title": "",
+      "journal": "Proteins",
+      "year": "2003",
+      "author": "ML Verdonk",
+      "unstructured": "Verdonk, M. L., Cole, J. C., Hartshorn, M. J., Murray, C. W. & Taylor, R. D. Improved protein\u2013ligand docking using GOLD. Proteins 52, 609\u2013623 (2003)."
+    },
+    {
+      "key": "5905_CR150",
+      "doi": "10.1021/acs.jctc.1c00136",
+      "title": "",
+      "journal": "J. Chem. Theory Comput.",
+      "year": "2021",
+      "author": "EB Miller",
+      "unstructured": "Miller, E. B. et al. Reliable and accurate solution to the induced fit docking problem for protein\u2013ligand binding. J. Chem. Theory Comput. 17, 2630\u20132639 (2021)."
+    },
+    {
+      "key": "5905_CR151",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Chemical space docking. BioSolveIT https://www.biosolveit.de/application-academy/chemical-space-docking/ (2022)."
+    },
+    {
+      "key": "5905_CR152",
+      "doi": "10.1007/978-1-0716-0282-9_16",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Cavasotto, C. N. in Quantum Mechanics in Drug Discovery (ed. Heifetz, A.) 257\u2013268 (Springer, 2020)."
+    },
+    {
+      "key": "5905_CR153",
+      "doi": "10.4155/fmc-2016-0093",
+      "title": "",
+      "journal": "Future Med. Chem.",
+      "year": "2016",
+      "author": "SL Dixon",
+      "unstructured": "Dixon, S. L. et al. AutoQSAR: an automated machine learning tool for best-practice quantitative structure\u2013activity relationship modeling. Future Med. Chem. 8, 1825\u20131839 (2016)."
+    },
+    {
+      "key": "5905_CR154",
+      "doi": "10.1111/j.1747-0285.2007.00605.x",
+      "title": "",
+      "journal": "Chem. Biol. Drug Des.",
+      "year": "2008",
+      "author": "M Totrov",
+      "unstructured": "Totrov, M. Atomic property fields: generalized 3D pharmacophoric potential for automated ligand superposition, pharmacophore elucidation and 3D QSAR. Chem. Biol. Drug Des. 71, 15\u201327 (2008)."
+    },
+    {
+      "key": "5905_CR155",
+      "doi": "10.1002/wcms.1468",
+      "title": "",
+      "journal": "WIREs Comput. Mol. Sci.",
+      "year": "2020",
+      "author": "D Schaller",
+      "unstructured": "Schaller, D. et al. Next generation 3D pharmacophore modeling. WIREs Comput. Mol. Sci. 10, e1468 (2020)."
+    },
+    {
+      "key": "5905_CR156",
+      "doi": "10.3389/frai.2019.00017",
+      "title": "",
+      "journal": "Front. Artif. Intell.",
+      "year": "2019",
+      "author": "SK Chakravarti",
+      "unstructured": "Chakravarti, S. K. & Alla, S. R. M. Descriptor free QSAR modeling using deep learning with long short-term memory neural networks. Front. Artif. Intell. 2, 17 (2019)."
+    },
+    {
+      "key": "5905_CR157",
+      "doi": "10.1021/jm030331x",
+      "title": "",
+      "journal": "J. Med. Chem.",
+      "year": "2004",
+      "author": "Z Deng",
+      "unstructured": "Deng, Z., Chuaqui, C. & Singh, J. Structural interaction fingerprint (SIFt): a novel method for analyzing three-dimensional protein-ligand binding interactions. J. Med. Chem. 47, 337\u2013344 (2004)."
+    }
+  ]
+}

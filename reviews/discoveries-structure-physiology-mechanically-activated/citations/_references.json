@@ -1,0 +1,1361 @@
+{
+  "article": {
+    "slug": "s41586-020-2933-1",
+    "doi": "10.1038/s41586-020-2933-1",
+    "title": "Discoveries in structure and physiology of mechanically activated ion channels",
+    "url": "https://www.nature.com/articles/s41586-020-2933-1",
+    "abbrev": "discoveries-structure-physiology-mechanically-activated",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/discoveries-structure-physiology-mechanically-activated"
+  },
+  "meta": {
+    "title": "Discoveries in structure and physiology of mechanically activated ion channels",
+    "authors": [
+      "J. M. Kefauver",
+      "A. B. Ward",
+      "A. Patapoutian"
+    ],
+    "published": [
+      2020,
+      11,
+      25
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-020-2933-1",
+    "n_references": 148,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "2933_CR1",
+      "doi": "10.1073/pnas.1313364111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "A Anishkin",
+      "unstructured": "Anishkin, A., Loukin, S. H., Teng, J. & Kung, C. Feeling the hidden mechanical forces in lipid bilayer is an original sense. Proc. Natl Acad. Sci. USA 111, 7898\u20137905 (2014)."
+    },
+    {
+      "key": "2933_CR2",
+      "doi": "10.1146/annurev.biophys.37.032807.125836",
+      "title": "",
+      "journal": "Annu. Rev. Biophys.",
+      "year": "2010",
+      "author": "J Arnad\u00f3ttir",
+      "unstructured": "Arnad\u00f3ttir, J. & Chalfie, M. Eukaryotic mechanosensitive channels. Annu. Rev. Biophys. 39, 111\u2013137 (2010)."
+    },
+    {
+      "key": "2933_CR3",
+      "doi": "10.1016/j.neuron.2015.08.032",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2015",
+      "author": "SS Ranade",
+      "unstructured": "Ranade, S. S., Syeda, R. & Patapoutian, A. Mechanically activated ion channels. Neuron 87, 1162\u20131179 (2015)."
+    },
+    {
+      "key": "2933_CR4",
+      "doi": "10.1146/annurev-physiol-021317-121351",
+      "title": "",
+      "journal": "Annu. Rev. Physiol.",
+      "year": "2018",
+      "author": "CD Cox",
+      "unstructured": "Cox, C. D., Bavi, N. & Martinac, B. Bacterial mechanosensors. Annu. Rev. Physiol. 80, 71\u201393 (2018)."
+    },
+    {
+      "key": "2933_CR5",
+      "doi": "10.1038/nrm2595",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2009",
+      "author": "M Chalfie",
+      "unstructured": "Chalfie, M. Neurosensory mechanotransduction. Nat. Rev. Mol. Cell Biol. 10, 44\u201352 (2009)."
+    },
+    {
+      "key": "2933_CR6",
+      "doi": "10.1016/j.cell.2019.08.049",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "D Douguet",
+      "unstructured": "Douguet, D. & Honor\u00e9, E. Mammalian mechanoelectrical transduction: structure and function of force-gated ion channels. Cell 179, 340\u2013354 (2019)."
+    },
+    {
+      "key": "2933_CR7",
+      "doi": "10.1146/annurev-neuro-070918-050509",
+      "title": "",
+      "journal": "Annu. Rev. Neurosci.",
+      "year": "2020",
+      "author": "P Jin",
+      "unstructured": "Jin, P., Jan, L. Y. & Jan, Y.-N. Mechanosensitive ion channels: structural features relevant to mechanotransduction mechanisms. Annu. Rev. Neurosci. 43, 207\u2013229 (2020)."
+    },
+    {
+      "key": "2933_CR8",
+      "doi": "10.1126/science.1193270",
+      "title": "",
+      "journal": "Science",
+      "year": "2010",
+      "author": "B Coste",
+      "unstructured": "Coste, B. et al. Piezo1 and Piezo2 are essential components of distinct mechanically activated cation channels. Science 330, 55\u201360 (2010). This study uses an RNA interference screen to identify PIEZOs as essential components of a mechanically actived ion channel."
+    },
+    {
+      "key": "2933_CR9",
+      "doi": "10.1038/nrm.2017.92",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2017",
+      "author": "SE Murthy",
+      "unstructured": "Murthy, S. E., Dubin, A. E. & Patapoutian, A. Piezos thrive under pressure: mechanically activated ion channels in health and disease. Nat. Rev. Mol. Cell Biol. 18, 771\u2013783 (2017)."
+    },
+    {
+      "key": "2933_CR10",
+      "doi": "10.1073/pnas.1320768111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "SG Brohawn",
+      "unstructured": "Brohawn, S. G., Su, Z. & MacKinnon, R. Mechanosensitivity is mediated directly by the lipid membrane in TRAAK and TREK1 K+ channels. Proc. Natl Acad. Sci. USA 111, 3614\u20133619 (2014). This study demonstrates that the mechanically activated K2P channels, TRAAK and TREK1, are inherently mechanosensitive."
+    },
+    {
+      "key": "2933_CR11",
+      "doi": "10.7554/elife.41844",
+      "title": "",
+      "journal": "eLife",
+      "year": "2018",
+      "author": "SE Murthy",
+      "unstructured": "Murthy, S. E. et al. OSCA/TMEM63 are an evolutionarily conserved family of mechanically activated ion channels. eLife 7, 1\u201317 (2018). Several OSCA genes and their mammalian homologues, the TMEM63 family, are shown to be inherently mechanosensitive ion channels."
+    },
+    {
+      "key": "2933_CR12",
+      "doi": "10.1016/j.jmb.2019.07.006",
+      "title": "",
+      "journal": "J. Mol. Biol.",
+      "year": "2019",
+      "author": "T Rasmussen",
+      "unstructured": "Rasmussen, T., Flegler, V. J., Rasmussen, A. & B\u00f6ttcher, B. Structure of the mechanosensitive channel MscS embedded in the membrane bilayer. J. Mol. Biol. 431, 3081\u20133090 (2019)."
+    },
+    {
+      "key": "2933_CR13",
+      "doi": "10.7554/elife.50486",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "B Reddy",
+      "unstructured": "Reddy, B., Bavi, N., Lu, A., Park, Y. & Perozo, E. Molecular basis of force-from-lipids gating in the mechanosensitive channel MscS. eLife 8, e50486 (2019). These two articles present cryo-EM structures of the bacterial MscS channel in a lipidic nanodisc, substantially updating our understanding of how it is embedded within the membrane."
+    },
+    {
+      "key": "2933_CR14",
+      "doi": "10.1038/nature22981",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "P Jin",
+      "unstructured": "Jin, P. et al. Electron cryo-microscopy structure of the mechanotransduction channel NOMPC. Nature 547, 118\u2013122 (2017). This study presents the cryo-EM structure of NOMPC, revealing that the large ankyrin repeat domain is arranged with a large spring-like architecture."
+    },
+    {
+      "key": "2933_CR15",
+      "doi": "10.1038/s41594-018-0037-5",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2018",
+      "author": "Z Deng",
+      "unstructured": "Deng, Z. et al. Cryo-EM and X-ray structures of TRPV4 reveal insight into ion permeation and gating mechanisms. Nat. Struct. Mol. Biol. 25, 252\u2013260 (2018)."
+    },
+    {
+      "key": "2933_CR16",
+      "doi": "10.7554/elife.38770",
+      "title": "",
+      "journal": "eLife",
+      "year": "2018",
+      "author": "J Ge",
+      "unstructured": "Ge, J. et al. Structure of mouse protocadherin 15 of the stereocilia tip link in complex with LHFPL5. eLife 7, e38770 (2018). Co-expression and purification of the MET complex components PCDH15 and LHFPL5 reveal that a TM helix of the PCDH15 subunit interacts extensively with the TM helices of each LHFPL5 subunit."
+    },
+    {
+      "key": "2933_CR17",
+      "doi": "10.7554/elife.39340",
+      "title": "",
+      "journal": "eLife",
+      "year": "2018",
+      "author": "S Noreng",
+      "unstructured": "Noreng, S., Bharadwaj, A., Posert, R., Yoshioka, C. & Baconguis, I. Structure of the human epithelial sodium channel by cryo-electron microscopy. eLife 7, e39340 (2018)."
+    },
+    {
+      "key": "2933_CR18",
+      "doi": "10.7554/elife.33660",
+      "title": "",
+      "journal": "eLife",
+      "year": "2017",
+      "author": "YR Guo",
+      "unstructured": "Guo, Y. R. & MacKinnon, R. Structure-based membrane dome mechanism for Piezo mechanosensitivity. eLife 6, e33660 (2017)."
+    },
+    {
+      "key": "2933_CR19",
+      "doi": "10.1038/nature25453",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "K Saotome",
+      "unstructured": "Saotome, K. et al. Structure of the mechanically activated ion channel Piezo1. Nature 554, 481\u2013486 (2018)."
+    },
+    {
+      "key": "2933_CR20",
+      "doi": "10.1038/nature25743",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "Q Zhao",
+      "unstructured": "Zhao, Q. et al. Structure and mechanogating mechanism of the Piezo1 channel. Nature 554, 487\u2013492 (2018)."
+    },
+    {
+      "key": "2933_CR21",
+      "doi": "10.1038/s41586-019-1505-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "L Wang",
+      "unstructured": "Wang, L. et al. Structure and mechanogating of the mammalian tactile channel PIEZO2. Nature 573, 225\u2013229 (2019). These four studies present cryo-EM structures of PIEZO1 and PIEZO2, revealing that its curved shape probably resides within the membrane, and providing a near-atomic-resolution view of several features that may be involved in gating by mechanical force."
+    },
+    {
+      "key": "2933_CR22",
+      "doi": "10.1038/s41594-018-0117-6",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2018",
+      "author": "M Zhang",
+      "unstructured": "Zhang, M. et al. Structure of the mechanosensitive OSCA channels. Nat. Struct. Mol. Biol. 25, 850\u2013858 (2018)."
+    },
+    {
+      "key": "2933_CR23",
+      "doi": "10.7554/elife.41845",
+      "title": "",
+      "journal": "eLife",
+      "year": "2018",
+      "author": "S Jojoa-Cruz",
+      "unstructured": "Jojoa-Cruz, S. et al. Cryo-EM structure of the mechanically activated ion channel OSCA1.2. eLife 7, e41845 (2018)."
+    },
+    {
+      "key": "2933_CR24",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "X Liu",
+      "unstructured": "Liu, X., Wang, J. & Sun, L. Structure of the hyperosmolality-gated calcium-permeable channel OSCA1.2. Nat. Commun. 9, 5060 (2018)."
+    },
+    {
+      "key": "2933_CR25",
+      "doi": "10.1073/pnas.1900774116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "K Maity",
+      "unstructured": "Maity, K. et al. Cryo-EM structure of OSCA1.2 from Oryza sativa elucidates the mechanical basis of potential membrane hyperosmolality gating. Proc. Natl Acad. Sci. USA 116, 14309\u201314318 (2019). These four studies present cryo-EM structures of OSCA1.2 and other OSCA family members, revealing their structural homology to TMEM16 and highlighting features that may be involved in mechanical gating."
+    },
+    {
+      "key": "2933_CR26",
+      "doi": "10.1080/19336950.2016.1224624",
+      "title": "",
+      "journal": "Channels",
+      "year": "2017",
+      "author": "N Bavi",
+      "unstructured": "Bavi, N., Cox, C. D., Perozo, E. & Martinac, B. Toward a structural blueprint for bilayer-mediated channel mechanosensitivity. Channels 11, 91\u201393 (2017). This study proposed the dragging mechanism of mechanotransduction."
+    },
+    {
+      "key": "2933_CR27",
+      "doi": "10.1126/science.1261512",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "YY Dong",
+      "unstructured": "Dong, Y. Y. et al. K2P channel gating mechanisms revealed by structures of TREK-2 and a complex with Prozac. Science 347, 1256\u20131259 (2015)."
+    },
+    {
+      "key": "2933_CR28",
+      "doi": "10.1085/jgp.201812266",
+      "title": "",
+      "journal": "J. Gen. Physiol.",
+      "year": "2019",
+      "author": "D Argudo",
+      "unstructured": "Argudo, D., Capponi, S., Bethel, N. P. & Grabe, M. A multiscale model of mechanotransduction by the ankyrin chains of the NOMPC channel. J. Gen. Physiol. 151, 316\u2013327 (2019)."
+    },
+    {
+      "key": "2933_CR29",
+      "doi": "10.1016/s0006-3495(93)81044-0",
+      "title": "",
+      "journal": "Biophys. J.",
+      "year": "1993",
+      "author": "SI Sukharev",
+      "unstructured": "Sukharev, S. I., Martinac, B., Arshavsky, V. Y. & Kung, C. Two types of mechanosensitive channels in the Escherichia coli cell envelope: solubilization and functional reconstitution. Biophys. J. 65, 177\u2013183 (1993)."
+    },
+    {
+      "key": "2933_CR30",
+      "doi": "10.1016/j.cub.2005.11.044",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2006",
+      "author": "ES Haswell",
+      "unstructured": "Haswell, E. S. & Meyerowitz, E. M. MscS-like proteins control plastid size and shape in Arabidopsis thaliana. Curr. Biol. 16, 1\u201311 (2006)."
+    },
+    {
+      "key": "2933_CR31",
+      "doi": "10.1155/2002/419261",
+      "title": "",
+      "journal": "Archaea",
+      "year": "2002",
+      "author": "A Kloda",
+      "unstructured": "Kloda, A. & Martinac, B. Common evolutionary origins of mechanosensitive ion channels in Archaea, Bacteria and cell-walled Eukarya. Archaea 1, 35\u201344 (2002)."
+    },
+    {
+      "key": "2933_CR32",
+      "doi": "10.1038/nsb827",
+      "title": "",
+      "journal": "Nat. Struct. Biol.",
+      "year": "2002",
+      "author": "E Perozo",
+      "unstructured": "Perozo, E., Kloda, A., Cortes, D. M. & Martinac, B. Physical principles underlying the transduction of bilayer deformation forces during mechanosensitive channel gating. Nat. Struct. Biol. 9, 696\u2013703 (2002)."
+    },
+    {
+      "key": "2933_CR33",
+      "doi": "10.1038/nsb828",
+      "title": "",
+      "journal": "Nat. Struct. Biol.",
+      "year": "2002",
+      "author": "M Betanzos",
+      "unstructured": "Betanzos, M., Chiang, C. S., Guy, H. R. & Sukharev, S. A large iris-like expansion of a mechanosensitive channel protein induced by membrane tension. Nat. Struct. Biol. 9, 704\u2013710 (2002). Disulfide cross-linking between the first TM helices on adjacent subunits of MscL in the resting state and in osmotically shocked cells provides the first evidence for the area-expansion model of mechanotransduction."
+    },
+    {
+      "key": "2933_CR34",
+      "doi": "10.1126/science.282.5397.2220",
+      "title": "",
+      "journal": "Science",
+      "year": "1998",
+      "author": "G Chang",
+      "unstructured": "Chang, G., Spencer, R. H., Lee, A. T., Barclay, M. T. & Rees, D. C. Structure of the MscL homolog from Mycobacterium tuberculosis: a gated mechanosensitive ion channel. Science 282, 2220\u20132226 (1998)."
+    },
+    {
+      "key": "2933_CR35",
+      "doi": "10.1085/jgp.20028768",
+      "title": "",
+      "journal": "J. Gen. Physiol.",
+      "year": "2003",
+      "author": "A Anishkin",
+      "unstructured": "Anishkin, A. et al. On the conformation of the COOH-terminal domain of the large mechanosensitive channel MscL. J. Gen. Physiol. 121, 227\u2013244 (2003)."
+    },
+    {
+      "key": "2933_CR36",
+      "doi": "10.4161/chan.20756",
+      "title": "",
+      "journal": "Channels",
+      "year": "2012",
+      "author": "I Iscla",
+      "unstructured": "Iscla, I., Wray, R. & Blount, P. The dynamics of protein\u2013protein interactions between domains of MscL at the cytoplasmic\u2013lipid interface. Channels 6, 255\u2013261 (2012)."
+    },
+    {
+      "key": "2933_CR37",
+      "doi": "10.1073/pnas.1503202112",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2015",
+      "author": "J Li",
+      "unstructured": "Li, J. et al. Mechanical coupling of the multiple structural elements of the large-conductance mechanosensitive channel during expansion. Proc. Natl Acad. Sci. USA 112, 10726\u201310731 (2015)."
+    },
+    {
+      "key": "2933_CR38",
+      "doi": "10.1038/ncomms11984",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "N Bavi",
+      "unstructured": "Bavi, N. et al. The role of MscL amphipathic N terminus indicates a blueprint for bilayer-mediated gating of mechanosensitive channels. Nat. Commun. 7, 11984 (2016)."
+    },
+    {
+      "key": "2933_CR39",
+      "doi": "10.7554/elife.01834",
+      "title": "",
+      "journal": "eLife",
+      "year": "2014",
+      "author": "Y Wang",
+      "unstructured": "Wang, Y. et al. Single molecule FRET reveals pore size and opening mechanism of a mechano-sensitive ion channel. eLife 3, e01834 (2014)."
+    },
+    {
+      "key": "2933_CR40",
+      "doi": "10.1016/s0006-3495(04)74337-4",
+      "title": "",
+      "journal": "Biophys. J.",
+      "year": "2004",
+      "author": "CS Chiang",
+      "unstructured": "Chiang, C. S., Anishkin, A. & Sukharev, S. Gating of the large mechanosensitive channel in situ: estimation of the spatial scale of the transition from channel population responses. Biophys. J. 86, 2846\u20132861 (2004)."
+    },
+    {
+      "key": "2933_CR41",
+      "doi": "10.1529/biophysj.104.047431",
+      "title": "",
+      "journal": "Biophys. J.",
+      "year": "2005",
+      "author": "P Wiggins",
+      "unstructured": "Wiggins, P. & Phillips, R. Membrane\u2013protein interactions in mechanosensitive channels. Biophys. J. 88, 880\u2013902 (2005)."
+    },
+    {
+      "key": "2933_CR42",
+      "doi": "10.1126/science.1077945",
+      "title": "",
+      "journal": "Science",
+      "year": "2002",
+      "author": "RB Bass",
+      "unstructured": "Bass, R. B., Strop, P., Barclay, M. & Rees, D. C. Crystal structure of Escherichia coli MscS, a voltage-modulated and mechanosensitive channel. Science 298, 1582\u20131587 (2002)."
+    },
+    {
+      "key": "2933_CR43",
+      "doi": "10.1126/science.1159262",
+      "title": "",
+      "journal": "Science",
+      "year": "2008",
+      "author": "W Wang",
+      "unstructured": "Wang, W. et al. The structure of an open form of an E. coli mechanosensitive channel at 3.45\u00a0\u00c5 resolution. Science 321, 1179\u20131183 (2008)."
+    },
+    {
+      "key": "2933_CR44",
+      "doi": "10.1085/jgp.200810000",
+      "title": "",
+      "journal": "J. Gen. Physiol.",
+      "year": "2008",
+      "author": "A Anishkin",
+      "unstructured": "Anishkin, A., Kamaraju, K. & Sukharev, S. Mechanosensitive channel MscS in the open state: modeling of the transition, explicit simulations, and experimental measurements of conductance. J. Gen. Physiol. 132, 67\u201383 (2008)."
+    },
+    {
+      "key": "2933_CR45",
+      "doi": "10.1126/science.1159674",
+      "title": "",
+      "journal": "Science",
+      "year": "2008",
+      "author": "V V\u00e1squez",
+      "unstructured": "V\u00e1squez, V., Sotomayor, M., Cordero-Morales, J., Schulten, K. & Perozo, E. A structural mechanism for MscS gating in lipid bilayers. Science 321, 1210\u20131214 (2008)."
+    },
+    {
+      "key": "2933_CR46",
+      "doi": "10.1016/j.jmb.2019.05.043",
+      "title": "",
+      "journal": "J. Mol. Biol.",
+      "year": "2019",
+      "author": "T Rasmussen",
+      "unstructured": "Rasmussen, T. et al. Interaction of the mechanosensitive channel, MscS, with the membrane bilayer through lipid intercalation into grooves and pockets. J. Mol. Biol. 431, 3339\u20133352 (2019)."
+    },
+    {
+      "key": "2933_CR47",
+      "doi": "10.1529/biophysj.107.123448",
+      "title": "",
+      "journal": "Biophys. J.",
+      "year": "2008",
+      "author": "MD Edwards",
+      "unstructured": "Edwards, M. D., Bartlett, W. & Booth, I. R. Pore mutations of the Escherichia coli MscS channel affect desensitization but not ionic preference. Biophys. J. 94, 3003\u20133013 (2008)."
+    },
+    {
+      "key": "2933_CR48",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2013",
+      "author": "CD Cox",
+      "unstructured": "Cox, C. D. et al. Selectivity mechanism of the mechanosensitive channel MscS revealed by probing channel subconducting states. Nat. Commun. 4, 2137 (2013)."
+    },
+    {
+      "key": "2933_CR49",
+      "doi": "10.1085/jgp.201311114",
+      "title": "",
+      "journal": "J. Gen. Physiol.",
+      "year": "2014",
+      "author": "I Rowe",
+      "unstructured": "Rowe, I., Anishkin, A., Kamaraju, K., Yoshimura, K. & Sukharev, S. The cytoplasmic cage domain of the mechanosensitive channel MscS is a sensor of macromolecular crowding. J. Gen. Physiol. 143, 543\u2013557 (2014)."
+    },
+    {
+      "key": "2933_CR50",
+      "doi": "10.1146/annurev-arplant-043014-114700",
+      "title": "",
+      "journal": "Annu. Rev. Plant Biol.",
+      "year": "2015",
+      "author": "ES Hamilton",
+      "unstructured": "Hamilton, E. S., Schlegel, A. M. & Haswell, E. S. United in diversity: mechanosensitive ion channels in plants. Annu. Rev. Plant Biol. 66, 113\u2013137 (2015)."
+    },
+    {
+      "key": "2933_CR51",
+      "doi": "10.1002/pld3.124",
+      "title": "",
+      "journal": "Plant Direct",
+      "year": "2019",
+      "author": "JS Lee",
+      "unstructured": "Lee, J. S., Wilson, M. E., Richardson, R. A. & Haswell, E. S. Genetic and physical interactions between the organellar mechanosensitive ion channel homologs MSL1, MSL2, and MSL3 reveal a role for inter-organellar communication in plant development. Plant Direct 3, e00124 (2019)."
+    },
+    {
+      "key": "2933_CR52",
+      "doi": "10.1093/pcp/pcw230",
+      "title": "",
+      "journal": "Plant Cell Physiol.",
+      "year": "2017",
+      "author": "ES Hamilton",
+      "unstructured": "Hamilton, E. S. & Haswell, E. S. The tension-sensitive ion transport activity of MSL8 is critical for its function in pollen hydration and germination. Plant Cell Physiol. 58, 1222\u20131237 (2017)."
+    },
+    {
+      "key": "2933_CR53",
+      "doi": "10.1093/jxb/eraa192",
+      "title": "",
+      "journal": "J. Exp. Bot.",
+      "year": "2020",
+      "author": "D Basu",
+      "unstructured": "Basu, D., Shoots, J. M. & Haswell, E. S. Interactions between the N- and C-termini of the mechanosensitive ion channel AtMSL10 are consistent with a three-step mechanism for activation. J. Exp. Bot. 71, 4020\u20134032 (2020)."
+    },
+    {
+      "key": "2933_CR54",
+      "doi": "10.1016/j.cub.2020.05.015",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2020",
+      "author": "D Basu",
+      "unstructured": "Basu, D. & Haswell, E. S. The mechanosensitive ion channel MSL10 potentiates responses to cell swelling in Arabidopsis seedlings. Curr. Biol. 30, 2716\u20132728.e6 (2020)."
+    },
+    {
+      "key": "2933_CR55",
+      "doi": "10.1016/j.celrep.2020.03.026",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2020",
+      "author": "Y Li",
+      "unstructured": "Li, Y. et al. Structural insights into a plant mechanosensitive ion channel MSL1. Cell Rep. 30, 4518\u20134527.e3 (2020). This study presents the open and closed structures of MSL1, providing insights into the gating of this plant mechanosensitive channel."
+    },
+    {
+      "key": "2933_CR56",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "Z Deng",
+      "unstructured": "Deng, Z. et al. Structural mechanism for gating of a eukaryotic mechanosensitive channel of small conductance. Nat. Commun. 11, 3690 (2020)."
+    },
+    {
+      "key": "2933_CR57",
+      "doi": "10.1111/nyas.12874",
+      "title": "",
+      "journal": "Ann. NY Acad. Sci.",
+      "year": "2015",
+      "author": "SG Brohawn",
+      "unstructured": "Brohawn, S. G. How ion channels sense mechanical force: insights from mechanosensitive K2P channels TRAAK, TREK1, and TREK2. Ann. NY Acad. Sci. 1352, 20\u201332 (2015)."
+    },
+    {
+      "key": "2933_CR58",
+      "doi": "10.7554/elife.50403",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "SG Brohawn",
+      "unstructured": "Brohawn, S. G. et al. The mechanosensitive ion channel TRAAK is localized to the mammalian node of Ranvier. eLife 8, 713990 (2019)."
+    },
+    {
+      "key": "2933_CR59",
+      "doi": "10.1073/pnas.1218950110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "SG Brohawn",
+      "unstructured": "Brohawn, S. G., Campbell, E. B. & MacKinnon, R. Domain-swapped chain connectivity and gated membrane access in a Fab-mediated crystal of the human TRAAK K+ channel. Proc. Natl Acad. Sci. USA 110, 2129\u20132134 (2013)."
+    },
+    {
+      "key": "2933_CR60",
+      "doi": "10.1016/j.cell.2016.02.002",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "M Schewe",
+      "unstructured": "Schewe, M. et al. A non-canonical voltage-sensing mechanism controls gating in K2P K+ channels. Cell 164, 937\u2013949 (2016)."
+    },
+    {
+      "key": "2933_CR61",
+      "doi": "10.1126/science.1213808",
+      "title": "",
+      "journal": "Science",
+      "year": "2012",
+      "author": "SG Brohawn",
+      "unstructured": "Brohawn, S. G., del M\u00e1rmol, J. & MacKinnon, R. Crystal structure of the human K2P TRAAK, a lipid- and mechano-sensitive K+ ion channel. Science 335, 436\u2013441 (2012)."
+    },
+    {
+      "key": "2933_CR62",
+      "doi": "10.1038/nature14013",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "SG Brohawn",
+      "unstructured": "Brohawn, S. G., Campbell, E. B. & MacKinnon, R. Physical mechanism for gating and mechanosensitivity of the human TRAAK K+ channel. Nature 516, 126\u2013130 (2014)."
+    },
+    {
+      "key": "2933_CR63",
+      "doi": "10.1016/j.neuron.2014.11.017",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2014",
+      "author": "M Lolicato",
+      "unstructured": "Lolicato, M., Riegelhaupt, P. M., Arrigoni, C., Clark, K. A. & Minor, D. L., Jr. Transmembrane helix straightening and buckling underlies activation of mechanosensitive and thermosensitive K(2P) channels. Neuron 84, 1198\u20131212 (2014). These two articles present crystal structures of mechanosenstive K2P channels with opposing interpretations of the activity state of the channel; Brohawn et al. observe lipid density that extends into the channel pore."
+    },
+    {
+      "key": "2933_CR64",
+      "doi": "10.1085/jgp.201611601",
+      "title": "",
+      "journal": "J. Gen. Physiol.",
+      "year": "2016",
+      "author": "C McClenaghan",
+      "unstructured": "McClenaghan, C. et al. Polymodal activation of the TREK-2 K2P channel produces structurally distinct open states. J. Gen. Physiol. 147, 497\u2013505 (2016)."
+    },
+    {
+      "key": "2933_CR65",
+      "doi": "10.1016/j.str.2017.03.006",
+      "title": "",
+      "journal": "Structure",
+      "year": "2017",
+      "author": "P Aryal",
+      "unstructured": "Aryal, P. et al. Bilayer-mediated structural transitions control mechanosensitivity of the TREK-2 K2P channel. Structure 25, 708\u2013718.e2 (2017). Molecular dynamics modelling of TREK-2 elucidates the gating transition upon membrane tension."
+    },
+    {
+      "key": "2933_CR66",
+      "doi": "10.1073/pnas.1708990114",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "MV Clausen",
+      "unstructured": "Clausen, M. V., Jarerattanachat, V., Carpenter, E. P., Sansom, M. S. P. & Tucker, S. J. Asymmetric mechanosensitivity in a eukaryotic ion channel. Proc. Natl Acad. Sci. USA 114, E8343\u2013E8351 (2017)."
+    },
+    {
+      "key": "2933_CR67",
+      "doi": "10.1038/nature22988",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "M Lolicato",
+      "unstructured": "Lolicato, M. et al. K2P2.1 (TREK-1)-activator complexes reveal a cryptic selectivity filter binding site. Nature 547, 364\u2013368 (2017)."
+    },
+    {
+      "key": "2933_CR68",
+      "doi": "10.1126/scitranslmed.aat9897",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2018",
+      "author": "SE Murthy",
+      "unstructured": "Murthy, S. E. et al. The mechanosensitive ion channel Piezo2 mediates sensitivity to mechanical pain in mice. Sci. Transl. Med. 10, eaat9897 (2018)."
+    },
+    {
+      "key": "2933_CR69",
+      "doi": "10.1126/scitranslmed.aat9892",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2018",
+      "author": "M Szczot",
+      "unstructured": "Szczot, M. et al. PIEZO2 mediates injury-induced tactile pain in mice and humans. Sci. Transl. Med. 10, eaat9892 (2018)."
+    },
+    {
+      "key": "2933_CR70",
+      "doi": "10.1126/science.aau6324",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "WZ Zeng",
+      "unstructured": "Zeng, W. Z. et al. PIEZOs mediate neuronal sensing of blood pressure and the baroreceptor reflex. Science 362, 464\u2013467 (2018)."
+    },
+    {
+      "key": "2933_CR71",
+      "doi": "10.1073/pnas.1817070115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "K Nonomura",
+      "unstructured": "Nonomura, K. et al. Mechanically activated ion channel PIEZO1 is required for lymphatic valve formation. Proc. Natl Acad. Sci. USA 115, 12817\u201312822 (2018)."
+    },
+    {
+      "key": "2933_CR72",
+      "doi": "10.1172/jci.insight.125068",
+      "title": "",
+      "journal": "JCI Insight",
+      "year": "2019",
+      "author": "D Choi",
+      "unstructured": "Choi, D. et al. Piezo1 incorporates mechanical force signals into the genetic program that governs lymphatic valve development and maintenance. JCI Insight 4, e125068 (2019)."
+    },
+    {
+      "key": "2933_CR73",
+      "doi": "10.1016/j.yjmcc.2020.03.013",
+      "title": "",
+      "journal": "J. Mol. Cell. Cardiol.",
+      "year": "2020",
+      "author": "A Faucherre",
+      "unstructured": "Faucherre, A. et al. Piezo1 is required for outflow tract and aortic valve development. J. Mol. Cell. Cardiol. 143, 51\u201362 (2020)."
+    },
+    {
+      "key": "2933_CR74",
+      "doi": "10.7554/elife.44706",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "AL Duchemin",
+      "unstructured": "Duchemin, A. L., Vignes, H. & Vermot, J. Mechanically activated piezo channels modulate outflow tract valve development through the Yap1 and Klf2\u2013Notch signaling axis. eLife 8, e44706 (2019)."
+    },
+    {
+      "key": "2933_CR75",
+      "doi": "10.1152/ajpcell.00346.2018",
+      "title": "",
+      "journal": "Am. J. Physiol. Cell Physiol.",
+      "year": "2019",
+      "author": "H Kang",
+      "unstructured": "Kang, H. et al. Piezo1 mediates angiogenesis through activation of MT1-MMP signaling. Am. J. Physiol. Cell Physiol. 316, C92\u2013C103 (2019)."
+    },
+    {
+      "key": "2933_CR76",
+      "doi": "10.1038/nature25744",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "L He",
+      "unstructured": "He, L., Si, G., Huang, J., Samuel, A. D. T. & Perrimon, N. Mechanical regulation of stem-cell differentiation by the stretch-activated Piezo channel. Nature 555, 103\u2013106 (2018)."
+    },
+    {
+      "key": "2933_CR77",
+      "doi": "10.7554/elife.47454",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "W Sun",
+      "unstructured": "Sun, W. et al. The mechanosensitive Piezo1 channel is required for bone formation. eLife 8, e47454 (2019)."
+    },
+    {
+      "key": "2933_CR78",
+      "doi": "10.7554/elife.49631",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "X Li",
+      "unstructured": "Li, X. et al. Stimulation of Piezo1 by mechanical signals promotes bone anabolism. eLife 8, e49631 (2019)."
+    },
+    {
+      "key": "2933_CR79",
+      "doi": "10.1038/s42003-019-0514-3",
+      "title": "",
+      "journal": "Commun. Biol.",
+      "year": "2019",
+      "author": "KL Ellefsen",
+      "unstructured": "Ellefsen, K. L. et al. Myosin-II mediated traction forces evoke localized Piezo1-dependent Ca2+ flickers. Commun. Biol. 2, 298 (2019)."
+    },
+    {
+      "key": "2933_CR80",
+      "doi": "10.1016/j.neuron.2019.01.050",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2019",
+      "author": "Y Song",
+      "unstructured": "Song, Y. et al. The mechanosensitive ion channel Piezo inhibits axon regeneration. Neuron 102, 373\u2013389 (2019)."
+    },
+    {
+      "key": "2933_CR81",
+      "doi": "10.1038/s41586-019-1485-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "AG Solis",
+      "unstructured": "Solis, A. G. et al. Mechanosensation of cyclical force by PIEZO1 is essential for innate immunity. Nature 573, 69\u201374 (2019)."
+    },
+    {
+      "key": "2933_CR82",
+      "doi": "10.1016/j.cell.2018.02.047",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "S Ma",
+      "unstructured": "Ma, S. et al. Common PIEZO1 allele in African populations causes RBC dehydration and attenuates Plasmodium infection. Cell 173, 443\u2013455 (2018)."
+    },
+    {
+      "key": "2933_CR83",
+      "doi": "10.1073/pnas.1919843117",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2020",
+      "author": "CN Nguetse",
+      "unstructured": "Nguetse, C. N. et al. A common polymorphism in the druggable ion channel PIEZO1 is associated with protection from severe malaria. Proc. Natl Acad. Sci. USA 117, 9074\u20139081 (2020)."
+    },
+    {
+      "key": "2933_CR84",
+      "doi": "10.1038/nature15247",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "J Ge",
+      "unstructured": "Ge, J. et al. Architecture of the mammalian mechanosensitive Piezo1 channel. Nature 527, 64\u201369 (2015)."
+    },
+    {
+      "key": "2933_CR85",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "J Wu",
+      "unstructured": "Wu, J., Goyal, R. & Grandl, J. Localized force application reveals mechanically sensitive domains of Piezo1. Nat. Commun. 7, 12939 (2016)."
+    },
+    {
+      "key": "2933_CR86",
+      "doi": "10.1016/j.celrep.2017.10.120",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2017",
+      "author": "J Wu",
+      "unstructured": "Wu, J. et al. Inactivation of mechanically activated Piezo1 ion channels is determined by the C-terminal extracellular domain and the inner pore helix. Cell Rep. 21, 2357\u20132366 (2017)."
+    },
+    {
+      "key": "2933_CR87",
+      "doi": "10.1016/j.celrep.2019.12.040",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2020",
+      "author": "AH Lewis",
+      "unstructured": "Lewis, A. H. & Grandl, J. Inactivation kinetics and mechanical gating of Piezo1 ion channels depend on subdomains within the cap. Cell Rep. 30, 870\u2013880 (2020)."
+    },
+    {
+      "key": "2933_CR88",
+      "doi": "10.1038/ncomms8223",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2015",
+      "author": "B Coste",
+      "unstructured": "Coste, B. et al. Piezo1 ion channel pore properties are dictated by C-terminal region. Nat. Commun. 6, 7223 (2015)."
+    },
+    {
+      "key": "2933_CR89",
+      "doi": "10.1016/j.febslet.2009.10.022",
+      "title": "",
+      "journal": "FEBS Lett.",
+      "year": "2010",
+      "author": "G Drin",
+      "unstructured": "Drin, G. & Antonny, B. Amphipathic helices and membrane curvature. FEBS Lett. 584, 1840\u20131847 (2010)."
+    },
+    {
+      "key": "2933_CR90",
+      "doi": "10.1016/j.neuron.2020.02.010",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2020",
+      "author": "J Geng",
+      "unstructured": "Geng, J. et al. A plug-and-latch mechanism for gating the mechanosensitive Piezo channel. Neuron 106, 438\u2013451 (2020)."
+    },
+    {
+      "key": "2933_CR91",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "Y Wang",
+      "unstructured": "Wang, Y. et al. A lever-like transduction pathway for long-distance chemical- and mechano-gating of the mechanosensitive Piezo1 channel. Nat. Commun. 9, 1300 (2018)."
+    },
+    {
+      "key": "2933_CR92",
+      "doi": "10.1073/pnas.1905985116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "FJ Taberner",
+      "unstructured": "Taberner, F. J. et al. Structure-guided examination of the mechanogating mechanism of PIEZO2. Proc. Natl Acad. Sci. USA 116, 14260\u201314269 (2019)."
+    },
+    {
+      "key": "2933_CR93",
+      "doi": "10.1021/bi200770q",
+      "title": "",
+      "journal": "Biochemistry",
+      "year": "2011",
+      "author": "C Bae",
+      "unstructured": "Bae, C., Sachs, F. & Gottlieb, P. A. The mechanosensitive ion channel Piezo1 is inhibited by the peptide GsMTx4. Biochemistry 50, 6295\u20136300 (2011)."
+    },
+    {
+      "key": "2933_CR94",
+      "doi": "10.1080/19336950.2017.1279370",
+      "title": "",
+      "journal": "Channels",
+      "year": "2017",
+      "author": "C Alcaino",
+      "unstructured": "Alcaino, C., Knutson, K., Gottlieb, P. A., Farrugia, G. & Beyder, A. Mechanosensitive ion channel Piezo2 is inhibited by D-GsMTx4. Channels 11, 245\u2013253 (2017)."
+    },
+    {
+      "key": "2933_CR95",
+      "doi": "10.1016/j.pbiomolbio.2017.07.011",
+      "title": "",
+      "journal": "Prog. Biophys. Mol. Biol.",
+      "year": "2017",
+      "author": "TM Suchyna",
+      "unstructured": "Suchyna, T. M. Piezo channels and GsMTx4: two milestones in our understanding of excitatory mechanosensitive channels and their role in pathology. Prog. Biophys. Mol. Biol. 130, 244\u2013253 (2017)."
+    },
+    {
+      "key": "2933_CR96",
+      "doi": "10.7554/elife.07369",
+      "title": "",
+      "journal": "eLife",
+      "year": "2015",
+      "author": "R Syeda",
+      "unstructured": "Syeda, R. et al. Chemical activation of the mechanotransduction channel Piezo1. eLife 4, e07369 (2015)."
+    },
+    {
+      "key": "2933_CR97",
+      "doi": "10.1111/bph.14188",
+      "title": "",
+      "journal": "Br. J. Pharmacol.",
+      "year": "2018",
+      "author": "EL Evans",
+      "unstructured": "Evans, E. L. et al. Yoda1 analogue (Dooku1) which antagonizes Yoda1-evoked activation of Piezo1 and aortic relaxation. Br. J. Pharmacol. 175, 1744\u20131759 (2018)."
+    },
+    {
+      "key": "2933_CR98",
+      "doi": "10.1038/s41467-018-04405-3",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "JJ Lacroix",
+      "unstructured": "Lacroix, J. J., Botello-Smith, W. M. & Luo, Y. Probing the gating mechanism of the mechanosensitive channel Piezo1 with the small molecule Yoda1. Nat. Commun. 9, 2029 (2018)."
+    },
+    {
+      "key": "2933_CR99",
+      "doi": "10.1038/cr.2014.14",
+      "title": "",
+      "journal": "Cell Res.",
+      "year": "2014",
+      "author": "C Hou",
+      "unstructured": "Hou, C. et al. DUF221 proteins are a family of osmosensitive calcium-permeable cation channels conserved across eukaryotes. Cell Res. 24, 632\u2013635 (2014)."
+    },
+    {
+      "key": "2933_CR100",
+      "doi": "10.1038/nature13593",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "F Yuan",
+      "unstructured": "Yuan, F. et al. OSCA1 mediates osmotic-stress-evoked Ca2+ increases vital for osmosensing in Arabidopsis. Nature 514, 367\u2013371 (2014)."
+    },
+    {
+      "key": "2933_CR101",
+      "doi": "10.1016/j.ajhg.2019.09.011",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2019",
+      "author": "H Yan",
+      "unstructured": "Yan, H. et al. Heterozygous variants in the mechanosensitive ion channel TMEM63A result in transient hypomyelination during infancy. Am. J. Hum. Genet. 105, 996\u20131004 (2019)."
+    },
+    {
+      "key": "2933_CR102",
+      "doi": "10.1016/j.neuron.2018.07.033",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2018",
+      "author": "B Pan",
+      "unstructured": "Pan, B. et al. TMC1 forms the pore of mechanosensory transduction channels in vertebrate inner ear hair cells. Neuron 99, 736\u2013753 (2018)."
+    },
+    {
+      "key": "2933_CR103",
+      "doi": "10.7554/elife.38433",
+      "title": "",
+      "journal": "eLife",
+      "year": "2018",
+      "author": "A Ballesteros",
+      "unstructured": "Ballesteros, A., Fenollar-Ferrer, C. & Swartz, K. J. Structural relationship between the putative hair cell mechanotransduction channel TMC1 and TMEM16 proteins. eLife 7, e38433 (2018)."
+    },
+    {
+      "key": "2933_CR104",
+      "doi": "10.3390/ijms20020371",
+      "title": "",
+      "journal": "Int. J. Mol. Sci.",
+      "year": "2019",
+      "author": "JB Startek",
+      "unstructured": "Startek, J. B., Boonen, B., Talavera, K. & Meseguer, V. TRP channels as sensors of chemically-induced changes in cell membrane mechanical properties. Int. J. Mol. Sci. 20, 371 (2019)."
+    },
+    {
+      "key": "2933_CR105",
+      "doi": "10.1126/science.287.5461.2229",
+      "title": "",
+      "journal": "Science",
+      "year": "2000",
+      "author": "RG Walker",
+      "unstructured": "Walker, R. G., Willingham, A. T. & Zuker, C. S. A. A Drosophila mechanosensory transduction channel. Science 287, 2229\u20132234 (2000). This study identifies the nompC gene via a genetic screen with a readout of transduction currents upon mechanical stimulus of mechanoreceptor bristles in D. melanogaster."
+    },
+    {
+      "key": "2933_CR106",
+      "doi": "10.1016/j.neuron.2010.07.004",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2010",
+      "author": "LE Cheng",
+      "unstructured": "Cheng, L. E., Song, W., Looger, L. L., Jan, L. Y. & Jan, Y. N. The role of the TRP channel NompC in Drosophila larval and adult locomotion. Neuron 67, 373\u2013380 (2010)."
+    },
+    {
+      "key": "2933_CR107",
+      "doi": "10.1126/science.1084370",
+      "title": "",
+      "journal": "Science",
+      "year": "2003",
+      "author": "S Sidi",
+      "unstructured": "Sidi, S., Friedrich, R. W. & Nicolson, T. NompC TRP channel required for vertebrate sensory hair cell mechanotransduction. Science 301, 96\u201399 (2003)."
+    },
+    {
+      "key": "2933_CR108",
+      "doi": "10.1371/journal.pone.0011012",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2010",
+      "author": "J Lee",
+      "unstructured": "Lee, J., Moon, S., Cha, Y. & Chung, Y. D. Drosophila TRPN(=NOMPC) channel localizes to the distal end of mechanosensory cilia. PLoS ONE 5, e11012 (2010)."
+    },
+    {
+      "key": "2933_CR109",
+      "doi": "10.1038/nature11685",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "Z Yan",
+      "unstructured": "Yan, Z. et al. Drosophila NOMPC is a mechanotransduction channel subunit for gentle-touch sensation. Nature 493, 221\u2013225 (2013)."
+    },
+    {
+      "key": "2933_CR110",
+      "doi": "10.1073/pnas.1819371116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "L Sun",
+      "unstructured": "Sun, L. et al. Ultrastructural organization of NompC in the mechanoreceptive organelle of Drosophila campaniform mechanoreceptors. Proc. Natl Acad. Sci. USA 116, 7343\u20137352 (2019)."
+    },
+    {
+      "key": "2933_CR111",
+      "doi": "10.1038/nature04437",
+      "title": "",
+      "journal": "Nature",
+      "year": "2006",
+      "author": "G Lee",
+      "unstructured": "Lee, G. et al. Nanospring behaviour of ankyrin repeats. Nature 440, 246\u2013249 (2006)."
+    },
+    {
+      "key": "2933_CR112",
+      "doi": "10.1101/853721",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Wang, Y. et al. Push-to-open: The gating mechanism of the tethered mechanosensitive ion channel NompC. Preprint at https://doi.org/10.1101/853721 (2019)."
+    },
+    {
+      "key": "2933_CR113",
+      "doi": "10.7554/elife.21074",
+      "title": "",
+      "journal": "eLife",
+      "year": "2017",
+      "author": "MR Servin-Vences",
+      "unstructured": "Servin-Vences, M. R., Moroni, M., Lewin, G. R. & Poole, K. Direct measurement of TRPV4 and PIEZO1 activity reveals multiple mechanotransduction pathways in chondrocytes. eLife 6, e21074 (2017)."
+    },
+    {
+      "key": "2933_CR114",
+      "doi": "10.1242/jcs.238360",
+      "title": "",
+      "journal": "J. Cell Sci.",
+      "year": "2019",
+      "author": "YA Nikolaev",
+      "unstructured": "Nikolaev, Y. A. et al. Mammalian TRP ion channels are insensitive to membrane stretch. J. Cell Sci. 132, 238360 (2019)."
+    },
+    {
+      "key": "2933_CR115",
+      "doi": "10.1523/jneurosci.03-05-00962.1983",
+      "title": "",
+      "journal": "J. Neurosci.",
+      "year": "1983",
+      "author": "DP Corey",
+      "unstructured": "Corey, D. P. & Hudspeth, A. J. Kinetics of the receptor current in bullfrog saccular hair cells. J. Neurosci. 3, 962\u2013976 (1983). This study provided one of the first confirmations of the existence of a channel directly activated by mechanical stimuli, measured in hair cells from the vestibular system of a bullfrog."
+    },
+    {
+      "key": "2933_CR116",
+      "doi": "10.1101/cshperspect.a033167",
+      "title": "",
+      "journal": "Cold Spring Harb. Perspect. Med.",
+      "year": "2019",
+      "author": "CL Cunningham",
+      "unstructured": "Cunningham, C. L. & M\u00fcller, U. Molecular structure of the hair cell mechanoelectrical transduction complex. Cold Spring Harb. Perspect. Med. 9, a033167 (2019)."
+    },
+    {
+      "key": "2933_CR117",
+      "doi": "10.1016/j.neuron.2019.10.017",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2020",
+      "author": "Y Jia",
+      "unstructured": "Jia, Y. et al. TMC1 and TMC2 proteins are pore-forming subunits of mechanosensitive ion channels. Neuron 105, 310\u2013321 (2020). A study showing that TMC1 and TMC2 proteins, putative pore-forming components of the MET channel complex, form mechanically activated channels when reconstituted in liposomes."
+    },
+    {
+      "key": "2933_CR118",
+      "doi": "10.1016/j.cell.2012.10.041",
+      "title": "",
+      "journal": "Cell",
+      "year": "2012",
+      "author": "W Xiong",
+      "unstructured": "Xiong, W. et al. TMHS is an integral component of the mechanotransduction machinery of cochlear hair cells. Cell 151, 1283\u20131295 (2012)."
+    },
+    {
+      "key": "2933_CR119",
+      "doi": "10.1016/j.neuron.2020.03.033",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2020",
+      "author": "CL Cunningham",
+      "unstructured": "Cunningham, C. L. et al. TMIE defines pore and gating properties of the mechanotransduction channel of mammalian cochlear hair cells. Neuron 107, 126\u2013143 (2020)."
+    },
+    {
+      "key": "2933_CR120",
+      "doi": "10.1038/349588a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1991",
+      "author": "M Driscoll",
+      "unstructured": "Driscoll, M. & Chalfie, M. The mec-4 gene is a member of a family of Caenorhabditis elegans genes that can mutate to induce neuronal degeneration. Nature 349, 588\u2013593 (1991). In this study, mec-4, the founding member of the DEG gene family of mechanoreceptors in C. eleganswas cloned."
+    },
+    {
+      "key": "2933_CR121",
+      "doi": "10.1073/pnas.1515968112",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2015",
+      "author": "Y Chen",
+      "unstructured": "Chen, Y., Bharill, S., Isacoff, E. Y. & Chalfie, M. Subunit composition of a DEG/ENaC mechanosensory channel of Caenorhabditis elegans. Proc. Natl Acad. Sci. USA 112, 11690\u201311695 (2015)."
+    },
+    {
+      "key": "2933_CR122",
+      "doi": "10.1016/b978-0-12-386481-9.00001-8",
+      "title": "",
+      "journal": "Adv. Genet.",
+      "year": "2011",
+      "author": "Y Ben-Shahar",
+      "unstructured": "Ben-Shahar, Y. Sensory functions for degenerin/epithelial sodium channels (DEG/ENaC). Adv. Genet. 76, 1\u201326 (2011)."
+    },
+    {
+      "key": "2933_CR123",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "SH Lin",
+      "unstructured": "Lin, S. H. et al. Evidence for the involvement of ASIC3 in sensory mechanotransduction in proprioceptors. Nat. Commun. 7, 11460 (2016)."
+    },
+    {
+      "key": "2933_CR124",
+      "doi": "10.1073/pnas.1911243117",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2020",
+      "author": "F Knoepp",
+      "unstructured": "Knoepp, F. et al. Shear force sensing of epithelial Na+ channel (ENaC) relies on N-glycosylated asparagines in the palm and knuckle domains of \u03b1ENaC. Proc. Natl Acad. Sci. USA 117, 717\u2013726 (2020)."
+    },
+    {
+      "key": "2933_CR125",
+      "doi": "10.1038/348261a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1990",
+      "author": "B Martinac",
+      "unstructured": "Martinac, B., Adler, J. & Kung, C. Mechanosensitive ion channels of E. coli activated by amphipaths. Nature 348, 261\u2013263 (1990)."
+    },
+    {
+      "key": "2933_CR126",
+      "doi": "10.1007/s12551-018-0450-3",
+      "title": "",
+      "journal": "Biophys. Rev.",
+      "year": "2018",
+      "author": "B Martinac",
+      "unstructured": "Martinac, B. et al. Tuning ion channel mechanosensitivity by asymmetry of the transbilayer pressure profile. Biophys. Rev. 10, 1377\u20131384 (2018)."
+    },
+    {
+      "key": "2933_CR127",
+      "doi": "10.1073/pnas.1200051109",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2012",
+      "author": "T Nomura",
+      "unstructured": "Nomura, T. et al. Differential effects of lipids and lyso-lipids on the mechanosensitivity of the mechanosensitive channels MscL and MscS. Proc. Natl Acad. Sci. USA 109, 8770\u20138775 (2012)."
+    },
+    {
+      "key": "2933_CR128",
+      "doi": "10.1016/j.celrep.2016.10.033",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2016",
+      "author": "R Syeda",
+      "unstructured": "Syeda, R. et al. Piezo1 channels are inherently mechanosensitive. Cell Rep. 17, 1739\u20131746 (2016)."
+    },
+    {
+      "key": "2933_CR129",
+      "doi": "10.1016/s0009-3084(99)00054-7",
+      "title": "",
+      "journal": "Chem. Phys. Lipids",
+      "year": "1999",
+      "author": "RS Cantor",
+      "unstructured": "Cantor, R. S. The influence of membrane lateral pressures on simple geometric models of protein conformational equilibria. Chem. Phys. Lipids 101, 45\u201356 (1999)."
+    },
+    {
+      "key": "2933_CR130",
+      "doi": "10.1016/j.jmbbm.2017.12.026",
+      "title": "",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "year": "2018",
+      "author": "P Ridone",
+      "unstructured": "Ridone, P. et al. \u201cForce-from-lipids\u201d gating of mechanosensitive channels modulated by PUFAs. J. Mech. Behav. Biomed. Mater. 79, 158\u2013167 (2018)."
+    },
+    {
+      "key": "2933_CR131",
+      "doi": "10.1038/nsmb.3120",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2015",
+      "author": "C Pliotas",
+      "unstructured": "Pliotas, C. et al. The role of lipids in mechanosensation. Nat. Struct. Mol. Biol. 22, 991\u2013998 (2015)."
+    },
+    {
+      "key": "2933_CR132",
+      "doi": "10.1016/j.sbi.2016.10.017",
+      "title": "",
+      "journal": "Curr. Opin. Struct. Biol.",
+      "year": "2017",
+      "author": "C Pliotas",
+      "unstructured": "Pliotas, C. & Naismith, J. H. Spectator no more, the role of the membrane in regulating ion channel function. Curr. Opin. Struct. Biol. 45, 59\u201366 (2017). This review discusses an entropy-based mechanism of mechanotransduction in which lipids dissociate from hydrophobic pockets, inducing conformational changes in mechanically-activated channels."
+    },
+    {
+      "key": "2933_CR133",
+      "doi": "10.7554/elife.41968",
+      "title": "",
+      "journal": "eLife",
+      "year": "2018",
+      "author": "CA Haselwandter",
+      "unstructured": "Haselwandter, C. A. & MacKinnon, R. Piezo\u2019s membrane footprint and its contribution to mechanosensitivity. eLife 7, e41968 (2018)."
+    },
+    {
+      "key": "2933_CR134",
+      "doi": "10.1038/s41586-019-1499-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "Y-CC Lin",
+      "unstructured": "Lin, Y.-C. C. et al. Force-induced conformational changes in PIEZO1. Nature 573, 230\u2013234 (2019). This study uses atomic force microscopy to both induce membrane tension and measure its effects on reconstituted PIEZO1, providing evidence that PIEZO1 expands under tension."
+    },
+    {
+      "key": "2933_CR135",
+      "doi": "10.1038/emboj.2009.398",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "2010",
+      "author": "J Hu",
+      "unstructured": "Hu, J., Chiang, L. Y., Koch, M. & Lewin, G. R. Evidence for a protein tether involved in somatic touch. EMBO J. 29, 855\u2013867 (2010)."
+    },
+    {
+      "key": "2933_CR136",
+      "doi": "10.1016/j.celrep.2019.08.075",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2019",
+      "author": "CD Cox",
+      "unstructured": "Cox, C. D., Bavi, N. & Martinac, B. Biophysical principles of ion-channel-mediated mechanosensory transduction. Cell Rep. 29, 1\u201312 (2019)."
+    },
+    {
+      "key": "2933_CR137",
+      "doi": "10.1038/s41598-017-16540-w",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2017",
+      "author": "S Li Fraine",
+      "unstructured": "Li Fraine, S., Patel, A., Duprat, F. & Sharif-Naeini, R. Dynamic regulation of TREK1 gating by polycystin 2 via a filamin A-mediated cytoskeletal mechanism. Sci. Rep. 7, 17403 (2017)."
+    },
+    {
+      "key": "2933_CR138",
+      "doi": "10.1113/jphysiol.2004.081935",
+      "title": "",
+      "journal": "J. Physiol.",
+      "year": "2005",
+      "author": "CMB Lopes",
+      "unstructured": "Lopes, C. M. B. et al. PIP2 hydrolysis underlies agonist-induced inhibition and regulates voltage gating of two-pore domain K+ channels. J. Physiol. 564, 117\u2013129 (2005)."
+    },
+    {
+      "key": "2933_CR139",
+      "doi": "10.1126/scisignal.2005667",
+      "title": "",
+      "journal": "Sci. Signal.",
+      "year": "2015",
+      "author": "I Borbiro",
+      "unstructured": "Borbiro, I., Badheka, D. & Rohacs, T. Activation of TRPV1 channels inhibits mechanosensitive Piezo channel activity by depleting membrane phosphoinositides. Sci. Signal. 8, ra15 (2015)."
+    },
+    {
+      "key": "2933_CR140",
+      "doi": "10.1073/pnas.1302018110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "A Anishkin",
+      "unstructured": "Anishkin, A. & Kung, C. Stiffened lipid platforms at molecular force foci. Proc. Natl Acad. Sci. USA 110, 4886\u20134892 (2013). This article proposes an innovative model for mechanotransduction in which cholesterol-rich platforms, maintained by cholesterol-binding scaffold proteins and localized to focal adhesions or adherens junctions, provide specialized force-sensing domains."
+    },
+    {
+      "key": "2933_CR141",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "EN Petersen",
+      "unstructured": "Petersen, E. N., Chung, H. W., Nayebosadri, A. & Hansen, S. B. Kinetic disruption of lipid rafts is a mechanosensor for phospholipase D. Nat. Commun. 7, 13873 (2016)."
+    },
+    {
+      "key": "2933_CR142",
+      "doi": "10.1016/j.neuron.2018.09.046",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2018",
+      "author": "X Chen",
+      "unstructured": "Chen, X. et al. A feedforward mechanism mediated by mechanosensitive ion channel PIEZO1 and tissue mechanics promotes glioma aggression. Neuron 100, 799\u2013815 (2018)."
+    },
+    {
+      "key": "2933_CR143",
+      "doi": "10.1038/ncomms4520",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2014",
+      "author": "K Poole",
+      "unstructured": "Poole, K., Herget, R., Lapatsina, L., Ngo, H. D. & Lewin, G. R. Tuning Piezo ion channels to detect molecular-scale movements relevant for fine touch. Nat. Commun. 5, 3520 (2014)."
+    },
+    {
+      "key": "2933_CR144",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2015",
+      "author": "Y Qi",
+      "unstructured": "Qi, Y. et al. Membrane stiffening by STOML3 facilitates mechanosensation in sensory neurons. Nat. Commun. 6, 8512 (2015)."
+    },
+    {
+      "key": "2933_CR145",
+      "doi": "10.1016/j.cell.2020.01.033",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "L Beaulieu-Laroche",
+      "unstructured": "Beaulieu-Laroche, L. et al. TACAN is an ion channel involved in sensing mechanical pain. Cell 180, 956\u2013967 (2020)."
+    },
+    {
+      "key": "2933_CR146",
+      "doi": "10.7554/elife.53308",
+      "title": "",
+      "journal": "eLife",
+      "year": "2020",
+      "author": "A Patkunarajah",
+      "unstructured": "Patkunarajah, A. et al. TMEM87a/Elkin1, a component of a novel mechanoelectrical transduction pathway, modulates melanoma adhesion and migration. eLife 9, e53308 (2020)."
+    },
+    {
+      "key": "2933_CR147",
+      "doi": "10.1016/j.cell.2018.03.076",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "J Xu",
+      "unstructured": "Xu, J. et al. GPR68 senses flow and is essential for vascular physiology. Cell 173, 762\u2013775 (2018)."
+    },
+    {
+      "key": "2933_CR148",
+      "doi": "10.1371/journal.pone.0150578",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2016",
+      "author": "O Bavi",
+      "unstructured": "Bavi, O., Vossoughi, M., Naghdabadi, R. & Jamali, Y. The combined effect of hydrophobic mismatch and bilayer local bending on the regulation of mechanosensitive ion channels. PLoS ONE 11, e0150578 (2016)."
+    }
+  ]
+}

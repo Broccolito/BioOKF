@@ -1,0 +1,1425 @@
+{
+  "article": {
+    "slug": "s41586-020-2729-3",
+    "doi": "10.1038/s41586-020-2729-3",
+    "title": "Host\u2013microbiota maladaptation in colorectal cancer",
+    "url": "https://www.nature.com/articles/s41586-020-2729-3",
+    "abbrev": "host-microbiota-maladaptation-colorectal-cancer",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/host-microbiota-maladaptation-colorectal-cancer"
+  },
+  "n_refs": 153,
+  "n_with_doi": 144,
+  "n_oa": 114,
+  "records": [
+    {
+      "doi": "10.1038/s41575-019-0189-8",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Rev. Gastroenterol. Hepatol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1186/s13073-016-0307-y",
+      "title": "",
+      "year": "2016",
+      "journal": "Genome Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://genomemedicine.biomedcentral.com/track/pdf/10.1186/s13073-016-0307-y",
+      "file": "10.1186_s13073-016-0307-y.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2010.01.023",
+      "title": "",
+      "year": "2010",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867410000243/pdf",
+      "file": "10.1016_j.cell.2010.01.023.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2014.03.011",
+      "title": "",
+      "year": "2014",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867414003456/pdf",
+      "file": "10.1016_j.cell.2014.03.011.md"
+    },
+    {
+      "doi": "10.1038/nri3608",
+      "title": "",
+      "year": "2014",
+      "journal": "Nat. Rev. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41575-018-0081-y",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Rev. Gastroenterol. Hepatol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://dspace.library.uu.nl/handle/1874/439369",
+      "file": "10.1038_s41575-018-0081-y.md"
+    },
+    {
+      "doi": "10.1126/sciimmunol.aao1605",
+      "title": "",
+      "year": "2018",
+      "journal": "Sci. Immunol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6352895?pdf=render",
+      "file": "10.1126_sciimmunol.aao1605.md"
+    },
+    {
+      "doi": "10.1038/nature17039",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5228603?pdf=render",
+      "file": "10.1038_nature17039.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2018.08.067",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867418311681/pdf",
+      "file": "10.1016_j.cell.2018.08.067.md"
+    },
+    {
+      "doi": "10.1056/nejm198612253152606",
+      "title": "",
+      "year": "1986",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cgh.2012.01.010",
+      "title": "",
+      "year": "2012",
+      "journal": "Clin. Gastroenterol. Hepatol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cghjournal.org/article/S1542356512001097/pdf",
+      "file": "10.1016_j.cgh.2012.01.010.md"
+    },
+    {
+      "doi": "10.1038/nature16166",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1056/nejm199110173251604",
+      "title": "",
+      "year": "1991",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJM199110173251604?articleTools=true",
+      "file": "10.1056_nejm199110173251604.md"
+    },
+    {
+      "doi": "10.1056/nejm199110173251603",
+      "title": "",
+      "year": "1991",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJM199110173251603?articleTools=true",
+      "file": "10.1056_nejm199110173251603.md"
+    },
+    {
+      "doi": "10.1038/nrc3611",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Rev. Cancer",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2010.01.025",
+      "title": "",
+      "year": "2010",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867410000607/pdf",
+      "file": "10.1016_j.cell.2010.01.025.md"
+    },
+    {
+      "doi": "10.1038/nrclinonc.2016.171",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Rev. Clin. Oncol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pure.amsterdamumc.nl/ws/files/159164662/From-tumour-heterogeneity-to-advances-in-precision-treatment-of-colorectal-cancer.pdf",
+      "file": "10.1038_nrclinonc.2016.171.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2011.02.013",
+      "title": "",
+      "year": "2011",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867411001279/pdf",
+      "file": "10.1016_j.cell.2011.02.013.md"
+    },
+    {
+      "doi": "10.1126/science.1129139",
+      "title": "",
+      "year": "2006",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.immuni.2019.12.018",
+      "title": "",
+      "year": "2020",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761319305370/pdf",
+      "file": "10.1016_j.immuni.2019.12.018.md"
+    },
+    {
+      "doi": "10.1016/j.ccell.2017.11.004",
+      "title": "",
+      "year": "2017",
+      "journal": "Cancer Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S153561081730507X/pdf",
+      "file": "10.1016_j.ccell.2017.11.004.md"
+    },
+    {
+      "doi": "10.1038/s41568-019-0238-1",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Rev. Cancer",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41568-019-0238-1.pdf",
+      "file": "10.1038_s41568-019-0238-1.md"
+    },
+    {
+      "doi": "10.1038/nri3896",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Rev. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1053/j.gastro.2017.08.022",
+      "title": "",
+      "year": "2017",
+      "journal": "Gastroenterology",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1053/j.gastro.2017.08.022",
+      "file": "10.1053_j.gastro.2017.08.022.md"
+    },
+    {
+      "doi": "10.1038/nmicrobiol.2016.228",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://hdl.handle.net/1721.1/118383",
+      "file": "10.1038_nmicrobiol.2016.228.md"
+    },
+    {
+      "doi": "10.1016/j.mam.2019.05.001",
+      "title": "",
+      "year": "2019",
+      "journal": "Mol. Aspects Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.sciencedirect.com/science/article/pii/S0098299719300329?via%3Dihub",
+      "file": "10.1016_j.mam.2019.05.001.md"
+    },
+    {
+      "doi": "10.1038/s41575-019-0209-8",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Rev. Gastroenterol. Hepatol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.ccell.2018.03.004",
+      "title": "",
+      "year": "2018",
+      "journal": "Cancer Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1535610818300722/pdf",
+      "file": "10.1016_j.ccell.2018.03.004.md"
+    },
+    {
+      "doi": "10.1126/science.aaw2367",
+      "title": "",
+      "year": "2019",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.tim.2020.01.001",
+      "title": "",
+      "year": "2020",
+      "journal": "Trends Microbiol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://orbilu.uni.lu/handle/10993/42723",
+      "file": "10.1016_j.tim.2020.01.001.md"
+    },
+    {
+      "doi": "10.1038/s41591-019-0406-6",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://findresearcher.sdu.dk/ws/files/168756114/118119_2_merged_1550607614.pdf",
+      "file": "10.1038_s41591-019-0406-6.md"
+    },
+    {
+      "doi": "10.1016/j.chom.2020.03.005",
+      "title": "",
+      "year": "2020",
+      "journal": "Cell Host Microbe",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1931312820301694/pdf",
+      "file": "10.1016_j.chom.2020.03.005.md"
+    },
+    {
+      "doi": "10.1016/s0016-5085(03)00266-x",
+      "title": "",
+      "year": "2003",
+      "journal": "Gastroenterology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.gastrojournal.org/article/S001650850300266X/pdf",
+      "file": "10.1016_s0016-5085_03_00266-x.md"
+    },
+    {
+      "doi": "10.1073/pnas.1001261107",
+      "title": "",
+      "year": "2010",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2895108?pdf=render",
+      "file": "10.1073_pnas.1001261107.md"
+    },
+    {
+      "doi": "10.1126/science.1127059",
+      "title": "",
+      "year": "2006",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1136/gutjnl-2013-305257",
+      "title": "",
+      "year": "2014",
+      "journal": "Gut",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1010203108",
+      "title": "",
+      "year": "2011",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1158/0008-5472.can-08-1551",
+      "title": "",
+      "year": "2008",
+      "journal": "Cancer Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aacrjournals.org/cancerres/article-pdf/68/23/9909/2594429/9909.pdf",
+      "file": "10.1158_0008-5472.can-08-1551.md"
+    },
+    {
+      "doi": "10.1136/gutjnl-2018-317200",
+      "title": "",
+      "year": "2019",
+      "journal": "Gut",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://gut.bmj.com/content/gutjnl/68/2/289.full.pdf",
+      "file": "10.1136_gutjnl-2018-317200.md"
+    },
+    {
+      "doi": "10.1158/0008-5472.can-16-3472",
+      "title": "",
+      "year": "2017",
+      "journal": "Cancer Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://cancerres.aacrjournals.org/content/canres/77/10/2620.full.pdf",
+      "file": "10.1158_0008-5472.can-16-3472.md"
+    },
+    {
+      "doi": "10.1136/gutjnl-2014-307241",
+      "title": "",
+      "year": "2016",
+      "journal": "Gut",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/11380/1064380",
+      "file": "10.1136_gutjnl-2014-307241.md"
+    },
+    {
+      "doi": "10.1053/j.gastro.2019.12.026",
+      "title": "",
+      "year": "2020",
+      "journal": "Gastroenterology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.gastrojournal.org/article/S0016508520300068/pdf",
+      "file": "10.1053_j.gastro.2019.12.026.md"
+    },
+    {
+      "doi": "10.1038/s41586-020-2080-8",
+      "title": "",
+      "year": "2020",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8142898?pdf=render",
+      "file": "10.1038_s41586-020-2080-8.md"
+    },
+    {
+      "doi": "10.1136/gutjnl-2014-307213",
+      "title": "",
+      "year": "2015",
+      "journal": "Gut",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://gut.bmj.com/content/gutjnl/64/3/459.full.pdf",
+      "file": "10.1136_gutjnl-2014-307213.md"
+    },
+    {
+      "doi": "10.1038/s41467-020-15549-6",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-020-15549-6.pdf",
+      "file": "10.1038_s41467-020-15549-6.md"
+    },
+    {
+      "doi": "10.5306/wjco.v7.i3.293",
+      "title": "",
+      "year": "2016",
+      "journal": "World J. Clin. Oncol.",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.5306/wjco.v7.i3.293",
+      "file": "10.5306_wjco.v7.i3.293.md"
+    },
+    {
+      "doi": "10.1084/jem.20181939",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Exp. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://rupress.org/jem/article-pdf/216/10/2378/1170910/jem_20181939.pdf",
+      "file": "10.1084_jem.20181939.md"
+    },
+    {
+      "doi": "10.1053/j.gastro.2019.10.020",
+      "title": "",
+      "year": "2020",
+      "journal": "Gastroenterology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.gastrojournal.org/article/S0016508519414716/pdf",
+      "file": "10.1053_j.gastro.2019.10.020.md"
+    },
+    {
+      "doi": "10.1038/nrmicro3344",
+      "title": "",
+      "year": "2014",
+      "journal": "Nat. Rev. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3748/wjg.v25.i2.151",
+      "title": "",
+      "year": "2019",
+      "journal": "World J. Gastroenterol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.wjgnet.com/1007-9327/full/v25/i2/151.htm",
+      "file": "10.3748_wjg.v25.i2.151.md"
+    },
+    {
+      "doi": "10.1053/j.gastro.2019.12.029",
+      "title": "",
+      "year": "2020",
+      "journal": "Gastroenterology",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7384232?pdf=render",
+      "file": "10.1053_j.gastro.2019.12.029.md"
+    },
+    {
+      "doi": "10.1038/s41591-019-0458-7",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.bio-conferences.org/10.1051/bioconf/20214101001/pdf",
+      "file": "10.1038_s41591-019-0458-7.md"
+    },
+    {
+      "doi": "10.1038/s41522-020-0123-4",
+      "title": "",
+      "year": "2020",
+      "journal": "NPJ Biofilms Microbiomes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41522-020-0123-4.pdf",
+      "file": "10.1038_s41522-020-0123-4.md"
+    },
+    {
+      "doi": "10.1016/s1383-5718(97)00132-0",
+      "title": "",
+      "year": "1997",
+      "journal": "Mutat. Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1053/j.gastro.2019.12.027",
+      "title": "",
+      "year": "2020",
+      "journal": "Gastroenterology",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7291292?pdf=render",
+      "file": "10.1053_j.gastro.2019.12.027.md"
+    },
+    {
+      "doi": "10.1111/jcmm.14984",
+      "title": "",
+      "year": "2020",
+      "journal": "J. Cell. Mol. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7028862?pdf=render",
+      "file": "10.1111_jcmm.14984.md"
+    },
+    {
+      "doi": "10.1146/annurev.pharmtox.43.100901.135828",
+      "title": "",
+      "year": "2003",
+      "journal": "Annu. Rev. Pharmacol. Toxicol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.immuni.2018.07.010",
+      "title": "",
+      "year": "2018",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761318303303/pdf",
+      "file": "10.1016_j.immuni.2018.07.010.md"
+    },
+    {
+      "doi": "10.1073/pnas.1322269111",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/111/6/2247.full.pdf",
+      "file": "10.1073_pnas.1322269111.md"
+    },
+    {
+      "doi": "10.1016/j.immuni.2018.12.018",
+      "title": "",
+      "year": "2019",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761318305661/pdf",
+      "file": "10.1016_j.immuni.2018.12.018.md"
+    },
+    {
+      "doi": "10.1038/s41564-019-0649-5",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Microbiol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7048616?pdf=render",
+      "file": "10.1038_s41564-019-0649-5.md"
+    },
+    {
+      "doi": "10.1016/j.immuni.2013.12.007",
+      "title": "",
+      "year": "2014",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761313005645/pdf",
+      "file": "10.1016_j.immuni.2013.12.007.md"
+    },
+    {
+      "doi": "10.1158/2159-8290.cd-14-0501",
+      "title": "",
+      "year": "2014",
+      "journal": "Cancer Discov.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://cancerdiscovery.aacrjournals.org/content/candisc/4/12/1387.full.pdf",
+      "file": "10.1158_2159-8290.cd-14-0501.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2016.05.018",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867416305669/pdf",
+      "file": "10.1016_j.cell.2016.05.018.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2014.04.051",
+      "title": "",
+      "year": "2014",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867414007363/pdf",
+      "file": "10.1016_j.cell.2014.04.051.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0006026",
+      "title": "",
+      "year": "2009",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0006026&type=printable",
+      "file": "10.1371_journal.pone.0006026.md"
+    },
+    {
+      "doi": "10.1158/0008-5472.can-08-2061",
+      "title": "",
+      "year": "2008",
+      "journal": "Cancer Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aacrjournals.org/cancerres/article-pdf/68/24/10060/2599099/10060.pdf",
+      "file": "10.1158_0008-5472.can-08-2061.md"
+    },
+    {
+      "doi": "10.1038/nature11465",
+      "title": "",
+      "year": "2012",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3601659?pdf=render",
+      "file": "10.1038_nature11465.md"
+    },
+    {
+      "doi": "10.1073/pnas.1406199111",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/111/51/18321.full.pdf",
+      "file": "10.1073_pnas.1406199111.md"
+    },
+    {
+      "doi": "10.1038/s41522-017-0040-3",
+      "title": "",
+      "year": "2017",
+      "journal": "NPJ Biofilms Microbiomes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41522-017-0040-3.pdf",
+      "file": "10.1038_s41522-017-0040-3.md"
+    },
+    {
+      "doi": "10.1126/science.aah3648",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5881113?pdf=render",
+      "file": "10.1126_science.aah3648.md"
+    },
+    {
+      "doi": "10.1172/jci124196",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/124196/files/pdf",
+      "file": "10.1172_jci124196.md"
+    },
+    {
+      "doi": "10.1038/s41385-020-0270-1",
+      "title": "",
+      "year": "2020",
+      "journal": "Mucosal Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41385-020-0270-1.pdf",
+      "file": "10.1038_s41385-020-0270-1.md"
+    },
+    {
+      "doi": "10.1073/pnas.1307575110",
+      "title": "",
+      "year": "2013",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/110/24/9862.full.pdf",
+      "file": "10.1073_pnas.1307575110.md"
+    },
+    {
+      "doi": "10.1038/nm.2015",
+      "title": "",
+      "year": "2009",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3034219?pdf=render",
+      "file": "10.1038_nm.2015.md"
+    },
+    {
+      "doi": "10.1016/j.immuni.2014.03.013",
+      "title": "",
+      "year": "2014",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761314001472/pdf",
+      "file": "10.1016_j.immuni.2014.03.013.md"
+    },
+    {
+      "doi": "10.1128/mbio.00692-13",
+      "title": "",
+      "year": "2013",
+      "journal": "MBio",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://doaj.org/article/07521b2b479c4fca8cf5ec7fdafdca7d",
+      "file": "10.1128_mbio.00692-13.md"
+    },
+    {
+      "doi": "10.1038/nature09447",
+      "title": "",
+      "year": "2010",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.immuni.2018.11.015",
+      "title": "",
+      "year": "2019",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761318305235/pdf",
+      "file": "10.1016_j.immuni.2018.11.015.md"
+    },
+    {
+      "doi": "10.1016/j.immuni.2013.08.003",
+      "title": "",
+      "year": "2013",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761313003312/pdf",
+      "file": "10.1016_j.immuni.2013.08.003.md"
+    },
+    {
+      "doi": "10.1172/jci.insight.127551",
+      "title": "",
+      "year": "2020",
+      "journal": "JCI Insight",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://insight.jci.org/articles/view/127551/files/pdf",
+      "file": "10.1172_jci.insight.127551.md"
+    },
+    {
+      "doi": "10.1084/jem.20122308",
+      "title": "",
+      "year": "2013",
+      "journal": "J. Exp. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://jem.rupress.org/content/jem/210/5/917.full.pdf",
+      "file": "10.1084_jem.20122308.md"
+    },
+    {
+      "doi": "10.1002/eji.201747183",
+      "title": "",
+      "year": "2018",
+      "journal": "Eur. J. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/eji.201747183",
+      "file": "10.1002_eji.201747183.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-0899-7",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-019-0899-7.pdf",
+      "file": "10.1038_s41586-019-0899-7.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1237-9",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-019-1237-9.pdf",
+      "file": "10.1038_s41586-019-1237-9.md"
+    },
+    {
+      "doi": "10.1126/science.1224820",
+      "title": "",
+      "year": "2012",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3645302?pdf=render",
+      "file": "10.1126_science.1224820.md"
+    },
+    {
+      "doi": "10.1038/ncomms5724",
+      "title": "",
+      "year": "2014",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms5724.pdf",
+      "file": "10.1038_ncomms5724.md"
+    },
+    {
+      "doi": "10.1158/0008-5472.can-13-1511",
+      "title": "",
+      "year": "2013",
+      "journal": "Cancer Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.chom.2016.03.007",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell Host Microbe",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://www.repository.cam.ac.uk/handle/1810/257291",
+      "file": "10.1016_j.chom.2016.03.007.md"
+    },
+    {
+      "doi": "10.1016/j.canlet.2019.11.019",
+      "title": "",
+      "year": "2020",
+      "journal": "Cancer Lett.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1172/jci88625",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/88625/files/pdf",
+      "file": "10.1172_jci88625.md"
+    },
+    {
+      "doi": "10.1126/science.1069094",
+      "title": "",
+      "year": "2002",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2016.10.043",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867416314647/pdf",
+      "file": "10.1016_j.cell.2016.10.043.md"
+    },
+    {
+      "doi": "10.1016/j.celrep.2017.03.080",
+      "title": "",
+      "year": "2017",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5528001?pdf=render",
+      "file": "10.1016_j.celrep.2017.03.080.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2015.10.072",
+      "title": "",
+      "year": "2015",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867415014282/pdf",
+      "file": "10.1016_j.cell.2015.10.072.md"
+    },
+    {
+      "doi": "10.1084/jem.20100199",
+      "title": "",
+      "year": "2010",
+      "journal": "J. Exp. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2916129?pdf=render",
+      "file": "10.1084_jem.20100199.md"
+    },
+    {
+      "doi": "10.1136/gutjnl-2016-313498",
+      "title": "",
+      "year": "2018",
+      "journal": "Gut",
+      "is_oa": true,
+      "kind": "repo",
+      "link": ""
+    },
+    {
+      "doi": "10.1038/ncb3206",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Cell Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.celrep.2020.03.035",
+      "title": "",
+      "year": "2020",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2211124720303491/pdf",
+      "file": "10.1016_j.celrep.2020.03.035.md"
+    },
+    {
+      "doi": "10.1016/j.ccell.2018.03.012",
+      "title": "",
+      "year": "2018",
+      "journal": "Cancer Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1535610818301168/pdf",
+      "file": "10.1016_j.ccell.2018.03.012.md"
+    },
+    {
+      "doi": "10.1038/mi.2016.53",
+      "title": "",
+      "year": "2017",
+      "journal": "Mucosal Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/mi201653.pdf",
+      "file": "10.1038_mi.2016.53.md"
+    },
+    {
+      "doi": "10.1016/j.chom.2018.01.007",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell Host Microbe",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1931312818300428/pdf",
+      "file": "10.1016_j.chom.2018.01.007.md"
+    },
+    {
+      "doi": "10.1038/s41590-020-0602-z",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Immunol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7212050?pdf=render",
+      "file": "10.1038_s41590-020-0602-z.md"
+    },
+    {
+      "doi": "10.1046/j.1365-2249.2001.01462.x",
+      "title": "",
+      "year": "2001",
+      "journal": "Clin. Exp. Immunol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1905997?pdf=render",
+      "file": "10.1046_j.1365-2249.2001.01462.x.md"
+    },
+    {
+      "doi": "10.1046/j.1365-2249.2000.01155.x",
+      "title": "",
+      "year": "2000",
+      "journal": "Clin. Exp. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/cei/article-pdf/119/3/456/42129132/j.1365-2249.2000.01155.x.pdf",
+      "file": "10.1046_j.1365-2249.2000.01155.x.md"
+    },
+    {
+      "doi": "10.1016/j.bbrc.2018.10.136",
+      "title": "",
+      "year": "2018",
+      "journal": "Biochem. Biophys. Res. Commun.",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1016/j.bbrc.2018.10.136",
+      "file": "10.1016_j.bbrc.2018.10.136.md"
+    },
+    {
+      "doi": "10.1016/j.chom.2013.07.007",
+      "title": "",
+      "year": "2013",
+      "journal": "Cell Host Microbe",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1931312813002552/pdf",
+      "file": "10.1016_j.chom.2013.07.007.md"
+    },
+    {
+      "doi": "10.1038/s41564-019-0541-3",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.immuni.2015.01.010",
+      "title": "",
+      "year": "2015",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761315000369/pdf",
+      "file": "10.1016_j.immuni.2015.01.010.md"
+    },
+    {
+      "doi": "10.1126/science.aaw6985",
+      "title": "",
+      "year": "2019",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.celrep.2019.01.108",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2211124719301457/pdf",
+      "file": "10.1016_j.celrep.2019.01.108.md"
+    },
+    {
+      "doi": "10.1016/j.coi.2017.07.012",
+      "title": "",
+      "year": "2017",
+      "journal": "Curr. Opin. Immunol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7126332?pdf=render",
+      "file": "10.1016_j.coi.2017.07.012.md"
+    },
+    {
+      "doi": "10.1038/s41592-020-0737-8",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Methods",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7060080?pdf=render",
+      "file": "10.1038_s41592-020-0737-8.md"
+    },
+    {
+      "doi": "10.1038/s41578-018-0034-7",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Rev. Mater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.celrep.2019.04.001",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2211124719304565/pdf",
+      "file": "10.1016_j.celrep.2019.04.001.md"
+    },
+    {
+      "doi": "10.1038/s41551-019-0397-0",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Biomed. Eng.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://nrs.harvard.edu/urn-3:HUL.InstRepos:41759414",
+      "file": "10.1038_s41551-019-0397-0.md"
+    },
+    {
+      "doi": "10.1038/s41388-018-0155-x",
+      "title": "",
+      "year": "2018",
+      "journal": "Oncogene",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nprot.2017.137",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Protoc.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2017.09.016",
+      "title": "",
+      "year": "2017",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867417310656/pdf",
+      "file": "10.1016_j.cell.2017.09.016.md"
+    },
+    {
+      "doi": "10.1126/science.aaw4361",
+      "title": "",
+      "year": "2019",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7377314?pdf=render",
+      "file": "10.1126_science.aaw4361.md"
+    },
+    {
+      "doi": "10.1016/j.ccell.2019.08.003",
+      "title": "",
+      "year": "2019",
+      "journal": "Cancer Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S153561081930371X/pdf",
+      "file": "10.1016_j.ccell.2019.08.003.md"
+    },
+    {
+      "doi": "10.1126/science.aal5240",
+      "title": "",
+      "year": "2017",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/femsre/fuv036",
+      "title": "",
+      "year": "2016",
+      "journal": "FEMS Microbiol. Rev.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/femsre/article-pdf/40/1/117/23905335/fuv036.pdf",
+      "file": "10.1093_femsre_fuv036.md"
+    },
+    {
+      "doi": "10.1158/0008-5472.can-13-0827",
+      "title": "",
+      "year": "2013",
+      "journal": "Cancer Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://cancerres.aacrjournals.org/content/canres/73/24/7199.full.pdf",
+      "file": "10.1158_0008-5472.can-13-0827.md"
+    },
+    {
+      "doi": "10.3389/fphys.2018.01534",
+      "title": "",
+      "year": "2018",
+      "journal": "Front. Physiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fphys.2018.01534/pdf",
+      "file": "10.3389_fphys.2018.01534.md"
+    },
+    {
+      "doi": "10.1136/gutjnl-2018-317178",
+      "title": "",
+      "year": "2019",
+      "journal": "Gut",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://gut.bmj.com/content/gutjnl/68/4/654.full.pdf",
+      "file": "10.1136_gutjnl-2018-317178.md"
+    },
+    {
+      "doi": "10.1053/j.gastro.2020.06.042",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.gastrojournal.org/article/S0016508520348435/pdf",
+      "file": "10.1053_j.gastro.2020.06.042.md"
+    },
+    {
+      "doi": "10.1053/j.gastro.2018.04.018",
+      "title": "",
+      "year": "2018",
+      "journal": "Gastroenterology",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.immuni.2018.08.024",
+      "title": "",
+      "year": "2018",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S107476131830387X/pdf",
+      "file": "10.1016_j.immuni.2018.08.024.md"
+    },
+    {
+      "doi": "10.4161/gmic.2.5.18603",
+      "title": "",
+      "year": "2011",
+      "journal": "Gut Microbes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.4161/gmic.2.5.18603?needAccess=true",
+      "file": "10.4161_gmic.2.5.18603.md"
+    },
+    {
+      "doi": "10.1038/s41598-020-62139-z",
+      "title": "",
+      "year": "2020",
+      "journal": "Sci. Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41598-020-62139-z.pdf",
+      "file": "10.1038_s41598-020-62139-z.md"
+    },
+    {
+      "doi": "10.1097/mog.0000000000000057",
+      "title": "",
+      "year": "2014",
+      "journal": "Curr. Opin. Gastroenterol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4215539?pdf=render",
+      "file": "10.1097_mog.0000000000000057.md"
+    },
+    {
+      "doi": "10.1186/s13059-016-1116-8",
+      "title": "",
+      "year": "2016",
+      "journal": "Genome Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-016-1116-8",
+      "file": "10.1186_s13059-016-1116-8.md"
+    },
+    {
+      "doi": "10.1007/s12275-020-9365-3",
+      "title": "",
+      "year": "2020",
+      "journal": "J. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41540-018-0063-2",
+      "title": "",
+      "year": "2018",
+      "journal": "NPJ Syst. Biol. Appl.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41540-018-0063-2.pdf",
+      "file": "10.1038_s41540-018-0063-2.md"
+    },
+    {
+      "doi": "10.1016/j.chom.2017.03.010",
+      "title": "",
+      "year": "2017",
+      "journal": "Cell Host Microbe",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1931312817301208/pdf",
+      "file": "10.1016_j.chom.2017.03.010.md"
+    },
+    {
+      "doi": "10.1007/978-1-4939-7528-0_4",
+      "title": "",
+      "year": "2018",
+      "journal": "Methods Mol. Biol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://orbilu.uni.lu/handle/10993/39838",
+      "file": "10.1007_978-1-4939-7528-0_4.md"
+    },
+    {
+      "doi": "10.1073/pnas.1912129116",
+      "title": "",
+      "year": "2019",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6883805?pdf=render",
+      "file": "10.1073_pnas.1912129116.md"
+    },
+    {
+      "doi": "10.1186/s12866-020-01762-2",
+      "title": "",
+      "year": "2020",
+      "journal": "BMC Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://bmcmicrobiol.biomedcentral.com/track/pdf/10.1186/s12866-020-01762-2",
+      "file": "10.1186_s12866-020-01762-2.md"
+    },
+    {
+      "doi": "10.1038/s41551-019-0423-2",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Biomed. Eng.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41388-020-1341-1",
+      "title": "",
+      "year": "2020",
+      "journal": "Oncogene",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41388-020-1341-1.pdf",
+      "file": "10.1038_s41388-020-1341-1.md"
+    },
+    {
+      "doi": "10.1158/1078-0432.ccr-19-1086",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://clincancerres.aacrjournals.org/content/clincanres/26/16/4313.full.pdf",
+      "file": "10.1158_1078-0432.ccr-19-1086.md"
+    },
+    {
+      "doi": "10.1016/j.tim.2017.11.002",
+      "title": "",
+      "year": "2018",
+      "journal": "Trends Microbiol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://orbilu.uni.lu/handle/10993/37914",
+      "file": "10.1016_j.tim.2017.11.002.md"
+    },
+    {
+      "doi": "10.1038/s41579-019-0213-6",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Rev. Microbiol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6759048?pdf=render",
+      "file": "10.1038_s41579-019-0213-6.md"
+    }
+  ]
+}

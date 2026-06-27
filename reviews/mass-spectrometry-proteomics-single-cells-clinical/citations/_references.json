@@ -1,0 +1,1451 @@
+{
+  "article": {
+    "slug": "s41586-025-08584-0",
+    "doi": "10.1038/s41586-025-08584-0",
+    "title": "Mass-spectrometry-based proteomics: from single cells to clinical applications",
+    "url": "https://www.nature.com/articles/s41586-025-08584-0",
+    "abbrev": "mass-spectrometry-proteomics-single-cells-clinical",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/mass-spectrometry-proteomics-single-cells-clinical"
+  },
+  "meta": {
+    "title": "Mass-spectrometry-based proteomics: from single cells to clinical applications",
+    "authors": [
+      "Tiannan Guo",
+      "Judith A. Steen",
+      "Matthias Mann"
+    ],
+    "published": [
+      2025,
+      2,
+      26
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-025-08584-0",
+    "n_references": 158,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "8584_CR1",
+      "doi": "10.7208/chicago/9780226826691.001.0001",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Ball, P. How Life Works: A User\u2019s Guide to the New Biology (Univ. Chicago Press, 2024)."
+    },
+    {
+      "key": "8584_CR2",
+      "doi": "10.1126/science.1260419",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "M Uhlen",
+      "unstructured": "Uhlen, M. et al. Tissue-based map of the human proteome. Science 347, 1260419 (2015). This landmark study presents a comprehensive map of the human proteome across 32 tissues and organs, providing millions of IHC-based pictures of health and disease."
+    },
+    {
+      "key": "8584_CR3",
+      "doi": "10.1371/journal.pone.0015004",
+      "title": "",
+      "journal": "PLoS One",
+      "year": "2010",
+      "author": "L Gold",
+      "unstructured": "Gold, L. et al. Aptamer-based multiplexed proteomic technology for biomarker discovery. PLoS One 5, e15004 (2010)."
+    },
+    {
+      "key": "8584_CR4",
+      "doi": "10.1371/journal.pone.0095192",
+      "title": "",
+      "journal": "PLoS One",
+      "year": "2014",
+      "author": "E Assarsson",
+      "unstructured": "Assarsson, E. et al. Homogenous 96-plex PEA immunoassay exhibiting high sensitivity, specificity, and excellent scalability. PLoS One 9, e95192 (2014)."
+    },
+    {
+      "key": "8584_CR5",
+      "doi": "10.1038/nature01511",
+      "title": "",
+      "journal": "Nature",
+      "year": "2003",
+      "author": "R Aebersold",
+      "unstructured": "Aebersold, R. & Mann, M. Mass spectrometry-based proteomics. Nature 422, 198\u2013207 (2003)."
+    },
+    {
+      "key": "8584_CR6",
+      "doi": "10.1038/nature19949",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "R Aebersold",
+      "unstructured": "Aebersold, R. & Mann, M. Mass-spectrometric exploration of proteome structure and function. Nature 537, 347\u2013355 (2016)."
+    },
+    {
+      "key": "8584_CR7",
+      "doi": "10.1126/science.2675315",
+      "title": "",
+      "journal": "Science",
+      "year": "1989",
+      "author": "JB Fenn",
+      "unstructured": "Fenn, J. B., Mann, M., Meng, C. K., Wong, S. F. & Whitehouse, C. M. Electrospray ionization for mass spectrometry of large biomolecules. Science 246, 64\u201371 (1989)."
+    },
+    {
+      "key": "8584_CR8",
+      "doi": "10.15252/msb.20145625",
+      "title": "",
+      "journal": "Mol. Syst. Biol.",
+      "year": "2014",
+      "author": "CS Hughes",
+      "unstructured": "Hughes, C. S. et al. Ultrasensitive proteome analysis using paramagnetic bead technology. Mol. Syst. Biol. 10, 757 (2014)."
+    },
+    {
+      "key": "8584_CR9",
+      "doi": "10.1074/mcp.tir118.001270",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2019",
+      "author": "TS Batth",
+      "unstructured": "Batth, T. S. et al. Protein aggregation capture on microparticles enables multipurpose proteomics sample preparation. Mol. Cell. Proteomics 18, 1027\u20131035 (2019)."
+    },
+    {
+      "key": "8584_CR10",
+      "doi": "10.1002/1878-0261.12570",
+      "title": "",
+      "journal": "Mol. Oncol.",
+      "year": "2019",
+      "author": "Y Zhu",
+      "unstructured": "Zhu, Y. et al. High-throughput proteomic analysis of FFPE tissue samples facilitates tumor stratification. Mol. Oncol. 13, 2305\u20132328 (2019)."
+    },
+    {
+      "key": "8584_CR11",
+      "doi": "10.1016/j.addr.2021.113844",
+      "title": "",
+      "journal": "Adv. Drug Deliv. Rev.",
+      "year": "2021",
+      "author": "Q Xiao",
+      "unstructured": "Xiao, Q. et al. High-throughput proteomics and AI for cancer biomarker discovery. Adv. Drug Deliv. Rev. 176, 113844 (2021)."
+    },
+    {
+      "key": "8584_CR12",
+      "doi": "10.1126/sciadv.abb9314",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2021",
+      "author": "J Hendy",
+      "unstructured": "Hendy, J. Ancient protein analysis in archaeology. Sci. Adv. 7, eabb9314 (2021)."
+    },
+    {
+      "key": "8584_CR13",
+      "doi": "10.1038/s41586-023-06923-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "D Mylopotamitaki",
+      "unstructured": "Mylopotamitaki, D. et al. Homo sapiens reached the higher latitudes of Europe by 45,000 years ago. Nature 626, 341\u2013346 (2024)."
+    },
+    {
+      "key": "8584_CR14",
+      "doi": "10.1080/14789450.2022.2134780",
+      "title": "",
+      "journal": "Expert Rev. Proteomics",
+      "year": "2022",
+      "author": "Y Bian",
+      "unstructured": "Bian, Y., Gao, C. & Kuster, B. On the potential of micro-flow LC\u2013MS/MS in proteomics. Expert Rev. Proteomics 19, 153\u2013164 (2022)."
+    },
+    {
+      "key": "8584_CR15",
+      "doi": "10.1074/mcp.tir118.000853",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2018",
+      "author": "N Bache",
+      "unstructured": "Bache, N. et al. A novel LC system embeds analytes in pre-formed gradients for rapid, ultra-robust proteomics. Mol. Cell. Proteomics 17, 2284\u20132296 (2018)."
+    },
+    {
+      "key": "8584_CR16",
+      "doi": "10.1038/s41586-020-2402-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "JB Muller",
+      "unstructured": "Muller, J. B. et al. The proteome landscape of the kingdoms of life. Nature 582, 592\u2013596 (2020)."
+    },
+    {
+      "key": "8584_CR17",
+      "doi": "10.1021/ac991131p",
+      "title": "",
+      "journal": "Anal. Chem.",
+      "year": "2000",
+      "author": "A Makarov",
+      "unstructured": "Makarov, A. Electrostatic axially harmonic orbital trapping: a high-performance technique of mass analysis. Anal. Chem. 72, 1156\u20131162 (2000)."
+    },
+    {
+      "key": "8584_CR18",
+      "doi": "10.1146/annurev-anchem-071114-040325",
+      "title": "",
+      "journal": "Annu. Rev. Anal. Chem.",
+      "year": "2015",
+      "author": "S Eliuk",
+      "unstructured": "Eliuk, S. & Makarov, A. Evolution of Orbitrap mass spectrometry instrumentation. Annu. Rev. Anal. Chem. 8, 61\u201380 (2015)."
+    },
+    {
+      "key": "8584_CR19",
+      "doi": "10.1016/j.mcpro.2021.100138",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2021",
+      "author": "F Meier",
+      "unstructured": "Meier, F., Park, M. A. & Mann, M. Trapped ion mobility spectrometry and parallel accumulation\u2013serial fragmentation in proteomics. Mol. Cell. Proteomics 20, 100138 (2021)."
+    },
+    {
+      "key": "8584_CR20",
+      "doi": "10.1021/acs.analchem.3c02856",
+      "title": "",
+      "journal": "Anal. Chem.",
+      "year": "2023",
+      "author": "HI Stewart",
+      "unstructured": "Stewart, H. I. et al. Parallelized acquisition of Orbitrap and Astral analyzers enables high-throughput quantitative analysis. Anal. Chem. 95, 15656\u201315664 (2023)."
+    },
+    {
+      "key": "8584_CR21",
+      "doi": "10.1038/s41587-023-02099-7",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2024",
+      "author": "UH Guzman",
+      "unstructured": "Guzman, U. H. et al. Ultra-fast label-free quantification and comprehensive proteome coverage with narrow-window data-independent acquisition. Nat. Biotechnol. 42, 1855\u20131866 (2024). Together with Stewart et al. (2023), this study introduces the Astral mass analyser for proteomics use\u2014a novel multi-reflecting TOF MS that enables ultra-fast and highly sensitive proteomics, allowing for the quantification of nearly 10,000 proteins in single-shot analyses of human cell lines."
+    },
+    {
+      "key": "8584_CR22",
+      "doi": "10.1038/nmeth705",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2004",
+      "author": "JD Venable",
+      "unstructured": "Venable, J. D., Dong, M. Q., Wohlschlegel, J., Dillin, A. & Yates, J. R. Automated approach for quantitative analysis of complex peptide mixtures from tandem mass spectra. Nat. Methods 1, 39\u201345 (2004)."
+    },
+    {
+      "key": "8584_CR23",
+      "doi": "10.1074/mcp.o111.016717",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2012",
+      "author": "LC Gillet",
+      "unstructured": "Gillet, L. C. et al. Targeted data extraction of the MS/MS spectra generated by data-independent acquisition: a new concept for consistent and accurate proteome analysis. Mol. Cell. Proteomics 11, O111.016717 (2012)."
+    },
+    {
+      "key": "8584_CR24",
+      "doi": "10.1038/s41592-020-00998-0",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2020",
+      "author": "F Meier",
+      "unstructured": "Meier, F. et al. diaPASEF: parallel accumulation-serial fragmentation combined with data-independent acquisition. Nat. Methods 17, 1229\u20131236 (2020)."
+    },
+    {
+      "key": "8584_CR25",
+      "doi": "10.1038/nbt.2841",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2014",
+      "author": "HL Rost",
+      "unstructured": "Rost, H. L. et al. OpenSWATH enables automated, targeted analysis of data-independent acquisition MS data. Nat. Biotechnol. 32, 219\u2013223 (2014)."
+    },
+    {
+      "key": "8584_CR26",
+      "doi": "10.1074/mcp.ra117.000314",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2017",
+      "author": "R Bruderer",
+      "unstructured": "Bruderer, R. et al. Optimization of experimental parameters in data-independent mass spectrometry significantly increases depth and reproducibility of results. Mol. Cell. Proteomics 16, 2296\u20132309 (2017)."
+    },
+    {
+      "key": "8584_CR27",
+      "doi": "10.1038/s41592-019-0638-x",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2020",
+      "author": "V Demichev",
+      "unstructured": "Demichev, V., Messner, C. B., Vernardis, S. I., Lilley, K. S. & Ralser, M. DIA-NN: neural networks and interference correction enable deep proteome coverage in high throughput. Nat. Methods 17, 41\u201344 (2020). This landmark paper introducing DIA-NN, a deep-neural-network-based software for analysing DIA proteomics data, greatly improved peptide identification and quantification for more comprehensive and precise proteome profiling."
+    },
+    {
+      "key": "8584_CR28",
+      "doi": "10.1002/pmic.201900276",
+      "title": "",
+      "journal": "Proteomics",
+      "year": "2020",
+      "author": "F Zhang",
+      "unstructured": "Zhang, F., Ge, W., Ruan, G., Cai, X. & Guo, T. Data-independent acquisition mass spectrometry-based proteomics and software tools: a glimpse in 2020. Proteomics 20, e1900276 (2020)."
+    },
+    {
+      "key": "8584_CR29",
+      "doi": "10.1016/j.mcpro.2022.100437",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2022",
+      "author": "M The",
+      "unstructured": "The, M., Samaras, P., Kuster, B. & Wilhelm, M. Reanalysis of ProteomicsDB using an accurate, sensitive, and scalable false discovery rate estimation approach for protein groups. Mol. Cell. Proteomics 21, 100437 (2022)."
+    },
+    {
+      "key": "8584_CR30",
+      "doi": "10.1038/s41467-024-46485-4",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2024",
+      "author": "MT Strauss",
+      "unstructured": "Strauss, M. T. et al. AlphaPept: a modern and open framework for MS-based proteomics. Nat. Commun. 15, 2168 (2024)."
+    },
+    {
+      "key": "8584_CR31",
+      "doi": "10.7554/elife.83947",
+      "title": "",
+      "journal": "eLife",
+      "year": "2022",
+      "author": "Z Wang",
+      "unstructured": "Wang, Z. et al. High-throughput proteomics of nanogram-scale samples with Zeno SWATH MS. eLife 11, e83947 (2022)."
+    },
+    {
+      "key": "8584_CR32",
+      "doi": "10.1016/j.mcpro.2022.100489",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2023",
+      "author": "P Skowronek",
+      "unstructured": "Skowronek, P. et al. Synchro-PASEF allows precursor-specific fragment ion extraction and interference removal in data-independent acquisition. Mol. Cell. Proteomics 22, 100489 (2023)."
+    },
+    {
+      "key": "8584_CR33",
+      "doi": "10.1038/ncomms14271",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "MS Baker",
+      "unstructured": "Baker, M. S. et al. Accelerating the search for the missing proteins in the human proteome. Nat. Commun. 8, 14271 (2017)."
+    },
+    {
+      "key": "8584_CR34",
+      "doi": "10.1073/pnas.1508380112",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2015",
+      "author": "N Perdigao",
+      "unstructured": "Perdigao, N. et al. Unexpected features of the dark proteome. Proc. Natl Acad. Sci. USA 112, 15898\u201315903 (2015)."
+    },
+    {
+      "key": "8584_CR35",
+      "doi": "10.1038/s41592-022-01454-x",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2022",
+      "author": "G Kustatscher",
+      "unstructured": "Kustatscher, G. et al. Understudied proteins: opportunities and challenges for functional proteomics. Nat. Methods 19, 774\u2013779 (2022)."
+    },
+    {
+      "key": "8584_CR36",
+      "doi": "10.1038/s43586-023-00205-2",
+      "title": "",
+      "journal": "Nat. Rev. Methods Primers",
+      "year": "2023",
+      "author": "R Hellinger",
+      "unstructured": "Hellinger, R. et al. Peptidomics. Nat. Rev. Methods Primers 3, 25 (2023)."
+    },
+    {
+      "key": "8584_CR37",
+      "doi": "10.1021/acs.jproteome.1c00168",
+      "title": "",
+      "journal": "J. Proteome Res.",
+      "year": "2021",
+      "author": "J Li",
+      "unstructured": "Li, J. et al. TMTpro-18plex: the expanded and complete set of TMTpro reagents for sample multiplexing. J. Proteome Res. 20, 2964\u20132972 (2021)."
+    },
+    {
+      "key": "8584_CR38",
+      "doi": "10.1038/nmeth.1714",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2011",
+      "author": "L Ting",
+      "unstructured": "Ting, L., Rad, R., Gygi, S. P. & Haas, W. MS3 eliminates ratio distortion in isobaric multiplexed quantitative proteomics. Nat. Methods 8, 937\u2013940 (2011)."
+    },
+    {
+      "key": "8584_CR39",
+      "doi": "10.1038/s41467-018-03309-6",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "A Hogrebe",
+      "unstructured": "Hogrebe, A. et al. Benchmarking common quantification strategies for large-scale phosphoproteomics. Nat. Commun. 9, 1045 (2018)."
+    },
+    {
+      "key": "8584_CR40",
+      "doi": "10.1038/s41592-020-01002-5",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2021",
+      "author": "TK Cheung",
+      "unstructured": "Cheung, T. K. et al. Defining the carrier proteome limit for single-cell proteomics. Nat. Methods 18, 76\u201383 (2021)."
+    },
+    {
+      "key": "8584_CR41",
+      "doi": "10.1016/j.cell.2009.05.051",
+      "title": "",
+      "journal": "Cell",
+      "year": "2009",
+      "author": "P Picotti",
+      "unstructured": "Picotti, P., Bodenmiller, B., Mueller, L. N., Domon, B. & Aebersold, R. Full dynamic range proteome analysis of S. cerevisiae by targeted proteomics. Cell 138, 795\u2013806 (2009)."
+    },
+    {
+      "key": "8584_CR42",
+      "doi": "10.1038/nmeth.2015",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2012",
+      "author": "P Picotti",
+      "unstructured": "Picotti, P. & Aebersold, R. Selected reaction monitoring-based proteomics: workflows, potential, pitfalls and future directions. Nat. Methods 9, 555\u2013566 (2012)."
+    },
+    {
+      "key": "8584_CR43",
+      "doi": "10.1074/mcp.tir118.001131",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2019",
+      "author": "C Wichmann",
+      "unstructured": "Wichmann, C. et al. MaxQuant.Live enables global targeting of more than 25,000 peptides. Mol. Cell. Proteomics 18, 982\u2013994 (2019)."
+    },
+    {
+      "key": "8584_CR44",
+      "doi": "10.1016/j.cels.2021.06.006",
+      "title": "",
+      "journal": "Cell Syst.",
+      "year": "2021",
+      "author": "M Mann",
+      "unstructured": "Mann, M., Kumar, C., Zeng, W. F. & Strauss, M. T. Artificial intelligence for proteomics and biomarker discovery. Cell Syst. 12, 759\u2013770 (2021)."
+    },
+    {
+      "key": "8584_CR45",
+      "doi": "10.1038/s41592-024-02324-4",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2024",
+      "author": "BM Gyori",
+      "unstructured": "Gyori, B. M. & Vitek, O. Beyond protein lists: AI-assisted interpretation of proteomic investigations in the context of evolving scientific knowledge. Nat. Methods 21, 1387\u20131389 (2024)."
+    },
+    {
+      "key": "8584_CR46",
+      "doi": "10.1038/s41587-021-01145-6",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2022",
+      "author": "A Santos",
+      "unstructured": "Santos, A. et al. A knowledge graph to interpret clinical proteomics data. Nat. Biotechnol. 40, 692\u2013702 (2022)."
+    },
+    {
+      "key": "8584_CR47",
+      "doi": "10.1016/j.cels.2017.05.009",
+      "title": "",
+      "journal": "Cell Syst.",
+      "year": "2017",
+      "author": "DB Bekker-Jensen",
+      "unstructured": "Bekker-Jensen, D. B. et al. An optimized shotgun strategy for the rapid generation of comprehensive human proteomes. Cell Syst. 4, 587\u2013599 (2017)."
+    },
+    {
+      "key": "8584_CR48",
+      "doi": "10.1038/s41587-023-01714-x",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2023",
+      "author": "P Sinitcyn",
+      "unstructured": "Sinitcyn, P. et al. Global detection of human variants and isoforms by deep proteome sequencing. Nat. Biotechnol. 41, 1776\u20131786 (2023)."
+    },
+    {
+      "key": "8584_CR49",
+      "doi": "10.1038/msb.2010.106",
+      "title": "",
+      "journal": "Mol. Syst. Biol.",
+      "year": "2010",
+      "author": "E Lundberg",
+      "unstructured": "Lundberg, E. et al. Defining the transcriptome and proteome in three functionally different human cell lines. Mol. Syst. Biol. 6, 450 (2010)."
+    },
+    {
+      "key": "8584_CR50",
+      "doi": "10.1038/s41467-020-19045-9",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "S Adhikari",
+      "unstructured": "Adhikari, S. et al. A high-stringency blueprint of the human proteome. Nat. Commun. 11, 5301 (2020)."
+    },
+    {
+      "key": "8584_CR51",
+      "doi": "10.1126/science.aay0262",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "J Chen",
+      "unstructured": "Chen, J. et al. Pervasive functional translation of noncanonical human open reading frames. Science 367, 1140\u20131146 (2020)."
+    },
+    {
+      "key": "8584_CR52",
+      "doi": "10.1038/s41576-020-0258-4",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2020",
+      "author": "C Buccitelli",
+      "unstructured": "Buccitelli, C. & Selbach, M. mRNAs, proteins and the emerging principles of gene expression control. Nat. Rev. Genet. 21, 630\u2013644 (2020)."
+    },
+    {
+      "key": "8584_CR53",
+      "doi": "10.1016/j.cell.2016.03.014",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "Y Liu",
+      "unstructured": "Liu, Y., Beyer, A. & Aebersold, R. On the dependency of cellular protein levels on mRNA abundance. Cell 165, 535\u2013550 (2016)."
+    },
+    {
+      "key": "8584_CR54",
+      "doi": "10.1016/j.mcpro.2023.100636",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2023",
+      "author": "S Knecht",
+      "unstructured": "Knecht, S. et al. An introduction to analytical challenges, approaches, and applications in mass spectrometry-based secretomics. Mol. Cell. Proteomics 22, 100636 (2023)."
+    },
+    {
+      "key": "8584_CR55",
+      "doi": "10.1074/mcp.r120.002208",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2021",
+      "author": "G van Mierlo",
+      "unstructured": "van Mierlo, G. & Vermeulen, M. Chromatin proteomics to study epigenetics\u2014challenges and opportunities. Mol. Cell. Proteomics 20, 100056 (2021)."
+    },
+    {
+      "key": "8584_CR56",
+      "doi": "10.1074/mcp.r120.002190",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2021",
+      "author": "AB Ross",
+      "unstructured": "Ross, A. B., Langer, J. D. & Jovanovic, M. Proteome turnover in the spotlight: approaches, applications, and perspectives. Mol. Cell. Proteomics 20, 100016 (2021)."
+    },
+    {
+      "key": "8584_CR57",
+      "doi": "10.1016/j.cmet.2014.11.002",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2014",
+      "author": "SB Azimifar",
+      "unstructured": "Azimifar, S. B., Nagaraj, N., Cox, J. & Mann, M. Cell-type-resolved quantitative proteomics of murine liver. Cell Metab. 20, 1076\u20131087 (2014)."
+    },
+    {
+      "key": "8584_CR58",
+      "doi": "10.1038/nmeth.2834",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2014",
+      "author": "NA Kulak",
+      "unstructured": "Kulak, N. A., Pichler, G., Paron, I., Nagaraj, N. & Mann, M. Minimal, encapsulated proteomic-sample processing applied to copy-number estimation in eukaryotic cells. Nat. Methods 11, 319\u2013324 (2014)."
+    },
+    {
+      "key": "8584_CR59",
+      "doi": "10.1038/s41592-023-01802-5",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2023",
+      "author": "MJ MacCoss",
+      "unstructured": "MacCoss, M. J. et al. Sampling the proteome by emerging single-molecule and mass spectrometry methods. Nat. Methods 20, 339\u2013346 (2023)."
+    },
+    {
+      "key": "8584_CR60",
+      "doi": "10.1038/s41592-020-01010-5",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2021",
+      "author": "W Qin",
+      "unstructured": "Qin, W., Cho, K. F., Cavanagh, P. E. & Ting, A. Y. Deciphering molecular interactions by proximity labeling. Nat. Methods 18, 133\u2013143 (2021)."
+    },
+    {
+      "key": "8584_CR61",
+      "doi": "10.2174/0929867325666180530115711",
+      "title": "",
+      "journal": "Curr. Med. Chem.",
+      "year": "2019",
+      "author": "T Ma",
+      "unstructured": "Ma, T., Ye, Z. & Wang, L. Genome wide approaches to identify protein\u2013DNA interactions. Curr. Med. Chem. 26, 7641\u20137654 (2019)."
+    },
+    {
+      "key": "8584_CR62",
+      "doi": "10.1016/j.tips.2023.04.007",
+      "title": "",
+      "journal": "Trends Pharmacol. Sci.",
+      "year": "2023",
+      "author": "B Lucero",
+      "unstructured": "Lucero, B., Francisco, K. R., Liu, L. J., Caffrey, C. R. & Ballatore, C. Protein\u2013protein interactions: developing small-molecule inhibitors/stabilizers through covalent strategies. Trends Pharmacol. Sci. 44, 474\u2013488 (2023)."
+    },
+    {
+      "key": "8584_CR63",
+      "doi": "10.1038/s41586-023-06739-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "AC Michaelis",
+      "unstructured": "Michaelis, A. C. et al. The social and structural architecture of the yeast protein interactome. Nature 624, 192\u2013200 (2023). This comprehensive study maps the near-complete protein\u2013protein interaction network in yeast, providing insights into the social and structural architecture of an entire proteome and revealing fundamental principles of protein complex organization."
+    },
+    {
+      "key": "8584_CR64",
+      "doi": "10.1038/nbt.4201",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2018",
+      "author": "TC Branon",
+      "unstructured": "Branon, T. C. et al. Efficient proximity labeling in living cells and organisms with TurboID. Nat. Biotechnol. 36, 880\u2013887 (2018)."
+    },
+    {
+      "key": "8584_CR65",
+      "doi": "10.1038/s41467-022-29346-w",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "J Hiatt",
+      "unstructured": "Hiatt, J. et al. A functional map of HIV\u2013host interactions in primary human T cells. Nat. Commun. 13, 1752 (2022)."
+    },
+    {
+      "key": "8584_CR66",
+      "doi": "10.1038/s41586-021-04352-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "LG Thorne",
+      "unstructured": "Thorne, L. G. et al. Evolution of enhanced innate immune evasion by SARS-CoV-2. Nature 602, 487\u2013495 (2022)."
+    },
+    {
+      "key": "8584_CR67",
+      "doi": "10.1016/j.cell.2018.11.028",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "PS Shah",
+      "unstructured": "Shah, P. S. et al. Comparative flavivirus\u2013host protein interaction mapping reveals mechanisms of dengue and Zika virus pathogenesis. Cell 175, 1931\u20131945 (2018)."
+    },
+    {
+      "key": "8584_CR68",
+      "doi": "10.1101/2021.10.04.463034",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Evans, R. et al. Protein complex prediction with AlphaFold-Multimer. Preprint at bioRxiv https://doi.org/10.1101/2021.10.04.463034 (2022)."
+    },
+    {
+      "key": "8584_CR69",
+      "doi": "10.1021/acs.analchem.5b04123",
+      "title": "",
+      "journal": "Anal. Chem.",
+      "year": "2016",
+      "author": "NM Riley",
+      "unstructured": "Riley, N. M. & Coon, J. J. Phosphoproteomics in the age of rapid and deep proteome profiling. Anal. Chem. 88, 74\u201394 (2016)."
+    },
+    {
+      "key": "8584_CR70",
+      "doi": "10.1016/j.mcpro.2022.100279",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2022",
+      "author": "P Skowronek",
+      "unstructured": "Skowronek, P. et al. Rapid and in-depth coverage of the (phospho-)proteome with deep libraries and optimal window design for dia-PASEF. Mol. Cell. Proteomics 21, 100279 (2022)."
+    },
+    {
+      "key": "8584_CR71",
+      "doi": "10.1021/acs.jproteome.2c00850",
+      "title": "",
+      "journal": "J. Proteome Res.",
+      "year": "2023",
+      "author": "A Chang",
+      "unstructured": "Chang, A., Leutert, M., Rodriguez-Mias, R. A. & Villen, J. Automated enrichment of phosphotyrosine peptides for high-throughput proteomics. J. Proteome Res. 22, 1868\u20131880 (2023)."
+    },
+    {
+      "key": "8584_CR72",
+      "doi": "10.1038/s41586-024-07224-3",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "J Poirson",
+      "unstructured": "Poirson, J. et al. Proteome-scale discovery of protein degradation and stabilization effectors. Nature 628, 878\u2013886 (2024)."
+    },
+    {
+      "key": "8584_CR73",
+      "doi": "10.1007/978-1-4939-9232-4_5",
+      "title": "",
+      "journal": "Methods Mol. Biol.",
+      "year": "2019",
+      "author": "PJ Lund",
+      "unstructured": "Lund, P. J. et al. Isotopic labeling and quantitative proteomics of acetylation on histones and beyond. Methods Mol. Biol. 1977, 43\u201370 (2019)."
+    },
+    {
+      "key": "8584_CR74",
+      "doi": "10.1038/s41580-019-0099-1",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2019",
+      "author": "MJ Clague",
+      "unstructured": "Clague, M. J., Urbe, S. & Komander, D. Breaking the chains: deubiquitylating enzyme specificity begets function. Nat. Rev. Mol. Cell Biol. 20, 338\u2013352 (2019)."
+    },
+    {
+      "key": "8584_CR75",
+      "doi": "10.1126/scisignal.aau8645",
+      "title": "",
+      "journal": "Sci. Signal.",
+      "year": "2019",
+      "author": "EJ Needham",
+      "unstructured": "Needham, E. J., Parker, B. L., Burykin, T., James, D. E. & Humphrey, S. J. Illuminating the dark phosphoproteome. Sci. Signal. 12, eaau8645 (2019)."
+    },
+    {
+      "key": "8584_CR76",
+      "doi": "10.1126/science.ade3925",
+      "title": "",
+      "journal": "Science",
+      "year": "2023",
+      "author": "J Zecha",
+      "unstructured": "Zecha, J. et al. Decrypting drug actions and protein modifications by dose- and time-resolved proteomics. Science 380, 93\u2013101 (2023). This comprehensive study maps dose- and time-resolved changes in the phosphoproteome after drug treatments, providing insights into drug-induced signalling dynamics and revealing principles of cellular adaptation to pharmacological perturbations."
+    },
+    {
+      "key": "8584_CR77",
+      "doi": "10.1038/nmeth.1970",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2012",
+      "author": "SA Singh",
+      "unstructured": "Singh, S. A. et al. FLEXIQinase, a mass spectrometry-based assay, to unveil multikinase mechanisms. Nat. Methods 9, 504\u2013508 (2012)."
+    },
+    {
+      "key": "8584_CR78",
+      "doi": "10.1021/acs.analchem.5b04509",
+      "title": "",
+      "journal": "Anal. Chem.",
+      "year": "2016",
+      "author": "W Mair",
+      "unstructured": "Mair, W. et al. FLEXITau: quantifying post-translational modifications of tau protein in vitro and in human disease. Anal. Chem. 88, 3704\u20133714 (2016)."
+    },
+    {
+      "key": "8584_CR79",
+      "doi": "10.1016/j.cell.2020.10.029",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "H Wesseling",
+      "unstructured": "Wesseling, H. et al. Tau PTM profiles identify patient heterogeneity and stages of Alzheimer\u2019s disease. Cell 183, 1699\u20131713 (2020). This groundbreaking study comprehensively analyses tau post-translational modifications in Alzheimer\u2019s disease, revealing distinct modification profiles that correlate with disease progression and patient heterogeneity, and providing new insights into tau pathology, diagnostics and potential therapeutic targets."
+    },
+    {
+      "key": "8584_CR80",
+      "doi": "10.1016/j.cmet.2016.10.004",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2017",
+      "author": "MS Robles",
+      "unstructured": "Robles, M. S., Humphrey, S. J. & Mann, M. Phosphorylation Is a central mechanism for circadian control of metabolism and physiology. Cell Metab. 25, 118\u2013127 (2017)."
+    },
+    {
+      "key": "8584_CR81",
+      "doi": "10.1016/j.cell.2024.03.024",
+      "title": "",
+      "journal": "Cell",
+      "year": "2024",
+      "author": "G Prus",
+      "unstructured": "Prus, G., Satpathy, S., Weinert, B. T., Narita, T. & Choudhary, C. Global, site-resolved analysis of ubiquitylation occupancy and turnover rate reveals systems properties. Cell 187, 2875\u20132892 (2024). A comprehensive global analysis of human ubiquitylation stoichiometry and turnover rates, revealing unexpectedly low occupancy levels and providing insights into the dynamics and regulation of this crucial PTM."
+    },
+    {
+      "key": "8584_CR82",
+      "doi": "10.1038/s41587-019-0344-3",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2020",
+      "author": "D Ochoa",
+      "unstructured": "Ochoa, D. et al. The functional landscape of the human phosphoproteome. Nat. Biotechnol. 38, 365\u2013373 (2020). This large-scale bioinformatic study maps the functional landscape of protein phosphorylation in human cells, integrating phosphoproteomics data with various functional assays to predict the functional effect of phosphorylation events."
+    },
+    {
+      "key": "8584_CR83",
+      "doi": "10.1371/journal.pbio.3001636",
+      "title": "",
+      "journal": "PLoS Biol.",
+      "year": "2022",
+      "author": "I Bludau",
+      "unstructured": "Bludau, I. et al. The structural context of posttranslational modifications at a proteome-wide scale. PLoS Biol. 20, e3001636 (2022)."
+    },
+    {
+      "key": "8584_CR84",
+      "doi": "10.1038/s41467-024-51071-9",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2024",
+      "author": "P Shrestha",
+      "unstructured": "Shrestha, P., Kandel, J., Tayara, H. & Chong, K. T. Post-translational modification prediction via prompt-based fine-tuning of a GPT-2 model. Nat. Commun. 15, 6699 (2024)."
+    },
+    {
+      "key": "8584_CR85",
+      "doi": "10.1038/s41587-021-01051-x",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2022",
+      "author": "C Vieitez",
+      "unstructured": "Vieitez, C. et al. High-throughput functional characterization of protein phosphorylation sites in yeast. Nat. Biotechnol. 40, 382\u2013390 (2022)."
+    },
+    {
+      "key": "8584_CR86",
+      "doi": "10.1021/acs.analchem.8b04122",
+      "title": "",
+      "journal": "Anal. Chem.",
+      "year": "2018",
+      "author": "R Ma",
+      "unstructured": "Ma, R., Meng, H., Wiebelhaus, N. & Fitzgerald, M. C. Chemo-selection strategy for limited proteolysis experiments on the proteomic scale. Anal. Chem. 90, 14039\u201314047 (2018)."
+    },
+    {
+      "key": "8584_CR87",
+      "doi": "10.1016/j.tibs.2020.05.006",
+      "title": "",
+      "journal": "Trends Biochem. Sci.",
+      "year": "2020",
+      "author": "M Pepelnjak",
+      "unstructured": "Pepelnjak, M., de Souza, N. & Picotti, P. Detecting protein\u2013small molecule interactions using limited proteolysis\u2013mass spectrometry (LiP\u2013MS). Trends Biochem. Sci. 45, 919\u2013920 (2020)."
+    },
+    {
+      "key": "8584_CR88",
+      "doi": "10.1021/acs.chemrev.1c00786",
+      "title": "",
+      "journal": "Chem. Rev.",
+      "year": "2022",
+      "author": "L Piersimoni",
+      "unstructured": "Piersimoni, L., Kastritis, P. L., Arlt, C. & Sinz, A. Cross-linking mass spectrometry for investigating protein conformations and protein\u2013protein interactions\u2014a method for all seasons. Chem. Rev. 122, 7500\u20137531 (2022)."
+    },
+    {
+      "key": "8584_CR89",
+      "doi": "10.1016/j.sbi.2019.06.007",
+      "title": "",
+      "journal": "Curr. Opin. Struct. Biol.",
+      "year": "2019",
+      "author": "J Zheng",
+      "unstructured": "Zheng, J., Strutzenberg, T., Pascal, B. D. & Griffin, P. R. Protein dynamics and conformational changes explored by hydrogen/deuterium exchange mass spectrometry. Curr. Opin. Struct. Biol. 58, 305\u2013313 (2019)."
+    },
+    {
+      "key": "8584_CR90",
+      "doi": "10.1038/s41592-019-0459-y",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2019",
+      "author": "GR Masson",
+      "unstructured": "Masson, G. R. et al. Recommendations for performing, interpreting and reporting hydrogen deuterium exchange mass spectrometry (HDX-MS) experiments. Nat. Methods 16, 595\u2013602 (2019)."
+    },
+    {
+      "key": "8584_CR91",
+      "doi": "10.1016/j.sbi.2014.08.007",
+      "title": "",
+      "journal": "Curr. Opin. Struct. Biol.",
+      "year": "2014",
+      "author": "DP Marciano",
+      "unstructured": "Marciano, D. P., Dharmarajan, V. & Griffin, P. R. HDX-MS guided drug discovery: small molecules and biopharmaceuticals. Curr. Opin. Struct. Biol. 28, 105\u2013111 (2014)."
+    },
+    {
+      "key": "8584_CR92",
+      "doi": "10.1016/j.cbpa.2023.102357",
+      "title": "",
+      "journal": "Curr. Opin. Chem. Biol.",
+      "year": "2023",
+      "author": "C Yu",
+      "unstructured": "Yu, C. & Huang, L. New advances in cross-linking mass spectrometry toward structural systems biology. Curr. Opin. Chem. Biol. 76, 102357 (2023)."
+    },
+    {
+      "key": "8584_CR93",
+      "doi": "10.1016/j.sbi.2023.102599",
+      "title": "",
+      "journal": "Curr. Opin. Struct. Biol.",
+      "year": "2023",
+      "author": "ZA Chen",
+      "unstructured": "Chen, Z. A. & Rappsilber, J. Protein structure dynamics by crosslinking mass spectrometry. Curr. Opin. Struct. Biol. 80, 102599 (2023)."
+    },
+    {
+      "key": "8584_CR94",
+      "doi": "10.1038/s41467-021-23666-z",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2021",
+      "author": "S Lenz",
+      "unstructured": "Lenz, S. et al. Reliable identification of protein\u2013protein interactions by crosslinking mass spectrometry. Nat. Commun. 12, 3564 (2021). This paper introduces an integrated workflow for cross-linking MS, combining optimized sample preparation, chromatography and data analysis to enhance the depth and reliability of protein interaction mapping, advancing our understanding of protein complex structures and cellular organization."
+    },
+    {
+      "key": "8584_CR95",
+      "doi": "10.1073/pnas.2023360118",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2021",
+      "author": "A Wheat",
+      "unstructured": "Wheat, A. et al. Protein interaction landscapes revealed by advanced in vivo cross-linking\u2013mass spectrometry. Proc. Natl Acad. Sci. USA 118, e2023360118 (2021)."
+    },
+    {
+      "key": "8584_CR96",
+      "doi": "10.1002/anie.202113937",
+      "title": "",
+      "journal": "Angew. Chem. Int. Ed.",
+      "year": "2022",
+      "author": "PL Jiang",
+      "unstructured": "Jiang, P. L. et al. A membrane-permeable and immobilized metal affinity chromatography (IMAC) enrichable cross-linking reagent to advance in vivo cross-linking mass spectrometry. Angew. Chem. Int. Ed. 61, e202113937 (2022)."
+    },
+    {
+      "key": "8584_CR97",
+      "doi": "10.15252/msb.20198994",
+      "title": "",
+      "journal": "Mol. Syst. Biol.",
+      "year": "2019",
+      "author": "ML Mendes",
+      "unstructured": "Mendes, M. L. et al. An integrated workflow for crosslinking mass spectrometry. Mol. Syst. Biol. 15, e8994 (2019)."
+    },
+    {
+      "key": "8584_CR98",
+      "doi": "10.1038/s41592-024-02478-1",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2024",
+      "author": "MA Clasen",
+      "unstructured": "Clasen, M. A. et al. Proteome-scale recombinant standards and a robust high-speed search engine to advance cross-linking MS-based interactomics. Nat. Methods 21, 2327\u20132335 (2024)."
+    },
+    {
+      "key": "8584_CR99",
+      "doi": "10.1038/s41587-023-01704-z",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2023",
+      "author": "K Stahl",
+      "unstructured": "Stahl, K., Graziadei, A., Dau, T., Brock, O. & Rappsilber, J. Protein structure prediction with in-cell photo-crosslinking mass spectrometry and deep learning. Nat. Biotechnol. 41, 1810\u20131819 (2023)."
+    },
+    {
+      "key": "8584_CR100",
+      "doi": "10.1016/j.cell.2017.12.006",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "I Piazza",
+      "unstructured": "Piazza, I. et al. A map of protein\u2013metabolite interactions reveals principles of chemical communication. Cell 172, 358\u2013372 (2018). This groundbreaking study presents a comprehensive map of protein\u2013metabolite interactions in yeast, revealing widespread and functionally important associations between proteins and small molecules and providing insights into metabolite-mediated cellular regulation and communication principles."
+    },
+    {
+      "key": "8584_CR101",
+      "doi": "10.1038/s43587-022-00196-x",
+      "title": "",
+      "journal": "Nat. Aging",
+      "year": "2022",
+      "author": "SR Shuken",
+      "unstructured": "Shuken, S. R. et al. Limited proteolysis\u2013mass spectrometry reveals aging-associated changes in cerebrospinal fluid protein abundances and structures. Nat. Aging 2, 379\u2013388 (2022)."
+    },
+    {
+      "key": "8584_CR102",
+      "doi": "10.1016/j.cell.2021.11.029",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "T Arakhamia",
+      "unstructured": "Arakhamia, T. et al. Posttranslational modifications mediate the structural diversity of tauopathy strains. Cell 184, 6207\u20136210 (2021). This first study to combine cryo-EM with MS-based proteomics studies tau filaments from the brains of individuals with Alzheimer\u2019s disease to shed light on the molecular basis of tau pathology associated with PTMs and the structural diversity of tauopathy strains."
+    },
+    {
+      "key": "8584_CR103",
+      "doi": "10.1038/s41573-022-00409-3",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2022",
+      "author": "F Meissner",
+      "unstructured": "Meissner, F., Geddes-McAlister, J., Mann, M. & Bantscheff, M. The emerging role of mass spectrometry-based proteomics in drug discovery. Nat. Rev. Drug Discov. 21, 637\u2013654 (2022)."
+    },
+    {
+      "key": "8584_CR104",
+      "doi": "10.1021/ja034490h",
+      "title": "",
+      "journal": "J. Am. Chem. Soc.",
+      "year": "2003",
+      "author": "AE Speers",
+      "unstructured": "Speers, A. E., Adam, G. C. & Cravatt, B. F. Activity-based protein profiling in vivo using a copper(I)-catalyzed azide-alkyne [3+2] cycloaddition. J. Am. Chem. Soc. 125, 4686\u20134687 (2003)."
+    },
+    {
+      "key": "8584_CR105",
+      "doi": "10.1016/j.cbpa.2022.102225",
+      "title": "",
+      "journal": "Curr. Opin. Chem. Biol.",
+      "year": "2022",
+      "author": "C Le Sueur",
+      "unstructured": "Le Sueur, C., Hammaren, H. M., Sridharan, S. & Savitski, M. M. Thermal proteome profiling: insights into protein modifications, associations, and functions. Curr. Opin. Chem. Biol. 71, 102225 (2022)."
+    },
+    {
+      "key": "8584_CR106",
+      "doi": "10.1016/j.cbpa.2021.102107",
+      "title": "",
+      "journal": "Curr. Opin. Chem. Biol.",
+      "year": "2022",
+      "author": "CSC Ng",
+      "unstructured": "Ng, C. S. C. & Banik, S. M. Recent advances in induced proximity modalities. Curr. Opin. Chem. Biol. 67, 102107 (2022)."
+    },
+    {
+      "key": "8584_CR107",
+      "doi": "10.1038/nrd.2017.111",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2017",
+      "author": "JG Moffat",
+      "unstructured": "Moffat, J. G., Vincent, F., Lee, J. A., Eder, J. & Prunotto, M. Opportunities and challenges in phenotypic drug discovery: an industry perspective. Nat. Rev. Drug Discov. 16, 531\u2013543 (2017)."
+    },
+    {
+      "key": "8584_CR108",
+      "doi": "10.1038/s41592-023-01771-9",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2023",
+      "author": "FA Rosenberger",
+      "unstructured": "Rosenberger, F. A., Thielert, M. & Mann, M. Making single-cell proteomics biologically relevant. Nat. Methods 20, 320\u2013323 (2023)."
+    },
+    {
+      "key": "8584_CR109",
+      "doi": "10.1021/acs.analchem.8b00661",
+      "title": "",
+      "journal": "Anal. Chem.",
+      "year": "2018",
+      "author": "ZY Li",
+      "unstructured": "Li, Z. Y. et al. Nanoliter-scale oil-air-droplet chip-based single cell proteomic analysis. Anal. Chem. 90, 5430\u20135438 (2018)."
+    },
+    {
+      "key": "8584_CR110",
+      "doi": "10.1038/s41467-018-03367-w",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "Y Zhu",
+      "unstructured": "Zhu, Y. et al. Nanodroplet processing platform for deep and quantitative proteome profiling of 10\u2013100 mammalian cells. Nat. Commun. 9, 882 (2018)."
+    },
+    {
+      "key": "8584_CR111",
+      "doi": "10.1186/s13059-018-1547-5",
+      "title": "",
+      "journal": "Genome Biol.",
+      "year": "2018",
+      "author": "B Budnik",
+      "unstructured": "Budnik, B., Levy, E., Harmange, G. & Slavov, N. SCoPE-MS: mass spectrometry of single mammalian cells quantifies proteome heterogeneity during cell differentiation. Genome Biol. 19, 161 (2018)."
+    },
+    {
+      "key": "8584_CR112",
+      "doi": "10.1038/s41467-021-27778-4",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "ST Gebreyesus",
+      "unstructured": "Gebreyesus, S. T. et al. Streamlined single-cell proteomics by an integrated microfluidic chip and data-independent acquisition mass spectrometry. Nat. Commun. 13, 37 (2022)."
+    },
+    {
+      "key": "8584_CR113",
+      "doi": "10.15252/msb.202110798",
+      "title": "",
+      "journal": "Mol. Syst. Biol.",
+      "year": "2022",
+      "author": "AD Brunner",
+      "unstructured": "Brunner, A. D. et al. Ultra-high sensitivity mass spectrometry quantifies single-cell proteome changes upon perturbation. Mol. Syst. Biol. 18, e10798 (2022)."
+    },
+    {
+      "key": "8584_CR114",
+      "doi": "10.1038/s41587-022-01389-w",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2023",
+      "author": "J Derks",
+      "unstructured": "Derks, J. et al. Increasing the throughput of sensitive proteomics by plexDIA. Nat. Biotechnol. 41, 50\u201359 (2023)."
+    },
+    {
+      "key": "8584_CR115",
+      "doi": "10.1007/978-1-0716-3934-4_9",
+      "title": "",
+      "journal": "Methods Mol. Biol.",
+      "year": "2024",
+      "author": "M Thielert",
+      "unstructured": "Thielert, M., Weiss, C. A. M., Mann, M. & Rosenberger, F. A. Spatial proteomics of single hepatocytes with multiplexed data-independent acquisition (mDIA). Methods Mol. Biol. 2817, 97\u2013113 (2024)."
+    },
+    {
+      "key": "8584_CR116",
+      "doi": "10.1038/s41592-024-02558-2",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Ye, Z. et al. Enhanced sensitivity and scalability with a Chip-Tip workflow enables deep single-cell proteomics. Nat. Methods https://doi.org/10.1038/s41592-024-02558-2 (2025)."
+    },
+    {
+      "key": "8584_CR117",
+      "doi": "10.1038/s41467-024-46777-9",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2024",
+      "author": "Z Ye",
+      "unstructured": "Ye, Z. et al. One-Tip enables comprehensive proteome coverage in minimal cells and single zygotes. Nat. Commun. 15, 2474 (2024)."
+    },
+    {
+      "key": "8584_CR118",
+      "doi": "10.1038/s41467-024-49651-w",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2024",
+      "author": "C Ctortecka",
+      "unstructured": "Ctortecka, C. et al. Automated single-cell proteomics providing sufficient proteome depth to study complex biology beyond cell type classifications. Nat. Commun. 15, 5707 (2024)."
+    },
+    {
+      "key": "8584_CR119",
+      "doi": "10.1038/s41587-022-01302-5",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2022",
+      "author": "A Mund",
+      "unstructured": "Mund, A. et al. Deep visual proteomics defines single-cell identity and heterogeneity. Nat. Biotechnol. 40, 1231\u20131240 (2022). This study introduces DVP, which combines AI-driven image analysis with high-resolution mass spectrometry to map protein expression patterns in specific cell types within complex tissues, enabling exceptional spatial resolution for functional studies in proteomics."
+    },
+    {
+      "key": "8584_CR120",
+      "doi": "10.1038/s41586-024-08061-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "TM Nordmann",
+      "unstructured": "Nordmann, T. M. et al. Spatial proteomics identifies JAKi as treatment for a lethal skin disease. Nature 635, 1001\u20131009 (2024).\u00a0This pioneering single-cell-type spatial proteomics study goes all the way from discovering the cause of a lethal disease to finding a cure for it, marking the dawn of spatial medicine."
+    },
+    {
+      "key": "8584_CR121",
+      "doi": "10.1038/s41467-024-53683-7",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2024",
+      "author": "Z Dong",
+      "unstructured": "Dong, Z. et al. Spatial proteomics of single cells and organelles on tissue slides using filter-aided expansion proteomics. Nat. Commun. 15, 9378 (2024)."
+    },
+    {
+      "key": "8584_CR122",
+      "doi": "10.1038/s41467-022-35367-2",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "M Ma",
+      "unstructured": "Ma, M. et al. In-depth mapping of protein localizations in whole tissue by micro-scaffold assisted spatial proteomics (MASP). Nat. Commun. 13, 7736 (2022)."
+    },
+    {
+      "key": "8584_CR123",
+      "doi": "10.1021/pr1008515",
+      "title": "",
+      "journal": "J. Proteome Res.",
+      "year": "2011",
+      "author": "S Surinova",
+      "unstructured": "Surinova, S. et al. On the development of plasma protein biomarkers. J. Proteome Res. 10, 5\u201316 (2011)."
+    },
+    {
+      "key": "8584_CR124",
+      "doi": "10.15252/msb.20156297",
+      "title": "",
+      "journal": "Mol. Syst. Biol.",
+      "year": "2017",
+      "author": "PE Geyer",
+      "unstructured": "Geyer, P. E., Holdt, L. M., Teupser, D. & Mann, M. Revisiting biomarker discovery by plasma proteomics. Mol. Syst. Biol. 13, 942 (2017)."
+    },
+    {
+      "key": "8584_CR125",
+      "doi": "10.1038/s41591-022-01850-y",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2022",
+      "author": "L Niu",
+      "unstructured": "Niu, L. et al. Noninvasive proteomic biomarkers for alcohol-related liver disease. Nat. Med. 28, 1277\u20131287 (2022). A high-throughput plasma proteomics approach that identifies novel protein biomarkers for non-invasive diagnosis and staging of alcohol-related liver disease, outperforming existing clinical tests and demonstrating the potential of MS-based proteomics for diagnostic tools."
+    },
+    {
+      "key": "8584_CR126",
+      "doi": "10.1016/j.xcrm.2023.101172",
+      "title": "",
+      "journal": "Cell Rep. Med.",
+      "year": "2023",
+      "author": "X Cai",
+      "unstructured": "Cai, X. et al. Population serum proteomics uncovers a prognostic protein classifier for metabolic syndrome. Cell Rep. Med. 4, 101172 (2023)."
+    },
+    {
+      "key": "8584_CR127",
+      "doi": "10.1016/j.cels.2020.05.012",
+      "title": "",
+      "journal": "Cell Syst.",
+      "year": "2020",
+      "author": "CB Messner",
+      "unstructured": "Messner, C. B. et al. Ultra-high-throughput clinical proteomics reveals classifiers of COVID-19 infection. Cell Syst. 11, 11\u201324 (2020)."
+    },
+    {
+      "key": "8584_CR128",
+      "doi": "10.1126/scitranslmed.adh0185",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2024",
+      "author": "Y Mi",
+      "unstructured": "Mi, Y. et al. High-throughput mass spectrometry maps the sepsis plasma proteome and differences in patient response. Sci. Transl. Med. 16, eadh0185 (2024)."
+    },
+    {
+      "key": "8584_CR129",
+      "doi": "10.1016/j.cell.2020.05.032",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "B Shen",
+      "unstructured": "Shen, B. et al. Proteomic and metabolomic characterization of COVID-19 patient sera. Cell 182, 59\u201372 (2020)."
+    },
+    {
+      "key": "8584_CR130",
+      "doi": "10.1038/s41467-020-17033-7",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "JE Blume",
+      "unstructured": "Blume, J. E. et al. Rapid, deep and precise profiling of the plasma proteome with multi-nanoparticle protein corona. Nat. Commun. 11, 3662 (2020)."
+    },
+    {
+      "key": "8584_CR131",
+      "doi": "10.1021/acs.jproteome.3c00357",
+      "title": "",
+      "journal": "J. Proteome Res.",
+      "year": "2023",
+      "author": "LR Heil",
+      "unstructured": "Heil, L. R. et al. Evaluating the performance of the Astral mass analyzer for quantitative proteomics using data-independent acquisition. J. Proteome Res. 22, 3290\u20133300 (2023)."
+    },
+    {
+      "key": "8584_CR132",
+      "doi": "10.1586/epr.09.17",
+      "title": "",
+      "journal": "Expert Rev. Proteomics",
+      "year": "2009",
+      "author": "RJ Simpson",
+      "unstructured": "Simpson, R. J., Lim, J. W., Moritz, R. L. & Mathivanan, S. Exosomes: proteomic insights and diagnostic potential. Expert Rev. Proteomics 6, 267\u2013283 (2009)."
+    },
+    {
+      "key": "8584_CR133",
+      "doi": "10.1126/sciadv.adf9717",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2023",
+      "author": "A Viode",
+      "unstructured": "Viode, A. et al. A simple, time- and cost-effective, high-throughput depletion strategy for deep plasma proteomics. Sci. Adv. 9, eadf9717 (2023). This study introduces a simple, time- and cost-effective high-throughput depletion strategy for deep plasma proteomics that enables the analysis of thousands of plasma proteins at an impressive coverage."
+    },
+    {
+      "key": "8584_CR134",
+      "doi": "10.1016/j.mcpro.2024.100786",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2024",
+      "author": "BB Sun",
+      "unstructured": "Sun, B. B., Suhre, K. & Gibson, B. W. Promises and challenges of populational proteomics in health and disease. Mol. Cell. Proteomics 23, 100786 (2024)."
+    },
+    {
+      "key": "8584_CR135",
+      "doi": "10.1016/j.mcpro.2023.100577",
+      "title": "",
+      "journal": "Mol. Cell. Proteomics",
+      "year": "2023",
+      "author": "JM Bader",
+      "unstructured": "Bader, J. M., Albrecht, V. & Mann, M. MS-based proteomics of body fluids: the end of the beginning. Mol. Cell. Proteomics 22, 100577 (2023)."
+    },
+    {
+      "key": "8584_CR136",
+      "doi": "10.1126/sciadv.abm5164",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2022",
+      "author": "DH Katz",
+      "unstructured": "Katz, D. H. et al. Proteomic profiling platforms head to head: leveraging genetics and clinical traits to compare aptamer- and antibody-based methods. Sci. Adv. 8, eabm5164 (2022)."
+    },
+    {
+      "key": "8584_CR137",
+      "doi": "10.1021/acs.jproteome.4c00586",
+      "title": "",
+      "journal": "J. Proteome Res.",
+      "year": "2024",
+      "author": "PE Geyer",
+      "unstructured": "Geyer, P. E. et al. The circulating proteome\u2014technological developments, current challenges, and future trends. J. Proteome Res. 23, 5279\u20135295 (2024)."
+    },
+    {
+      "key": "8584_CR138",
+      "doi": "10.1016/j.celrep.2021.110271",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2022",
+      "author": "X Bi",
+      "unstructured": "Bi, X. et al. Proteomic and metabolomic profiling of urine uncovers immune responses in patients with COVID-19. Cell Rep. 38, 110271 (2022)."
+    },
+    {
+      "key": "8584_CR139",
+      "doi": "10.15252/emmm.202013257",
+      "title": "",
+      "journal": "EMBO Mol. Med.",
+      "year": "2021",
+      "author": "S Virreira Winter",
+      "unstructured": "Virreira Winter, S. et al. Urinary proteome profiling for stratifying patients with familial Parkinson\u2019s disease. EMBO Mol. Med. 13, e13257 (2021)."
+    },
+    {
+      "key": "8584_CR140",
+      "doi": "10.1016/j.annemergmed.2011.12.015",
+      "title": "",
+      "journal": "Ann. Emerg. Med.",
+      "year": "2012",
+      "author": "A Kentsis",
+      "unstructured": "Kentsis, A. et al. Detection and diagnostic value of urine leucine-rich \u03b1-2-glycoprotein in children with suspected acute appendicitis. Ann. Emerg. Med. 60, 78\u201383 (2012)."
+    },
+    {
+      "key": "8584_CR141",
+      "doi": "10.1159/000520680",
+      "title": "",
+      "journal": "Neonatology",
+      "year": "2022",
+      "author": "S Ahmed",
+      "unstructured": "Ahmed, S. et al. Urine proteomics for noninvasive monitoring of biomarkers in bronchopulmonary dysplasia. Neonatology 119, 193\u2013203 (2022)."
+    },
+    {
+      "key": "8584_CR142",
+      "doi": "",
+      "title": "",
+      "journal": "Innovation",
+      "year": "2024",
+      "author": "QQ Tao",
+      "unstructured": "Tao, Q. Q. et al. Alzheimer\u2019s disease early diagnostic and staging biomarkers revealed by large-scale cerebrospinal fluid and serum proteomic profiling. Innovation 5, 100544 (2024)."
+    },
+    {
+      "key": "8584_CR143",
+      "doi": "10.1038/s41568-022-00446-5",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2022",
+      "author": "DR Mani",
+      "unstructured": "Mani, D. R. et al. Cancer proteogenomics: current impact and future prospects. Nat. Rev. Cancer 22, 298\u2013313 (2022)."
+    },
+    {
+      "key": "8584_CR144",
+      "doi": "10.1016/j.ccell.2023.06.009",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2023",
+      "author": "Y Li",
+      "unstructured": "Li, Y. et al. Proteogenomic data and resources for pan-cancer analysis. Cancer Cell 41, 1397\u20131406 (2023)."
+    },
+    {
+      "key": "8584_CR145",
+      "doi": "10.1038/nm.3807",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2015",
+      "author": "T Guo",
+      "unstructured": "Guo, T. et al. Rapid mass spectrometric conversion of tissue biopsy samples into permanent quantitative digital proteome maps. Nat. Med. 21, 407\u2013413 (2015)."
+    },
+    {
+      "key": "8584_CR146",
+      "doi": "10.1038/s41596-022-00727-1",
+      "title": "",
+      "journal": "Nat. Protoc.",
+      "year": "2022",
+      "author": "X Cai",
+      "unstructured": "Cai, X. et al. High-throughput proteomic sample preparation using pressure cycling technology. Nat. Protoc. 17, 2307\u20132325 (2022)."
+    },
+    {
+      "key": "8584_CR147",
+      "doi": "10.1056/nejmp1500523",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2015",
+      "author": "FS Collins",
+      "unstructured": "Collins, F. S. & Varmus, H. A new initiative on precision medicine. N. Engl. J. Med. 372, 793\u2013795 (2015)."
+    },
+    {
+      "key": "8584_CR148",
+      "doi": "10.2471/blt.16.187468",
+      "title": "",
+      "journal": "Bull. World Health Organ.",
+      "year": "2017",
+      "author": "CS Kosack",
+      "unstructured": "Kosack, C. S., Page, A. L. & Klatser, P. R. A guide to aid the selection of diagnostic tests. Bull. World Health Organ. 95, 639\u2013645 (2017)."
+    },
+    {
+      "key": "8584_CR149",
+      "doi": "10.1186/s12014-024-09455-y",
+      "title": "",
+      "journal": "Clin. Proteomics",
+      "year": "2024",
+      "author": "CL Han",
+      "unstructured": "Han, C. L. et al. Lessons learned: establishing a CLIA-equivalent laboratory for targeted mass spectrometry assays - navigating the transition from research to clinical practice. Clin. Proteomics 21, 12 (2024)."
+    },
+    {
+      "key": "8584_CR150",
+      "doi": "10.1038/s41421-022-00442-x",
+      "title": "",
+      "journal": "Cell Discov.",
+      "year": "2022",
+      "author": "Y Sun",
+      "unstructured": "Sun, Y. et al. Artificial intelligence defines protein-based classification of thyroid nodules. Cell Discov. 8, 85 (2022). This multi-centre study uses AI and proteomics to develop a highly accurate protein-based classification system for thyroid nodules, showing that AI can be integrated with molecular profiling for improved cancer diagnostics and personalized medicine."
+    },
+    {
+      "key": "8584_CR151",
+      "doi": "10.1038/s41586-019-0987-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "Y Jiang",
+      "unstructured": "Jiang, Y. et al. Proteomics identifies new therapeutic targets of early-stage hepatocellular carcinoma. Nature 567, 257\u2013261 (2019). This large-scale proteogenomic study of early-stage hepatocellular carcinoma identifies new molecular subtypes and potential therapeutic targets, and proposed proteomics-driven precision medicine."
+    },
+    {
+      "key": "8584_CR152",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Clarke, W. & Nair, H. Mass Spectrometry for the Clinical Laboratory (Academic Press, 2017)."
+    },
+    {
+      "key": "8584_CR153",
+      "doi": "10.1016/j.xcrm.2023.101005",
+      "title": "",
+      "journal": "Cell Rep. Med.",
+      "year": "2023",
+      "author": "PW van Zalm",
+      "unstructured": "van Zalm, P. W. et al. Meta-analysis of published cerebrospinal fluid proteomics data identifies and validates metabolic enzyme panel as Alzheimer\u2019s disease biomarkers. Cell Rep. Med. 4, 101005 (2023)."
+    },
+    {
+      "key": "8584_CR154",
+      "doi": "10.1038/s41586-023-06139-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "CV Theodoris",
+      "unstructured": "Theodoris, C. V. et al. Transfer learning enables predictions in network biology. Nature 618, 616\u2013624 (2023)."
+    },
+    {
+      "key": "8584_CR155",
+      "doi": "10.1038/s41586-023-05881-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "M Moor",
+      "unstructured": "Moor, M. et al. Foundation models for generalist medical artificial intelligence. Nature 616, 259\u2013265 (2023)."
+    },
+    {
+      "key": "8584_CR156",
+      "doi": "10.1016/j.xgen.2024.100691",
+      "title": "",
+      "journal": "Cell Genom.",
+      "year": "2024",
+      "author": "L Qian",
+      "unstructured": "Qian, L. et al. AI-empowered perturbation proteomics for complex biological systems. Cell Genom. 4, 100691 (2024)."
+    },
+    {
+      "key": "8584_CR157",
+      "doi": "10.1101/2024.04.15.589472",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Schaar, A. C. et al. Nicheformer: a foundation model for single-cell and spatial omics. Preprint at bioRxiv https://doi.org/10.1101/2024.04.15.589472 (2024)."
+    },
+    {
+      "key": "8584_CR158",
+      "doi": "10.1038/s41586-024-08280-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "F He",
+      "unstructured": "He, F. et al. \u03c0-Hub: the proteomic navigator of the human body. Nature 636, 322\u2013331 (2024)."
+    }
+  ]
+}

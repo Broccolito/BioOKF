@@ -1,0 +1,1352 @@
+{
+  "article": {
+    "slug": "s41586-020-2124-0",
+    "doi": "10.1038/s41586-020-2124-0",
+    "title": "Dietary modifications for enhanced cancer therapy",
+    "url": "https://www.nature.com/articles/s41586-020-2124-0",
+    "abbrev": "dietary-modifications-enhanced-cancer-therapy",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/dietary-modifications-enhanced-cancer-therapy"
+  },
+  "meta": {
+    "title": "Dietary modifications for enhanced cancer therapy",
+    "authors": [
+      "Naama Kanarek",
+      "Boryana Petrova",
+      "David M. Sabatini"
+    ],
+    "published": [
+      2020,
+      3,
+      25
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-020-2124-0",
+    "n_references": 147,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "2124_CR1",
+      "doi": "10.7554/elife.44235",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "MR Sullivan",
+      "unstructured": "Sullivan, M. R. et al. Quantification of microenvironmental metabolites in murine cancers reveals determinants of tumor nutrient availability. eLife 8, e44235 (2019)."
+    },
+    {
+      "key": "2124_CR2",
+      "doi": "10.1016/j.cell.2017.03.023",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "JR Cantor",
+      "unstructured": "Cantor, J. R. et al. Physiologic medium rewires cellular metabolism and reveals uric acid as an endogenous inhibitor of UMP synthase. Cell 169, 258\u2013272.e217 (2017)."
+    },
+    {
+      "key": "2124_CR3",
+      "doi": "10.7554/elife.27713",
+      "title": "",
+      "journal": "eLife",
+      "year": "2017",
+      "author": "A Muir",
+      "unstructured": "Muir, A. et al. Environmental cystine drives glutamine anaplerosis and sensitizes cancer cells to glutaminase inhibition. eLife 6, e27713 (2017)."
+    },
+    {
+      "key": "2124_CR4",
+      "doi": "10.1016/j.cmet.2016.01.007",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2016",
+      "author": "SM Davidson",
+      "unstructured": "Davidson, S. M. et al. Environment impacts the metabolic dependencies of Ras-driven non-small cell lung cancer. Cell Metab. 23, 517\u2013528 (2016)."
+    },
+    {
+      "key": "2124_CR5",
+      "doi": "10.1146/annurev-cancerbio-030617-050329",
+      "title": "",
+      "journal": "Annu. Rev. Cancer Biol.",
+      "year": "2018",
+      "author": "ME Torrence",
+      "unstructured": "Torrence, M. E. & Manning, B. D. Nutrient sensing in cancer. Annu. Rev. Cancer Biol. 2, 251\u2013269 (2018). This review addresses a topic (not discussed here) that is key for understanding the consequences of dietary modifications that change nutrient availability at the tumour microenvironment, such as the dietary modifications listed above."
+    },
+    {
+      "key": "2124_CR6",
+      "doi": "10.1038/nature21363",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "GS Hotamisligil",
+      "unstructured": "Hotamisligil, G. S. Inflammation, metaflammation and immunometabolic disorders. Nature 542, 177\u2013185 (2017)."
+    },
+    {
+      "key": "2124_CR7",
+      "doi": "10.1038/ni.3754",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2017",
+      "author": "L Zitvogel",
+      "unstructured": "Zitvogel, L., Pietrocola, F. & Kroemer, G. Nutrition, inflammation and cancer. Nat. Immunol. 18, 843\u2013850 (2017)."
+    },
+    {
+      "key": "2124_CR8",
+      "doi": "10.1186/s12967-018-1448-0",
+      "title": "",
+      "journal": "J. Transl. Med.",
+      "year": "2018",
+      "author": "L Soldati",
+      "unstructured": "Soldati, L. et al. The influence of diet on anti-cancer immune responsiveness. J. Transl. Med. 16, 75 (2018)."
+    },
+    {
+      "key": "2124_CR9",
+      "doi": "10.1038/s41568-018-0061-0",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2018",
+      "author": "A Nencioni",
+      "unstructured": "Nencioni, A., Caffa, I., Cortellino, S. & Longo, V. D. Fasting and cancer: molecular mechanisms and clinical application. Nat. Rev. Cancer 18, 707\u2013719 (2018)."
+    },
+    {
+      "key": "2124_CR10",
+      "doi": "10.1126/science.aau2095",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "A Di Francesco",
+      "unstructured": "Di Francesco, A., Di Germanio, C., Bernier, M. & de Cabo, R. A time to fast. Science 362, 770\u2013775 (2018)."
+    },
+    {
+      "key": "2124_CR11",
+      "doi": "10.1016/j.mad.2005.06.007",
+      "title": "",
+      "journal": "Mech. Ageing Dev.",
+      "year": "2005",
+      "author": "O Descamps",
+      "unstructured": "Descamps, O., Riondel, J., Ducros, V. & Roussel, A. M. Mitochondrial production of reactive oxygen species and incidence of age-associated lymphoma in OF1 mice: effect of alternate-day fasting. Mech. Ageing Dev. 126, 1185\u20131191 (2005)."
+    },
+    {
+      "key": "2124_CR12",
+      "doi": "10.1093/carcin/23.5.817",
+      "title": "",
+      "journal": "Carcinogenesis",
+      "year": "2002",
+      "author": "D Berrigan",
+      "unstructured": "Berrigan, D., Perkins, S. N., Haines, D. C. & Hursting, S. D. Adult-onset calorie restriction and fasting delay spontaneous tumorigenesis in p53-deficient mice. Carcinogenesis 23, 817\u2013822 (2002)."
+    },
+    {
+      "key": "2124_CR13",
+      "doi": "10.1126/scitranslmed.3003293",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2012",
+      "author": "C Lee",
+      "unstructured": "Lee, C. et al. Fasting cycles retard growth of tumors and sensitize a range of cancer cell types to chemotherapy. Sci. Transl. Med. 4, 124ra27 (2012)."
+    },
+    {
+      "key": "2124_CR14",
+      "doi": "10.1158/0008-5472.can-09-3228",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2010",
+      "author": "C Lee",
+      "unstructured": "Lee, C. et al. Reduced levels of IGF-I mediate differential protection of normal and cancer cells in response to fasting and improve chemotherapeutic index. Cancer Res. 70, 1564\u20131572 (2010)."
+    },
+    {
+      "key": "2124_CR15",
+      "doi": "10.1016/j.cmet.2015.05.012",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2015",
+      "author": "S Brandhorst",
+      "unstructured": "Brandhorst, S. et al. A periodic diet that mimics fasting promotes multi-system regeneration, enhanced cognitive performance, and healthspan. Cell Metab. 22, 86\u201399 (2015)."
+    },
+    {
+      "key": "2124_CR16",
+      "doi": "10.1016/j.tem.2012.07.005",
+      "title": "",
+      "journal": "Trends Endocrinol. Metab.",
+      "year": "2012",
+      "author": "JW Locasale",
+      "unstructured": "Locasale, J. W. The consequences of enhanced cell-autonomous glucose metabolism. Trends Endocrinol. Metab. 23, 545\u2013551 (2012). This paper describes in depth the metabolic alterations that occur in cells that process abnormally high amount of glucose, such as transformed cells."
+    },
+    {
+      "key": "2124_CR17",
+      "doi": "",
+      "title": "",
+      "journal": "Int. J. Oncol.",
+      "year": "2006",
+      "author": "T Belhocine",
+      "unstructured": "Belhocine, T. et al. 18FDG PET in oncology: the best and the worst (Review). Int. J. Oncol. 28, 1249\u20131261 (2006)."
+    },
+    {
+      "key": "2124_CR18",
+      "doi": "10.1210/en.2011-0231",
+      "title": "",
+      "journal": "Endocrinology",
+      "year": "2011",
+      "author": "EJ Gallagher",
+      "unstructured": "Gallagher, E. J. & LeRoith, D. Minireview: IGF, insulin, and cancer. Endocrinology 152, 2546\u20132551 (2011)."
+    },
+    {
+      "key": "2124_CR19",
+      "doi": "10.1126/science.123.3191.309",
+      "title": "",
+      "journal": "Science",
+      "year": "1956",
+      "author": "O Warburg",
+      "unstructured": "Warburg, O. On the origin of cancer cells. Science 123, 309\u2013314 (1956)."
+    },
+    {
+      "key": "2124_CR20",
+      "doi": "10.1016/j.cmet.2018.07.020",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2018",
+      "author": "KD Courtney",
+      "unstructured": "Courtney, K. D. et al. Isotope tracing of human clear cell renal cell carcinomas demonstrates suppressed glucose oxidation in vivo. Cell Metab. 28, 793\u2013800.e2 (2018)."
+    },
+    {
+      "key": "2124_CR21",
+      "doi": "10.1126/science.1160809",
+      "title": "",
+      "journal": "Science",
+      "year": "2009",
+      "author": "MG Vander Heiden",
+      "unstructured": "Vander Heiden, M. G., Cantley, L. C. & Thompson, C. B. Understanding the Warburg effect: the metabolic requirements of cell proliferation. Science 324, 1029\u20131033 (2009)."
+    },
+    {
+      "key": "2124_CR22",
+      "doi": "10.1016/j.cell.2017.07.029",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "DA Fruman",
+      "unstructured": "Fruman, D. A. et al. The PI3K pathway in human disease. Cell 170, 605\u2013635 (2017)."
+    },
+    {
+      "key": "2124_CR23",
+      "doi": "10.1016/j.cell.2017.03.035",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "RA Saxton",
+      "unstructured": "Saxton, R. A. & Sabatini, D. M. mTOR signaling in growth, metabolism, and disease. Cell 169, 361\u2013371 (2017)."
+    },
+    {
+      "key": "2124_CR24",
+      "doi": "10.1073/pnas.0308291101",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2004",
+      "author": "L Fontana",
+      "unstructured": "Fontana, L., Meyer, T. E., Klein, S. & Holloszy, J. O. Long-term calorie restriction is highly effective in reducing the risk for atherosclerosis in humans. Proc. Natl Acad. Sci. USA 101, 6659\u20136663 (2004)."
+    },
+    {
+      "key": "2124_CR25",
+      "doi": "10.1007/978-3-319-42118-6_12",
+      "title": "",
+      "journal": "Recent Results Cancer Res.",
+      "year": "2016",
+      "author": "S Brandhorst",
+      "unstructured": "Brandhorst, S. & Longo, V. D. Fasting and caloric restriction in cancer prevention and treatment. Recent Results Cancer Res. 207, 241\u2013266 (2016)."
+    },
+    {
+      "key": "2124_CR26",
+      "doi": "10.18632/aging.101382",
+      "title": "",
+      "journal": "Aging (Albany NY)",
+      "year": "2018",
+      "author": "DD Weber",
+      "unstructured": "Weber, D. D., Aminazdeh-Gohari, S. & Kofler, B. Ketogenic diet in cancer therapy. Aging (Albany NY) 10, 164\u2013165 (2018)."
+    },
+    {
+      "key": "2124_CR27",
+      "doi": "10.1016/j.redox.2014.08.002",
+      "title": "",
+      "journal": "Redox Biol.",
+      "year": "2014",
+      "author": "BG Allen",
+      "unstructured": "Allen, B. G. et al. Ketogenic diets as an adjuvant cancer therapy: history and potential mechanism. Redox Biol. 2, 963\u2013970 (2014)."
+    },
+    {
+      "key": "2124_CR28",
+      "doi": "10.1007/s11060-014-1362-0",
+      "title": "",
+      "journal": "J. Neurooncol.",
+      "year": "2014",
+      "author": "CE Champ",
+      "unstructured": "Champ, C. E. et al. Targeting metabolism with a ketogenic diet during the treatment of glioblastoma multiforme. J. Neurooncol. 117, 125\u2013131 (2014)."
+    },
+    {
+      "key": "2124_CR29",
+      "doi": "10.1038/sj.bjc.6601269",
+      "title": "",
+      "journal": "Br. J. Cancer",
+      "year": "2003",
+      "author": "TN Seyfried",
+      "unstructured": "Seyfried, T. N., Sanderson, T. M., El-Abbadi, M. M., McGowan, R. & Mukherjee, P. Role of glucose and ketone bodies in the metabolic control of experimental brain cancer. Br. J. Cancer 89, 1375\u20131382 (2003)."
+    },
+    {
+      "key": "2124_CR30",
+      "doi": "10.1158/1078-0432.ccr-15-0916",
+      "title": "",
+      "journal": "Clin. Cancer Res.",
+      "year": "2016",
+      "author": "RT Martuscello",
+      "unstructured": "Martuscello, R. T. et al. A supplemented high-fat low-carbohydrate diet for the treatment of glioblastoma. Clin. Cancer Res. 22, 2482\u20132495 (2016)."
+    },
+    {
+      "key": "2124_CR31",
+      "doi": "10.1158/2159-8290.cd-12-0507",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2013",
+      "author": "NL Curry",
+      "unstructured": "Curry, N. L. et al. Pten-null tumors cohabiting the same lung display differential AKT activation and sensitivity to dietary restriction. Cancer Discov. 3, 908\u2013921 (2013)."
+    },
+    {
+      "key": "2124_CR32",
+      "doi": "10.1038/nature07782",
+      "title": "",
+      "journal": "Nature",
+      "year": "2009",
+      "author": "NY Kalaany",
+      "unstructured": "Kalaany, N. Y. & Sabatini, D. M. Tumours with PI3K activation are resistant to dietary restriction. Nature 458, 725\u2013731 (2009). This study emphasizes the key role played by glucose as an upstream activator of PI3K signalling in cancer cell proliferation, by showing in vivo that tumours with constitutive PI3K activation can survive glucose restriction."
+    },
+    {
+      "key": "2124_CR33",
+      "doi": "10.1038/s41586-018-0343-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "BD Hopkins",
+      "unstructured": "Hopkins, B. D. et al. Suppression of insulin feedback enhances the efficacy of PI3K inhibitors. Nature 560, 499\u2013503 (2018). This paper demonstrates that a combination of dietary and pharmacological insulin inhibition results in reduced pro-oncogenic signalling through mTOR, enhanced tumour inhibition and improved survival of tumour-bearing mice in several cancer models."
+    },
+    {
+      "key": "2124_CR34",
+      "doi": "10.1038/nrc3483",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2013",
+      "author": "A Carracedo",
+      "unstructured": "Carracedo, A., Cantley, L. C. & Pandolfi, P. P. Cancer metabolism: fatty acid oxidation in the limelight. Nat. Rev. Cancer 13, 227\u2013232 (2013)."
+    },
+    {
+      "key": "2124_CR35",
+      "doi": "10.1007/s12032-017-0930-5",
+      "title": "",
+      "journal": "Med. Oncol.",
+      "year": "2017",
+      "author": "N Erickson",
+      "unstructured": "Erickson, N., Boscheri, A., Linke, B. & Huebner, J. Systematic review: isocaloric ketogenic dietary regimes for cancer patients. Med. Oncol. 34, 72 (2017). This systematic review summarizes reports that have used a ketogenic diet in patients with cancer."
+    },
+    {
+      "key": "2124_CR36",
+      "doi": "10.1016/j.nut.2012.05.001",
+      "title": "",
+      "journal": "Nutrition",
+      "year": "2012",
+      "author": "EJ Fine",
+      "unstructured": "Fine, E. J. et al. Targeting insulin inhibition as a metabolic therapy in advanced cancer: a pilot safety and feasibility dietary trial in 10 patients. Nutrition 28, 1028\u20131035 (2012)."
+    },
+    {
+      "key": "2124_CR37",
+      "doi": "10.3892/ol.2015.3923",
+      "title": "",
+      "journal": "Oncol. Lett.",
+      "year": "2016",
+      "author": "N Jansen",
+      "unstructured": "Jansen, N. & Walach, H. The development of tumours under a ketogenic diet in association with the novel tumour marker TKTL1: a case series in general practice. Oncol. Lett. 11, 584\u2013592 (2016)."
+    },
+    {
+      "key": "2124_CR38",
+      "doi": "10.1007/s13668-019-0264-3",
+      "title": "",
+      "journal": "Curr. Nutr. Rep.",
+      "year": "2019",
+      "author": "CA Maino Vieytes",
+      "unstructured": "Maino Vieytes, C. A., Taha, H. M., Burton-Obanla, A. A., Douglas, K. G. & Arthur, A. E. Carbohydrate nutrition and the risk of cancer. Curr. Nutr. Rep. 8, 230\u2013239 (2019)."
+    },
+    {
+      "key": "2124_CR39",
+      "doi": "10.1172/jci96702",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2018",
+      "author": "AA Hannou",
+      "unstructured": "Hannou, A. A. et al. Fructose metabolism and metabolic disease. J. Clin. Invest. 128, 545\u2013555 (2018)."
+    },
+    {
+      "key": "2124_CR40",
+      "doi": "10.1146/annurev-nutr-082117-051805",
+      "title": "",
+      "journal": "Annu. Rev. Nutr.",
+      "year": "2018",
+      "author": "N Makarem",
+      "unstructured": "Makarem, N., Bandera, E. V., Nicholson, J. M. & Parekh, N. Consumption of sugars, sugary foods, and sugary beverages in relation to cancer risk: a systematic review of longitudinal studies. Annu. Rev. Nutr. 38, 17\u201339 (2018)."
+    },
+    {
+      "key": "2124_CR41",
+      "doi": "10.1016/j.cmet.2017.12.016",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2018",
+      "author": "C Jang",
+      "unstructured": "Jang, C. et al. The small intestine converts dietary fructose into glucose and organic acids. Cell Metab. 27, 351\u2013361.e353 (2018)."
+    },
+    {
+      "key": "2124_CR42",
+      "doi": "10.1113/jphysiol.2011.215731",
+      "title": "",
+      "journal": "J. Physiol. (Lond.)",
+      "year": "2013",
+      "author": "V Douard",
+      "unstructured": "Douard, V. & Ferraris, R. P. The role of fructose transporters in diseases linked to excessive fructose intake. J. Physiol. (Lond.) 591, 401\u2013414 (2013)."
+    },
+    {
+      "key": "2124_CR43",
+      "doi": "10.2147/ott.s205522",
+      "title": "",
+      "journal": "OncoTargets Ther.",
+      "year": "2019",
+      "author": "C Jin",
+      "unstructured": "Jin, C., Gong, X. & Shang, Y. GLUT5 increases fructose utilization in ovarian cancer. OncoTargets Ther. 12, 5425\u20135436 (2019)."
+    },
+    {
+      "key": "2124_CR44",
+      "doi": "10.1038/s41419-018-0630-x",
+      "title": "",
+      "journal": "Cell Death Dis.",
+      "year": "2018",
+      "author": "Y Weng",
+      "unstructured": "Weng, Y., Zhu, J., Chen, Z., Fu, J. & Zhang, F. Fructose fuels lung adenocarcinoma through GLUT5. Cell Death Dis. 9, 557 (2018)."
+    },
+    {
+      "key": "2124_CR45",
+      "doi": "10.1016/j.bbrc.2018.04.103",
+      "title": "",
+      "journal": "Biochem. Biophys. Res. Commun.",
+      "year": "2018",
+      "author": "C Su",
+      "unstructured": "Su, C., Li, H. & Gao, W. GLUT5 increases fructose utilization and promotes tumor progression in glioma. Biochem. Biophys. Res. Commun. 500, 462\u2013469 (2018)."
+    },
+    {
+      "key": "2124_CR46",
+      "doi": "10.1007/s10620-016-4054-0",
+      "title": "",
+      "journal": "Dig. Dis. Sci.",
+      "year": "2016",
+      "author": "S Softic",
+      "unstructured": "Softic, S., Cohen, D. E. & Kahn, C. R. Role of dietary fructose and hepatic de novo lipogenesis in fatty liver disease. Dig. Dis. Sci. 61, 1282\u20131293 (2016)."
+    },
+    {
+      "key": "2124_CR47",
+      "doi": "10.2147/dmso.s198968",
+      "title": "",
+      "journal": "Diabetes Metab. Syndr. Obes.",
+      "year": "2019",
+      "author": "BH Mai",
+      "unstructured": "Mai, B. H. & Yan, L. J. The negative and detrimental effects of high fructose on the liver, with special reference to metabolic disorders. Diabetes Metab. Syndr. Obes. 12, 821\u2013826 (2019)."
+    },
+    {
+      "key": "2124_CR48",
+      "doi": "10.1126/science.aat8515",
+      "title": "",
+      "journal": "Science",
+      "year": "2019",
+      "author": "MD Goncalves",
+      "unstructured": "Goncalves, M. D. et al. High-fructose corn syrup enhances intestinal tumor growth in mice. Science 363, 1345\u20131349 (2019)."
+    },
+    {
+      "key": "2124_CR49",
+      "doi": "10.1002/mnfr.201300758",
+      "title": "",
+      "journal": "Mol. Nutr. Food Res.",
+      "year": "2014",
+      "author": "S Kamata",
+      "unstructured": "Kamata, S. et al. Dietary deprivation of each essential amino acid induces differential systemic adaptive responses in mice. Mol. Nutr. Food Res. 58, 1309\u20131321 (2014). This study demonstrates that deprivation of essential amino acids results in a systemic adaptive response that circumvents the systemic drop of the deprived amino acid as measured in the plasma."
+    },
+    {
+      "key": "2124_CR50",
+      "doi": "10.1152/ajplegacy.1973.225.2.408",
+      "title": "",
+      "journal": "Am. J. Physiol.",
+      "year": "1973",
+      "author": "SA Adibi",
+      "unstructured": "Adibi, S. A., Modesto, T. A., Morse, E. L. & Amin, P. M. Amino acid levels in plasma, liver, and skeletal muscle during protein deprivation. Am. J. Physiol. 225, 408\u2013414 (1973)."
+    },
+    {
+      "key": "2124_CR51",
+      "doi": "10.1038/s41586-019-1437-3",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "X Gao",
+      "unstructured": "Gao, X. et al. Dietary methionine influences therapy in mouse cancer models and alters human metabolism. Nature 572, 397\u2013401 (2019). This study compared the metabolic consequences of methionine restriction between patients with cancer and tumour-bearing mice, and found them to be similar. In addition, methionine restriction was shown to influence anti-cancer therapy."
+    },
+    {
+      "key": "2124_CR52",
+      "doi": "10.1073/pnas.73.5.1523",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1976",
+      "author": "RM Hoffman",
+      "unstructured": "Hoffman, R. M. & Erbe, R. W. High in vivo rates of methionine biosynthesis in transformed human and malignant rat cells auxotrophic for methionine. Proc. Natl Acad. Sci. USA 73, 1523\u20131527 (1976). The work described here provides experimental proof that methionine auxotrophy in transformed cells stems not from an inability of these cells to synthesize methionine, but rather from their high demand for methionine."
+    },
+    {
+      "key": "2124_CR53",
+      "doi": "10.1016/j.cmet.2015.08.024",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2015",
+      "author": "SJ Mentch",
+      "unstructured": "Mentch, S. J. et al. Histone methylation dynamics and gene regulation occur through the sensing of one-carbon metabolism. Cell Metab. 22, 861\u2013873 (2015)."
+    },
+    {
+      "key": "2124_CR54",
+      "doi": "10.1126/science.aao3265",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "X Gu",
+      "unstructured": "Gu, X. et al. SAMTOR is an S-adenosylmethionine sensor for the mTORC1 pathway. Science 358, 813\u2013818 (2017)."
+    },
+    {
+      "key": "2124_CR55",
+      "doi": "10.1038/ncomms7479",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2015",
+      "author": "S Eriksson",
+      "unstructured": "Eriksson, S., Prigge, J. R., Talago, E. A., Arn\u00e9r, E. S. & Schmidt, E. E. Dietary methionine can sustain cytosolic redox homeostasis in the mouse liver. Nat. Commun. 6, 6479 (2015)."
+    },
+    {
+      "key": "2124_CR56",
+      "doi": "",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "1993",
+      "author": "H Guo",
+      "unstructured": "Guo, H. et al. Therapeutic tumor-specific cell cycle block induced by methionine starvation in vivo. Cancer Res. 53, 5676\u20135679 (1993)."
+    },
+    {
+      "key": "2124_CR57",
+      "doi": "10.1016/s0024-3205(96)00672-8",
+      "title": "",
+      "journal": "Life Sci.",
+      "year": "1997",
+      "author": "F Poirson-Bichat",
+      "unstructured": "Poirson-Bichat, F. et al. Methionine deprivation and methionine analogs inhibit cell proliferation and growth of human xenografted gliomas. Life Sci. 60, 919\u2013931 (1997)."
+    },
+    {
+      "key": "2124_CR58",
+      "doi": "10.1016/j.toxlet.2014.11.011",
+      "title": "",
+      "journal": "Toxicol. Lett.",
+      "year": "2015",
+      "author": "H Liu",
+      "unstructured": "Liu, H. et al. Methionine and cystine double deprivation stress suppresses glioma proliferation via inducing ROS/autophagy. Toxicol. Lett. 232, 349\u2013355 (2015)."
+    },
+    {
+      "key": "2124_CR59",
+      "doi": "10.1038/bjc.1997.274",
+      "title": "",
+      "journal": "Br. J. Cancer",
+      "year": "1997",
+      "author": "F Poirson-Bichat",
+      "unstructured": "Poirson-Bichat, F., Gonfalone, G., Bras-Gon\u00e7alves, R. A., Dutrillaux, B. & Poupon, M. F. Growth of methionine-dependent human prostate cancer (PC-3) is inhibited by ethionine combined with methionine starvation. Br. J. Cancer 75, 1605\u20131612 (1997)."
+    },
+    {
+      "key": "2124_CR60",
+      "doi": "10.1002/pros.22884",
+      "title": "",
+      "journal": "Prostate",
+      "year": "2014",
+      "author": "R Sinha",
+      "unstructured": "Sinha, R. et al. Dietary methionine restriction inhibits prostatic intraepithelial neoplasia in TRAMP mice. Prostate 74, 1663\u20131673 (2014)."
+    },
+    {
+      "key": "2124_CR61",
+      "doi": "10.1207/s15327914nc5402_6",
+      "title": "",
+      "journal": "Nutr. Cancer",
+      "year": "2006",
+      "author": "D Komninou",
+      "unstructured": "Komninou, D., Leutzinger, Y., Reddy, B. S. & Richie, J. P. Jr Methionine restriction inhibits colon carcinogenesis. Nutr. Cancer 54, 202\u2013208 (2006)."
+    },
+    {
+      "key": "2124_CR62",
+      "doi": "10.1158/1078-0432.ccr-14-2792",
+      "title": "",
+      "journal": "Clin. Cancer Res.",
+      "year": "2015",
+      "author": "E Strekalova",
+      "unstructured": "Strekalova, E., Malin, D., Good, D. M. & Cryns, V. L. Methionine deprivation induces a targetable vulnerability in triple-negative breast cancer cells by enhancing TRAIL receptor-2 expression. Clin. Cancer Res. 21, 2780\u20132791 (2015)."
+    },
+    {
+      "key": "2124_CR63",
+      "doi": "10.18632/oncotarget.11615",
+      "title": "",
+      "journal": "Oncotarget",
+      "year": "2016",
+      "author": "H Jeon",
+      "unstructured": "Jeon, H. et al. Methionine deprivation suppresses triple-negative breast cancer metastasis in vitro and in vivo. Oncotarget 7, 67223\u201367234 (2016)."
+    },
+    {
+      "key": "2124_CR64",
+      "doi": "10.1186/s12885-016-2367-1",
+      "title": "",
+      "journal": "BMC Cancer",
+      "year": "2016",
+      "author": "JR Hens",
+      "unstructured": "Hens, J. R. et al. Methionine-restricted diet inhibits growth of MCF10AT1-derived mammary tumors by increasing cell cycle inhibitors in athymic nude mice. BMC Cancer 16, 349 (2016)."
+    },
+    {
+      "key": "2124_CR65",
+      "doi": "10.1093/carcin/bgy085",
+      "title": "",
+      "journal": "Carcinogenesis",
+      "year": "2018",
+      "author": "IR Miousse",
+      "unstructured": "Miousse, I. R. et al. Modulation of dietary methionine intake elicits potent, yet distinct, anticancer effects on primary versus metastatic tumors. Carcinogenesis 39, 1117\u20131126 (2018)."
+    },
+    {
+      "key": "2124_CR66",
+      "doi": "10.1096/fj.201701211r",
+      "title": "",
+      "journal": "FASEB J.",
+      "year": "2018",
+      "author": "D Yu",
+      "unstructured": "Yu, D. et al. Short-term methionine deprivation improves metabolic health via sexually dimorphic, mTORC1-independent mechanisms. FASEB J. 32, 3471\u20133482 (2018)."
+    },
+    {
+      "key": "2124_CR67",
+      "doi": "10.1016/j.cell.2018.03.001",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "A Longchamp",
+      "unstructured": "Longchamp, A. et al. Amino acid restriction triggers angiogenesis via GCN2/ATF4 regulation of VEGF and H2S production. Cell 173, 117\u2013129.e114 (2018)."
+    },
+    {
+      "key": "2124_CR68",
+      "doi": "10.1159/000088478",
+      "title": "",
+      "journal": "Oncology",
+      "year": "2005",
+      "author": "P Carmeliet",
+      "unstructured": "Carmeliet, P. VEGF as a key mediator of angiogenesis in cancer. Oncology 69 (Suppl. 3), 4\u201310 (2005)."
+    },
+    {
+      "key": "2124_CR69",
+      "doi": "",
+      "title": "",
+      "journal": "J. Nutr.",
+      "year": "1993",
+      "author": "N Orentreich",
+      "unstructured": "Orentreich, N., Matias, J. R., DeFelice, A. & Zimmerman, J. A. Low methionine ingestion by rats extends life span. J. Nutr. 123, 269\u2013274 (1993)."
+    },
+    {
+      "key": "2124_CR70",
+      "doi": "10.1111/j.1474-9726.2005.00152.x",
+      "title": "",
+      "journal": "Aging Cell",
+      "year": "2005",
+      "author": "RA Miller",
+      "unstructured": "Miller, R. A. et al. Methionine-deficient diet extends mouse lifespan, slows immune and lens aging, alters glucose, T4, IGF-I and insulin levels, and increases hepatocyte MIF levels and stress resistance. Aging Cell 4, 119\u2013125 (2005)."
+    },
+    {
+      "key": "2124_CR71",
+      "doi": "10.1371/journal.pone.0051357",
+      "title": "",
+      "journal": "PLoS One",
+      "year": "2012",
+      "author": "GP Ables",
+      "unstructured": "Ables, G. P., Perrone, C. E., Orentreich, D. & Orentreich, N. Methionine-restricted C57BL/6J mice are resistant to diet-induced obesity and insulin resistance but have low bone density. PLoS One 7, e51357 (2012)."
+    },
+    {
+      "key": "2124_CR72",
+      "doi": "10.1111/j.1474-9726.2006.00220.x",
+      "title": "",
+      "journal": "Aging Cell",
+      "year": "2006",
+      "author": "VL Malloy",
+      "unstructured": "Malloy, V. L. et al. Methionine restriction decreases visceral fat mass and preserves insulin action in aging male Fischer 344 rats independent of energy restriction. Aging Cell 5, 305\u2013314 (2006)."
+    },
+    {
+      "key": "2124_CR73",
+      "doi": "10.1016/j.celrep.2014.04.045",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2014",
+      "author": "CF Labuschagne",
+      "unstructured": "Labuschagne, C. F., van den Broek, N. J., Mackay, G. M., Vousden, K. H. & Maddocks, O. D. Serine, but not glycine, supports one-carbon metabolism and proliferation of cancer cells. Cell Rep. 7, 1248\u20131258 (2014)."
+    },
+    {
+      "key": "2124_CR74",
+      "doi": "10.1038/ng.3421",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2015",
+      "author": "GM DeNicola",
+      "unstructured": "DeNicola, G. M. et al. NRF2 regulates serine biosynthesis in non-small cell lung cancer. Nat. Genet. 47, 1475\u20131481 (2015)."
+    },
+    {
+      "key": "2124_CR75",
+      "doi": "10.1038/nature10350",
+      "title": "",
+      "journal": "Nature",
+      "year": "2011",
+      "author": "R Possemato",
+      "unstructured": "Possemato, R. et al. Functional genomics reveal that the serine synthesis pathway is essential in breast cancer. Nature 476, 346\u2013350 (2011)."
+    },
+    {
+      "key": "2124_CR76",
+      "doi": "10.1158/0008-5472.can-14-2643-t",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2014",
+      "author": "SP Gravel",
+      "unstructured": "Gravel, S. P. et al. Serine deprivation enhances antineoplastic activity of biguanides. Cancer Res. 74, 7521\u20137533 (2014)."
+    },
+    {
+      "key": "2124_CR77",
+      "doi": "10.1038/nature22056",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "ODK Maddocks",
+      "unstructured": "Maddocks, O. D. K. et al. Modulating the therapeutic response of tumours to dietary serine and glycine starvation. Nature 544, 372\u2013376 (2017)."
+    },
+    {
+      "key": "2124_CR78",
+      "doi": "10.1016/j.cmet.2019.02.015",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2019",
+      "author": "MR Sullivan",
+      "unstructured": "Sullivan, M. R. et al. Increased serine synthesis provides an advantage for tumors arising in tissues where serine levels are limiting. Cell Metab. 29, 1410\u20131421.e1414 (2019)."
+    },
+    {
+      "key": "2124_CR79",
+      "doi": "10.1038/nchembio.2070",
+      "title": "",
+      "journal": "Nat. Chem. Biol.",
+      "year": "2016",
+      "author": "ME Pacold",
+      "unstructured": "Pacold, M. E. et al. A PHGDH inhibitor reveals coordination of serine synthesis and one-carbon unit fate. Nat. Chem. Biol. 12, 452\u2013458 (2016)."
+    },
+    {
+      "key": "2124_CR80",
+      "doi": "10.1038/nature11743",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "OD Maddocks",
+      "unstructured": "Maddocks, O. D. et al. Serine starvation induces stress and p53-dependent metabolic remodelling in cancer cells. Nature 493, 542\u2013546 (2013). The study provides evidence that serine starvation in vivo is harmful for p53-deficient tumours, and discusses the role of serine in oxidative stress management.\u00a0"
+    },
+    {
+      "key": "2124_CR81",
+      "doi": "10.1038/s41586-018-0316-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "N Kanarek",
+      "unstructured": "Kanarek, N. et al. Histidine catabolism is a major determinant of methotrexate sensitivity. Nature 559, 632\u2013636 (2018). This paper describes a dietary supplement that enhances the efficacy of a common chemotherapy drug in vivo."
+    },
+    {
+      "key": "2124_CR82",
+      "doi": "",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "1983",
+      "author": "EM Newman",
+      "unstructured": "Newman, E. M., Nierenberg, D. W. & Santi, D. V. Selective killing of transformed cells by methotrexate with histidine deprivation or with alpha-amino alcohols. Cancer Res. 43, 4703\u20134708 (1983)."
+    },
+    {
+      "key": "2124_CR83",
+      "doi": "10.1038/s41586-018-0729-3",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "PS Gonzalez",
+      "unstructured": "Gonzalez, P. S. et al. Mannose impairs tumour growth and enhances chemotherapy. Nature 563, 719\u2013723 (2018). This research describes a rare example of a nutrient that is toxic for cancer cells but otherwise harmless, and that has the potential to be supplemented in the diet as an anti-cancer treatment."
+    },
+    {
+      "key": "2124_CR84",
+      "doi": "10.3109/10428194.2015.1101098",
+      "title": "",
+      "journal": "Leuk. Lymphoma",
+      "year": "2016",
+      "author": "N Hijiya",
+      "unstructured": "Hijiya, N. & van der Sluis, I. M. Asparaginase-associated toxicity in children with acute lymphoblastic leukemia. Leuk. Lymphoma 57, 748\u2013757 (2016)."
+    },
+    {
+      "key": "2124_CR85",
+      "doi": "10.1038/ncomms11457",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "AS Krall",
+      "unstructured": "Krall, A. S., Xu, S., Graeber, T. G., Braas, D. & Christofk, H. R. Asparagine promotes cancer cell proliferation through use as an amino acid exchange factor. Nat. Commun. 7, 11457 (2016)."
+    },
+    {
+      "key": "2124_CR86",
+      "doi": "10.1038/nature25465",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "SRV Knott",
+      "unstructured": "Knott, S. R. V. et al. Asparagine bioavailability governs metastasis in a model of breast cancer. Nature 554, 378\u2013381 (2018)."
+    },
+    {
+      "key": "2124_CR87",
+      "doi": "10.1002/cncr.20057",
+      "title": "",
+      "journal": "Cancer",
+      "year": "2004",
+      "author": "BJ Dillon",
+      "unstructured": "Dillon, B. J. et al. Incidence and distribution of argininosuccinate synthetase deficiency in human cancers: a method for identifying cancers sensitive to arginine deprivation. Cancer 100, 826\u2013833 (2004)."
+    },
+    {
+      "key": "2124_CR88",
+      "doi": "10.1093/jn/134.10.2837s",
+      "title": "",
+      "journal": "J. Nutr.",
+      "year": "2004",
+      "author": "DS Lind",
+      "unstructured": "Lind, D. S. Arginine and cancer. J. Nutr. 134 (Suppl.), 2837S\u20132841S (2004)."
+    },
+    {
+      "key": "2124_CR89",
+      "doi": "10.1016/j.celrep.2016.12.077",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2017",
+      "author": "JC Kremer",
+      "unstructured": "Kremer, J. C. et al. Arginine deprivation inhibits the Warburg effect and upregulates glutamine anaplerosis and serine biosynthesis in ASS1-deficient cancers. Cell Rep. 18, 991\u20131004 (2017)."
+    },
+    {
+      "key": "2124_CR90",
+      "doi": "",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2002",
+      "author": "CM Ensor",
+      "unstructured": "Ensor, C. M., Holtsberg, F. W., Bomalaski, J. S. & Clark, M. A. Pegylated arginine deiminase (ADI-SS PEG20,000 mw) inhibits human melanomas and hepatocellular carcinomas in vitro and in vivo. Cancer Res. 62, 5443\u20135450 (2002)."
+    },
+    {
+      "key": "2124_CR91",
+      "doi": "10.1200/jco.2004.11.120",
+      "title": "",
+      "journal": "J. Clin. Oncol.",
+      "year": "2004",
+      "author": "F Izzo",
+      "unstructured": "Izzo, F. et al. Pegylated arginine deiminase treatment of patients with unresectable hepatocellular carcinoma: results from phase I/II studies. J. Clin. Oncol. 22, 1815\u20131822 (2004)."
+    },
+    {
+      "key": "2124_CR92",
+      "doi": "10.1038/s41586-018-0697-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "L Poillet-Perez",
+      "unstructured": "Poillet-Perez, L. et al. Autophagy maintains tumour growth through circulating arginine. Nature 563, 569\u2013573 (2018)."
+    },
+    {
+      "key": "2124_CR93",
+      "doi": "10.1038/333664a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1988",
+      "author": "RM Palmer",
+      "unstructured": "Palmer, R. M., Ashton, D. S. & Moncada, S. Vascular endothelial cells synthesize nitric oxide from l-arginine. Nature 333, 664\u2013666 (1988)."
+    },
+    {
+      "key": "2124_CR94",
+      "doi": "10.1016/0027-5107(94)90245-3",
+      "title": "",
+      "journal": "Mutat. Res.",
+      "year": "1994",
+      "author": "H Ohshima",
+      "unstructured": "Ohshima, H. & Bartsch, H. Chronic infections and inflammatory processes as cancer risk factors: possible role of nitric oxide in carcinogenesis. Mutat. Res. 305, 253\u2013264 (1994)."
+    },
+    {
+      "key": "2124_CR95",
+      "doi": "10.1016/j.celrep.2017.02.054",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2017",
+      "author": "I Poursaitidis",
+      "unstructured": "Poursaitidis, I. et al. Oncogene-selective sensitivity to synchronous cell death following modulation of the amino acid nutrient cystine. Cell Rep. 18, 2547\u20132556 (2017)."
+    },
+    {
+      "key": "2124_CR96",
+      "doi": "10.1038/nm.4232",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2017",
+      "author": "SL Cramer",
+      "unstructured": "Cramer, S. L. et al. Systemic depletion of l-cyst(e)ine with cyst(e)inase increases reactive oxygen species and suppresses tumor growth. Nat. Med. 23, 120\u2013127 (2017)."
+    },
+    {
+      "key": "2124_CR97",
+      "doi": "10.1126/science.106.2764.619",
+      "title": "",
+      "journal": "Science",
+      "year": "1947",
+      "author": "S Farber",
+      "unstructured": "Farber, S. et al. The action of pteroylglutamic conjugates on man. Science 106, 619\u2013621 (1947)."
+    },
+    {
+      "key": "2124_CR98",
+      "doi": "10.1056/nejm194806032382301",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "1948",
+      "author": "S Farber",
+      "unstructured": "Farber, S. & Diamond, L. K. Temporary remissions in acute leukemia in children produced by folic acid antagonist, 4-aminopteroyl-glutamic acid. N. Engl. J. Med. 238, 787\u2013793 (1948)."
+    },
+    {
+      "key": "2124_CR99",
+      "doi": "10.1038/nrclinonc.2014.51",
+      "title": "",
+      "journal": "Nat. Rev. Clin. Oncol.",
+      "year": "2014",
+      "author": "PM Wilson",
+      "unstructured": "Wilson, P. M., Danenberg, P. V., Johnston, P. G., Lenz, H. J. & Ladner, R. D. Standing the test of time: targeting thymidylate biosynthesis in cancer therapy. Nat. Rev. Clin. Oncol. 11, 282\u2013298 (2014)."
+    },
+    {
+      "key": "2124_CR100",
+      "doi": "10.1038/bjc.2017.118",
+      "title": "",
+      "journal": "Br. J. Cancer",
+      "year": "2017",
+      "author": "AC Newman",
+      "unstructured": "Newman, A. C. & Maddocks, O. D. K. One-carbon metabolism in cancer. Br. J. Cancer 116, 1499\u20131504 (2017)."
+    },
+    {
+      "key": "2124_CR101",
+      "doi": "10.1056/nejmra052603",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2006",
+      "author": "CH Pui",
+      "unstructured": "Pui, C. H. & Evans, W. E. Treatment of acute lymphoblastic leukemia. N. Engl. J. Med. 354, 166\u2013178 (2006)."
+    },
+    {
+      "key": "2124_CR102",
+      "doi": "10.18632/oncotarget.15053",
+      "title": "",
+      "journal": "Oncotarget",
+      "year": "2017",
+      "author": "O Suvalov",
+      "unstructured": "Suvalov, O. et al. One-carbon metabolism and nucleotide biosynthesis as attractive targets for anticancer therapy. Oncotarget 8, 23955\u201323977 (2017)."
+    },
+    {
+      "key": "2124_CR103",
+      "doi": "10.1093/cdn/nzy013",
+      "title": "",
+      "journal": "Curr. Dev. Nutr.",
+      "year": "2018",
+      "author": "MS Field",
+      "unstructured": "Field, M. S., Lan, X., Stover, D. M. & Stover, P. J. Dietary uridine decreases tumorigenesis in the Apc\nMin/+ model of intestinal cancer. Curr. Dev. Nutr. 2, nzy013 (2018)."
+    },
+    {
+      "key": "2124_CR104",
+      "doi": "10.1073/pnas.0709747104",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2007",
+      "author": "RJ DeBerardinis",
+      "unstructured": "DeBerardinis, R. J. et al. Beyond aerobic glycolysis: transformed cells can engage in glutamine metabolism that exceeds the requirement for protein and nucleotide synthesis. Proc. Natl Acad. Sci. USA 104, 19345\u201319350 (2007)."
+    },
+    {
+      "key": "2124_CR105",
+      "doi": "10.1016/j.trecan.2017.01.005",
+      "title": "",
+      "journal": "Trends Cancer",
+      "year": "2017",
+      "author": "AA Cluntun",
+      "unstructured": "Cluntun, A. A., Lukey, M. J., Cerione, R. A. & Locasale, J. W. Glutamine metabolism in cancer: understanding the heterogeneity. Trends Cancer 3, 169\u2013180 (2017)."
+    },
+    {
+      "key": "2124_CR106",
+      "doi": "10.1038/nature10602",
+      "title": "",
+      "journal": "Nature",
+      "year": "2011",
+      "author": "CM Metallo",
+      "unstructured": "Metallo, C. M. et al. Reductive glutamine metabolism by IDH1 mediates lipogenesis under hypoxia. Nature 481, 380\u2013384 (2011)."
+    },
+    {
+      "key": "2124_CR107",
+      "doi": "10.1038/ncomms15965",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "DE Biancur",
+      "unstructured": "Biancur, D. E. et al. Compensatory metabolic networks in pancreatic cancers upon perturbation of glutamine metabolism. Nat. Commun. 8, 15965 (2017)."
+    },
+    {
+      "key": "2124_CR108",
+      "doi": "10.1111/j.1753-4887.1990.tb02967.x",
+      "title": "",
+      "journal": "Nutr. Rev.",
+      "year": "1990",
+      "author": "JM Lacey",
+      "unstructured": "Lacey, J. M. & Wilmore, D. W. Is glutamine a conditionally essential amino acid? Nutr. Rev. 48, 297\u2013309 (1990)."
+    },
+    {
+      "key": "2124_CR109",
+      "doi": "10.1016/j.semcdb.2017.05.023",
+      "title": "",
+      "journal": "Semin. Cell Dev. Biol.",
+      "year": "2018",
+      "author": "JN Moloney",
+      "unstructured": "Moloney, J. N. & Cotter, T. G. ROS signalling in the biology of cancer. Semin. Cell Dev. Biol. 80, 50\u201364 (2018)."
+    },
+    {
+      "key": "2124_CR110",
+      "doi": "10.1038/nature12040",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "J Son",
+      "unstructured": "Son, J. et al. Glutamine supports pancreatic cancer growth through a KRAS-regulated metabolic pathway. Nature 496, 101\u2013105 (2013)."
+    },
+    {
+      "key": "2124_CR111",
+      "doi": "10.1186/s40170-015-0137-1",
+      "title": "",
+      "journal": "Cancer Metab.",
+      "year": "2015",
+      "author": "G Chakrabarti",
+      "unstructured": "Chakrabarti, G. et al. Targeting glutamine metabolism sensitizes pancreatic cancer to PARP-driven metabolic catastrophe induced by \u00df-lapachone. Cancer Metab. 3, 12 (2015)."
+    },
+    {
+      "key": "2124_CR112",
+      "doi": "10.1016/j.ccell.2018.04.002",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2018",
+      "author": "M Momcilovic",
+      "unstructured": "Momcilovic, M. et al. The GSK3 signaling axis regulates adaptive glutamine metabolism in lung squamous cell carcinoma. Cancer Cell 33, 905\u2013921.e905 (2018)."
+    },
+    {
+      "key": "2124_CR113",
+      "doi": "10.1016/j.cmet.2018.07.005",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2018",
+      "author": "M Tajan",
+      "unstructured": "Tajan, M. et al. A role for p53 in the adaptation to glutamine starvation through the expression of SLC1A3. Cell Metab. 28, 721\u2013736.e6 (2018)."
+    },
+    {
+      "key": "2124_CR114",
+      "doi": "10.1038/ncb3272",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2015",
+      "author": "S Tardito",
+      "unstructured": "Tardito, S. et al. Glutamine synthetase activity fuels nucleotide biosynthesis and supports growth of glutamine-restricted glioblastoma. Nat. Cell Biol. 17, 1556\u20131568 (2015). This paper emphasizes the importance of assessment of nutrients manipulated by dietary modifications at the tumour microenvironment and not elsewhere, such as the plasma."
+    },
+    {
+      "key": "2124_CR115",
+      "doi": "10.1101/gad.302349.117",
+      "title": "",
+      "journal": "Genes Dev.",
+      "year": "2017",
+      "author": "MV Niklison-Chirou",
+      "unstructured": "Niklison-Chirou, M. V. et al. TAp73 is a marker of glutamine addiction in medulloblastoma. Genes Dev. 31, 1738\u20131753 (2017)."
+    },
+    {
+      "key": "2124_CR116",
+      "doi": "10.1016/j.cmet.2016.10.011",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2016",
+      "author": "L Yang",
+      "unstructured": "Yang, L. et al. Targeting stromal glutamine synthetase in tumors disrupts tumor microenvironment-regulated cancer cell growth. Cell Metab. 24, 685\u2013700 (2016)."
+    },
+    {
+      "key": "2124_CR117",
+      "doi": "10.1016/j.cmet.2016.03.016",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2016",
+      "author": "JL Coloff",
+      "unstructured": "Coloff, J. L. et al. Differential glutamate metabolism in proliferating and quiescent mammary epithelial cells. Cell Metab. 23, 867\u2013880 (2016)."
+    },
+    {
+      "key": "2124_CR118",
+      "doi": "10.7554/elife.28083",
+      "title": "",
+      "journal": "eLife",
+      "year": "2017",
+      "author": "VI Sayin",
+      "unstructured": "Sayin, V. I. et al. Activation of the NRF2 antioxidant program generates an imbalance in central carbon metabolism in cancer. eLife 6, e28083 (2017)."
+    },
+    {
+      "key": "2124_CR119",
+      "doi": "10.1038/s41556-018-0125-0",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2018",
+      "author": "LB Sullivan",
+      "unstructured": "Sullivan, L. B. et al. Aspartate is an endogenous metabolic limitation for tumour growth. Nat. Cell Biol. 20, 782\u2013788 (2018)."
+    },
+    {
+      "key": "2124_CR120",
+      "doi": "10.1038/s41556-018-0118-z",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2018",
+      "author": "J Garcia-Bermudez",
+      "unstructured": "Garcia-Bermudez, J. et al. Aspartate is a limiting metabolite for cancer cell proliferation under hypoxia and in tumours. Nat. Cell Biol. 20, 775\u2013781 (2018). This study studied the dependency of tumours on aspartate under hypoxic conditions, and it provides an interesting example of potential specificity of tumour targeting by dietary deprivation of nutrients that might be achieved by tumour-specific vulnerability, in this case owing to the hypoxic conditions at the tumour site."
+    },
+    {
+      "key": "2124_CR121",
+      "doi": "10.1016/j.cell.2015.07.016",
+      "title": "",
+      "journal": "Cell",
+      "year": "2015",
+      "author": "K Birsoy",
+      "unstructured": "Birsoy, K. et al. An essential role of the mitochondrial electron transport chain in cell proliferation is to enable aspartate synthesis. Cell 162, 540\u2013551 (2015)."
+    },
+    {
+      "key": "2124_CR122",
+      "doi": "10.1038/nature19084",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "CM Sousa",
+      "unstructured": "Sousa, C. M. et al. Pancreatic stellate cells support tumour metabolism through autophagic alanine secretion. Nature 536, 479\u2013483 (2016). This study shows that although alanine has a unique metabolic role in pancreatic ductal adenocarcinoma, it is not likely to be a good target for dietary modifications because it is supplied to the tumour by surrounding stroma cells, illustrating the importance of understanding a tumour\u2019s sources of nutrition."
+    },
+    {
+      "key": "2124_CR123",
+      "doi": "10.1172/jci62129",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2012",
+      "author": "A Carracedo",
+      "unstructured": "Carracedo, A. et al. A metabolic prosurvival role for PML in breast cancer. J. Clin. Invest. 122, 3088\u20133100 (2012)."
+    },
+    {
+      "key": "2124_CR124",
+      "doi": "10.1038/nature08268",
+      "title": "",
+      "journal": "Nature",
+      "year": "2009",
+      "author": "ZT Schafer",
+      "unstructured": "Schafer, Z. T. et al. Antioxidant and oncogene rescue of metabolic defects caused by loss of matrix attachment. Nature 461, 109\u2013113 (2009)."
+    },
+    {
+      "key": "2124_CR125",
+      "doi": "10.1038/nm.4055",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2016",
+      "author": "R Camarda",
+      "unstructured": "Camarda, R. et al. Inhibition of fatty acid oxidation as a therapy for MYC-overexpressing triple-negative breast cancer. Nat. Med. 22, 427\u2013432 (2016)."
+    },
+    {
+      "key": "2124_CR126",
+      "doi": "10.1101/gad.1987211",
+      "title": "",
+      "journal": "Genes Dev.",
+      "year": "2011",
+      "author": "K Zaugg",
+      "unstructured": "Zaugg, K. et al. Carnitine palmitoyltransferase 1C promotes cell survival and tumor growth under conditions of metabolic stress. Genes Dev. 25, 1041\u20131051 (2011)."
+    },
+    {
+      "key": "2124_CR127",
+      "doi": "10.1016/j.ccr.2012.08.014",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2012",
+      "author": "P Caro",
+      "unstructured": "Caro, P. et al. Metabolic signatures uncover distinct targets in molecular subsets of diffuse large B cell lymphoma. Cancer Cell 22, 547\u2013560 (2012)."
+    },
+    {
+      "key": "2124_CR128",
+      "doi": "10.1186/s40170-018-0189-0",
+      "title": "",
+      "journal": "Cancer Metab.",
+      "year": "2018",
+      "author": "J Tucci",
+      "unstructured": "Tucci, J. et al. Switch to low-fat diet improves outcome of acute lymphoblastic leukemia in obese mice. Cancer Metab. 6, 15 (2018)."
+    },
+    {
+      "key": "2124_CR129",
+      "doi": "10.1038/nature17173",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "S Beyaz",
+      "unstructured": "Beyaz, S. et al. High-fat diet enhances stemness and tumorigenicity of intestinal progenitors. Nature 531, 53\u201358 (2016)."
+    },
+    {
+      "key": "2124_CR130",
+      "doi": "10.1016/j.bbabio.2010.10.022",
+      "title": "",
+      "journal": "Biochim. Biophys. Acta",
+      "year": "2011",
+      "author": "LS Pike",
+      "unstructured": "Pike, L. S., Smift, A. L., Croteau, N. J., Ferrick, D. A. & Wu, M. Inhibition of fatty acid oxidation by etomoxir impairs NADPH production and increases reactive oxygen species resulting in ATP depletion and cell death in human glioblastoma cells. Biochim. Biophys. Acta 1807, 726\u2013734 (2011)."
+    },
+    {
+      "key": "2124_CR131",
+      "doi": "10.1038/nature11066",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "SM Jeon",
+      "unstructured": "Jeon, S. M., Chandel, N. S. & Hay, N. AMPK regulates NADPH homeostasis to promote tumour cell survival during energy stress. Nature 485, 661\u2013665 (2012)."
+    },
+    {
+      "key": "2124_CR132",
+      "doi": "10.1158/0008-5472.can-09-2266",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2009",
+      "author": "C Yang",
+      "unstructured": "Yang, C. et al. Glioblastoma cells require glutamate dehydrogenase to survive impairments of glucose metabolism or Akt signaling. Cancer Res. 69, 7986\u20137993 (2009)."
+    },
+    {
+      "key": "2124_CR133",
+      "doi": "10.1172/jci69600",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2013",
+      "author": "CT Hensley",
+      "unstructured": "Hensley, C. T., Wasti, A. T. & DeBerardinis, R. J. Glutamine and cancer: cell biology, physiology, and clinical opportunities. J. Clin. Invest. 123, 3678\u20133684 (2013)."
+    },
+    {
+      "key": "2124_CR134",
+      "doi": "10.1016/j.devcel.2016.02.012",
+      "title": "",
+      "journal": "Dev. Cell",
+      "year": "2016",
+      "author": "AM Hosios",
+      "unstructured": "Hosios, A. M. et al. Amino acids rather than glucose account for the majority of cell mass in proliferating mammalian cells. Dev. Cell 36, 540\u2013549 (2016)."
+    },
+    {
+      "key": "2124_CR135",
+      "doi": "10.1371/journal.pone.0016957",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2011",
+      "author": "N Psychogios",
+      "unstructured": "Psychogios, N. et al. The human serum metabolome. PLoS ONE 6, e16957 (2011)."
+    },
+    {
+      "key": "2124_CR136",
+      "doi": "10.1016/j.ccell.2016.06.005",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2016",
+      "author": "S Di Biase",
+      "unstructured": "Di Biase, S. et al. Fasting-Mimicking Diet Reduces HO-1 to promote T cell-mediated tumor cytotoxicity. Cancer Cell 30, 136\u2013146 (2016)."
+    },
+    {
+      "key": "2124_CR137",
+      "doi": "10.1016/j.ccell.2016.05.016",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2016",
+      "author": "F Pietrocola",
+      "unstructured": "Pietrocola, F. et al. Caloric restriction mimetics enhance anticancer immunosurveillance. Cancer Cell 30, 147\u2013160 (2016)."
+    },
+    {
+      "key": "2124_CR138",
+      "doi": "10.1186/s12885-016-2337-7",
+      "title": "",
+      "journal": "BMC Cancer",
+      "year": "2016",
+      "author": "DM Lussier",
+      "unstructured": "Lussier, D. M. et al. Enhanced immunity in a mouse model of malignant glioma is mediated by a therapeutic ketogenic diet. BMC Cancer 16, 310 (2016)."
+    },
+    {
+      "key": "2124_CR139",
+      "doi": "10.1016/j.cell.2016.09.031",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "R Geiger",
+      "unstructured": "Geiger, R. et al. l-Arginine modulates T cell metabolism and enhances survival and anti-tumor activity. Cell 167, 829\u2013842.e813 (2016)."
+    },
+    {
+      "key": "2124_CR140",
+      "doi": "10.1038/nature24057",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "S Hui",
+      "unstructured": "Hui, S. et al. Glucose feeds the TCA cycle via circulating lactate. Nature 551, 115\u2013118 (2017)."
+    },
+    {
+      "key": "2124_CR141",
+      "doi": "10.1016/j.cell.2017.09.019",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "B Faubert",
+      "unstructured": "Faubert, B. et al. Lactate metabolism in human lung tumors. Cell 171, 358\u2013371.e359 (2017)."
+    },
+    {
+      "key": "2124_CR142",
+      "doi": "10.1016/j.celrep.2018.03.017",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2018",
+      "author": "X Gao",
+      "unstructured": "Gao, X. et al. Serine availability influences mitochondrial dynamics and function through lipid metabolism. Cell Rep. 22, 3507\u20133520 (2018)."
+    },
+    {
+      "key": "2124_CR143",
+      "doi": "10.1083/jcb.201604085",
+      "title": "",
+      "journal": "J. Cell Biol.",
+      "year": "2016",
+      "author": "KR Mattaini",
+      "unstructured": "Mattaini, K. R., Sullivan, M. R. & Vander Heiden, M. G. The importance of serine metabolism in cancer. J. Cell Biol. 214, 249\u2013257 (2016)."
+    },
+    {
+      "key": "2124_CR144",
+      "doi": "10.2967/jnumed.110.084244",
+      "title": "",
+      "journal": "J. Nuclear Med.",
+      "year": "2011",
+      "author": "KN Rajagopalan",
+      "unstructured": "Rajagopalan, K. N. & DeBerardinis, R. J. Role of glutamine in cancer: therapeutic and imaging implications. J. Nuclear Med. 52, 1005\u20131008 (2011)."
+    },
+    {
+      "key": "2124_CR145",
+      "doi": "10.1016/j.molcel.2014.08.018",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2014",
+      "author": "J Zhang",
+      "unstructured": "Zhang, J. et al. Asparagine plays a critical role in regulating cellular adaptation to glutamine depletion. Mol. Cell 56, 205\u2013218 (2014)."
+    },
+    {
+      "key": "2124_CR146",
+      "doi": "10.1016/j.cmet.2017.12.006",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2018",
+      "author": "NN Pavlova",
+      "unstructured": "Pavlova, N. N. et al. As extracellular glutamine levels decline, asparagine becomes an essential amino acid. Cell Metab. 27, 428\u2013438.e425 (2018)."
+    },
+    {
+      "key": "2124_CR147",
+      "doi": "10.1182/blood-2013-10-535112",
+      "title": "",
+      "journal": "Blood",
+      "year": "2014",
+      "author": "WK Chan",
+      "unstructured": "Chan, W. K. et al. The glutaminase activity of l-asparaginase is not required for anticancer activity against ASNS-negative cells. Blood 123, 3596\u20133606 (2014)."
+    }
+  ]
+}

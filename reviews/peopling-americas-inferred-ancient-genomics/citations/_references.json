@@ -1,0 +1,1198 @@
+{
+  "article": {
+    "slug": "s41586-021-03499-y",
+    "doi": "10.1038/s41586-021-03499-y",
+    "title": "Peopling of the Americas as inferred from ancient genomics",
+    "url": "https://www.nature.com/articles/s41586-021-03499-y",
+    "abbrev": "peopling-americas-inferred-ancient-genomics",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/peopling-americas-inferred-ancient-genomics"
+  },
+  "meta": {
+    "title": "Peopling of the Americas as inferred from ancient genomics",
+    "authors": [
+      "Eske Willerslev",
+      "David J. Meltzer"
+    ],
+    "published": [
+      2021,
+      6,
+      16
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-021-03499-y",
+    "n_references": 130,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "3499_CR1",
+      "doi": "10.1371/journal.pone.0001764",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2008",
+      "author": "A Achilli",
+      "unstructured": "Achilli, A. et al. The phylogeny of the four pan-American mtDNA haplogroups: implications for evolutionary and disease studies. PLoS ONE 3, e1764 (2008)."
+    },
+    {
+      "key": "3499_CR2",
+      "doi": "10.1073/pnas.1306290110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "A Achilli",
+      "unstructured": "Achilli, A. et al. Reconciling migration models to the Americas with the variation of North American native mitogenomes. Proc. Natl Acad. Sci. USA 110, 14308\u201314313 (2013)."
+    },
+    {
+      "key": "3499_CR3",
+      "doi": "10.1016/j.ajhg.2007.11.013",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2008",
+      "author": "NJR Fagundes",
+      "unstructured": "Fagundes, N. J. R. et al. Mitochondrial population genomics supports a single pre-Clovis origin with a coastal route for the peopling of the Americas. Am. J. Hum. Genet. 82, 583\u2013592 (2008)."
+    },
+    {
+      "key": "3499_CR4",
+      "doi": "10.1002/ajpa.21614",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2012",
+      "author": "BH Kashani",
+      "unstructured": "Kashani, B. H. et al. Mitochondrial haplogroup C4c: a rare lineage entering America through the ice-free corridor? Am. J. Phys. Anthropol. 147, 35\u201339 (2012)."
+    },
+    {
+      "key": "3499_CR5",
+      "doi": "10.1002/ajpa.21238",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2009",
+      "author": "RS Malhi",
+      "unstructured": "Malhi, R. S. et al. Brief communication: mitochondrial haplotype C4c confirmed as a founding genome in the Americas. Am. J. Phys. Anthropol. 141, 494\u2013497 (2009)."
+    },
+    {
+      "key": "3499_CR6",
+      "doi": "10.1101/gr.109231.110",
+      "title": "",
+      "journal": "Genome Res.",
+      "year": "2010",
+      "author": "UA Perego",
+      "unstructured": "Perego, U. A. et al. The initial peopling of the Americas: a growing number of founding mitochondrial genomes from Beringia. Genome Res. 20, 1174\u20131179 (2010)."
+    },
+    {
+      "key": "3499_CR7",
+      "doi": "10.1016/j.ajhg.2008.03.019",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2008",
+      "author": "NV Volodko",
+      "unstructured": "Volodko, N. V. et al. Mitochondrial genome diversity in arctic Siberians, with particular reference to the evolutionary history of Beringia and Pleistocenic peopling of the Americas. Am. J. Hum. Genet. 82, 1084\u20131100 (2008)."
+    },
+    {
+      "key": "3499_CR8",
+      "doi": "10.1371/journal.pone.0071390",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2013",
+      "author": "V Battaglia",
+      "unstructured": "Battaglia, V. et al. The first peopling of South America: new evidence from Y-chromosome haplogroup Q. PLoS ONE 8, e71390 (2013)."
+    },
+    {
+      "key": "3499_CR9",
+      "doi": "10.1073/pnas.1118760109",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2012",
+      "author": "MC Dulik",
+      "unstructured": "Dulik, M. C. et al. Y-chromosome analysis reveals genetic divergence and new founding native lineages in Athapaskan- and Eskimoan-speaking populations. Proc. Natl Acad. Sci. USA 109, 8471\u20138476 (2012)."
+    },
+    {
+      "key": "3499_CR10",
+      "doi": "10.1002/ajpa.20883",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2008",
+      "author": "RS Malhi",
+      "unstructured": "Malhi, R. S. et al. Distribution of Y chromosomes among native North Americans: a study of Athapaskan population history. Am. J. Phys. Anthropol. 137, 412\u2013424 (2008)."
+    },
+    {
+      "key": "3499_CR11",
+      "doi": "10.1146/annurev-anthro-102215-100036",
+      "title": "",
+      "journal": "Annu. Rev. Anthropol.",
+      "year": "2016",
+      "author": "DA Bolnick",
+      "unstructured": "Bolnick, D. A., Raff, J. A., Springs, L. C., Reynolds, A. W. & Mir\u00f3-Herrans, A. T. Native American genomics and population histories. Annu. Rev. Anthropol. 45, 319\u2013340 (2016)."
+    },
+    {
+      "key": "3499_CR12",
+      "doi": "10.1016/j.tig.2014.07.007",
+      "title": "",
+      "journal": "Trends Genet.",
+      "year": "2014",
+      "author": "JK Pickrell",
+      "unstructured": "Pickrell, J. K. & Reich, D. Toward a new history and geography of human genes informed by ancient DNA. Trends Genet. 30, 377\u2013389 (2014)."
+    },
+    {
+      "key": "3499_CR13",
+      "doi": "10.1073/pnas.1112563108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "BD O\u2019Fallon",
+      "unstructured": "O\u2019Fallon, B. D. & Fehren-Schmitz, L. Native Americans experienced a strong population bottleneck coincident with European contact. Proc. Natl Acad. Sci. USA 108, 20444\u201320448 (2011)."
+    },
+    {
+      "key": "3499_CR14",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Milner, G. R. in Beyond Germs: Native Depopulation in North America (eds Cameron, C. M. et al.) 50\u201373 (Univ. Arizona Press, 2015)."
+    },
+    {
+      "key": "3499_CR15",
+      "doi": "10.1038/nature11258",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "D Reich",
+      "unstructured": "Reich, D. et al. Reconstructing Native American population history. Nature 488, 370\u2013374 (2012). The first large-scale genome-wide SNP-array study of present-day Native American individuals."
+    },
+    {
+      "key": "3499_CR16",
+      "doi": "",
+      "title": "",
+      "journal": "Syst. Biol.",
+      "year": "2017",
+      "author": "M Leonardi",
+      "unstructured": "Leonardi, M. et al. Evolutionary patterns and processes: lessons from ancient DNA. Syst. Biol. 66, e1\u2013e29 (2017)."
+    },
+    {
+      "key": "3499_CR17",
+      "doi": "10.1038/nrg3029",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2011",
+      "author": "M Stoneking",
+      "unstructured": "Stoneking, M. & Krause, J. Learning about human population history from ancient and modern genomes. Nat. Rev. Genet. 12, 603\u2013614 (2011)."
+    },
+    {
+      "key": "3499_CR18",
+      "doi": "10.1146/annurev-biochem-062917-012002",
+      "title": "",
+      "journal": "Annu. Rev. Biochem.",
+      "year": "2018",
+      "author": "E Cappellini",
+      "unstructured": "Cappellini, E. et al. Ancient biomolecules and evolutionary inference. Annu. Rev. Biochem. 87, 1029\u20131060 (2018)."
+    },
+    {
+      "key": "3499_CR19",
+      "doi": "10.1038/nature13025",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "M Rasmussen",
+      "unstructured": "Rasmussen, M. et al. The genome of a Late Pleistocene human from a Clovis burial site in western Montana. Nature 506, 225\u2013229 (2014). The first ancient genome sequenced from the Americas, which revealed a deep basal split between North and South Native American populations, and continuity between Clovis and contemporary Native American populations."
+    },
+    {
+      "key": "3499_CR20",
+      "doi": "10.1017/9781108632867",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Meltzer, D. J. First Peoples in a New World: Populating Ice Age America 2nd edn (Cambridge Univ. Press, 2021)."
+    },
+    {
+      "key": "3499_CR21",
+      "doi": "10.1016/j.cell.2018.10.027",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "C Posth",
+      "unstructured": "Posth, C. et al. Reconstructing the deep population history of Central and South America. Cell 175, 1185\u20131197.e22 (2018). Genome-wide analyses of ancient Central and South American populations revealed the timing and patterns of population continuity and discontinuity over time."
+    },
+    {
+      "key": "3499_CR22",
+      "doi": "10.1126/science.1085219",
+      "title": "",
+      "journal": "Science",
+      "year": "2004",
+      "author": "VV Pitulko",
+      "unstructured": "Pitulko, V. V. et al. The Yana RHS site: humans in the Arctic before the Last Glacial Maximum. Science 303, 52\u201356 (2004)."
+    },
+    {
+      "key": "3499_CR23",
+      "doi": "10.1016/j.quascirev.2017.04.004",
+      "title": "",
+      "journal": "Quat. Sci. Rev.",
+      "year": "2017",
+      "author": "V Pitulko",
+      "unstructured": "Pitulko, V., Pavlova, E. & Nikolskiy, P. Revising the archaeological record of the Upper Pleistocene Arctic Siberia: human dispersal and adaptations in MIS 3 and 2. Quat. Sci. Rev. 165, 127\u2013148 (2017)."
+    },
+    {
+      "key": "3499_CR24",
+      "doi": "10.1073/pnas.1411762111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "K Lambeck",
+      "unstructured": "Lambeck, K., Rouby, H., Purcell, A., Sun, Y. & Sambridge, M. Sea level and global ice volumes from the Last Glacial Maximum to the Holocene. Proc. Natl Acad. Sci. USA 111, 15296\u201315303 (2014)."
+    },
+    {
+      "key": "3499_CR25",
+      "doi": "10.1098/rspb.2013.2167",
+      "title": "",
+      "journal": "Proc. R. Soc. B",
+      "year": "2014",
+      "author": "M Meiri",
+      "unstructured": "Meiri, M. et al. Faunal record identifies Bering isthmus conditions as constraint to end-Pleistocene migration to the New World. Proc. R. Soc. B 281, 20132167 (2014)."
+    },
+    {
+      "key": "3499_CR26",
+      "doi": "10.1130/g22712.1",
+      "title": "",
+      "journal": "Geology",
+      "year": "2006",
+      "author": "LD Keigwin",
+      "unstructured": "Keigwin, L. D., Donnelly, J. P., Cook, M. S., Driscoll, N. W. & Brigham-Grette, J. Rapid sea-level rise and Holocene climate in the Chukchi Sea. Geology 34, 861\u2013864 (2006)."
+    },
+    {
+      "key": "3499_CR27",
+      "doi": "10.1126/sciadv.aay2935",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2020",
+      "author": "T Pico",
+      "unstructured": "Pico, T., Mitrovica, J. X. & Mix, A. C. Sea level fingerprinting of the Bering Strait flooding history detects the source of the Younger Dryas climate event. Sci. Adv. 6, eaay2935 (2020)."
+    },
+    {
+      "key": "3499_CR28",
+      "doi": "10.1016/j.quascirev.2013.03.015",
+      "title": "",
+      "journal": "Quat. Sci. Rev.",
+      "year": "2013",
+      "author": "DH Mann",
+      "unstructured": "Mann, D. H., Groves, P., Kunz, M. L., Reanier, R. E. & Gaglioti, B. V. Ice-age megafauna in Arctic Alaska: extinction, invasion, survival. Quat. Sci. Rev. 70, 91\u2013108 (2013)."
+    },
+    {
+      "key": "3499_CR29",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Fitzhugh, B. in Oxford Handbook of the Prehistoric Arctic (eds Friesen, M. & Mason, O.) (Oxford Univ. Press, 2016)."
+    },
+    {
+      "key": "3499_CR30",
+      "doi": "10.1093/oxfordhb/9780199766956.001.0001",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Friesen, T. M. in Oxford Handbook of the Prehistoric Arctic (eds Friesen, M. & Mason, O.) (Oxford Univ. Press, 2016)."
+    },
+    {
+      "key": "3499_CR31",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Goebel, T. & Potter, B. in Oxford Handbook of the Prehistoric Arctic (eds Friesen, M. & Mason, O.) (Oxford Univ. Press, 2016)."
+    },
+    {
+      "key": "3499_CR32",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Graf, K. E. in Paleoamerican Odyssey (eds Graf, K. E. et al.) 65\u201380 (Texas A&M Press, 2014)."
+    },
+    {
+      "key": "3499_CR33",
+      "doi": "10.1007/s12520-016-0342-z",
+      "title": "",
+      "journal": "Archaeol. Anthropol. Sci.",
+      "year": "2018",
+      "author": "YV Kuzmin",
+      "unstructured": "Kuzmin, Y. V. & Keates, S. G. Siberia and neighboring regions in the Last Glacial Maximum: did people occupy northern Eurasia at that time? Archaeol. Anthropol. Sci. 10, 111\u2013124 (2018)."
+    },
+    {
+      "key": "3499_CR34",
+      "doi": "",
+      "title": "",
+      "journal": "Arctic Anthropol.",
+      "year": "2001",
+      "author": "CE Holmes",
+      "unstructured": "Holmes, C. E. Tanana River Valley archaeology circa 14,000 to 9000 B.P. Arctic Anthropol. 38, 154\u2013170 (2001)."
+    },
+    {
+      "key": "3499_CR35",
+      "doi": "10.1126/science.1156533",
+      "title": "",
+      "journal": "Science",
+      "year": "2008",
+      "author": "TD Dillehay",
+      "unstructured": "Dillehay, T. D. et al. Monte Verde: seaweed, food, medicine, and the peopling of South America. Science 320, 784\u2013786 (2008)."
+    },
+    {
+      "key": "3499_CR36",
+      "doi": "10.1126/science.aax9830",
+      "title": "",
+      "journal": "Science",
+      "year": "2019",
+      "author": "LG Davis",
+      "unstructured": "Davis, L. G. et al. Late Upper Paleolithic occupation at Cooper\u2019s Ferry, Idaho, USA, ~16,000 years ago. Science 365, 891\u2013897 (2019)."
+    },
+    {
+      "key": "3499_CR37",
+      "doi": "10.1126/science.1218443",
+      "title": "",
+      "journal": "Science",
+      "year": "2012",
+      "author": "DL Jenkins",
+      "unstructured": "Jenkins, D. L. et al. Clovis age Western Stemmed projectile points and human coprolites at the Paisley Caves. Science 337, 223\u2013228 (2012)."
+    },
+    {
+      "key": "3499_CR38",
+      "doi": "10.1126/sciadv.aat4505",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2018",
+      "author": "MR Waters",
+      "unstructured": "Waters, M. R. et al. Pre-Clovis projectile points at the Debra L. Friedkin site, Texas-implications for the Late Pleistocene peopling of the Americas. Sci. Adv. 4, eaat4505 (2018)."
+    },
+    {
+      "key": "3499_CR39",
+      "doi": "10.1038/s41586-020-2509-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "CF Ardelean",
+      "unstructured": "Ardelean, C. F. et al. Evidence of human occupation in Mexico around the Last Glacial Maximum. Nature 584, 87\u201392 (2020)."
+    },
+    {
+      "key": "3499_CR40",
+      "doi": "10.1371/journal.pone.0141923",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2015",
+      "author": "TD Dillehay",
+      "unstructured": "Dillehay, T. D. et al. New archaeological evidence for an early human presence at Monte Verde, Chile. PLoS ONE 10, e0141923 (2015)."
+    },
+    {
+      "key": "3499_CR41",
+      "doi": "10.1038/nature22065",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "SR Holen",
+      "unstructured": "Holen, S. R. et al. A 130,000-year-old archaeological site in southern California, USA. Nature 544, 479\u2013483 (2017)."
+    },
+    {
+      "key": "3499_CR42",
+      "doi": "10.1080/20555563.2017.1348091",
+      "title": "",
+      "journal": "PaleoAmerica",
+      "year": "2017",
+      "author": "TJ Braje",
+      "unstructured": "Braje, T. J. et al. Were hominins in California \u223c130,000 years ago? PaleoAmerica 3, 200\u2013202 (2017)."
+    },
+    {
+      "key": "3499_CR43",
+      "doi": "10.1126/science.145.3639.1408",
+      "title": "",
+      "journal": "Science",
+      "year": "1964",
+      "author": "CV Haynes Jr.",
+      "unstructured": "Haynes, C. V. Jr. Fluted projectile points: their age and dispersion. Science 145, 1408\u20131413 (1964)."
+    },
+    {
+      "key": "3499_CR44",
+      "doi": "10.1126/sciadv.aat5473",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2018",
+      "author": "BA Potter",
+      "unstructured": "Potter, B. A. et al. Current evidence allows multiple models for the peopling of the Americas. Sci. Adv. 4, eaat5473 (2018)."
+    },
+    {
+      "key": "3499_CR45",
+      "doi": "10.1073/pnas.1601077113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "PD Heintzman",
+      "unstructured": "Heintzman, P. D. et al. Bison phylogeography constrains dispersal and viability of the ice free corridor in western Canada. Proc. Natl Acad. Sci. USA 113, 8057\u20138063 (2016)."
+    },
+    {
+      "key": "3499_CR46",
+      "doi": "10.1038/nature19085",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "MW Pedersen",
+      "unstructured": "Pedersen, M. W. et al. Postglacial viability and colonization in North America\u2019s ice-free corridor. Nature 537, 45\u201349 (2016)."
+    },
+    {
+      "key": "3499_CR47",
+      "doi": "10.1029/2018gl079419",
+      "title": "",
+      "journal": "Geophys. Res. Lett.",
+      "year": "2018",
+      "author": "CM Darvill",
+      "unstructured": "Darvill, C. M., Menounos, B., Goehring, B. M., Lian, O. B. & Caffee, M. W. Retreat of the Western Cordilleran Ice Sheet margin during the last deglaciation. Geophys. Res. Lett. 45, 9710\u20139720 (2018)."
+    },
+    {
+      "key": "3499_CR48",
+      "doi": "10.1126/sciadv.aar5040",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2018",
+      "author": "AJ Lesnek",
+      "unstructured": "Lesnek, A. J., Briner, J. P., Lindqvist, C., Baichtal, J. F. & Heaton, T. H. Deglaciation of the Pacific coastal corridor directly preceded the human colonization of the Americas. Sci. Adv. 4, eaar5040 (2018)."
+    },
+    {
+      "key": "3499_CR49",
+      "doi": "10.1126/science.aan3001",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "B Menounos",
+      "unstructured": "Menounos, B. et al. Cordilleran Ice Sheet mass loss preceded climate reversals near the Pleistocene Termination. Science 358, 781\u2013784 (2017)."
+    },
+    {
+      "key": "3499_CR50",
+      "doi": "10.1073/pnas.1800312115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "HL Smith",
+      "unstructured": "Smith, H. L. & Goebel, T. Origins and spread of fluted-point technology in the Canadian ice-free corridor and eastern Beringia. Proc. Natl Acad. Sci. USA 115, 4116\u20134121 (2018)."
+    },
+    {
+      "key": "3499_CR51",
+      "doi": "10.1038/s41586-019-1279-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "M Sikora",
+      "unstructured": "Sikora, M. et al. The population history of northeastern Siberia since the Pleistocene. Nature 570, 182\u2013188 (2019)."
+    },
+    {
+      "key": "3499_CR52",
+      "doi": "10.1038/nature12736",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "M Raghavan",
+      "unstructured": "Raghavan, M. et al. Upper Palaeolithic Siberian genome reveals dual ancestry of Native Americans. Nature 505, 87\u201391 (2014). A Siberian Upper Paleolithic genome revealed a previously unsampled population that contributed to the ancestry of European, Siberian and Native American populations."
+    },
+    {
+      "key": "3499_CR53",
+      "doi": "",
+      "title": "",
+      "journal": "Mol. Biol. Evol.",
+      "year": "2017",
+      "author": "M Lipson",
+      "unstructured": "Lipson, M. & Reich, D. A working model of the deep relationships of diverse modern human genetic lineages outside of Africa. Mol. Biol. Evol. 34, 889\u2013902 (2017)."
+    },
+    {
+      "key": "3499_CR54",
+      "doi": "10.1016/j.cell.2020.04.037",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "H Yu",
+      "unstructured": "Yu, H. et al. Paleolithic to Bronze Age Siberians reveal connections with First Americans and across Eurasia. Cell 181, 1232\u20131245.e20 (2020)."
+    },
+    {
+      "key": "3499_CR55",
+      "doi": "10.1038/s41586-018-0094-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "PDB Damgaard",
+      "unstructured": "Damgaard, P. D. B. et al. 137 ancient human genomes from across the Eurasian steppes. Nature 557, 369\u2013374 (2018)."
+    },
+    {
+      "key": "3499_CR56",
+      "doi": "10.1126/science.aab3884",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "M Raghavan",
+      "unstructured": "Raghavan, M. et al. Genomic evidence for the Pleistocene and recent population history of Native Americans. Science 349, aab3884 (2015)."
+    },
+    {
+      "key": "3499_CR57",
+      "doi": "10.1525/aa.1942.44.4.02a00050",
+      "title": "",
+      "journal": "Am. Anthropol.",
+      "year": "1942",
+      "author": "R Jakobson",
+      "unstructured": "Jakobson, R. The Paleosiberian languages. Am. Anthropol. 44, 602\u2013620 (1942)."
+    },
+    {
+      "key": "3499_CR58",
+      "doi": "10.1038/nature25173",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "JV Moreno-Mayar",
+      "unstructured": "Moreno-Mayar, J. V. et al. Terminal Pleistocene Alaskan genome reveals first founding population of Native Americans. Nature 553, 203\u2013207 (2018). An Alaskan genome dating to the Late Pleistocene/early Holocene showed the presence of a previously undiscovered population, Ancient Beringians, who diverged from the basal American branch before the formation of the Ancestral Native American population."
+    },
+    {
+      "key": "3499_CR59",
+      "doi": "10.1126/science.aav2621",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "JV Moreno-Mayar",
+      "unstructured": "Moreno-Mayar, J. V. et al. Early human dispersals within the Americas. Science 362, eaav2621 (2018). This study demonstrated genetic affinities between distant early populations in North and South America, providing evidence of widespread, rapid dispersal of early group and evidence of later dispersals."
+    },
+    {
+      "key": "3499_CR60",
+      "doi": "10.1038/nature17993",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "Q Fu",
+      "unstructured": "Fu, Q. et al. The genetic history of Ice Age Europe. Nature 534, 200\u2013205 (2016)."
+    },
+    {
+      "key": "3499_CR61",
+      "doi": "10.1146/annurev-genom-083117-021749",
+      "title": "",
+      "journal": "Annu. Rev. Genomics Hum. Genet.",
+      "year": "2018",
+      "author": "P Skoglund",
+      "unstructured": "Skoglund, P. & Mathieson, I. Ancient genomics of modern humans: the first decade. Annu. Rev. Genomics Hum. Genet. 19, 381\u2013404 (2018)."
+    },
+    {
+      "key": "3499_CR62",
+      "doi": "10.1126/sciadv.1501385",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2016",
+      "author": "B Llamas",
+      "unstructured": "Llamas, B. et al. Ancient mitochondrial DNA provides high-resolution time scale of the peopling of the Americas. Sci. Adv. 2, e1501385 (2016)."
+    },
+    {
+      "key": "3499_CR63",
+      "doi": "10.1016/j.cub.2018.11.029",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2019",
+      "author": "T Pinotti",
+      "unstructured": "Pinotti, T. et al. Y chromosome sequences reveal a short Beringian standstill, rapid expansion, and early population structure of Native American founders. Curr. Biol. 29, 149\u2013157.e3 (2019)."
+    },
+    {
+      "key": "3499_CR64",
+      "doi": "10.1371/journal.pone.0000829",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2007",
+      "author": "E Tamm",
+      "unstructured": "Tamm, E. et al. Beringian standstill and spread of Native American founders. PLoS ONE 2, e829 (2007)."
+    },
+    {
+      "key": "3499_CR65",
+      "doi": "10.1371/journal.pone.0001596",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2008",
+      "author": "A Kitchen",
+      "unstructured": "Kitchen, A., Miyamoto, M. M. & Mulligan, C. J. A three-stage colonization model for the peopling of the Americas. PLoS ONE 3, e1596 (2008)."
+    },
+    {
+      "key": "3499_CR66",
+      "doi": "10.1073/pnas.1620410114",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "J Lindo",
+      "unstructured": "Lindo, J. et al. Ancient individuals from the North American Northwest Coast reveal 10,000 years of regional genetic continuity. Proc. Natl Acad. Sci. USA 114, 4093\u20134098 (2017)."
+    },
+    {
+      "key": "3499_CR67",
+      "doi": "10.1126/sciadv.aau4921",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2018",
+      "author": "J Lindo",
+      "unstructured": "Lindo, J. et al. The genetic prehistory of the Andean highlands 7000 years BP though European contact. Sci. Adv. 4, eaau4921 (2018)."
+    },
+    {
+      "key": "3499_CR68",
+      "doi": "10.1126/science.aar6851",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "CL Scheib",
+      "unstructured": "Scheib, C. L. et al. Ancient human parallel lineages within North America contributed to a coastal expansion. Science 360, 1024\u20131027 (2018)."
+    },
+    {
+      "key": "3499_CR69",
+      "doi": "10.1073/pnas.1413131111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "BA Potter",
+      "unstructured": "Potter, B. A., Irish, J. D., Reuther, J. D. & McKinney, H. J. New insights into Eastern Beringian mortuary behavior: a terminal Pleistocene double infant burial at Upward Sun River. Proc. Natl Acad. Sci. USA 111, 17060\u201317065 (2014)."
+    },
+    {
+      "key": "3499_CR70",
+      "doi": "10.1126/science.aan0737",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "NN Johannsen",
+      "unstructured": "Johannsen, N. N., Larson, G., Meltzer, D. J. & Vander Linden, M. A composite window into human history. Science 356, 1118\u20131120 (2017)."
+    },
+    {
+      "key": "3499_CR71",
+      "doi": "10.1016/j.gde.2016.06.016",
+      "title": "",
+      "journal": "Curr. Opin. Genet. Dev.",
+      "year": "2016",
+      "author": "P Skoglund",
+      "unstructured": "Skoglund, P. & Reich, D. A genomic view of the peopling of the Americas. Curr. Opin. Genet. Dev. 41, 27\u201335 (2016)."
+    },
+    {
+      "key": "3499_CR72",
+      "doi": "10.1073/pnas.1720798115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "DN Harris",
+      "unstructured": "Harris, D. N. et al. Evolutionary genomic dynamics of Peruvians before, during, and after the Inca Empire. Proc. Natl Acad. Sci. USA 115, E6526\u2013E6535 (2018)."
+    },
+    {
+      "key": "3499_CR73",
+      "doi": "10.1146/annurev.an.24.100195.000321",
+      "title": "",
+      "journal": "Annu. Rev. Anthropol.",
+      "year": "1995",
+      "author": "DJ Meltzer",
+      "unstructured": "Meltzer, D. J. Clocking the first Americans. Annu. Rev. Anthropol. 24, 21\u201345 (1995)."
+    },
+    {
+      "key": "3499_CR74",
+      "doi": "10.1038/s41467-020-17656-w",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "N Nakatsuka",
+      "unstructured": "Nakatsuka, N. et al. Ancient genomes in South Patagonia reveal population movements associated with technological shifts and geography. Nat. Commun. 11, 3868 (2020)."
+    },
+    {
+      "key": "3499_CR75",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Meltzer, D. J. in The Settlement of the American Continents: a Multidisciplinary Approach to Human Biogeography\u00a0vol. 1 (eds Barton, C. M. et al.) 123\u2013137 (Univ. Arizona Press, 2004)."
+    },
+    {
+      "key": "3499_CR76",
+      "doi": "10.1126/science.aay5012",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "A Bergstr\u00f6m",
+      "unstructured": "Bergstr\u00f6m, A. et al. Insights into human genetic variation and population history from 929 diverse genomes. Science 367, eaay5012 (2020)."
+    },
+    {
+      "key": "3499_CR77",
+      "doi": "10.1590/1678-4685-gmb-2017-0087",
+      "title": "",
+      "journal": "Genet. Mol. Biol.",
+      "year": "2018",
+      "author": "NJR Fagundes",
+      "unstructured": "Fagundes, N. J. R. et al. How strong was the bottleneck associated to the peopling of the Americas? New insights from multilocus sequence data. Genet. Mol. Biol. 41 (suppl 1), 206\u2013214 (2018)."
+    },
+    {
+      "key": "3499_CR78",
+      "doi": "10.1016/j.cell.2020.04.015",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "N Nakatsuka",
+      "unstructured": "Nakatsuka, N. et al. A paleogenomic reconstruction of the deep population history of the Andes. Cell 181, 1131\u20131145.e21 (2020). This genome-wide study showed the structure of and gene flow in Holocene Andean populations, and demonstrated that genetic continuity occurred even with the rise and fall of Andean Empires."
+    },
+    {
+      "key": "3499_CR79",
+      "doi": "10.1073/pnas.2010083118",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2021",
+      "author": "AR Perri",
+      "unstructured": "Perri, A. R. et al. Dog domestication and the dual dispersal of people and dogs into the Americas. Proc. Natl Acad. Sci. USA 118, e2010083118 (2021)."
+    },
+    {
+      "key": "3499_CR80",
+      "doi": "10.1080/0043824042000303656",
+      "title": "",
+      "journal": "World Archaeol.",
+      "year": "2004",
+      "author": "B Bradley",
+      "unstructured": "Bradley, B. & Stanford, D. The North Atlantic ice-edge corridor: a possible Palaeolithic route to the New World. World Archaeol. 36, 459\u2013478 (2004)."
+    },
+    {
+      "key": "3499_CR81",
+      "doi": "10.1179/2055556315z.00000000040",
+      "title": "",
+      "journal": "PaleoAmerica",
+      "year": "2015",
+      "author": "JA Raff",
+      "unstructured": "Raff, J. A. & Bolnick, D. A. Does mitochondrial haplogroup X indicate ancient trans-Atlantic migration to the Americas? A critical re-evaluation. PaleoAmerica 1, 297\u2013304 (2015)."
+    },
+    {
+      "key": "3499_CR82",
+      "doi": "10.1073/pnas.171305898",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2001",
+      "author": "CL Brace",
+      "unstructured": "Brace, C. L. et al. Old World sources of the first New World human inhabitants: a comparative craniofacial view. Proc. Natl Acad. Sci. USA 98, 10017\u201310022 (2001)."
+    },
+    {
+      "key": "3499_CR83",
+      "doi": "10.1073/pnas.0507185102",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2005",
+      "author": "WA Neves",
+      "unstructured": "Neves, W. A. & Hubbe, M. Cranial morphology of early Americans from Lagoa Santa, Brazil: implications for the settlement of the New World. Proc. Natl Acad. Sci. USA 102, 18309\u201318314 (2005)."
+    },
+    {
+      "key": "3499_CR84",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Owsley, D. W. & Jantz, R. L. in Kennewick Man: The Scientific Investigation of an Ancient American Skeleton (ed. Owsley, D. W.) 622\u2013650 (Texas A&M Press, 2014)."
+    },
+    {
+      "key": "3499_CR85",
+      "doi": "10.1038/nature14625",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "M Rasmussen",
+      "unstructured": "Rasmussen, M. et al. The ancestry and affiliations of Kennewick Man. Nature 523, 455\u2013458 (2015)."
+    },
+    {
+      "key": "3499_CR86",
+      "doi": "10.1038/s41586-019-1251-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "P Flegontov",
+      "unstructured": "Flegontov, P. et al. Palaeo-Eskimo genetic ancestry and the peopling of Chukotka and North America. Nature 570, 236\u2013240 (2019)."
+    },
+    {
+      "key": "3499_CR87",
+      "doi": "10.1126/science.1255832",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "M Raghavan",
+      "unstructured": "Raghavan, M. et al. The genetic prehistory of the New World Arctic. Science 345, 1255832 (2014)."
+    },
+    {
+      "key": "3499_CR88",
+      "doi": "10.1038/nature08835",
+      "title": "",
+      "journal": "Nature",
+      "year": "2010",
+      "author": "M Rasmussen",
+      "unstructured": "Rasmussen, M. et al. Ancient human genome sequence of an extinct Palaeo-Eskimo. Nature 463, 757\u2013762 (2010). The first ancient human genome sequenced, revealing that American Paleo-Inuit were from a dispersal independent of Native Americans and Inuit."
+    },
+    {
+      "key": "3499_CR89",
+      "doi": "10.1038/srep20768",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2016",
+      "author": "P Flegontov",
+      "unstructured": "Flegontov, P. et al. Genomic study of the Ket: a Paleo-Eskimo-related ethnic group with significant ancient North Eurasian ancestry. Sci. Rep. 6, 20768 (2016)."
+    },
+    {
+      "key": "3499_CR90",
+      "doi": "10.1075/dia.18001.vaj",
+      "title": "",
+      "journal": "Diachronica",
+      "year": "2018",
+      "author": "E Vajda",
+      "unstructured": "Vajda, E. Dene\u2013Yeniseian: progress and unanswered questions. Diachronica 35, 277\u2013295 (2018)."
+    },
+    {
+      "key": "3499_CR91",
+      "doi": "10.1086/660977",
+      "title": "",
+      "journal": "Int. J. Am. Linguist.",
+      "year": "2011",
+      "author": "L Campbell",
+      "unstructured": "Campbell, L. The Dene\u2013Yeniseian connection. Int. J. Am. Linguist. 77, 445\u2013451 (2011)."
+    },
+    {
+      "key": "3499_CR92",
+      "doi": "10.1163/22105832-00502007",
+      "title": "",
+      "journal": "Lang. Dyn. Chang.",
+      "year": "2015",
+      "author": "L Campbell",
+      "unstructured": "Campbell, L. Do languages and genes correlate? Lang. Dyn. Chang. 5, 202\u2013226 (2015)."
+    },
+    {
+      "key": "3499_CR93",
+      "doi": "10.1016/j.cub.2017.08.053",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2017",
+      "author": "AT Duggan",
+      "unstructured": "Duggan, A. T. et al. Genetic discontinuity between the Maritime Archaic and Beothuk populations in Newfoundland, Canada. Curr. Biol. 27, 3149\u20133156.e11 (2017)."
+    },
+    {
+      "key": "3499_CR94",
+      "doi": "10.1017/aaq.2019.88",
+      "title": "",
+      "journal": "Am. Antiq.",
+      "year": "2020",
+      "author": "TM Friesen",
+      "unstructured": "Friesen, T. M. Radiocarbon evidence for fourteenth-century Dorset occupation in the eastern North American Arctic. Am. Antiq. 85, 222\u2013240 (2020)."
+    },
+    {
+      "key": "3499_CR95",
+      "doi": "10.1098/rspb.2019.1929",
+      "title": "",
+      "journal": "Proc. R. Soc. B",
+      "year": "2019",
+      "author": "C Ameen",
+      "unstructured": "Ameen, C. et al. Specialized sledge dogs accompanied Inuit dispersal across the North American Arctic. Proc. R. Soc. B 286, 20191929 (2019)."
+    },
+    {
+      "key": "3499_CR96",
+      "doi": "10.1126/science.aaz8599",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "MS Sinding",
+      "unstructured": "Sinding, M. S. et al. Arctic-adapted dogs emerged at the Pleistocene-Holocene transition. Science 368, 1495\u20131499 (2020)."
+    },
+    {
+      "key": "3499_CR97",
+      "doi": "10.1484/m.sem-eb.6.09070802050003050102090104",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Barrett, J. H. Contact, Continuity, and Collapse: The Norse Colonization of the North Atlantic\u00a0vol. 5 (Brepols, 2003)."
+    },
+    {
+      "key": "3499_CR98",
+      "doi": "10.1038/s41586-020-2688-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "A Margaryan",
+      "unstructured": "Margaryan, A. et al. Population genomics of the Viking world. Nature 585, 390\u2013396 (2020)."
+    },
+    {
+      "key": "3499_CR99",
+      "doi": "10.1126/sciadv.aar7806",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2019",
+      "author": "MF Napolitano",
+      "unstructured": "Napolitano, M. F. et al. Reevaluating human colonization of the Caribbean using chronometric hygiene and Bayesian modeling. Sci. Adv. 5, eaar7806 (2019)."
+    },
+    {
+      "key": "3499_CR100",
+      "doi": "10.1126/science.aba8697",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "K N\u00e4gele",
+      "unstructured": "N\u00e4gele, K. et al. Genomic insights into the early peopling of the Caribbean. Science 369, 456\u2013460 (2020)."
+    },
+    {
+      "key": "3499_CR101",
+      "doi": "10.1073/pnas.1716839115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "H Schroeder",
+      "unstructured": "Schroeder, H. et al. Origins and genetic legacies of the Caribbean Taino. Proc. Natl Acad. Sci. USA 115, 2341\u20132346 (2018)."
+    },
+    {
+      "key": "3499_CR102",
+      "doi": "10.1038/s41586-020-03053-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "DM Fernandes",
+      "unstructured": "Fernandes, D. M. et al. A genetic history of the pre-contact Caribbean. Nature 590, 103\u2013110 (2021)."
+    },
+    {
+      "key": "3499_CR103",
+      "doi": "10.1038/s41576-020-0218-z",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2020",
+      "author": "F Racimo",
+      "unstructured": "Racimo, F., Sikora, M., Vander Linden, M., Schroeder, H. & Lalueza-Fox, C. Beyond broad strokes: sociocultural insights from the study of ancient genomes. Nat. Rev. Genet. 21, 355\u2013366 (2020)."
+    },
+    {
+      "key": "3499_CR104",
+      "doi": "10.1016/j.cub.2014.09.057",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2014",
+      "author": "JV Moreno-Mayar",
+      "unstructured": "Moreno-Mayar, J. V. et al. Genome-wide ancestry patterns in Rapanui suggest pre-European admixture with Native Americans. Curr. Biol. 24, 2518\u20132525 (2014)."
+    },
+    {
+      "key": "3499_CR105",
+      "doi": "10.1016/j.cub.2017.09.029",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2017",
+      "author": "L Fehren-Schmitz",
+      "unstructured": "Fehren-Schmitz, L. et al. Genetic ancestry of Rapanui before and after European Contact. Curr. Biol. 27, 3209\u20133215.e6 (2017)."
+    },
+    {
+      "key": "3499_CR106",
+      "doi": "10.1038/s41586-020-2487-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "AG Ioannidis",
+      "unstructured": "Ioannidis, A. G. et al. Native American gene flow into Polynesia predating Easter Island settlement. Nature 583, 572\u2013577 (2020)."
+    },
+    {
+      "key": "3499_CR107",
+      "doi": "10.1525/9780520948716",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Grayson, D. K. The Great Basin: a Natural Prehistory (Univ. California Press, 2011)."
+    },
+    {
+      "key": "3499_CR108",
+      "doi": "10.1016/j.cell.2019.01.052",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "A Prohaska",
+      "unstructured": "Prohaska, A. et al. Human disease variation in the light of population genomics. Cell 177, 115\u2013131 (2019)."
+    },
+    {
+      "key": "3499_CR109",
+      "doi": "10.2307/280776",
+      "title": "",
+      "journal": "Am. Antiq.",
+      "year": "1989",
+      "author": "DJ Meltzer",
+      "unstructured": "Meltzer, D. J. Why don\u2019t we know when the first people came to North America? Am. Antiq. 54, 471\u2013490 (1989)."
+    },
+    {
+      "key": "3499_CR110",
+      "doi": "10.1101/gr.234674.118",
+      "title": "",
+      "journal": "Genome Res.",
+      "year": "2018",
+      "author": "A G\u00f3mez-Carballa",
+      "unstructured": "G\u00f3mez-Carballa, A. et al. The peopling of South America and the trans-Andean gene flow of the first settlers. Genome Res. 28, 767\u2013779 (2018)."
+    },
+    {
+      "key": "3499_CR111",
+      "doi": "10.1126/science.1251688",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "A Moreno-Estrada",
+      "unstructured": "Moreno-Estrada, A. et al. The genetics of Mexico recapitulates Native American substructure and affects biomedical traits. Science 344, 1280\u20131285 (2014)."
+    },
+    {
+      "key": "3499_CR112",
+      "doi": "10.1016/j.cub.2020.07.072",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2020",
+      "author": "H Ringbauer",
+      "unstructured": "Ringbauer, H., Steinr\u00fccken, M., Fehren-Schmitz, L. & Reich, D. Increased rate of close-kin unions in the central Andes in the half millennium before European contact. Curr. Biol. 30, R980\u2013R981 (2020)."
+    },
+    {
+      "key": "3499_CR113",
+      "doi": "10.1038/nature13591",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "KI Bos",
+      "unstructured": "Bos, K. I. et al. Pre-Columbian mycobacterial genomes reveal seals as a source of New World human tuberculosis. Nature 514, 494\u2013497 (2014)."
+    },
+    {
+      "key": "3499_CR114",
+      "doi": "10.7183/0002-7316.79.3.487",
+      "title": "",
+      "journal": "Am. Antiq.",
+      "year": "2014",
+      "author": "EE Jones",
+      "unstructured": "Jones, E. E. Spatiotemporal analysis of Old World diseases in North America, A.D. 1519\u20131807. Am. Antiq. 79, 487\u2013506 (2014)."
+    },
+    {
+      "key": "3499_CR115",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Dillehay, T. D. The First Americans: Search and Research (eds Dillehay, T. D. & Meltzer, D. J.) 231\u2013264 (CRC, 1991)."
+    },
+    {
+      "key": "3499_CR116",
+      "doi": "10.1038/ncomms13175",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "J Lindo",
+      "unstructured": "Lindo, J. et al. A time transect of exomes from a Native American population before and after European contact. Nat. Commun. 7, 13175 (2016). One of the first studies to show evidence of positive selection and changing frequencies in HLA alleles before and after European contact."
+    },
+    {
+      "key": "3499_CR117",
+      "doi": "10.1073/pnas.1819467116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "AW Reynolds",
+      "unstructured": "Reynolds, A. W. et al. Comparing signals of natural selection between three Indigenous North American populations. Proc. Natl Acad. Sci. USA 116, 9312\u20139317 (2019)."
+    },
+    {
+      "key": "3499_CR118",
+      "doi": "10.1016/j.ajhg.2020.06.017",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2020",
+      "author": "JK Wagner",
+      "unstructured": "Wagner, J. K. et al. Fostering responsible research on ancient DNA. Am. J. Hum. Genet. 107, 183\u2013195 (2020)."
+    },
+    {
+      "key": "3499_CR119",
+      "doi": "10.1126/science.aaq1131",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "J Bardill",
+      "unstructured": "Bardill, J. et al. Advancing the ethics of paleogenomics. Science 360, 384\u2013385 (2018)."
+    },
+    {
+      "key": "3499_CR120",
+      "doi": "10.1162/daed_a_00490",
+      "title": "",
+      "journal": "Daedalus",
+      "year": "2018",
+      "author": "NA Garrison",
+      "unstructured": "Garrison, N. A. Genetic ancestry testing with tribes: ethics, identity & health implications. Daedalus 147, 60\u201369 (2018)."
+    },
+    {
+      "key": "3499_CR121",
+      "doi": "10.1146/annurev-anthro-102215-095937",
+      "title": "",
+      "journal": "Annu. Rev. Anthropol.",
+      "year": "2016",
+      "author": "C Colwell",
+      "unstructured": "Colwell, C. Collaborative archaeologies and descendant communities. Annu. Rev. Anthropol. 45, 113\u2013127 (2016)."
+    },
+    {
+      "key": "3499_CR122",
+      "doi": "10.1038/s41467-018-05188-3",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "KG Claw",
+      "unstructured": "Claw, K. G. et al. A framework for enhancing ethical genomic research with Indigenous communities. Nat. Commun. 9, 2957 (2018)."
+    },
+    {
+      "key": "3499_CR123",
+      "doi": "10.1146/annurev-genom-083118-015434",
+      "title": "",
+      "journal": "Annu. Rev. Genomics Hum. Genet.",
+      "year": "2019",
+      "author": "NA Garrison",
+      "unstructured": "Garrison, N. A. et al. Genomic research through an Indigenous lens: understanding the expectations. Annu. Rev. Genomics Hum. Genet. 20, 495\u2013517 (2019)."
+    },
+    {
+      "key": "3499_CR124",
+      "doi": "10.1038/d41586-019-02516-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "K Fox",
+      "unstructured": "Fox, K. & Hawks, J. Use ancient remains more wisely. Nature 572, 581\u2013583 (2019)."
+    },
+    {
+      "key": "3499_CR125",
+      "doi": "10.1126/science.1084114",
+      "title": "",
+      "journal": "Science",
+      "year": "2003",
+      "author": "E Willerslev",
+      "unstructured": "Willerslev, E. et al. Diverse plant and animal genetic records from Holocene and Pleistocene sediments. Science 300, 791\u2013795 (2003)."
+    },
+    {
+      "key": "3499_CR126",
+      "doi": "10.1098/rstb.2013.0383",
+      "title": "",
+      "journal": "Phil. Trans. R. Soc. Lond. B",
+      "year": "2015",
+      "author": "MW Pedersen",
+      "unstructured": "Pedersen, M. W. et al. Ancient and modern environmental DNA. Phil. Trans. R. Soc. Lond. B 370, 20130383 (2015)."
+    },
+    {
+      "key": "3499_CR127",
+      "doi": "10.1126/science.aam9695",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "V Slon",
+      "unstructured": "Slon, V. et al. Neandertal and Denisovan DNA from Pleistocene sediments. Science 356, 605\u2013608 (2017)."
+    },
+    {
+      "key": "3499_CR128",
+      "doi": "10.1038/nature14895",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "P Skoglund",
+      "unstructured": "Skoglund, P. et al. Genetic evidence for two founding populations of the Americas. Nature 525, 104\u2013108 (2015)."
+    },
+    {
+      "key": "3499_CR129",
+      "doi": "10.1126/science.aat3628",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "H McColl",
+      "unstructured": "McColl, H. et al. The prehistoric peopling of Southeast Asia. Science 361, 88\u201392 (2018)."
+    },
+    {
+      "key": "3499_CR130",
+      "doi": "10.1073/pnas.2025739118",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2021",
+      "author": "M Ara\u00fajo Castro e Silva",
+      "unstructured": "Ara\u00fajo Castro e Silva, M., Ferraz, T., C\u00e1tira Bortolini, M., Comas, D. & H\u00fcnemeier, T. Deep genetic affinity between coastal Pacific and Amazonian natives evidenced by Australasian ancestry. Proc. Natl Acad. Sci. USA 118, e2025739118 (2021)."
+    }
+  ]
+}

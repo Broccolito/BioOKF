@@ -1,0 +1,1145 @@
+{
+  "article": {
+    "slug": "s41586-024-08194-2",
+    "doi": "10.1038/s41586-024-08194-2",
+    "title": "Reinventing type 2 immunity in cancer",
+    "url": "https://www.nature.com/articles/s41586-024-08194-2",
+    "abbrev": "reinventing-type-immunity-cancer",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/reinventing-type-immunity-cancer"
+  },
+  "meta": {
+    "title": "Reinventing type 2 immunity in cancer",
+    "authors": [
+      "Marek Wagner",
+      "Hiroyoshi Nishikawa",
+      "Shigeo Koyasu"
+    ],
+    "published": [
+      2025,
+      1,
+      8
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-024-08194-2",
+    "n_references": 124,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "8194_CR1",
+      "doi": "10.4049/jimmunol.136.7.2348",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "1986",
+      "author": "TR Mosmann",
+      "unstructured": "Mosmann, T. R., Cherwinski, H., Bond, M. W., Giedlin, M. A. & Coffman, R. L. Two types of murine helper T cell clone. I. Definition according to profiles of lymphokine activities and secreted proteins. J. Immunol. 136, 2348\u20132357 (1986)."
+    },
+    {
+      "key": "8194_CR2",
+      "doi": "10.1126/science.3128869",
+      "title": "",
+      "journal": "Science",
+      "year": "1988",
+      "author": "Y Suzuki",
+      "unstructured": "Suzuki, Y., Orellana, M. A., Schreiber, R. D. & Remington, J. S. Interferon-gamma: the major mediator of resistance against Toxoplasma gondii. Science 240, 516\u2013518 (1988)."
+    },
+    {
+      "key": "8194_CR3",
+      "doi": "10.1146/annurev.iy.07.040189.001045",
+      "title": "",
+      "journal": "Annu. Rev. Immunol.",
+      "year": "1989",
+      "author": "TR Mosmann",
+      "unstructured": "Mosmann, T. R. & Coffman, R. L. TH1 and TH2 cells: different patterns of lymphokine secretion lead to different functional properties. Annu. Rev. Immunol. 7, 145\u2013173 (1989)."
+    },
+    {
+      "key": "8194_CR4",
+      "doi": "10.1016/j.immuni.2017.11.015",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2017",
+      "author": "NL Harris",
+      "unstructured": "Harris, N. L. & Loke, P. Recent advances in type-2-cell-mediated immunity: insights from helminth infection. Immunity 47, 1024\u20131036 (2017)."
+    },
+    {
+      "key": "8194_CR5",
+      "doi": "10.1146/annurev-immunol-101921-041206",
+      "title": "",
+      "journal": "Annu. Rev. Immunol.",
+      "year": "2023",
+      "author": "JE Allen",
+      "unstructured": "Allen, J. E. IL-4 and IL-13: regulators and effectors of wound repair. Annu. Rev. Immunol. 41, 229\u2013254 (2023)."
+    },
+    {
+      "key": "8194_CR6",
+      "doi": "10.1126/science.1204351",
+      "title": "",
+      "journal": "Science",
+      "year": "2011",
+      "author": "SJ Jenkins",
+      "unstructured": "Jenkins, S. J. et al. Local macrophage proliferation, rather than recruitment from the blood, is a signature of TH2 inflammation. Science 332, 1284\u20131288 (2011)."
+    },
+    {
+      "key": "8194_CR7",
+      "doi": "10.1038/s41586-023-06797-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "NM LaMarche",
+      "unstructured": "LaMarche, N. M. et al. An IL-4 signalling axis in bone marrow drives pro-tumorigenic myelopoiesis. Nature 625, 166\u2013174 (2024)."
+    },
+    {
+      "key": "8194_CR8",
+      "doi": "10.1016/j.cell.2006.01.007",
+      "title": "",
+      "journal": "Cell",
+      "year": "2006",
+      "author": "J Condeelis",
+      "unstructured": "Condeelis, J. & Pollard, J. W. Macrophages: obligate partners for tumor cell migration, invasion, and metastasis. Cell 124, 263\u2013266 (2006)."
+    },
+    {
+      "key": "8194_CR9",
+      "doi": "10.1038/nri.2017.90",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2018",
+      "author": "RL Gieseck 3rd",
+      "unstructured": "Gieseck, R. L. 3rd, Wilson, M. S. & Wynn, T. A. Type 2 immunity in tissue repair and fibrosis. Nat. Rev. Immunol. 18, 62\u201376 (2018)."
+    },
+    {
+      "key": "8194_CR10",
+      "doi": "10.1038/s41577-023-00942-1",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2024",
+      "author": "DMW Zaiss",
+      "unstructured": "Zaiss, D. M. W., Pearce, E. J., Artis, D., McKenzie, A. N. J. & Klose, C. S. N. Cooperation of ILC2s and TH2 cells in the expulsion of intestinal helminth parasites. Nat. Rev. Immunol. 24, 294\u2013302 (2024)."
+    },
+    {
+      "key": "8194_CR11",
+      "doi": "10.4049/jimmunol.140.9.3206",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "1988",
+      "author": "IM Katona",
+      "unstructured": "Katona, I. M., Urban, J. F. Jr & Finkelman, F. D. The role of L3T4+ and Lyt-2+ T cells in the IgE response and immunity to Nippostrongylus brasiliensis. J. Immunol. 140, 3206\u20133211 (1988)."
+    },
+    {
+      "key": "8194_CR12",
+      "doi": "10.1073/pnas.88.13.5513",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1991",
+      "author": "JF Urban Jr",
+      "unstructured": "Urban, J. F. Jr, Katona, I. M., Paul, W. E. & Finkelman, F. D. Interleukin 4 is important in protective immunity to a gastrointestinal nematode infection in mice. Proc. Natl Acad. Sci. USA 88, 5513\u20135517 (1991)."
+    },
+    {
+      "key": "8194_CR13",
+      "doi": "10.1128/iai.64.8.2950-2954.1996",
+      "title": "",
+      "journal": "Infect. Immun.",
+      "year": "1996",
+      "author": "KJ Else",
+      "unstructured": "Else, K. J. & Grencis, R. K. Antibody-independent effector mechanisms in resistance to the intestinal nematode parasite Trichuris muris. Infect. Immun. 64, 2950\u20132954 (1996)."
+    },
+    {
+      "key": "8194_CR14",
+      "doi": "10.1038/nature08636",
+      "title": "",
+      "journal": "Nature",
+      "year": "2010",
+      "author": "K Moro",
+      "unstructured": "Moro, K. et al. Innate production of TH2 cytokines by adipose tissue-associated c-Kit+Sca-1+ lymphoid cells. Nature 463, 540\u2013544 (2010)."
+    },
+    {
+      "key": "8194_CR15",
+      "doi": "10.1038/nature08900",
+      "title": "",
+      "journal": "Nature",
+      "year": "2010",
+      "author": "DR Neill",
+      "unstructured": "Neill, D. R. et al. Nuocytes represent a new innate effector leukocyte that mediates type-2 immunity. Nature 464, 1367\u20131370 (2010)."
+    },
+    {
+      "key": "8194_CR16",
+      "doi": "10.1073/pnas.1003988107",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2010",
+      "author": "AE Price",
+      "unstructured": "Price, A. E. et al. Systemically dispersed innate IL-13-expressing cells in type 2 immunity. Proc. Natl Acad. Sci. USA 107, 11489\u201311494 (2010). References 14\u201316 identified ILC2s as natural helper cells, nuocytes and innate helper type 2 cells, respectively."
+    },
+    {
+      "key": "8194_CR17",
+      "doi": "10.1016/b978-0-12-380995-7.00002-1",
+      "title": "",
+      "journal": "Adv. Immunol.",
+      "year": "2010",
+      "author": "S Koyasu",
+      "unstructured": "Koyasu, S., Moro, K., Tanabe, M. & Takeuchi, T. Natural helper cells: a new player in the innate immune response against helminth infection. Adv. Immunol. 108, 21\u201344 (2010)."
+    },
+    {
+      "key": "8194_CR18",
+      "doi": "10.1016/j.immuni.2023.03.014",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2023",
+      "author": "AB Molofsky",
+      "unstructured": "Molofsky, A. B. & Locksley, R. M. The ins and outs of innate and adaptive type 2 immunity. Immunity 56, 704\u2013722 (2023)."
+    },
+    {
+      "key": "8194_CR19",
+      "doi": "10.1038/jid.2015.406",
+      "title": "",
+      "journal": "J. Invest. Dermatol.",
+      "year": "2016",
+      "author": "GD Rak",
+      "unstructured": "Rak, G. D. et al. IL-33-dependent group 2 innate lymphoid cells promote cutaneous wound healing. J. Invest. Dermatol. 136, 487\u2013496 (2016). This study highlights the involevemnt of ILC2s in cutaneous wound healing."
+    },
+    {
+      "key": "8194_CR20",
+      "doi": "10.1016/j.immuni.2017.04.017",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2017",
+      "author": "C Shimokawa",
+      "unstructured": "Shimokawa, C. et al. Mast cells are crucial for induction of group 2 innate lymphoid cells and clearance of helminth infections. Immunity 46, 863\u2013874.e864 (2017). This study identified the role of mast cells in the clearance of helminths."
+    },
+    {
+      "key": "8194_CR21",
+      "doi": "10.1038/s41467-021-23587-x",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2021",
+      "author": "CY Chang",
+      "unstructured": "Chang, C. Y. et al. Tumor suppressor p53 regulates intestinal type 2 immunity. Nat. Commun. 12, 3371 (2021). This study uncovered the role of the tumour supressor p53 in regulating intestinal type 2 immunity against parasitic infections."
+    },
+    {
+      "key": "8194_CR22",
+      "doi": "10.1371/journal.pntd.0003627",
+      "title": "",
+      "journal": "PLoS Negl. Trop. Dis.",
+      "year": "2015",
+      "author": "N Nausch",
+      "unstructured": "Nausch, N. et al. Group 2 innate lymphoid cell proportions are diminished in young helminth infected children and restored by curative anti-helminthic treatment. PLoS Negl. Trop. Dis. 9, e0003627 (2015)."
+    },
+    {
+      "key": "8194_CR23",
+      "doi": "10.1016/j.trecan.2015.08.011",
+      "title": "",
+      "journal": "Trends Cancer",
+      "year": "2015",
+      "author": "PJ Brindley",
+      "unstructured": "Brindley, P. J., da Costa, J. M. C. & Sripa, B. Why does infection with some helminths cause cancer? Trends Cancer 1, 174\u2013182 (2015)."
+    },
+    {
+      "key": "8194_CR24",
+      "doi": "10.1371/journal.ppat.1006393",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2017",
+      "author": "PJ Brindley",
+      "unstructured": "Brindley, P. J. & Loukas, A. Helminth infection-induced malignancy. PLoS Pathog. 13, e1006393 (2017)."
+    },
+    {
+      "key": "8194_CR25",
+      "doi": "10.1016/0027-5107(94)90244-5",
+      "title": "",
+      "journal": "Mutat. Res.",
+      "year": "1994",
+      "author": "MR Haswell-Elkins",
+      "unstructured": "Haswell-Elkins, M. R. et al. Liver fluke infection and cholangiocarcinoma: model of endogenous nitric oxide and extragastric nitrosation in human carcinogenesis. Mutat. Res. 305, 241\u2013252 (1994)."
+    },
+    {
+      "key": "8194_CR26",
+      "doi": "10.1016/j.cell.2020.06.024",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "J Vijg",
+      "unstructured": "Vijg, J. & Dong, X. Pathogenic mechanisms of somatic mutation and genome mosaicism in aging. Cell 182, 12\u201323 (2020)."
+    },
+    {
+      "key": "8194_CR27",
+      "doi": "10.1038/s41586-023-06333-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "T Nishimura",
+      "unstructured": "Nishimura, T. et al. Evolutionary histories of breast cancer and related clones. Nature 620, 607\u2013614 (2023)."
+    },
+    {
+      "key": "8194_CR28",
+      "doi": "10.1038/ng.2806",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2013",
+      "author": "W Chan-On",
+      "unstructured": "Chan-On, W. et al. Exome sequencing identifies distinct mutational patterns in liver fluke-related and non-infection-related bile duct cancers. Nat. Genet. 45, 1474\u20131478 (2013)."
+    },
+    {
+      "key": "8194_CR29",
+      "doi": "10.1097/mog.0000000000000162",
+      "title": "",
+      "journal": "Curr. Opin. Gastroenterol.",
+      "year": "2015",
+      "author": "A Jusakul",
+      "unstructured": "Jusakul, A., Kongpetch, S. & Teh, B. T. Genetics of Opisthorchis viverrini-related cholangiocarcinoma. Curr. Opin. Gastroenterol. 31, 258\u2013263 (2015)."
+    },
+    {
+      "key": "8194_CR30",
+      "doi": "10.1016/j.canlet.2015.01.018",
+      "title": "",
+      "journal": "Cancer Lett.",
+      "year": "2015",
+      "author": "MJ Gouveia",
+      "unstructured": "Gouveia, M. J. et al. Estrogen-like metabolites and DNA-adducts in urogenital schistosomiasis-associated bladder cancer. Cancer Lett. 359, 226\u2013232 (2015)."
+    },
+    {
+      "key": "8194_CR31",
+      "doi": "10.3347/kjp.2017.55.1.21",
+      "title": "",
+      "journal": "Korean J. Parasitol.",
+      "year": "2017",
+      "author": "B Chala",
+      "unstructured": "Chala, B. et al. Development of urinary bladder pre-neoplasia by Schistosoma haematobium eggs and chemical carcinogen in mice. Korean J. Parasitol. 55, 21\u201329 (2017)."
+    },
+    {
+      "key": "8194_CR32",
+      "doi": "10.1371/journal.pone.0133749",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2015",
+      "author": "RG Palfree",
+      "unstructured": "Palfree, R. G., Bennett, H. P. & Bateman, A. The evolution of the secreted regulatory protein progranulin. PLoS ONE 10, e0133749 (2015)."
+    },
+    {
+      "key": "8194_CR33",
+      "doi": "10.1371/journal.ppat.1000611",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2009",
+      "author": "MJ Smout",
+      "unstructured": "Smout, M. J. et al. A granulin-like growth factor secreted by the carcinogenic liver fluke, Opisthorchis viverrini, promotes proliferation of host cells. PLoS Pathog. 5, e1000611 (2009)."
+    },
+    {
+      "key": "8194_CR34",
+      "doi": "10.1371/journal.ppat.1010839",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2022",
+      "author": "S Chaiyadet",
+      "unstructured": "Chaiyadet, S. et al. Knockout of liver fluke granulin, Ov-grn-1, impedes malignant transformation during chronic infection with Opisthorchis viverrini. PLoS Pathog. 18, e1010839 (2022)."
+    },
+    {
+      "key": "8194_CR35",
+      "doi": "10.3389/fmed.2018.00030",
+      "title": "",
+      "journal": "Front. Med.",
+      "year": "2018",
+      "author": "B Haugen",
+      "unstructured": "Haugen, B. et al. Granulin secreted by the food-borne liver fluke Opisthorchis viverrini promotes angiogenesis in human endothelial cells. Front. Med. 5, 30 (2018)."
+    },
+    {
+      "key": "8194_CR36",
+      "doi": "10.1038/s41467-023-43336-6",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2023",
+      "author": "N Otaki",
+      "unstructured": "Otaki, N. et al. Activation of ILC2s through constitutive IFN\u03b3 signaling reduction leads to spontaneous pulmonary fibrosis. Nat. Commun. 14, 8120 (2023). This study established a novel mouse model for pulmonary fibrosis and uncovered the role of ILC2s in the disease onset."
+    },
+    {
+      "key": "8194_CR37",
+      "doi": "10.1016/j.immuni.2016.06.009",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2016",
+      "author": "RL Gieseck 3rd",
+      "unstructured": "Gieseck, R. L. 3rd et al. Interleukin-13 activates distinct cellular pathways leading to ductular reaction, steatosis, and fibrosis. Immunity 45, 145\u2013158 (2016)."
+    },
+    {
+      "key": "8194_CR38",
+      "doi": "10.1038/srep25066",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2016",
+      "author": "S O\u2019Reilly",
+      "unstructured": "O\u2019Reilly, S., Ciechomska, M., Fullard, N., Przyborski, S. & van Laar, J. M. IL-13 mediates collagen deposition via STAT6 and microRNA-135b: a role for epigenetics. Sci. Rep. 6, 25066 (2016)."
+    },
+    {
+      "key": "8194_CR39",
+      "doi": "10.1038/s41467-019-14263-2",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "FC Simoes",
+      "unstructured": "Simoes, F. C. et al. Macrophages directly contribute collagen to scar formation during zebrafish heart regeneration and mouse heart repair. Nat. Commun. 11, 600 (2020)."
+    },
+    {
+      "key": "8194_CR40",
+      "doi": "10.1084/jem.194.6.809",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2001",
+      "author": "CG Lee",
+      "unstructured": "Lee, C. G. et al. Interleukin-13 induces tissue fibrosis by selectively stimulating and activating transforming growth factor \u03b21. J. Exp. Med. 194, 809\u2013821 (2001)."
+    },
+    {
+      "key": "8194_CR41",
+      "doi": "10.1038/jid.2015.352",
+      "title": "",
+      "journal": "J. Invest. Dermatol.",
+      "year": "2016",
+      "author": "G Theocharidis",
+      "unstructured": "Theocharidis, G. et al. Type VI collagen regulates dermal matrix assembly and fibroblast motility. J. Invest. Dermatol. 136, 74\u201383 (2016)."
+    },
+    {
+      "key": "8194_CR42",
+      "doi": "10.3389/fimmu.2018.03042",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2018",
+      "author": "AH Costain",
+      "unstructured": "Costain, A. H., MacDonald, A. S. & Smits, H. H. Schistosome egg migration: mechanisms, pathogenesis and host immune responses. Front. Immunol. 9, 3042 (2018)."
+    },
+    {
+      "key": "8194_CR43",
+      "doi": "10.1158/0008-5472.can-12-3022",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2013",
+      "author": "J Zhang",
+      "unstructured": "Zhang, J. et al. Fibroblast-specific protein 1/S100A4-positive cells prevent carcinoma through collagen production and encapsulation of carcinogens. Cancer Res. 73, 2770\u20132781 (2013)."
+    },
+    {
+      "key": "8194_CR44",
+      "doi": "10.1038/s12276-023-01013-0",
+      "title": "",
+      "journal": "Exp. Mol. Med.",
+      "year": "2023",
+      "author": "D Yang",
+      "unstructured": "Yang, D., Liu, J., Qian, H. & Zhuang, Q. Cancer-associated fibroblasts: from basic science to anticancer therapy. Exp. Mol. Med. 55, 1322\u20131332 (2023)."
+    },
+    {
+      "key": "8194_CR45",
+      "doi": "10.1038/nrc.2016.73",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2016",
+      "author": "R Kalluri",
+      "unstructured": "Kalluri, R. The biology and function of fibroblasts in cancer. Nat. Rev. Cancer 16, 582\u2013598 (2016)."
+    },
+    {
+      "key": "8194_CR46",
+      "doi": "10.1158/0008-5472.can-19-0454",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2019",
+      "author": "Y Mizutani",
+      "unstructured": "Mizutani, Y. et al. Meflin-positive cancer-associated fibroblasts inhibit pancreatic carcinogenesis. Cancer Res. 79, 5367\u20135381 (2019)."
+    },
+    {
+      "key": "8194_CR47",
+      "doi": "10.1038/s41389-018-0087-x",
+      "title": "",
+      "journal": "Oncogenesis",
+      "year": "2018",
+      "author": "AK Patel",
+      "unstructured": "Patel, A. K. et al. A subtype of cancer-associated fibroblasts with lower expression of alpha-smooth muscle actin suppresses stemness through BMP4 in oral carcinoma. Oncogenesis 7, 78 (2018)."
+    },
+    {
+      "key": "8194_CR48",
+      "doi": "10.1084/jem.20150576",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2015",
+      "author": "CK Pallangyo",
+      "unstructured": "Pallangyo, C. K., Ziegler, P. K. & Greten, F. R. IKK\u03b2 acts as a tumor suppressor in cancer-associated fibroblasts during intestinal tumorigenesis. J. Exp. Med. 212, 2253\u20132266 (2015)."
+    },
+    {
+      "key": "8194_CR49",
+      "doi": "10.3389/fcell.2021.613534",
+      "title": "",
+      "journal": "Front. Cell Dev. Biol.",
+      "year": "2021",
+      "author": "Z Wang",
+      "unstructured": "Wang, Z. et al. Cancer-associated fibroblasts suppress cancer development: the other side of the coin. Front. Cell Dev. Biol. 9, 613534 (2021)."
+    },
+    {
+      "key": "8194_CR50",
+      "doi": "10.1016/j.cyto.2022.155961",
+      "title": "",
+      "journal": "Cytokine",
+      "year": "2022",
+      "author": "WJ Yeoh",
+      "unstructured": "Yeoh, W. J., Vu, V. P. & Krebs, P. IL-33 biology in cancer: an update and future perspectives. Cytokine 157, 155961 (2022)."
+    },
+    {
+      "key": "8194_CR51",
+      "doi": "10.1158/0008-5472.can-12-4479",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2013",
+      "author": "Y Ma",
+      "unstructured": "Ma, Y., Hwang, R. F., Logsdon, C. D. & Ullrich, S. E. Dynamic mast cell\u2013stromal cell interactions promote growth of pancreatic cancer. Cancer Res. 73, 3927\u20133937 (2013)."
+    },
+    {
+      "key": "8194_CR52",
+      "doi": "10.1084/jem.20030849",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2003",
+      "author": "T Schuler",
+      "unstructured": "Schuler, T., Kornig, S. & Blankenstein, T. Tumor rejection by modulation of tumor stromal fibroblasts. J. Exp. Med. 198, 1487\u20131493 (2003)."
+    },
+    {
+      "key": "8194_CR53",
+      "doi": "10.1016/j.ccr.2012.08.017",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2012",
+      "author": "S Demehri",
+      "unstructured": "Demehri, S. et al. Elevated epidermal thymic stromal lymphopoietin levels establish an antitumor environment in the skin. Cancer Cell 22, 494\u2013505 (2012)."
+    },
+    {
+      "key": "8194_CR54",
+      "doi": "10.1016/j.ccr.2012.08.016",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2012",
+      "author": "M Di Piazza",
+      "unstructured": "Di Piazza, M., Nowell, C. S., Koch, U., Durham, A. D. & Radtke, F. Loss of cutaneous TSLP-dependent immune responses skews the balance of inflammation from tumor protective to tumor promoting. Cancer Cell 22, 479\u2013493 (2012)."
+    },
+    {
+      "key": "8194_CR55",
+      "doi": "10.1172/jci83724",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2016",
+      "author": "S Demehri",
+      "unstructured": "Demehri, S. et al. Thymic stromal lymphopoietin blocks early stages of breast carcinogenesis. J. Clin. Invest. 126, 1458\u20131470 (2016)."
+    },
+    {
+      "key": "8194_CR56",
+      "doi": "10.1126/scitranslmed.3001374",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2011",
+      "author": "S Furuta",
+      "unstructured": "Furuta, S. et al. IL-25 causes apoptosis of IL-25R-expressing breast cancer cells without toxicity to nonmalignant cells. Sci. Transl. Med. 3, 78ra31 (2011)."
+    },
+    {
+      "key": "8194_CR57",
+      "doi": "10.4049/jimmunol.1501730",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2016",
+      "author": "J Kim",
+      "unstructured": "Kim, J. et al. Intratumorally establishing type 2 innate lymphoid cells blocks tumor growth. J. Immunol. 196, 2410\u20132423 (2016)."
+    },
+    {
+      "key": "8194_CR58",
+      "doi": "10.1084/jem.188.12.2357",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1998",
+      "author": "K Hung",
+      "unstructured": "Hung, K. et al. The central role of CD4+ T cells in the antitumor immune response. J. Exp. Med. 188, 2357\u20132368 (1998)."
+    },
+    {
+      "key": "8194_CR59",
+      "doi": "10.4049/jimmunol.145.9.3136",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "1990",
+      "author": "M Bosco",
+      "unstructured": "Bosco, M. et al. Low doses of IL-4 injected perilymphatically in tumor-bearing mice inhibit the growth of poorly and apparently nonimmunogenic tumors and induce a tumor-specific immune memory. J. Immunol. 145, 3136\u20133143 (1990)."
+    },
+    {
+      "key": "8194_CR60",
+      "doi": "10.1002/ijc.2910530622",
+      "title": "",
+      "journal": "Int. J. Cancer",
+      "year": "1993",
+      "author": "A Modesti",
+      "unstructured": "Modesti, A. et al. Ultrastructural evidence of the mechanisms responsible for interleukin-4-activated rejection of a spontaneous murine adenocarcinoma. Int. J. Cancer 53, 988\u2013993 (1993).\u00a0References 59 and 60 revealed that IL-4 has a role in tumour rejection in mouse models."
+    },
+    {
+      "key": "8194_CR61",
+      "doi": "10.4049/jimmunol.153.12.5659",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "1994",
+      "author": "F Pericle",
+      "unstructured": "Pericle, F. et al. An efficient Th2-type memory follows CD8+ lymphocyte-driven and eosinophil-mediated rejection of a spontaneous mouse mammary adenocarcinoma engineered to release IL-4. J. Immunol. 153, 5659\u20135673 (1994)."
+    },
+    {
+      "key": "8194_CR62",
+      "doi": "10.1126/scitranslmed.aat7973",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2019",
+      "author": "MT Wolf",
+      "unstructured": "Wolf, M. T. et al. A biologic scaffold-associated type 2 immune microenvironment inhibits tumor formation and synergizes with checkpoint immunotherapy. Sci. Transl. Med. 11, eaat7973 (2019)."
+    },
+    {
+      "key": "8194_CR63",
+      "doi": "10.4049/jimmunol.178.7.4222",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2007",
+      "author": "L Simson",
+      "unstructured": "Simson, L. et al. Regulation of carcinogenesis by IL-5 and CCL11: a potential role for eosinophils in tumor immune surveillance. J. Immunol. 178, 4222\u20134229 (2007)."
+    },
+    {
+      "key": "8194_CR64",
+      "doi": "10.4049/jimmunol.1101270",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2012",
+      "author": "M Ikutani",
+      "unstructured": "Ikutani, M. et al. Identification of innate IL-5-producing cells and their role in lung eosinophil regulation and antitumor immunity. J. Immunol. 188, 703\u2013713 (2012)."
+    },
+    {
+      "key": "8194_CR65",
+      "doi": "10.1038/ncomms12080",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "T Dalessandri",
+      "unstructured": "Dalessandri, T., Crawford, G., Hayes, M., Castro Seoane, R. & Strid, J. IL-13 from intraepithelial lymphocytes regulates tissue homeostasis and protects against carcinogenesis in the skin. Nat. Commun. 7, 12080 (2016)."
+    },
+    {
+      "key": "8194_CR66",
+      "doi": "10.1084/jem.188.6.1039",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1998",
+      "author": "OV Volpert",
+      "unstructured": "Volpert, O. V. et al. Inhibition of angiogenesis by interleukin 4. J. Exp. Med. 188, 1039\u20131046 (1998)."
+    },
+    {
+      "key": "8194_CR67",
+      "doi": "10.1002/art.22034",
+      "title": "",
+      "journal": "Arthritis Rheum.",
+      "year": "2006",
+      "author": "CS Haas",
+      "unstructured": "Haas, C. S. et al. Inhibition of angiogenesis by interleukin-4 gene therapy in rat adjuvant-induced arthritis. Arthritis Rheum. 54, 2402\u20132414 (2006)."
+    },
+    {
+      "key": "8194_CR68",
+      "doi": "10.1002/art.22823",
+      "title": "",
+      "journal": "Arthritis Rheum.",
+      "year": "2007",
+      "author": "CS Haas",
+      "unstructured": "Haas, C. S. et al. In vivo inhibition of angiogenesis by interleukin-13 gene therapy in a rat model of rheumatoid arthritis. Arthritis Rheum. 56, 2535\u20132548 (2007)."
+    },
+    {
+      "key": "8194_CR69",
+      "doi": "10.1038/s41577-020-0306-5",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2020",
+      "author": "AD Waldman",
+      "unstructured": "Waldman, A. D., Fritz, J. M. & Lenardo, M. J. A guide to cancer immunotherapy: from T cell basic science to clinical practice. Nat. Rev. Immunol. 20, 651\u2013668 (2020)."
+    },
+    {
+      "key": "8194_CR70",
+      "doi": "10.1038/nature21349",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "DS Chen",
+      "unstructured": "Chen, D. S. & Mellman, I. Elements of cancer immunity and the cancer-immune set point. Nature 541, 321\u2013330 (2017)."
+    },
+    {
+      "key": "8194_CR71",
+      "doi": "10.1084/jem.190.5.617",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1999",
+      "author": "T Nishimura",
+      "unstructured": "Nishimura, T. et al. Distinct role of antigen-specific T helper type 1 (Th1) and Th2 cells in tumor eradication in vivo. J. Exp. Med. 190, 617\u2013627 (1999)."
+    },
+    {
+      "key": "8194_CR72",
+      "doi": "10.1038/s41416-022-02056-2",
+      "title": "",
+      "journal": "Br. J. Cancer",
+      "year": "2023",
+      "author": "D Jacenik",
+      "unstructured": "Jacenik, D., Karagiannidis, I. & Beswick, E. J. Th2 cells inhibit growth of colon and pancreas cancers by promoting anti-tumorigenic responses from macrophages and eosinophils. Br. J. Cancer 128, 387\u2013397 (2023)."
+    },
+    {
+      "key": "8194_CR73",
+      "doi": "10.1084/jem.20021683",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2003",
+      "author": "J Mattes",
+      "unstructured": "Mattes, J. et al. Immunotherapy of cytotoxic T cell-resistant tumors by T helper 2 cells: an eotaxin and STAT6-dependent process. J. Exp. Med. 197, 387\u2013393 (2003)."
+    },
+    {
+      "key": "8194_CR74",
+      "doi": "10.1158/0008-5472.can-16-1219",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2016",
+      "author": "KB Lorvik",
+      "unstructured": "Lorvik, K. B. et al. Adoptive transfer of tumor-specific Th2 cells eradicates tumors by triggering an in situ inflammatory immune response. Cancer Res. 76, 6864\u20136876 (2016)."
+    },
+    {
+      "key": "8194_CR75",
+      "doi": "10.1038/s41568-022-00547-1",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2023",
+      "author": "L Cassetta",
+      "unstructured": "Cassetta, L. & Pollard, J. W. A timeline of tumour-associated macrophage biology. Nat. Rev. Cancer 23, 238\u2013257 (2023)."
+    },
+    {
+      "key": "8194_CR76",
+      "doi": "10.1038/s41586-020-2836-1",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "M Liu",
+      "unstructured": "Liu, M. et al. TGF\u03b2 suppresses type 2 immunity to cancer. Nature 587, 115\u2013120 (2020)."
+    },
+    {
+      "key": "8194_CR77",
+      "doi": "10.1016/j.cell.2018.07.017",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "E Vivier",
+      "unstructured": "Vivier, E. et al. Innate lymphoid cells: 10 years on. Cell 174, 1054\u20131066 (2018). This review addresses the field of innate lymphoid cells."
+    },
+    {
+      "key": "8194_CR78",
+      "doi": "10.1016/j.trecan.2017.03.008",
+      "title": "",
+      "journal": "Trends Cancer",
+      "year": "2017",
+      "author": "M Wagner",
+      "unstructured": "Wagner, M., Moro, K. & Koyasu, S. Plastic heterogeneity of innate lymphoid cells in cancer. Trends Cancer 3, 326\u2013335 (2017)."
+    },
+    {
+      "key": "8194_CR79",
+      "doi": "10.1002/hep.31855",
+      "title": "",
+      "journal": "Hepatology",
+      "year": "2021",
+      "author": "XY Xu",
+      "unstructured": "Xu, X. Y. et al. Group-2 innate lymphoid cells promote HCC progression through CXCL2\u2013neutrophil-induced immunosuppression. Hepatology 74, 2526\u20132543 (2021)."
+    },
+    {
+      "key": "8194_CR80",
+      "doi": "10.1136/gutjnl-2021-325288",
+      "title": "",
+      "journal": "Gut",
+      "year": "2022",
+      "author": "B Heinrich",
+      "unstructured": "Heinrich, B. et al. The tumour microenvironment shapes innate lymphoid cells in patients with hepatocellular carcinoma. Gut 71, 1161\u20131175 (2022)."
+    },
+    {
+      "key": "8194_CR81",
+      "doi": "10.1016/j.it.2019.03.004",
+      "title": "",
+      "journal": "Trends Immunol.",
+      "year": "2019",
+      "author": "M Wagner",
+      "unstructured": "Wagner, M. & Koyasu, S. Cancer immunoediting by innate lymphoid cells. Trends Immunol. 40, 415\u2013430 (2019)."
+    },
+    {
+      "key": "8194_CR82",
+      "doi": "10.1038/s41422-020-0312-y",
+      "title": "",
+      "journal": "Cell Res.",
+      "year": "2020",
+      "author": "S Wang",
+      "unstructured": "Wang, S. et al. Transdifferentiation of tumor infiltrating innate lymphoid cells during progression of colorectal cancer. Cell Res. 30, 610\u2013622 (2020)."
+    },
+    {
+      "key": "8194_CR83",
+      "doi": "10.3390/cancers13030559",
+      "title": "",
+      "journal": "Cancers",
+      "year": "2021",
+      "author": "Q Huang",
+      "unstructured": "Huang, Q. et al. Type 2 innate lymphoid cells protect against colorectal cancer progression and predict improved patient survival. Cancers 13, 559 (2021)."
+    },
+    {
+      "key": "8194_CR84",
+      "doi": "10.1038/s41586-020-2015-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "JA Moral",
+      "unstructured": "Moral, J. A. et al. ILC2s amplify PD-1 blockade by activating tissue-specific cancer immunity. Nature 579, 130\u2013135 (2020)."
+    },
+    {
+      "key": "8194_CR85",
+      "doi": "10.1016/j.cell.2023.12.015",
+      "title": "",
+      "journal": "Cell",
+      "year": "2024",
+      "author": "Z Li",
+      "unstructured": "Li, Z. et al. Therapeutic application of human type 2 innate lymphoid cells via induction of granzyme B-mediated tumor cell death. Cell 187, 624\u2013641.e623 (2024)."
+    },
+    {
+      "key": "8194_CR86",
+      "doi": "10.3389/fimmu.2021.758522",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2021",
+      "author": "M Wagner",
+      "unstructured": "Wagner, M. & Koyasu, S. Innate lymphoid cells in skin homeostasis and malignancy. Front. Immunol. 12, 758522 (2021)."
+    },
+    {
+      "key": "8194_CR87",
+      "doi": "10.1016/j.trecan.2022.06.010",
+      "title": "",
+      "journal": "Trends Cancer",
+      "year": "2022",
+      "author": "M Wagner",
+      "unstructured": "Wagner, M. & Koyasu, S. Cancer immunosurveillance by ILC2s. Trends Cancer 8, 792\u2013794 (2022)."
+    },
+    {
+      "key": "8194_CR88",
+      "doi": "10.1038/jid.2013.203",
+      "title": "",
+      "journal": "J. Invest. Dermatol.",
+      "year": "2013",
+      "author": "Y Jang",
+      "unstructured": "Jang, Y. et al. UVB induces HIF-1\u03b1-dependent TSLP expression via the JNK and ERK pathways. J. Invest. Dermatol. 133, 2601\u20132608 (2013)."
+    },
+    {
+      "key": "8194_CR89",
+      "doi": "10.1016/j.jdermsci.2011.10.004",
+      "title": "",
+      "journal": "J. Dermatol. Sci.",
+      "year": "2012",
+      "author": "J Meephansan",
+      "unstructured": "Meephansan, J., Komine, M., Tsuda, H., Tominaga, S. & Ohtsuki, M. Ultraviolet B irradiation induces the expression of IL-33 mRNA and protein in normal human epidermal keratinocytes. J. Dermatol. Sci. 65, 72\u201374 (2012)."
+    },
+    {
+      "key": "8194_CR90",
+      "doi": "10.1016/j.immuni.2023.03.015",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2023",
+      "author": "EB Kopp",
+      "unstructured": "Kopp, E. B., Agaronyan, K., Licona-Limon, I., Nish, S. A. & Medzhitov, R. Modes of type 2 immune response initiation. Immunity 56, 687\u2013694 (2023)."
+    },
+    {
+      "key": "8194_CR91",
+      "doi": "10.1016/j.celrep.2020.01.103",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2020",
+      "author": "M Wagner",
+      "unstructured": "Wagner, M. et al. Tumor-derived lactic acid contributes to the paucity of intratumoral ILC2s. Cell Rep. 30, 2743\u20132757.e2745 (2020). This study highlights the tumoricidal potential of ILC2s and the mechanism of tumour evasion in primary melanoma."
+    },
+    {
+      "key": "8194_CR92",
+      "doi": "10.3389/fimmu.2021.733136",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2021",
+      "author": "E Howard",
+      "unstructured": "Howard, E. et al. PD-1 blockade on tumor microenvironment-resident ILC2s promotes TNF-\u03b1 production and restricts progression of metastatic melanoma. Front. Immunol. 12, 733136 (2021)."
+    },
+    {
+      "key": "8194_CR93",
+      "doi": "10.1016/j.celrep.2023.113579",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2024",
+      "author": "H Niu",
+      "unstructured": "Niu, H. et al. LKB1 prevents ILC2 exhaustion to enhance antitumor immunity. Cell Rep. 43, 113579 (2024)."
+    },
+    {
+      "key": "8194_CR94",
+      "doi": "10.4049/jimmunol.2300220",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2023",
+      "author": "X Wang",
+      "unstructured": "Wang, X. et al. Dopamine receptor 1 impedes ILC2-mediated antitumor immunity. J. Immunol. 211, 1418\u20131425 (2023)."
+    },
+    {
+      "key": "8194_CR95",
+      "doi": "10.1038/s41590-021-00943-z",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2021",
+      "author": "N Jacquelot",
+      "unstructured": "Jacquelot, N. et al. Blockade of the co-inhibitory molecule PD-1 unleashes ILC2-dependent antitumor immunity in melanoma. Nat. Immunol. 22, 851\u2013864 (2021)."
+    },
+    {
+      "key": "8194_CR96",
+      "doi": "10.1038/s41590-022-01291-2",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2022",
+      "author": "S Grisaru-Tal",
+      "unstructured": "Grisaru-Tal, S., Rothenberg, M. E. & Munitz, A. Eosinophil\u2013lymphocyte interactions in the tumor microenvironment and cancer immunotherapy. Nat. Immunol. 23, 1309\u20131316 (2022)."
+    },
+    {
+      "key": "8194_CR97",
+      "doi": "10.1158/0008-5472.can-15-0869",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2016",
+      "author": "E Van Overmeire",
+      "unstructured": "Van Overmeire, E. et al. M-CSF and GM-CSF receptor signaling differentially regulate monocyte maturation and macrophage polarization in the tumor microenvironment. Cancer Res. 76, 35\u201342 (2016)."
+    },
+    {
+      "key": "8194_CR98",
+      "doi": "10.1038/s41577-022-00704-5",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2022",
+      "author": "H Spits",
+      "unstructured": "Spits, H. & Mjosberg, J. Heterogeneity of type 2 innate lymphoid cells. Nat. Rev. Immunol. 22, 701\u2013712 (2022)."
+    },
+    {
+      "key": "8194_CR99",
+      "doi": "10.1016/j.smim.2019.04.001",
+      "title": "",
+      "journal": "Semin. Immunol.",
+      "year": "2019",
+      "author": "T Bald",
+      "unstructured": "Bald, T., Wagner, M., Gao, Y., Koyasu, S. & Smyth, M. J. Hide and seek: plasticity of innate lymphoid cells in cancer. Semin. Immunol. 41, 101273 (2019)."
+    },
+    {
+      "key": "8194_CR100",
+      "doi": "10.1038/s41577-020-0282-9",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2020",
+      "author": "SM Bal",
+      "unstructured": "Bal, S. M., Golebski, K. & Spits, H. Plasticity of innate lymphoid cell subsets. Nat. Rev. Immunol. 20, 552\u2013565 (2020)."
+    },
+    {
+      "key": "8194_CR101",
+      "doi": "10.1038/s41590-018-0201-4",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2018",
+      "author": "RR Ricardo-Gonzalez",
+      "unstructured": "Ricardo-Gonzalez, R. R. et al. Tissue signals imprint ILC2 identity with anticipatory function. Nat. Immunol. 19, 1093\u20131099 (2018)."
+    },
+    {
+      "key": "8194_CR102",
+      "doi": "10.1080/2162402x.2017.1317420",
+      "title": "",
+      "journal": "Oncoimmunology",
+      "year": "2017",
+      "author": "V Lucarini",
+      "unstructured": "Lucarini, V. et al. IL-33 restricts tumor growth and inhibits pulmonary metastasis in melanoma-bearing mice through eosinophils. Oncoimmunology 6, e1317420 (2017)."
+    },
+    {
+      "key": "8194_CR103",
+      "doi": "10.1038/nri3341",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2013",
+      "author": "HF Rosenberg",
+      "unstructured": "Rosenberg, H. F., Dyer, K. D. & Foster, P. S. Eosinophils: changing perspectives in health and disease. Nat. Rev. Immunol. 13, 9\u201322 (2013)."
+    },
+    {
+      "key": "8194_CR104",
+      "doi": "10.1038/s41568-020-0283-9",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2020",
+      "author": "S Grisaru-Tal",
+      "unstructured": "Grisaru-Tal, S., Itan, M., Klion, A. D. & Munitz, A. A new dawn for eosinophils in the tumour microenvironment. Nat. Rev. Cancer 20, 594\u2013607 (2020)."
+    },
+    {
+      "key": "8194_CR105",
+      "doi": "10.4049/jimmunol.1000446",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2010",
+      "author": "F Legrand",
+      "unstructured": "Legrand, F. et al. Human eosinophils exert TNF-\u03b1 and granzyme A-mediated tumoricidal activity toward colon carcinoma cells. J. Immunol. 185, 7443\u20137451 (2010)."
+    },
+    {
+      "key": "8194_CR106",
+      "doi": "10.1038/ni.3159",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2015",
+      "author": "R Carretero",
+      "unstructured": "Carretero, R. et al. Eosinophils orchestrate cancer rejection by normalizing tumor vessels and enhancing infiltration of CD8+ T cells. Nat. Immunol. 16, 609\u2013617 (2015). This study highlights the tumoricidal potential of eosinophils through the normalization of blood vessels."
+    },
+    {
+      "key": "8194_CR107",
+      "doi": "10.1046/j.1365-2559.2002.01437.x",
+      "title": "",
+      "journal": "Histopathology",
+      "year": "2002",
+      "author": "RG Dorta",
+      "unstructured": "Dorta, R. G. et al. Tumour-associated tissue eosinophilia as a prognostic factor in oral squamous cell carcinomas. Histopathology 41, 152\u2013157 (2002)."
+    },
+    {
+      "key": "8194_CR108",
+      "doi": "10.1002/(sici)1097-0142(20000401)88:7<1544::aid-cncr7>3.0.co;2-s",
+      "title": "",
+      "journal": "Cancer",
+      "year": "2000",
+      "author": "MJ Fernandez-Acenero",
+      "unstructured": "Fernandez-Acenero, M. J., Galindo-Gallego, M., Sanz, J. & Aljama, A. Prognostic influence of tumor-associated eosinophilic infiltrate in colorectal carcinoma. Cancer 88, 1544\u20131548 (2000)."
+    },
+    {
+      "key": "8194_CR109",
+      "doi": "",
+      "title": "",
+      "journal": "Clin. Cancer Res.",
+      "year": "1995",
+      "author": "JA Sosman",
+      "unstructured": "Sosman, J. A. et al. Evidence for eosinophil activation in cancer patients receiving recombinant interleukin-4: effects of interleukin-4 alone and following interleukin-2 administration. Clin. Cancer Res. 1, 805\u2013812 (1995)."
+    },
+    {
+      "key": "8194_CR110",
+      "doi": "10.2217/imt-2016-0138",
+      "title": "",
+      "journal": "Immunotherapy",
+      "year": "2017",
+      "author": "A Moreira",
+      "unstructured": "Moreira, A., Leisgang, W., Schuler, G. & Heinzerling, L. Eosinophilic count as a biomarker for prognosis of melanoma patients and its importance in the response to immunotherapy. Immunotherapy 9, 115\u2013121 (2017)."
+    },
+    {
+      "key": "8194_CR111",
+      "doi": "10.1016/j.ccell.2022.11.014",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2023",
+      "author": "OS Blomberg",
+      "unstructured": "Blomberg, O. S. et al. IL-5-producing CD4+ T cells and eosinophils cooperate to enhance response to immune checkpoint blockade in breast cancer. Cancer Cell 41, 106\u2013123.e110 (2023)."
+    },
+    {
+      "key": "8194_CR112",
+      "doi": "10.1038/s41590-019-0321-5",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2019",
+      "author": "C Hollande",
+      "unstructured": "Hollande, C. et al. Inhibition of the dipeptidyl peptidase DPP4 (CD26) reveals IL-33-dependent eosinophil-mediated cont\u03b1ol of tumor growth. Nat. Immunol. 20, 257\u2013264 (2019)."
+    },
+    {
+      "key": "8194_CR113",
+      "doi": "10.1038/s41568-022-00466-1",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2022",
+      "author": "CM Laumont",
+      "unstructured": "Laumont, C. M., Banville, A. C., Gilardi, M., Hollern, D. P. & Nelson, B. H. Tumour-infiltrating B cells: immunological mechanisms, clinical impact and therapeutic opportunities. Nat. Rev. Cancer 22, 414\u2013430 (2022)."
+    },
+    {
+      "key": "8194_CR114",
+      "doi": "10.1038/s41467-024-46873-w",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2024",
+      "author": "L Kasikova",
+      "unstructured": "Kasikova, L. et al. Tertiary lymphoid structures and B cells determine clinically relevant T cell phenotypes in ovarian cancer. Nat. Commun. 15, 2528 (2024)."
+    },
+    {
+      "key": "8194_CR115",
+      "doi": "10.1038/s41568-019-0144-6",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2019",
+      "author": "C Sautes-Fridman",
+      "unstructured": "Sautes-Fridman, C., Petitprez, F., Calderaro, J. & Fridman, W. H. Tertiary lymphoid structures in the era of cancer immunotherapy. Nat. Rev. Cancer 19, 307\u2013325 (2019)."
+    },
+    {
+      "key": "8194_CR116",
+      "doi": "10.1007/s00281-016-0565-1",
+      "title": "",
+      "journal": "Semin. Immunopathol.",
+      "year": "2016",
+      "author": "K Mukai",
+      "unstructured": "Mukai, K., Tsai, M., Starkl, P., Marichal, T. & Galli, S. J. IgE and mast cells in host defense against parasites and venoms. Semin. Immunopathol. 38, 581\u2013603 (2016)."
+    },
+    {
+      "key": "8194_CR117",
+      "doi": "10.1111/all.13119",
+      "title": "",
+      "journal": "Allergy",
+      "year": "2017",
+      "author": "E Jensen-Jarolim",
+      "unstructured": "Jensen-Jarolim, E. et al. AllergoOncology\u2014the impact of allergy in oncology: EAACI position paper. Allergy 72, 866\u2013887 (2017)."
+    },
+    {
+      "key": "8194_CR118",
+      "doi": "10.1158/2326-6066.cir-16-0392",
+      "title": "",
+      "journal": "Cancer Immunol. Res.",
+      "year": "2017",
+      "author": "D Ly",
+      "unstructured": "Ly, D., Zhu, C. Q., Cabanero, M., Tsao, M. S. & Zhang, L. Role for high-affinity IgE receptor in prognosis of lung adenocarcinoma patients. Cancer Immunol. Res. 5, 821\u2013829 (2017)."
+    },
+    {
+      "key": "8194_CR119",
+      "doi": "10.1097/cmr.0000000000000192",
+      "title": "",
+      "journal": "Melanoma Res.",
+      "year": "2015",
+      "author": "H Siiskonen",
+      "unstructured": "Siiskonen, H. et al. Low numbers of tryptase+ and chymase+ mast cells associated with reduced survival and advanced tumor stage in melanoma. Melanoma Res. 25, 479\u2013485 (2015)."
+    },
+    {
+      "key": "8194_CR120",
+      "doi": "10.1186/s13601-020-00335-w",
+      "title": "",
+      "journal": "Clin. Transl. Allergy",
+      "year": "2020",
+      "author": "D Ferastraoaru",
+      "unstructured": "Ferastraoaru, D. et al. AllergoOncology: ultra-low IgE, a potential novel biomarker in cancer\u2013a position paper of the European Academy of Allergy and Clinical Immunology (EAACI). Clin. Transl. Allergy 10, 32 (2020)."
+    },
+    {
+      "key": "8194_CR121",
+      "doi": "10.1186/2051-1426-1-16",
+      "title": "",
+      "journal": "J. Immunother. Cancer",
+      "year": "2013",
+      "author": "S Spranger",
+      "unstructured": "Spranger, S. & Gajewski, T. Rational combinations of immunotherapeutics that target discrete pathways. J. Immunother. Cancer 1, 16 (2013)."
+    },
+    {
+      "key": "8194_CR122",
+      "doi": "10.1038/s41571-024-00870-6",
+      "title": "",
+      "journal": "Nat. Rev. Clin. Oncol.",
+      "year": "2024",
+      "author": "S Kumagai",
+      "unstructured": "Kumagai, S., Itahashi, K. & Nishikawa, H. Regulatory T cell-mediated immunosuppression orchestrated by cancer: towards an immuno-genomic paradigm for precision medicine. Nat. Rev. Clin. Oncol. 21, 337\u2013353 (2024). This study provides a new concept of carcinogenesis called \u2018immuno-genomic cancer evolution\u2019."
+    },
+    {
+      "key": "8194_CR123",
+      "doi": "10.1038/s41586-024-07762-w",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Bai, Z. et al. Single-cell CAR T atlas reveals type 2 function in 8-year leukaemia remission. Nature 634, 702\u2013711 (2024)."
+    },
+    {
+      "key": "8194_CR124",
+      "doi": "10.1038/s41586-024-07962-4",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Feng, B. et al. The type 2 cytokine Fc\u2013IL-4 revitalizes exhausted CD8+T cells against cancer. Nature 634, 712\u2013720 (2024)."
+    }
+  ]
+}

@@ -1,0 +1,1738 @@
+{
+  "article": {
+    "slug": "s41586-024-07062-3",
+    "doi": "10.1038/s41586-024-07062-3",
+    "title": "Ion and lipid orchestration of secondary active transport",
+    "url": "https://www.nature.com/articles/s41586-024-07062-3",
+    "abbrev": "ion-lipid-orchestration-secondary-active-transport",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/ion-lipid-orchestration-secondary-active-transport"
+  },
+  "meta": {
+    "title": "Ion and lipid orchestration of secondary active transport",
+    "authors": [
+      "David Drew",
+      "Olga Boudker"
+    ],
+    "published": [
+      2024,
+      2,
+      28
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-024-07062-3",
+    "n_references": 190,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "7062_CR1",
+      "doi": "10.1038/nrd4626",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2015",
+      "author": "L Lin",
+      "unstructured": "Lin, L., Yee, S. W., Kim, R. B. & Giacomini, K. M. SLC transporters as therapeutic targets: emerging opportunities. Nat. Rev. Drug Discov. 14, 543\u2013560 (2015)."
+    },
+    {
+      "key": "7062_CR2",
+      "doi": "10.1111/febs.15531",
+      "title": "",
+      "journal": "FEBS J.",
+      "year": "2021",
+      "author": "MD Pizzagalli",
+      "unstructured": "Pizzagalli, M. D., Bensimon, A. & Superti-Furga, G. A guide to plasma membrane solute carrier proteins. FEBS J. 288, 2784\u20132835 (2021)."
+    },
+    {
+      "key": "7062_CR3",
+      "doi": "10.34067/kid.0002772021",
+      "title": "",
+      "journal": "Kidney360",
+      "year": "2021",
+      "author": "EM Wright",
+      "unstructured": "Wright, E. M. SGLT2 inhibitors: physiology and pharmacology. Kidney360 2, 2027\u20132037 (2021)."
+    },
+    {
+      "key": "7062_CR4",
+      "doi": "10.1021/bi050543r",
+      "title": "",
+      "journal": "Biochemistry",
+      "year": "2005",
+      "author": "M Klingenberg",
+      "unstructured": "Klingenberg, M. Ligand\u2013protein interaction in biomembrane carriers. The induced transition fit of transport catalysis. Biochemistry 44, 8563\u20138570 (2005)."
+    },
+    {
+      "key": "7062_CR5",
+      "doi": "10.1038/180134a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1957",
+      "author": "P Mitchell",
+      "unstructured": "Mitchell, P. A general theory of membrane transport from studies of bacteria. Nature 180, 134\u2013136 (1957)."
+    },
+    {
+      "key": "7062_CR6",
+      "doi": "10.1038/211969a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1966",
+      "author": "O Jardetzky",
+      "unstructured": "Jardetzky, O. Simple allosteric model for membrane pumps. Nature 211, 969\u2013970 (1966). The terminology \u2018alternating-access\u2019 was first coined in this study of small molecule transporters."
+    },
+    {
+      "key": "7062_CR7",
+      "doi": "10.1146/annurev-biochem-060815-014520",
+      "title": "",
+      "journal": "Annu. Rev. Biochem.",
+      "year": "2016",
+      "author": "D Drew",
+      "unstructured": "Drew, D. & Boudker, O. Shared molecular mechanisms of membrane transporters. Annu. Rev. Biochem. 85, 543\u2013572 (2016). This review defined the elevator alternating-access mechanism, which was first observed in the sodium-coupled glutamate transporter GltPh."
+    },
+    {
+      "key": "7062_CR8",
+      "doi": "10.1515/hsz-2014-0224",
+      "title": "",
+      "journal": "Biol. Chem.",
+      "year": "2014",
+      "author": "R Keller",
+      "unstructured": "Keller, R., Ziegler, C. & Schneider, D. When two turn into one: evolution of membrane transporters from half modules. Biol. Chem. 395, 1379\u20131388 (2014)."
+    },
+    {
+      "key": "7062_CR9",
+      "doi": "10.1146/annurev-biophys-051013-023008",
+      "title": "",
+      "journal": "Annu. Rev. Biophys.",
+      "year": "2015",
+      "author": "LR Forrest",
+      "unstructured": "Forrest, L. R. Structural symmetry in membrane proteins. Annu. Rev. Biophys. 44, 311\u2013337 (2015)."
+    },
+    {
+      "key": "7062_CR10",
+      "doi": "10.1016/j.cell.2012.11.050",
+      "title": "",
+      "journal": "Cell",
+      "year": "2012",
+      "author": "N Lane",
+      "unstructured": "Lane, N. & Martin, W. F. The origin of membrane bioenergetics. Cell 151, 1406\u20131416 (2012)."
+    },
+    {
+      "key": "7062_CR11",
+      "doi": "10.1038/nmicrobiol.2016.116",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2016",
+      "author": "MC Weiss",
+      "unstructured": "Weiss, M. C. et al. The physiology and habitat of the last universal common ancestor. Nat. Microbiol. 1, 16116 (2016)."
+    },
+    {
+      "key": "7062_CR12",
+      "doi": "10.1016/j.sbi.2023.102535",
+      "title": "",
+      "journal": "Curr. Opin. Struct. Biol.",
+      "year": "2023",
+      "author": "CG Andersen",
+      "unstructured": "Andersen, C. G., Bavnhoj, L. & Pedersen, B. P. May the proton motive force be with you: a plant transporter review. Curr. Opin. Struct. Biol. 79, 102535 (2023)."
+    },
+    {
+      "key": "7062_CR13",
+      "doi": "10.1128/mmbr.00024-19",
+      "title": "",
+      "journal": "Microbiol. Mol. Biol. Rev.",
+      "year": "2019",
+      "author": "F Bianchi",
+      "unstructured": "Bianchi, F., Van\u2019t Klooster, J. S., Ruiz, S. J. & Poolman, B. Regulation of amino acid transport in Saccharomyces cerevisiae. Microbiol. Mol. Biol. Rev. 83, e00024\u201319 (2019)."
+    },
+    {
+      "key": "7062_CR14",
+      "doi": "10.1021/acs.chemrev.0c00983",
+      "title": "",
+      "journal": "Chem. Rev.",
+      "year": "2021",
+      "author": "D Drew",
+      "unstructured": "Drew, D., North, R. A., Nagarathinam, K. & Tanabe, M. Structures and general transport mechanisms by the major facilitator superfamily (MFS). Chem. Rev. 121, 5289\u20135335 (2021). This recent review comprehensively explores the structure, function, regulation, dynamics, oligomerization and complexes of the major facilitator superfamily (MFS)."
+    },
+    {
+      "key": "7062_CR15",
+      "doi": "10.1038/ncomms4009",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2014",
+      "author": "AS Ethayathulla",
+      "unstructured": "Ethayathulla, A. S. et al. Structure-based mechanism for Na+/melibiose symport by MelB. Nat. Commun. 5, 3009 (2014)."
+    },
+    {
+      "key": "7062_CR16",
+      "doi": "10.1016/j.jmb.2021.166959",
+      "title": "",
+      "journal": "J. Mol. Biol.",
+      "year": "2021",
+      "author": "DP Claxton",
+      "unstructured": "Claxton, D. P., Jagessar, K. L. & McHaourab, H. S. Principles of alternating access in multidrug and toxin extrusion (MATE) transporters. J. Mol. Biol. 433, 166959 (2021)."
+    },
+    {
+      "key": "7062_CR17",
+      "doi": "10.1016/j.jbc.2021.100262",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2021",
+      "author": "S Castellano",
+      "unstructured": "Castellano, S. et al. Conserved binding site in the N-lobe of prokaryotic MATE transporters suggests a role for Na+ in ion-coupled drug efflux. J. Biol. Chem. 296, 100262 (2021)."
+    },
+    {
+      "key": "7062_CR18",
+      "doi": "10.1038/nature03018",
+      "title": "",
+      "journal": "Nature",
+      "year": "2004",
+      "author": "D Yernool",
+      "unstructured": "Yernool, D., Boudker, O., Jin, Y. & Gouaux, E. Structure of a glutamate transporter homologue from Pyrococcus horikoshii. Nature 431, 811\u2013818 (2004)."
+    },
+    {
+      "key": "7062_CR19",
+      "doi": "10.1073/pnas.1010750108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "DG Isom",
+      "unstructured": "Isom, D. G., Castaneda, C. A., Cannon, B. R. & Garcia-Moreno, B. Large shifts in pKa values of lysine residues buried inside a protein. Proc. Natl Acad. Sci. USA 108, 5260\u20135265 (2011)."
+    },
+    {
+      "key": "7062_CR20",
+      "doi": "10.1085/jgp.201511404",
+      "title": "",
+      "journal": "J. Gen. Physiol.",
+      "year": "2015",
+      "author": "EA Morrison",
+      "unstructured": "Morrison, E. A., Robinson, A. E., Liu, Y. & Henzler-Wildman, K. A. Asymmetric protonation of EmrE. J. Gen. Physiol. 146, 445\u2013461 (2015)."
+    },
+    {
+      "key": "7062_CR21",
+      "doi": "10.1038/nchembio.1999",
+      "title": "",
+      "journal": "Nat. Chem. Biol.",
+      "year": "2016",
+      "author": "A Gayen",
+      "unstructured": "Gayen, A., Leninger, M. & Traaseth, N. J. Protonation of a glutamate residue modulates the dynamics of the drug transporter EmrE. Nat. Chem. Biol. 12, 141\u2013145 (2016)."
+    },
+    {
+      "key": "7062_CR22",
+      "doi": "10.1002/pro.2647",
+      "title": "",
+      "journal": "Protein Sci.",
+      "year": "2015",
+      "author": "CA Fitch",
+      "unstructured": "Fitch, C. A., Platzer, G., Okon, M., Garcia-Moreno, B. E. & McIntosh, L. P. Arginine: its pKa value revisited. Protein Sci. 24, 752\u2013761 (2015)."
+    },
+    {
+      "key": "7062_CR23",
+      "doi": "10.1007/978-1-4614-1533-6_242",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Lev, B., Roux, B. & Noskov, S. Y. in Encyclopedia of Metalloproteins (eds Kretsinger, R. H. et al.) (Springer, 2013); https://doi.org/10.1007/978-1-4614-1533-6_242."
+    },
+    {
+      "key": "7062_CR24",
+      "doi": "10.1073/pnas.0900638106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "S Jaud",
+      "unstructured": "Jaud, S. et al. Insertion of short transmembrane helices by the Sec61 translocon. Proc. Natl Acad. Sci. USA 106, 11588\u201311593 (2009)."
+    },
+    {
+      "key": "7062_CR25",
+      "doi": "10.1073/pnas.1710727114",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "JL Parker",
+      "unstructured": "Parker, J. L. et al. Proton movement and coupling in the POT family of peptide transporters. Proc. Natl Acad. Sci. USA 114, 13182\u201313187 (2017)."
+    },
+    {
+      "key": "7062_CR26",
+      "doi": "10.1073/pnas.0803577105",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2008",
+      "author": "IN Smirnova",
+      "unstructured": "Smirnova, I. N., Kasho, V. & Kaback, H. R. Protonation and sugar binding to LacY. Proc. Natl Acad. Sci. USA 105, 8896\u20138901 (2008). This study uses fluourescent-probe-based analysis and kinetics to conclusively demonstrate that LacY is always protonated prior to sugar binding across all physiologically relevant pH ranges."
+    },
+    {
+      "key": "7062_CR27",
+      "doi": "10.1085/jgp.201912377",
+      "title": "",
+      "journal": "J. Gen. Physiol.",
+      "year": "2019",
+      "author": "HR Kaback",
+      "unstructured": "Kaback, H. R. & Guan, L. It takes two to tango: the dance of the permease. J. Gen. Physiol. 151, 878\u2013886 (2019)."
+    },
+    {
+      "key": "7062_CR28",
+      "doi": "10.1074/jbc.270.21.12670",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "1995",
+      "author": "JS Lolkema",
+      "unstructured": "Lolkema, J. S. & Poolman, B. Uncoupling in secondary transport proteins. A mechanistic explanation for mutants of lac permease with an uncoupled phenotype. J. Biol. Chem. 270, 12670\u201312676 (1995)."
+    },
+    {
+      "key": "7062_CR29",
+      "doi": "10.1038/s41477-023-01421-0",
+      "title": "",
+      "journal": "Nat. Plants",
+      "year": "2023",
+      "author": "L Bavnhoj",
+      "unstructured": "Bavnhoj, L. et al. Structure and sucrose binding mechanism of the plant SUC1 sucrose transporter. Nat. Plants 9, 938\u2013950 (2023)."
+    },
+    {
+      "key": "7062_CR30",
+      "doi": "10.1038/emboj.2012.157",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "2012",
+      "author": "N Solcan",
+      "unstructured": "Solcan, N. et al. Alternating access mechanism in the POT family of oligopeptide transporters. EMBO J. 31, 3411\u20133421 (2012)."
+    },
+    {
+      "key": "7062_CR31",
+      "doi": "10.1073/pnas.1400336111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "MG Madej",
+      "unstructured": "Madej, M. G., Sun, L., Yan, N. & Kaback, H. R. Functional architecture of MFS d-glucose transporters. Proc. Natl Acad. Sci. USA 111, E719\u2013E727 (2014)."
+    },
+    {
+      "key": "7062_CR32",
+      "doi": "10.1371/journal.pbio.3000260",
+      "title": "",
+      "journal": "PLoS Biol.",
+      "year": "2019",
+      "author": "JB Leano",
+      "unstructured": "Leano, J. B. et al. Structures suggest a mechanism for energy coupling by a family of organic anion transporters. PLoS Biol. 17, e3000260 (2019)."
+    },
+    {
+      "key": "7062_CR33",
+      "doi": "10.1093/pnasnexus/pgad007",
+      "title": "",
+      "journal": "PNAS Nexus",
+      "year": "2023",
+      "author": "K Geistlinger",
+      "unstructured": "Geistlinger, K., Schmidt, J. D. R. & Beitz, E. Human monocarboxylate transporters accept and relay protons via the bound substrate for selectivity and activity at physiological pH. PNAS Nexus 2, pgad007 (2023)."
+    },
+    {
+      "key": "7062_CR34",
+      "doi": "10.1038/s41467-020-20032-3",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "R Jia",
+      "unstructured": "Jia, R. et al. Hydrogen\u2013deuterium exchange mass spectrometry captures distinct dynamics upon substrate and inhibitor binding to a transporter. Nat. Commun. 11, 6162 (2020)."
+    },
+    {
+      "key": "7062_CR35",
+      "doi": "10.1038/s41586-021-03579-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "JL Parker",
+      "unstructured": "Parker, J. L. et al. Structural basis of antifolate recognition and transport by PCFT. Nature 595, 130\u2013134 (2021)."
+    },
+    {
+      "key": "7062_CR36",
+      "doi": "10.1085/jgp.201912428",
+      "title": "",
+      "journal": "J. Gen. Physiol.",
+      "year": "2019",
+      "author": "AT Bozzi",
+      "unstructured": "Bozzi, A. T., Bane, L. B., Zimanyi, C. M. & Gaudet, R. Unique structural features in an Nramp metal transporter impart substrate-specific proton cotransport and a kinetic bias to favor import. J. Gen. Physiol. 151, 1413\u20131429 (2019). Transport kinetics of an bacterial metal transporter elegantly show that some transition metals are proton-coupled whereas others are not, and that uncoupled proton uniport is possible in the presence of a membrane potential."
+    },
+    {
+      "key": "7062_CR37",
+      "doi": "10.1038/nature03978",
+      "title": "",
+      "journal": "Nature",
+      "year": "2005",
+      "author": "A Yamashita",
+      "unstructured": "Yamashita, A., Singh, S. K., Kawate, T., Jin, Y. & Gouaux, E. Crystal structure of a bacterial homologue of Na+/Cl-dependent neurotransmitter transporters. Nature 437, 215\u2013223 (2005)."
+    },
+    {
+      "key": "7062_CR38",
+      "doi": "10.1038/s41467-021-25998-2",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2021",
+      "author": "W Wang",
+      "unstructured": "Wang, W. et al. Cryo-EM structure of the sodium-driven chloride/bicarbonate exchanger NDCBE. Nat. Commun. 12, 5690 (2021)."
+    },
+    {
+      "key": "7062_CR39",
+      "doi": "10.1126/science.1088196",
+      "title": "",
+      "journal": "Science",
+      "year": "2003",
+      "author": "J Abramson",
+      "unstructured": "Abramson, J. et al. Structure and mechanism of the lactose permease of Escherichia coli. Science 301, 610\u2013615 (2003)."
+    },
+    {
+      "key": "7062_CR40",
+      "doi": "10.1038/nature11524",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "L Sun",
+      "unstructured": "Sun, L. et al. Crystal structure of a bacterial homologue of glucose transporters GLUT1\u20134. Nature 490, 361\u2013366 (2012)."
+    },
+    {
+      "key": "7062_CR41",
+      "doi": "10.1038/nature13306",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "D Deng",
+      "unstructured": "Deng, D. et al. Crystal structure of the human glucose transporter GLUT1. Nature 510, 121\u2013125 (2014)."
+    },
+    {
+      "key": "7062_CR42",
+      "doi": "10.7554/elife.84805",
+      "title": "",
+      "journal": "eLife",
+      "year": "2023",
+      "author": "D Mitrovic",
+      "unstructured": "Mitrovic, D. et al. Reconstructing the transport cycle in the sugar porter superfamily using coevolution-powered machine learning. eLife 12, e84805 (2023)."
+    },
+    {
+      "key": "7062_CR43",
+      "doi": "10.15252/embj.2021108341",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "2022",
+      "author": "JC Canul-Tec",
+      "unstructured": "Canul-Tec, J. C. et al. The ion-coupling mechanism of human excitatory amino acid transporters. EMBO J. 41, e108341 (2022)."
+    },
+    {
+      "key": "7062_CR44",
+      "doi": "10.1038/s41467-023-38120-5",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2023",
+      "author": "B Qiu",
+      "unstructured": "Qiu, B. & Boudker, O. Symport and antiport mechanisms of human glutamate transporters. Nat. Commun. 14, 2579 (2023). This cryo-EM study of a human glutamate transporter reveals the detailed structural mechanism of coupled symport of sodium ions and protons and potassium antiport."
+    },
+    {
+      "key": "7062_CR45",
+      "doi": "10.1038/nsmb.2548",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2013",
+      "author": "N Reyes",
+      "unstructured": "Reyes, N., Oh, S. & Boudker, O. Binding thermodynamics of a glutamate transporter homolog. Nat. Struct. Mol. Biol. 20, 634\u2013640 (2013)."
+    },
+    {
+      "key": "7062_CR46",
+      "doi": "10.7554/elife.02283",
+      "title": "",
+      "journal": "eLife",
+      "year": "2014",
+      "author": "G Verdon",
+      "unstructured": "Verdon, G., Oh, S., Serio, R. N. & Boudker, O. Coupled ion binding and structural transitions along the transport cycle of glutamate transporters. eLife 3, e02283 (2014)."
+    },
+    {
+      "key": "7062_CR47",
+      "doi": "10.1038/ncomms13420",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "A Guskov",
+      "unstructured": "Guskov, A., Jensen, S., Faustino, I., Marrink, S. J. & Slotboom, D. J. Coupled binding mechanism of three sodium ions and aspartate in the glutamate transporter homologue GltTk. Nat. Commun. 7, 13420 (2016)."
+    },
+    {
+      "key": "7062_CR48",
+      "doi": "10.1038/s41586-022-05530-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "S Ravera",
+      "unstructured": "Ravera, S. et al. Structural insights into the mechanism of the sodium/iodide symporter. Nature 612, 795\u2013801 (2022)."
+    },
+    {
+      "key": "7062_CR49",
+      "doi": "10.1126/sciadv.abf5814",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2021",
+      "author": "B Qiu",
+      "unstructured": "Qiu, B., Matthies, D., Fortea, E., Yu, Z. & Boudker, O. Cryo-EM structures of excitatory amino acid transporter 3 visualize coupled substrate, sodium, and proton binding and transport. Sci. Adv. 7, eabf5814 (2021)."
+    },
+    {
+      "key": "7062_CR50",
+      "doi": "10.1038/nsmb.2663",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2013",
+      "author": "S Jensen",
+      "unstructured": "Jensen, S., Guskov, A., Rempel, S., Hanelt, I. & Slotboom, D. J. Crystal structure of a substrate-free aspartate transporter. Nat. Struct. Mol. Biol. 20, 1224\u20131226 (2013)."
+    },
+    {
+      "key": "7062_CR51",
+      "doi": "10.1074/jbc.m704087200",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2007",
+      "author": "HP Koch",
+      "unstructured": "Koch, H. P., Hubbard, J. M. & Larsson, H. P. Voltage-independent sodium-binding events reported by the 4B\u20134C loop in the human glutamate transporter excitatory amino acid transporter 3. J. Biol. Chem. 282, 24547\u201324553 (2007)."
+    },
+    {
+      "key": "7062_CR52",
+      "doi": "10.7554/elife.37291",
+      "title": "",
+      "journal": "eLife",
+      "year": "2018",
+      "author": "S Oh",
+      "unstructured": "Oh, S. & Boudker, O. Kinetic mechanism of coupled binding in sodium-aspartate symporter GltPh. eLife 7, e37291 (2018)."
+    },
+    {
+      "key": "7062_CR53",
+      "doi": "10.1038/s41467-019-11363-x",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "AA Garaeva",
+      "unstructured": "Garaeva, A. A., Guskov, A., Slotboom, D. J. & Paulino, C. A one-gate elevator mechanism for the human neutral amino acid transporter ASCT2. Nat. Commun. 10, 3427 (2019)."
+    },
+    {
+      "key": "7062_CR54",
+      "doi": "10.7554/elife.58417",
+      "title": "",
+      "journal": "eLife",
+      "year": "2020",
+      "author": "X Wang",
+      "unstructured": "Wang, X. & Boudker, O. Large domain movements through the lipid bilayer mediate substrate release and inhibition of glutamate transporters. eLife 9, e58417 (2020)."
+    },
+    {
+      "key": "7062_CR55",
+      "doi": "10.1126/sciadv.aba9854",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2020",
+      "author": "C Alleva",
+      "unstructured": "Alleva, C. et al. Na+-dependent gate dynamics and electrostatic attraction ensure substrate coupling in glutamate transporters. Sci. Adv. 6, eaba9854 (2020)."
+    },
+    {
+      "key": "7062_CR56",
+      "doi": "10.1038/s41467-018-07700-1",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "P Bisignano",
+      "unstructured": "Bisignano, P. et al. Inhibitor binding mode and allosteric regulation of Na+-glucose symporters. Nat. Commun. 9, 5245 (2018)."
+    },
+    {
+      "key": "7062_CR57",
+      "doi": "10.1038/nature10737",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "H Krishnamurthy",
+      "unstructured": "Krishnamurthy, H. & Gouaux, E. X-ray structures of LeuT in substrate-free outward-open and apo inward-open states. Nature 481, 469\u2013474 (2012)."
+    },
+    {
+      "key": "7062_CR58",
+      "doi": "10.1085/jgp.202012710",
+      "title": "",
+      "journal": "J. Gen. Physiol.",
+      "year": "2021",
+      "author": "P Hariharan",
+      "unstructured": "Hariharan, P. & Guan, L. Cooperative binding ensures the obligatory melibiose/Na+ cotransport in MelB. J. Gen. Physiol. 153, e202012710 (2021)."
+    },
+    {
+      "key": "7062_CR59",
+      "doi": "10.1038/s41586-021-04212-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "Y Niu",
+      "unstructured": "Niu, Y. et al. Structural basis of inhibition of the human SGLT2\u2013MAP17 glucose transporter. Nature 601, 280\u2013284 (2022)."
+    },
+    {
+      "key": "7062_CR60",
+      "doi": "10.1073/pnas.1621431114",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "N Grytsyk",
+      "unstructured": "Grytsyk, N., Sugihara, J., Kaback, H. R. & Hellwig, P. pKa of Glu325 in LacY. Proc. Natl Acad. Sci. USA 114, 1530\u20131535 (2017)."
+    },
+    {
+      "key": "7062_CR61",
+      "doi": "10.1146/annurev.biophys.35.040405.102005",
+      "title": "",
+      "journal": "Annu. Rev. Biophys. Biomol. Struct.",
+      "year": "2006",
+      "author": "L Guan",
+      "unstructured": "Guan, L. & Kaback, H. R. Lessons from lactose permease. Annu. Rev. Biophys. Biomol. Struct. 35, 67\u201391 (2006)."
+    },
+    {
+      "key": "7062_CR62",
+      "doi": "10.3389/fcimb.2018.00033",
+      "title": "",
+      "journal": "Front. Cell Infect. Microbiol.",
+      "year": "2018",
+      "author": "LT Rosa",
+      "unstructured": "Rosa, L. T., Bianconi, M. E., Thomas, G. H. & Kelly, D. J. Tripartite ATP-independent periplasmic (TRAP) transporters and tripartite tricarboxylate transporters (TTT): from uptake to pathogenicity. Front. Cell Infect. Microbiol. 8, 33 (2018)."
+    },
+    {
+      "key": "7062_CR63",
+      "doi": "10.1038/s41467-023-36590-1",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2023",
+      "author": "JS Davies",
+      "unstructured": "Davies, J. S. et al. Structure and mechanism of a tripartite ATP-independent periplasmic TRAP transporter. Nat. Commun. 14, 1120 (2023)."
+    },
+    {
+      "key": "7062_CR64",
+      "doi": "10.1038/s41467-022-31907-y",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "MF Peter",
+      "unstructured": "Peter, M. F. et al. Structural and mechanistic analysis of a tripartite ATP-independent periplasmic TRAP transporter. Nat. Commun. 13, 4471 (2022)."
+    },
+    {
+      "key": "7062_CR65",
+      "doi": "10.1074/jbc.m111.281030",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2012",
+      "author": "C Mulligan",
+      "unstructured": "Mulligan, C., Leech, A. P., Kelly, D. J. & Thomas, G. H. The membrane proteins SiaQ and SiaM form an essential stoichiometric complex in the sialic acid tripartite ATP-independent periplasmic (TRAP) transporter SiaPQM (VC1777-1779) from Vibrio cholerae. J. Biol. Chem. 287, 3598\u20133608 (2012)."
+    },
+    {
+      "key": "7062_CR66",
+      "doi": "10.1038/nature12484",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "C Lee",
+      "unstructured": "Lee, C. et al. A two-domain elevator mechanism for sodium/proton antiport. Nature 501, 573\u2013577 (2013)."
+    },
+    {
+      "key": "7062_CR67",
+      "doi": "10.1038/nature03692",
+      "title": "",
+      "journal": "Nature",
+      "year": "2005",
+      "author": "C Hunte",
+      "unstructured": "Hunte, C. et al. Structure of a Na+/H+ antiporter and insights into mechanism of action and regulation by pH. Nature 435, 1197\u20131202 (2005)."
+    },
+    {
+      "key": "7062_CR68",
+      "doi": "10.1074/jbc.m111.230235",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2011",
+      "author": "T Mager",
+      "unstructured": "Mager, T., Rimon, A., Padan, E. & Fendler, K. Transport mechanism and pH regulation of the Na+/H+ antiporter NhaA from Escherichia coli: an electrophysiological study. J. Biol. Chem. 286, 23570\u201323581 (2011)."
+    },
+    {
+      "key": "7062_CR69",
+      "doi": "10.1016/j.jmb.2014.05.020",
+      "title": "",
+      "journal": "J. Mol. Biol.",
+      "year": "2014",
+      "author": "S Schuldiner",
+      "unstructured": "Schuldiner, S. Competition as a way of life for H+-coupled antiporters. J. Mol. Biol. 426, 2539\u20132546 (2014)."
+    },
+    {
+      "key": "7062_CR70",
+      "doi": "10.1038/nsmb.3164",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2016",
+      "author": "M Coincon",
+      "unstructured": "Coincon, M. et al. Crystal structures reveal the molecular basis of ion translocation in sodium/proton antiporters. Nat. Struct. Mol. Biol. 23, 248\u2013255 (2016)."
+    },
+    {
+      "key": "7062_CR71",
+      "doi": "10.1038/s41467-018-06306-x",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "K Nagarathinam",
+      "unstructured": "Nagarathinam, K. et al. Outward open conformation of a major facilitator superfamily multidrug/H+ antiporter provides insights into switching mechanism. Nat. Commun. 9, 4005 (2018)."
+    },
+    {
+      "key": "7062_CR72",
+      "doi": "10.1038/cr.2015.94",
+      "title": "",
+      "journal": "Cell Res.",
+      "year": "2015",
+      "author": "J Heng",
+      "unstructured": "Heng, J. et al. Substrate-bound structure of the E. coli multidrug resistance transporter MdfA. Cell Res. 25, 1060\u20131073 (2015)."
+    },
+    {
+      "key": "7062_CR73",
+      "doi": "10.1038/s42003-019-0446-y",
+      "title": "",
+      "journal": "Commun. Biol.",
+      "year": "2019",
+      "author": "HH Wu",
+      "unstructured": "Wu, H. H., Symersky, J. & Lu, M. Structure of an engineered multidrug transporter MdfA reveals the molecular basis for substrate recognition. Commun. Biol. 2, 210 (2019)."
+    },
+    {
+      "key": "7062_CR74",
+      "doi": "10.1016/s0014-5793(00)01677-x",
+      "title": "",
+      "journal": "FEBS Lett.",
+      "year": "2000",
+      "author": "H Yerushalmi",
+      "unstructured": "Yerushalmi, H. & Schuldiner, S. A common binding site for substrates and protons in EmrE, an ion-coupled multidrug transporter. FEBS Lett. 476, 93\u201397 (2000)."
+    },
+    {
+      "key": "7062_CR75",
+      "doi": "10.1038/383634a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1996",
+      "author": "N Zerangue",
+      "unstructured": "Zerangue, N. & Kavanaugh, M. P. Flux coupling in a neuronal glutamate transporter. Nature 383, 634\u2013637 (1996)."
+    },
+    {
+      "key": "7062_CR76",
+      "doi": "10.1016/s0021-9258(19)86675-9",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "1979",
+      "author": "PJ Nelson",
+      "unstructured": "Nelson, P. J. & Rudnick, G. Coupling between platelet 5-hydroxytryptamine and potassium transport. J. Biol. Chem. 254, 10084\u201310089 (1979)."
+    },
+    {
+      "key": "7062_CR77",
+      "doi": "10.1038/s41467-022-30154-5",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "SG Schmidt",
+      "unstructured": "Schmidt, S. G. et al. The dopamine transporter antiports potassium to increase the uptake of dopamine. Nat. Commun. 13, 2446 (2022)."
+    },
+    {
+      "key": "7062_CR78",
+      "doi": "10.1038/ncomms12755",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "CB Billesbolle",
+      "unstructured": "Billesbolle, C. B. et al. Transition metal ion FRET uncovers K+ regulation of a neurotransmitter/sodium symporter. Nat. Commun. 7, 12755 (2016)."
+    },
+    {
+      "key": "7062_CR79",
+      "doi": "10.7554/elife.87985",
+      "title": "",
+      "journal": "eLife",
+      "year": "2023",
+      "author": "SG Schmidt",
+      "unstructured": "Schmidt, S. G., Nygaard, A., Mindell, J. A. & Loland, C. J. Exploring the K+ binding site and its coupling to transport in the neurotransmitter:sodium symporter LeuT. eLife 12, RP87985 (2023)."
+    },
+    {
+      "key": "7062_CR80",
+      "doi": "10.1038/nsmb.2277",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2012",
+      "author": "A Picollo",
+      "unstructured": "Picollo, A., Xu, Y., Johner, N., Berneche, S. & Accardi, A. Synergistic substrate binding determines the stoichiometry of transport of a prokaryotic H+/Cl\u2212 exchanger. Nat. Struct. Mol. Biol. 19, 525\u2013531 (2012). This elegant study uses isothermal titration calorimetry to uncover an unexpected coupling between protonation and Cl\u2212 binding in a bacterial H+/Cl\u2212 exchanger."
+    },
+    {
+      "key": "7062_CR81",
+      "doi": "10.1113/jp270575",
+      "title": "",
+      "journal": "J. Physiol.",
+      "year": "2015",
+      "author": "A Accardi",
+      "unstructured": "Accardi, A. Structure and gating of CLC channels and exchangers. J. Physiol. 593, 4129\u20134138 (2015)."
+    },
+    {
+      "key": "7062_CR82",
+      "doi": "10.7554/elife.04273",
+      "title": "",
+      "journal": "eLife",
+      "year": "2014",
+      "author": "JL Parker",
+      "unstructured": "Parker, J. L., Mindell, J. A. & Newstead, S. Thermodynamic evidence for a dual transport mechanism in a POT peptide transporter. eLife 3, e04273 (2014). In this study, a reconstituted proteoliposome system is used to demonstrate that the proton:substrate stoichiometry is different between di- and tri-peptides, highlighting flexibility in substrate\u2013H+ coupling."
+    },
+    {
+      "key": "7062_CR83",
+      "doi": "10.1016/j.bbapap.2008.11.020",
+      "title": "",
+      "journal": "Biochim. Biophys. Acta",
+      "year": "2009",
+      "author": "N Fluman",
+      "unstructured": "Fluman, N. & Bibi, E. Bacterial multidrug transport through the lens of the major facilitator superfamily. Biochim. Biophys. Acta 1794, 738\u2013747 (2009)."
+    },
+    {
+      "key": "7062_CR84",
+      "doi": "10.1073/pnas.1203632109",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2012",
+      "author": "O Tirosh",
+      "unstructured": "Tirosh, O. et al. Manipulating the drug/proton antiport stoichiometry of the secondary multidrug transporter MdfA. Proc. Natl Acad. Sci. USA 109, 12473\u201312478 (2012)."
+    },
+    {
+      "key": "7062_CR85",
+      "doi": "10.1093/emboj/18.4.822",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "1999",
+      "author": "R Edgar",
+      "unstructured": "Edgar, R. & Bibi, E. A single membrane-embedded negative charge is critical for recognizing positively charged drugs by the Escherichia coli multidrug resistance protein MdfA. EMBO J. 18, 822\u2013832 (1999)."
+    },
+    {
+      "key": "7062_CR86",
+      "doi": "10.1073/pnas.0707207104",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2007",
+      "author": "O Dohan",
+      "unstructured": "Dohan, O. et al. The Na+/I symporter (NIS) mediates electroneutral active transport of the environmental pollutant perchlorate. Proc. Natl Acad. Sci. USA 104, 20250\u201320255 (2007). This study revealed that iodide and perchlorate are co-transported by the LeuT-fold protein NIS with distinct numbers of Na+ ions."
+    },
+    {
+      "key": "7062_CR87",
+      "doi": "10.1073/pnas.0435544100",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2003",
+      "author": "O Lewinson",
+      "unstructured": "Lewinson, O. et al. The Escherichia coli multidrug transporter MdfA catalyzes both electrogenic and electroneutral transport reactions. Proc. Natl Acad. Sci. USA 100, 1667\u20131672 (2003)."
+    },
+    {
+      "key": "7062_CR88",
+      "doi": "10.1096/fj.10-156927",
+      "title": "",
+      "journal": "FASEB J.",
+      "year": "2010",
+      "author": "TA Schaedler",
+      "unstructured": "Schaedler, T. A. & van Veen, H. W. A flexible cation binding site in the multidrug major facilitator superfamily transporter LmrP is associated with variable proton coupling. FASEB J. 24, 3653\u20133661 (2010)."
+    },
+    {
+      "key": "7062_CR89",
+      "doi": "10.1074/jbc.m808877200",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2009",
+      "author": "N Sigal",
+      "unstructured": "Sigal, N., Fluman, N., Siemion, S. & Bibi, E. The secondary multidrug/proton antiporter MdfA tolerates displacements of an essential negatively charged side chain. J. Biol. Chem. 284, 6966\u20136971 (2009). This study showed that the H+-coupling residue can be shifted to a different location in the bacterial MFS protein while retaining its ability to use export drugs, demonstrating that H+-coupled transport can be flexible."
+    },
+    {
+      "key": "7062_CR90",
+      "doi": "10.1038/s41594-020-0464-y",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2020",
+      "author": "V Debruycker",
+      "unstructured": "Debruycker, V. et al. An embedded lipid in the multidrug transporter LmrP suggests a mechanism for polyspecificity. Nat. Struct. Mol. Biol. 27, 829\u2013835 (2020)."
+    },
+    {
+      "key": "7062_CR91",
+      "doi": "10.1038/s41598-017-14438-1",
+      "title": "",
+      "journal": "Sci Rep.",
+      "year": "2017",
+      "author": "R Henderson",
+      "unstructured": "Henderson, R. & Poolman, B. Proton-solute coupling mechanism of the maltose transporter from Saccharomyces cerevisiae. Sci Rep. 7, 14375 (2017)."
+    },
+    {
+      "key": "7062_CR92",
+      "doi": "10.1073/pnas.2113141118",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2021",
+      "author": "C Li",
+      "unstructured": "Li, C. & Voth, G. A. A quantitative paradigm for water-assisted proton transport through proteins and other confined spaces. Proc. Natl Acad. Sci. USA 118, e2113141118 (2021)."
+    },
+    {
+      "key": "7062_CR93",
+      "doi": "10.1073/pnas.1317890111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "W Han",
+      "unstructured": "Han, W., Cheng, R. C., Maduke, M. C. & Tajkhorshid, E. Water access points and hydration pathways in CLC H+/Cl\u2212 transporters. Proc. Natl Acad. Sci. USA 111, 1819\u20131824 (2014)."
+    },
+    {
+      "key": "7062_CR94",
+      "doi": "10.1073/pnas.2101932118",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2021",
+      "author": "Y Liu",
+      "unstructured": "Liu, Y. et al. Key computational findings reveal proton transfer as driving the functional cycle in the phosphate transporter PiPT. Proc. Natl Acad. Sci. USA 118, e2101932118 (2021)."
+    },
+    {
+      "key": "7062_CR95",
+      "doi": "10.1021/jacs.6b06683",
+      "title": "",
+      "journal": "J. Am. Chem. Soc.",
+      "year": "2016",
+      "author": "S Lee",
+      "unstructured": "Lee, S., Mayes, H. B., Swanson, J. M. & Voth, G. A. The origin of coupled chloride and proton transport in a Cl\u2212/H+ antiporter. J. Am. Chem. Soc. 138, 14923\u201314930 (2016)."
+    },
+    {
+      "key": "7062_CR96",
+      "doi": "10.7554/elife.41124",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "AT Bozzi",
+      "unstructured": "Bozzi, A. T. et al. Structures in multiple conformations reveal distinct transition metal and proton pathways in an Nramp transporter. eLife 8, e41124 (2019)."
+    },
+    {
+      "key": "7062_CR97",
+      "doi": "10.1126/sciadv.abl3857",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2021",
+      "author": "D Yang",
+      "unstructured": "Yang, D. & Gouaux, E. Illumination of serotonin transporter mechanism and role of the allosteric site. Sci. Adv. 7, eabl3857 (2021)."
+    },
+    {
+      "key": "7062_CR98",
+      "doi": "10.1038/nature14431",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "KH Wang",
+      "unstructured": "Wang, K. H., Penmatsa, A. & Gouaux, E. Neurotransmitter and psychostimulant recognition by the dopamine transporter. Nature 521, 322\u2013327 (2015)."
+    },
+    {
+      "key": "7062_CR99",
+      "doi": "10.1038/s41594-023-01011-w",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Nayak, S. R. et al. Cryo-EM structure of GABA transporter 1 reveals substrate recognition and transport mechanism. Nat. Struct. Mol. Biol. 30, 1023\u20131032 (2023)."
+    },
+    {
+      "key": "7062_CR100",
+      "doi": "10.1038/s41594-023-00983-z",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Zhu, A. et al. Molecular basis for substrate recognition and transport of human GABA transporter GAT1. Nat. Struct. Mol. Biol. 30, 1012\u20131022 (2023)."
+    },
+    {
+      "key": "7062_CR101",
+      "doi": "10.1038/nature06133",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Zomot, E. et al. Mechanism of chloride interaction with neurotransmitter:sodium symporters. Nature 449, 726\u2013730 (2007). This article showed that charged neutralization with either a negatively charged residue or a choloride ion is evolutionary-conserved to such an extent that just a single mutation introduces Cl\u2212 coupling to the bacterial NSS homologue LeuT."
+    },
+    {
+      "key": "7062_CR102",
+      "doi": "10.1038/cr.2017.83",
+      "title": "",
+      "journal": "Cell Res.",
+      "year": "2017",
+      "author": "X Yu",
+      "unstructured": "Yu, X. et al. Dimeric structure of the uracil:proton symporter UraA provides mechanistic insights into the SLC4/23/26 transporters. Cell Res. 27, 1020\u20131033 (2017)."
+    },
+    {
+      "key": "7062_CR103",
+      "doi": "10.1073/pnas.2302799120",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2023",
+      "author": "J Weng",
+      "unstructured": "Weng, J. et al. Insight into the mechanism of H+-coupled nucleobase transport. Proc. Natl Acad. Sci. USA 120, e2302799120 (2023)."
+    },
+    {
+      "key": "7062_CR104",
+      "doi": "10.1126/science.1176088",
+      "title": "",
+      "journal": "Science",
+      "year": "2009",
+      "author": "PL Shaffer",
+      "unstructured": "Shaffer, P. L., Goehring, A., Shankaranarayanan, A. & Gouaux, E. Structure and mechanism of a Na+-independent amino acid transporter. Science 325, 1010\u20131014 (2009)."
+    },
+    {
+      "key": "7062_CR105",
+      "doi": "10.1073/pnas.1309071110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "S Kalayil",
+      "unstructured": "Kalayil, S., Schulze, S. & Kuhlbrandt, W. Arginine oscillation explains Na+ independence in the substrate/product antiporter CaiT. Proc. Natl Acad. Sci. USA 110, 17296\u201317301 (2013)."
+    },
+    {
+      "key": "7062_CR106",
+      "doi": "10.1101/2023.06.14.544989",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Trebesch, N. & Tajkhorshid, E. Structure reveals homology in elevator transporters. Preprint at bioRxiv https://doi.org/10.1101/2023.06.14.544989 (2023)."
+    },
+    {
+      "key": "7062_CR107",
+      "doi": "10.1021/acs.chemrev.5b00627",
+      "title": "",
+      "journal": "Chem. Rev.",
+      "year": "2016",
+      "author": "MV LeVine",
+      "unstructured": "LeVine, M. V., Cuendet, M. A., Khelashvili, G. & Weinstein, H. Allosteric mechanisms of molecular machines at the membrane: transport by sodium-coupled symporters. Chem. Rev. 116, 6552\u20136587 (2016)."
+    },
+    {
+      "key": "7062_CR108",
+      "doi": "10.1016/j.sbi.2021.11.005",
+      "title": "",
+      "journal": "Curr. Opin. Struct. Biol.",
+      "year": "2022",
+      "author": "JM Swanson",
+      "unstructured": "Swanson, J. M. Multiscale kinetic analysis of proteins. Curr. Opin. Struct. Biol. 72, 169\u2013175 (2022)."
+    },
+    {
+      "key": "7062_CR109",
+      "doi": "10.1016/j.copbio.2018.11.005",
+      "title": "",
+      "journal": "Curr. Opin. Biotechnol.",
+      "year": "2019",
+      "author": "RK Henderson",
+      "unstructured": "Henderson, R. K., Fendler, K. & Poolman, B. Coupling efficiency of secondary active transporters. Curr. Opin. Biotechnol. 58, 62\u201371 (2019). This review highlights examples of imperfect ion coupling in secondary-active transporters and where these ion leaks may benefit the host organism."
+    },
+    {
+      "key": "7062_CR110",
+      "doi": "10.1016/j.bpj.2017.09.038",
+      "title": "",
+      "journal": "Biophys. J.",
+      "year": "2017",
+      "author": "A Bazzone",
+      "unstructured": "Bazzone, A., Zabadne, A. J., Salisowski, A., Madej, M. G. & Fendler, K. A loose relationship: incomplete H+/sugar coupling in the MFS sugar transporter GlcP. Biophys. J. 113, 2736\u20132749 (2017)."
+    },
+    {
+      "key": "7062_CR111",
+      "doi": "10.1085/jgp.200709756",
+      "title": "",
+      "journal": "J. Gen. Physiol.",
+      "year": "2007",
+      "author": "M Walden",
+      "unstructured": "Walden, M. et al. Uncoupling and turnover in a Cl\u2212/H+ exchange transporter. J. Gen. Physiol. 129, 317\u2013329 (2007)."
+    },
+    {
+      "key": "7062_CR112",
+      "doi": "10.1085/jgp.200810112",
+      "title": "",
+      "journal": "J. Gen. Physiol.",
+      "year": "2009",
+      "author": "HH Lim",
+      "unstructured": "Lim, H. H. & Miller, C. Intracellular proton-transfer mutants in a CLC Cl\u2212/H+ exchanger. J. Gen. Physiol. 133, 131\u2013138 (2009)."
+    },
+    {
+      "key": "7062_CR113",
+      "doi": "10.1016/j.jmb.2006.07.006",
+      "title": "",
+      "journal": "J. Mol. Biol.",
+      "year": "2006",
+      "author": "W Nguitragool",
+      "unstructured": "Nguitragool, W. & Miller, C. Uncoupling of a CLC Cl\u2212/H+ exchange transporter by polyatomic anions. J. Mol. Biol. 362, 682\u2013690 (2006)."
+    },
+    {
+      "key": "7062_CR114",
+      "doi": "10.1098/rstb.2008.0138",
+      "title": "",
+      "journal": "Philos. Trans. R. Soc. Lond. B",
+      "year": "2009",
+      "author": "C Miller",
+      "unstructured": "Miller, C. & Nguitragool, W. A provisional transport mechanism for a chloride channel-type Cl\u2212/H+ exchanger. Philos. Trans. R. Soc. Lond. B 364, 175\u2013180 (2009)."
+    },
+    {
+      "key": "7062_CR115",
+      "doi": "10.1074/jbc.270.45.27099",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "1995",
+      "author": "M Panayotova-Heiermann",
+      "unstructured": "Panayotova-Heiermann, M., Loo, D. D. & Wright, E. M. Kinetics of steady-state currents and charge movements associated with the rat Na+/glucose cotransporter. J. Biol. Chem. 270, 27099\u201327105 (1995)."
+    },
+    {
+      "key": "7062_CR116",
+      "doi": "10.1242/jeb.198.10.2197",
+      "title": "",
+      "journal": "J. Exp. Biol.",
+      "year": "1995",
+      "author": "A Galli",
+      "unstructured": "Galli, A., DeFelice, L. J., Duke, B. J., Moore, K. R. & Blakely, R. D. Sodium-dependent norepinephrine-induced currents in norepinephrine-transporter-transfected HEK-293 cells blocked by cocaine and antidepressants. J. Exp. Biol. 198, 2197\u20132212 (1995)."
+    },
+    {
+      "key": "7062_CR117",
+      "doi": "10.1074/jbc.270.30.17668",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "1995",
+      "author": "RJ Vandenberg",
+      "unstructured": "Vandenberg, R. J., Arriza, J. L., Amara, S. G. & Kavanaugh, M. P. Constitutive ion fluxes and substrate binding domains of human glutamate transporters. J. Biol. Chem. 270, 17668\u201317671 (1995)."
+    },
+    {
+      "key": "7062_CR118",
+      "doi": "10.1016/0896-6273(94)90260-7",
+      "title": "",
+      "journal": "Neuron",
+      "year": "1994",
+      "author": "JN Cammack",
+      "unstructured": "Cammack, J. N., Rakhilin, S. V. & Schwartz, E. A. A GABA transporter operates asymmetrically and with variable stoichiometry. Neuron 13, 949\u2013960 (1994)."
+    },
+    {
+      "key": "7062_CR119",
+      "doi": "10.1074/jbc.m114.574269",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2014",
+      "author": "L Borre",
+      "unstructured": "Borre, L., Andreassen, T. F., Shi, L., Weinstein, H. & Gether, U. The second sodium site in the dopamine transporter controls cation permeation and is regulated by chloride. J. Biol. Chem. 289, 25764\u201325773 (2014)."
+    },
+    {
+      "key": "7062_CR120",
+      "doi": "10.1016/0896-6273(94)90337-9",
+      "title": "",
+      "journal": "Neuron",
+      "year": "1994",
+      "author": "S Mager",
+      "unstructured": "Mager, S. et al. Conducting states of a mammalian serotonin transporter. Neuron 12, 845\u2013859 (1994)."
+    },
+    {
+      "key": "7062_CR121",
+      "doi": "10.1371/journal.pcbi.1007789",
+      "title": "",
+      "journal": "PLoS Comput. Biol.",
+      "year": "2020",
+      "author": "P Bisignano",
+      "unstructured": "Bisignano, P. et al. A kinetic mechanism for enhanced selectivity of membrane transport. PLoS Comput. Biol. 16, e1007789 (2020)."
+    },
+    {
+      "key": "7062_CR122",
+      "doi": "10.1152/physiol.00030.2009",
+      "title": "",
+      "journal": "Physiology",
+      "year": "2009",
+      "author": "LR Forrest",
+      "unstructured": "Forrest, L. R. & Rudnick, G. The rocking bundle: a mechanism for ion-coupled solute flux by symmetrical transporters. Physiology 24, 377\u2013386 (2009)."
+    },
+    {
+      "key": "7062_CR123",
+      "doi": "10.1073/pnas.1613744113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "T Zeuthen",
+      "unstructured": "Zeuthen, T., Gorraitz, E., Her, K., Wright, E. M. & Loo, D. D. Structural and functional significance of water permeation through cotransporters. Proc. Natl Acad. Sci. USA 113, E6887\u2013E6894 (2016). This pivotal study demonstrated that water is co-transported together with glucose across the apical membrane of the small intestine by SGLT1 rather than osmosis, a pathway of physiological significance in rehydration therapy."
+    },
+    {
+      "key": "7062_CR124",
+      "doi": "10.1073/pnas.93.23.13367",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1996",
+      "author": "DD Loo",
+      "unstructured": "Loo, D. D., Zeuthen, T., Chandy, G. & Wright, E. M. Cotransport of water by the Na+/glucose cotransporter. Proc. Natl Acad. Sci. USA 93, 13367\u201313370 (1996)."
+    },
+    {
+      "key": "7062_CR125",
+      "doi": "10.1073/pnas.1218986110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "J Li",
+      "unstructured": "Li, J. et al. Transient formation of water-conducting states in membrane transporters. Proc. Natl Acad. Sci. USA 110, 7696\u20137701 (2013)."
+    },
+    {
+      "key": "7062_CR126",
+      "doi": "10.1038/s41467-017-02202-y",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "DS Terry",
+      "unstructured": "Terry, D. S. et al. A partially-open inward-facing intermediate conformation of LeuT is associated with Na+ release and substrate transport. Nat. Commun. 9, 230 (2018)."
+    },
+    {
+      "key": "7062_CR127",
+      "doi": "10.1016/j.jmb.2021.166991",
+      "title": "",
+      "journal": "J. Mol. Biol.",
+      "year": "2021",
+      "author": "AT Bozzi",
+      "unstructured": "Bozzi, A. T. & Gaudet, R. Molecular mechanism of Nramp-family transition metal transport. J. Mol. Biol. 433, 166991 (2021)."
+    },
+    {
+      "key": "7062_CR128",
+      "doi": "10.1038/s41467-022-35410-2",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "PJ Spreacker",
+      "unstructured": "Spreacker, P. J. et al. Activating alternative transport modes in a multidrug resistance efflux pump to confer chemical susceptibility. Nat. Commun. 13, 7655 (2022)."
+    },
+    {
+      "key": "7062_CR129",
+      "doi": "10.4161/chan.2.1.6047",
+      "title": "",
+      "journal": "Channels",
+      "year": "2008",
+      "author": "RJ Vandenberg",
+      "unstructured": "Vandenberg, R. J., Huang, S. & Ryan, R. M. Slips, leaks and channels in glutamate transporters. Channels 2, 51\u201358 (2008)."
+    },
+    {
+      "key": "7062_CR130",
+      "doi": "10.1016/0896-6273(95)90159-0",
+      "title": "",
+      "journal": "Neuron",
+      "year": "1995",
+      "author": "JI Wadiche",
+      "unstructured": "Wadiche, J. I., Amara, S. G. & Kavanaugh, M. P. Ion fluxes associated with excitatory amino acid transport. Neuron 15, 721\u2013728 (1995)."
+    },
+    {
+      "key": "7062_CR131",
+      "doi": "10.1038/nsmb1230",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2007",
+      "author": "RM Ryan",
+      "unstructured": "Ryan, R. M. & Mindell, J. A. The uncoupled chloride conductance of a bacterial glutamate transporter homolog. Nat. Struct. Mol. Biol. 14, 365\u2013371 (2007)."
+    },
+    {
+      "key": "7062_CR132",
+      "doi": "10.1038/s41586-021-03240-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "I Chen",
+      "unstructured": "Chen, I. et al. Glutamate transporters have a chloride channel with two hydrophobic gates. Nature 591, 327\u2013331 (2021). In this elegant paper, the authors combine cross-linking, electrophysiology and cryo-EM to capture the chloride-conducting state of a Na+-coupled glutamate transporter."
+    },
+    {
+      "key": "7062_CR133",
+      "doi": "10.7554/elife.34896",
+      "title": "",
+      "journal": "eLife",
+      "year": "2018",
+      "author": "R Chang",
+      "unstructured": "Chang, R., Eriksen, J. & Edwards, R. H. The dual role of chloride in synaptic vesicle glutamate transport. eLife 7, e34896 (2018)."
+    },
+    {
+      "key": "7062_CR134",
+      "doi": "10.1126/science.aba9202",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "F Li",
+      "unstructured": "Li, F. et al. Ion transport and regulation in a synaptic vesicle glutamate transporter. Science 368, 893\u2013897 (2020)."
+    },
+    {
+      "key": "7062_CR135",
+      "doi": "10.1038/s41586-021-04211-w",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "L Han",
+      "unstructured": "Han, L. et al. Structure and mechanism of the SGLT family of glucose transporters. Nature 601, 274\u2013279 (2022)."
+    },
+    {
+      "key": "7062_CR136",
+      "doi": "10.1038/nrm.2017.138",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2018",
+      "author": "T Harayama",
+      "unstructured": "Harayama, T. & Riezman, H. Understanding the diversity of membrane lipid composition. Nat. Rev. Mol. Cell Biol. 19, 281\u2013296 (2018)."
+    },
+    {
+      "key": "7062_CR137",
+      "doi": "10.1038/s41580-022-00524-4",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2023",
+      "author": "I Levental",
+      "unstructured": "Levental, I. & Lyman, E. Regulation of membrane protein structure and function by their lipid nano-environment. Nat. Rev. Mol. Cell Biol. 24, 107\u2013122 (2023). This recent review surveys how specific lipids and lipid bilayer properties adjust to regulate the activity of membrane proteins."
+    },
+    {
+      "key": "7062_CR138",
+      "doi": "10.1016/j.cub.2018.01.007",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2018",
+      "author": "T Kobayashi",
+      "unstructured": "Kobayashi, T. & Menon, A. K. Transbilayer lipid asymmetry. Curr. Biol. 28, R386\u2013R391 (2018)."
+    },
+    {
+      "key": "7062_CR139",
+      "doi": "10.1016/j.cell.2010.05.037",
+      "title": "",
+      "journal": "Cell",
+      "year": "2010",
+      "author": "HJ Sharpe",
+      "unstructured": "Sharpe, H. J., Stevens, T. J. & Munro, S. A comprehensive comparison of transmembrane domains reveals organelle-specific properties. Cell 142, 158\u2013169 (2010)."
+    },
+    {
+      "key": "7062_CR140",
+      "doi": "10.1146/annurev.biophys.36.040306.132643",
+      "title": "",
+      "journal": "Annu. Rev. Biophys. Biomol. Struct.",
+      "year": "2007",
+      "author": "OS Andersen",
+      "unstructured": "Andersen, O. S. & Koeppe, R. E. 2nd Bilayer thickness and membrane protein function: an energetic perspective. Annu. Rev. Biophys. Biomol. Struct. 36, 107\u2013130 (2007)."
+    },
+    {
+      "key": "7062_CR141",
+      "doi": "10.1021/bi992634s",
+      "title": "",
+      "journal": "Biochemistry",
+      "year": "2000",
+      "author": "F Dumas",
+      "unstructured": "Dumas, F., Tocanne, J. F., Leblanc, G. & Lebrun, M. C. Consequences of hydrophobic mismatch between lipids and melibiose permease on melibiose transport. Biochemistry 39, 4846\u20134854 (2000)."
+    },
+    {
+      "key": "7062_CR142",
+      "doi": "10.15252/embr.202153025",
+      "title": "",
+      "journal": "EMBO Rep.",
+      "year": "2022",
+      "author": "K Corin",
+      "unstructured": "Corin, K. & Bowie, J. U. How physical forces drive the process of helical membrane protein folding. EMBO Rep. 23, e53025 (2022)."
+    },
+    {
+      "key": "7062_CR143",
+      "doi": "10.7554/elife.63288",
+      "title": "",
+      "journal": "eLife",
+      "year": "2021",
+      "author": "R Chadda",
+      "unstructured": "Chadda, R. et al. Membrane transporter dimerization driven by differential lipid solvation energetics of dissociated and associated states. eLife 10, e63288 (2021)."
+    },
+    {
+      "key": "7062_CR144",
+      "doi": "10.1038/s41467-022-35202-8",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "Y Jiang",
+      "unstructured": "Jiang, Y. et al. Membrane-mediated protein interactions drive membrane protein organization. Nat. Commun. 13, 7373 (2022)."
+    },
+    {
+      "key": "7062_CR145",
+      "doi": "10.7554/elife.50576",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "W Zhou",
+      "unstructured": "Zhou, W. et al. Large-scale state-dependent membrane remodeling by a transporter protein. eLife 8, e50576 (2019)."
+    },
+    {
+      "key": "7062_CR146",
+      "doi": "10.7554/elife.57003",
+      "title": "",
+      "journal": "eLife",
+      "year": "2020",
+      "author": "JS van \u2018t Klooster",
+      "unstructured": "van \u2018t Klooster, J. S. et al. Periprotein lipidomes of Saccharomyces cerevisiae provide a flexible environment for conformational changes of membrane proteins. eLife 9, e57003 (2020)."
+    },
+    {
+      "key": "7062_CR147",
+      "doi": "10.1038/s41594-022-00738-2",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Matsuoka, R. et al. Structure, mechanism and lipid-mediated remodeling of the mammalian Na+/H+ exchanger NHA2. Nat. Struct. Mol. Biol. 29, 108\u2013120 (2022). Cryo-EM structures reveal a surprisingly dynamic oligomeric interface in the elevator Na+/H+ exchanger NHA2, which could be remodelled by the binding of specific lipids."
+    },
+    {
+      "key": "7062_CR148",
+      "doi": "",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "2020",
+      "author": "I Winklemann",
+      "unstructured": "Winklemann, I. et al. Structure and elevator mechanism of the mammalian sodium/proton exchanger NHE9. EMBO J. 39, e105908 (2020)."
+    },
+    {
+      "key": "7062_CR149",
+      "doi": "10.1038/nature20820",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "K Gupta",
+      "unstructured": "Gupta, K. et al. The role of interfacial lipids in stabilizing membrane protein oligomers. Nature 541, 421\u2013424 (2017)."
+    },
+    {
+      "key": "7062_CR150",
+      "doi": "10.1101/2023.09.10.557050",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Kokane S, M. P. et al. PI-(3,5)P2-mediated oligomerization of the endosomal sodium/proton exchanger NHE9. Preprint at bioRxiv https://doi.org/10.1101/2023.09.10.557050 (2023)."
+    },
+    {
+      "key": "7062_CR151",
+      "doi": "10.1016/j.bbamem.2009.06.010",
+      "title": "",
+      "journal": "Biochim. Biophys. Acta",
+      "year": "2009",
+      "author": "T Romantsov",
+      "unstructured": "Romantsov, T., Guan, Z. & Wood, J. M. Cardiolipin and the osmotic stress responses of bacteria. Biochim. Biophys. Acta 1788, 2092\u20132100 (2009)."
+    },
+    {
+      "key": "7062_CR152",
+      "doi": "10.1038/s41467-018-06702-3",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "E Nji",
+      "unstructured": "Nji, E., Chatzikyriakidou, Y., Landreh, M. & Drew, D. An engineered thermal-shift screen reveals specific lipid preferences of eukaryotic and prokaryotic membrane proteins. Nat. Commun. 9, 4253 (2018)."
+    },
+    {
+      "key": "7062_CR153",
+      "doi": "10.1038/ncomms13993",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "M Landreh",
+      "unstructured": "Landreh, M. et al. Integrating mass spectrometry with MD simulations reveals the role of lipids in Na+/H+ antiporters. Nat. Commun. 8, 13993 (2017)."
+    },
+    {
+      "key": "7062_CR154",
+      "doi": "10.1016/j.chembiol.2018.03.011",
+      "title": "",
+      "journal": "Cell Chem. Biol.",
+      "year": "2018",
+      "author": "E Pyle",
+      "unstructured": "Pyle, E. et al. Structural lipids enable the formation of functional oligomers of the eukaryotic purine symporter UapA. Cell Chem. Biol. 25, 840\u2013848.e844 (2018)."
+    },
+    {
+      "key": "7062_CR155",
+      "doi": "10.1016/j.str.2006.01.013",
+      "title": "",
+      "journal": "Structure",
+      "year": "2006",
+      "author": "T Kawate",
+      "unstructured": "Kawate, T. & Gouaux, E. Fluorescence-detection size-exclusion chromatography for precrystallization screening of integral membrane proteins. Structure 14, 673\u2013681 (2006)."
+    },
+    {
+      "key": "7062_CR156",
+      "doi": "10.1038/ncomms14089",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "A Anderluh",
+      "unstructured": "Anderluh, A. et al. Direct PIP2 binding mediates stable oligomer formation of the serotonin transporter. Nat. Commun. 8, 14089 (2017)."
+    },
+    {
+      "key": "7062_CR157",
+      "doi": "10.1038/s42003-022-04210-1",
+      "title": "",
+      "journal": "Commun. Biol.",
+      "year": "2022",
+      "author": "D Luethi",
+      "unstructured": "Luethi, D. et al. Phosphatidylinositol 4,5-bisphosphate (PIP2) facilitates norepinephrine transporter dimerization and modulates substrate efflux. Commun. Biol. 5, 1259 (2022)."
+    },
+    {
+      "key": "7062_CR158",
+      "doi": "10.1074/jbc.m113.531632",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2014",
+      "author": "A Anderluh",
+      "unstructured": "Anderluh, A. et al. Single molecule analysis reveals coexistence of stable serotonin transporter monomers and oligomers in the live cell plasma membrane. J. Biol. Chem. 289, 4387\u20134394 (2014)."
+    },
+    {
+      "key": "7062_CR159",
+      "doi": "10.1074/jbc.ra118.006178",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2019",
+      "author": "AK Das",
+      "unstructured": "Das, A. K. et al. Dopamine transporter forms stable dimers in the live cell plasma membrane in a phosphatidylinositol 4,5-bisphosphate-independent manner. J. Biol. Chem. 294, 5632\u20135642 (2019)."
+    },
+    {
+      "key": "7062_CR160",
+      "doi": "10.1016/j.jmb.2021.167056",
+      "title": "",
+      "journal": "J. Mol. Biol.",
+      "year": "2021",
+      "author": "TA Chew",
+      "unstructured": "Chew, T. A., Zhang, J. & Feng, L. High-resolution views and transport mechanisms of the NKCC1 and KCC transporters. J. Mol. Biol. 433, 167056 (2021)."
+    },
+    {
+      "key": "7062_CR161",
+      "doi": "10.1038/s41467-020-14834-8",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "V Arkhipova",
+      "unstructured": "Arkhipova, V., Guskov, A. & Slotboom, D. J. Structural ensemble of a glutamate transporter homologue in lipid nanodisc environment. Nat. Commun. 11, 998 (2020)."
+    },
+    {
+      "key": "7062_CR162",
+      "doi": "10.1016/j.bbalip.2015.01.011",
+      "title": "",
+      "journal": "Biochim. Biophys. Acta",
+      "year": "2015",
+      "author": "SB Hansen",
+      "unstructured": "Hansen, S. B. Lipid agonism: the PIP2 paradigm of ligand-gated ion channels. Biochim. Biophys. Acta 1851, 620\u2013628 (2015)."
+    },
+    {
+      "key": "7062_CR163",
+      "doi": "10.1101/2022.06.02.493408",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Heinz, V. et al. Osmotic stress response in BetP: how lipids and K+ team up to overcome downregulation. Preprint at bioRxiv https://doi.org/10.1101/2022.06.02.493408 (2022)."
+    },
+    {
+      "key": "7062_CR164",
+      "doi": "10.1038/embor.2011.102",
+      "title": "",
+      "journal": "EMBO Rep.",
+      "year": "2011",
+      "author": "C Perez",
+      "unstructured": "Perez, C., Khafizov, K., Forrest, L. R., Kramer, R. & Ziegler, C. The role of trimerization in the osmoregulated betaine transporter BetP. EMBO Rep. 12, 804\u2013810 (2011)."
+    },
+    {
+      "key": "7062_CR165",
+      "doi": "10.7554/elife.74136",
+      "title": "",
+      "journal": "eLife",
+      "year": "2022",
+      "author": "X Leray",
+      "unstructured": "Leray, X. et al. Tonic inhibition of the chloride/proton antiporter ClC-7 by PI(3,5)P2 is crucial for lysosomal pH maintenance. eLife 11, e74136 (2022)."
+    },
+    {
+      "key": "7062_CR166",
+      "doi": "10.1152/physrev.00028.2018",
+      "title": "",
+      "journal": "Physiol. Rev.",
+      "year": "2019",
+      "author": "SF Pedersen",
+      "unstructured": "Pedersen, S. F. & Counillon, L. The SLC9A\u2013C mammalian Na+/H+ exchanger family: molecules, mechanisms, and physiology. Physiol. Rev. 99, 2015\u20132113 (2019)."
+    },
+    {
+      "key": "7062_CR167",
+      "doi": "10.1016/j.molcel.2023.06.033",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2023",
+      "author": "H Tang",
+      "unstructured": "Tang, H. et al. The solute carrier SPNS2 recruits PI(4,5)P2 to synergistically regulate transport of sphingosine-1-phosphate. Mol. Cell 83, 2739\u20132752.e2735 (2023)."
+    },
+    {
+      "key": "7062_CR168",
+      "doi": "10.1074/jbc.ra120.015175",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2021",
+      "author": "L Zhang",
+      "unstructured": "Zhang, L. et al. Cholesterol stimulates the cellular uptake of l-carnitine by the carnitine/organic cation transporter novel 2 (OCTN2). J. Biol. Chem. 296, 100204 (2021)."
+    },
+    {
+      "key": "7062_CR169",
+      "doi": "10.1529/biophysj.106.086900",
+      "title": "",
+      "journal": "Biophys. J.",
+      "year": "2006",
+      "author": "S Raunser",
+      "unstructured": "Raunser, S. et al. Heterologously expressed GLT-1 associates in approximately 200-nm protein\u2013lipid islands. Biophys. J. 91, 3718\u20133726 (2006)."
+    },
+    {
+      "key": "7062_CR170",
+      "doi": "10.1074/jbc.m403938200",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2004",
+      "author": "ME Butchbach",
+      "unstructured": "Butchbach, M. E., Tian, G., Guo, H. & Lin, C. L. Association of excitatory amino acid transporters, especially EAAT2, with cholesterol-rich lipid raft microdomains: importance for excitatory amino acid transporter localization and function. J. Biol. Chem. 279, 34388\u201334396 (2004)."
+    },
+    {
+      "key": "7062_CR171",
+      "doi": "10.1073/pnas.2304602120",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2023",
+      "author": "D Yang",
+      "unstructured": "Yang, D., Zhao, Z., Tajkhorshid, E. & Gouaux, E. Structures and membrane interactions of native serotonin transporter in complexes with psychostimulants. Proc. Natl Acad. Sci. USA 120, e2304602120 (2023)."
+    },
+    {
+      "key": "7062_CR172",
+      "doi": "10.1074/jbc.m117.809046",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2018",
+      "author": "L Laursen",
+      "unstructured": "Laursen, L. et al. Cholesterol binding to a conserved site modulates the conformation, pharmacology, and transport kinetics of the human serotonin transporter. J. Biol. Chem. 293, 3510\u20133523 (2018)."
+    },
+    {
+      "key": "7062_CR173",
+      "doi": "10.1074/jbc.m110.150565",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2010",
+      "author": "WC Hong",
+      "unstructured": "Hong, W. C. & Amara, S. G. Membrane cholesterol modulates the outward facing conformation of the dopamine transporter and alters cocaine binding. J. Biol. Chem. 285, 32616\u201332626 (2010)."
+    },
+    {
+      "key": "7062_CR174",
+      "doi": "10.1038/s41467-018-06704-1",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "C Martens",
+      "unstructured": "Martens, C. et al. Direct protein-lipid interactions shape the conformational landscape of secondary transporters. Nat. Commun. 9, 4151 (2018). In this study, hydrogen\u2013deuterium exchange mass spectrometry and molecular dynamics simulations show how lipid compositions can influence conformational preferences and dynamics in MFS transporters."
+    },
+    {
+      "key": "7062_CR175",
+      "doi": "10.1016/j.str.2012.08.021",
+      "title": "",
+      "journal": "Structure",
+      "year": "2012",
+      "author": "M Andersson",
+      "unstructured": "Andersson, M. et al. Proton-coupled dynamics in lactose permease. Structure 20, 1893\u20131904 (2012)."
+    },
+    {
+      "key": "7062_CR176",
+      "doi": "10.1074/jbc.270.2.732",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "1995",
+      "author": "M Bogdanov",
+      "unstructured": "Bogdanov, M. & Dowhan, W. Phosphatidylethanolamine is required for in vivo function of the membrane-associated lactose permease of Escherichia coli. J. Biol. Chem. 270, 732\u2013739 (1995)."
+    },
+    {
+      "key": "7062_CR177",
+      "doi": "10.1186/s12915-018-0553-0",
+      "title": "",
+      "journal": "BMC Biol.",
+      "year": "2018",
+      "author": "P Hariharan",
+      "unstructured": "Hariharan, P. et al. Structural and functional characterization of protein-lipid interactions of the Salmonella typhimurium melibiose transporter MelB. BMC Biol. 16, 85 (2018)."
+    },
+    {
+      "key": "7062_CR178",
+      "doi": "10.1038/s41467-023-39711-y",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2023",
+      "author": "A Suades",
+      "unstructured": "Suades, A. et al. Establishing mammalian GLUT kinetics and lipid composition influences in a reconstituted-liposome system. Nat. Commun. 14, 4070 (2023)."
+    },
+    {
+      "key": "7062_CR179",
+      "doi": "10.1016/j.jmb.2020.04.029",
+      "title": "",
+      "journal": "J. Mol. Biol.",
+      "year": "2020",
+      "author": "JS van \u2018t Klooster",
+      "unstructured": "van \u2018t Klooster, J. S. et al. Membrane lipid requirements of the lysine transporter Lyp1 from Saccharomyces cerevisiae. J. Mol. Biol. 432, 4023\u20134031 (2020)."
+    },
+    {
+      "key": "7062_CR180",
+      "doi": "10.1074/jbc.m116.730168",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2016",
+      "author": "RC Hresko",
+      "unstructured": "Hresko, R. C., Kraft, T. E., Quigley, A., Carpenter, E. P. & Hruz, P. W. Mammalian glucose transporter activity is dependent upon anionic and conical phospholipids. J. Biol. Chem. 291, 17271\u201317282 (2016)."
+    },
+    {
+      "key": "7062_CR181",
+      "doi": "10.1101/2023.12.03.569786",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Reddy K. D. et al. Uncoupled substrate binding underlies the evolutionary switch between Na+ and H+-coupled prokaryotic aspartate transporters. Preprint at bioRxiv https://doi.org/10.1101/2023.12.03.569786 (2023)."
+    },
+    {
+      "key": "7062_CR182",
+      "doi": "10.1038/s41467-017-01815-7",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "JMH Goudsmits",
+      "unstructured": "Goudsmits, J. M. H., Slotboom, D. J. & van Oijen, A. M. Single-molecule visualization of conformational changes and substrate transport in the vitamin B(12) ABC importer BtuCD\u2013F. Nat. Commun. 8, 1652 (2017)."
+    },
+    {
+      "key": "7062_CR183",
+      "doi": "10.1038/s41586-019-1747-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "GA Fitzgerald",
+      "unstructured": "Fitzgerald, G. A. et al. Quantifying secondary transport at single-molecule resolution. Nature 575, 528\u2013534 (2019)."
+    },
+    {
+      "key": "7062_CR184",
+      "doi": "10.1126/sciadv.aaz1949",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2020",
+      "author": "D Ciftci",
+      "unstructured": "Ciftci, D. et al. Single-molecule transport kinetics of a glutamate transporter homolog shows static disorder. Sci. Adv. 6, eaaz1949 (2020)."
+    },
+    {
+      "key": "7062_CR185",
+      "doi": "10.1073/pnas.2025520118",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2021",
+      "author": "D Ciftci",
+      "unstructured": "Ciftci, D. et al. Linking function to global and local dynamics in an elevator-type transporter. Proc. Natl Acad. Sci. USA 118, e2025520118 (2021)."
+    },
+    {
+      "key": "7062_CR186",
+      "doi": "10.3389/fpls.2021.715694",
+      "title": "",
+      "journal": "Front. Plant Sci.",
+      "year": "2021",
+      "author": "XZ Fang",
+      "unstructured": "Fang, X. Z. et al. NRT1.1 dual-affinity nitrate transport/signalling and its roles in plant abiotic stress resistance. Front. Plant Sci. 12, 715694 (2021)."
+    },
+    {
+      "key": "7062_CR187",
+      "doi": "10.1073/pnas.2302325120",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2023",
+      "author": "X Tao",
+      "unstructured": "Tao, X., Zhao, C. & MacKinnon, R. Membrane protein isolation and structure determination in cell-derived membrane vesicles. Proc. Natl Acad. Sci. USA 120, e2302325120 (2023)."
+    },
+    {
+      "key": "7062_CR188",
+      "doi": "10.1038/s41467-018-05253-x",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "F Windler",
+      "unstructured": "Windler, F. et al. The solute carrier SLC9C1 is a Na+/H+-exchanger gated by an S4-type voltage-sensor and cyclic-nucleotide binding. Nat. Commun. 9, 2809 (2018)."
+    },
+    {
+      "key": "7062_CR189",
+      "doi": "10.1126/sciadv.adh4251",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2023",
+      "author": "SA Jones",
+      "unstructured": "Jones, S. A. et al. Structural basis of purine nucleotide inhibition of human uncoupling protein 1. Sci. Adv. 9, eadh4251 (2023)."
+    },
+    {
+      "key": "7062_CR190",
+      "doi": "10.1038/s41586-023-06332-w",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "Y Kang",
+      "unstructured": "Kang, Y. & Chen, L. Structural basis for the binding of DNP and purine nucleotides onto UCP1. Nature 620, 226\u2013231 (2023)."
+    }
+  ]
+}

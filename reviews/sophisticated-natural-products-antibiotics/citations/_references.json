@@ -1,0 +1,1069 @@
+{
+  "article": {
+    "slug": "s41586-024-07530-w",
+    "doi": "10.1038/s41586-024-07530-w",
+    "title": "Sophisticated natural products as antibiotics",
+    "url": "https://www.nature.com/articles/s41586-024-07530-w",
+    "abbrev": "sophisticated-natural-products-antibiotics",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/sophisticated-natural-products-antibiotics"
+  },
+  "meta": {
+    "title": "Sophisticated natural products as antibiotics",
+    "authors": [
+      "Kim Lewis",
+      "Richard E. Lee",
+      "Heike Br\u00f6tz-Oesterhelt",
+      "Sebastian Hiller",
+      "Marina V. Rodnina",
+      "Tanja Schneider",
+      "Markus Weingarth",
+      "Ingo Wohlgemuth"
+    ],
+    "published": [
+      2024,
+      7,
+      31
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-024-07530-w",
+    "n_references": 115,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "7530_CR1",
+      "doi": "10.1016/j.cell.2020.02.056",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "K Lewis",
+      "unstructured": "Lewis, K. The science of antibiotic discovery. Cell 181, 29\u201345 (2020)."
+    },
+    {
+      "key": "7530_CR2",
+      "doi": "10.1016/s1473-3099(17)30753-3",
+      "title": "",
+      "journal": "Lancet Infect. Dis.",
+      "year": "2018",
+      "author": "E Tacconelli",
+      "unstructured": "Tacconelli, E. et al. Discovery, research, and development of new antibiotics: the WHO priority list of antibiotic-resistant bacteria and tuberculosis. Lancet Infect. Dis. 18, 318\u2013327 (2018)."
+    },
+    {
+      "key": "7530_CR3",
+      "doi": "10.1016/s0140-6736(21)02724-0",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2022",
+      "author": "Antimicrobial Resistance Collaborators.",
+      "unstructured": "Antimicrobial Resistance Collaborators. Global burden of bacterial antimicrobial resistance in 2019: a systematic analysis. Lancet 399, 629\u2013655 (2022)."
+    },
+    {
+      "key": "7530_CR4",
+      "doi": "10.1016/j.jinf.2018.02.007",
+      "title": "",
+      "journal": "J. Infect.",
+      "year": "2018",
+      "author": "JA Ramos-Castaneda",
+      "unstructured": "Ramos-Castaneda, J. A. et al. Mortality due to KPC carbapenemase-producing Klebsiella pneumoniae infections: systematic review and meta-analysis: mortality due to KPC Klebsiella pneumoniae infections. J. Infect. 76, 438\u2013448 (2018)."
+    },
+    {
+      "key": "7530_CR5",
+      "doi": "10.1186/s12941-017-0191-3",
+      "title": "",
+      "journal": "Ann. Clin. Microbiol. Antimicrob.",
+      "year": "2017",
+      "author": "L Xu",
+      "unstructured": "Xu, L., Sun, X. & Ma, X. Systematic review and meta-analysis of mortality of patients infected with carbapenem-resistant Klebsiella pneumoniae. Ann. Clin. Microbiol. Antimicrob. 16, 18 (2017)."
+    },
+    {
+      "key": "7530_CR6",
+      "doi": "10.1016/j.resmic.2018.02.002",
+      "title": "",
+      "journal": "Res. Microbiol.",
+      "year": "2018",
+      "author": "HI Zgurskaya",
+      "unstructured": "Zgurskaya, H. I., Rybenkov, V. V., Krishnamoorthy, G. & Leus, I. V. Trans-envelope multidrug efflux pumps of Gram-negative bacteria and their synergism with the outer membrane barrier. Res. Microbiol. 169, 351\u2013356 (2018)."
+    },
+    {
+      "key": "7530_CR7",
+      "doi": "10.1146/annurev.mi.39.100185.001541",
+      "title": "",
+      "journal": "Annu. Rev. Microbiol.",
+      "year": "1985",
+      "author": "JT Staley",
+      "unstructured": "Staley, J. T. & Konopka, A. Measurement of in situ activities of nonphotosynthetic microorganisms in aquatic and terrestrial habitats. Annu. Rev. Microbiol. 39, 321\u2013346 (1985)."
+    },
+    {
+      "key": "7530_CR8",
+      "doi": "10.1016/j.chembiol.2010.02.010",
+      "title": "",
+      "journal": "Chem. Biol.",
+      "year": "2010",
+      "author": "A D\u2019Onofrio",
+      "unstructured": "D\u2019Onofrio, A. et al. Siderophores from neighboring organisms promote the growth of uncultured bacteria. Chem. Biol. 17, 254\u2013264 (2010)."
+    },
+    {
+      "key": "7530_CR9",
+      "doi": "10.1186/s40168-017-0380-5",
+      "title": "",
+      "journal": "Microbiome",
+      "year": "2017",
+      "author": "K Fenn",
+      "unstructured": "Fenn, K. et al. Quinones are growth factors for the human gut microbiota. Microbiome 5, 161 (2017)."
+    },
+    {
+      "key": "7530_CR10",
+      "doi": "10.1038/s41564-018-0307-3",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2019",
+      "author": "P Strandwitz",
+      "unstructured": "Strandwitz, P. et al. GABA-modulating bacteria of the human gut microbiota. Nat. Microbiol. 4, 396\u2013403 (2019)."
+    },
+    {
+      "key": "7530_CR11",
+      "doi": "10.1038/nature14098",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "LL Ling",
+      "unstructured": "Ling, L. L. et al. A new antibiotic kills pathogens without detectable resistance. Nature 517, 455\u2013459 (2015). This paper describes the discovery of teixobactin from an uncultured bacterium."
+    },
+    {
+      "key": "7530_CR12",
+      "doi": "10.1016/j.cell.2023.07.038",
+      "title": "",
+      "journal": "Cell",
+      "year": "2023",
+      "author": "R Shukla",
+      "unstructured": "Shukla, R. et al. An antibiotic from an uncultured bacterium binds to an immutable target. Cell 186, 4059\u20134073.e4027 (2023)."
+    },
+    {
+      "key": "7530_CR13",
+      "doi": "10.1016/j.molcel.2018.03.001",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2018",
+      "author": "L Pantel",
+      "unstructured": "Pantel, L. et al. Odilorhabdins, antibacterial agents that cause miscoding by binding at a new ribosomal site. Mol. Cell 70, 83\u201394 e87 (2018)."
+    },
+    {
+      "key": "7530_CR14",
+      "doi": "10.1038/s41586-019-1791-1",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "Y Imai",
+      "unstructured": "Imai, Y. et al. A new antibiotic selectively kills Gram-negative pathogens. Nature 576, 459\u2013464 (2019)."
+    },
+    {
+      "key": "7530_CR15",
+      "doi": "10.1038/s41589-022-01102-7",
+      "title": "",
+      "journal": "Nat. Chem. Biol.",
+      "year": "2022",
+      "author": "Y Imai",
+      "unstructured": "Imai, Y. et al. Evybactin is a DNA gyrase inhibitor that selectively kills Mycobacterium tuberculosis. Nat. Chem. Biol. 18, 1236\u20131244 (2022). This paper describes the discovery of darobactins that target BamA in the outer membrane of Gram-negative bacteria."
+    },
+    {
+      "key": "7530_CR16",
+      "doi": "10.1038/s41564-022-01227-4",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2022",
+      "author": "RD Miller",
+      "unstructured": "Miller, R. D. et al. Computational identification of a systemic antibiotic for gram-negative bacteria. Nat. Microbiol. 7, 1661\u20131672 (2022)."
+    },
+    {
+      "key": "7530_CR17",
+      "doi": "10.1128/mbio.00700-22",
+      "title": "",
+      "journal": "mBio",
+      "year": "2022",
+      "author": "N Shahsavari",
+      "unstructured": "Shahsavari, N. et al. A silent operon of Photorhabdus luminescens encodes a prodrug mimic of GTP. mBio 13, e0070022 (2022)."
+    },
+    {
+      "key": "7530_CR18",
+      "doi": "10.1038/s41467-022-32858-0",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "V Libis",
+      "unstructured": "Libis, V. et al. Multiplexed mobilization and expression of biosynthetic gene clusters. Nat. Commun. 13, 5256 (2022). This paper describes an approach for efficient cloning of environmental DNA for the expression of BGCs."
+    },
+    {
+      "key": "7530_CR19",
+      "doi": "10.1038/s41564-022-01110-2",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2022",
+      "author": "A Gavriilidou",
+      "unstructured": "Gavriilidou, A. et al. Compendium of specialized metabolite biosynthetic diversity encoded in bacterial genomes. Nat. Microbiol. 7, 726\u2013735 (2022). This study catalogues BGCs from sequenced genomes and links them to taxonomy and biogeography."
+    },
+    {
+      "key": "7530_CR20",
+      "doi": "10.1021/jm700967e",
+      "title": "",
+      "journal": "J. Med. Chem.",
+      "year": "2008",
+      "author": "R O\u2019Shea",
+      "unstructured": "O\u2019Shea, R. & Moser, H. E. Physicochemical properties of antibacterial compounds: Implications for drug discovery. J. Med. Chem. 51, 2871\u20132878 (2008)."
+    },
+    {
+      "key": "7530_CR21",
+      "doi": "10.1038/nature22308",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "MF Richter",
+      "unstructured": "Richter, M. F. et al. Predictive compound accumulation rules yield a broad-spectrum antibiotic. Nature 545, 299\u2013304 (2017). This study provides rules for compound penetration into Gram-negative bacteria."
+    },
+    {
+      "key": "7530_CR22",
+      "doi": "10.1128/mbio.02785-20",
+      "title": "",
+      "journal": "mBio",
+      "year": "2021",
+      "author": "J Mehla",
+      "unstructured": "Mehla, J. et al. Predictive rules of efflux inhibition and avoidance in Pseudomonas aeruginosa. mBio 12, e02785\u201320 (2021). This study analyses physico-chemical properties of compounds that enable penetration into P. aeruginosa, and synthesis of MDR inhibitors."
+    },
+    {
+      "key": "7530_CR23",
+      "doi": "10.1038/s41589-020-00674-6",
+      "title": "",
+      "journal": "Nat. Chem. Biol.",
+      "year": "2020",
+      "author": "S Zhao",
+      "unstructured": "Zhao, S. et al. Defining new chemical space for drug penetration into Gram-negative bacteria. Nat. Chem. Biol. 16, 1293\u20131302 (2020)."
+    },
+    {
+      "key": "7530_CR24",
+      "doi": "10.1021/acs.jcim.0c00352",
+      "title": "",
+      "journal": "J. Chem. Inf. Model.",
+      "year": "2020",
+      "author": "RA Mansbach",
+      "unstructured": "Mansbach, R. A. et al. Machine learning algorithm identifies an antibiotic vocabulary for permeating Gram-negative bacteria. J. Chem. Inf. Model. 60, 2838\u20132847 (2020)."
+    },
+    {
+      "key": "7530_CR25",
+      "doi": "10.1038/s41586-023-06760-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "EJ Geddes",
+      "unstructured": "Geddes, E. J. et al. Porin-independent accumulation in Pseudomonas enables antibiotic discovery. Nature 624, 145\u2013153 (2023)."
+    },
+    {
+      "key": "7530_CR26",
+      "doi": "10.1038/s41564-019-0604-5",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2020",
+      "author": "EN Parker",
+      "unstructured": "Parker, E. N. et al. Implementation of permeation rules leads to a FabI inhibitor with activity against Gram-negative pathogens. Nat. Microbiol. 5, 67\u201375 (2020)."
+    },
+    {
+      "key": "7530_CR27",
+      "doi": "10.1038/s41586-021-03899-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "TF Durand-Reville",
+      "unstructured": "Durand-Reville, T. F. et al. Rational design of a new antibiotic class for drug-resistant infections. Nature 597, 698\u2013702 (2021)."
+    },
+    {
+      "key": "7530_CR28",
+      "doi": "10.1126/science.1182749",
+      "title": "",
+      "journal": "Science",
+      "year": "2010",
+      "author": "N Srinivas",
+      "unstructured": "Srinivas, N. et al. Peptidomimetic antibiotics target outer-membrane biogenesis in Pseudomonas aeruginosa. Science 327, 1010\u20131013 (2010)."
+    },
+    {
+      "key": "7530_CR29",
+      "doi": "10.1038/s41586-019-1665-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "A Luther",
+      "unstructured": "Luther, A. et al. Chimeric peptidomimetic antibiotics against Gram-negative bacteria. Nature 576, 452\u2013458 (2019)."
+    },
+    {
+      "key": "7530_CR30",
+      "doi": "10.1038/s41586-023-06799-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "KS Pahil",
+      "unstructured": "Pahil, K. S. et al. A new antibiotic traps lipopolysaccharide in its intermembrane transporter. Nature 625, 572\u2013577 (2024)."
+    },
+    {
+      "key": "7530_CR31",
+      "doi": "10.1038/s41586-023-06873-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "C Zampaloni",
+      "unstructured": "Zampaloni, C. et al. A novel antibiotic class targeting the lipopolysaccharide transporter. Nature 625, 566\u2013571 (2024)."
+    },
+    {
+      "key": "7530_CR32",
+      "doi": "",
+      "title": "",
+      "journal": "Br. J. Exp. Pathol.",
+      "year": "1929",
+      "author": "A Fleming",
+      "unstructured": "Fleming, A. On the antibacterial action of cultures of a penicillium, with special reference to their use in the isolation of B. influenzae. Br. J. Exp. Pathol. 10, 226 (1929)."
+    },
+    {
+      "key": "7530_CR33",
+      "doi": "10.1039/d1md00200g",
+      "title": "",
+      "journal": "RSC Med. Chem.",
+      "year": "2021",
+      "author": "M Mora-Ochomogo",
+      "unstructured": "Mora-Ochomogo, M. & Lohans, C. T. \u03b2-Lactam antibiotic targets and resistance mechanisms: from covalent inhibitors to substrates. RSC Med. Chem. 12, 1623\u20131639 (2021)."
+    },
+    {
+      "key": "7530_CR34",
+      "doi": "10.1038/nrd2202",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2007",
+      "author": "LL Silver",
+      "unstructured": "Silver, L. L. Multi-targeting by monotherapeutic antibacterials. Nat. Rev. Drug Discov. 6, 41\u201355 (2007)."
+    },
+    {
+      "key": "7530_CR35",
+      "doi": "10.1128/aac.11.5.852",
+      "title": "",
+      "journal": "Antimicrob. Agents Chemother.",
+      "year": "1977",
+      "author": "C Reading",
+      "unstructured": "Reading, C. & Cole, M. Clavulanic acid: a beta-lactamase-inhibiting beta-lactam from Streptomyces clavuligerus. Antimicrob. Agents Chemother. 11, 852\u2013857 (1977)."
+    },
+    {
+      "key": "7530_CR36",
+      "doi": "10.1128/aac.03579-14",
+      "title": "",
+      "journal": "Antimicrob. Agents Chemother.",
+      "year": "2014",
+      "author": "P Levasseur",
+      "unstructured": "Levasseur, P. et al. Efficacy of a ceftazidime\u2013avibactam combination in a murine model of septicemia caused by Enterobacteriaceae species producing ampc or extended-spectrum \u03b2-lactamases. Antimicrob. Agents Chemother. 58, 6490\u20136495 (2014)."
+    },
+    {
+      "key": "7530_CR37",
+      "doi": "10.1007/s40121-018-0214-1",
+      "title": "",
+      "journal": "Infect. Dis. Ther.",
+      "year": "2018",
+      "author": "RG Wunderink",
+      "unstructured": "Wunderink, R. G. et al. Effect and safety of meropenem-vaborbactam versus best-available therapy in patients with carbapenem-resistant Enterobacteriaceae infections: The TANGO II randomized clinical trial. Infect. Dis. Ther. 7, 439\u2013455 (2018)."
+    },
+    {
+      "key": "7530_CR38",
+      "doi": "10.1038/nbt1206-1504",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2006",
+      "author": "K Lewis",
+      "unstructured": "Lewis, K. & Ausubel, F. M. Prospects for plant-derived antibacterials. Nat. Biotechnol. 24, 1504\u20131507 (2006)."
+    },
+    {
+      "key": "7530_CR39",
+      "doi": "10.1073/pnas.030540597",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2000",
+      "author": "FR Stermitz",
+      "unstructured": "Stermitz, F. R., Lorenz, P., Tawara, J. N., Zenewicz, L. A. & Lewis, K. Synergy in a medicinal plant: antimicrobial action of berberine potentiated by 5\u2032-methoxyhydnocarpin, a multidrug pump inhibitor. Proc. Natl Acad. Sci. USA 97, 1433\u20131437 (2000)."
+    },
+    {
+      "key": "7530_CR40",
+      "doi": "10.1021/acsinfecdis.2c00263",
+      "title": "",
+      "journal": "ACS Infect. Dis.",
+      "year": "2022",
+      "author": "M Moniruzzaman",
+      "unstructured": "Moniruzzaman, M. et al. Analysis of orthogonal efflux and permeation properties of compounds leads to the discovery of new efflux pump inhibitors. ACS Infect. Dis. 8, 2149\u20132160 (2022)."
+    },
+    {
+      "key": "7530_CR41",
+      "doi": "10.1136/gutjnl-2018-317503",
+      "title": "",
+      "journal": "Gut",
+      "year": "2019",
+      "author": "MG Dominguez-Bello",
+      "unstructured": "Dominguez-Bello, M. G., Godoy-Vitorino, F., Knight, R. & Blaser, M. J. Role of the microbiome in human development. Gut 68, 1108\u20131114 (2019)."
+    },
+    {
+      "key": "7530_CR42",
+      "doi": "10.1038/s41575-022-00610-0",
+      "title": "",
+      "journal": "Nat. Rev. Gastroenterol. Hepatol.",
+      "year": "2022",
+      "author": "MK Schnizlein",
+      "unstructured": "Schnizlein, M. K. & Young, V. B. Capturing the environment of the Clostridioides difficile infection cycle. Nat. Rev. Gastroenterol. Hepatol. 19, 508\u2013520 (2022)."
+    },
+    {
+      "key": "7530_CR43",
+      "doi": "10.1016/j.celrep.2022.110649",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2022",
+      "author": "WE Anthony",
+      "unstructured": "Anthony, W. E. et al. Acute and persistent effects of commonly used antibiotics on the gut microbiome and resistome in healthy adults. Cell Rep. 39, 110649 (2022)."
+    },
+    {
+      "key": "7530_CR44",
+      "doi": "10.1056/nejmoa2106516",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2022",
+      "author": "P Feuerstadt",
+      "unstructured": "Feuerstadt, P. et al. SER-109, an oral microbiome therapy for recurrent Clostridioides difficile infection. N. Engl. J. Med. 386, 220\u2013229 (2022). This paper describes the introduction of a new type of \u2018drug\u2019\u2014an assemblage of clostridial spores for the treatment of C. difficile infection."
+    },
+    {
+      "key": "7530_CR45",
+      "doi": "10.1186/1757-4749-5-23",
+      "title": "",
+      "journal": "Gut Pathog.",
+      "year": "2013",
+      "author": "LR Lopetuso",
+      "unstructured": "Lopetuso, L. R., Scaldaferri, F., Petito, V. & Gasbarrini, A. Commensal clostridia: leading players in the maintenance of gut homeostasis. Gut Pathog. 5, 23 (2013)."
+    },
+    {
+      "key": "7530_CR46",
+      "doi": "10.1128/aac.39.11.2484",
+      "title": "",
+      "journal": "Antimicrob. Agents Chemother.",
+      "year": "1995",
+      "author": "K Mikusova",
+      "unstructured": "Mikusova, K., Slayden, R. A., Besra, G. S. & Brennan, P. J. Biogenesis of the mycobacterial cell wall and the site of action of ethambutol. Antimicrob. Agents Chemother. 39, 2484\u20132489 (1995)."
+    },
+    {
+      "key": "7530_CR47",
+      "doi": "10.1177/1060028013504087",
+      "title": "",
+      "journal": "Ann. Pharmacother.",
+      "year": "2014",
+      "author": "EB Chahine",
+      "unstructured": "Chahine, E. B., Karaoui, L. R. & Mansour, H. Bedaquiline: a novel diarylquinoline for multidrug-resistant tuberculosis. Ann. Pharmacother. 48, 107\u2013115 (2014)."
+    },
+    {
+      "key": "7530_CR48",
+      "doi": "10.3389/fcimb.2021.673100",
+      "title": "",
+      "journal": "Front. Cell. Infect. Microbiol.",
+      "year": "2021",
+      "author": "D Diallo",
+      "unstructured": "Diallo, D. et al. Antituberculosis therapy and gut microbiota: review of potential host microbiota directed-therapies. Front. Cell. Infect. Microbiol. 11, 673100 (2021)."
+    },
+    {
+      "key": "7530_CR49",
+      "doi": "10.1128/mbio.01516-20",
+      "title": "",
+      "journal": "mBio",
+      "year": "2020",
+      "author": "J Quigley",
+      "unstructured": "Quigley, J. et al. Novel antimicrobials from uncultured bacteria acting against Mycobacterium tuberculosis. mBio 11, e01516\u2013e01520 (2020)."
+    },
+    {
+      "key": "7530_CR50",
+      "doi": "10.3390/antibiotics11091218",
+      "title": "",
+      "journal": "Antibiotics",
+      "year": "2022",
+      "author": "T Motiwala",
+      "unstructured": "Motiwala, T., Mthethwa, Q., Achilonu, I. & Khoza, T. ESKAPE pathogens: looking at Clp ATPases as potential drug targets. Antibiotics 11, 1218 (2022)."
+    },
+    {
+      "key": "7530_CR51",
+      "doi": "10.1038/s41586-020-2072-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "S Rempel",
+      "unstructured": "Rempel, S. et al. A mycobacterial ABC transporter mediates the uptake of hydrophilic compounds. Nature 580, 409\u2013412 (2020)."
+    },
+    {
+      "key": "7530_CR52",
+      "doi": "10.1016/j.cell.2021.09.011",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "N Leimer",
+      "unstructured": "Leimer, N. et al. A selective antibiotic for Lyme disease. Cell 184, 5405\u20135418.e5416 (2021). This paper describes the identification of an antibiotic for selective action against B. burgdorferi."
+    },
+    {
+      "key": "7530_CR53",
+      "doi": "10.1038/nsmb.2992",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2015",
+      "author": "YS Polikanov",
+      "unstructured": "Polikanov, Y. S., Melnikov, S. V., Soll, D. & Steitz, T. A. Structural insights into the role of rRNA modifications in protein synthesis and ribosome assembly. Nat. Struct. Mol. Biol. 22, 342\u2013344 (2015)."
+    },
+    {
+      "key": "7530_CR54",
+      "doi": "10.1016/0006-291x(66)90188-4",
+      "title": "",
+      "journal": "Biochem. Biophys. Res. Commun.",
+      "year": "1966",
+      "author": "AN Chatterjee",
+      "unstructured": "Chatterjee, A. N. & Perkins, H. R. Compounds formed between nucleotides related to the biosynthesis of bacterial cell wall and vancomycin. Biochem. Biophys. Res. Commun. 24, 489\u2013494 (1966)."
+    },
+    {
+      "key": "7530_CR55",
+      "doi": "10.1016/j.bbamem.2015.04.014",
+      "title": "",
+      "journal": "Biochim. Biophys. Acta",
+      "year": "2015",
+      "author": "D Munch",
+      "unstructured": "Munch, D. & Sahl, H. G. Structural variations of the cell wall precursor lipid II in Gram-positive bacteria - Impact on binding and efficacy of antimicrobial peptides. Biochim. Biophys. Acta 1848, 3062\u20133071 (2015)."
+    },
+    {
+      "key": "7530_CR56",
+      "doi": "10.1056/nejm198807213190307",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "1988",
+      "author": "R Leclercq",
+      "unstructured": "Leclercq, R., Derlot, E., Duval, J. & Courvalin, P. Plasmid-mediated resistance to vancomycin and teicoplanin in Enterococcus faecium. N. Engl. J. Med. 319, 157\u2013161 (1988)."
+    },
+    {
+      "key": "7530_CR57",
+      "doi": "10.1073/pnas.94.12.6480",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1997",
+      "author": "CG Marshall",
+      "unstructured": "Marshall, C. G., Broadhead, G., Leskiw, B. K. & Wright, G. D. d-Ala\u2013d-Ala ligases from glycopeptide antibiotic-producing organisms are highly homologous to the enterococcal vancomycin-resistance ligases VanA and VanB. Proc. Natl Acad. Sci. USA 94, 6480\u20136483 (1997)."
+    },
+    {
+      "key": "7530_CR58",
+      "doi": "10.1038/s41586-022-05019-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "R Shukla",
+      "unstructured": "Shukla, R. et al. Teixobactin kills bacteria by a two-pronged attack on the cell envelope. Nature 608, 390\u2013396 (2022)."
+    },
+    {
+      "key": "7530_CR59",
+      "doi": "10.1016/j.cell.2023.07.038",
+      "title": "",
+      "journal": "Cell",
+      "year": "2023",
+      "author": "R Shukla",
+      "unstructured": "Shukla, R. et al. An antibiotic from an uncultured bacterium binds to an immutable target. Cell 186, 4059\u20134073 (2023)."
+    },
+    {
+      "key": "7530_CR60",
+      "doi": "10.1128/aac.01050-16",
+      "title": "",
+      "journal": "Antimicrob. Agents Chemother.",
+      "year": "2016",
+      "author": "T Homma",
+      "unstructured": "Homma, T. et al. Dual targeting of cell wall precursors by teixobactin leads to cell lysis. Antimicrob. Agents Chemother. 60, 6510\u20136517 (2016)."
+    },
+    {
+      "key": "7530_CR61",
+      "doi": "10.3181/00379727-55-14461",
+      "title": "",
+      "journal": "Proc. Soc. Exp. Biol. Med.",
+      "year": "1944",
+      "author": "A Schatz",
+      "unstructured": "Schatz, A., Bugie, E. & Waksman, S. A. Streptomycin, a substance exhibiting antibiotic activity against Gram-positive and Gram-negative bacteria. Proc. Soc. Exp. Biol. Med. 55, 66\u201369 (1944)."
+    },
+    {
+      "key": "7530_CR62",
+      "doi": "10.1038/nrmicro3155",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2014",
+      "author": "DN Wilson",
+      "unstructured": "Wilson, D. N. Ribosome-targeting antibiotics and mechanisms of bacterial resistance. Nat. Rev. Microbiol. 12, 35\u201348 (2014)."
+    },
+    {
+      "key": "7530_CR63",
+      "doi": "10.1073/pnas.2013315118",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2021",
+      "author": "J Aguirre Rivera",
+      "unstructured": "Aguirre Rivera, J. et al. Real-time measurements of aminoglycoside effects on protein synthesis in live cells. Proc. Natl Acad. Sci. USA 118, e2013315118 (2021)."
+    },
+    {
+      "key": "7530_CR64",
+      "doi": "10.1007/bf00332630",
+      "title": "",
+      "journal": "Mol. Genetics Genomics",
+      "year": "1982",
+      "author": "DI Andersson",
+      "unstructured": "Andersson, D. I., Bohman, K., Isaksson, L. A. & Kurland, C. G. Translation rates and misreading characteristics of rpsD mutants in Escherichia coli. Mol. Genetics Genomics 187, 467\u2013472 (1982)."
+    },
+    {
+      "key": "7530_CR65",
+      "doi": "10.1038/s41467-021-21942-6",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2021",
+      "author": "I Wohlgemuth",
+      "unstructured": "Wohlgemuth, I. et al. Translation error clusters induced by aminoglycoside antibiotics. Nat. Commun. 12, 1830 (2021). This study reveals the basis of killing by aminoglycosides\u2014the introduction of strings of errors into nascent proteins."
+    },
+    {
+      "key": "7530_CR66",
+      "doi": "10.1016/j.sbi.2009.08.003",
+      "title": "",
+      "journal": "Curr. Opin. Struct. Biol.",
+      "year": "2009",
+      "author": "N Tokuriki",
+      "unstructured": "Tokuriki, N. & Tawfik, D. S. Stability effects of mutations and protein evolvability. Curr. Opin. Struct. Biol. 19, 596\u2013604 (2009)."
+    },
+    {
+      "key": "7530_CR67",
+      "doi": "10.1126/science.aaa4690",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "A Kling",
+      "unstructured": "Kling, A. et al. Targeting DnaN for tuberculosis therapy using novel griselimycins. Science 348, 1106\u20131112 (2015)."
+    },
+    {
+      "key": "7530_CR68",
+      "doi": "10.1007/978-3-030-25241-0",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Lewis, K. (ed.) Persister Cells and Infectious Disease (Springer Nature, 2019)."
+    },
+    {
+      "key": "7530_CR69",
+      "doi": "10.1371/journal.pbio.1000317",
+      "title": "",
+      "journal": "PLoS Biol.",
+      "year": "2010",
+      "author": "T. Dorr",
+      "unstructured": "Dorr, T., Vulic, M. & Lewis, K. Ciprofloxacin causes persister formation by inducing the TisB toxin in Escherichia coli. PLoS Biol. 8, e1000317 (2010)."
+    },
+    {
+      "key": "7530_CR70",
+      "doi": "10.1111/mmi.13607",
+      "title": "",
+      "journal": "Mol. Microbiol.",
+      "year": "2017",
+      "author": "BA Berghoff",
+      "unstructured": "Berghoff, B. A., Hoekzema, M., Aulbach, L. & Wagner, E. G. Two regulatory RNA elements affect TisB-dependent depolarization and persister formation. Mol. Microbiol. 103, 1020\u20131033 (2017)."
+    },
+    {
+      "key": "7530_CR71",
+      "doi": "10.1073/pnas.1904309116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "C Romilly",
+      "unstructured": "Romilly, C., Deindl, S. & Wagner, E. G. H. The ribosomal protein S1-dependent standby site in tisB mRNA consists of a single-stranded region and a 5\u2032 structure element. Proc. Natl Acad. Sci. USA 116, 15901\u201315906 (2019)."
+    },
+    {
+      "key": "7530_CR72",
+      "doi": "10.1038/nature14662",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "MA Schumacher",
+      "unstructured": "Schumacher, M. A. et al. HipBA\u2013promoter structures reveal the basis of heritable multidrug tolerance. Nature 524, 59\u201364 (2015)."
+    },
+    {
+      "key": "7530_CR73",
+      "doi": "10.1371/journal.pbio.3001194",
+      "title": "",
+      "journal": "PLoS Biol.",
+      "year": "2021",
+      "author": "S Manuse",
+      "unstructured": "Manuse, S. et al. Bacterial persisters are a stochastically formed subpopulation of low-energy cells. PLoS Biol. 19, e3001194 (2021)."
+    },
+    {
+      "key": "7530_CR74",
+      "doi": "10.1128/spectrum.02948-22",
+      "title": "",
+      "journal": "Microbiol. Spectr.",
+      "year": "2022",
+      "author": "J Quigley",
+      "unstructured": "Quigley, J. & Lewis, K. Noise in a metabolic pathway leads to persister formation in Mycobacterium tuberculosis. Microbiol. Spectr. 10, e0294822 (2022)."
+    },
+    {
+      "key": "7530_CR75",
+      "doi": "10.1128/aac.02136-13",
+      "title": "",
+      "journal": "Antimicrob. Agents Chemother.",
+      "year": "2014",
+      "author": "LE Fleck",
+      "unstructured": "Fleck, L. E. et al. A screen for and validation of prodrug antimicrobials. Antimicrob. Agents Chemother. 58, 1410\u20131419 (2014)."
+    },
+    {
+      "key": "7530_CR76",
+      "doi": "10.1021/np500158q",
+      "title": "",
+      "journal": "J. Nat. Prod.",
+      "year": "2014",
+      "author": "JD Goodreid",
+      "unstructured": "Goodreid, J. D. et al. Total synthesis and antibacterial testing of the A54556 cyclic acyldepsipeptides isolated from Streptomyces hawaiiensis. J. Nat. Prod. 77, 2170\u20132181 (2014)."
+    },
+    {
+      "key": "7530_CR77",
+      "doi": "10.1128/aem.01292-19",
+      "title": "",
+      "journal": "Appl. Environ. Microbiol.",
+      "year": "2019",
+      "author": "D Thomy",
+      "unstructured": "Thomy, D. et al. The ADEP biosynthetic gene cluster in Streptomyces hawaiiensis NRRL 15010 reveals an accessory clpP gene as a novel antibiotic resistance factor. Appl. Environ. Microbiol. 85, e01292\u201319 (2019)."
+    },
+    {
+      "key": "7530_CR78",
+      "doi": "10.1038/nm1306",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2005",
+      "author": "H Brotz-Oesterhelt",
+      "unstructured": "Brotz-Oesterhelt, H. et al. Dysregulation of bacterial proteolytic machinery by a new class of antibiotics. Nat. Med. 11, 1082\u20131087 (2005). This paper describes the discovery of the mechanism of killing by ADEP: dysregulation of the bacterial protease ClpP."
+    },
+    {
+      "key": "7530_CR79",
+      "doi": "10.1038/nsmb.2885",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2014",
+      "author": "AO Olivares",
+      "unstructured": "Olivares, A. O., Nager, A. R., Iosefson, O., Sauer, R. T. & Baker, T. A. Mechanochemical basis of protein degradation by a double-ring AAA+ machine. Nat. Struct. Mol. Biol. 21, 871\u2013875 (2014)."
+    },
+    {
+      "key": "7530_CR80",
+      "doi": "10.1073/pnas.1805125115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "S Vahidi",
+      "unstructured": "Vahidi, S. et al. Reversible inhibition of the ClpP protease via an N-terminal conformational switch. Proc. Natl Acad. Sci. USA 115, E6447\u2013E6456 (2018)."
+    },
+    {
+      "key": "7530_CR81",
+      "doi": "10.1021/acsinfecdis.9b00245",
+      "title": "",
+      "journal": "ACS Infect. Dis.",
+      "year": "2019",
+      "author": "EC Griffith",
+      "unstructured": "Griffith, E. C. et al. Ureadepsipeptides as ClpP Activators. ACS Infect. Dis. 5, 1915\u20131925 (2019)."
+    },
+    {
+      "key": "7530_CR82",
+      "doi": "10.1002/cbic.201900787",
+      "title": "",
+      "journal": "ChemBioChem",
+      "year": "2020",
+      "author": "IT Malik",
+      "unstructured": "Malik, I. T. et al. Functional characterisation of ClpP mutations conferring resistance to acyldepsipeptide antibiotics in firmicutes. ChemBioChem 21, 1997\u20132012 (2020)."
+    },
+    {
+      "key": "7530_CR83",
+      "doi": "10.1038/s41594-019-0304-0",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2019",
+      "author": "C Gatsogiannis",
+      "unstructured": "Gatsogiannis, C., Balogh, D., Merino, F., Sieber, S. A. & Raunser, S. Cryo-EM structure of the ClpXP protein degradation machinery. Nat. Struct. Mol. Biol. 26, 946\u2013954 (2019)."
+    },
+    {
+      "key": "7530_CR84",
+      "doi": "10.7554/elife.52158",
+      "title": "",
+      "journal": "eLife",
+      "year": "2020",
+      "author": "ZA Ripstein",
+      "unstructured": "Ripstein, Z. A., Vahidi, S., Houry, W. A., Rubinstein, J. L. & Kay, L. E. A processive rotary mechanism couples substrate unfolding and proteolysis in the ClpXP degradation machinery. eLife 9, e52158 (2020)."
+    },
+    {
+      "key": "7530_CR85",
+      "doi": "10.7554/elife.52774",
+      "title": "",
+      "journal": "eLife",
+      "year": "2020",
+      "author": "X Fei",
+      "unstructured": "Fei, X. et al. Structures of the ATP-fueled ClpXP proteolytic machine bound to protein substrate. eLife 9, e52774 (2020)."
+    },
+    {
+      "key": "7530_CR86",
+      "doi": "10.1073/pnas.1110385108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "P Sass",
+      "unstructured": "Sass, P. et al. Antibiotic acyldepsipeptides activate ClpP peptidase to degrade the cell division protein FtsZ. Proc. Natl Acad. Sci. USA 108, 17474\u201317479 (2011)."
+    },
+    {
+      "key": "7530_CR87",
+      "doi": "10.1038/s42003-021-01789-9",
+      "title": "",
+      "journal": "Commun. Biol.",
+      "year": "2021",
+      "author": "N Silber",
+      "unstructured": "Silber, N., Mayer, C., Matos de Opitz, C. L. & Sass, P. Progression of the late-stage divisome is unaffected by the depletion of the cytoplasmic FtsZ pool. Commun. Biol. 4, 270 (2021)."
+    },
+    {
+      "key": "7530_CR88",
+      "doi": "10.1038/nature12790",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "BP Conlon",
+      "unstructured": "Conlon, B. P. et al. Activated ClpP kills persisters and eradicates a chronic biofilm infection. Nature 503, 365\u2013370 (2013). This paper describes the anti-persister activity of ADEP."
+    },
+    {
+      "key": "7530_CR89",
+      "doi": "10.1128/aac.01554-19",
+      "title": "",
+      "journal": "Antimicrob. Agents Chemother.",
+      "year": "2019",
+      "author": "N Mroue",
+      "unstructured": "Mroue, N. et al. Pharmacodynamics of ClpP-activating antibiotic combinations against Gram-positive pathogens. Antimicrob. Agents Chemother. 64, e01554-19 (2019)."
+    },
+    {
+      "key": "7530_CR90",
+      "doi": "10.1128/aac.00424-18",
+      "title": "",
+      "journal": "Antimicrob. Agents Chemother.",
+      "year": "2018",
+      "author": "A Brown Gandt",
+      "unstructured": "Brown Gandt, A. et al. In vivo and in vitro effects of a ClpP-activating antibiotic against vancomycin-resistant enterococci. Antimicrob. Agents Chemother. 62, e00424-18 (2018)."
+    },
+    {
+      "key": "7530_CR91",
+      "doi": "10.3389/fmolb.2021.690902",
+      "title": "",
+      "journal": "Front. Mol. Biosci.",
+      "year": "2021",
+      "author": "H Brotz-Oesterhelt",
+      "unstructured": "Brotz-Oesterhelt, H. & Vorbach, A. Reprogramming of the caseinolytic protease by ADEP antibiotics: molecular mechanism, cellular consequences, therapeutic potential. Front. Mol. Biosci. 8, 690902 (2021)."
+    },
+    {
+      "key": "7530_CR92",
+      "doi": "10.1016/j.ijmm.2013.11.009",
+      "title": "",
+      "journal": "Int. J. Med. Microbiol.",
+      "year": "2014",
+      "author": "D Frees",
+      "unstructured": "Frees, D., Gerth, U. & Ingmer, H. Clp chaperones and proteases are central in stress survival, virulence and antibiotic resistance of Staphylococcus aureus. Int. J. Med. Microbiol. 304, 142\u2013149 (2014)."
+    },
+    {
+      "key": "7530_CR93",
+      "doi": "10.1159/000517718",
+      "title": "",
+      "journal": "Microb. Physiol.",
+      "year": "2021",
+      "author": "A Illigmann",
+      "unstructured": "Illigmann, A., Thoma, Y., Pan, S., Reinhardt, L. & Brotz-Oesterhelt, H. Contribution of the Clp protease to bacterial survival and mitochondrial homoeostasis. Microb. Physiol. 31, 260\u2013279 (2021)."
+    },
+    {
+      "key": "7530_CR94",
+      "doi": "10.1126/sciadv.adg3683",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Schuster, M. et al. Peptidomimetic antibiotics disrupt the lipopolysaccharide transport bridge of drug-resistant Enterobacteriaceae. Sci. Adv. 9, eadg3683 (2023)."
+    },
+    {
+      "key": "7530_CR95",
+      "doi": "10.1021/jacs.2c05565",
+      "title": "",
+      "journal": "J. Am. Chem. Soc.",
+      "year": "2022",
+      "author": "H Nguyen",
+      "unstructured": "Nguyen, H. et al. Characterization of a radical SAM oxygenase for the ether crosslinking in darobactin biosynthesis. J. Am. Chem. Soc. 144, 18876\u201318886 (2022)."
+    },
+    {
+      "key": "7530_CR96",
+      "doi": "10.1038/s41586-021-03455-w",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "H Kaur",
+      "unstructured": "Kaur, H. et al. The antibiotic darobactin mimics a \u03b2-strand to inhibit outer membrane insertase. Nature 593, 125\u2013129 (2021)."
+    },
+    {
+      "key": "7530_CR97",
+      "doi": "10.1039/d1sc02725e",
+      "title": "",
+      "journal": "Chem. Sci.",
+      "year": "2021",
+      "author": "S Gro\u00df",
+      "unstructured": "Gro\u00df, S. et al. Improved broad-spectrum antibiotics against Gram-negative pathogens via darobactin biosynthetic pathway engineering. Chem. Sci. 12, 11882\u201311893 (2021)."
+    },
+    {
+      "key": "7530_CR98",
+      "doi": "10.1002/anie.202214094",
+      "title": "",
+      "journal": "Angew. Chem. Int. Ed. Engl.",
+      "year": "2022",
+      "author": "CE Seyfert",
+      "unstructured": "Seyfert, C. E. et al. Darobactins exhibiting superior antibiotic activity by Cryo-EM structure guided biosynthetic engineering. Angew. Chem. Int. Ed. Engl. 62, e202214094 (2022)."
+    },
+    {
+      "key": "7530_CR99",
+      "doi": "10.1021/jacs.2c05892",
+      "title": "",
+      "journal": "J. Am. Chem. Soc.",
+      "year": "2022",
+      "author": "YC Lin",
+      "unstructured": "Lin, Y. C. et al. Atroposelective total synthesis of darobactin A. J. Am. Chem. Soc. 144, 14458\u201314462 (2022)."
+    },
+    {
+      "key": "7530_CR100",
+      "doi": "10.1021/jacs.2c05891",
+      "title": "",
+      "journal": "J. Am. Chem. Soc.",
+      "year": "2022",
+      "author": "M Nesic",
+      "unstructured": "Nesic, M. et al. Total synthesis of darobactin A. J. Am. Chem. Soc. 144, 14026\u201314030 (2022)."
+    },
+    {
+      "key": "7530_CR101",
+      "doi": "10.1016/j.drudis.2016.06.012",
+      "title": "",
+      "journal": "Drug Discov. Today",
+      "year": "2016",
+      "author": "YS Tan",
+      "unstructured": "Tan, Y. S., Lane, D. P. & Verma, C. S. Stapled peptide design: principles and roles of computation. Drug Discov. Today 21, 1642\u20131653 (2016)."
+    },
+    {
+      "key": "7530_CR102",
+      "doi": "",
+      "title": "",
+      "journal": "J. Antibiot.",
+      "year": "1953",
+      "author": "K Maeda",
+      "unstructured": "Maeda, K., Osato, T. & Umezawa, H. A new antibiotic, azomycin. J. Antibiot. 6, 182 (1953)."
+    },
+    {
+      "key": "7530_CR103",
+      "doi": "10.1248/cpb1953.3.379",
+      "title": "",
+      "journal": "Pharm. Bull.",
+      "year": "1955",
+      "author": "S Nakamura",
+      "unstructured": "Nakamura, S. Structure of azomycin, a new antibiotic. Pharm. Bull. 3, 379\u2013383 (1955)."
+    },
+    {
+      "key": "7530_CR104",
+      "doi": "10.7164/antibiotics.42.1513",
+      "title": "",
+      "journal": "J. Antibiot.",
+      "year": "1989",
+      "author": "JH Shoji",
+      "unstructured": "Shoji, J. H. et al. Isolation of azomycin from Pseudomonas fluorescens. J. Antibiot. 42, 1513\u20131514 (1989)."
+    },
+    {
+      "key": "7530_CR105",
+      "doi": "10.3390/ph15050561",
+      "title": "",
+      "journal": "Pharmaceuticals",
+      "year": "2022",
+      "author": "R Gupta",
+      "unstructured": "Gupta, R. et al. Functionalized nitroimidazole scaffold construction and their pharmaceutical applications: a 1950\u20132021 comprehensive overview. Pharmaceuticals 15, 561 (2022)."
+    },
+    {
+      "key": "7530_CR106",
+      "doi": "10.1099/00221287-100-2-283",
+      "title": "",
+      "journal": "J. Gen. Microbiol.",
+      "year": "1977",
+      "author": "BP Goldstein",
+      "unstructured": "Goldstein, B. P. et al. The mechanism of action of nitro-heterocyclic antimicrobial drugs. Metabolic activation by micro-organisms. J. Gen. Microbiol. 100, 283\u2013298 (1977)."
+    },
+    {
+      "key": "7530_CR107",
+      "doi": "10.1021/acs.accounts.1c00004",
+      "title": "",
+      "journal": "Acc. Chem. Res.",
+      "year": "2021",
+      "author": "MJ Miller",
+      "unstructured": "Miller, M. J. & Liu, R. Design and syntheses of new antibiotics inspired by nature\u2019s quest for iron in an oxidative climate. Acc. Chem. Res. 54, 1646\u20131661 (2021)."
+    },
+    {
+      "key": "7530_CR108",
+      "doi": "10.1093/cid/ciz826",
+      "title": "",
+      "journal": "Clin. Infect. Dis.",
+      "year": "2019",
+      "author": "T Sato",
+      "unstructured": "Sato, T. & Yamawaki, K. Cefiderocol: discovery, chemistry, and in vivo profiles of a novel siderophore cephalosporin. Clin. Infect. Dis. 69, S538\u2013S543 (2019). This paper describes the creation of an approved chimeric antibiotic utilizing a siderophore moiety for penetration into the cell."
+    },
+    {
+      "key": "7530_CR109",
+      "doi": "10.1016/j.antiviral.2009.10.002",
+      "title": "",
+      "journal": "Antiviral Res.",
+      "year": "2010",
+      "author": "S Broder",
+      "unstructured": "Broder, S. The development of antiretroviral therapy and its impact on the HIV-1/AIDS pandemic. Antiviral Res. 85, 1\u201318 (2010)."
+    },
+    {
+      "key": "7530_CR110",
+      "doi": "10.1073/pnas.74.12.5463",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1977",
+      "author": "F Sanger",
+      "unstructured": "Sanger, F., Nicklen, S. & Coulson, A. R. DNA sequencing with chain-terminating inhibitors. Proc. Natl Acad. Sci. USA 74, 5463\u20135467 (1977)."
+    },
+    {
+      "key": "7530_CR111",
+      "doi": "10.1038/nm.2015",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2009",
+      "author": "S Wu",
+      "unstructured": "Wu, S. et al. A human colonic commensal promotes colon tumorigenesis via activation of T helper type 17 T cell responses. Nat. Med. 15, 1016\u20131022 (2009)."
+    },
+    {
+      "key": "7530_CR112",
+      "doi": "10.1126/science.abm3233",
+      "title": "",
+      "journal": "Science",
+      "year": "2022",
+      "author": "Y Cao",
+      "unstructured": "Cao, Y. et al. Commensal microbiota from patients with inflammatory bowel disease produce genotoxic metabolites. Science 378, eabm3233 (2022)."
+    },
+    {
+      "key": "7530_CR113",
+      "doi": "10.1126/science.abp9960",
+      "title": "",
+      "journal": "Science",
+      "year": "2022",
+      "author": "JY Lee",
+      "unstructured": "Lee, J. Y., Tsolis, R. M. & Baumler, A. J. The microbiome and gut homeostasis. Science 377, eabp9960 (2022)."
+    },
+    {
+      "key": "7530_CR114",
+      "doi": "10.1126/scitranslmed.abo7793",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2022",
+      "author": "MA Cook",
+      "unstructured": "Cook, M. A. & Wright, G. D. The past, present, and future of antibiotics. Sci. Transl. Med. 14, eabo7793 (2022)."
+    },
+    {
+      "key": "7530_CR115",
+      "doi": "10.1038/s41586-018-0483-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "PA Smith",
+      "unstructured": "Smith, P. A. et al. Optimized arylomycins are a new class of Gram-negative antibiotics. Nature 561, 189\u2013194 (2018)."
+    }
+  ]
+}

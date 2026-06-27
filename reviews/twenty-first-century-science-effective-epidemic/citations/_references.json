@@ -1,0 +1,887 @@
+{
+  "article": {
+    "slug": "s41586-019-1717-y",
+    "doi": "10.1038/s41586-019-1717-y",
+    "title": "A new twenty-first century science for effective epidemic response",
+    "url": "https://www.nature.com/articles/s41586-019-1717-y",
+    "abbrev": "twenty-first-century-science-effective-epidemic",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/twenty-first-century-science-effective-epidemic"
+  },
+  "meta": {
+    "title": "A new twenty-first century science for effective epidemic response",
+    "authors": [
+      "Juliet Bedford",
+      "Jeremy Farrar",
+      "Chikwe Ihekweazu",
+      "Gagandeep Kang",
+      "Marion Koopmans",
+      "John Nkengasong"
+    ],
+    "published": [
+      2019,
+      11,
+      6
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-019-1717-y",
+    "n_references": 95,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "1717_CR1",
+      "doi": "10.1038/001009a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1869",
+      "author": "TH Huxley",
+      "unstructured": "Huxley, T. H. Nature: aphorisms by Goethe. Nature 1, 9\u201311 (1869)."
+    },
+    {
+      "key": "1717_CR2",
+      "doi": "10.1093/ije/dym132",
+      "title": "",
+      "journal": "Int. J. Epidemiol.",
+      "year": "2007",
+      "author": "DE Lilienfeld",
+      "unstructured": "Lilienfeld, D. E. Celebration: William Farr (1807\u20131883)\u2014an appreciation on the 200th anniversary of his birth. Int. J. Epidemiol. 36, 985\u2013987 (2007)."
+    },
+    {
+      "key": "1717_CR3",
+      "doi": "10.1016/j.ajog.2018.11.1084",
+      "title": "",
+      "journal": "Am. J. Obstet. Gynecol.",
+      "year": "2019",
+      "author": "N Kadar",
+      "unstructured": "Kadar, N. Rediscovering Ignaz Philipp Semmelweis (1818\u20131865). Am. J. Obstet. Gynecol. 220, 26\u201339 (2019)."
+    },
+    {
+      "key": "1717_CR4",
+      "doi": "10.1136/jech.2009.087957",
+      "title": "",
+      "journal": "J. Epidemiol. Community Health",
+      "year": "2011",
+      "author": "C Julia",
+      "unstructured": "Julia, C. & Valleron, A.-J. Louis-Rene Villerme (1782\u20131863), a pioneer in social epidemiology: re-analysis of his data on comparative mortality in Paris in the early 19th century. J. Epidemiol. Community Health 65, 666\u2013670 (2011)."
+    },
+    {
+      "key": "1717_CR5",
+      "doi": "10.1016/s0140-6736(13)60771-0",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2013",
+      "author": "P Fine",
+      "unstructured": "Fine, P. et al. John Snow\u2019s legacy: epidemiology without borders. Lancet 381, 1302\u20131311 (2013). This is a wide-ranging meeting report that places modern epidemiology in the context of the past two hundred years and highlights the importance of bringing in new disciplines, remaining open-minded and using those skills across a wider range of societal issues than are traditionally considered public health."
+    },
+    {
+      "key": "1717_CR6",
+      "doi": "10.1136/bmj.288.6414.379",
+      "title": "",
+      "journal": "Br. Med. J. (Clin. Res. Ed.)",
+      "year": "1984",
+      "author": "N Howard-Jones",
+      "unstructured": "Howard-Jones, N. Robert Koch and the cholera vibrio: a centenary. Br. Med. J. (Clin. Res. Ed.) 288, 379\u2013381 (1984)."
+    },
+    {
+      "key": "1717_CR7",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Coggon, D., Rose, G. & Barker, D. J. P. Epidemiology for the Uninitiated (BMJ Books, 2003)."
+    },
+    {
+      "key": "1717_CR8",
+      "doi": "10.2307/3349375",
+      "title": "",
+      "journal": "Milbank Mem. Fund Q.",
+      "year": "1971",
+      "author": "AR Omran",
+      "unstructured": "Omran, A. R. The epidemiologic transition. A theory of the epidemiology of population change. Milbank Mem. Fund Q. 49, 509\u2013538 (1971)."
+    },
+    {
+      "key": "1717_CR9",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Gallagher, J. Large Ebola outbreaks new normal, says WHO. BBC News (7 June 2019)."
+    },
+    {
+      "key": "1717_CR10",
+      "doi": "10.1016/j.annepidem.2016.12.002",
+      "title": "",
+      "journal": "Ann. Epidemiol.",
+      "year": "2017",
+      "author": "RC Brownson",
+      "unstructured": "Brownson, R. C., Samet, J. M. & Bensyl, D. M. Applied epidemiology and public health: are we training the future generations appropriately? Ann. Epidemiol. 27, 77\u201382 (2017)."
+    },
+    {
+      "key": "1717_CR11",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "WHO. Managing Epidemics: Key Facts about Major Deadly Diseases https://apps.who.int/iris/handle/10665/272442 (WHO, 2018)."
+    },
+    {
+      "key": "1717_CR12",
+      "doi": "10.1017/s0025727300043738",
+      "title": "",
+      "journal": "Med. Hist.",
+      "year": "1985",
+      "author": "KC Carter",
+      "unstructured": "Carter, K. C. Ignaz Semmelweis, Carl Mayrhofer, and the rise of germ theory. Med. Hist. 29, 33\u201353 (1985)."
+    },
+    {
+      "key": "1717_CR13",
+      "doi": "10.1073/pnas.1400472111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "S Plotkin",
+      "unstructured": "Plotkin, S. History of vaccination. Proc. Natl Acad. Sci. USA 111, 12283\u201312287 (2014)."
+    },
+    {
+      "key": "1717_CR14",
+      "doi": "10.1016/0196-6553(82)90003-7",
+      "title": "",
+      "journal": "Am. J. Infect. Control",
+      "year": "1982",
+      "author": "MA Strassburg",
+      "unstructured": "Strassburg, M. A. The global eradication of smallpox. Am. J. Infect. Control 10, 53\u201359 (1982)."
+    },
+    {
+      "key": "1717_CR15",
+      "doi": "10.1093/aje/kwq320",
+      "title": "",
+      "journal": "Am. J. Epidemiol.",
+      "year": "2010",
+      "author": "N Nathanson",
+      "unstructured": "Nathanson, N. & Kew, O. M. From emergence to eradication: the epidemiology of poliomyelitis deconstructed. Am. J. Epidemiol. 172, 1213\u20131229 (2010)."
+    },
+    {
+      "key": "1717_CR16",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Macfarlane Burnet, F. & White, D. O. Natural History of Infectious Disease\u00a0p263 (Cambridge Univ. Press, 1972)."
+    },
+    {
+      "key": "1717_CR17",
+      "doi": "10.1001/jama.1990.03440110088033",
+      "title": "",
+      "journal": "J. Am. Med. Assoc.",
+      "year": "1990",
+      "author": "DJ Bregman",
+      "unstructured": "Bregman, D. J. & Langmuir, A. D. Farr\u2019s law applied to AIDS projections. J. Am. Med. Assoc. 263, 1522\u20131525 (1990)."
+    },
+    {
+      "key": "1717_CR18",
+      "doi": "10.1093/ije/30.1.1",
+      "title": "",
+      "journal": "Int. J. Epidemiol.",
+      "year": "2001",
+      "author": "GD Smith",
+      "unstructured": "Smith, G. D. & Ebrahim, S. Epidemiology\u2014is it time to call it a day? Int. J. Epidemiol. 30, 1\u201311 (2001)."
+    },
+    {
+      "key": "1717_CR19",
+      "doi": "10.1098/rsif.2014.0950",
+      "title": "",
+      "journal": "J. R. Soc. Interface",
+      "year": "2014",
+      "author": "KF Smith",
+      "unstructured": "Smith, K. F. et al. Global rise in human infectious disease outbreaks. J. R. Soc. Interface 11, 20140950 (2014)."
+    },
+    {
+      "key": "1717_CR20",
+      "doi": "10.1186/s13690-017-0223-7",
+      "title": "",
+      "journal": "Arch. Public Health",
+      "year": "2017",
+      "author": "CR MacIntyre",
+      "unstructured": "MacIntyre, C. R. & Bui, C. M. Pandemics, public health emergencies and antimicrobial resistance \u2014 putting the threat in an epidemiologic and risk analysis context. Arch. Public Health 75, 54 (2017)."
+    },
+    {
+      "key": "1717_CR21",
+      "doi": "",
+      "title": "",
+      "journal": "Infect. Ecol. Epidemiol.",
+      "year": "2015",
+      "author": "C-J Neiderud",
+      "unstructured": "Neiderud, C.-J. How urbanization affects the epidemiology of emerging infectious diseases. Infect. Ecol. Epidemiol. 5, 27060 (2015)."
+    },
+    {
+      "key": "1717_CR22",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Morse, S. S. in Microbial Evolution and Co-Adaptation: A Tribute to the Life and Scientific Legacies of Joshua Lederberg (National Academies Press, 2009)."
+    },
+    {
+      "key": "1717_CR23",
+      "doi": "",
+      "title": "",
+      "journal": "EJIFCC",
+      "year": "2018",
+      "author": "N Vignier",
+      "unstructured": "Vignier, N. & Bouchaud, O. Travel, migration and emerging infectious diseases. EJIFCC 29, 175\u2013179 (2018)."
+    },
+    {
+      "key": "1717_CR24",
+      "doi": "10.1073/pnas.0903423106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "KP Paaijmans",
+      "unstructured": "Paaijmans, K. P., Read, A. F. & Thomas, M. B. Understanding the link between malaria risk and climate. Proc. Natl Acad. Sci. USA 106, 13844\u201313849 (2009)."
+    },
+    {
+      "key": "1717_CR25",
+      "doi": "10.1001/jama.2014.14387",
+      "title": "",
+      "journal": "J. Am. Med. Assoc.",
+      "year": "2014",
+      "author": "AS Boozary",
+      "unstructured": "Boozary, A. S., Farmer, P. E. & Jha, A. K. The Ebola outbreak, fragile health systems, and quality as a cure. J. Am. Med. Assoc. 312, 1859\u20131860 (2014)."
+    },
+    {
+      "key": "1717_CR26",
+      "doi": "10.1089/bsp.2014.0032",
+      "title": "",
+      "journal": "Biosecur. Bioterror.",
+      "year": "2014",
+      "author": "SC Quinn",
+      "unstructured": "Quinn, S. C. & Kumar, S. Health inequalities and infectious disease epidemics: a challenge for global health security. Biosecur. Bioterror. 12, 263\u2013273 (2014)."
+    },
+    {
+      "key": "1717_CR27",
+      "doi": "10.1371/currents.outbreaks.aa1f2b60e8d43939b43fbd93e1a63a94",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Cohn, S. & Kutalek, R. Historical parallels, Ebola virus disease and cholera: understanding community distrust and social violence with epidemics. PLoS Curr. 8, https://doi.org/10.1371/currents.outbreaks.aa1f2b60e8d43939b43fbd93e1a63a94 (2016)."
+    },
+    {
+      "key": "1717_CR28",
+      "doi": "10.1371/journal.ppat.1004438",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2014",
+      "author": "SL Sharara",
+      "unstructured": "Sharara, S. L. & Kanj, S. S. War and infectious diseases: challenges of the Syrian civil war. PLoS Pathog. 10, e1004438 (2014)."
+    },
+    {
+      "key": "1717_CR29",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "WHO. Pandemic Influenza Preparedness Framework for the Sharing of Influenza Viruses and Access to Vaccines and Other Benefits (WHO, 2011)."
+    },
+    {
+      "key": "1717_CR30",
+      "doi": "10.1038/d41586-019-00789-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "JN Nkengasong",
+      "unstructured": "Nkengasong, J. N. How Africa can quell the next disease outbreaks. Nature 567, 147 (2019).The ability to prevent, detect and respond to any health issues will always depend on the local capacity and although international partners can bring complementary expertise and resources, it is the local capacity that is critical; in this article, the authors argue for national investment in public health, health systems, science and local leadership, examples of which are the establishment of the African CDC, the renewed strength of the WHO African regional office and the African Academy of Sciences."
+    },
+    {
+      "key": "1717_CR31",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Cheng, M. AP Exclusive: UN health chief orders probe into misconduct. AP News (17 January 2019)."
+    },
+    {
+      "key": "1717_CR32",
+      "doi": "10.1016/s0140-6736(71)92410-x",
+      "title": "",
+      "journal": "Lancet",
+      "year": "1971",
+      "author": "J Tudor Hart",
+      "unstructured": "Tudor Hart, J. The inverse care law. Lancet 297, 405\u2013412 (1971)."
+    },
+    {
+      "key": "1717_CR33",
+      "doi": "",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2015",
+      "author": "S Kay",
+      "unstructured": "Kay, S. Africa\u2019s leadership in biomedical research: shifting the center of gravity. Sci. Transl. Med. 7, 314ed13 (2015).Agenda setting, research questions and funding for biomedical research has historically been led from Northern Hemisphere countries in an unequal Northern\u2013Southern Hemisphere relationship; in this article, a determined approach to shift that centre of gravity is outlined, such that the agenda is firmly based where the need is greatest."
+    },
+    {
+      "key": "1717_CR34",
+      "doi": "10.1093/scipol/scz007",
+      "title": "",
+      "journal": "Sci. Public Policy",
+      "year": "2019",
+      "author": "J Chataway",
+      "unstructured": "Chataway, J. et al. Science granting councils in sub-Saharan Africa: trends and tensions. Sci. Public Policy 46, 620\u2013631 (2019)."
+    },
+    {
+      "key": "1717_CR35",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "International Federation of Red Cross and Red Crescent Societies. Community-Based Surveillance: Guiding Principles (IFRC, 2017)."
+    },
+    {
+      "key": "1717_CR36",
+      "doi": "10.3201/eid1311.061093",
+      "title": "",
+      "journal": "Emerg. Infect. Dis.",
+      "year": "2007",
+      "author": "M Gayer",
+      "unstructured": "Gayer, M., Legros, D., Formenty, P. & Connolly, M. A. Conflict and emerging infectious diseases. Emerg. Infect. Dis. 13, 1625\u20131631 (2007)."
+    },
+    {
+      "key": "1717_CR37",
+      "doi": "10.1016/s1473-3099(19)30063-5",
+      "title": "",
+      "journal": "Lancet Infect. Dis.",
+      "year": "2019",
+      "author": "P Vinck",
+      "unstructured": "Vinck, P., Pham, P. N., Bindu, K. K., Bedford, J. & Nilles, E. J. Institutional trust and misinformation in the response to the 2018\u201319 Ebola outbreak in North Kivu, DR Congo: a population-based survey. Lancet Infect. Dis. 19, 529\u2013536 (2019)."
+    },
+    {
+      "key": "1717_CR38",
+      "doi": "",
+      "title": "",
+      "journal": "Wkly. Epidemiol. Rec.",
+      "year": "2019",
+      "author": "J Bedford",
+      "unstructured": "Bedford, J. et al. Application of social science in the response to Ebola, \u00c9quateur Province, Democratic Republic of the Congo. Wkly. Epidemiol. Rec. 94, 19\u201323 (2019)."
+    },
+    {
+      "key": "1717_CR39",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Bardosh, K. et al. Towards People-Centred Epidemic Preparedness and Response: From Knowledge to Action (Wellcome Trust, 2019)."
+    },
+    {
+      "key": "1717_CR40",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "UNICEF & IDS. The Social Science in Humanitarian Action Platform https://www.socialscienceinaction.org/ (2019)."
+    },
+    {
+      "key": "1717_CR41",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "GloPID-R. Social Science Research. https://www.glopid-r.org/our-work/social-science-research/ (2018)."
+    },
+    {
+      "key": "1717_CR42",
+      "doi": "10.1136/bmjgh-2017-000534",
+      "title": "",
+      "journal": "BMJ Glob. Health",
+      "year": "2018",
+      "author": "D Stellmach",
+      "unstructured": "Stellmach, D., Beshar, I., Bedford, J., du Cros, P. & Stringer, B. Anthropology in public health emergencies: what is anthropology good for? BMJ Glob. Health 3, e000534 (2018)."
+    },
+    {
+      "key": "1717_CR43",
+      "doi": "10.1136/sextrans-2014-051879",
+      "title": "",
+      "journal": "Sex. Transm. Infect.",
+      "year": "2015",
+      "author": "LE Manhart",
+      "unstructured": "Manhart, L. E. & Khosropour, C. M. Launching a new era for behavioural surveillance. Sex. Transm. Infect. 91, 152\u2013153 (2015)."
+    },
+    {
+      "key": "1717_CR44",
+      "doi": "10.2471/blt.16.175984",
+      "title": "",
+      "journal": "Bull. World Health Organ.",
+      "year": "2017",
+      "author": "M Miller",
+      "unstructured": "Miller, M. & Hagan, E. Integrated biological\u2013behavioural surveillance in pandemic-threat warning systems. Bull. World Health Organ. 95, 62\u201368 (2017)."
+    },
+    {
+      "key": "1717_CR45",
+      "doi": "10.1038/s41586-019-0956-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "CS Wood",
+      "unstructured": "Wood, C. S. et al. Taking connected mobile-health diagnostics of infectious diseases to the field. Nature 566, 467\u2013474 (2019)."
+    },
+    {
+      "key": "1717_CR46",
+      "doi": "10.1093/ije/dyy095",
+      "title": "",
+      "journal": "Int. J. Epidemiol.",
+      "year": "2018",
+      "author": "CM Peak",
+      "unstructured": "Peak, C. M. et al. Population mobility reductions associated with travel restrictions during the Ebola epidemic in Sierra Leone: use of mobile phone data. Int. J. Epidemiol. 47, 1562\u20131570 (2018)."
+    },
+    {
+      "key": "1717_CR47",
+      "doi": "10.1371/journal.pone.0083672",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2013",
+      "author": "DA Broniatowski",
+      "unstructured": "Broniatowski, D. A., Paul, M. J. & Dredze, M. National and local influenza surveillance through Twitter: an analysis of the 2012\u20132013 influenza epidemic. PLoS ONE 8, e83672 (2013)."
+    },
+    {
+      "key": "1717_CR48",
+      "doi": "10.1111/1468-0009.12038",
+      "title": "",
+      "journal": "Milbank Q.",
+      "year": "2014",
+      "author": "E Velasco",
+      "unstructured": "Velasco, E., Agheneza, T., Denecke, K., Kirchner, G. & Eckmanns, T. Social media and internet-based data in global systems for public health surveillance: a systematic review. Milbank Q. 92, 7\u201333 (2014)."
+    },
+    {
+      "key": "1717_CR49",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "ISARIC. Protocols & Data Tools https://isaric.tghn.org/protocols/ (accessed 18 September 2019)."
+    },
+    {
+      "key": "1717_CR50",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "WHO. Laboratory Network. https://www.who.int/immunization/monitoring_surveillance/burden/laboratory/en/ (2018)."
+    },
+    {
+      "key": "1717_CR51",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "FAO. Enhancing Early Warning Capabilities and Capacities for Food Safety (FAO, 2015)."
+    },
+    {
+      "key": "1717_CR52",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "European Citizen Science Association. Global Mosquito Alert https://ecsa.citizen-science.net/global-mosquito-alert (accessed 12 October 2019)."
+    },
+    {
+      "key": "1717_CR53",
+      "doi": "10.1038/nature16996",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "J Quick",
+      "unstructured": "Quick, J. et al. Real-time, portable genome sequencing for Ebola surveillance. Nature 530, 228\u2013232 (2016)."
+    },
+    {
+      "key": "1717_CR54",
+      "doi": "10.1016/j.ajic.2016.05.015",
+      "title": "",
+      "journal": "Am. J. Infect. Control",
+      "year": "2017",
+      "author": "P Tang",
+      "unstructured": "Tang, P., Croxen, M. A., Hasan, M. R., Hsiao, W. W. & Hoang, L. M. Infection control in the new age of genomic epidemiology. Am. J. Infect. Control 45, 170\u2013179 (2017)."
+    },
+    {
+      "key": "1717_CR55",
+      "doi": "10.1126/science.1259657",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "SK Gire",
+      "unstructured": "Gire, S. K. et al. Genomic surveillance elucidates Ebola virus origin and transmission during the 2014 outbreak. Science 345, 1369\u20131372 (2014)."
+    },
+    {
+      "key": "1717_CR56",
+      "doi": "10.1038/nature14490",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "Y-G Tong",
+      "unstructured": "Tong, Y.-G. et al. Genetic diversity and evolutionary dynamics of Ebola virus in Sierra Leone. Nature 524, 93\u201396 (2015)."
+    },
+    {
+      "key": "1717_CR57",
+      "doi": "10.1056/nejmoa1804498",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2018",
+      "author": "KJ Siddle",
+      "unstructured": "Siddle, K. J. et al. Genomic analysis of Lassa virus during an increase in cases in Nigeria in 2018. N. Engl. J. Med. 379, 1745\u20131753 (2018)."
+    },
+    {
+      "key": "1717_CR58",
+      "doi": "10.3201/eid1811.120453",
+      "title": "",
+      "journal": "Emerg. Infect. Dis.",
+      "year": "2012",
+      "author": "FM Aarestrup",
+      "unstructured": "Aarestrup, F.M. et al. Integrating genome-based informatics to modernize global disease monitoring, information sharing, and response. Emerg. Infect. Dis. 18, e1 (2012).The integration of genomics and other types of data into the surveillance, prevention and response of epidemics is critical and can help to transform the ability to enhance public health; although the tools are now available, it will be key to ensure that these new approaches are fully integrated and not seen as esoteric ivory tower research, but instead as an essential component of twenty-first century epidemiology, public health and epidemics\u2014the next generation of leaders need to be trained in and comfortable across a range of new disciplines."
+    },
+    {
+      "key": "1717_CR59",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "GMI Global Microbial Identifier https://www.globalmicrobialidentifier.org/ (2018)."
+    },
+    {
+      "key": "1717_CR60",
+      "doi": "10.1016/s0140-6736(16)32621-6",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2017",
+      "author": "AM Henao-Restrepo",
+      "unstructured": "Henao-Restrepo, A. M. et al. Efficacy and effectiveness of an rVSV-vectored vaccine in preventing Ebola virus disease: final results from the Guinea ring vaccination, open-label, cluster-randomised trial (Ebola \u00c7a Suffit!).Lancet 389, 505\u2013518 (2017).A seminal study that shows that ring vaccination could be used in the midst of a devastating Ebola epidemic and, furthermore, that innovation research can be conducted in an epidemic, trial designs can be adapted without compromising scientific integrity and that Ebola can be prevented through vaccination."
+    },
+    {
+      "key": "1717_CR61",
+      "doi": "10.2105/ajph.2015.302996",
+      "title": "",
+      "journal": "Am. J. Public Health",
+      "year": "2016",
+      "author": "A Rid",
+      "unstructured": "Rid, A. & Miller, F. G. Ethical rationale for the Ebola \u201cring vaccination\u201d trial design. Am. J. Public Health 106, 432\u2013435 (2016)."
+    },
+    {
+      "key": "1717_CR62",
+      "doi": "10.1073/pnas.1817329116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "CR Wells",
+      "unstructured": "Wells, C. R. et al. Ebola vaccination in the Democratic Republic of the Congo. Proc. Natl Acad. Sci. USA 116, 10178\u201310183 (2019)."
+    },
+    {
+      "key": "1717_CR63",
+      "doi": "10.1016/s1473-3099(17)30234-7",
+      "title": "",
+      "journal": "Lancet Infect. Dis.",
+      "year": "2017",
+      "author": "A Rojek",
+      "unstructured": "Rojek, A., Horby, P. & Dunning, J. Insights from clinical research completed during the West Africa Ebola virus disease epidemic. Lancet Infect. Dis. 17, e280\u2013e292 (2017)."
+    },
+    {
+      "key": "1717_CR64",
+      "doi": "10.1016/s2468-2667(18)30029-x",
+      "title": "",
+      "journal": "Lancet Public Health",
+      "year": "2018",
+      "author": "MJ Siedner",
+      "unstructured": "Siedner, M. J., Ryan, E. T. & Bogoch, I. I. Gone or forgotten? The rise and fall of Zika virus. Lancet Public Health 3, e109\u2013e110 (2018)."
+    },
+    {
+      "key": "1717_CR65",
+      "doi": "",
+      "title": "",
+      "journal": "NPJ Vaccines",
+      "year": "2018",
+      "author": "ADT Barrett",
+      "unstructured": "Barrett, A. D. T. Current status of Zika vaccine development: Zika vaccines advance into clinical evaluation. NPJ Vaccines 3, 24 (2018)."
+    },
+    {
+      "key": "1717_CR66",
+      "doi": "10.1016/s1473-3099(17)30062-2",
+      "title": "",
+      "journal": "Lancet Infect. Dis.",
+      "year": "2017",
+      "author": "T Burki",
+      "unstructured": "Burki, T. CEPI: preparing for the worst. Lancet Infect. Dis. 17, 265\u2013266 (2017)."
+    },
+    {
+      "key": "1717_CR67",
+      "doi": "10.1016/s1473-3099(14)70999-5",
+      "title": "",
+      "journal": "Lancet Infect. Dis.",
+      "year": "2015",
+      "author": "C Yen",
+      "unstructured": "Yen, C. et al. The development of global vaccine stockpiles. Lancet Infect. Dis. 15, 340\u2013347 (2015)."
+    },
+    {
+      "key": "1717_CR68",
+      "doi": "10.1136/medethics-2016-103474",
+      "title": "",
+      "journal": "J. Med. Ethics",
+      "year": "2018",
+      "author": "P Calain",
+      "unstructured": "Calain, P. The Ebola clinical trials: a precedent for research ethics in disasters. J. Med. Ethics 44, 3\u20138 (2018).It is an ethical imperative to consider and implement research in an epidemic setting as, for many epidemic diseases, it is the only time at which to conduct the research that will inform and improve the lives of the individuals affected during epidemic and to ensure that future generations are better prepared; however, such research is challenging at many levels and it is critical to have an ethical framework that guides the research, places individuals and communites at the heart of the research and facilitates the maximum benefit for the maximum number of people, in an equitable way, that is independent of the ability to pay\u2014such a framework is outlined in this paper and is put into the context of social justice and equity."
+    },
+    {
+      "key": "1717_CR69",
+      "doi": "10.1126/science.aam8334",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "M Lipsitch",
+      "unstructured": "Lipsitch, M. & Eyal, N. Improving vaccine trials in infectious disease emergencies. Science 357, 153\u2013156 (2017)."
+    },
+    {
+      "key": "1717_CR70",
+      "doi": "10.1016/j.molmed.2015.12.005",
+      "title": "",
+      "journal": "Trends Mol. Med.",
+      "year": "2016",
+      "author": "EJ Mendoza",
+      "unstructured": "Mendoza, E. J., Qiu, X. & Kobinger, G. P. Progression of Ebola therapeutics during the 2014\u20132015 outbreak. Trends Mol. Med. 22, 164\u2013173 (2016)."
+    },
+    {
+      "key": "1717_CR71",
+      "doi": "10.1016/s0140-6736(19)30160-6",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2019",
+      "author": "MP Fallah",
+      "unstructured": "Fallah, M. P. & Skrip, L. A. Ebola therapies: an unconventionally calculated risk. Lancet 393, 850\u2013852 (2019)."
+    },
+    {
+      "key": "1717_CR72",
+      "doi": "10.1371/journal.pone.0203387",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2018",
+      "author": "M Brueckner",
+      "unstructured": "Brueckner, M., Titman, A., Jaki, T., Rojek, A. & Horby, P. Performance of different clinical trial designs to evaluate treatments during an epidemic. PLoS ONE 13, e0203387 (2018)."
+    },
+    {
+      "key": "1717_CR73",
+      "doi": "10.3389/fvets.2018.00014",
+      "title": "",
+      "journal": "Front. Vet. Sci.",
+      "year": "2018",
+      "author": "D Destoumieux-Garz\u00f3n",
+      "unstructured": "Destoumieux-Garz\u00f3n, D. et al. The One Health concept: 10\u2009years old and a long road ahead. Front. Vet. Sci. 5, 14 (2018)."
+    },
+    {
+      "key": "1717_CR74",
+      "doi": "10.3201/eid1812.120664",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Day, M. J. et al. Surveillance of zoonotic infectious disease transmitted by small companion animals. Emerg. Infect. Dis. 18, https://doi.org/10.3201/eid1812.120664 (2012)."
+    },
+    {
+      "key": "1717_CR75",
+      "doi": "10.1371/journal.pone.0109986",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2014",
+      "author": "CL Rist",
+      "unstructured": "Rist, C. L., Arriola, C. S. & Rubin, C. Prioritizing zoonoses: a proposed one health tool for collaborative decision-making. PLoS ONE 9, e109986 (2014)."
+    },
+    {
+      "key": "1717_CR76",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "FAO. Evaluation of the Emergency Prevention System (EMPRES) Programme in Food Chain Crises (FAO, 2018)."
+    },
+    {
+      "key": "1717_CR77",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "FAO, WHO & OIE. Report of the WHO/FAO/OIE joint consultation on emerging zoonotic diseases (WHO, 2004)."
+    },
+    {
+      "key": "1717_CR78",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "European Centre for Disease Prevention and Control. Towards One Health preparedness (ECDC, 2018)."
+    },
+    {
+      "key": "1717_CR79",
+      "doi": "10.1093/infdis/jiy213",
+      "title": "",
+      "journal": "J. Infect. Dis.",
+      "year": "2018",
+      "author": "C Huber",
+      "unstructured": "Huber, C., Finelli, L. & Stevens, W. The economic and social burden of the 2014 Ebola outbreak in West Africa. J. Infect. Dis. 218, S698\u2013S704 (2018).Epidemics cause enormous disruption to countries, regions and the world; however, the focus is often on the epidemic itself, the pathogen and its immediate effect rather than the much broader effect that the epidemic has not only on the healthcare system\u2014which lasts long after the epidemic itself\u2014as routine vaccination programmes often collapse, maternal\u2013child health suffers, and malaria, HIV and tuberculosis clinics and surgery\u2014all aspects of healthcare\u2014are disrupted, but also on the wider society, as mistrust and tension occurs between citizens, authorities and governments, and education, investments, businesses, trade and tourism inevitablely suffer leading to an economic impact that can be long lasting and devastating for often already fragile communities."
+    },
+    {
+      "key": "1717_CR80",
+      "doi": "10.1016/s2214-109x(15)00065-0",
+      "title": "",
+      "journal": "Lancet Glob. Health",
+      "year": "2015",
+      "author": "DK Evans",
+      "unstructured": "Evans, D. K., Goldstein, M. & Popova, A. Health-care worker mortality and the legacy of the Ebola epidemic. Lancet Glob. Health 3, e439\u2013e440 (2015)."
+    },
+    {
+      "key": "1717_CR81",
+      "doi": "10.1136/bmjgh-2015-000007",
+      "title": "",
+      "journal": "BMJ Glob. Health",
+      "year": "2016",
+      "author": "B Morse",
+      "unstructured": "Morse, B., Gr\u00e9pin, K. A., Blair, R. A. & Tsai, L. Patterns of demand for non-Ebola health services during and after the Ebola outbreak: panel survey evidence from Monrovia, Liberia. BMJ Glob. Health 1, e000007 (2016)."
+    },
+    {
+      "key": "1717_CR82",
+      "doi": "10.1016/s2352-4642(18)30021-x",
+      "title": "",
+      "journal": "Lancet Child Adolesc. Health",
+      "year": "2018",
+      "author": "EB Brickley",
+      "unstructured": "Brickley, E. B. & Rodrigues, L. C. Further pieces of evidence in the Zika virus and microcephaly puzzle. Lancet Child Adolesc. Health 2, 162\u2013164 (2018)."
+    },
+    {
+      "key": "1717_CR83",
+      "doi": "10.1016/s0140-6736(19)31211-5",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2019",
+      "author": "Ebola Gbalo Research Group",
+      "unstructured": "Ebola Gbalo Research Group. Responding to the Ebola virus disease outbreak in DR Congo: when will we learn from Sierra Leone? Lancet 393, 2647\u20132650 (2019)."
+    },
+    {
+      "key": "1717_CR84",
+      "doi": "10.1016/j.amjmed.2017.10.035",
+      "title": "",
+      "journal": "Am. J. Med.",
+      "year": "2018",
+      "author": "DD Miller",
+      "unstructured": "Miller, D. D. & Brown, E. W. Artificial intelligence in medical practice: the question to the answer? Am. J. Med. 131, 129\u2013133 (2018)."
+    },
+    {
+      "key": "1717_CR85",
+      "doi": "10.3390/ijerph15122796",
+      "title": "",
+      "journal": "Int. J. Environ. Res. Public Health",
+      "year": "2018",
+      "author": "K Benke",
+      "unstructured": "Benke, K. & Benke, G. Artificial intelligence and big data in public health. Int. J. Environ. Res. Public Health 15, 2796 (2018)."
+    },
+    {
+      "key": "1717_CR86",
+      "doi": "10.1126/science.1234914",
+      "title": "",
+      "journal": "Science",
+      "year": "2013",
+      "author": "JS McLellan",
+      "unstructured": "McLellan, J. S. et al. Structure of RSV fusion glycoprotein trimer bound to a prefusion-specific neutralizing antibody. Science 340, 1113\u20131117 (2013)."
+    },
+    {
+      "key": "1717_CR87",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Adalja, A. A., Watson, M., Cicero, A. & Inglesby, T. Vaccine Platforms: State of the Field and Looming Challenges (Johns Hopkins Center for Health Security, 2019)."
+    },
+    {
+      "key": "1717_CR88",
+      "doi": "10.1016/j.vaccine.2017.02.069",
+      "title": "",
+      "journal": "Vaccine",
+      "year": "2017",
+      "author": "HK Charlton Hume",
+      "unstructured": "Charlton Hume, H. K. & Lua, L. H. L. Platform technologies for modern vaccine manufacturing. Vaccine 35, 4480\u20134485 (2017)."
+    },
+    {
+      "key": "1717_CR89",
+      "doi": "10.1038/540189a",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "SF Dowell",
+      "unstructured": "Dowell, S. F., Blazes, D. & Desmond-Hellmann, S. Four steps to precision public health. Nature 540, 189\u2013191 (2016)."
+    },
+    {
+      "key": "1717_CR90",
+      "doi": "10.1056/nejmp1806634",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2018",
+      "author": "M Chowkwanyun",
+      "unstructured": "Chowkwanyun, M., Bayer, R. & Galea, S. \u201cPrecision\u201d public health \u2014 between novelty and hype. N. Engl. J. Med. 379, 1398\u20131400 (2018)."
+    },
+    {
+      "key": "1717_CR91",
+      "doi": "10.1016/s0140-6736(18)32741-7",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2018",
+      "author": "R Horton",
+      "unstructured": "Horton, R. Offline: in defence of precision public health. Lancet 392, 1504 (2018)."
+    },
+    {
+      "key": "1717_CR92",
+      "doi": "10.7554/elife.43481",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "HH Chang",
+      "unstructured": "Chang, H. H. et al. Mapping imported malaria in Bangladesh using parasite genetic and human mobility data. eLife 8, e43481 (2019)."
+    },
+    {
+      "key": "1717_CR93",
+      "doi": "10.1016/j.vaccine.2019.01.011",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Krubiner, C. B. et al. Pregnant women & vaccines against emerging epidemic threats: ethics guidance for preparedness, research, and response. Vaccine https://doi.org/10.1016/j.vaccine.2019.01.011 (2019)."
+    },
+    {
+      "key": "1717_CR94",
+      "doi": "10.1001/jama.2018.17716",
+      "title": "",
+      "journal": "J. Am. Med. Assoc.",
+      "year": "2018",
+      "author": "K Heyrana",
+      "unstructured": "Heyrana, K., Byers, H. M. & Stratton, P. Increasing the participation of pregnant women in clinical trials. J. Am. Med. Assoc. 320, 2077\u20132078 (2018)."
+    },
+    {
+      "key": "1717_CR95",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "The Ethics Working Group on ZIKV Research & Pregnancy. Pregnant Women & the Zika Virus Vaccine Research Agenda: Ethics Guidance on Priorities, Inclusion, and Evidence Generation (PREVENT, 2017)."
+    }
+  ]
+}

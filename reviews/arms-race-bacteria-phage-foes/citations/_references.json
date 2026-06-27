@@ -1,0 +1,1586 @@
+{
+  "article": {
+    "slug": "s41586-019-1894-8",
+    "doi": "10.1038/s41586-019-1894-8",
+    "title": "The arms race between bacteria and their phage foes",
+    "url": "https://www.nature.com/articles/s41586-019-1894-8",
+    "abbrev": "arms-race-bacteria-phage-foes",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/arms-race-bacteria-phage-foes"
+  },
+  "meta": {
+    "title": "The arms race between bacteria and their phage foes",
+    "authors": [
+      "Hannah G. Hampton",
+      "Bridget N. J. Watson",
+      "Peter C. Fineran"
+    ],
+    "published": [
+      2020,
+      1,
+      15
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-019-1894-8",
+    "n_references": 173,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "1894_CR1",
+      "doi": "10.4161/viru.24498",
+      "title": "",
+      "journal": "Virulence",
+      "year": "2013",
+      "author": "L-C Fortier",
+      "unstructured": "Fortier, L.-C. & Sekulovic, O. Importance of prophages to evolution and virulence of bacterial pathogens. Virulence 4, 354\u2013365 (2013)."
+    },
+    {
+      "key": "1894_CR2",
+      "doi": "10.1038/nrmicro1750",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2007",
+      "author": "CA Suttle",
+      "unstructured": "Suttle, C. A. Marine viruses\u2014major players in the global ecosystem. Nat. Rev. Microbiol. 5, 801\u2013812 (2007)."
+    },
+    {
+      "key": "1894_CR3",
+      "doi": "10.1186/gb-2013-14-11-r123",
+      "title": "",
+      "journal": "Genome Biol.",
+      "year": "2013",
+      "author": "BL Hurwitz",
+      "unstructured": "Hurwitz, B. L., Hallam, S. J. & Sullivan, M. B. Metabolic reprogramming by viruses in the sunlit and dark ocean. Genome Biol. 14, R123 (2013)."
+    },
+    {
+      "key": "1894_CR4",
+      "doi": "10.1146/annurev-virology-031413-085500",
+      "title": "",
+      "journal": "Annu. Rev. Virol.",
+      "year": "2014",
+      "author": "RL Dy",
+      "unstructured": "Dy, R. L., Richter, C., Salmond, G. P. C. & Fineran, P. C. Remarkable mechanisms in microbes to resist phage infections. Annu. Rev. Virol. 1, 307\u2013331 (2014)."
+    },
+    {
+      "key": "1894_CR5",
+      "doi": "10.1128/mmbr.00011-16",
+      "title": "",
+      "journal": "Microbiol. Mol. Biol. Rev.",
+      "year": "2016",
+      "author": "S van Houte",
+      "unstructured": "van Houte, S., Buckling, A. & Westra, E. R. Evolutionary ecology of prokaryotic immune mechanisms. Microbiol. Mol. Biol. Rev. 80, 745\u2013763 (2016)."
+    },
+    {
+      "key": "1894_CR6",
+      "doi": "10.1038/nrmicro3096",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2013",
+      "author": "JE Samson",
+      "unstructured": "Samson, J. E., Magad\u00e1n, A. H., Sabri, M. & Moineau, S. Revenge of the phages: defeating bacterial defences. Nat. Rev. Microbiol. 11, 675\u2013687 (2013)."
+    },
+    {
+      "key": "1894_CR7",
+      "doi": "10.1016/j.cell.2019.03.040",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "AC Gregory",
+      "unstructured": "Gregory, A. C. et al. Marine DNA viral macro- and microdiversity from pole to pole. Cell 177, 1109\u20131123 (2019)."
+    },
+    {
+      "key": "1894_CR8",
+      "doi": "10.1038/s41591-019-0437-z",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2019",
+      "author": "RM Dedrick",
+      "unstructured": "Dedrick, R. M. et al. Engineered bacteriophages for treatment of a patient with a disseminated drug-resistant Mycobacterium abscessus. Nat. Med. 25, 730\u2013733 (2019). The first published study in which a genetically engineered phage cocktail is used to treat a bacterial infection in a human patient."
+    },
+    {
+      "key": "1894_CR9",
+      "doi": "10.1146/annurev-food-032818-121747",
+      "title": "",
+      "journal": "Annu. Rev. Food Sci. Technol.",
+      "year": "2019",
+      "author": "L O\u2019Sullivan",
+      "unstructured": "O\u2019Sullivan, L., Bolton, D., McAuliffe, O. & Coffey, A. Bacteriophages in food applications: from foe to friend. Annu. Rev. Food Sci. Technol. 10, 151\u2013172 (2019)."
+    },
+    {
+      "key": "1894_CR10",
+      "doi": "10.1111/trf.15126",
+      "title": "",
+      "journal": "Transfusion",
+      "year": "2019",
+      "author": "DV Foss",
+      "unstructured": "Foss, D. V., Hochstrasser, M. L. & Wilson, R. C. Clinical applications of CRISPR-based genome editing and diagnostics. Transfusion 59, 1389\u20131399 (2019)."
+    },
+    {
+      "key": "1894_CR11",
+      "doi": "10.1016/s0065-3527(08)60785-x",
+      "title": "",
+      "journal": "Adv. Virus Res.",
+      "year": "1998",
+      "author": "HW Ackermann",
+      "unstructured": "Ackermann, H. W. Tailed bacteriophages: the order Caudovirales. Adv. Virus Res. 51, 135\u2013201 (1998)."
+    },
+    {
+      "key": "1894_CR12",
+      "doi": "10.4161/bact.1.1.14942",
+      "title": "",
+      "journal": "Bacteriophage",
+      "year": "2011",
+      "author": "MRJ Clokie",
+      "unstructured": "Clokie, M. R. J., Millard, A. D., Letarov, A. V. & Heaphy, S. Phages in nature. Bacteriophage 1, 31\u201345 (2011)."
+    },
+    {
+      "key": "1894_CR13",
+      "doi": "10.7554/elife.03497",
+      "title": "",
+      "journal": "eLife",
+      "year": "2014",
+      "author": "KD Seed",
+      "unstructured": "Seed, K. D. et al. Evolutionary consequences of intra-patient phage predation on microbial populations. eLife 3, e03497 (2014)."
+    },
+    {
+      "key": "1894_CR14",
+      "doi": "10.1186/1471-2180-11-258",
+      "title": "",
+      "journal": "BMC Microbiol.",
+      "year": "2011",
+      "author": "AJ Manning",
+      "unstructured": "Manning, A. J. & Kuehn, M. J. Contribution of bacterial outer membrane vesicles to innate bacterial defense. BMC Microbiol. 11, 258 (2011)."
+    },
+    {
+      "key": "1894_CR15",
+      "doi": "10.1128/jb.00792-17",
+      "title": "",
+      "journal": "J. Bacteriol.",
+      "year": "2018",
+      "author": "T Reyes-Robles",
+      "unstructured": "Reyes-Robles, T. et al. Vibrio cholerae outer membrane vesicles inhibit bacteriophage infection. J. Bacteriol. 200, e00792-17 (2018)."
+    },
+    {
+      "key": "1894_CR16",
+      "doi": "10.1016/j.cell.2016.12.003",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "E Tzipilevich",
+      "unstructured": "Tzipilevich, E., Habusha, M. & Ben-Yehuda, S. Acquisition of phage sensitivity by bacteria through exchange of phage receptors. Cell 168, 186\u2013199 (2017). This study showed that co-culturing of cells allowed for the transfer of phage receptors from sensitive bacteria to resistant bacteria."
+    },
+    {
+      "key": "1894_CR17",
+      "doi": "10.1146/annurev.genet.40.110405.090442",
+      "title": "",
+      "journal": "Annu. Rev. Genet.",
+      "year": "2006",
+      "author": "R Moxon",
+      "unstructured": "Moxon, R., Bayliss, C. & Hood, D. Bacterial contingency loci: the role of simple sequence DNA repeats in bacterial adaptation. Annu. Rev. Genet. 40, 307\u2013333 (2006)."
+    },
+    {
+      "key": "1894_CR18",
+      "doi": "",
+      "title": "",
+      "journal": "Med. Microbiol. Immunol.",
+      "year": "1988",
+      "author": "Y Ohshima",
+      "unstructured": "Ohshima, Y., Schumacher-Perdreau, F., Peters, G. & Pulverer, G. The role of capsule as a barrier to bacteriophage adsorption in an encapsulated Staphylococcus simulans strain. Med. Microbiol. Immunol. 177, 229\u2013233 (1988)."
+    },
+    {
+      "key": "1894_CR19",
+      "doi": "10.1038/ismej.2011.174",
+      "title": "",
+      "journal": "ISME J.",
+      "year": "2012",
+      "author": "PD Scanlan",
+      "unstructured": "Scanlan, P. D. & Buckling, A. Co-evolution with lytic phage selects for the mucoid phenotype of Pseudomonas fluorescens SBW25. ISME J. 6, 1148\u20131158 (2012)."
+    },
+    {
+      "key": "1894_CR20",
+      "doi": "10.1038/s41564-017-0061-y",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2018",
+      "author": "H Harvey",
+      "unstructured": "Harvey, H. et al. Pseudomonas aeruginosa defends against phages through type IV pilus glycosylation. Nat. Microbiol. 3, 47\u201352 (2018)."
+    },
+    {
+      "key": "1894_CR21",
+      "doi": "10.1038/ismej.2016.79",
+      "title": "",
+      "journal": "ISME J.",
+      "year": "2016",
+      "author": "J Bondy-Denomy",
+      "unstructured": "Bondy-Denomy, J. et al. Prophages mediate defense against phage infection through diverse mechanisms. ISME J. 10, 2854\u20132866 (2016)."
+    },
+    {
+      "key": "1894_CR22",
+      "doi": "10.1126/science.1214449",
+      "title": "",
+      "journal": "Science",
+      "year": "2012",
+      "author": "JR Meyer",
+      "unstructured": "Meyer, J. R. et al. Repeatability and contingency in the evolution of a key innovation in phage lambda. Science 335, 428\u2013432 (2012)."
+    },
+    {
+      "key": "1894_CR23",
+      "doi": "10.1126/science.aar1954",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "KL Petrie",
+      "unstructured": "Petrie, K. L. et al. Destabilizing mutations encode nongenetic variation that drives evolutionary innovation. Science 359, 1542\u20131545 (2018)."
+    },
+    {
+      "key": "1894_CR24",
+      "doi": "10.1111/mmi.14231",
+      "title": "",
+      "journal": "Mol. Microbiol.",
+      "year": "2019",
+      "author": "M Habusha",
+      "unstructured": "Habusha, M., Tzipilevich, E., Fiyaksel, O. & Ben-Yehuda, S. A mutant bacteriophage evolved to infect resistant bacteria gained a broader host range. Mol. Microbiol. 111, 1463\u20131475 (2019)."
+    },
+    {
+      "key": "1894_CR25",
+      "doi": "10.1128/jvi.00801-12",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2012",
+      "author": "D Schwarzer",
+      "unstructured": "Schwarzer, D. et al. A multivalent adsorption apparatus explains the broad host range of phage phi92: a comprehensive genomic and structural analysis. J. Virol. 86, 10384\u201310398 (2012)."
+    },
+    {
+      "key": "1894_CR26",
+      "doi": "10.3390/v10080396",
+      "title": "",
+      "journal": "Viruses",
+      "year": "2018",
+      "author": "S Fernandes",
+      "unstructured": "Fernandes, S. & S\u00e3o-Jos\u00e9, C. Enzymes and mechanisms employed by tailed bacteriophages to breach the bacterial cell barriers. Viruses 10, 396 (2018)."
+    },
+    {
+      "key": "1894_CR27",
+      "doi": "10.1038/s41579-018-0070-8",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2018",
+      "author": "FL Nobrega",
+      "unstructured": "Nobrega, F. L. et al. Targeting mechanisms of tailed bacteriophages. Nat. Rev. Microbiol. 16, 760\u2013773 (2018)."
+    },
+    {
+      "key": "1894_CR28",
+      "doi": "10.1093/nar/gku734",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2014",
+      "author": "PH Oliveira",
+      "unstructured": "Oliveira, P. H., Touchon, M. & Rocha, E. P. C. The interplay of restriction\u2013modification systems with mobile genetic elements and their prokaryotic hosts. Nucleic Acids Res. 42, 10618\u201310631 (2014)."
+    },
+    {
+      "key": "1894_CR29",
+      "doi": "10.1093/nar/gkt990",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2014",
+      "author": "WAM Loenen",
+      "unstructured": "Loenen, W. A. M., Dryden, D. T. F., Raleigh, E. A., Wilson, G. G. & Murray, N. E. Highlights of the DNA cutters: a short history of the restriction enzymes. Nucleic Acids Res. 42, 3\u201319 (2014)."
+    },
+    {
+      "key": "1894_CR30",
+      "doi": "10.1046/j.1365-2958.2002.02896.x",
+      "title": "",
+      "journal": "Mol. Microbiol.",
+      "year": "2002",
+      "author": "P Sumby",
+      "unstructured": "Sumby, P. & Smith, M. C. M. Genetics of the phage growth limitation (Pgl) system of Streptomyces coelicolor A3(2). Mol. Microbiol. 44, 489\u2013500 (2002)."
+    },
+    {
+      "key": "1894_CR31",
+      "doi": "10.1016/j.virol.2014.12.036",
+      "title": "",
+      "journal": "Virology",
+      "year": "2015",
+      "author": "PA Hoskisson",
+      "unstructured": "Hoskisson, P. A., Sumby, P. & Smith, M. C. M. The phage growth limitation system in Streptomyces coelicolor A(3)2 is a toxin/antitoxin system, comprising enzymes with DNA methyltransferase, protein kinase and ATPase activity. Virology 477, 100\u2013109 (2015)."
+    },
+    {
+      "key": "1894_CR32",
+      "doi": "10.15252/embj.201489455",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "2015",
+      "author": "T Goldfarb",
+      "unstructured": "Goldfarb, T. et al. BREX is a novel phage resistance system widespread in microbial genomes. EMBO J. 34, 169\u2013183 (2015). This study describes an RM-like system that prevents infection through a mechanism other than DNA cleavage or degradation."
+    },
+    {
+      "key": "1894_CR33",
+      "doi": "10.1093/nar/gky1125",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2019",
+      "author": "J Gordeeva",
+      "unstructured": "Gordeeva, J. et al. BREX system of Escherichia coli distinguishes self from non-self by methylation of a specific DNA site. Nucleic Acids Res. 47, 253\u2013265 (2019)."
+    },
+    {
+      "key": "1894_CR34",
+      "doi": "10.1038/s41564-017-0051-0",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2018",
+      "author": "G Ofir",
+      "unstructured": "Ofir, G. et al. DISARM is a widespread bacterial defence system with broad anti-phage activities. Nat. Microbiol. 3, 90\u201398 (2018). Discovery of a type of widespread RM-like phage-resistance system."
+    },
+    {
+      "key": "1894_CR35",
+      "doi": "10.1128/mr.47.3.345-360.1983",
+      "title": "",
+      "journal": "Microbiol. Rev.",
+      "year": "1983",
+      "author": "DH Kr\u00fcger",
+      "unstructured": "Kr\u00fcger, D. H. & Bickle, T. A. Bacteriophage survival: multiple mechanisms for avoiding the deoxyribonucleic acid restriction systems of their hosts. Microbiol. Rev. 47, 345\u2013360 (1983)."
+    },
+    {
+      "key": "1894_CR36",
+      "doi": "10.1128/mmbr.00044-12",
+      "title": "",
+      "journal": "Microbiol. Mol. Biol. Rev.",
+      "year": "2013",
+      "author": "K Vasu",
+      "unstructured": "Vasu, K. & Nagaraja, V. Diverse functions of restriction\u2013modification systems in addition to cellular defense. Microbiol. Mol. Biol. Rev. 77, 53\u201372 (2013)."
+    },
+    {
+      "key": "1894_CR37",
+      "doi": "10.1099/00221287-139-6-1283",
+      "title": "",
+      "journal": "J. Gen. Microbiol.",
+      "year": "1993",
+      "author": "R Korona",
+      "unstructured": "Korona, R., Korona, B. & Levin, B. R. Sensitivity of naturally occurring coliphages to type I and type II restriction and modification. J. Gen. Microbiol. 139, 1283\u20131290 (1993)."
+    },
+    {
+      "key": "1894_CR38",
+      "doi": "10.1098/rsbl.2017.0646",
+      "title": "",
+      "journal": "Biol. Lett.",
+      "year": "2017",
+      "author": "M Ple\u0161ka",
+      "unstructured": "Ple\u0161ka, M. & Guet, C. C. Effects of mutations in phage restriction sites during escape from restriction\u2013modification. Biol. Lett. 13, 20170646 (2017)."
+    },
+    {
+      "key": "1894_CR39",
+      "doi": "10.3390/v6125077",
+      "title": "",
+      "journal": "Viruses",
+      "year": "2014",
+      "author": "EE Kulikov",
+      "unstructured": "Kulikov, E. E. et al. Genomic sequencing and biological characteristics of a novel Escherichia coli bacteriophage 9g, a putative representative of a new Siphoviridae genus. Viruses 6, 5077\u20135092 (2014)."
+    },
+    {
+      "key": "1894_CR40",
+      "doi": "10.1016/0022-2836(86)90071-9",
+      "title": "",
+      "journal": "J. Mol. Biol.",
+      "year": "1986",
+      "author": "WAM Loenen",
+      "unstructured": "Loenen, W. A. M. & Murray, N. E. Modification enhancement by the restriction alleviation protein (Ral) of bacteriophage \u03bb. J. Mol. Biol. 190, 11\u201322 (1986)."
+    },
+    {
+      "key": "1894_CR41",
+      "doi": "10.1016/0022-2836(89)90437-3",
+      "title": "",
+      "journal": "J. Mol. Biol.",
+      "year": "1989",
+      "author": "AV Semerjian",
+      "unstructured": "Semerjian, A. V., Malloy, D. C. & Poteete, A. R. Genetic structure of the bacteriophage P22 PL operon. J. Mol. Biol. 207, 1\u201313 (1989)."
+    },
+    {
+      "key": "1894_CR42",
+      "doi": "10.1128/aem.02229-13",
+      "title": "",
+      "journal": "Appl. Environ. Microbiol.",
+      "year": "2013",
+      "author": "J Murphy",
+      "unstructured": "Murphy, J., Mahony, J., Ainsworth, S., Nauta, A. & van Sinderen, D. Bacteriophage orphan DNA methyltransferases: insights from their bacterial origin, function, and occurrence. Appl. Environ. Microbiol. 79, 7547\u20137555 (2013)."
+    },
+    {
+      "key": "1894_CR43",
+      "doi": "10.1016/0378-1119(83)90098-7",
+      "title": "",
+      "journal": "Gene",
+      "year": "1983",
+      "author": "SL Schlagman",
+      "unstructured": "Schlagman, S. L. & Hattman, S. Molecular cloning of a functional dam\n+ gene coding for phage T4 DNA adenine methylase. Gene 22, 139\u2013156 (1983)."
+    },
+    {
+      "key": "1894_CR44",
+      "doi": "10.1093/nar/15.9.3689",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "1987",
+      "author": "U G\u00fcnthert",
+      "unstructured": "G\u00fcnthert, U. & Reiners, L. Bacillus subtilis phage SPR codes for a DNA methyltransferase with triple sequence specificity. Nucleic Acids Res. 15, 3689\u20133702 (1987)."
+    },
+    {
+      "key": "1894_CR45",
+      "doi": "10.1016/0042-6822(87)90324-2",
+      "title": "",
+      "journal": "Virology",
+      "year": "1987",
+      "author": "S Iida",
+      "unstructured": "Iida, S., Streiff, M. B., Bickle, T. A. & Arber, W. Two DNA antirestriction systems of bacteriophage P1, darA, and darB: characterization of darA\n\u2212 phages. Virology 157, 156\u2013166 (1987)."
+    },
+    {
+      "key": "1894_CR46",
+      "doi": "10.1111/mmi.13705",
+      "title": "",
+      "journal": "Mol. Microbiol.",
+      "year": "2017",
+      "author": "D Piya",
+      "unstructured": "Piya, D., Vara, L., Russell, W. K., Young, R. & Gill, J. J. The multicomponent antirestriction system of phage P1 is linked to capsid morphogenesis. Mol. Microbiol. 105, 399\u2013412 (2017)."
+    },
+    {
+      "key": "1894_CR47",
+      "doi": "10.1093/nar/gkf518",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2002",
+      "author": "C Atanasiu",
+      "unstructured": "Atanasiu, C., Su, T. J., Sturrock, S. S. & Dryden, D. T. F. Interaction of the ocr gene 0.3 protein of bacteriophage T7 with EcoKI restriction/modification enzyme. Nucleic Acids Res. 30, 3936\u20133944 (2002)."
+    },
+    {
+      "key": "1894_CR48",
+      "doi": "10.1016/s1097-2765(02)00435-5",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2002",
+      "author": "MD Walkinshaw",
+      "unstructured": "Walkinshaw, M. D. et al. Structure of Ocr from bacteriophage T7, a protein that mimics B-form DNA. Mol. Cell 9, 187\u2013194 (2002)."
+    },
+    {
+      "key": "1894_CR49",
+      "doi": "10.1111/j.1365-2958.1993.tb01124.x",
+      "title": "",
+      "journal": "Mol. Microbiol.",
+      "year": "1993",
+      "author": "C Laity",
+      "unstructured": "Laity, C., Chater, K. F., Lewis, C. G. & Buttner, M. J. Genetic analysis of the \u03c6C31-specific phage growth limitation (Pgl) system of Streptomyces coelicolor A3(2). Mol. Microbiol. 7, 329\u2013336 (1993)."
+    },
+    {
+      "key": "1894_CR50",
+      "doi": "10.1126/science.1138140",
+      "title": "",
+      "journal": "Science",
+      "year": "2007",
+      "author": "R Barrangou",
+      "unstructured": "Barrangou, R. et al. CRISPR provides acquired resistance against viruses in prokaryotes. Science 315, 1709\u20131712 (2007)."
+    },
+    {
+      "key": "1894_CR51",
+      "doi": "10.1126/science.aal5056",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "SA Jackson",
+      "unstructured": "Jackson, S. A. et al. CRISPR\u2013Cas: adapting to change. Science 356, eaal5056 (2017)."
+    },
+    {
+      "key": "1894_CR52",
+      "doi": "10.1016/j.cell.2017.11.032",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "F Hille",
+      "unstructured": "Hille, F. et al. The biology of CRISPR\u2013Cas: backward and forward. Cell 172, 1239\u20131259 (2018)."
+    },
+    {
+      "key": "1894_CR53",
+      "doi": "10.1098/rstb.2018.0087",
+      "title": "",
+      "journal": "Phil. Trans. R. Soc. B",
+      "year": "2019",
+      "author": "EV Koonin",
+      "unstructured": "Koonin, E. V. & Makarova, K. S. Origins and evolution of CRISPR\u2013Cas systems. Phil. Trans. R. Soc. B 374, 20180087 (2019)."
+    },
+    {
+      "key": "1894_CR54",
+      "doi": "10.1016/j.mib.2017.05.008",
+      "title": "",
+      "journal": "Curr. Opin. Microbiol.",
+      "year": "2017",
+      "author": "EV Koonin",
+      "unstructured": "Koonin, E. V., Makarova, K. S. & Zhang, F. Diversity, classification and evolution of CRISPR\u2013Cas systems. Curr. Opin. Microbiol. 37, 67\u201378 (2017)."
+    },
+    {
+      "key": "1894_CR55",
+      "doi": "10.1089/crispr.2018.0033",
+      "title": "",
+      "journal": "CRISPR J.",
+      "year": "2018",
+      "author": "KS Makarova",
+      "unstructured": "Makarova, K. S., Wolf, Y. I. & Koonin, E. V. Classification and nomenclature of CRISPR\u2013Cas systems: where from here? CRISPR J. 1, 325\u2013336 (2018)."
+    },
+    {
+      "key": "1894_CR56",
+      "doi": "10.1126/science.1159689",
+      "title": "",
+      "journal": "Science",
+      "year": "2008",
+      "author": "SJJ Brouns",
+      "unstructured": "Brouns, S. J. J. et al. Small CRISPR RNAs guide antiviral defense in prokaryotes. Science 321, 960\u2013964 (2008)."
+    },
+    {
+      "key": "1894_CR57",
+      "doi": "10.1073/pnas.1104144108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "E Semenova",
+      "unstructured": "Semenova, E. et al. Interference by clustered regularly interspaced short palindromic repeat (CRISPR) RNA is governed by a seed sequence. Proc. Natl Acad. Sci. USA 108, 10098\u201310103 (2011)."
+    },
+    {
+      "key": "1894_CR58",
+      "doi": "10.1038/ncomms1937",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2012",
+      "author": "KA Datsenko",
+      "unstructured": "Datsenko, K. A. et al. Molecular memory of prior infections activates the CRISPR/Cas adaptive bacterial immunity system. Nat. Commun. 3, 945 (2012)."
+    },
+    {
+      "key": "1894_CR59",
+      "doi": "",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2017",
+      "author": "A Strotskaya",
+      "unstructured": "Strotskaya, A. et al. The action of Escherichia coli CRISPR\u2013Cas system on lytic bacteriophages with different lifestyles and development strategies. Nucleic Acids Res. 45, 1946\u20131957 (2017)."
+    },
+    {
+      "key": "1894_CR60",
+      "doi": "10.1128/jb.01184-12",
+      "title": "",
+      "journal": "J. Bacteriol.",
+      "year": "2012",
+      "author": "KC Cady",
+      "unstructured": "Cady, K. C., Bondy-Denomy, J., Heussler, G. E., Davidson, A. R. & O\u2019Toole, G. A. The CRISPR/Cas adaptive immune system of Pseudomonas aeruginosa mediates resistance to naturally occurring and engineered phages. J. Bacteriol. 194, 5728\u20135738 (2012)."
+    },
+    {
+      "key": "1894_CR61",
+      "doi": "10.1016/j.cub.2015.01.065",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2015",
+      "author": "ER Westra",
+      "unstructured": "Westra, E. R. et al. Parasite exposure drives selective evolution of constitutive versus inducible defense. Curr. Biol. 25, 1043\u20131049 (2015)."
+    },
+    {
+      "key": "1894_CR62",
+      "doi": "10.1128/mbio.02406-17",
+      "title": "",
+      "journal": "mBio",
+      "year": "2018",
+      "author": "BNJ Watson",
+      "unstructured": "Watson, B. N. J., Staals, R. H. J. & Fineran, P. C. CRISPR\u2013Cas-mediated phage resistance enhances horizontal gene transfer by transduction. mBio 9, e02406-17 (2018)."
+    },
+    {
+      "key": "1894_CR63",
+      "doi": "10.1080/15476286.2019.1634965",
+      "title": "",
+      "journal": "RNA Biol.",
+      "year": "2019",
+      "author": "HN Taylor",
+      "unstructured": "Taylor, H. N. et al. Structural basis of type IV CRISPR RNA biogenesis by a Cas6 endoribonuclease. RNA Biol. 16, 1438\u20131447 (2019)."
+    },
+    {
+      "key": "1894_CR64",
+      "doi": "10.1038/s41564-018-0274-8",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2019",
+      "author": "A \u00d6zcan",
+      "unstructured": "\u00d6zcan, A. et al. Type IV CRISPR RNA processing and effector complex formation in Aromatoleum aromaticum. Nat. Microbiol. 4, 89\u201396 (2019)."
+    },
+    {
+      "key": "1894_CR65",
+      "doi": "10.1111/mmi.12152",
+      "title": "",
+      "journal": "Mol. Microbiol.",
+      "year": "2013",
+      "author": "L Deng",
+      "unstructured": "Deng, L., Garrett, R. A., Shah, S. A., Peng, X. & She, Q. A novel interference mechanism by a type IIIB CRISPR\u2013Cmr module in Sulfolobus. Mol. Microbiol. 87, 1088\u20131099 (2013)."
+    },
+    {
+      "key": "1894_CR66",
+      "doi": "10.1016/j.cell.2015.04.027",
+      "title": "",
+      "journal": "Cell",
+      "year": "2015",
+      "author": "P Samai",
+      "unstructured": "Samai, P. et al. Co-transcriptional DNA and RNA cleavage during type III CRISPR\u2013Cas immunity. Cell 161, 1164\u20131174 (2015)."
+    },
+    {
+      "key": "1894_CR67",
+      "doi": "10.1016/j.cell.2015.12.053",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "W Jiang",
+      "unstructured": "Jiang, W., Samai, P. & Marraffini, L. A. Degradation of phage transcripts by CRISPR-associated RNases enables type III CRISPR\u2013Cas immunity. Cell 164, 710\u2013721 (2016)."
+    },
+    {
+      "key": "1894_CR68",
+      "doi": "10.1016/j.chom.2017.07.016",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2017",
+      "author": "NC Pyenson",
+      "unstructured": "Pyenson, N. C., Gayvert, K., Varble, A., Elemento, O. & Marraffini, L. A. Broad targeting specificity during bacterial type III CRISPR\u2013Cas immunity constrains viral escape. Cell Host Microbe 22, 343\u2013353 (2017)."
+    },
+    {
+      "key": "1894_CR69",
+      "doi": "10.1371/journal.pone.0051663",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2012",
+      "author": "AM Millen",
+      "unstructured": "Millen, A. M., Horvath, P., Boyaval, P. & Romero, D. A. Mobile CRISPR/Cas-mediated bacteriophage resistance in Lactococcus lactis. PLoS ONE 7, e51663 (2012)."
+    },
+    {
+      "key": "1894_CR70",
+      "doi": "10.1016/j.molcel.2014.09.027",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2014",
+      "author": "G Tamulaitis",
+      "unstructured": "Tamulaitis, G. et al. Programmable RNA shredding by the type III-A CRISPR\u2013Cas system of Streptococcus thermophilus. Mol. Cell 56, 506\u2013517 (2014)."
+    },
+    {
+      "key": "1894_CR71",
+      "doi": "10.1038/nature13637",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "GW Goldberg",
+      "unstructured": "Goldberg, G. W., Jiang, W., Bikard, D. & Marraffini, L. A. Conditional tolerance of temperate phages via transcription-dependent CRISPR\u2013Cas targeting. Nature 514, 633\u2013637 (2014)."
+    },
+    {
+      "key": "1894_CR72",
+      "doi": "10.1126/science.aao0100",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "M Kazlauskiene",
+      "unstructured": "Kazlauskiene, M., Kostiuk, G., Venclovas, \u010c., Tamulaitis, G. & Siksnys, V. A cyclic oligonucleotide signaling pathway in type III CRISPR\u2013Cas systems. Science 357, 605\u2013609 (2017)."
+    },
+    {
+      "key": "1894_CR73",
+      "doi": "10.1038/nature23467",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "O Niewoehner",
+      "unstructured": "Niewoehner, O. et al. Type III CRISPR\u2013Cas systems produce cyclic oligoadenylate second messengers. Nature 548, 543\u2013548 (2017)."
+    },
+    {
+      "key": "1894_CR74",
+      "doi": "10.1038/s41564-018-0353-x",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2019",
+      "author": "JT Rost\u00f8l",
+      "unstructured": "Rost\u00f8l, J. T. & Marraffini, L. A. Non-specific degradation of transcripts promotes plasmid clearance during type III-A CRISPR\u2013Cas immunity. Nat. Microbiol. 4, 656\u2013662 (2019)."
+    },
+    {
+      "key": "1894_CR75",
+      "doi": "10.1016/j.tig.2019.03.009",
+      "title": "",
+      "journal": "Trends Genet.",
+      "year": "2019",
+      "author": "A Varble",
+      "unstructured": "Varble, A. & Marraffini, L. A. Three new Cs for CRISPR: collateral, communicate, cooperate. Trends Genet. 35, 446\u2013456 (2019)."
+    },
+    {
+      "key": "1894_CR76",
+      "doi": "10.1016/j.molcel.2016.08.038",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2016",
+      "author": "J McGinn",
+      "unstructured": "McGinn, J. & Marraffini, L. A. CRISPR\u2013Cas systems optimize their immune response by specifying the site of spacer integration. Mol. Cell 64, 616\u2013623 (2016)."
+    },
+    {
+      "key": "1894_CR77",
+      "doi": "10.1016/j.cell.2015.09.038",
+      "title": "",
+      "journal": "Cell",
+      "year": "2015",
+      "author": "B Zetsche",
+      "unstructured": "Zetsche, B. et al. Cpf1 is a single RNA-guided endonuclease of a class 2 CRISPR\u2013Cas system. Cell 163, 759\u2013771 (2015)."
+    },
+    {
+      "key": "1894_CR78",
+      "doi": "10.1093/nar/gkx1264",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2018",
+      "author": "M Vlot",
+      "unstructured": "Vlot, M. et al. Bacteriophage DNA glucosylation impairs target DNA binding by type I and II but not by type V CRISPR\u2013Cas effector complexes. Nucleic Acids Res. 46, 873\u2013885 (2018)."
+    },
+    {
+      "key": "1894_CR79",
+      "doi": "10.1126/science.aaf5573",
+      "title": "",
+      "journal": "Science",
+      "year": "2016",
+      "author": "OO Abudayyeh",
+      "unstructured": "Abudayyeh, O. O. et al. C2c2 is a single-component programmable RNA-guided RNA-targeting CRISPR effector. Science 353, aaf5573 (2016)."
+    },
+    {
+      "key": "1894_CR80",
+      "doi": "10.1038/s41586-019-1257-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "AJ Meeske",
+      "unstructured": "Meeske, A. J., Nakandakari-Higa, S. & Marraffini, L. A. Cas13-induced cellular dormancy prevents the rise of CRISPR-resistant bacteriophage. Nature 570, 241\u2013245 (2019). This study demonstrates that a CRISPR\u2013Cas variant can provide broad phage protection by inducing bacterial dormancy."
+    },
+    {
+      "key": "1894_CR81",
+      "doi": "10.1098/rstb.2018.0090",
+      "title": "",
+      "journal": "Phil. Trans. R. Soc. B",
+      "year": "2019",
+      "author": "BNJ Watson",
+      "unstructured": "Watson, B. N. J. et al. Different genetic and morphological outcomes for phages targeted by single or multiple CRISPR\u2013Cas spacers. Phil. Trans. R. Soc. B 374, 20180090 (2019)."
+    },
+    {
+      "key": "1894_CR82",
+      "doi": "10.1128/jb.01412-07",
+      "title": "",
+      "journal": "J. Bacteriol.",
+      "year": "2008",
+      "author": "H Deveau",
+      "unstructured": "Deveau, H. et al. Phage response to CRISPR-encoded resistance in Streptococcus thermophilus. J. Bacteriol. 190, 1390\u20131400 (2008)."
+    },
+    {
+      "key": "1894_CR83",
+      "doi": "10.1111/j.1462-2920.2012.02879.x",
+      "title": "",
+      "journal": "Environ. Microbiol.",
+      "year": "2013",
+      "author": "CL Sun",
+      "unstructured": "Sun, C. L. et al. Phage mutations in response to CRISPR diversification in a bacterial population. Environ. Microbiol. 15, 463\u2013470 (2013)."
+    },
+    {
+      "key": "1894_CR84",
+      "doi": "10.1093/nar/gku628",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2014",
+      "author": "B Martel",
+      "unstructured": "Martel, B. & Moineau, S. CRISPR\u2013Cas: an efficient tool for genome engineering of virulent bacteriophages. Nucleic Acids Res. 42, 9504\u20139513 (2014)."
+    },
+    {
+      "key": "1894_CR85",
+      "doi": "10.1128/mbio.00262-15",
+      "title": "",
+      "journal": "mBio",
+      "year": "2015",
+      "author": "D Paez-Espino",
+      "unstructured": "Paez-Espino, D. et al. CRISPR immunity drives rapid phage genome evolution in Streptococcus thermophilus. mBio 6, e00262-15 (2015)."
+    },
+    {
+      "key": "1894_CR86",
+      "doi": "10.1080/15476286.2018.1509662",
+      "title": "",
+      "journal": "RNA Biol.",
+      "year": "2019",
+      "author": "TJ Nicholson",
+      "unstructured": "Nicholson, T. J. et al. Bioinformatic evidence of widespread priming in type I and II CRISPR\u2013Cas systems. RNA Biol. 16, 566\u2013576 (2019)."
+    },
+    {
+      "key": "1894_CR87",
+      "doi": "10.1016/j.chom.2019.09.002",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2019",
+      "author": "PM Nussenzweig",
+      "unstructured": "Nussenzweig, P. M., McGinn, J. & Marraffini, L. A. Cas9 cleavage of viral genomes primes the acquisition of new immunological memories. Cell Host Microbe 26, 515\u2013526 (2019)."
+    },
+    {
+      "key": "1894_CR88",
+      "doi": "10.1038/nature11723",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "J Bondy-Denomy",
+      "unstructured": "Bondy-Denomy, J., Pawluk, A., Maxwell, K. L. & Davidson, A. R. Bacteriophage genes that inactivate the CRISPR/Cas bacterial immune system. Nature 493, 429\u2013432 (2013). The discovery and characterization of anti-CRISPRs."
+    },
+    {
+      "key": "1894_CR89",
+      "doi": "10.1089/crispr.2018.0052",
+      "title": "",
+      "journal": "CRISPR J.",
+      "year": "2019",
+      "author": "S Hwang",
+      "unstructured": "Hwang, S. & Maxwell, K. L. Meet the anti-CRISPRs: widespread protein inhibitors of CRISPR\u2013Cas systems. CRISPR J. 2, 23\u201330 (2019)."
+    },
+    {
+      "key": "1894_CR90",
+      "doi": "10.1093/femsle/fnz098",
+      "title": "",
+      "journal": "FEMS Microbiol. Lett.",
+      "year": "2019",
+      "author": "D Trasanidou",
+      "unstructured": "Trasanidou, D. et al. Keeping CRISPR in check: diverse mechanisms of phage-encoded anti-CRISPRS. FEMS Microbiol. Lett. 366, fnz098 (2019)."
+    },
+    {
+      "key": "1894_CR91",
+      "doi": "10.1016/j.cell.2019.09.003",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "Y Bhoobalan-Chitty",
+      "unstructured": "Bhoobalan-Chitty, Y., Baek Johansen, T., Di Cianni, N. & Peng, X. Inhibition of type III CRISPR\u2013Cas immunity by an archaeal virus-encoded anti-CRISPR protein. Cell 179, 448\u2013458 (2019)."
+    },
+    {
+      "key": "1894_CR92",
+      "doi": "10.1038/s41594-019-0206-1",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2019",
+      "author": "L Dong",
+      "unstructured": "Dong, L. et al. An anti-CRISPR protein disables type V Cas12a by acetylation. Nat. Struct. Mol. Biol. 26, 308\u2013314 (2019)."
+    },
+    {
+      "key": "1894_CR93",
+      "doi": "10.1038/s41594-019-0208-z",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2019",
+      "author": "GJ Knott",
+      "unstructured": "Knott, G. J. et al. Broad-spectrum enzymatic inhibition of CRISPR\u2013Cas12a. Nat. Struct. Mol. Biol. 26, 315\u2013321 (2019)."
+    },
+    {
+      "key": "1894_CR94",
+      "doi": "10.1016/j.cell.2018.05.058",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "M Landsberger",
+      "unstructured": "Landsberger, M. et al. Anti-CRISPR phages cooperate to overcome CRISPR\u2013Cas immunity. Cell 174, 908\u2013916 (2018). This study demonstrates that phages cooperate through their anti-CRISPRs to immunosuppress the host CRISPR\u2013Cas system."
+    },
+    {
+      "key": "1894_CR95",
+      "doi": "10.1016/j.cell.2018.06.013",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "AL Borges",
+      "unstructured": "Borges, A. L. et al. Bacteriophage cooperation suppresses CRISPR\u2013Cas3 and Cas9 immunity. Cell 174, 917\u2013925 (2018). This work describes how phages cooperate through their anti-CRISPRs to inhibit bacterial adaptive immunity."
+    },
+    {
+      "key": "1894_CR96",
+      "doi": "10.1038/nature11927",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "KD Seed",
+      "unstructured": "Seed, K. D., Lazinski, D. W., Calderwood, S. B. & Camilli, A. A bacteriophage encodes its own CRISPR/Cas adaptive response to evade host innate immunity. Nature 494, 489\u2013491 (2013)."
+    },
+    {
+      "key": "1894_CR97",
+      "doi": "10.1128/mbio.01045-13",
+      "title": "",
+      "journal": "mBio",
+      "year": "2014",
+      "author": "KR Hargreaves",
+      "unstructured": "Hargreaves, K. R., Flores, C. O., Lawley, T. D. & Clokie, M. R. J. Abundant and diverse clustered regularly interspaced short palindromic repeat spacers in Clostridium difficile strains and prophages target multiple phage types within this pathogen. mBio 5, e01045-13 (2014)."
+    },
+    {
+      "key": "1894_CR98",
+      "doi": "10.1128/mbio.02417-18",
+      "title": "",
+      "journal": "mBio",
+      "year": "2019",
+      "author": "MT Montgomery",
+      "unstructured": "Montgomery, M. T., Guerrero Bustamante, C. A., Dedrick, R. M., Jacobs-Sera, D. & Hatfull, G. F. Yet more evidence of collusion: a new viral defense system encoded by Gordonia phage CarolAnn. mBio 10, e02417-18 (2019)."
+    },
+    {
+      "key": "1894_CR99",
+      "doi": "10.1038/nchembio.2044",
+      "title": "",
+      "journal": "Nat. Chem. Biol.",
+      "year": "2016",
+      "author": "R Page",
+      "unstructured": "Page, R. & Peti, W. Toxin\u2013antitoxin systems in bacterial growth arrest and persistence. Nat. Chem. Biol. 12, 208\u2013214 (2016)."
+    },
+    {
+      "key": "1894_CR100",
+      "doi": "10.1073/pnas.0808832106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "PC Fineran",
+      "unstructured": "Fineran, P. C. et al. The phage abortive infection system, ToxIN, functions as a protein\u2013RNA toxin\u2013antitoxin pair. Proc. Natl Acad. Sci. USA 106, 894\u2013899 (2009)."
+    },
+    {
+      "key": "1894_CR101",
+      "doi": "10.1101/572362",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Al-Shayeb, B. et al. Clades of huge phage from across Earth\u2019s ecosystems. Preprint at bioRxiv https://doi.org/10.1101/572362 (2019)."
+    },
+    {
+      "key": "1894_CR102",
+      "doi": "10.1038/s41579-019-0204-7",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2019",
+      "author": "G Faure",
+      "unstructured": "Faure, G. et al. CRISPR\u2013Cas in mobile genetic elements: counter-defence and beyond. Nat. Rev. Microbiol. 17, 513\u2013525 (2019)."
+    },
+    {
+      "key": "1894_CR103",
+      "doi": "10.1016/j.mib.2005.06.006",
+      "title": "",
+      "journal": "Curr. Opin. Microbiol.",
+      "year": "2005",
+      "author": "M-C Chopin",
+      "unstructured": "Chopin, M.-C., Chopin, A. & Bidnenko, E. Phage abortive infection in lactococci: variations on a theme. Curr. Opin. Microbiol. 8, 473\u2013479 (2005)."
+    },
+    {
+      "key": "1894_CR104",
+      "doi": "10.1038/nrmicro2315",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2010",
+      "author": "SJ Labrie",
+      "unstructured": "Labrie, S. J., Samson, J. E. & Moineau, S. Bacteriophage resistance mechanisms. Nat. Rev. Microbiol. 8, 317\u2013327 (2010)."
+    },
+    {
+      "key": "1894_CR105",
+      "doi": "10.1016/j.chom.2016.08.010",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2016",
+      "author": "F Depardieu",
+      "unstructured": "Depardieu, F. et al. A eukaryotic-like serine/threonine kinase protects Staphylococci against phages. Cell Host Microbe 20, 471\u2013481 (2016). This study describes the discovery of an Abi system with similarities to eukaryotic defences."
+    },
+    {
+      "key": "1894_CR106",
+      "doi": "10.1101/gad.6.3.497",
+      "title": "",
+      "journal": "Genes Dev.",
+      "year": "1992",
+      "author": "DH Parma",
+      "unstructured": "Parma, D. H. et al. The Rex system of bacteriophage lambda: tolerance and altruistic cell death. Genes Dev. 6, 497\u2013510 (1992)."
+    },
+    {
+      "key": "1894_CR107",
+      "doi": "10.1128/mbio.00196-19",
+      "title": "",
+      "journal": "mBio",
+      "year": "2019",
+      "author": "GM Gentile",
+      "unstructured": "Gentile, G. M. et al. More evidence of collusion: a new prophage-mediated viral defense system encoded by mycobacteriophage Sbash. mBio 10, e00196-19 (2019)."
+    },
+    {
+      "key": "1894_CR108",
+      "doi": "10.1111/mmi.12129",
+      "title": "",
+      "journal": "Mol. Microbiol.",
+      "year": "2013",
+      "author": "JE Samson",
+      "unstructured": "Samson, J. E., Spinelli, S., Cambillau, C. & Moineau, S. Structure and activity of AbiQ, a lactococcal endoribonuclease belonging to the type III toxin\u2013antitoxin system. Mol. Microbiol. 87, 756\u2013768 (2013)."
+    },
+    {
+      "key": "1894_CR109",
+      "doi": "10.1093/nar/gkt1419",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2014",
+      "author": "RL Dy",
+      "unstructured": "Dy, R. L., Przybilski, R., Semeijn, K., Salmond, G. P. C. & Fineran, P. C. A widespread bacteriophage abortive infection system functions through a type IV toxin\u2013antitoxin mechanism. Nucleic Acids Res. 42, 4590\u20134605 (2014)."
+    },
+    {
+      "key": "1894_CR110",
+      "doi": "10.1128/jb.178.7.2044-2050.1996",
+      "title": "",
+      "journal": "J. Bacteriol.",
+      "year": "1996",
+      "author": "DC Pecota",
+      "unstructured": "Pecota, D. C. & Wood, T. K. Exclusion of T4 phage by the hok/sok killer locus from plasmid R1. J. Bacteriol. 178, 2044\u20132050 (1996)."
+    },
+    {
+      "key": "1894_CR111",
+      "doi": "10.1534/genetics.110.121798",
+      "title": "",
+      "journal": "Genetics",
+      "year": "2011",
+      "author": "M Koga",
+      "unstructured": "Koga, M., Otsuka, Y., Lemire, S. & Yonesaki, T. Escherichia coli rnlA and rnlB compose a novel toxin\u2013antitoxin system. Genetics 187, 123\u2013130 (2011)."
+    },
+    {
+      "key": "1894_CR112",
+      "doi": "10.1007/s00438-004-1048-y",
+      "title": "",
+      "journal": "Mol. Genet. Genomics",
+      "year": "2004",
+      "author": "R Hazan",
+      "unstructured": "Hazan, R. & Engelberg-Kulka, H. Escherichia coli mazEF-mediated cell death as a defense mechanism that inhibits the spread of phage P1. Mol. Genet. Genomics 272, 227\u2013234 (2004)."
+    },
+    {
+      "key": "1894_CR113",
+      "doi": "10.1111/j.1365-2958.1995.tb02255.x",
+      "title": "",
+      "journal": "Mol. Microbiol.",
+      "year": "1995",
+      "author": "L Snyder",
+      "unstructured": "Snyder, L. Phage-exclusion enzymes: a bonanza of biochemical and cell biology reagents? Mol. Microbiol. 15, 415\u2013420 (1995)."
+    },
+    {
+      "key": "1894_CR114",
+      "doi": "10.1111/j.1365-2958.2012.07975.x",
+      "title": "",
+      "journal": "Mol. Microbiol.",
+      "year": "2012",
+      "author": "Y Otsuka",
+      "unstructured": "Otsuka, Y. & Yonesaki, T. Dmd of bacteriophage T4 functions as an antitoxin against Escherichia coli LsoA and RnlA toxins. Mol. Microbiol. 83, 669\u2013681 (2012)."
+    },
+    {
+      "key": "1894_CR115",
+      "doi": "10.1128/jb.01111-06",
+      "title": "",
+      "journal": "J. Bacteriol.",
+      "year": "2007",
+      "author": "SJ Labrie",
+      "unstructured": "Labrie, S. J. & Moineau, S. Abortive infection mechanisms and prophage sequences significantly influence the genetic makeup of emerging lytic lactococcal phages. J. Bacteriol. 189, 1482\u20131487 (2007)."
+    },
+    {
+      "key": "1894_CR116",
+      "doi": "10.1371/journal.pgen.1003023",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2012",
+      "author": "TR Blower",
+      "unstructured": "Blower, T. R., Evans, T. J., Przybilski, R., Fineran, P. C. & Salmond, G. P. C. Viral evasion of a bacterial suicide system by RNA-based molecular mimicry enables infectious altruism. PLoS Genet. 8, e1003023 (2012)."
+    },
+    {
+      "key": "1894_CR117",
+      "doi": "10.1016/j.molcel.2013.02.002",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2013",
+      "author": "H Sberro",
+      "unstructured": "Sberro, H. et al. Discovery of functional toxin/antitoxin systems in bacteria by shotgun cloning. Mol. Cell 50, 136\u2013148 (2013)."
+    },
+    {
+      "key": "1894_CR118",
+      "doi": "10.1111/mmi.13225",
+      "title": "",
+      "journal": "Mol. Microbiol.",
+      "year": "2016",
+      "author": "AM Alawneh",
+      "unstructured": "Alawneh, A. M., Qi, D., Yonesaki, T. & Otsuka, Y. An ADP-ribosyltransferase Alt of bacteriophage T4 negatively regulates the Escherichia coli|MazF toxin of a toxin\u2013antitoxin module. Mol. Microbiol. 99, 188\u2013198 (2016)."
+    },
+    {
+      "key": "1894_CR119",
+      "doi": "10.3390/v11010048",
+      "title": "",
+      "journal": "Viruses",
+      "year": "2019",
+      "author": "J Lossouarn",
+      "unstructured": "Lossouarn, J. et al. Enterococcus faecalis Countermeasures defeat a virulent Picovirinae bacteriophage. Viruses 11, 48 (2019)."
+    },
+    {
+      "key": "1894_CR120",
+      "doi": "10.1128/aem.03229-16",
+      "title": "",
+      "journal": "Appl. Environ. Microbiol.",
+      "year": "2017",
+      "author": "TR Blower",
+      "unstructured": "Blower, T. R. et al. Evolution of Pectobacterium bacteriophage \u03a6M1 to escape two bifunctional type III toxin\u2013antitoxin and abortive infection systems through mutations in a single viral gene. Appl. Environ. Microbiol. 83, e03229-16 (2017)."
+    },
+    {
+      "key": "1894_CR121",
+      "doi": "10.3389/fcimb.2018.00127",
+      "title": "",
+      "journal": "Front. Microbiol.",
+      "year": "2018",
+      "author": "B Chen",
+      "unstructured": "Chen, B., Akusobi, C., Fang, X. & Salmond, G. P. C. Environmental T4-family bacteriophages evolve to escape abortive infection via multiple routes in a bacterial host employing \u2018altruistic suicide\u2019 through type III toxin\u2013antitoxin systems. Front. Microbiol. 8, 127 (2018)."
+    },
+    {
+      "key": "1894_CR122",
+      "doi": "10.4161/bact.23146",
+      "title": "",
+      "journal": "Bacteriophage",
+      "year": "2012",
+      "author": "N Cumby",
+      "unstructured": "Cumby, N., Davidson, A. R. & Maxwell, K. L. The moron comes of age. Bacteriophage 2, e23146 (2012)."
+    },
+    {
+      "key": "1894_CR123",
+      "doi": "10.1038/nmicrobiol.2016.251",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2017",
+      "author": "RM Dedrick",
+      "unstructured": "Dedrick, R. M. et al. Prophage-mediated defence against viral attack and viral counter-defence. Nat. Microbiol. 2, 16251 (2017). Demonstration that mycobacterial prophages encode diverse anti-phage defence systems and the ways that phages can evade these defences."
+    },
+    {
+      "key": "1894_CR124",
+      "doi": "10.1111/mmi.13946",
+      "title": "",
+      "journal": "Mol. Microbiol.",
+      "year": "2018",
+      "author": "C-C Ko",
+      "unstructured": "Ko, C.-C. & Hatfull, G. F. Mycobacteriophage Fruitloop gp52 inactivates Wag31 (DivIVA) to prevent heterotypic superinfection. Mol. Microbiol. 108, 443\u2013460 (2018)."
+    },
+    {
+      "key": "1894_CR125",
+      "doi": "10.1038/s41564-019-0510-x",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2019",
+      "author": "S Roux",
+      "unstructured": "Roux, S. et al. Cryptic inoviruses revealed as pervasive in bacteria and archaea across Earth\u2019s biomes. Nat. Microbiol. 4, 1895\u20131906 (2019)."
+    },
+    {
+      "key": "1894_CR126",
+      "doi": "10.1128/jb.05535-11",
+      "title": "",
+      "journal": "J. Bacteriol.",
+      "year": "2011",
+      "author": "KS Makarova",
+      "unstructured": "Makarova, K. S., Wolf, Y. I., Snir, S. & Koonin, E. V. Defense islands in bacterial and archaeal genomes and prediction of novel defense systems. J. Bacteriol. 193, 6039\u20136056 (2011)."
+    },
+    {
+      "key": "1894_CR127",
+      "doi": "10.1126/science.aar4120",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "S Doron",
+      "unstructured": "Doron, S. et al. Systematic discovery of antiphage defense systems in the microbial pangenome. Science 359, eaar4120\u201313 (2018). This study describes the identification of numerous new anti-phage systems in defence islands."
+    },
+    {
+      "key": "1894_CR128",
+      "doi": "10.1093/femsre/fuy010",
+      "title": "",
+      "journal": "FEMS Microbiol. Rev.",
+      "year": "2018",
+      "author": "S Willkomm",
+      "unstructured": "Willkomm, S., Makarova, K. S. & Grohmann, D. DNA silencing by prokaryotic Argonaute proteins adds a new layer of defense against invading nucleic acids. FEMS Microbiol. Rev. 42, 376\u2013387 (2018)."
+    },
+    {
+      "key": "1894_CR129",
+      "doi": "10.1038/nrmicro.2017.73",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2018",
+      "author": "JW Hegge",
+      "unstructured": "Hegge, J. W., Swarts, D. C. & van der Oost, J. Prokaryotic Argonaute proteins: novel genome-editing tools? Nat. Rev. Microbiol. 16, 5\u201311 (2018)."
+    },
+    {
+      "key": "1894_CR130",
+      "doi": "10.1038/nature12971",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "DC Swarts",
+      "unstructured": "Swarts, D. C. et al. DNA-guided DNA interference by a prokaryotic Argonaute. Nature 507, 258\u2013261 (2014)."
+    },
+    {
+      "key": "1894_CR131",
+      "doi": "10.1016/j.molcel.2017.01.033",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2017",
+      "author": "DC Swarts",
+      "unstructured": "Swarts, D. C. et al. Autonomous generation and loading of DNA guides by bacterial Argonaute. Mol. Cell 65, 985\u2013998 (2017)."
+    },
+    {
+      "key": "1894_CR132",
+      "doi": "10.1016/j.molcel.2013.08.014",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2013",
+      "author": "I Olovnikov",
+      "unstructured": "Olovnikov, I., Chan, K., Sachidanandam, R., Newman, D. K. & Aravin, A. A. Bacterial Argonaute samples the transcriptome to identify foreign DNA. Mol. Cell 51, 594\u2013605 (2013)."
+    },
+    {
+      "key": "1894_CR133",
+      "doi": "10.1038/nmicrobiol.2017.34",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2017",
+      "author": "A Zander",
+      "unstructured": "Zander, A. et al. Guide-independent DNA cleavage by archaeal Argonaute from Methanocaldococcus jannaschii. Nat. Microbiol. 2, 17034 (2017)."
+    },
+    {
+      "key": "1894_CR134",
+      "doi": "10.1038/s41586-019-1605-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "D Cohen",
+      "unstructured": "Cohen, D. et al. Cyclic GMP\u2013AMP signalling protects bacteria against viral infection. Nature 574, 691\u2013695 (2019). This study showed that a eukaryotic anti-viral signalling pathway is also present in prokaryotes, and that this pathway offers protection from a range of phages."
+    },
+    {
+      "key": "1894_CR135",
+      "doi": "10.1101/694695",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Ye, Q. et al. HORMA domain proteins and a Pch2-like ATPase regulate bacterial cGAS-like enzymes to mediate bacteriophage immunity. Preprint at bioRxiv https://doi.org/10.1101/694695 (2019)."
+    },
+    {
+      "key": "1894_CR136",
+      "doi": "10.1101/694703",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Lau, R. K. et al. Structure and mechanism of a cyclic trinucleotide-activated bacterial endonuclease mediating bacteriophage immunity. Preprint at bioRxiv https://doi.org/10.1101/694703 (2019)."
+    },
+    {
+      "key": "1894_CR137",
+      "doi": "10.1038/s41586-018-0767-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "S Kronheim",
+      "unstructured": "Kronheim, S. et al. A chemical defence against phage infection. Nature 564, 283\u2013286 (2018). The first example of chemical defences against phages."
+    },
+    {
+      "key": "1894_CR138",
+      "doi": "10.1126/science.aal2130",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "V Chaikeeratisak",
+      "unstructured": "Chaikeeratisak, V. et al. Assembly of a nucleus-like structure during viral replication in bacteria. Science 355, 194\u2013197 (2017). This study describes how jumbophages can produce nucleus-like protein shells inside a bacterium for phage replication."
+    },
+    {
+      "key": "1894_CR139",
+      "doi": "10.1038/s41586-019-1786-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "Sen\u00e9n D. Mendoza",
+      "unstructured": "Mendoza, S. D. et al. A bacteriophage nucleus-like compartment shields DNA from CRISPR nucleases. Nature https://doi.org/10.1038/s41586-019-1786-y (2019)."
+    },
+    {
+      "key": "1894_CR140",
+      "doi": "10.1038/s41564-019-0612-5",
+      "title": "",
+      "journal": "Nature Microbiology",
+      "year": "2019",
+      "author": "Lucia M. Malone",
+      "unstructured": "Malone, L. M. et al. A jumbo phage that forms a nucleus-like structure evades CRISPR\u2013Cas DNA targeting but is vulnerable to type III RNA-based immunity. Nat. Microbiol. https://doi.org/10.1038/s41564-019-0612-5 (2019)."
+    },
+    {
+      "key": "1894_CR141",
+      "doi": "10.1128/mbio.00362-12",
+      "title": "",
+      "journal": "mBio",
+      "year": "2013",
+      "author": "NM H\u00f8yland-Kroghsbo",
+      "unstructured": "H\u00f8yland-Kroghsbo, N. M., Maerkedahl, R. B. & Svenningsen, S. L. A quorum-sensing-induced bacteriophage defense mechanism. mBio 4, e00362-12 (2013)."
+    },
+    {
+      "key": "1894_CR142",
+      "doi": "10.1073/pnas.1617415113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "NM H\u00f8yland-Kroghsbo",
+      "unstructured": "H\u00f8yland-Kroghsbo, N. M. et al. Quorum sensing controls the Pseudomonas aeruginosa CRISPR\u2013Cas adaptive immune system. Proc. Natl Acad. Sci. USA 114, 131\u2013135 (2017)."
+    },
+    {
+      "key": "1894_CR143",
+      "doi": "10.1016/j.molcel.2016.11.012",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2016",
+      "author": "AG Patterson",
+      "unstructured": "Patterson, A. G. et al. Quorum sensing controls adaptive immunity through the regulation of multiple CRISPR\u2013Cas systems. Mol. Cell 64, 1102\u20131108 (2016). Demonstration that bacteria use quorum-sensing communication to coordinate multiple CRISPR\u2013Cas systems at a population level"
+    },
+    {
+      "key": "1894_CR144",
+      "doi": "10.1038/nature21049",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "Z Erez",
+      "unstructured": "Erez, Z. et al. Communication between viruses guides lysis\u2013lysogeny decisions. Nature 541, 488\u2013493 (2017). This study reveals that phages use communication to guide the replication strategy used by progeny phages."
+    },
+    {
+      "key": "1894_CR145",
+      "doi": "10.1016/j.chom.2019.03.017",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2019",
+      "author": "A Stokar-Avihail",
+      "unstructured": "Stokar-Avihail, A., Tal, N., Erez, Z., Lopatina, A. & Sorek, R. Widespread utilization of peptide communication in phages infecting soil and pathogenic bacteria. Cell Host Microbe 25, 746\u2013755 (2019)."
+    },
+    {
+      "key": "1894_CR146",
+      "doi": "10.1038/s41564-018-0259-7",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2018",
+      "author": "C Dou",
+      "unstructured": "Dou, C. et al. Structural and functional insights into the regulation of the lysis\u2013lysogeny decision in viral communities. Nat. Microbiol. 3, 1285\u20131294 (2018)."
+    },
+    {
+      "key": "1894_CR147",
+      "doi": "10.1016/j.molcel.2019.01.025",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2019",
+      "author": "F Gallego del Sol",
+      "unstructured": "Gallego del Sol, F., Penad\u00e9s, J. R. & Marina, A. Deciphering the molecular mechanism underpinning phage arbitrium communication systems. Mol. Cell 74, 59\u201372 (2019)."
+    },
+    {
+      "key": "1894_CR148",
+      "doi": "10.1038/s41421-019-0101-2",
+      "title": "",
+      "journal": "Cell Discov.",
+      "year": "2019",
+      "author": "Z Guan",
+      "unstructured": "Guan, Z. et al. Structural insights into DNA recognition by AimR of the arbitrium communication system in the SPbeta phage. Cell Discov. 5, 29 (2019)."
+    },
+    {
+      "key": "1894_CR149",
+      "doi": "10.1128/mbio.00638-19",
+      "title": "",
+      "journal": "mBio",
+      "year": "2019",
+      "author": "JE Silpe",
+      "unstructured": "Silpe, J. E. & Bassler, B. L. Phage-encoded LuxR-type receptors responsive to host-produced bacterial quorum-sensing autoinducers. mBio 10, e00638-19 (2019)."
+    },
+    {
+      "key": "1894_CR150",
+      "doi": "10.1016/j.cell.2018.10.059",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "JE Silpe",
+      "unstructured": "Silpe, J. E. & Bassler, B. L. A Host-Produced Quorum-Sensing Autoinducer Controls a Phage Lysis-Lysogeny Decision. Cell 176, 268\u2013280 (2019)."
+    },
+    {
+      "key": "1894_CR151",
+      "doi": "10.1371/journal.pone.0085131",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2014",
+      "author": "KR Hargreaves",
+      "unstructured": "Hargreaves, K. R., Kropinski, A. M. & Clokie, M. R. J. What does the talking?: quorum sensing signalling genes discovered in a bacteriophage genome. PLoS ONE 9, e85131 (2014)."
+    },
+    {
+      "key": "1894_CR152",
+      "doi": "10.1016/j.chom.2019.01.003",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2019",
+      "author": "RV Uribe",
+      "unstructured": "Uribe, R. V. et al. Discovery and characterization of Cas9 inhibitors disseminated across seven bacterial phyla. Cell Host Microbe 25, 233\u2013241 (2019)."
+    },
+    {
+      "key": "1894_CR153",
+      "doi": "10.1146/annurev-micro-090816-093830",
+      "title": "",
+      "journal": "Annu. Rev. Microbiol.",
+      "year": "2017",
+      "author": "EV Koonin",
+      "unstructured": "Koonin, E. V., Makarova, K. S. & Wolf, Y. I. Evolutionary genomics of defense systems in archaea and bacteria. Annu. Rev. Microbiol. 71, 233\u2013261 (2017)."
+    },
+    {
+      "key": "1894_CR154",
+      "doi": "10.1038/ncomms3087",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2013",
+      "author": "M-\u00c8V Dupuis",
+      "unstructured": "Dupuis, M.-\u00c8. V., Villion, M., Magad\u00e1n, A. H. & Moineau, S. CRISPR\u2013Cas and restriction\u2013modification systems are compatible and increase phage resistance. Nat. Commun. 4, 2087 (2013)."
+    },
+    {
+      "key": "1894_CR155",
+      "doi": "10.7554/elife.27601",
+      "title": "",
+      "journal": "eLife",
+      "year": "2017",
+      "author": "S Silas",
+      "unstructured": "Silas, S. et al. Type III CRISPR\u2013Cas systems can provide redundancy to counteract viral escape from type I systems. eLife 6, e27601 (2017)."
+    },
+    {
+      "key": "1894_CR156",
+      "doi": "10.1021/pr500796n",
+      "title": "",
+      "journal": "J. Proteome Res.",
+      "year": "2014",
+      "author": "A Van den Bossche",
+      "unstructured": "Van den Bossche, A. et al. Systematic identification of hypothetical bacteriophage proteins targeting key protein complexes of Pseudomonas aeruginosa. J. Proteome Res. 13, 4446\u20134456 (2014)."
+    },
+    {
+      "key": "1894_CR157",
+      "doi": "10.1007/978-1-4614-3567-9_16",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Buckling, A. & Brockhurst, M. in Evolutionary Systems Biology Vol. 751 (ed. Soyer O.) 347\u2013370 (Springer, 2012)."
+    },
+    {
+      "key": "1894_CR158",
+      "doi": "10.1111/1574-6976.12072",
+      "title": "",
+      "journal": "FEMS Microbiol. Rev.",
+      "year": "2014",
+      "author": "B Koskella",
+      "unstructured": "Koskella, B. & Brockhurst, M. A. Bacteria\u2013phage coevolution as a driver of ecological and evolutionary processes in microbial communities. FEMS Microbiol. Rev. 38, 916\u2013931 (2014)."
+    },
+    {
+      "key": "1894_CR159",
+      "doi": "10.1016/j.tim.2017.02.012",
+      "title": "",
+      "journal": "Trends Microbiol.",
+      "year": "2017",
+      "author": "PD Scanlan",
+      "unstructured": "Scanlan, P. D. Bacteria\u2013bacteriophage coevolution in the human gut: implications for microbial diversity and functionality. Trends Microbiol. 25, 614\u2013623 (2017)."
+    },
+    {
+      "key": "1894_CR160",
+      "doi": "10.1126/science.168.3934.992.b",
+      "title": "",
+      "journal": "Science",
+      "year": "1970",
+      "author": "MT Horne",
+      "unstructured": "Horne, M. T. Coevolution of Escherichia coli and bacteriophages in chemostat culture. Science 168, 992\u2013993 (1970)."
+    },
+    {
+      "key": "1894_CR161",
+      "doi": "10.1086/284364",
+      "title": "",
+      "journal": "Am. Nat.",
+      "year": "1985",
+      "author": "RE Lenski",
+      "unstructured": "Lenski, R. E. & Levin, B. R. Constraints on the coevolution of bacteria and virulent phage: a model, some experiments, and predictions for natural communities. Am. Nat. 125, 585\u2013602 (1985)."
+    },
+    {
+      "key": "1894_CR162",
+      "doi": "10.1098/rspb.2001.1945",
+      "title": "",
+      "journal": "Proc. R. Soc. Lond. B",
+      "year": "2002",
+      "author": "A Buckling",
+      "unstructured": "Buckling, A. & Rainey, P. B. Antagonistic coevolution between a bacterium and a bacteriophage. Proc. R. Soc. Lond. B 269, 931\u2013936 (2002)."
+    },
+    {
+      "key": "1894_CR163",
+      "doi": "10.1038/nature01164",
+      "title": "",
+      "journal": "Nature",
+      "year": "2002",
+      "author": "A Buckling",
+      "unstructured": "Buckling, A. & Rainey, P. B. The role of parasites in sympatric and allopatric host diversification. Nature 420, 496\u2013499 (2002)."
+    },
+    {
+      "key": "1894_CR164",
+      "doi": "10.1016/j.meegid.2007.01.005",
+      "title": "",
+      "journal": "Infect. Genet. Evol.",
+      "year": "2007",
+      "author": "MA Brockhurst",
+      "unstructured": "Brockhurst, M. A., Morgan, A. D., Fenton, A. & Buckling, A. Experimental coevolution with bacteria and phage: the Pseudomonas fluorescens\u2014\u03a62 model system. Infect. Genet. Evol. 7, 547\u2013552 (2007)."
+    },
+    {
+      "key": "1894_CR165",
+      "doi": "10.1126/science.1198767",
+      "title": "",
+      "journal": "Science",
+      "year": "2011",
+      "author": "P G\u00f3mez",
+      "unstructured": "G\u00f3mez, P. & Buckling, A. Bacteria\u2013phage antagonistic coevolution in soil. Science 332, 106\u2013109 (2011)."
+    },
+    {
+      "key": "1894_CR166",
+      "doi": "10.1126/science.1157358",
+      "title": "",
+      "journal": "Science",
+      "year": "2008",
+      "author": "AF Andersson",
+      "unstructured": "Andersson, A. F. & Banfield, J. F. Virus population dynamics and acquired virus resistance in natural microbial communities. Science 320, 1047\u20131050 (2008)."
+    },
+    {
+      "key": "1894_CR167",
+      "doi": "10.1101/gr.138297.112",
+      "title": "",
+      "journal": "Genome Res.",
+      "year": "2012",
+      "author": "A Stern",
+      "unstructured": "Stern, A., Mick, E., Tirosh, I., Sagy, O. & Sorek, R. CRISPR targeting reveals a reservoir of common phages associated with the human gut microbiome. Genome Res. 22, 1985\u20131994 (2012)."
+    },
+    {
+      "key": "1894_CR168",
+      "doi": "10.1155/2013/370871",
+      "title": "",
+      "journal": "Archaea",
+      "year": "2013",
+      "author": "JB Emerson",
+      "unstructured": "Emerson, J. B. et al. Virus\u2013host and CRISPR dynamics in Archaea-dominated hypersaline Lake Tyrrell, Victoria, Australia. Archaea 2013, 370871 (2013)."
+    },
+    {
+      "key": "1894_CR169",
+      "doi": "10.1038/s41467-017-00158-7",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "E Laanto",
+      "unstructured": "Laanto, E., Hoikkala, V., Ravantti, J. & Sundberg, L. R. Long-term genomic coevolution of host\u2013parasite interaction in the natural environment. Nat. Commun. 8, 111 (2017)."
+    },
+    {
+      "key": "1894_CR170",
+      "doi": "10.1016/j.molcel.2015.10.008",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2015",
+      "author": "S Shmakov",
+      "unstructured": "Shmakov, S. et al. Discovery and Functional characterization of diverse class 2 CRISPR\u2013Cas systems. Mol. Cell 60, 385\u2013397 (2015)."
+    },
+    {
+      "key": "1894_CR171",
+      "doi": "10.1038/nature21059",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "D Burstein",
+      "unstructured": "Burstein, D. et al. New CRISPR\u2013Cas systems from uncultivated microbes. Nature 542, 237\u2013241 (2017)."
+    },
+    {
+      "key": "1894_CR172",
+      "doi": "10.1038/ismej.2017.194",
+      "title": "",
+      "journal": "ISME J.",
+      "year": "2018",
+      "author": "JL Weissman",
+      "unstructured": "Weissman, J. L. et al. Immune loss as a driver of coexistence during host\u2013phage coevolution. ISME J. 12, 585\u2013597 (2018)."
+    },
+    {
+      "key": "1894_CR173",
+      "doi": "10.1016/j.chom.2018.12.014",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2019",
+      "author": "SA Jackson",
+      "unstructured": "Jackson, S. A., Birkholz, N., Malone, L. M. & Fineran, P. C. Imprecise spacer acquisition generates CRISPR\u2013Cas immune diversity through primed adaptation. Cell Host Microbe 25, 250\u2013260 (2019)."
+    }
+  ]
+}

@@ -1,0 +1,1561 @@
+{
+  "article": {
+    "slug": "s41586-021-03244-5",
+    "doi": "10.1038/s41586-021-03244-5",
+    "title": "Origins of modern human ancestry",
+    "url": "https://www.nature.com/articles/s41586-021-03244-5",
+    "abbrev": "origins-modern-human-ancestry",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/origins-modern-human-ancestry"
+  },
+  "meta": {
+    "title": "Origins of modern human ancestry",
+    "authors": [
+      "Anders Bergstr\u00f6m",
+      "Chris Stringer",
+      "Mateja Hajdinjak",
+      "Eleanor M. L. Scerri",
+      "Pontus Skoglund"
+    ],
+    "published": [
+      2021,
+      2,
+      10
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-021-03244-5",
+    "n_references": 170,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "3244_CR1",
+      "doi": "10.1038/325031a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1987",
+      "author": "RL Cann",
+      "unstructured": "Cann, R. L., Stoneking, M. & Wilson, A. C. Mitochondrial DNA and human evolution. Nature 325, 31\u201336 (1987)."
+    },
+    {
+      "key": "3244_CR2",
+      "doi": "10.1126/science.1172257",
+      "title": "",
+      "journal": "Science",
+      "year": "2009",
+      "author": "SA Tishkoff",
+      "unstructured": "Tishkoff, S. A. et al. The genetic structure and history of Africans and African Americans. Science 324, 1035\u20131044 (2009)."
+    },
+    {
+      "key": "3244_CR3",
+      "doi": "10.1073/pnas.0507611102",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2005",
+      "author": "S Ramachandran",
+      "unstructured": "Ramachandran, S. et al. Support from the relationship of genetic and geographic distance in human populations for a serial founder effect originating in Africa. Proc. Natl Acad. Sci. USA 102, 15942\u201315947 (2005)."
+    },
+    {
+      "key": "3244_CR4",
+      "doi": "10.1146/annurev-genom-083117-021749",
+      "title": "",
+      "journal": "Annu. Rev. Genomics Hum. Genet.",
+      "year": "2018",
+      "author": "P Skoglund",
+      "unstructured": "Skoglund, P. & Mathieson, I. Ancient genomics of modern humans: the first decade. Annu. Rev. Genomics Hum. Genet. 19, 381\u2013404 (2018)."
+    },
+    {
+      "key": "3244_CR5",
+      "doi": "10.1126/science.3125610",
+      "title": "",
+      "journal": "Science",
+      "year": "1988",
+      "author": "CB Stringer",
+      "unstructured": "Stringer, C. B. & Andrews, P. Genetic and fossil evidence for the origin of modern humans. Science 239, 1263\u20131268 (1988)."
+    },
+    {
+      "key": "3244_CR6",
+      "doi": "10.1038/nature01669",
+      "title": "",
+      "journal": "Nature",
+      "year": "2003",
+      "author": "TD White",
+      "unstructured": "White, T. D. et al. Pleistocene Homo sapiens from Middle Awash, Ethiopia. Nature 423, 742\u2013747 (2003)."
+    },
+    {
+      "key": "3244_CR7",
+      "doi": "10.1038/nature22336",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "J-J Hublin",
+      "unstructured": "Hublin, J.-J. et al. New fossils from Jebel Irhoud, Morocco and the pan-African origin of Homo sapiens. Nature 546, 289\u2013292 (2017)."
+    },
+    {
+      "key": "3244_CR8",
+      "doi": "10.1098/rstb.2015.0237",
+      "title": "",
+      "journal": "Phil. Trans. R. Soc. Lond. B",
+      "year": "2016",
+      "author": "C Stringer",
+      "unstructured": "Stringer, C. The origin and evolution of Homo sapiens. Phil. Trans. R. Soc. Lond. B 371, 20150237 (2016). A synthesis of evidence from the fossil record on the evolution and origins of Homo sapiens."
+    },
+    {
+      "key": "3244_CR9",
+      "doi": "10.1126/science.1188021",
+      "title": "",
+      "journal": "Science",
+      "year": "2010",
+      "author": "RE Green",
+      "unstructured": "Green, R. E. et al. A draft sequence of the Neandertal genome. Science 328, 710\u2013722 (2010). The first large-scale genomic data from Neanderthals revealed admixture during the out-of-Africa expansion."
+    },
+    {
+      "key": "3244_CR10",
+      "doi": "10.1038/nature09710",
+      "title": "",
+      "journal": "Nature",
+      "year": "2010",
+      "author": "D Reich",
+      "unstructured": "Reich, D. et al. Genetic history of an archaic hominin group from Denisova Cave in Siberia. Nature 468, 1053\u20131060 (2010). A genome from Denisova Cave revealed a previously unknown archaic human group, and admixture in Oceanian ancestry."
+    },
+    {
+      "key": "3244_CR11",
+      "doi": "10.1126/science.1227721",
+      "title": "",
+      "journal": "Science",
+      "year": "2012",
+      "author": "CM Schlebusch",
+      "unstructured": "Schlebusch, C. M. et al. Genomic variation in seven Khoe-San groups reveals adaptation and complex African history. Science 338, 374\u2013379 (2012). Analyses of diverse Khoe-San groups confirm that these groups show extensive diversity but shared common ancestry that diversified early in human history."
+    },
+    {
+      "key": "3244_CR12",
+      "doi": "10.1073/pnas.1017511108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "BM Henn",
+      "unstructured": "Henn, B. M. et al. Hunter-gatherer genomic diversity suggests a southern African origin for modern humans. Proc. Natl Acad. Sci. USA 108, 5154\u20135162 (2011)."
+    },
+    {
+      "key": "3244_CR13",
+      "doi": "10.1016/j.cell.2017.08.049",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "P Skoglund",
+      "unstructured": "Skoglund, P. et al. Reconstructing prehistoric African population structure. Cell 171, 59\u201371 (2017). Ancient DNA reveals evidence that early diverging modern human ancestry is found in West Africa."
+    },
+    {
+      "key": "3244_CR14",
+      "doi": "10.1038/nature18964",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "S Mallick",
+      "unstructured": "Mallick, S. et al. The Simons Genome Diversity Project: 300 genomes from 142 diverse populations. Nature 538, 201\u2013206 (2016)."
+    },
+    {
+      "key": "3244_CR15",
+      "doi": "10.1126/science.1153717",
+      "title": "",
+      "journal": "Science",
+      "year": "2008",
+      "author": "JZ Li",
+      "unstructured": "Li, J. Z. et al. Worldwide human relationships inferred from genome-wide patterns of variation. Science 319, 1100\u20131104 (2008)."
+    },
+    {
+      "key": "3244_CR16",
+      "doi": "10.1016/j.quascirev.2016.05.012",
+      "title": "",
+      "journal": "Quat. Sci. Rev.",
+      "year": "2016",
+      "author": "PS Breeze",
+      "unstructured": "Breeze, P. S. et al. Palaeohydrological corridors for hominin dispersals in the Middle East ~250\u201370,000 years ago. Quat. Sci. Rev. 144, 155\u2013185 (2016)."
+    },
+    {
+      "key": "3244_CR17",
+      "doi": "10.1016/j.jhevol.2005.04.006",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2005",
+      "author": "R Gr\u00fcn",
+      "unstructured": "Gr\u00fcn, R. et al. U-series and ESR analyses of bones and teeth relating to the human burials from Skhul. J. Hum. Evol. 49, 316\u2013334 (2005)."
+    },
+    {
+      "key": "3244_CR18",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Valladas, H., Merrier, N., Joron, J.-L. & Reyss, J.-L. in Neandertals and Modern Humans in Western Asia (eds Akazawa, T. et al.) 69\u201375 (Springer, 1998)."
+    },
+    {
+      "key": "3244_CR19",
+      "doi": "10.1038/s41559-018-0518-2",
+      "title": "",
+      "journal": "Nat. Ecol. Evol.",
+      "year": "2018",
+      "author": "HS Groucutt",
+      "unstructured": "Groucutt, H. S. et al. Homo sapiens in Arabia by 85,000 years ago. Nat. Ecol. Evol. 2, 800\u2013809 (2018)."
+    },
+    {
+      "key": "3244_CR20",
+      "doi": "10.1126/science.aap8369",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "I Hershkovitz",
+      "unstructured": "Hershkovitz, I. et al. The earliest modern humans outside Africa. Science 359, 456\u2013459 (2018)."
+    },
+    {
+      "key": "3244_CR21",
+      "doi": "10.1038/s41586-019-1376-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "K Harvati",
+      "unstructured": "Harvati, K. et al. Apidima Cave fossils provide earliest evidence of Homo sapiens in Eurasia. Nature 571, 500\u2013504 (2019)."
+    },
+    {
+      "key": "3244_CR22",
+      "doi": "10.1038/nature15696",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "W Liu",
+      "unstructured": "Liu, W. et al. The earliest unequivocally modern humans in southern China. Nature 526, 696\u2013699 (2015)."
+    },
+    {
+      "key": "3244_CR23",
+      "doi": "10.1016/j.quaint.2015.12.088",
+      "title": "",
+      "journal": "Quat. Int.",
+      "year": "2017",
+      "author": "Y Cai",
+      "unstructured": "Cai, Y. et al. The age of human remains and associated fauna from Zhiren Cave in Guangxi, southern China. Quat. Int. 434, 84\u201391 (2017)."
+    },
+    {
+      "key": "3244_CR24",
+      "doi": "10.1038/nature23452",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "KE Westaway",
+      "unstructured": "Westaway, K. E. et al. An early modern human presence in Sumatra 73,000\u201363,000 years ago. Nature 548, 322\u2013325 (2017)."
+    },
+    {
+      "key": "3244_CR25",
+      "doi": "10.1016/j.quaint.2016.12.002",
+      "title": "",
+      "journal": "Quat. Int.",
+      "year": "2018",
+      "author": "L Shackelford",
+      "unstructured": "Shackelford, L. et al. Additional evidence for early modern human morphological diversity in Southeast Asia at Tam Pa Ling, Laos. Quat. Int. 466, 93\u2013106 (2018)."
+    },
+    {
+      "key": "3244_CR26",
+      "doi": "10.1038/nature22968",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "C Clarkson",
+      "unstructured": "Clarkson, C. et al. Human occupation of northern Australia by 65,000 years ago. Nature 547, 306\u2013310 (2017). An old archaeological sequence in Australia that challenges the current genomic time frame for the worldwide expansion of modern humans."
+    },
+    {
+      "key": "3244_CR27",
+      "doi": "10.1038/nature17993",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "Q Fu",
+      "unstructured": "Fu, Q. et al. The genetic history of Ice Age Europe. Nature 534, 200\u2013205 (2016)."
+    },
+    {
+      "key": "3244_CR28",
+      "doi": "10.1126/science.aaa0114",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "A Seguin-Orlando",
+      "unstructured": "Seguin-Orlando, A. et al. Genomic structure in Europeans dating back at least 36,200 years. Science 346, 1113\u20131118 (2014)."
+    },
+    {
+      "key": "3244_CR29",
+      "doi": "10.1038/nature13810",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "Q Fu",
+      "unstructured": "Fu, Q. et al. Genome sequence of a 45,000-year-old modern human from western Siberia. Nature 514, 445\u2013449 (2014)."
+    },
+    {
+      "key": "3244_CR30",
+      "doi": "10.1126/science.aao1807",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "M Sikora",
+      "unstructured": "Sikora, M. et al. Ancient genomes show social and reproductive behavior of early Upper Paleolithic foragers. Science 358, 659\u2013662 (2017)."
+    },
+    {
+      "key": "3244_CR31",
+      "doi": "10.1038/s41586-019-1279-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "M Sikora",
+      "unstructured": "Sikora, M. et al. The population history of northeastern Siberia since the Pleistocene. Nature 570, 182\u2013188 (2019)."
+    },
+    {
+      "key": "3244_CR32",
+      "doi": "10.1016/j.cub.2017.09.030",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2017",
+      "author": "MA Yang",
+      "unstructured": "Yang, M. A. et al. 40,000-year-old individual from Asia provides insight into early population structure in Eurasia. Curr. Biol. 27, 3202\u20133208 (2017)."
+    },
+    {
+      "key": "3244_CR33",
+      "doi": "10.1073/pnas.1514696113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "P Moorjani",
+      "unstructured": "Moorjani, P. et al. A genetic method for dating ancient genomes provides a direct estimate of human generation interval in the last 45,000 years. Proc. Natl Acad. Sci. USA 113, 5652\u20135657 (2016)."
+    },
+    {
+      "key": "3244_CR34",
+      "doi": "10.1371/journal.pgen.1002947",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2012",
+      "author": "S Sankararaman",
+      "unstructured": "Sankararaman, S., Patterson, N., Li, H., P\u00e4\u00e4bo, S. & Reich, D. The date of interbreeding between Neandertals and modern humans. PLoS Genet. 8, e1002947 (2012)."
+    },
+    {
+      "key": "3244_CR35",
+      "doi": "10.1016/j.cub.2016.03.037",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2016",
+      "author": "S Sankararaman",
+      "unstructured": "Sankararaman, S., Mallick, S., Patterson, N. & Reich, D. The combined landscape of Denisovan and Neanderthal ancestry in present-day humans. Curr. Biol. 26, 1241\u20131247 (2016)."
+    },
+    {
+      "key": "3244_CR36",
+      "doi": "10.1016/j.cub.2013.02.044",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2013",
+      "author": "Q Fu",
+      "unstructured": "Fu, Q. et al. A revised timescale for human evolution based on ancient mitochondrial genomes. Curr. Biol. 23, 553\u2013559 (2013)."
+    },
+    {
+      "key": "3244_CR37",
+      "doi": "10.1016/j.cub.2016.01.037",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2016",
+      "author": "C Posth",
+      "unstructured": "Posth, C. et al. Pleistocene mitochondrial genomes suggest a single major dispersal of non-Africans and a late glacial population turnover in Europe. Curr. Biol. 26, 827\u2013833 (2016)."
+    },
+    {
+      "key": "3244_CR38",
+      "doi": "10.1038/ng.3559",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2016",
+      "author": "GD Poznik",
+      "unstructured": "Poznik, G. D. et al. Punctuated bursts in human male demography inferred from 1,244 worldwide Y-chromosome sequences. Nat. Genet. 48, 593\u2013599 (2016)."
+    },
+    {
+      "key": "3244_CR39",
+      "doi": "10.1101/gr.186684.114",
+      "title": "",
+      "journal": "Genome Res.",
+      "year": "2015",
+      "author": "M Karmin",
+      "unstructured": "Karmin, M. et al. A recent bottleneck of Y chromosome diversity coincides with a global change in culture. Genome Res. 25, 459\u2013466 (2015)."
+    },
+    {
+      "key": "3244_CR40",
+      "doi": "10.1038/nature19792",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "L Pagani",
+      "unstructured": "Pagani, L. et al. Genomic analyses inform on migration events during the peopling of Eurasia. Nature 538, 238\u2013242 (2016)."
+    },
+    {
+      "key": "3244_CR41",
+      "doi": "10.1073/pnas.1323666111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "H Reyes-Centeno",
+      "unstructured": "Reyes-Centeno, H. et al. Genomic and cranial phenotype data support multiple modern human dispersals from Africa and a southern route into Asia. Proc. Natl Acad. Sci. USA 111, 7248\u20137253 (2014)."
+    },
+    {
+      "key": "3244_CR42",
+      "doi": "10.1186/s13323-015-0030-2",
+      "title": "",
+      "journal": "Investig. Genet.",
+      "year": "2015",
+      "author": "F Tassi",
+      "unstructured": "Tassi, F. et al. Early modern human dispersal from Africa: genomic evidence for multiple waves of migration. Investig. Genet. 6, 13 (2015)."
+    },
+    {
+      "key": "3244_CR43",
+      "doi": "10.1126/science.1211177",
+      "title": "",
+      "journal": "Science",
+      "year": "2011",
+      "author": "M Rasmussen",
+      "unstructured": "Rasmussen, M. et al. An Aboriginal Australian genome reveals separate human dispersals into Asia. Science 334, 94\u201398 (2011)."
+    },
+    {
+      "key": "3244_CR44",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Kingdon, J. Self-Made Man and His Undoing (Simon & Schuster, 1993)."
+    },
+    {
+      "key": "3244_CR45",
+      "doi": "10.1002/(sici)1096-8644(1998)107:27+<137::aid-ajpa6>3.0.co;2-q",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "1998",
+      "author": "M Miraz\u00f3n Lahr",
+      "unstructured": "Miraz\u00f3n Lahr, M. & Foley, R. A. Towards a theory of modern human origins: geography, demography, and diversity in recent human evolution. Am. J. Phys. Anthropol. 107, 137\u2013176 (1998)."
+    },
+    {
+      "key": "3244_CR46",
+      "doi": "10.1038/nature18299",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "A-S Malaspinas",
+      "unstructured": "Malaspinas, A.-S. et al. A genomic history of Aboriginal Australia. Nature 538, 207\u2013214 (2016)."
+    },
+    {
+      "key": "3244_CR47",
+      "doi": "10.1016/j.ajhg.2017.04.002",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2017",
+      "author": "JD Wall",
+      "unstructured": "Wall, J. D. Inferring human demographic histories of non-African populations from patterns of allele sharing. Am. J. Hum. Genet. 100, 766\u2013772 (2017)."
+    },
+    {
+      "key": "3244_CR48",
+      "doi": "",
+      "title": "",
+      "journal": "Mol. Biol. Evol.",
+      "year": "2017",
+      "author": "M Lipson",
+      "unstructured": "Lipson, M. & Reich, D. A working model of the deep relationships of diverse modern human genetic lineages outside of Africa. Mol. Biol. Evol. 34, 889\u2013902 (2017). Modelling of population relationships outside of Africa supports a single, shared origin for all non-African ancestries."
+    },
+    {
+      "key": "3244_CR49",
+      "doi": "10.1126/science.aay5012",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "A Bergstr\u00f6m",
+      "unstructured": "Bergstr\u00f6m, A. et al. Insights into human genetic variation and population history from 929 diverse genomes. Science 367, eaay5012 (2020)."
+    },
+    {
+      "key": "3244_CR50",
+      "doi": "10.1038/nature13673",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "I Lazaridis",
+      "unstructured": "Lazaridis, I. et al. Ancient human genomes suggest three ancestral populations for present-day Europeans. Nature 513, 409\u2013413 (2014)."
+    },
+    {
+      "key": "3244_CR51",
+      "doi": "10.1038/nature19310",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "I Lazaridis",
+      "unstructured": "Lazaridis, I. et al. Genomic insights into the origin of farming in the ancient Near East. Nature 536, 419\u2013424 (2016)."
+    },
+    {
+      "key": "3244_CR52",
+      "doi": "10.1101/423079",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Lazaridis, I. et al. Paleolithic DNA from the Caucasus reveals core of West Eurasian ancestry. Preprint at https://doi.org/10.1101/423079 (2018)."
+    },
+    {
+      "key": "3244_CR53",
+      "doi": "10.1080/01621459.2019.1635482",
+      "title": "",
+      "journal": "J. Am. Stat. Assoc.",
+      "year": "2020",
+      "author": "J Kamm",
+      "unstructured": "Kamm, J., Terhorst, J., Durbin, R. & Song, Y. S. Efficiently inferring the demographic history of many populations with allele count data. J. Am. Stat. Assoc. 115, 1472\u20131487 (2020)."
+    },
+    {
+      "key": "3244_CR54",
+      "doi": "10.1126/science.aar8380",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "M van de Loosdrecht",
+      "unstructured": "van de Loosdrecht, M. et al. Pleistocene North African genomes link Near Eastern and sub-Saharan African human populations. Science 360, 548\u2013552 (2018)."
+    },
+    {
+      "key": "3244_CR55",
+      "doi": "10.1126/science.1216304",
+      "title": "",
+      "journal": "Science",
+      "year": "2012",
+      "author": "P Skoglund",
+      "unstructured": "Skoglund, P. et al. Origins and genetic legacy of Neolithic farmers and hunter-gatherers in Europe. Science 336, 466\u2013469 (2012)."
+    },
+    {
+      "key": "3244_CR56",
+      "doi": "10.1126/science.aaf7943",
+      "title": "",
+      "journal": "Science",
+      "year": "2016",
+      "author": "F Broushaki",
+      "unstructured": "Broushaki, F. et al. Early Neolithic genomes from the eastern Fertile Crescent. Science 353, 499\u2013503 (2016)."
+    },
+    {
+      "key": "3244_CR57",
+      "doi": "10.1038/nature14317",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "W Haak",
+      "unstructured": "Haak, W. et al. Massive migration from the steppe was a source for Indo-European languages in Europe. Nature 522, 207\u2013211 (2015)."
+    },
+    {
+      "key": "3244_CR58",
+      "doi": "10.1126/science.1253448",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "P Skoglund",
+      "unstructured": "Skoglund, P. et al. Genomic diversity and admixture differs for Stone-Age Scandinavian foragers and farmers. Science 344, 747\u2013750 (2014)."
+    },
+    {
+      "key": "3244_CR59",
+      "doi": "10.1093/molbev/mss117",
+      "title": "",
+      "journal": "Mol. Biol. Evol.",
+      "year": "2012",
+      "author": "MA Yang",
+      "unstructured": "Yang, M. A., Malaspinas, A.-S., Durand, E. Y. & Slatkin, M. Ancient structure in Africa unlikely to explain Neanderthal and non-African genetic similarity. Mol. Biol. Evol. 29, 2987\u20132995 (2012)."
+    },
+    {
+      "key": "3244_CR60",
+      "doi": "10.1073/pnas.1221359110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "Q Fu",
+      "unstructured": "Fu, Q. et al. DNA analysis of an early modern human from Tianyuan Cave, China. Proc. Natl Acad. Sci. USA 110, 2223\u20132227 (2013)."
+    },
+    {
+      "key": "3244_CR61",
+      "doi": "10.1038/nature12886",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "K Pr\u00fcfer",
+      "unstructured": "Pr\u00fcfer, K. et al. The complete genome sequence of a Neanderthal from the Altai Mountains. Nature 505, 43\u201349 (2014). The first high-quality Neanderthal genome reveals super-archaic ancestry in Denisovans."
+    },
+    {
+      "key": "3244_CR62",
+      "doi": "10.1126/science.aao1887",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "K Pr\u00fcfer",
+      "unstructured": "Pr\u00fcfer, K. et al. A high-coverage Neandertal genome from Vindija Cave in Croatia. Science 358, 655\u2013658 (2017)."
+    },
+    {
+      "key": "3244_CR63",
+      "doi": "10.1016/j.cell.2020.01.012",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "L Chen",
+      "unstructured": "Chen, L., Wolf, A. B., Fu, W., Li, L. & Akey, J. M. Identifying and interpreting apparent Neanderthal ancestry in African individuals. Cell 180, 677\u2013687 (2020)."
+    },
+    {
+      "key": "3244_CR64",
+      "doi": "10.1093/gbe/evt160",
+      "title": "",
+      "journal": "Genome Biol. Evol.",
+      "year": "2013",
+      "author": "S Wang",
+      "unstructured": "Wang, S., Lachance, J., Tishkoff, S. A., Hey, J. & Xing, J. Apparent variation in Neanderthal admixture among African populations is consistent with gene flow from non-African populations. Genome Biol. Evol. 5, 2075\u20132081 (2013)."
+    },
+    {
+      "key": "3244_CR65",
+      "doi": "10.1371/journal.pone.0047765",
+      "title": "",
+      "journal": "PLoS One",
+      "year": "2012",
+      "author": "F S\u00e1nchez-Quinto",
+      "unstructured": "S\u00e1nchez-Quinto, F. et al. North African populations carry the signature of admixture with Neandertals. PLoS One 7, e47765 (2012)."
+    },
+    {
+      "key": "3244_CR66",
+      "doi": "10.1073/pnas.1313787111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "JK Pickrell",
+      "unstructured": "Pickrell, J. K. et al. Ancient west Eurasian ancestry in southern and eastern Africa. Proc. Natl Acad. Sci. USA 111, 2632\u20132637 (2014)."
+    },
+    {
+      "key": "3244_CR67",
+      "doi": "10.1126/science.aad2879",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "MG Llorente",
+      "unstructured": "Llorente, M. G. et al. Ancient Ethiopian genome reveals extensive Eurasian admixture in Eastern Africa. Science 350, 820\u2013822 (2015); erratum 351, aaf3945 (2016)."
+    },
+    {
+      "key": "3244_CR68",
+      "doi": "10.1126/science.aao6266",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "CM Schlebusch",
+      "unstructured": "Schlebusch, C. M. et al. Southern African ancient genomes estimate modern human divergence to 350,000 to 260,000 years ago. Science 358, 652\u2013655 (2017)."
+    },
+    {
+      "key": "3244_CR69",
+      "doi": "10.1038/nature10484",
+      "title": "",
+      "journal": "Nature",
+      "year": "2011",
+      "author": "T Higham",
+      "unstructured": "Higham, T. et al. The earliest evidence for anatomically modern humans in northwestern Europe. Nature 479, 521\u2013524 (2011)."
+    },
+    {
+      "key": "3244_CR70",
+      "doi": "10.1038/nature26151",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "M Hajdinjak",
+      "unstructured": "Hajdinjak, M. et al. Reconstructing the genetic history of late Neanderthals. Nature 555, 652\u2013656 (2018)."
+    },
+    {
+      "key": "3244_CR71",
+      "doi": "10.1126/science.1224344",
+      "title": "",
+      "journal": "Science",
+      "year": "2012",
+      "author": "M Meyer",
+      "unstructured": "Meyer, M. et al. A high-coverage genome sequence from an archaic Denisovan individual. Science 338, 222\u2013226 (2012)."
+    },
+    {
+      "key": "3244_CR72",
+      "doi": "10.1073/pnas.1108181108",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Skoglund, P. & Jakobsson, M. Archaic human ancestry in East Asia. Proc. Natl Acad. Sci. USA 108, 18301\u201318306 (2011)."
+    },
+    {
+      "key": "3244_CR73",
+      "doi": "10.1534/genetics.112.148213",
+      "title": "",
+      "journal": "Genetics",
+      "year": "2013",
+      "author": "JD Wall",
+      "unstructured": "Wall, J. D. et al. Higher levels of Neanderthal ancestry in East Asians than in Europeans. Genetics 194, 199\u2013209 (2013)."
+    },
+    {
+      "key": "3244_CR74",
+      "doi": "10.1126/science.aad9416",
+      "title": "",
+      "journal": "Science",
+      "year": "2016",
+      "author": "B Vernot",
+      "unstructured": "Vernot, B. et al. Excavating Neandertal and Denisovan DNA from the genomes of Melanesian individuals. Science 352, 235\u2013239 (2016)."
+    },
+    {
+      "key": "3244_CR75",
+      "doi": "10.1016/j.ajhg.2014.12.029",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2015",
+      "author": "BY Kim",
+      "unstructured": "Kim, B. Y. & Lohmueller, K. E. Selection and reduced population size cannot explain higher amounts of Neandertal ancestry in East Asian than in European human populations. Am. J. Hum. Genet. 96, 454\u2013461 (2015)."
+    },
+    {
+      "key": "3244_CR76",
+      "doi": "10.1038/s41559-018-0735-8",
+      "title": "",
+      "journal": "Nat. Ecol. Evol.",
+      "year": "2019",
+      "author": "FA Villanea",
+      "unstructured": "Villanea, F. A. & Schraiber, J. G. Multiple episodes of interbreeding between Neanderthal and modern humans. Nat. Ecol. Evol. 3, 39\u201344 (2019)."
+    },
+    {
+      "key": "3244_CR77",
+      "doi": "10.1016/j.ajhg.2015.01.006",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2015",
+      "author": "B Vernot",
+      "unstructured": "Vernot, B. & Akey, J. M. Complex history of admixture between modern humans and Neandertals. Am. J. Hum. Genet. 96, 448\u2013453 (2015)."
+    },
+    {
+      "key": "3244_CR78",
+      "doi": "10.1038/s41586-020-2225-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "L Skov",
+      "unstructured": "Skov, L. et al. The nature of Neanderthal introgression revealed by 27,566 Icelandic genomes. Nature 582, 78\u201383 (2020)."
+    },
+    {
+      "key": "3244_CR79",
+      "doi": "10.1073/pnas.1814338116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "M Petr",
+      "unstructured": "Petr, M., P\u00e4\u00e4bo, S., Kelso, J. & Vernot, B. Limits of long-term selection against Neandertal introgression. Proc. Natl Acad. Sci. USA 116, 1639\u20131644 (2019)."
+    },
+    {
+      "key": "3244_CR80",
+      "doi": "10.1038/nature12961",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "S Sankararaman",
+      "unstructured": "Sankararaman, S. et al. The genomic landscape of Neanderthal ancestry in present-day humans. Nature 507, 354\u2013357 (2014)."
+    },
+    {
+      "key": "3244_CR81",
+      "doi": "10.1534/genetics.116.186890",
+      "title": "",
+      "journal": "Genetics",
+      "year": "2016",
+      "author": "K Harris",
+      "unstructured": "Harris, K. & Nielsen, R. The genetic cost of Neanderthal introgression. Genetics 203, 881\u2013891 (2016)."
+    },
+    {
+      "key": "3244_CR82",
+      "doi": "10.1126/science.aar3684",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "M Schumer",
+      "unstructured": "Schumer, M. et al. Natural selection interacts with recombination to shape the evolution of hybrid genomes. Science 360, 656\u2013660 (2018)."
+    },
+    {
+      "key": "3244_CR83",
+      "doi": "10.1371/journal.pgen.1006340",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2016",
+      "author": "I Juric",
+      "unstructured": "Juric, I., Aeschbacher, S. & Coop, G. The strength of selection against Neanderthal introgression. PLoS Genet. 12, e1006340 (2016)."
+    },
+    {
+      "key": "3244_CR84",
+      "doi": "10.1016/j.ajhg.2011.09.005",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2011",
+      "author": "D Reich",
+      "unstructured": "Reich, D. et al. Denisova admixture and the first modern human dispersals into Southeast Asia and Oceania. Am. J. Hum. Genet. 89, 516\u2013528 (2011)."
+    },
+    {
+      "key": "3244_CR85",
+      "doi": "10.1038/s41586-019-1793-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "GenomeAsia100K Consortium",
+      "unstructured": "GenomeAsia100K Consortium. The GenomeAsia 100K Project enables genetic discoveries across Asia. Nature 576, 106\u2013111 (2019)."
+    },
+    {
+      "key": "3244_CR86",
+      "doi": "10.1093/molbev/msv141",
+      "title": "",
+      "journal": "Mol. Biol. Evol.",
+      "year": "2015",
+      "author": "P Qin",
+      "unstructured": "Qin, P. & Stoneking, M. Denisovan ancestry in east Eurasian and Native American populations. Mol. Biol. Evol. 32, 2665\u20132674 (2015)."
+    },
+    {
+      "key": "3244_CR87",
+      "doi": "10.1016/j.cell.2018.02.031",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "SR Browning",
+      "unstructured": "Browning, S. R., Browning, B. L., Zhou, Y., Tucci, S. & Akey, J. M. Analysis of human sequence data reveals two pulses of archaic Denisovan admixture. Cell 173, 53\u201361 (2018). Analyses of Denisovan segments in present-day individuals reveal that two distinct Denisovan source populations admixed with the ancestors of East Asian people."
+    },
+    {
+      "key": "3244_CR88",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Reich, D. Who We Are and How We Got Here: Ancient DNA and the New Science of the Human Past (Oxford Univ. Press, 2018)."
+    },
+    {
+      "key": "3244_CR89",
+      "doi": "10.1126/science.aar8486",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "S Tucci",
+      "unstructured": "Tucci, S. et al. Evolutionary history and adaptation of a human pygmy population of Flores Island, Indonesia. Science 361, 511\u2013516 (2018)."
+    },
+    {
+      "key": "3244_CR90",
+      "doi": "10.1016/j.cell.2019.02.035",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "GS Jacobs",
+      "unstructured": "Jacobs, G. S. et al. Multiple deeply divergent Denisovan ancestries in Papuans. Cell 177, 1010\u20131021 (2019)."
+    },
+    {
+      "key": "3244_CR91",
+      "doi": "10.1073/pnas.2035108100",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2003",
+      "author": "E Trinkaus",
+      "unstructured": "Trinkaus, E. et al. An early modern human from the Pe\u015ftera cu Oase, Romania. Proc. Natl Acad. Sci. USA 100, 11231\u201311236 (2003)."
+    },
+    {
+      "key": "3244_CR92",
+      "doi": "10.1038/nature14558",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "Q Fu",
+      "unstructured": "Fu, Q. et al. An early modern human from Romania with a recent Neanderthal ancestor. Nature 524, 216\u2013219 (2015)."
+    },
+    {
+      "key": "3244_CR93",
+      "doi": "10.1038/s41586-018-0455-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "V Slon",
+      "unstructured": "Slon, V. et al. The genome of the offspring of a Neanderthal mother and a Denisovan father. Nature 561, 113\u2013116 (2018)."
+    },
+    {
+      "key": "3244_CR94",
+      "doi": "10.1073/pnas.1107450108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "M Currat",
+      "unstructured": "Currat, M. & Excoffier, L. Strong reproductive isolation between humans and Neanderthals inferred from observed patterns of introgression. Proc. Natl Acad. Sci. USA 108, 15129\u201315134 (2011)."
+    },
+    {
+      "key": "3244_CR95",
+      "doi": "10.1126/science.1245938",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "B Vernot",
+      "unstructured": "Vernot, B. & Akey, J. M. Resurrecting surviving Neandertal lineages from modern human genomes. Science 343, 1017\u20131021 (2014)."
+    },
+    {
+      "key": "3244_CR96",
+      "doi": "10.1038/ng.3621",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2016",
+      "author": "M Mondal",
+      "unstructured": "Mondal, M. et al. Genomic analysis of Andamanese provides insights into ancient human migration into Asia and adaptation. Nat. Genet. 48, 1066\u20131070 (2016)."
+    },
+    {
+      "key": "3244_CR97",
+      "doi": "10.1038/s41467-018-08089-7",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "M Mondal",
+      "unstructured": "Mondal, M., Bertranpetit, J. & Lao, O. Approximate Bayesian computation with deep learning supports a third archaic introgression in Asia and Oceania. Nat. Commun. 10, 246 (2019)."
+    },
+    {
+      "key": "3244_CR98",
+      "doi": "10.1038/s41588-019-0484-x",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2019",
+      "author": "L Speidel",
+      "unstructured": "Speidel, L., Forest, M., Shi, S. & Myers, S. R. A method for genome-wide genealogy estimation for thousands of samples. Nat. Genet. 51, 1321\u20131329 (2019)."
+    },
+    {
+      "key": "3244_CR99",
+      "doi": "10.1038/s41588-018-0097-9",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "P Skoglund",
+      "unstructured": "Skoglund, P., Mallick, S., Patterson, N. & Reich, D. No evidence for unknown archaic ancestry in South Asia. Nat. Genet. 50, 632\u2013633 (2018)."
+    },
+    {
+      "key": "3244_CR100",
+      "doi": "10.1002/evan.21455",
+      "title": "",
+      "journal": "Evol. Anthropol.",
+      "year": "2015",
+      "author": "HS Groucutt",
+      "unstructured": "Groucutt, H. S. et al. Rethinking the dispersal of Homo sapiens out of Africa. Evol. Anthropol. 24, 149\u2013164 (2015)."
+    },
+    {
+      "key": "3244_CR101",
+      "doi": "10.1016/j.tree.2018.05.005",
+      "title": "",
+      "journal": "Trends Ecol. Evol.",
+      "year": "2018",
+      "author": "EML Scerri",
+      "unstructured": "Scerri, E. M. L. et al. Did our species evolve in subdivided populations across Africa, and why does it matter? Trends Ecol. Evol. 33, 582\u2013594 (2018). A synthesis of fossil, archaeological and genomic evidence that suggests a pan-African model of human evolution."
+    },
+    {
+      "key": "3244_CR102",
+      "doi": "10.1038/s41467-019-11213-w",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "A Mounier",
+      "unstructured": "Mounier, A. & Miraz\u00f3n Lahr, M. Deciphering African late middle Pleistocene hominin diversity and the origin of our species. Nat. Commun. 10, 3406 (2019)."
+    },
+    {
+      "key": "3244_CR103",
+      "doi": "10.1038/s41559-019-0865-7",
+      "title": "",
+      "journal": "Nat. Ecol. Evol.",
+      "year": "2019",
+      "author": "RS Lacruz",
+      "unstructured": "Lacruz, R. S. et al. The evolutionary history of the human face. Nat. Ecol. Evol. 3, 726\u2013736 (2019)."
+    },
+    {
+      "key": "3244_CR104",
+      "doi": "10.31730/osf.io/eqs7d",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Berger, L. R. & Hawks, J. Revisiting the age of the Florisbad hominin material. Preprint at https://doi.org/10.31730/osf.io/eqs7d (2020)."
+    },
+    {
+      "key": "3244_CR105",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Bruner, E. & Lombard, M. The skull from Florisbad: a paleoneurological report. J. Anthropol. Sci. 98, 89\u201397 (2020)."
+    },
+    {
+      "key": "3244_CR106",
+      "doi": "10.1038/s41586-020-1929-1",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "M Lipson",
+      "unstructured": "Lipson, M. et al. Ancient West African foragers in the context of African population history. Nature 577, 665\u2013670 (2020). Analysis of ancient and modern genomes from Central Africa suggests a model with multiple layers of ancestry on the African continent."
+    },
+    {
+      "key": "3244_CR107",
+      "doi": "10.1038/nature06742",
+      "title": "",
+      "journal": "Nature",
+      "year": "2008",
+      "author": "M Jakobsson",
+      "unstructured": "Jakobsson, M. et al. Genotype, haplotype and copy-number variation in worldwide human populations. Nature 451, 998\u20131003 (2008)."
+    },
+    {
+      "key": "3244_CR108",
+      "doi": "10.1038/ng.3015",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2014",
+      "author": "S Schiffels",
+      "unstructured": "Schiffels, S. & Durbin, R. Inferring human population size and separation history from multiple genome sequences. Nat. Genet. 46, 919\u2013925 (2014)."
+    },
+    {
+      "key": "3244_CR109",
+      "doi": "10.1371/journal.pgen.1008552",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2020",
+      "author": "K Wang",
+      "unstructured": "Wang, K., Mathieson, I., O\u2019Connell, J. & Schiffels, S. Tracking human population structure through time from whole genome sequences. PLoS Genet. 16, e1008552 (2020). Detailed analysis of the time depth of human population structure, including evidence for small amounts of a very deep structure."
+    },
+    {
+      "key": "3244_CR110",
+      "doi": "10.1534/genetics.116.192963",
+      "title": "",
+      "journal": "Genetics",
+      "year": "2017",
+      "author": "S Song",
+      "unstructured": "Song, S., Sliwerska, E., Emery, S. & Kidd, J. M. modeling human population separation history using physically phased genomes. Genetics 205, 385\u2013395 (2017)."
+    },
+    {
+      "key": "3244_CR111",
+      "doi": "10.1186/s13059-019-1679-2",
+      "title": "",
+      "journal": "Genome Biol.",
+      "year": "2019",
+      "author": "S Fan",
+      "unstructured": "Fan, S. et al. African evolutionary history inferred from whole genome sequence data of 44 indigenous African populations. Genome Biol. 20, 82 (2019)."
+    },
+    {
+      "key": "3244_CR112",
+      "doi": "10.1038/ng.937",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2011",
+      "author": "I Gronau",
+      "unstructured": "Gronau, I., Hubisz, M. J., Gulko, B., Danko, C. G. & Siepel, A. Bayesian inference of ancient human demography from individual genome sequences. Nat. Genet. 43, 1031\u20131034 (2011)."
+    },
+    {
+      "key": "3244_CR113",
+      "doi": "10.1093/molbev/msr212",
+      "title": "",
+      "journal": "Mol. Biol. Evol.",
+      "year": "2012",
+      "author": "KR Veeramah",
+      "unstructured": "Veeramah, K. R. et al. An early divergence of KhoeSan ancestors from those of other modern humans is supported by an ABC-based analysis of autosomal resequencing data. Mol. Biol. Evol. 29, 617\u2013630 (2012)."
+    },
+    {
+      "key": "3244_CR114",
+      "doi": "10.1038/s41559-018-0496-4",
+      "title": "",
+      "journal": "Nat. Ecol. Evol.",
+      "year": "2018",
+      "author": "M Lopez",
+      "unstructured": "Lopez, M. et al. The demographic history and mutational load of African hunter-gatherers and farmers. Nat. Ecol. Evol. 2, 721\u2013730 (2018)."
+    },
+    {
+      "key": "3244_CR115",
+      "doi": "10.1101/gr.196634.115",
+      "title": "",
+      "journal": "Genome Res.",
+      "year": "2016",
+      "author": "P Hsieh",
+      "unstructured": "Hsieh, P. et al. Model-based analyses of whole-genome data reveal a complex evolutionary history involving archaic introgression in Central African Pygmies. Genome Res. 26, 291\u2013300 (2016)."
+    },
+    {
+      "key": "3244_CR116",
+      "doi": "10.1371/journal.pgen.1000448",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2009",
+      "author": "E Patin",
+      "unstructured": "Patin, E. et al. Inferring the demographic history of African farmers and pygmy hunter-gatherers using a multilocus resequencing data set. PLoS Genet. 5, e1000448 (2009)."
+    },
+    {
+      "key": "3244_CR117",
+      "doi": "10.1038/s41559-019-0992-1",
+      "title": "",
+      "journal": "Nat. Ecol. Evol.",
+      "year": "2019",
+      "author": "EML Scerri",
+      "unstructured": "Scerri, E. M. L., Chikhi, L. & Thomas, M. G. Beyond multiregional and simple out-of-Africa models of human evolution. Nat. Ecol. Evol. 3, 1370\u20131372 (2019)."
+    },
+    {
+      "key": "3244_CR118",
+      "doi": "10.1016/j.gde.2018.10.003",
+      "title": "",
+      "journal": "Curr. Opin. Genet. Dev.",
+      "year": "2018",
+      "author": "BM Henn",
+      "unstructured": "Henn, B. M., Steele, T. E. & Weaver, T. D. Clarifying distinct models of modern human origins in Africa. Curr. Opin. Genet. Dev. 53, 148\u2013156 (2018)."
+    },
+    {
+      "key": "3244_CR119",
+      "doi": "10.1371/journal.pone.0024024",
+      "title": "",
+      "journal": "PLoS One",
+      "year": "2011",
+      "author": "K Harvati",
+      "unstructured": "Harvati, K. et al. The Later Stone Age calvaria from Iwo Eleru, Nigeria: morphology and chronology. PLoS One 6, e24024 (2011). Analysis of a partial skull from Iho Eleru in Nigeria suggests that the complex diversity of skeletal morphology persisted until as recently as 13\u00a0ka."
+    },
+    {
+      "key": "3244_CR120",
+      "doi": "10.1016/j.jhevol.2014.02.018",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2014",
+      "author": "CM Stojanowski",
+      "unstructured": "Stojanowski, C. M. Iwo Eleru\u2019s place among Late Pleistocene and Early Holocene populations of North and East Africa. J. Hum. Evol. 75, 80\u201389 (2014)."
+    },
+    {
+      "key": "3244_CR121",
+      "doi": "10.1016/j.jhevol.2016.04.003",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2016",
+      "author": "I Crevecoeur",
+      "unstructured": "Crevecoeur, I., Brooks, A., Ribot, I., Cornelissen, E. & Semal, P. Late Stone Age human remains from Ishango (Democratic Republic of Congo): new insights on Late Pleistocene modern human diversity in Africa. J. Hum. Evol. 96, 35\u201357 (2016)."
+    },
+    {
+      "key": "3244_CR122",
+      "doi": "10.1016/j.gde.2004.08.010",
+      "title": "",
+      "journal": "Curr. Opin. Genet. Dev.",
+      "year": "2004",
+      "author": "RM Harding",
+      "unstructured": "Harding, R. M. & McVean, G. A structured ancestral population for the evolution of modern humans. Curr. Opin. Genet. Dev. 14, 667\u2013674 (2004)."
+    },
+    {
+      "key": "3244_CR123",
+      "doi": "10.1371/journal.pgen.0020105",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2006",
+      "author": "V Plagnol",
+      "unstructured": "Plagnol, V. & Wall, J. D. Possible ancestral structure in human populations. PLoS Genet. 2, e105 (2006)."
+    },
+    {
+      "key": "3244_CR124",
+      "doi": "10.1038/nature10231",
+      "title": "",
+      "journal": "Nature",
+      "year": "2011",
+      "author": "H Li",
+      "unstructured": "Li, H. & Durbin, R. Inference of human population history from individual whole-genome sequences. Nature 475, 493\u2013496 (2011)."
+    },
+    {
+      "key": "3244_CR125",
+      "doi": "10.1371/journal.pgen.1008204",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2019",
+      "author": "AP Ragsdale",
+      "unstructured": "Ragsdale, A. P. & Gravel, S. Models of archaic admixture and recent history from two-locus statistics. PLoS Genet. 15, e1008204 (2019)."
+    },
+    {
+      "key": "3244_CR126",
+      "doi": "10.1073/pnas.1109300108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "MF Hammer",
+      "unstructured": "Hammer, M. F., Woerner, A. E., Mendez, F. L., Watkins, J. C. & Wall, J. D. Genetic evidence for archaic admixture in Africa. Proc. Natl Acad. Sci. USA 108, 15123\u201315128 (2011)."
+    },
+    {
+      "key": "3244_CR127",
+      "doi": "10.1016/j.ajhg.2019.11.005",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2019",
+      "author": "JD Wall",
+      "unstructured": "Wall, J. D., Ratan, A. & Stawiski, E. Identification of African-specific admixture between modern and archaic humans. Am. J. Hum. Genet. 105, 1254\u20131261 (2019)."
+    },
+    {
+      "key": "3244_CR128",
+      "doi": "10.1016/j.cell.2012.07.009",
+      "title": "",
+      "journal": "Cell",
+      "year": "2012",
+      "author": "J Lachance",
+      "unstructured": "Lachance, J. et al. Evolutionary history and adaptation from high-coverage whole-genome sequences of diverse African hunter-gatherers. Cell 150, 457\u2013469 (2012)."
+    },
+    {
+      "key": "3244_CR129",
+      "doi": "10.1126/sciadv.aax5097",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2020",
+      "author": "A Durvasula",
+      "unstructured": "Durvasula, A. & Sankararaman, S. Recovering signals of ghost archaic introgression in African populations. Sci. Adv. 6, eaax5097 (2020)."
+    },
+    {
+      "key": "3244_CR130",
+      "doi": "",
+      "title": "",
+      "journal": "Proc. R. Soc. Lond. B",
+      "year": "2009",
+      "author": "O Deshpande",
+      "unstructured": "Deshpande, O., Batzoglou, S., Feldman, M. W. & Cavalli-Sforza, L. L. A serial founder effect model for human settlement out of Africa. Proc. R. Soc. Lond. B 276, 291\u2013300 (2009)."
+    },
+    {
+      "key": "3244_CR131",
+      "doi": "10.1016/j.cub.2005.02.038",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2005",
+      "author": "F Prugnolle",
+      "unstructured": "Prugnolle, F., Manica, A. & Balloux, F. Geography predicts neutral genetic diversity of human populations. Curr. Biol. 15, R159\u2013R160 (2005)."
+    },
+    {
+      "key": "3244_CR132",
+      "doi": "10.1016/j.tig.2014.07.007",
+      "title": "",
+      "journal": "Trends Genet.",
+      "year": "2014",
+      "author": "JK Pickrell",
+      "unstructured": "Pickrell, J. K. & Reich, D. Toward a new history and geography of human genes informed by ancient DNA. Trends Genet. 30, 377\u2013389 (2014)."
+    },
+    {
+      "key": "3244_CR133",
+      "doi": "10.1073/pnas.0903341106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "M DeGiorgio",
+      "unstructured": "DeGiorgio, M., Jakobsson, M. & Rosenberg, N. A. Out of Africa: modern human origins special feature: explaining worldwide patterns of human genetic variation using a coalescent-based serial founder model of migration outward from Africa. Proc. Natl Acad. Sci. USA 106, 16057\u201316062 (2009)."
+    },
+    {
+      "key": "3244_CR134",
+      "doi": "10.1038/nature19844",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "P Skoglund",
+      "unstructured": "Skoglund, P. et al. Genomic insights into the peopling of the Southwest Pacific. Nature 538, 510\u2013513 (2016)."
+    },
+    {
+      "key": "3244_CR135",
+      "doi": "10.1016/j.cub.2008.12.049",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2009",
+      "author": "P Verdu",
+      "unstructured": "Verdu, P. et al. Origins and genetic diversity of pygmy hunter-gatherers from Western Central Africa. Curr. Biol. 19, 312\u2013318 (2009)."
+    },
+    {
+      "key": "3244_CR136",
+      "doi": "10.1016/j.ajhg.2008.04.002",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2008",
+      "author": "DM Behar",
+      "unstructured": "Behar, D. M. et al. The dawn of human matrilineal diversity. Am. J. Hum. Genet. 82, 1130\u20131140 (2008)."
+    },
+    {
+      "key": "3244_CR137",
+      "doi": "10.1016/j.ajhg.2013.02.002",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2013",
+      "author": "FL Mendez",
+      "unstructured": "Mendez, F. L. et al. An African American paternal lineage adds an extremely ancient root to the human Y chromosome phylogenetic tree. Am. J. Hum. Genet. 92, 454\u2013459 (2013)."
+    },
+    {
+      "key": "3244_CR138",
+      "doi": "10.1534/genetics.119.302368",
+      "title": "",
+      "journal": "Genetics",
+      "year": "2019",
+      "author": "M Haber",
+      "unstructured": "Haber, M. et al. A rare deep-rooting D0 African Y-chromosomal haplogroup and its implications for the expansion of modern humans out of Africa. Genetics 212, 1421\u20131428 (2019)."
+    },
+    {
+      "key": "3244_CR139",
+      "doi": "10.1101/2020.06.01.127555",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Cole, C. B., Zhu, S. J., Mathieson, I., Pr\u00fcfer, K. & Lunter, G. Ancient admixture into Africa from the ancestors of non-Africans. Preprint at https://doi.org/10.1101/2020.06.01.127555 (2020)."
+    },
+    {
+      "key": "3244_CR140",
+      "doi": "10.1073/pnas.0904119106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "JJ Hublin",
+      "unstructured": "Hublin, J. J. The origin of Neandertals. Proc. Natl Acad. Sci. USA 106, 16022\u201316027 (2009)."
+    },
+    {
+      "key": "3244_CR141",
+      "doi": "10.1038/nature06193",
+      "title": "",
+      "journal": "Nature",
+      "year": "2007",
+      "author": "J Krause",
+      "unstructured": "Krause, J. et al. Neanderthals in central Asia and Siberia. Nature 449, 902\u2013904 (2007)."
+    },
+    {
+      "key": "3244_CR142",
+      "doi": "10.1126/science.abb6320",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "D Zhang",
+      "unstructured": "Zhang, D. et al. Denisovan DNA in Late Pleistocene sediments from Baishiya Karst Cave on the Tibetan Plateau. Science 370, 584\u2013587 (2020)."
+    },
+    {
+      "key": "3244_CR143",
+      "doi": "10.1002/jqs.3137",
+      "title": "",
+      "journal": "J. Quat. Sci.",
+      "year": "2019",
+      "author": "J Galway\u2010Witham",
+      "unstructured": "Galway\u2010Witham, J., Cole, J. & Stringer, C. Aspects of human physical and behavioural evolution during the last 1 million years. J. Quat. Sci. 34, 355\u2013378 (2019)."
+    },
+    {
+      "key": "3244_CR144",
+      "doi": "10.1002/ajpa.23305",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2017",
+      "author": "S Athreya",
+      "unstructured": "Athreya, S. & Wu, X. A multivariate assessment of the Dali hominin cranium from China: morphological affinities and implications for Pleistocene evolution in East Asia. Am. J. Phys. Anthropol. 164, 679\u2013701 (2017)."
+    },
+    {
+      "key": "3244_CR145",
+      "doi": "10.1073/pnas.0508681103",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2006",
+      "author": "KR Rosenberg",
+      "unstructured": "Rosenberg, K. R., Zun\u00e9, L. & Ruff, C. B. Body size, body proportions, and encephalization in a Middle Pleistocene archaic human from northern China. Proc. Natl Acad. Sci. USA 103, 3552\u20133556 (2006)."
+    },
+    {
+      "key": "3244_CR146",
+      "doi": "10.1073/pnas.1902396116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "X-J Wu",
+      "unstructured": "Wu, X.-J. et al. Archaic human remains from Hualongdong, China, and Middle Pleistocene human continuity and variation. Proc. Natl Acad. Sci. USA 116, 9820\u20139824 (2019)."
+    },
+    {
+      "key": "3244_CR147",
+      "doi": "10.1038/s41586-019-1139-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "F Chen",
+      "unstructured": "Chen, F. et al. A late Middle Pleistocene Denisovan mandible from the Tibetan Plateau. Nature 569, 409\u2013412 (2019)."
+    },
+    {
+      "key": "3244_CR148",
+      "doi": "10.1038/nature17405",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "M Meyer",
+      "unstructured": "Meyer, M. et al. Nuclear DNA sequences from the Middle Pleistocene Sima de los Huesos hominins. Nature 531, 504\u2013507 (2016). Retrieval of the oldest hominin DNA to date supports an early presence of Neanderthal-like ancestry in Europe."
+    },
+    {
+      "key": "3244_CR149",
+      "doi": "10.1073/pnas.2004944117",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2020",
+      "author": "F Mafessoni",
+      "unstructured": "Mafessoni, F. et al. A high-coverage Neandertal genome from Chagyrskaya Cave. Proc. Natl Acad. Sci. USA 117, 15132\u201315136 (2020)."
+    },
+    {
+      "key": "3244_CR150",
+      "doi": "10.1126/sciadv.aay5483",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2020",
+      "author": "AR Rogers",
+      "unstructured": "Rogers, A. R., Harris, N. S. & Achenbach, A. A. Neanderthal\u2013Denisovan ancestors interbred with a distantly related hominin. Sci. Adv. 6, eaay5483 (2020)."
+    },
+    {
+      "key": "3244_CR151",
+      "doi": "10.1038/nature08976",
+      "title": "",
+      "journal": "Nature",
+      "year": "2010",
+      "author": "J Krause",
+      "unstructured": "Krause, J. et al. The complete mitochondrial DNA genome of an unknown hominin from southern Siberia. Nature 464, 894\u2013897 (2010)."
+    },
+    {
+      "key": "3244_CR152",
+      "doi": "10.1038/ncomms16046",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "C Posth",
+      "unstructured": "Posth, C. et al. Deeply divergent archaic mitochondrial genome provides lower time boundary for African gene flow into Neanderthals. Nat. Commun. 8, 16046 (2017)."
+    },
+    {
+      "key": "3244_CR153",
+      "doi": "10.1098/rstb.2015.0236",
+      "title": "",
+      "journal": "Phil. Trans. R. Soc. Lond. B",
+      "year": "2016",
+      "author": "SC Ant\u00f3n",
+      "unstructured": "Ant\u00f3n, S. C. et al. Morphological variation in Homo erectus and the origins of developmental plasticity. Phil. Trans. R. Soc. Lond. B 371, 20150236 (2016)."
+    },
+    {
+      "key": "3244_CR154",
+      "doi": "10.1016/j.jhevol.2018.12.001",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2019",
+      "author": "M Martin\u00f3n-Torres",
+      "unstructured": "Martin\u00f3n-Torres, M. et al. New permanent teeth from Gran Dolina-TD6 (Sierra de Atapuerca). The bearing of Homo antecessor on the evolutionary scenario of Early and Middle Pleistocene Europe. J. Hum. Evol. 127, 93\u2013117 (2019)."
+    },
+    {
+      "key": "3244_CR155",
+      "doi": "10.1126/science.1131412",
+      "title": "",
+      "journal": "Science",
+      "year": "2006",
+      "author": "JP Noonan",
+      "unstructured": "Noonan, J. P. et al. Sequencing and analysis of Neanderthal genomic DNA. Science 314, 1113\u20131118 (2006)."
+    },
+    {
+      "key": "3244_CR156",
+      "doi": "10.1038/nature12788",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "M Meyer",
+      "unstructured": "Meyer, M. et al. A mitochondrial genome sequence of a hominin from Sima de los Huesos. Nature 505, 403\u2013406 (2014)."
+    },
+    {
+      "key": "3244_CR157",
+      "doi": "10.1016/j.cell.2008.06.021",
+      "title": "",
+      "journal": "Cell",
+      "year": "2008",
+      "author": "RE Green",
+      "unstructured": "Green, R. E. et al. A complete Neandertal mitochondrial genome sequence determined by high-throughput sequencing. Cell 134, 416\u2013426 (2008)."
+    },
+    {
+      "key": "3244_CR158",
+      "doi": "10.1126/science.abb6460",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "M Petr",
+      "unstructured": "Petr, M. et al. The evolutionary history of Neanderthal and Denisovan Y chromosomes. Science 369, 1653\u20131656 (2020)."
+    },
+    {
+      "key": "3244_CR159",
+      "doi": "10.1016/j.jhevol.2013.12.001",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2014",
+      "author": "LJ Arnold",
+      "unstructured": "Arnold, L. J. et al. Luminescence dating and palaeomagnetic age constraint on hominins from Sima de los Huesos, Atapuerca, Spain. J. Hum. Evol. 67, 85\u2013107 (2014)."
+    },
+    {
+      "key": "3244_CR160",
+      "doi": "10.1038/nature16544",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "M Kuhlwilm",
+      "unstructured": "Kuhlwilm, M. et al. Ancient gene flow from early modern humans into Eastern Neanderthals. Nature 530, 429\u2013433 (2016)."
+    },
+    {
+      "key": "3244_CR161",
+      "doi": "10.1371/journal.pgen.1008895",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2020",
+      "author": "MJ Hubisz",
+      "unstructured": "Hubisz, M. J., Williams, A. L. & Siepel, A. Mapping gene flow between ancient hominins through demography-aware inference of the ancestral recombination graph. PLoS Genet. 16, e1008895 (2020)."
+    },
+    {
+      "key": "3244_CR162",
+      "doi": "10.1515/9783110878837.875",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Isaac, G. L. in After the Australopithecines (eds Butzer, K. W. & Isaac, G. L.) 875\u2013887 (Mouton, 1975)."
+    },
+    {
+      "key": "3244_CR163",
+      "doi": "10.1016/j.crpv.2013.06.004",
+      "title": "",
+      "journal": "C. R. Palevol",
+      "year": "2013",
+      "author": "C Zanolli",
+      "unstructured": "Zanolli, C. & Mazurier, A. Endostructural characterization of the H. heidelbergensis dental remains from the early Middle Pleistocene site of Tighenif, Algeria. C. R. Palevol 12, 293\u2013304 (2013)."
+    },
+    {
+      "key": "3244_CR164",
+      "doi": "10.1016/j.jhevol.2018.06.010",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2018",
+      "author": "AS Hammond",
+      "unstructured": "Hammond, A. S., Alm\u00e9cija, S., Libsekal, Y., Rook, L. & Macchiarelli, R. A partial Homo pelvis from the Early Pleistocene of Eritrea. J. Hum. Evol. 123, 109\u2013128 (2018)."
+    },
+    {
+      "key": "3244_CR165",
+      "doi": "10.1038/s41586-020-2153-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "F Welker",
+      "unstructured": "Welker, F. et al. The dental proteome of Homo antecessor. Nature 580, 235\u2013238 (2020). Retrieval of ancient dental enamel proteins from Homo antecessor highlights the biomolecular potential of proteomics to reach into the deep past."
+    },
+    {
+      "key": "3244_CR166",
+      "doi": "10.1073/pnas.1106638108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "R Ferring",
+      "unstructured": "Ferring, R. et al. Earliest human occupations at Dmanisi (Georgian Caucasus) dated to 1.85\u20131.78 Ma. Proc. Natl Acad. Sci. USA 108, 10432\u201310436 (2011)."
+    },
+    {
+      "key": "3244_CR167",
+      "doi": "10.1002/evan.20155",
+      "title": "",
+      "journal": "Evol. Anthropol.",
+      "year": "2008",
+      "author": "OM Pearson",
+      "unstructured": "Pearson, O. M. Statistical and biological definitions of \u201cnatomically modern\u201d humans: suggestions for a unified approach to modern morphology. Evol. Anthropol. 17, 38\u201348 (2008)."
+    },
+    {
+      "key": "3244_CR168",
+      "doi": "10.1371/journal.pone.0129102",
+      "title": "",
+      "journal": "PLoS One",
+      "year": "2015",
+      "author": "R Pinhasi",
+      "unstructured": "Pinhasi, R. et al. Optimal ancient DNA yields from the inner ear part of the human petrous bone. PLoS One 10, e0129102 (2015)."
+    },
+    {
+      "key": "3244_CR169",
+      "doi": "10.1038/srep23559",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2016",
+      "author": "S Brown",
+      "unstructured": "Brown, S. et al. Identification of a new hominin bone from Denisova Cave, Siberia using collagen fingerprinting and mitochondrial DNA analysis. Sci. Rep. 6, 23559 (2016)."
+    },
+    {
+      "key": "3244_CR170",
+      "doi": "10.1126/science.aam9695",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "V Slon",
+      "unstructured": "Slon, V. et al. Neandertal and Denisovan DNA from Pleistocene sediments. Science 356, 605\u2013608 (2017)."
+    }
+  ]
+}

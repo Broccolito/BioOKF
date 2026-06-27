@@ -1,0 +1,1218 @@
+{
+  "article": {
+    "slug": "s41586-019-1841-8",
+    "doi": "10.1038/s41586-019-1841-8",
+    "title": "Why and where an HIV cure is needed and how it might be achieved",
+    "url": "https://www.nature.com/articles/s41586-019-1841-8",
+    "abbrev": "why-where-hiv-cure-needed-how",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/why-where-hiv-cure-needed-how"
+  },
+  "n_refs": 131,
+  "n_with_doi": 123,
+  "n_oa": 96,
+  "records": [
+    {
+      "doi": "10.1056/nejmoa0802905",
+      "title": "",
+      "year": "2009",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa0802905?articleTools=true",
+      "file": "10.1056_nejmoa0802905.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1027-4",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.repository.cam.ac.uk/handle/1810/290071",
+      "file": "10.1038_s41586-019-1027-4.md"
+    },
+    {
+      "doi": "10.1093/infdis/jiy479",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jid/article-pdf/218/12/1954/27985933/jiy479.pdf",
+      "file": "10.1093_infdis_jiy479.md"
+    },
+    {
+      "doi": "10.1371/journal.ppat.1003211",
+      "title": "",
+      "year": "2013",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1003211&type=printable",
+      "file": "10.1371_journal.ppat.1003211.md"
+    },
+    {
+      "doi": "10.1038/nm.4108",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://escholarship.org/uc/item/7s0868rb",
+      "file": "10.1038_nm.4108.md"
+    },
+    {
+      "doi": "10.1056/nejmoa1902824",
+      "title": "",
+      "year": "2019",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa1902824?articleTools=true",
+      "file": "10.1056_nejmoa1902824.md"
+    },
+    {
+      "doi": "10.1056/nejmoa1904340",
+      "title": "",
+      "year": "2019",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa1904340?articleTools=true",
+      "file": "10.1056_nejmoa1904340.md"
+    },
+    {
+      "doi": "10.1136/bmjopen-2016-011453",
+      "title": "",
+      "year": "2016",
+      "journal": "BMJ Open",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://bmjopen.bmj.com/content/bmjopen/6/7/e011453.full.pdf",
+      "file": "10.1136_bmjopen-2016-011453.md"
+    },
+    {
+      "doi": "10.1089/aid.2014.0200",
+      "title": "",
+      "year": "2015",
+      "journal": "AIDS Res. Hum. Retroviruses",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4287130?pdf=render",
+      "file": "10.1089_aid.2014.0200.md"
+    },
+    {
+      "doi": "10.1001/jama.2018.21167",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Am. Med. Assoc.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s0140-6736(19)30418-0",
+      "title": "",
+      "year": "2019",
+      "journal": "Lancet",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S0140673619304180/pdf",
+      "file": "10.1016_s0140-6736_19_30418-0.md"
+    },
+    {
+      "doi": "10.1186/s41256-019-0107-1",
+      "title": "",
+      "year": "2019",
+      "journal": "Glob. Health Res. Policy",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ghrp.biomedcentral.com/counter/pdf/10.1186/s41256-019-0107-1",
+      "file": "10.1186_s41256-019-0107-1.md"
+    },
+    {
+      "doi": "10.1097/qad.0000000000002052",
+      "title": "",
+      "year": "2019",
+      "journal": "AIDS",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://links.lww.com/QAD/B393",
+      "file": "10.1097_qad.0000000000002052.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0204840",
+      "title": "",
+      "year": "2018",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0204840&type=printable",
+      "file": "10.1371_journal.pone.0204840.md"
+    },
+    {
+      "doi": "10.1126/science.278.5341.1295",
+      "title": "",
+      "year": "1997",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.278.5341.1291",
+      "title": "",
+      "year": "1997",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.94.24.13193",
+      "title": "",
+      "year": "1997",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC24285?pdf=render",
+      "file": "10.1073_pnas.94.24.13193.md"
+    },
+    {
+      "doi": "10.1073/pnas.1617961114",
+      "title": "",
+      "year": "2017",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/114/18/E3659.full.pdf",
+      "file": "10.1073_pnas.1617961114.md"
+    },
+    {
+      "doi": "10.1038/s41591-018-0017-7",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.immuni.2018.04.004",
+      "title": "",
+      "year": "2018",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761318301419/pdf",
+      "file": "10.1016_j.immuni.2018.04.004.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.aap9927",
+      "title": "",
+      "year": "2018",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2013.09.020",
+      "title": "",
+      "year": "2013",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867413011574/pdf",
+      "file": "10.1016_j.cell.2013.09.020.md"
+    },
+    {
+      "doi": "10.1084/jem.20170193",
+      "title": "",
+      "year": "2017",
+      "journal": "J. Exp. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://rupress.org/jem/article-pdf/214/4/959/1167371/jem_20170193.pdf",
+      "file": "10.1084_jem.20170193.md"
+    },
+    {
+      "doi": "10.1038/nature21710",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nm.1972",
+      "title": "",
+      "year": "2009",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2859814?pdf=render",
+      "file": "10.1038_nm.1972.md"
+    },
+    {
+      "doi": "10.1371/journal.ppat.1005761",
+      "title": "",
+      "year": "2016",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1005761&type=printable",
+      "file": "10.1371_journal.ppat.1005761.md"
+    },
+    {
+      "doi": "10.1038/nm.4113",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.immuni.2017.09.018",
+      "title": "",
+      "year": "2017",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761317304296/pdf",
+      "file": "10.1016_j.immuni.2017.09.018.md"
+    },
+    {
+      "doi": "10.1371/journal.ppat.1005349",
+      "title": "",
+      "year": "2016",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1005349&type=printable",
+      "file": "10.1371_journal.ppat.1005349.md"
+    },
+    {
+      "doi": "10.1016/j.celrep.2017.09.081",
+      "title": "",
+      "year": "2017",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2211124717313864/pdf",
+      "file": "10.1016_j.celrep.2017.09.081.md"
+    },
+    {
+      "doi": "10.1371/journal.ppat.1006856",
+      "title": "",
+      "year": "2018",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1006856&type=printable",
+      "file": "10.1371_journal.ppat.1006856.md"
+    },
+    {
+      "doi": "10.1371/journal.ppat.1007619",
+      "title": "",
+      "year": "2019",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1007619&type=printable",
+      "file": "10.1371_journal.ppat.1007619.md"
+    },
+    {
+      "doi": "10.1097/qad.0000000000001029",
+      "title": "",
+      "year": "2016",
+      "journal": "AIDS",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1172/jci93289",
+      "title": "",
+      "year": "2017",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/93289/files/pdf",
+      "file": "10.1172_jci93289.md"
+    },
+    {
+      "doi": "10.1186/s12977-016-0293-6",
+      "title": "",
+      "year": "2016",
+      "journal": "Retrovirology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://retrovirology.biomedcentral.com/counter/pdf/10.1186/s12977-016-0293-6",
+      "file": "10.1186_s12977-016-0293-6.md"
+    },
+    {
+      "doi": "10.1073/pnas.1720665115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1256304",
+      "title": "",
+      "year": "2014",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1254194",
+      "title": "",
+      "year": "2014",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2015.01.020",
+      "title": "",
+      "year": "2015",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S009286741500063X/pdf",
+      "file": "10.1016_j.cell.2015.01.020.md"
+    },
+    {
+      "doi": "10.1172/jci124291",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/124291/files/pdf",
+      "file": "10.1172_jci124291.md"
+    },
+    {
+      "doi": "10.7554/elife.34655",
+      "title": "",
+      "year": "2018",
+      "journal": "eLife",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://elifesciences.org/articles/34655.bib",
+      "file": "10.7554_elife.34655.md"
+    },
+    {
+      "doi": "10.1038/s41467-019-08431-7",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-019-08431-7.pdf",
+      "file": "10.1038_s41467-019-08431-7.md"
+    },
+    {
+      "doi": "10.1172/jci97555",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/97555/files/pdf",
+      "file": "10.1172_jci97555.md"
+    },
+    {
+      "doi": "10.1073/pnas.1318249111",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/111/6/2307.full.pdf",
+      "file": "10.1073_pnas.1318249111.md"
+    },
+    {
+      "doi": "10.1371/journal.ppat.1004010",
+      "title": "",
+      "year": "2014",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1004010&type=printable",
+      "file": "10.1371_journal.ppat.1004010.md"
+    },
+    {
+      "doi": "10.1016/j.immuni.2012.01.014",
+      "title": "",
+      "year": "2012",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761312000842/pdf",
+      "file": "10.1016_j.immuni.2012.01.014.md"
+    },
+    {
+      "doi": "10.1038/nm.4156",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5014606?pdf=render",
+      "file": "10.1038_nm.4156.md"
+    },
+    {
+      "doi": "10.1128/jvi.01153-09",
+      "title": "",
+      "year": "2009",
+      "journal": "J. Virol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2772718?pdf=render",
+      "file": "10.1128_jvi.01153-09.md"
+    },
+    {
+      "doi": "10.1371/journal.ppat.1002840",
+      "title": "",
+      "year": "2012",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1002840&type=printable",
+      "file": "10.1371_journal.ppat.1002840.md"
+    },
+    {
+      "doi": "10.1182/blood-2010-12-322727",
+      "title": "",
+      "year": "2011",
+      "journal": "Blood",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/srep40354",
+      "title": "",
+      "year": "2017",
+      "journal": "Sci. Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/srep40354.pdf",
+      "file": "10.1038_srep40354.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.aag1809",
+      "title": "",
+      "year": "2017",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5678930?pdf=render",
+      "file": "10.1126_scitranslmed.aag1809.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.aau0528",
+      "title": "",
+      "year": "2019",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6901350?pdf=render",
+      "file": "10.1126_scitranslmed.aau0528.md"
+    },
+    {
+      "doi": "10.1016/j.immuni.2015.08.012",
+      "title": "",
+      "year": "2015",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761315003441/pdf",
+      "file": "10.1016_j.immuni.2015.08.012.md"
+    },
+    {
+      "doi": "10.1371/journal.ppat.1003347",
+      "title": "",
+      "year": "2013",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1003347&type=printable",
+      "file": "10.1371_journal.ppat.1003347.md"
+    },
+    {
+      "doi": "10.1038/s41591-018-0026-6",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pure.amsterdamumc.nl/ws/files/158826734/Rapid-hiv-rna-rebound-after-antiretroviral-treatment-interruption-in-persons-durably-suppressed-in-fiebig-i-acute-hiv-in.pdf",
+      "file": "10.1038_s41591-018-0026-6.md"
+    },
+    {
+      "doi": "10.1371/journal.pmed.1002417",
+      "title": "",
+      "year": "2017",
+      "journal": "PLoS Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.1002417&type=printable",
+      "file": "10.1371_journal.pmed.1002417.md"
+    },
+    {
+      "doi": "10.7326/m14-1027",
+      "title": "",
+      "year": "2014",
+      "journal": "Ann. Intern. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1056/nejmoa1302976",
+      "title": "",
+      "year": "2013",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa1302976?articleTools=true",
+      "file": "10.1056_nejmoa1302976.md"
+    },
+    {
+      "doi": "10.1038/s41598-017-13287-2",
+      "title": "",
+      "year": "2017",
+      "journal": "Sci. Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41598-017-13287-2.pdf",
+      "file": "10.1038_s41598-017-13287-2.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-0898-8",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6447073?pdf=render",
+      "file": "10.1038_s41586-019-0898-8.md"
+    },
+    {
+      "doi": "10.1038/nm.4411",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5831193?pdf=render",
+      "file": "10.1038_nm.4411.md"
+    },
+    {
+      "doi": "10.1038/nmeth.3320",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Methods",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4425449?pdf=render",
+      "file": "10.1038_nmeth.3320.md"
+    },
+    {
+      "doi": "10.1093/infdis/jix225",
+      "title": "",
+      "year": "2017",
+      "journal": "J. Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jid/article-pdf/216/1/72/24263729/jix225.pdf",
+      "file": "10.1093_infdis_jix225.md"
+    },
+    {
+      "doi": "10.1073/pnas.1414926112",
+      "title": "",
+      "year": "2015",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/112/10/E1126.full.pdf",
+      "file": "10.1073_pnas.1414926112.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.aan8848",
+      "title": "",
+      "year": "2017",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC11059970?pdf=render",
+      "file": "10.1126_scitranslmed.aan8848.md"
+    },
+    {
+      "doi": "10.1093/infdis/jiz012",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jid/article-pdf/220/Supplement_1/S5/28896287/jiz012.pdf",
+      "file": "10.1093_infdis_jiz012.md"
+    },
+    {
+      "doi": "10.1016/s2352-3018(19)30052-9",
+      "title": "",
+      "year": "2019",
+      "journal": "Lancet HIV",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/infdis/jiw120",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jid/article-pdf/214/1/73/17411901/jiw120.pdf",
+      "file": "10.1093_infdis_jiw120.md"
+    },
+    {
+      "doi": "10.1093/ofid/ofx081",
+      "title": "",
+      "year": "2017",
+      "journal": "Open Forum Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/ofid/article-pdf/4/2/ofx081/17945987/ofx081.pdf",
+      "file": "10.1093_ofid_ofx081.md"
+    },
+    {
+      "doi": "10.1016/s2352-3018(17)30146-7",
+      "title": "",
+      "year": "2018",
+      "journal": "Lancet HIV",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S2352301817301467/pdf",
+      "file": "10.1016_s2352-3018_17_30146-7.md"
+    },
+    {
+      "doi": "10.1038/s41591-018-0130-7",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6389357?pdf=render",
+      "file": "10.1038_s41591-018-0130-7.md"
+    },
+    {
+      "doi": "10.1038/s41467-019-08311-0",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-019-08311-0.pdf",
+      "file": "10.1038_s41467-019-08311-0.md"
+    },
+    {
+      "doi": "10.1016/s2352-3018(15)00232-5",
+      "title": "",
+      "year": "2016",
+      "journal": "Lancet HIV",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://pasteur.hal.science/pasteur-01289420",
+      "file": "10.1016_s2352-3018_15_00232-5.md"
+    },
+    {
+      "doi": "10.1038/nbt.1663",
+      "title": "",
+      "year": "2010",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1371/journal.ppat.1006956",
+      "title": "",
+      "year": "2018",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1006956&type=printable",
+      "file": "10.1371_journal.ppat.1006956.md"
+    },
+    {
+      "doi": "10.1016/j.jcyt.2017.05.013",
+      "title": "",
+      "year": "2017",
+      "journal": "Cytotherapy",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nrd.2016.280",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Rev. Drug Discov.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41577-018-0085-4",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Rev. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41577-018-0085-4.pdf",
+      "file": "10.1038_s41577-018-0085-4.md"
+    },
+    {
+      "doi": "10.1056/nejmc1405805",
+      "title": "",
+      "year": "2014",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMc1405805?articleTools=true",
+      "file": "10.1056_nejmc1405805.md"
+    },
+    {
+      "doi": "10.1016/j.celrep.2016.11.057",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2211124716316308/pdf",
+      "file": "10.1016_j.celrep.2016.11.057.md"
+    },
+    {
+      "doi": "10.1016/j.immuni.2019.02.005",
+      "title": "",
+      "year": "2019",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761319300718/pdf",
+      "file": "10.1016_j.immuni.2019.02.005.md"
+    },
+    {
+      "doi": "10.1016/s2352-3018(19)30003-7",
+      "title": "",
+      "year": "2019",
+      "journal": "Lancet HIV",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S2352301819300037/pdf",
+      "file": "10.1016_s2352-3018_19_30003-7.md"
+    },
+    {
+      "doi": "10.1006/mthe.2002.0611",
+      "title": "",
+      "year": "2002",
+      "journal": "Mol. Ther.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1525001602906118/pdf",
+      "file": "10.1006_mthe.2002.0611.md"
+    },
+    {
+      "doi": "10.1126/science.aar6711",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1371/journal.ppat.1006753",
+      "title": "",
+      "year": "2017",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1006753&type=printable",
+      "file": "10.1371_journal.ppat.1006753.md"
+    },
+    {
+      "doi": "10.1371/journal.ppat.1006613",
+      "title": "",
+      "year": "2017",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1006613&type=printable",
+      "file": "10.1371_journal.ppat.1006613.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.aav5685",
+      "title": "",
+      "year": "2019",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7136029?pdf=render",
+      "file": "10.1126_scitranslmed.aav5685.md"
+    },
+    {
+      "doi": "10.1038/nature11286",
+      "title": "",
+      "year": "2012",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1371/journal.ppat.1004473",
+      "title": "",
+      "year": "2014",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1004473&type=printable",
+      "file": "10.1371_journal.ppat.1004473.md"
+    },
+    {
+      "doi": "10.1016/s2352-3018(15)00226-x",
+      "title": "",
+      "year": "2015",
+      "journal": "Lancet HIV",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5108570?pdf=render",
+      "file": "10.1016_s2352-3018_15_00226-x.md"
+    },
+    {
+      "doi": "10.1016/s2352-3018(14)70014-1",
+      "title": "",
+      "year": "2014",
+      "journal": "Lancet HIV",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1371/journal.ppat.1005142",
+      "title": "",
+      "year": "2015",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1005142&type=printable",
+      "file": "10.1371_journal.ppat.1005142.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.aao4521",
+      "title": "",
+      "year": "2018",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.osti.gov/servlets/purl/1438143",
+      "file": "10.1126_scitranslmed.aao4521.md"
+    },
+    {
+      "doi": "10.1093/cid/cix201",
+      "title": "",
+      "year": "2017",
+      "journal": "Clin. Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/cid/article-pdf/64/12/1686/24254616/cix201.pdf",
+      "file": "10.1093_cid_cix201.md"
+    },
+    {
+      "doi": "10.1172/jci80142",
+      "title": "",
+      "year": "2015",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/80142/files/pdf",
+      "file": "10.1172_jci80142.md"
+    },
+    {
+      "doi": "10.1172/jci.insight.122673",
+      "title": "",
+      "year": "2018",
+      "journal": "JCI Insight",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://insight.jci.org/articles/view/122673/files/pdf",
+      "file": "10.1172_jci.insight.122673.md"
+    },
+    {
+      "doi": "10.1128/jvi.02084-16",
+      "title": "",
+      "year": "2017",
+      "journal": "J. Virol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://jvi.asm.org/content/jvi/91/4/e02084-16.full.pdf",
+      "file": "10.1128_jvi.02084-16.md"
+    },
+    {
+      "doi": "10.1073/pnas.1406663111",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/111/37/13475.full.pdf",
+      "file": "10.1073_pnas.1406663111.md"
+    },
+    {
+      "doi": "10.1128/mbio.00465-15",
+      "title": "",
+      "year": "2015",
+      "journal": "mBio",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://mbio.asm.org/content/mbio/6/4/e00465-15.full.pdf",
+      "file": "10.1128_mbio.00465-15.md"
+    },
+    {
+      "doi": "10.1016/j.celrep.2017.09.080",
+      "title": "",
+      "year": "2017",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2211124717313852/pdf",
+      "file": "10.1016_j.celrep.2017.09.080.md"
+    },
+    {
+      "doi": "10.1016/s2055-6640(20)30030-3",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6844401?pdf=render",
+      "file": "10.1016_s2055-6640_20_30030-3.md"
+    },
+    {
+      "doi": "10.1073/pnas.1419162112",
+      "title": "",
+      "year": "2015",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/112/17/5467.full.pdf",
+      "file": "10.1073_pnas.1419162112.md"
+    },
+    {
+      "doi": "10.1093/infdis/jit098",
+      "title": "",
+      "year": "2013",
+      "journal": "J. Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jid/article-pdf/207/12/1829/18068269/jit098.pdf",
+      "file": "10.1093_infdis_jit098.md"
+    },
+    {
+      "doi": "10.1126/science.aac9475",
+      "title": "",
+      "year": "2016",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/cms/asset/b4190c99-089b-4a22-985a-817f69d80945/pap.pdf",
+      "file": "10.1126_science.aac9475.md"
+    },
+    {
+      "doi": "10.1038/nature12519",
+      "title": "",
+      "year": "2013",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nm.4063",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature20583",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5145754?pdf=render",
+      "file": "10.1038_nature20583.md"
+    },
+    {
+      "doi": "10.1038/s41586-018-0600-6",
+      "title": "",
+      "year": "2018",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature21435",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-018-0531-2",
+      "title": "",
+      "year": "2018",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aan8630",
+      "title": "",
+      "year": "2017",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/cms/asset/3f1ff19f-5ff3-4a95-87be-ed807465db47/pap.pdf",
+      "file": "10.1126_science.aan8630.md"
+    },
+    {
+      "doi": "10.1172/jci82314",
+      "title": "",
+      "year": "2015",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/82314/files/pdf",
+      "file": "10.1172_jci82314.md"
+    },
+    {
+      "doi": "10.1080/14760584.2017.1322513",
+      "title": "",
+      "year": "2017",
+      "journal": "Expert Rev. Vaccines",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://zenodo.org/record/3501343",
+      "file": "10.1080_14760584.2017.1322513.md"
+    },
+    {
+      "doi": "10.1038/s41467-019-08798-7",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-019-08798-7.pdf",
+      "file": "10.1038_s41467-019-08798-7.md"
+    },
+    {
+      "doi": "10.1093/infdis/jix191",
+      "title": "",
+      "year": "2017",
+      "journal": "J. Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jid/article-pdf/215/11/1725/23666975/jix191.pdf",
+      "file": "10.1093_infdis_jix191.md"
+    },
+    {
+      "doi": "10.1182/bloodadvances.2017012971",
+      "title": "",
+      "year": "2018",
+      "journal": "Blood Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ashpublications.org/bloodadvances/article-pdf/2/2/76/879884/advances012971.pdf",
+      "file": "10.1182_bloodadvances.2017012971.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.aag2285",
+      "title": "",
+      "year": "2017",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://europepmc.org/articles/pmc5497679?pdf=render",
+      "file": "10.1126_scitranslmed.aag2285.md"
+    },
+    {
+      "doi": "10.1016/s2352-3018(15)00186-1",
+      "title": "",
+      "year": "2015",
+      "journal": "Lancet HIV",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s2352-3018(16)30055-8",
+      "title": "",
+      "year": "2016",
+      "journal": "Lancet HIV",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1371/journal.pone.0113031",
+      "title": "",
+      "year": "2014",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0113031&type=printable",
+      "file": "10.1371_journal.pone.0113031.md"
+    },
+    {
+      "doi": "10.1172/jci97377",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/97377/files/pdf",
+      "file": "10.1172_jci97377.md"
+    },
+    {
+      "doi": "10.1093/infdis/jiy617",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jid/article-pdf/219/7/1084/33183303/jiy617.pdf",
+      "file": "10.1093_infdis_jiy617.md"
+    }
+  ]
+}

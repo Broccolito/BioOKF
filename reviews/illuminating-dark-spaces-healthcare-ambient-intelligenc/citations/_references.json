@@ -1,0 +1,1568 @@
+{
+  "article": {
+    "slug": "s41586-020-2669-y",
+    "doi": "10.1038/s41586-020-2669-y",
+    "title": "Illuminating the dark spaces of healthcare with ambient intelligence",
+    "url": "https://www.nature.com/articles/s41586-020-2669-y",
+    "abbrev": "illuminating-dark-spaces-healthcare-ambient-intelligenc",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/illuminating-dark-spaces-healthcare-ambient-intelligenc"
+  },
+  "meta": {
+    "title": "Illuminating the dark spaces of healthcare with ambient intelligence",
+    "authors": [
+      "Albert Haque",
+      "Arnold Milstein",
+      "Li Fei-Fei"
+    ],
+    "published": [
+      2020,
+      9,
+      9
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-020-2669-y",
+    "n_references": 171,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "2669_CR1",
+      "doi": "10.1038/nature14539",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "Y LeCun",
+      "unstructured": "LeCun, Y., Bengio, Y. & Hinton, G. Deep learning. Nature 521, 436\u2013444 (2015). This paper reviews developments in deep learning and explains common neural network architectures such as convolutional and recurrent neural networks when applied to visual and natural language-processing tasks."
+    },
+    {
+      "key": "2669_CR2",
+      "doi": "10.1126/science.aaa8415",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "MI Jordan",
+      "unstructured": "Jordan, M. I. & Mitchell, T. M. Machine learning: trends, perspectives, and prospects. Science 349, 255\u2013260 (2015)."
+    },
+    {
+      "key": "2669_CR3",
+      "doi": "10.1038/s41591-018-0316-z",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2019",
+      "author": "A Esteva",
+      "unstructured": "Esteva, A. et al. A guide to deep learning in healthcare. Nat. Med. 25, 24\u201329 (2019). This perspective describes the use of computer vision, natural language processing, speech recognition and reinforcement learning for medical imaging tasks, electronic health record analysis, robotic-assisted surgery and genomic research."
+    },
+    {
+      "key": "2669_CR4",
+      "doi": "10.1038/s41591-018-0300-7",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2019",
+      "author": "EJ Topol",
+      "unstructured": "Topol, E. J. High-performance medicine: the convergence of human and artificial intelligence. Nat. Med. 25, 44\u201356 (2019). This review outlines how artificial intelligence is used by clinicians, patients and health systems to interpret medical images, find workflow efficiencies and promote patient self-care."
+    },
+    {
+      "key": "2669_CR5",
+      "doi": "10.1038/s41746-020-0221-y",
+      "title": "",
+      "journal": "NPJ Digit. Med.",
+      "year": "2020",
+      "author": "RT Sutton",
+      "unstructured": "Sutton, R. T. et al. An overview of clinical decision support systems: benefits, risks, and strategies for success. NPJ Digit. Med. 3, 17 (2020)."
+    },
+    {
+      "key": "2669_CR6",
+      "doi": "10.1056/nejmp1716891",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2018",
+      "author": "S Yeung",
+      "unstructured": "Yeung, S., Downing, N. L., Fei-Fei, L. & Milstein, A. Bedside computer vision \u2014 moving artificial intelligence from driver assistance to patient safety. N. Engl. J. Med. 378, 1271\u20131273 (2018)."
+    },
+    {
+      "key": "2669_CR7",
+      "doi": "10.1056/nejmsa0810119",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2009",
+      "author": "AB Haynes",
+      "unstructured": "Haynes, A. B. et al. A surgical safety checklist to reduce morbidity and mortality in a global population. N. Engl. J. Med. 360, 491\u2013499 (2009)."
+    },
+    {
+      "key": "2669_CR8",
+      "doi": "10.1136/bmj.i2139",
+      "title": "",
+      "journal": "Br. Med. J.",
+      "year": "2016",
+      "author": "MA Makary",
+      "unstructured": "Makary, M. A. & Daniel, M. Medical error\u2014the third leading cause of death in the US. Br. Med. J. 353, i2139 (2016)."
+    },
+    {
+      "key": "2669_CR9",
+      "doi": "10.1097/acm.0b013e318253c9e0",
+      "title": "",
+      "journal": "Acad. Med.",
+      "year": "2012",
+      "author": "VR Tallentire",
+      "unstructured": "Tallentire, V. R., Smith, S. E., Skinner, J. & Cameron, H. S. Exploring error in team-based acute care scenarios: an observational study from the United Kingdom. Acad. Med. 87, 792\u2013798 (2012)."
+    },
+    {
+      "key": "2669_CR10",
+      "doi": "10.4103/2349-5014.155727",
+      "title": "",
+      "journal": "J. Forensic Sci. Med.",
+      "year": "2016",
+      "author": "T Yang",
+      "unstructured": "Yang, T. et al. Evaluation of medical malpractice litigations in China, 2002\u20132011. J. Forensic Sci. Med. 2, 185\u2013189 (2016)."
+    },
+    {
+      "key": "2669_CR11",
+      "doi": "10.1093/ageing/afz074",
+      "title": "",
+      "journal": "Age Ageing",
+      "year": "2019",
+      "author": "MC Pol",
+      "unstructured": "Pol, M. C., ter Riet, G., van Hartingsveldt, M., Kr\u00f6se, B. & Buurman, B. M. Effectiveness of sensor monitoring in a rehabilitation programme for older patients after hip fracture: a three-arm stepped wedge randomised trial. Age Ageing 48, 650\u2013657 (2019)."
+    },
+    {
+      "key": "2669_CR12",
+      "doi": "10.1016/j.outlook.2018.11.004",
+      "title": "",
+      "journal": "Nurs. Outlook",
+      "year": "2019",
+      "author": "RL Fritz",
+      "unstructured": "Fritz, R. L. & Dermody, G. A nurse-driven method for developing artificial intelligence in \u201csmart\u201d homes for aging-in-place. Nurs. Outlook 67, 140\u2013153 (2019)."
+    },
+    {
+      "key": "2669_CR13",
+      "doi": "",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2016",
+      "author": "JA Kaye",
+      "unstructured": "Kaye, J. A. et al. F5-05-04: ecologically valid assessment of life activities: unobtrusive continuous monitoring with sensors. Alzheimers Dement. 12, P374 (2016)."
+    },
+    {
+      "key": "2669_CR14",
+      "doi": "10.1109/jproc.2013.2262913",
+      "title": "",
+      "journal": "Proc IEEE Inst. Electr. Electron. Eng.",
+      "year": "2013",
+      "author": "G Acampora",
+      "unstructured": "Acampora, G., Cook, D. J., Rashidi, P. & Vasilakos, A. V. A survey on ambient intelligence in health care. Proc IEEE Inst. Electr. Electron. Eng. 101, 2470\u20132494 (2013)."
+    },
+    {
+      "key": "2669_CR15",
+      "doi": "10.1109/jproc.2017.2787688",
+      "title": "",
+      "journal": "Proc IEEE Inst. Electr. Electron. Eng.",
+      "year": "2018",
+      "author": "DJ Cook",
+      "unstructured": "Cook, D. J., Duncan, G., Sprint, G. & Fritz, R. Using smart city technology to make healthcare smarter. Proc IEEE Inst. Electr. Electron. Eng. 106, 708\u2013722 (2018)."
+    },
+    {
+      "key": "2669_CR16",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Centers for Disease Control and Prevention. National Health Interview Survey: Summary Health Statistics https://www.cdc.gov/nchs/nhis/shs.htm (2018)."
+    },
+    {
+      "key": "2669_CR17",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "NHS Digital. Hospital Admitted Patient Care and Adult Critical Care Activity 2018\u201319 https://digital.nhs.uk/data-and-information/publications/statistical/hospital-admitted-patient-care-activity/2018-19 (NHS, 2019)."
+    },
+    {
+      "key": "2669_CR18",
+      "doi": "10.3390/bs8110098",
+      "title": "",
+      "journal": "Behav. Sci. (Basel)",
+      "year": "2018",
+      "author": "RS Patel",
+      "unstructured": "Patel, R. S., Bachu, R., Adikey, A., Malik, M. & Shah, M. Factors related to physician burnout and its consequences: a review. Behav. Sci. (Basel) 8, 98 (2018)."
+    },
+    {
+      "key": "2669_CR19",
+      "doi": "10.1016/j.ajem.2015.07.050",
+      "title": "",
+      "journal": "Am. J. Emerg. Med.",
+      "year": "2015",
+      "author": "M Lyon",
+      "unstructured": "Lyon, M. et al. Rural ED transfers due to lack of radiology services. Am. J. Emerg. Med. 33, 1630\u20131634 (2015)."
+    },
+    {
+      "key": "2669_CR20",
+      "doi": "10.1001/jama.2020.3972",
+      "title": "",
+      "journal": "J. Am. Med. Assoc.",
+      "year": "2020",
+      "author": "JG Adams",
+      "unstructured": "Adams, J. G. & Walls, R. M. Supporting the health care workforce during the COVID-19 global epidemic. J. Am. Med. Assoc. 323, 1439\u20131440 (2020)."
+    },
+    {
+      "key": "2669_CR21",
+      "doi": "10.1097/ccm.0000000000001722",
+      "title": "",
+      "journal": "Crit. Care Med.",
+      "year": "2016",
+      "author": "NA Halpern",
+      "unstructured": "Halpern, N. A., Goldman, D. A., Tan, K. S. & Pastores, S. M. Trends in critical care beds and use among population groups and Medicare and Medicaid beneficiaries in the United States: 2000\u20132010. Crit. Care Med. 44, 1490\u20131499 (2016)."
+    },
+    {
+      "key": "2669_CR22",
+      "doi": "10.1097/ccm.0b013e3181b090d0",
+      "title": "",
+      "journal": "Crit. Care Med.",
+      "year": "2010",
+      "author": "NA Halpern",
+      "unstructured": "Halpern, N. A. & Pastores, S. M. Critical care medicine in the United States 2000\u20132005: an analysis of bed numbers, occupancy rates, payer mix, and costs. Crit. Care Med. 38, 65\u201371 (2010)."
+    },
+    {
+      "key": "2669_CR23",
+      "doi": "10.1164/rccm.201312-2257oc",
+      "title": "",
+      "journal": "Am. J. Respir. Crit. Care Med.",
+      "year": "2014",
+      "author": "G Hermans",
+      "unstructured": "Hermans, G. et al. Acute outcomes and 1-year mortality of intensive care unit-acquired weakness. A cohort study and propensity-matched analysis. Am. J. Respir. Crit. Care Med. 190, 410\u2013420 (2014)."
+    },
+    {
+      "key": "2669_CR24",
+      "doi": "10.1371/journal.pone.0223185",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2019",
+      "author": "L Zhang",
+      "unstructured": "Zhang, L. et al. Early mobilization of critically ill patients in the intensive care unit: a systematic review and meta-analysis. PLoS ONE 14, e0223185 (2019)."
+    },
+    {
+      "key": "2669_CR25",
+      "doi": "10.1097/00003246-199502000-00015",
+      "title": "",
+      "journal": "Crit. Care Med.",
+      "year": "1995",
+      "author": "Y Donchin",
+      "unstructured": "Donchin, Y. et al. A look into the nature and causes of human errors in the intensive care unit. Crit. Care Med. 23, 294\u2013300 (1995)."
+    },
+    {
+      "key": "2669_CR26",
+      "doi": "",
+      "title": "",
+      "journal": "Crit. Care",
+      "year": "2013",
+      "author": "CL Hodgson",
+      "unstructured": "Hodgson, C. L., Berney, S., Harrold, M., Saxena, M. & Bellomo, R. Clinical review: early patient mobilization in the ICU. Crit. Care 17, 207 (2013)."
+    },
+    {
+      "key": "2669_CR27",
+      "doi": "10.4187/respcare.03677",
+      "title": "",
+      "journal": "Respir. Care",
+      "year": "2015",
+      "author": "AC Verceles",
+      "unstructured": "Verceles, A. C. & Hager, E. R. Use of accelerometry to monitor physical activity in critically ill subjects: a systematic review. Respir. Care 60, 1330\u20131336 (2015)."
+    },
+    {
+      "key": "2669_CR28",
+      "doi": "10.1097/ccm.0000000000002265",
+      "title": "",
+      "journal": "Crit. Care Med.",
+      "year": "2017",
+      "author": "AJ Ma",
+      "unstructured": "Ma, A. J. et al. Measuring patient mobility in the ICU using a novel noninvasive sensor. Crit. Care Med. 45, 630\u2013636 (2017)."
+    },
+    {
+      "key": "2669_CR29",
+      "doi": "10.1038/s41746-019-0087-z",
+      "title": "",
+      "journal": "NPJ Digit. Med.",
+      "year": "2019",
+      "author": "S Yeung",
+      "unstructured": "Yeung, S. et al. A computer vision system for deep learning-based detection of patient mobilization activities in the ICU. NPJ Digit. Med. 2, 11 (2019). This study used computer vision to simultaneously categorize patient mobilization activities in intensive care units and count the number of healthcare personnel involved in each activity."
+    },
+    {
+      "key": "2669_CR30",
+      "doi": "10.1038/s41598-019-44004-w",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2019",
+      "author": "A Davoudi",
+      "unstructured": "Davoudi, A. et al. Intelligent ICU for autonomous patient monitoring using pervasive sensing and deep learning. Sci. Rep. 9, 8020 (2019).This study used cameras and wearable sensors to track the physical movement of delirious and non-delirious patients in an intensive care unit."
+    },
+    {
+      "key": "2669_CR31",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "WHO. Report on the Burden of Endemic Health Care-associated Infection Worldwide https://apps.who.int/iris/handle/10665/80135 (2011)."
+    },
+    {
+      "key": "2669_CR32",
+      "doi": "10.1016/s0140-6736(03)13644-6",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2003",
+      "author": "J-L Vincent",
+      "unstructured": "Vincent, J.-L. Nosocomial infections in adult intensive-care units. Lancet 361, 2068\u20132077 (2003)."
+    },
+    {
+      "key": "2669_CR33",
+      "doi": "",
+      "title": "",
+      "journal": "Cochrane Database Syst. Rev.",
+      "year": "2017",
+      "author": "DJ Gould",
+      "unstructured": "Gould, D. J., Moralejo, D., Drey, N., Chudleigh, J. H. & Taljaard, M. Interventions to improve hand hygiene compliance in patient care. Cochrane Database Syst. Rev. 9, CD005186 (2017)."
+    },
+    {
+      "key": "2669_CR34",
+      "doi": "10.1136/bmjqs-2014-003080",
+      "title": "",
+      "journal": "BMJ Qual. Saf.",
+      "year": "2014",
+      "author": "JA Srigley",
+      "unstructured": "Srigley, J. A., Furness, C. D., Baker, G. R. & Gardam, M. Quantification of the Hawthorne effect in hand hygiene compliance monitoring using an electronic monitoring system: a retrospective cohort study. BMJ Qual. Saf. 23, 974\u2013980 (2014)."
+    },
+    {
+      "key": "2669_CR35",
+      "doi": "10.1109/titb.2012.2204896",
+      "title": "",
+      "journal": "IEEE Trans. Inf. Technol. Biomed.",
+      "year": "2012",
+      "author": "AAN Shirehjini",
+      "unstructured": "Shirehjini, A. A. N., Yassine, A. & Shirmohammadi, S. Equipment location in hospitals using RFID-based positioning system. IEEE Trans. Inf. Technol. Biomed. 16, 1058\u20131069 (2012)."
+    },
+    {
+      "key": "2669_CR36",
+      "doi": "10.1016/j.jhin.2007.06.004",
+      "title": "",
+      "journal": "J. Hosp. Infect.",
+      "year": "2007",
+      "author": "H Sax",
+      "unstructured": "Sax, H. et al. \u2018My five moments for hand hygiene\u2019: a user-centred design approach to understand, train, monitor and report hand hygiene. J. Hosp. Infect. 67, 9\u201321 (2007)."
+    },
+    {
+      "key": "2669_CR37",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Haque, A. et al. Towards vision-based smart hospitals: a system for tracking and monitoring hand hygiene compliance. In Proc. 2nd Machine Learning for Healthcare Conference 75\u201387 (PMLR, 2017). This study evaluated the performance of depth sensors and covert auditors at measuring hand hygiene compliance in a hospital unit."
+    },
+    {
+      "key": "2669_CR38",
+      "doi": "10.1093/jamia/ocaa115",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Singh, A. et al. Automatic detection of hand hygiene using computer vision technology. J. Am. Med. Inform. Assoc. https://doi.org/10.1093/jamia/ocaa115 (2020)."
+    },
+    {
+      "key": "2669_CR39",
+      "doi": "10.1093/ofid/ofv200",
+      "title": "",
+      "journal": "Open Forum Infect. Dis.",
+      "year": "2016",
+      "author": "J Chen",
+      "unstructured": "Chen, J., Cremer, J. F., Zarei, K., Segre, A. M. & Polgreen, P. M. Using computer vision and depth sensing to measure healthcare worker-patient contacts and personal protective equipment adherence within hospital rooms. Open Forum Infect. Dis. 3, ofv200 (2016)."
+    },
+    {
+      "key": "2669_CR40",
+      "doi": "10.1093/intqhc/mzy099",
+      "title": "",
+      "journal": "Int. J. Qual. Health Care",
+      "year": "2019",
+      "author": "S Awwad",
+      "unstructured": "Awwad, S., Tarvade, S., Piccardi, M. & Gattas, D. J. The use of privacy-protected computer vision to measure the quality of healthcare worker hand hygiene. Int. J. Qual. Health Care 31, 36\u201342 (2019)."
+    },
+    {
+      "key": "2669_CR41",
+      "doi": "10.1016/s0140-6736(08)60878-8",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2008",
+      "author": "TG Weiser",
+      "unstructured": "Weiser, T. G. et al. An estimation of the global volume of surgery: a modelling strategy based on available data. Lancet 372, 139\u2013144 (2008)."
+    },
+    {
+      "key": "2669_CR42",
+      "doi": "10.1016/j.amjsurg.2012.11.009",
+      "title": "",
+      "journal": "Am. J. Surg.",
+      "year": "2013",
+      "author": "O Anderson",
+      "unstructured": "Anderson, O., Davis, R., Hanna, G. B. & Vincent, C. A. Surgical adverse events: a systematic review. Am. J. Surg. 206, 253\u2013262 (2013)."
+    },
+    {
+      "key": "2669_CR43",
+      "doi": "10.1097/sla.0000000000001214",
+      "title": "",
+      "journal": "Ann. Surg.",
+      "year": "2015",
+      "author": "EM Bonrath",
+      "unstructured": "Bonrath, E. M., Dedy, N. J., Gordon, L. E. & Grantcharov, T. P. Comprehensive surgical coaching enhances surgical skill in the operating room: a randomized controlled trial. Ann. Surg. 262, 205\u2013212 (2015)."
+    },
+    {
+      "key": "2669_CR44",
+      "doi": "10.1016/j.jss.2019.09.006",
+      "title": "",
+      "journal": "J. Surg. Res.",
+      "year": "2020",
+      "author": "A Vaidya",
+      "unstructured": "Vaidya, A. et al. Current status of technical skills assessment tools in surgery: a systematic review. J. Surg. Res. 246, 342\u2013378 (2020)."
+    },
+    {
+      "key": "2669_CR45",
+      "doi": "10.1016/j.jsurg.2016.10.006",
+      "title": "",
+      "journal": "J. Surg. Educ.",
+      "year": "2017",
+      "author": "A Ghasemloonia",
+      "unstructured": "Ghasemloonia, A. et al. Surgical skill assessment using motion quality and smoothness. J. Surg. Educ. 74, 295\u2013305 (2017)."
+    },
+    {
+      "key": "2669_CR46",
+      "doi": "10.1001/jamanetworkopen.2020.1664",
+      "title": "",
+      "journal": "JAMA Netw. Open",
+      "year": "2020",
+      "author": "S Khalid",
+      "unstructured": "Khalid, S., Goldenberg, M., Grantcharov, T., Taati, B. & Rudzicz, F. Evaluation of deep learning models for identifying surgical actions and measuring performance. JAMA Netw. Open 3, e201664 (2020)."
+    },
+    {
+      "key": "2669_CR47",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Law, H., Ghani, K. & Deng, J. Surgeon Technical skill assessment using computer vision based analysis. In Proc. 2nd Machine Learning for Healthcare Conference 88\u201399 (PMLR, 2017)."
+    },
+    {
+      "key": "2669_CR48",
+      "doi": "10.1109/wacv.2018.00081",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Jin, A. et al. Tool detection and operative skill assessment in surgical videos using region-based convolutional neural networks. In Proc. Winter Conference on Applications of Computer Vision 691\u2013699 (IEEE, 2018)."
+    },
+    {
+      "key": "2669_CR49",
+      "doi": "10.1109/tmi.2016.2593957",
+      "title": "",
+      "journal": "IEEE Trans. Med. Imaging",
+      "year": "2017",
+      "author": "AP Twinanda",
+      "unstructured": "Twinanda, A. P. et al. EndoNet: a deep architecture for recognition tasks on laparoscopic videos. IEEE Trans. Med. Imaging 36, 86\u201397 (2017)."
+    },
+    {
+      "key": "2669_CR50",
+      "doi": "10.1097/sla.0000000000002693",
+      "title": "",
+      "journal": "Ann. Surg.",
+      "year": "2018",
+      "author": "DA Hashimoto",
+      "unstructured": "Hashimoto, D. A., Rosman, G., Rus, D. & Meireles, O. R. Artificial intelligence in surgery: promises and perils. Ann. Surg. 268, 70\u201376 (2018)."
+    },
+    {
+      "key": "2669_CR51",
+      "doi": "10.1097/sla.0b013e318181c9a3",
+      "title": "",
+      "journal": "Ann. Surg.",
+      "year": "2008",
+      "author": "CC Greenberg",
+      "unstructured": "Greenberg, C. C., Regenbogen, S. E., Lipsitz, S. R., Diaz-Flores, R. & Gawande, A. A. The frequency and significance of discrepancies in the surgical count. Ann. Surg. 248, 337\u2013341 (2008)."
+    },
+    {
+      "key": "2669_CR52",
+      "doi": "",
+      "title": "",
+      "journal": "Jt. Comm. J. Qual. Patient Saf.",
+      "year": "2012",
+      "author": "A Agrawal",
+      "unstructured": "Agrawal, A. Counting matters: lessons from the root cause analysis of a retained surgical item. Jt. Comm. J. Qual. Patient Saf. 38, 566\u2013574 (2012)."
+    },
+    {
+      "key": "2669_CR53",
+      "doi": "10.1001/jamasurg.2015.0301",
+      "title": "",
+      "journal": "JAMA Surg.",
+      "year": "2015",
+      "author": "S Hempel",
+      "unstructured": "Hempel, S. et al. Wrong-site surgery, retained surgical items, and surgical fires: a systematic review of surgical never events. JAMA Surg. 150, 796\u2013805 (2015)."
+    },
+    {
+      "key": "2669_CR54",
+      "doi": "",
+      "title": "",
+      "journal": "Jt. Comm. J. Qual. Patient Saf.",
+      "year": "2011",
+      "author": "RR Cima",
+      "unstructured": "Cima, R. R. et al. Using a data-matrix-coded sponge counting system across a surgical practice: impact after 18 months. Jt. Comm. J. Qual. Patient Saf. 37, 51\u201358 (2011)."
+    },
+    {
+      "key": "2669_CR55",
+      "doi": "10.1016/j.jamcollsurg.2012.06.014",
+      "title": "",
+      "journal": "J. Am. Coll. Surg.",
+      "year": "2012",
+      "author": "CC Rupp",
+      "unstructured": "Rupp, C. C. et al. Effectiveness of a radiofrequency detection system as an adjunct to manual counting protocols for tracking surgical sponges: a prospective trial of 2,285 patients. J. Am. Coll. Surg. 215, 524\u2013533 (2012)."
+    },
+    {
+      "key": "2669_CR56",
+      "doi": "10.1007/s11548-015-1305-z",
+      "title": "",
+      "journal": "Int. J. Comput. Assist. Radiol. Surg.",
+      "year": "2016",
+      "author": "Y Kassahun",
+      "unstructured": "Kassahun, Y. et al. Surgical robotics beyond enhanced dexterity instrumentation: a survey of machine learning techniques and their role in intelligent and autonomous surgical actions. Int. J. Comput. Assist. Radiol. Surg. 11, 553\u2013568 (2016)."
+    },
+    {
+      "key": "2669_CR57",
+      "doi": "10.1109/wacv.2017.47",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Kadkhodamohammadi, A., Gangi, A., de Mathelin, M. & Padoy, N. A multi-view RGB-D approach for human pose estimation in operating rooms. In Proc. Winter Conference on Applications of Computer Vision 363\u2013372 (IEEE, 2017)."
+    },
+    {
+      "key": "2669_CR58",
+      "doi": "10.1097/sla.0000000000002863",
+      "title": "",
+      "journal": "Ann. Surg.",
+      "year": "2020",
+      "author": "JJ Jung",
+      "unstructured": "Jung, J. J., J\u00fcni, P., Lebovic, G. & Grantcharov, T. First-year analysis of the operating room black box study. Ann. Surg. 271, 122\u2013127 (2020)."
+    },
+    {
+      "key": "2669_CR59",
+      "doi": "10.1055/s-0037-1615747",
+      "title": "",
+      "journal": "Appl. Clin. Inform.",
+      "year": "2018",
+      "author": "E Joukes",
+      "unstructured": "Joukes, E., Abu-Hanna, A., Cornet, R. & de Keizer, N. F. Time spent on dedicated patient care and documentation tasks before and after the introduction of a structured and standardized electronic health record. Appl. Clin. Inform. 9, 46\u201353 (2018)."
+    },
+    {
+      "key": "2669_CR60",
+      "doi": "10.1016/j.ajem.2016.07.056",
+      "title": "",
+      "journal": "Am. J. Emerg. Med.",
+      "year": "2016",
+      "author": "HA Heaton",
+      "unstructured": "Heaton, H. A., Castaneda-Guarderas, A., Trotter, E. R., Erwin, P. J. & Bellolio, M. F. Effect of scribes on patient throughput, revenue, and patient and provider satisfaction: a systematic review and meta-analysis. Am. J. Emerg. Med. 34, 2018\u20132028 (2016)."
+    },
+    {
+      "key": "2669_CR61",
+      "doi": "10.1016/j.ajem.2016.12.020",
+      "title": "",
+      "journal": "Am. J. Emerg. Med.",
+      "year": "2017",
+      "author": "N Rich",
+      "unstructured": "Rich, N. The impact of working as a medical scribe. Am. J. Emerg. Med. 35, 513 (2017)."
+    },
+    {
+      "key": "2669_CR62",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Boulton, C. How Google Glass automates patient documentation for dignity health. Wall Street Journal (16 June 2014)."
+    },
+    {
+      "key": "2669_CR63",
+      "doi": "10.1093/jamia/ocy179",
+      "title": "",
+      "journal": "J. Am. Med. Inform. Assoc.",
+      "year": "2019",
+      "author": "SV Blackley",
+      "unstructured": "Blackley, S. V., Huynh, J., Wang, L., Korach, Z. & Zhou, L. Speech recognition for clinical documentation from 1990 to 2018: a systematic review. J. Am. Med. Inform. Assoc. 26, 324\u2013338 (2019)."
+    },
+    {
+      "key": "2669_CR64",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Chiu, C.-C. et al. Speech recognition for medical conversations. In Proc. 18th Annual Conference of the International Speech Communication Association 2972\u20132976 (ISCA, 2018). This paper developed a speech-recognition algorithm to transcribe anonymized conversations between patients and clinicians."
+    },
+    {
+      "key": "2669_CR65",
+      "doi": "10.2196/medinform.7883",
+      "title": "",
+      "journal": "JMIR Med. Inform.",
+      "year": "2017",
+      "author": "R Pranaat",
+      "unstructured": "Pranaat, R. et al. Use of simulation based on an electronic health records environment to evaluate the structure and accuracy of notes generated by medical scribes: proof-of-concept study. JMIR Med. Inform. 5, e30 (2017)."
+    },
+    {
+      "key": "2669_CR66",
+      "doi": "",
+      "title": "",
+      "journal": "J. Healthc. Manag.",
+      "year": "2014",
+      "author": "RS Kaplan",
+      "unstructured": "Kaplan, R. S. et al. Using time-driven activity-based costing to identify value improvement opportunities in healthcare. J. Healthc. Manag. 59, 399\u2013412 (2014)."
+    },
+    {
+      "key": "2669_CR67",
+      "doi": "10.1097/sla.0b013e31818a43af",
+      "title": "",
+      "journal": "Ann. Surg.",
+      "year": "2008",
+      "author": "ME Porter",
+      "unstructured": "Porter, M. E. Value-based health care delivery. Ann. Surg. 248, 503\u2013509 (2008)."
+    },
+    {
+      "key": "2669_CR68",
+      "doi": "10.1016/j.healthpol.2017.04.013",
+      "title": "",
+      "journal": "Health Policy",
+      "year": "2017",
+      "author": "G Keel",
+      "unstructured": "Keel, G., Savage, C., Rafiq, M. & Mazzocato, P. Time-driven activity-based costing in health care: a systematic review of the literature. Health Policy 121, 755\u2013763 (2017)."
+    },
+    {
+      "key": "2669_CR69",
+      "doi": "10.1016/j.hjdsi.2013.07.007",
+      "title": "",
+      "journal": "Healthcare",
+      "year": "2013",
+      "author": "KE French",
+      "unstructured": "French, K. E. et al. Measuring the value of process improvement initiatives in a preoperative assessment center using time-driven activity-based costing. Healthcare 1, 136\u2013142 (2013)."
+    },
+    {
+      "key": "2669_CR70",
+      "doi": "10.1109/mis.2008.18",
+      "title": "",
+      "journal": "IEEE Intelligent Systems",
+      "year": "2008",
+      "author": "D S\u00e1nchez",
+      "unstructured": "S\u00e1nchez, D., Tentori, M. & Favela, J. Activity recognition for the smart hospital. IEEE Intelligent Systems 23, 50\u201357 (2008)."
+    },
+    {
+      "key": "2669_CR71",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "United Nations. World Population Ageing 2019 https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/files/documents/2020/Jan/un_2019_worldpopulationageing_report.pdf (2020)."
+    },
+    {
+      "key": "2669_CR72",
+      "doi": "10.12974/2309-6128.2015.03.01.2",
+      "title": "",
+      "journal": "J. Aging Gerontol.",
+      "year": "2015",
+      "author": "A Mamikonian-Zarpas",
+      "unstructured": "Mamikonian-Zarpas, A. & Lagan\u00e1, L. The relationship between older adults\u2019 risk for a future fall and difficulty performing activities of daily living. J. Aging Gerontol. 3, 8\u201316 (2015)."
+    },
+    {
+      "key": "2669_CR73",
+      "doi": "10.1111/j.1532-5415.2011.03867.x",
+      "title": "",
+      "journal": "J. Am. Geriatr. Soc.",
+      "year": "2012",
+      "author": "MG Stineman",
+      "unstructured": "Stineman, M. G. et al. All-cause 1-, 5-, and 10-year mortality in elderly people according to activities of daily living stage. J. Am. Geriatr. Soc. 60, 485\u2013492 (2012)."
+    },
+    {
+      "key": "2669_CR74",
+      "doi": "10.1093/gerona/59.8.m838",
+      "title": "",
+      "journal": "J. Gerontol. A",
+      "year": "2004",
+      "author": "EA Phelan",
+      "unstructured": "Phelan, E. A., Williams, B., Penninx, B. W. J. H., LoGerfo, J. P. & Leveille, S. G. Activities of daily living function and disability in older adults in a randomized trial of the health enhancement program. J. Gerontol. A 59, M838\u2013M843 (2004)."
+    },
+    {
+      "key": "2669_CR75",
+      "doi": "10.1097/mrr.0b013e3283544d07",
+      "title": "",
+      "journal": "Int. J. Rehabil. Res.",
+      "year": "2012",
+      "author": "G Carlsson",
+      "unstructured": "Carlsson, G., Haak, M., Nygren, C. & Iwarsson, S. Self-reported versus professionally assessed functional limitations in community-dwelling very old individuals. Int. J. Rehabil. Res. 35, 299\u2013304 (2012)."
+    },
+    {
+      "key": "2669_CR76",
+      "doi": "10.3390/s17020341",
+      "title": "",
+      "journal": "Sensors",
+      "year": "2017",
+      "author": "Z Wang",
+      "unstructured": "Wang, Z., Yang, Z. & Dong, T. A review of wearable technologies for elderly care that can accurately track indoor position, recognize physical activities and monitor vital signs in real time. Sensors 17, 341 (2017)."
+    },
+    {
+      "key": "2669_CR77",
+      "doi": "10.1111/j.1532-5415.1983.tb03391.x",
+      "title": "",
+      "journal": "J. Am. Geriatr. Soc.",
+      "year": "1983",
+      "author": "S Katz",
+      "unstructured": "Katz, S. Assessing self-maintenance: activities of daily living, mobility, and instrumental activities of daily living. J. Am. Geriatr. Soc. 31, 721\u2013727 (1983)."
+    },
+    {
+      "key": "2669_CR78",
+      "doi": "10.3390/s18072027",
+      "title": "",
+      "journal": "Sensors",
+      "year": "2018",
+      "author": "MZ Uddin",
+      "unstructured": "Uddin, M. Z., Khaksar, W. & Torresen, J. Ambient sensors for elderly care and independent living: a survey. Sensors 18, 2027 (2018)."
+    },
+    {
+      "key": "2669_CR79",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Luo, Z. et al. Computer vision-based descriptive analytics of seniors\u2019 daily activities for long-term health monitoring. In Proc. 3rd Machine Learning for Healthcare Conference 1\u201318 (PMLR, 2018). This study created spatial and temporal summaries of activities of daily living using a depth and thermal sensor inside the bedroom of an older resident."
+    },
+    {
+      "key": "2669_CR80",
+      "doi": "10.1007/s11042-012-1162-5",
+      "title": "",
+      "journal": "Multimedia Tools Appl.",
+      "year": "2014",
+      "author": "H Cheng",
+      "unstructured": "Cheng, H., Liu, Z., Zhao, Y., Ye, G. & Sun, X. Real world activity summary for senior home monitoring. Multimedia Tools Appl. 70, 177\u2013197 (2014)."
+    },
+    {
+      "key": "2669_CR81",
+      "doi": "10.1371/journal.pone.0218112",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2019",
+      "author": "M-T Lee",
+      "unstructured": "Lee, M.-T., Jang, Y. & Chang, W.-Y. How do impairments in cognitive functions affect activities of daily living functions in older adults? PLoS ONE 14, e0218112 (2019)."
+    },
+    {
+      "key": "2669_CR82",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Chen, J., Zhang, J., Kam, A. H. & Shue, L. An automatic acoustic bathroom monitoring system. In Proc. International Symposium on Circuits and Systems 1750\u20131753 (IEEE, 2005)."
+    },
+    {
+      "key": "2669_CR83",
+      "doi": "",
+      "title": "",
+      "journal": "J. Eng.",
+      "year": "2019",
+      "author": "A Shrestha",
+      "unstructured": "Shrestha, A. et al. Elderly care: activities of daily living classification with an S band radar. J. Eng. 2019, 7601\u20137606 (2019)."
+    },
+    {
+      "key": "2669_CR84",
+      "doi": "10.1056/nejmcp1903252",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2020",
+      "author": "DA Ganz",
+      "unstructured": "Ganz, D. A. & Latham, N. K. Prevention of falls in community-dwelling older adults. N. Engl. J. Med. 382, 734\u2013743 (2020)."
+    },
+    {
+      "key": "2669_CR85",
+      "doi": "10.15585/mmwr.mm6537a2",
+      "title": "",
+      "journal": "MMWR Morb. Mortal. Wkly. Rep.",
+      "year": "2016",
+      "author": "G Bergen",
+      "unstructured": "Bergen, G., Stevens, M. R. & Burns, E. R. Falls and fall injuries among adults aged \u226565 years \u2014 United States, 2014. MMWR Morb. Mortal. Wkly. Rep. 65, 993\u2013998 (2016)."
+    },
+    {
+      "key": "2669_CR86",
+      "doi": "10.1136/bmj.282.6260.266",
+      "title": "",
+      "journal": "Br. Med. J. (Clin. Res. Ed.)",
+      "year": "1981",
+      "author": "D Wild",
+      "unstructured": "Wild, D., Nayak, U. S. & Isaacs, B. How dangerous are falls in old people at home? Br. Med. J. (Clin. Res. Ed.) 282, 266\u2013268 (1981)."
+    },
+    {
+      "key": "2669_CR87",
+      "doi": "10.1093/ageing/afm169",
+      "title": "",
+      "journal": "Age Ageing",
+      "year": "2008",
+      "author": "AC Scheffer",
+      "unstructured": "Scheffer, A. C., Schuurmans, M. J., van Dijk, N., van der Hooft, T. & de Rooij, S. E. Fear of falling: measurement strategy, prevalence, risk factors and consequences among older persons. Age Ageing 37, 19\u201324 (2008)."
+    },
+    {
+      "key": "2669_CR88",
+      "doi": "10.1093/geront/gnu104",
+      "title": "",
+      "journal": "Gerontologist",
+      "year": "2016",
+      "author": "M Pol",
+      "unstructured": "Pol, M. et al. Older people\u2019s perspectives regarding the use of sensor monitoring in their home. Gerontologist 56, 485\u2013493 (2016)."
+    },
+    {
+      "key": "2669_CR89",
+      "doi": "10.1109/radar.2017.7944316",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Erol, B., Amin, M. G. & Boashash, B. Range-Doppler radar sensor fusion for fall detection. In Proc. IEEE Radar Conference 819\u2013824 (IEEE, 2017)."
+    },
+    {
+      "key": "2669_CR90",
+      "doi": "10.1519/jpt.0b013e3182abe779",
+      "title": "",
+      "journal": "J. Geriatr. Phys. Ther.",
+      "year": "2014",
+      "author": "S Chaudhuri",
+      "unstructured": "Chaudhuri, S., Thompson, H. & Demiris, G. Fall detection devices and their use with older adults: a systematic review. J. Geriatr. Phys. Ther. 37, 178\u2013196 (2014)."
+    },
+    {
+      "key": "2669_CR91",
+      "doi": "10.3390/s19030452",
+      "title": "",
+      "journal": "Sensors",
+      "year": "2019",
+      "author": "T Tegou",
+      "unstructured": "Tegou, T. et al. A low-cost indoor activity monitoring system for detecting frailty in older adults. Sensors 19, 452 (2019)."
+    },
+    {
+      "key": "2669_CR92",
+      "doi": "10.1093/geront/gnv044",
+      "title": "",
+      "journal": "Gerontologist",
+      "year": "2015",
+      "author": "M Rantz",
+      "unstructured": "Rantz, M. et al. Automated in-home fall risk assessment and detection sensor system for elders. Gerontologist 55, S78\u2013S87 (2015)."
+    },
+    {
+      "key": "2669_CR93",
+      "doi": "10.1109/tbme.2014.2367038",
+      "title": "",
+      "journal": "IEEE Trans. Biomed. Eng.",
+      "year": "2015",
+      "author": "BY Su",
+      "unstructured": "Su, B. Y., Ho, K. C., Rantz, M. J. & Skubic, M. Doppler radar fall activity detection using the wavelet transform. IEEE Trans. Biomed. Eng. 62, 865\u2013875 (2015)."
+    },
+    {
+      "key": "2669_CR94",
+      "doi": "10.1109/jbhi.2014.2312180",
+      "title": "",
+      "journal": "IEEE J. Biomed. Health Inform.",
+      "year": "2015",
+      "author": "EE Stone",
+      "unstructured": "Stone, E. E. & Skubic, M. Fall detection in homes of older adults using the Microsoft Kinect. IEEE J. Biomed. Health Inform. 19, 290\u2013301 (2015)."
+    },
+    {
+      "key": "2669_CR95",
+      "doi": "10.1016/j.jamda.2017.05.012",
+      "title": "",
+      "journal": "J. Am. Med. Dir. Assoc.",
+      "year": "2017",
+      "author": "M Rantz",
+      "unstructured": "Rantz, M. et al. Randomized trial of intelligent sensor system for early illness alerts in senior housing. J. Am. Med. Dir. Assoc. 18, 860\u2013870 (2017). This randomized trial investigated the clinical efficacy of a real-time intervention system\u2014triggered by abnormal gait patterns, as detected by ambient sensors\u2014on the walking ability of older individuals at home."
+    },
+    {
+      "key": "2669_CR96",
+      "doi": "10.1016/j.cmpb.2014.09.005",
+      "title": "",
+      "journal": "Comput. Methods Programs Biomed.",
+      "year": "2014",
+      "author": "B Kwolek",
+      "unstructured": "Kwolek, B. & Kepski, M. Human fall detection on embedded platform using depth maps and wireless accelerometer. Comput. Methods Programs Biomed. 117, 489\u2013501 (2014)."
+    },
+    {
+      "key": "2669_CR97",
+      "doi": "10.1016/j.gaitpost.2011.03.027",
+      "title": "",
+      "journal": "Gait Posture",
+      "year": "2011",
+      "author": "TAL Wren",
+      "unstructured": "Wren, T. A. L., Gorton, G. E. III, Ounpuu, S. & Tucker, C. A. Efficacy of clinical gait analysis: a systematic review. Gait Posture 34, 149\u2013153 (2011)."
+    },
+    {
+      "key": "2669_CR98",
+      "doi": "10.1016/j.gaitpost.2012.11.018",
+      "title": "",
+      "journal": "Gait Posture",
+      "year": "2013",
+      "author": "TA Wren",
+      "unstructured": "Wren, T. A. et al. Outcomes of lower extremity orthopedic surgery in ambulatory children with cerebral palsy with and without gait analysis: results of a randomized controlled trial. Gait Posture 38, 236\u2013241 (2013)."
+    },
+    {
+      "key": "2669_CR99",
+      "doi": "10.1002/ana.25548",
+      "title": "",
+      "journal": "Ann. Neurol.",
+      "year": "2019",
+      "author": "S Del Din",
+      "unstructured": "Del Din, S. et al. Gait analysis with wearables predicts conversion to Parkinson disease. Ann. Neurol. 86, 357\u2013367 (2019)."
+    },
+    {
+      "key": "2669_CR100",
+      "doi": "10.1371/journal.pone.0211466",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2019",
+      "author": "\u0141 Kidzi\u0144ski",
+      "unstructured": "Kidzi\u0144ski, \u0141., Delp, S. & Schwartz, M. Automatic real-time gait event detection in children using deep neural networks. PLoS ONE 14, e0211466 (2019)."
+    },
+    {
+      "key": "2669_CR101",
+      "doi": "10.3390/app10010234",
+      "title": "",
+      "journal": "Appl. Sci.",
+      "year": "2020",
+      "author": "S D\u00edaz",
+      "unstructured": "D\u00edaz, S., Stephenson, J. B. & Labrador, M. A. Use of wearable sensor technology in gait, balance, and range of motion analysis. Appl. Sci. 10, 234 (2020)."
+    },
+    {
+      "key": "2669_CR102",
+      "doi": "10.1089/tmj.2014.0025",
+      "title": "",
+      "journal": "Telemed. J. E Health",
+      "year": "2014",
+      "author": "J Juen",
+      "unstructured": "Juen, J., Cheng, Q., Prieto-Centurion, V., Krishnan, J. A. & Schatz, B. Health monitors for chronic disease by gait analysis with mobile phones. Telemed. J. E Health 20, 1035\u20131041 (2014)."
+    },
+    {
+      "key": "2669_CR103",
+      "doi": "10.2196/mhealth.9832",
+      "title": "",
+      "journal": "JMIR Mhealth Uhealth",
+      "year": "2019",
+      "author": "A Kononova",
+      "unstructured": "Kononova, A. et al. The use of wearable activity trackers among older adults: focus group study of tracker perceptions, motivators, and barriers in the maintenance stage of behavior change. JMIR Mhealth Uhealth 7, e9832 (2019)."
+    },
+    {
+      "key": "2669_CR104",
+      "doi": "10.1089/g4h.2014.0047",
+      "title": "",
+      "journal": "Games Health J.",
+      "year": "2015",
+      "author": "A Da Gama",
+      "unstructured": "Da Gama, A., Fallavollita, P., Teichrieb, V., & Navab, N. Motor rehabilitation using Kinect: a systematic review. Games Health J. 4, 123\u2013135 (2015)."
+    },
+    {
+      "key": "2669_CR105",
+      "doi": "10.1016/j.eswa.2008.08.076",
+      "title": "",
+      "journal": "Expert Syst. Appl.",
+      "year": "2009",
+      "author": "C-W Cho",
+      "unstructured": "Cho, C.-W., Chao, W.-H., Lin, S.-H. & Chen, Y.-Y. A vision-based analysis system for gait recognition in patients with Parkinson\u2019s disease. Expert Syst. Appl. 36, 7033\u20137039 (2009)."
+    },
+    {
+      "key": "2669_CR106",
+      "doi": "10.1109/radar.2019.8835611",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Seifert, A., Zoubir, A. M. & Amin, M. G. Detection of gait asymmetry using indoor Doppler radar. In Proc. IEEE Radar Conference 1\u20136 (IEEE, 2019)."
+    },
+    {
+      "key": "2669_CR107",
+      "doi": "10.1109/tbme.2015.2410142",
+      "title": "",
+      "journal": "IEEE Trans. Biomed. Eng.",
+      "year": "2015",
+      "author": "MUB Altaf",
+      "unstructured": "Altaf, M. U. B., Butko, T., Juang, B. H. & Juang, B.-H. Acoustic gaits: gait analysis with footstep sounds. IEEE Trans. Biomed. Eng. 62, 2001\u20132011 (2015)."
+    },
+    {
+      "key": "2669_CR108",
+      "doi": "10.1016/j.gaitpost.2014.01.008",
+      "title": "",
+      "journal": "Gait Posture",
+      "year": "2014",
+      "author": "B Galna",
+      "unstructured": "Galna, B. et al. Accuracy of the Microsoft Kinect sensor for measuring movement in people with Parkinson\u2019s disease. Gait Posture 39, 1062\u20131068 (2014)."
+    },
+    {
+      "key": "2669_CR109",
+      "doi": "10.1109/tnsre.2013.2279155",
+      "title": "",
+      "journal": "IEEE Trans. Neural Syst. Rehabil. Eng.",
+      "year": "2014",
+      "author": "A Jaume-i-Cap\u00f3",
+      "unstructured": "Jaume-i-Cap\u00f3, A., Mart\u00ednez-Bueso, P., Moy\u00e0-Alcover, B. & Varona, J. Interactive rehabilitation system for improvement of balance therapies in people with cerebral palsy. IEEE Trans. Neural Syst. Rehabil. Eng. 22, 419\u2013427 (2014)."
+    },
+    {
+      "key": "2669_CR110",
+      "doi": "10.1016/0002-9343(86)90717-5",
+      "title": "",
+      "journal": "Am. J. Med.",
+      "year": "1986",
+      "author": "ME Tinetti",
+      "unstructured": "Tinetti, M. E., Williams, T. F. & Mayewski, R. Fall risk index for elderly patients based on number of chronic disabilities. Am. J. Med. 80, 429\u2013434 (1986)."
+    },
+    {
+      "key": "2669_CR111",
+      "doi": "10.1109/uic-atc.2017.8397481",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Wang, C. et al. Multimodal gait analysis based on wearable inertial and microphone sensors. In Proc. IEEE SmartWorld 1\u20138 (2017)."
+    },
+    {
+      "key": "2669_CR112",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Mental Health America. Mental Health in America - Adult Data 2018 https://www.mhanational.org/issues/mental-health-america-adult-data-2018 (2018)."
+    },
+    {
+      "key": "2669_CR113",
+      "doi": "10.1016/j.euroneuro.2011.07.018",
+      "title": "",
+      "journal": "Eur. Neuropsychopharmacol.",
+      "year": "2011",
+      "author": "HU Wittchen",
+      "unstructured": "Wittchen, H. U. et al. The size and burden of mental disorders and other disorders of the brain in Europe 2010. Eur. Neuropsychopharmacol. 21, 655\u2013679 (2011)."
+    },
+    {
+      "key": "2669_CR114",
+      "doi": "10.2105/ajph.93.2.239",
+      "title": "",
+      "journal": "Am. J. Public Health",
+      "year": "2003",
+      "author": "LR Snowden",
+      "unstructured": "Snowden, L. R. Bias in mental health assessment and intervention: theory and evidence. Am. J. Public Health 93, 239\u2013243 (2003)."
+    },
+    {
+      "key": "2669_CR115",
+      "doi": "10.1017/s0033291719000151",
+      "title": "",
+      "journal": "Psychol. Med.",
+      "year": "2019",
+      "author": "ABR Shatte",
+      "unstructured": "Shatte, A. B. R., Hutchinson, D. M. & Teague, S. J. Machine learning in mental health: a scoping review of methods and applications. Psychol. Med. 49, 1426\u20131448 (2019)."
+    },
+    {
+      "key": "2669_CR116",
+      "doi": "10.1109/mmsp.2017.8122218",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Chakraborty, D. et al. Assessment and prediction of negative symptoms of schizophrenia from RGB+ D movement signals. In Proc. 19th International Workshop on Multimedia Signal Processing 1\u20136 (2017)."
+    },
+    {
+      "key": "2669_CR117",
+      "doi": "10.1111/sltb.12180",
+      "title": "",
+      "journal": "Suicide Life Threat. Behav.",
+      "year": "2016",
+      "author": "JP Pestian",
+      "unstructured": "Pestian, J. P. et al. A controlled trial using natural language processing to examine the language of suicidal adolescents in the emergency department. Suicide Life Threat. Behav. 46, 154\u2013159 (2016)."
+    },
+    {
+      "key": "2669_CR118",
+      "doi": "10.1037/0022-0167.54.1.32",
+      "title": "",
+      "journal": "J. Couns. Psychol.",
+      "year": "2007",
+      "author": "W Lutz",
+      "unstructured": "Lutz, W., Leon, S. C., Martinovich, Z., Lyons, J. S. & Stiles, W. B. Therapist effects in outpatient psychotherapy: a three-level growth curve approach. J. Couns. Psychol. 54, 32\u201339 (2007)."
+    },
+    {
+      "key": "2669_CR119",
+      "doi": "10.1038/s41746-020-0285-8",
+      "title": "",
+      "journal": "NPJ Digit. Med.",
+      "year": "2020",
+      "author": "AS Miner",
+      "unstructured": "Miner, A. S. et al. Assessing the accuracy of automatic speech recognition for psychotherapy. NPJ Digit. Med. 3, 82 (2020)."
+    },
+    {
+      "key": "2669_CR120",
+      "doi": "10.1371/journal.pone.0143055",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2015",
+      "author": "B Xiao",
+      "unstructured": "Xiao, B., Imel, Z. E., Georgiou, P. G., Atkins, D. C. & Narayanan, S. S. \u201cRate my therapist\u201d: automated detection of empathy in drug and alcohol counseling via speech and language processing. PLoS ONE 10, e0143055 (2015)."
+    },
+    {
+      "key": "2669_CR121",
+      "doi": "10.1001/jamapsychiatry.2019.2664",
+      "title": "",
+      "journal": "JAMA Psychiatry",
+      "year": "2020",
+      "author": "MP Ewbank",
+      "unstructured": "Ewbank, M. P. et al. Quantifying the association between psychotherapy content and clinical outcomes using deep learning. JAMA Psychiatry 77, 35\u201343 (2020)."
+    },
+    {
+      "key": "2669_CR122",
+      "doi": "10.1109/iccv.2017.41",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Sadeghian, A., Alahi, A. & Savarese, S. Tracking the untrackable: learning to track multiple cues with long-term dependencies. In Proc. Conference on Computer Vision and Pattern Recognition 300\u2013311 (IEEE, 2017)."
+    },
+    {
+      "key": "2669_CR123",
+      "doi": "10.1007/978-3-030-01252-6_6",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Liu, G. et al. Image inpainting for irregular holes using partial convolutions. In Proc. 15th European Conference on Computer Vision 89\u2013105 (Springer, 2018)."
+    },
+    {
+      "key": "2669_CR124",
+      "doi": "10.1109/taslp.2019.2947232",
+      "title": "",
+      "journal": "IEEE/ACM Trans. Audio Speech Lang. Process.",
+      "year": "2019",
+      "author": "A Marafioti",
+      "unstructured": "Marafioti, A., Perraudin, N., Holighaus, N. & Majdak, P. A context encoder for audio inpainting. IEEE/ACM Trans. Audio Speech Lang. Process. 27, 2362\u20132372 (2019)."
+    },
+    {
+      "key": "2669_CR125",
+      "doi": "10.1016/j.cviu.2019.102897",
+      "title": "",
+      "journal": "Comput. Vis. Image Underst.",
+      "year": "2020",
+      "author": "Y Chen",
+      "unstructured": "Chen, Y., Tian, Y. & He, M. Monocular human pose estimation: a survey of deep learning-based methods. Comput. Vis. Image Underst. 192, 102897 (2020)."
+    },
+    {
+      "key": "2669_CR126",
+      "doi": "10.1007/s11263-016-0981-7",
+      "title": "",
+      "journal": "Int. J. Comput. Vis.",
+      "year": "2017",
+      "author": "R Krishna",
+      "unstructured": "Krishna, R. et al. Visual genome: connecting language and vision using crowdsourced dense image annotations. Int. J. Comput. Vis. 123, 32\u201373 (2017)."
+    },
+    {
+      "key": "2669_CR127",
+      "doi": "10.1109/cvpr.2015.7298990",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Johnson, J. et al. Image retrieval using scene graphs. In Proc. Conference on Computer Vision and Pattern Recognition 3668\u20133678 (IEEE, 2015)."
+    },
+    {
+      "key": "2669_CR128",
+      "doi": "10.1109/cvpr.2019.00857",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Shi, J., Zhang, H. & Li, J. Explainable and explicit visual reasoning over scene graphs. In Proc. Conference on Computer Vision and Pattern Recognition 8368\u20138376 (IEEE/CVF, 2019)."
+    },
+    {
+      "key": "2669_CR129",
+      "doi": "10.1377/hlthaff.2014.0031",
+      "title": "",
+      "journal": "Health Aff.",
+      "year": "2014",
+      "author": "JD Halamka",
+      "unstructured": "Halamka, J. D. Early experiences with big data at an academic medical center. Health Aff. 33, 1132\u20131138 (2014)."
+    },
+    {
+      "key": "2669_CR130",
+      "doi": "",
+      "title": "",
+      "journal": "ACM Comput. Surv.",
+      "year": "2020",
+      "author": "J Verbraeken",
+      "unstructured": "Verbraeken, J. et al. A survey on distributed machine learning. ACM Comput. Surv. 53, 30 (2020)."
+    },
+    {
+      "key": "2669_CR131",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "You, Y. et al. Large batch optimization for deep learning: training BERT in 76 minutes. In Proc. 8th International Conference on Learning Representations 1\u201338 (2020)."
+    },
+    {
+      "key": "2669_CR132",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Kitaev, N., Kaiser, \u0141. & Levskaya, A. Reformer: the efficient transformer. In Proc. 8th International Conference on Learning Representations 1\u201312 (2020)."
+    },
+    {
+      "key": "2669_CR133",
+      "doi": "10.1109/cvpr.2016.211",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Heilbron, F., Niebles, J. & Ghanem, B. Fast temporal activity proposals for efficient detection of human actions in untrimmed videos. In Proc. Conference on Computer Vision and Pattern Recognition 1914\u20131923 (IEEE, 2016)."
+    },
+    {
+      "key": "2669_CR134",
+      "doi": "10.1007/978-3-030-20893-6_23",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Zhu, Y., Lan, Z., Newsam, S. & Hauptmann, A. Hidden two-stream convolutional networks for action recognition. In Proc. 14th Asian Conference on Computer Vision 363\u2013378 (Springer, 2019)."
+    },
+    {
+      "key": "2669_CR135",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Han, S., Mao, H. & Dally, W. J. Deep compression: compressing deep neural networks with pruning, trained quantization and Huffman coding. In Proc. 4th International Conference on Learning Representations 1\u201314 (2016). This paper introduced a method to compress neural network models and reduce their computational and storage requirements."
+    },
+    {
+      "key": "2669_CR136",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Micikeviciusd, P. et al. Mixed precision training. In Proc. 6th International Conference on Learning Representations 1\u201312 (2018)."
+    },
+    {
+      "key": "2669_CR137",
+      "doi": "10.1109/cvpr.2015.7298735",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Yu, G. & Yuan, J. Fast action proposals for human action detection and search. In Proc. Conference on Computer Vision and Pattern Recognition 1302\u20131311 (IEEE, 2015)."
+    },
+    {
+      "key": "2669_CR138",
+      "doi": "10.1038/d41586-018-05707-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "J Zou",
+      "unstructured": "Zou, J. & Schiebinger, L. AI can be sexist and racist \u2014 it\u2019s time to make it fair. Nature 559, 324\u2013326 (2018)."
+    },
+    {
+      "key": "2669_CR139",
+      "doi": "",
+      "title": "",
+      "journal": "Adv. Neural Inf. Process. Syst.",
+      "year": "2017",
+      "author": "G Pleiss",
+      "unstructured": "Pleiss, G., Raghavan, M., Wu, F., Kleinberg, J. & Weinberger, K. Q. On fairness and calibration. Adv. Neural Inf. Process. Syst. 30, 5680\u20135689 (2017)."
+    },
+    {
+      "key": "2669_CR140",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Neyshabur, B., Bhojanapalli, S., McAllester, D. & Srebro, N. Exploring generalization in deep learning. Adv. Neural Inf. Process. Syst. 30, 5947\u20135956 (2017)."
+    },
+    {
+      "key": "2669_CR141",
+      "doi": "10.18653/v1/p18-1031",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Howard, J. & Ruder, S. Universal language model fine-tuning for text classification. In Proc. 56th Annual Meeting of the Association for Computational Linguistics 328\u2013339 (2018)."
+    },
+    {
+      "key": "2669_CR142",
+      "doi": "10.1109/tkde.2009.191",
+      "title": "",
+      "journal": "IEEE Trans. Knowl. Data Eng.",
+      "year": "2010",
+      "author": "SJ Pan",
+      "unstructured": "Pan, S. J. & Yang, Q. A survey on transfer learning. IEEE Trans. Knowl. Data Eng. 22, 1345\u20131359 (2010)."
+    },
+    {
+      "key": "2669_CR143",
+      "doi": "10.1109/msp.2014.2347059",
+      "title": "",
+      "journal": "IEEE Signal Process. Mag.",
+      "year": "2015",
+      "author": "VM Patel",
+      "unstructured": "Patel, V. M., Gopalan, R., Li, R. & Chellappa, R. Visual domain adaptation: a survey of recent advances. IEEE Signal Process. Mag. 32, 53\u201369 (2015)."
+    },
+    {
+      "key": "2669_CR144",
+      "doi": "",
+      "title": "",
+      "journal": "ACM Comput. Surv.",
+      "year": "2020",
+      "author": "Y Wang",
+      "unstructured": "Wang, Y., Kwok, J., Ni, L. M. & Yao, Q. Generalizing from a few examples: a survey on few-shot learning. ACM Comput. Surv. 53, 63 (2020)."
+    },
+    {
+      "key": "2669_CR145",
+      "doi": "10.1038/s42256-019-0088-2",
+      "title": "",
+      "journal": "Nat. Mach. Intell.",
+      "year": "2019",
+      "author": "A Jobin",
+      "unstructured": "Jobin, A., Ienca, M. & Vayena, E. The global landscape of AI ethics guidelines. Nat. Mach. Intell. 1, 389\u2013399 (2019)."
+    },
+    {
+      "key": "2669_CR146",
+      "doi": "10.1109/tmtt.2013.2256924",
+      "title": "",
+      "journal": "IEEE Trans. Microw. Theory Tech.",
+      "year": "2013",
+      "author": "C Li",
+      "unstructured": "Li, C., Lubecke, V. M., Boric-Lubecke, O. & Lin, J. A review on recent advances in Doppler radar sensors for noncontact healthcare monitoring. IEEE Trans. Microw. Theory Tech. 61, 2046\u20132060 (2013)."
+    },
+    {
+      "key": "2669_CR147",
+      "doi": "10.1056/nejmp1608086",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2016",
+      "author": "F Rockhold",
+      "unstructured": "Rockhold, F., Nisen, P. & Freeman, A. Data sharing at a crossroads. N. Engl. J. Med. 375, 1115\u20131117 (2016)."
+    },
+    {
+      "key": "2669_CR148",
+      "doi": "10.1038/s41591-019-0548-6",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2019",
+      "author": "J Wiens",
+      "unstructured": "Wiens, J. et al. Do no harm: a roadmap for responsible machine learning for health care. Nat. Med. 25, 1337\u20131340 (2019)."
+    },
+    {
+      "key": "2669_CR149",
+      "doi": "10.1371/journal.pone.0028071",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2011",
+      "author": "K El Emam",
+      "unstructured": "El Emam, K., Jonker, E., Arbuckle, L. & Malin, B. A systematic review of re-identification attacks on health data. PLoS ONE 6, e28071 (2011)."
+    },
+    {
+      "key": "2669_CR150",
+      "doi": "10.1007/s00138-014-0623-4",
+      "title": "",
+      "journal": "Mach. Vis. Appl.",
+      "year": "2014",
+      "author": "K Nasrollahi",
+      "unstructured": "Nasrollahi, K. & Moeslund, T. Super-resolution: a comprehensive survey. Mach. Vis. Appl. 25, 1423\u20131468 (2014)."
+    },
+    {
+      "key": "2669_CR151",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Brewster, T. How an amateur rap crew stole surveillance tech that tracks almost every American. Forbes Magazine (12 October 2018)."
+    },
+    {
+      "key": "2669_CR152",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Cutler, J. E. How can patients make money off their medical data? Bloomberg Law (29 January 2019)."
+    },
+    {
+      "key": "2669_CR153",
+      "doi": "10.1038/s41746-019-0157-2",
+      "title": "",
+      "journal": "NPJ Digit. Med.",
+      "year": "2019",
+      "author": "EM Cahan",
+      "unstructured": "Cahan, E. M., Hernandez-Boussard, T., Thadaney-Israni, S. & Rubin, D. L. Putting the data before the algorithm in big data addressing personalized healthcare. NPJ Digit. Med. 2, 78 (2019)."
+    },
+    {
+      "key": "2669_CR154",
+      "doi": "10.7326/m18-1990",
+      "title": "",
+      "journal": "Ann. Intern. Med.",
+      "year": "2018",
+      "author": "A Rajkomar",
+      "unstructured": "Rajkomar, A., Hardt, M., Howell, M. D., Corrado, G. & Chin, M. H. Ensuring fairness in machine learning to advance health equity. Ann. Intern. Med. 169, 866\u2013872 (2018)."
+    },
+    {
+      "key": "2669_CR155",
+      "doi": "10.1056/nejmp1714229",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2018",
+      "author": "DS Char",
+      "unstructured": "Char, D. S., Shah, N. H. & Magnus, D. Implementing machine learning in health care \u2014 addressing ethical challenges. N. Engl. J. Med. 378, 981\u2013983 (2018)."
+    },
+    {
+      "key": "2669_CR156",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Buolamwini, J. & Gebru, T. Gender shades: intersectional accuracy disparities in commercial gender classification. In Proc. 1st Conference on Fairness, Accountability and Transparency 77\u201391 (2018)."
+    },
+    {
+      "key": "2669_CR157",
+      "doi": "10.1001/amajethics.2019.167",
+      "title": "",
+      "journal": "AMA J. Ethics",
+      "year": "2019",
+      "author": "IY Chen",
+      "unstructured": "Chen, I. Y., Szolovits, P. & Ghassemi, M. Can AI help reduce disparities in general medical and mental health care? AMA J. Ethics 21, E167\u2013E179 (2019)."
+    },
+    {
+      "key": "2669_CR158",
+      "doi": "10.7326/m18-1376",
+      "title": "",
+      "journal": "Ann. Intern. Med.",
+      "year": "2019",
+      "author": "RF Wolff",
+      "unstructured": "Wolff, R. F. et al. PROBAST: a tool to assess the risk of bias and applicability of prediction model studies. Ann. Intern. Med. 170, 51\u201358 (2019)."
+    },
+    {
+      "key": "2669_CR159",
+      "doi": "10.1073/pnas.1900654116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "WJ Murdoch",
+      "unstructured": "Murdoch, W. J., Singh, C., Kumbier, K., Abbasi-Asl, R. & Yu, B. Definitions, methods, and applications in interpretable machine learning. Proc. Natl Acad. Sci. USA 116, 22071\u201322080 (2019). This article proposed a framework for evaluating model interpretability through predictive accuracy, descriptive accuracy and relevancy."
+    },
+    {
+      "key": "2669_CR160",
+      "doi": "10.1038/s41591-018-0307-0",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2019",
+      "author": "J He",
+      "unstructured": "He, J. et al. The practical implementation of artificial intelligence technologies in medicine. Nat. Med. 25, 30\u201336 (2019)."
+    },
+    {
+      "key": "2669_CR161",
+      "doi": "10.7326/m14-0697",
+      "title": "",
+      "journal": "Ann. Intern. Med.",
+      "year": "2015",
+      "author": "GS Collins",
+      "unstructured": "Collins, G. S., Reitsma, J. B., Altman, D. G. & Moons, K. G. M. Transparent reporting of a multivariable prediction model for individual prognosis or diagnosis (TRIPOD): the TRIPOD statement. Ann. Intern. Med. 162, 55\u201363 (2015)."
+    },
+    {
+      "key": "2669_CR162",
+      "doi": "10.1145/3287560.3287596",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Mitchell, M. et al. Model cards for model reporting. In Proc. 2nd Conference on Fairness, Accountability, and Transparency 220\u2013229 (2019)."
+    },
+    {
+      "key": "2669_CR163",
+      "doi": "10.1136/bmjopen-2014-005691",
+      "title": "",
+      "journal": "BMJ Open",
+      "year": "2014",
+      "author": "R Thomas",
+      "unstructured": "Thomas, R. et al. Deliberative democracy and cancer screening consent: a randomised control trial of the effect of a community jury on men\u2019s knowledge about and intentions to participate in PSA screening. BMJ Open 4, e005691 (2014)."
+    },
+    {
+      "key": "2669_CR164",
+      "doi": "10.2105/ajph.2013.301663",
+      "title": "",
+      "journal": "Am. J. Public Health",
+      "year": "2014",
+      "author": "JL Otto",
+      "unstructured": "Otto, J. L., Holodniy, M. & DeFraites, R. F. Public health practice is not research. Am. J. Public Health 104, 596\u2013602 (2014)."
+    },
+    {
+      "key": "2669_CR165",
+      "doi": "10.1001/jama.2019.21699",
+      "title": "",
+      "journal": "J. Am. Med. Assoc.",
+      "year": "2020",
+      "author": "S Gerke",
+      "unstructured": "Gerke, S., Yeung, S. & Cohen, I. G. Ethical and legal aspects of ambient intelligence in hospitals. J. Am. Med. Assoc. 323, 601\u2013602 (2020)."
+    },
+    {
+      "key": "2669_CR166",
+      "doi": "10.1371/journal.pone.0207639",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2018",
+      "author": "JW Kim",
+      "unstructured": "Kim, J. W., Jang, B. & Yoo, H. Privacy-preserving aggregation of personal health data streams. PLoS ONE 13, e0207639 (2018)."
+    },
+    {
+      "key": "2669_CR167",
+      "doi": "",
+      "title": "",
+      "journal": "J. Mach. Learn. Res.",
+      "year": "2009",
+      "author": "L van der Maaten",
+      "unstructured": "van der Maaten, L., Postma, E. & van den Herik, J. Dimensionality reduction: a comparative. J. Mach. Learn. Res. 10, 13 (2009)."
+    },
+    {
+      "key": "2669_CR168",
+      "doi": "10.1109/cvpr42600.2020.00530",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Kocabas, M., Athanasiou, N. & Black, M. J. VIBE: video inference for human body pose and shape estimation. In Proc. Conference on Computer Vision and Pattern Recognition 5253\u20135263 (IEEE/CVF, 2020)."
+    },
+    {
+      "key": "2669_CR169",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "McMahan, H. B., Moore, E., Ramage, D., Hampson, S. & Arcas, B. A. Communication-efficient learning of deep networks from decentralized data. In Proc. 20th International Conference on Artificial Intelligence and Statistics 1273\u20131282 (PMLR, 2017). This paper proposed federated learning, a method for training a shared model while the data is distributed across multiple client devices."
+    },
+    {
+      "key": "2669_CR170",
+      "doi": "10.1145/1536414.1536440",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Gentry, C. Fully homomorphic encryption using ideal lattices. In Proc 41st Symposium on Theory of Computing 169\u2013178 (ACM, 2009). This paper proposed the first fully homomorphic encryption scheme that supports addition and multiplication on encrypted data."
+    },
+    {
+      "key": "2669_CR171",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "McCoy, S. T. Aboard USNS Comfort (US Navy, 2003)."
+    }
+  ]
+}

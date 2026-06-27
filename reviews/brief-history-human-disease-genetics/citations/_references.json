@@ -1,0 +1,1601 @@
+{
+  "article": {
+    "slug": "s41586-019-1879-7",
+    "doi": "10.1038/s41586-019-1879-7",
+    "title": "A brief history of human disease genetics",
+    "url": "https://www.nature.com/articles/s41586-019-1879-7",
+    "abbrev": "brief-history-human-disease-genetics",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/brief-history-human-disease-genetics"
+  },
+  "meta": {
+    "title": "A brief history of human disease genetics",
+    "authors": [
+      "Melina Claussnitzer",
+      "Judy H. Cho",
+      "Rory Collins",
+      "Nancy J. Cox",
+      "Emmanouil T. Dermitzakis",
+      "Matthew E. Hurles",
+      "Sekar Kathiresan",
+      "Eimear E. Kenny",
+      "Cecilia M. Lindgren",
+      "Daniel G. MacArthur",
+      "Kathryn N. North",
+      "Sharon E. Plon",
+      "Heidi L. Rehm",
+      "Neil Risch",
+      "Charles N. Rotimi",
+      "Jay Shendure",
+      "Nicole Soranzo",
+      "Mark I. McCarthy"
+    ],
+    "published": [
+      2020,
+      1,
+      8
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-019-1879-7",
+    "n_references": 173,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "1879_CR1",
+      "doi": "10.1038/35057062",
+      "title": "",
+      "journal": "Nature",
+      "year": "2001",
+      "author": "International Human Genome Sequencing Consortium",
+      "unstructured": "International Human Genome Sequencing Consortium. Initial sequencing and analysis of the human genome. Nature 409, 860\u2013921 (2001). This paper describes the first analyses from the draft human genome sequence assembled over the previous decade: it launched modern human genetics and represents a tribute to the power of collaborative science."
+    },
+    {
+      "key": "1879_CR2",
+      "doi": "10.1038/nature02168",
+      "title": "",
+      "journal": "Nature",
+      "year": "2003",
+      "author": "International HapMap Consortium",
+      "unstructured": "International HapMap Consortium. The International HapMap Project. Nature 426, 789\u2013796 (2003). The HapMap Consortium developed the first genome-wide maps of common sequence variation, using this information to lay out the haplotypic structure of this variation across three major ancestral groupings (from Europe, East Asia and Africa)."
+    },
+    {
+      "key": "1879_CR3",
+      "doi": "10.1038/nature15393",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "1,000 Genomes Project Consortium",
+      "unstructured": "1000 Genomes Project Consortium. A global reference for human genetic variation. Nature 526, 68\u201374 (2015)."
+    },
+    {
+      "key": "1879_CR4",
+      "doi": "10.1038/ng.3643",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2016",
+      "author": "The Haplotype Reference Consortium",
+      "unstructured": "The Haplotype Reference Consortium. A reference panel of 64,976 haplotypes for genotype imputation. Nat. Genet. 48, 1279\u20131283 (2016)."
+    },
+    {
+      "key": "1879_CR5",
+      "doi": "10.1038/nature19057",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "M Lek",
+      "unstructured": "Lek, M. et al. Analysis of protein-coding genetic variation in 60,706 humans. Nature 536, 285\u2013291 (2016)."
+    },
+    {
+      "key": "1879_CR6",
+      "doi": "10.1101/531210",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Karczewski, K. J. et al. Variation across 141,456 human exomes and genomes reveals the spectrum of loss-of-function intolerance across human protein-coding genes. Preprint at bioRxiv https://doi.org/10.1101/531210 (2019). The most recent report from the genome aggregation database (gnomAD) project combining human sequence data on an unprecedented scale to characterize rare, high-impact variants and their relationship to health and disease."
+    },
+    {
+      "key": "1879_CR7",
+      "doi": "10.1056/nejm199405193302001",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "1994",
+      "author": "B Kremer",
+      "unstructured": "Kremer, B. et al. A worldwide study of the Huntington\u2019s disease mutation. The sensitivity and specificity of measuring CAG repeats. N. Engl. J. Med. 330, 1401\u20131406 (1994)."
+    },
+    {
+      "key": "1879_CR8",
+      "doi": "",
+      "title": "",
+      "journal": "Harvey Lect.",
+      "year": "1990",
+      "author": "FS Collins",
+      "unstructured": "Collins, F. S. Identifying human disease genes by positional cloning. Harvey Lect. 86, 149\u2013164 (1990\u20131991)."
+    },
+    {
+      "key": "1879_CR9",
+      "doi": "10.1056/nejm199405193302011",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "1994",
+      "author": "JF Gusella",
+      "unstructured": "Gusella, J. F. & MacDonald, M. E. Huntington\u2019s disease and repeating trinucleotides. N. Engl. J. Med. 330, 1450\u20131451 (1994)."
+    },
+    {
+      "key": "1879_CR10",
+      "doi": "10.1086/379977",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2003",
+      "author": "LE Vissers",
+      "unstructured": "Vissers, L. E. et al. Array-based comparative genomic hybridization for the genomewide detection of submicroscopic chromosomal abnormalities. Am. J. Hum. Genet. 73, 1261\u20131270 (2003)."
+    },
+    {
+      "key": "1879_CR11",
+      "doi": "10.1038/nature08250",
+      "title": "",
+      "journal": "Nature",
+      "year": "2009",
+      "author": "SB Ng",
+      "unstructured": "Ng, S. B. et al. Targeted capture and massively parallel sequencing of 12 human exomes. Nature 461, 272\u2013276 (2009)."
+    },
+    {
+      "key": "1879_CR12",
+      "doi": "10.1038/nature06884",
+      "title": "",
+      "journal": "Nature",
+      "year": "2008",
+      "author": "DA Wheeler",
+      "unstructured": "Wheeler, D. A. et al. The complete genome of an individual by massively parallel DNA sequencing. Nature 452, 872\u2013876 (2008)."
+    },
+    {
+      "key": "1879_CR13",
+      "doi": "10.1038/ng.712",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2010",
+      "author": "LE Vissers",
+      "unstructured": "Vissers, L. E. et al. A de novo paradigm for mental retardation. Nat. Genet. 42, 1109\u20131112 (2010)."
+    },
+    {
+      "key": "1879_CR14",
+      "doi": "10.1038/nature21062",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "Deciphering Developmental Disorders Study",
+      "unstructured": "Deciphering Developmental Disorders Study. Prevalence and architecture of de novo mutations in developmental disorders. Nature 542, 433\u2013438 (2017)."
+    },
+    {
+      "key": "1879_CR15",
+      "doi": "10.1056/nejmoa1714458",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2018",
+      "author": "K Splinter",
+      "unstructured": "Splinter, K. et al. Effect of genetic diagnosis on patients with previously undiagnosed disease. N. Engl. J. Med. 379, 2131\u20132139 (2018)."
+    },
+    {
+      "key": "1879_CR16",
+      "doi": "10.1038/nature14135",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "Deciphering Developmental Disorders Study",
+      "unstructured": "Deciphering Developmental Disorders Study. Large-scale discovery of novel genetic causes of developmental disorders. Nature 519, 223\u2013228 (2015)."
+    },
+    {
+      "key": "1879_CR17",
+      "doi": "10.1016/j.ajhg.2009.03.010",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2009",
+      "author": "HV Firth",
+      "unstructured": "Firth, H. V. et al. DECIPHER: database of chromosomal imbalance and phenotype in humans using ensembl resources. Am. J. Hum. Genet. 84, 524\u2013533 (2009)."
+    },
+    {
+      "key": "1879_CR18",
+      "doi": "",
+      "title": "",
+      "journal": "Curr.Protoc. Hum. Genet.",
+      "year": "2017",
+      "author": "NLM Sobreira",
+      "unstructured": "Philippakis, A.A. et al. The Matchmaker Exchange: a platform for rare disease gene discovery. Hum. Mutat. 36, 915\u2013921 (2015)."
+    },
+    {
+      "key": "1879_CR19",
+      "doi": "10.1016/j.ajhg.2017.04.003",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2017",
+      "author": "KM Boycott",
+      "unstructured": "Boycott, K. M. et al. International cooperation to enable the diagnosis of all rare genetic diseases. Am. J. Hum. Genet. 100, 695\u2013705 (2017)."
+    },
+    {
+      "key": "1879_CR20",
+      "doi": "10.1038/s41436-018-0259-2",
+      "title": "",
+      "journal": "Genet. Med.",
+      "year": "2019",
+      "author": "J Kennedy",
+      "unstructured": "Kennedy, J. et al. KAT6A syndrome: genotype\u2013phenotype correlation in 76 patients with pathogenic KAT6A variants. Genet. Med. 21, 850\u2013860 (2019)."
+    },
+    {
+      "key": "1879_CR21",
+      "doi": "10.1093/nar/gku1205",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2015",
+      "author": "JS Amberger",
+      "unstructured": "Amberger, J. S., Bocchini, C. A., Schiettecatte, F., Scott, A. F. & Hamosh, A. OMIM.org: Online Mendelian Inheritance in Man (OMIM), an online catalog of human genes and genetic disorders. Nucleic Acids Res. 43, D789\u2013D798 (2015)."
+    },
+    {
+      "key": "1879_CR22",
+      "doi": "10.1093/nar/gkt1113",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2014",
+      "author": "MJ Landrum",
+      "unstructured": "Landrum, M. J. et al. ClinVar: public archive of relationships among sequence variation and human phenotype. Nucleic Acids Res. 42, D980\u2013D985 (2014)."
+    },
+    {
+      "key": "1879_CR23",
+      "doi": "10.1056/nejmsr1406261",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2015",
+      "author": "HL Rehm",
+      "unstructured": "Rehm, H. L. et al. ClinGen\u2014the Clinical Genome Resource. N. Engl. J. Med. 372, 2235\u20132242 (2015)."
+    },
+    {
+      "key": "1879_CR24",
+      "doi": "10.1126/scitranslmed.aad5169",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2016",
+      "author": "EV Minikel",
+      "unstructured": "Minikel, E. V. et al. Quantifying prion disease penetrance using large population control cohorts. Sci. Transl. Med. 8, 322ra9 (2016)."
+    },
+    {
+      "key": "1879_CR25",
+      "doi": "10.1038/ng.2794",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2013",
+      "author": "J Flannick",
+      "unstructured": "Flannick, J. et al. Assessing the phenotypic effects in the general population of rare variants in genes for a dominant Mendelian form of diabetes. Nat. Genet. 45, 1380\u20131385 (2013)."
+    },
+    {
+      "key": "1879_CR26",
+      "doi": "10.1038/nn.4014",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2015",
+      "author": "K Be\u010danovi\u0107",
+      "unstructured": "Be\u010danovi\u0107, K. et al. A SNP in the HTT promoter alters NF-\u03baB binding and is a bidirectional genetic modifier of Huntington disease. Nat. Neurosci. 18, 807\u2013816 (2015)."
+    },
+    {
+      "key": "1879_CR27",
+      "doi": "10.1038/s41588-018-0192-y",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "SE Castel",
+      "unstructured": "Castel, S. E. et al. Modified penetrance of coding variants by cis-regulatory variation contributes to disease risk. Nat. Genet. 50, 1327\u20131334 (2018)."
+    },
+    {
+      "key": "1879_CR28",
+      "doi": "10.1038/nature13127",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "DG MacArthur",
+      "unstructured": "MacArthur, D. G. et al. Guidelines for investigating causality of sequence variants in human disease. Nature 508, 469\u2013476 (2014)."
+    },
+    {
+      "key": "1879_CR29",
+      "doi": "10.1038/s41586-018-0461-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "GM Findlay",
+      "unstructured": "Findlay, G. M. et al. Accurate classification of BRCA1 variants with saturation genome editing. Nature 562, 217\u2013222 (2018). This paper describes an effort to obtain massively parallel functional assessments of all potential sequence variants in a gene causal for familial breast cancer, and thereby provide more confident predictions of clinical significance for those found to carry a previously unseen mutation."
+    },
+    {
+      "key": "1879_CR30",
+      "doi": "10.1126/scitranslmed.aal5209",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2017",
+      "author": "BB Cummings",
+      "unstructured": "Cummings, B. B. et al. Improving genetic diagnosis in Mendelian disease with transcriptome sequencing. Sci. Transl. Med. 9, eaal5209 (2017)."
+    },
+    {
+      "key": "1879_CR31",
+      "doi": "10.1016/j.ajhg.2017.04.004",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2017",
+      "author": "DT Butcher",
+      "unstructured": "Butcher, D. T. et al. CHARGE and Kabuki syndromes: gene-specific DNA methylation signatures identify epigenetic mechanisms linking these clinically overlapping conditions. Am. J. Hum. Genet. 100, 773\u2013788 (2017)."
+    },
+    {
+      "key": "1879_CR32",
+      "doi": "10.1038/nature25983",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "PJ Short",
+      "unstructured": "Short, P. J. et al. De novo mutations in regulatory elements in neurodevelopmental disorders. Nature 555, 611\u2013616 (2018)."
+    },
+    {
+      "key": "1879_CR33",
+      "doi": "10.1016/j.cell.2018.12.015",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "K Jaganathan",
+      "unstructured": "Jaganathan, K. et al. Predicting splicing from primary sequence with deep learning. Cell 176, 535\u2013548 (2019)."
+    },
+    {
+      "key": "1879_CR34",
+      "doi": "10.1038/35079107",
+      "title": "",
+      "journal": "Nature",
+      "year": "2001",
+      "author": "JP Hugot",
+      "unstructured": "Hugot, J. P. et al. Association of NOD2 leucine-rich repeat variants with susceptibility to Crohn\u2019s disease. Nature 411, 599\u2013603 (2001)."
+    },
+    {
+      "key": "1879_CR35",
+      "doi": "10.1038/35079114",
+      "title": "",
+      "journal": "Nature",
+      "year": "2001",
+      "author": "Y Ogura",
+      "unstructured": "Ogura, Y. et al. A frameshift mutation in NOD2 associated with susceptibility to Crohn\u2019s disease. Nature 411, 603\u2013606 (2001)."
+    },
+    {
+      "key": "1879_CR36",
+      "doi": "10.1172/jci109151",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "1978",
+      "author": "J Barbosa",
+      "unstructured": "Barbosa, J., Chern, M. M., Noreen, H. & Anderson, V. E. Analysis of linkage between the major histocompatibility system and juvenile, insulin-dependent diabetes in multiplex families. Reanalysis of data. J. Clin. Invest. 62, 492\u2013495 (1978)."
+    },
+    {
+      "key": "1879_CR37",
+      "doi": "10.1126/science.273.5281.1516",
+      "title": "",
+      "journal": "Science",
+      "year": "1996",
+      "author": "N Risch",
+      "unstructured": "Risch, N. & Merikangas, K. The future of genetic studies of complex human diseases. Science 273, 1516\u20131517 (1996). A highly influential commentary that switched much of the complex trait genetics field from linkage to association and imagined GWAS several years before the technology made them a reality."
+    },
+    {
+      "key": "1879_CR38",
+      "doi": "10.1126/science.1109557",
+      "title": "",
+      "journal": "Science",
+      "year": "2005",
+      "author": "RJ Klein",
+      "unstructured": "Klein, R. J. et al. Complement factor H polymorphism in age-related macular degeneration. Science 308, 385\u2013389 (2005). Arguably the first full GWAS, this study demonstrated the potential of agnostic genomic surveys to highlight entirely novel biology\u2014in this case, a role for complement in the pathogenesis of macular degeneration."
+    },
+    {
+      "key": "1879_CR39",
+      "doi": "10.1126/science.1135245",
+      "title": "",
+      "journal": "Science",
+      "year": "2006",
+      "author": "RH Duerr",
+      "unstructured": "Duerr, R. H. et al. A genome-wide association study identifies IL23R as an inflammatory bowel disease gene. Science 314, 1461\u20131463 (2006)."
+    },
+    {
+      "key": "1879_CR40",
+      "doi": "10.1038/nature05911",
+      "title": "",
+      "journal": "Nature",
+      "year": "2007",
+      "author": "Wellcome Trust Case Control Consortium",
+      "unstructured": "Wellcome Trust Case Control Consortium. Genome-wide association study of 14,000 cases of seven common diseases and 3,000 shared controls. Nature 447, 661\u2013678 (2007). This paper, which describes what was, at the time, the largest GWAS yet conducted, demonstrated the broad applicability of the approach, and set the scene for the decade of GWAS discovery that followed."
+    },
+    {
+      "key": "1879_CR41",
+      "doi": "10.1038/s41588-018-0241-6",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "A Mahajan",
+      "unstructured": "Mahajan, A. et al. Fine-mapping type 2 diabetes loci to single-variant resolution using high-density imputation and islet-specific epigenome maps. Nat. Genet. 50, 1505\u20131513 (2018)."
+    },
+    {
+      "key": "1879_CR42",
+      "doi": "10.1016/j.cell.2016.10.042",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "WJ Astle",
+      "unstructured": "Astle, W. J. et al. The allelic landscape of human blood cell trait variation and links to common complex disease. Cell 167, 1415\u20131429 (2016)."
+    },
+    {
+      "key": "1879_CR43",
+      "doi": "10.1038/nature09410",
+      "title": "",
+      "journal": "Nature",
+      "year": "2010",
+      "author": "H Lango Allen",
+      "unstructured": "Lango Allen, H. et al. Hundreds of variants clustered in genomic loci and biological pathways affect human height. Nature 467, 832\u2013838 (2010)."
+    },
+    {
+      "key": "1879_CR44",
+      "doi": "10.1093/nar/gky1120",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2019",
+      "author": "A Buniello",
+      "unstructured": "Buniello, A. et al. The NHGRI\u2013EBI GWAS catalog of published genome-wide association studies, targeted arrays and summary statistics 2019. Nucleic Acids Res. 47, D1005\u2013D1012 (2019)."
+    },
+    {
+      "key": "1879_CR45",
+      "doi": "10.1038/nature18642",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "C Fuchsberger",
+      "unstructured": "Fuchsberger, C. et al. The genetic architecture of type 2 diabetes. Nature 536, 41\u201347 (2016)."
+    },
+    {
+      "key": "1879_CR46",
+      "doi": "10.1038/nature14962",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "UK10K Consortium",
+      "unstructured": "UK10K Consortium. The UK10K project identifies rare variants in health and disease. Nature 526, 82\u201390 (2015)."
+    },
+    {
+      "key": "1879_CR47",
+      "doi": "10.1038/nature08494",
+      "title": "",
+      "journal": "Nature",
+      "year": "2009",
+      "author": "TA Manolio",
+      "unstructured": "Manolio, T. A. et al. Finding the missing heritability of complex diseases. Nature 461, 747\u2013753 (2009)."
+    },
+    {
+      "key": "1879_CR48",
+      "doi": "10.1101/588020",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Wainschtein, P. et al. Recovery of trait heritability from whole genome sequence data. Preprint at bioRxiv https://doi.org/10.1101/588020 (2019)."
+    },
+    {
+      "key": "1879_CR49",
+      "doi": "10.1038/ng.2915",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2014",
+      "author": "J Flannick",
+      "unstructured": "Flannick, J. et al. Loss-of-function mutations in SLC30A8 protect against type 2 diabetes. Nat. Genet. 46, 357\u2013363 (2014)."
+    },
+    {
+      "key": "1879_CR50",
+      "doi": "10.1038/nature13425",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "I Moltke",
+      "unstructured": "Moltke, I. et al. A common Greenlandic TBC1D4 variant confers muscle insulin resistance and type 2 diabetes. Nature 512, 190\u2013193 (2014)."
+    },
+    {
+      "key": "1879_CR51",
+      "doi": "10.1056/nejmoa1508419",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2016",
+      "author": "P Nioi",
+      "unstructured": "Nioi, P. et al. Variant ASGR1 associated with a reduced risk of coronary artery disease. N. Engl. J. Med. 374, 2131\u20132141 (2016)."
+    },
+    {
+      "key": "1879_CR52",
+      "doi": "10.1126/science.1161524",
+      "title": "",
+      "journal": "Science",
+      "year": "2008",
+      "author": "TI Pollin",
+      "unstructured": "Pollin, T. I. et al. A null mutation in human APOC3 confers a favorable plasma lipid profile and apparent cardioprotection. Science 322, 1702\u20131705 (2008)."
+    },
+    {
+      "key": "1879_CR53",
+      "doi": "10.1126/science.aac8624",
+      "title": "",
+      "journal": "Science",
+      "year": "2016",
+      "author": "VM Narasimhan",
+      "unstructured": "Narasimhan, V. M. et al. Health and population effects of rare gene knockouts in adult humans with related parents. Science 352, 474\u2013477 (2016). A powerful illustration of the insights that can be gained from the study of individuals who are homozygous carriers of null alleles in genes of biomedical interest."
+    },
+    {
+      "key": "1879_CR54",
+      "doi": "10.1038/nature22034",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "D Saleheen",
+      "unstructured": "Saleheen, D. et al. Human knockouts and phenotypic analysis in a cohort with a high rate of consanguinity. Nature 544, 235\u2013239 (2017)."
+    },
+    {
+      "key": "1879_CR55",
+      "doi": "10.1038/s41588-019-0379-x",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2019",
+      "author": "AR Martin",
+      "unstructured": "Martin, A. R. et al. Clinical use of current polygenic risk scores may exacerbate health disparities. Nat. Genet. 51, 584\u2013591 (2019). An elegant distillation of the ways in which the historical focus of genetic discovery among populations of European descent has adverse consequences for both discovery and translation."
+    },
+    {
+      "key": "1879_CR56",
+      "doi": "10.1038/s41588-018-0101-4",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "J Zeng",
+      "unstructured": "Zeng, J. et al. Signatures of negative selection in the genetic architecture of human complex traits. Nat. Genet. 50, 746\u2013753 (2018)."
+    },
+    {
+      "key": "1879_CR57",
+      "doi": "10.1126/science.1193032",
+      "title": "",
+      "journal": "Science",
+      "year": "2010",
+      "author": "G Genovese",
+      "unstructured": "Genovese, G. et al. Association of trypanolytic ApoL1 variants with kidney disease in African Americans. Science 329, 841\u2013845 (2010)."
+    },
+    {
+      "key": "1879_CR58",
+      "doi": "10.1126/science.164.3881.839",
+      "title": "",
+      "journal": "Science",
+      "year": "1969",
+      "author": "L Luzzatto",
+      "unstructured": "Luzzatto, L., Usanga, F. A. & Reddy, S. Glucose-6-phosphate dehydrogenase deficient red cells: resistance to infection by malarial parasites. Science 164, 839\u2013842 (1969)."
+    },
+    {
+      "key": "1879_CR59",
+      "doi": "10.1038/s41586-019-1310-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "GL Wojcik",
+      "unstructured": "Wojcik, G. L. et al. Genetic analyses of diverse populations improves discovery for complex traits. Nature 570, 514\u2013518 (2019)."
+    },
+    {
+      "key": "1879_CR60",
+      "doi": "10.1038/nature13835",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "KK Farh",
+      "unstructured": "Farh, K. K. et al. Genetic and epigenetic fine mapping of causal autoimmune disease variants. Nature 518, 337\u2013343 (2015). An early demonstration of the value of overlapping genome-wide association data with tissue-specific regulatory maps to define the cell-types and tissues likely to be driving disease pathology."
+    },
+    {
+      "key": "1879_CR61",
+      "doi": "10.1016/j.ajhg.2018.08.017",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2018",
+      "author": "MK Freund",
+      "unstructured": "Freund, M. K. et al. Phenotype-specific enrichment of Mendelian disorder genes near GWAS regions across 62 complex traits. Am. J. Hum. Genet. 103, 535\u2013552 (2018)."
+    },
+    {
+      "key": "1879_CR62",
+      "doi": "10.1016/j.cell.2017.05.038",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "EA Boyle",
+      "unstructured": "Boyle, E. A., Li, Y. I. & Pritchard, J. K. An expanded view of complex traits: from polygenic to omnigenic. Cell 169, 1177\u20131186 (2017)."
+    },
+    {
+      "key": "1879_CR63",
+      "doi": "10.1038/ng.3760",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2017",
+      "author": "KM de Lange",
+      "unstructured": "de Lange, K. M. et al. Genome-wide association study implicates immune activation of multiple integrin genes in inflammatory bowel disease. Nat. Genet. 49, 256\u2013261 (2017)."
+    },
+    {
+      "key": "1879_CR64",
+      "doi": "10.1038/nature16549",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "A Sekar",
+      "unstructured": "Sekar, A. et al. Schizophrenia risk from complex variation of complement component 4. Nature 530, 177\u2013183 (2016)."
+    },
+    {
+      "key": "1879_CR65",
+      "doi": "10.1038/nature11582",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "L Jostins",
+      "unstructured": "Jostins, L. et al. Host\u2013microbe interactions have shaped the genetic architecture of inflammatory bowel disease. Nature 491, 119\u2013124 (2012)."
+    },
+    {
+      "key": "1879_CR66",
+      "doi": "10.7554/elife.43657",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "TG Richardson",
+      "unstructured": "Richardson, T. G., Harrison, S., Hemani, G. & Davey Smith, G. An atlas of polygenic risk score associations to highlight putative causal relationships across the human phenome. eLife 8, e43657 (2019)."
+    },
+    {
+      "key": "1879_CR67",
+      "doi": "10.1126/scitranslmed.aag1974",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2016",
+      "author": "CA Dendrou",
+      "unstructured": "Dendrou, C. A. et al. Resolving TYK2 locus genotype-to-phenotype differences in autoimmunity. Sci. Transl. Med. 8, 363ra149 (2016)."
+    },
+    {
+      "key": "1879_CR68",
+      "doi": "10.1016/s0140-6736(12)60312-2",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2012",
+      "author": "BF Voight",
+      "unstructured": "Voight, B. F. et al. Plasma HDL cholesterol and risk of myocardial infarction: a Mendelian randomisation study. Lancet 380, 572\u2013580 (2012)."
+    },
+    {
+      "key": "1879_CR69",
+      "doi": "10.1038/s41588-018-0183-z",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "AV Khera",
+      "unstructured": "Khera, A. V. et al. Genome-wide polygenic scores for common diseases identify individuals with risk equivalent to monogenic mutations. Nat. Genet. 50, 1219\u20131224 (2018). This paper used large-scale genetic data to demonstrate the clinical potential of the polygenic scores that can be constructed for many common diseases, emphasizing that, in some situations, the lifetime risk of disease for those with the highest scores approaches that of established monogenic disease."
+    },
+    {
+      "key": "1879_CR70",
+      "doi": "10.1016/s0140-6736(13)61752-3",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2014",
+      "author": "SS Mahmood",
+      "unstructured": "Mahmood, S. S., Levy, D., Vasan, R. S. & Wang, T. J. The Framingham Heart Study and the epidemiology of cardiovascular disease: a historical perspective. Lancet 383, 999\u20131008 (2014)."
+    },
+    {
+      "key": "1879_CR71",
+      "doi": "10.1038/nature06007",
+      "title": "",
+      "journal": "Nature",
+      "year": "2007",
+      "author": "DF Gudbjartsson",
+      "unstructured": "Gudbjartsson, D. F. et al. Variants conferring risk of atrial fibrillation on chromosome 4q25. Nature 448, 353\u2013357 (2007)."
+    },
+    {
+      "key": "1879_CR72",
+      "doi": "10.1038/nature06846",
+      "title": "",
+      "journal": "Nature",
+      "year": "2008",
+      "author": "TE Thorgeirsson",
+      "unstructured": "Thorgeirsson, T. E. et al. A variant associated with nicotine dependence, lung cancer and peripheral arterial disease. Nature 452, 638\u2013642 (2008)."
+    },
+    {
+      "key": "1879_CR73",
+      "doi": "10.1056/nejmp1500523",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2015",
+      "author": "FS Collins",
+      "unstructured": "Collins, F. S. & Varmus, H. A new initiative on precision medicine. N. Engl. J. Med. 372, 793\u2013795 (2015)."
+    },
+    {
+      "key": "1879_CR74",
+      "doi": "10.1038/s41586-018-0579-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "C Bycroft",
+      "unstructured": "Bycroft, C. et al. The UK Biobank resource with deep phenotyping and genomic data. Nature 562, 203\u2013209 (2018)."
+    },
+    {
+      "key": "1879_CR75",
+      "doi": "10.1016/j.je.2016.12.005",
+      "title": "",
+      "journal": "J. Epidemiol.",
+      "year": "2017",
+      "author": "A Nagai",
+      "unstructured": "Nagai, A. et al. Overview of the BioBank Japan Project: study design and profile. J. Epidemiol. 27, S2\u2013S8 (2017)."
+    },
+    {
+      "key": "1879_CR76",
+      "doi": "10.1093/ije/dyr120",
+      "title": "",
+      "journal": "Int. J. Epidemiol.",
+      "year": "2011",
+      "author": "Z Chen",
+      "unstructured": "Chen, Z. et al. China Kadoorie Biobank of 0.5 million people: survey methods, baseline characteristics and long-term follow-up. Int. J. Epidemiol. 40, 1652\u20131666 (2011)."
+    },
+    {
+      "key": "1879_CR77",
+      "doi": "10.1038/nrg2999",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2011",
+      "author": "IS Kohane",
+      "unstructured": "Kohane, I. S. Using electronic health records to drive discovery in disease genomics. Nat. Rev. Genet. 12, 417\u2013428 (2011)."
+    },
+    {
+      "key": "1879_CR78",
+      "doi": "10.1016/j.cell.2019.02.039",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "NS Abul-Husn",
+      "unstructured": "Abul-Husn, N. S. & Kenny, E. E. Personalized medicine and the power of electronic health records. Cell 177, 58\u201369 (2019)."
+    },
+    {
+      "key": "1879_CR79",
+      "doi": "10.1038/s41586-018-0175-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "BB Sun",
+      "unstructured": "Sun, B. B. et al. Genomic atlas of the human plasma proteome. Nature 558, 73\u201379 (2018)."
+    },
+    {
+      "key": "1879_CR80",
+      "doi": "10.1038/ng.2982",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2014",
+      "author": "SY Shin",
+      "unstructured": "Shin, S. Y. et al. An atlas of genetic influences on human blood metabolites. Nat. Genet. 46, 543\u2013550 (2014)."
+    },
+    {
+      "key": "1879_CR81",
+      "doi": "10.1093/hmg/ddz070",
+      "title": "",
+      "journal": "Hum. Mol. Genet.",
+      "year": "2019",
+      "author": "YJ Sung",
+      "unstructured": "Sung, Y. J. et al. A multi-ancestry genome-wide study incorporating gene-smoking interactions identifies multiple new loci for pulse pressure and mean arterial pressure. Hum. Mol. Genet. 28, ddz070 (2019)."
+    },
+    {
+      "key": "1879_CR82",
+      "doi": "",
+      "title": "",
+      "journal": "Curr. Protoc. Hum. Genet.",
+      "year": "2019",
+      "author": "SA Pendergrass",
+      "unstructured": "Pendergrass, S. A. & Crawford, D. C. Using electronic health records to generate phenotypes for research. Curr. Protoc. Hum. Genet. 100, e80 (2019)."
+    },
+    {
+      "key": "1879_CR83",
+      "doi": "10.1093/bioinformatics/btq126",
+      "title": "",
+      "journal": "Bioinformatics",
+      "year": "2010",
+      "author": "JC Denny",
+      "unstructured": "Denny, J. C. et al. PheWAS: demonstrating the feasibility of a phenome-wide scan to discover gene\u2013disease associations. Bioinformatics 26, 1205\u20131210 (2010)."
+    },
+    {
+      "key": "1879_CR84",
+      "doi": "10.1101/657734",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Liu, Z. et al. Mendelian randomization analysis dissects the relationship between NAFLD, T2D and obesity and provides implications for precision medicine. Preprint at bioRxiv https://doi.org/10.1101/657734 (2019)."
+    },
+    {
+      "key": "1879_CR85",
+      "doi": "10.1371/journal.pgen.1002254",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2011",
+      "author": "C Cotsapas",
+      "unstructured": "Cotsapas, C. et al. Pervasive sharing of genetic effects in autoimmune disease. PLoS Genet. 7, e1002254 (2011)."
+    },
+    {
+      "key": "1879_CR86",
+      "doi": "10.1038/s41588-018-0047-6",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "M Kanai",
+      "unstructured": "Kanai, M. et al. Genetic analysis of quantitative traits in the Japanese population links cell types to complex human diseases. Nat. Genet. 50, 390\u2013400 (2018)."
+    },
+    {
+      "key": "1879_CR87",
+      "doi": "10.1038/ng2062",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2007",
+      "author": "J Gudmundsson",
+      "unstructured": "Gudmundsson, J. et al. Two variants on chromosome 17 confer prostate cancer risk, and the one in TCF2 protects against type 2 diabetes. Nat. Genet. 39, 977\u2013983 (2007)."
+    },
+    {
+      "key": "1879_CR88",
+      "doi": "10.1056/nejmoa1712191",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2018",
+      "author": "NS Abul-Husn",
+      "unstructured": "Abul-Husn, N. S. et al. A protein-truncating HSD17B13 variant and protection from chronic liver disease. N. Engl. J. Med. 378, 1096\u20131106 (2018)."
+    },
+    {
+      "key": "1879_CR89",
+      "doi": "10.1038/nrd4051",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2013",
+      "author": "RM Plenge",
+      "unstructured": "Plenge, R. M., Scolnick, E. M. & Altshuler, D. Validating therapeutic targets through human genetics. Nat. Rev. Drug Discov. 12, 581\u2013594 (2013)."
+    },
+    {
+      "key": "1879_CR90",
+      "doi": "10.1038/s41588-018-0171-3",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "JB Nielsen",
+      "unstructured": "Nielsen, J. B. et al. Biobank-driven genomic discovery yields new insight into atrial fibrillation biology. Nat. Genet. 50, 1234\u20131239 (2018)."
+    },
+    {
+      "key": "1879_CR91",
+      "doi": "10.1038/s41586-019-1231-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "J Flannick",
+      "unstructured": "Flannick, J. et al. Exome sequencing of 20,791\u00a0cases of type 2 diabetes and 24,440\u00a0controls. Nature 570, 71\u201376 (2019)."
+    },
+    {
+      "key": "1879_CR92",
+      "doi": "10.1101/572347",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Van Hout, C. V. et al. Whole exome sequencing and characterization of coding variation in 49,960 individuals in the UK Biobank. Preprint at bioRxiv https://doi.org/10.1101/572347 (2019)."
+    },
+    {
+      "key": "1879_CR93",
+      "doi": "10.1161/circulationaha.118.035658",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2019",
+      "author": "AV Khera",
+      "unstructured": "Khera, A. V. et al. Whole-genome sequencing to characterize monogenic and polygenic contributions in patients hospitalized with early-onset myocardial infarction. Circulation 139, 1593\u20131602 (2019)."
+    },
+    {
+      "key": "1879_CR94",
+      "doi": "10.1038/s41588-017-0022-7",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "N Grarup",
+      "unstructured": "Grarup, N. et al. Loss-of-function variants in ADCY3 increase risk of obesity and type 2 diabetes. Nat. Genet. 50, 172\u2013174 (2018)."
+    },
+    {
+      "key": "1879_CR95",
+      "doi": "10.1056/nejmoa054013",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2006",
+      "author": "JC Cohen",
+      "unstructured": "Cohen, J. C., Boerwinkle, E., Mosley, T. H. Jr & Hobbs, H. H. Sequence variations in PCSK9, low LDL, and protection against coronary heart disease. N. Engl. J. Med. 354, 1264\u20131272 (2006)."
+    },
+    {
+      "key": "1879_CR96",
+      "doi": "10.1038/ng.952",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2011",
+      "author": "MA Rivas",
+      "unstructured": "Rivas, M. A. et al. Deep resequencing of GWAS loci identifies independent rare variants associated with inflammatory bowel disease. Nat. Genet. 43, 1066\u20131073 (2011)."
+    },
+    {
+      "key": "1879_CR97",
+      "doi": "10.1016/j.ajhg.2015.06.009",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2015",
+      "author": "JX Chong",
+      "unstructured": "Chong, J. X. et al. The genetic basis of Mendelian phenotypes: discoveries, challenges, and opportunities. Am. J. Hum. Genet. 97, 199\u2013215 (2015)."
+    },
+    {
+      "key": "1879_CR98",
+      "doi": "10.1016/j.cell.2015.01.036",
+      "title": "",
+      "journal": "Cell",
+      "year": "2015",
+      "author": "JL Goldstein",
+      "unstructured": "Goldstein, J. L. & Brown, M. S. A century of cholesterol and coronaries: from plaques to genes to statins. Cell 161, 161\u2013172 (2015)."
+    },
+    {
+      "key": "1879_CR99",
+      "doi": "10.1093/hmg/ddl060",
+      "title": "",
+      "journal": "Hum. Mol. Genet.",
+      "year": "2006",
+      "author": "L Peltonen",
+      "unstructured": "Peltonen, L., Perola, M., Naukkarinen, J. & Palotie, A. Lessons from studying monogenic disease for common disease. Hum. Mol. Genet. 15, R67\u2013R74 (2006)."
+    },
+    {
+      "key": "1879_CR100",
+      "doi": "10.1038/ng.3406",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2015",
+      "author": "B Bulik-Sullivan",
+      "unstructured": "Bulik-Sullivan, B. et al. An atlas of genetic correlations across human diseases and traits. Nat. Genet. 47, 1236\u20131241 (2015)."
+    },
+    {
+      "key": "1879_CR101",
+      "doi": "10.1038/nature09266",
+      "title": "",
+      "journal": "Nature",
+      "year": "2010",
+      "author": "K Musunuru",
+      "unstructured": "Musunuru, K. et al. From noncoding variant to phenotype via SORT1 at the 1p13 cholesterol locus. Nature 466, 714\u2013719 (2010). Widely accepted as the first paper to describe the detailed mechanistic dissection of a complex trait locus and still one of relatively few examples of success in this endeavour."
+    },
+    {
+      "key": "1879_CR102",
+      "doi": "10.1056/nejmoa1502214",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2015",
+      "author": "M Claussnitzer",
+      "unstructured": "Claussnitzer, M. et al. FTO obesity variant circuitry and adipocyte browning in humans. N. Engl. J. Med. 373, 895\u2013907 (2015)."
+    },
+    {
+      "key": "1879_CR103",
+      "doi": "10.1038/nature13138",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "S Smemo",
+      "unstructured": "Smemo, S. et al. Obesity-associated variants within FTO form long-range functional connections with IRX3. Nature 507, 371\u2013375 (2014)."
+    },
+    {
+      "key": "1879_CR104",
+      "doi": "10.1016/j.cell.2017.06.049",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "RM Gupta",
+      "unstructured": "Gupta, R. M. et al. A genetic variant associated with five vascular diseases is a distal regulator of endothelin-1 gene expression. Cell 170, 522\u2013533 (2017)."
+    },
+    {
+      "key": "1879_CR105",
+      "doi": "10.1038/s41588-018-0088-x",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "KS Small",
+      "unstructured": "Small, K. S. et al. Regulatory variants at KLF14 influence type 2 diabetes risk via a female-specific effect on adipocyte size and body composition. Nat. Genet. 50, 572\u2013580 (2018)."
+    },
+    {
+      "key": "1879_CR106",
+      "doi": "10.1016/j.neuron.2018.06.011",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2018",
+      "author": "YT Lin",
+      "unstructured": "Lin, Y. T. et al. APOE4 causes widespread molecular and cellular alterations associated with Alzheimer\u2019s disease phenotypes in human iPSC-derived brain cell types. Neuron 98, 1294 (2018)."
+    },
+    {
+      "key": "1879_CR107",
+      "doi": "10.1038/nature11247",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "ENCODE Project Consortium",
+      "unstructured": "ENCODE Project Consortium. An integrated encyclopedia of DNA elements in the human genome. Nature 489, 57\u201374 (2012)."
+    },
+    {
+      "key": "1879_CR108",
+      "doi": "10.1038/nature14248",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "Roadmap Epigenomics Consortium",
+      "unstructured": "Roadmap Epigenomics Consortium et al. Integrative analysis of 111 reference human epigenomes. Nature 518, 317\u2013330 (2015). The flagship paper from the NIH Roadmap Epigenomics Consortium, describing a detailed analysis of the epigenomic profiles of more than 100 human cell types and characterizing how these regulatory patterns relate to gene regulation, cellular differentiation and human disease."
+    },
+    {
+      "key": "1879_CR109",
+      "doi": "10.1186/s13073-018-0523-8",
+      "title": "",
+      "journal": "Genome Med.",
+      "year": "2018",
+      "author": "KE Tansey",
+      "unstructured": "Tansey, K. E., Cameron, D. & Hill, M. J. Genetic risk for Alzheimer\u2019s disease is concentrated in specific macrophage and microglial transcriptional networks. Genome Med. 10, 14 (2018)."
+    },
+    {
+      "key": "1879_CR110",
+      "doi": "10.1038/s41588-018-0154-4",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "ER Gamazon",
+      "unstructured": "Gamazon, E. R. et al. Using an atlas of gene regulation across 44 human tissues to inform complex disease- and trait-associated variation. Nat. Genet. 50, 956\u2013967 (2018)."
+    },
+    {
+      "key": "1879_CR111",
+      "doi": "10.1038/ng.3981",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2017",
+      "author": "H Ongen",
+      "unstructured": "Ongen, H. et al. Estimating the causal tissues for complex traits and diseases. Nat. Genet. 49, 1676\u20131683 (2017)."
+    },
+    {
+      "key": "1879_CR112",
+      "doi": "10.1038/nature24277",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "GTEx Consortium",
+      "unstructured": "GTEx Consortium. Genetic effects on gene expression across human tissues. Nature 550, 204\u2013213 (2017). One of several papers describing the results obtained from the Genotype-Tissue Expression (GTEx) project, which used RNA-sequence data from more than 40 human tissues in several hundred individuals to explore the relationship between DNA sequence variation and tissue-specific expression."
+    },
+    {
+      "key": "1879_CR113",
+      "doi": "10.1101/693671",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Chiou, J. et al. Single cell chromatin accessibility reveals pancreatic islet cell type- and state-specific regulatory programs of diabetes risk. Preprint at bioRxiv https://doi.org/10.1101/693671 (2019)."
+    },
+    {
+      "key": "1879_CR114",
+      "doi": "10.1038/s41586-019-1629-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "HuBMAP Consortium",
+      "unstructured": "HuBMAP Consortium. The human body at cellular resolution: the NIH Human Biomolecular Atlas Program. Nature 574, 187\u2013192 (2019)."
+    },
+    {
+      "key": "1879_CR115",
+      "doi": "10.7554/elife.27041",
+      "title": "",
+      "journal": "eLife",
+      "year": "2017",
+      "author": "A Regev",
+      "unstructured": "Regev, A. et al. The Human Cell Atlas. eLife 6, e27041 (2017)."
+    },
+    {
+      "key": "1879_CR116",
+      "doi": "10.1111/j.1749-6632.2011.06311.x",
+      "title": "",
+      "journal": "Ann. NY Acad. Sci.",
+      "year": "2011",
+      "author": "KC Lloyd",
+      "unstructured": "Lloyd, K. C. A knockout mouse resource for the biomedical research community. Ann. NY Acad. Sci. 1245, 24\u201326 (2011)."
+    },
+    {
+      "key": "1879_CR117",
+      "doi": "10.1038/s41588-018-0081-4",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "HK Finucane",
+      "unstructured": "Finucane, H. K. et al. Heritability enrichment of specifically expressed genes identifies disease-relevant tissues and cell types. Nat. Genet. 50, 621\u2013629 (2018)."
+    },
+    {
+      "key": "1879_CR118",
+      "doi": "10.1126/science.aat8266",
+      "title": "",
+      "journal": "Science",
+      "year": "2019",
+      "author": "O Delaneau",
+      "unstructured": "Delaneau, O. et al. Chromatin three-dimensional interactions mediate genetic effects on gene expression. Science 364, eaat8266 (2019)."
+    },
+    {
+      "key": "1879_CR119",
+      "doi": "10.1038/nmeth.3547",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2015",
+      "author": "J Zhou",
+      "unstructured": "Zhou, J. & Troyanskaya, O. G. Predicting effects of noncoding variants with deep learning-based sequence model. Nat. Methods 12, 931\u2013934 (2015)."
+    },
+    {
+      "key": "1879_CR120",
+      "doi": "10.1101/gr.200535.115",
+      "title": "",
+      "journal": "Genome Res.",
+      "year": "2016",
+      "author": "DR Kelley",
+      "unstructured": "Kelley, D. R., Snoek, J. & Rinn, J. L. Basset: learning the regulatory code of the accessible genome with deep convolutional neural networks. Genome Res. 26, 990\u2013999 (2016)."
+    },
+    {
+      "key": "1879_CR121",
+      "doi": "10.1038/nbt.1589",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2009",
+      "author": "RP Patwardhan",
+      "unstructured": "Patwardhan, R. P. et al. High-resolution analysis of DNA regulatory elements by synthetic saturation mutagenesis. Nat. Biotechnol. 27, 1173\u20131175 (2009)."
+    },
+    {
+      "key": "1879_CR122",
+      "doi": "10.1038/nbt.2137",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2012",
+      "author": "A Melnikov",
+      "unstructured": "Melnikov, A. et al. Systematic dissection and optimization of inducible enhancers in human cells using a massively parallel reporter assay. Nat. Biotechnol. 30, 271\u2013277 (2012)."
+    },
+    {
+      "key": "1879_CR123",
+      "doi": "10.1038/s41467-018-07746-1",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "X Wang",
+      "unstructured": "Wang, X. et al. High-resolution genome-wide functional dissection of transcriptional regulatory regions and nucleotides in human. Nat. Commun. 9, 5380 (2018)."
+    },
+    {
+      "key": "1879_CR124",
+      "doi": "10.1073/pnas.1711023115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "C Potting",
+      "unstructured": "Potting, C. et al. Genome-wide CRISPR screen for PARKIN regulators reveals transcriptional repression as a determinant of mitophagy. Proc. Natl Acad. Sci. USA 115, E180\u2013E189 (2018)."
+    },
+    {
+      "key": "1879_CR125",
+      "doi": "10.1016/j.cell.2018.11.029",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "M Gasperini",
+      "unstructured": "Gasperini, M. et al. A genome-wide framework for mapping gene regulation via cellular genetic screens. Cell 176, 377\u2013390 (2019)."
+    },
+    {
+      "key": "1879_CR126",
+      "doi": "10.1038/s41588-019-0538-0",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2019",
+      "author": "CP Fulco",
+      "unstructured": "Fulco, C. P. et al. Activity-by-contact model of enhancer-promoter regulation from thousands of CRISPR perturbations. Nat. Genet. 51, 1664\u20131669 (2019)."
+    },
+    {
+      "key": "1879_CR127",
+      "doi": "10.1038/nature17946",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "AC Komor",
+      "unstructured": "Komor, A. C., Kim, Y. B., Packer, M. S., Zuris, J. A. & Liu, D. R. Programmable editing of a target base in genomic DNA without double-stranded DNA cleavage. Nature 533, 420\u2013424 (2016)."
+    },
+    {
+      "key": "1879_CR128",
+      "doi": "10.1016/j.cell.2019.09.016",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "D Feldman",
+      "unstructured": "Feldman, D. et al. Optical pooled screens in human cells. Cell 179, 787\u2013799 (2019)."
+    },
+    {
+      "key": "1879_CR129",
+      "doi": "10.1016/j.cell.2016.11.038",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "A Dixit",
+      "unstructured": "Dixit, A. et al. Perturb-Seq: dissecting molecular circuits with scalable single-cell RNA profiling of pooled genetic screens. Cell 167, 1853\u20131866 (2016)."
+    },
+    {
+      "key": "1879_CR130",
+      "doi": "10.1038/nmeth.4177",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2017",
+      "author": "P Datlinger",
+      "unstructured": "Datlinger, P. et al. Pooled CRISPR screening with single-cell transcriptome readout. Nat. Methods 14, 297\u2013301 (2017)."
+    },
+    {
+      "key": "1879_CR131",
+      "doi": "10.1016/j.cell.2018.03.033",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "L Ding",
+      "unstructured": "Ding, L. et al. Perspective on oncogenic processes at the end of the beginning of cancer genomics. Cell 173, 305\u2013320 (2018)."
+    },
+    {
+      "key": "1879_CR132",
+      "doi": "10.1158/1535-7163.mct-17-0597",
+      "title": "",
+      "journal": "Mol. Cancer Ther.",
+      "year": "2017",
+      "author": "YK Chae",
+      "unstructured": "Chae, Y. K. et al. Path toward precision oncology: review of targeted therapy studies and tools to aid in defining \u201cactionability\u201d of a molecular lesion and patient management support. Mol. Cancer Ther. 16, 2645\u20132655 (2017)."
+    },
+    {
+      "key": "1879_CR133",
+      "doi": "10.1177/0194599815591156",
+      "title": "",
+      "journal": "Otolaryngol. Head Neck Surg.",
+      "year": "2015",
+      "author": "AE Shearer",
+      "unstructured": "Shearer, A. E. & Smith, R. J. Massively parallel sequencing for genetic diagnosis of hearing loss: the new standard of care. Otolaryngol. Head Neck Surg. 153, 175\u2013182 (2015)."
+    },
+    {
+      "key": "1879_CR134",
+      "doi": "10.1001/jama.2014.14601",
+      "title": "",
+      "journal": "J. Am. Med. Assoc.",
+      "year": "2014",
+      "author": "Y Yang",
+      "unstructured": "Yang, Y. et al. Molecular findings among patients referred for clinical whole-exome sequencing. J. Am. Med. Assoc. 312, 1870\u20131879 (2014)."
+    },
+    {
+      "key": "1879_CR135",
+      "doi": "10.1038/s41436-018-0055-z",
+      "title": "",
+      "journal": "Genet. Med.",
+      "year": "2019",
+      "author": "JM Friedman",
+      "unstructured": "Friedman, J. M. et al. Genome-wide sequencing in acutely ill infants: genomic medicine\u2019s critical application? Genet. Med. 21, 498\u2013504 (2019)."
+    },
+    {
+      "key": "1879_CR136",
+      "doi": "10.1126/scitranslmed.aat6177",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2019",
+      "author": "MM Clark",
+      "unstructured": "Clark, M. M. et al. Diagnosis of genetic diseases in seriously ill children by rapid whole-genome sequencing and automated phenotyping and interpretation. Sci. Transl. Med. 11, eaat6177 (2019)."
+    },
+    {
+      "key": "1879_CR137",
+      "doi": "10.1186/s13073-017-0412-6",
+      "title": "",
+      "journal": "Genome Med.",
+      "year": "2017",
+      "author": "MK Eldomery",
+      "unstructured": "Eldomery, M. K. et al. Lessons learned from additional research analyses of unsolved clinical exome cases. Genome Med. 9, 26 (2017)."
+    },
+    {
+      "key": "1879_CR138",
+      "doi": "10.1016/j.cell.2019.02.040",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "KM Boycott",
+      "unstructured": "Boycott, K. M. et al. A diagnosis for all rare genetic diseases: the horizon and the next frontiers. Cell 177, 32\u201337 (2019)."
+    },
+    {
+      "key": "1879_CR139",
+      "doi": "10.1016/j.cell.2018.08.016",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "S Liu",
+      "unstructured": "Liu, S. et al. Genomic analyses from non-invasive prenatal testing reveal genetic associations, patterns of viral infections, and Chinese population history. Cell 175, 347\u2013359 (2018)."
+    },
+    {
+      "key": "1879_CR140",
+      "doi": "10.1586/14737159.2015.973857",
+      "title": "",
+      "journal": "Expert Rev. Mol. Diagn.",
+      "year": "2015",
+      "author": "DT Thung",
+      "unstructured": "Thung, D. T., Beulen, L., Hehir-Kwa, J. & Faas, B. H. Implementation of whole genome massively parallel sequencing for noninvasive prenatal testing in laboratories. Expert Rev. Mol. Diagn. 15, 111\u2013124 (2015)."
+    },
+    {
+      "key": "1879_CR141",
+      "doi": "10.1097/ogx.0000000000000029",
+      "title": "",
+      "journal": "Obstet. Gynecol. Surv.",
+      "year": "2014",
+      "author": "JO Lo",
+      "unstructured": "Lo, J. O., Cori D, F., Norton, M. E. & Caughey, A. B. Noninvasive prenatal testing. Obstet. Gynecol. Surv. 69, 89\u201399 (2014)."
+    },
+    {
+      "key": "1879_CR142",
+      "doi": "10.1542/peds.2005-2633i",
+      "title": "",
+      "journal": "Pediatrics",
+      "year": "2006",
+      "author": "MS Watson",
+      "unstructured": "Watson, M. S. et al. Newborn screening: toward a uniform screening panel and system\u2014executive summary. Pediatrics 117, S296\u2013S307 (2006)."
+    },
+    {
+      "key": "1879_CR143",
+      "doi": "10.1038/gim.2017.32",
+      "title": "",
+      "journal": "Genet. Med.",
+      "year": "2017",
+      "author": "RJ Currier",
+      "unstructured": "Currier, R. J. et al. Genomic sequencing in cystic fibrosis newborn screening: what works best, two-tier predefined CFTR mutation panels or second-tier CFTR panel followed by third-tier sequencing? Genet. Med. 19, 1159\u20131163 (2017)."
+    },
+    {
+      "key": "1879_CR144",
+      "doi": "10.1352/2008.46:247-251",
+      "title": "",
+      "journal": "Intellect. Dev. Disabil.",
+      "year": "2008",
+      "author": "PE Bauer",
+      "unstructured": "Bauer, P. E. \u201cTell them it\u2019s not so bad\u201d: prenatal screening for Down syndrome and the bias toward abortion. Intellect. Dev. Disabil. 46, 247\u2013251 (2008)."
+    },
+    {
+      "key": "1879_CR145",
+      "doi": "10.1002/cpt.1048",
+      "title": "",
+      "journal": "Clin. Pharmacol. Ther.",
+      "year": "2018",
+      "author": "S Volpi",
+      "unstructured": "Volpi, S. et al. Research directions in the clinical implementation of pharmacogenomics: an overview of US Programs and Projects. Clin. Pharmacol. Ther. 103, 778\u2013786 (2018)."
+    },
+    {
+      "key": "1879_CR146",
+      "doi": "10.1038/nature08185",
+      "title": "",
+      "journal": "Nature",
+      "year": "2009",
+      "author": "International Schizophrenia Consortium",
+      "unstructured": "International Schizophrenia Consortium. Common polygenic variation contributes to risk of schizophrenia and bipolar disorder. Nature 460, 748\u2013752 (2009)."
+    },
+    {
+      "key": "1879_CR147",
+      "doi": "10.1093/hmg/ddp295",
+      "title": "",
+      "journal": "Hum. Mol. Genet.",
+      "year": "2009",
+      "author": "DM Evans",
+      "unstructured": "Evans, D. M., Visscher, P. M. & Wray, N. R. Harnessing the information contained within genome-wide association studies to improve individual prediction of complex disease risk. Hum. Mol. Genet. 18, 3525\u20133531 (2009)."
+    },
+    {
+      "key": "1879_CR148",
+      "doi": "10.1200/jco.18.01854",
+      "title": "",
+      "journal": "J. Clin. Oncol.",
+      "year": "2019",
+      "author": "AW Kurian",
+      "unstructured": "Kurian, A. W. et al. Genetic testing and results in a population-based cohort of breast cancer patients and ovarian cancer patients. J. Clin. Oncol. 37, 1305\u20131315 (2019)."
+    },
+    {
+      "key": "1879_CR149",
+      "doi": "10.1001/jamasurg.2018.2001",
+      "title": "",
+      "journal": "JAMA Surg.",
+      "year": "2018",
+      "author": "SJ Katz",
+      "unstructured": "Katz, S. J. et al. Association of attending surgeon with variation in the receipt of genetic testing after diagnosis of breast cancer. JAMA Surg. 153, 909\u2013916 (2018)."
+    },
+    {
+      "key": "1879_CR150",
+      "doi": "10.1007/s12687-017-0344-2",
+      "title": "",
+      "journal": "J. Community Genet.",
+      "year": "2018",
+      "author": "L Kalokairinou",
+      "unstructured": "Kalokairinou, L. et al. Legislation of direct-to-consumer genetic testing in Europe: a fragmented regulatory landscape. J. Community Genet. 9, 117\u2013132 (2018)."
+    },
+    {
+      "key": "1879_CR151",
+      "doi": "10.1016/j.mayocp.2017.11.001",
+      "title": "",
+      "journal": "Mayo Clin. Proc.",
+      "year": "2018",
+      "author": "MA Allyse",
+      "unstructured": "Allyse, M. A., Robinson, D. H., Ferber, M. J. & Sharp, R. R. Direct-to-Consumer Testing 2.0: emerging models of direct-to-consumer genetic testing. Mayo Clin. Proc. 93, 113\u2013120 (2018)."
+    },
+    {
+      "key": "1879_CR152",
+      "doi": "10.1016/j.ajhg.2018.12.015",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2019",
+      "author": "CF Wright",
+      "unstructured": "Wright, C. F. et al. Assessing the pathogenicity, penetrance, and expressivity of putative disease-causing variants in a population setting. Am. J. Hum. Genet. 104, 275\u2013286 (2019)."
+    },
+    {
+      "key": "1879_CR153",
+      "doi": "10.1038/s41436-019-0502-5",
+      "title": "",
+      "journal": "Genet. Med.",
+      "year": "2019",
+      "author": "ACMG Board of Directors",
+      "unstructured": "ACMG Board of Directors. The use of ACMG secondary findings recommendations for general population screening: a policy\u00a0statement of the American College of Medical Genetics and Genomics (ACMG). Genet. Med. 21, 1467\u20131468 (2019)."
+    },
+    {
+      "key": "1879_CR154",
+      "doi": "10.1038/nrclinonc.2016.191",
+      "title": "",
+      "journal": "Nat. Rev. Clin. Oncol.",
+      "year": "2017",
+      "author": "A George",
+      "unstructured": "George, A., Kaye, S. & Banerjee, S. Delivering widespread BRCA testing and PARP inhibition to patients with ovarian cancer. Nat. Rev. Clin. Oncol. 14, 284\u2013296 (2017)."
+    },
+    {
+      "key": "1879_CR155",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "CenterWatch. FDA Approved Drugs for Genetic Disease (CenterWatch); https://www.centerwatch.com/drug-information/fda-approved-drugs/therapeutic-area/34/genetic-disease"
+    },
+    {
+      "key": "1879_CR156",
+      "doi": "10.1038/s41591-019-0401-y",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2019",
+      "author": "Y Wu",
+      "unstructured": "Wu, Y. et al. Highly efficient therapeutic gene editing of human hematopoietic stem cells. Nat. Med. 25, 776\u2013783 (2019)."
+    },
+    {
+      "key": "1879_CR157",
+      "doi": "10.1056/nejmoa1701719",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2017",
+      "author": "S Jaiswal",
+      "unstructured": "Jaiswal, S. et al. Clonal hematopoiesis and risk of atherosclerotic cardiovascular disease. N. Engl. J. Med. 377, 111\u2013121 (2017)."
+    },
+    {
+      "key": "1879_CR158",
+      "doi": "10.1038/s41586-018-0718-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "MH Lee",
+      "unstructured": "Lee, M. H. et al. Somatic APP gene recombination in Alzheimer\u2019s disease and normal neurons. Nature 563, 639\u2013645 (2018)."
+    },
+    {
+      "key": "1879_CR159",
+      "doi": "10.1126/science.1251546",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "H3Africa Consortium",
+      "unstructured": "H3Africa Consortium. Enabling the genomic revolution in Africa. Science 344, 1346\u20131348 (2014)."
+    },
+    {
+      "key": "1879_CR160",
+      "doi": "10.1002/humu.23625",
+      "title": "",
+      "journal": "Hum. Mutat.",
+      "year": "2018",
+      "author": "L Dolman",
+      "unstructured": "Dolman, L. et al. ClinGen advancing genomic data-sharing standards as a GA4GH driver project. Hum. Mutat. 39, 1686\u20131689 (2018)."
+    },
+    {
+      "key": "1879_CR161",
+      "doi": "10.1126/science.1246949",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "BP Fairfax",
+      "unstructured": "Fairfax, B. P. et al. Innate immune activity conditions the effect of regulatory variants upon monocyte gene expression. Science 343, 1246949 (2014)."
+    },
+    {
+      "key": "1879_CR162",
+      "doi": "10.1038/ng.3314",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2015",
+      "author": "MR Nelson",
+      "unstructured": "Nelson, M. R. et al. The support of human genetic evidence for approved drug indications. Nat. Genet. 47, 856\u2013860 (2015). An influential paper that demonstrates that the probability of therapeutic success is enhanced (by around a factor of 2) for drug targets with supportive evidence from human genetics."
+    },
+    {
+      "key": "1879_CR163",
+      "doi": "10.1016/j.jalz.2018.08.005",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2019",
+      "author": "DP Veitch",
+      "unstructured": "Veitch, D. P. et al. Understanding disease progression and improving Alzheimer\u2019s disease clinical trials: recent highlights from the Alzheimer\u2019s Disease Neuroimaging Initiative. Alzheimers Dement. 15, 106\u2013152 (2019)."
+    },
+    {
+      "key": "1879_CR164",
+      "doi": "10.1038/nrg.2016.86",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2016",
+      "author": "EA Ashley",
+      "unstructured": "Ashley, E. A. Towards precision medicine. Nat. Rev. Genet. 17, 507\u2013522 (2016)."
+    },
+    {
+      "key": "1879_CR165",
+      "doi": "10.1126/science.aaf5094",
+      "title": "",
+      "journal": "Science",
+      "year": "2016",
+      "author": "PW Franks",
+      "unstructured": "Franks, P. W. & McCarthy, M. I. Exposing the exposures responsible for type 2 diabetes and obesity. Science 354, 69\u201373 (2016)."
+    },
+    {
+      "key": "1879_CR166",
+      "doi": "10.1038/s41588-019-0350-x",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2019",
+      "author": "S Sanna",
+      "unstructured": "Sanna, S. et al. Causal relationships among the gut microbiome, short-chain fatty acids and metabolic diseases. Nat. Genet. 51, 600\u2013605 (2019)."
+    },
+    {
+      "key": "1879_CR167",
+      "doi": "10.1371/journal.pmed.1002654",
+      "title": "",
+      "journal": "PLoS Med.",
+      "year": "2018",
+      "author": "MS Udler",
+      "unstructured": "Udler, M. S. et al. Type 2 diabetes genetic loci informed by multi-trait associations point to disease mechanisms and subtypes: a soft clustering analysis. PLoS Med. 15, e1002654 (2018)."
+    },
+    {
+      "key": "1879_CR168",
+      "doi": "10.1093/ije/14.1.32",
+      "title": "",
+      "journal": "Int. J. Epidemiol.",
+      "year": "1985",
+      "author": "G Rose",
+      "unstructured": "Rose, G. Sick individuals and sick populations. Int. J. Epidemiol. 14, 32\u201338 (1985)."
+    },
+    {
+      "key": "1879_CR169",
+      "doi": "10.1038/nrg.2017.89",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2018",
+      "author": "LA Hindorff",
+      "unstructured": "Hindorff, L. A. et al. Prioritizing diversity in human genomics research. Nat. Rev. Genet. 19, 175\u2013185 (2018)."
+    },
+    {
+      "key": "1879_CR170",
+      "doi": "10.1038/nrg3978",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2015",
+      "author": "A Wittrup",
+      "unstructured": "Wittrup, A. & Lieberman, J. Knocking down disease: a progress report on siRNA therapeutics. Nat. Rev. Genet. 16, 543\u2013552 (2015)."
+    },
+    {
+      "key": "1879_CR171",
+      "doi": "10.1056/nejmoa1708566",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2017",
+      "author": "SJ Schuster",
+      "unstructured": "Schuster, S. J. et al. Chimeric antigen receptor T cells in refractory B-cell lymphomas. N. Engl. J. Med. 377, 2545\u20132554 (2017)."
+    },
+    {
+      "key": "1879_CR172",
+      "doi": "10.1161/circresaha.115.304351",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2014",
+      "author": "Q Ding",
+      "unstructured": "Ding, Q. et al. Permanent alteration of PCSK9 with in vivo CRISPR\u2013Cas9 genome editing. Circ. Res. 115, 488\u2013492 (2014)."
+    },
+    {
+      "key": "1879_CR173",
+      "doi": "10.1016/j.tig.2015.03.010",
+      "title": "",
+      "journal": "Trends Genet.",
+      "year": "2015",
+      "author": "VI Risca",
+      "unstructured": "Risca, V. I. & Greenleaf, W. J. Unraveling the 3D genome: genomics tools for multiscale exploration. Trends Genet. 31, 357\u2013372 (2015)."
+    }
+  ]
+}

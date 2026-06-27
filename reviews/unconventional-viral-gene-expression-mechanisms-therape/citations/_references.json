@@ -1,0 +1,1712 @@
+{
+  "article": {
+    "slug": "s41586-021-03511-5",
+    "doi": "10.1038/s41586-021-03511-5",
+    "title": "Unconventional viral gene expression mechanisms as therapeutic targets",
+    "url": "https://www.nature.com/articles/s41586-021-03511-5",
+    "abbrev": "unconventional-viral-gene-expression-mechanisms-therape",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/unconventional-viral-gene-expression-mechanisms-therape"
+  },
+  "meta": {
+    "title": "Unconventional viral gene expression mechanisms as therapeutic targets",
+    "authors": [
+      "Jessica Sook Yuin Ho",
+      "Zeyu Zhu",
+      "Ivan Marazzi"
+    ],
+    "published": [
+      2021,
+      5,
+      19
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-021-03511-5",
+    "n_references": 187,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "3511_CR1",
+      "doi": "10.1016/0092-8674(86)90762-2",
+      "title": "",
+      "journal": "Cell",
+      "year": "1986",
+      "author": "M Kozak",
+      "unstructured": "Kozak, M. Point mutations define a sequence flanking the AUG initiator codon that modulates translation by eukaryotic ribosomes. Cell 44, 283\u2013292 (1986)."
+    },
+    {
+      "key": "3511_CR2",
+      "doi": "10.1371/journal.pcbi.0030091",
+      "title": "",
+      "journal": "PLoS Comput. Biol.",
+      "year": "2007",
+      "author": "WY Chung",
+      "unstructured": "Chung, W. Y., Wadhawan, S., Szklarczyk, R., Pond, S. K. & Nekrutenko, A. A first look at ARFome: dual-coding genes in mammalian genomes. PLoS Comput. Biol. 3, e91 (2007)."
+    },
+    {
+      "key": "3511_CR3",
+      "doi": "10.1101/gr.133249.111",
+      "title": "",
+      "journal": "Genome Res.",
+      "year": "2012",
+      "author": "AM Michel",
+      "unstructured": "Michel, A. M. et al. Observation of dually decoded regions of the human genome using ribosome profiling data. Genome Res. 22, 2219\u20132229 (2012)."
+    },
+    {
+      "key": "3511_CR4",
+      "doi": "10.1093/ve/veaa009",
+      "title": "",
+      "journal": "Virus Evol.",
+      "year": "2020",
+      "author": "TE Schlub",
+      "unstructured": "Schlub, T. E. & Holmes, E. C. Properties and abundance of overlapping genes in viruses. Virus Evol. 6, veaa009 (2020)."
+    },
+    {
+      "key": "3511_CR5",
+      "doi": "10.1128/jvi.78.4.2082-2087.2004",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2004",
+      "author": "P Biswas",
+      "unstructured": "Biswas, P., Jiang, X., Pacchia, A. L., Dougherty, J. P. & Peltz, S. W. The human immunodeficiency virus type 1 ribosomal frameshifting site is an invariant sequence determinant and an important target for antiviral therapy. J. Virol. 78, 2082\u20132087 (2004)."
+    },
+    {
+      "key": "3511_CR6",
+      "doi": "10.1128/jvi.75.4.1834-1841.2001",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2001",
+      "author": "M Shehu-Xhilaga",
+      "unstructured": "Shehu-Xhilaga, M., Crowe, S. M. & Mak, J. Maintenance of the Gag/Gag-Pol ratio is important for human immunodeficiency virus type 1 RNA dimerization and viral infectivity. J. Virol. 75, 1834\u20131841 (2001)."
+    },
+    {
+      "key": "3511_CR7",
+      "doi": "10.1016/0092-8674(88)90031-1",
+      "title": "",
+      "journal": "Cell",
+      "year": "1988",
+      "author": "T Jacks",
+      "unstructured": "Jacks, T., Madhani, H. D., Masiarz, F. R. & Varmus, H. E. Signals for ribosomal frameshifting in the Rous sarcoma virus Gag-Pol region. Cell 55, 447\u2013458 (1988). This article reports the discovery of the frameshift site and stem-loop structure as requirements for PRFs in the synthesis of Gag\u2013Pol protein."
+    },
+    {
+      "key": "3511_CR8",
+      "doi": "10.1099/vir.0.021774-0",
+      "title": "",
+      "journal": "J. Gen. Virol.",
+      "year": "2010",
+      "author": "I van Knippenberg",
+      "unstructured": "van Knippenberg, I., Carlton-Smith, C. & Elliott, R. M. The N-terminus of Bunyamwera orthobunyavirus NSs protein is essential for interferon antagonism. J. Gen. Virol. 91, 2002\u20132006 (2010)."
+    },
+    {
+      "key": "3511_CR9",
+      "doi": "10.1371/journal.ppat.1002413",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2011",
+      "author": "N McFadden",
+      "unstructured": "McFadden, N. et al. Norovirus regulation of the innate immune response and apoptosis occurs via the product of the alternative open reading frame 4. PLoS Pathog. 7, e1002413 (2011)."
+    },
+    {
+      "key": "3511_CR10",
+      "doi": "10.1038/nrmicro1395",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2006",
+      "author": "HB Scholthof",
+      "unstructured": "Scholthof, H. B. The Tombusvirus-encoded P19: from irrelevance to elegance. Nat. Rev. Microbiol. 4, 405\u2013411 (2006)."
+    },
+    {
+      "key": "3511_CR11",
+      "doi": "10.1038/nm1201-1306",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2001",
+      "author": "W Chen",
+      "unstructured": "Chen, W. et al. A novel influenza A virus mitochondrial protein that induces cell death. Nat. Med. 7, 1306\u20131312 (2001)."
+    },
+    {
+      "key": "3511_CR12",
+      "doi": "10.1128/jvi.00595-09",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2009",
+      "author": "C Rancurel",
+      "unstructured": "Rancurel, C., Khosravi, M., Dunker, A. K., Romero, P. R. & Karlin, D. Overlapping genes produce proteins with unusual sequence properties and offer insight into de novo protein creation. J. Virol. 83, 10719\u201310736 (2009). This paper was one of the first to suggest that overprinting is a mechanism for de novo gene and protein creation, and uses viruses as a model system to characterize the properties and the phylogenetic distributions of such proteins."
+    },
+    {
+      "key": "3511_CR13",
+      "doi": "10.1186/1471-2164-14-117",
+      "title": "",
+      "journal": "BMC Genomics",
+      "year": "2013",
+      "author": "R Neme",
+      "unstructured": "Neme, R. & Tautz, D. Phylogenetic patterns of emergence of new genes support a model of frequent de novo evolution. BMC Genomics 14, 117 (2013)."
+    },
+    {
+      "key": "3511_CR14",
+      "doi": "10.1093/nar/gkx690",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2017",
+      "author": "C Penno",
+      "unstructured": "Penno, C., Kumari, R., Baranov, P. V., van Sinderen, D. & Atkins, J. F. Specific reverse transcriptase slippage at the HIV ribosomal frameshift sequence: potential implications for modulation of GagPol synthesis. Nucleic Acids Res. 45, 10156\u201310167 (2017)."
+    },
+    {
+      "key": "3511_CR15",
+      "doi": "10.1128/jvi.73.7.5568-5576.1999",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "1999",
+      "author": "S Hausmann",
+      "unstructured": "Hausmann, S., Garcin, D., Delenda, C. & Kolakofsky, D. The versatility of paramyxovirus RNA polymerase stuttering. J. Virol. 73, 5568\u20135576 (1999)."
+    },
+    {
+      "key": "3511_CR16",
+      "doi": "10.1128/jvi.75.15.6901-6913.2001",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2001",
+      "author": "JN Barr",
+      "unstructured": "Barr, J. N. & Wertz, G. W. Polymerase slippage at vesicular stomatitis virus gene junctions to generate poly(A) is regulated by the upstream 3\u2032-AUAC-5\u2032 tetranucleotide: implications for the mechanism of transcription termination. J. Virol. 75, 6901\u20136913 (2001)."
+    },
+    {
+      "key": "3511_CR17",
+      "doi": "10.1016/s0092-8674(88)91285-8",
+      "title": "",
+      "journal": "Cell",
+      "year": "1988",
+      "author": "SM Thomas",
+      "unstructured": "Thomas, S. M., Lamb, R. A. & Paterson, R. G. Two mRNAs that differ by two nontemplated nucleotides encode the amino coterminal proteins P and V of the paramyxovirus SV5. Cell 54, 891\u2013902 (1988). A seminal paper that first identified transcriptional slippage as a mechanism of generating multiple transcripts from one gene in paramyxovirus SV5."
+    },
+    {
+      "key": "3511_CR18",
+      "doi": "10.15252/embr.201540509",
+      "title": "",
+      "journal": "EMBO Rep.",
+      "year": "2015",
+      "author": "A Olspert",
+      "unstructured": "Olspert, A., Chung, B. Y., Atkins, J. F., Carr, J. P. & Firth, A. E. Transcriptional slippage in the positive-sense RNA virus family Potyviridae. EMBO Rep. 16, 995\u20131004 (2015)."
+    },
+    {
+      "key": "3511_CR19",
+      "doi": "10.1099/vir.0.83614-0",
+      "title": "",
+      "journal": "J. Gen. Virol.",
+      "year": "2008",
+      "author": "M Ratinier",
+      "unstructured": "Ratinier, M. et al. Transcriptional slippage prompts recoding in alternate reading frames in the hepatitis C virus (HCV) core sequence from strain HCV-1. J. Gen. Virol. 89, 1569\u20131578 (2008)."
+    },
+    {
+      "key": "3511_CR20",
+      "doi": "10.1099/vir.0.80986-0",
+      "title": "",
+      "journal": "J. Gen. Virol.",
+      "year": "2005",
+      "author": "D Kolakofsky",
+      "unstructured": "Kolakofsky, D., Roux, L., Garcin, D. & Ruigrok, R. W. H. Paramyxovirus mRNA editing, the \u201crule of six\u201d and error catastrophe: a hypothesis. J. Gen. Virol. 86, 1869\u20131877 (2005)."
+    },
+    {
+      "key": "3511_CR21",
+      "doi": "10.1128/jvi.01360-07",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2007",
+      "author": "PJ Dillon",
+      "unstructured": "Dillon, P. J. & Parks, G. D. Role for the phosphoprotein P subunit of the paramyxovirus polymerase in limiting induction of host cell antiviral responses. J. Virol. 81, 11116\u201311127 (2007)."
+    },
+    {
+      "key": "3511_CR22",
+      "doi": "10.1128/jvi.02023-07",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2008",
+      "author": "MD Gainey",
+      "unstructured": "Gainey, M. D., Dillon, P. J., Clark, K. M., Manuse, M. J. & Parks, G. D. Paramyxovirus-induced shutoff of host and viral protein synthesis: role of the P and V proteins in limiting PKR activation. J. Virol. 82, 828\u2013839 (2008)."
+    },
+    {
+      "key": "3511_CR23",
+      "doi": "10.1128/jvi.73.12.9928-9933.1999",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "1999",
+      "author": "L Didcock",
+      "unstructured": "Didcock, L., Young, D. F., Goodbourn, S. & Randall, R. E. The V protein of simian virus 5 inhibits interferon signalling by targeting STAT1 for proteasome-mediated degradation. J. Virol. 73, 9928\u20139933 (1999)."
+    },
+    {
+      "key": "3511_CR24",
+      "doi": "10.1093/emboj/16.3.578",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "1997",
+      "author": "A Kato",
+      "unstructured": "Kato, A., Kiyotani, K., Sakai, Y., Yoshida, T. & Nagai, Y. The paramyxovirus, Sendai virus, V protein encodes a luxury function required for viral pathogenesis. EMBO J. 16, 578\u2013587 (1997)."
+    },
+    {
+      "key": "3511_CR25",
+      "doi": "10.1128/jvi.75.10.4506-4518.2001",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2001",
+      "author": "D Vulli\u00e9moz",
+      "unstructured": "Vulli\u00e9moz, D. & Roux, L. \u201cRule of six\u201d: how does the Sendai virus RNA polymerase keep count? J. Virol. 75, 4506\u20134518 (2001)."
+    },
+    {
+      "key": "3511_CR26",
+      "doi": "10.1017/s1355838202029977",
+      "title": "",
+      "journal": "RNA",
+      "year": "2002",
+      "author": "F Iseni",
+      "unstructured": "Iseni, F. et al. Chemical modification of nucleotide bases and mRNA editing depend on hexamer or nucleoprotein phase in Sendai virus nucleocapsids. RNA 8, 1056\u20131067 (2002)."
+    },
+    {
+      "key": "3511_CR27",
+      "doi": "10.1128/mbio.02011-14",
+      "title": "",
+      "journal": "MBio",
+      "year": "2014",
+      "author": "RS Shabman",
+      "unstructured": "Shabman, R. S. et al. Deep sequencing identifies noncanonical editing of Ebola and Marburg virus RNAs in infected cells. MBio 5, e02011-14 (2014)."
+    },
+    {
+      "key": "3511_CR28",
+      "doi": "10.1128/jvi.02190-10",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2011",
+      "author": "M Mehedi",
+      "unstructured": "Mehedi, M. et al. A new Ebola virus nonstructural glycoprotein expressed through RNA editing. J. Virol. 85, 5406\u20135414 (2011)."
+    },
+    {
+      "key": "3511_CR29",
+      "doi": "10.1073/pnas.93.8.3602",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1996",
+      "author": "A Sanchez",
+      "unstructured": "Sanchez, A., Trappier, S. G., Mahy, B. W., Peters, C. J. & Nichol, S. T. The virion glycoproteins of Ebola viruses are encoded in two reading frames and are expressed through transcriptional editing. Proc. Natl Acad. Sci. USA 93, 3602\u20133607 (1996)."
+    },
+    {
+      "key": "3511_CR30",
+      "doi": "10.1128/jvi.72.8.6442-6447.1998",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "1998",
+      "author": "A Sanchez",
+      "unstructured": "Sanchez, A. et al. Biochemical analysis of the secreted and virion glycoproteins of Ebola virus. J. Virol. 72, 6442\u20136447 (1998)."
+    },
+    {
+      "key": "3511_CR31",
+      "doi": "10.1006/viro.1995.0052",
+      "title": "",
+      "journal": "Virology",
+      "year": "1995",
+      "author": "VE Volchkov",
+      "unstructured": "Volchkov, V. E. et al. GP mRNA of Ebola virus is edited by the Ebola virus polymerase and by T7 and vaccinia virus polymerases. Virology 214, 421\u2013430 (1995)."
+    },
+    {
+      "key": "3511_CR32",
+      "doi": "10.1038/emi.2012.38",
+      "title": "",
+      "journal": "Emerg. Microbes Infect.",
+      "year": "2012",
+      "author": "M Selman",
+      "unstructured": "Selman, M., Dankar, S. K., Forbes, N. E., Jia, J. J. & Brown, E. G. Adaptive mutation in influenza A virus non-structural gene is linked to host switching and induces a novel protein by alternative splicing. Emerg. Microbes Infect. 1, e42 (2012)."
+    },
+    {
+      "key": "3511_CR33",
+      "doi": "10.1093/emboj/19.24.6751",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "2000",
+      "author": "G Neumann",
+      "unstructured": "Neumann, G., Hughes, M. T. & Kawaoka, Y. Influenza A virus NS2 protein mediates vRNP nuclear export through NES-independent interaction with hCRM1. EMBO J. 19, 6751\u20136758 (2000)."
+    },
+    {
+      "key": "3511_CR34",
+      "doi": "10.1371/journal.ppat.1003460",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2013",
+      "author": "PL Tsai",
+      "unstructured": "Tsai, P. L. et al. Cellular RNA binding proteins NS1-BP and hnRNP K regulate influenza A virus RNA splicing. PLoS Pathog. 9, e1003460 (2013)."
+    },
+    {
+      "key": "3511_CR35",
+      "doi": "10.1002/j.1460-2075.1996.tb00925.x",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "1996",
+      "author": "SR Shih",
+      "unstructured": "Shih, S. R. & Krug, R. M. Novel exploitation of a nuclear function by influenza virus: the cellular SF2/ASF splicing factor controls the amount of the essential viral M2 ion channel protein in infected cells. EMBO J. 15, 5415\u20135427 (1996)."
+    },
+    {
+      "key": "3511_CR36",
+      "doi": "10.1016/j.antiviral.2019.06.003",
+      "title": "",
+      "journal": "Antiviral Res.",
+      "year": "2019",
+      "author": "A Artarini",
+      "unstructured": "Artarini, A. et al. Regulation of influenza A virus mRNA splicing by CLK1. Antiviral Res. 168, 187\u2013196 (2019)."
+    },
+    {
+      "key": "3511_CR37",
+      "doi": "10.1038/s41467-019-13520-8",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "B Bogdanow",
+      "unstructured": "Bogdanow, B. et al. The dynamic proteome of influenza A virus infection identifies M segment splicing as a host range determinant. Nat. Commun. 10, 5518 (2019)."
+    },
+    {
+      "key": "3511_CR38",
+      "doi": "10.1371/journal.pone.0156906",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2016",
+      "author": "T Jiang",
+      "unstructured": "Jiang, T., Nogales, A., Baker, S. F., Martinez-Sobrido, L. & Turner, D. H. Mutations designed by ensemble defect to misfold conserved RNA structures of influenza A segments 7 and 8 affect splicing and attenuate viral replication in cell culture. PLoS ONE 11, e0156906 (2016)."
+    },
+    {
+      "key": "3511_CR39",
+      "doi": "10.1093/bib/bbaa052",
+      "title": "",
+      "journal": "Brief Bioinform.",
+      "year": "2021",
+      "author": "Z Cai",
+      "unstructured": "Cai, Z. et al. VirusCircBase: a database of virus circular RNAs. Brief Bioinform. 22, 2182\u20132190 (2021)."
+    },
+    {
+      "key": "3511_CR40",
+      "doi": "10.1038/s41467-019-10246-5",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "J Zhao",
+      "unstructured": "Zhao, J. et al. Transforming activity of an oncoprotein-encoding circular RNA from human papillomavirus. Nat. Commun. 10, 2300 (2019). This paper reports how oncogenic strains of human papillomavirus use back-splicing to generate circular RNAs of oncogene E7, which have an essential role in the malignant transformation of infected cells."
+    },
+    {
+      "key": "3511_CR41",
+      "doi": "",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2016",
+      "author": "JF Atkins",
+      "unstructured": "Atkins, J. F., Loughran, G., Bhatt, P. R., Firth, A. E. & Baranov, P. V. Ribosomal frameshifting and transcriptional slippage: from genetic steganography and cryptography to adventitious use. Nucleic Acids Res. 44, 7007\u20137078 (2016)."
+    },
+    {
+      "key": "3511_CR42",
+      "doi": "10.1073/pnas.1102932108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "G Loughran",
+      "unstructured": "Loughran, G., Firth, A. E. & Atkins, J. F. Ribosomal frameshifting into an overlapping gene in the 2B-encoding region of the cardiovirus genome. Proc. Natl Acad. Sci. USA 108, E1111\u2013E1119 (2011)."
+    },
+    {
+      "key": "3511_CR43",
+      "doi": "10.1016/s0968-0004(02)02149-7",
+      "title": "",
+      "journal": "Trends Biochem. Sci.",
+      "year": "2002",
+      "author": "JW Harger",
+      "unstructured": "Harger, J. W., Meskauskas, A. & Dinman, J. D. An \u201cintegrated model\u201d of programmed ribosomal frameshifting. Trends Biochem. Sci. 27, 448\u2013454 (2002)."
+    },
+    {
+      "key": "3511_CR44",
+      "doi": "10.1002/wrna.1126",
+      "title": "",
+      "journal": "Wiley Interdiscip. Rev. RNA",
+      "year": "2012",
+      "author": "JD Dinman",
+      "unstructured": "Dinman, J. D. Mechanisms and implications of programmed translational frameshifting. Wiley Interdiscip. Rev. RNA 3, 661\u2013673 (2012)."
+    },
+    {
+      "key": "3511_CR45",
+      "doi": "10.1038/331280a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1988",
+      "author": "T Jacks",
+      "unstructured": "Jacks, T. et al. Characterization of ribosomal frameshifting in HIV-1 Gag-Pol expression. Nature 331, 280\u2013283 (1988)."
+    },
+    {
+      "key": "3511_CR46",
+      "doi": "10.1093/nar/gkf657",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2002",
+      "author": "D Dulude",
+      "unstructured": "Dulude, D., Baril, M. & Brakier-Gingras, L. Characterization of the frameshift stimulatory signal controlling a programmed \u22121 ribosomal frameshift in the human immunodeficiency virus type 1. Nucleic Acids Res. 30, 5094\u20135102 (2002)."
+    },
+    {
+      "key": "3511_CR47",
+      "doi": "10.1128/jvi.68.3.1501-1508.1994",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "1994",
+      "author": "M Cassan",
+      "unstructured": "Cassan, M., Delaunay, N., Vaquero, C. & Rousset, J. P. Translational frameshifting at the Gag-Pol junction of human immunodeficiency virus type 1 is not increased in infected T-lymphoid cells. J. Virol. 68, 1501\u20131508 (1994)."
+    },
+    {
+      "key": "3511_CR48",
+      "doi": "10.1006/jmbi.1997.1134",
+      "title": "",
+      "journal": "J. Mol. Biol.",
+      "year": "1997",
+      "author": "I Brierley",
+      "unstructured": "Brierley, I., Meredith, M. R., Bloys, A. J. & Hagervall, T. G. Expression of a coronavirus ribosomal frameshift signal in Escherichia coli: influence of tRNA anticodon modification on frameshifting. J. Mol. Biol. 270, 360\u2013373 (1997)."
+    },
+    {
+      "key": "3511_CR49",
+      "doi": "10.1016/j.virol.2009.12.033",
+      "title": "",
+      "journal": "Virology",
+      "year": "2010",
+      "author": "AE Firth",
+      "unstructured": "Firth, A. E., Blitvich, B. J., Wills, N. M., Miller, C. L. & Atkins, J. F. Evidence for ribosomal frameshifting and a novel overlapping gene in the genomes of insect-specific flaviviruses. Virology 399, 153\u2013166 (2010)."
+    },
+    {
+      "key": "3511_CR50",
+      "doi": "10.1016/j.virol.2004.11.038",
+      "title": "",
+      "journal": "Virology",
+      "year": "2005",
+      "author": "PV Baranov",
+      "unstructured": "Baranov, P. V. et al. Programmed ribosomal frameshifting in decoding the SARS-CoV genome. Virology 332, 498\u2013510 (2005)."
+    },
+    {
+      "key": "3511_CR51",
+      "doi": "10.1128/jvi.02480-09",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2010",
+      "author": "EP Plant",
+      "unstructured": "Plant, E. P., Rakauskaite, R., Taylor, D. R. & Dinman, J. D. Achieving a golden mean: mechanisms by which coronaviruses ensure synthesis of the correct stoichiometric ratios of viral proteins. J. Virol. 84, 4330\u20134340 (2010)."
+    },
+    {
+      "key": "3511_CR52",
+      "doi": "10.1093/nar/gki731",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2005",
+      "author": "MC Su",
+      "unstructured": "Su, M. C., Chang, C. T., Chu, C. H., Tsai, C. H. & Chang, K. Y. An atypical RNA pseudoknot stimulator and an upstream attenuation signal for \u22121 ribosomal frameshifting of SARS coronavirus. Nucleic Acids Res. 33, 4265\u20134275 (2005)."
+    },
+    {
+      "key": "3511_CR53",
+      "doi": "10.1016/j.virol.2005.08.048",
+      "title": "",
+      "journal": "Virology",
+      "year": "2006",
+      "author": "D Dulude",
+      "unstructured": "Dulude, D., Berchiche, Y. A., Gendron, K., Brakier-Gingras, L. & Heveker, N. Decreasing the frameshift efficiency translates into an equivalent reduction of the replication of the human immunodeficiency virus type 1. Virology 345, 127\u2013136 (2006)."
+    },
+    {
+      "key": "3511_CR54",
+      "doi": "10.1128/jvi.00149-16",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2016",
+      "author": "P Garcia-Miranda",
+      "unstructured": "Garcia-Miranda, P. et al. Stability of HIV frameshift site RNA correlates with frameshift efficiency and decreased virus infectivity. J. Virol. 90, 6906\u20136917 (2016)."
+    },
+    {
+      "key": "3511_CR55",
+      "doi": "10.1006/viro.1993.1174",
+      "title": "",
+      "journal": "Virology",
+      "year": "1993",
+      "author": "V Karacostas",
+      "unstructured": "Karacostas, V., Wolffe, E. J., Nagashima, K., Gonda, M. A. & Moss, B. Overexpression of the HIV-1 Gag-Pol polyprotein results in intracellular activation of HIV-1 protease and inhibition of assembly and budding of virus-like particles. Virology 193, 661\u2013671 (1993)."
+    },
+    {
+      "key": "3511_CR56",
+      "doi": "10.1371/journal.ppat.1005357",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2016",
+      "author": "Y Suzuki",
+      "unstructured": "Suzuki, Y. et al. Characterization of RyDEN (C19orf66) as an interferon-stimulated cellular inhibitor against dengue virus replication. PLoS Pathog. 12, e1005357 (2016)."
+    },
+    {
+      "key": "3511_CR57",
+      "doi": "10.1016/j.cell.2018.12.030",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "X Wang",
+      "unstructured": "Wang, X. et al. Regulation of HIV-1 Gag-Pol expression by shiftless, an inhibitor of programmed \u22121 ribosomal frameshifting. Cell 176, 625\u2013635.e14 (2019). This article describes how the host factor shiftless functions as a universal inhibitor of \u22121 PRFs by causing premature translational termination in HIV-1 and several other viruses."
+    },
+    {
+      "key": "3511_CR58",
+      "doi": "10.1128/jvi.64.11.5448-5456.1990",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "1990",
+      "author": "S Schwartz",
+      "unstructured": "Schwartz, S., Felber, B. K., Feny\u00f6, E. M. & Pavlakis, G. N. Env and Vpu proteins of human immunodeficiency virus type 1 are produced from multiple bicistronic mRNAs. J. Virol. 64, 5448\u20135456 (1990). The authors report the discovery of leaky scanning of an upstream viral protein as the mechanism of generating the envelope protein in HIV-1."
+    },
+    {
+      "key": "3511_CR59",
+      "doi": "10.1016/j.virol.2003.10.031",
+      "title": "",
+      "journal": "Virology",
+      "year": "2004",
+      "author": "D Kolakofsky",
+      "unstructured": "Kolakofsky, D., Le Mercier, P., Iseni, F. & Garcin, D. Viral DNA polymerase scanning and the gymnastics of Sendai virus RNA synthesis. Virology 318, 463\u2013473 (2004)."
+    },
+    {
+      "key": "3511_CR60",
+      "doi": "10.1128/jvi.74.16.7284-7297.2000",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2000",
+      "author": "SN Stacey",
+      "unstructured": "Stacey, S. N. et al. Leaky scanning is the predominant mechanism for translation of human papillomavirus type 16 E7 oncoprotein from E6/E7 bicistronic mRNA. J. Virol. 74, 7284\u20137297 (2000)."
+    },
+    {
+      "key": "3511_CR61",
+      "doi": "10.1099/0022-1317-64-8-1705",
+      "title": "",
+      "journal": "J. Gen. Virol.",
+      "year": "1983",
+      "author": "F Fuller",
+      "unstructured": "Fuller, F., Bhown, A. S. & Bishop, D. H. Bunyavirus nucleoprotein, N, and a non-structural protein, NSS, are coded by overlapping reading frames in the S RNA. J. Gen. Virol. 64, 1705\u20131714 (1983)."
+    },
+    {
+      "key": "3511_CR62",
+      "doi": "10.1128/jvi.06223-11",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2012",
+      "author": "J Vera-Otarola",
+      "unstructured": "Vera-Otarola, J. et al. The Andes hantavirus NSs protein is expressed from the viral small mRNA by a leaky scanning mechanism. J. Virol. 86, 2176\u20132187 (2012)."
+    },
+    {
+      "key": "3511_CR63",
+      "doi": "10.1126/science.3261888",
+      "title": "",
+      "journal": "Science",
+      "year": "1988",
+      "author": "K Strebel",
+      "unstructured": "Strebel, K., Klimkait, T. & Martin, M. A. A novel gene of HIV-1, vpu, and its 16-kilodalton product. Science 241, 1221\u20131223 (1988)."
+    },
+    {
+      "key": "3511_CR64",
+      "doi": "10.1128/jvi.66.12.7193-7200.1992",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "1992",
+      "author": "RL Willey",
+      "unstructured": "Willey, R. L., Maldarelli, F., Martin, M. A. & Strebel, K. Human immunodeficiency virus type 1 Vpu protein induces rapid degradation of CD4. J. Virol. 66, 7193\u20137200 (1992)."
+    },
+    {
+      "key": "3511_CR65",
+      "doi": "10.1073/pnas.86.13.5163",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1989",
+      "author": "EF Terwilliger",
+      "unstructured": "Terwilliger, E. F., Cohen, E. A., Lu, Y. C., Sodroski, J. G. & Haseltine, W. A. Functional role of human immunodeficiency virus type 1 Vpu. Proc. Natl Acad. Sci. USA 86, 5163\u20135167 (1989)."
+    },
+    {
+      "key": "3511_CR66",
+      "doi": "10.1016/j.chom.2009.10.004",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2009",
+      "author": "D Sauter",
+      "unstructured": "Sauter, D. et al. Tetherin-driven adaptation of Vpu and Nef function and the evolution of pandemic and nonpandemic HIV-1 strains. Cell Host Microbe 6, 409\u2013421 (2009)."
+    },
+    {
+      "key": "3511_CR67",
+      "doi": "10.1093/nar/gkr487",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2011",
+      "author": "HM Wise",
+      "unstructured": "Wise, H. M. et al. Overlapping signals for translational regulation and packaging of influenza A virus segment 2. Nucleic Acids Res. 39, 7775\u20137790 (2011)."
+    },
+    {
+      "key": "3511_CR68",
+      "doi": "10.1099/vir.0.82378-0",
+      "title": "",
+      "journal": "J. Gen. Virol.",
+      "year": "2007",
+      "author": "R Zell",
+      "unstructured": "Zell, R. et al. Prevalence of PB1-F2 of influenza A viruses. J. Gen. Virol. 88, 536\u2013546 (2007)."
+    },
+    {
+      "key": "3511_CR69",
+      "doi": "10.1371/journal.ppat.1001014",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2010",
+      "author": "JL McAuley",
+      "unstructured": "McAuley, J. L. et al. PB1-F2 proteins from H5N1 and 20th century pandemic influenza viruses cause immunopathology. PLoS Pathog. 6, e1001014 (2010)."
+    },
+    {
+      "key": "3511_CR70",
+      "doi": "10.1371/journal.ppat.0010004",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2005",
+      "author": "D Zamarin",
+      "unstructured": "Zamarin, D., Garc\u00eda-Sastre, A., Xiao, X., Wang, R. & Palese, P. Influenza virus PB1-F2 protein induces cell death through mitochondrial ANT3 and VDAC1. PLoS Pathog. 1, e4 (2005)."
+    },
+    {
+      "key": "3511_CR71",
+      "doi": "10.1038/s41564-018-0297-1",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2019",
+      "author": "V Lulla",
+      "unstructured": "Lulla, V. et al. An upstream protein-coding region in enteroviruses modulates virus infection in gut epithelial cells. Nat. Microbiol. 4, 280\u2013292 (2019)."
+    },
+    {
+      "key": "3511_CR72",
+      "doi": "10.1371/journal.ppat.1005473",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2016",
+      "author": "N Irigoyen",
+      "unstructured": "Irigoyen, N. et al. High-resolution analysis of coronavirus gene expression by RNA sequencing and ribosome profiling. PLoS Pathog. 12, e1005473 (2016)."
+    },
+    {
+      "key": "3511_CR73",
+      "doi": "10.1128/jvi.02831-13",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2014",
+      "author": "HY Wu",
+      "unstructured": "Wu, H. Y., Guan, B. J., Su, Y. P., Fan, Y. H. & Brian, D. A. Reselection of a genomic upstream open reading frame in mouse hepatitis coronavirus 5\u2032-untranslated-region mutants. J. Virol. 88, 846\u2013858 (2014)."
+    },
+    {
+      "key": "3511_CR74",
+      "doi": "10.1073/pnas.90.24.11733",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1993",
+      "author": "MA Hofmann",
+      "unstructured": "Hofmann, M. A., Senanayake, S. D. & Brian, D. A. A translation-attenuating intraleader open reading frame is selected on coronavirus mRNAs during persistent infection. Proc. Natl Acad. Sci. USA 90, 11733\u201311737 (1993)."
+    },
+    {
+      "key": "3511_CR75",
+      "doi": "10.1371/journal.ppat.1003147",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2013",
+      "author": "RS Shabman",
+      "unstructured": "Shabman, R. S. et al. An upstream open reading frame modulates ebola virus polymerase translation and virus replication. PLoS Pathog. 9, e1003147 (2013). This paper relates how an upstream ORF suppresses the translation of the downstream canonical L protein as a way to maintain protein expression level in ebolavirus."
+    },
+    {
+      "key": "3511_CR76",
+      "doi": "10.1128/jvi.67.9.5514-5521.1993",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "1993",
+      "author": "CR Degnin",
+      "unstructured": "Degnin, C. R., Schleiss, M. R., Cao, J. & Geballe, A. P. Translational inhibition mediated by a short upstream open reading frame in the human cytomegalovirus gpUL4 (gp48) transcript. J. Virol. 67, 5514\u20135521 (1993)."
+    },
+    {
+      "key": "3511_CR77",
+      "doi": "10.1093/nar/gki251",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2005",
+      "author": "A Chen",
+      "unstructured": "Chen, A., Kao, Y. F. & Brown, C. M. Translation of the first upstream ORF in the hepatitis B virus pregenomic RNA modulates translation at the core and polymerase initiation codons. Nucleic Acids Res. 33, 1169\u20131181 (2005)."
+    },
+    {
+      "key": "3511_CR78",
+      "doi": "10.1073/pnas.0810916106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "SE Calvo",
+      "unstructured": "Calvo, S. E., Pagliarini, D. J. & Mootha, V. K. Upstream open reading frames cause widespread reduction of protein expression and are polymorphic among humans. Proc. Natl Acad. Sci. USA 106, 7507\u20137512 (2009)."
+    },
+    {
+      "key": "3511_CR79",
+      "doi": "10.7554/elife.08890",
+      "title": "",
+      "journal": "eLife",
+      "year": "2015",
+      "author": "Z Ji",
+      "unstructured": "Ji, Z., Song, R., Regev, A. & Struhl, K. Many lncRNAs, 5'UTRs, and pseudogenes are translated and some are likely to express functional proteins. eLife 4, e08890 (2015)."
+    },
+    {
+      "key": "3511_CR80",
+      "doi": "10.1074/jbc.m300316200",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2003",
+      "author": "X Jin",
+      "unstructured": "Jin, X., Turcott, E., Englehardt, S., Mize, G. J. & Morris, D. R. The two upstream open reading frames of oncogene mdm2 have different translational regulatory properties. J. Biol. Chem. 278, 25716\u201325721 (2003)."
+    },
+    {
+      "key": "3511_CR81",
+      "doi": "10.1099/vir.0.042499-0",
+      "title": "",
+      "journal": "J. Gen. Virol.",
+      "year": "2012",
+      "author": "AE Firth",
+      "unstructured": "Firth, A. E. & Brierley, I. Non-canonical translation in RNA viruses. J. Gen. Virol. 93, 1385\u20131409 (2012)."
+    },
+    {
+      "key": "3511_CR82",
+      "doi": "10.1074/jbc.r116.733899",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2016",
+      "author": "SK Young",
+      "unstructured": "Young, S. K. & Wek, R. C. Upstream open reading frames differentially regulate gene-specific translation in the integrated stress response. J. Biol. Chem. 291, 16927\u201316935 (2016)."
+    },
+    {
+      "key": "3511_CR83",
+      "doi": "10.1016/s0021-9258(18)68338-3",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "1988",
+      "author": "KC Gupta",
+      "unstructured": "Gupta, K. C. & Patwardhan, S. ACG, the initiator codon for a Sendai virus protein. J. Biol. Chem. 263, 8553\u20138556 (1988). This paper represents one of the first observations of near-cognate start codon use in viral protein expression."
+    },
+    {
+      "key": "3511_CR84",
+      "doi": "10.1128/jvi.66.3.1765-1768.1992",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "1992",
+      "author": "R Boeck",
+      "unstructured": "Boeck, R., Curran, J., Matsuoka, Y., Compans, R. & Kolakofsky, D. The parainfluenza virus type 1 P/C gene uses a very efficient GUG codon to start its C\u2032 protein. J. Virol. 66, 1765\u20131768 (1992)."
+    },
+    {
+      "key": "3511_CR85",
+      "doi": "10.1016/0022-2836(89)90347-1",
+      "title": "",
+      "journal": "J. Mol. Biol.",
+      "year": "1989",
+      "author": "AC Prats",
+      "unstructured": "Prats, A. C., De Billy, G., Wang, P. & Darlix, J. L. CUG initiation codon used for the synthesis of a cell surface antigen coded by the murine leukemia virus. J. Mol. Biol. 205, 363\u2013372 (1989)."
+    },
+    {
+      "key": "3511_CR86",
+      "doi": "10.1093/nar/28.7.1625",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2000",
+      "author": "S Corcelette",
+      "unstructured": "Corcelette, S., Mass\u00e9, T. & Madjar, J. J. Initiation of translation by non-AUG codons in human T-cell lymphotropic virus type I mRNA encoding both Rex and Tax regulatory proteins. Nucleic Acids Res. 28, 1625\u20131634 (2000)."
+    },
+    {
+      "key": "3511_CR87",
+      "doi": "10.1371/journal.ppat.1007518",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2019",
+      "author": "HM Machkovech",
+      "unstructured": "Machkovech, H. M., Bloom, J. D. & Subramaniam, A. R. Comprehensive profiling of translation initiation in influenza virus infected cells. PLoS Pathog. 15, e1007518 (2019)."
+    },
+    {
+      "key": "3511_CR88",
+      "doi": "10.1128/jvi.72.2.1677-1682.1998",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "1998",
+      "author": "Y Shirako",
+      "unstructured": "Shirako, Y. Non-AUG translation initiation in a plant RNA virus: a forty-amino-acid extension is added to the N terminus of the soil-borne wheat mosaic virus capsid protein. J. Virol. 72, 1677\u20131682 (1998)."
+    },
+    {
+      "key": "3511_CR89",
+      "doi": "10.1128/jvi.67.3.1433-1440.1993",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "1993",
+      "author": "R Carroll",
+      "unstructured": "Carroll, R. & Derse, D. Translation of equine infectious anemia virus bicistronic tat-rev mRNA requires leaky ribosome scanning of the tat CTG initiation codon. J. Virol. 67, 1433\u20131440 (1993)."
+    },
+    {
+      "key": "3511_CR90",
+      "doi": "10.1073/pnas.010426997",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2000",
+      "author": "J Sasaki",
+      "unstructured": "Sasaki, J. & Nakashima, N. Methionine-independent initiation of translation in the capsid protein of an insect RNA virus. Proc. Natl Acad. Sci. USA 97, 1512\u20131515 (2000). This paper reports the discovery that translation initiation of an insect virus mRNA is independent of both AUG and the methionine initiator tRNA."
+    },
+    {
+      "key": "3511_CR91",
+      "doi": "10.1128/mcb.20.14.4990-4999.2000",
+      "title": "",
+      "journal": "Mol. Cell. Biol.",
+      "year": "2000",
+      "author": "JE Wilson",
+      "unstructured": "Wilson, J. E., Powell, M. J., Hoover, S. E. & Sarnow, P. Naturally occurring dicistronic cricket paralysis virus RNA is regulated by two internal ribosome entry sites. Mol. Cell. Biol. 20, 4990\u20134999 (2000)."
+    },
+    {
+      "key": "3511_CR92",
+      "doi": "10.1016/j.cell.2017.04.021",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "A Rialdi",
+      "unstructured": "Rialdi, A. et al. The RNA exosome syncs IAV-RNAPII transcription to promote viral ribogenesis and infectivity. Cell 169, 679\u2013692.e14 (2017)."
+    },
+    {
+      "key": "3511_CR93",
+      "doi": "10.1038/nature07745",
+      "title": "",
+      "journal": "Nature",
+      "year": "2009",
+      "author": "A Dias",
+      "unstructured": "Dias, A. et al. The cap-snatching endonuclease of influenza virus polymerase resides in the PA subunit. Nature 458, 914\u2013918 (2009)."
+    },
+    {
+      "key": "3511_CR94",
+      "doi": "10.1038/nature14009",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "S Reich",
+      "unstructured": "Reich, S. et al. Structural insight into cap-snatching and RNA synthesis by influenza polymerase. Nature 516, 361\u2013366 (2014)."
+    },
+    {
+      "key": "3511_CR95",
+      "doi": "10.1093/nar/gkv333",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2015",
+      "author": "D Koppstein",
+      "unstructured": "Koppstein, D., Ashour, J. & Bartel, D. P. Sequencing the cap-snatching repertoire of H1N1 influenza provides insight into the mechanism of viral transcription initiation. Nucleic Acids Res. 43, 5052\u20135064 (2015)."
+    },
+    {
+      "key": "3511_CR96",
+      "doi": "10.1261/rna.054221.115",
+      "title": "",
+      "journal": "RNA",
+      "year": "2015",
+      "author": "W Gu",
+      "unstructured": "Gu, W. et al. Influenza A virus preferentially snatches noncoding RNA caps. RNA 21, 2067\u20132075 (2015)."
+    },
+    {
+      "key": "3511_CR97",
+      "doi": "10.1016/j.virol.2017.06.020",
+      "title": "",
+      "journal": "Virology",
+      "year": "2017",
+      "author": "D Sikora",
+      "unstructured": "Sikora, D., Rocheleau, L., Brown, E. G. & Pelchat, M. Influenza A virus cap-snatches host RNAs based on their abundance early after infection. Virology 509, 167\u2013177 (2017)."
+    },
+    {
+      "key": "3511_CR98",
+      "doi": "10.1016/j.cell.2020.05.035",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "JSY Ho",
+      "unstructured": "Ho, J. S. Y. et al. Hybrid gene origination creates human-virus chimeric proteins during infection. Cell 181, 1502\u20131517 (2020). This article describes the discovery of upstream AUGs in cap-snatched host sequences being transcribed and translated to generate host\u2013virus hybrid proteins."
+    },
+    {
+      "key": "3511_CR99",
+      "doi": "10.1101/738427",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Wise, H. M. et al. An alternative AUG codon that produces an N-terminally extended form of the influenza A virus NP is a virulence factor for a swine-derived virus. Preprint at https://doi.org/10.1101/738427 (2019)."
+    },
+    {
+      "key": "3511_CR100",
+      "doi": "10.1089/vim.2017.0141",
+      "title": "",
+      "journal": "Viral Immunol.",
+      "year": "2018",
+      "author": "H Kim",
+      "unstructured": "Kim, H., Webster, R. G. & Webby, R. J. Influenza virus: dealing with a drifting and shifting pathogen. Viral Immunol. 31, 174\u2013183 (2018)."
+    },
+    {
+      "key": "3511_CR101",
+      "doi": "10.1186/1471-2105-7-75",
+      "title": "",
+      "journal": "BMC Bioinformatics",
+      "year": "2006",
+      "author": "AE Firth",
+      "unstructured": "Firth, A. E. & Brown, C. M. Detecting overlapping coding sequences in virus genomes. BMC Bioinformatics 7, 75 (2006)."
+    },
+    {
+      "key": "3511_CR102",
+      "doi": "10.1093/bioinformatics/bti007",
+      "title": "",
+      "journal": "Bioinformatics",
+      "year": "2005",
+      "author": "AE Firth",
+      "unstructured": "Firth, A. E. & Brown, C. M. Detecting overlapping coding sequences with pairwise alignments. Bioinformatics 21, 282\u2013292 (2005)."
+    },
+    {
+      "key": "3511_CR103",
+      "doi": "10.1126/science.1222213",
+      "title": "",
+      "journal": "Science",
+      "year": "2012",
+      "author": "BW Jagger",
+      "unstructured": "Jagger, B. W. et al. An overlapping protein-coding region in influenza A virus segment 3 modulates the host response. Science 337, 199\u2013204 (2012)."
+    },
+    {
+      "key": "3511_CR104",
+      "doi": "10.1002/jmv.26091",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Mohamadi, M. et al. Hepatitis C virus alternative reading frame protein (ARFP): production, features, and pathogenesis. J. Med. Virol. 92, 2930\u20132937 (2020)."
+    },
+    {
+      "key": "3511_CR105",
+      "doi": "10.4049/jimmunol.1900070",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2019",
+      "author": "DJ Zanker",
+      "unstructured": "Zanker, D. J. et al. Influenza A virus infection induces viral and cellular defective ribosomal products encoded by alternative reading frames. J. Immunol. 202, 3370\u20133380 (2019)."
+    },
+    {
+      "key": "3511_CR106",
+      "doi": "10.1038/s41467-019-08734-9",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "DP Depledge",
+      "unstructured": "Depledge, D. P. et al. Direct RNA sequencing on nanopore arrays redefines the transcriptional complexity of a viral pathogen. Nat. Commun. 10, 754 (2019)."
+    },
+    {
+      "key": "3511_CR107",
+      "doi": "10.1073/pnas.1706696114",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "H Di",
+      "unstructured": "Di, H. et al. Expanded subgenomic mRNA transcriptome and coding capacity of a nidovirus. Proc. Natl Acad. Sci. USA 114, E8895\u2013E8904 (2017)."
+    },
+    {
+      "key": "3511_CR108",
+      "doi": "10.1084/jem.20092060",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2010",
+      "author": "A Bansal",
+      "unstructured": "Bansal, A. et al. CD8 T cell response and evolutionary pressure to HIV-1 cryptic epitopes derived from antisense transcription. J. Exp. Med. 207, 51\u201359 (2010). This paper describes how an ARF in HIV encodes cryptic epitopes that contribute to the majority of the CD8 T cell response during infection."
+    },
+    {
+      "key": "3511_CR109",
+      "doi": "10.1097/cji.0b013e31823284a6",
+      "title": "",
+      "journal": "J. Immunother.",
+      "year": "2011",
+      "author": "EK Vetsika",
+      "unstructured": "Vetsika, E. K. et al. Sequential administration of the native TERT572 cryptic peptide enhances the immune response initiated by its optimized variant TERT572Y in cancer patients. J. Immunother. 34, 641\u2013650 (2011)."
+    },
+    {
+      "key": "3511_CR110",
+      "doi": "10.4049/jimmunol.0901907",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2010",
+      "author": "BP Dolan",
+      "unstructured": "Dolan, B. P., Li, L., Takeda, K., Bennink, J. R. & Yewdell, J. W. Defective ribosomal products are the major source of antigenic peptides endogenously generated from influenza A virus neuraminidase. J. Immunol. 184, 1419\u20131424 (2010)."
+    },
+    {
+      "key": "3511_CR111",
+      "doi": "10.1097/qai.0000000000000700",
+      "title": "",
+      "journal": "J. Acquir. Immune Defic. Syndr.",
+      "year": "2015",
+      "author": "A Bansal",
+      "unstructured": "Bansal, A. et al. Enhanced recognition of HIV-1 cryptic epitopes restricted by HLA class I alleles associated with a favorable clinical outcome. J. Acquir. Immune Defic. Syndr. 70, 1\u20138 (2015)."
+    },
+    {
+      "key": "3511_CR112",
+      "doi": "10.1097/qai.0b013e3182a9917e",
+      "title": "",
+      "journal": "J. Acquir. Immune Defic. Syndr.",
+      "year": "2014",
+      "author": "A Bet",
+      "unstructured": "Bet, A., Sterrett, S., Sato, A., Bansal, A. & Goepfert, P. A. Characterization of T-cell responses to cryptic epitopes in recipients of a noncodon-optimized HIV-1 vaccine. J. Acquir. Immune Defic. Syndr. 65, 142\u2013150 (2014)."
+    },
+    {
+      "key": "3511_CR113",
+      "doi": "10.1128/jvi.00711-18",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2018",
+      "author": "BJ Peng",
+      "unstructured": "Peng, B. J. et al. Antisense-derived HIV-1 cryptic epitopes are not major drivers of viral evolution during the acute phase of infection. J. Virol. 92, e00711-18 (2018)."
+    },
+    {
+      "key": "3511_CR114",
+      "doi": "10.4049/jimmunol.0903118",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2010",
+      "author": "NJ Maness",
+      "unstructured": "Maness, N. J. et al. Robust, vaccine-induced CD8+ T lymphocyte response against an out-of-frame epitope. J. Immunol. 184, 67\u201372 (2010). Four articles111\u2013114 demonstrate how the T cell response to cryptic epitopes produced from ARFs in HIV is robust, associated with improved clinical outcomes and associated with minimal viral escape."
+    },
+    {
+      "key": "3511_CR115",
+      "doi": "10.3389/fimmu.2019.02711",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2019",
+      "author": "M Seif",
+      "unstructured": "Seif, M., Einsele, H. & L\u00f6ffler, J. CAR T cells beyond cancer: hope for immunomodulatory therapy of infectious diseases. Front. Immunol. 10, 2711 (2019)."
+    },
+    {
+      "key": "3511_CR116",
+      "doi": "10.1021/ja1098325",
+      "title": "",
+      "journal": "J. Am. Chem. Soc.",
+      "year": "2011",
+      "author": "SJ Park",
+      "unstructured": "Park, S. J., Kim, Y. G. & Park, H. J. Identification of RNA pseudoknot-binding ligand that inhibits the -1 ribosomal frameshifting of SARS-coronavirus by structure-based virtual screening. J. Am. Chem. Soc. 133, 10094\u201310100 (2011). This paper describes how an RNA structure-based inhibitor screening revealed a candidate that targets and reduces the efficiency of \u22121 PRFs in SARS-CoV."
+    },
+    {
+      "key": "3511_CR117",
+      "doi": "10.1021/ja410344b",
+      "title": "",
+      "journal": "J. Am. Chem. Soc.",
+      "year": "2014",
+      "author": "DB Ritchie",
+      "unstructured": "Ritchie, D. B., Soong, J., Sikkema, W. K. & Woodside, M. T. Anti-frameshifting ligand reduces the conformational plasticity of the SARS virus pseudoknot. J. Am. Chem. Soc. 136, 2196\u20132199 (2014)."
+    },
+    {
+      "key": "3511_CR118",
+      "doi": "10.1073/pnas.1204114109",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2012",
+      "author": "DB Ritchie",
+      "unstructured": "Ritchie, D. B., Foster, D. A. & Woodside, M. T. Programmed \u22121 frameshifting efficiency correlates with RNA pseudoknot conformational plasticity, not resistance to mechanical unfolding. Proc. Natl Acad. Sci. USA 109, 16167\u201316172 (2012)."
+    },
+    {
+      "key": "3511_CR119",
+      "doi": "10.1021/jm050815o",
+      "title": "",
+      "journal": "J. Med. Chem.",
+      "year": "2005",
+      "author": "PP Seth",
+      "unstructured": "Seth, P. P. et al. SAR by MS: discovery of a new class of RNA-binding small molecules for the hepatitis C virus: internal ribosome entry site IIA subdomain. J. Med. Chem. 48, 7099\u20137102 (2005)."
+    },
+    {
+      "key": "3511_CR120",
+      "doi": "10.1038/nchembio.217",
+      "title": "",
+      "journal": "Nat. Chem. Biol.",
+      "year": "2009",
+      "author": "J Parsons",
+      "unstructured": "Parsons, J. et al. Conformational inhibition of the hepatitis C virus internal ribosome entry site RNA. Nat. Chem. Biol. 5, 823\u2013825 (2009)."
+    },
+    {
+      "key": "3511_CR121",
+      "doi": "10.1073/pnas.1118699109",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2012",
+      "author": "SM Dibrov",
+      "unstructured": "Dibrov, S. M. et al. Structure of a hepatitis C virus RNA domain in complex with a translation inhibitor reveals a binding mode reminiscent of riboswitches. Proc. Natl Acad. Sci. USA 109, 5223\u20135228 (2012)."
+    },
+    {
+      "key": "3511_CR122",
+      "doi": "10.15252/embj.201592469",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "2015",
+      "author": "H Yamamoto",
+      "unstructured": "Yamamoto, H. et al. Molecular architecture of the ribosome-bound hepatitis C virus internal ribosomal entry site RNA. EMBO J. 34, 3042\u20133058 (2015)."
+    },
+    {
+      "key": "3511_CR123",
+      "doi": "10.1093/nar/gkn342",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2008",
+      "author": "R Juliano",
+      "unstructured": "Juliano, R., Alam, M. R., Dixit, V. & Kang, H. Mechanisms and strategies for effective delivery of antisense and siRNA oligonucleotides. Nucleic Acids Res. 36, 4158\u20134171 (2008)."
+    },
+    {
+      "key": "3511_CR124",
+      "doi": "10.1177/135965350400900612",
+      "title": "",
+      "journal": "Antivir. Ther.",
+      "year": "2004",
+      "author": "M Soler",
+      "unstructured": "Soler, M., McHutchison, J. G., Kwoh, T. J., Dorr, F. A. & Pawlotsky, J. M. Virological effects of ISIS 14803, an antisense oligonucleotide inhibitor of hepatitis C virus (HCV) internal ribosome entry site (IRES), on HCV IRES in chronic hepatitis C patients and examination of the potential role of primary and secondary HCV resistance in the outcome of treatment. Antivir. Ther. 9, 953\u2013968 (2004)."
+    },
+    {
+      "key": "3511_CR125",
+      "doi": "10.1128/aac.43.2.347",
+      "title": "",
+      "journal": "Antimicrob. Agents Chemother.",
+      "year": "1999",
+      "author": "H Zhang",
+      "unstructured": "Zhang, H. et al. Antisense oligonucleotide inhibition of hepatitis C virus (HCV) gene expression in livers of mice infected with an HCV\u2013vaccinia virus recombinant. Antimicrob. Agents Chemother. 43, 347\u2013353 (1999)."
+    },
+    {
+      "key": "3511_CR126",
+      "doi": "10.1097/qco.0000000000000532",
+      "title": "",
+      "journal": "Curr. Opin. Infect. Dis.",
+      "year": "2019",
+      "author": "FG Hayden",
+      "unstructured": "Hayden, F. G. & Shindo, N. Influenza virus polymerase inhibitors in clinical development. Curr. Opin. Infect. Dis. 32, 176\u2013186 (2019)."
+    },
+    {
+      "key": "3511_CR127",
+      "doi": "10.1016/j.antiviral.2018.10.008",
+      "title": "",
+      "journal": "Antiviral Res.",
+      "year": "2018",
+      "author": "T Noshi",
+      "unstructured": "Noshi, T. et al. In vitro characterization of baloxavir acid, a first-in-class cap-dependent endonuclease inhibitor of the influenza virus polymerase PA subunit. Antiviral Res. 160, 109\u2013117 (2018)."
+    },
+    {
+      "key": "3511_CR128",
+      "doi": "10.1093/jac/dky462",
+      "title": "",
+      "journal": "J. Antimicrob. Chemother.",
+      "year": "2019",
+      "author": "K Fukao",
+      "unstructured": "Fukao, K. et al. Combination treatment with the cap-dependent endonuclease inhibitor baloxavir marboxil and a neuraminidase inhibitor in a mouse model of influenza A virus infection. J. Antimicrob. Chemother. 74, 654\u2013662 (2019)."
+    },
+    {
+      "key": "3511_CR129",
+      "doi": "10.3201/eid2510.190607",
+      "title": "",
+      "journal": "Emerg. Infect. Dis.",
+      "year": "2019",
+      "author": "VP Mishin",
+      "unstructured": "Mishin, V. P. et al. Susceptibility of influenza A, B, C, and D viruses to baloxavir. Emerg. Infect. Dis. 25, 1969\u20131972 (2019)."
+    },
+    {
+      "key": "3511_CR130",
+      "doi": "10.3389/fgene.2017.00125",
+      "title": "",
+      "journal": "Front. Genet.",
+      "year": "2017",
+      "author": "ST de Farias",
+      "unstructured": "de Farias, S. T., Dos Santos Junior, A. P., R\u00eago, T. G. & Jos\u00e9, M. V. Origin and evolution of RNA-dependent RNA polymerase. Front. Genet. 8, 125 (2017)."
+    },
+    {
+      "key": "3511_CR131",
+      "doi": "10.1371/journal.pmed.1002535",
+      "title": "",
+      "journal": "PLoS Med.",
+      "year": "2018",
+      "author": "J Guedj",
+      "unstructured": "Guedj, J. et al. Antiviral efficacy of favipiravir against ebola virus: a translational study in cynomolgus macaques. PLoS Med. 15, e1002535 (2018)."
+    },
+    {
+      "key": "3511_CR132",
+      "doi": "10.1038/s41598-018-27890-4",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2018",
+      "author": "S Omoto",
+      "unstructured": "Omoto, S. et al. Characterization of influenza virus variants induced by treatment with the endonuclease inhibitor baloxavir marboxil. Sci. Rep. 8, 9633 (2018)."
+    },
+    {
+      "key": "3511_CR133",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Hofmann, W. P., Soriano, V. & Zeuzem, S. in Antiviral Stategies: Handbook of Experimental Pharmacology (eds Kr\u00e4usslich H. G. & Bartenschlager, R.) 321\u2013346 (2009)."
+    },
+    {
+      "key": "3511_CR134",
+      "doi": "10.1101/cshperspect.a007161",
+      "title": "",
+      "journal": "Cold Spring Harb. Perspect. Med.",
+      "year": "2012",
+      "author": "EJ Arts",
+      "unstructured": "Arts, E. J. & Hazuda, D. J. HIV-1 antiretroviral drug therapy. Cold Spring Harb. Perspect. Med. 2, a007161 (2012)."
+    },
+    {
+      "key": "3511_CR135",
+      "doi": "10.18632/oncotarget.16723",
+      "title": "",
+      "journal": "Oncotarget",
+      "year": "2017",
+      "author": "R Bayat Mokhtari",
+      "unstructured": "Bayat Mokhtari, R. et al. Combination therapy in combating cancer. Oncotarget 8, 38022\u201338043 (2017)."
+    },
+    {
+      "key": "3511_CR136",
+      "doi": "10.1016/j.tibtech.2012.12.006",
+      "title": "",
+      "journal": "Trends Biotechnol.",
+      "year": "2013",
+      "author": "RJ Worthington",
+      "unstructured": "Worthington, R. J. & Melander, C. Combination approaches to combat multidrug-resistant bacteria. Trends Biotechnol. 31, 177\u2013184 (2013)."
+    },
+    {
+      "key": "3511_CR137",
+      "doi": "10.1038/s41579-018-0120-2",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2019",
+      "author": "P Simmonds",
+      "unstructured": "Simmonds, P., Aiewsakun, P. & Katzourakis, A. Prisoners of war \u2013 host adaptation and its constraints on virus evolution. Nat. Rev. Microbiol. 17, 321\u2013328 (2019)."
+    },
+    {
+      "key": "3511_CR138",
+      "doi": "10.7554/elife.36666",
+      "title": "",
+      "journal": "eLife",
+      "year": "2018",
+      "author": "B Krause-Kyora",
+      "unstructured": "Krause-Kyora, B. et al. Neolithic and medieval virus genomes reveal complex evolution of hepatitis B. eLife 7, e36666 (2018)."
+    },
+    {
+      "key": "3511_CR139",
+      "doi": "10.1038/s41586-018-0097-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "B M\u00fchlemann",
+      "unstructured": "M\u00fchlemann, B. et al. Ancient hepatitis B viruses from the Bronze Age to the Medieval period. Nature 557, 418\u2013423 (2018). Two articles138,139 show that hepatitis B virus isolated from samples from the Bronze and Neolithic Age is minimally divergent from modern strains, which suggests that viral adaptation to the host may confer an upper limit to the mutations that can be accumulated over time."
+    },
+    {
+      "key": "3511_CR140",
+      "doi": "10.1016/j.cell.2014.10.041",
+      "title": "",
+      "journal": "Cell",
+      "year": "2014",
+      "author": "K Majzoub",
+      "unstructured": "Majzoub, K. et al. RACK1 controls IRES-mediated translation of viruses. Cell 159, 1086\u20131095 (2014)."
+    },
+    {
+      "key": "3511_CR141",
+      "doi": "10.18632/oncotarget.26907",
+      "title": "",
+      "journal": "Oncotarget",
+      "year": "2019",
+      "author": "H Ullah",
+      "unstructured": "Ullah, H., Hou, W., Dakshanamurthy, S. & Tang, Q. Host targeted antiviral (HTA): functional inhibitor compounds of scaffold protein RACK1 inhibit herpes simplex virus proliferation. Oncotarget 10, 3209\u20133226 (2019)."
+    },
+    {
+      "key": "3511_CR142",
+      "doi": "10.1016/j.immuni.2015.12.017",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2016",
+      "author": "NS Heaton",
+      "unstructured": "Heaton, N. S. et al. Targeting viral proteostasis limits influenza virus, HIV, and dengue virus infection. Immunity 44, 46\u201358 (2016). This paper reports that viruses exhibit host dependency of SEC61-mediated protein translocation and folding, and that inhibition of SEC61 provides a broad-spectrum inhibition on growth and infectivity in several viruses."
+    },
+    {
+      "key": "3511_CR143",
+      "doi": "10.1016/j.cell.2018.11.028",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "PS Shah",
+      "unstructured": "Shah, P. S. et al. Comparative flavivirus\u2013host protein interaction mapping reveals mechanisms of dengue and Zika virus pathogenesis. Cell 175, 1931\u20131945 (2018)."
+    },
+    {
+      "key": "3511_CR144",
+      "doi": "10.1038/s41586-020-2286-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "DE Gordon",
+      "unstructured": "Gordon, D. E. et al. A SARS-CoV-2 protein interaction map reveals targets for drug repurposing. Nature 583, 459\u2013468 (2020)."
+    },
+    {
+      "key": "3511_CR145",
+      "doi": "10.1126/science.1235681",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "M Dalziel",
+      "unstructured": "Dalziel, M., Crispin, M., Scanlan, C. N., Zitzmann, N. & Dwek, R. A. Emerging principles for the therapeutic exploitation of glycosylation. Science 343, 1235681 (2014)."
+    },
+    {
+      "key": "3511_CR146",
+      "doi": "10.1016/j.bbagen.2019.05.012",
+      "title": "",
+      "journal": "Biochim. Biophys. Acta, Gen. Subj.",
+      "year": "2019",
+      "author": "Y Watanabe",
+      "unstructured": "Watanabe, Y., Bowden, T. A., Wilson, I. A. & Crispin, M. Exploitation of glycosylation in enveloped virus pathobiology. Biochim. Biophys. Acta, Gen. Subj. 1863, 1480\u20131497 (2019)."
+    },
+    {
+      "key": "3511_CR147",
+      "doi": "10.1038/s41586-020-2332-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "D Bojkova",
+      "unstructured": "Bojkova, D. et al. Proteomics of SARS-CoV-2-infected host cells reveals therapy targets. Nature 583, 469\u2013472 (2020)."
+    },
+    {
+      "key": "3511_CR148",
+      "doi": "10.1128/jvi.00612-18",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2018",
+      "author": "P Dhillon",
+      "unstructured": "Dhillon, P. et al. Cytoplasmic relocalization and colocalization with viroplasms of host cell proteins, and their role in rotavirus infection. J. Virol. 92, e00612-18 (2018)."
+    },
+    {
+      "key": "3511_CR149",
+      "doi": "10.1038/s41594-018-0124-7",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2018",
+      "author": "N Zhao",
+      "unstructured": "Zhao, N. et al. Influenza virus infection causes global RNAPII termination defects. Nat. Struct. Mol. Biol. 25, 885\u2013893 (2018)."
+    },
+    {
+      "key": "3511_CR150",
+      "doi": "10.1002/wrna.1543",
+      "title": "",
+      "journal": "Wiley Interdiscip. Rev. RNA",
+      "year": "2019",
+      "author": "S Boudreault",
+      "unstructured": "Boudreault, S., Roy, P., Lemay, G. & Bisaillon, M. Viral modulation of cellular RNA alternative splicing: a new key player in virus-host interactions? Wiley Interdiscip. Rev. RNA 10, e1543 (2019)."
+    },
+    {
+      "key": "3511_CR151",
+      "doi": "10.1128/jvi.00520-19",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2019",
+      "author": "G Bonenfant",
+      "unstructured": "Bonenfant, G. et al. Zika virus subverts stress granules to promote and restrict viral gene expression. J. Virol. 93, e00520-19 (2019)."
+    },
+    {
+      "key": "3511_CR152",
+      "doi": "10.1038/nsmb.3310",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2016",
+      "author": "R Batra",
+      "unstructured": "Batra, R. et al. RNA-binding protein CPEB1 remodels host and viral RNA landscapes. Nat. Struct. Mol. Biol. 23, 1101\u20131110 (2016)."
+    },
+    {
+      "key": "3511_CR153",
+      "doi": "10.1186/s12864-016-3029-z",
+      "title": "",
+      "journal": "BMC Genomics",
+      "year": "2016",
+      "author": "MP Tremblay",
+      "unstructured": "Tremblay, M. P. et al. Global profiling of alternative RNA splicing events provides insights into molecular differences between various types of hepatocellular carcinoma. BMC Genomics 17, 683 (2016)."
+    },
+    {
+      "key": "3511_CR154",
+      "doi": "10.3390/ijms19010075",
+      "title": "",
+      "journal": "Int. J. Mol. Sci.",
+      "year": "2017",
+      "author": "JC Lin",
+      "unstructured": "Lin, J. C. Therapeutic applications of targeted alternative splicing to cancer treatment. Int. J. Mol. Sci. 19, E75 (2017)."
+    },
+    {
+      "key": "3511_CR155",
+      "doi": "10.1002/wrna.1476",
+      "title": "",
+      "journal": "Wiley Interdiscip. Rev. RNA",
+      "year": "2018",
+      "author": "LM Urbanski",
+      "unstructured": "Urbanski, L. M., Leclair, N. & Anczuk\u00f3w, O. Alternative-splicing defects in cancer: splicing regulators and their downstream targets, guiding the way to novel cancer therapeutics. Wiley Interdiscip. Rev. RNA 9, e1476 (2018)."
+    },
+    {
+      "key": "3511_CR156",
+      "doi": "10.1038/334320a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1988",
+      "author": "J Pelletier",
+      "unstructured": "Pelletier, J. & Sonenberg, N. Internal initiation of translation of eukaryotic mRNA directed by a sequence derived from poliovirus RNA. Nature 334, 320\u2013325 (1988)."
+    },
+    {
+      "key": "3511_CR157",
+      "doi": "10.1128/jvi.62.8.2636-2643.1988",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "1988",
+      "author": "SK Jang",
+      "unstructured": "Jang, S. K. et al. A segment of the 5\u2032 nontranslated region of encephalomyocarditis virus RNA directs internal entry of ribosomes during in vitro translation. J. Virol. 62, 2636\u20132643 (1988). This paper represents one of the first observations of IRESs as an alternative cap-independent translation mechanism that is used by encephalomyocarditis virus."
+    },
+    {
+      "key": "3511_CR158",
+      "doi": "10.1073/pnas.0504132102",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2005",
+      "author": "A Griffiths",
+      "unstructured": "Griffiths, A. & Coen, D. M. An unusual internal ribosome entry site in the herpes simplex virus thymidine kinase gene. Proc. Natl Acad. Sci. USA 102, 9667\u20139672 (2005)."
+    },
+    {
+      "key": "3511_CR159",
+      "doi": "10.1128/jvi.01732-13",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2013",
+      "author": "ST Kang",
+      "unstructured": "Kang, S. T., Wang, H. C., Yang, Y. T., Kou, G. H. & Lo, C. F. The DNA virus white spot syndrome virus uses an internal ribosome entry site for translation of the highly expressed nonstructural protein ICP35. J. Virol. 87, 13263\u201313278 (2013)."
+    },
+    {
+      "key": "3511_CR160",
+      "doi": "10.1016/j.gpb.2020.03.001",
+      "title": "",
+      "journal": "Genomics Proteomics Bioinformatics",
+      "year": "2020",
+      "author": "J Zhao",
+      "unstructured": "Zhao, J. et al. IRESbase: a comprehensive database of experimentally validated internal ribosome entry sites. Genomics Proteomics Bioinformatics 18, 129\u2013139 (2020)."
+    },
+    {
+      "key": "3511_CR161",
+      "doi": "10.1002/embj.201386124",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "2014",
+      "author": "TR Sweeney",
+      "unstructured": "Sweeney, T. R., Abaeva, I. S., Pestova, T. V. & Hellen, C. U. The mechanism of translation initiation on type 1 picornavirus IRESs. EMBO J. 33, 76\u201392 (2014)."
+    },
+    {
+      "key": "3511_CR162",
+      "doi": "10.1128/mcb.23.2.687-698.2003",
+      "title": "",
+      "journal": "Mol. Cell. Biol.",
+      "year": "2003",
+      "author": "VG Kolupaeva",
+      "unstructured": "Kolupaeva, V. G., Lomakin, I. B., Pestova, T. V. & Hellen, C. U. Eukaryotic initiation factors 4G and 4A mediate conformational changes downstream of the initiation codon of the encephalomyocarditis virus internal ribosomal entry site. Mol. Cell. Biol. 23, 687\u2013698 (2003)."
+    },
+    {
+      "key": "3511_CR163",
+      "doi": "10.1016/j.cell.2014.04.015",
+      "title": "",
+      "journal": "Cell",
+      "year": "2014",
+      "author": "IS Fern\u00e1ndez",
+      "unstructured": "Fern\u00e1ndez, I. S., Bai, X. C., Murshudov, G., Scheres, S. H. & Ramakrishnan, V. Initiation of translation by cricket paralysis virus IRES requires its translocation in the ribosome. Cell 157, 823\u2013831 (2014)."
+    },
+    {
+      "key": "3511_CR164",
+      "doi": "10.1261/rna.1315109",
+      "title": "",
+      "journal": "RNA",
+      "year": "2009",
+      "author": "N Deniz",
+      "unstructured": "Deniz, N., Lenarcic, E. M., Landry, D. M. & Thompson, S. R. Translation initiation factors are not required for Dicistroviridae IRES function in vivo. RNA 15, 932\u2013946 (2009)."
+    },
+    {
+      "key": "3511_CR165",
+      "doi": "10.1016/0092-8674(93)90257-q",
+      "title": "",
+      "journal": "Cell",
+      "year": "1993",
+      "author": "J F\u00fctterer",
+      "unstructured": "F\u00fctterer, J., Kiss-L\u00e1szl\u00f3, Z. & Hohn, T. Nonlinear ribosome migration on cauliflower mosaic virus 35S RNA. Cell 73, 789\u2013802 (1993)."
+    },
+    {
+      "key": "3511_CR166",
+      "doi": "10.1099/0022-1317-80-8-2217",
+      "title": "",
+      "journal": "J. Gen. Virol.",
+      "year": "1999",
+      "author": "MM Pooggin",
+      "unstructured": "Pooggin, M. M., F\u00fctterer, J., Skryabin, K. G. & Hohn, T. A short open reading frame terminating in front of a stable hairpin is the conserved feature in pregenomic RNA leaders of plant pararetroviruses. J. Gen. Virol. 80, 2217\u20132228 (1999)."
+    },
+    {
+      "key": "3511_CR167",
+      "doi": "10.1101/gad.10.12.1557",
+      "title": "",
+      "journal": "Genes Dev.",
+      "year": "1996",
+      "author": "A Yueh",
+      "unstructured": "Yueh, A. & Schneider, R. J. Selective translation initiation by ribosome jumping in adenovirus-infected and heat-shocked cells. Genes Dev. 10, 1557\u20131567 (1996)."
+    },
+    {
+      "key": "3511_CR168",
+      "doi": "10.1128/mcb.18.9.5021",
+      "title": "",
+      "journal": "Mol. Cell. Biol.",
+      "year": "1998",
+      "author": "P Latorre",
+      "unstructured": "Latorre, P., Kolakofsky, D. & Curran, J. Sendai virus Y proteins are initiated by a ribosomal shunt. Mol. Cell. Biol. 18, 5021\u20135031 (1998)."
+    },
+    {
+      "key": "3511_CR169",
+      "doi": "10.1074/jbc.m304874200",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2003",
+      "author": "G Meyers",
+      "unstructured": "Meyers, G. Translation of the minor capsid protein of a calicivirus is initiated by a novel termination-dependent reinitiation mechanism. J. Biol. Chem. 278, 34051\u201334060 (2003)."
+    },
+    {
+      "key": "3511_CR170",
+      "doi": "10.1002/j.1460-2075.1990.tb07446.x",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "1990",
+      "author": "CM Horvath",
+      "unstructured": "Horvath, C. M., Williams, M. A. & Lamb, R. A. Eukaryotic coupled translation of tandem cistrons: identification of the influenza B virus BM2 polypeptide. EMBO J. 9, 2639\u20132647 (1990)."
+    },
+    {
+      "key": "3511_CR171",
+      "doi": "10.1093/emboj/19.11.2681",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "2000",
+      "author": "G Ahmadian",
+      "unstructured": "Ahmadian, G., Randhawa, J. S. & Easton, A. J. Expression of the ORF-2 protein of the human respiratory syncytial virus M2 gene is initiated by a ribosomal termination-dependent reinitiation mechanism. EMBO J. 19, 2681\u20132689 (2000)."
+    },
+    {
+      "key": "3511_CR172",
+      "doi": "10.1074/jbc.m502276200",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2005",
+      "author": "PS Gould",
+      "unstructured": "Gould, P. S. & Easton, A. J. Coupled translation of the respiratory syncytial virus M2 open reading frames requires upstream sequences. J. Biol. Chem. 280, 21972\u201321980 (2005)."
+    },
+    {
+      "key": "3511_CR173",
+      "doi": "10.1371/journal.pgen.1003122",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2012",
+      "author": "S Jeudy",
+      "unstructured": "Jeudy, S., Abergel, C., Claverie, J. M. & Legendre, M. Translation in giant viruses: a unique mixture of bacterial and eukaryotic termination schemes. PLoS Genet. 8, e1003122 (2012)."
+    },
+    {
+      "key": "3511_CR174",
+      "doi": "10.1371/journal.pgen.1006196",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2016",
+      "author": "F Schueren",
+      "unstructured": "Schueren, F. & Thoms, S. Functional translational readthrough: a systems biology perspective. PLoS Genet. 12, e1006196 (2016)."
+    },
+    {
+      "key": "3511_CR175",
+      "doi": "10.1038/331723a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1988",
+      "author": "W Leinfelder",
+      "unstructured": "Leinfelder, W., Zehelein, E., Mandrand-Berthelot, M. A. & B\u00f6ck, A. Gene for a novel tRNA species that accepts l-serine and cotranslationally inserts selenocysteine. Nature 331, 723\u2013725 (1988)."
+    },
+    {
+      "key": "3511_CR176",
+      "doi": "10.1016/s0021-9258(18)81714-8",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "1989",
+      "author": "BJ Lee",
+      "unstructured": "Lee, B. J., Worland, P. J., Davis, J. N., Stadtman, T. C. & Hatfield, D. L. Identification of a selenocysteyl-tRNA(Ser) in mammalian cells that recognizes the nonsense codon, UGA. J. Biol. Chem. 264, 9724\u20139727 (1989)."
+    },
+    {
+      "key": "3511_CR177",
+      "doi": "10.1002/j.1460-2075.1994.tb06337.x",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "1994",
+      "author": "MD Ryan",
+      "unstructured": "Ryan, M. D. & Drew, J. Foot-and-mouth disease virus 2A oligopeptide mediated cleavage of an artificial polyprotein. EMBO J. 13, 928\u2013933 (1994)."
+    },
+    {
+      "key": "3511_CR178",
+      "doi": "10.1099/0022-1317-82-5-1013",
+      "title": "",
+      "journal": "J. Gen. Virol.",
+      "year": "2001",
+      "author": "MLL Donnelly",
+      "unstructured": "Donnelly, M. L. L. et al. Analysis of the aphthovirus 2A/2B polyprotein \u2018cleavage\u2019 mechanism indicates not a proteolytic reaction, but a novel translational effect: a putative ribosomal \u2018skip\u2019. J. Gen. Virol. 82, 1013\u20131025 (2001)."
+    },
+    {
+      "key": "3511_CR179",
+      "doi": "10.1099/vir.0.83428-0",
+      "title": "",
+      "journal": "J. Gen. Virol.",
+      "year": "2008",
+      "author": "GA Luke",
+      "unstructured": "Luke, G. A. et al. Occurrence, function and evolutionary origins of \u20182A-like\u2019 sequences in virus genomes. J. Gen. Virol. 89, 1036\u20131042 (2008)."
+    },
+    {
+      "key": "3511_CR180",
+      "doi": "10.1093/nar/gkr1176",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2012",
+      "author": "P Sharma",
+      "unstructured": "Sharma, P. et al. 2A peptides provide distinct solutions to driving stop-carry on translational recoding. Nucleic Acids Res. 40, 3143\u20133151 (2012)."
+    },
+    {
+      "key": "3511_CR181",
+      "doi": "10.1016/j.molcel.2006.11.013",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2007",
+      "author": "T Ogino",
+      "unstructured": "Ogino, T. & Banerjee, A. K. Unconventional mechanism of mRNA capping by the RNA-dependent RNA polymerase of vesicular stomatitis virus. Mol. Cell 25, 85\u201397 (2007)."
+    },
+    {
+      "key": "3511_CR182",
+      "doi": "10.1038/nrmicro2675",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2011",
+      "author": "E Decroly",
+      "unstructured": "Decroly, E., Ferron, F., Lescar, J. & Canard, B. Conventional and unconventional mechanisms for capping viral mRNA. Nat. Rev. Microbiol. 10, 51\u201365 (2011)."
+    },
+    {
+      "key": "3511_CR183",
+      "doi": "10.1073/pnas.92.2.507",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1995",
+      "author": "T Ahola",
+      "unstructured": "Ahola, T. & K\u00e4\u00e4ri\u00e4inen, L. Reaction in alphavirus mRNA capping: formation of a covalent complex of nonstructural protein nsP1 with 7-methyl-GMP. Proc. Natl Acad. Sci. USA 92, 507\u2013511 (1995)."
+    },
+    {
+      "key": "3511_CR184",
+      "doi": "10.1016/j.coviro.2011.09.003",
+      "title": "",
+      "journal": "Curr. Opin. Virol.",
+      "year": "2011",
+      "author": "I Goodfellow",
+      "unstructured": "Goodfellow, I. The genome-linked protein VPg of vertebrate viruses \u2013 a multifaceted protein. Curr. Opin. Virol. 1, 355\u2013362 (2011)."
+    },
+    {
+      "key": "3511_CR185",
+      "doi": "10.1146/annurev-virology-100114-055218",
+      "title": "",
+      "journal": "Annu. Rev. Virol.",
+      "year": "2015",
+      "author": "I Sola",
+      "unstructured": "Sola, I., Almaz\u00e1n, F., Z\u00fa\u00f1iga, S. & Enjuanes, L. Continuous and discontinuous RNA synthesis in coronaviruses. Annu. Rev. Virol. 2, 265\u2013288 (2015)."
+    },
+    {
+      "key": "3511_CR186",
+      "doi": "10.1016/j.cell.2020.04.011",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "D Kim",
+      "unstructured": "Kim, D. et al. The architecture of SARS-CoV-2 transcriptome. Cell 181, 914\u2013921.e10 (2020)."
+    },
+    {
+      "key": "3511_CR187",
+      "doi": "10.1038/s41586-020-2739-1",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "Y Finkel",
+      "unstructured": "Finkel, Y. et al. The coding capacity of SARS-CoV-2. Nature 589, 125\u2013130 (2021)."
+    }
+  ]
+}

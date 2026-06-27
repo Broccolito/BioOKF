@@ -1,0 +1,1526 @@
+{
+  "article": {
+    "slug": "s41586-026-10593-6",
+    "doi": "10.1038/s41586-026-10593-6",
+    "title": "Genetic technologies to enhance crop nutritional value under climate change",
+    "url": "https://www.nature.com/articles/s41586-026-10593-6",
+    "abbrev": "genetic-technologies-enhance-crop-nutritional-value",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/genetic-technologies-enhance-crop-nutritional-value"
+  },
+  "meta": {
+    "title": "Genetic technologies to enhance crop nutritional value under climate change",
+    "authors": [
+      "Dominique Van Der Straeten",
+      "Mustafa Bulut",
+      "Da Cao",
+      "Asaph Aharoni",
+      "Howarth Bouis",
+      "Antonio Granell",
+      "Wilhelm Gruissem",
+      "Birger Lindberg M\u00f8ller",
+      "Cathie Martin",
+      "Holger Puchta",
+      "Nese Sreenivasulu",
+      "Alain Tissier",
+      "Leena Tripathi",
+      "Marc Van Montagu",
+      "Alisdair R. Fernie"
+    ],
+    "published": [
+      2026,
+      6,
+      24
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-026-10593-6",
+    "n_references": 165,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "10593_CR1",
+      "doi": "10.1016/s2214-109x(24)00276-6",
+      "title": "",
+      "journal": "Lancet Glob. Health",
+      "year": "2024",
+      "author": "S Passarelli",
+      "unstructured": "Passarelli, S. et al. Global estimation of dietary micronutrient inadequacies: a modelling analysis. Lancet Glob. Health 12, e1590\u2013e1599 (2024). This modelling analysis combines micronutrient intake data from 31 countries with publicly available data from the Global Dietary Database, to estimate the prevalence of inadequate nutrient intakes for over 99% of the global population."
+    },
+    {
+      "key": "10593_CR2",
+      "doi": "10.1016/s2214-109x(22)00367-9",
+      "title": "",
+      "journal": "Lancet Glob. Health",
+      "year": "2022",
+      "author": "GA Stevens",
+      "unstructured": "Stevens, G. A. et al. Micronutrient deficiencies among preschool-aged children and women of reproductive age worldwide: a pooled analysis of individual-level data from population-representative surveys. Lancet Glob. Health 10, e1590\u2013e1599 (2022)."
+    },
+    {
+      "key": "10593_CR3",
+      "doi": "10.1016/j.cdnut.2024.104478",
+      "title": "",
+      "journal": "Curr. Dev. Nutr.",
+      "year": "2024",
+      "author": "H Bouis",
+      "unstructured": "Bouis, H. et al. Biofortification: future challenges for a newly emerging technology to improve nutrition security sustainably. Curr. Dev. Nutr. 8, 104478 (2024)."
+    },
+    {
+      "key": "10593_CR4",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "FAO, IFAD, UNICEF, WFP & WHO. The State of Food Security and Nutrition in the World 2025: Addressing High Food Price Inflation for Food Security and Nutrition (FAO, 2025)."
+    },
+    {
+      "key": "10593_CR5",
+      "doi": "10.1016/s0140-6736(20)31647-0",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2020",
+      "author": "D Headey",
+      "unstructured": "Headey, D. et al. Impacts of COVID-19 on childhood malnutrition and nutrition-related mortality. Lancet 396, 519\u2013521 (2020)."
+    },
+    {
+      "key": "10593_CR6",
+      "doi": "10.1038/d41586-025-00898-3",
+      "title": "",
+      "journal": "Nature",
+      "year": "2025",
+      "author": "S Osendarp",
+      "unstructured": "Osendarp, S., Ruel, M., Udomkesmalee, E., Tessema, M. & Haddad, L. The full lethal impact of massive cuts to international food aid. Nature 640, 35\u201337 (2025)."
+    },
+    {
+      "key": "10593_CR7",
+      "doi": "10.1136/bmj.k2252",
+      "title": "",
+      "journal": "BMJ",
+      "year": "2018",
+      "author": "R Perez-Escamilla",
+      "unstructured": "Perez-Escamilla, R. et al. Nutrition disparities and the global burden of malnutrition. BMJ 361, k2252 (2018)."
+    },
+    {
+      "key": "10593_CR8",
+      "doi": "10.1016/j.eclinm.2023.101850",
+      "title": "",
+      "journal": "eClinicalMedicine",
+      "year": "2023",
+      "author": "B Chong",
+      "unstructured": "Chong, B. et al. Trends and predictions of malnutrition and obesity in 204 countries and territories: an analysis of the Global Burden of Disease Study 2019. eClinicalMedicine 57, 101850 (2023)."
+    },
+    {
+      "key": "10593_CR9",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "WHO. Malnutrition fact sheet https://www.who.int/news-room/fact-sheets/detail/malnutrition (2024)."
+    },
+    {
+      "key": "10593_CR10",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Borlaug, N. E. The Green Revolution, Peace, and Humanity (Nobel Prize lecture, 1970)."
+    },
+    {
+      "key": "10593_CR11",
+      "doi": "10.1073/pnas.0912953109",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2012",
+      "author": "PL Pingali",
+      "unstructured": "Pingali, P. L. Green revolution: impacts, limits, and the path ahead. Proc. Natl Acad. Sci. USA 109, 12302\u201312308 (2012)."
+    },
+    {
+      "key": "10593_CR12",
+      "doi": "10.1007/s00122-015-2585-y",
+      "title": "",
+      "journal": "Theor. Appl. Genet.",
+      "year": "2015",
+      "author": "Y-B Fu",
+      "unstructured": "Fu, Y.-B. Understanding crop genetic diversity under modern plant breeding. Theor. Appl. Genet. 128, 2131\u20132142 (2015)."
+    },
+    {
+      "key": "10593_CR13",
+      "doi": "10.3390/ijerph8020358",
+      "title": "",
+      "journal": "Int. J. Environ. Res. Public Health",
+      "year": "2011",
+      "author": "F Burchi",
+      "unstructured": "Burchi, F., Fanzo, J. & Frison, E. The role of food and nutrition system approaches in tackling hidden hunger. Int. J. Environ. Res. Public Health 8, 358\u2013373 (2011)."
+    },
+    {
+      "key": "10593_CR14",
+      "doi": "10.1038/nplants.2016.97",
+      "title": "",
+      "journal": "Nat. Plants",
+      "year": "2016",
+      "author": "PR Shewry",
+      "unstructured": "Shewry, P. R., Pellny, T. K. & Lovegrove, A. Is modern wheat bad for health? Nat. Plants 2, 16097 (2016)."
+    },
+    {
+      "key": "10593_CR15",
+      "doi": "10.1016/j.eja.2020.126013",
+      "title": "",
+      "journal": "Eur. J. Agron.",
+      "year": "2020",
+      "author": "ME Styczen",
+      "unstructured": "Styczen, M. E., Abrahamsen, P., Hansen, S. & Knudsen, L. Analysis of the significant drop in protein content in Danish grain crops from 1990\u20132015 based on N-response in fertilizer trials. Eur. J. Agron. 115, 126013 (2020)."
+    },
+    {
+      "key": "10593_CR16",
+      "doi": "10.1111/nbu.12461",
+      "title": "",
+      "journal": "Nutr. Bull.",
+      "year": "2020",
+      "author": "P Shewry",
+      "unstructured": "Shewry, P. et al. Do modern types of wheat have lower quality for human health?\u00a0Nutr. Bull. 45, 362\u2013373 (2020)."
+    },
+    {
+      "key": "10593_CR17",
+      "doi": "10.3390/foods12040843",
+      "title": "",
+      "journal": "Foods",
+      "year": "2023",
+      "author": "A Lovegrove",
+      "unstructured": "Lovegrove, A. et al. Comparative compositions of grain of bread wheat, emmer and spelt grown with different levels of nitrogen fertilisation. Foods 12, 843 (2023)."
+    },
+    {
+      "key": "10593_CR18",
+      "doi": "10.1016/s0140-6736(18)31788-4",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2019",
+      "author": "W Willett",
+      "unstructured": "Willett, W. et al. Food in the Anthropocene: the EAT\u2013Lancet Commission on healthy diets from sustainable food systems. Lancet 393, 447\u2013492 (2019). This paper presents universal scientific targets to reach a global food systems transformation aimed at sustainable health of people and planet; the reference below is an update that adds a global overview on equity in food systems."
+    },
+    {
+      "key": "10593_CR19",
+      "doi": "10.1016/s0140-6736(25)01201-2",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2025",
+      "author": "J Rockstr\u00f6m",
+      "unstructured": "Rockstr\u00f6m, J. et al. The EAT\u2013Lancet Commission on healthy, sustainable, and just food systems. Lancet 406, 1625\u20131700 (2025)."
+    },
+    {
+      "key": "10593_CR20",
+      "doi": "10.1038/s41572-021-00329-3",
+      "title": "",
+      "journal": "Nat. Rev. Dis. Primers",
+      "year": "2021",
+      "author": "JC Fanzo",
+      "unstructured": "Fanzo, J. C. & Downs, S. M. Climate change and nutrition-associated diseases. Nat. Rev. Dis. Primers 7, 90 (2021)."
+    },
+    {
+      "key": "10593_CR21",
+      "doi": "10.1126/sciadv.aaq1012",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2018",
+      "author": "C Zhu",
+      "unstructured": "Zhu, C. et al. Carbon dioxide (CO2) levels this century will alter the protein, micronutrients, and vitamin content of rice grains with potential health consequences for the poorest rice-dependent countries. Sci. Adv. 4, eaaq1012 (2018). This study covers multi-year, multi-location free-air CO2 enrichment experiments for 18 genetically diverse rice lines, providing a first example of a marked reduction of multiple micronutrients in a staple crop subjected to higher concentrations of CO2."
+    },
+    {
+      "key": "10593_CR22",
+      "doi": "10.1038/nature13179",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "SS Myers",
+      "unstructured": "Myers, S. S. et al. Increasing CO2 threatens human nutrition. Nature 510, 139\u2013142 (2014)."
+    },
+    {
+      "key": "10593_CR23",
+      "doi": "10.1029/2019gh000188",
+      "title": "",
+      "journal": "GeoHealth",
+      "year": "2019",
+      "author": "MR Smith",
+      "unstructured": "Smith, M. R. & Myers, S. S. Global health implications of nutrient changes in rice under high atmospheric carbon dioxide. GeoHealth 3, 190\u2013200 (2019)."
+    },
+    {
+      "key": "10593_CR24",
+      "doi": "10.1038/s41558-018-0253-3",
+      "title": "",
+      "journal": "Nat. Clim. Change",
+      "year": "2018",
+      "author": "MR Smith",
+      "unstructured": "Smith, M. R. & Myers, S. S. Impact of anthropogenic CO2 emissions on global human nutrition. Nat. Clim. Change 8, 834\u2013839 (2018)."
+    },
+    {
+      "key": "10593_CR25",
+      "doi": "10.3390/plants8110465",
+      "title": "",
+      "journal": "Plants",
+      "year": "2019",
+      "author": "J Soares",
+      "unstructured": "Soares, J., Deuchande, T., Valente, L. M., Pintado, M. & Vasconcelos, M. W. Growth and nutritional responses of bean and soybean genotypes to elevated CO2 in a controlled environment. Plants 8, 465 (2019)."
+    },
+    {
+      "key": "10593_CR26",
+      "doi": "10.1002/advs.202513322",
+      "title": "",
+      "journal": "Adv. Sci.",
+      "year": "2026",
+      "author": "D Cao",
+      "unstructured": "Cao, D. et al. Climate change threatens micronutrient density of European winter wheat. Adv. Sci. https://doi.org/10.1002/advs.202513322 (2026)."
+    },
+    {
+      "key": "10593_CR27",
+      "doi": "10.1104/pp.16.01371",
+      "title": "",
+      "journal": "Plant Physiol.",
+      "year": "2016",
+      "author": "AD Hanson",
+      "unstructured": "Hanson, A. D., Beaudoin, G. A., McCarty, D. R. & Gregory, J. F. III. Does abiotic stress cause functional B vitamin deficiency in plants?\u00a0Plant Physiol. 172, 2082\u20132097 (2016)."
+    },
+    {
+      "key": "10593_CR28",
+      "doi": "10.1016/j.pbi.2007.04.009",
+      "title": "",
+      "journal": "Curr. Opin. Plant Biol.",
+      "year": "2007",
+      "author": "AG Smith",
+      "unstructured": "Smith, A. G., Croft, M. T., Moulin, M. & Webb, M. E. Plants need their vitamins too. Curr. Opin. Plant Biol. 10, 266\u2013275 (2007)."
+    },
+    {
+      "key": "10593_CR29",
+      "doi": "10.1104/pp.109.140046",
+      "title": "",
+      "journal": "Plant Physiol.",
+      "year": "2009",
+      "author": "M Tunc-Ozdemir",
+      "unstructured": "Tunc-Ozdemir, M. et al. Thiamin confers enhanced tolerance to oxidative stress in Arabidopsis. Plant Physiol. 151, 421\u2013432 (2009)."
+    },
+    {
+      "key": "10593_CR30",
+      "doi": "10.3390/su13126582",
+      "title": "",
+      "journal": "Sustainability",
+      "year": "2021",
+      "author": "SF Amjad",
+      "unstructured": "Amjad, S. F. et al. Combined use of endophytic bacteria and pre-sowing treatment of thiamine mitigates the adverse effects of drought stress in wheat (Triticum aestivum L.) cultivars. Sustainability 13, 6582 (2021)."
+    },
+    {
+      "key": "10593_CR31",
+      "doi": "10.1007/s10725-013-9858-8",
+      "title": "",
+      "journal": "Plant Growth Regul.",
+      "year": "2014",
+      "author": "B Deng",
+      "unstructured": "Deng, B., Jin, X., Yang, Y., Lin, Z. & Zhang, Y. The regulatory role of riboflavin in the drought tolerance of tobacco plants depends on ROS production. Plant Growth Regul. 72, 269\u2013277 (2014)."
+    },
+    {
+      "key": "10593_CR32",
+      "doi": "10.1080/14620316.2020.1793691",
+      "title": "",
+      "journal": "J. Hortic. Sci. Biotechnol.",
+      "year": "2021",
+      "author": "M Ibrahim",
+      "unstructured": "Ibrahim, M., Ibrahim, H. A. & Abd El-Gawad, H. Folic acid as a protective agent in snap bean plants under water deficit conditions. J. Hortic. Sci. Biotechnol. 96, 94\u2013109 (2021)."
+    },
+    {
+      "key": "10593_CR33",
+      "doi": "10.3390/plants11111459",
+      "title": "",
+      "journal": "Plants",
+      "year": "2022",
+      "author": "H Alsamadany",
+      "unstructured": "Alsamadany, H., Mansour, H., Elkelish, A. & Ibrahim, M. F. Folic acid confers tolerance against salt stress-induced oxidative damages in snap beans through regulation growth, metabolites, antioxidant machinery and gene expression. Plants 11, 1459 (2022)."
+    },
+    {
+      "key": "10593_CR34",
+      "doi": "10.1007/s42976-024-00504-8",
+      "title": "",
+      "journal": "Cereal Res. Commun.",
+      "year": "2024",
+      "author": "K Jiadkong",
+      "unstructured": "Jiadkong, K. & Ueda, A. Effects of riboflavin application on rice growth under salinized soil conditions. Cereal Res. Commun. 52, 1565\u20131577 (2024)."
+    },
+    {
+      "key": "10593_CR35",
+      "doi": "10.3389/fpls.2022.1005710",
+      "title": "",
+      "journal": "Front. Plant Sci.",
+      "year": "2022",
+      "author": "MT Khan",
+      "unstructured": "Khan, M. T. et al. Impression of foliar-applied folic acid on coriander (Coriandrum sativum L.) to regulate aerial growth, biochemical activity, and essential oil profiling under drought stress. Front. Plant Sci. 13, 1005710 (2022)."
+    },
+    {
+      "key": "10593_CR36",
+      "doi": "10.1093/jxb/erad505",
+      "title": "",
+      "journal": "J. Exp. Bot.",
+      "year": "2024",
+      "author": "N Smirnoff",
+      "unstructured": "Smirnoff, N. & Wheeler, G. L. The ascorbate biosynthesis pathway in plants is known, but there is a way to go with understanding control and functions. J. Exp. Bot. 75, 2604\u20132630 (2024)."
+    },
+    {
+      "key": "10593_CR37",
+      "doi": "10.3389/fpls.2013.00143",
+      "title": "",
+      "journal": "Front. Plant Sci.",
+      "year": "2013",
+      "author": "H Vanderschuren",
+      "unstructured": "Vanderschuren, H. et al. Strategies for vitamin B6 biofortification of plants: a dual role as a micronutrient and a stress protectant. Front. Plant Sci. 4, 143 (2013)."
+    },
+    {
+      "key": "10593_CR38",
+      "doi": "10.3389/fchem.2017.00021",
+      "title": "",
+      "journal": "Front. Chem.",
+      "year": "2017",
+      "author": "V Gorelova",
+      "unstructured": "Gorelova, V., Ambach, L., R\u00e9beill\u00e9, F., Stove, C. & Van Der Straeten, D. Folates in plants: research advances and progress in crop biofortification. Front. Chem. 5, 21 (2017)."
+    },
+    {
+      "key": "10593_CR39",
+      "doi": "10.3390/nu13041118",
+      "title": "",
+      "journal": "Nutrients",
+      "year": "2021",
+      "author": "R Olson",
+      "unstructured": "Olson, R., Gavin-Smith, B., Ferraboschi, C. & Kraemer, K. Food fortification: the advantages, disadvantages and lessons from sight and life programs. Nutrients 13, 1118 (2021)."
+    },
+    {
+      "key": "10593_CR40",
+      "doi": "10.1016/j.foodpol.2023.102515",
+      "title": "",
+      "journal": "Food Policy",
+      "year": "2023",
+      "author": "J Fanzo",
+      "unstructured": "Fanzo, J., McLaren, R., Bellows, A. & Carducci, B. Challenges and opportunities for increasing the effectiveness of food reformulation and fortification to improve dietary and nutrition outcomes. Food Policy 119, 102515 (2023)."
+    },
+    {
+      "key": "10593_CR41",
+      "doi": "10.1038/s43016-023-00905-8",
+      "title": "",
+      "journal": "Nat. Food",
+      "year": "2024",
+      "author": "J Li",
+      "unstructured": "Li, J., Martin, C. & Fernie, A. Biofortification\u2019s contribution to mitigating micronutrient deficiencies. Nat. Food 5, 19\u201327 (2024)."
+    },
+    {
+      "key": "10593_CR42",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Ritchie, H., Rosado, P. & Roser, M. Agricultural production. Our World in Data https://ourworldindata.org/agricultural-production (2023)."
+    },
+    {
+      "key": "10593_CR43",
+      "doi": "10.1016/j.copbio.2017.02.003",
+      "title": "",
+      "journal": "Curr. Opin. Biotechnol.",
+      "year": "2017",
+      "author": "H De Steur",
+      "unstructured": "De Steur, H., Mehta, S., Gellynck, X. & Finkelstein, J. L. GM biofortified crops: potential effects on targeting the micronutrient intake gap in human populations. Curr. Opin. Biotechnol. 44, 181\u2013188 (2017)."
+    },
+    {
+      "key": "10593_CR44",
+      "doi": "10.1111/nyas.13293",
+      "title": "",
+      "journal": "Ann. NY Acad. Sci.",
+      "year": "2017",
+      "author": "MN Garcia-Casal",
+      "unstructured": "Garcia-Casal, M. N., Pe\u00f1a-Rosas, J. P., Giyose, B. & Groups, C. W. Staple crops biofortified with increased vitamins and minerals: considerations for a public health strategy. Ann. NY Acad. Sci. 1390, 3\u201313 (2017)."
+    },
+    {
+      "key": "10593_CR45",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Bouis, H. E. et al. Food Biofortification\u2014Reaping the Benefits of Science to Overcome Hidden Hunger: a Paper in the Series on the Need for Agricultural Innovation to Sustainably Feed the World by 2050. CAST Issue Paper No. 69 (CAST, 2020)."
+    },
+    {
+      "key": "10593_CR46",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "CDC. Micronutrient Facts https://www.cdc.gov/nutrition/features/micronutrient-facts.html (2025)."
+    },
+    {
+      "key": "10593_CR47",
+      "doi": "10.1016/j.molp.2017.08.006",
+      "title": "",
+      "journal": "Mol. Plant",
+      "year": "2018",
+      "author": "S Yu",
+      "unstructured": "Yu, S. & Tian, L. Breeding major cereal grains through the lens of nutrition sensitivity. Mol. Plant 11, 23\u201330 (2018)."
+    },
+    {
+      "key": "10593_CR48",
+      "doi": "10.1111/nyas.14936",
+      "title": "",
+      "journal": "Ann. NY Acad. Sci.",
+      "year": "2023",
+      "author": "S Kumar",
+      "unstructured": "Kumar, S. et al. Breeding and adoption of biofortified crops and their nutritional impact on human health. Ann. NY Acad. Sci. 1520, 5\u201319 (2023)."
+    },
+    {
+      "key": "10593_CR49",
+      "doi": "10.1126/science.287.5451.303",
+      "title": "",
+      "journal": "Science",
+      "year": "2000",
+      "author": "X Ye",
+      "unstructured": "Ye, X. et al. Engineering the provitamin A (\u03b2-carotene) biosynthetic pathway into (carotenoid-free) rice endosperm. Science 287, 303\u2013305 (2000). A seminal paper in biofortification by genetic modification, demonstrating its potential to alleviate vitamin A deficiency through the accumulation of provitamin A in rice kernels."
+    },
+    {
+      "key": "10593_CR50",
+      "doi": "10.1038/nbt1082",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2005",
+      "author": "JA Paine",
+      "unstructured": "Paine, J. A. et al. Improving the nutritional value of golden rice through increased pro-vitamin A content. Nat. Biotechnol. 23, 482\u2013487 (2005)."
+    },
+    {
+      "key": "10593_CR51",
+      "doi": "10.1016/j.molp.2020.11.019",
+      "title": "",
+      "journal": "Mol. Plant",
+      "year": "2021",
+      "author": "L Jiang",
+      "unstructured": "Jiang, L., Strobbe, S., Van Der Straeten, D. & Zhang, C. Regulation of plant vitamin metabolism: backbone of biofortification for the alleviation of hidden hunger. Mol. Plant 14, 40\u201360 (2021)."
+    },
+    {
+      "key": "10593_CR52",
+      "doi": "10.1038/s41467-020-19020-4",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "D Van Der Straeten",
+      "unstructured": "Van Der Straeten, D. et al. Multiplying the efficiency and impact of biofortification through metabolic engineering. Nat. Commun. 11, 5203 (2020)."
+    },
+    {
+      "key": "10593_CR53",
+      "doi": "10.1038/s41437-022-00500-w",
+      "title": "",
+      "journal": "Heredity",
+      "year": "2022",
+      "author": "AM Husaini",
+      "unstructured": "Husaini, A. M. High-value pleiotropic genes for developing multiple stress-tolerant biofortified crops for 21st-century challenges. Heredity 128, 460\u2013472 (2022)."
+    },
+    {
+      "key": "10593_CR54",
+      "doi": "10.1111/tpj.15483",
+      "title": "",
+      "journal": "Plant J.",
+      "year": "2022",
+      "author": "RM Rivero",
+      "unstructured": "Rivero, R. M., Mittler, R., Blumwald, E. & Zandalinas, S. I. Developing climate-resilient crops: improving plant tolerance to stress combination. Plant J. 109, 373\u2013389 (2022)."
+    },
+    {
+      "key": "10593_CR55",
+      "doi": "10.1016/j.jplph.2020.153134",
+      "title": "",
+      "journal": "J. Plant Physiol.",
+      "year": "2020",
+      "author": "E Cappetta",
+      "unstructured": "Cappetta, E., Andolfo, G., Di Matteo, A. & Ercolano, M. R. Empowering crop resilience to environmental multiple stress through the modulation of key response components. J. Plant Physiol. 246, 153134 (2020)."
+    },
+    {
+      "key": "10593_CR56",
+      "doi": "10.1038/s41467-025-59542-3",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2025",
+      "author": "R Sanchez-Munoz",
+      "unstructured": "Sanchez-Munoz, R. et al. Machine-learning meta-analysis reveals ethylene as a central component of the molecular core in abiotic stress responses in Arabidopsis. Nat. Commun. 16, 4778 (2025)."
+    },
+    {
+      "key": "10593_CR57",
+      "doi": "10.1007/s10722-020-01097-x",
+      "title": "",
+      "journal": "Genet. Resour. Crop Evol.",
+      "year": "2021",
+      "author": "FCB das Araujo",
+      "unstructured": "das Araujo, F. C. B. et al. Identification and validation of SNPs in the phytoene synthase 2 (psy2) gene associated with yellow color of the root in cassava (Manihot esculenta Crantz) accessions of the Brazilian Amazon. Genet. Resour. Crop Evol. 68, 1809\u20131824 (2021)."
+    },
+    {
+      "key": "10593_CR58",
+      "doi": "10.1126/science.1150255",
+      "title": "",
+      "journal": "Science",
+      "year": "2008",
+      "author": "CE Harjes",
+      "unstructured": "Harjes, C. E. et al. Natural genetic variation in lycopene epsilon cyclase tapped for maize biofortification. Science 319, 330\u2013333 (2008). An example of how classical breeding in combination with marker-assisted techniques can be used to increase vitamin contents in a crop staple."
+    },
+    {
+      "key": "10593_CR59",
+      "doi": "10.1038/ng.551",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2010",
+      "author": "J Yan",
+      "unstructured": "Yan, J. et al. Rare genetic variation at Zea mays crtRB1 increases \u03b2-carotene in maize grain. Nat. Genet. 42, 322\u2013327 (2010)."
+    },
+    {
+      "key": "10593_CR60",
+      "doi": "10.3390/ijms20225703",
+      "title": "",
+      "journal": "Int. J. Mol. Sci.",
+      "year": "2019",
+      "author": "F Sestili",
+      "unstructured": "Sestili, F. et al. Provitamin A biofortification of durum wheat through a TILLING approach. Int. J. Mol. Sci. 20, 5703 (2019)."
+    },
+    {
+      "key": "10593_CR61",
+      "doi": "10.3389/fpls.2023.1079559",
+      "title": "",
+      "journal": "Front. Plant Sci.",
+      "year": "2023",
+      "author": "A Frittelli",
+      "unstructured": "Frittelli, A. et al. The suppression of TdMRP3 genes reduces the phytic acid and increases the nutrient accumulation in durum wheat grain. Front. Plant Sci. 14, 1079559 (2023)."
+    },
+    {
+      "key": "10593_CR62",
+      "doi": "10.1126/sciadv.abq2266",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2022",
+      "author": "S Knudsen",
+      "unstructured": "Knudsen, S. et al. FIND-IT: accelerated trait development for a green evolution. Sci. Adv. 8, eabq2266 (2022)."
+    },
+    {
+      "key": "10593_CR63",
+      "doi": "10.1111/pbi.14427",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2024",
+      "author": "C Dockter",
+      "unstructured": "Dockter, C., Knudsen, S., Rasmussen, M. W., Skadhauge, B. & M\u00f8ller, B. L. Just FIND-IT: harnessing the true power of induced mutagenesis. Plant Biotechnol. J. 22, 3051\u20133053 (2024)."
+    },
+    {
+      "key": "10593_CR64",
+      "doi": "10.1111/pbi.12650",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2017",
+      "author": "JY Paul",
+      "unstructured": "Paul, J. Y. et al. Golden bananas in the field: elevated fruit pro-vitamin A from the expression of a single banana transgene. Plant Biotechnol. J. 15, 520\u2013532 (2017)."
+    },
+    {
+      "key": "10593_CR65",
+      "doi": "10.3389/fpls.2018.00443",
+      "title": "",
+      "journal": "Front. Plant Sci.",
+      "year": "2018",
+      "author": "S Strobbe",
+      "unstructured": "Strobbe, S. & Van Der Straeten, D. Toward eradication of B-vitamin deficiencies: considerations for crop biofortification. Front. Plant Sci. 9, 443 (2018)."
+    },
+    {
+      "key": "10593_CR66",
+      "doi": "10.1016/j.copbio.2024.103132",
+      "title": "",
+      "journal": "Curr. Opin. Biotechnol.",
+      "year": "2024",
+      "author": "L De Zanetti",
+      "unstructured": "De Zanetti, L. & Van Der Straeten, D. \u2018From metabolism to metabolism\u2019: holistic considerations on B-vitamin interactions, biofortification, and deficiencies. Curr. Opin. Biotechnol. 87, 103132 (2024)."
+    },
+    {
+      "key": "10593_CR67",
+      "doi": "10.1038/nbt1351",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2007",
+      "author": "S Storozhenko",
+      "unstructured": "Storozhenko, S. et al. Folate fortification of rice by metabolic engineering. Nat. Biotechnol. 25, 1277\u20131279 (2007)."
+    },
+    {
+      "key": "10593_CR68",
+      "doi": "10.1038/nbt.3358",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2015",
+      "author": "D Blancquaert",
+      "unstructured": "Blancquaert, D. et al. Improving folate (vitamin B9) stability in biofortified rice through metabolic engineering. Nat. Biotechnol. 33, 1076\u20131078 (2015). A first proof of concept of simultaneous enhancement and stabilization of vitamins (folates, vitamin B9) to reach the recommended daily intake in a single serving of rice."
+    },
+    {
+      "key": "10593_CR69",
+      "doi": "10.1016/j.molp.2017.12.008",
+      "title": "",
+      "journal": "Mol. Plant",
+      "year": "2018",
+      "author": "J De Lepeleire",
+      "unstructured": "De Lepeleire, J. et al. Folate biofortification of potato by tuber-specific expression of four folate biosynthesis genes. Mol. Plant 11, 175\u2013188 (2018). An example of multi-gene targeted metabolic engineering as a route towards biofortification."
+    },
+    {
+      "key": "10593_CR70",
+      "doi": "10.1111/pbi.14348",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Fitzpatrick, T. B. et al. Vitamin B1 enhancement in the endosperm of rice through thiamine sequestration. Plant Biotechnol. J. 22, 2330\u20132332 (2024)."
+    },
+    {
+      "key": "10593_CR71",
+      "doi": "10.1038/nbt.3318",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Li, K.-T. et al. Increased bioavailable vitamin B6 in field-grown transgenic cassava for dietary sufficiency. Nat. Biotechnol. 33, 1029\u20131032 (2015). An example of a comprehensive approach to enhance the bioavailability of vitamin B6 in an important global crop."
+    },
+    {
+      "key": "10593_CR72",
+      "doi": "10.1016/j.molp.2024.09.005",
+      "title": "",
+      "journal": "Mol. Plant",
+      "year": "2024",
+      "author": "Q Liang",
+      "unstructured": "Liang, Q. et al. Creation of folate-biofortified rice by simultaneously enhancing biosynthetic flux and blocking folate oxidation. Mol. Plant 17, 1487\u20131489 (2024)."
+    },
+    {
+      "key": "10593_CR73",
+      "doi": "10.1038/s41477-022-01154-6",
+      "title": "",
+      "journal": "Nat. Plants",
+      "year": "2022",
+      "author": "J Li",
+      "unstructured": "Li, J. et al. Biofortified tomatoes provide a new route to vitamin D sufficiency. Nat. Plants 8, 611\u2013616 (2022). A proof-of-concept study in tomato, showing that a CRISPR\u2013Cas-based approach can be used to accumulate a vitamin that does not naturally occur in plant foods."
+    },
+    {
+      "key": "10593_CR74",
+      "doi": "10.1111/pbi.14459",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2024",
+      "author": "M Boccia",
+      "unstructured": "Boccia, M. et al. Metabolic engineering of vitamin D3 in Solanaceae plants. Plant Biotechnol. J. 22, 3389\u20133391 (2024)."
+    },
+    {
+      "key": "10593_CR75",
+      "doi": "10.1111/pbi.70018",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2025",
+      "author": "Y Livneh",
+      "unstructured": "Livneh, Y. et al. Combined enhancement of ascorbic acid, \u03b2-carotene and zeaxanthin in gene-edited lettuce. Plant Biotechnol. J. 23, 1954\u20131967 (2025). A demonstration of multi-pathway CRISPR\u2013Cas application, achieving considerable enhancements in provitamin A and vitamin C in lettuce."
+    },
+    {
+      "key": "10593_CR76",
+      "doi": "10.1093/jxb/erab040",
+      "title": "",
+      "journal": "J. Exp. Bot.",
+      "year": "2021",
+      "author": "P Deslous",
+      "unstructured": "Deslous, P. et al. Overproduction of ascorbic acid impairs pollen fertility in tomato. J. Exp. Bot. 72, 3091\u20133107 (2021)."
+    },
+    {
+      "key": "10593_CR77",
+      "doi": "10.1111/pbi.70034",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2025",
+      "author": "Z Dai",
+      "unstructured": "Dai, Z. et al. An intronic SNP in the Carotenoid Cleavage Dioxygenase 1 (CsCCD1) controls yellow flesh formation in cucumber fruit (Cucumis sativus L.). Plant Biotechnol. J. 23, 2182\u20132193 (2025)."
+    },
+    {
+      "key": "10593_CR78",
+      "doi": "10.1016/j.cell.2021.01.013",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "H Yu",
+      "unstructured": "Yu, H. et al. A route to de novo domestication of wild allotetraploid rice. Cell 184, 1156\u20131170 (2021). A pioneering example that took de novo domestication beyond proof-of-concept studies and demonstrated its power as a route for developing novel crops."
+    },
+    {
+      "key": "10593_CR79",
+      "doi": "10.1016/j.molp.2024.11.010",
+      "title": "",
+      "journal": "Mol. Plant",
+      "year": "2025",
+      "author": "RN Tiozon",
+      "unstructured": "Tiozon, R. N. & Sreenivasulu, N. Harmonizing metabolic blueprint of flavor using complementary genomic insights. Mol. Plant 18, 19\u201321 (2025)."
+    },
+    {
+      "key": "10593_CR80",
+      "doi": "10.1038/s41586-024-08187-1",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "M Jayakodi",
+      "unstructured": "Jayakodi, M. et al. Structural variation in the pangenome of wild and domesticated barley. Nature 636, 654\u2013662 (2024)."
+    },
+    {
+      "key": "10593_CR81",
+      "doi": "10.1016/j.molp.2025.05.014",
+      "title": "",
+      "journal": "Mol. Plant",
+      "year": "2025",
+      "author": "Z Xia",
+      "unstructured": "Xia, Z. et al. Pan-genome and haplotype map of cassava cultivars and wild ancestors provide insights into its adaptive evolution and domestication. Mol. Plant 18, 1047\u20131071 (2025)."
+    },
+    {
+      "key": "10593_CR82",
+      "doi": "10.1126/science.285.5426.375",
+      "title": "",
+      "journal": "Science",
+      "year": "1999",
+      "author": "D DellaPenna",
+      "unstructured": "DellaPenna, D. Nutritional genomics: manipulating plant micronutrients to improve human health. Science 285, 375\u2013379 (1999)."
+    },
+    {
+      "key": "10593_CR83",
+      "doi": "10.1016/j.tplants.2022.11.002",
+      "title": "",
+      "journal": "Trends Plant Sci.",
+      "year": "2023",
+      "author": "Y Liu",
+      "unstructured": "Liu, Y. et al. Biotechnological detoxification: an unchanging source\u2013sink balance strategy for crop improvement. Trends Plant Sci. 28, 135\u2013138 (2023)."
+    },
+    {
+      "key": "10593_CR84",
+      "doi": "10.1038/nbt853",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2003",
+      "author": "EB Cahoon",
+      "unstructured": "Cahoon, E. B. et al. Metabolic redesign of vitamin E biosynthesis in plants for tocotrienol production and increased antioxidant content. Nat. Biotechnol. 21, 1082\u20131087 (2003). A seminal example of the power of sophisticated metabolic engineering strategies as potential routes towards biofortification."
+    },
+    {
+      "key": "10593_CR85",
+      "doi": "10.1105/tpc.106.046417",
+      "title": "",
+      "journal": "Plant Cell",
+      "year": "2006",
+      "author": "S Lu",
+      "unstructured": "Lu, S. et al. The cauliflower Or gene encodes a DnaJ cysteine-rich domain-containing protein that mediates high levels of \u03b2-carotene accumulation. Plant Cell 18, 3594\u20133605 (2006)."
+    },
+    {
+      "key": "10593_CR86",
+      "doi": "10.1007/s11033-022-07326-z",
+      "title": "",
+      "journal": "Mol. Biol. Rep.",
+      "year": "2022",
+      "author": "SH Wani",
+      "unstructured": "Wani, S. H. et al. Improving zinc and iron biofortification in wheat through genomics approaches. Mol. Biol. Rep. 49, 8007\u20138023 (2022)."
+    },
+    {
+      "key": "10593_CR87",
+      "doi": "10.1371/journal.pone.0010190",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2010",
+      "author": "L Zheng",
+      "unstructured": "Zheng, L. et al. Nicotianamine, a novel enhancer of rice iron bioavailability to humans. PLoS ONE\u00a05, e10190 (2010)."
+    },
+    {
+      "key": "10593_CR88",
+      "doi": "10.1073/pnas.0910950106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "S Lee",
+      "unstructured": "Lee, S. et al. Iron fortification of rice seeds through activation of the nicotianamine synthase gene. Proc. Natl Acad. Sci. USA 106, 22014\u201322019 (2009)."
+    },
+    {
+      "key": "10593_CR89",
+      "doi": "10.1042/bj3200493",
+      "title": "",
+      "journal": "Biochem. J.",
+      "year": "1996",
+      "author": "LJ Sweetlove",
+      "unstructured": "Sweetlove, L. J., Burrell, M. M. & Rees, T. A. Starch metabolism in tubers of transgenic potato (Solanum tuberosum) with increased ADPglucose pyrophosphorylase. Biochem. J. 320, 493\u2013498 (1996)."
+    },
+    {
+      "key": "10593_CR90",
+      "doi": "10.1093/jxb/erw254",
+      "title": "",
+      "journal": "J. Exp. Bot.",
+      "year": "2016",
+      "author": "W Wang",
+      "unstructured": "Wang, W. & Galili, G. Transgenic high-lysine rice\u2013a realistic solution to malnutrition?\u00a0J. Exp. Bot. 67, 4009\u20134011 (2016)."
+    },
+    {
+      "key": "10593_CR91",
+      "doi": "10.1093/plcell/koab032",
+      "title": "",
+      "journal": "Plant Cell",
+      "year": "2021",
+      "author": "CH Diepenbrock",
+      "unstructured": "Diepenbrock, C. H. et al. Eleven biosynthetic genes explain the majority of natural variation in carotenoid levels in maize grain. Plant Cell 33, 882\u2013900 (2021)."
+    },
+    {
+      "key": "10593_CR92",
+      "doi": "10.1016/j.scib.2024.11.040",
+      "title": "",
+      "journal": "Sci. Bull.",
+      "year": "2025",
+      "author": "Y Li",
+      "unstructured": "Li, Y. et al. Two major rice loci determine rice-staple food populations differences in vitamin B1 deficiency levels. Sci. Bull. 70, 1046\u20131050 (2025)."
+    },
+    {
+      "key": "10593_CR93",
+      "doi": "10.1111/tpj.14432",
+      "title": "",
+      "journal": "Plant J.",
+      "year": "2019",
+      "author": "W Zhan",
+      "unstructured": "Zhan, W. et al. An allele of ZmPORB2 encoding a protochlorophyllide oxidoreductase promotes tocopherol accumulation in both leaves and kernels of maize. Plant J. 100, 114\u2013127 (2019)."
+    },
+    {
+      "key": "10593_CR94",
+      "doi": "10.1080/07352680903436283",
+      "title": "",
+      "journal": "Crit. Rev. Plant Sci.",
+      "year": "2010",
+      "author": "D Blancquaert",
+      "unstructured": "Blancquaert, D. et al. Folates and folic acid: from fundamental research toward sustainable health. Crit. Rev. Plant Sci. 29, 14\u201335 (2010)."
+    },
+    {
+      "key": "10593_CR95",
+      "doi": "10.1038/nbt1108",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2005",
+      "author": "GR Davuluri",
+      "unstructured": "Davuluri, G. R. et al. Fruit-specific RNAi-mediated suppression of DET1 enhances carotenoid and flavonoid content in tomatoes. Nat. Biotechnol. 23, 890\u2013895 (2005)."
+    },
+    {
+      "key": "10593_CR96",
+      "doi": "10.1104/pp.16.00941",
+      "title": "",
+      "journal": "Plant Physiol.",
+      "year": "2016",
+      "author": "MG Stacey",
+      "unstructured": "Stacey, M. G. et al. Identification of homogentisate dioxygenase as a target for vitamin E biofortification in oilseeds. Plant Physiol. 172, 1506\u20131518 (2016)."
+    },
+    {
+      "key": "10593_CR97",
+      "doi": "10.1038/nbt1322",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2007",
+      "author": "J Shi",
+      "unstructured": "Shi, J. et al. Embryo-specific silencing of a transporter reduces phytic acid content of maize and soybean seeds. Nat. Biotechnol. 25, 930\u2013937 (2007)."
+    },
+    {
+      "key": "10593_CR98",
+      "doi": "10.1146/annurev-arplant-050213-035825",
+      "title": "",
+      "journal": "Annu. Rev. Plant Biol.",
+      "year": "2014",
+      "author": "G Farr\u00e9",
+      "unstructured": "Farr\u00e9, G. et al. Engineering complex metabolic pathways in plants. Annu. Rev. Plant Biol. 65, 187\u2013223 (2014)."
+    },
+    {
+      "key": "10593_CR99",
+      "doi": "10.1016/j.pbi.2018.01.004",
+      "title": "",
+      "journal": "Curr. Opin. Plant Biol.",
+      "year": "2018",
+      "author": "U Sonnewald",
+      "unstructured": "Sonnewald, U. & Fernie, A. R. Next-generation strategies for understanding and influencing source\u2013sink relations in crop plants. Curr. Opin. Plant Biol. 43, 63\u201370 (2018)."
+    },
+    {
+      "key": "10593_CR100",
+      "doi": "10.1111/tpj.70100",
+      "title": "",
+      "journal": "Plant J.",
+      "year": "2025",
+      "author": "SA Gharat",
+      "unstructured": "Gharat, S. A., Tamhane, V. A., Giri, A. P. & Aharoni, A. Navigating the challenges of engineering composite specialized metabolite pathways in plants. Plant J. 121, e70100 (2025)."
+    },
+    {
+      "key": "10593_CR101",
+      "doi": "10.7554/elife.13664",
+      "title": "",
+      "journal": "elife",
+      "year": "2016",
+      "author": "P Fuentes",
+      "unstructured": "Fuentes, P. et al. A new synthetic biology approach allows transfer of an entire metabolic pathway from a medicinal plant to a biomass crop. elife 5, e13664 (2016)."
+    },
+    {
+      "key": "10593_CR102",
+      "doi": "10.1038/nbt.1506",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2008",
+      "author": "E Butelli",
+      "unstructured": "Butelli, E. et al. Enrichment of tomato fruit with health-promoting anthocyanins by expression of select transcription factors. Nat. Biotechnol. 26, 1301\u20131308 (2008)."
+    },
+    {
+      "key": "10593_CR103",
+      "doi": "10.1111/pbi.12943",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2019",
+      "author": "TY Wu",
+      "unstructured": "Wu, T. Y., Gruissem, W. & Bhullar, N. K. Targeting intracellular transport combined with efficient uptake and storage significantly increases grain iron and zinc levels in rice. Plant Biotechnol. J. 17, 9\u201320 (2019). An example of a multi-targeted metabolic engineering approach."
+    },
+    {
+      "key": "10593_CR104",
+      "doi": "10.1080/09168451.2019.1608808",
+      "title": "",
+      "journal": "Biosci. Biotechnol. Biochem.",
+      "year": "2019",
+      "author": "M Suekawa",
+      "unstructured": "Suekawa, M. et al. High levels of expression of multiple enzymes in the Smirnoff\u2013Wheeler pathway are important for high accumulation of ascorbic acid in acerola fruits. Biosci. Biotechnol. Biochem. 83, 1713\u20131716 (2019)."
+    },
+    {
+      "key": "10593_CR105",
+      "doi": "10.1007/s00425-007-0535-x",
+      "title": "",
+      "journal": "Planta",
+      "year": "2007",
+      "author": "H-Y Wang",
+      "unstructured": "Wang, H.-Y. et al. Iron deficiency-mediated stress regulation of four subgroup Ib BHLH genes in Arabidopsis thaliana. Planta 226, 897\u2013908 (2007)."
+    },
+    {
+      "key": "10593_CR106",
+      "doi": "10.1371/journal.pgen.1008149",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2019",
+      "author": "J Ye",
+      "unstructured": "Ye, J. et al. Genome-wide association analysis identifies a natural variation in basic helix-loop-helix transcription factor regulating ascorbate biosynthesis via d-mannose/l-galactose pathway in tomato. PLoS Genet. 15, e1008149 (2019)."
+    },
+    {
+      "key": "10593_CR107",
+      "doi": "10.1038/ncomms9635",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2015",
+      "author": "Y Zhang",
+      "unstructured": "Zhang, Y. et al. Multi-level engineering facilitates the production of phenylpropanoid compounds in tomato. Nat. Commun. 6, 8635 (2015)."
+    },
+    {
+      "key": "10593_CR108",
+      "doi": "10.1021/acsfoodscitech.4c00692",
+      "title": "",
+      "journal": "ACS Food Sci. Technol.",
+      "year": "2024",
+      "author": "C Martin",
+      "unstructured": "Martin, C. & Butelli, E. The purple tomato story; from laboratory bench to the consumer. ACS Food Sci. Technol. 5, 19\u201328 (2024)."
+    },
+    {
+      "key": "10593_CR109",
+      "doi": "10.1016/j.ymben.2023.06.011",
+      "title": "",
+      "journal": "Metab. Eng.",
+      "year": "2023",
+      "author": "AR Konda",
+      "unstructured": "Konda, A. R. et al. Vitamin E biofortification: maximizing oilseed tocotrienol and total vitamin E tocochromanol production by use of metabolic bypass combinations. Metab. Eng. 79, 66\u201377 (2023)."
+    },
+    {
+      "key": "10593_CR110",
+      "doi": "10.1105/tpc.112.106385",
+      "title": "",
+      "journal": "Plant Cell",
+      "year": "2013",
+      "author": "SE Bocobza",
+      "unstructured": "Bocobza, S. E. et al. Orchestration of thiamin biosynthesis and central metabolism by combined action of the thiamin pyrophosphate riboswitch and the circadian clock in Arabidopsis. Plant Cell 25, 288\u2013307 (2013)."
+    },
+    {
+      "key": "10593_CR111",
+      "doi": "10.1038/s44222-023-00115-8",
+      "title": "",
+      "journal": "Nat. Rev. Bioeng.",
+      "year": "2023",
+      "author": "A Tuncel",
+      "unstructured": "Tuncel, A. et al. Genome-edited foods. Nat. Rev. Bioeng. 1, 799\u2013816 (2023)."
+    },
+    {
+      "key": "10593_CR112",
+      "doi": "10.1038/s41580-025-00834-3",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2025",
+      "author": "A Tuncel",
+      "unstructured": "Tuncel, A., Pan, C., Clem, J. S., Liu, D. & Qi, Y. CRISPR\u2013Cas applications in agriculture and plant research. Nat. Rev. Mol. Cell Biol. 26, 419\u2013441 (2025)."
+    },
+    {
+      "key": "10593_CR113",
+      "doi": "10.1016/j.bbrc.2024.150942",
+      "title": "",
+      "journal": "Biochem. Biophys. Res. Commun.",
+      "year": "2024",
+      "author": "C Jiang",
+      "unstructured": "Jiang, C. et al. Development and optimization of base editors and its application in crops. Biochem. Biophys. Res. Commun. 739, 150942 (2024)."
+    },
+    {
+      "key": "10593_CR114",
+      "doi": "10.1038/s41477-025-01956-4",
+      "title": "",
+      "journal": "Nat. Plants",
+      "year": "2025",
+      "author": "J Gilbertson",
+      "unstructured": "Gilbertson, J., Puchta, H. & Slotkin, R. K. The future of genome editing in plants. Nat. Plants 11, 680\u2013685 (2025)."
+    },
+    {
+      "key": "10593_CR115",
+      "doi": "10.1038/s41477-024-01898-3",
+      "title": "",
+      "journal": "Nat. Plants",
+      "year": "2025",
+      "author": "Y Zhao",
+      "unstructured": "Zhao, Y. et al. Precise deletion, replacement and inversion of large DNA fragments in plants using dual prime editing. Nat. Plants 11, 191\u2013205 (2025)."
+    },
+    {
+      "key": "10593_CR116",
+      "doi": "10.1186/s13059-023-02990-1",
+      "title": "",
+      "journal": "Genome Biol.",
+      "year": "2023",
+      "author": "P Ni",
+      "unstructured": "Ni, P. et al. Efficient and versatile multiplex prime editing in hexaploid wheat. Genome Biol. 24, 156 (2023)."
+    },
+    {
+      "key": "10593_CR117",
+      "doi": "10.1038/s41477-024-01786-w",
+      "title": "",
+      "journal": "Nat. Plants",
+      "year": "2024",
+      "author": "TV Vu",
+      "unstructured": "Vu, T. V. et al. Optimized dicot prime editing enables heritable desired edits in tomato and Arabidopsis. Nat. Plants 10, 1502\u20131513 (2024)."
+    },
+    {
+      "key": "10593_CR118",
+      "doi": "10.1016/j.cell.2024.11.005",
+      "title": "",
+      "journal": "Cell",
+      "year": "2025",
+      "author": "H Lou",
+      "unstructured": "Lou, H. et al. Engineering source\u2013sink relations by prime editing confers heat-stress resilience in tomato and rice. Cell 188, 530\u2013549 (2025)."
+    },
+    {
+      "key": "10593_CR119",
+      "doi": "10.1038/s41587-023-01769-w",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2024",
+      "author": "C Sun",
+      "unstructured": "Sun, C. et al. Precise integration of large DNA sequences in plant genomes using PrimeRoot editors. Nat. Biotechnol. 42, 316\u2013327 (2024)."
+    },
+    {
+      "key": "10593_CR120",
+      "doi": "10.1016/j.molp.2024.03.013",
+      "title": "",
+      "journal": "Mol. Plant",
+      "year": "2024",
+      "author": "T Schreiber",
+      "unstructured": "Schreiber, T. et al. Efficient scar-free knock-ins of several kilobases in plants by engineered CRISPR\u2013Cas endonucleases. Mol. Plant 17, 824\u2013837 (2024)."
+    },
+    {
+      "key": "10593_CR121",
+      "doi": "10.1038/s41586-024-07613-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "P Liu",
+      "unstructured": "Liu, P. et al. Transposase-assisted target-site integration for efficient plant genome engineering. Nature 631, 593\u2013600 (2024)."
+    },
+    {
+      "key": "10593_CR122",
+      "doi": "10.1007/s42994-023-00130-8",
+      "title": "",
+      "journal": "aBIOTECH",
+      "year": "2024",
+      "author": "H Puchta",
+      "unstructured": "Puchta, H. Regulation of gene-edited plants in Europe: from the valley of tears into the shining sun?\u00a0aBIOTECH 5, 231\u2013238 (2024)."
+    },
+    {
+      "key": "10593_CR123",
+      "doi": "10.1111/nph.19414",
+      "title": "",
+      "journal": "New Phytol.",
+      "year": "2024",
+      "author": "H Puchta",
+      "unstructured": "Puchta, H. & Houben, A. Plant chromosome engineering\u2013past, present and future. New Phytol. 241, 541\u2013552 (2024)."
+    },
+    {
+      "key": "10593_CR124",
+      "doi": "10.1038/s41467-023-37004-y",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2023",
+      "author": "Y Zhou",
+      "unstructured": "Zhou, Y. et al. Pan-genome inversion index reveals evolutionary insights into the subpopulation structure of Asian rice. Nat. Commun. 14, 1567 (2023)."
+    },
+    {
+      "key": "10593_CR125",
+      "doi": "10.1038/s41586-020-2947-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "M Jayakodi",
+      "unstructured": "Jayakodi, M. et al. The barley pan-genome reveals the hidden legacy of mutation breeding. Nature 588, 284\u2013289 (2020)."
+    },
+    {
+      "key": "10593_CR126",
+      "doi": "10.1038/s41467-020-18277-z",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "C Schmidt",
+      "unstructured": "Schmidt, C. et al. Changing local recombination patterns in Arabidopsis by CRISPR/Cas mediated chromosome engineering. Nat. Commun. 11, 4418 (2020)."
+    },
+    {
+      "key": "10593_CR127",
+      "doi": "10.1038/nrg3605",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2013",
+      "author": "RS Meyer",
+      "unstructured": "Meyer, R. S. & Purugganan, M. D. Evolution of crop species: genetics of domestication and diversification. Nat. Rev. Genet. 14, 840\u2013852 (2013)."
+    },
+    {
+      "key": "10593_CR128",
+      "doi": "10.1016/j.cell.2017.08.030",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "D Rodr\u00edguez-Leal",
+      "unstructured": "Rodr\u00edguez-Leal, D., Lemmon, Z. H., Man, J., Bartlett, M. E. & Lippman, Z. B. Engineering quantitative trait variation for crop improvement by genome editing. Cell 171, 470\u2013480 (2017)."
+    },
+    {
+      "key": "10593_CR129",
+      "doi": "10.1038/s41477-023-01384-2",
+      "title": "",
+      "journal": "Nat. Plants",
+      "year": "2023",
+      "author": "J Zhou",
+      "unstructured": "Zhou, J. et al. An efficient CRISPR\u2013Cas12a promoter editing system for crop improvement. Nat. Plants 9, 588\u2013604 (2023)."
+    },
+    {
+      "key": "10593_CR130",
+      "doi": "10.1111/pbi.14484",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2025",
+      "author": "X Zheng",
+      "unstructured": "Zheng, X. et al. An efficient CRISPR\u2013Cas12a-mediated microRNA knockout strategy in plants. Plant Biotechnol. J. 23, 128\u2013140 (2025)."
+    },
+    {
+      "key": "10593_CR131",
+      "doi": "10.1016/j.ymben.2020.01.008",
+      "title": "",
+      "journal": "Metab. Eng.",
+      "year": "2020",
+      "author": "N Kaur",
+      "unstructured": "Kaur, N. et al. CRISPR/Cas9 directed editing of lycopene epsilon-cyclase modulates metabolic flux for \u03b2-carotene biosynthesis in banana fruit. Metab. Eng. 59, 76\u201386 (2020)."
+    },
+    {
+      "key": "10593_CR132",
+      "doi": "10.3389/fpls.2018.00559",
+      "title": "",
+      "journal": "Front. Plant Sci.",
+      "year": "2018",
+      "author": "X Li",
+      "unstructured": "Li, X. et al. Lycopene is enriched in tomato fruit by CRISPR/Cas9-mediated multiplex genome editing. Front. Plant Sci. 9, 559 (2018)."
+    },
+    {
+      "key": "10593_CR133",
+      "doi": "10.1007/s00299-024-03199-7",
+      "title": "",
+      "journal": "Plant Cell Rep.",
+      "year": "2024",
+      "author": "G Sobrino-Mengual",
+      "unstructured": "Sobrino-Mengual, G. et al. Activation of the native PHYTOENE SYNTHASE 1 promoter by modifying near-miss cis-acting elements induces carotenoid biosynthesis in embryogenic rice callus. Plant Cell Rep. 43, 118 (2024)."
+    },
+    {
+      "key": "10593_CR134",
+      "doi": "10.1186/s12284-019-0345-3",
+      "title": "",
+      "journal": "Rice",
+      "year": "2019",
+      "author": "A Endo",
+      "unstructured": "Endo, A., Saika, H., Takemura, M., Misawa, N. & Toki, S. A novel approach to carotenoid accumulation in rice callus by mimicking the cauliflower Orange mutation via genome editing. Rice 12, 81 (2019)."
+    },
+    {
+      "key": "10593_CR135",
+      "doi": "10.1016/j.cell.2025.01.023",
+      "title": "",
+      "journal": "Cell",
+      "year": "2025",
+      "author": "J-J Xu",
+      "unstructured": "Xu, J.-J. et al. Design of CoQ10 crops based on evolutionary history. Cell 188, 1941\u20131954 (2025)."
+    },
+    {
+      "key": "10593_CR136",
+      "doi": "10.1101/gad.443907",
+      "title": "",
+      "journal": "Genes Dev.",
+      "year": "2007",
+      "author": "S Bocobza",
+      "unstructured": "Bocobza, S. et al. Riboswitch-dependent gene regulation and its evolution in the plant kingdom. Genes Dev. 21, 2874\u20132879 (2007)."
+    },
+    {
+      "key": "10593_CR137",
+      "doi": "10.1073/pnas.2112516119",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2022",
+      "author": "JL Gage",
+      "unstructured": "Gage, J. L. et al. Variation in upstream open reading frames contributes to allelic diversity in maize protein abundance. Proc. Natl Acad. Sci. USA 119, e2112516119 (2022)."
+    },
+    {
+      "key": "10593_CR138",
+      "doi": "10.1016/j.tplants.2024.10.005",
+      "title": "",
+      "journal": "Trends Plant Sci.",
+      "year": "2025",
+      "author": "R Mou",
+      "unstructured": "Mou, R., Niu, R., Yang, R. & Xu, G. Engineering crop performance with upstream open reading frames. Trends Plant Sci. 30, 311\u2013323 (2025)."
+    },
+    {
+      "key": "10593_CR139",
+      "doi": "10.1038/s41587-023-01707-w",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2023",
+      "author": "C Xue",
+      "unstructured": "Xue, C. et al. Tuning plant phenotypes by precise, graded downregulation of gene expression. Nat. Biotechnol. 41, 1758\u20131764 (2023)."
+    },
+    {
+      "key": "10593_CR140",
+      "doi": "10.1038/nbt.4202",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2018",
+      "author": "H Zhang",
+      "unstructured": "Zhang, H. et al. Genome editing of upstream open reading frames enables translational control in plants. Nat. Biotechnol. 36, 894\u2013898 (2018). An early example of the use of genome editing to tune gene expression and thereby also facilitate the upregulation of gene expression."
+    },
+    {
+      "key": "10593_CR141",
+      "doi": "10.1093/jxb/erad003",
+      "title": "",
+      "journal": "J. Exp. Bot.",
+      "year": "2023",
+      "author": "SS Ferreira",
+      "unstructured": "Ferreira, S. S. & Reis, R. S. Using CRISPR/Cas to enhance gene expression for crop trait improvement by editing miRNA targets. J. Exp. Bot. 74, 2208\u20132212 (2023)."
+    },
+    {
+      "key": "10593_CR142",
+      "doi": "10.1093/plcell/koae315",
+      "title": "",
+      "journal": "Plant Cell",
+      "year": "2025",
+      "author": "C He",
+      "unstructured": "He, C. et al. Boosting transcriptional activities by employing repeated activation domains in transcription factors. Plant Cell 37, koae315 (2025)."
+    },
+    {
+      "key": "10593_CR143",
+      "doi": "10.1038/s41598-017-07198-5",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2017",
+      "author": "SP Singh",
+      "unstructured": "Singh, S. P., Gruissem, W. & Bhullar, N. K. Single genetic locus improvement of iron, zinc and \u03b2-carotene content in rice grains. Sci. Rep. 7, 6883 (2017)."
+    },
+    {
+      "key": "10593_CR144",
+      "doi": "10.1111/nph.18333",
+      "title": "",
+      "journal": "New Phytol.",
+      "year": "2023",
+      "author": "M Buchholzer",
+      "unstructured": "Buchholzer, M. & Frommer, W. B. An increasing number of countries regulate genome editing in crops. New Phytol. 237, 12\u201315 (2023)."
+    },
+    {
+      "key": "10593_CR145",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Volcic, V. Trends in European Public Investment in Plant Breeding R&I (Plants for the Future European Technology Platform, 2024)."
+    },
+    {
+      "key": "10593_CR146",
+      "doi": "10.1371/journal.pone.0287276",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2024",
+      "author": "J Menary",
+      "unstructured": "Menary, J. & Fuller, S. S. New genomic techniques, old divides: stakeholder attitudes towards new biotechnology regulation in the EU and UK. PLoS ONE\u00a019, e0287276 (2024)."
+    },
+    {
+      "key": "10593_CR147",
+      "doi": "10.1038/s44383-025-00016-2",
+      "title": "",
+      "journal": "npj Sci. Plants",
+      "year": "2026",
+      "author": "A Ricroch",
+      "unstructured": "Ricroch, A. et al. Global status of genome editing versus transgenesis legislation in plants and the current EU situation. npj Sci. Plants 2, 3 (2026)."
+    },
+    {
+      "key": "10593_CR148",
+      "doi": "10.1007/s11103-019-00913-y",
+      "title": "",
+      "journal": "Plant Mol. Biol.",
+      "year": "2019",
+      "author": "TV Matveeva",
+      "unstructured": "Matveeva, T. V. & Otten, L. Widespread occurrence of natural genetic transformation of plants by Agrobacterium. Plant Mol. Biol. 101, 415\u2013437 (2019)."
+    },
+    {
+      "key": "10593_CR149",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "EU Parliament. Proposal for a Regulation of the European Parliament and of the Council on Plants Obtained by Certain New Genomic Techniques and Their Food and Feed, and Amending Regulation (EU) 2017/625 https://food.ec.europa.eu/document/download/c03805a6-4dcc-42ce-959c-e4d609010fa3_en?filename=gmo_biotech_ngt_proposal_2023-411_en.pdf (2023)."
+    },
+    {
+      "key": "10593_CR150",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "UK Parliament. Genetic Technology (Precision Breeding) Act 2023 https://www.legislation.gov.uk/ukpga/2023/6/pdfs/ukpga_20230006_en.pdf (2023)."
+    },
+    {
+      "key": "10593_CR151",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Genetic Literacy Project. Global Gene Editing Regulation Tracker https://crispr-gene-editing-regs-tracker.geneticliteracyproject.org (2024)."
+    },
+    {
+      "key": "10593_CR152",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "FAO, IFAD, PAHO, UNICEF & WFP. Latin America and the Caribbean\u2014Regional Overview of Food Security and Nutrition 2023 edn (FAO, 2023)."
+    },
+    {
+      "key": "10593_CR153",
+      "doi": "10.3389/fbioe.2025.1526851",
+      "title": "",
+      "journal": "Front. Bioeng. Biotechnol.",
+      "year": "2025",
+      "author": "O Akinbo",
+      "unstructured": "Akinbo, O. et al. Africa and zero hunger agenda: genome editing policy landscape, challenges and opportunities. Front. Bioeng. Biotechnol. 13, 1526851 (2025)."
+    },
+    {
+      "key": "10593_CR154",
+      "doi": "10.1007/s11240-024-02904-4",
+      "title": "",
+      "journal": "Plant Cell Tiss. Organ Cult.",
+      "year": "2024",
+      "author": "A Hern\u00e1ndez-Soto",
+      "unstructured": "Hern\u00e1ndez-Soto, A. & Gatica-Arias, A. Genome editing in Latin America: research achievements and regulatory evolution. Plant Cell Tiss. Organ Cult. 159, 55 (2024)."
+    },
+    {
+      "key": "10593_CR155",
+      "doi": "10.3390/plants11192538",
+      "title": "",
+      "journal": "Plants",
+      "year": "2022",
+      "author": "MG Jones",
+      "unstructured": "Jones, M. G. et al. Enabling trade in gene-edited produce in Asia and Australasia: the developing regulatory landscape and future perspectives. Plants 11, 2538 (2022)."
+    },
+    {
+      "key": "10593_CR156",
+      "doi": "10.3389/fgeed.2022.876697",
+      "title": "",
+      "journal": "Front. Genome Ed.",
+      "year": "2022",
+      "author": "L Tripathi",
+      "unstructured": "Tripathi, L. et al. Genome editing for sustainable agriculture in Africa. Front. Genome Ed. 4, 876697 (2022)."
+    },
+    {
+      "key": "10593_CR157",
+      "doi": "10.1038/s41586-025-09122-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2025",
+      "author": "G Li",
+      "unstructured": "Li, G. et al. Integrated biotechnological and AI innovations for crop improvement. Nature 643, 925\u2013937 (2025). This paper proposes the integration of omics technologies, genome editing, protein design and high-throughput phenotyping, supported by artificial-intelligence-enabled tools, to face challenges imposed by global climate change and contribute to food security."
+    },
+    {
+      "key": "10593_CR158",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Institute of Medicine. Dietary Reference Intakes for Calcium, Phosphorus, Magnesium, Vitamin D, and Fluoride (National Academies Press, 1997)."
+    },
+    {
+      "key": "10593_CR159",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Institute of Medicine. Dietary Reference Intakes for Thiamin, Riboflavin, Niacin, Vitamin B6, Folate, Vitamin B12, Pantothenic Acid, Biotin, and Choline (National Academies Press, 1998)."
+    },
+    {
+      "key": "10593_CR160",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Institute of Medicine. Dietary Reference Intakes for Vitamin C, Vitamin E, Selenium, and Carotenoids (National Academies Press, 2000)."
+    },
+    {
+      "key": "10593_CR161",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Institute of Medicine. Dietary Reference Intakes for Vitamin A, Vitamin K, Arsenic, Boron, Chromium, Copper, Iodine, Iron, Manganese, Molybdenum, Nickel, Silicon, Vanadium, and Zinc (National Academies Press, 2001)."
+    },
+    {
+      "key": "10593_CR162",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Institute of Medicine. Dietary Reference Intakes for Water, Potassium, Sodium, Chloride, and Sulfate (National Academies Press, 2005)."
+    },
+    {
+      "key": "10593_CR163",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Institute of Medicine. Dietary Reference Intakes for Calcium and Vitamin D (National Academies Press, 2010)."
+    },
+    {
+      "key": "10593_CR164",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Institute of Medicine. Dietary Reference Intakes for Sodium and Potassium (National Academies Press, 2019)."
+    },
+    {
+      "key": "10593_CR165",
+      "doi": "10.1038/s41586-021-03695-w",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "B Tellman",
+      "unstructured": "Tellman, B. et al. Satellite imaging reveals increased proportion of population exposed to floods. Nature 596, 80\u201386 (2021)."
+    }
+  ]
+}

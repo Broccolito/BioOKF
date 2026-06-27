@@ -1,0 +1,1704 @@
+{
+  "article": {
+    "slug": "s41586-023-05968-y",
+    "doi": "10.1038/s41586-023-05968-y",
+    "title": "The neuroscience of cancer",
+    "url": "https://www.nature.com/articles/s41586-023-05968-y",
+    "abbrev": "neuroscience-cancer",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/neuroscience-cancer"
+  },
+  "n_refs": 180,
+  "n_with_doi": 175,
+  "n_oa": 114,
+  "records": [
+    {
+      "doi": "10.1126/science.294.5545.1354",
+      "title": "",
+      "year": "2001",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1469-7793.2001.00665.x",
+      "title": "",
+      "year": "2001",
+      "journal": "J. Physiol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2278670?pdf=render",
+      "file": "10.1111_j.1469-7793.2001.00665.x.md"
+    },
+    {
+      "doi": "10.1126/science.291.5504.657",
+      "title": "",
+      "year": "2001",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2004.12.020",
+      "title": "",
+      "year": "2005",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867404012450/pdf",
+      "file": "10.1016_j.cell.2004.12.020.md"
+    },
+    {
+      "doi": "10.1016/s0925-4773(97)00054-3",
+      "title": "",
+      "year": "1997",
+      "journal": "Mech. Dev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1051/jbio/2001195030327",
+      "title": "",
+      "year": "2001",
+      "journal": "J. Soc. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.ceca.2005.01.005",
+      "title": "",
+      "year": "2005",
+      "journal": "Cell Calcium",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1523/jneurosci.0740-19.2019",
+      "title": "",
+      "year": "2020",
+      "journal": "J. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jneurosci.org/content/jneuro/40/5/944.full.pdf",
+      "file": "10.1523_jneurosci.0740-19.2019.md"
+    },
+    {
+      "doi": "10.1016/s0896-6273(00)80026-4",
+      "title": "",
+      "year": "1996",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0896627300800264/pdf",
+      "file": "10.1016_s0896-6273_00_80026-4.md"
+    },
+    {
+      "doi": "10.1016/s0092-8674(00)81816-4",
+      "title": "",
+      "year": "1996",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867400818164/pdf",
+      "file": "10.1016_s0092-8674_00_81816-4.md"
+    },
+    {
+      "doi": "10.1038/32448",
+      "title": "",
+      "year": "1998",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1523/jneurosci.17-18-07037.1997",
+      "title": "",
+      "year": "1997",
+      "journal": "J. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jneurosci.org/content/jneuro/17/18/7037.full.pdf",
+      "file": "10.1523_jneurosci.17-18-07037.1997.md"
+    },
+    {
+      "doi": "10.1016/j.neuron.2004.08.015",
+      "title": "",
+      "year": "2004",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0896627304004970/pdf",
+      "file": "10.1016_j.neuron.2004.08.015.md"
+    },
+    {
+      "doi": "10.1016/0896-6273(95)90008-x",
+      "title": "",
+      "year": "1995",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1016/0896-6273(95)90008-x",
+      "file": "10.1016_0896-6273_95_90008-x.md"
+    },
+    {
+      "doi": "10.1159/000082139",
+      "title": "",
+      "year": "2004",
+      "journal": "Dev. Neurosci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1523/jneurosci.3229-04.2004",
+      "title": "",
+      "year": "2004",
+      "journal": "J. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jneurosci.org/content/jneuro/24/46/10343.full.pdf",
+      "file": "10.1523_jneurosci.3229-04.2004.md"
+    },
+    {
+      "doi": "10.1016/j.neuron.2010.03.009",
+      "title": "",
+      "year": "2010",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0896627310001807/pdf",
+      "file": "10.1016_j.neuron.2010.03.009.md"
+    },
+    {
+      "doi": "10.1126/science.aar2866",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s0896-6273(01)00217-3",
+      "title": "",
+      "year": "2001",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0896627301002173/pdf",
+      "file": "10.1016_s0896-6273_01_00217-3.md"
+    },
+    {
+      "doi": "10.1126/science.281.5376.559",
+      "title": "",
+      "year": "1998",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1523/jneurosci.18-11-04145.1998",
+      "title": "",
+      "year": "1998",
+      "journal": "J. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jneurosci.org/content/jneuro/18/11/4145.full.pdf",
+      "file": "10.1523_jneurosci.18-11-04145.1998.md"
+    },
+    {
+      "doi": "10.1002/dneu.20737",
+      "title": "",
+      "year": "2009",
+      "journal": "Dev. Neurobiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/dneu.20737",
+      "file": "10.1002_dneu.20737.md"
+    },
+    {
+      "doi": "10.1523/jneurosci.14-06-03805.1994",
+      "title": "",
+      "year": "1994",
+      "journal": "J. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jneurosci.org/content/jneuro/14/6/3805.full.pdf",
+      "file": "10.1523_jneurosci.14-06-03805.1994.md"
+    },
+    {
+      "doi": "10.1016/0896-6273(93)90246-n",
+      "title": "",
+      "year": "1993",
+      "journal": "Neuron",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1152/jn.00972.2002",
+      "title": "",
+      "year": "2003",
+      "journal": "J. Neurophysiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature06233",
+      "title": "",
+      "year": "2007",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nrn2759",
+      "title": "",
+      "year": "2010",
+      "journal": "Nat. Rev. Neurosci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2902252?pdf=render",
+      "file": "10.1038_nrn2759.md"
+    },
+    {
+      "doi": "10.1113/jphysiol.2004.071621",
+      "title": "",
+      "year": "2004",
+      "journal": "J. Physiol.",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "http://doi.org/10.1113/jphysiol.2004.071621",
+      "file": "10.1113_jphysiol.2004.071621.md"
+    },
+    {
+      "doi": "10.1126/science.2035024",
+      "title": "",
+      "year": "1991",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/374716a0",
+      "title": "",
+      "year": "1995",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1469-7793.1998.219bu.x",
+      "title": "",
+      "year": "1998",
+      "journal": "J. Physiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://physoc.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1469-7793.1998.219bu.x?download=true",
+      "file": "10.1111_j.1469-7793.1998.219bu.x.md"
+    },
+    {
+      "doi": "10.1126/science.1071111",
+      "title": "",
+      "year": "2002",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nn.2285",
+      "title": "",
+      "year": "2009",
+      "journal": "Nat. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://discovery.ucl.ac.uk/150241/1/Hausser_1378129_Traveling_waves_in_developing_cerebellar_cortex_ukmss-4248.pdf",
+      "file": "10.1038_nn.2285.md"
+    },
+    {
+      "doi": "10.1523/jneurosci.14-03-01486.1994",
+      "title": "",
+      "year": "1994",
+      "journal": "J. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jneurosci.org/content/jneuro/14/3/1486.full.pdf",
+      "file": "10.1523_jneurosci.14-03-01486.1994.md"
+    },
+    {
+      "doi": "10.1126/science.274.5290.1133",
+      "title": "",
+      "year": "1996",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.neuron.2013.10.030",
+      "title": "",
+      "year": "2013",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0896627313009343/pdf",
+      "file": "10.1016_j.neuron.2013.10.030.md"
+    },
+    {
+      "doi": "10.1016/s0896-6273(04)00266-1",
+      "title": "",
+      "year": "2004",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0896627304002661/pdf",
+      "file": "10.1016_s0896-6273_04_00266-1.md"
+    },
+    {
+      "doi": "10.1016/j.neuron.2005.08.023",
+      "title": "",
+      "year": "2005",
+      "journal": "Neuron",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nn1522",
+      "title": "",
+      "year": "2005",
+      "journal": "Nat. Neurosci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1380263?pdf=render",
+      "file": "10.1038_nn1522.md"
+    },
+    {
+      "doi": "10.1073/pnas.0803955106",
+      "title": "",
+      "year": "2009",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/doi/pdf/10.1073/pnas.0803955106",
+      "file": "10.1073_pnas.0803955106.md"
+    },
+    {
+      "doi": "10.1038/sj.npp.1300320",
+      "title": "",
+      "year": "2004",
+      "journal": "Neuropsychopharmacology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/1300320.pdf",
+      "file": "10.1038_sj.npp.1300320.md"
+    },
+    {
+      "doi": "10.1038/nn.3734",
+      "title": "",
+      "year": "2014",
+      "journal": "Nat. Neurosci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4122286?pdf=render",
+      "file": "10.1038_nn.3734.md"
+    },
+    {
+      "doi": "10.1113/jphysiol.1949.sp004335",
+      "title": "",
+      "year": "1949",
+      "journal": "J. Physiol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1392492?pdf=render",
+      "file": "10.1113_jphysiol.1949.sp004335.md"
+    },
+    {
+      "doi": "10.1038/nature11007",
+      "title": "",
+      "year": "2012",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://hdl.handle.net/20.500.11820/5dddc02c-5fba-4cd1-8843-f6127c64d960",
+      "file": "10.1038_nature11007.md"
+    },
+    {
+      "doi": "10.1038/nn.3390",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Neurosci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3807738?pdf=render",
+      "file": "10.1038_nn.3390.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2011.11.094",
+      "title": "",
+      "year": "2012",
+      "journal": "Neuroimage",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41593-018-0120-6",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Neurosci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5920745?pdf=render",
+      "file": "10.1038_s41593-018-0120-6.md"
+    },
+    {
+      "doi": "10.1038/s41593-018-0121-5",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Neurosci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5920726?pdf=render",
+      "file": "10.1038_s41593-018-0121-5.md"
+    },
+    {
+      "doi": "10.1093/cercor/bhh060",
+      "title": "",
+      "year": "2004",
+      "journal": "Cereb. Cortex",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/cercor/article-pdf/14/9/995/1032230/bhh060.pdf",
+      "file": "10.1093_cercor_bhh060.md"
+    },
+    {
+      "doi": "10.1016/j.neuron.2013.01.006",
+      "title": "",
+      "year": "2013",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://figshare.com/articles/journal_contribution/Oligodendrocyte_dynamics_in_the_healthy_adult_CNS_evidence_for_myelin_remodeling/22899281",
+      "file": "10.1016_j.neuron.2013.01.006.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2014.10.011",
+      "title": "",
+      "year": "2014",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867414012987/pdf",
+      "file": "10.1016_j.cell.2014.10.011.md"
+    },
+    {
+      "doi": "10.1016/j.devcel.2021.06.006",
+      "title": "",
+      "year": "2021",
+      "journal": "Dev. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1534580721004846/pdf",
+      "file": "10.1016_j.devcel.2021.06.006.md"
+    },
+    {
+      "doi": "10.1126/science.1252304",
+      "title": "",
+      "year": "2014",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4096908?pdf=render",
+      "file": "10.1126_science.1252304.md"
+    },
+    {
+      "doi": "10.1016/j.neuron.2019.04.032",
+      "title": "",
+      "year": "2019",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6697075?pdf=render",
+      "file": "10.1016_j.neuron.2019.04.032.md"
+    },
+    {
+      "doi": "10.1038/s41467-017-02719-2",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-017-02719-2.pdf",
+      "file": "10.1038_s41467-017-02719-2.md"
+    },
+    {
+      "doi": "10.1016/j.neuron.2019.10.013",
+      "title": "",
+      "year": "2020",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7579726?pdf=render",
+      "file": "10.1016_j.neuron.2019.10.013.md"
+    },
+    {
+      "doi": "10.1073/pnas.1916646117",
+      "title": "",
+      "year": "2020",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/117/24/13227.full.pdf",
+      "file": "10.1073_pnas.1916646117.md"
+    },
+    {
+      "doi": "10.1126/science.1254960",
+      "title": "",
+      "year": "2014",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6324726?pdf=render",
+      "file": "10.1126_science.1254960.md"
+    },
+    {
+      "doi": "10.1038/s41593-019-0582-1",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Neurosci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7213814?pdf=render",
+      "file": "10.1038_s41593-019-0582-1.md"
+    },
+    {
+      "doi": "10.1002/glia.20969",
+      "title": "",
+      "year": "2010",
+      "journal": "Glia",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1523/jneurosci.3990-12.2013",
+      "title": "",
+      "year": "2013",
+      "journal": "J. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jneurosci.org/content/jneuro/33/11/4947.full.pdf",
+      "file": "10.1523_jneurosci.3990-12.2013.md"
+    },
+    {
+      "doi": "10.1038/35012083",
+      "title": "",
+      "year": "2000",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nn1162",
+      "title": "",
+      "year": "2004",
+      "journal": "Nat. Neurosci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature04302",
+      "title": "",
+      "year": "2005",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1416283?pdf=render",
+      "file": "10.1038_nature04302.md"
+    },
+    {
+      "doi": "10.7554/elife.49291",
+      "title": "",
+      "year": "2019",
+      "journal": "eLife",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6800000?pdf=render",
+      "file": "10.7554_elife.49291.md"
+    },
+    {
+      "doi": "10.7554/elife.28080",
+      "title": "",
+      "year": "2017",
+      "journal": "eLife",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://kclpure.kcl.ac.uk/ws/files/86955058/Signalling_through_AMPA_receptors_KOUGIOUMTZIDOU_Publishedonline13June2017_GOLD_VoR_CC_BY_.pdf",
+      "file": "10.7554_elife.28080.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2019.06.024",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867419306877/pdf",
+      "file": "10.1016_j.cell.2019.06.024.md"
+    },
+    {
+      "doi": "10.1126/science.aao4750",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5949869?pdf=render",
+      "file": "10.1126_science.aao4750.md"
+    },
+    {
+      "doi": "10.1038/s41588-022-01236-3",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41588-022-01236-3.pdf",
+      "file": "10.1038_s41588-022-01236-3.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2011.06.014",
+      "title": "",
+      "year": "2011",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867411006568/pdf",
+      "file": "10.1016_j.cell.2011.06.014.md"
+    },
+    {
+      "doi": "10.1073/pnas.1101657108",
+      "title": "",
+      "year": "2011",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3060250?pdf=render",
+      "file": "10.1073_pnas.1101657108.md"
+    },
+    {
+      "doi": "10.1073/pnas.1414389111",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/111/40/E4214.full.pdf",
+      "file": "10.1073_pnas.1414389111.md"
+    },
+    {
+      "doi": "10.1016/j.ccell.2015.09.007",
+      "title": "",
+      "year": "2015",
+      "journal": "Cancer Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1535610815003384/pdf",
+      "file": "10.1016_j.ccell.2015.09.007.md"
+    },
+    {
+      "doi": "10.1016/j.ccell.2017.03.011",
+      "title": "",
+      "year": "2017",
+      "journal": "Cancer Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1535610817301071/pdf",
+      "file": "10.1016_j.ccell.2017.03.011.md"
+    },
+    {
+      "doi": "10.1016/j.molcel.2019.08.030",
+      "title": "",
+      "year": "2019",
+      "journal": "Mol. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1097276519306859/pdf",
+      "file": "10.1016_j.molcel.2019.08.030.md"
+    },
+    {
+      "doi": "10.1016/j.ccell.2020.06.003",
+      "title": "",
+      "year": "2020",
+      "journal": "Cancer Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S153561082030307X/pdf",
+      "file": "10.1016_j.ccell.2020.06.003.md"
+    },
+    {
+      "doi": "10.1038/s41588-022-01205-w",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Genet.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9742294?pdf=render",
+      "file": "10.1038_s41588-022-01205-w.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2015.04.012",
+      "title": "",
+      "year": "2015",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867415004298/pdf",
+      "file": "10.1016_j.cell.2015.04.012.md"
+    },
+    {
+      "doi": "10.1038/s41586-022-04719-9",
+      "title": "",
+      "year": "2022",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-021-03580-6",
+      "title": "",
+      "year": "2021",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8346229?pdf=render",
+      "file": "10.1038_s41586-021-03580-6.md"
+    },
+    {
+      "doi": "10.1038/nature24014",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://nrs.harvard.edu/urn-3:HUL.InstRepos:37067887",
+      "file": "10.1038_nature24014.md"
+    },
+    {
+      "doi": "10.1038/s41467-020-15770-3",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-020-15770-3.pdf",
+      "file": "10.1038_s41467-020-15770-3.md"
+    },
+    {
+      "doi": "10.1101/gad.310797.117",
+      "title": "",
+      "year": "2018",
+      "journal": "Genes Dev.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://genesdev.cshlp.org/content/32/7-8/491.full.pdf",
+      "file": "10.1101_gad.310797.117.md"
+    },
+    {
+      "doi": "10.1007/s11060-018-2967-5",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Neurooncol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pure.amsterdamumc.nl/ws/files/158495128/Oscillatory-brain-activity-associates-with-neuroligin-3-expression-and-predicts-progression-free-survival-in-patients-wi.pdf",
+      "file": "10.1007_s11060-018-2967-5.md"
+    },
+    {
+      "doi": "10.1038/s41467-022-30466-6",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-022-30466-6.pdf",
+      "file": "10.1038_s41467-022-30466-6.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1563-y",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7038898?pdf=render",
+      "file": "10.1038_s41586-019-1563-y.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1564-x",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://eprints.gla.ac.uk/198826/",
+      "file": "10.1038_s41586-019-1564-x.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2022.06.054",
+      "title": "",
+      "year": "2022",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867422008479/pdf",
+      "file": "10.1016_j.cell.2022.06.054.md"
+    },
+    {
+      "doi": "10.1101/2021.11.04.467325",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.biorxiv.org/content/biorxiv/early/2021/11/04/2021.11.04.467325.full.pdf",
+      "file": "10.1101_2021.11.04.467325.md"
+    },
+    {
+      "doi": "10.1523/jneurosci.3532-16.2017",
+      "title": "",
+      "year": "2017",
+      "journal": "J. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jneurosci.org/content/jneuro/37/29/6837.full.pdf",
+      "file": "10.1523_jneurosci.3532-16.2017.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2022.04.038",
+      "title": "",
+      "year": "2022",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867422005360/pdf",
+      "file": "10.1016_j.cell.2022.04.038.md"
+    },
+    {
+      "doi": "10.1038/s41586-022-05520-4",
+      "title": "",
+      "year": "2022",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1101/gad.330597.119",
+      "title": "",
+      "year": "2019",
+      "journal": "Genes Dev.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://genesdev.cshlp.org/content/33/23-24/1739.full.pdf",
+      "file": "10.1101_gad.330597.119.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1576-6",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://iris.unil.ch/bitstreams/2b7f6ab6-0a8b-4806-b3d9-3f44f46d0899/download",
+      "file": "10.1038_s41586-019-1576-6.md"
+    },
+    {
+      "doi": "10.1038/nm.2453",
+      "title": "",
+      "year": "2011",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3192231?pdf=render",
+      "file": "10.1038_nm.2453.md"
+    },
+    {
+      "doi": "10.1111/j.1528-1167.2012.03557.x",
+      "title": "",
+      "year": "2012",
+      "journal": "Epilepsia",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1528-1167.2012.03557.x",
+      "file": "10.1111_j.1528-1167.2012.03557.x.md"
+    },
+    {
+      "doi": "10.1002/glia.22730",
+      "title": "",
+      "year": "2015",
+      "journal": "Glia",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4237714?pdf=render",
+      "file": "10.1002_glia.22730.md"
+    },
+    {
+      "doi": "10.1038/nn.4493",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5824716?pdf=render",
+      "file": "10.1038_nn.4493.md"
+    },
+    {
+      "doi": "10.1038/s41586-020-1952-2",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7577741?pdf=render",
+      "file": "10.1038_s41586-020-1952-2.md"
+    },
+    {
+      "doi": "10.1172/jci133316",
+      "title": "",
+      "year": "2020",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/133316/files/pdf",
+      "file": "10.1172_jci133316.md"
+    },
+    {
+      "doi": "10.1038/s41586-023-06036-1",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-023-06036-1.pdf",
+      "file": "10.1038_s41586-023-06036-1.md"
+    },
+    {
+      "doi": "10.1007/s11060-019-03386-7",
+      "title": "",
+      "year": "2020",
+      "journal": "J. Neurooncol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://link.springer.com/content/pdf/10.1007/s11060-019-03386-7.pdf",
+      "file": "10.1007_s11060-019-03386-7.md"
+    },
+    {
+      "doi": "10.1016/j.yexcr.2013.10.004",
+      "title": "",
+      "year": "2014",
+      "journal": "Exp. Cell. Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nrgastro.2012.32",
+      "title": "",
+      "year": "2012",
+      "journal": "Nat. Rev. Gastroenterol. Hepatol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://figshare.com/articles/journal_contribution/The_enteric_nervous_system_and_neurogastroenterology/26804476",
+      "file": "10.1038_nrgastro.2012.32.md"
+    },
+    {
+      "doi": "10.1126/science.1192046",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.devcel.2014.06.012",
+      "title": "",
+      "year": "2014",
+      "journal": "Dev. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1534580714004018/pdf",
+      "file": "10.1016_j.devcel.2014.06.012.md"
+    },
+    {
+      "doi": "10.1016/s0002-9440(10)64208-3",
+      "title": "",
+      "year": "2002",
+      "journal": "Am. J. Pathol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://ajp.amjpathol.org/article/S0002944010642083/pdf",
+      "file": "10.1016_s0002-9440_10_64208-3.md"
+    },
+    {
+      "doi": "10.1053/j.gastro.2012.05.007",
+      "title": "",
+      "year": "2012",
+      "journal": "Gastroenterology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.gastrojournal.org/article/S0016508512006889/pdf",
+      "file": "10.1053_j.gastro.2012.05.007.md"
+    },
+    {
+      "doi": "10.1186/s12915-014-0092-2",
+      "title": "",
+      "year": "2014",
+      "journal": "BMC Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://bmcbiol.biomedcentral.com/counter/pdf/10.1186/s12915-014-0092-2",
+      "file": "10.1186_s12915-014-0092-2.md"
+    },
+    {
+      "doi": "10.1038/s41467-019-10219-8",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-019-10219-8.pdf",
+      "file": "10.1038_s41467-019-10219-8.md"
+    },
+    {
+      "doi": "10.1095/biolreprod51.1.99",
+      "title": "",
+      "year": "1994",
+      "journal": "Biol. Reprod.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/(sici)1097-0045(19980215)34:3<214::aid-pros9>3.0.co;2-h",
+      "title": "",
+      "year": "1998",
+      "journal": "Prostate",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s0022-5347(17)38881-x",
+      "title": "",
+      "year": "1989",
+      "journal": "J. Urol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1053/hupa.2001.26456",
+      "title": "",
+      "year": "2001",
+      "journal": "Hum. Pathol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/pros.1137",
+      "title": "",
+      "year": "2001",
+      "journal": "Prostate",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1236361",
+      "title": "",
+      "year": "2013",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aah5072",
+      "title": "",
+      "year": "2017",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://science.sciencemag.org/content/sci/358/6361/321.full.pdf",
+      "file": "10.1126_science.aah5072.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1219-y",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41598-017-16858-5",
+      "title": "",
+      "year": "2017",
+      "journal": "Sci. Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41598-017-16858-5.pdf",
+      "file": "10.1038_s41598-017-16858-5.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0016295",
+      "title": "",
+      "year": "2011",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0016295&type=printable",
+      "file": "10.1371_journal.pone.0016295.md"
+    },
+    {
+      "doi": "10.1158/0008-5472.can-07-6810",
+      "title": "",
+      "year": "2008",
+      "journal": "Cancer Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aacrjournals.org/cancerres/article-pdf/68/10/3573/2592421/3573.pdf",
+      "file": "10.1158_0008-5472.can-07-6810.md"
+    },
+    {
+      "doi": "10.1053/j.gastro.2003.09.018",
+      "title": "",
+      "year": "2003",
+      "journal": "Gastroenterology",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/0016-5085(84)90586-9",
+      "title": "",
+      "year": "1984",
+      "journal": "Gastroenterology",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/0167-0115(88)90036-5",
+      "title": "",
+      "year": "1988",
+      "journal": "Regul. Pept.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/carcin/bgr118",
+      "title": "",
+      "year": "2011",
+      "journal": "Carcinogenesis",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/carcin/article-pdf/32/9/1396/7093065/bgr118.pdf",
+      "file": "10.1093_carcin_bgr118.md"
+    },
+    {
+      "doi": "10.1002/cncr.26117",
+      "title": "",
+      "year": "2011",
+      "journal": "Cancer",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1200/jco.2009.22.4949",
+      "title": "",
+      "year": "2009",
+      "journal": "J. Clin. Oncol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ascopubs.org/doi/pdfdirect/10.1200/JCO.2009.22.4949?role=tab",
+      "file": "10.1200_jco.2009.22.4949.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.3009569",
+      "title": "",
+      "year": "2014",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cmet.2022.10.012",
+      "title": "",
+      "year": "2022",
+      "journal": "Cell Metab.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1097/00006676-199801000-00013",
+      "title": "",
+      "year": "1998",
+      "journal": "Pancreas",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/cne.21736",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2677067?pdf=render",
+      "file": "10.1002_cne.21736.md"
+    },
+    {
+      "doi": "10.1007/bf02788369",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/(sici)1096-9098(199707)65:3<164::aid-jso4>3.0.co;2-4",
+      "title": "",
+      "year": "1997",
+      "journal": "J. Surg. Oncol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1097/pas.0b013e318065bfe6",
+      "title": "",
+      "year": "2007",
+      "journal": "Am. J. Surg. Pathol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1200/jco.1999.17.8.2419",
+      "title": "",
+      "year": "1999",
+      "journal": "J. Clin. Oncol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1440-1746.2006.04074.x",
+      "title": "",
+      "year": "2006",
+      "journal": "J. Gastroenterol. Hepatol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.ccr.2007.01.012",
+      "title": "",
+      "year": "2007",
+      "journal": "Cancer Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S153561080700027X/pdf",
+      "file": "10.1016_j.ccr.2007.01.012.md"
+    },
+    {
+      "doi": "10.1016/j.ccr.2011.05.011",
+      "title": "",
+      "year": "2011",
+      "journal": "Cancer Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1535610811001899/pdf",
+      "file": "10.1016_j.ccr.2011.05.011.md"
+    },
+    {
+      "doi": "10.1158/0008-5472.can-13-2050",
+      "title": "",
+      "year": "2014",
+      "journal": "Cancer Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1512603113",
+      "title": "",
+      "year": "2016",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/113/11/3078.full.pdf",
+      "file": "10.1073_pnas.1512603113.md"
+    },
+    {
+      "doi": "10.4161/cbt.10.1.11944",
+      "title": "",
+      "year": "2010",
+      "journal": "Cancer Biol. Ther.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.4161/cbt.10.1.11944?needAccess=true",
+      "file": "10.4161_cbt.10.1.11944.md"
+    },
+    {
+      "doi": "10.1158/1535-7163.mct-12-0809",
+      "title": "",
+      "year": "2013",
+      "journal": "Mol. Cancer Ther.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.bbi.2014.02.019",
+      "title": "",
+      "year": "2014",
+      "journal": "Brain Behav. Immun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://hdl.handle.net/11343/41989",
+      "file": "10.1016_j.bbi.2014.02.019.md"
+    },
+    {
+      "doi": "10.1136/bmj.j108",
+      "title": "",
+      "year": "2017",
+      "journal": "Br. Med. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.bmj.com/content/bmj/356/bmj.j108.full.pdf",
+      "file": "10.1136_bmj.j108.md"
+    },
+    {
+      "doi": "10.1016/j.ccell.2017.11.007",
+      "title": "",
+      "year": "2018",
+      "journal": "Cancer Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S153561081730510X/pdf",
+      "file": "10.1016_j.ccell.2017.11.007.md"
+    },
+    {
+      "doi": "10.1007/bf01003127",
+      "title": "",
+      "year": "1970",
+      "journal": "Histochem. J.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s0306-4522(01)00399-2",
+      "title": "",
+      "year": "2001",
+      "journal": "Neuroscience",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1556/aphysiol.99.2012.2.8",
+      "title": "",
+      "year": "2012",
+      "journal": "Acta Physiol. Hung.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1228258",
+      "title": "",
+      "year": "2012",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1097/md.0000000000000172",
+      "title": "",
+      "year": "2014",
+      "journal": "Medicine",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4602796?pdf=render",
+      "file": "10.1097_md.0000000000000172.md"
+    },
+    {
+      "doi": "10.1016/j.molonc.2015.05.001",
+      "title": "",
+      "year": "2015",
+      "journal": "Mol. Oncol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1016/j.molonc.2015.05.001",
+      "file": "10.1016_j.molonc.2015.05.001.md"
+    },
+    {
+      "doi": "10.1016/j.bbi.2015.12.014",
+      "title": "",
+      "year": "2016",
+      "journal": "Brain Behav. Immun.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4783183?pdf=render",
+      "file": "10.1016_j.bbi.2015.12.014.md"
+    },
+    {
+      "doi": "10.1038/s41593-019-0430-3",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Neurosci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s10549-006-9219-7",
+      "title": "",
+      "year": "2006",
+      "journal": "Breast Cancer Res. Treat.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1158/0008-5472.can-10-0522",
+      "title": "",
+      "year": "2010",
+      "journal": "Cancer Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aacrjournals.org/cancerres/article-pdf/70/18/7042/2639115/7042.pdf",
+      "file": "10.1158_0008-5472.can-10-0522.md"
+    },
+    {
+      "doi": "10.1158/1078-0432.ccr-19-2641",
+      "title": "",
+      "year": "2020",
+      "journal": "Clin. Cancer Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.stem.2015.02.006",
+      "title": "",
+      "year": "2015",
+      "journal": "Cell Stem Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1934590915000624/pdf",
+      "file": "10.1016_j.stem.2015.02.006.md"
+    },
+    {
+      "doi": "10.1038/s41577-021-00508-z",
+      "title": "",
+      "year": "2021",
+      "journal": "Nat. Rev. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1172/jci129502",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Clin. Invest.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1136/gutjnl-2018-317479",
+      "title": "",
+      "year": "2019",
+      "journal": "Gut",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41591-019-0566-4",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3389/fimmu.2018.00164",
+      "title": "",
+      "year": "2018",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fimmu.2018.00164/pdf",
+      "file": "10.3389_fimmu.2018.00164.md"
+    },
+    {
+      "doi": "10.1016/j.immuni.2021.03.025",
+      "title": "",
+      "year": "2021",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761321001370/pdf",
+      "file": "10.1016_j.immuni.2021.03.025.md"
+    },
+    {
+      "doi": "10.1038/s41586-022-05374-w",
+      "title": "",
+      "year": "2022",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-022-05374-w.pdf",
+      "file": "10.1038_s41586-022-05374-w.md"
+    },
+    {
+      "doi": "10.1038/s41556-021-00820-9",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Cell Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8852304?pdf=render",
+      "file": "10.1038_s41556-021-00820-9.md"
+    },
+    {
+      "doi": "10.1038/s41586-021-04082-1",
+      "title": "",
+      "year": "2021",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-021-04082-1.pdf",
+      "file": "10.1038_s41586-021-04082-1.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.abc8188",
+      "title": "",
+      "year": "2021",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/35013070",
+      "title": "",
+      "year": "2000",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-022-04890-z",
+      "title": "",
+      "year": "2022",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-022-04890-z.pdf",
+      "file": "10.1038_s41586-022-04890-z.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2005.10.041",
+      "title": "",
+      "year": "2006",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867405013280/pdf",
+      "file": "10.1016_j.cell.2005.10.041.md"
+    },
+    {
+      "doi": "10.1038/nature06685",
+      "title": "",
+      "year": "2008",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1084/jem.20160723",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Exp. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://rupress.org/jem/article-pdf/213/12/2567/1164521/jem_20160723.pdf",
+      "file": "10.1084_jem.20160723.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2020.11.028",
+      "title": "",
+      "year": "2021",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867420315646/pdf",
+      "file": "10.1016_j.cell.2020.11.028.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2021.10.013",
+      "title": "",
+      "year": "2021",
+      "journal": "Cell",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.21873/anticanres.12737",
+      "title": "",
+      "year": "2018",
+      "journal": "Anticancer Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://ar.iiarjournals.org/content/38/7/4361.full.pdf",
+      "file": "10.21873_anticanres.12737.md"
+    }
+  ]
+}

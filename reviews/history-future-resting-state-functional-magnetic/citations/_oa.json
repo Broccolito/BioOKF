@@ -1,0 +1,1547 @@
+{
+  "article": {
+    "slug": "s41586-025-08953-9",
+    "doi": "10.1038/s41586-025-08953-9",
+    "title": "The history and future of resting-state functional magnetic resonance imaging",
+    "url": "https://www.nature.com/articles/s41586-025-08953-9",
+    "abbrev": "history-future-resting-state-functional-magnetic",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/history-future-resting-state-functional-magnetic"
+  },
+  "n_refs": 162,
+  "n_with_doi": 157,
+  "n_oa": 119,
+  "records": [
+    {
+      "doi": "10.1038/jcbfm.1992.67",
+      "title": "",
+      "year": "1992",
+      "journal": "J. Cereb. Blood Flow Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.sagepub.com/doi/pdf/10.1038/jcbfm.1992.67",
+      "file": "10.1038_jcbfm.1992.67.md"
+    },
+    {
+      "doi": "10.1038/jcbfm.1988.52",
+      "title": "",
+      "year": "1988",
+      "journal": "J. Cereb. Blood Flow Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.sagepub.com/doi/pdf/10.1038/jcbfm.1988.52",
+      "file": "10.1038_jcbfm.1988.52.md"
+    },
+    {
+      "doi": "10.1007/bf01797193",
+      "title": "",
+      "year": "1929",
+      "journal": "Archiv f\u00fcr Psychiatrie und Nervenkrankheiten",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://hdl.handle.net/11858/00-001M-0000-002A-5DE0-7",
+      "file": "10.1007_bf01797193.md"
+    },
+    {
+      "doi": "10.1002/hbm.460020107",
+      "title": "",
+      "year": "1994",
+      "journal": "Hum. Brain Mapp.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/mrm.1910340409",
+      "title": "",
+      "year": "1995",
+      "journal": "Magn. Reson. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1097/00004647-199703000-00007",
+      "title": "",
+      "year": "1997",
+      "journal": "J. Cereb. Blood Flow Metab.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1131295",
+      "title": "",
+      "year": "2007",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1821121?pdf=render",
+      "file": "10.1126_science.1131295.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2013.04.001",
+      "title": "",
+      "year": "2013",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3720818?pdf=render",
+      "file": "10.1016_j.neuroimage.2013.04.001.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2012.01.044",
+      "title": "",
+      "year": "2012",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3342417?pdf=render",
+      "file": "10.1016_j.neuroimage.2012.01.044.md"
+    },
+    {
+      "doi": "10.1162/netn_a_00028",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mitpressjournals.org/doi/pdf/10.1162/NETN_a_00028",
+      "file": "10.1162_netn_a_00028.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.3004978",
+      "title": "",
+      "year": "2013",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3618956?pdf=render",
+      "file": "10.1126_scitranslmed.3004978.md"
+    },
+    {
+      "doi": "10.1073/pnas.1518785112",
+      "title": "",
+      "year": "2015",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/112/46/14115.full.pdf",
+      "file": "10.1073_pnas.1518785112.md"
+    },
+    {
+      "doi": "10.1038/nature05758",
+      "title": "",
+      "year": "2007",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.98.2.676",
+      "title": "",
+      "year": "2001",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC14647?pdf=render",
+      "file": "10.1073_pnas.98.2.676.md"
+    },
+    {
+      "doi": "10.1073/pnas.0135058100",
+      "title": "",
+      "year": "2003",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1523/jneurosci.5587-06.2007",
+      "title": "",
+      "year": "2007",
+      "journal": "J. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jneurosci.org/content/jneuro/27/9/2349.full.pdf",
+      "file": "10.1523_jneurosci.5587-06.2007.md"
+    },
+    {
+      "doi": "10.1073/pnas.0601417103",
+      "title": "",
+      "year": "2006",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1564249?pdf=render",
+      "file": "10.1073_pnas.0601417103.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2005.08.035",
+      "title": "",
+      "year": "2006",
+      "journal": "Neuroimage",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.neuron.2011.09.006",
+      "title": "",
+      "year": "2011",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0896627311007926/pdf",
+      "file": "10.1016_j.neuron.2011.09.006.md"
+    },
+    {
+      "doi": "10.1152/jn.00338.2011",
+      "title": "",
+      "year": "2011",
+      "journal": "J. Neurophysiol.",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1152/jn.00338.2011",
+      "file": "10.1152_jn.00338.2011.md"
+    },
+    {
+      "doi": "10.1016/j.tics.2008.01.001",
+      "title": "",
+      "year": "2008",
+      "journal": "Trends Cogn. Sci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3632449?pdf=render",
+      "file": "10.1016_j.tics.2008.01.001.md"
+    },
+    {
+      "doi": "10.1007/s10548-019-00744-6",
+      "title": "",
+      "year": "2019",
+      "journal": "Brain Topogr.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7325607?pdf=render",
+      "file": "10.1007_s10548-019-00744-6.md"
+    },
+    {
+      "doi": "10.1073/pnas.0905267106",
+      "title": "",
+      "year": "2009",
+      "journal": "Proc. Natl Acad. Sci. USA.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2722273?pdf=render",
+      "file": "10.1073_pnas.0905267106.md"
+    },
+    {
+      "doi": "10.1073/pnas.0504136102",
+      "title": "",
+      "year": "2005",
+      "journal": "Proc. Natl Acad. Sci. USA.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/11577/3275367",
+      "file": "10.1073_pnas.0504136102.md"
+    },
+    {
+      "doi": "10.1002/hbm.20113",
+      "title": "",
+      "year": "2005",
+      "journal": "Hum. Brain Mapp.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6871700?pdf=render",
+      "file": "10.1002_hbm.20113.md"
+    },
+    {
+      "doi": "10.1523/jneurosci.3408-06.2006",
+      "title": "",
+      "year": "2006",
+      "journal": "J. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jneurosci.org/content/jneuro/26/51/13338.full.pdf",
+      "file": "10.1523_jneurosci.3408-06.2006.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2007.08.008",
+      "title": "",
+      "year": "2008",
+      "journal": "Neuroimage",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.bpsgos.2022.11.003",
+      "title": "",
+      "year": "2023",
+      "journal": "Biol. Psychiatry Glob. Open Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://escholarship.org/content/qt16s9z7pv/qt16s9z7pv.pdf",
+      "file": "10.1016_j.bpsgos.2022.11.003.md"
+    },
+    {
+      "doi": "10.1038/s41586-022-04492-9",
+      "title": "",
+      "year": "2022",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-022-04492-9.pdf",
+      "file": "10.1038_s41586-022-04492-9.md"
+    },
+    {
+      "doi": "10.1016/j.dcn.2024.101438",
+      "title": "",
+      "year": "2024",
+      "journal": "Dev. Cogn. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11381617/pdf/main.pdf",
+      "file": "10.1016_j.dcn.2024.101438.md"
+    },
+    {
+      "doi": "10.1016/j.tics.2020.06.003",
+      "title": "",
+      "year": "2020",
+      "journal": "Trends Cogn. Sci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7429348?pdf=render",
+      "file": "10.1016_j.tics.2020.06.003.md"
+    },
+    {
+      "doi": "10.1038/nn.4135",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/nn.4135.pdf",
+      "file": "10.1038_nn.4135.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2021.118466",
+      "title": "",
+      "year": "2021",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://doaj.org/article/a4a40a1e614c47d9bfc0a88b5a86a0e7",
+      "file": "10.1016_j.neuroimage.2021.118466.md"
+    },
+    {
+      "doi": "10.1016/j.tins.2013.03.001",
+      "title": "",
+      "year": "2013",
+      "journal": "Trends Neurosci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41386-024-01888-1",
+      "title": "",
+      "year": "2025",
+      "journal": "Neuropsychopharmacology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41386-024-01888-1.pdf",
+      "file": "10.1038_s41386-024-01888-1.md"
+    },
+    {
+      "doi": "10.1073/pnas.1503960112",
+      "title": "",
+      "year": "2015",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/112/17/E2235.full.pdf",
+      "file": "10.1073_pnas.1503960112.md"
+    },
+    {
+      "doi": "10.1073/pnas.1521299113",
+      "title": "",
+      "year": "2016",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/113/23/6556.full.pdf",
+      "file": "10.1073_pnas.1521299113.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2019.01.076",
+      "title": "",
+      "year": "2019",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6440826?pdf=render",
+      "file": "10.1016_j.neuroimage.2019.01.076.md"
+    },
+    {
+      "doi": "10.1093/cercor/bhab064",
+      "title": "",
+      "year": "2021",
+      "journal": "Cereb. Cortex",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8485153?pdf=render",
+      "file": "10.1093_cercor_bhab064.md"
+    },
+    {
+      "doi": "10.1126/sciadv.abf2709",
+      "title": "",
+      "year": "2021",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://digitalcommons.wustl.edu/cgi/viewcontent.cgi?article=11556&context=open_access_pubs",
+      "file": "10.1126_sciadv.abf2709.md"
+    },
+    {
+      "doi": "10.1038/s41593-022-01118-1",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Neurosci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41467-018-04920-3",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-018-04920-3.pdf",
+      "file": "10.1038_s41467-018-04920-3.md"
+    },
+    {
+      "doi": "10.1136/jnnp.2004.044263",
+      "title": "",
+      "year": "2004",
+      "journal": "J. Neurol. Neurosurg. Psychiatry",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://jnnp.bmj.com/content/jnnp/75/9/1232.2.full.pdf",
+      "file": "10.1136_jnnp.2004.044263.md"
+    },
+    {
+      "doi": "10.1016/j.nec.2010.11.001",
+      "title": "",
+      "year": "2011",
+      "journal": "Neurosurg. Clin. N. Am.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3073717?pdf=render",
+      "file": "10.1016_j.nec.2010.11.001.md"
+    },
+    {
+      "doi": "10.1073/pnas.0901435106",
+      "title": "",
+      "year": "2009",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2708777?pdf=render",
+      "file": "10.1073_pnas.0901435106.md"
+    },
+    {
+      "doi": "10.1002/1522-2594(200009)44:3<373::aid-mrm5>3.0.co;2-p",
+      "title": "",
+      "year": "2000",
+      "journal": "Magn. Reson. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/1522-2594%28200009%2944%3A3%3C373%3A%3AAID-MRM5%3E3.0.CO%3B2-P",
+      "file": "10.1002_1522-2594_200009_44_3_373__aid-mrm5_3.0.co_2-p.md"
+    },
+    {
+      "doi": "10.1097/00001756-200502280-00017",
+      "title": "",
+      "year": "2005",
+      "journal": "Neuroreport",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1200506109",
+      "title": "",
+      "year": "2012",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/109/10/3979.full.pdf",
+      "file": "10.1073_pnas.1200506109.md"
+    },
+    {
+      "doi": "10.1016/j.mri.2008.01.012",
+      "title": "",
+      "year": "2008",
+      "journal": "Magn. Reson. Imaging",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/35084005",
+      "title": "",
+      "year": "2001",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.0913110107",
+      "title": "",
+      "year": "2010",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2890438?pdf=render",
+      "file": "10.1073_pnas.0913110107.md"
+    },
+    {
+      "doi": "10.1038/nmeth.2013",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://zenodo.org/record/3425996",
+      "file": "10.1038_nmeth.2013.md"
+    },
+    {
+      "doi": "10.1038/nature12354",
+      "title": "",
+      "year": "2013",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/nature12354.pdf",
+      "file": "10.1038_nature12354.md"
+    },
+    {
+      "doi": "10.1038/nmeth.2333",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Methods",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4469972?pdf=render",
+      "file": "10.1038_nmeth.2333.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2018.06.042",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867418308456/pdf",
+      "file": "10.1016_j.cell.2018.06.042.md"
+    },
+    {
+      "doi": "10.1126/science.aat4422",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://escholarship.org/content/qt1sp665ct/qt1sp665ct.pdf",
+      "file": "10.1126_science.aat4422.md"
+    },
+    {
+      "doi": "10.1016/j.neuron.2019.02.037",
+      "title": "",
+      "year": "2019",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6533151?pdf=render",
+      "file": "10.1016_j.neuron.2019.02.037.md"
+    },
+    {
+      "doi": "10.1126/science.aab0810",
+      "title": "",
+      "year": "2015",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nmeth.1398",
+      "title": "",
+      "year": "2009",
+      "journal": "Nat. Methods",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1038/nmeth.1398",
+      "file": "10.1038_nmeth.1398.md"
+    },
+    {
+      "doi": "10.1016/j.neuron.2018.03.015",
+      "title": "",
+      "year": "2018",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0896627318301922/pdf",
+      "file": "10.1016_j.neuron.2018.03.015.md"
+    },
+    {
+      "doi": "10.1016/j.biopsych.2022.09.008",
+      "title": "",
+      "year": "2023",
+      "journal": "Biol. Psychiatry",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.biologicalpsychiatryjournal.com/article/S0006322322015864/pdf",
+      "file": "10.1016_j.biopsych.2022.09.008.md"
+    },
+    {
+      "doi": "10.1016/j.neuron.2020.07.020",
+      "title": "",
+      "year": "2020",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S089662732030564X/pdf",
+      "file": "10.1016_j.neuron.2020.07.020.md"
+    },
+    {
+      "doi": "10.1007/978-3-030-59797-9_3",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.tics.2017.04.002",
+      "title": "",
+      "year": "2017",
+      "journal": "Trends Cogn. Sci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6033047?pdf=render",
+      "file": "10.1016_j.tics.2017.04.002.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2020.116707",
+      "title": "",
+      "year": "2020",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7165049?pdf=render",
+      "file": "10.1016_j.neuroimage.2020.116707.md"
+    },
+    {
+      "doi": "10.1038/s41593-025-01945-y",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2011.10.018",
+      "title": "",
+      "year": "2012",
+      "journal": "Neuroimage",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2017.12.073",
+      "title": "",
+      "year": "2018",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://research.monash.edu/en/publications/ce0132f9-570b-4a1a-a95e-57e918a77f81",
+      "file": "10.1016_j.neuroimage.2017.12.073.md"
+    },
+    {
+      "doi": "10.1038/s41596-018-0065-y",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Protoc.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8161527?pdf=render",
+      "file": "10.1038_s41596-018-0065-y.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2016.09.038",
+      "title": "",
+      "year": "2017",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5321814?pdf=render",
+      "file": "10.1016_j.neuroimage.2016.09.038.md"
+    },
+    {
+      "doi": "10.1038/s41598-019-50750-8",
+      "title": "",
+      "year": "2019",
+      "journal": "Sci. Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41598-019-50750-8.pdf",
+      "file": "10.1038_s41598-019-50750-8.md"
+    },
+    {
+      "doi": "10.1162/imag_a_00101",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12224465/pdf/imag-2-00101.pdf",
+      "file": "10.1162_imag_a_00101.md"
+    },
+    {
+      "doi": "10.1089/brain.2012.0080",
+      "title": "",
+      "year": "2012",
+      "journal": "Brain Connect.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2016.11.052",
+      "title": "",
+      "year": "2017",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5489207?pdf=render",
+      "file": "10.1016_j.neuroimage.2016.11.052.md"
+    },
+    {
+      "doi": "10.1007/s12021-016-9299-4",
+      "title": "",
+      "year": "2016",
+      "journal": "Neuroinformatics",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://ir.psych.ac.cn/handle/311026/20018",
+      "file": "10.1007_s12021-016-9299-4.md"
+    },
+    {
+      "doi": "10.1089/brain.2012.0073",
+      "title": "",
+      "year": "2012",
+      "journal": "Brain Connect.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nn.4500",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Neurosci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5685169?pdf=render",
+      "file": "10.1038_nn.4500.md"
+    },
+    {
+      "doi": "10.1038/s41467-022-31347-8",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-022-31347-8.pdf",
+      "file": "10.1038_s41467-022-31347-8.md"
+    },
+    {
+      "doi": "10.1016/j.cobeha.2021.04.002",
+      "title": "",
+      "year": "2021",
+      "journal": "Curr. Opin. Behav. Sci.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13268537/",
+      "file": "10.1016_j.cobeha.2021.04.002.md"
+    },
+    {
+      "doi": "10.1073/pnas.1418031112",
+      "title": "",
+      "year": "2015",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/112/3/887.full.pdf",
+      "file": "10.1073_pnas.1418031112.md"
+    },
+    {
+      "doi": "10.1523/jneurosci.1786-20.2020",
+      "title": "",
+      "year": "2021",
+      "journal": "J. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jneurosci.org/content/jneuro/41/6/1130.full.pdf",
+      "file": "10.1523_jneurosci.1786-20.2020.md"
+    },
+    {
+      "doi": "10.1089/brain.2014.0284",
+      "title": "",
+      "year": "2014",
+      "journal": "Brain Connect.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4146390?pdf=render",
+      "file": "10.1089_brain.2014.0284.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2013.05.099",
+      "title": "",
+      "year": "2013",
+      "journal": "Neuroimage",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.neuron.2014.10.015",
+      "title": "",
+      "year": "2014",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0896627314009131/pdf",
+      "file": "10.1016_j.neuron.2014.10.015.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2013.05.079",
+      "title": "",
+      "year": "2013",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/11577/3177387",
+      "file": "10.1016_j.neuroimage.2013.05.079.md"
+    },
+    {
+      "doi": "10.3389/fpsyt.2019.00924",
+      "title": "",
+      "year": "2019",
+      "journal": "Front. Psychiatry",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fpsyt.2019.00924/pdf",
+      "file": "10.3389_fpsyt.2019.00924.md"
+    },
+    {
+      "doi": "10.1162/netn_a_00116",
+      "title": "",
+      "year": "2020",
+      "journal": "Netw. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mitpressjournals.org/doi/pdf/10.1162/netn_a_00116",
+      "file": "10.1162_netn_a_00116.md"
+    },
+    {
+      "doi": "10.1038/nrn3857",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Rev. Neurosci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.neuron.2008.04.017",
+      "title": "",
+      "year": "2008",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0896627308003693/pdf",
+      "file": "10.1016_j.neuron.2008.04.017.md"
+    },
+    {
+      "doi": "10.1162/netn_a_00323",
+      "title": "",
+      "year": "2023",
+      "journal": "Netw. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://direct.mit.edu/netn/article-pdf/doi/10.1162/netn_a_00323/2104530/netn_a_00323.pdf",
+      "file": "10.1162_netn_a_00323.md"
+    },
+    {
+      "doi": "10.1016/j.dcn.2018.10.004",
+      "title": "",
+      "year": "2019",
+      "journal": "Dev. Cogn. Neurosci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6969259?pdf=render",
+      "file": "10.1016_j.dcn.2018.10.004.md"
+    },
+    {
+      "doi": "10.1016/j.tics.2021.09.005",
+      "title": "",
+      "year": "2021",
+      "journal": "Trends Cogn. Sci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8585722?pdf=render",
+      "file": "10.1016_j.tics.2021.09.005.md"
+    },
+    {
+      "doi": "10.1093/cercor/bhae223",
+      "title": "",
+      "year": "2024",
+      "journal": "Cereb. Cortex",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/cercor/article-pdf/34/6/bhae223/58242930/bhae223.pdf",
+      "file": "10.1093_cercor_bhae223.md"
+    },
+    {
+      "doi": "10.1038/s41586-023-05745-x",
+      "title": "",
+      "year": "2023",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-023-05745-x.pdf",
+      "file": "10.1038_s41586-023-05745-x.md"
+    },
+    {
+      "doi": "10.1016/j.neuron.2022.04.018",
+      "title": "",
+      "year": "2022",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0896627322003634/pdf",
+      "file": "10.1016_j.neuron.2022.04.018.md"
+    },
+    {
+      "doi": "10.1016/j.biopsych.2024.07.012",
+      "title": "",
+      "year": "2025",
+      "journal": "Biol. Psychiatry",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://scholarworks.indianapolis.iu.edu/bitstreams/f049eacb-e8ae-4859-83ca-2470b8f861db/download",
+      "file": "10.1016_j.biopsych.2024.07.012.md"
+    },
+    {
+      "doi": "10.1038/s42003-023-05629-w",
+      "title": "",
+      "year": "2023",
+      "journal": "Commun. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s42003-023-05629-w.pdf",
+      "file": "10.1038_s42003-023-05629-w.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2022.118960",
+      "title": "",
+      "year": "2022",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8935501?pdf=render",
+      "file": "10.1016_j.neuroimage.2022.118960.md"
+    },
+    {
+      "doi": "10.1016/j.biopsych.2020.06.023",
+      "title": "",
+      "year": "2020",
+      "journal": "Biol. Psychiatry",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41386-024-01952-w",
+      "title": "",
+      "year": "2025",
+      "journal": "Neuropsychopharmacology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11526002/pdf/41386_2024_Article_1952.pdf",
+      "file": "10.1038_s41386-024-01952-w.md"
+    },
+    {
+      "doi": "10.1016/j.nicl.2018.01.026",
+      "title": "",
+      "year": "2018",
+      "journal": "Neuroimage Clin.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://doaj.org/article/a05c9caa677f4da6af1c97be18e156d2",
+      "file": "10.1016_j.nicl.2018.01.026.md"
+    },
+    {
+      "doi": "10.1146/annurev-bioeng-071516-044450",
+      "title": "",
+      "year": "2017",
+      "journal": "Annu. Rev. Biomed. Eng.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-bioeng-071516-044450",
+      "file": "10.1146_annurev-bioeng-071516-044450.md"
+    },
+    {
+      "doi": "10.1073/pnas.1307154110",
+      "title": "",
+      "year": "2013",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/110/37/15115.full.pdf",
+      "file": "10.1073_pnas.1307154110.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2003.11.025",
+      "title": "",
+      "year": "2004",
+      "journal": "Neuroimage",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/mrm.1910380220",
+      "title": "",
+      "year": "1997",
+      "journal": "Magn. Reson. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/(sici)1099-1492(199706/08)10:4/5<197::aid-nbm466>3.0.co;2-s",
+      "title": "",
+      "year": "1997",
+      "journal": "NMR Biomed.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2007.09.040",
+      "title": "",
+      "year": "2008",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10664765/pdf/nihms-1943499.pdf",
+      "file": "10.1016_j.neuroimage.2007.09.040.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2020.116787",
+      "title": "",
+      "year": "2020",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7292765?pdf=render",
+      "file": "10.1016_j.neuroimage.2020.116787.md"
+    },
+    {
+      "doi": "10.1038/nrn3963",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Rev. Neurosci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3389/fncom.2022.866517",
+      "title": "",
+      "year": "2022",
+      "journal": "Front. Comput. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fncom.2022.866517/pdf",
+      "file": "10.3389_fncom.2022.866517.md"
+    },
+    {
+      "doi": "10.1016/j.neuron.2014.08.034",
+      "title": "",
+      "year": "2014",
+      "journal": "Neuron",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0896627314007351/pdf",
+      "file": "10.1016_j.neuron.2014.08.034.md"
+    },
+    {
+      "doi": "10.1016/j.mri.2019.05.031",
+      "title": "",
+      "year": "2019",
+      "journal": "Magn. Reson. Imaging",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://arxiv.org/pdf/1812.11477",
+      "file": "10.1016_j.mri.2019.05.031.md"
+    },
+    {
+      "doi": "10.1016/j.biopsych.2020.03.022",
+      "title": "",
+      "year": "2020",
+      "journal": "Biol. Psychiatry",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/tp.2017.164",
+      "title": "",
+      "year": "2017",
+      "journal": "Transl. Psychiatry",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/tp2017164.pdf",
+      "file": "10.1038_tp.2017.164.md"
+    },
+    {
+      "doi": "10.1126/sciadv.abj1812",
+      "title": "",
+      "year": "2022",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/history/af398e21-491d-4ed6-b413-c8ca1c03948d/sciadv.abj1812.v1.pdf",
+      "file": "10.1126_sciadv.abj1812.md"
+    },
+    {
+      "doi": "10.1038/s41592-023-01812-3",
+      "title": "",
+      "year": "2023",
+      "journal": "Nat. Methods",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41592-023-01812-3.pdf",
+      "file": "10.1038_s41592-023-01812-3.md"
+    },
+    {
+      "doi": "10.1016/s2214-109x(18)30406-6",
+      "title": "",
+      "year": "2019",
+      "journal": "Lancet Glob. Health",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S2214109X18304066/pdf",
+      "file": "10.1016_s2214-109x_18_30406-6.md"
+    },
+    {
+      "doi": "10.1016/j.neuron.2017.07.011",
+      "title": "",
+      "year": "2017",
+      "journal": "Neuron",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/ncomms9885",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms9885.pdf",
+      "file": "10.1038_ncomms9885.md"
+    },
+    {
+      "doi": "10.1038/s41386-021-01124-0",
+      "title": "",
+      "year": "2022",
+      "journal": "Neuropsychopharmacology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41386-021-01124-0.pdf",
+      "file": "10.1038_s41386-021-01124-0.md"
+    },
+    {
+      "doi": "10.1007/7854_2024_483",
+      "title": "",
+      "year": "2024",
+      "journal": "Curr. Top. Behav. Neurosci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.2218958120",
+      "title": "",
+      "year": "2023",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10214160/pdf/pnas.202218958.pdf",
+      "file": "10.1073_pnas.2218958120.md"
+    },
+    {
+      "doi": "10.1038/s41562-021-01161-1",
+      "title": "",
+      "year": "2021",
+      "journal": "Nat. Hum. Behav.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41562-021-01161-1.pdf",
+      "file": "10.1038_s41562-021-01161-1.md"
+    },
+    {
+      "doi": "10.1016/j.biopsych.2023.11.013",
+      "title": "",
+      "year": "2024",
+      "journal": "Biol. Psychiatry",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.biologicalpsychiatryjournal.com/article/S0006322323017420/pdf",
+      "file": "10.1016_j.biopsych.2023.11.013.md"
+    },
+    {
+      "doi": "10.1093/cercor/bhx179",
+      "title": "",
+      "year": "2018",
+      "journal": "Cereb. Cortex",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/cercor/article-pdf/28/9/3095/25696343/bhx179.pdf",
+      "file": "10.1093_cercor_bhx179.md"
+    },
+    {
+      "doi": "10.1093/cercor/bhu239",
+      "title": "",
+      "year": "2016",
+      "journal": "Cereb. Cortex",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/cercor/article-pdf/26/1/288/17308915/bhu239.pdf",
+      "file": "10.1093_cercor_bhu239.md"
+    },
+    {
+      "doi": "10.1038/s41467-025-58176-9",
+      "title": "",
+      "year": "2025",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-025-58176-9.pdf",
+      "file": "10.1038_s41467-025-58176-9.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2018.12.012",
+      "title": "",
+      "year": "2019",
+      "journal": "Neuroimage",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2008.10.065",
+      "title": "",
+      "year": "2009",
+      "journal": "Neuroimage",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.dib.2018.04.126",
+      "title": "",
+      "year": "2018",
+      "journal": "Data Brief.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6139368?pdf=render",
+      "file": "10.1016_j.dib.2018.04.126.md"
+    },
+    {
+      "doi": "10.1089/brain.2014.0288",
+      "title": "",
+      "year": "2014",
+      "journal": "Brain Connect.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4150394?pdf=render",
+      "file": "10.1089_brain.2014.0288.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2003.12.030",
+      "title": "",
+      "year": "2004",
+      "journal": "Neuroimage",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s00429-014-0795-8",
+      "title": "",
+      "year": "2015",
+      "journal": "Brain Struct. Funct.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://ir.psych.ac.cn/handle/311026/15237",
+      "file": "10.1007_s00429-014-0795-8.md"
+    },
+    {
+      "doi": "10.1177/1073858415595004",
+      "title": "",
+      "year": "2016",
+      "journal": "Neuroscientist",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.sagepub.com/doi/pdf/10.1177/1073858415595004",
+      "file": "10.1177_1073858415595004.md"
+    },
+    {
+      "doi": "10.1098/rstb.2005.1634",
+      "title": "",
+      "year": "2005",
+      "journal": "Philos. Trans. R. Soc. B",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1854918?pdf=render",
+      "file": "10.1098_rstb.2005.1634.md"
+    },
+    {
+      "doi": "10.1038/nrn2575",
+      "title": "",
+      "year": "2009",
+      "journal": "Nat. Rev. Neurosci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nn.4502",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Neurosci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2009.10.003",
+      "title": "",
+      "year": "2010",
+      "journal": "Neuroimage",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.euroneuro.2010.03.008",
+      "title": "",
+      "year": "2010",
+      "journal": "Eur. Neuropsychopharmacol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2008.08.010",
+      "title": "",
+      "year": "2008",
+      "journal": "Neuroimage",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2013.04.087",
+      "title": "",
+      "year": "2013",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://hdl.handle.net/11343/44053",
+      "file": "10.1016_j.neuroimage.2013.04.087.md"
+    },
+    {
+      "doi": "10.1093/psyrad/kkab003",
+      "title": "",
+      "year": "2021",
+      "journal": "Psychoradiology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/psyrad/article-pdf/1/1/42/37906708/kkab003.pdf",
+      "file": "10.1093_psyrad_kkab003.md"
+    },
+    {
+      "doi": "10.1073/pnas.0911855107",
+      "title": "",
+      "year": "2010",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2842060?pdf=render",
+      "file": "10.1073_pnas.0911855107.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2013.05.041",
+      "title": "",
+      "year": "2013",
+      "journal": "Neuroimage",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3724347?pdf=render",
+      "file": "10.1016_j.neuroimage.2013.05.041.md"
+    },
+    {
+      "doi": "10.1016/j.dcn.2018.03.001",
+      "title": "",
+      "year": "2018",
+      "journal": "Dev. Cogn. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://digitalcommons.wustl.edu/cgi/viewcontent.cgi?article=7977&context=open_access_pubs",
+      "file": "10.1016_j.dcn.2018.03.001.md"
+    },
+    {
+      "doi": "10.1038/mp.2013.78",
+      "title": "",
+      "year": "2014",
+      "journal": "Mol. Psychiatry",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pure.knaw.nl/ws/files/2276660/dimartino2014.pdf",
+      "file": "10.1038_mp.2013.78.md"
+    },
+    {
+      "doi": "10.1038/s41398-020-0705-1",
+      "title": "",
+      "year": "2020",
+      "journal": "Transl. Psychiatry",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41398-020-0705-1.pdf",
+      "file": "10.1038_s41398-020-0705-1.md"
+    },
+    {
+      "doi": "10.1016/j.biopsych.2022.09.024",
+      "title": "",
+      "year": "2023",
+      "journal": "Biol. Psychiatry",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41467-018-04976-1",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-018-04976-1.pdf",
+      "file": "10.1038_s41467-018-04976-1.md"
+    },
+    {
+      "doi": "10.1038/s41592-024-02238-1",
+      "title": "",
+      "year": "2024",
+      "journal": "Nat. Methods",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41592-023-02145-x",
+      "title": "",
+      "year": "2024",
+      "journal": "Nat. Methods",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://orbi.uliege.be/bitstream/2268/332879/1/neurodesk.pdf",
+      "file": "10.1038_s41592-023-02145-x.md"
+    },
+    {
+      "doi": "10.1038/s41592-024-02237-2",
+      "title": "",
+      "year": "2024",
+      "journal": "Nat. Methods",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41592-024-02237-2.pdf",
+      "file": "10.1038_s41592-024-02237-2.md"
+    },
+    {
+      "doi": "10.1038/s41562-023-01647-0",
+      "title": "",
+      "year": "2023",
+      "journal": "Nat. Hum. Behav.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11024722/pdf/nihms-1983225.pdf",
+      "file": "10.1038_s41562-023-01647-0.md"
+    },
+    {
+      "doi": "10.1038/s41593-022-01218-y",
+      "title": "",
+      "year": "2023",
+      "journal": "Nat. Neurosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41593-022-01218-y.pdf",
+      "file": "10.1038_s41593-022-01218-y.md"
+    },
+    {
+      "doi": "10.1016/j.dcn.2024.101466",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11959870/pdf/main.pdf",
+      "file": "10.1016_j.dcn.2024.101466.md"
+    },
+    {
+      "doi": "10.1038/s41597-022-01413-3",
+      "title": "",
+      "year": "2022",
+      "journal": "Sci. Data",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41597-022-01413-3.pdf",
+      "file": "10.1038_s41597-022-01413-3.md"
+    },
+    {
+      "doi": "10.1038/s41597-021-01004-8",
+      "title": "",
+      "year": "2021",
+      "journal": "Sci. Data",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41597-021-01004-8.pdf",
+      "file": "10.1038_s41597-021-01004-8.md"
+    }
+  ]
+}

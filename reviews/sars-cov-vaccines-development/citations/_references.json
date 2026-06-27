@@ -1,0 +1,900 @@
+{
+  "article": {
+    "slug": "s41586-020-2798-3",
+    "doi": "10.1038/s41586-020-2798-3",
+    "title": "SARS-CoV-2 vaccines in development",
+    "url": "https://www.nature.com/articles/s41586-020-2798-3",
+    "abbrev": "sars-cov-vaccines-development",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/sars-cov-vaccines-development"
+  },
+  "meta": {
+    "title": "SARS-CoV-2 vaccines in development",
+    "authors": [
+      "Florian Krammer"
+    ],
+    "published": [
+      2020,
+      9,
+      23
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-020-2798-3",
+    "n_references": 97,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "2798_CR1",
+      "doi": "10.1056/nejmoa2001017",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2020",
+      "author": "N Zhu",
+      "unstructured": "Zhu, N. et al. A novel coronavirus from patients with pneumonia in China, 2019. N. Engl. J. Med. 382, 727\u2013733 (2020)."
+    },
+    {
+      "key": "2798_CR2",
+      "doi": "10.1038/s41586-020-2012-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "P Zhou",
+      "unstructured": "Zhou, P. et al. A pneumonia outbreak associated with a new coronavirus of probable bat origin. Nature 579, 270\u2013273 (2020)."
+    },
+    {
+      "key": "2798_CR3",
+      "doi": "10.1038/s41579-018-0118-9",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2019",
+      "author": "J Cui",
+      "unstructured": "Cui, J., Li, F. & Shi, Z. L. Origin and evolution of pathogenic coronaviruses. Nat. Rev. Microbiol. 17, 181\u2013192 (2019)."
+    },
+    {
+      "key": "2798_CR4",
+      "doi": "10.1128/jvi.79.3.1595-1604.2005",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2005",
+      "author": "L Vijgen",
+      "unstructured": "Vijgen, L. et al. Complete genomic sequence of human coronavirus OC43: molecular clock analysis suggests a relatively recent zoonotic coronavirus transmission event. J. Virol. 79, 1595\u20131604 (2005)."
+    },
+    {
+      "key": "2798_CR5",
+      "doi": "10.1016/j.vaccine.2008.09.026",
+      "title": "",
+      "journal": "Vaccine",
+      "year": "2008",
+      "author": "JE Martin",
+      "unstructured": "Martin, J. E. et al. A SARS DNA vaccine induces neutralizing antibody and cellular immune responses in healthy adults in a phase I clinical trial. Vaccine 26, 6338\u20136343 (2008)."
+    },
+    {
+      "key": "2798_CR6",
+      "doi": "10.1177/135965350701200702",
+      "title": "",
+      "journal": "Antivir. Ther.",
+      "year": "2007",
+      "author": "JT Lin",
+      "unstructured": "Lin, J. T. et al. Safety and immunogenicity from a phase I trial of inactivated severe acute respiratory syndrome coronavirus vaccine. Antivir. Ther. 12, 1107\u20131113 (2007)."
+    },
+    {
+      "key": "2798_CR7",
+      "doi": "10.3389/fmicb.2019.01781",
+      "title": "",
+      "journal": "Front. Microbiol.",
+      "year": "2019",
+      "author": "CY Yong",
+      "unstructured": "Yong, C. Y., Ong, H. K., Yeap, S. K., Ho, K. L. & Tan, W. S. Recent advances in the vaccine development against Middle East respiratory syndrome-coronavirus. Front. Microbiol. 10, 1781 (2019)."
+    },
+    {
+      "key": "2798_CR8",
+      "doi": "10.1038/nrmicro3143",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2013",
+      "author": "RL Graham",
+      "unstructured": "Graham, R. L., Donaldson, E. F. & Baric, R. S. A decade after SARS: strategies for controlling emerging coronaviruses. Nat. Rev. Microbiol. 11, 836\u2013848 (2013)."
+    },
+    {
+      "key": "2798_CR9",
+      "doi": "10.1016/bs.aivir.2019.08.002",
+      "title": "",
+      "journal": "Adv. Virus Res.",
+      "year": "2019",
+      "author": "MA Tortorici",
+      "unstructured": "Tortorici, M. A. & Veesler, D. Structural insights into coronavirus entry. Adv. Virus Res. 105, 93\u2013116 (2019)."
+    },
+    {
+      "key": "2798_CR10",
+      "doi": "10.1126/science.abb2507",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "D Wrapp",
+      "unstructured": "Wrapp, D. et al. Cryo-EM structure of the 2019-nCoV spike in the prefusion conformation. Science 367, 1260\u20131263 (2020)."
+    },
+    {
+      "key": "2798_CR11",
+      "doi": "10.1038/s41564-020-0688-y",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2020",
+      "author": "M Letko",
+      "unstructured": "Letko, M., Marzi, A. & Munster, V. Functional assessment of cell entry and receptor usage for SARS-CoV-2 and other lineage B betacoronaviruses. Nat. Microbiol. 5, 562\u2013569 (2020)."
+    },
+    {
+      "key": "2798_CR12",
+      "doi": "10.1038/cr.2008.15",
+      "title": "",
+      "journal": "Cell Res.",
+      "year": "2008",
+      "author": "H Wang",
+      "unstructured": "Wang, H. et al. SARS coronavirus entry into host cells through a novel clathrin- and caveolae-independent endocytic pathway. Cell Res. 18, 290\u2013301 (2008)."
+    },
+    {
+      "key": "2798_CR13",
+      "doi": "10.1073/pnas.1707304114",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "J Pallesen",
+      "unstructured": "Pallesen, J. et al. Immunogenicity and structures of a rationally designed prefusion MERS-CoV spike antigen. Proc. Natl Acad. Sci. USA 114, E7348\u2013E7357 (2017). This study shows that coronavirus spike proteins can be stabilized by changing two amino acids in S2 to prolines."
+    },
+    {
+      "key": "2798_CR14",
+      "doi": "10.3201/eid2607.200841",
+      "title": "",
+      "journal": "Emerging Infect. Dis.",
+      "year": "2020",
+      "author": "NMA Okba",
+      "unstructured": "Okba, N. M. A. et al. Severe acute respiratory syndrome coronavirus 2-specific antibody responses in coronavirus disease patients. Emerging Infect. Dis. 26, 1478\u20131488 (2020)."
+    },
+    {
+      "key": "2798_CR15",
+      "doi": "10.1038/s41591-020-0913-5",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2020",
+      "author": "F Amanat",
+      "unstructured": "Amanat, F. et al. A serological assay to detect SARS-CoV-2 seroconversion in humans. Nat. Med. 26, 1033\u20131036 (2020)."
+    },
+    {
+      "key": "2798_CR16",
+      "doi": "10.4049/jimmunol.2000583",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2020",
+      "author": "WB Alsoussi",
+      "unstructured": "Alsoussi, W. B. et al. A potently neutralizing antibody protects mice against SARS-CoV-2 infection. J. Immunol. 205, 915\u2013922 (2020)."
+    },
+    {
+      "key": "2798_CR17",
+      "doi": "10.1101/2020.07.14.20151126",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Wajnberg, A. et al. SARS-CoV-2 infection induces robust, neutralizing antibody responses that are stable for at least three months. Preprint at https://doi.org/10.1101/2020.07.14.20151126 (2020)."
+    },
+    {
+      "key": "2798_CR18",
+      "doi": "10.1038/s41586-020-2571-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "L Liu",
+      "unstructured": "Liu, L. et al. Potent neutralizing antibodies against multiple epitopes on SARS-CoV-2 spike. Nature 584, 450\u2013456 (2020)."
+    },
+    {
+      "key": "2798_CR19",
+      "doi": "10.1101/2020.08.01.20166553",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Isho, B. et al. Mucosal versus systemic antibody responses to SARS-CoV-2 antigens in COVID-19 patients. Preprint at https://doi.org/10.1101/2020.08.01.20166553 (2020)."
+    },
+    {
+      "key": "2798_CR20",
+      "doi": "10.1101/2020.07.18.20155374",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Iyer, A. S. et al. Dynamics and significance of the antibody response to SARS-CoV-2 infection. Preprint at https://doi.org/10.1101/2020.07.18.20155374 (2020)."
+    },
+    {
+      "key": "2798_CR21",
+      "doi": "10.1101/2020.05.24.20112300",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Randad, P. R. et al. COVID-19 serology at population scale: SARS-CoV-2-specific antibody responses in saliva. Preprint at https://doi.org/10.1101/2020.05.24.20112300 (2020)."
+    },
+    {
+      "key": "2798_CR22",
+      "doi": "10.1016/j.cell.2020.05.015",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "A Grifoni",
+      "unstructured": "Grifoni, A. et al. Targets of T cell responses to SARS-CoV-2 coronavirus in humans with COVID-19 disease and unexposed individuals. Cell 181, 1489\u20131501.e15 (2020)."
+    },
+    {
+      "key": "2798_CR23",
+      "doi": "10.1101/2020.03.13.990226",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Bao, L. et al. Lack of reinfection in rhesus macaques infected with SARS-CoV-2. Preprint at https://doi.org/10.1101/2020.03.13.990226 (2020)."
+    },
+    {
+      "key": "2798_CR24",
+      "doi": "10.1126/science.abc5343",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "W Deng",
+      "unstructured": "Deng, W. et al. Primary exposure to SARS-CoV-2 protects against reinfection in rhesus macaques. Science 369, 818\u2013823 (2020)."
+    },
+    {
+      "key": "2798_CR25",
+      "doi": "10.1126/science.abc6284",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "J Yu",
+      "unstructured": "Yu, J. et al. DNA vaccine protection against SARS-CoV-2 in rhesus macaques. Science 369, 806\u2013811 (2020)."
+    },
+    {
+      "key": "2798_CR26",
+      "doi": "10.1128/jcm.02107-20",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Addetia, A. et al. Neutralizing antibodies correlate with protection from SARS-CoV-2 in humans during a fishery vessel outbreak with high attack rate. J. Clin. Microbiol. https://doi.org/10.1128/JCM.02107-20 (2020). This study provides the first evidence that neutralizing antibodies may protect humans from SARS-CoV-2 infection."
+    },
+    {
+      "key": "2798_CR27",
+      "doi": "10.1084/jem.20020400",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2002",
+      "author": "GM Spiekermann",
+      "unstructured": "Spiekermann, G. M. et al. Receptor-mediated immunoglobulin G transport across mucosal barriers in adult life: functional expression of FcRn in the mammalian lung. J. Exp. Med. 196, 303\u2013310 (2002)."
+    },
+    {
+      "key": "2798_CR28",
+      "doi": "10.1016/s0025-6196(12)64949-0",
+      "title": "",
+      "journal": "Mayo Clin. Proc.",
+      "year": "1988",
+      "author": "HY Reynolds",
+      "unstructured": "Reynolds, H. Y. Immunoglobulin G and its function in the human respiratory tract. Mayo Clin. Proc. 63, 161\u2013174 (1988)."
+    },
+    {
+      "key": "2798_CR29",
+      "doi": "10.1128/cvi.00475-09",
+      "title": "",
+      "journal": "Clin. Vaccine Immunol.",
+      "year": "2010",
+      "author": "SH Pakkanen",
+      "unstructured": "Pakkanen, S. H. et al. Expression of homing receptors on IgA1 and IgA2 plasmablasts in blood reflects differential distribution of IgA1 and IgA2 in various body fluids. Clin. Vaccine Immunol. 17, 393\u2013401 (2010)."
+    },
+    {
+      "key": "2798_CR30",
+      "doi": "10.1080/21645515.2015.1114195",
+      "title": "",
+      "journal": "Hum. Vaccin. Immunother.",
+      "year": "2016",
+      "author": "F Su",
+      "unstructured": "Su, F., Patel, G. B., Hu, S. & Chen, W. Induction of mucosal immunity through systemic immunization: phantom or reality? Hum. Vaccin. Immunother. 12, 1070\u20131079 (2016)."
+    },
+    {
+      "key": "2798_CR31",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Development and Licensure of Vaccines to Prevent COVID-19. https://www.fda.gov/media/139638/download (FDA, 2020)."
+    },
+    {
+      "key": "2798_CR32",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Draft Landscape of COVID-19 Candidate Vaccines. https://www.who.int/publications/m/item/draft-landscape-of-covid-19-candidate-vaccines (WHO, accessed 26 September 2020)."
+    },
+    {
+      "key": "2798_CR33",
+      "doi": "10.1016/j.cell.2020.06.008",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "H Wang",
+      "unstructured": "Wang, H. et al. Development of an inactivated vaccine candidate, BBIBP-CorV, with potent protection against SARS-CoV-2. Cell 182, 713\u2013721.e9 (2020)."
+    },
+    {
+      "key": "2798_CR34",
+      "doi": "10.1126/science.abc1932",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "Q Gao",
+      "unstructured": "Gao, Q. et al. Development of an inactivated vaccine candidate for SARS-CoV-2. Science 369, 77\u201381 (2020)."
+    },
+    {
+      "key": "2798_CR35",
+      "doi": "10.1101/2020.07.31.20161216",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Zhang, Y.-J. et al. Immunogenicity and safety of a SARS-CoV-2 inactivated vaccine in healthy adults aged 18\u201359 years: report of the randomized, double-blind, and placebo-controlled phase 2 clinical trial. Preprint at https://doi.org/10.1101/2020.07.31.20161216 (2020). This was the second study to show immunogenicity of an inactivated SARS-CoV-2 vaccine in humans."
+    },
+    {
+      "key": "2798_CR36",
+      "doi": "10.1073/pnas.070525997",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2000",
+      "author": "J Talon",
+      "unstructured": "Talon, J. et al. Influenza A and B viruses expressing altered NS1 proteins: a vaccine approach. Proc. Natl Acad. Sci. USA 97, 4309\u20134314 (2000)."
+    },
+    {
+      "key": "2798_CR37",
+      "doi": "10.1016/j.vaccine.2015.11.054",
+      "title": "",
+      "journal": "Vaccine",
+      "year": "2016",
+      "author": "AJ Broadbent",
+      "unstructured": "Broadbent, A. J. et al. Evaluation of the attenuation, immunogenicity, and efficacy of a live virus vaccine generated by codon-pair bias de-optimization of the 2009 pandemic H1N1 influenza virus, in ferrets. Vaccine 34, 563\u2013570 (2016)."
+    },
+    {
+      "key": "2798_CR38",
+      "doi": "10.1101/2020.05.15.098079",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Chen, W. H. et al. Yeast-expressed SARS-CoV recombinant receptor-binding domain (RBD219-N1) formulated with aluminium hydroxide induces protective immunity and reduces immune enhancement. Preprint at https://doi.org/10.1101/2020.05.15.098079 (2020)."
+    },
+    {
+      "key": "2798_CR39",
+      "doi": "10.3748/wjg.v11.i39.6159",
+      "title": "",
+      "journal": "World J. Gastroenterol.",
+      "year": "2005",
+      "author": "J Chen",
+      "unstructured": "Chen, J. et al. Receptor-binding domain of SARS-CoV spike protein: soluble expression in E. coli, purification and functional characterization. World J. Gastroenterol. 11, 6159\u20136164 (2005)."
+    },
+    {
+      "key": "2798_CR40",
+      "doi": "10.1101/2020.09.16.300970",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Amanat, F. et al. Introduction of two prolines and removal of the polybasic cleavage site leads to optimal efficacy of a recombinant spike based SARS-CoV-2 vaccine in the mouse model. Preprint at https://doi.org/10.1101/2020.09.16.300970 (2020)."
+    },
+    {
+      "key": "2798_CR41",
+      "doi": "10.1038/s41586-020-2607-z",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Mercado, N. B. et al. Single-shot Ad26 vaccine protects against SARS-CoV-2 in rhesus macaques. Nature https://doi.org/10.1038/s41586-020-2607-z (2020)."
+    },
+    {
+      "key": "2798_CR42",
+      "doi": "10.1056/nejmoa2026920",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Keech, C. et al. Phase 1\u20132 trial of a SARS-CoV-2 recombinant spike protein nanoparticle vaccine. N. Engl. J. Med. https://doi.org/10.1056/NEJMoa2026920 (2020). This is the first study to report immunogenicity of a recombinant spike vaccine in humans."
+    },
+    {
+      "key": "2798_CR43",
+      "doi": "10.1038/s41586-020-2622-0",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Corbett, K. S. et al. SARS-CoV-2 mRNA vaccine design enabled by prototype pathogen preparedness. Nature https://doi.org/10.1038/s41586-020-2622-0 (2020)."
+    },
+    {
+      "key": "2798_CR44",
+      "doi": "10.1126/science.abd0826",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "CL Hsieh",
+      "unstructured": "Hsieh, C. L. et al. Structure-based design of prefusion-stabilized SARS-CoV-2 spikes. Science 369, 1501\u20131505 (2020)."
+    },
+    {
+      "key": "2798_CR45",
+      "doi": "10.1016/s0140-6736(20)31208-3",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2020",
+      "author": "FC Zhu",
+      "unstructured": "Zhu, F. C. et al. Safety, tolerability, and immunogenicity of a recombinant adenovirus type-5 vectored COVID-19 vaccine: a dose-escalation, open-label, non-randomised, first-in-human trial. Lancet 395, 1845\u20131854 (2020). This paper reports a first-in-human study with an AdV5-based vaccine candidate against SARS-CoV-2."
+    },
+    {
+      "key": "2798_CR46",
+      "doi": "10.1016/s0140-6736(20)31605-6",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2020",
+      "author": "FC Zhu",
+      "unstructured": "Zhu, F. C. et al. Immunogenicity and safety of a recombinant adenovirus type-5-vectored COVID-19 vaccine in healthy adults aged 18 years or older: a randomised, double-blind, placebo-controlled, phase 2 trial. Lancet 396, 479\u2013488 (2020)."
+    },
+    {
+      "key": "2798_CR47",
+      "doi": "10.1016/s0140-6736(20)31604-4",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2020",
+      "author": "PM Folegatti",
+      "unstructured": "Folegatti, P. M. et al. Safety and immunogenicity of the ChAdOx1 nCoV-19 vaccine against SARS-CoV-2: a preliminary report of a phase 1/2, single-blind, randomised controlled trial. Lancet 396, 467\u2013478 (2020). A key study demonstrating immunogenicity of the ChAdOx1 nCoV-19 vaccine in humans."
+    },
+    {
+      "key": "2798_CR48",
+      "doi": "10.1038/s41541-020-00221-3",
+      "title": "",
+      "journal": "NPJ Vaccines",
+      "year": "2020",
+      "author": "SP Graham",
+      "unstructured": "Graham, S. P. et al. Evaluation of the immunogenicity of prime\u2013boost vaccination with the replication-deficient viral vectored COVID-19 vaccine candidate ChAdOx1 nCoV-19. NPJ Vaccines 5, 69 (2020)."
+    },
+    {
+      "key": "2798_CR49",
+      "doi": "10.1038/s41586-020-2608-y",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "van Doremalen, N. et al. ChAdOx1 nCoV-19 vaccine prevents SARS-CoV-2 pneumonia in rhesus macaques. Nature https://doi.org/10.1038/s41586-020-2608-y (2020)."
+    },
+    {
+      "key": "2798_CR50",
+      "doi": "10.1016/s0140-6736(20)31866-3",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Logunov, D. Y. et al. Safety and immunogenicity of an rAd26 and rAd5 vector-based heterologous prime-boost COVID-19 vaccine in two formulations: two open, non-randomised phase 1/2 studies from Russia. Lancet https://doi.org/10.1016/S0140-6736(20)31866-3 (2020)."
+    },
+    {
+      "key": "2798_CR51",
+      "doi": "10.1016/j.chom.2020.07.018",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2020",
+      "author": "JB Case",
+      "unstructured": "Case, J. B. et al. Replication-competent vesicular stomatitis virus vaccine vector protects against SARS-CoV-2-mediated pathogenesis in mice. Cell Host Microbe 28, 465\u2013474.e4 (2020)."
+    },
+    {
+      "key": "2798_CR52",
+      "doi": "10.1101/2020.07.26.221861",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Sun, W. et al. Newcastle disease virus (NDV) expressing the spike protein of SARS-CoV-2 as vaccine candidate. Preprint at https://doi.org/10.1101/2020.07.26.221861 (2020)."
+    },
+    {
+      "key": "2798_CR53",
+      "doi": "10.3390/vaccines8030472",
+      "title": "",
+      "journal": "Vaccines",
+      "year": "2020",
+      "author": "MA Rohaim",
+      "unstructured": "Rohaim, M. A. & Munir, M. A scalable topical vectored vaccine candidate against SARS-CoV-2. Vaccines 8, 472 (2020)."
+    },
+    {
+      "key": "2798_CR54",
+      "doi": "10.1101/2020.07.30.229120",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Sun, W. et al. A Newcastle disease virus (NDV) expressing membrane-anchored spike as a cost-effective inactivated SARS-CoV-2 vaccine. Preprint at https://doi.org/10.1101/2020.07.30.229120 (2020)."
+    },
+    {
+      "key": "2798_CR55",
+      "doi": "10.1016/j.ymthe.2017.11.017",
+      "title": "",
+      "journal": "Mol. Ther.",
+      "year": "2018",
+      "author": "AB Vogel",
+      "unstructured": "Vogel, A. B. et al. Self-amplifying RNA vaccines give equivalent protection against influenza to mRNA vaccines but at much lower doses. Mol. Ther. 26, 446\u2013455 (2018)."
+    },
+    {
+      "key": "2798_CR56",
+      "doi": "10.1016/j.immuni.2020.07.019",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Laczk\u00f3, D. et al. A single immunization with nucleoside-modified mRNA vaccines elicits strong cellular and humoral immune responses against SARS-CoV-2 in mice. Immunity https://doi.org/10.1016/j.immuni.2020.07.019 (2020)."
+    },
+    {
+      "key": "2798_CR57",
+      "doi": "10.1056/nejmoa2024671",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Corbett, K. S. et al. Evaluation of the mRNA-1273 vaccine against SARS-CoV-2 in nonhuman primates. N. Engl. J. Med. https://doi.org/10.1056/NEJMoa2024671 (2020)."
+    },
+    {
+      "key": "2798_CR58",
+      "doi": "10.1038/s41422-020-00392-7",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Lu, J. et al. A COVID-19 mRNA vaccine encoding SARS-CoV-2 virus-like particles induces a strong antiviral-like immune response in mice. Cell Res. 30, 936\u2013939 (2020)."
+    },
+    {
+      "key": "2798_CR59",
+      "doi": "10.1056/nejmoa2022483",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Jackson, L. A. et al. An mRNA vaccine against SARS-CoV-2 \u2014 preliminary report. N. Engl. J. Med. https://doi.org/10.1056/NEJMoa2022483 (2020). This is the first report on the immunogenicity of Moderna\u2019s mRNA SARS-CoV-2 vaccine candidate in humans."
+    },
+    {
+      "key": "2798_CR60",
+      "doi": "10.1038/s41586-020-2639-4",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Mulligan, M. J. et al. Phase 1/2 study of COVID-19 RNA vaccine BNT162b1 in adults. Nature https://doi.org/10.1038/s41586-020-2639-4 (2020)."
+    },
+    {
+      "key": "2798_CR61",
+      "doi": "10.1038/s41586-020-2708-8",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Dinnon, K. H. et al. A mouse-adapted model of SARS-CoV-2 to test COVID-19 countermeasures.\u00a0Nature\u00a0https://doi.org/10.1038/s41586-020-2708-8 (2020)."
+    },
+    {
+      "key": "2798_CR62",
+      "doi": "10.1126/science.abc4730",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Gu, H. et al. Adaptation of SARS-CoV-2 in BALB/c mice for testing vaccine efficacy. Science https://doi.org/10.1126/science.abc4730 (2020)."
+    },
+    {
+      "key": "2798_CR63",
+      "doi": "10.1016/j.cell.2020.06.011",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "AO Hassan",
+      "unstructured": "Hassan, A. O. et al. A SARS-CoV-2 infection model in mice demonstrates protection by neutralizing antibodies. Cell 182, 744\u2013753.e4 (2020)."
+    },
+    {
+      "key": "2798_CR64",
+      "doi": "10.1016/j.cell.2020.05.027",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "RD Jiang",
+      "unstructured": "Jiang, R. D. et al. Pathogenesis of SARS-CoV-2 in transgenic mice expressing human angiotensin-converting enzyme 2. Cell 182, 50\u201358.e8 (2020)."
+    },
+    {
+      "key": "2798_CR65",
+      "doi": "10.1101/2020.07.06.190066",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Rathnasinghe, R. et al. Comparison of transgenic and adenovirus hACE2 mouse models for SARS-CoV-2 infection. Preprint at https://doi.org/10.1101/2020.07.06.190066 (2020)."
+    },
+    {
+      "key": "2798_CR66",
+      "doi": "10.1016/j.cell.2020.06.010",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "J Sun",
+      "unstructured": "Sun, J. et al. Generation of a broadly useful model for COVID-19 pathogenesis, vaccination, and treatment. Cell 182, 734\u2013743.e5 (2020)."
+    },
+    {
+      "key": "2798_CR67",
+      "doi": "10.1038/s41586-020-2312-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "L Bao",
+      "unstructured": "Bao, L. et al. The pathogenicity of SARS-CoV-2 in hACE2 transgenic mice. Nature 583, 830\u2013833 (2020)."
+    },
+    {
+      "key": "2798_CR68",
+      "doi": "10.1126/science.abb7015",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "J Shi",
+      "unstructured": "Shi, J. et al. Susceptibility of ferrets, cats, dogs, and other domesticated animals to SARS-coronavirus 2. Science 368, 1016\u20131020 (2020)."
+    },
+    {
+      "key": "2798_CR69",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "M Richard",
+      "unstructured": "Richard, M. et al. SARS-CoV-2 is transmitted via contact and via the air between ferrets. Nat. Commun. 11, 3496 (2020)."
+    },
+    {
+      "key": "2798_CR70",
+      "doi": "10.1016/j.chom.2020.03.023",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2020",
+      "author": "YI Kim",
+      "unstructured": "Kim, Y. I. et al. Infection and rapid transmission of SARS-CoV-2 in ferrets. Cell Host Microbe 27, 704\u2013709.e2 (2020)."
+    },
+    {
+      "key": "2798_CR71",
+      "doi": "10.1073/pnas.2018975117",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2020",
+      "author": "M Imai",
+      "unstructured": "Imai, M. et al. Syrian hamsters as a small animal model for SARS-CoV-2 infection and countermeasure development. Proc. Natl Acad. Sci. USA 117, 16587\u201316595 (2020)."
+    },
+    {
+      "key": "2798_CR72",
+      "doi": "10.1038/s41586-020-2342-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "SF Sia",
+      "unstructured": "Sia, S. F. et al. Pathogenesis and transmission of SARS-CoV-2 in golden hamsters. Nature 583, 834\u2013838 (2020)."
+    },
+    {
+      "key": "2798_CR73",
+      "doi": "",
+      "title": "",
+      "journal": "J. Med. Res.",
+      "year": "2020",
+      "author": "S Mohandas",
+      "unstructured": "Mohandas, S. et al. Evaluation of the susceptibility of mice & hamsters to SARS-CoV-2 infection. Indian J. Med. Res. 151, 479\u2013482 (2020)."
+    },
+    {
+      "key": "2798_CR74",
+      "doi": "10.1126/science.abc4776",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "A Chandrashekar",
+      "unstructured": "Chandrashekar, A. et al. SARS-CoV-2 infection protects against rechallenge in rhesus macaques. Science 369, 812\u2013817 (2020)."
+    },
+    {
+      "key": "2798_CR75",
+      "doi": "10.1038/s41586-020-2324-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "VJ Munster",
+      "unstructured": "Munster, V. J. et al. Respiratory disease in rhesus macaques inoculated with SARS-CoV-2. Nature 585, 268\u2013272 (2020)."
+    },
+    {
+      "key": "2798_CR76",
+      "doi": "10.1038/s41422-020-0364-z",
+      "title": "",
+      "journal": "Cell Res.",
+      "year": "2020",
+      "author": "C Shan",
+      "unstructured": "Shan, C. et al. Infection with novel coronavirus (SARS-CoV-2) causes pneumonia in rhesus macaques. Cell Res. 30, 670\u2013677 (2020)."
+    },
+    {
+      "key": "2798_CR77",
+      "doi": "10.24272/j.issn.2095-8137.2020.202",
+      "title": "",
+      "journal": "Zool. Res.",
+      "year": "2020",
+      "author": "TZ Song",
+      "unstructured": "Song, T. Z. et al. Delayed severe cytokine storm and immune cell infiltration in SARS-CoV-2-infected aged Chinese rhesus macaques. Zool. Res. 41, 503\u2013516 (2020)."
+    },
+    {
+      "key": "2798_CR78",
+      "doi": "10.1038/s41586-020-2423-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "BN Williamson",
+      "unstructured": "Williamson, B. N. et al. Clinical benefit of remdesivir in rhesus macaques infected with SARS-CoV-2. Nature 585, 273\u2013276 (2020)."
+    },
+    {
+      "key": "2798_CR79",
+      "doi": "10.1101/2020.08.18.256578",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Guebre-Xabier, M. et al. NVX-CoV2373 vaccine protects cynomolgus macaque upper and lower airways against SARS-CoV-2 challenge. Preprint at https://doi.org/10.1101/2020.08.18.256578 (2020)."
+    },
+    {
+      "key": "2798_CR80",
+      "doi": "10.1001/jama.2020.15543",
+      "title": "",
+      "journal": "JAMA",
+      "year": "2020",
+      "author": "S Xia",
+      "unstructured": "Xia, S. et al. Effect of an inactivated vaccine against SARS-CoV-2 on safety and immunogenicity outcomes: interim analysis of 2 randomized clinical trials. JAMA 324, 951\u2013960 (2020). This was the first study to show immunogenicity of an inactivated SARS-CoV-2 vaccine in humans."
+    },
+    {
+      "key": "2798_CR81",
+      "doi": "10.1101/2020.08.17.20176651",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Walsh, E. E. et al. RNA-based COVID-19 vaccine BNT162b2 selected for a pivotal efficacy study. Preprint at https://doi.org/10.1101/2020.08.17.20176651 (2020). A key study comparing the immunogenicity of Pfizer\u2019s mRNA-based RBD and spike vaccines in humans."
+    },
+    {
+      "key": "2798_CR82",
+      "doi": "10.1128/cvi.00604-15",
+      "title": "",
+      "journal": "Clin. Vaccine Immunol.",
+      "year": "2016",
+      "author": "AJ Dunning",
+      "unstructured": "Dunning, A. J. et al. Correlates of protection against influenza in the elderly: results from an influenza vaccine efficacy trial. Clin. Vaccine Immunol. 23, 228\u2013235 (2016)."
+    },
+    {
+      "key": "2798_CR83",
+      "doi": "10.1016/j.vaccine.2009.01.136",
+      "title": "",
+      "journal": "Vaccine",
+      "year": "2009",
+      "author": "JE McElhaney",
+      "unstructured": "McElhaney, J. E. et al. Granzyme B: correlates with protection and enhanced CTL response to influenza vaccination in older adults. Vaccine 27, 2418\u20132425 (2009)."
+    },
+    {
+      "key": "2798_CR84",
+      "doi": "10.1016/j.vaccine.2012.12.013",
+      "title": "",
+      "journal": "Vaccine",
+      "year": "2013",
+      "author": "CA DiazGranados",
+      "unstructured": "DiazGranados, C. A. et al. High-dose trivalent influenza vaccine compared to standard dose vaccine in elderly adults: safety, immunogenicity and relative efficacy during the 2009\u20132010 season. Vaccine 31, 861\u2013866 (2013)."
+    },
+    {
+      "key": "2798_CR85",
+      "doi": "10.1586/14760584.2014.922416",
+      "title": "",
+      "journal": "Expert Rev. Vaccines",
+      "year": "2014",
+      "author": "CJ Luke",
+      "unstructured": "Luke, C. J. & Subbarao, K. Improving pandemic H5N1 influenza vaccines by combining different vaccine platforms. Expert Rev. Vaccines 13, 873\u2013883 (2014)."
+    },
+    {
+      "key": "2798_CR86",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "The National Academies of Sciences, Engineering and Medicine. Discussion Draft of the Preliminary Framework for Equitable Allocation of COVID-19 Vaccine\u00a0(The National Academies Press, 2020)."
+    },
+    {
+      "key": "2798_CR87",
+      "doi": "10.1101/2020.08.05.20168435",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Keech, C. et al. First-in-human trial of a SARS CoV 2 recombinant spike protein nanoparticle vaccine. Preprint at https://doi.org/10.1101/2020.08.05.20168435 (2020)."
+    },
+    {
+      "key": "2798_CR88",
+      "doi": "10.1016/s0065-3519(99)80026-3",
+      "title": "",
+      "journal": "Adv. Vet. Med.",
+      "year": "1999",
+      "author": "FW Scott",
+      "unstructured": "Scott, F. W. Evaluation of risks and benefits associated with vaccination against coronavirus infections in cats. Adv. Vet. Med. 41, 347\u2013358 (1999)."
+    },
+    {
+      "key": "2798_CR89",
+      "doi": "10.1371/journal.pone.0035421",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2012",
+      "author": "CT Tseng",
+      "unstructured": "Tseng, C. T. et al. Immunization with SARS coronavirus vaccines leads to pulmonary immunopathology on challenge with the SARS virus. PLoS ONE 7, e35421 (2012)."
+    },
+    {
+      "key": "2798_CR90",
+      "doi": "10.1371/journal.pmed.0030525",
+      "title": "",
+      "journal": "PLoS Med.",
+      "year": "2006",
+      "author": "D Deming",
+      "unstructured": "Deming, D. et al. Vaccine efficacy in senescent mice challenged with recombinant SARS-CoV bearing epidemic and zoonotic spike variants. PLoS Med. 3, e525 (2006)."
+    },
+    {
+      "key": "2798_CR91",
+      "doi": "10.1128/jvi.06048-11",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2011",
+      "author": "M Bolles",
+      "unstructured": "Bolles, M. et al. A double-inactivated severe acute respiratory syndrome coronavirus vaccine provides incomplete protection in mice and induces increased eosinophilic proinflammatory pulmonary response upon challenge. J. Virol. 85, 12201\u201312215 (2011)."
+    },
+    {
+      "key": "2798_CR92",
+      "doi": "10.1016/j.vaccine.2005.01.033",
+      "title": "",
+      "journal": "Vaccine",
+      "year": "2005",
+      "author": "M Czub",
+      "unstructured": "Czub, M., Weingartl, H., Czub, S., He, R. & Cao, J. Evaluation of modified vaccinia virus Ankara based recombinant SARS vaccine in ferrets. Vaccine 23, 2273\u20132279 (2005)."
+    },
+    {
+      "key": "2798_CR93",
+      "doi": "10.1016/j.bbrc.2014.07.090",
+      "title": "",
+      "journal": "Biochem. Biophys. Res. Commun.",
+      "year": "2014",
+      "author": "SF Wang",
+      "unstructured": "Wang, S. F. et al. Antibody-dependent SARS coronavirus infection is mediated by antibodies against spike proteins. Biochem. Biophys. Res. Commun. 451, 208\u2013214 (2014)."
+    },
+    {
+      "key": "2798_CR94",
+      "doi": "10.1021/acsinfecdis.6b00006",
+      "title": "",
+      "journal": "ACS Infect. Dis.",
+      "year": "2016",
+      "author": "Q Wang",
+      "unstructured": "Wang, Q. et al. Immunodominant SARS coronavirus epitopes in humans elicited both enhancing and neutralizing effects on infection in non-human primates. ACS Infect. Dis. 2, 361\u2013376 (2016)."
+    },
+    {
+      "key": "2798_CR95",
+      "doi": "10.1016/j.vaccine.2006.08.011",
+      "title": "",
+      "journal": "Vaccine",
+      "year": "2007",
+      "author": "YW Kam",
+      "unstructured": "Kam, Y. W. et al. Antibodies against trimeric S glycoprotein protect hamsters against SARS-CoV challenge despite their capacity to mediate Fc\u03b3RII-dependent entry into B cells in vitro. Vaccine 25, 729\u2013740 (2007)."
+    },
+    {
+      "key": "2798_CR96",
+      "doi": "10.1371/journal.ppat.1006565",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2017",
+      "author": "KV Houser",
+      "unstructured": "Houser, K. V. et al. Enhanced inflammation in New Zealand white rabbits when MERS-CoV reinfection occurs in the absence of neutralizing antibody. PLoS Pathog. 13, e1006565 (2017)."
+    },
+    {
+      "key": "2798_CR97",
+      "doi": "10.1080/21645515.2016.1177688",
+      "title": "",
+      "journal": "Hum. Vaccin. Immunother.",
+      "year": "2016",
+      "author": "AS Agrawal",
+      "unstructured": "Agrawal, A. S. et al. Immunization with inactivated Middle East Respiratory Syndrome coronavirus vaccine leads to lung immunopathology on challenge with live virus. Hum. Vaccin. Immunother. 12, 2351\u20132356 (2016)."
+    }
+  ]
+}

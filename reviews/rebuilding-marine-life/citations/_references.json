@@ -1,0 +1,1337 @@
+{
+  "article": {
+    "slug": "s41586-020-2146-7",
+    "doi": "10.1038/s41586-020-2146-7",
+    "title": "Rebuilding marine life",
+    "url": "https://www.nature.com/articles/s41586-020-2146-7",
+    "abbrev": "rebuilding-marine-life",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/rebuilding-marine-life"
+  },
+  "meta": {
+    "title": "Rebuilding marine life",
+    "authors": [
+      "Carlos M. Duarte",
+      "Susana Agusti",
+      "Edward Barbier",
+      "Gregory L. Britten",
+      "Juan Carlos Castilla",
+      "Jean-Pierre Gattuso",
+      "Robinson W. Fulweiler",
+      "Terry P. Hughes",
+      "Nancy Knowlton",
+      "Catherine E. Lovelock",
+      "Heike K. Lotze",
+      "Milica Predragovic",
+      "Elvira Poloczanska",
+      "Callum Roberts",
+      "Boris Worm"
+    ],
+    "published": [
+      2020,
+      4,
+      1
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-020-2146-7",
+    "n_references": 144,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "2146_CR1",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "OECD. The Ocean Economy in 2030 (OECD Publishing, 2016)."
+    },
+    {
+      "key": "2146_CR2",
+      "doi": "10.1525/bio.2009.59.11.8",
+      "title": "",
+      "journal": "Bioscience",
+      "year": "2009",
+      "author": "CM Duarte",
+      "unstructured": "Duarte, C. M. et al. Will the oceans help feed humanity? Bioscience 59, 967\u2013976 (2009)."
+    },
+    {
+      "key": "2146_CR3",
+      "doi": "10.1073/pnas.1701262114",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "CM Roberts",
+      "unstructured": "Roberts, C. M. et al. Marine reserves can mitigate and promote adaptation to climate change. Proc. Natl Acad. Sci. USA 114, 6167\u20136175 (2017)."
+    },
+    {
+      "key": "2146_CR4",
+      "doi": "10.3389/fmars.2018.00337",
+      "title": "",
+      "journal": "Front. Mar. Sci.",
+      "year": "2018",
+      "author": "J-P Gattuso",
+      "unstructured": "Gattuso, J.-P. et al. Ocean solutions to address climate change and its effects on marine ecosystems. Front. Mar. Sci. 5, 337 (2018)."
+    },
+    {
+      "key": "2146_CR5",
+      "doi": "10.1126/science.1059199",
+      "title": "",
+      "journal": "Science",
+      "year": "2001",
+      "author": "JB Jackson",
+      "unstructured": "Jackson, J. B. et al. Historical overfishing and the recent collapse of coastal ecosystems. Science 293, 629\u2013637 (2001)."
+    },
+    {
+      "key": "2146_CR6",
+      "doi": "10.1016/j.tree.2008.12.004",
+      "title": "",
+      "journal": "Trends Ecol. Evol.",
+      "year": "2009",
+      "author": "HK Lotze",
+      "unstructured": "Lotze, H. K. & Worm, B. Historical baselines for large marine animals. Trends Ecol. Evol. 24, 254\u2013262 (2009)."
+    },
+    {
+      "key": "2146_CR7",
+      "doi": "10.1126/science.1255641",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "DJ McCauley",
+      "unstructured": "McCauley, D. J. et al. Marine defaunation: animal loss in the global ocean. Science 347, 1255641 (2015). This paper reviews the historical hunting and associated loss of animals in the ocean and examines current threats that may result in future losses."
+    },
+    {
+      "key": "2146_CR8",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "IPBES. IPBES Global Assessment Summary for Policymakers. https://www.ipbes.net/news/ipbes-global-assessment-summary-policymakers-pdf (2019)."
+    },
+    {
+      "key": "2146_CR9",
+      "doi": "10.1111/j.1365-2486.2010.02311.x",
+      "title": "",
+      "journal": "Glob. Change Biol.",
+      "year": "2011",
+      "author": "P Wassmann",
+      "unstructured": "Wassmann, P. et al. Footprints of climate change in the Arctic marine ecosystem. Glob. Change Biol. 17, 1235\u20131249 (2011)."
+    },
+    {
+      "key": "2146_CR10",
+      "doi": "10.1126/science.aac4722",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "J-P Gattuso",
+      "unstructured": "Gattuso, J.-P. et al. Contrasting futures for ocean and society from different anthropogenic CO2 emissions scenarios. Science 349, aac4722 (2015)."
+    },
+    {
+      "key": "2146_CR11",
+      "doi": "10.1038/nature22901",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "TP Hughes",
+      "unstructured": "Hughes, T. P. et al. Coral reefs in the Anthropocene. Nature 546, 82\u201390 (2017)."
+    },
+    {
+      "key": "2146_CR12",
+      "doi": "10.1126/science.aan8048",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "TP Hughes",
+      "unstructured": "Hughes, T. P. et al. Spatial and temporal patterns of mass bleaching of corals in the Anthropocene. Science 359, 80\u201383 (2018). This study provides a global assessment of the extent of coral bleaching, with emphasis on the 2015\u20132016 global coral-reef bleaching events."
+    },
+    {
+      "key": "2146_CR13",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Hoegh-Guldberg, O. et al. in Special Report on Global Warming of 1.5\u2009\u00b0C (eds Masson-Delmotte, V. et al.) 175\u2013311 (WMO, 2018). This IPCC report suggests that, in light of recent coral losses, the research community may have underestimated the risks of climate change for coral reefs, and concludes that even achieving the ambitious goal of 1.5\u2009\u00b0C of global warming under the Paris Agreement could result in the loss of 70\u201390% of reef-building corals compared to that at the time the assessment was made."
+    },
+    {
+      "key": "2146_CR14",
+      "doi": "10.1073/pnas.1900194116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "HK Lotze",
+      "unstructured": "Lotze, H. K. et al. Global ensemble projections reveal trophic amplification of ocean biomass declines with climate change. Proc. Natl Acad. Sci. USA 116, 12907\u201312912 (2019)."
+    },
+    {
+      "key": "2146_CR15",
+      "doi": "10.1126/science.aad5443",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "J Lubchenco",
+      "unstructured": "Lubchenco, J. & Grorud-Colvert, K. Making waves: the science and politics of ocean protection. Science 350, 382\u2013383 (2015)."
+    },
+    {
+      "key": "2146_CR16",
+      "doi": "10.1038/387253a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1997",
+      "author": "R Costanza",
+      "unstructured": "Costanza, R. et al. The value of the world\u2019s ecosystem services and natural capital. Nature 387, 253\u2013260 (1997)."
+    },
+    {
+      "key": "2146_CR17",
+      "doi": "",
+      "title": "",
+      "journal": "Dev.",
+      "year": "2015",
+      "author": "JJ Silver",
+      "unstructured": "Silver, J. J. et al. Blue economy and competing discourses in international oceans governance. J. Environ. Dev. 24, 135\u2013160 (2015)."
+    },
+    {
+      "key": "2146_CR18",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Roberts, C. M. The Unnatural History of the Sea (Island Press, 2007). This book reviews how human pressures drove changes in marine ecosystems and to marine life, providing evidence that the observed impacts on marine ecosystems are not a recent phenomenon."
+    },
+    {
+      "key": "2146_CR19",
+      "doi": "10.1038/nature21895",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "B Worm",
+      "unstructured": "Worm, B. Marine conservation: how to heal an ocean. Nature 543, 630\u2013631 (2017)."
+    },
+    {
+      "key": "2146_CR20",
+      "doi": "",
+      "title": "",
+      "journal": "Proc. R. Soc. Lond. B",
+      "year": "2018",
+      "author": "HP Jones",
+      "unstructured": "Jones, H. P. et al. Restoration and repair of Earth\u2019s damaged ecosystems. Proc. R. Soc. Lond. B 285, 20172577 (2018)."
+    },
+    {
+      "key": "2146_CR21",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "FAO. The State of World Fisheries and Aquaculture: Meeting the Sustainable Development Goals (Food and Agriculture Organization of the United Nations, 2018)."
+    },
+    {
+      "key": "2146_CR22",
+      "doi": "10.1126/science.1185198",
+      "title": "",
+      "journal": "Science",
+      "year": "2010",
+      "author": "SC Doney",
+      "unstructured": "Doney, S. C. The growing human footprint on coastal and open-ocean biogeochemistry. Science 328, 1512\u20131516 (2010)."
+    },
+    {
+      "key": "2146_CR23",
+      "doi": "10.1126/science.aam7240",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "D Breitburg",
+      "unstructured": "Breitburg, D. et al. Declining oxygen in the global ocean and coastal waters. Science 359, eaam7240 (2018)."
+    },
+    {
+      "key": "2146_CR24",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "IUCN. The IUCN Red List of Threatened Species. https://www.iucnredlist.org/ (accessed 1 April 2019)."
+    },
+    {
+      "key": "2146_CR25",
+      "doi": "10.1093/acprof:oso/9780199535095.003.0006",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Dulvy, N. K., Pinnegar, J. K. & Reynolds, J. D. in Holocene Extinctions (ed. Turvey, S. T.) 129\u2013150 (Oxford Univ. Press, 2009)."
+    },
+    {
+      "key": "2146_CR26",
+      "doi": "10.1016/j.cub.2018.06.010",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2018",
+      "author": "KR Jones",
+      "unstructured": "Jones, K. R. et al. The location and protection status of Earth\u2019s diminishing marine wilderness. Curr. Biol. 28, 2506\u20132512 (2018)."
+    },
+    {
+      "key": "2146_CR27",
+      "doi": "10.1038/ncomms4271",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2014",
+      "author": "X Irigoien",
+      "unstructured": "Irigoien, X. et al. Large mesopelagic fishes biomass and trophic efficiency in the open ocean. Nat. Commun. 5, 3271 (2014). This study reports an estimate of mesopelagic fish abundance, which exceeds the biomass of all other fish stocks by about 30 times and remains unexploited by fisheries."
+    },
+    {
+      "key": "2146_CR28",
+      "doi": "10.1007/s00114-010-0696-5",
+      "title": "",
+      "journal": "Naturwissenschaften",
+      "year": "2010",
+      "author": "D Beare",
+      "unstructured": "Beare, D., H\u00f6lker, F., Engelhard, G. H., McKenzie, E. & Reid, D. G. An unintended experiment in fisheries science: a marine area protected by war results in Mexican waves in fish numbers-at-age. Naturwissenschaften 97, 797\u2013808 (2010)."
+    },
+    {
+      "key": "2146_CR29",
+      "doi": "10.1016/j.marpolbul.2007.11.018",
+      "title": "",
+      "journal": "Mar. Pollut. Bull.",
+      "year": "2008",
+      "author": "ZT Richards",
+      "unstructured": "Richards, Z. T., Beger, M., Pinca, S. & Wallace, C. C. Bikini Atoll coral biodiversity resilience five decades after nuclear testing. Mar. Pollut. Bull. 56, 503\u2013515 (2008)."
+    },
+    {
+      "key": "2146_CR30",
+      "doi": "10.3354/meps08538",
+      "title": "",
+      "journal": "Mar. Ecol. Prog. Ser.",
+      "year": "2010",
+      "author": "T Oguz",
+      "unstructured": "Oguz, T. & Velikova, V. Abrupt transition of the northwestern Black Sea shelf ecosystem from a eutrophic to an alternative pristine state. Mar. Ecol. Prog. Ser. 405, 231\u2013242 (2010)."
+    },
+    {
+      "key": "2146_CR31",
+      "doi": "10.1007/s12237-009-9191-7",
+      "title": "",
+      "journal": "Estuaries Coast.",
+      "year": "2010",
+      "author": "P Mozeti\u010d",
+      "unstructured": "Mozeti\u010d, P. et al. Recent trends towards oligotrophication of the northern Adriatic: evidence from chlorophyll a time series. Estuaries Coast. 33, 362\u2013375 (2010)."
+    },
+    {
+      "key": "2146_CR32",
+      "doi": "10.1073/pnas.0802812105",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2008",
+      "author": "JBC Jackson",
+      "unstructured": "Jackson, J. B. C. Colloquium paper: ecological extinction and evolution in the brave new ocean. Proc. Natl Acad. Sci. USA 105, 11458\u201311465 (2008)."
+    },
+    {
+      "key": "2146_CR33",
+      "doi": "10.3389/fmars.2014.00063",
+      "title": "",
+      "journal": "Front. Mar. Sci.",
+      "year": "2014",
+      "author": "CM Duarte",
+      "unstructured": "Duarte, C. M. Global change and the future ocean: a grand challenge for marine sciences. Front. Mar. Sci. 1, 63 (2014)."
+    },
+    {
+      "key": "2146_CR34",
+      "doi": "10.1371/journal.pone.0077908",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2013",
+      "author": "AM Magera",
+      "unstructured": "Magera, A. M., Mills Flemming, J. E., Kaschner, K., Christensen, L. B. & Lotze, H. K. Recovery trends in marine mammal populations. PLoS ONE 8, e77908 (2013)."
+    },
+    {
+      "key": "2146_CR35",
+      "doi": "10.1016/j.tree.2011.07.008",
+      "title": "",
+      "journal": "Trends Ecol. Evol.",
+      "year": "2011",
+      "author": "HK Lotze",
+      "unstructured": "Lotze, H. K., Coll, M., Magera, A. M., Ward-Paige, C. & Airoldi, L. Recovery of marine animal populations and ecosystems. Trends Ecol. Evol. 26, 595\u2013605 (2011). This paper provides a discussion of the recovery potential and timescales for marine animal populations and ecosystems."
+    },
+    {
+      "key": "2146_CR36",
+      "doi": "10.1073/pnas.1520420113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "C Costello",
+      "unstructured": "Costello, C. et al. Global fishery prospects under contrasting management regimes. Proc. Natl Acad. Sci. USA 113, 5125\u20135129 (2016)."
+    },
+    {
+      "key": "2146_CR37",
+      "doi": "10.1023/a:1014235924952",
+      "title": "",
+      "journal": "Rev. Fish Biol. Fish.",
+      "year": "2001",
+      "author": "JC Castilla",
+      "unstructured": "Castilla, J. C. & Defeo, O. Latin American benthic shell fisheries: emphasis on co-management and experimental practices. Rev. Fish Biol. Fish. 11, 1\u201330 (2001)."
+    },
+    {
+      "key": "2146_CR38",
+      "doi": "10.1038/nature21728",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "AM Birkenbach",
+      "unstructured": "Birkenbach, A. M., Kaczan, D. J. & Smith, M. D. Catch shares slow the race to fish. Nature 544, 223\u2013226 (2017)."
+    },
+    {
+      "key": "2146_CR39",
+      "doi": "10.1126/science.1173146",
+      "title": "",
+      "journal": "Science",
+      "year": "2009",
+      "author": "B Worm",
+      "unstructured": "Worm, B. et al. Rebuilding global fisheries. Science 325, 578\u2013585 (2009)."
+    },
+    {
+      "key": "2146_CR40",
+      "doi": "10.1038/nclimate1970",
+      "title": "",
+      "journal": "Nat. Clim. Change",
+      "year": "2013",
+      "author": "CM Duarte",
+      "unstructured": "Duarte, C. M. et al. The role of coastal plant communities for climate change mitigation and adaption. Nat. Clim. Change 3, 961\u2013968 (2013). This review summarizes how Blue Carbon strategies, based on the conservation and restoration of vegetated coastal habitats, can help to mitigate climate change and can provide coastal protection, thereby helping coastal communities to adapt to climate change."
+    },
+    {
+      "key": "2146_CR41",
+      "doi": "10.1126/sciadv.aar8195",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2018",
+      "author": "TB Reusch",
+      "unstructured": "Reusch, T.B. et al. The Baltic Sea as a time machine for the future coastal ocean. Sci. Adv. 4, eaar8195 (2018). This review provides a narrative of the difficulties and successes in achieving environmental improvements and recovery of the Baltic Sea, with an emphasis on lessons learned to guide future efforts elsewhere."
+    },
+    {
+      "key": "2146_CR42",
+      "doi": "10.3389/fmars.2019.00123",
+      "title": "",
+      "journal": "Front. Mar. Sci.",
+      "year": "2019",
+      "author": "DF Boesch",
+      "unstructured": "Boesch, D. F. Barriers and bridges in abating coastal eutrophication. Front. Mar. Sci. 6, 123 (2019)."
+    },
+    {
+      "key": "2146_CR43",
+      "doi": "10.1126/science.1260352",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "JR Jambeck",
+      "unstructured": "Jambeck, J. R. et al. Plastic waste inputs from land into the ocean. Science 347, 768\u2013771 (2015)."
+    },
+    {
+      "key": "2146_CR44",
+      "doi": "10.1098/rstb.2004.1578",
+      "title": "",
+      "journal": "Phil. Trans. R. Soc. B",
+      "year": "2005",
+      "author": "CM Roberts",
+      "unstructured": "Roberts, C. M., Hawkins, J. P. & Gell, F. R. The role of marine reserves in achieving sustainable fisheries. Phil. Trans. R. Soc. B 360, 123\u2013132 (2005)."
+    },
+    {
+      "key": "2146_CR45",
+      "doi": "10.1073/pnas.0810440106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "S Das",
+      "unstructured": "Das, S. & Vincent, J. R. Mangroves protected villages and reduced death toll during Indian super cyclone. Proc. Natl Acad. Sci. USA 106, 7357\u20137360 (2009)."
+    },
+    {
+      "key": "2146_CR46",
+      "doi": "10.1098/rsbl.2018.0251",
+      "title": "",
+      "journal": "Biol. Lett.",
+      "year": "2018",
+      "author": "P Taillardat",
+      "unstructured": "Taillardat, P., Friess, D. A. & Lupascu, M. Mangrove blue carbon strategies for climate change mitigation are most effective at the national scale. Biol. Lett. 14, 20180251 (2018)."
+    },
+    {
+      "key": "2146_CR47",
+      "doi": "10.1126/science.1128035",
+      "title": "",
+      "journal": "Science",
+      "year": "2006",
+      "author": "HK Lotze",
+      "unstructured": "Lotze, H. K. et al. Depletion, degradation, and recovery potential of estuaries and coastal seas. Science 312, 1806\u20131809 (2006)."
+    },
+    {
+      "key": "2146_CR48",
+      "doi": "10.1016/j.tree.2015.04.003",
+      "title": "",
+      "journal": "Trends Ecol. Evol.",
+      "year": "2015",
+      "author": "J Roman",
+      "unstructured": "Roman, J., Dunphy-Daly, M. M., Johnston, D. W. & Read, A. J. Lifting baselines to address the consequences of conservation success. Trends Ecol. Evol. 30, 299\u2013302 (2015)."
+    },
+    {
+      "key": "2146_CR49",
+      "doi": "10.1016/j.marpol.2015.05.007",
+      "title": "",
+      "journal": "Mar. Policy",
+      "year": "2016",
+      "author": "M Bejder",
+      "unstructured": "Bejder, M. et al. Embracing conservation success of recovering humpback whale populations: evaluating the case for downlisting their conservation status in Australia. Mar. Policy 66, 137\u2013141 (2016)."
+    },
+    {
+      "key": "2146_CR50",
+      "doi": "10.1578/am.40.1.2014.20",
+      "title": "",
+      "journal": "Aquat. Mamm.",
+      "year": "2014",
+      "author": "MS Lowry",
+      "unstructured": "Lowry, M. S. et al. Abundance, distribution, and population growth of the northern elephant seal (Mirounga angustirostris) in the United States from 1991 to 2010. Aquat. Mamm. 40, 20\u201331 (2014). This paper provides a compelling overview of how hunting regulation and protection allowed the remarkable comeback of the northern elephant seal in the Pacific coast of the United States."
+    },
+    {
+      "key": "2146_CR51",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Fisheries and Oceans Canada. Stock Assessment of Canadian Grey Seals (Halichoerus grypus). Canadian Science Advisory Secretariat Research Document 2014/010 (Fisheries and Oceans Canada, 2014)."
+    },
+    {
+      "key": "2146_CR52",
+      "doi": "10.1126/sciadv.1600730",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2017",
+      "author": "AD Mazaris",
+      "unstructured": "Mazaris, A. D., Schofield, G., Gkazinou, C., Almpanidou, V. & Hays, G. C. Global sea turtle conservation successes. Sci. Adv. 3, e1600730 (2017)."
+    },
+    {
+      "key": "2146_CR53",
+      "doi": "10.1111/j.1467-2979.2011.00435.x",
+      "title": "",
+      "journal": "Fish Fish.",
+      "year": "2012",
+      "author": "D Ricard",
+      "unstructured": "Ricard, D. et al. Examining the knowledge base and status of commercially exploited marine species with the RAM Legacy Stock Assessment Database. Fish Fish. 13, 380\u2013398 (2012)."
+    },
+    {
+      "key": "2146_CR54",
+      "doi": "10.1641/0006-3568(2004)054[0297:mfpccf]2.0.co;2",
+      "title": "",
+      "journal": "Bioscience",
+      "year": "2004",
+      "author": "JA Hutchings",
+      "unstructured": "Hutchings, J. A. & Reynolds, J. D. Marine fish population collapses: consequences for recovery and extinction risk. Bioscience 54, 297\u2013309 (2004)."
+    },
+    {
+      "key": "2146_CR55",
+      "doi": "10.1016/j.scitotenv.2018.08.268",
+      "title": "",
+      "journal": "Sci. Total Environ.",
+      "year": "2019",
+      "author": "F Rig\u00e9t",
+      "unstructured": "Rig\u00e9t, F. et al. Temporal trends of persistent organic pollutants in Arctic marine and freshwater biota. Sci. Total Environ. 649, 99\u2013110 (2019)."
+    },
+    {
+      "key": "2146_CR56",
+      "doi": "10.1016/j.gca.2018.05.005",
+      "title": "",
+      "journal": "Geochim. Cosmochim. Acta",
+      "year": "2018",
+      "author": "AJ Pinedo-Gonz\u00e1lez",
+      "unstructured": "Pinedo-Gonz\u00e1lez, A. J. et al. Concentration and isotopic composition of dissolved Pb in surface waters of the modern global ocean. Geochim. Cosmochim. Acta 235, 41\u201354 (2018)."
+    },
+    {
+      "key": "2146_CR57",
+      "doi": "10.1016/j.marenvres.2018.11.011",
+      "title": "",
+      "journal": "Mar. Environ. Res.",
+      "year": "2019",
+      "author": "M Sch\u00f8yen",
+      "unstructured": "Sch\u00f8yen, M. et al. Levels and trends of tributyltin (TBT) and imposex in dogwhelk (Nucella lapillus) along the Norwegian coastline from 1991 to 2017. Mar. Environ. Res. 144, 1\u20138 (2019)."
+    },
+    {
+      "key": "2146_CR58",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "IOTOPF. Oil Tanker Spill Statistics 2016 http://www.itopf.org/ (2016)."
+    },
+    {
+      "key": "2146_CR59",
+      "doi": "10.1007/s12237-008-9111-2",
+      "title": "",
+      "journal": "Estuaries Coast.",
+      "year": "2009",
+      "author": "CM Duarte",
+      "unstructured": "Duarte, C. M. et al. Return to Neverland: shifting baselines affect eutrophication restoration targets. Estuaries Coast. 32, 29\u201336 (2009)."
+    },
+    {
+      "key": "2146_CR60",
+      "doi": "10.1073/pnas.1715798115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "JS Lefcheck",
+      "unstructured": "Lefcheck, J. S. et al. Long-term nutrient reductions lead to the unprecedented recovery of a temperate coastal region. Proc. Natl Acad. Sci. USA 115, 3658\u20133662 (2018)."
+    },
+    {
+      "key": "2146_CR61",
+      "doi": "10.1016/j.marpolbul.2018.08.049",
+      "title": "",
+      "journal": "Mar. Pollut. Bull.",
+      "year": "2018",
+      "author": "D Tomasko",
+      "unstructured": "Tomasko, D. et al. Widespread recovery of seagrass coverage in Southwest Florida (USA): temporal and spatial trends and management actions responsible for success. Mar. Pollut. Bull. 135, 1128\u20131137 (2018)."
+    },
+    {
+      "key": "2146_CR62",
+      "doi": "10.1038/s41467-019-11340-4",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "CB de los Santos",
+      "unstructured": "de los Santos, C.B. et al. Recent trend reversal for declining European seagrass meadows. Nat. Commun. 10, 3356 (2019). This study reports how decades of efforts to reduce nutrient inputs, improve coastal water quality and conserve and restore seagrass meadows has led to a remarkable trend reversal from sustained losses of seagrass across Europe throughout the twentieth century to a substantial increase between 2000 and 2010."
+    },
+    {
+      "key": "2146_CR63",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Yoshida, G. et al. in Blue Carbon in Shallow Coastal Ecosystems (eds Kuwae, T. & Hori, M.) (Springer Nature, 2019)."
+    },
+    {
+      "key": "2146_CR64",
+      "doi": "10.3354/meps08183",
+      "title": "",
+      "journal": "Mar. Ecol. Prog. Ser.",
+      "year": "2009",
+      "author": "S Arnaud-Haond",
+      "unstructured": "Arnaud-Haond, S. et al. Genetic recolonization of mangrove: genetic diversity still increasing in the Mekong Delta 30 years after Agent Orange. Mar. Ecol. Prog. Ser. 390, 129\u2013135 (2009)."
+    },
+    {
+      "key": "2146_CR65",
+      "doi": "10.1007/s11273-015-9479-2",
+      "title": "",
+      "journal": "Wetl. Ecol. Manag.",
+      "year": "2016",
+      "author": "VN Nam",
+      "unstructured": "Nam, V. N., Sasmito, S. D., Murdiyarso, D., Purbopuspito, J. & MacKenzie, R. A. Carbon stocks in artificially and naturally regenerated mangrove ecosystems in the Mekong Delta. Wetl. Ecol. Manag. 24, 231\u2013244 (2016)."
+    },
+    {
+      "key": "2146_CR66",
+      "doi": "10.3390/rs10101669",
+      "title": "",
+      "journal": "Remote Sens.",
+      "year": "2018",
+      "author": "P Bunting",
+      "unstructured": "Bunting, P. et al. The global mangrove watch\u2014a new 2010 global baseline of mangrove extent. Remote Sens. 10, 1669 (2018)."
+    },
+    {
+      "key": "2146_CR67",
+      "doi": "10.1111/geb.12449",
+      "title": "",
+      "journal": "Glob. Ecol. Biogeogr.",
+      "year": "2016",
+      "author": "SE Hamilton",
+      "unstructured": "Hamilton, S. E. & Casey, D. Creation of a high spatio-temporal resolution global database of continuous mangrove forest cover for the 21st century (CGMFC-21). Glob. Ecol. Biogeogr. 25, 729\u2013738 (2016)."
+    },
+    {
+      "key": "2146_CR68",
+      "doi": "10.1016/j.biocon.2018.08.020",
+      "title": "",
+      "journal": "Biol. Conserv.",
+      "year": "2018",
+      "author": "J L\u00f3pez-Angarita",
+      "unstructured": "L\u00f3pez-Angarita, J. et al. Land use patterns and influences of protected areas on mangroves of the eastern tropical Pacific. Biol. Conserv. 227, 82\u201391 (2018)."
+    },
+    {
+      "key": "2146_CR69",
+      "doi": "10.1016/j.ecss.2015.11.027",
+      "title": "",
+      "journal": "Estuar. Coast. Shelf Sci.",
+      "year": "2016",
+      "author": "H Almahasheer",
+      "unstructured": "Almahasheer, H. et al. Decadal stability of Red Sea mangroves. Estuar. Coast. Shelf Sci. 169, 164\u2013172 (2016)."
+    },
+    {
+      "key": "2146_CR70",
+      "doi": "10.1007/s10661-018-6472-2",
+      "title": "",
+      "journal": "Environ. Monit. Assess.",
+      "year": "2018",
+      "author": "H Almahasheer",
+      "unstructured": "Almahasheer, H. Spatial coverage of mangrove communities in the Arabian Gulf. Environ. Monit. Assess. 190, 85 (2018)."
+    },
+    {
+      "key": "2146_CR71",
+      "doi": "10.1093/jpe/rtp009",
+      "title": "",
+      "journal": "J. Plant Ecol.",
+      "year": "2009",
+      "author": "LZ Chen",
+      "unstructured": "Chen, L. Z. et al. Recent progresses in mangrove conservation, restoration and research in China. J. Plant Ecol. 2, 45\u201354 (2009)."
+    },
+    {
+      "key": "2146_CR72",
+      "doi": "10.3354/esr00753",
+      "title": "",
+      "journal": "Species Res.",
+      "year": "2016",
+      "author": "SE Piacenza",
+      "unstructured": "Piacenza, S. E. et al. Trends and variability in demographic indicators of a recovering population of green sea turtles Chelonia mydas. Endanger. Species Res. 31, 103\u2013117 (2016)."
+    },
+    {
+      "key": "2146_CR73",
+      "doi": "10.1139/f2012-077",
+      "title": "",
+      "journal": "Can. J. Fish. Aquat. Sci.",
+      "year": "2012",
+      "author": "JT Thorson",
+      "unstructured": "Thorson, J. T., Cope, J. M., Branch, T. A. & Jensen, O. P. Spawning biomass reference points for exploited marine fishes, incorporating taxonomic and body size information. Can. J. Fish. Aquat. Sci. 69, 1556\u20131568 (2012)."
+    },
+    {
+      "key": "2146_CR74",
+      "doi": "10.1002/2016gl071751",
+      "title": "",
+      "journal": "Geophys. Res. Lett.",
+      "year": "2017",
+      "author": "S McClatchie",
+      "unstructured": "McClatchie, S. et al. Collapse and recovery of forage fish populations prior to commercial exploitation. Geophys. Res. Lett. 44, 1877\u20131885 (2017)."
+    },
+    {
+      "key": "2146_CR75",
+      "doi": "10.1890/1540-9295(2006)4[303:rufpap]2.0.co;2",
+      "title": "",
+      "journal": "Front. Ecol. Environ.",
+      "year": "2006",
+      "author": "AA Rosenberg",
+      "unstructured": "Rosenberg, A. A., Swasey, J. H. & Bowman, M. Rebuilding US fisheries: progress and problems. Front. Ecol. Environ. 4, 303\u2013308 (2006)."
+    },
+    {
+      "key": "2146_CR76",
+      "doi": "10.1126/science.1230441",
+      "title": "",
+      "journal": "Science",
+      "year": "2013",
+      "author": "P Neubauer",
+      "unstructured": "Neubauer, P., Jensen, O. P., Hutchings, J. A. & Baum, J. K. Resilience and recovery of overexploited marine populations. Science 340, 347\u2013349 (2013)."
+    },
+    {
+      "key": "2146_CR77",
+      "doi": "10.1126/science.1113725",
+      "title": "",
+      "journal": "Science",
+      "year": "2005",
+      "author": "C Safina",
+      "unstructured": "Safina, C., Rosenberg, A. A., Myers, R. A., Quinn, T. J. II & Collie, J. S. U.S. ocean fish recovery: staying the course. Science 309, 707\u2013708 (2005)."
+    },
+    {
+      "key": "2146_CR78",
+      "doi": "10.1038/nature14358",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "MA MacNeil",
+      "unstructured": "MacNeil, M. A. et al. Recovery potential of the world\u2019s coral reef fishes. Nature 520, 341\u2013344 (2015)."
+    },
+    {
+      "key": "2146_CR79",
+      "doi": "10.1371/journal.pone.0040542",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2012",
+      "author": "UR Sumaila",
+      "unstructured": "Sumaila, U. R. et al. Benefits of rebuilding global marine fisheries outweigh costs. PLoS ONE 7, e40542 (2012)."
+    },
+    {
+      "key": "2146_CR80",
+      "doi": "10.1002/fee.1935",
+      "title": "",
+      "journal": "Front. Ecol. Environ.",
+      "year": "2018",
+      "author": "A Bersoza Hern\u00e1ndez",
+      "unstructured": "Bersoza Hern\u00e1ndez, A. et al. Restoring the eastern oyster: how much progress has been made in 53 years? Front. Ecol. Environ. 16, 463\u2013471 (2018)."
+    },
+    {
+      "key": "2146_CR81",
+      "doi": "10.3354/meps148269",
+      "title": "",
+      "journal": "Mar. Ecol. Prog. Ser.",
+      "year": "1997",
+      "author": "MH Graham",
+      "unstructured": "Graham, M. H. et al. Population dynamics of giant kelp Macrocystis pyrifera along a wave exposure gradient. Mar. Ecol. Prog. Ser. 148, 269\u2013279 (1997)."
+    },
+    {
+      "key": "2146_CR82",
+      "doi": "10.2307/2937118",
+      "title": "",
+      "journal": "Ecol. Monogr.",
+      "year": "1992",
+      "author": "PK Dayton",
+      "unstructured": "Dayton, P. K., Tegner, M. J., Parnell, P. E. & Edwards, P. B. Temporal and spatial patterns of disturbance and recovery in a kelp forest community. Ecol. Monogr. 62, 421\u2013445 (1992)."
+    },
+    {
+      "key": "2146_CR83",
+      "doi": "10.1046/j.1526-100x.2002.02031.x",
+      "title": "",
+      "journal": "Restor. Ecol.",
+      "year": "2002",
+      "author": "PB Williams",
+      "unstructured": "Williams, P. B. & Orr, M. K. Physical evolution of restored breached levee salt marshes in the San Francisco Bay estuary. Restor. Ecol. 10, 527\u2013542 (2002)."
+    },
+    {
+      "key": "2146_CR84",
+      "doi": "10.1016/j.ecss.2007.08.024",
+      "title": "",
+      "journal": "Estuar. Coast. Shelf Sci.",
+      "year": "2008",
+      "author": "DM Alongi",
+      "unstructured": "Alongi, D. M. Mangrove forests: resilience, protection from tsunamis, and responses to global climate change. Estuar. Coast. Shelf Sci. 76, 1\u201313 (2008)."
+    },
+    {
+      "key": "2146_CR85",
+      "doi": "10.1080/00785236.1995.10422039",
+      "title": "",
+      "journal": "Ophelia",
+      "year": "1995",
+      "author": "CM Duarte",
+      "unstructured": "Duarte, C. M. Submerged aquatic vegetation in relation to different nutrient regimes. Ophelia 41, 87\u2013112 (1995)."
+    },
+    {
+      "key": "2146_CR86",
+      "doi": "10.1016/j.csr.2011.08.003",
+      "title": "",
+      "journal": "Cont. Shelf Res.",
+      "year": "2011",
+      "author": "CN Rooper",
+      "unstructured": "Rooper, C. N. et al. Modeling the impacts of bottom trawling and the subsequent recovery rates of sponges and corals in the Aleutian Islands, Alaska. Cont. Shelf Res. 31, 1827\u20131834 (2011)."
+    },
+    {
+      "key": "2146_CR87",
+      "doi": "10.1111/1365-2664.13141",
+      "title": "",
+      "journal": "J. Appl. Ecol.",
+      "year": "2018",
+      "author": "F Girard",
+      "unstructured": "Girard, F., Shea, K. & Fisher, C. R. Projecting the recovery of a long-lived deep-sea coral species after the Deepwater Horizon oil spill using state-structured models. J. Appl. Ecol. 55, 1812\u20131822 (2018)."
+    },
+    {
+      "key": "2146_CR88",
+      "doi": "10.1038/s41586-019-1081-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "TP Hughes",
+      "unstructured": "Hughes, T. P. et al. Global warming impairs stock\u2013recruitment dynamics of corals. Nature 568, 387\u2013390 (2019)."
+    },
+    {
+      "key": "2146_CR89",
+      "doi": "10.1038/ncomms14163",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "D Moreno-Mateos",
+      "unstructured": "Moreno-Mateos, D. et al. Anthropogenic ecosystem disturbance and the recovery debt. Nat. Commun. 8, 14163 (2017)."
+    },
+    {
+      "key": "2146_CR90",
+      "doi": "10.1371/journal.pone.0011767",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2010",
+      "author": "RH Thurstan",
+      "unstructured": "Thurstan, R. H. & Roberts, C. M. Ecological meltdown in the Firth of Clyde, Scotland: two centuries of change in a coastal marine ecosystem. PLoS ONE 5, e11767 (2010)."
+    },
+    {
+      "key": "2146_CR91",
+      "doi": "10.1038/ncomms15325",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "GL Britten",
+      "unstructured": "Britten, G. L. et al. Extended fisheries recovery timelines in a changing environment. Nat. Commun. 8, 15325 (2017)."
+    },
+    {
+      "key": "2146_CR92",
+      "doi": "10.1126/science.aao6379",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "JK Moore",
+      "unstructured": "Moore, J. K. et al. Sustained climate warming drives declining marine biological productivity. Science 359, 1139\u20131143 (2018)."
+    },
+    {
+      "key": "2146_CR93",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "WWF. Living Blue Planet Report (WWF, 2015)."
+    },
+    {
+      "key": "2146_CR94",
+      "doi": "10.1038/ncomms1013",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2010",
+      "author": "RH Thurstan",
+      "unstructured": "Thurstan, R. H., Brockington, S. & Roberts, C. M. The effects of 118 years of industrial fishing on UK bottom trawl fisheries. Nat. Commun. 1, 15 (2010)."
+    },
+    {
+      "key": "2146_CR95",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "IPCC. IPCC Special Report on the Ocean and Cryosphere in a Changing Climate. (eds. P\u00f6rtner, H.-O. et al.) (IPCC, 2019). This IPCC Special Report contains an updated assessment of the impacts\u2014both realized and projected\u2014of climate change on the oceans as well as projections on sea-level rise and its associated impacts."
+    },
+    {
+      "key": "2146_CR96",
+      "doi": "10.1007/s13280-018-1065-4",
+      "title": "",
+      "journal": "Ambio",
+      "year": "2019",
+      "author": "P Jepson",
+      "unstructured": "Jepson, P. Recoverable Earth: a twenty-first century environmental narrative. Ambio 48, 123\u2013130 (2019)."
+    },
+    {
+      "key": "2146_CR97",
+      "doi": "10.1111/j.1365-2664.2009.01662.x",
+      "title": "",
+      "journal": "J. Appl. Ecol.",
+      "year": "2009",
+      "author": "PP Molloy",
+      "unstructured": "Molloy, P. P., McLean, I. B. & C\u00f4t\u00e9, I. M. Effects of marine reserve age on fish populations: a global meta-analysis. J. Appl. Ecol. 46, 743\u2013751 (2009)."
+    },
+    {
+      "key": "2146_CR98",
+      "doi": "10.1126/sciadv.aaw2869",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2019",
+      "author": "E Dinerstein",
+      "unstructured": "Dinerstein, E. et al. A global deal for nature: guiding principles, milestones, and targets. Sci. Adv. 5, eaaw2869 (2019)."
+    },
+    {
+      "key": "2146_CR99",
+      "doi": "10.1016/j.marpol.2018.02.004",
+      "title": "",
+      "journal": "Mar. Policy",
+      "year": "2018",
+      "author": "E Sala",
+      "unstructured": "Sala, E. et al. Assessing real progress towards effective ocean protection. Mar. Policy 91, 11\u201313 (2018)."
+    },
+    {
+      "key": "2146_CR100",
+      "doi": "10.1016/j.tree.2015.06.011",
+      "title": "",
+      "journal": "Trends Ecol. Evol.",
+      "year": "2015",
+      "author": "MJ Costello",
+      "unstructured": "Costello, M. J. & Ballantine, B. Biodiversity conservation should focus on no-take marine reserves: 94% of marine protected areas allow fishing. Trends Ecol. Evol. 30, 507\u2013509 (2015)."
+    },
+    {
+      "key": "2146_CR101",
+      "doi": "10.1038/nature21708",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "DA Gill",
+      "unstructured": "Gill, D. A. et al. Capacity shortfalls hinder the performance of marine protected areas globally. Nature 543, 665\u2013669 (2017)."
+    },
+    {
+      "key": "2146_CR102",
+      "doi": "10.1093/biosci/biy021",
+      "title": "",
+      "journal": "Bioscience",
+      "year": "2018",
+      "author": "BC O\u2019Leary",
+      "unstructured": "O\u2019Leary, B. C. et al. Addressing criticisms of large-scale marine protected areas. Bioscience 68, 359\u2013370 (2018)."
+    },
+    {
+      "key": "2146_CR103",
+      "doi": "",
+      "title": "",
+      "journal": "Conserv. Lett.",
+      "year": "2019",
+      "author": "CC O\u2019Hara",
+      "unstructured": "O\u2019Hara, C. C., Villase\u00f1or-Derbez, J. C., Ralph, G. M. & Halpern, B. S. Mapping status and conservation of global at-risk marine biodiversity. Conserv. Lett. 12, e12651 (2019)."
+    },
+    {
+      "key": "2146_CR104",
+      "doi": "10.1890/15-1077",
+      "title": "",
+      "journal": "Ecol. Appl.",
+      "year": "2016",
+      "author": "E Bayraktarov",
+      "unstructured": "Bayraktarov, E. et al. The cost and feasibility of marine coastal restoration. Ecol. Appl. 26, 1055\u20131074 (2016)."
+    },
+    {
+      "key": "2146_CR105",
+      "doi": "10.1038/524285a",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "EB Barbier",
+      "unstructured": "Barbier, E. B. Policy: Hurricane Katrina\u2019s lessons for the world. Nature 524, 285\u2013287 (2015)."
+    },
+    {
+      "key": "2146_CR106",
+      "doi": "10.1038/nature12859",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "S Temmerman",
+      "unstructured": "Temmerman, S. et al. Ecosystem-based coastal defence in the face of global change. Nature 504, 79\u201383 (2013)."
+    },
+    {
+      "key": "2146_CR107",
+      "doi": "10.1111/1365-2664.12562",
+      "title": "",
+      "journal": "J. Appl. Ecol.",
+      "year": "2016",
+      "author": "MM van Katwijk",
+      "unstructured": "van Katwijk, M. M. et al. Global review of seagrass restoration: the importance of large-scale planting. J. Appl. Ecol. 53, 567\u2013578 (2016)."
+    },
+    {
+      "key": "2146_CR108",
+      "doi": "10.1111/rec.12916",
+      "title": "",
+      "journal": "Restor. Ecol.",
+      "year": "2019",
+      "author": "DJ Suggett",
+      "unstructured": "Suggett, D. J. et al. Optimizing return-on-effort for coral nursery and outplanting practices to aid restoration of the Great Barrier Reef. Restor. Ecol. 27, 683\u2013693 (2019)."
+    },
+    {
+      "key": "2146_CR109",
+      "doi": "10.1016/j.ecoleng.2004.10.003",
+      "title": "",
+      "journal": "Ecol. Eng.",
+      "year": "2005",
+      "author": "RR Lewis III",
+      "unstructured": "Lewis, R. R. III. Ecological engineering for successful management and restoration of mangrove forests. Ecol. Eng. 24, 403\u2013418 (2005)."
+    },
+    {
+      "key": "2146_CR110",
+      "doi": "10.1073/pnas.1422301112",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2015",
+      "author": "MJ van Oppen",
+      "unstructured": "van Oppen, M. J., Oliver, J. K., Putnam, H. M. & Gates, R. D. Building coral reef resilience through assisted evolution. Proc. Natl Acad. Sci. USA 112, 2307\u20132313 (2015)."
+    },
+    {
+      "key": "2146_CR111",
+      "doi": "10.17226/25279",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "National Academies of Sciences, Engineering, and Medicine. A Research Review of Interventions to Increase the Persistence and Resilience of Coral Reefs https://doi.org/10.17226/25279 (National Academies Press, 2019)."
+    },
+    {
+      "key": "2146_CR112",
+      "doi": "10.1038/s41559-019-0942-y",
+      "title": "",
+      "journal": "Nat. Ecol. Evol.",
+      "year": "2019",
+      "author": "CE Lovelock",
+      "unstructured": "Lovelock, C. E. & Brown, B. M. Land tenure considerations are key to successful mangrove restoration. Nat. Ecol. Evol. 3, 1135 (2019)."
+    },
+    {
+      "key": "2146_CR113",
+      "doi": "10.3389/fmars.2018.00470",
+      "title": "",
+      "journal": "Front. Mar. Sci.",
+      "year": "2018",
+      "author": "CM Duarte",
+      "unstructured": "Duarte, C. M. & Krause-Jensen, D. Intervention options to accelerate ecosystem recovery from coastal eutrophication. Front. Mar. Sci. 5, 470 (2018)."
+    },
+    {
+      "key": "2146_CR114",
+      "doi": "10.1038/srep46613",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2017",
+      "author": "X Xiao",
+      "unstructured": "Xiao, X. et al. Nutrient removal from Chinese coastal waters by large-scale seaweed aquaculture. Sci. Rep. 7, 46613 (2017)."
+    },
+    {
+      "key": "2146_CR115",
+      "doi": "10.1021/acs.est.8b03655",
+      "title": "",
+      "journal": "Environ. Sci. Technol.",
+      "year": "2019",
+      "author": "J Carstensen",
+      "unstructured": "Carstensen, J. & Duarte, C. M. Drivers of pH variability in coastal ecosystems. Environ. Sci. Technol. 53, 4020\u20134029 (2019)."
+    },
+    {
+      "key": "2146_CR116",
+      "doi": "10.1021/acs.est.6b06187",
+      "title": "",
+      "journal": "Environ. Sci. Technol.",
+      "year": "2017",
+      "author": "E Rydin",
+      "unstructured": "Rydin, E., Kumblad, L., Wulff, F. & Larsson, P. Remediation of a eutrophic bay in the Baltic Sea. Environ. Sci. Technol. 51, 4559\u20134566 (2017)."
+    },
+    {
+      "key": "2146_CR117",
+      "doi": "10.1038/484289a",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "D Boesch",
+      "unstructured": "Boesch, D. Deep-water drilling remains a risky business. Nature 484, 289 (2012)."
+    },
+    {
+      "key": "2146_CR118",
+      "doi": "10.1016/j.ocecoaman.2019.104853",
+      "title": "",
+      "journal": "Ocean Coast. Manage.",
+      "year": "2019",
+      "author": "L Johannsdottir",
+      "unstructured": "Johannsdottir, L. & Cook, D. Systemic risk of maritime-related oil spills viewed from an Arctic and insurance perspective. Ocean Coast. Manage. 179, 104853 (2019)."
+    },
+    {
+      "key": "2146_CR119",
+      "doi": "",
+      "title": "",
+      "journal": "Proc. R. Soc. Lond. B",
+      "year": "2016",
+      "author": "HP Kunc",
+      "unstructured": "Kunc, H. P., McLaughlin, K. E. & Schmidt, R. Aquatic noise pollution: implications for individuals, populations, and ecosystems. Proc. R. Soc. Lond. B 283, 20160839 (2016)."
+    },
+    {
+      "key": "2146_CR120",
+      "doi": "10.17863/cam.39153",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Worthington, T. & Spalding, M. Mangrove Restoration Potential: A global map highlighting a critical opportunity. https://doi.org/10.17863/CAM.39153 (2018)."
+    },
+    {
+      "key": "2146_CR121",
+      "doi": "10.1002/2013wr014651",
+      "title": "",
+      "journal": "Water Resour. Res.",
+      "year": "2014",
+      "author": "GM Kondolf",
+      "unstructured": "Kondolf, G. M., Rubin, Z. K. & Minear, J. T. Dams on the Mekong: cumulative sediment starvation. Water Resour. Res. 50, 5158\u20135169 (2014)."
+    },
+    {
+      "key": "2146_CR122",
+      "doi": "10.1038/s41586-018-0476-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "M Schuerch",
+      "unstructured": "Schuerch, M. et al. Future response of global coastal wetlands to sea-level rise. Nature 561, 231\u2013234 (2018)."
+    },
+    {
+      "key": "2146_CR123",
+      "doi": "10.1016/j.marpolbul.2004.11.028",
+      "title": "",
+      "journal": "Mar. Pollut. Bull.",
+      "year": "2005",
+      "author": "KE Fabricius",
+      "unstructured": "Fabricius, K. E. Effects of terrestrial runoff on the ecology of corals and coral reefs: review and synthesis. Mar. Pollut. Bull. 50, 125\u2013146 (2005)."
+    },
+    {
+      "key": "2146_CR124",
+      "doi": "10.1038/nature18307",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "J Rogelj",
+      "unstructured": "Rogelj, J. et al. Paris Agreement climate proposals need a boost to keep warming well below 2\u2009\u00b0C. Nature 534, 631\u2013639 (2016)."
+    },
+    {
+      "key": "2146_CR125",
+      "doi": "10.1038/s41558-018-0118-9",
+      "title": "",
+      "journal": "Nat. Clim. Change",
+      "year": "2018",
+      "author": "KB Tokarska",
+      "unstructured": "Tokarska, K. B. & Gillett, N. P. Cumulative carbon emissions budgets consistent with 1.5\u2009\u00b0C global warming. Nat. Clim. Change 8, 296\u2013299 (2018)."
+    },
+    {
+      "key": "2146_CR126",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "UNEP. Emissions Gap Report 2019. https://www.unenvironment.org/resources/emissions-gap-report-2019 (UNEP, 2019)."
+    },
+    {
+      "key": "2146_CR127",
+      "doi": "10.1038/s41558-018-0149-2",
+      "title": "",
+      "journal": "Nat. Clim. Change",
+      "year": "2018",
+      "author": "JF Bruno",
+      "unstructured": "Bruno, J. F. et al. Climate change threatens the world\u2019s marine protected areas. Nat. Clim. Change 8, 499\u2013503 (2018)."
+    },
+    {
+      "key": "2146_CR128",
+      "doi": "10.1038/s41467-019-09238-2",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "S Sully",
+      "unstructured": "Sully, S., Burkepile, D. E., Donovan, M. K., Hodgson, G. & van Woesik, R. A global analysis of coral bleaching over the past two decades. Nat. Commun. 10, 1264 (2019)."
+    },
+    {
+      "key": "2146_CR129",
+      "doi": "10.1126/science.aar3454",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "EB Barbier",
+      "unstructured": "Barbier, E. B., Burgess, J. C. & Dean, T. J. How to pay for saving biodiversity. Science 360, 486\u2013488 (2018). This study provides estimates and funding mechanisms to pay for biodiversity conservation globally, including estimates of investment and benefits for conserving marine biodiversity."
+    },
+    {
+      "key": "2146_CR130",
+      "doi": "10.1073/pnas.0403239101",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2004",
+      "author": "A Balmford",
+      "unstructured": "Balmford, A., Gravestock, P., Hockley, N., McClean, C. J. & Roberts, C. M. The worldwide costs of marine protected areas. Proc. Natl Acad. Sci. USA 101, 9694\u20139697 (2004)."
+    },
+    {
+      "key": "2146_CR131",
+      "doi": "10.1073/pnas.0909335107",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2010",
+      "author": "LJ McCook",
+      "unstructured": "McCook, L. J. et al. Adaptive management of the Great Barrier Reef: a globally significant demonstration of the benefits of networks of marine reserves. Proc. Natl Acad. Sci. USA 107, 18278\u201318285 (2010)."
+    },
+    {
+      "key": "2146_CR132",
+      "doi": "10.1126/science.aao4248",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "MG Burgess",
+      "unstructured": "Burgess, M. G. et al. Protecting marine mammals, turtles, and birds by rebuilding global fisheries. Science 359, 1255\u20131258 (2018)."
+    },
+    {
+      "key": "2146_CR133",
+      "doi": "10.1073/pnas.1604982113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "J Lubchenco",
+      "unstructured": "Lubchenco, J. et al. The right incentives enable ocean sustainability successes and provide hope for the future. Proc. Natl Acad. Sci. USA 113, 14507\u201314514 (2016)."
+    },
+    {
+      "key": "2146_CR134",
+      "doi": "10.1371/journal.pone.0166681",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2016",
+      "author": "AM Cisneros-Montemayor",
+      "unstructured": "Cisneros-Montemayor, A. M., Pauly, D., Weatherdon, L. V. & Ota, Y. A global estimate of seafood consumption by coastal indigenous peoples. PLoS ONE 11, e0166681 (2016)."
+    },
+    {
+      "key": "2146_CR135",
+      "doi": "10.1073/pnas.1902796116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "R Arlinghaus",
+      "unstructured": "Arlinghaus, R. et al. Opinion: governing the recreational dimension of global fisheries. Proc. Natl Acad. Sci. USA 116, 5209\u20135213 (2019)."
+    },
+    {
+      "key": "2146_CR136",
+      "doi": "10.1080/09644016.2017.1327485",
+      "title": "",
+      "journal": "Env. Polit.",
+      "year": "2017",
+      "author": "K B\u00e4ckstrand",
+      "unstructured": "B\u00e4ckstrand, K. et al. Non-state actors in global climate governance: from Copenhagen to Paris and beyond. Env. Polit. 26, 561\u2013579 (2017)."
+    },
+    {
+      "key": "2146_CR137",
+      "doi": "",
+      "title": "",
+      "journal": "Dev.",
+      "year": "2017",
+      "author": "A Hudson",
+      "unstructured": "Hudson, A. Restoring and protecting the world\u2019s large marine ecosystems: an engine for job creation and sustainable economic development. Environ. Dev. 22, 150\u2013155 (2017)."
+    },
+    {
+      "key": "2146_CR138",
+      "doi": "10.1890/06-1896.1",
+      "title": "",
+      "journal": "Ecol. Appl.",
+      "year": "2008",
+      "author": "S Gelcich",
+      "unstructured": "Gelcich, S., Godoy, N., Prado, L. & Castilla, J. C. Add-on conservation benefits of marine territorial user rights fishery policies in central Chile. Ecol. Appl. 18, 273\u2013281 (2008)."
+    },
+    {
+      "key": "2146_CR139",
+      "doi": "10.1016/j.gloenvcha.2018.04.002",
+      "title": "",
+      "journal": "Glob. Environ. Change",
+      "year": "2018",
+      "author": "LN Johns",
+      "unstructured": "Johns, L. N. & Jacquet, J. Doom and gloom versus optimism: an assessment of ocean-related US science journalism (2001\u20132015). Glob. Environ. Change 50, 142\u2013148 (2018)."
+    },
+    {
+      "key": "2146_CR140",
+      "doi": "10.1126/science.aan4082",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "A Balmford",
+      "unstructured": "Balmford, A. & Knowlton, N. Why Earth optimism? Science 356, 225 (2017)."
+    },
+    {
+      "key": "2146_CR141",
+      "doi": "10.1038/505475a",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "EB Barbier",
+      "unstructured": "Barbier, E. B. et al. Protect the deep sea. Nature 505, 475\u2013477 (2014)."
+    },
+    {
+      "key": "2146_CR142",
+      "doi": "10.1016/j.marpol.2011.11.003",
+      "title": "",
+      "journal": "Mar. Policy",
+      "year": "2012",
+      "author": "BC O\u2019Leary",
+      "unstructured": "O\u2019Leary, B. C. et al. The first network of marine protected areas (MPAs) in the high seas: the process, the challenges and where next. Mar. Policy 36, 598\u2013605 (2012)."
+    },
+    {
+      "key": "2146_CR143",
+      "doi": "10.1126/science.1145560",
+      "title": "",
+      "journal": "Science",
+      "year": "2007",
+      "author": "JP Rodr\u00edguez",
+      "unstructured": "Rodr\u00edguez, J. P. et al. Environment: globalization of conservation: a view from the south. Science 317, 755\u2013756 (2007)."
+    },
+    {
+      "key": "2146_CR144",
+      "doi": "10.1088/1748-9326/aab212",
+      "title": "",
+      "journal": "Environ. Res. Lett.",
+      "year": "2018",
+      "author": "JM Mogoll\u00f3n",
+      "unstructured": "Mogoll\u00f3n, J. M. et al. Assessing future reactive nitrogen inputs into global croplands based on the shared socioeconomic pathways. Environ. Res. Lett. 13, 044008 (2018)."
+    }
+  ]
+}

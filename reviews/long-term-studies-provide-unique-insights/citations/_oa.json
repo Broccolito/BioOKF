@@ -1,0 +1,1554 @@
+{
+  "article": {
+    "slug": "s41586-025-08597-9",
+    "doi": "10.1038/s41586-025-08597-9",
+    "title": "Long-term studies provide unique insights into evolution",
+    "url": "https://www.nature.com/articles/s41586-025-08597-9",
+    "abbrev": "long-term-studies-provide-unique-insights",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/long-term-studies-provide-unique-insights"
+  },
+  "n_refs": 179,
+  "n_with_doi": 161,
+  "n_oa": 90,
+  "records": [
+    {
+      "doi": "10.1126/science.1070315",
+      "title": "",
+      "year": "2002",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://zotero.org/groups/5435545/items/L8GSKMXJ",
+      "file": "10.1126_science.1070315.md"
+    },
+    {
+      "doi": "10.1038/s41586-023-06052-1",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10425966/pdf/nihms-1900581.pdf",
+      "file": "10.1038_s41586-023-06052-1.md"
+    },
+    {
+      "doi": "10.1038/nature24287",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://researchmgt.monash.edu/ws/files/241986057/108509549_oa.pdf",
+      "file": "10.1038_nature24287.md"
+    },
+    {
+      "doi": "10.1093/oso/9780192898661.001.0001",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1515/9781400851300",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41559-024-02402-y",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41559-024-02402-y.pdf",
+      "file": "10.1038_s41559-024-02402-y.md"
+    },
+    {
+      "doi": "10.1126/science.aao4593",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s00239-023-10095-3",
+      "title": "",
+      "year": "2023",
+      "journal": "J. Mol. Evol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature08480",
+      "title": "",
+      "year": "2009",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.0803151105",
+      "title": "",
+      "year": "2008",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1365-2745.2006.01145.x",
+      "title": "",
+      "year": "2006",
+      "journal": "J. Ecol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1365-2745.2006.01145.x",
+      "file": "10.1111_j.1365-2745.2006.01145.x.md"
+    },
+    {
+      "doi": "10.1038/hdy.1976.62",
+      "title": "",
+      "year": "1976",
+      "journal": "Heredity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/hdy197662.pdf",
+      "file": "10.1038_hdy.1976.62.md"
+    },
+    {
+      "doi": "10.1098/rspb.2019.1332",
+      "title": "",
+      "year": "2019",
+      "journal": "Proc. R. Soc. B",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2019.1332",
+      "file": "10.1098_rspb.2019.1332.md"
+    },
+    {
+      "doi": "10.1525/california/9780520247666.003.0006",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.tree.2010.08.002",
+      "title": "",
+      "year": "2010",
+      "journal": "Trends Ecol. Evol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41559-022-01940-7",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Ecol. Evol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.research.ed.ac.uk/files/315379833/Sheldon_etal._LT_studies_NEE_comment_final_171022.pdf",
+      "file": "10.1038_s41559-022-01940-7.md"
+    },
+    {
+      "doi": "10.1126/science.292.5521.1528",
+      "title": "",
+      "year": "2001",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1173668",
+      "title": "",
+      "year": "2009",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.tplants.2004.05.005",
+      "title": "",
+      "year": "2004",
+      "journal": "Trends Plant Sci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1146/annurev-ecolsys-110218-024926",
+      "title": "",
+      "year": "2019",
+      "journal": "Annu. Rev. Ecol. Evol. Syst.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-ecolsys-110218-024926",
+      "file": "10.1146_annurev-ecolsys-110218-024926.md"
+    },
+    {
+      "doi": "10.1111/j.1365-294x.2007.03474.x",
+      "title": "",
+      "year": "2008",
+      "journal": "Mol. Ecol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/jeb.14086",
+      "title": "",
+      "year": "2022",
+      "journal": "J. Evol. Biol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": ""
+    },
+    {
+      "doi": "10.1643/ce-16-549",
+      "title": "",
+      "year": "2017",
+      "journal": "Copeia",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://digitalcommons.uri.edu/bio_facpubs/179",
+      "file": "10.1643_ce-16-549.md"
+    },
+    {
+      "doi": "10.1038/s41559-023-02116-7",
+      "title": "",
+      "year": "2023",
+      "journal": "Nat. Ecol. Evol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://hal.science/hal-04190499/document",
+      "file": "10.1038_s41559-023-02116-7.md"
+    },
+    {
+      "doi": "10.1201/9780429351907",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41567-017-0002-y",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Phys.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6853058?pdf=render",
+      "file": "10.1038_s41567-017-0002-y.md"
+    },
+    {
+      "doi": "10.1038/ncomms7102",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms7102.pdf",
+      "file": "10.1038_ncomms7102.md"
+    },
+    {
+      "doi": "10.1126/sciadv.adn2706",
+      "title": "",
+      "year": "2024",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/doi/pdf/10.1126/sciadv.adn2706?download=true",
+      "file": "10.1126_sciadv.adn2706.md"
+    },
+    {
+      "doi": "10.3390/genes14081635",
+      "title": "",
+      "year": "2023",
+      "journal": "Genes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/2073-4425/14/8/1635/pdf?version=1692252669",
+      "file": "10.3390_genes14081635.md"
+    },
+    {
+      "doi": "10.1515/9781400837946",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/sysbio/syab041",
+      "title": "",
+      "year": "2022",
+      "journal": "Syst. Biol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": ""
+    },
+    {
+      "doi": "10.1146/annurev-ecolsys-121415-032254",
+      "title": "",
+      "year": "2016",
+      "journal": "Annu. Rev. Ecol. Evol. Syst.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-ecolsys-121415-032254",
+      "file": "10.1146_annurev-ecolsys-121415-032254.md"
+    },
+    {
+      "doi": "10.7312/simp93764",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/brv.12643",
+      "title": "",
+      "year": "2021",
+      "journal": "Biol. Rev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.tree.2022.09.005",
+      "title": "",
+      "year": "2023",
+      "journal": "Trends Ecol. Evol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1098/rstb.2016.0417",
+      "title": "",
+      "year": "2017",
+      "journal": "Phil. Trans. R. Soc. B",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rstb.2016.0417",
+      "file": "10.1098_rstb.2016.0417.md"
+    },
+    {
+      "doi": "10.1038/nature11514",
+      "title": "",
+      "year": "2012",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1128/jb.151.1.269-273.1982",
+      "title": "",
+      "year": "1982",
+      "journal": "J. Bacteriol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://jb.asm.org/content/jb/151/1/269.full.pdf",
+      "file": "10.1128_jb.151.1.269-273.1982.md"
+    },
+    {
+      "doi": "10.1099/mic.0.001390",
+      "title": "",
+      "year": "2023",
+      "journal": "Microbiology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10482366/pdf/mic-169-1390.pdf",
+      "file": "10.1099_mic.0.001390.md"
+    },
+    {
+      "doi": "10.1666/0094-8373(2005)031[0133:tdoes]2.0.co;2",
+      "title": "",
+      "year": "2005",
+      "journal": "Paleobiology",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1461-0248.2009.01381.x",
+      "title": "",
+      "year": "2009",
+      "journal": "Ecol. Lett.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/10072/425168",
+      "file": "10.1111_j.1461-0248.2009.01381.x.md"
+    },
+    {
+      "doi": "10.1126/science.aag2773",
+      "title": "",
+      "year": "2017",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.repository.cam.ac.uk/handle/1810/263836",
+      "file": "10.1126_science.aag2773.md"
+    },
+    {
+      "doi": "10.1016/0022-5193(83)90335-1",
+      "title": "",
+      "year": "1983",
+      "journal": "J. Theor. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1086/510633",
+      "title": "",
+      "year": "2007",
+      "journal": "Am. Nat.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.2222071120",
+      "title": "",
+      "year": "2023",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10589706/pdf/pnas.202222071.pdf",
+      "file": "10.1073_pnas.2222071120.md"
+    },
+    {
+      "doi": "10.1038/327511a0",
+      "title": "",
+      "year": "1987",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://hdl.handle.net/2027.42/62579",
+      "file": "10.1038_327511a0.md"
+    },
+    {
+      "doi": "10.1093/acprof:oso/9780199595372.001.0001",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/evl3.3",
+      "title": "",
+      "year": "2017",
+      "journal": "Evol. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/evl3.3",
+      "file": "10.1002_evl3.3.md"
+    },
+    {
+      "doi": "10.1093/evolinnean/kzae006",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/evolinnean/advance-article-pdf/doi/10.1093/evolinnean/kzae006/58058263/kzae006.pdf",
+      "file": "10.1093_evolinnean_kzae006.md"
+    },
+    {
+      "doi": "10.1038/s41467-019-10636-9",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-019-10636-9.pdf",
+      "file": "10.1038_s41467-019-10636-9.md"
+    },
+    {
+      "doi": "10.4159/9780674417922",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.5962/bhl.title.27468",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/genetics/16.2.97",
+      "title": "",
+      "year": "1931",
+      "journal": "Genetics",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/genetics/article-pdf/16/2/97/35081059/genetics0097.pdf",
+      "file": "10.1093_genetics_16.2.97.md"
+    },
+    {
+      "doi": "10.1146/annurev-ecolsys-012722-035231",
+      "title": "",
+      "year": "2022",
+      "journal": "Annu. Rev. Ecol. Evol. Syst.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10544833/pdf/nihms-1883447.pdf",
+      "file": "10.1146_annurev-ecolsys-012722-035231.md"
+    },
+    {
+      "doi": "10.1086/427270",
+      "title": "",
+      "year": "2005",
+      "journal": "Am. Nat.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1558-5646.1970.tb01759.x",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1558-5646.1970.tb01759.x",
+      "file": "10.1111_j.1558-5646.1970.tb01759.x.md"
+    },
+    {
+      "doi": "10.1086/280955",
+      "title": "",
+      "year": "1941",
+      "journal": "Am. Nat.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.add1417",
+      "title": "",
+      "year": "2024",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/10261/360199",
+      "file": "10.1126_science.add1417.md"
+    },
+    {
+      "doi": "10.1126/science.1243357",
+      "title": "",
+      "year": "2013",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1250939",
+      "title": "",
+      "year": "2014",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/ismej.2017.69",
+      "title": "",
+      "year": "2017",
+      "journal": "ISME J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ismej201769.pdf",
+      "file": "10.1038_ismej.2017.69.md"
+    },
+    {
+      "doi": "10.3389/fgene.2015.00099",
+      "title": "",
+      "year": "2015",
+      "journal": "Front. Genet.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4356158?pdf=render",
+      "file": "10.3389_fgene.2015.00099.md"
+    },
+    {
+      "doi": "10.1126/science.1203799",
+      "title": "",
+      "year": "2011",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://nrs.harvard.edu/urn-3:HUL.InstRepos:34262174",
+      "file": "10.1126_science.1203799.md"
+    },
+    {
+      "doi": "10.1038/nature09352",
+      "title": "",
+      "year": "2010",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.abk0853",
+      "title": "",
+      "year": "2022",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://research.rug.nl/files/221210508/science.abk0853.pdf",
+      "file": "10.1126_science.abk0853.md"
+    },
+    {
+      "doi": "10.1086/323585",
+      "title": "",
+      "year": "2001",
+      "journal": "Am. Nat.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1046/j.1365-2656.1999.00299.x",
+      "title": "",
+      "year": "1999",
+      "journal": "J. Anim. Ecol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1046/j.1365-2656.1999.00299.x",
+      "file": "10.1046_j.1365-2656.1999.00299.x.md"
+    },
+    {
+      "doi": "10.2307/2411246",
+      "title": "",
+      "year": "1998",
+      "journal": "Evolution",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/35083580",
+      "title": "",
+      "year": "2001",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41467-024-54302-1",
+      "title": "",
+      "year": "2024",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-024-54302-1.pdf",
+      "file": "10.1038_s41467-024-54302-1.md"
+    },
+    {
+      "doi": "10.1111/evo.14622",
+      "title": "",
+      "year": "2022",
+      "journal": "Evolution",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/evolut/article-pdf/76/11/2605/50000322/evolut2605.pdf",
+      "file": "10.1111_evo.14622.md"
+    },
+    {
+      "doi": "10.1093/acprof:oso/9780199674237.003.0010",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1098/rstb.2010.0108",
+      "title": "",
+      "year": "2010",
+      "journal": "Phil. Trans. R. Soc. B",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rstb.2010.0108",
+      "file": "10.1098_rstb.2010.0108.md"
+    },
+    {
+      "doi": "10.1111/j.1558-5646.2012.01794.x",
+      "title": "",
+      "year": "2012",
+      "journal": "Evolution",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.3363360",
+      "title": "",
+      "year": "1988",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1063656",
+      "title": "",
+      "year": "2001",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/bies.201600017",
+      "title": "",
+      "year": "2016",
+      "journal": "BioEssays",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s00484-019-01851-6",
+      "title": "",
+      "year": "2020",
+      "journal": "Int. J. Biometeorol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://link.springer.com/content/pdf/10.1007/s00484-019-01851-6.pdf",
+      "file": "10.1007_s00484-019-01851-6.md"
+    },
+    {
+      "doi": "10.1007/bf01237655",
+      "title": "",
+      "year": "1995",
+      "journal": "Evol. Ecol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1146/annurev-ecolsys-012722-024041",
+      "title": "",
+      "year": "2022",
+      "journal": "Annu. Rev. Ecol. Evol. Syst.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.research.ed.ac.uk/files/296380912/AREES_Rum_deer_01_05_22_no_field_codes.pdf",
+      "file": "10.1146_annurev-ecolsys-012722-024041.md"
+    },
+    {
+      "doi": "10.2307/2411924",
+      "title": "",
+      "year": "1956",
+      "journal": "Syst. Zool.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.2307/2410333",
+      "title": "",
+      "year": "1995",
+      "journal": "Evolution",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1128374",
+      "title": "",
+      "year": "2006",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1558-5646.1983.tb05618.x",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1558-5646.1983.tb05618.x",
+      "file": "10.1111_j.1558-5646.1983.tb05618.x.md"
+    },
+    {
+      "doi": "10.1126/science.aad8786",
+      "title": "",
+      "year": "2016",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1098/rspb.2012.1051",
+      "title": "",
+      "year": "2012",
+      "journal": "Proc. R. Soc. B Biol. Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2012.1051",
+      "file": "10.1098_rspb.2012.1051.md"
+    },
+    {
+      "doi": "10.1111/nph.15029",
+      "title": "",
+      "year": "2018",
+      "journal": "New Phytol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/nph.15029",
+      "file": "10.1111_nph.15029.md"
+    },
+    {
+      "doi": "10.1111/gcb.12770",
+      "title": "",
+      "year": "2015",
+      "journal": "Glob. Chang. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1157174",
+      "title": "",
+      "year": "2008",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.biocon.2009.03.016",
+      "title": "",
+      "year": "2009",
+      "journal": "Biol. Conserv.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/1365-2656.13683",
+      "title": "",
+      "year": "2023",
+      "journal": "J. Anim. Ecol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/ele.13953",
+      "title": "",
+      "year": "2022",
+      "journal": "Ecol. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ele.13953",
+      "file": "10.1111_ele.13953.md"
+    },
+    {
+      "doi": "10.1371/journal.pbio.3000493",
+      "title": "",
+      "year": "2019",
+      "journal": "PLoS Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.3000493&type=printable",
+      "file": "10.1371_journal.pbio.3000493.md"
+    },
+    {
+      "doi": "10.1002/wcc.852",
+      "title": "",
+      "year": "2023",
+      "journal": "Wiley Interdiscip. Rev. Clim. Change",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/wcc.852",
+      "file": "10.1002_wcc.852.md"
+    },
+    {
+      "doi": "10.1111/ele.13603",
+      "title": "",
+      "year": "2020",
+      "journal": "Ecol. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ele.13603",
+      "file": "10.1111_ele.13603.md"
+    },
+    {
+      "doi": "10.1111/eva.12137",
+      "title": "",
+      "year": "2014",
+      "journal": "Evol. Appl.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/eva.12137",
+      "file": "10.1111_eva.12137.md"
+    },
+    {
+      "doi": "10.1111/ele.12348",
+      "title": "",
+      "year": "2014",
+      "journal": "Ecol. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ele.12348",
+      "file": "10.1111_ele.12348.md"
+    },
+    {
+      "doi": "10.1111/j.1469-185x.1937.tb00642.x",
+      "title": "",
+      "year": "1937",
+      "journal": "Biol. Rev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/hdy.1955.36",
+      "title": "",
+      "year": "1955",
+      "journal": "Heredity",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1098/rsbl.2011.1136",
+      "title": "",
+      "year": "2012",
+      "journal": "Biol. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://rsbl.royalsocietypublishing.org/content/8/4/609.full.pdf+html",
+      "file": "10.1098_rsbl.2011.1136.md"
+    },
+    {
+      "doi": "10.1126/science.abg5980",
+      "title": "",
+      "year": "2022",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/10138/356542",
+      "file": "10.1126_science.abg5980.md"
+    },
+    {
+      "doi": "10.1146/annurev-ecolsys-112414-054339",
+      "title": "",
+      "year": "2015",
+      "journal": "Annu. Rev. Ecol. Evol. Syst.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://pure.iiasa.ac.at/id/eprint/11318/1/HeinoEtAl2015-Fisheries-induced%20evolution%20IIASA%20AnnRevEcolEvolSyst.pdf",
+      "file": "10.1146_annurev-ecolsys-112414-054339.md"
+    },
+    {
+      "doi": "10.1007/s13280-014-0547-2",
+      "title": "",
+      "year": "2015",
+      "journal": "Ambio",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4357625?pdf=render",
+      "file": "10.1007_s13280-014-0547-2.md"
+    },
+    {
+      "doi": "10.1126/science.abk0989",
+      "title": "",
+      "year": "2022",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://research.vu.nl/en/publications/33f6f617-198f-4fb8-b6b4-225ac76c821e",
+      "file": "10.1126_science.abk0989.md"
+    },
+    {
+      "doi": "10.1038/s41559-020-1193-7",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Ecol. Evol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aam5979",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://science.sciencemag.org/content/sci/362/6415/eaam5979.full.pdf",
+      "file": "10.1126_science.aam5979.md"
+    },
+    {
+      "doi": "10.1126/science.aas9043",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1098/rstb.2009.0154",
+      "title": "",
+      "year": "2010",
+      "journal": "Phil. Trans. R. Soc. B",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2842699?pdf=render",
+      "file": "10.1098_rstb.2009.0154.md"
+    },
+    {
+      "doi": "10.1073/pnas.2304934120",
+      "title": "",
+      "year": "2024",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/doi/pdf/10.1073/pnas.2304934120",
+      "file": "10.1073_pnas.2304934120.md"
+    },
+    {
+      "doi": "10.1038/s41467-020-19437-x",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-020-19437-x.pdf",
+      "file": "10.1038_s41467-020-19437-x.md"
+    },
+    {
+      "doi": "10.1038/s41559-018-0581-8",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Ecol. Evol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6519129?pdf=render",
+      "file": "10.1038_s41559-018-0581-8.md"
+    },
+    {
+      "doi": "10.1038/nrg3564",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Rev. Genet.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4239992?pdf=render",
+      "file": "10.1038_nrg3564.md"
+    },
+    {
+      "doi": "10.1038/s41559-020-1128-3",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Ecol. Evol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8063891?pdf=render",
+      "file": "10.1038_s41559-020-1128-3.md"
+    },
+    {
+      "doi": "10.1126/science.1212986",
+      "title": "",
+      "year": "2012",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature12344",
+      "title": "",
+      "year": "2013",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://nrs.harvard.edu/urn-3:HUL.InstRepos:11879818",
+      "file": "10.1038_nature12344.md"
+    },
+    {
+      "doi": "10.1073/pnas.1712999114",
+      "title": "",
+      "year": "2017",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/114/48/12773.full.pdf",
+      "file": "10.1073_pnas.1712999114.md"
+    },
+    {
+      "doi": "10.1038/nature18959",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4988878?pdf=render",
+      "file": "10.1038_nature18959.md"
+    },
+    {
+      "doi": "10.1073/pnas.1314561111",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/111/6/2217.full.pdf",
+      "file": "10.1073_pnas.1314561111.md"
+    },
+    {
+      "doi": "10.1126/science.aap9125",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://hal.science/hal-05200425",
+      "file": "10.1126_science.aap9125.md"
+    },
+    {
+      "doi": "10.1126/sciadv.adl3149",
+      "title": "",
+      "year": "2024",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/doi/pdf/10.1126/sciadv.adl3149?download=true",
+      "file": "10.1126_sciadv.adl3149.md"
+    },
+    {
+      "doi": "10.1086/723209",
+      "title": "",
+      "year": "2023",
+      "journal": "Am. Nat.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/evl3.266",
+      "title": "",
+      "year": "2022",
+      "journal": "Evol. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/evl3.266",
+      "file": "10.1002_evl3.266.md"
+    },
+    {
+      "doi": "10.1093/biosci/biad083",
+      "title": "",
+      "year": "2023",
+      "journal": "BioScience",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/bioscience/article-pdf/73/11/785/54595373/biad083.pdf",
+      "file": "10.1093_biosci_biad083.md"
+    },
+    {
+      "doi": "10.1093/evolinnean/kzae016",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/evolinnean/advance-article-pdf/doi/10.1093/evolinnean/kzae016/58889760/kzae016.pdf",
+      "file": "10.1093_evolinnean_kzae016.md"
+    },
+    {
+      "doi": "10.1515/9781400883080",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1193954",
+      "title": "",
+      "year": "2011",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1098/rstb.2009.0012",
+      "title": "",
+      "year": "2009",
+      "journal": "Phil. Trans. R. Soc. B",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2690506?pdf=render",
+      "file": "10.1098_rstb.2009.0012.md"
+    },
+    {
+      "doi": "10.1111/ele.13712",
+      "title": "",
+      "year": "2021",
+      "journal": "Ecol. Lett.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/1365-2435.13244",
+      "title": "",
+      "year": "2019",
+      "journal": "Funct. Ecol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1365-2435.13244",
+      "file": "10.1111_1365-2435.13244.md"
+    },
+    {
+      "doi": "10.1111/j.1461-0248.2007.01086.x",
+      "title": "",
+      "year": "2007",
+      "journal": "Ecol. Lett.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/1975/5986",
+      "file": "10.1111_j.1461-0248.2007.01086.x.md"
+    },
+    {
+      "doi": "10.1038/nature01767",
+      "title": "",
+      "year": "2003",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41598-023-36221-1",
+      "title": "",
+      "year": "2023",
+      "journal": "Sci. Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41598-023-36221-1.pdf",
+      "file": "10.1038_s41598-023-36221-1.md"
+    },
+    {
+      "doi": "10.1073/pnas.1816298116",
+      "title": "",
+      "year": "2019",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/116/6/2112.full.pdf",
+      "file": "10.1073_pnas.1816298116.md"
+    },
+    {
+      "doi": "10.1038/s41396-020-00787-9",
+      "title": "",
+      "year": "2021",
+      "journal": "ISME J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41396-020-00787-9.pdf",
+      "file": "10.1038_s41396-020-00787-9.md"
+    },
+    {
+      "doi": "10.1073/pnas.1406357111",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/111/45/16035.full.pdf",
+      "file": "10.1073_pnas.1406357111.md"
+    },
+    {
+      "doi": "10.1111/1365-2435.13261",
+      "title": "",
+      "year": "2019",
+      "journal": "Funct. Ecol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1365-2435.13261",
+      "file": "10.1111_1365-2435.13261.md"
+    },
+    {
+      "doi": "10.1007/978-3-031-47814-7_10",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1086/705380",
+      "title": "",
+      "year": "2019",
+      "journal": "Am. Nat.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1086/599300",
+      "title": "",
+      "year": "2009",
+      "journal": "Am. Nat.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://www.dora.lib4ri.ch/eawag/islandora/object/eawag%3A6194",
+      "file": "10.1086_599300.md"
+    },
+    {
+      "doi": "10.1111/eth.12849",
+      "title": "",
+      "year": "2019",
+      "journal": "Ethology",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aap9289",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://science.sciencemag.org/content/sci/360/6392/1017.full.pdf",
+      "file": "10.1126_science.aap9289.md"
+    },
+    {
+      "doi": "10.1038/nature03039",
+      "title": "",
+      "year": "2004",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1643/ce-16-517",
+      "title": "",
+      "year": "2017",
+      "journal": "Copeia",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/ele.14335",
+      "title": "",
+      "year": "2024",
+      "journal": "Ecol. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/ele.14335",
+      "file": "10.1111_ele.14335.md"
+    },
+    {
+      "doi": "10.1890/0012-9615(2002)072[0383:poacal]2.0.co;2",
+      "title": "",
+      "year": "2002",
+      "journal": "Ecol. Monogr.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cub.2023.06.071",
+      "title": "",
+      "year": "2023",
+      "journal": "Curr. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/978-3-030-66933-1",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/mec.13252",
+      "title": "",
+      "year": "2015",
+      "journal": "Mol. Ecol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/mec.13252",
+      "file": "10.1111_mec.13252.md"
+    },
+    {
+      "doi": "10.1111/2041-210x.14298",
+      "title": "",
+      "year": "2024",
+      "journal": "Methods Ecol. Evol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/2041-210X.14298",
+      "file": "10.1111_2041-210x.14298.md"
+    },
+    {
+      "doi": "10.1126/science.aaa2478",
+      "title": "",
+      "year": "2015",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.abg1780",
+      "title": "",
+      "year": "2022",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://research.rug.nl/en/publications/e34ca350-5b44-4276-9419-4ee27af44217",
+      "file": "10.1126_science.abg1780.md"
+    },
+    {
+      "doi": "10.2307/2408842",
+      "title": "",
+      "year": "1983",
+      "journal": "Evolution",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/evolut/qpad077",
+      "title": "",
+      "year": "2023",
+      "journal": "Evolution",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/evolut/advance-article-pdf/doi/10.1093/evolut/qpad077/50117283/qpad077.pdf",
+      "file": "10.1093_evolut_qpad077.md"
+    },
+    {
+      "doi": "10.1038/s41576-023-00636-3",
+      "title": "",
+      "year": "2024",
+      "journal": "Nat. Rev. Genet.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/2041-210x.13901",
+      "title": "",
+      "year": "2022",
+      "journal": "Methods Ecol. Evol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/2041-210X.13901",
+      "file": "10.1111_2041-210x.13901.md"
+    },
+    {
+      "doi": "10.1038/ncomms5117",
+      "title": "",
+      "year": "2014",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms5117.pdf",
+      "file": "10.1038_ncomms5117.md"
+    },
+    {
+      "doi": "10.1126/science.1090727",
+      "title": "",
+      "year": "2004",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1256739",
+      "title": "",
+      "year": "2014",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-024-07636-1",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC11254757?pdf=render",
+      "file": "10.1038_s41586-024-07636-1.md"
+    },
+    {
+      "doi": "10.1038/s41586-024-07834-x",
+      "title": "",
+      "year": "2024",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13227946/",
+      "file": "10.1038_s41586-024-07834-x.md"
+    },
+    {
+      "doi": "10.1126/science.abj7484",
+      "title": "",
+      "year": "2022",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10684103/pdf/nihms-1945071.pdf",
+      "file": "10.1126_science.abj7484.md"
+    }
+  ]
+}

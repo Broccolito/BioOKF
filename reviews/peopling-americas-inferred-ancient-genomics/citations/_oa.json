@@ -1,0 +1,1181 @@
+{
+  "article": {
+    "slug": "s41586-021-03499-y",
+    "doi": "10.1038/s41586-021-03499-y",
+    "title": "Peopling of the Americas as inferred from ancient genomics",
+    "url": "https://www.nature.com/articles/s41586-021-03499-y",
+    "abbrev": "peopling-americas-inferred-ancient-genomics",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/peopling-americas-inferred-ancient-genomics"
+  },
+  "n_refs": 130,
+  "n_with_doi": 120,
+  "n_oa": 86,
+  "records": [
+    {
+      "doi": "10.1371/journal.pone.0001764",
+      "title": "",
+      "year": "2008",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0001764&type=printable",
+      "file": "10.1371_journal.pone.0001764.md"
+    },
+    {
+      "doi": "10.1073/pnas.1306290110",
+      "title": "",
+      "year": "2013",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/110/35/14308.full.pdf",
+      "file": "10.1073_pnas.1306290110.md"
+    },
+    {
+      "doi": "10.1016/j.ajhg.2007.11.013",
+      "title": "",
+      "year": "2008",
+      "journal": "Am. J. Hum. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0002929708001390/pdf",
+      "file": "10.1016_j.ajhg.2007.11.013.md"
+    },
+    {
+      "doi": "10.1002/ajpa.21614",
+      "title": "",
+      "year": "2012",
+      "journal": "Am. J. Phys. Anthropol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/ajpa.21238",
+      "title": "",
+      "year": "2009",
+      "journal": "Am. J. Phys. Anthropol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1101/gr.109231.110",
+      "title": "",
+      "year": "2010",
+      "journal": "Genome Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://genome.cshlp.org/content/20/9/1174.full.pdf",
+      "file": "10.1101_gr.109231.110.md"
+    },
+    {
+      "doi": "10.1016/j.ajhg.2008.03.019",
+      "title": "",
+      "year": "2008",
+      "journal": "Am. J. Hum. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S000292970800253X/pdf",
+      "file": "10.1016_j.ajhg.2008.03.019.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0071390",
+      "title": "",
+      "year": "2013",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0071390&type=printable",
+      "file": "10.1371_journal.pone.0071390.md"
+    },
+    {
+      "doi": "10.1073/pnas.1118760109",
+      "title": "",
+      "year": "2012",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/109/22/8471.full.pdf",
+      "file": "10.1073_pnas.1118760109.md"
+    },
+    {
+      "doi": "10.1002/ajpa.20883",
+      "title": "",
+      "year": "2008",
+      "journal": "Am. J. Phys. Anthropol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2584155?pdf=render",
+      "file": "10.1002_ajpa.20883.md"
+    },
+    {
+      "doi": "10.1146/annurev-anthro-102215-100036",
+      "title": "",
+      "year": "2016",
+      "journal": "Annu. Rev. Anthropol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-anthro-102215-100036",
+      "file": "10.1146_annurev-anthro-102215-100036.md"
+    },
+    {
+      "doi": "10.1016/j.tig.2014.07.007",
+      "title": "",
+      "year": "2014",
+      "journal": "Trends Genet.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4163019?pdf=render",
+      "file": "10.1016_j.tig.2014.07.007.md"
+    },
+    {
+      "doi": "10.1073/pnas.1112563108",
+      "title": "",
+      "year": "2011",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature11258",
+      "title": "",
+      "year": "2012",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3615710?pdf=render",
+      "file": "10.1038_nature11258.md"
+    },
+    {
+      "doi": "10.1038/nrg3029",
+      "title": "",
+      "year": "2011",
+      "journal": "Nat. Rev. Genet.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1146/annurev-biochem-062917-012002",
+      "title": "",
+      "year": "2018",
+      "journal": "Annu. Rev. Biochem.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://curis.ku.dk/ws/files/196344053/Ancient_Biomolecules_and_Evolutionary_Inference.pdf",
+      "file": "10.1146_annurev-biochem-062917-012002.md"
+    },
+    {
+      "doi": "10.1038/nature13025",
+      "title": "",
+      "year": "2014",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4878442?pdf=render",
+      "file": "10.1038_nature13025.md"
+    },
+    {
+      "doi": "10.1017/9781108632867",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2018.10.027",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867418313801/pdf",
+      "file": "10.1016_j.cell.2018.10.027.md"
+    },
+    {
+      "doi": "10.1126/science.1085219",
+      "title": "",
+      "year": "2004",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.quascirev.2017.04.004",
+      "title": "",
+      "year": "2017",
+      "journal": "Quat. Sci. Rev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1411762111",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/111/43/15296.full.pdf",
+      "file": "10.1073_pnas.1411762111.md"
+    },
+    {
+      "doi": "10.1098/rspb.2013.2167",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. R. Soc. B",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rspb.2013.2167",
+      "file": "10.1098_rspb.2013.2167.md"
+    },
+    {
+      "doi": "10.1130/g22712.1",
+      "title": "",
+      "year": "2006",
+      "journal": "Geology",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/sciadv.aay2935",
+      "title": "",
+      "year": "2020",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://advances.sciencemag.org/content/advances/6/9/eaay2935.full.pdf",
+      "file": "10.1126_sciadv.aay2935.md"
+    },
+    {
+      "doi": "10.1016/j.quascirev.2013.03.015",
+      "title": "",
+      "year": "2013",
+      "journal": "Quat. Sci. Rev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/oxfordhb/9780199766956.001.0001",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s12520-016-0342-z",
+      "title": "",
+      "year": "2018",
+      "journal": "Archaeol. Anthropol. Sci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1156533",
+      "title": "",
+      "year": "2008",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aax9830",
+      "title": "",
+      "year": "2019",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1218443",
+      "title": "",
+      "year": "2012",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/sciadv.aat4505",
+      "title": "",
+      "year": "2018",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://advances.sciencemag.org/content/advances/4/10/eaat4505.full.pdf",
+      "file": "10.1126_sciadv.aat4505.md"
+    },
+    {
+      "doi": "10.1038/s41586-020-2509-0",
+      "title": "",
+      "year": "2020",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://portal.findresearcher.sdu.dk/da/publications/46c4b429-c111-41cd-bd29-5ec9f2e6bdb5",
+      "file": "10.1038_s41586-020-2509-0.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0141923",
+      "title": "",
+      "year": "2015",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0141923&type=printable",
+      "file": "10.1371_journal.pone.0141923.md"
+    },
+    {
+      "doi": "10.1038/nature22065",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1080/20555563.2017.1348091",
+      "title": "",
+      "year": "2017",
+      "journal": "PaleoAmerica",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.145.3639.1408",
+      "title": "",
+      "year": "1964",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/sciadv.aat5473",
+      "title": "",
+      "year": "2018",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/doi/pdf/10.1126/sciadv.aat5473?download=true",
+      "file": "10.1126_sciadv.aat5473.md"
+    },
+    {
+      "doi": "10.1073/pnas.1601077113",
+      "title": "",
+      "year": "2016",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/113/29/8057.full.pdf",
+      "file": "10.1073_pnas.1601077113.md"
+    },
+    {
+      "doi": "10.1038/nature19085",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "landing",
+      "link": "https://escholarship.org/uc/item/76h9t39c",
+      "file": "10.1038_nature19085.md"
+    },
+    {
+      "doi": "10.1029/2018gl079419",
+      "title": "",
+      "year": "2018",
+      "journal": "Geophys. Res. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2018GL079419",
+      "file": "10.1029_2018gl079419.md"
+    },
+    {
+      "doi": "10.1126/sciadv.aar5040",
+      "title": "",
+      "year": "2018",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/doi/pdf/10.1126/sciadv.aar5040?download=true",
+      "file": "10.1126_sciadv.aar5040.md"
+    },
+    {
+      "doi": "10.1126/science.aan3001",
+      "title": "",
+      "year": "2017",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1800312115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/115/16/4116.full.pdf",
+      "file": "10.1073_pnas.1800312115.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1279-z",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://escholarship.org/uc/item/2m10h434",
+      "file": "10.1038_s41586-019-1279-z.md"
+    },
+    {
+      "doi": "10.1038/nature12736",
+      "title": "",
+      "year": "2014",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://escholarship.org/uc/item/79h679zc",
+      "file": "10.1038_nature12736.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2020.04.037",
+      "title": "",
+      "year": "2020",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S009286742030502X/pdf",
+      "file": "10.1016_j.cell.2020.04.037.md"
+    },
+    {
+      "doi": "10.1038/s41586-018-0094-2",
+      "title": "",
+      "year": "2018",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://pure.kb.dk/da/publications/dc338cbc-9152-48e8-afbf-5e8f8444417b",
+      "file": "10.1038_s41586-018-0094-2.md"
+    },
+    {
+      "doi": "10.1126/science.aab3884",
+      "title": "",
+      "year": "2015",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://hal.science/hal-02112773v1/file/emss-64881.pdf",
+      "file": "10.1126_science.aab3884.md"
+    },
+    {
+      "doi": "10.1525/aa.1942.44.4.02a00050",
+      "title": "",
+      "year": "1942",
+      "journal": "Am. Anthropol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1525/aa.1942.44.4.02a00050",
+      "file": "10.1525_aa.1942.44.4.02a00050.md"
+    },
+    {
+      "doi": "10.1038/nature25173",
+      "title": "",
+      "year": "2018",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://researchonline.ljmu.ac.uk/id/eprint/7887/1/UpwardSun_Nature%20paper%20MS%20DEC17.pdf",
+      "file": "10.1038_nature25173.md"
+    },
+    {
+      "doi": "10.1126/science.aav2621",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://amu.hal.science/hal-03207789",
+      "file": "10.1126_science.aav2621.md"
+    },
+    {
+      "doi": "10.1038/nature17993",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4943878?pdf=render",
+      "file": "10.1038_nature17993.md"
+    },
+    {
+      "doi": "10.1146/annurev-genom-083117-021749",
+      "title": "",
+      "year": "2018",
+      "journal": "Annu. Rev. Genomics Hum. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-genom-083117-021749",
+      "file": "10.1146_annurev-genom-083117-021749.md"
+    },
+    {
+      "doi": "10.1126/sciadv.1501385",
+      "title": "",
+      "year": "2016",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://advances.sciencemag.org/content/advances/2/4/e1501385.full.pdf",
+      "file": "10.1126_sciadv.1501385.md"
+    },
+    {
+      "doi": "10.1016/j.cub.2018.11.029",
+      "title": "",
+      "year": "2019",
+      "journal": "Curr. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0960982218314957/pdf",
+      "file": "10.1016_j.cub.2018.11.029.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0000829",
+      "title": "",
+      "year": "2007",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0000829&type=printable",
+      "file": "10.1371_journal.pone.0000829.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0001596",
+      "title": "",
+      "year": "2008",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0001596&type=printable",
+      "file": "10.1371_journal.pone.0001596.md"
+    },
+    {
+      "doi": "10.1073/pnas.1620410114",
+      "title": "",
+      "year": "2017",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/114/16/4093.full.pdf",
+      "file": "10.1073_pnas.1620410114.md"
+    },
+    {
+      "doi": "10.1126/sciadv.aau4921",
+      "title": "",
+      "year": "2018",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://advances.sciencemag.org/content/advances/4/11/eaau4921.full.pdf",
+      "file": "10.1126_sciadv.aau4921.md"
+    },
+    {
+      "doi": "10.1126/science.aar6851",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://science.sciencemag.org/content/sci/360/6392/1024.full.pdf",
+      "file": "10.1126_science.aar6851.md"
+    },
+    {
+      "doi": "10.1073/pnas.1413131111",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/111/48/17060.full.pdf",
+      "file": "10.1073_pnas.1413131111.md"
+    },
+    {
+      "doi": "10.1126/science.aan0737",
+      "title": "",
+      "year": "2017",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.gde.2016.06.016",
+      "title": "",
+      "year": "2016",
+      "journal": "Curr. Opin. Genet. Dev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1720798115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/115/28/E6526.full.pdf",
+      "file": "10.1073_pnas.1720798115.md"
+    },
+    {
+      "doi": "10.1146/annurev.an.24.100195.000321",
+      "title": "",
+      "year": "1995",
+      "journal": "Annu. Rev. Anthropol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41467-020-17656-w",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-020-17656-w.pdf",
+      "file": "10.1038_s41467-020-17656-w.md"
+    },
+    {
+      "doi": "10.1126/science.aay5012",
+      "title": "",
+      "year": "2020",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://cea.hal.science/cea-04419421/document",
+      "file": "10.1126_science.aay5012.md"
+    },
+    {
+      "doi": "10.1590/1678-4685-gmb-2017-0087",
+      "title": "",
+      "year": "2018",
+      "journal": "Genet. Mol. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.scielo.br/pdf/gmb/v41n1s1/1415-4757-GMB-41-01-2017-0087.pdf",
+      "file": "10.1590_1678-4685-gmb-2017-0087.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2020.04.015",
+      "title": "",
+      "year": "2020",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867420304773/pdf",
+      "file": "10.1016_j.cell.2020.04.015.md"
+    },
+    {
+      "doi": "10.1073/pnas.2010083118",
+      "title": "",
+      "year": "2021",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://qmro.qmul.ac.uk/xmlui/handle/123456789/71618",
+      "file": "10.1073_pnas.2010083118.md"
+    },
+    {
+      "doi": "10.1080/0043824042000303656",
+      "title": "",
+      "year": "2004",
+      "journal": "World Archaeol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1179/2055556315z.00000000040",
+      "title": "",
+      "year": "2015",
+      "journal": "PaleoAmerica",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.1179/2055556315Z.00000000040?needAccess=true",
+      "file": "10.1179_2055556315z.00000000040.md"
+    },
+    {
+      "doi": "10.1073/pnas.171305898",
+      "title": "",
+      "year": "2001",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.0507185102",
+      "title": "",
+      "year": "2005",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1317934?pdf=render",
+      "file": "10.1073_pnas.0507185102.md"
+    },
+    {
+      "doi": "10.1038/nature14625",
+      "title": "",
+      "year": "2015",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/nature14625.pdf",
+      "file": "10.1038_nature14625.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1251-y",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1255832",
+      "title": "",
+      "year": "2014",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.repository.cam.ac.uk/bitstreams/6cc57b10-545d-44ba-8a76-b1fba4e32cf4/download",
+      "file": "10.1126_science.1255832.md"
+    },
+    {
+      "doi": "10.1038/nature08835",
+      "title": "",
+      "year": "2010",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/nature08835.pdf",
+      "file": "10.1038_nature08835.md"
+    },
+    {
+      "doi": "10.1038/srep20768",
+      "title": "",
+      "year": "2016",
+      "journal": "Sci. Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/srep20768.pdf",
+      "file": "10.1038_srep20768.md"
+    },
+    {
+      "doi": "10.1075/dia.18001.vaj",
+      "title": "",
+      "year": "2018",
+      "journal": "Diachronica",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1086/660977",
+      "title": "",
+      "year": "2011",
+      "journal": "Int. J. Am. Linguist.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1163/22105832-00502007",
+      "title": "",
+      "year": "2015",
+      "journal": "Lang. Dyn. Chang.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cub.2017.08.053",
+      "title": "",
+      "year": "2017",
+      "journal": "Curr. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0960982217310916/pdf",
+      "file": "10.1016_j.cub.2017.08.053.md"
+    },
+    {
+      "doi": "10.1017/aaq.2019.88",
+      "title": "",
+      "year": "2020",
+      "journal": "Am. Antiq.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1098/rspb.2019.1929",
+      "title": "",
+      "year": "2019",
+      "journal": "Proc. R. Soc. B",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6939252?pdf=render",
+      "file": "10.1098_rspb.2019.1929.md"
+    },
+    {
+      "doi": "10.1126/science.aaz8599",
+      "title": "",
+      "year": "2020",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pure.rug.nl/ws/files/128351924/1495.full.pdf",
+      "file": "10.1126_science.aaz8599.md"
+    },
+    {
+      "doi": "10.1484/m.sem-eb.6.09070802050003050102090104",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-020-2688-8",
+      "title": "",
+      "year": "2020",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.biorxiv.org/content/10.1101/703405v1.full.pdf",
+      "file": "10.1038_s41586-020-2688-8.md"
+    },
+    {
+      "doi": "10.1126/sciadv.aar7806",
+      "title": "",
+      "year": "2019",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://advances.sciencemag.org/content/advances/5/12/eaar7806.full.pdf",
+      "file": "10.1126_sciadv.aar7806.md"
+    },
+    {
+      "doi": "10.1126/science.aba8697",
+      "title": "",
+      "year": "2020",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://science.sciencemag.org/content/early/2020/06/03/science.aba8697",
+      "file": "10.1126_science.aba8697.md"
+    },
+    {
+      "doi": "10.1073/pnas.1716839115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/115/10/2341.full.pdf",
+      "file": "10.1073_pnas.1716839115.md"
+    },
+    {
+      "doi": "10.1038/s41586-020-03053-2",
+      "title": "",
+      "year": "2021",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7864882?pdf=render",
+      "file": "10.1038_s41586-020-03053-2.md"
+    },
+    {
+      "doi": "10.1038/s41576-020-0218-z",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Rev. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://eprints.bournemouth.ac.uk/33588/1/Review%20ancient%20DNA%20-%20Fernando%2C%20Martin%2C%20Marc%2C%20Hannes%2C%20Carles.pdf",
+      "file": "10.1038_s41576-020-0218-z.md"
+    },
+    {
+      "doi": "10.1016/j.cub.2014.09.057",
+      "title": "",
+      "year": "2014",
+      "journal": "Curr. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0960982214012202/pdf",
+      "file": "10.1016_j.cub.2014.09.057.md"
+    },
+    {
+      "doi": "10.1016/j.cub.2017.09.029",
+      "title": "",
+      "year": "2017",
+      "journal": "Curr. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0960982217311946/pdf",
+      "file": "10.1016_j.cub.2017.09.029.md"
+    },
+    {
+      "doi": "10.1038/s41586-020-2487-2",
+      "title": "",
+      "year": "2020",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-020-2487-2.pdf",
+      "file": "10.1038_s41586-020-2487-2.md"
+    },
+    {
+      "doi": "10.1525/9780520948716",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2019.01.052",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867419301151/pdf",
+      "file": "10.1016_j.cell.2019.01.052.md"
+    },
+    {
+      "doi": "10.2307/280776",
+      "title": "",
+      "year": "1989",
+      "journal": "Am. Antiq.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1101/gr.234674.118",
+      "title": "",
+      "year": "2018",
+      "journal": "Genome Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://genome.cshlp.org/content/28/6/767.full.pdf",
+      "file": "10.1101_gr.234674.118.md"
+    },
+    {
+      "doi": "10.1126/science.1251688",
+      "title": "",
+      "year": "2014",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://escholarship.org/content/qt9p4205st/qt9p4205st.pdf",
+      "file": "10.1126_science.1251688.md"
+    },
+    {
+      "doi": "10.1016/j.cub.2020.07.072",
+      "title": "",
+      "year": "2020",
+      "journal": "Curr. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0960982220310976/pdf",
+      "file": "10.1016_j.cub.2020.07.072.md"
+    },
+    {
+      "doi": "10.1038/nature13591",
+      "title": "",
+      "year": "2014",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/nature13591.pdf",
+      "file": "10.1038_nature13591.md"
+    },
+    {
+      "doi": "10.7183/0002-7316.79.3.487",
+      "title": "",
+      "year": "2014",
+      "journal": "Am. Antiq.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/ncomms13175",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms13175.pdf",
+      "file": "10.1038_ncomms13175.md"
+    },
+    {
+      "doi": "10.1073/pnas.1819467116",
+      "title": "",
+      "year": "2019",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/116/19/9312.full.pdf",
+      "file": "10.1073_pnas.1819467116.md"
+    },
+    {
+      "doi": "10.1016/j.ajhg.2020.06.017",
+      "title": "",
+      "year": "2020",
+      "journal": "Am. J. Hum. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0002929720302056/pdf",
+      "file": "10.1016_j.ajhg.2020.06.017.md"
+    },
+    {
+      "doi": "10.1126/science.aaq1131",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6150602?pdf=render",
+      "file": "10.1126_science.aaq1131.md"
+    },
+    {
+      "doi": "10.1162/daed_a_00490",
+      "title": "",
+      "year": "2018",
+      "journal": "Daedalus",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1162/daed_a_00490",
+      "file": "10.1162_daed_a_00490.md"
+    },
+    {
+      "doi": "10.1146/annurev-anthro-102215-095937",
+      "title": "",
+      "year": "2016",
+      "journal": "Annu. Rev. Anthropol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41467-018-05188-3",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-018-05188-3.pdf",
+      "file": "10.1038_s41467-018-05188-3.md"
+    },
+    {
+      "doi": "10.1146/annurev-genom-083118-015434",
+      "title": "",
+      "year": "2019",
+      "journal": "Annu. Rev. Genomics Hum. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-genom-083118-015434",
+      "file": "10.1146_annurev-genom-083118-015434.md"
+    },
+    {
+      "doi": "10.1038/d41586-019-02516-5",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://media.nature.com/original/magazine-assets/d41586-019-02516-5/d41586-019-02516-5.pdf",
+      "file": "10.1038_d41586-019-02516-5.md"
+    },
+    {
+      "doi": "10.1126/science.1084114",
+      "title": "",
+      "year": "2003",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1098/rstb.2013.0383",
+      "title": "",
+      "year": "2015",
+      "journal": "Phil. Trans. R. Soc. Lond. B",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rstb.2013.0383",
+      "file": "10.1098_rstb.2013.0383.md"
+    },
+    {
+      "doi": "10.1126/science.aam9695",
+      "title": "",
+      "year": "2017",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://eprints.bournemouth.ac.uk/29206/3/Revised_manuscript.pdf",
+      "file": "10.1126_science.aam9695.md"
+    },
+    {
+      "doi": "10.1038/nature14895",
+      "title": "",
+      "year": "2015",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4982469?pdf=render",
+      "file": "10.1038_nature14895.md"
+    },
+    {
+      "doi": "10.1126/science.aat3628",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://hdl.handle.net/10072/383365",
+      "file": "10.1126_science.aat3628.md"
+    },
+    {
+      "doi": "10.1073/pnas.2025739118",
+      "title": "",
+      "year": "2021",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/118/14/e2025739118.full.pdf",
+      "file": "10.1073_pnas.2025739118.md"
+    }
+  ]
+}

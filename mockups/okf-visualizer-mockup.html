@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BioOKF Studio — mockup</title>
+<style>
+  :root{
+    --text:#1f242c;
+    --muted:#666c76;
+    --faint:#969ca6;
+    --hair:rgba(20,24,31,0.09);
+    --hair-2:rgba(20,24,31,0.06);
+    --glass:rgba(252,252,253,0.62);
+    --glass-soft:rgba(252,252,253,0.46);
+    --glass-strong:rgba(252,252,253,0.80);
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"SF Pro Text",ui-sans-serif,system-ui,"Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;margin:0;}
+  body{
+    font-family:var(--sans);color:var(--text);overflow:hidden;
+    -webkit-font-smoothing:antialiased;
+    /* macOS-style desktop wallpaper (muted, so the app's gray stays dominant) */
+    background:
+      radial-gradient(60% 50% at 18% 16%, rgba(168,182,214,0.55), transparent 60%),
+      radial-gradient(55% 45% at 84% 12%, rgba(214,190,196,0.45), transparent 60%),
+      radial-gradient(60% 55% at 72% 86%, rgba(178,200,188,0.45), transparent 60%),
+      linear-gradient(155deg,#aeb8d2 0%,#cdc9d6 45%,#c2cdc6 100%);
+  }
+
+  /* ---------- macOS menu bar ---------- */
+  .menubar{
+    position:absolute;top:0;left:0;right:0;height:26px;z-index:50;
+    display:flex;align-items:center;gap:18px;padding:0 14px;
+    background:rgba(250,250,252,0.20);
+    -webkit-backdrop-filter:blur(16px) saturate(150%);backdrop-filter:blur(16px) saturate(150%);
+    border-bottom:1px solid rgba(255,255,255,0.12);
+    font-size:13px;color:rgba(28,32,40,0.86);
+  }
+  .menubar .apple{width:13px;height:14px;}
+  .menubar .mb-app{font-weight:600;}
+  .menubar .mb-item{font-weight:400;opacity:.82;}
+  .menubar .mb-right{margin-left:auto;display:flex;align-items:center;gap:14px;opacity:.85;}
+  .menubar .clock{font-variant-numeric:tabular-nums;}
+
+  /* ---------- App window ---------- */
+  .window{
+    position:absolute;top:42px;left:34px;right:34px;bottom:86px;z-index:10;
+    border-radius:13px;overflow:hidden;
+    border:1px solid rgba(255,255,255,0.30);
+    box-shadow:0 26px 70px rgba(20,24,31,0.30), 0 6px 18px rgba(20,24,31,0.16);
+    display:flex;flex-direction:column;
+    background:rgba(255,255,255,0.04);
+  }
+  .titlebar{
+    height:42px;flex:0 0 42px;display:flex;align-items:center;gap:14px;padding:0 16px;
+    background:var(--glass);
+    -webkit-backdrop-filter:blur(24px) saturate(170%);backdrop-filter:blur(24px) saturate(170%);
+    border-bottom:1px solid var(--hair);
+  }
+  .lights{display:flex;align-items:center;gap:8px;}
+  .lights i{width:12px;height:12px;border-radius:50%;display:inline-block;box-shadow:inset 0 0 0 0.5px rgba(0,0,0,0.12);}
+  .lights .r{background:#ff5f57;} .lights .y{background:#febc2e;} .lights .g{background:#28c840;}
+  .tb-title{font-size:13.5px;font-weight:600;letter-spacing:-0.01em;color:var(--text);}
+  .tb-sub{font-size:12px;color:var(--faint);font-variant-numeric:tabular-nums;margin-left:14px;}
+  .tb-spacer{flex:1;}
+  .tb-search{display:flex;align-items:center;gap:7px;background:rgba(20,24,31,0.05);border:1px solid var(--hair);border-radius:8px;padding:5px 9px;color:var(--faint);width:250px;}
+  .tb-search input{border:none;background:transparent;outline:none;flex:1;min-width:0;font-family:var(--sans);font-size:12.5px;color:var(--text);}
+  .tb-search input::placeholder{color:var(--faint);}
+  .tb-kbd{font-family:var(--mono);font-size:10.5px;color:var(--faint);border:1px solid var(--hair);border-radius:4px;padding:0 4px;}
+
+  .wbody{flex:1;display:flex;min-height:0;}
+
+  /* ---------- Sidebar ---------- */
+  .sidebar{
+    width:230px;flex:0 0 230px;display:flex;flex-direction:column;overflow:hidden;
+    background:var(--glass-soft);
+    -webkit-backdrop-filter:blur(28px) saturate(160%);backdrop-filter:blur(28px) saturate(160%);
+    border-right:1px solid var(--hair);
+    transition:width .26s cubic-bezier(.4,0,.2,1),flex-basis .26s cubic-bezier(.4,0,.2,1);
+  }
+  .wbody.collapsed .sidebar{width:58px;flex-basis:58px;}
+  .sb-top{display:flex;align-items:center;gap:9px;padding:14px 14px 8px;}
+  .mark{width:18px;height:18px;border-radius:5px;background:#23272e;flex:0 0 18px;position:relative;}
+  .mark::after{content:"";position:absolute;inset:5px;border-radius:2px;border:1.4px solid rgba(255,255,255,0.85);border-right-color:transparent;}
+  .sb-name{font-size:13px;font-weight:600;white-space:nowrap;}
+  .collapse{margin-left:auto;width:24px;height:24px;border-radius:6px;border:none;background:transparent;color:var(--faint);cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;flex:0 0 24px;}
+  .collapse:hover{background:rgba(20,24,31,0.06);color:var(--text);}
+  .wbody.collapsed .sb-name,.wbody.collapsed .sb-label,.wbody.collapsed .kb-meta,.wbody.collapsed .kb-name,.wbody.collapsed .sb-foot{opacity:0;pointer-events:none;}
+  .wbody.collapsed .collapse{margin-left:0;}
+  .sb-label{font-size:10.5px;letter-spacing:.04em;color:var(--faint);padding:10px 16px 4px;white-space:nowrap;}
+  .kb-list{flex:1;overflow-y:auto;padding:0 8px;}
+  .kb{display:flex;align-items:center;gap:10px;padding:8px 9px;border-radius:8px;cursor:pointer;margin:1px 0;}
+  .kb:hover{background:rgba(20,24,31,0.045);}
+  .kb.active{background:rgba(20,24,31,0.07);}
+  .kb-mono{display:none;width:30px;height:24px;border-radius:7px;background:rgba(20,24,31,0.06);font-size:11px;font-weight:600;color:var(--muted);align-items:center;justify-content:center;flex:0 0 30px;}
+  .wbody.collapsed .kb-mono{display:flex;}
+  .wbody.collapsed .kb-text{display:none;}
+  .wbody.collapsed .kb{justify-content:center;padding:7px 0;}
+  .kb.active .kb-mono{background:rgba(20,24,31,0.12);color:var(--text);}
+  .kb-text{min-width:0;flex:1;}
+  .kb-name{display:block;font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.3;}
+  .kb-meta{display:block;font-size:11px;color:var(--faint);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .sb-foot{padding:8px 12px 12px;}
+  .new-kb{width:100%;text-align:left;padding:7px 9px;border-radius:8px;border:none;background:transparent;color:var(--muted);font-size:12.5px;cursor:pointer;font-family:var(--sans);}
+  .new-kb:hover{background:rgba(20,24,31,0.045);color:var(--text);}
+
+  /* ---------- Main / stage ---------- */
+  .main{flex:1;position:relative;min-width:0;}
+  .stage{position:absolute;inset:0;
+    background:var(--glass-soft);
+    -webkit-backdrop-filter:blur(30px) saturate(150%);backdrop-filter:blur(30px) saturate(150%);
+    overflow:hidden;}
+  canvas{display:block;width:100%;height:100%;cursor:grab;}
+  canvas.grabbing{cursor:grabbing;}
+
+  /* ---------- Legend ---------- */
+  .legend{
+    position:absolute;left:18px;bottom:18px;z-index:6;max-width:288px;
+    background:var(--glass);
+    -webkit-backdrop-filter:blur(22px) saturate(160%);backdrop-filter:blur(22px) saturate(160%);
+    border:1px solid var(--hair);border-radius:12px;
+    box-shadow:0 8px 24px rgba(20,24,31,0.10);
+    padding:11px 13px;
+  }
+  .legend h4{margin:0 0 8px;font-size:10.5px;letter-spacing:.04em;color:var(--faint);font-weight:600;}
+  .legend h4 .tg{float:right;cursor:pointer;font-weight:500;}
+  .legend-fam{margin-bottom:6px;}
+  .fam-name{color:var(--faint);font-size:10px;margin-bottom:3px;}
+  .swatches{display:flex;flex-wrap:wrap;gap:3px;}
+  .sw{display:flex;align-items:center;gap:5px;padding:1px 6px 1px 3px;border-radius:6px;}
+  .sw i{width:10px;height:10px;border-radius:3px;display:inline-block;box-shadow:inset 0 0 0 0.5px rgba(0,0,0,0.22);}
+  .sw span{font-size:10px;color:var(--text);white-space:nowrap;}
+  .legend.min .legend-body{display:none;}
+
+  /* ---------- Detail panel ---------- */
+  .detail{
+    position:absolute;top:16px;right:16px;width:374px;max-height:calc(100% - 32px);z-index:8;
+    background:var(--glass-strong);
+    -webkit-backdrop-filter:blur(26px) saturate(165%);backdrop-filter:blur(26px) saturate(165%);
+    border:1px solid var(--hair);border-radius:14px;
+    box-shadow:0 14px 40px rgba(20,24,31,0.16);
+    display:none;flex-direction:column;overflow:hidden;
+    animation:pop .2s cubic-bezier(.2,.8,.2,1);
+  }
+  .detail.open{display:flex;}
+  @keyframes pop{from{opacity:0;transform:translateY(-5px);}to{opacity:1;transform:none;}}
+  .d-head{padding:14px 15px 12px;border-bottom:1px solid var(--hair);position:relative;}
+  .d-badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:#fff;padding:2px 9px;border-radius:6px;}
+  .d-sub{font-size:11px;color:var(--muted);margin-left:7px;}
+  .d-id{font-size:17px;font-weight:650;letter-spacing:-0.015em;margin:9px 0 2px;line-height:1.2;}
+  .d-desc{font-size:12px;color:var(--muted);line-height:1.45;}
+  .d-close{position:absolute;top:12px;right:12px;width:24px;height:24px;border-radius:6px;border:none;background:transparent;color:var(--faint);cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;}
+  .d-close:hover{background:rgba(20,24,31,0.06);color:var(--text);}
+  .chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:9px;}
+  .chip{font-size:11px;color:var(--muted);background:rgba(20,24,31,0.05);border-radius:6px;padding:2px 8px;}
+  .chip.xref{font-family:var(--mono);color:#535a66;cursor:pointer;}
+  .chip.xref:hover{background:rgba(20,24,31,0.09);color:var(--text);}
+  .d-body{overflow-y:auto;padding:13px 15px 17px;}
+  .d-section h5{font-size:10px;letter-spacing:.05em;color:var(--faint);margin:13px 0 7px;font-weight:600;}
+  .edge-group{margin-bottom:9px;}
+  .eg-pred{font-family:var(--mono);font-size:11px;color:#4a505a;background:rgba(20,24,31,0.045);border-radius:5px;padding:1px 7px;display:inline-block;margin-bottom:4px;}
+  .erow{display:flex;align-items:center;gap:8px;padding:5px 7px;border-radius:8px;cursor:pointer;}
+  .erow:hover{background:rgba(20,24,31,0.05);}
+  .erow .arrow{color:var(--faint);font-size:11px;}
+  .erow .tgt{display:flex;align-items:center;gap:7px;min-width:0;}
+  .erow .tgt i{width:10px;height:10px;border-radius:3px;flex:0 0 10px;box-shadow:inset 0 0 0 0.5px rgba(0,0,0,0.22);}
+  .erow .tgt span{font-size:12.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .erow .stat{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--muted);white-space:nowrap;}
+  .ext{font-size:9.5px;color:var(--faint);border:1px solid var(--hair);border-radius:4px;padding:0 4px;margin-left:5px;}
+  .md{font-size:12.5px;line-height:1.6;color:#2b3038;}
+  .md h1{font-size:15px;margin:4px 0 7px;}
+  .md h2{font-size:13px;margin:13px 0 5px;}
+  .md p{margin:6px 0;}
+  .md a{color:#4f5a8a;text-decoration:none;border-bottom:1px solid rgba(79,90,138,0.3);cursor:pointer;}
+  .md code{font-family:var(--mono);font-size:11px;background:rgba(20,24,31,0.05);padding:1px 5px;border-radius:4px;}
+  .md ul{margin:6px 0;padding-left:17px;}
+  .fm{font-family:var(--mono);font-size:10.5px;color:#4a505a;background:rgba(20,24,31,0.04);border:1px solid var(--hair);border-radius:8px;padding:9px 11px;white-space:pre-wrap;line-height:1.5;overflow-x:auto;}
+  .prov{display:grid;grid-template-columns:1fr 1fr;gap:6px;}
+  .prov .cell{background:rgba(20,24,31,0.035);border-radius:8px;padding:7px 9px;}
+  .prov .k{font-size:9.5px;color:var(--faint);letter-spacing:.03em;}
+  .prov .v{font-size:12px;color:var(--text);margin-top:2px;font-weight:550;}
+  .statgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;}
+  .statgrid .cell{background:rgba(20,24,31,0.035);border-radius:8px;padding:7px 8px;text-align:center;}
+  .statgrid .v{font-family:var(--mono);font-size:12.5px;font-weight:600;}
+  .statgrid .k{font-size:9px;color:var(--faint);margin-top:2px;}
+  .edge-headline{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13.5px;margin-top:7px;}
+  .edge-headline .n{display:inline-flex;align-items:center;gap:6px;font-weight:600;cursor:pointer;}
+  .edge-headline .n i{width:11px;height:11px;border-radius:3px;box-shadow:inset 0 0 0 0.5px rgba(0,0,0,0.22);}
+  .edge-headline .p{font-family:var(--mono);font-size:11px;color:#fff;background:#7a828e;border-radius:5px;padding:2px 7px;}
+
+  .zoomctl{position:absolute;right:18px;bottom:18px;z-index:6;display:flex;flex-direction:column;border:1px solid var(--hair);border-radius:10px;overflow:hidden;background:var(--glass);-webkit-backdrop-filter:blur(20px) saturate(160%);backdrop-filter:blur(20px) saturate(160%);box-shadow:0 6px 18px rgba(20,24,31,0.10);}
+  .zoomctl button{width:34px;height:34px;border:none;background:transparent;color:var(--muted);cursor:pointer;font-size:16px;line-height:1;border-bottom:1px solid var(--hair);font-family:var(--sans);}
+  .zoomctl button:last-child{border-bottom:none;font-size:13px;}
+  .zoomctl button:hover{background:rgba(20,24,31,0.06);color:var(--text);}
+  .tip{position:absolute;z-index:9;pointer-events:none;background:rgba(31,36,44,0.92);color:#fff;font-size:11px;padding:4px 8px;border-radius:6px;display:none;white-space:nowrap;}
+  .tip .tp{font-family:var(--mono);opacity:.8;font-size:10px;}
+
+  /* ---------- Dock ---------- */
+  .dock{
+    position:absolute;left:50%;transform:translateX(-50%);bottom:12px;z-index:40;
+    display:flex;align-items:flex-end;gap:11px;padding:7px 11px;border-radius:18px;
+    background:rgba(250,250,252,0.28);
+    -webkit-backdrop-filter:blur(20px) saturate(160%);backdrop-filter:blur(20px) saturate(160%);
+    border:1px solid rgba(255,255,255,0.30);
+    box-shadow:0 10px 30px rgba(20,24,31,0.22);
+  }
+  .dock .ic{width:42px;height:42px;border-radius:11px;box-shadow:inset 0 1px 0 rgba(255,255,255,0.4),0 2px 6px rgba(20,24,31,0.18);position:relative;}
+  .dock .ic.active::after{content:"";position:absolute;bottom:-5px;left:50%;transform:translateX(-50%);width:3px;height:3px;border-radius:50%;background:rgba(20,24,31,0.45);}
+</style>
+</head>
+<body>
+
+  <!-- menu bar -->
+  <div class="menubar">
+    <svg class="apple" viewBox="0 0 14 16" fill="rgba(28,32,40,0.86)"><path d="M9.6 2.1c.5-.6.8-1.4.7-2.1-.7 0-1.5.5-2 1.1-.4.5-.8 1.3-.7 2 .8 0 1.5-.4 2-1zM11 8.4c0-1.6 1.3-2.4 1.4-2.4-.8-1.1-2-1.3-2.4-1.3-1-.1-2 .6-2.5.6s-1.3-.6-2.1-.6c-1.1 0-2.1.6-2.7 1.6-1.1 2-.3 4.9.8 6.5.5.8 1.2 1.6 2 1.6.8 0 1.1-.5 2.1-.5s1.2.5 2.1.5c.9 0 1.4-.8 2-1.5.6-.9.8-1.7.8-1.8 0 0-1.5-.6-1.5-2.7z"/></svg>
+    <span class="mb-app">BioOKF Studio</span>
+    <span class="mb-item">File</span><span class="mb-item">Edit</span><span class="mb-item">View</span><span class="mb-item">Base</span><span class="mb-item">Help</span>
+    <span class="mb-right">
+      <svg width="20" height="11" viewBox="0 0 26 12" fill="none" stroke="rgba(28,32,40,0.8)"><rect x="1" y="1" width="21" height="10" rx="2.5"/><rect x="2.5" y="2.5" width="14" height="7" rx="1" fill="rgba(28,32,40,0.8)" stroke="none"/><rect x="23" y="4" width="2" height="4" rx="1" fill="rgba(28,32,40,0.8)" stroke="none"/></svg>
+      <svg width="15" height="11" viewBox="0 0 16 12" fill="rgba(28,32,40,0.8)"><path d="M8 9.5l2.2 2.2a3.1 3.1 0 00-4.4 0L8 9.5zM3.8 5.3l1.5 1.5a6 6 0 015.4 0l1.5-1.5a8.1 8.1 0 00-8.4 0zM1 2.5l1.5 1.5a10 10 0 0111 0L16 2.5a12.1 12.1 0 00-15 0z"/></svg>
+      <span class="clock">Fri 9:41 AM</span>
+    </span>
+  </div>
+
+  <!-- app window -->
+  <div class="window">
+    <div class="titlebar">
+      <span class="lights"><i class="r"></i><i class="y"></i><i class="g"></i></span>
+      <span class="tb-title" id="tbTitle">COVID-19 immunology</span>
+      <span class="tb-spacer"></span>
+      <div class="tb-search">
+        <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><line x1="11" y1="11" x2="14.5" y2="14.5"/></svg>
+        <input id="searchInput" placeholder="Search nodes, types…" autocomplete="off" />
+        <span class="tb-kbd">⌘K</span>
+      </div>
+      <span class="tb-sub" id="tbSub">— nodes · — edges</span>
+    </div>
+    <div class="wbody" id="wbody">
+      <aside class="sidebar">
+        <div class="sb-top">
+          <span class="mark"></span>
+          <span class="sb-name">BioOKF Studio</span>
+          <button class="collapse" id="collapseBtn" title="Collapse">‹</button>
+        </div>
+        <div class="sb-label">Knowledge bases</div>
+        <div class="kb-list" id="kbList"></div>
+        <div class="sb-foot"><button class="new-kb">＋  New base</button></div>
+      </aside>
+      <main class="main">
+        <div class="stage"><canvas id="graph"></canvas></div>
+        <div class="legend" id="legend">
+          <h4>Node types <span class="tg" id="legendToggle">hide</span></h4>
+          <div class="legend-body" id="legendBody"></div>
+        </div>
+        <div class="detail" id="detail"></div>
+        <div class="zoomctl">
+          <button id="zoomIn" title="Zoom in">+</button>
+          <button id="zoomOut" title="Zoom out">−</button>
+          <button id="zoomFit" title="Fit to view">⤢</button>
+        </div>
+        <div class="tip" id="tip"></div>
+      </main>
+    </div>
+  </div>
+
+  <!-- dock -->
+  <div class="dock">
+    <div class="ic" style="background:linear-gradient(160deg,#7aa0d8,#4f74b0)"></div>
+    <div class="ic" style="background:linear-gradient(160deg,#9bbf8e,#5f9460)"></div>
+    <div class="ic active" style="background:#23272e;position:relative"><span style="position:absolute;inset:11px;border-radius:3px;border:2px solid rgba(255,255,255,0.85);border-right-color:transparent"></span></div>
+    <div class="ic" style="background:linear-gradient(160deg,#d8a0a8,#b06f7a)"></div>
+    <div class="ic" style="background:linear-gradient(160deg,#d8c79b,#b09a5f)"></div>
+    <div class="ic" style="background:linear-gradient(160deg,#c9ccd2,#9aa0a8)"></div>
+  </div>
+
+<script>
+/* ===== 28 OKF node types -> colors ===== */
+const TYPE_COLOR = {
+  Gene:"#6366A8", Variant:"#8A86C4", SequenceFeature:"#AAA6DA", Structure:"#7C8FC9",
+  Molecule:"#2E8C84", MolecularClass:"#5FB0A8", BiologicalPathway:"#4FA38C", BiologicalFunction:"#7CC3B0",
+  Anatomy:"#3F9E6E", CellType:"#62B889", Organism:"#8FCBA6",
+  Disease:"#C45B6B", Phenotype:"#D98AA0", BiomedicalMeasure:"#D98C5A", MethodOrProcedure:"#C99750",
+  Exposure:"#B79A52", SocialFactor:"#C2A86A", Food:"#CBB87E",
+  Device:"#6E87A3", MaterialSample:"#92A6BC",
+  Publication:"#6B7280", Study:"#7A828E", Dataset:"#88909C", Agent:"#5E6672",
+  Population:"#7E8896", GeographicLocation:"#94A0A0", Concept:"#9AA0A8", Other:"#AEB2B8"
+};
+const FAMILIES = [
+  ["Genomic", ["Gene","Variant","SequenceFeature","Structure"]],
+  ["Molecular & process", ["Molecule","MolecularClass","BiologicalPathway","BiologicalFunction"]],
+  ["Anatomy & organism", ["Anatomy","CellType","Organism"]],
+  ["Clinical", ["Disease","Phenotype","BiomedicalMeasure","MethodOrProcedure"]],
+  ["Exposome", ["Exposure","SocialFactor","Food"]],
+  ["Physical", ["Device","MaterialSample"]],
+  ["Provenance & context", ["Publication","Study","Dataset","Agent","Population","GeographicLocation","Concept","Other"]]
+];
+const SYMMETRIC = new Set(["interacts_with","associated_with"]);
+
+/* ===== demo data ===== */
+function N(id,type,subtype,extra){ return Object.assign({id,type,subtype,synonyms:[],xref:[],desc:"",body:""}, extra||{}); }
+function E(s,t,pred,extra){ return Object.assign({s,t,pred,kl:"knowledge_assertion",at:"manual_agent",ps:"Monarch Initiative"}, extra||{}); }
+
+const KB_COVID = {
+  id:"covid", name:"COVID-19 immunology", color:"#C45B6B",
+  nodes:[
+    N("IL6","Gene","protein_coding",{synonyms:["IL-6","interleukin 6","BSF2"],xref:["HGNC:6018","NCBIGene:3569","ENSEMBL:ENSG00000136244"],desc:"Protein-coding gene encoding the pro-inflammatory cytokine interleukin-6.",
+      body:"# IL6\n\n`IL6` is a protein-coding gene on chromosome 7p15.3 encoding **interleukin-6**, a pleiotropic pro-inflammatory cytokine central to the acute-phase response. Its product signals through IL6R and is a major driver of the cytokine-release phenotype seen in severe [COVID-19](#).\n\n## Notes\nElevated serum IL-6 is one of the strongest prognostic biomarkers in hospitalized patients."}),
+    N("ACE2","Gene","protein_coding",{synonyms:["ACEH"],xref:["HGNC:13557","NCBIGene:59272"],desc:"Encodes the SARS-CoV-2 entry receptor ACE2.",body:"# ACE2\n\nEncodes angiotensin-converting enzyme 2, the cell-surface entry receptor exploited by SARS-CoV-2 spike."}),
+    N("Interleukin-6 (protein)","Molecule","protein",{synonyms:["IL-6"],xref:["UniProtKB:P05231"],desc:"Pro-inflammatory cytokine; the protein product of IL6.",body:"# Interleukin-6 (protein)\n\nThe secreted cytokine product of [IL6](#). Acts on the IL-6 receptor complex to trigger JAK/STAT signaling."}),
+    N("Tocilizumab","Molecule","drug",{synonyms:["Actemra","RoActemra"],xref:["DRUGBANK:DB06273","CHEMBL:CHEMBL1237022"],desc:"Humanized monoclonal antibody against the IL-6 receptor.",
+      body:"# Tocilizumab\n\nA humanized monoclonal antibody (IL-6R antagonist). In the RECOVERY trial it reduced mortality in hospitalized COVID-19 patients with hypoxia and systemic inflammation.\n\n## Mechanism\nBlocks both membrane-bound and soluble IL-6 receptor, interrupting IL-6/JAK/STAT signaling."}),
+    N("Dexamethasone","Molecule","drug",{xref:["DRUGBANK:DB01234"],desc:"Corticosteroid; first drug shown to reduce COVID-19 mortality.",body:"# Dexamethasone\n\nA glucocorticoid; RECOVERY showed a mortality benefit in ventilated patients."}),
+    N("IL-6 receptor antagonists","MolecularClass","pharmacologic",{desc:"Drug class blocking IL-6 receptor signaling.",body:"# IL-6 receptor antagonists\n\nA pharmacologic class; members include [Tocilizumab](#) and sarilumab."}),
+    N("TMPRSS2 risk allele","Variant","allele",{xref:["DBSNP:rs12329760"],desc:"Germline variant associated with COVID-19 susceptibility.",body:"# TMPRSS2 risk allele\n\nA germline allele in *TMPRSS2* nominally associated with severe COVID-19."}),
+    N("ACE2 promoter","SequenceFeature","promoter",{desc:"Regulatory promoter region of ACE2.",body:"# ACE2 promoter\n\nThe reference promoter region driving ACE2 transcription."}),
+    N("Spike–ACE2 complex","Structure","cryo_em",{xref:["PDB:6M0J"],desc:"Cryo-EM structure of the spike RBD bound to ACE2.",body:"# Spike–ACE2 complex\n\nCryo-EM coordinate model of the SARS-CoV-2 spike RBD bound to human ACE2 (≈2.45 Å)."}),
+    N("Lung","Anatomy","organ",{xref:["UBERON:0002048"],desc:"Primary organ affected in COVID-19.",body:"# Lung\n\nThe principal site of SARS-CoV-2 pathology."}),
+    N("Blood","Anatomy","body_fluid",{xref:["UBERON:0000178"],desc:"Body fluid; site of circulating IL-6.",body:"# Blood\n\nCirculating compartment where IL-6 and CRP are measured."}),
+    N("Type II pneumocyte","CellType","cell_type",{xref:["CL:0002063"],desc:"Alveolar epithelial cell expressing ACE2.",body:"# Type II pneumocyte\n\nSurfactant-producing alveolar epithelial cell; expresses ACE2."}),
+    N("Alveolar macrophage","CellType","cell_type",{xref:["CL:0000583"],desc:"Lung-resident macrophage; cytokine source.",body:"# Alveolar macrophage\n\nTissue-resident macrophage; a major source of IL-6 in the inflamed lung."}),
+    N("SARS-CoV-2","Organism","pathogen",{xref:["NCBITaxon:2697049"],desc:"Betacoronavirus causing COVID-19.",body:"# SARS-CoV-2\n\nThe betacoronavirus that causes [COVID-19](#)."}),
+    N("Homo sapiens","Organism","species",{xref:["NCBITaxon:9606"],desc:"Human host.",body:"# Homo sapiens\n\nThe host species."}),
+    N("IL-6/JAK/STAT signaling","BiologicalPathway","signaling",{xref:["REACT:R-HSA-1059683"],desc:"Cytokine signaling cascade.",body:"# IL-6/JAK/STAT signaling\n\nSignaling cascade downstream of the IL-6 receptor driving acute-phase gene transcription."}),
+    N("Cytokine storm","BiologicalPathway","pathologic",{desc:"Hyper-inflammatory systemic response.",body:"# Cytokine storm\n\nDysregulated systemic hyper-inflammation; a hallmark of severe COVID-19."}),
+    N("Cytokine receptor binding","BiologicalFunction","binding",{xref:["GO:0019955"],desc:"Molecular function: binding to a cytokine receptor.",body:"# Cytokine receptor binding\n\nGO molecular function describing cytokine–receptor binding activity."}),
+    N("COVID-19","Disease","infection",{synonyms:["coronavirus disease 2019","SARS-CoV-2 infection"],xref:["MONDO:0100096","DOID:0080600","ICD10:U07.1"],desc:"Respiratory and systemic disease caused by SARS-CoV-2.",
+      body:"# COVID-19\n\nThe disease caused by SARS-CoV-2. Severe disease features a hyper-inflammatory, IL-6-driven phenotype, which is why [IL6](#) is `associated_with` outcomes and why the IL-6R antagonist [Tocilizumab](#) `treats` it.\n\n## Clinical course\nRanges from asymptomatic to ARDS requiring mechanical ventilation."}),
+    N("ARDS","Disease","syndrome",{xref:["MONDO:0006502"],desc:"Acute respiratory distress syndrome.",body:"# ARDS\n\nAcute respiratory distress syndrome; a severe complication of COVID-19."}),
+    N("Respiratory distress","Phenotype","sign",{xref:["HP:0002098"],desc:"Objective sign of respiratory difficulty.",body:"# Respiratory distress\n\nAn observed sign of impaired breathing."}),
+    N("Fever","Phenotype","symptom",{xref:["HP:0001945"],desc:"Elevated body temperature.",body:"# Fever\n\nA common presenting symptom."}),
+    N("Serum IL-6 level","BiomedicalMeasure","biomarker",{xref:["LOINC:26881-3"],desc:"Quantitative IL-6 concentration in serum.",body:"# Serum IL-6 level\n\nA measurable biomarker (pg/mL) prognostic for severity."}),
+    N("C-reactive protein level","BiomedicalMeasure","lab_test",{xref:["LOINC:1988-5"],desc:"Acute-phase reactant level.",body:"# C-reactive protein level\n\nAcute-phase inflammatory marker."}),
+    N("RT-PCR assay","MethodOrProcedure","lab_assay",{desc:"Nucleic-acid test for SARS-CoV-2.",body:"# RT-PCR assay\n\nReverse-transcription PCR diagnostic for SARS-CoV-2 RNA."}),
+    N("Mechanical ventilation","MethodOrProcedure","procedure",{desc:"Respiratory support procedure.",body:"# Mechanical ventilation\n\nInvasive respiratory support for severe ARDS."}),
+    N("Tobacco smoking","Exposure","behavioral",{xref:["ECTO:0000855"],desc:"Behavioral exposure.",body:"# Tobacco smoking\n\nA behavioral exposure influencing respiratory outcomes."}),
+    N("Healthcare access","SocialFactor","healthcare_access",{desc:"Social determinant of health.",body:"# Healthcare access\n\nStructural determinant affecting outcomes and testing rates."}),
+    N("Vitamin D–rich diet","Food","dietary_product",{desc:"Dietary pattern hypothesized to modulate risk.",body:"# Vitamin D–rich diet\n\nA dietary pattern; evidence for protection is weak/predicted."}),
+    N("Mechanical ventilator","Device","instrument",{desc:"Engineered respiratory support device.",body:"# Mechanical ventilator\n\nThe engineered device delivering mechanical ventilation."}),
+    N("Serum sample","MaterialSample","serum",{desc:"Biospecimen drawn from blood.",body:"# Serum sample\n\nA biospecimen used to measure IL-6 and CRP."}),
+    N("Elevated IL-6 in severe COVID-19","Publication","article",{xref:["PMID:32504360"],desc:"Primary literature on IL-6 and severity.",body:"# Elevated IL-6 in severe COVID-19\n\nPeer-reviewed article reporting the IL-6–severity association.",raw:"raw/pmid-32504360.pdf"}),
+    N("RECOVERY trial","Study","rct",{xref:["NCT04381936"],desc:"Large adaptive platform RCT.",body:"# RECOVERY trial\n\nUK adaptive platform RCT evaluating COVID-19 therapeutics.",raw:"raw/recovery-protocol.pdf"}),
+    N("COVID-19 host GWAS","Dataset","omics_matrix",{desc:"Host-genetics summary statistics.",body:"# COVID-19 host GWAS\n\nSummary statistics for host genetic susceptibility."}),
+    N("Monarch Initiative","Agent","organization",{xref:["infores:monarchinitiative"],desc:"Curating organization.",body:"# Monarch Initiative\n\nA curation authority; primary_source for several edges."}),
+    N("Hospitalized COVID-19 patients","Population","cohort",{desc:"Study population.",body:"# Hospitalized COVID-19 patients\n\nThe cohort studied in RECOVERY."}),
+    N("United Kingdom","GeographicLocation","country",{xref:["ISO-3166:GB"],desc:"Geographic context.",body:"# United Kingdom\n\nWhere RECOVERY was conducted."}),
+    N("Hazard ratio","Concept","unit",{desc:"Effect-metric concept.",body:"# Hazard ratio\n\nA survival-analysis effect metric used on edges."}),
+    N("Long-COVID symptom cluster","Other","construct",{note:"No substantive entity type fits a loosely-defined symptom cluster.",desc:"Catch-all construct.",body:"# Long-COVID symptom cluster\n\nA loosely-defined construct; typed `Other` with a note."})
+  ],
+  edges:[
+    E("IL6","Interleukin-6 (protein)","encodes",{}),
+    E("IL6","COVID-19","associated_with",{kl:"statistical_association",at:"text_mining_agent",ps:"Elevated IL-6 in severe COVID-19",pubs:["PMID:32504360","PMID:32979574"],stats:{effect_metric:"hazard_ratio",effect_size:2.9,ci_lower:1.7,ci_upper:4.9,p_value:"3.0e-6",sample_size:1484},qual:{anatomical_context:"blood"}}),
+    E("IL6","IL-6/JAK/STAT signaling","participates_in",{}),
+    E("IL6","Elevated IL-6 in severe COVID-19","reported_in",{}),
+    E("Interleukin-6 (protein)","Cytokine storm","participates_in",{}),
+    E("Interleukin-6 (protein)","Cytokine receptor binding","participates_in",{}),
+    E("Interleukin-6 (protein)","Blood","located_in",{}),
+    E("Tocilizumab","COVID-19","treats",{kl:"statistical_association",at:"data_analysis_pipeline",ps:"RECOVERY trial",pubs:["PMID:33933206"],stats:{effect_metric:"relative_risk",effect_size:0.85,ci_lower:0.76,ci_upper:0.94,clinical_phase:"approved"}}),
+    E("Tocilizumab","Interleukin-6 (protein)","binds",{stats:{effect_metric:"Kd",effect_size:0.0024,unit:"nM"}}),
+    E("Tocilizumab","IL-6 receptor antagonists","member_of",{}),
+    E("Tocilizumab","RECOVERY trial","reported_in",{}),
+    E("Dexamethasone","COVID-19","treats",{kl:"statistical_association",at:"data_analysis_pipeline",ps:"RECOVERY trial",pubs:["PMID:32678530"],stats:{effect_metric:"relative_risk",effect_size:0.83,ci_lower:0.75,ci_upper:0.93}}),
+    E("Dexamethasone","RECOVERY trial","reported_in",{}),
+    E("COVID-19","Respiratory distress","has_phenotype",{stats:{frequency:"frequent"}}),
+    E("COVID-19","Fever","has_phenotype",{stats:{frequency:"very frequent"}}),
+    E("COVID-19","Lung","located_in",{}),
+    E("COVID-19","ARDS","causes",{kl:"statistical_association"}),
+    E("COVID-19","Elevated IL-6 in severe COVID-19","reported_in",{}),
+    E("ARDS","Respiratory distress","has_phenotype",{}),
+    E("SARS-CoV-2","COVID-19","causes",{}),
+    E("SARS-CoV-2","Homo sapiens","interacts_with",{}),
+    E("Spike–ACE2 complex","ACE2","interacts_with",{}),
+    E("Spike–ACE2 complex","SARS-CoV-2","derives_from",{}),
+    E("ACE2","COVID-19","associated_with",{kl:"statistical_association",at:"text_mining_agent",ps:"COVID-19 host GWAS",stats:{effect_metric:"odds_ratio",effect_size:1.45}}),
+    E("ACE2","Type II pneumocyte","expressed_in",{stats:{direction:"increased"}}),
+    E("ACE2 promoter","ACE2","part_of",{}),
+    E("TMPRSS2 risk allele","COVID-19","predisposes_to",{kl:"statistical_association",at:"data_analysis_pipeline",ps:"COVID-19 host GWAS",stats:{effect_metric:"odds_ratio",effect_size:1.31,ci_lower:1.12,ci_upper:1.53,p_value:"8e-9"}}),
+    E("TMPRSS2 risk allele","COVID-19 host GWAS","reported_in",{}),
+    E("Serum IL-6 level","Interleukin-6 (protein)","measures",{stats:{unit:"pg/mL"}}),
+    E("Serum IL-6 level","COVID-19","associated_with",{kl:"statistical_association",at:"data_analysis_pipeline",ps:"Elevated IL-6 in severe COVID-19"}),
+    E("C-reactive protein level","COVID-19","associated_with",{kl:"statistical_association",at:"data_analysis_pipeline",ps:"Monarch Initiative"}),
+    E("RT-PCR assay","SARS-CoV-2","measures",{stats:{sensitivity:0.95,specificity:0.99}}),
+    E("Mechanical ventilation","ARDS","treats",{}),
+    E("Mechanical ventilator","ARDS","treats",{}),
+    E("Tobacco smoking","COVID-19","predisposes_to",{kl:"statistical_association",at:"text_mining_agent",ps:"Monarch Initiative",stats:{effect_metric:"odds_ratio",effect_size:1.4}}),
+    E("Healthcare access","COVID-19","predisposes_to",{kl:"statistical_association",ps:"Monarch Initiative",stats:{direction:"decreased"}}),
+    E("Vitamin D–rich diet","COVID-19","prevents",{kl:"prediction",at:"text_mining_agent",ps:"Monarch Initiative"}),
+    E("Type II pneumocyte","Lung","part_of",{}),
+    E("Alveolar macrophage","Lung","part_of",{}),
+    E("Alveolar macrophage","Interleukin-6 (protein)","interacts_with",{}),
+    E("IL-6/JAK/STAT signaling","Cytokine storm","part_of",{}),
+    E("Serum sample","Blood","derives_from",{}),
+    E("Serum sample","Serum IL-6 level","measures",{}),
+    E("Hospitalized COVID-19 patients","United Kingdom","located_in",{}),
+    E("RECOVERY trial","United Kingdom","located_in",{}),
+    E("RECOVERY trial","Hospitalized COVID-19 patients","interacts_with",{}),
+    E("COVID-19 host GWAS","Homo sapiens","derives_from",{}),
+    E("Hazard ratio","Serum IL-6 level","associated_with",{kl:"not_provided"}),
+    E("Long-COVID symptom cluster","COVID-19","associated_with",{kl:"observation",note:"Loosely defined construct."})
+  ]
+};
+
+const KB_CANCER = {
+  id:"cancer", name:"Drug resistance in cancer", color:"#8A86C4",
+  nodes:[
+    N("EGFR","Gene","protein_coding",{xref:["HGNC:3236"],desc:"Receptor tyrosine kinase gene.",body:"# EGFR\n\nReceptor tyrosine kinase frequently mutated in NSCLC."}),
+    N("EGFR T790M","Variant","snv",{xref:["DBSNP:rs121434569"],desc:"Resistance mutation.",body:"# EGFR T790M\n\nGatekeeper mutation conferring resistance to first-gen EGFR inhibitors."}),
+    N("Gefitinib","Molecule","drug",{xref:["DRUGBANK:DB00317"],desc:"First-generation EGFR TKI.",body:"# Gefitinib\n\nFirst-generation EGFR tyrosine-kinase inhibitor."}),
+    N("Osimertinib","Molecule","drug",{xref:["DRUGBANK:DB09330"],desc:"Third-generation EGFR TKI.",body:"# Osimertinib\n\nThird-generation TKI active against T790M."}),
+    N("EGFR tyrosine kinase inhibitors","MolecularClass","pharmacologic",{desc:"TKI drug class.",body:"# EGFR TKIs\n\nA pharmacologic class of EGFR inhibitors."}),
+    N("Non-small cell lung cancer","Disease","neoplasm",{xref:["MONDO:0005233"],desc:"NSCLC.",body:"# NSCLC\n\nThe most common form of lung cancer."}),
+    N("Acquired drug resistance","Phenotype","trait",{desc:"Reduced therapeutic response over time.",body:"# Acquired drug resistance\n\nProgressive loss of treatment response."}),
+    N("Tumor biopsy","MaterialSample","biopsy",{desc:"Tissue biospecimen.",body:"# Tumor biopsy\n\nBiospecimen for molecular profiling."}),
+    N("ctDNA assay","MethodOrProcedure","lab_assay",{desc:"Liquid-biopsy method.",body:"# ctDNA assay\n\nCirculating tumor DNA sequencing."}),
+    N("FLAURA trial","Study","rct",{xref:["NCT02296125"],desc:"Phase III EGFR-TKI trial.",body:"# FLAURA\n\nPhase III RCT of osimertinib vs first-gen TKIs."}),
+    N("Resistance mechanisms in NSCLC","Publication","review",{xref:["PMID:29151359"],desc:"Review article.",body:"# Resistance mechanisms in NSCLC\n\nReview of EGFR-TKI resistance.",raw:"raw/pmid-29151359.pdf"}),
+    N("Lung","Anatomy","organ",{xref:["UBERON:0002048"],desc:"Affected organ.",body:"# Lung\n\nPrimary tumor site."})
+  ],
+  edges:[
+    E("EGFR","Non-small cell lung cancer","predisposes_to",{kl:"statistical_association",at:"data_analysis_pipeline",ps:"Resistance mechanisms in NSCLC",stats:{effect_metric:"odds_ratio",effect_size:3.2}}),
+    E("EGFR","EGFR T790M","interacts_with",{}),
+    E("EGFR T790M","Gefitinib","affects_response_to",{ps:"Resistance mechanisms in NSCLC",stats:{response_direction:"resistance"}}),
+    E("EGFR T790M","Acquired drug resistance","causes",{ps:"Resistance mechanisms in NSCLC"}),
+    E("Gefitinib","Non-small cell lung cancer","treats",{kl:"statistical_association",at:"data_analysis_pipeline",ps:"FLAURA trial",stats:{effect_metric:"hazard_ratio",effect_size:1.0}}),
+    E("Osimertinib","Non-small cell lung cancer","treats",{kl:"statistical_association",at:"data_analysis_pipeline",ps:"FLAURA trial",pubs:["PMID:29151359"],stats:{effect_metric:"hazard_ratio",effect_size:0.46,ci_lower:0.37,ci_upper:0.57}}),
+    E("Osimertinib","EGFR tyrosine kinase inhibitors","member_of",{}),
+    E("Gefitinib","EGFR tyrosine kinase inhibitors","member_of",{}),
+    E("Non-small cell lung cancer","Lung","located_in",{}),
+    E("Non-small cell lung cancer","Acquired drug resistance","has_phenotype",{}),
+    E("ctDNA assay","EGFR T790M","measures",{stats:{sensitivity:0.7}}),
+    E("Tumor biopsy","Non-small cell lung cancer","derives_from",{}),
+    E("Osimertinib","FLAURA trial","reported_in",{})
+  ]
+};
+
+const KB_DIABETES = {
+  id:"diabetes", name:"Type 2 diabetes", color:"#2E8C84",
+  nodes:[
+    N("TCF7L2","Gene","protein_coding",{xref:["HGNC:11641"],desc:"Strongest common T2D risk gene.",body:"# TCF7L2\n\nThe strongest common genetic risk locus for type 2 diabetes."}),
+    N("Metformin","Molecule","drug",{xref:["DRUGBANK:DB00331"],desc:"First-line T2D therapy.",body:"# Metformin\n\nFirst-line oral antihyperglycemic."}),
+    N("Type 2 diabetes","Disease","syndrome",{xref:["MONDO:0005148"],desc:"Metabolic disease of insulin resistance.",body:"# Type 2 diabetes\n\nChronic disease of insulin resistance and relative insulin deficiency."}),
+    N("HbA1c","BiomedicalMeasure","biomarker",{xref:["LOINC:4548-4"],desc:"Glycated hemoglobin.",body:"# HbA1c\n\nGlycemic-control biomarker."}),
+    N("Obesity","Phenotype","trait",{xref:["HP:0001513"],desc:"Excess adiposity.",body:"# Obesity\n\nA major risk phenotype."}),
+    N("Physical inactivity","Exposure","behavioral",{desc:"Behavioral exposure.",body:"# Physical inactivity\n\nA modifiable behavioral risk factor."}),
+    N("UK Biobank","Dataset","omics_matrix",{desc:"Population cohort dataset.",body:"# UK Biobank\n\nLarge prospective cohort with genotypes."}),
+    N("Pancreatic beta cell","CellType","cell_type",{xref:["CL:0000169"],desc:"Insulin-secreting cell.",body:"# Pancreatic beta cell\n\nInsulin-secreting islet cell."})
+  ],
+  edges:[
+    E("TCF7L2","Type 2 diabetes","predisposes_to",{kl:"statistical_association",at:"data_analysis_pipeline",ps:"UK Biobank",stats:{effect_metric:"odds_ratio",effect_size:1.4,ci_lower:1.34,ci_upper:1.46,p_value:"1e-140"}}),
+    E("Metformin","Type 2 diabetes","treats",{ps:"UK Biobank",stats:{clinical_phase:"approved"}}),
+    E("HbA1c","Type 2 diabetes","measures",{stats:{unit:"%"}}),
+    E("Type 2 diabetes","Obesity","associated_with",{kl:"statistical_association",at:"data_analysis_pipeline",ps:"UK Biobank"}),
+    E("Physical inactivity","Type 2 diabetes","predisposes_to",{kl:"statistical_association",at:"text_mining_agent",ps:"UK Biobank",stats:{effect_metric:"relative_risk",effect_size:1.2}}),
+    E("Obesity","Type 2 diabetes","predisposes_to",{kl:"statistical_association",at:"data_analysis_pipeline",ps:"UK Biobank",stats:{effect_metric:"odds_ratio",effect_size:2.8}}),
+    E("TCF7L2","Pancreatic beta cell","expressed_in",{stats:{direction:"increased"}}),
+    E("TCF7L2","UK Biobank","reported_in",{})
+  ]
+};
+const KBS = [KB_COVID, KB_CANCER, KB_DIABETES];
+
+/* ===== state + force sim ===== */
+const cv=document.getElementById('graph'), ctx=cv.getContext('2d');
+let DPR=Math.max(1,window.devicePixelRatio||1), W=0,H=0;
+let view={x:0,y:0,k:1};
+let nodes=[], edges=[], byId={};
+let hover=null, hoverEdge=null, selected=null, selectedEdge=null;
+let drag=null, panning=null, moved=false, alpha=1, activeKB=KB_COVID;
+let focusNeighbors=new Set();
+
+function loadKB(kb){
+  activeKB=kb; byId={};
+  nodes=kb.nodes.map((n,i)=>{
+    const a=(i/kb.nodes.length)*Math.PI*2, r=180+(i%5)*16;
+    const node=Object.assign({},n,{x:Math.cos(a)*r,y:Math.sin(a)*r,vx:0,vy:0,deg:0});
+    byId[n.id]=node; return node;
+  });
+  edges=kb.edges.filter(e=>byId[e.s]&&byId[e.t]).map(e=>Object.assign({},e));
+  edges.forEach(e=>{byId[e.s].deg++;byId[e.t].deg++;});
+  const hubSet=new Set([...nodes].sort((a,b)=>b.deg-a.deg).slice(0,6).map(n=>n.id));
+  nodes.forEach(n=>n.hub=hubSet.has(n.id));
+  selected=null;selectedEdge=null;hover=null;hoverEdge=null;focusNeighbors=new Set();
+  closeDetail(); alpha=1;
+  for(let i=0;i<280;i++) tick(0.9*Math.pow(0.985,i)+0.02);
+  fitView(); updateChrome();
+}
+function tick(a){
+  const M=nodes.length;
+  for(let i=0;i<M;i++){const ni=nodes[i];
+    for(let j=i+1;j<M;j++){const nj=nodes[j];
+      let dx=ni.x-nj.x,dy=ni.y-nj.y,d2=dx*dx+dy*dy;
+      if(d2<0.01){d2=0.01;dx=Math.random()-0.5;dy=Math.random()-0.5;}
+      const d=Math.sqrt(d2),rep=4200/d2,fx=(dx/d)*rep,fy=(dy/d)*rep;
+      ni.vx+=fx*a;ni.vy+=fy*a;nj.vx-=fx*a;nj.vy-=fy*a;}}
+  const L=92;
+  edges.forEach(e=>{const s=byId[e.s],t=byId[e.t];
+    let dx=t.x-s.x,dy=t.y-s.y,d=Math.sqrt(dx*dx+dy*dy)||0.01;
+    const f=(d-L)*0.045*a,fx=(dx/d)*f,fy=(dy/d)*f;
+    s.vx+=fx;s.vy+=fy;t.vx-=fx;t.vy-=fy;});
+  nodes.forEach(n=>{n.vx+=-n.x*0.012*a;n.vy+=-n.y*0.012*a;});
+  nodes.forEach(n=>{if(n===drag){n.vx=0;n.vy=0;return;}n.x+=n.vx;n.y+=n.vy;n.vx*=0.82;n.vy*=0.82;});
+}
+function toScreen(x,y){return [(x*view.k)+view.x+W/2,(y*view.k)+view.y+H/2];}
+function toWorld(sx,sy){return [(sx-W/2-view.x)/view.k,(sy-H/2-view.y)/view.k];}
+function nodeR(n){return n.hub?10:6;}
+function fitView(){
+  if(!nodes.length)return;
+  let mnx=1e9,mny=1e9,mxx=-1e9,mxy=-1e9;
+  nodes.forEach(n=>{mnx=Math.min(mnx,n.x);mny=Math.min(mny,n.y);mxx=Math.max(mxx,n.x);mxy=Math.max(mxy,n.y);});
+  const pad=72,gw=mxx-mnx||1,gh=mxy-mny||1,k=Math.min((W-pad*2)/gw,(H-pad*2)/gh,1.6);
+  view.k=k;view.x=-((mnx+mxx)/2)*k;view.y=-((mny+mxy)/2)*k;
+}
+function neighborsOf(id){const s=new Set();edges.forEach(e=>{if(e.s===id)s.add(e.t);if(e.t===id)s.add(e.s);});return s;}
+function recomputeFocus(){const id=(selected&&selected.id)||(hover&&hover.id)||null;focusNeighbors=id?neighborsOf(id):new Set();}
+
+/* ===== rendering ===== */
+let searchTerm='';
+function matches(n){const q=searchTerm;if(!q)return true;return n.id.toLowerCase().includes(q)||n.type.toLowerCase().includes(q)||(n.subtype||'').toLowerCase().includes(q);}
+
+function draw(){
+  ctx.setTransform(DPR,0,0,DPR,0,0);
+  ctx.clearRect(0,0,W,H);
+  drawGrid();
+  const focusId=(selected&&selected.id)||(hover&&hover.id)||null;
+  const focusEdge=selectedEdge||hoverEdge;
+  edges.forEach(e=>{
+    const s=byId[e.s],t=byId[e.t];
+    let emph=0,dim=false;
+    if(focusEdge===e)emph=2;
+    else if(focusId&&(e.s===focusId||e.t===focusId))emph=1;
+    if(focusId&&!(e.s===focusId||e.t===focusId))dim=true;
+    if(focusEdge&&focusEdge!==e)dim=true;
+    if(searchTerm){dim=!(matches(s)&&matches(t));emph=0;}
+    drawEdge(s,t,e,emph,dim);
+  });
+  nodes.forEach(n=>{
+    const isFocus=focusId===n.id, isNb=focusNeighbors.has(n.id);
+    let a=1;
+    if(searchTerm)a=matches(n)?1:0.12;
+    else if(focusId&&!isFocus&&!isNb)a=0.26;
+    drawNodeCircle(n,a,isFocus);
+  });
+  drawLabels(focusId);
+}
+function drawNodeCircle(n,a,isFocus){
+  const [x,y]=toScreen(n.x,n.y),r=nodeR(n)*view.k,col=TYPE_COLOR[n.type]||"#9aa1ab";
+  ctx.globalAlpha=a;
+  if(isFocus){ // soft same-color halo only — no outline ring
+    const g=ctx.createRadialGradient(x,y,r,x,y,r+13);
+    g.addColorStop(0,hexA(col,0.34));g.addColorStop(0.55,hexA(col,0.14));g.addColorStop(1,hexA(col,0));
+    ctx.beginPath();ctx.arc(x,y,r+13,0,7);ctx.fillStyle=g;ctx.fill();
+  }
+  ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fillStyle=col;ctx.fill();
+  ctx.lineWidth=1.1;ctx.strokeStyle="rgba(18,21,26,0.92)";ctx.stroke(); // black border
+  ctx.globalAlpha=1;
+}
+function drawLabels(focusId){
+  const cands=[];
+  nodes.forEach(n=>{
+    const isFocus=focusId===n.id, isNb=focusNeighbors.has(n.id), isHover=hover===n;
+    let pr=-1,a=1;
+    if(searchTerm){ if(matches(n)){pr=2;} else return; }
+    else{
+      if(isFocus)pr=5; else if(isHover)pr=4; else if(n.hub)pr=3; else if(isNb)pr=2; else if(view.k>=1.55)pr=1;
+      if(focusId&&!isFocus&&!isNb)a=0.30;
+    }
+    if(pr<0)return;
+    cands.push({n,pr,a});
+  });
+  cands.sort((p,q)=>q.pr-p.pr);
+  const placed=[];
+  ctx.textBaseline="middle";
+  cands.forEach(({n,pr,a})=>{
+    const [x,y]=toScreen(n.x,n.y),r=nodeR(n)*view.k,fs=n.hub?12:11.5;
+    ctx.font=`${pr>=4||n.hub?600:450} ${fs}px -apple-system,system-ui,sans-serif`;
+    const label=n.id.length>30?n.id.slice(0,29)+"…":n.id;
+    const tw=ctx.measureText(label).width, lx=x+r+6, ly=y;
+    const rect={x:lx-1,y:ly-fs/2-1,w:tw+2,h:fs+2};
+    if(placed.some(p=>!(rect.x>p.x+p.w||rect.x+rect.w<p.x||rect.y>p.y+p.h||rect.y+rect.h<p.y)))return;
+    placed.push(rect);
+    ctx.save();
+    ctx.globalAlpha=a;
+    ctx.shadowColor="rgba(250,250,252,0.95)";ctx.shadowBlur=4;ctx.shadowOffsetX=0;ctx.shadowOffsetY=0;
+    ctx.fillStyle="#1c2128";
+    ctx.fillText(label,lx,ly);ctx.fillText(label,lx,ly);
+    ctx.restore();
+  });
+}
+function drawGrid(){
+  const step=34*view.k; if(step<11)return;
+  const ox=((view.x+W/2)%step+step)%step, oy=((view.y+H/2)%step+step)%step;
+  ctx.fillStyle="rgba(20,24,31,0.045)";
+  for(let x=ox;x<W;x+=step)for(let y=oy;y<H;y+=step){ctx.beginPath();ctx.arc(x,y,0.8,0,7);ctx.fill();}
+}
+function drawEdge(s,t,e,emph,dim){
+  const [x1,y1]=toScreen(s.x,s.y),[x2,y2]=toScreen(t.x,t.y);
+  let dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy)||1;
+  const ux=dx/len,uy=dy/len,px=-uy,py=ux;
+  const rs=nodeR(s)*view.k+1.5,rt=nodeR(t)*view.k+1.5;
+  const sx=x1+ux*rs,sy=y1+uy*rs,ex=x2-ux*rt,ey=y2-uy*rt;
+  // uniform light gray; emphasis only changes opacity slightly
+  let col="rgba(28,33,40,0.18)";
+  if(emph===1)col="rgba(28,33,40,0.32)";
+  if(emph===2)col="rgba(28,33,40,0.46)";
+  if(dim)col="rgba(28,33,40,0.07)";
+  if(SYMMETRIC.has(e.pred)){
+    ctx.strokeStyle=col;ctx.lineWidth=0.9;
+    ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(ex,ey);ctx.stroke();
+  }else{
+    // very subtle taper: source side a hair thicker than target side, no arrowhead
+    const w0=0.85,w1=0.42;
+    ctx.fillStyle=col;
+    ctx.beginPath();
+    ctx.moveTo(sx+px*w0,sy+py*w0);
+    ctx.lineTo(ex+px*w1,ey+py*w1);
+    ctx.lineTo(ex-px*w1,ey-py*w1);
+    ctx.lineTo(sx-px*w0,sy-py*w0);
+    ctx.closePath();ctx.fill();
+  }
+  if(emph===2&&len>26){
+    const mx=(sx+ex)/2,my=(sy+ey)/2;
+    ctx.save();
+    ctx.font="500 11px ui-monospace,Menlo,monospace";
+    ctx.textAlign="center";ctx.textBaseline="middle";
+    ctx.shadowColor="rgba(250,250,252,0.95)";ctx.shadowBlur=4;ctx.shadowOffsetX=0;ctx.shadowOffsetY=0;
+    ctx.fillStyle="#41474f";
+    ctx.fillText(e.pred,mx,my);ctx.fillText(e.pred,mx,my);
+    ctx.restore();
+    ctx.textAlign="start";
+  }
+}
+function hexA(hex,a){const h=hex.replace('#','');return `rgba(${parseInt(h.slice(0,2),16)},${parseInt(h.slice(2,4),16)},${parseInt(h.slice(4,6),16)},${a})`;}
+
+function loop(){
+  // keep the canvas backing store exactly proportional to its displayed size so nodes stay perfectly circular
+  const needW=Math.round(cv.clientWidth*DPR), needH=Math.round(cv.clientHeight*DPR);
+  if(needW>0&&needH>0&&(cv.width!==needW||cv.height!==needH)){W=cv.clientWidth;H=cv.clientHeight;cv.width=needW;cv.height=needH;}
+  if(alpha>0.005){tick(alpha);alpha*=0.94;}
+  draw();
+  requestAnimationFrame(loop);
+}
+
+/* ===== hit testing + interaction ===== */
+function pickNode(sx,sy){for(let i=nodes.length-1;i>=0;i--){const n=nodes[i],[x,y]=toScreen(n.x,n.y),r=nodeR(n)*view.k+4;if((sx-x)**2+(sy-y)**2<=r*r)return n;}return null;}
+function pickEdge(sx,sy){let best=null,bd=6;edges.forEach(e=>{const s=byId[e.s],t=byId[e.t],[x1,y1]=toScreen(s.x,s.y),[x2,y2]=toScreen(t.x,t.y),d=distSeg(sx,sy,x1,y1,x2,y2);if(d<bd){bd=d;best=e;}});return best;}
+function distSeg(px,py,x1,y1,x2,y2){const dx=x2-x1,dy=y2-y1,l2=dx*dx+dy*dy;if(l2===0)return Math.hypot(px-x1,py-y1);let t=((px-x1)*dx+(py-y1)*dy)/l2;t=Math.max(0,Math.min(1,t));return Math.hypot(px-(x1+t*dx),py-(y1+t*dy));}
+
+const tip=document.getElementById('tip');
+// mousemove on window so drag/pan keeps working even when the cursor leaves the canvas
+window.addEventListener('mousemove',ev=>{
+  const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top;
+  if(drag){const [wx,wy]=toWorld(sx,sy);drag.x=wx;drag.y=wy;moved=true;alpha=Math.max(alpha,0.25);hideTip();return;}
+  if(panning){view.x+=sx-panning.x;view.y+=sy-panning.y;panning={x:sx,y:sy};moved=true;hideTip();return;}
+  // hover detection only when the cursor is actually over the canvas
+  if(sx<0||sy<0||sx>rect.width||sy>rect.height){if(hover||hoverEdge){hover=null;hoverEdge=null;recomputeFocus();}hideTip();return;}
+  const n=pickNode(sx,sy);hover=n;hoverEdge=n?null:pickEdge(sx,sy);recomputeFocus();
+  cv.style.cursor=(n||hoverEdge)?'pointer':'grab';
+  if(n)showTip(sx,sy,n.id,n.type+(n.subtype?' · '+n.subtype:''));
+  else if(hoverEdge)showTip(sx,sy,hoverEdge.pred,hoverEdge.s+' → '+hoverEdge.t);
+  else hideTip();
+});
+function showTip(sx,sy,a,b){tip.style.display='block';tip.style.left=(sx+14)+'px';tip.style.top=(sy+14)+'px';tip.innerHTML=`${esc(a)}<br><span class="tp">${esc(b)}</span>`;}
+function hideTip(){tip.style.display='none';}
+cv.addEventListener('mousedown',ev=>{const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top;moved=false;const n=pickNode(sx,sy);if(n){drag=n;}else{panning={x:sx,y:sy};}cv.classList.add('grabbing');});
+window.addEventListener('mouseup',ev=>{
+  const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top;
+  cv.classList.remove('grabbing');
+  if(!moved){
+    const n=pickNode(sx,sy);
+    if(n){selected=n;selectedEdge=null;recomputeFocus();showNodeDetail(n);}
+    else{const e=pickEdge(sx,sy);if(e){selectedEdge=e;selected=null;recomputeFocus();showEdgeDetail(e);}else{selected=null;selectedEdge=null;recomputeFocus();closeDetail();}}
+  }
+  drag=null;panning=null;
+});
+cv.addEventListener('wheel',ev=>{
+  ev.preventDefault();
+  const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top,[wx,wy]=toWorld(sx,sy);
+  const nk=Math.max(0.25,Math.min(5,view.k*Math.exp(-ev.deltaY*0.0014)));view.k=nk;
+  view.x=sx-W/2-wx*view.k;view.y=sy-H/2-wy*view.k;
+},{passive:false});
+
+/* ===== detail panels ===== */
+const detail=document.getElementById('detail');
+function closeDetail(){detail.classList.remove('open');detail.innerHTML='';}
+function showNodeDetail(n){
+  const col=TYPE_COLOR[n.type]||"#9aa1ab";
+  const out=edges.filter(e=>e.s===n.id),inc=edges.filter(e=>e.t===n.id);
+  const groups={};out.forEach(e=>{(groups[e.pred]=groups[e.pred]||[]).push(e);});
+  let eh='';
+  Object.keys(groups).forEach(p=>{
+    eh+=`<div class="edge-group"><div class="eg-pred">${p}</div>`;
+    groups[p].forEach(e=>{const tn=byId[e.t],tc=tn?TYPE_COLOR[tn.type]:"#bbb",st=fmtStat(e);
+      eh+=`<div class="erow" data-edge="${escAttr(e.s+'|'+e.t+'|'+e.pred)}"><span class="arrow">→</span><span class="tgt"><i style="background:${tc}"></i><span>${esc(e.t)}</span>${tn?'':'<span class="ext">ext</span>'}</span>${st?`<span class="stat">${st}</span>`:''}</div>`;});
+    eh+=`</div>`;
+  });
+  let ih='';
+  if(inc.length){ih=`<div class="d-section"><h5>Referenced by (${inc.length})</h5>`;inc.slice(0,8).forEach(e=>{const sn=byId[e.s],sc=sn?TYPE_COLOR[sn.type]:"#bbb";ih+=`<div class="erow" data-edge="${escAttr(e.s+'|'+e.t+'|'+e.pred)}"><span class="tgt"><i style="background:${sc}"></i><span>${esc(e.s)}</span></span><span class="stat">${e.pred} →</span></div>`;});ih+=`</div>`;}
+  const chips=(n.synonyms||[]).map(s=>`<span class="chip">${esc(s)}</span>`).join('');
+  const xr=(n.xref||[]).map(x=>`<span class="chip xref">${esc(x)}</span>`).join('');
+  detail.innerHTML=`<div class="d-head"><button class="d-close" id="dClose">×</button>
+    <span class="d-badge" style="background:${col}">${n.type}</span><span class="d-sub">${n.subtype||''}</span>
+    <div class="d-id">${esc(n.id)}</div>${n.desc?`<div class="d-desc">${esc(n.desc)}</div>`:''}
+    ${chips?`<div class="chips">${chips}</div>`:''}${xr?`<div class="chips">${xr}</div>`:''}</div>
+    <div class="d-body">
+    <div class="d-section"><h5>Frontmatter</h5><div class="fm">${esc(buildFm(n,out))}</div></div>
+    ${eh?`<div class="d-section"><h5>Edges · this node → object (${out.length})</h5>${eh}</div>`:''}
+    ${ih}
+    <div class="d-section"><h5>Document</h5><div class="md">${renderMd(n.body||'')}</div></div></div>`;
+  detail.classList.add('open');wireDetail();
+}
+function showEdgeDetail(e){
+  const s=byId[e.s],t=byId[e.t],sc=TYPE_COLOR[s.type],tc=t?TYPE_COLOR[t.type]:"#bbb",st=e.stats||{},sym=SYMMETRIC.has(e.pred);
+  const cells=[];
+  if(st.effect_size!=null)cells.push(cell(st.effect_size,st.effect_metric||'effect'));
+  if(st.p_value!=null)cells.push(cell(st.p_value,'p-value'));
+  if(st.ci_lower!=null)cells.push(cell(st.ci_lower+'–'+st.ci_upper,'95% CI'));
+  if(st.sample_size!=null)cells.push(cell('n='+st.sample_size,'sample'));
+  if(st.sensitivity!=null)cells.push(cell(st.sensitivity,'sensitivity'));
+  if(st.specificity!=null)cells.push(cell(st.specificity,'specificity'));
+  if(st.direction)cells.push(cell(st.direction,'direction'));
+  if(st.frequency)cells.push(cell(st.frequency,'frequency'));
+  if(st.unit)cells.push(cell(st.unit,'unit'));
+  if(st.clinical_phase)cells.push(cell(st.clinical_phase,'phase'));
+  if(st.response_direction)cells.push(cell(st.response_direction,'response'));
+  const pubs=(e.pubs||[]).map(p=>`<span class="chip xref">${esc(p)}</span>`).join('');
+  detail.innerHTML=`<div class="d-head"><button class="d-close" id="dClose">×</button>
+    <span class="d-badge" style="background:#7a828e">EDGE</span><span class="d-sub">${sym?'symmetric':'directed'}</span>
+    <div class="edge-headline"><span class="n" data-node="${escAttr(e.s)}"><i style="background:${sc}"></i>${esc(e.s)}</span>
+    <span class="p">${e.pred}${sym?' ⇄':' →'}</span>
+    <span class="n" data-node="${escAttr(e.t)}"><i style="background:${tc}"></i>${esc(e.t)}${t?'':' <span class="ext">ext</span>'}</span></div></div>
+    <div class="d-body">
+    <div class="d-section"><h5>Provenance triplet</h5><div class="prov">
+      <div class="cell"><div class="k">knowledge_level</div><div class="v">${e.kl}</div></div>
+      <div class="cell"><div class="k">agent_type</div><div class="v">${e.at}</div></div>
+      <div class="cell" style="grid-column:1/3"><div class="k">primary_source</div><div class="v" data-node="${escAttr(e.ps)}" style="${byId[e.ps]?'cursor:pointer;color:#4f5a8a':''}">${esc(e.ps)}${byId[e.ps]?'':' <span class="ext">ext</span>'}</div></div>
+    </div></div>
+    ${cells.length?`<div class="d-section"><h5>Quantitative attributes</h5><div class="statgrid">${cells.join('')}</div></div>`:''}
+    ${pubs?`<div class="d-section"><h5>Publications</h5><div class="chips">${pubs}</div></div>`:''}
+    ${e.note?`<div class="d-section"><h5>Note</h5><div class="d-desc">${esc(e.note)}</div></div>`:''}
+    <div class="d-section"><h5>YAML</h5><div class="fm">${esc(edgeYaml(e))}</div></div></div>`;
+  detail.classList.add('open');wireDetail();
+}
+function cell(v,k){return `<div class="cell"><div class="v">${esc(String(v))}</div><div class="k">${esc(k)}</div></div>`;}
+function wireDetail(){
+  const c=document.getElementById('dClose');if(c)c.onclick=()=>{selected=null;selectedEdge=null;recomputeFocus();closeDetail();};
+  detail.querySelectorAll('[data-node]').forEach(el=>{el.onclick=()=>{const n=byId[el.getAttribute('data-node')];if(n){selected=n;selectedEdge=null;recomputeFocus();focusOn(n);showNodeDetail(n);}};});
+  detail.querySelectorAll('[data-edge]').forEach(el=>{el.onclick=()=>{const [s,t,p]=el.getAttribute('data-edge').split('|');const e=edges.find(x=>x.s===s&&x.t===t&&x.pred===p);if(e){selectedEdge=e;selected=null;recomputeFocus();showEdgeDetail(e);}};});
+}
+function focusOn(n){view.x=W*0.4-W/2-n.x*view.k;view.y=H*0.5-H/2-n.y*view.k;}
+function buildFm(n,out){
+  let s=`type: ${n.type}\nidentifier: ${n.id}\n`;
+  if(n.subtype)s+=`subtype: ${n.subtype}\n`;
+  if(n.synonyms&&n.synonyms.length)s+=`synonyms: [${n.synonyms.join(', ')}]\n`;
+  if(n.xref&&n.xref.length)s+=`xref: [${n.xref.join(', ')}]\n`;
+  if(n.raw)s+=`raw_source: [${n.raw}]\n`;
+  if(n.note)s+=`note: ${n.note}\n`;
+  if(n.desc)s+=`description: ${n.desc}\n`;
+  if(out.length){s+=`edges:\n`;out.slice(0,3).forEach(e=>{s+=`  - predicate: ${e.pred}\n    object: ${e.t}\n    knowledge_level: ${e.kl}\n    agent_type: ${e.at}\n    primary_source: ${e.ps}\n`;if(e.stats&&e.stats.effect_size!=null)s+=`    effect_metric: ${e.stats.effect_metric}\n    effect_size: ${e.stats.effect_size}\n`;});if(out.length>3)s+=`  # … ${out.length-3} more\n`;}
+  return s;
+}
+function edgeYaml(e){let s=`- predicate: ${e.pred}\n  object: ${e.t}\n  knowledge_level: ${e.kl}\n  agent_type: ${e.at}\n  primary_source: ${e.ps}\n`;if(e.pubs&&e.pubs.length)s+=`  publications: [${e.pubs.join(', ')}]\n`;const st=e.stats||{};Object.keys(st).forEach(k=>s+=`  ${k}: ${st[k]}\n`);if(e.qual)Object.keys(e.qual).forEach(k=>s+=`  qualifiers:\n    ${k}: ${e.qual[k]}\n`);if(e.note)s+=`  note: ${e.note}\n`;return s;}
+function fmtStat(e){const st=e.stats||{};if(st.effect_size!=null)return (st.effect_metric?st.effect_metric.replace(/_/g,' ')+' ':'')+st.effect_size;if(st.sensitivity!=null)return 'sens '+st.sensitivity;if(st.frequency)return st.frequency;if(st.direction)return st.direction;if(st.unit)return st.unit;return '';}
+function renderMd(md){const lines=md.split('\n');let h='',inL=false;for(let line of lines){if(/^#\s+/.test(line)){if(inL){h+='</ul>';inL=false;}h+='<h1>'+inl(line.replace(/^#\s+/,''))+'</h1>';continue;}if(/^##\s+/.test(line)){if(inL){h+='</ul>';inL=false;}h+='<h2>'+inl(line.replace(/^##\s+/,''))+'</h2>';continue;}if(/^\s*[-*]\s+/.test(line)){if(!inL){h+='<ul>';inL=true;}h+='<li>'+inl(line.replace(/^\s*[-*]\s+/,''))+'</li>';continue;}if(line.trim()===''){if(inL){h+='</ul>';inL=false;}continue;}if(inL){h+='</ul>';inL=false;}h+='<p>'+inl(line)+'</p>';}if(inL)h+='</ul>';return h;}
+function inl(s){s=esc(s);s=s.replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>');s=s.replace(/`([^`]+)`/g,'<code>$1</code>');s=s.replace(/\[([^\]]+)\]\(([^)]*)\)/g,'<a>$1</a>');return s;}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function escAttr(s){return esc(s).replace(/'/g,'&#39;');}
+
+/* ===== sidebar + chrome ===== */
+function monogram(name){return name.split(/\s+/).slice(0,2).map(w=>w[0]||'').join('').toUpperCase();}
+function renderSidebar(){
+  const list=document.getElementById('kbList');list.innerHTML='';
+  KBS.forEach(kb=>{const el=document.createElement('div');el.className='kb'+(kb===activeKB?' active':'');el.title=kb.name;
+    el.innerHTML=`<span class="kb-mono">${esc(monogram(kb.name))}</span><span class="kb-text"><span class="kb-name">${esc(kb.name)}</span><span class="kb-meta">${kb.nodes.length} nodes · ${kb.edges.length} edges</span></span>`;
+    el.onclick=()=>{loadKB(kb);renderSidebar();};list.appendChild(el);});
+}
+function renderLegend(){
+  let h='';FAMILIES.forEach(([fam,types])=>{h+=`<div class="legend-fam"><div class="fam-name">${fam}</div><div class="swatches">`;types.forEach(t=>{h+=`<span class="sw"><i style="background:${TYPE_COLOR[t]}"></i><span>${t}</span></span>`;});h+=`</div></div>`;});
+  document.getElementById('legendBody').innerHTML=h;
+}
+function updateChrome(){document.getElementById('tbTitle').textContent=activeKB.name;document.getElementById('tbSub').textContent=`${nodes.length} nodes · ${edges.length} edges`;}
+document.getElementById('collapseBtn').onclick=()=>{const wb=document.getElementById('wbody');wb.classList.toggle('collapsed');document.getElementById('collapseBtn').textContent=wb.classList.contains('collapsed')?'›':'‹';setTimeout(resize,280);};
+document.getElementById('legendToggle').onclick=()=>{const lg=document.getElementById('legend');lg.classList.toggle('min');document.getElementById('legendToggle').textContent=lg.classList.contains('min')?'show':'hide';};
+
+const searchInput=document.getElementById('searchInput');
+searchInput.addEventListener('input',e=>{searchTerm=e.target.value.trim().toLowerCase();});
+
+// zoom controls (anchored on the canvas center)
+function zoomBy(f){const cx=W/2,cy=H/2,[wx,wy]=toWorld(cx,cy);view.k=Math.max(0.25,Math.min(5,view.k*f));view.x=cx-W/2-wx*view.k;view.y=cy-H/2-wy*view.k;}
+document.getElementById('zoomIn').onclick=()=>zoomBy(1.25);
+document.getElementById('zoomOut').onclick=()=>zoomBy(0.8);
+document.getElementById('zoomFit').onclick=()=>fitView();
+
+function resize(){const rect=cv.getBoundingClientRect();W=rect.width;H=rect.height;DPR=Math.max(1,window.devicePixelRatio||1);cv.width=W*DPR;cv.height=H*DPR;}
+window.addEventListener('resize',resize);
+renderSidebar();renderLegend();resize();loadKB(KB_COVID);requestAnimationFrame(loop);
+</script>
+</body>
+</html>

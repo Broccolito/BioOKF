@@ -1,0 +1,16 @@
+[package]
+name = "okf-cli"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "okf — the BioOKF command-line tool (lint, graph, search, scaffold)"
+
+[[bin]]
+name = "okf"
+path = "src/main.rs"
+
+[dependencies]
+okf-core = { path = "../okf-core" }
+clap = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }

@@ -1,0 +1,1920 @@
+{
+  "article": {
+    "slug": "s41586-024-07302-6",
+    "doi": "10.1038/s41586-024-07302-6",
+    "title": "Decoding the interplay between genetic and non-genetic drivers of metastasis",
+    "url": "https://www.nature.com/articles/s41586-024-07302-6",
+    "abbrev": "decoding-interplay-genetic-non-genetic-drivers",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/decoding-interplay-genetic-non-genetic-drivers"
+  },
+  "meta": {
+    "title": "Decoding the interplay between genetic and non-genetic drivers of metastasis",
+    "authors": [
+      "Panagiotis Karras",
+      "James R. M. Black",
+      "Nicholas McGranahan",
+      "Jean-Christophe Marine"
+    ],
+    "published": [
+      2024,
+      5,
+      15
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-024-07302-6",
+    "n_references": 210,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "7302_CR1",
+      "doi": "10.1016/j.cell.2023.03.003",
+      "title": "",
+      "journal": "Cell",
+      "year": "2023",
+      "author": "S Gerstberger",
+      "unstructured": "Gerstberger, S., Jiang, Q. & Ganesh, K. Metastasis. Cell 186, 1564\u20131579 (2023)."
+    },
+    {
+      "key": "7302_CR2",
+      "doi": "10.1038/s41559-020-01367-y",
+      "title": "",
+      "journal": "Nat. Ecol. Evol.",
+      "year": "2021",
+      "author": "D Miroshnychenko",
+      "unstructured": "Miroshnychenko, D. et al. Spontaneous cell fusions as a mechanism of parasexual recombination in tumour cell populations. Nat. Ecol. Evol. 5, 379\u2013391 (2021)."
+    },
+    {
+      "key": "7302_CR3",
+      "doi": "10.1126/sciadv.aat7828",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2018",
+      "author": "CE Gast",
+      "unstructured": "Gast, C. E. et al. Cell fusion potentiates tumor heterogeneity and reveals circulating hybrid cells that correlate with stage and survival. Sci. Adv. 4, eaat7828 (2018)."
+    },
+    {
+      "key": "7302_CR4",
+      "doi": "10.1073/pnas.0900108106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "X Lu",
+      "unstructured": "Lu, X. & Kang, Y. Efficient acquisition of dual metastasis organotropism to bone and lung through stable spontaneous fusion between MDA-MB-231 variants. Proc. Natl Acad. Sci. USA 106, 9385\u20139390 (2009)."
+    },
+    {
+      "key": "7302_CR5",
+      "doi": "10.1038/s41568-021-00336-2",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Black, J. R. M. & McGranahan, N. Genetic and non-genetic clonal diversity in cancer evolution. Nat. Rev. Cancer https://doi.org/10.1038/s41568-021-00336-2 (2021)."
+    },
+    {
+      "key": "7302_CR6",
+      "doi": "10.1158/2159-8290.cd-21-1059",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Hanahan, D. Hallmarks of cancer: new dimensions. Cancer Discov. https://doi.org/10.1158/2159-8290.CD-21-1059 (2022)."
+    },
+    {
+      "key": "7302_CR7",
+      "doi": "10.1126/science.959840",
+      "title": "",
+      "journal": "Science",
+      "year": "1976",
+      "author": "PC Nowell",
+      "unstructured": "Nowell, P. C. The clonal evolution of tumor cell populations. Science 194, 23\u201328 (1976)."
+    },
+    {
+      "key": "7302_CR8",
+      "doi": "10.1073/pnas.1303607110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "PJ Killela",
+      "unstructured": "Killela, P. J. et al. TERT promoter mutations occur frequently in gliomas and a subset of tumors derived from cells with low rates of self-renewal. Proc. Natl Acad. Sci. USA 110, 6021\u20136026 (2013)."
+    },
+    {
+      "key": "7302_CR9",
+      "doi": "10.1038/s41586-020-1970-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "PCAWG Transcriptome Core Group",
+      "unstructured": "PCAWG Transcriptome Core Group et al. Genomic basis for RNA alterations in cancer. Nature 578, 129\u2013136 (2020). This genomic\u2013transcriptomic analysis highlights the range of genomically encoded transcriptomic alterations in cancer, and the impact of somatic copy-number alterations on gene expression."
+    },
+    {
+      "key": "7302_CR10",
+      "doi": "10.1038/s41586-020-1969-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "ICGC/TCGA Pan-Cancer Analysis of Whole Genomes Consortium.",
+      "unstructured": "ICGC/TCGA Pan-Cancer Analysis of Whole Genomes Consortium. Pan-cancer analysis of whole genomes. Nature 578, 82\u201393 (2020)."
+    },
+    {
+      "key": "7302_CR11",
+      "doi": "10.1038/s41586-023-05706-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "C Mart\u00ednez-Ruiz",
+      "unstructured": "Mart\u00ednez-Ruiz, C. et al. Genomic-transcriptomic evolution in lung cancer and metastasis. Nature 616, 543\u2013552 (2023). This paper explores links between genomic and transcriptomic alterations during lung cancer evolution, highlighting the influence of genomic alterations on global patterns of allele-specific gene expression and RNA editing, as well as their interplay during metastasis."
+    },
+    {
+      "key": "7302_CR12",
+      "doi": "10.1038/nature25480",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "SN Gr\u00f6bner",
+      "unstructured": "Gr\u00f6bner, S. N. et al. The landscape of genomic alterations across childhood cancers. Nature 555, 321\u2013327 (2018)."
+    },
+    {
+      "key": "7302_CR13",
+      "doi": "10.1038/s41571-020-0350-x",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Bonnal, S. C., L\u00f3pez-Oreja, I. & Valc\u00e1rcel, J. Roles and mechanisms of alternative splicing in cancer\u2014implications for care. Nat. Rev. Clin. Oncol. https://doi.org/10.1038/s41571-020-0350-x (2020)."
+    },
+    {
+      "key": "7302_CR14",
+      "doi": "10.1261/rna.057919.116",
+      "title": "",
+      "journal": "RNA",
+      "year": "2016",
+      "author": "O Anczuk\u00f3w",
+      "unstructured": "Anczuk\u00f3w, O. & Krainer, A. R. Splicing-factor alterations in cancers. RNA 22, 1285\u20131301 (2016)."
+    },
+    {
+      "key": "7302_CR15",
+      "doi": "10.1016/j.cell.2018.07.034",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "MH Bailey",
+      "unstructured": "Bailey, M. H. et al. Comprehensive characterization of cancer driver genes and mutations. Cell 174, 1034\u20131035 (2018)."
+    },
+    {
+      "key": "7302_CR16",
+      "doi": "10.1038/s41586-022-04809-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "SA Patel",
+      "unstructured": "Patel, S. A. et al. The renal lineage factor PAX8 controls oncogenic signalling in kidney cancer. Nature 606, 999\u20131006 (2022)."
+    },
+    {
+      "key": "7302_CR17",
+      "doi": "10.1038/s41586-022-05311-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "J Househam",
+      "unstructured": "Househam, J. et al. Phenotypic plasticity and genetic control in colorectal cancer evolution. Nature 611, 744\u2013753 (2022)."
+    },
+    {
+      "key": "7302_CR18",
+      "doi": "",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2002",
+      "author": "I Gazzoli",
+      "unstructured": "Gazzoli, I., Loda, M., Garber, J., Syngal, S. & Kolodner, R. D. A hereditary nonpolyposis colorectal carcinoma case associated with hypermethylation of the MLH1 gene in normal tissue and loss of heterozygosity of the unmethylated allele in the resulting microsatellite instability-high tumor. Cancer Res. 62, 3925\u20133928 (2002)."
+    },
+    {
+      "key": "7302_CR19",
+      "doi": "10.1101/cshperspect.a019505",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Baylin, S. B. & Jones, P. A. Epigenetic determinants of cancer. Cold Spring Harb. Perspect. Biol. 8, a019505 (2016)."
+    },
+    {
+      "key": "7302_CR20",
+      "doi": "10.1158/2159-8290.cd-20-1334",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2021",
+      "author": "H Pan",
+      "unstructured": "Pan, H. et al. Discovery of candidate DNA methylation cancer driver genes. Cancer Discov. 11, 2266\u20132281 (2021)."
+    },
+    {
+      "key": "7302_CR21",
+      "doi": "10.1038/s41586-021-04206-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "KA Fennell",
+      "unstructured": "Fennell, K. A. et al. Non-genetic determinants of malignant clonal fitness at single-cell resolution. Nature 601, 125\u2013131 (2022)."
+    },
+    {
+      "key": "7302_CR22",
+      "doi": "10.1126/science.abc1944",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "JJ Quinn",
+      "unstructured": "Quinn, J. J. et al. Single-cell lineages reveal the rates, routes, and drivers of metastasis in cancer xenografts. Science 371, eabc1944 (2021)."
+    },
+    {
+      "key": "7302_CR23",
+      "doi": "10.1016/j.cell.2022.04.015",
+      "title": "",
+      "journal": "Cell",
+      "year": "2022",
+      "author": "D Yang",
+      "unstructured": "Yang, D. et al. Lineage tracing reveals the phylodynamics, plasticity, and paths of tumor evolution. Cell 185, eabc1944 (2022)."
+    },
+    {
+      "key": "7302_CR24",
+      "doi": "10.1038/s41586-022-05242-7",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Karras, P. et al. A cellular hierarchy in melanoma uncouples growth and metastasis. Nature https://doi.org/10.1038/s41586-022-05242-7 (2022). This study provides evidence that tumour growth and metastatic dissemination in a preclinical mouse model of melanoma can be fuelled by transcriptionally and spatially distinct melanoma subpopulations."
+    },
+    {
+      "key": "7302_CR25",
+      "doi": "10.1158/2159-8290.cd-20-0219",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2021",
+      "author": "MJ Schmitt",
+      "unstructured": "Schmitt, M. J. et al. Phenotypic mapping of pathologic cross-talk between glioblastoma and innate immune cells by synthetic genetic tracing. Cancer Discov. 11, 754\u2013777 (2021)."
+    },
+    {
+      "key": "7302_CR26",
+      "doi": "10.1101/2021.03.26.437185",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Mehrabadi, F. R. et al. Profiles of expressed mutations in single cells reveal subclonal expansion patterns and therapeutic impact of intratumor heterogeneity. Preprint at bioRxiv https://doi.org/10.1101/2021.03.26.437185 (2021)."
+    },
+    {
+      "key": "7302_CR27",
+      "doi": "10.1101/2022.12.28.522128",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Schiffman, J. S. et al. Defining ancestry, heritability and plasticity of cellular phenotypes in somatic evolution. Preprint at bioRxiv https://doi.org/10.1101/2022.12.28.522128 (2022). This preprint links phylogenetic ancestry with single cellular phenotypes and explores their relative heritability in somatic evolution."
+    },
+    {
+      "key": "7302_CR28",
+      "doi": "10.1038/nrg2556",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2009",
+      "author": "A Brock",
+      "unstructured": "Brock, A., Chang, H. & Huang, S. Non-genetic heterogeneity\u2014a mutation-independent driving force for the somatic evolution of tumours. Nat. Rev. Genet. 10, 336\u2013342 (2009)."
+    },
+    {
+      "key": "7302_CR29",
+      "doi": "10.1038/s41571-020-0340-z",
+      "title": "",
+      "journal": "Nat. Rev. Clin. Oncol.",
+      "year": "2020",
+      "author": "\u00c1 Quintanal-Villalonga",
+      "unstructured": "Quintanal-Villalonga, \u00c1. et al. Lineage plasticity in cancer: a shared pathway of therapeutic resistance. Nat. Rev. Clin. Oncol. 17, 360\u2013371 (2020)."
+    },
+    {
+      "key": "7302_CR30",
+      "doi": "10.1038/nature11344",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "G Driessens",
+      "unstructured": "Driessens, G., Beck, B., Caauwe, A., Simons, B. D. & Blanpain, C. Defining the mode of tumour growth by clonal analysis. Nature 488, 527\u2013530 (2012)."
+    },
+    {
+      "key": "7302_CR31",
+      "doi": "10.1016/j.ccr.2006.11.020",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Calabrese, C. et al. A perivascular niche for brain tumor stem cells. Cancer Cell https://doi.org/10.1016/j.ccr.2006.11.020 (2007)."
+    },
+    {
+      "key": "7302_CR32",
+      "doi": "10.1016/j.stem.2014.02.002",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Oskarsson, T., Batlle, E. & Massagu\u00e9, J. Metastatic stem cells: sources, niches, and vital pathways. Cell Stem Cell https://doi.org/10.1016/j.stem.2014.02.002 (2014)."
+    },
+    {
+      "key": "7302_CR33",
+      "doi": "10.1038/nature17676",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "S Nik-Zainal",
+      "unstructured": "Nik-Zainal, S. et al. Landscape of somatic mutations in 560 breast cancer whole-genome sequences. Nature 534, 47\u201354 (2016)."
+    },
+    {
+      "key": "7302_CR34",
+      "doi": "10.1126/science.aaf2784",
+      "title": "",
+      "journal": "Science",
+      "year": "2016",
+      "author": "S Turajlic",
+      "unstructured": "Turajlic, S. & Swanton, C. Metastasis as an evolutionary process. Science 352, 169\u2013175 (2016)."
+    },
+    {
+      "key": "7302_CR35",
+      "doi": "10.1016/j.ccell.2019.12.004",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2020",
+      "author": "NJ Birkbak",
+      "unstructured": "Birkbak, N. J. & McGranahan, N. Cancer genome evolutionary trajectories in metastasis. Cancer Cell 37, 8\u201319 (2020)."
+    },
+    {
+      "key": "7302_CR36",
+      "doi": "",
+      "title": "",
+      "journal": "Contemp. Oncol.",
+      "year": "2015",
+      "author": "K Tomczak",
+      "unstructured": "Tomczak, K., Czerwi\u0144ska, P. & Wiznerowicz, M. The Cancer Genome Atlas (TCGA): an immeasurable source of knowledge. Contemp. Oncol. 19, A68\u2013A77 (2015)."
+    },
+    {
+      "key": "7302_CR37",
+      "doi": "10.1038/s41586-019-1689-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "P Priestley",
+      "unstructured": "Priestley, P. et al. Pan-cancer whole-genome analyses of metastatic solid tumours. Nature 575, 210\u2013216 (2019)."
+    },
+    {
+      "key": "7302_CR38",
+      "doi": "10.1038/nature23306",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "DR Robinson",
+      "unstructured": "Robinson, D. R. et al. Integrative clinical genomics of metastatic cancer. Nature 548, 297\u2013303 (2017)."
+    },
+    {
+      "key": "7302_CR39",
+      "doi": "10.1016/j.cell.2022.01.003",
+      "title": "",
+      "journal": "Cell",
+      "year": "2022",
+      "author": "B Nguyen",
+      "unstructured": "Nguyen, B. et al. Genomic characterization of metastatic patterns from prospective clinical sequencing of 25,000 patients. Cell 185, 563\u2013575 (2022)."
+    },
+    {
+      "key": "7302_CR40",
+      "doi": "10.1158/0008-5472.can-22-0562",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2022",
+      "author": "DS Christensen",
+      "unstructured": "Christensen, D. S. et al. Treatment represents a key driver of metastatic cancer evolution. Cancer Res. 82, 2918\u20132927 (2022)."
+    },
+    {
+      "key": "7302_CR41",
+      "doi": "10.1038/s41588-020-0628-z",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2020",
+      "author": "Z Hu",
+      "unstructured": "Hu, Z., Li, Z., Ma, Z. & Curtis, C. Multi-cancer analysis of clonality and the timing of systemic spread in paired primary tumors and metastases. Nat. Genet. 52, 701\u2013708 (2020)."
+    },
+    {
+      "key": "7302_CR42",
+      "doi": "10.1038/s41586-023-06054-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "F Mart\u00ednez-Jim\u00e9nez",
+      "unstructured": "Mart\u00ednez-Jim\u00e9nez, F. et al. Pan-cancer whole-genome comparison of primary and metastatic solid tumours. Nature 618, 333\u2013341 (2023). This large, unpaired analysis of primary and metastatic tumours demonstrated that overall, primary and metastatic genomes tended to be relatively similar, without obvious \u2018gatekeeper\u2019 events that unlock metastatic potential."
+    },
+    {
+      "key": "7302_CR43",
+      "doi": "10.1016/j.cell.2018.06.001",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "I Martincorena",
+      "unstructured": "Martincorena, I. et al. Universal patterns of selection in cancer and somatic tissues. Cell 173, 1823 (2018)."
+    },
+    {
+      "key": "7302_CR44",
+      "doi": "10.1038/s41586-022-05082-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "T Baslan",
+      "unstructured": "Baslan, T. et al. Ordered and deterministic cancer genome evolution after p53 loss. Nature 608, 795\u2013802 (2022)."
+    },
+    {
+      "key": "7302_CR45",
+      "doi": "10.1016/j.ccell.2023.03.018",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2023",
+      "author": "HB Lengel",
+      "unstructured": "Lengel, H. B. et al. Genomic mapping of metastatic organotropism in lung adenocarcinoma. Cancer Cell 41, 970\u2013985 (2023)."
+    },
+    {
+      "key": "7302_CR46",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Turajlic, S. et al. Tracking cancer evolution reveals constrained routes to metastases: TRACERx Renal. Cell 173, 581\u2013594.e12 (2018). This systematic analysis of paired primary and metastatic clear-cell renal carcinoma biopsies reveals that genomic events (in particular, 9p loss) are highly selected in metastasis."
+    },
+    {
+      "key": "7302_CR47",
+      "doi": "10.1038/s41586-023-05729-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "M Al Bakir",
+      "unstructured": "Al Bakir, M. et al. The evolution of non-small cell lung cancer metastases in TRACERx. Nature 616, 534\u2013542 (2023). This paired analysis of lung cancer primary and metastatic tumours revealed that metastatic competence is shaped by selection of genomic events occurring within the primary tumour."
+    },
+    {
+      "key": "7302_CR48",
+      "doi": "10.1038/s43018-021-00250-4",
+      "title": "",
+      "journal": "Nat. Cancer",
+      "year": "2021",
+      "author": "F Chen",
+      "unstructured": "Chen, F. et al. Moving pan-cancer studies from basic research toward the clinic. Nat. Cancer 2, 879\u2013890 (2021)."
+    },
+    {
+      "key": "7302_CR49",
+      "doi": "10.1056/nejmoa1616288",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2017",
+      "author": "M Jamal-Hanjani",
+      "unstructured": "Jamal-Hanjani, M. et al. Tracking the evolution of non-small-cell lung cancer. N. Engl. J. Med. 376, 2109\u20132121 (2017)."
+    },
+    {
+      "key": "7302_CR50",
+      "doi": "10.1016/j.ccell.2021.01.011",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Patton, E. E. et al. Melanoma models for the next generation of therapies. Cancer Cell https://doi.org/10.1016/j.ccell.2021.01.011 (2021)."
+    },
+    {
+      "key": "7302_CR51",
+      "doi": "10.1038/s41568-023-00568-4",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2023",
+      "author": "JD Hebert",
+      "unstructured": "Hebert, J. D., Neal, J. W. & Winslow, M. M. Dissecting metastasis using preclinical models and methods. Nat. Rev. Cancer 23, 391\u2013407 (2023)."
+    },
+    {
+      "key": "7302_CR52",
+      "doi": "10.1016/j.trecan.2022.02.004",
+      "title": "",
+      "journal": "Trends Cancer",
+      "year": "2022",
+      "author": "R Vander Velde",
+      "unstructured": "Vander Velde, R., Shaffer, S. & Marusyk, A. Integrating mutational and nonmutational mechanisms of acquired therapy resistance within the Darwinian paradigm. Trends Cancer 8, 456\u2013466 (2022)."
+    },
+    {
+      "key": "7302_CR53",
+      "doi": "10.1016/j.cell.2017.01.018",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "N McGranahan",
+      "unstructured": "McGranahan, N. & Swanton, C. Clonal heterogeneity and tumor evolution: past, present, and the future. Cell 168, 613\u2013628 (2017)."
+    },
+    {
+      "key": "7302_CR54",
+      "doi": "10.1158/2159-8290.cd-20-1808",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2021",
+      "author": "L Bejarano",
+      "unstructured": "Bejarano, L., Jord\u0101o, M. J. C. & Joyce, J. A. Therapeutic targeting of the tumor microenvironment. Cancer Discov. 11, 933\u2013959 (2021)."
+    },
+    {
+      "key": "7302_CR55",
+      "doi": "10.1158/2159-8290.cd-21-0316",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2022",
+      "author": "Y Wu",
+      "unstructured": "Wu, Y. et al. Spatiotemporal immune landscape of colorectal cancer liver metastasis at single-cell level. Cancer Discov. 12, 134\u2013153 (2022)."
+    },
+    {
+      "key": "7302_CR56",
+      "doi": "10.1016/j.ccell.2023.02.016",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2023",
+      "author": "KE de Visser",
+      "unstructured": "de Visser, K. E. & Joyce, J. A. The evolving tumor microenvironment: from cancer initiation to metastatic outgrowth. Cancer Cell 41, 374\u2013403 (2023)."
+    },
+    {
+      "key": "7302_CR57",
+      "doi": "10.1038/nrc3597",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Beck, B. & Blanpain, C. Unravelling cancer stem cell potential. Nat. Rev. Cancer https://doi.org/10.1038/nrc3597 (2013)."
+    },
+    {
+      "key": "7302_CR58",
+      "doi": "10.1182/blood-2008-08-077941",
+      "title": "",
+      "journal": "Blood",
+      "year": "2008",
+      "author": "JE Dick",
+      "unstructured": "Dick, J. E. Stem cell concepts renew cancer research. Blood 112, 4793\u20134807 (2008)."
+    },
+    {
+      "key": "7302_CR59",
+      "doi": "10.1016/j.cell.2009.08.017",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Shackleton, M., Quintana, E., Fearon, E. R. & Morrison, S. J. Heterogeneity in cancer: cancer stem cells versus clonal evolution. Cell https://doi.org/10.1016/j.cell.2009.08.017 (2009)."
+    },
+    {
+      "key": "7302_CR60",
+      "doi": "10.1038/nm.2304",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2011",
+      "author": "H Clevers",
+      "unstructured": "Clevers, H. The cancer stem cell: Premises, promises and challenges. Nat. Med. 17, 313\u2013319 (2011)."
+    },
+    {
+      "key": "7302_CR61",
+      "doi": "10.1038/nature15260",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "DA Lawson",
+      "unstructured": "Lawson, D. A. et al. Single-cell analysis reveals a stem-cell program in human metastatic breast cancer cells. Nature 526, 131\u2013135 (2015)."
+    },
+    {
+      "key": "7302_CR62",
+      "doi": "10.1016/j.cell.2018.11.046",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "S Gkountela",
+      "unstructured": "Gkountela, S. et al. Circulating tumor cell clustering shapes DNA methylation to enable metastasis seeding. Cell 176, 98\u2013112 (2019)."
+    },
+    {
+      "key": "7302_CR63",
+      "doi": "10.1038/nature21713",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Melo, F. D. S. E. et al. A distinct role for Lgr5+ stem cells in primary and metastatic colon cancer. Nature https://doi.org/10.1038/nature21713 (2017)."
+    },
+    {
+      "key": "7302_CR64",
+      "doi": "10.1016/j.cell.2012.02.008",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Guo, W. et al. Slug and Sox9 cooperatively determine the mammary stem cell state. Cell 148, 1015\u20131028 (2012)."
+    },
+    {
+      "key": "7302_CR65",
+      "doi": "10.1038/nature21713",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "De Sousa E Melo, F. et al. A distinct role for Lgr5+ stem cells in primary and metastatic colon cancer. Nature 543, 676\u2013680 (2017). This study demonstrated that ablation of LGR5+ CSCs does not prevent long-term tumour growth, as this compartment can be replenished by de-differentiation of LGR5\u2212 progenitors, but it does decrease metastasis incidence, which indicates that dissemination and/or colonization of distant sites may originate from LGR5+ CSCs."
+    },
+    {
+      "key": "7302_CR66",
+      "doi": "10.1016/j.stem.2020.02.008",
+      "title": "",
+      "journal": "Cell Stem Cell",
+      "year": "2020",
+      "author": "A Fumagalli",
+      "unstructured": "Fumagalli, A. et al. Plasticity of Lgr5-negative cancer cells drives metastasis in colorectal cancer. Cell Stem Cell 26, 569\u2013578 (2020). This article provides experimental evidence that CRC metastases are seeded by LGR5\u2212 cells, which have an intrinsic ability to become CSCs in a niche-independent manner and can restore epithelial hierarchies in metastatic tumours."
+    },
+    {
+      "key": "7302_CR67",
+      "doi": "10.1016/j.trecan.2023.06.010",
+      "title": "",
+      "journal": "Trends Cancer",
+      "year": "2023",
+      "author": "A Nowosad",
+      "unstructured": "Nowosad, A., Marine, J.-C. & Karras, P. Perivascular niches: critical hubs in cancer evolution. Trends Cancer 9, 897\u2013910 (2023)."
+    },
+    {
+      "key": "7302_CR68",
+      "doi": "10.1038/s41568-021-00332-6",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2021",
+      "author": "AW Lambert",
+      "unstructured": "Lambert, A. W. & Weinberg, R. A. Linking EMT programmes to normal and neoplastic epithelial stem cells. Nat. Rev. Cancer 21, 325\u2013338 (2021)."
+    },
+    {
+      "key": "7302_CR69",
+      "doi": "10.1016/j.ccell.2020.05.005",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2020",
+      "author": "Y Shen",
+      "unstructured": "Shen, Y. et al. Reduction of liver metastasis stiffness improves response to bevacizumab in metastatic colorectal cancer. Cancer Cell 37, 800\u2013817 (2020)."
+    },
+    {
+      "key": "7302_CR70",
+      "doi": "10.1038/ncb3157",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2015",
+      "author": "SC Wei",
+      "unstructured": "Wei, S. C. et al. Matrix stiffness drives epithelial-mesenchymal transition and tumour metastasis through a TWIST1-G3BP2 mechanotransduction pathway. Nat. Cell Biol. 17, 678\u2013688 (2015)."
+    },
+    {
+      "key": "7302_CR71",
+      "doi": "10.1007/s10555-007-9055-1",
+      "title": "",
+      "journal": "Cancer Metastasis Rev.",
+      "year": "2007",
+      "author": "P Vaupel",
+      "unstructured": "Vaupel, P. & Mayer, A. Hypoxia in cancer: significance and impact on clinical outcome. Cancer Metastasis Rev. 26, 225\u2013239 (2007)."
+    },
+    {
+      "key": "7302_CR72",
+      "doi": "10.1126/science.1234850",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Nieto, M. A. Epithelial plasticity: a common theme in embryonic and cancer cells. Science https://doi.org/10.1126/science.1234850 (2013)."
+    },
+    {
+      "key": "7302_CR73",
+      "doi": "10.1016/j.cell.2016.06.028",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Nieto, M. A., Huang, R. Y. Y. J., Jackson, R. A. A. & Thiery, J. P. P. EMT: 2016. Cell https://doi.org/10.1016/j.cell.2016.06.028 (2016)."
+    },
+    {
+      "key": "7302_CR74",
+      "doi": "10.1016/j.cell.2009.11.007",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Thiery, J. P., Acloque, H., Huang, R. Y. J. & Nieto, M. A. Epithelial-mesenchymal transitions in development and disease. Cell 139, 871\u2013890 (2009)."
+    },
+    {
+      "key": "7302_CR75",
+      "doi": "10.1038/ncb1691",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2008",
+      "author": "M-H Yang",
+      "unstructured": "Yang, M.-H. et al. Direct regulation of TWIST by HIF-1\u03b1 promotes metastasis. Nat. Cell Biol. 10, 295\u2013305 (2008)."
+    },
+    {
+      "key": "7302_CR76",
+      "doi": "10.1016/j.tcb.2015.07.012",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Ye, X. & Weinberg, R. A. Epithelial-mesenchymal plasticity: a central regulator of cancer progression. Trends Cell Biol. 25, 675\u2013686 (2015)."
+    },
+    {
+      "key": "7302_CR77",
+      "doi": "10.1016/j.ccr.2012.10.012",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2012",
+      "author": "OH Oca\u00f1a",
+      "unstructured": "Oca\u00f1a, O. H. et al. Metastatic colonization requires the repression of the epithelial-mesenchymal transition inducer Prrx1. Cancer Cell 22, 709\u2013724 (2012)."
+    },
+    {
+      "key": "7302_CR78",
+      "doi": "10.1016/j.celrep.2019.09.081",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2019",
+      "author": "T Revenco",
+      "unstructured": "Revenco, T. et al. Context dependency of epithelial-to-mesenchymal transition for metastasis. Cell Rep. 29, 1458\u20131468 (2019)."
+    },
+    {
+      "key": "7302_CR79",
+      "doi": "10.1016/j.celrep.2016.02.034",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Beerling, E. et al. Plasticity between epithelial and mesenchymal states unlinks EMT from metastasis-enhancing stem cell capacity. Cell Rep. https://doi.org/10.1016/j.celrep.2016.02.034 (2016)."
+    },
+    {
+      "key": "7302_CR80",
+      "doi": "10.1038/s41586-018-0040-3",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "I Pastushenko",
+      "unstructured": "Pastushenko, I. et al. Identification of the tumour transition states occurring during EMT. Nature 556, 463\u2013468 (2018). This study provides evidence that spontaneous EMT proceeds through intermediate transition states with different metastatic propensities, rather than through an on-and-off switch."
+    },
+    {
+      "key": "7302_CR81",
+      "doi": "10.1038/nature16064",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "X Zheng",
+      "unstructured": "Zheng, X. et al. Epithelial-to-mesenchymal transition is dispensable for metastasis but induces chemoresistance in pancreatic cancer. Nature 527, 525\u2013530 (2015)."
+    },
+    {
+      "key": "7302_CR82",
+      "doi": "10.1038/nature15748",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "KR Fischer",
+      "unstructured": "Fischer, K. R. et al. Epithelial-to-mesenchymal transition is not required for lung metastasis but contributes to chemoresistance. Nature 527, 472\u2013476 (2015)."
+    },
+    {
+      "key": "7302_CR83",
+      "doi": "10.1038/s41586-019-1526-3",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "V Padmanaban",
+      "unstructured": "Padmanaban, V. et al. E-cadherin is required for metastasis in multiple models of breast cancer. Nature 573, 439\u2013444 (2019)."
+    },
+    {
+      "key": "7302_CR84",
+      "doi": "10.1016/j.tcb.2021.10.004",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Graziani, V., Rodriguez-Hernandez, I., Maiques, O. & Sanz-Moreno, V. The amoeboid state as part of the epithelial-to-mesenchymal transition programme. Trends Cell Biol. https://doi.org/10.1016/j.tcb.2021.10.004 (2022)."
+    },
+    {
+      "key": "7302_CR85",
+      "doi": "10.1016/j.devcel.2021.11.006",
+      "title": "",
+      "journal": "Dev. Cell",
+      "year": "2021",
+      "author": "F L\u00fc\u00f6nd",
+      "unstructured": "L\u00fc\u00f6nd, F. et al. Distinct contributions of partial and full EMT to breast cancer malignancy. Dev. Cell 56, 3203\u20133221 (2021)."
+    },
+    {
+      "key": "7302_CR86",
+      "doi": "10.1016/j.ccell.2021.05.005",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2021",
+      "author": "KP Simeonov",
+      "unstructured": "Simeonov, K. P. et al. Single-cell lineage tracing of metastatic cancer reveals selection of hybrid EMT states. Cancer Cell 39, 1150\u20131162 (2021). Using an elegant inducible CRISPR\u2013Cas9-based lineage recorder with highly efficient single-cell capture of both transcriptional and phylogenetic information, this study demonstrates that the metastatic potential peaks in rare, late-hybrid EMT states, and goes on to show that the gene signatures of late-hybrid EMT states are predictive of reduced survival in both patients with pancreatic cancer and patients with lung cancer."
+    },
+    {
+      "key": "7302_CR87",
+      "doi": "10.1016/j.tcb.2018.12.001",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Pastushenko, I. & Blanpain, C. EMT transition states during tumor progression and metastasis. Trends Cell Biol. 29, 212\u2013226 (2019)."
+    },
+    {
+      "key": "7302_CR88",
+      "doi": "10.1016/j.cell.2019.05.012",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "M Ligorio",
+      "unstructured": "Ligorio, M. et al. Stromal microenvironment shapes the intratumoral architecture of pancreatic cancer. Cell 178, 160\u2013175 (2019)."
+    },
+    {
+      "key": "7302_CR89",
+      "doi": "10.1038/s41556-022-01045-0",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Cui, J. et al. MLL3 loss drives metastasis by promoting a hybrid epithelial\u2013mesenchymal transition state. Nat. Cell Biol. https://doi.org/10.1038/s41556-022-01045-0 (2023)."
+    },
+    {
+      "key": "7302_CR90",
+      "doi": "10.1016/j.devcel.2021.08.018",
+      "title": "",
+      "journal": "Dev. Cell",
+      "year": "2021",
+      "author": "NR Campbell",
+      "unstructured": "Campbell, N. R. et al. Cooperation between melanoma cell states promotes metastasis through heterotypic cluster formation. Dev. Cell 56, 2808\u20132825 (2021)."
+    },
+    {
+      "key": "7302_CR91",
+      "doi": "10.1038/s41586-020-03046-1",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "I Pastushenko",
+      "unstructured": "Pastushenko, I. et al. Fat1 deletion promotes hybrid EMT state, tumour stemness and metastasis. Nature 589, 448\u2013455 (2021)."
+    },
+    {
+      "key": "7302_CR92",
+      "doi": "10.1038/s41467-023-36439-7",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2023",
+      "author": "G Malagoli Tagliazucchi",
+      "unstructured": "Malagoli Tagliazucchi, G., Wiecek, A. J., Withnell, E. & Secrier, M. Genomic and microenvironmental heterogeneity shaping epithelial-to-mesenchymal trajectories in cancer. Nat. Commun. 14, 789 (2023)."
+    },
+    {
+      "key": "7302_CR93",
+      "doi": "10.1158/2159-8290.cd-14-0471",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2014",
+      "author": "JP Sullivan",
+      "unstructured": "Sullivan, J. P. et al. Brain tumor cells in circulation are enriched for mesenchymal gene expression. Cancer Discov. 4, 1299\u20131309 (2014)."
+    },
+    {
+      "key": "7302_CR94",
+      "doi": "10.1126/scitranslmed.3000403",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2010",
+      "author": "SL Stott",
+      "unstructured": "Stott, S. L. et al. Isolation and characterization of circulating tumor cells from patients with localized and metastatic prostate cancer. Sci. Transl. Med. 2, 25ra23 (2010)."
+    },
+    {
+      "key": "7302_CR95",
+      "doi": "10.1126/science.1228522",
+      "title": "",
+      "journal": "Science",
+      "year": "2013",
+      "author": "M Yu",
+      "unstructured": "Yu, M. et al. Circulating breast tumor cells exhibit dynamic changes in epithelial and mesenchymal composition. Science 339, 580\u2013584 (2013)."
+    },
+    {
+      "key": "7302_CR96",
+      "doi": "10.1073/pnas.1508541113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "KJ Cheung",
+      "unstructured": "Cheung, K. J. et al. Polyclonal breast cancer metastases arise from collective dissemination of keratin 14-expressing tumor cell clusters. Proc. Natl Acad. Sci. USA 113, E854\u2013E863 (2016)."
+    },
+    {
+      "key": "7302_CR97",
+      "doi": "10.1038/nrc3080",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Wirtz, D., Konstantopoulos, K. & Searson, P. C. The physics of cancer: the role of physical interactions and mechanical forces in metastasis. Nat. Rev. Cancer https://doi.org/10.1038/nrc3080 (2011)."
+    },
+    {
+      "key": "7302_CR98",
+      "doi": "10.1186/s13046-020-1533-0",
+      "title": "",
+      "journal": "J. Exp. Clin. Cancer Res.",
+      "year": "2020",
+      "author": "Q Huang",
+      "unstructured": "Huang, Q. et al. Shear stress activates ATOH8 via autocrine VEGF promoting glycolysis dependent-survival of colorectal cancer cells in the circulation. J. Exp. Clin. Cancer Res. 39, 25 (2020)."
+    },
+    {
+      "key": "7302_CR99",
+      "doi": "10.7150/ijbs.27055",
+      "title": "",
+      "journal": "Int. J. Biol. Sci.",
+      "year": "2018",
+      "author": "X Wang",
+      "unstructured": "Wang, X. et al. Fluid shear stress promotes autophagy in hepatocellular carcinoma cells. Int. J. Biol. Sci. 14, 1277\u20131290 (2018)."
+    },
+    {
+      "key": "7302_CR100",
+      "doi": "10.1038/s41586-019-0915-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "BM Szczerba",
+      "unstructured": "Szczerba, B. M. et al. Neutrophils escort circulating tumour cells to enable cell cycle progression. Nature 566, 553\u2013557 (2019)."
+    },
+    {
+      "key": "7302_CR101",
+      "doi": "10.1016/j.cell.2014.07.013",
+      "title": "",
+      "journal": "Cell",
+      "year": "2014",
+      "author": "N Aceto",
+      "unstructured": "Aceto, N. et al. Circulating tumor cell clusters are oligoclonal precursors of breast cancer metastasis. Cell 158, 1110\u20131122 (2014)."
+    },
+    {
+      "key": "7302_CR102",
+      "doi": "10.1016/j.cell.2020.08.045",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "ED Wrenn",
+      "unstructured": "Wrenn, E. D. et al. Regulation of collective metastasis by nanolumenal signaling. Cell 183, 395\u2013410 (2020)."
+    },
+    {
+      "key": "7302_CR103",
+      "doi": "10.1126/sciadv.abo7792",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2022",
+      "author": "F Xia",
+      "unstructured": "Xia, F. et al. Genome-wide in vivo screen of circulating tumor cells identifies SLIT2 as a regulator of metastasis. Sci. Adv. 8, eabo7792 (2022)."
+    },
+    {
+      "key": "7302_CR104",
+      "doi": "10.1038/s41588-022-01182-0",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Rahrmann, E. P. et al. The NALCN channel regulates metastasis and nonmalignant cell dissemination. Nat. Genet. https://doi.org/10.1038/s41588-022-01182-0 (2022)."
+    },
+    {
+      "key": "7302_CR105",
+      "doi": "10.1053/j.gastro.2013.12.007",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "2014",
+      "author": "AD Rhim",
+      "unstructured": "Rhim, A. D. et al. Detection of circulating pancreas epithelial cells in patients with pancreatic cystic lesions. Gastroenterology 146, 647\u2013651 (2014)."
+    },
+    {
+      "key": "7302_CR106",
+      "doi": "10.1038/nature20785",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "H Hosseini",
+      "unstructured": "Hosseini, H. et al. Early dissemination seeds metastasis in breast cancer. Nature 540, 552\u2013558 (2016)."
+    },
+    {
+      "key": "7302_CR107",
+      "doi": "10.1038/nature20609",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "KL Harper",
+      "unstructured": "Harper, K. L. et al. Mechanism of early dissemination and metastasis in Her2+ mammary cancer. Nature 540, 588\u2013592 (2016)."
+    },
+    {
+      "key": "7302_CR108",
+      "doi": "10.1126/science.1161621",
+      "title": "",
+      "journal": "Science",
+      "year": "2008",
+      "author": "K Podsypanina",
+      "unstructured": "Podsypanina, K. et al. Seeding and propagation of untransformed mouse mammary cells in the lung. Science 321, 1841\u20131844 (2008)."
+    },
+    {
+      "key": "7302_CR109",
+      "doi": "10.1158/2159-8290.cd-21-0010",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2021",
+      "author": "J Massagu\u00e9",
+      "unstructured": "Massagu\u00e9, J. & Ganesh, K. Metastasis-initiating cells and ecosystems. Cancer Discov. 11, 971\u2013994 (2021)."
+    },
+    {
+      "key": "7302_CR110",
+      "doi": "10.1038/s41588-018-0106-z",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "M El-Kebir",
+      "unstructured": "El-Kebir, M., Satas, G. & Raphael, B. J. Inferring parsimonious migration histories for metastatic cancers. Nat. Genet. 50, 718\u2013726 (2018)."
+    },
+    {
+      "key": "7302_CR111",
+      "doi": "10.1126/science.aat7171",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "JG Reiter",
+      "unstructured": "Reiter, J. G. et al. Minimal functional driver gene heterogeneity among untreated metastases. Science 361, 1033\u20131037 (2018)."
+    },
+    {
+      "key": "7302_CR112",
+      "doi": "10.1016/j.cell.2018.03.043",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "S Turajlic",
+      "unstructured": "Turajlic, S. et al. Deterministic evolutionary trajectories influence primary tumor growth: TRACERx Renal. Cell 173, 595\u2013610 (2018)."
+    },
+    {
+      "key": "7302_CR113",
+      "doi": "10.1038/ng.3214",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2015",
+      "author": "A Sottoriva",
+      "unstructured": "Sottoriva, A. et al. A Big Bang model of human colorectal tumor growth. Nat. Genet. 47, 209\u2013216 (2015)."
+    },
+    {
+      "key": "7302_CR114",
+      "doi": "10.1038/s41588-019-0551-3",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2020",
+      "author": "A Noorani",
+      "unstructured": "Noorani, A. et al. Genomic evidence supports a clonal diaspora model for metastases of esophageal adenocarcinoma. Nat. Genet. 52, 74\u201383 (2020)."
+    },
+    {
+      "key": "7302_CR115",
+      "doi": "10.1073/pnas.1508074112",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2015",
+      "author": "JZ Sanborn",
+      "unstructured": "Sanborn, J. Z. et al. Phylogenetic analyses of melanoma reveal complex patterns of metastatic dissemination. Proc. Natl Acad. Sci. USA 112, 10995\u201311000 (2015)."
+    },
+    {
+      "key": "7302_CR116",
+      "doi": "10.1158/2159-8290.cd-15-0120",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2015",
+      "author": "R Maddipati",
+      "unstructured": "Maddipati, R. & Stanger, B. Z. Pancreatic cancer metastases harbor evidence of polyclonality. Cancer Discov. 5, 1086\u20131097 (2015)."
+    },
+    {
+      "key": "7302_CR117",
+      "doi": "10.1038/s43018-020-0088-5",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Risson, E., Nobre, A. R., Maguer-Satta, V. & Aguirre-Ghiso, J. A. The current paradigm and challenges ahead for the dormancy of disseminated tumor cells. Nat. Cancer https://doi.org/10.1038/s43018-020-0088-5 (2020)."
+    },
+    {
+      "key": "7302_CR118",
+      "doi": "10.1016/j.cell.2012.06.035",
+      "title": "",
+      "journal": "Cell",
+      "year": "2012",
+      "author": "H Gao",
+      "unstructured": "Gao, H. et al. The BMP inhibitor Coco reactivates breast cancer cells at lung metastatic sites. Cell 150, 764\u2013779 (2012)."
+    },
+    {
+      "key": "7302_CR119",
+      "doi": "10.1016/j.cell.2016.06.009",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "H Gao",
+      "unstructured": "Gao, H. et al. Multi-organ site metastatic reactivation mediated by non-canonical discoidin domain receptor 1 signaling. Cell 166, 47\u201362 (2016)."
+    },
+    {
+      "key": "7302_CR120",
+      "doi": "10.1158/0008-5472.can-16-0608",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Cock, J. M. D. et al. Inflammation triggers Zeb1-dependent escape from tumor latency. Cancer Res. https://doi.org/10.1158/0008-5472.CAN-16-0608 (2016)."
+    },
+    {
+      "key": "7302_CR121",
+      "doi": "10.1126/science.aao4227",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "J Albrengues",
+      "unstructured": "Albrengues, J. et al. Neutrophil extracellular traps produced during inflammation awaken dormant cancer cells in mice. Science 361, eaao4227 (2018)."
+    },
+    {
+      "key": "7302_CR122",
+      "doi": "10.1038/s41586-021-03614-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "AL Correia",
+      "unstructured": "Correia, A. L. et al. Hepatic stellate cells suppress NK cell-sustained breast cancer dormancy. Nature 594, 566\u2013571 (2021)."
+    },
+    {
+      "key": "7302_CR123",
+      "doi": "10.1038/s41586-022-04774-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "ME Fane",
+      "unstructured": "Fane, M. E. et al. Stromal changes in the aged lung induce an emergence from melanoma dormancy. Nature 606, 396\u2013405 (2022)."
+    },
+    {
+      "key": "7302_CR124",
+      "doi": "10.1038/s41586-020-2969-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "X Jin",
+      "unstructured": "Jin, X. et al. A metastasis map of human cancer cell lines. Nature 588, 331\u2013336 (2020)."
+    },
+    {
+      "key": "7302_CR125",
+      "doi": "10.1038/s41586-023-05783-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "AM Frankell",
+      "unstructured": "Frankell, A. M. et al. The evolution of lung cancer and impact of subclonal selection in TRACERx. Nature 616, 525\u2013533 (2023)."
+    },
+    {
+      "key": "7302_CR126",
+      "doi": "10.1073/pnas.1016234107",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2010",
+      "author": "DG Duda",
+      "unstructured": "Duda, D. G. et al. Malignant cells facilitate lung metastasis by bringing their own soil. Proc. Natl Acad. Sci. USA 107, 21677\u201321682 (2010)."
+    },
+    {
+      "key": "7302_CR127",
+      "doi": "10.1038/nrc.2017.6",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Peinado, H. et al. Pre-metastatic niches: organ-specific homes for metastases. Nat. Rev. Cancer https://doi.org/10.1038/nrc.2017.6 (2017)."
+    },
+    {
+      "key": "7302_CR128",
+      "doi": "10.1038/nature04186",
+      "title": "",
+      "journal": "Nature",
+      "year": "2005",
+      "author": "RN Kaplan",
+      "unstructured": "Kaplan, R. N. et al. VEGFR1-positive haematopoietic bone marrow progenitors initiate the pre-metastatic niche. Nature 438, 820\u2013827 (2005)."
+    },
+    {
+      "key": "7302_CR129",
+      "doi": "10.1038/nrc2621",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Psaila, B. & Lyden, D. The metastatic niche: adapting the foreign soil. Nat. Rev. Cancer https://doi.org/10.1038/nrc2621 (2009)."
+    },
+    {
+      "key": "7302_CR130",
+      "doi": "10.1038/ncomms7716",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2015",
+      "author": "N Tominaga",
+      "unstructured": "Tominaga, N. et al. Brain metastatic cancer cells release microRNA-181c-containing extracellular vesicles capable of destructing blood-brain barrier. Nat. Commun. 6, 6716 (2015)."
+    },
+    {
+      "key": "7302_CR131",
+      "doi": "10.1016/j.ccr.2014.03.007",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2014",
+      "author": "W Zhou",
+      "unstructured": "Zhou, W. et al. Cancer-Secreted miR-105 destroys vascular endothelial barriers to promote metastasis. Cancer Cell 25, 501\u2013515 (2014)."
+    },
+    {
+      "key": "7302_CR132",
+      "doi": "10.1016/j.cmet.2021.12.001",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2022",
+      "author": "PK Parida",
+      "unstructured": "Parida, P. K. et al. Metabolic diversity within breast cancer brain-tropic cells determines metastatic fitness. Cell Metab. 34, 90\u2013105 (2022)."
+    },
+    {
+      "key": "7302_CR133",
+      "doi": "10.1038/s41586-019-1004-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "JW Lee",
+      "unstructured": "Lee, J. W. et al. Hepatocytes direct the formation of a pro-metastatic niche in the liver. Nature 567, 249\u2013252 (2019)."
+    },
+    {
+      "key": "7302_CR134",
+      "doi": "10.1038/s43018-021-00272-y",
+      "title": "",
+      "journal": "Nat. Cancer",
+      "year": "2021",
+      "author": "S Garc\u00eda-Silva",
+      "unstructured": "Garc\u00eda-Silva, S. et al. Melanoma-derived small extracellular vesicles induce lymphangiogenesis and metastasis through an NGFR-dependent mechanism. Nat. Cancer 2, 1387\u20131405 (2021)."
+    },
+    {
+      "key": "7302_CR135",
+      "doi": "10.1016/j.cmet.2021.09.002",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2021",
+      "author": "SM Morrissey",
+      "unstructured": "Morrissey, S. M. et al. Tumor-derived exosomes drive immunosuppressive macrophages in a pre-metastatic niche through glycolytic dominant metabolic reprogramming. Cell Metab. 33, 2040\u20132058 (2021)."
+    },
+    {
+      "key": "7302_CR136",
+      "doi": "10.1038/nature15756",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "A Hoshino",
+      "unstructured": "Hoshino, A. et al. Tumour exosome integrins determine organotropic metastasis. Nature 527, 329\u2013335 (2015)."
+    },
+    {
+      "key": "7302_CR137",
+      "doi": "10.1038/nature15376",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "L Zhang",
+      "unstructured": "Zhang, L. et al. Microenvironment-induced PTEN loss by exosomal microRNA primes brain metastasis outgrowth. Nature 527, 100\u2013104 (2015)."
+    },
+    {
+      "key": "7302_CR138",
+      "doi": "10.1038/s41568-019-0205-x",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2020",
+      "author": "CD Arvanitis",
+      "unstructured": "Arvanitis, C. D., Ferraro, G. B. & Jain, R. K. The blood-brain barrier and blood-tumour barrier in brain tumours and metastases. Nat. Rev. Cancer 20, 26\u201341 (2020)."
+    },
+    {
+      "key": "7302_CR139",
+      "doi": "10.1038/ncb3011",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2014",
+      "author": "L Sevenich",
+      "unstructured": "Sevenich, L. et al. Analysis of tumour- and stroma-supplied proteolytic networks reveals a brain-metastasis-promoting role for cathepsin S. Nat. Cell Biol. 16, 876\u2013888 (2014)."
+    },
+    {
+      "key": "7302_CR140",
+      "doi": "10.1038/s41556-019-0404-4",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2019",
+      "author": "G Rodrigues",
+      "unstructured": "Rodrigues, G. et al. Tumour exosomal CEMIP protein promotes cancer cell colonization in brain metastasis. Nat. Cell Biol. 21, 1403\u20131412 (2019)."
+    },
+    {
+      "key": "7302_CR141",
+      "doi": "10.1016/j.cell.2017.10.001",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "N McGranahan",
+      "unstructured": "McGranahan, N. et al. Allele-specific HLA loss and immune escape in lung cancer evolution. Cell 171, 1259\u20131271 (2017)."
+    },
+    {
+      "key": "7302_CR142",
+      "doi": "10.1016/j.ccell.2019.08.008",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2019",
+      "author": "ML Burr",
+      "unstructured": "Burr, M. L. et al. An evolutionarily conserved function of polycomb silences the MHC class I antigen presentation pathway and enables immune evasion in cancer. Cancer Cell 36, 385\u2013401.e8 (2019)."
+    },
+    {
+      "key": "7302_CR143",
+      "doi": "10.1038/s41586-019-1032-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "R Rosenthal",
+      "unstructured": "Rosenthal, R. et al. Neoantigen-directed immune escape in lung cancer evolution. Nature 567, 479\u2013485 (2019)."
+    },
+    {
+      "key": "7302_CR144",
+      "doi": "10.1038/s41586-022-04735-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "M \u0141uksza",
+      "unstructured": "\u0141uksza, M. et al. Neoantigen quality predicts immunoediting in survivors of pancreatic cancer. Nature 606, 389\u2013395 (2022)."
+    },
+    {
+      "key": "7302_CR145",
+      "doi": "10.1038/nature25492",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "DVF Tauriello",
+      "unstructured": "Tauriello, D. V. F. et al. TGF\u03b2 drives immune evasion in genetically reconstituted colon cancer metastasis. Nature 554, 538\u2013543 (2018)."
+    },
+    {
+      "key": "7302_CR146",
+      "doi": "10.1158/0008-5472.can-17-1891",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2018",
+      "author": "L Huergo-Zapico",
+      "unstructured": "Huergo-Zapico, L. et al. NK-cell editing mediates epithelial-to-mesenchymal transition via phenotypic and proteomic changes in melanoma cell lines. Cancer Res. 78, 3913\u20133925 (2018)."
+    },
+    {
+      "key": "7302_CR147",
+      "doi": "10.1016/j.cell.2016.02.025",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "S Malladi",
+      "unstructured": "Malladi, S. et al. Metastatic latency and immune evasion through autocrine inhibition of WNT. Cell 165, 45\u201360 (2016)."
+    },
+    {
+      "key": "7302_CR148",
+      "doi": "10.1038/s43018-020-0068-9",
+      "title": "",
+      "journal": "Nat. Cancer",
+      "year": "2020",
+      "author": "HC Lo",
+      "unstructured": "Lo, H. C. et al. Resistance to natural killer cell immunosurveillance confers a selective advantage to polyclonal metastasis. Nat. Cancer 1, 709\u2013722 (2020)."
+    },
+    {
+      "key": "7302_CR149",
+      "doi": "10.1016/j.cell.2022.04.019",
+      "title": "",
+      "journal": "Cell",
+      "year": "2022",
+      "author": "NE Reticker-Flynn",
+      "unstructured": "Reticker-Flynn, N. E. et al. Lymph node colonization induces tumor-immune tolerance to promote distant metastasis. Cell 185, 1924\u20131942 (2022). This study indicates that lymph node colonization induces tumour-specific immune tolerance and thereby facilitates further spreading of the disease to distant organs."
+    },
+    {
+      "key": "7302_CR150",
+      "doi": "10.1038/s41568-020-00320-2",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Bergers, G. & Fendt, S. M. The metabolism of cancer cells during metastasis. Nat. Rev. Cancer https://doi.org/10.1038/s41568-020-00320-2 (2021)."
+    },
+    {
+      "key": "7302_CR151",
+      "doi": "10.1101/gad.290940.116",
+      "title": "",
+      "journal": "Genes Dev.",
+      "year": "2017",
+      "author": "P Falletta",
+      "unstructured": "Falletta, P. et al. Translation reprogramming is an evolutionarily conserved driver of phenotypic plasticity and therapeutic resistance in melanoma. Genes Dev. 31, 18\u201333 (2017)."
+    },
+    {
+      "key": "7302_CR152",
+      "doi": "10.1016/j.cmet.2018.11.018",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Garc\u00eda-Jim\u00e9nez, C. & Goding, C. R. Starvation and pseudo-starvation as drivers of cancer metastasis through translation reprogramming. Cell Metab. 29, 254\u2013267 (2019)."
+    },
+    {
+      "key": "7302_CR153",
+      "doi": "10.1016/j.cmet.2017.09.006",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2017",
+      "author": "S Andrzejewski",
+      "unstructured": "Andrzejewski, S. et al. PGC-1\u03b1 promotes breast cancer metastasis and confers bioenergetic flexibility against metabolic drugs. Cell Metab. 26, 778\u2013787 (2017)."
+    },
+    {
+      "key": "7302_CR154",
+      "doi": "10.1038/ncb3039",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2014",
+      "author": "VS Lebleu",
+      "unstructured": "Lebleu, V. S. et al. PGC-1\u03b1 mediates mitochondrial biogenesis and oxidative phosphorylation in cancer cells to promote metastasis. Nat. Cell Biol. 16, 992\u20131003 (2014)."
+    },
+    {
+      "key": "7302_CR155",
+      "doi": "10.1016/j.devcel.2021.04.013",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Broadfield, L. A., Pane, A. A., Talebi, A., Swinnen, J. V. & Fendt, S. M. Lipid metabolism in cancer: new perspectives and emerging mechanisms. Dev. Cell https://doi.org/10.1016/j.devcel.2021.04.013 (2021)."
+    },
+    {
+      "key": "7302_CR156",
+      "doi": "10.1038/nature20791",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "G Pascual",
+      "unstructured": "Pascual, G. et al. Targeting metastasis-initiating cells through the fatty acid receptor CD36. Nature 541, 41\u201345 (2017)."
+    },
+    {
+      "key": "7302_CR157",
+      "doi": "10.1038/nm.2492",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2011",
+      "author": "KM Nieman",
+      "unstructured": "Nieman, K. M. et al. Adipocytes promote ovarian cancer metastasis and provide energy for rapid tumor growth. Nat. Med. 17, 1498\u20131503 (2011)."
+    },
+    {
+      "key": "7302_CR158",
+      "doi": "10.1038/s43018-021-00183-y",
+      "title": "",
+      "journal": "Nat. Cancer",
+      "year": "2021",
+      "author": "GB Ferraro",
+      "unstructured": "Ferraro, G. B. et al. Fatty acid synthesis is required for breast cancer brain metastasis. Nat. Cancer 2, 414\u2013428 (2021)."
+    },
+    {
+      "key": "7302_CR159",
+      "doi": "10.1038/s41586-022-04758-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "M Rossi",
+      "unstructured": "Rossi, M. et al. PHGDH heterogeneity potentiates cancer cell dissemination and metastasis. Nature 605, 747\u2013753 (2022)."
+    },
+    {
+      "key": "7302_CR160",
+      "doi": "10.1016/j.ccell.2019.12.012",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2020",
+      "author": "EC Cheung",
+      "unstructured": "Cheung, E. C. et al. Dynamic ROS control by TIGAR regulates the initiation and progression of pancreatic cancer. Cancer Cell 37, 168\u2013182 (2020)."
+    },
+    {
+      "key": "7302_CR161",
+      "doi": "10.1038/s41556-022-00881-4",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2022",
+      "author": "SB Crist",
+      "unstructured": "Crist, S. B. et al. Unchecked oxidative stress in skeletal muscle prevents outgrowth of disseminated tumour cells. Nat. Cell Biol. 24, 538\u2013553 (2022)."
+    },
+    {
+      "key": "7302_CR162",
+      "doi": "10.1038/nature15726",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "E Piskounova",
+      "unstructured": "Piskounova, E. et al. Oxidative stress inhibits distant metastasis by human melanoma cells. Nature 527, 186\u2013191 (2015)."
+    },
+    {
+      "key": "7302_CR163",
+      "doi": "10.1038/s41586-019-1847-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "A Tasdogan",
+      "unstructured": "Tasdogan, A. et al. Metabolic heterogeneity confers differences in melanoma metastatic potential. Nature 577, 115\u2013120 (2020)."
+    },
+    {
+      "key": "7302_CR164",
+      "doi": "10.1158/2159-8290.cd-18-1489",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2019",
+      "author": "GM Fischer",
+      "unstructured": "Fischer, G. M. et al. Molecular profiling reveals unique immune and metabolic features of melanoma brain metastases. Cancer Discov. 9, 628\u2013645 (2019)."
+    },
+    {
+      "key": "7302_CR165",
+      "doi": "10.7554/elife.43627",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "H Basnet",
+      "unstructured": "Basnet, H. et al. Flura-seq identifies organ-specific metabolic adaptations during early metastatic colonization. eLife 8, e43627 (2019)."
+    },
+    {
+      "key": "7302_CR166",
+      "doi": "10.1038/s41556-020-0477-0",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2020",
+      "author": "RT Davis",
+      "unstructured": "Davis, R. T. et al. Transcriptional diversity and bioenergetic shift in human breast cancer metastasis revealed by single-cell RNA sequencing. Nat. Cell Biol. 22, 310\u2013320 (2020)."
+    },
+    {
+      "key": "7302_CR167",
+      "doi": "10.1038/ncomms15267",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "I Elia",
+      "unstructured": "Elia, I. et al. Proline metabolism supports metastasis formation and could be inhibited to selectively target metastasizing cancer cells. Nat. Commun. 8, 15267 (2017)."
+    },
+    {
+      "key": "7302_CR168",
+      "doi": "10.1038/s41586-022-04898-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "S Delaunay",
+      "unstructured": "Delaunay, S. et al. Mitochondrial RNA modifications shape metabolic plasticity in metastasis. Nature 607, 593\u2013603 (2022)."
+    },
+    {
+      "key": "7302_CR169",
+      "doi": "10.1038/s43018-023-00513-2",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Altea-Manzano, P. et al. A palmitate-rich metastatic niche enables metastasis growth via p65 acetylation resulting in pro-metastatic NF-\u03baB signaling. Nat. Cancer https://doi.org/10.1038/s43018-023-00513-2 (2023)."
+    },
+    {
+      "key": "7302_CR170",
+      "doi": "10.1101/2022.08.17.504141",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Sivanand, S. et al. Cancer tissue of origin constrains the growth and metabolism of metastases. Preprint at bioRxiv https://doi.org/10.1101/2022.08.17.504141 (2022)."
+    },
+    {
+      "key": "7302_CR171",
+      "doi": "10.1038/s41586-020-2623-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "JM Ubellacker",
+      "unstructured": "Ubellacker, J. M. et al. Lymph protects metastasizing melanoma cells from ferroptosis. Nature 585, 113\u2013118 (2020)."
+    },
+    {
+      "key": "7302_CR172",
+      "doi": "10.1038/s42255-020-00317-z",
+      "title": "",
+      "journal": "Nat. Metab.",
+      "year": "2021",
+      "author": "I Elia",
+      "unstructured": "Elia, I. & Haigis, M. C. Metabolites and the tumour microenvironment: from cellular mechanisms to systemic metabolism. Nat. Metab. 3, 21\u201332 (2021)."
+    },
+    {
+      "key": "7302_CR173",
+      "doi": "10.3389/fcell.2022.930250",
+      "title": "",
+      "journal": "Front. Cell Dev. Biol.",
+      "year": "2022",
+      "author": "P Falletta",
+      "unstructured": "Falletta, P., Goding, C. R. & Vivas-Garc\u00eda, Y. Connecting metabolic rewiring with phenotype switching in melanoma. Front. Cell Dev. Biol. 10, 930250 (2022)."
+    },
+    {
+      "key": "7302_CR174",
+      "doi": "10.1126/sciadv.abh2443",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2021",
+      "author": "SY Loo",
+      "unstructured": "Loo, S. Y. et al. Fatty acid oxidation is a druggable gateway regulating cellular plasticity for driving metastasis in breast cancer. Sci. Adv. 7, eabh2443 (2021)."
+    },
+    {
+      "key": "7302_CR175",
+      "doi": "10.1038/nm.4407",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2017",
+      "author": "R Romero",
+      "unstructured": "Romero, R. et al. Keap1 loss promotes Kras-driven lung cancer and results in dependence on glutaminolysis. Nat. Med. 23, 1362\u20131368 (2017)."
+    },
+    {
+      "key": "7302_CR176",
+      "doi": "10.1038/s41586-019-1730-1",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "N Vasan",
+      "unstructured": "Vasan, N., Baselga, J. & Hyman, D. M. A view on drug resistance in cancer. Nature 575, 299\u2013309 (2019)."
+    },
+    {
+      "key": "7302_CR177",
+      "doi": "10.1038/s41568-020-00302-4",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2020",
+      "author": "J-C Marine",
+      "unstructured": "Marine, J.-C., Dawson, S.-J. & Dawson, M. A. Non-genetic mechanisms of therapeutic resistance in cancer. Nat. Rev. Cancer 20, 743\u2013756 (2020)."
+    },
+    {
+      "key": "7302_CR178",
+      "doi": "10.1038/s41586-022-04875-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "Z Diamantopoulou",
+      "unstructured": "Diamantopoulou, Z. et al. The metastatic spread of breast cancer accelerates during sleep. Nature 607, 156\u2013162 (2022). This study provides evidence that metastatic spreading in breast cancer follows circadian rhythmicity, with the highest levels observed during the rest phase."
+    },
+    {
+      "key": "7302_CR179",
+      "doi": "10.1126/science.abc4552",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Sepich-Poore, G. D. et al. The microbiome and human cancer. Science https://doi.org/10.1126/science.abc4552 (2021)."
+    },
+    {
+      "key": "7302_CR180",
+      "doi": "10.1016/j.cell.2022.09.015",
+      "title": "",
+      "journal": "Cell",
+      "year": "2022",
+      "author": "AB Dohlman",
+      "unstructured": "Dohlman, A. B. et al. A pan-cancer mycobiome analysis reveals fungal involvement in gastrointestinal and lung tumors. Cell 185, 3807\u20133822 (2022)."
+    },
+    {
+      "key": "7302_CR181",
+      "doi": "10.1038/s41467-020-16967-2",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "L Parhi",
+      "unstructured": "Parhi, L. et al. Breast cancer colonization by Fusobacterium nucleatum accelerates tumor growth and metastatic progression. Nat. Commun. 11, 3259 (2020)."
+    },
+    {
+      "key": "7302_CR182",
+      "doi": "10.1126/science.aal5240",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "S Bullman",
+      "unstructured": "Bullman, S. et al. Analysis of Fusobacterium persistence and antibiotic response in colorectal cancer. Science 358, 1443\u20131448 (2017)."
+    },
+    {
+      "key": "7302_CR183",
+      "doi": "10.1016/j.ccell.2021.03.004",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2021",
+      "author": "A Bertocchi",
+      "unstructured": "Bertocchi, A. et al. Gut vascular barrier impairment leads to intestinal bacteria dissemination and colorectal cancer metastasis to liver. Cancer Cell 39, 708\u2013724 (2021)."
+    },
+    {
+      "key": "7302_CR184",
+      "doi": "10.1016/j.cell.2022.02.027",
+      "title": "",
+      "journal": "Cell",
+      "year": "2022",
+      "author": "A Fu",
+      "unstructured": "Fu, A. et al. Tumor-resident intracellular microbiota promotes metastatic colonization in breast cancer. Cell 185, 1356\u20131372 (2022). This study reveals that tumour-resident bacteria promote the release and survival of CTCs."
+    },
+    {
+      "key": "7302_CR185",
+      "doi": "10.1038/s41586-022-05435-0",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Galeano Ni\u00f1o, J. L. et al. Effect of the intratumoral microbiota on spatial and cellular heterogeneity in cancer. Nature https://doi.org/10.1038/s41586-022-05435-0 (2022)."
+    },
+    {
+      "key": "7302_CR186",
+      "doi": "10.1016/j.cell.2022.09.005",
+      "title": "",
+      "journal": "Cell",
+      "year": "2022",
+      "author": "L Narunsky-Haziza",
+      "unstructured": "Narunsky-Haziza, L. et al. Pan-cancer analyses reveal cancer-type-specific fungal ecologies and bacteriome interactions. Cell 185, 3789\u20133806 (2022)."
+    },
+    {
+      "key": "7302_CR187",
+      "doi": "10.1038/s41568-020-0251-4",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2020",
+      "author": "AK Biswas",
+      "unstructured": "Biswas, A. K. & Acharyya, S. Understanding cachexia in the context of metastatic progression. Nat. Rev. Cancer 20, 274\u2013284 (2020)."
+    },
+    {
+      "key": "7302_CR188",
+      "doi": "10.1016/j.immuni.2018.03.004",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2018",
+      "author": "MD Wellenstein",
+      "unstructured": "Wellenstein, M. D. & de Visser, K. E. Cancer-cell-intrinsic mechanisms shaping the tumor immune landscape. Immunity 48, 399\u2013416 (2018)."
+    },
+    {
+      "key": "7302_CR189",
+      "doi": "10.1016/j.dnarep.2019.102673",
+      "title": "",
+      "journal": "DNA Repair",
+      "year": "2019",
+      "author": "J Kay",
+      "unstructured": "Kay, J., Thadhani, E., Samson, L. & Engelward, B. Inflammation-induced DNA damage, mutations and cancer. DNA Repair 83, 102673 (2019)."
+    },
+    {
+      "key": "7302_CR190",
+      "doi": "10.1056/nejmp1805966",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2018",
+      "author": "JA Beaver",
+      "unstructured": "Beaver, J. A., Kluetz, P. G. & Pazdur, R. Metastasis-free survival\u2014a new end point in prostate cancer trials. N. Engl. J. Med. 378, 2458\u20132460 (2018)."
+    },
+    {
+      "key": "7302_CR191",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "US National Library of Medicine. The PEACE (Posthumous Evaluation of Advanced Cancer Environment) Study. ClinicalTrials.gov clinicaltrials.gov/ct2/show/NCT03004755 (2023)."
+    },
+    {
+      "key": "7302_CR192",
+      "doi": "10.1158/2159-8290.cd-20-1559",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2021",
+      "author": "C Bailey",
+      "unstructured": "Bailey, C. et al. Tracking cancer evolution through the disease course. Cancer Discov. 11, 916\u2013932 (2021)."
+    },
+    {
+      "key": "7302_CR193",
+      "doi": "10.1038/s41586-023-06372-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "J Lengrand",
+      "unstructured": "Lengrand, J. et al. Pharmacological targeting of netrin-1 inhibits EMT in cancer. Nature 620, 402\u2013408 (2023). This article describes a clinically compatible approach to target EMT cells and thereby inhibit early metastatic dissemination."
+    },
+    {
+      "key": "7302_CR194",
+      "doi": "10.1038/s41586-023-06367-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "PA Cassier",
+      "unstructured": "Cassier, P. A. et al. Netrin-1 blockade inhibits tumour growth and EMT features in endometrial cancer. Nature 620, 409\u2013416 (2023)."
+    },
+    {
+      "key": "7302_CR195",
+      "doi": "10.1038/s41467-021-23237-2",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2021",
+      "author": "S Dhara",
+      "unstructured": "Dhara, S. et al. Pancreatic cancer prognosis is predicted by an ATAC-array technology for assessing chromatin accessibility. Nat. Commun. 12, 3044 (2021)."
+    },
+    {
+      "key": "7302_CR196",
+      "doi": "10.1016/j.cell.2016.05.052",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "SK Denny",
+      "unstructured": "Denny, S. K. et al. Nfib promotes metastasis through a widespread increase in chromatin accessibility. Cell 166, 328\u2013342 (2016)."
+    },
+    {
+      "key": "7302_CR197",
+      "doi": "10.15252/embj.201899599",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Zhao, Y. et al. EZH 2 cooperates with gain\u2010of\u2010function p53 mutants to promote cancer growth and metastasis. EMBO J. 38, e99599 (2019)."
+    },
+    {
+      "key": "7302_CR198",
+      "doi": "10.1038/s41392-019-0095-0",
+      "title": "",
+      "journal": "Signal Transduct. Target. Ther.",
+      "year": "2019",
+      "author": "Y Cheng",
+      "unstructured": "Cheng, Y. et al. Targeting epigenetic regulators for cancer therapy: mechanisms and advances in clinical trials. Signal Transduct. Target. Ther. 4, 62 (2019)."
+    },
+    {
+      "key": "7302_CR199",
+      "doi": "10.1038/s41586-022-05425-2",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Lomakin, A. et al. Spatial genomics maps the structure, nature and evolution of cancer clones. Nature https://doi.org/10.1038/s41586-022-05425-2 (2022)."
+    },
+    {
+      "key": "7302_CR200",
+      "doi": "10.1016/j.cell.2022.06.007",
+      "title": "",
+      "journal": "Cell",
+      "year": "2022",
+      "author": "J Biermann",
+      "unstructured": "Biermann, J. et al. Dissecting the treatment-naive ecosystem of human melanoma brain metastasis. Cell 185, 2591\u20132608 (2022)."
+    },
+    {
+      "key": "7302_CR201",
+      "doi": "10.1038/s41591-022-02047-z",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Jee, J. et al. Overall survival with circulating tumor DNA-guided therapy in advanced non-small-cell lung cancer. Nat. Med. https://doi.org/10.1038/s41591-022-02047-z (2022)."
+    },
+    {
+      "key": "7302_CR202",
+      "doi": "10.1038/s41416-019-0726-9",
+      "title": "",
+      "journal": "Br. J. Cancer",
+      "year": "2020",
+      "author": "A Nanou",
+      "unstructured": "Nanou, A. et al. Tumour-derived extracellular vesicles in blood of metastatic cancer patients associate with overall survival. Br. J. Cancer 122, 801\u2013811 (2020)."
+    },
+    {
+      "key": "7302_CR203",
+      "doi": "10.1038/nature22364",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "C Abbosh",
+      "unstructured": "Abbosh, C. et al. Phylogenetic ctDNA analysis depicts early-stage lung cancer evolution. Nature 545, 446\u2013451 (2017)."
+    },
+    {
+      "key": "7302_CR204",
+      "doi": "10.1038/nature14581",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "SA Melo",
+      "unstructured": "Melo, S. A. et al. Glypican-1 identifies cancer exosomes and detects early pancreatic cancer. Nature 523, 177\u2013182 (2015)."
+    },
+    {
+      "key": "7302_CR205",
+      "doi": "10.1002/ctm2.1090",
+      "title": "",
+      "journal": "Clin. Transl. Med.",
+      "year": "2022",
+      "author": "LJ Albrecht",
+      "unstructured": "Albrecht, L. J. et al. Circulating cell-free messenger RNA enables non-invasive pan-tumour monitoring of melanoma therapy independent of the mutational genotype. Clin. Transl. Med. 12, e1090 (2022)."
+    },
+    {
+      "key": "7302_CR206",
+      "doi": "10.1016/j.cmet.2022.09.023",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2022",
+      "author": "M Martin-Perez",
+      "unstructured": "Martin-Perez, M., Urdiroz-Urricelqui, U., Bigas, C. & Benitah, S. A. The role of lipids in cancer progression and metastasis. Cell Metab. 34, 1675\u20131699 (2022)."
+    },
+    {
+      "key": "7302_CR207",
+      "doi": "10.1038/s41586-022-05035-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "DA Glinos",
+      "unstructured": "Glinos, D. A. et al. Transcriptome variation in human tissues revealed by long-read sequencing. Nature 608, 353\u2013359 (2022)."
+    },
+    {
+      "key": "7302_CR208",
+      "doi": "10.1093/nar/gkx861",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2018",
+      "author": "J Gong",
+      "unstructured": "Gong, J. et al. PancanQTL: systematic identification of cis-eQTLs and trans-eQTLs in 33 cancer types. Nucleic Acids Res. 46, D971\u2013D976 (2018)."
+    },
+    {
+      "key": "7302_CR209",
+      "doi": "10.1038/s41586-021-03796-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "Y Oren",
+      "unstructured": "Oren, Y. et al. Cycling cancer persister cells arise from lineages with distinct programs. Nature 596, 576\u2013582 (2021)."
+    },
+    {
+      "key": "7302_CR210",
+      "doi": "10.1016/j.cell.2020.07.003",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "SM Shaffer",
+      "unstructured": "Shaffer, S. M. et al. Memory sequencing reveals heritable single-cell gene expression programs associated with distinct cellular behaviors. Cell 182, 947\u2013959 (2020)."
+    }
+  ]
+}

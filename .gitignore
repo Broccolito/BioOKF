@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# Rust / Tauri build artifacts
+studio/target/
+**/target/
+
+# Tauri generated files
+studio/app/src-tauri/gen/
+
+# Node
+node_modules/
+
+# Playwright MCP transient session logs
+.playwright-mcp/
+
+# Editor / OS cruft
+*.swp
+*.swo
+Thumbs.db

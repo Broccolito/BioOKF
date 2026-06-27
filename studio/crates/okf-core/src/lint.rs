@@ -1,0 +1,273 @@
+//! Lint a BioOKF bundle against the v0.5 conformance rules. Pure + deterministic:
+//! it returns a typed report; it never mutates the bundle.
+
+use crate::bundle::Bundle;
+use crate::graph::Graph;
+use crate::model::*;
+use serde::Serialize;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize)]
+#[serde(rename_all = "lowercase")]
+pub enum Severity {
+    Error,
+    Warn,
+    Info,
+}
+
+#[derive(Debug, Clone, Serialize)]
+pub struct Finding {
+    pub severity: Severity,
+    pub rule: String,
+    /// The node identifier (or "<bundle>") the finding concerns.
+    pub subject: String,
+    pub message: String,
+    pub path: Option<String>,
+}
+
+#[derive(Debug, Clone, Serialize, Default)]
+pub struct LintReport {
+    pub findings: Vec<Finding>,
+}
+
+impl LintReport {
+    pub fn errors(&self) -> usize {
+        self.findings.iter().filter(|f| f.severity == Severity::Error).count()
+    }
+    pub fn warnings(&self) -> usize {
+        self.findings.iter().filter(|f| f.severity == Severity::Warn).count()
+    }
+    pub fn infos(&self) -> usize {
+        self.findings.iter().filter(|f| f.severity == Severity::Info).count()
+    }
+    pub fn is_clean(&self) -> bool {
+        self.errors() == 0
+    }
+    fn push(&mut self, severity: Severity, rule: &str, subject: &str, message: String, path: Option<String>) {
+        self.findings.push(Finding {
+            severity,
+            rule: rule.to_string(),
+            subject: subject.to_string(),
+            message,
+            path,
+        });
+    }
+}
+
+fn looks_like_bare_curie(id: &str) -> bool {
+    // e.g. "HGNC:6018", "MONDO:0100096", "infores:hgnc" — a colon, no spaces.
+    id.contains(':') && !id.contains(' ') && !id.contains('(')
+}
+
+pub fn lint(bundle: &Bundle) -> LintReport {
+    let mut r = LintReport::default();
+
+    // --- file-level parse errors ---
+    for (path, err) in &bundle.parse_errors {
+        r.push(
+            Severity::Error,
+            "parse",
+            "<file>",
+            format!("failed to parse: {err}"),
+            Some(path.to_string_lossy().to_string()),
+        );
+    }
+
+    // --- duplicate identifiers ---
+    for (id, path) in &bundle.duplicate_identifiers {
+        r.push(
+            Severity::Error,
+            "identifier.duplicate",
+            id,
+            format!("identifier `{id}` is duplicated across the bundle"),
+            Some(path.to_string_lossy().to_string()),
+        );
+    }
+
+    for n in &bundle.nodes {
+        let path = Some(n.path.to_string_lossy().to_string());
+
+        // type must be one of 28
+        if !n.node_type.is_valid() {
+            r.push(
+                Severity::Error,
+                "type.invalid",
+                &n.identifier,
+                format!("`{}` is not one of the 28 controlled node types", n.raw_type),
+                path.clone(),
+            );
+        }
+
+        // identifier human-readability
+        if looks_like_bare_curie(&n.identifier) {
+            r.push(
+                Severity::Warn,
+                "identifier.opaque",
+                &n.identifier,
+                "identifier looks like a bare CURIE; it should be human-readable (move the CURIE to `xref`)".to_string(),
+                path.clone(),
+            );
+        }
+
+        // subtype expected
+        if n.subtype.is_none() {
+            r.push(
+                Severity::Info,
+                "subtype.missing",
+                &n.identifier,
+                "no `subtype` (agent-coined, expected but not validated)".to_string(),
+                path.clone(),
+            );
+        }
+
+        // source nodes should be anchored (raw_source OR an external xref)
+        if n.node_type.is_provenance() && n.raw_source.is_empty() && n.xref.is_empty() {
+            r.push(
+                Severity::Warn,
+                "source.unanchored",
+                &n.identifier,
+                "provenance node has neither a `raw_source` path nor an external `xref`".to_string(),
+                path.clone(),
+            );
+        }
+
+        // edges
+        for e in &n.edges {
+            lint_edge(&mut r, bundle, n, e, &path);
+        }
+    }
+
+    // --- orphans ---
+    let graph = Graph::from_bundle(bundle);
+    for id in graph.orphans() {
+        r.push(Severity::Warn, "node.orphan", &id, "node has no edges (orphan)".to_string(), None);
+    }
+
+    // --- contradictions (same subject/predicate/object, opposite negation) ---
+    lint_contradictions(&mut r, bundle);
+
+    r
+}
+
+fn lint_edge(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, path: &Option<String>) {
+    let subj = &n.identifier;
+
+    // predicate must be one of 23
+    if !e.predicate.is_valid() {
+        r.push(
+            Severity::Error,
+            "predicate.invalid",
+            subj,
+            format!("`{}` is not one of the 23 controlled predicates", e.raw_predicate),
+            path.clone(),
+        );
+    }
+    if e.reversed {
+        r.push(
+            Severity::Info,
+            "predicate.inverse",
+            subj,
+            format!("`{}` is a deprecated inverse alias; author the forward `{}` on the other node", e.raw_predicate, e.predicate.as_str()),
+            path.clone(),
+        );
+    }
+
+    // provenance triplet (mandatory)
+    match &e.knowledge_level {
+        None => r.push(Severity::Error, "edge.missing_knowledge_level", subj, format!("edge `{} -> {}` missing knowledge_level", e.predicate.as_str(), e.object), path.clone()),
+        Some(v) if !KNOWLEDGE_LEVELS.contains(&v.as_str()) => r.push(Severity::Error, "edge.invalid_knowledge_level", subj, format!("invalid knowledge_level `{v}`"), path.clone()),
+        _ => {}
+    }
+    match &e.agent_type {
+        None => r.push(Severity::Error, "edge.missing_agent_type", subj, format!("edge `{} -> {}` missing agent_type", e.predicate.as_str(), e.object), path.clone()),
+        Some(v) if !AGENT_TYPES.contains(&v.as_str()) => r.push(Severity::Error, "edge.invalid_agent_type", subj, format!("invalid agent_type `{v}`"), path.clone()),
+        _ => {}
+    }
+    match &e.primary_source {
+        None => r.push(Severity::Error, "edge.missing_primary_source", subj, format!("edge `{} -> {}` missing primary_source", e.predicate.as_str(), e.object), path.clone()),
+        Some(ps) if ps == "not_provided" => r.push(Severity::Warn, "edge.primary_source_not_provided", subj, "primary_source is `not_provided` (allowed only as a rare exception)".to_string(), path.clone()),
+        Some(ps) => {
+            match bundle.get(ps) {
+                None => r.push(Severity::Warn, "edge.primary_source_unresolved", subj, format!("primary_source `{ps}` does not resolve to a source node"), path.clone()),
+                Some(src) if !src.node_type.is_provenance() => r.push(Severity::Warn, "edge.primary_source_not_source", subj, format!("primary_source `{ps}` resolves to a {} node, not a Publication/Study/Dataset/Agent", src.node_type.as_str()), path.clone()),
+                _ => {}
+            }
+        }
+    }
+
+    // object resolution (skip the always-external case is impossible to know; warn)
+    if !bundle.contains(&e.object) {
+        let sev = if looks_like_bare_curie(&e.object) { Severity::Warn } else { Severity::Warn };
+        r.push(sev, "edge.object_unresolved", subj, format!("edge object `{}` does not resolve to any node's identifier", e.object), path.clone());
+    } else {
+        // domain/range checks (only when object resolves to a known node)
+        lint_domain_range(r, bundle, n, e, path);
+    }
+
+    // `regulates`/`expressed_in` require a `direction`
+    if matches!(e.predicate, Predicate::Regulates | Predicate::ExpressedIn) && e.direction.is_none() {
+        r.push(Severity::Info, "edge.missing_direction", subj, format!("`{}` should carry a `direction` (increased/decreased)", e.predicate.as_str()), path.clone());
+    }
+}
+
+fn lint_domain_range(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, path: &Option<String>) {
+    let obj = match bundle.get(&e.object) {
+        Some(o) => o,
+        None => return,
+    };
+    let subj = &n.identifier;
+    use NodeType::*;
+    let warn = |r: &mut LintReport, msg: String| {
+        r.push(Severity::Warn, "edge.range", subj, msg, path.clone());
+    };
+    match e.predicate {
+        Predicate::Treats | Predicate::Prevents => {
+            if !matches!(obj.node_type, Disease | Phenotype) {
+                warn(r, format!("`{}` should target a Disease/Phenotype, but `{}` is a {}", e.predicate.as_str(), e.object, obj.node_type.as_str()));
+            }
+        }
+        Predicate::HasPhenotype => {
+            if !matches!(obj.node_type, Phenotype) {
+                warn(r, format!("`has_phenotype` should target a Phenotype, but `{}` is a {}", e.object, obj.node_type.as_str()));
+            }
+        }
+        Predicate::Encodes => {
+            if !matches!(obj.node_type, Molecule) {
+                warn(r, format!("`encodes` should target a Molecule, but `{}` is a {}", e.object, obj.node_type.as_str()));
+            }
+        }
+        Predicate::ReportedIn => {
+            if !obj.node_type.is_provenance() {
+                warn(r, format!("`reported_in` should target a Publication/Study/Dataset/Agent, but `{}` is a {}", e.object, obj.node_type.as_str()));
+            }
+        }
+        _ => {}
+    }
+}
+
+fn lint_contradictions(r: &mut LintReport, bundle: &Bundle) {
+    use std::collections::HashMap;
+    // key: (subject, predicate, object) -> set of negation flags seen
+    let mut seen: HashMap<(String, String, String), (bool, bool)> = HashMap::new();
+    for n in &bundle.nodes {
+        for e in &n.edges {
+            let key = (n.identifier.clone(), e.predicate.as_str().to_string(), e.object.clone());
+            let entry = seen.entry(key).or_insert((false, false));
+            if e.negated {
+                entry.1 = true;
+            } else {
+                entry.0 = true;
+            }
+        }
+    }
+    for ((subj, pred, obj), (pos, neg)) in seen {
+        if pos && neg {
+            r.push(
+                Severity::Warn,
+                "edge.contradiction",
+                &subj,
+                format!("contradictory edges: both `{pred} -> {obj}` and its negation are asserted"),
+                None,
+            );
+        }
+    }
+}

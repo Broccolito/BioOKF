@@ -1,0 +1,1377 @@
+{
+  "article": {
+    "slug": "s41586-023-05957-1",
+    "doi": "10.1038/s41586-023-05957-1",
+    "title": "Reappraising the palaeobiology of Australopithecus",
+    "url": "https://www.nature.com/articles/s41586-023-05957-1",
+    "abbrev": "reappraising-palaeobiology-australopithecus",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/reappraising-palaeobiology-australopithecus"
+  },
+  "meta": {
+    "title": "Reappraising the palaeobiology of Australopithecus",
+    "authors": [
+      "Zeresenay Alemseged"
+    ],
+    "published": [
+      2023,
+      5,
+      3
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-023-05957-1",
+    "n_references": 150,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "5957_CR1",
+      "doi": "10.1038/115195a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1925",
+      "author": "RA Dart",
+      "unstructured": "Dart, R. A. Australopithecus africanus: the man-ape of South Africa. Nature 115, 195\u2013199 (1925). A pioneering study that reported on the discovery of Australopithecus and heralded the importance of Africa in the study of human evolution."
+    },
+    {
+      "key": "5957_CR2",
+      "doi": "10.1038/159377a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1947",
+      "author": "A Keith",
+      "unstructured": "Keith, A. Australopithecin\u00e6 or Dartians. Nature 159, 377\u2013377 (1947)."
+    },
+    {
+      "key": "5957_CR3",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Grine, F. E. in Evolutionary History of the Robust Australopithecines (ed. Grine, F. E.) 509\u2013520 (Aldine de Gruyter, 1988)."
+    },
+    {
+      "key": "5957_CR4",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Wood, B. A. Koobi Fora Research Project: Volume 4: Hominid Cranial Remains (Clarendon Press, 1991)."
+    },
+    {
+      "key": "5957_CR5",
+      "doi": "10.1002/ajpa.20732",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2007",
+      "author": "B Wood",
+      "unstructured": "Wood, B. & Constantino, P. Paranthropus boisei: fifty years of evidence and analysis. Am. J. Phys. Anthropol. 134, 106\u2013132 (2007)."
+    },
+    {
+      "key": "5957_CR6",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Johanson, D. C., White, T. D. & Coppens, Y. A new species of the genus Australopithecus (primates: Hominidae) from the Pliocene of eastern Africa. Kirtlandia 28, 1\u201314 (1978). A landmark paper that described and named the species Australopithecus afarensis (the \u201cLucy\u201d species), which gave rise to multiple species including Homo."
+    },
+    {
+      "key": "5957_CR7",
+      "doi": "10.1126/science.284.5414.629",
+      "title": "",
+      "journal": "Science",
+      "year": "1999",
+      "author": "B Asfaw",
+      "unstructured": "Asfaw, B. et al. Australopithecus garhi: a new species of early hominid from Ethiopia. Science 284, 629\u2013635 (1999)."
+    },
+    {
+      "key": "5957_CR8",
+      "doi": "10.1126/science.1184944",
+      "title": "",
+      "journal": "Science",
+      "year": "2010",
+      "author": "LR Berger",
+      "unstructured": "Berger, L. R. et al. Australopithecus sediba: a new species of Homo-like australopith from South Africa. Science 328, 195\u2013204 (2010)."
+    },
+    {
+      "key": "5957_CR9",
+      "doi": "10.1038/nature14448",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "Y Haile-Selassie",
+      "unstructured": "Haile-Selassie, Y. et al. New species from Ethiopia further expands Middle Pliocene hominin diversity. Nature 521, 483\u2013488 (2015)."
+    },
+    {
+      "key": "5957_CR10",
+      "doi": "10.1038/378273a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1995",
+      "author": "M Brunet",
+      "unstructured": "Brunet, M. et al. The first australopithecine 2,500 kilometres west of the Rift Valley (Chad). Nature 378, 273\u2013275 (1995)."
+    },
+    {
+      "key": "5957_CR11",
+      "doi": "10.1038/376565a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1995",
+      "author": "MG Leakey",
+      "unstructured": "Leakey, M. G., Feibel, C. S., McDougall, I. & Walker, A. New four-million-year-old hominid species from Kanapoi and Allia Bay, Kenya. Nature 376, 565\u2013571 (1995)."
+    },
+    {
+      "key": "5957_CR12",
+      "doi": "10.1002/ajpa.23892",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2019",
+      "author": "RJ Clarke",
+      "unstructured": "Clarke, R. J. Australopithecus prometheus was validly named on MLD 1. Am. J. Phys. Anthropol. 170, 479\u2013481 (2019)."
+    },
+    {
+      "key": "5957_CR13",
+      "doi": "",
+      "title": "",
+      "journal": "S. Afr. J. Sci.",
+      "year": "1981",
+      "author": "TD White",
+      "unstructured": "White, T. D., Johanson, D. C. & Kimbel, W. H. Australopithecus africanus: its phyletic position reconsidered. S. Afr. J. Sci. 77, 445\u2013470 (1981)."
+    },
+    {
+      "key": "5957_CR14",
+      "doi": "10.1093/oso/9780195157062.001.0001",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Kimbel, W. H., Rak, Y. & Johanson, D. C. The skull of Australopithecus afarensis (Oxford University Press, 2004). A monumental monograph that described and analysed the skull of Australopithecus afarensis and how the species related to other hominin taxa."
+    },
+    {
+      "key": "5957_CR15",
+      "doi": "10.1006/jhev.1999.0299",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "1999",
+      "author": "CA Lockwood",
+      "unstructured": "Lockwood, C. A. & Tobias, P. V. A large male hominin cranium from Sterkfontein, South Africa, and the status of Australopithecus africanus. J. Hum. Evol. 36, 637\u2013685 (1999)."
+    },
+    {
+      "key": "5957_CR16",
+      "doi": "10.1006/jhev.2001.0532",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2002",
+      "author": "CA Lockwood",
+      "unstructured": "Lockwood, C. A. & Tobias, P. V. Morphology and affinities of new hominin cranial remains from Member 4 of the Sterkfontein Formation, Gauteng Province, South Africa. J. Hum. Evol. 42, 389\u2013450 (2002). This paper described and analysed fossil material from a key South African cave and delved into morphology, affinities and variation in Australopithecus africanus."
+    },
+    {
+      "key": "5957_CR17",
+      "doi": "10.1007/978-94-007-5919-0_8",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Grine, F. E., Delanty, M. M. & Wood, B. A. in The Paleobiology of Australopithecus (eds Reed, K. E., Fleagle, J. G. & Leakey, R. E.) 125\u2013146 (Springer, 2013)."
+    },
+    {
+      "key": "5957_CR18",
+      "doi": "10.1002/ajpa.1330060304",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "1948",
+      "author": "RA Dart",
+      "unstructured": "Dart, R. A. The Makapansgat proto-human Australopithecus prometheus. Am. J. Phys. Anthropol. 6, 259\u2013284 (1948)."
+    },
+    {
+      "key": "5957_CR19",
+      "doi": "10.1002/ajpa.1330080109",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "1950",
+      "author": "R Broom",
+      "unstructured": "Broom, R. The genera and species of the South African fossil ape-men. Am. J. Phys. Anthropol. 8, 1\u201314 (1950)."
+    },
+    {
+      "key": "5957_CR20",
+      "doi": "10.1002/ajpa.1330200311",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "1962",
+      "author": "RA Dart",
+      "unstructured": "Dart, R. A. A cleft adult mandible and the nine other lower jaw fragments from Makapansgat. Am. J. Phys. Anthropol. 20, 267\u2013286 (1962)."
+    },
+    {
+      "key": "5957_CR21",
+      "doi": "10.1002/ajpa.1330120216",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "1954",
+      "author": "JT Robinson",
+      "unstructured": "Robinson, J. T. The genera and species of the australopithecinae. Am. J. Phys. Anthropol. 12, 181\u2013200 (1954)."
+    },
+    {
+      "key": "5957_CR22",
+      "doi": "",
+      "title": "",
+      "journal": "J. R. Anthropol. Inst. G. B. Irel.",
+      "year": "1950",
+      "author": "WE Le Gros Clark",
+      "unstructured": "Le Gros Clark, W. E. Hominid characters of the australopithecine dentition. J. R. Anthropol. Inst. G. B. Irel. 80, 37\u201354 (1950)."
+    },
+    {
+      "key": "5957_CR23",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Le Gros Clark, W. E. The Fossil Evidence for Human Evolution: an Introduction to the Study of Paleoanthropology (University of Chicago Press, 1964)."
+    },
+    {
+      "key": "5957_CR24",
+      "doi": "10.1002/(sici)1096-8644(199901)108:1<97::aid-ajpa6>3.0.co;2-o",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "1999",
+      "author": "CA Lockwood",
+      "unstructured": "Lockwood, C. A. Sexual dimorphism in the face of Australopithecus africanus. Am. J. Phys. Anthropol. 108, 97\u2013127 (1999)."
+    },
+    {
+      "key": "5957_CR25",
+      "doi": "10.1038/205121a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1965",
+      "author": "JT Robinson",
+      "unstructured": "Robinson, J. T. Homo \u2018habilis\u2019 and the Australopithecines. Nature 205, 121\u2013124 (1965)."
+    },
+    {
+      "key": "5957_CR26",
+      "doi": "10.2307/3887824",
+      "title": "",
+      "journal": "S. Afr. Archaeol. Bull.",
+      "year": "1965",
+      "author": "PV Tobias",
+      "unstructured": "Tobias, P. V. Australopithecus, Homo Habilis: underestimating intraspecific varia, Tool-using and tool-making. S. Afr. Archaeol. Bull. 20, 167\u2013192 (1965)."
+    },
+    {
+      "key": "5957_CR27",
+      "doi": "10.1002/(sici)1096-8644(199804)105:4<461::aid-ajpa5>3.0.co;2-r",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "1998",
+      "author": "JCM Ahern",
+      "unstructured": "Ahern, J. C. M. Underestimating intraspecific variation: the problem with excluding Sts 19 from Australopithecus africanus. Am. J. Phys. Anthropol. 105, 461\u2013480 (1998)."
+    },
+    {
+      "key": "5957_CR28",
+      "doi": "10.1046/j.1469-7580.2000.19710019.x",
+      "title": "",
+      "journal": "J. Anat.",
+      "year": "2000",
+      "author": "B Wood",
+      "unstructured": "Wood, B. & Richmond, B. G. Human evolution: taxonomy and paleobiology. J. Anat. 197, 19\u201360 (2000)."
+    },
+    {
+      "key": "5957_CR29",
+      "doi": "10.1126/science.284.5414.625",
+      "title": "",
+      "journal": "Science",
+      "year": "1999",
+      "author": "J de Heinzelin",
+      "unstructured": "de Heinzelin, J. et al. Environment and behavior of 2.5-million-year-old Bouri hominids. Science 284, 625\u2013629 (1999)."
+    },
+    {
+      "key": "5957_CR30",
+      "doi": "10.1002/ajpa.22902",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2016",
+      "author": "B Wood",
+      "unstructured": "Wood, B. & Boyle, E. K. Hominin taxic diversity: fact or fantasy? Am. J. Phys. Anthropol. 159, 37\u201378 (2016)."
+    },
+    {
+      "key": "5957_CR31",
+      "doi": "10.1038/521432a",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "F Spoor",
+      "unstructured": "Spoor, F. The middle Pliocene gets crowded. Nature 521, 432\u2013433 (2015)."
+    },
+    {
+      "key": "5957_CR32",
+      "doi": "10.1098/rstb.2015.0231",
+      "title": "",
+      "journal": "Philos. Trans. R. Soc. B",
+      "year": "2016",
+      "author": "F Spoor",
+      "unstructured": "Spoor, F., Leakey, M. G. & O\u2019Higgins, P. Middle Pliocene hominin diversity: Australopithecus deyiremeda and Kenyanthropus platyops. Philos. Trans. R. Soc. B 371, 20150231 (2016)."
+    },
+    {
+      "key": "5957_CR33",
+      "doi": "10.1038/35068500",
+      "title": "",
+      "journal": "Nature",
+      "year": "2001",
+      "author": "MG Leakey",
+      "unstructured": "Leakey, M. G. et al. New hominin genus from eastern Africa shows diverse middle Pliocene lineages. Nature 410, 433\u2013440 (2001). A crucial article that named and characterized a new genus (Kenyanthropus) and species (platyops) on the basis of discoveries in Kenya, suggesting that hominins were more diverse in the Middle Pliocene than was previously thought."
+    },
+    {
+      "key": "5957_CR34",
+      "doi": "10.1126/science.1078294",
+      "title": "",
+      "journal": "Science",
+      "year": "2003",
+      "author": "T White",
+      "unstructured": "White, T. Early hominids\u2013diversity or distortion? Science 299, 1994\u20131997 (2003)."
+    },
+    {
+      "key": "5957_CR35",
+      "doi": "10.1098/rstb.2010.0042",
+      "title": "",
+      "journal": "Philos. Trans. R. Soc. B",
+      "year": "2010",
+      "author": "F Spoor",
+      "unstructured": "Spoor, F., Leakey, M. G. & Leakey, L. N. Hominin diversity in the Middle Pliocene of eastern Africa: the maxilla of KNM-WT 40000. Philos. Trans. R. Soc. B 365, 3377\u20133388 (2010)."
+    },
+    {
+      "key": "5957_CR36",
+      "doi": "10.1016/j.jhevol.2006.02.003",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2006",
+      "author": "W Kimbel",
+      "unstructured": "Kimbel, W. et al. Was Australopithecus anamensis ancestral to A. afarensis? A case of anagenesis in the hominin fossil record. J. Hum. Evol. 51, 134\u2013152 (2006). A key study that analysed the combined Australopithecus afarensis and Australopithecus anamensis hypodigm and proposed a phylogenetic proximity between the two species using an anagenetic model."
+    },
+    {
+      "key": "5957_CR37",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Kimbel, W. H. in Handbook of Paleoanthropology (eds Henke, W. & Tattersall, I.) 1539\u20131573 (Springer, 2015)."
+    },
+    {
+      "key": "5957_CR38",
+      "doi": "10.1038/s41586-019-1513-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "Y Haile-Selassie",
+      "unstructured": "Haile-Selassie, Y., Melillo, S. M., Vazzana, A., Benazzi, S. & Ryan, T. M. A 3.8-million-year-old hominin cranium from Woranso-Mille, Ethiopia. Nature 573, 214\u2013219 (2019)."
+    },
+    {
+      "key": "5957_CR39",
+      "doi": "10.1007/978-94-007-5919-0_16",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Ward, C. V. in The Paleobiology of Australopithecus (eds Reed, K. E., Fleagle, J. G. & Leakey, R. E.) 235\u2013245 (Springer, 2013). A synthesis of the postural and locomotor adaptations of the many taxa in Australopithecus and implications for the broader understanding of early hominin evolution."
+    },
+    {
+      "key": "5957_CR40",
+      "doi": "10.1098/rstb.2010.0064",
+      "title": "",
+      "journal": "Philos. Trans. R. Soc. B",
+      "year": "2010",
+      "author": "Y Haile-Selassie",
+      "unstructured": "Haile-Selassie, Y. Phylogeny of early Australopithecus: new fossil evidence from the Woranso-Mille (central Afar, Ethiopia). Philos. Trans. R. Soc. B 365, 3323\u20133331 (2010)."
+    },
+    {
+      "key": "5957_CR41",
+      "doi": "10.1038/nature10922",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "Y Haile-Selassie",
+      "unstructured": "Haile-Selassie, Y. et al. A new hominin foot from Ethiopia shows multiple Pliocene bipedal adaptations. Nature 483, 565\u2013569 (2012)."
+    },
+    {
+      "key": "5957_CR42",
+      "doi": "10.1073/pnas.1521266113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "Y Haile-Selassie",
+      "unstructured": "Haile-Selassie, Y., Melillo, S. M. & Su, D. F. The Pliocene hominin diversity conundrum: do more fossils mean less clarity? Proc. Natl Acad. Sci. USA 113, 6364\u20136371 (2016). This paper discussed the key issue of hominin diversity in the Middle Pliocene in the light of discoveries from the Woranso-Mille site in Afar, Ethiopia."
+    },
+    {
+      "key": "5957_CR43",
+      "doi": "10.1038/nature04629",
+      "title": "",
+      "journal": "Nature",
+      "year": "2006",
+      "author": "TD White",
+      "unstructured": "White, T. D. et al. Asa Issie, Aramis and the origin of Australopithecus. Nature 440, 883\u2013889 (2006)."
+    },
+    {
+      "key": "5957_CR44",
+      "doi": "10.1126/science.1203697",
+      "title": "",
+      "journal": "Science",
+      "year": "2011",
+      "author": "R Pickering",
+      "unstructured": "Pickering, R. et al. Australopithecus sediba at 1.977 Ma and implications for the origins of the genus Homo. Science 333, 1421\u20131423 (2011)."
+    },
+    {
+      "key": "5957_CR45",
+      "doi": "10.1126/science.1175802",
+      "title": "",
+      "journal": "Science",
+      "year": "2009",
+      "author": "TD White",
+      "unstructured": "White, T. D. et al. Ardipithecus ramidus and the paleobiology of early hominids. Science 326, 64\u201386 (2009). This and other related papers in the same volume described the importance and role of Ardipithecus ramidus in human evolution and provided a detailed account of its paleobiology."
+    },
+    {
+      "key": "5957_CR46",
+      "doi": "10.1126/science.aaa1343",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "B Villmoare",
+      "unstructured": "Villmoare, B. et al. Early Homo at 2.8 Ma from Ledi-Geraru, Afar, Ethiopia. Science 347, 1352\u20131355 (2015). A paper describing and analysing the earliest evidence for the genus Homo dating back to 2.8 Ma."
+    },
+    {
+      "key": "5957_CR47",
+      "doi": "10.1002/ajpa.21183",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2009",
+      "author": "WH Kimbel",
+      "unstructured": "Kimbel, W. H. & Delezene, L. K. \u201cLucy\u201d redux: a review of research on Australopithecus afarensis. Am. J. Phys. Anthropol. 140, 2\u201348 (2009)."
+    },
+    {
+      "key": "5957_CR48",
+      "doi": "10.1038/nature03177",
+      "title": "",
+      "journal": "Nature",
+      "year": "2005",
+      "author": "S Semaw",
+      "unstructured": "Semaw, S. et al. Early Pliocene hominids from Gona, Ethiopia. Nature 433, 301\u2013305 (2005)."
+    },
+    {
+      "key": "5957_CR49",
+      "doi": "10.1016/j.jhevol.2019.102688",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2020",
+      "author": "A Du",
+      "unstructured": "Du, A., Rowan, J., Wang, S. C., Wood, B. A. & Alemseged, Z. Statistical estimates of hominin origination and extinction dates: a case study examining the Australopithecus anamensis\u2013afarensis lineage. J. Hum. Evol. 138, 102688 (2020)."
+    },
+    {
+      "key": "5957_CR50",
+      "doi": "10.1002/evan.21928",
+      "title": "",
+      "journal": "Evol. Anthropol.",
+      "year": "2021",
+      "author": "R Bobe",
+      "unstructured": "Bobe, R. & Wood, B. Estimating origination times from the early hominin fossil record. Evol. Anthropol. 31, 92\u2013102 (2021)."
+    },
+    {
+      "key": "5957_CR51",
+      "doi": "10.1038/nature09709",
+      "title": "",
+      "journal": "Nature",
+      "year": "2011",
+      "author": "B Wood",
+      "unstructured": "Wood, B. & Harrison, T. The evolutionary context of the first hominins. Nature 470, 347\u2013352 (2011)."
+    },
+    {
+      "key": "5957_CR52",
+      "doi": "10.1007/978-94-007-5919-0_12",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Strait, D. S. in The Paleobiology of Australopithecus (eds Reed, K. E., Fleagle, J. G. & Leakey, R. E.) 183\u2013191 (Springer, 2013)."
+    },
+    {
+      "key": "5957_CR53",
+      "doi": "10.1073/pnas.2123516119",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2022",
+      "author": "DE Granger",
+      "unstructured": "Granger, D. E. et al. Cosmogenic nuclide dating of Australopithecus at Sterkfontein, South Africa. Proc. Natl Acad. Sci. USA 119, e2123516119 (2022)."
+    },
+    {
+      "key": "5957_CR54",
+      "doi": "10.1073/pnas.0606454104",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2007",
+      "author": "Y Rak",
+      "unstructured": "Rak, Y., Ginzburg, A. & Geffen, E. Gorilla-like anatomy on Australopithecus afarensis mandibles suggests Au. afarensis link to robust australopiths. Proc. Natl Acad. Sci. USA 104, 6568\u20136572 (2007)."
+    },
+    {
+      "key": "5957_CR55",
+      "doi": "10.1038/s41598-021-96543-w",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2021",
+      "author": "J Braga",
+      "unstructured": "Braga, J. et al. Cochlear shape distinguishes southern African early hominin taxa with unique auditory ecologies. Sci. Rep. 11, 17018 (2021)."
+    },
+    {
+      "key": "5957_CR56",
+      "doi": "10.1098/rspb.2021.2178",
+      "title": "",
+      "journal": "Proc. R. Soc. B",
+      "year": "2021",
+      "author": "NMA Crouch",
+      "unstructured": "Crouch, N. M. A., Edie, S. M., Collins, K. S., Bieler, R. & Jablonski, D. Calibrating phylogenies assuming bifurcation or budding alters inferred macroevolutionary dynamics in a densely sampled phylogeny of bivalve families. Proc. R. Soc. B 288, 20212178 (2021)."
+    },
+    {
+      "key": "5957_CR57",
+      "doi": "",
+      "title": "",
+      "journal": "Paleobiology",
+      "year": "1998",
+      "author": "PN Pearson",
+      "unstructured": "Pearson, P. N. Speciation and extinction asymmetries in paleontological phylogenies: evidence for evolutionary progress. Paleobiology 24, 305\u2013335 (1998)."
+    },
+    {
+      "key": "5957_CR58",
+      "doi": "10.1016/j.jhevol.2019.03.006",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2019",
+      "author": "CS Mongle",
+      "unstructured": "Mongle, C. S., Strait, D. S. & Grine, F. E. Expanded character sampling underscores phylogenetic stability of Ardipithecus ramidus as a basal hominin. J. Hum. Evol. 131, 28\u201339 (2019)."
+    },
+    {
+      "key": "5957_CR59",
+      "doi": "10.1007/978-94-007-5919-0_11",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Lockwood, C. in The Paleobiology of Australopithecus (eds Reed, K. E., Fleagle, J. G. & Leakey, R. E.) 175\u2013182 (Springer, 2013)."
+    },
+    {
+      "key": "5957_CR60",
+      "doi": "10.1146/annurev.ea.22.050194.002033",
+      "title": "",
+      "journal": "Annu. Rev. Earth Planet. Sci.",
+      "year": "1994",
+      "author": "ME Raymo",
+      "unstructured": "Raymo, M. E. The initiation of Northern Hemisphere glaciation. Annu. Rev. Earth Planet. Sci. 22, 353\u2013383 (1994)."
+    },
+    {
+      "key": "5957_CR61",
+      "doi": "10.1016/j.epsl.2016.05.005",
+      "title": "",
+      "journal": "Earth Planet. Sci. Lett.",
+      "year": "2016",
+      "author": "HM Liddy",
+      "unstructured": "Liddy, H. M., Feakins, S. J. & Tierney, J. E. Cooling and drying in northeast Africa across the Pliocene. Earth Planet. Sci. Lett. 449, 430\u2013438 (2016)."
+    },
+    {
+      "key": "5957_CR62",
+      "doi": "10.1111/j.1469-185x.2010.00162.x",
+      "title": "",
+      "journal": "Biol. Rev.",
+      "year": "2011",
+      "author": "J-R Boisserie",
+      "unstructured": "Boisserie, J.-R., Fisher, R. E., Lihoreau, F. & Weston, E. M. Evolving between land and water: key questions on the emergence and history of the Hippopotamidae (Hippopotamoidea, Cetancodonta, Cetartiodactyla). Biol. Rev. 86, 601\u2013625 (2011)."
+    },
+    {
+      "key": "5957_CR63",
+      "doi": "",
+      "title": "",
+      "journal": "J. Vertebr. Paleontol.",
+      "year": "2013",
+      "author": "J Rowan",
+      "unstructured": "Rowan, J. & Reed, K. Endemism and dispersal in East African bovidae from thelate Miocene through the recent. J. Vertebr. Paleontol. 33, 201 (2013)."
+    },
+    {
+      "key": "5957_CR64",
+      "doi": "10.1111/j.1365-294x.2012.05650.x",
+      "title": "",
+      "journal": "Mol. Ecol.",
+      "year": "2012",
+      "author": "ED Lorenzen",
+      "unstructured": "Lorenzen, E. D., Heller, R. & Siegismund, H. R. Comparative phylogeography of African savannah ungulates. Mol. Ecol. 21, 3656\u20133670 (2012)."
+    },
+    {
+      "key": "5957_CR65",
+      "doi": "10.1016/j.jhevol.2019.102717",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2020",
+      "author": "R Bobe",
+      "unstructured": "Bobe, R., Manthi, F. K., Ward, C. V., Plavcan, J. M. & Carvalho, S. The ecology of Australopithecus anamensis in the early Pliocene of Kanapoi, Kenya. J. Hum. Evol. 140, 102717 (2020)."
+    },
+    {
+      "key": "5957_CR66",
+      "doi": "10.1016/j.jhevol.2020.102928",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2021",
+      "author": "L Dumouchel",
+      "unstructured": "Dumouchel, L., Bobe, R., Wynn, J. G. & Barr, W. A. The environments of Australopithecus anamensis at Allia Bay, Kenya: a multiproxy analysis of early Pliocene Bovidae. J. Hum. Evol. 151, 102928 (2021)."
+    },
+    {
+      "key": "5957_CR67",
+      "doi": "10.1007/978-94-007-5919-0_4",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Behrensmeyer, A. K. & Reed, K. E.in The Paleobiology of Australopithecus (eds Reed, K. E., Fleagle, J. G. & Leakey, R. E.) 41\u201360 (Springer, 2013)."
+    },
+    {
+      "key": "5957_CR68",
+      "doi": "10.1016/j.jhevol.2022.103182",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2022",
+      "author": "EN Fillion",
+      "unstructured": "Fillion, E. N., Harrison, T. & Kwekason, A. A nonanalog Pliocene ungulate community at Laetoli with implications for the paleoecology of Australopithecus afarensis. J. Hum. Evol. 167, 103182 (2022)."
+    },
+    {
+      "key": "5957_CR69",
+      "doi": "10.7282/t3ns0v99",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Campisano, C. J. Tephrostratigraphy and Hominin Paleoenvironments of the Hadar Formation, Afar Depression, Ethiopia. PhD thesis, Rutgers Univ. https://doi.org/10.7282/T3NS0V99 (2007)."
+    },
+    {
+      "key": "5957_CR70",
+      "doi": "10.1038/s41467-020-16060-8",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "Z Alemseged",
+      "unstructured": "Alemseged, Z. et al. Fossils from Mille-Logya, Afar, Ethiopia, elucidate the link between Pliocene environmental changes and Homo origins. Nat. Commun. 11, 2480 (2020)."
+    },
+    {
+      "key": "5957_CR71",
+      "doi": "10.1002/jqs.3345",
+      "title": "",
+      "journal": "J. Quat. Sci.",
+      "year": "2021",
+      "author": "D Geraads",
+      "unstructured": "Geraads, D. et al. Plio-Pleistocene mammals from Mille-Logya, Ethiopia, and the post-Hadar faunal change. J. Quat. Sci. 36, 1073\u20131089 (2021)."
+    },
+    {
+      "key": "5957_CR72",
+      "doi": "10.1126/science.aaa1415",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "EN DiMaggio",
+      "unstructured": "DiMaggio, E. N. et al. Late Pliocene fossiliferous sedimentary record and the environmental context of early Homo from Afar, Ethiopia. Science 347, 1355\u20131359 (2015)."
+    },
+    {
+      "key": "5957_CR73",
+      "doi": "10.1126/science.270.5233.53",
+      "title": "",
+      "journal": "Science",
+      "year": "1995",
+      "author": "PB deMenocal",
+      "unstructured": "deMenocal, P. B. Plio-Pleistocene African climate. Science 270, 53\u201359 (1995)."
+    },
+    {
+      "key": "5957_CR74",
+      "doi": "10.1016/s0012-821x(04)00003-2",
+      "title": "",
+      "journal": "Earth Planet. Sci. Lett.",
+      "year": "2004",
+      "author": "PB deMenocal",
+      "unstructured": "deMenocal, P. B. African climate change and faunal evolution during the Pliocene\u2013Pleistocene. Earth Planet. Sci. Lett. 220, 3\u201324 (2004)."
+    },
+    {
+      "key": "5957_CR75",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Vrba, E. S. in Paleoclimate and Evolution, with Emphasis on Human Origins (eds Vrba, E. S., Denton, G. H., Partridge, T. C. & Burckle, L. H.) 197\u2013448 (Yale University Press, 1995)."
+    },
+    {
+      "key": "5957_CR76",
+      "doi": "10.1016/j.jhevol.2019.03.012",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2019",
+      "author": "JCA Joordens",
+      "unstructured": "Joordens, J. C. A., Feibel, C. S., Vonhof, H. B., Schulp, A. S. & Kroon, D. Relevance of the eastern African coastal forest for early hominin biogeography. J. Hum. Evol. 131, 176\u2013202 (2019)."
+    },
+    {
+      "key": "5957_CR77",
+      "doi": "",
+      "title": "",
+      "journal": "Transvaal Museum Memoirs",
+      "year": "1957",
+      "author": "R Dart",
+      "unstructured": "Dart, R. The osteodontokeratic culture of Australopithecus prometheus. Transvaal Museum Memoirs 10, 87\u2013101 (1957)."
+    },
+    {
+      "key": "5957_CR78",
+      "doi": "10.1126/science.1207701",
+      "title": "",
+      "journal": "Science",
+      "year": "2011",
+      "author": "PS Ungar",
+      "unstructured": "Ungar, P. S. & Sponheimer, M. The diets of early hominins. Science 334, 190\u2013193 (2011)."
+    },
+    {
+      "key": "5957_CR79",
+      "doi": "10.1073/pnas.260368897",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2000",
+      "author": "MF Teaford",
+      "unstructured": "Teaford, M. F. & Ungar, P. S. Diet and the evolution of the earliest human ancestors. Proc. Natl Acad. Sci. USA 97, 13506\u201313511 (2000)."
+    },
+    {
+      "key": "5957_CR80",
+      "doi": "",
+      "title": "",
+      "journal": "S. Afr. J. Sci",
+      "year": "2006",
+      "author": "FE Grine",
+      "unstructured": "Grine, F. E., Ungar, P. S. & Teaford, M. F. Was the early Pliocene hominin \u2018Australopithecus\u2019 anamensis a hard object feeder? S. Afr. J. Sci 102, 301\u2013310 (2006)."
+    },
+    {
+      "key": "5957_CR81",
+      "doi": "10.1073/pnas.1424982112",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2015",
+      "author": "NE Levin",
+      "unstructured": "Levin, N. E., Haile-Selassie, Y., Frost, S. R. & Saylor, B. Z. Dietary change among hominins and cercopithecids in Ethiopia during the early Pliocene. Proc. Natl Acad. Sci. USA 112, 12304\u201312309 (2015)."
+    },
+    {
+      "key": "5957_CR82",
+      "doi": "10.1073/pnas.1516668112",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2015",
+      "author": "Z Alemseged",
+      "unstructured": "Alemseged, Z. Stable isotopes serving as a checkpoint. Proc. Natl Acad. Sci. USA 112, 12232\u201312233 (2015)."
+    },
+    {
+      "key": "5957_CR83",
+      "doi": "10.1073/pnas.1222559110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "JG Wynn",
+      "unstructured": "Wynn, J. G. et al. Diet of Australopithecus afarensis from the Pliocene Hadar Formation, Ethiopia. Proc. Natl Acad. Sci. USA 110, 10495\u201310500 (2013)."
+    },
+    {
+      "key": "5957_CR84",
+      "doi": "10.1073/pnas.1222579110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "M Sponheimer",
+      "unstructured": "Sponheimer, M. et al. Isotopic evidence of early hominin diets. Proc. Natl Acad. Sci. USA 110, 10513\u201310518 (2013)."
+    },
+    {
+      "key": "5957_CR85",
+      "doi": "10.1038/nature09248",
+      "title": "",
+      "journal": "Nature",
+      "year": "2010",
+      "author": "SP McPherron",
+      "unstructured": "McPherron, S. P. et al. Evidence for stone-tool-assisted consumption of animal tissues before 3.39 million years ago at Dikika, Ethiopia. Nature 466, 857\u2013860 (2010)."
+    },
+    {
+      "key": "5957_CR86",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Alemseged, Z. In First humans: Who was who, who did what, where and when? [English] (eds Coppens, Y. & Vialet, A.) 101\u2013122 (CNRS Editions, 2021)."
+    },
+    {
+      "key": "5957_CR87",
+      "doi": "10.1038/nature14464",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "S Harmand",
+      "unstructured": "Harmand, S. et al. 3.3-million-year-old stone tools from Lomekwi 3, West Turkana, Kenya. Nature 521, 310\u2013315 (2015). A study on the discovery of the earliest stone tools dating to 3.3 Ma, which led to the naming of the Lomekiwian\u2014a stone-tool-technology stage before the Oldowan."
+    },
+    {
+      "key": "5957_CR88",
+      "doi": "10.1126/science.1261735",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "MM Skinner",
+      "unstructured": "Skinner, M. M. et al. Human-like hand use in Australopithecus africanus. Science 347, 395\u2013399 (2015)."
+    },
+    {
+      "key": "5957_CR89",
+      "doi": "10.1038/nature14268",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "DE Granger",
+      "unstructured": "Granger, D. E. et al. New cosmogenic burial ages for Sterkfontein Member 2 Australopithecus and Member 5 Oldowan. Nature 522, 85\u201388 (2015)."
+    },
+    {
+      "key": "5957_CR90",
+      "doi": "10.1086/701477",
+      "title": "",
+      "journal": "Curr. Anthropol.",
+      "year": "2019",
+      "author": "JC Thompson",
+      "unstructured": "Thompson, J. C., Carvalho, S., Marean, C. W. & Alemseged, Z. Origins of the human predatory pattern: the transition to large-animal exploitation by early hominins. Curr. Anthropol. 60, 1\u201323 (2019)."
+    },
+    {
+      "key": "5957_CR91",
+      "doi": "10.1073/pnas.0401709101",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2004",
+      "author": "R Bonnefille",
+      "unstructured": "Bonnefille, R., Potts, R., Chalie, F., Jolly, D. & Peyron, O. High-resolution vegetation and climate change associated with Pliocene Australopithecus afarensis. Proc. Natl Acad. Sci. USA 101, 12125\u201312129 (2004)."
+    },
+    {
+      "key": "5957_CR92",
+      "doi": "10.1016/j.gaitpost.2006.05.001",
+      "title": "",
+      "journal": "Gait Posture",
+      "year": "2007",
+      "author": "CO Lovejoy",
+      "unstructured": "Lovejoy, C. O. The natural history of human gait and posture part 3: the knee. Gait Posture 25, 325\u2013341 (2007)."
+    },
+    {
+      "key": "5957_CR93",
+      "doi": "10.1038/scientificamerican1188-118",
+      "title": "",
+      "journal": "Sci. Am.",
+      "year": "1988",
+      "author": "CO Lovejoy",
+      "unstructured": "Lovejoy, C. O. Evolution of human walking. Sci. Am. 259, 118\u2013125 (1988)."
+    },
+    {
+      "key": "5957_CR94",
+      "doi": "10.1038/286385a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1980",
+      "author": "MH Day",
+      "unstructured": "Day, M. H. & Wickens, E. H. Laetoli Pliocene hominid footprints and bipedalism. Nature 286, 385\u2013387 (1980)."
+    },
+    {
+      "key": "5957_CR95",
+      "doi": "10.1126/science.208.4440.175",
+      "title": "",
+      "journal": "Science",
+      "year": "1980",
+      "author": "TD White",
+      "unstructured": "White, T. D. Evolutionary implications of Pliocene hominid footprints. Science 208, 175\u2013176 (1980)."
+    },
+    {
+      "key": "5957_CR96",
+      "doi": "10.1002/ajpa.1330600302",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "1983",
+      "author": "JT Stern Jr",
+      "unstructured": "Stern, J. T. Jr & Susman, R. L. The locomotor anatomy of Australopithecus afarensis. Am. J. Phys. Anthropol. 60, 279\u2013317 (1983)."
+    },
+    {
+      "key": "5957_CR97",
+      "doi": "10.1159/000156176",
+      "title": "",
+      "journal": "Folia Primatol.",
+      "year": "1984",
+      "author": "RL Susman",
+      "unstructured": "Susman, R. L., Jack, T., Stern, J. & Jungers, W. L. Arboreality and bipedality in the Hadar hominids. Folia Primatol. 43, 113\u2013156 (1984)."
+    },
+    {
+      "key": "5957_CR98",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Aiello, L. & Dean, C. An Introduction to Human Evolutionary Anatomy (Academic Press, 1990)."
+    },
+    {
+      "key": "5957_CR99",
+      "doi": "10.1002/ajpa.1330600302",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "1983",
+      "author": "JT Stern",
+      "unstructured": "Stern, J. T. Climbing to the top: a personal memoir of Australopithecus afarensis. Am. J. Phys. Anthropol. 60, 279\u2013317 (1983)."
+    },
+    {
+      "key": "5957_CR100",
+      "doi": "10.1002/ajpa.10185",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2002",
+      "author": "CV Ward",
+      "unstructured": "Ward, C. V. Interpreting the posture and locomotion of Australopithecus afarensis: where do we stand? Am. J. Phys. Anthropol. 119, 185\u2013215 (2002)."
+    },
+    {
+      "key": "5957_CR101",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Senut, B. & Tardieu, C. in Ancestors: the Hard Evidence (ed. Delson, E.) 193\u2013201 (Alan R. Liss, 1985)."
+    },
+    {
+      "key": "5957_CR102",
+      "doi": "10.1016/0047-2484(75)90017-2",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "1975",
+      "author": "HM McHenry",
+      "unstructured": "McHenry, H. M. Biomechanical interpretation of the early hominid hip. J. Hum. Evol. 4, 343\u2013355 (1975)."
+    },
+    {
+      "key": "5957_CR103",
+      "doi": "10.1126/science.1175834",
+      "title": "",
+      "journal": "Science",
+      "year": "2009",
+      "author": "CO Lovejoy",
+      "unstructured": "Lovejoy, C. O. Reexamining human origins in light of Ardipithecus ramidus. Science 326, 74\u201374e8 (2009)."
+    },
+    {
+      "key": "5957_CR104",
+      "doi": "10.1126/science.1175831",
+      "title": "",
+      "journal": "Science",
+      "year": "2009",
+      "author": "CO Lovejoy",
+      "unstructured": "Lovejoy, C. O., Suwa, G., Spurlock, L., Asfaw, B. & White, T. D. The pelvis and femur of Ardipithecus ramidus: the emergence of upright walking. Science 326, 71\u201371e6 (2009)."
+    },
+    {
+      "key": "5957_CR105",
+      "doi": "10.1002/1520-6505(2000)9:3<113::aid-evan2>3.0.co;2-w",
+      "title": "",
+      "journal": "Evol. Anthropol.",
+      "year": "2000",
+      "author": "JT Stern",
+      "unstructured": "Stern, J. T. Climbing to the top: a personal memoir of Australopithecus afarensis. Evol. Anthropol. 9, 113\u2013133 (2000)."
+    },
+    {
+      "key": "5957_CR106",
+      "doi": "10.1038/297676a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1982",
+      "author": "WL Jungers",
+      "unstructured": "Jungers, W. L. Lucy\u2019s limbs: skeletal allometry and locomotion in Australopithecus afarensis. Nature 297, 676\u2013678 (1982)."
+    },
+    {
+      "key": "5957_CR107",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Tardieu, C. in Current Perspectives in Primate Biology (eds Taub, D. M. & King, F. A.) 182\u2013192 (Van Nostrand Reinhold, 1986)."
+    },
+    {
+      "key": "5957_CR108",
+      "doi": "10.1126/science.1227123",
+      "title": "",
+      "journal": "Science",
+      "year": "2012",
+      "author": "DJ Green",
+      "unstructured": "Green, D. J. & Alemseged, Z. Australopithecus afarensis: scapular ontogeny, function, and the role of climbing in human evolution. Science 338, 514\u2013517 (2012). This study showed the importance of character plasticity during ontogeny and how that relates to locomotor adaptation in living apes and early hominins on the basis of the scapula, and helped to document the importance of arboreality in Australopithecus."
+    },
+    {
+      "key": "5957_CR109",
+      "doi": "10.1002/ajpa.1330740204",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "1987",
+      "author": "B Latimer",
+      "unstructured": "Latimer, B., Ohman, J. C. & Lovejoy, C. O. Talocrural joint in African hominoids: implications for Australopithecus afarensis. Am. J. Phys. Anthropol. 74, 155\u2013175 (1987)."
+    },
+    {
+      "key": "5957_CR110",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Latimer, B. In The origin of bipedality in Hominids [English]. (eds Coppens, Y. & Senut, B.) 169\u2013176 (CNRS, 1991)."
+    },
+    {
+      "key": "5957_CR111",
+      "doi": "10.1002/ajpa.1330380315",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "1973",
+      "author": "CO Lovejoy",
+      "unstructured": "Lovejoy, C. O., Heiple, K. G. & Burstein, A. H. The gait of Australopithecus. Am. J. Phys. Anthropol. 38, 757\u2013779 (1973)."
+    },
+    {
+      "key": "5957_CR112",
+      "doi": "10.1126/science.1201463",
+      "title": "",
+      "journal": "Science",
+      "year": "2011",
+      "author": "CV Ward",
+      "unstructured": "Ward, C. V., Kimbel, W. H. & Johanson, D. C. Complete fourth metatarsal and arches in the foot of Australopithecus afarensis. Science 331, 750\u2013753 (2011)."
+    },
+    {
+      "key": "5957_CR113",
+      "doi": "10.1242/jeb.019885",
+      "title": "",
+      "journal": "J. Exp. Biol.",
+      "year": "2009",
+      "author": "C Rolian",
+      "unstructured": "Rolian, C., Lieberman, D. E., Hamill, J., Scott, J. W. & Werbel, W. Walking, running and the evolution of short toes in humans. J. Exp. Biol. 212, 713\u2013721 (2009)."
+    },
+    {
+      "key": "5957_CR114",
+      "doi": "10.1242/jeb.174425",
+      "title": "",
+      "journal": "J. Exp. Biol.",
+      "year": "2018",
+      "author": "NB Holowka",
+      "unstructured": "Holowka, N. B. & Lieberman, D. E. Rethinking the evolution of the human foot: insights from experimental research. J. Exp. Biol. 221, jeb174425 (2018)."
+    },
+    {
+      "key": "5957_CR115",
+      "doi": "10.1126/science.1230128",
+      "title": "",
+      "journal": "Science",
+      "year": "2012",
+      "author": "S Larson",
+      "unstructured": "Larson, S. Did australopiths climb trees? Science 338, 478\u2013479 (2012)."
+    },
+    {
+      "key": "5957_CR116",
+      "doi": "10.1016/j.jhevol.2007.05.011",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2007",
+      "author": "BG Richmond",
+      "unstructured": "Richmond, B. G. Biomechanics of phalangeal curvature. J. Hum. Evol. 53, 678\u2013690 (2007)."
+    },
+    {
+      "key": "5957_CR117",
+      "doi": "10.1002/ajpa.22353",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2013",
+      "author": "DJ Green",
+      "unstructured": "Green, D. J. Ontogeny of the hominoid scapula: the influence of locomotion on morphology: ontogeny of hominoid scapular morphology and locomotion. Am. J. Phys. Anthropol. 152, 239\u2013260 (2013)."
+    },
+    {
+      "key": "5957_CR118",
+      "doi": "10.1126/sciadv.aar7723",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2018",
+      "author": "JM DeSilva",
+      "unstructured": "DeSilva, J. M., Gill, C. M., Prang, T. C., Bredella, M. A. & Alemseged, Z. A nearly complete foot from Dikika, Ethiopia and its implications for the ontogeny and function of Australopithecus afarensis. Sci. Adv. 4, eaar7723 (2018)."
+    },
+    {
+      "key": "5957_CR119",
+      "doi": "10.1016/j.jhevol.2006.09.001",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2007",
+      "author": "DJ Green",
+      "unstructured": "Green, D. J., Gordon, A. D. & Richmond, B. G. Limb-size proportions in Australopithecus afarensis and Australopithecus africanus. J. Hum. Evol. 52, 187\u2013200 (2007)."
+    },
+    {
+      "key": "5957_CR120",
+      "doi": "10.7554/elife.65897",
+      "title": "",
+      "journal": "eLife",
+      "year": "2021",
+      "author": "AM Prabhat",
+      "unstructured": "Prabhat, A. M. et al. Homoplasy in the evolution of modern human-like joint proportions in Australopithecus afarensis. eLife 10, e65897 (2021)."
+    },
+    {
+      "key": "5957_CR121",
+      "doi": "10.1038/369645a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1994",
+      "author": "F Spoor",
+      "unstructured": "Spoor, F., Wood, B. & Zonneveld, F. Implications of early hominid labyrinthine morphology for evolution of human bipedal locomotion. Nature 369, 645\u2013648 (1994)."
+    },
+    {
+      "key": "5957_CR122",
+      "doi": "10.1038/nature05047",
+      "title": "",
+      "journal": "Nature",
+      "year": "2006",
+      "author": "Z Alemseged",
+      "unstructured": "Alemseged, Z. et al. A juvenile early hominin skeleton from Dikika, Ethiopia. Nature 443, 296\u2013301 (2006)."
+    },
+    {
+      "key": "5957_CR123",
+      "doi": "10.1002/ajpa.23635",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2018",
+      "author": "TL Kivell",
+      "unstructured": "Kivell, T. L., Davenport, R., Hublin, J.-J., Thackeray, J. F. & Skinner, M. M. Trabecular architecture and joint loading of the proximal humerus in extant hominoids, Ateles, and Australopithecus africanus. Am. J. Phys. Anthropol. 167, 348\u2013365 (2018)."
+    },
+    {
+      "key": "5957_CR124",
+      "doi": "10.1038/s41559-020-1207-5",
+      "title": "",
+      "journal": "Nat. Ecol. Evol.",
+      "year": "2020",
+      "author": "CJ Dunmore",
+      "unstructured": "Dunmore, C. J. et al. The position of Australopithecus sediba within fossil hominin hand use diversity. Nat. Ecol. Evol. 4, 911\u2013918 (2020)."
+    },
+    {
+      "key": "5957_CR125",
+      "doi": "10.1006/jhev.1996.0095",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "1997",
+      "author": "DM Doran",
+      "unstructured": "Doran, D. M. Ontogeny of locomotion in mountain gorillas and chimpanzees. J. Hum. Evol. 32, 323\u2013344 (1997)."
+    },
+    {
+      "key": "5957_CR126",
+      "doi": "10.1126/science.284.5414.629",
+      "title": "",
+      "journal": "Science",
+      "year": "1999",
+      "author": "B Asfaw",
+      "unstructured": "Asfaw, B. et al. Australopithecus garhi: a new species of early hominid from Ethiopia. Science 284, 629\u2013635 (1999)."
+    },
+    {
+      "key": "5957_CR127",
+      "doi": "10.1126/science.1233477",
+      "title": "",
+      "journal": "Science",
+      "year": "2013",
+      "author": "SE Churchill",
+      "unstructured": "Churchill, S. E. et al. The upper limb of Australopithecus sediba. Science 340, 1233477 (2013)."
+    },
+    {
+      "key": "5957_CR128",
+      "doi": "10.1126/science.1202625",
+      "title": "",
+      "journal": "Science",
+      "year": "2011",
+      "author": "TL Kivell",
+      "unstructured": "Kivell, T. L., Kibii, J. M., Churchill, S. E., Schmid, P. & Berger, L. R. Australopithecus sediba hand demonstrates mosaic evolution of locomotor and manipulative abilities. Science 333, 1411\u20131417 (2011)."
+    },
+    {
+      "key": "5957_CR129",
+      "doi": "10.1038/s41586-021-04187-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "EJ McNutt",
+      "unstructured": "McNutt, E. J. et al. Footprint evidence of early hominin locomotor diversity at Laetoli, Tanzania. Nature 600, 468\u2013471 (2021)."
+    },
+    {
+      "key": "5957_CR130",
+      "doi": "10.1126/science.1232999",
+      "title": "",
+      "journal": "Science",
+      "year": "2013",
+      "author": "JM DeSilva",
+      "unstructured": "DeSilva, J. M. et al. The lower limb and mechanics of walking in Australopithecus sediba. Science 340, 1232999 (2013)."
+    },
+    {
+      "key": "5957_CR131",
+      "doi": "10.1126/science.211.4480.341",
+      "title": "",
+      "journal": "Science",
+      "year": "1981",
+      "author": "CO Lovejoy",
+      "unstructured": "Lovejoy, C. O. The origin of man. Science 211, 341\u2013350 (1981)."
+    },
+    {
+      "key": "5957_CR132",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "McHenry, H. M. in The Archaeology of Human Ancestry: Power, Sex and Tradition (eds Shennan, S. & Steele, J.) 82\u201399 (Routledge, 1996)."
+    },
+    {
+      "key": "5957_CR133",
+      "doi": "10.1006/jhev.1996.0096",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "1997",
+      "author": "JM Plavcan",
+      "unstructured": "Plavcan, J. M. & van Schaik, C. P. Interpreting hominid behavior on the basis of sexual dimorphism. J. Hum. Evol. 32, 345\u2013374 (1997)."
+    },
+    {
+      "key": "5957_CR134",
+      "doi": "10.1016/j.jhevol.2004.09.006",
+      "title": "",
+      "journal": "J. Hum. Evol.",
+      "year": "2005",
+      "author": "JM Plavcan",
+      "unstructured": "Plavcan, J. M., Lockwood, C. A., Kimbel, W. H., Lague, M. R. & Harmon, E. H. Sexual dimorphism in Australopithecus afarensis revisited: how strong is the case for a human-like pattern of dimorphism? J. Hum. Evol. 48, 313\u2013320 (2005)."
+    },
+    {
+      "key": "5957_CR135",
+      "doi": "10.1073/pnas.1133180100",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2003",
+      "author": "PL Reno",
+      "unstructured": "Reno, P. L., Meindl, R. S., McCollum, M. A. & Lovejoy, C. O. Sexual dimorphism in Australopithecus afarensis was similar to that of modern humans. Proc. Natl Acad. Sci. USA 100, 9404\u20139409 (2003)."
+    },
+    {
+      "key": "5957_CR136",
+      "doi": "10.7717/peerj.925",
+      "title": "",
+      "journal": "PeerJ",
+      "year": "2015",
+      "author": "PL Reno",
+      "unstructured": "Reno, P. L. & Lovejoy, C. O. From Lucy to Kadanuumuu: balanced analyses of Australopithecus afarensis assemblages confirm only moderate skeletal dimorphism. PeerJ 3, e925 (2015)."
+    },
+    {
+      "key": "5957_CR137",
+      "doi": "10.1002/ajpa.22195",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2013",
+      "author": "WL Hylander",
+      "unstructured": "Hylander, W. L. Functional links between canine height and jaw gape in catarrhines with special reference to early hominins. Am. J. Phys. Anthropol. 150, 247\u2013259 (2013)."
+    },
+    {
+      "key": "5957_CR138",
+      "doi": "10.1007/978-94-007-5919-0_13",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Gordon, A. D. in The Paleobiology of Australopithecus (eds Reed, K. E., Fleagle, J. G. & Leakey, R. E.) 195\u2013212 (Springer, 2013)."
+    },
+    {
+      "key": "5957_CR139",
+      "doi": "10.1126/sciadv.aaz4729",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2020",
+      "author": "P Gunz",
+      "unstructured": "Gunz, P. et al. Australopithecus afarensis endocasts suggest ape-like brain organization and prolonged brain growth. Sci. Adv. 6, eaaz4729 (2020). A study showing that some incipient human-like childhood existed in Australopithecus afarensis, which had a small brain and a chimp-like brain organization."
+    },
+    {
+      "key": "5957_CR140",
+      "doi": "10.1073/pnas.1205282109",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2012",
+      "author": "HM Dunsworth",
+      "unstructured": "Dunsworth, H. M., Warrener, A. G., Deacon, T., Ellison, P. T. & Pontzer, H. Metabolic hypothesis for human altriciality. Proc. Natl Acad. Sci. USA 109, 15212\u201315216 (2012)."
+    },
+    {
+      "key": "5957_CR141",
+      "doi": "10.1002/(sici)1520-6505(1999)7:6<197::aid-evan4>3.0.co;2-t",
+      "title": "",
+      "journal": "Evol. Anthropol.",
+      "year": "1999",
+      "author": "C Ward",
+      "unstructured": "Ward, C., Leakey, M. & Walker, A. The new hominid species Australopithecus anamensis. Evol. Anthropol. 7, 197\u2013205 (1999)."
+    },
+    {
+      "key": "5957_CR142",
+      "doi": "10.1002/ajpa.1330460203",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "1977",
+      "author": "TD White",
+      "unstructured": "White, T. D. New fossil hominids from Laetolil, Tanzania. Am. J. Phys. Anthropol. 46, 197\u2013229 (1977)."
+    },
+    {
+      "key": "5957_CR143",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Alemseged, Z. in The Cambridge World Prehistory (eds Renfrew, C. & Bahn, P.) 47\u201364 (Cambridge University Press, 2014)."
+    },
+    {
+      "key": "5957_CR144",
+      "doi": "10.1038/322517a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1986",
+      "author": "A Walker",
+      "unstructured": "Walker, A., Leakey, R. E., Harris, J. M. & Brown, F. H. 2.5-Myr Australopithecus boisei from west of Lake Turkana, Kenya. Nature 322, 517\u2013522 (1986)."
+    },
+    {
+      "key": "5957_CR145",
+      "doi": "10.1007/978-1-4419-0465-2_645",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Schroer, K. & Kufeldt, C. in Encyclopedia of Global Archaeology (ed. Smith, C.) 2870\u20132882 (Springer, 2014)."
+    },
+    {
+      "key": "5957_CR146",
+      "doi": "10.1002/ajpa.23750",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2018",
+      "author": "J DeSilva",
+      "unstructured": "DeSilva, J., McNutt, E., Benoit, J. & Zipfel, B. One small step: a review of Plio-Pleistocene hominin foot evolution. Am. J. Phys. Anthropol. 168, 63\u2013140 (2018)."
+    },
+    {
+      "key": "5957_CR147",
+      "doi": "10.1038/35084063",
+      "title": "",
+      "journal": "Nature",
+      "year": "2001",
+      "author": "Y Haile-Selassie",
+      "unstructured": "Haile-Selassie, Y. Late Miocene hominids from the Middle Awash, Ethiopia. Nature 412, 178\u2013181 (2001)."
+    },
+    {
+      "key": "5957_CR148",
+      "doi": "10.1038/s41586-022-04901-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "G Daver",
+      "unstructured": "Daver, G. et al. Postcranial evidence of late Miocene hominin bipedalism in Chad. Nature 609, 94\u2013100 (2022)."
+    },
+    {
+      "key": "5957_CR149",
+      "doi": "10.1038/nature00879",
+      "title": "",
+      "journal": "Nature",
+      "year": "2002",
+      "author": "M Brunet",
+      "unstructured": "Brunet, M. et al. A new hominid from the Upper Miocene of Chad, Central Africa. Nature 418, 145\u2013151 (2002)."
+    },
+    {
+      "key": "5957_CR150",
+      "doi": "10.1038/srep15175",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2015",
+      "author": "RS Lacruz",
+      "unstructured": "Lacruz, R. S. et al. Distinct growth of the nasomaxillary complex in Au. sediba. Sci. Rep. 5, 15175 (2015)."
+    }
+  ]
+}

@@ -1,0 +1,1360 @@
+{
+  "article": {
+    "slug": "s41586-020-2025-2",
+    "doi": "10.1038/s41586-020-2025-2",
+    "title": "Pathway paradigms revealed from the genetics of inflammatory bowel disease",
+    "url": "https://www.nature.com/articles/s41586-020-2025-2",
+    "abbrev": "pathway-paradigms-revealed-genetics-inflammatory-bowel",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/pathway-paradigms-revealed-genetics-inflammatory-bowel"
+  },
+  "meta": {
+    "title": "Pathway paradigms revealed from the genetics of inflammatory bowel disease",
+    "authors": [
+      "Daniel B. Graham",
+      "Ramnik J. Xavier"
+    ],
+    "published": [
+      2020,
+      2,
+      26
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-020-2025-2",
+    "n_references": 148,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "2025_CR1",
+      "doi": "10.1038/nature06005",
+      "title": "",
+      "journal": "Nature",
+      "year": "2007",
+      "author": "RJ Xavier",
+      "unstructured": "Xavier, R. J. & Podolsky, D. K. Unravelling the pathogenesis of inflammatory bowel disease. Nature 448, 427\u2013434 (2007)."
+    },
+    {
+      "key": "2025_CR2",
+      "doi": "10.1053/j.gastro.2016.10.020",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "2017",
+      "author": "GG Kaplan",
+      "unstructured": "Kaplan, G. G. & Ng, S. C. Understanding and preventing the global increase of inflammatory bowel disease. Gastroenterology 152, 313\u2013321.e2 (2017)."
+    },
+    {
+      "key": "2025_CR3",
+      "doi": "10.1038/s41586-019-1237-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "J Lloyd-Price",
+      "unstructured": "Lloyd-Price, J. et al. Multi-omics of the gut microbial ecosystem in inflammatory bowel diseases. Nature 569, 655\u2013662 (2019)."
+    },
+    {
+      "key": "2025_CR4",
+      "doi": "10.1038/nature14468",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "EF McKinney",
+      "unstructured": "McKinney, E. F., Lee, J. C., Jayne, D. R. W., Lyons, P. A. & Smith, K. G. C. T-cell exhaustion, co-stimulation and clinical outcome in autoimmunity and infection. Nature 523, 612\u2013616 (2015)."
+    },
+    {
+      "key": "2025_CR5",
+      "doi": "10.1016/s0140-6736(18)32592-3",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2019",
+      "author": "JS Hyams",
+      "unstructured": "Hyams, J. S. et al. Clinical and biological predictors of response to standardised paediatric colitis therapy (PROTECT): a multicentre inception cohort study. Lancet 393, 1708\u20131720 (2019)."
+    },
+    {
+      "key": "2025_CR6",
+      "doi": "10.1172/jci121668",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2019",
+      "author": "L Belarif",
+      "unstructured": "Belarif, L. et al. IL-7 receptor influences anti-TNF responsiveness and T cell gut homing in inflammatory bowel disease. J. Clin. Invest. 129, 1910\u20131925 (2019)."
+    },
+    {
+      "key": "2025_CR7",
+      "doi": "10.1038/s41571-019-0218-0",
+      "title": "",
+      "journal": "Nat. Rev. Clin. Oncol.",
+      "year": "2019",
+      "author": "F Martins",
+      "unstructured": "Martins, F. et al. Adverse effects of immune-checkpoint inhibitors: epidemiology, management and surveillance. Nat. Rev. Clin. Oncol. 16, 563\u2013580 (2019)."
+    },
+    {
+      "key": "2025_CR8",
+      "doi": "10.1080/03007995.2019.1620713",
+      "title": "",
+      "journal": "Curr. Med. Res. Opin.",
+      "year": "2019",
+      "author": "B Emond",
+      "unstructured": "Emond, B., Ellis, L. A., Chakravarty, S. D., Ladouceur, M. & Lefebvre, P. Real-world incidence of inflammatory bowel disease among patients with other chronic inflammatory diseases treated with interleukin-17a or phosphodiesterase 4 inhibitors. Curr. Med. Res. Opin. 35, 1751\u20131759 (2019)."
+    },
+    {
+      "key": "2025_CR9",
+      "doi": "10.1038/nature11582",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "L Jostins",
+      "unstructured": "Jostins, L. et al. Host\u2013microbe interactions have shaped the genetic architecture of inflammatory bowel disease. Nature 491, 119\u2013124 (2012). The Immunochip GWAS identified several new loci associated with IBD risk and offered insights into underlying pathways driving disease risk."
+    },
+    {
+      "key": "2025_CR10",
+      "doi": "10.1038/ng.3359",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2015",
+      "author": "JZ Liu",
+      "unstructured": "Liu, J. Z. et al. Association analyses identify 38 susceptibility loci for inflammatory bowel disease and highlight shared genetic risk across populations. Nat. Genet. 47, 979\u2013986 (2015). This GWAS analysed individuals across diverse ancestries, with large cohorts, and collectively implicated new loci associated with IBD."
+    },
+    {
+      "key": "2025_CR11",
+      "doi": "10.1038/ng.3760",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2017",
+      "author": "KM de Lange",
+      "unstructured": "de Lange, K. M. et al. Genome-wide association study implicates immune activation of multiple integrin genes in inflammatory bowel disease. Nat. Genet. 49, 256\u2013261 (2017). This GWAS and meta-analysis captured approximately 240 loci associated with IBD."
+    },
+    {
+      "key": "2025_CR12",
+      "doi": "10.1038/nature22969",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "H Huang",
+      "unstructured": "Huang, H. et al. Fine-mapping inflammatory bowel disease loci to single-variant resolution. Nature 547, 173\u2013178 (2017). This fine-mapping GWAS implicates putative causal SNPs associated with a number of IBD risk loci."
+    },
+    {
+      "key": "2025_CR13",
+      "doi": "10.1126/scitranslmed.aag1974",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2016",
+      "author": "CA Dendrou",
+      "unstructured": "Dendrou, C. A. et al. Resolving TYK2 locus genotype-to-phenotype differences in autoimmunity. Sci. Transl. Med. 8, 363ra149 (2016)."
+    },
+    {
+      "key": "2025_CR14",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "Y Momozawa",
+      "unstructured": "Momozawa, Y. et al. IBD risk loci are enriched in multigenic regulatory modules encompassing putative causative genes. Nat. Commun. 9, 2427 (2018)."
+    },
+    {
+      "key": "2025_CR15",
+      "doi": "10.1038/s41588-019-0505-9",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2019",
+      "author": "D Calderon",
+      "unstructured": "Calderon, D. et al. Landscape of stimulation-responsive chromatin across diverse human immune cells. Nat. Genet. 51, 1494\u20131505 (2019)."
+    },
+    {
+      "key": "2025_CR16",
+      "doi": "10.1038/s41588-018-0081-4",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "HK Finucane",
+      "unstructured": "Finucane, H. K. et al. Heritability enrichment of specifically expressed genes identifies disease-relevant tissues and cell types. Nat. Genet. 50, 621\u2013629 (2018)."
+    },
+    {
+      "key": "2025_CR17",
+      "doi": "10.1371/journal.pgen.1007329",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2018",
+      "author": "MA Rivas",
+      "unstructured": "Rivas, M. A. et al. Insights into the genetic epidemiology of Crohn\u2019s and rare diseases in the Ashkenazi Jewish population. PLoS Genet. 14, e1007329 (2018). This exome-sequencing study identified coding variants associated with IBD risk and leveraged ancestry to identify rare strong-acting genetic variants."
+    },
+    {
+      "key": "2025_CR18",
+      "doi": "10.1038/s41467-018-06964-x",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "GA Arnadottir",
+      "unstructured": "Arnadottir, G. A. et al. A homozygous loss-of-function mutation leading to CYBC1 deficiency causes chronic granulomatous disease. Nat. Commun. 9, 4447 (2018)."
+    },
+    {
+      "key": "2025_CR19",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "MA Rivas",
+      "unstructured": "Rivas, M. A. et al. A protein-truncating R179X variant in RNF186 confers protection against ulcerative colitis. Nat. Commun. 7, 12342 (2016)."
+    },
+    {
+      "key": "2025_CR20",
+      "doi": "10.1038/ng.952",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2011",
+      "author": "MA Rivas",
+      "unstructured": "Rivas, M. A. et al. Deep resequencing of GWAS loci identifies independent rare variants associated with inflammatory bowel disease. Nat. Genet. 43, 1066\u20131073 (2011)."
+    },
+    {
+      "key": "2025_CR21",
+      "doi": "10.1371/journal.pgen.1003723",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2013",
+      "author": "M Beaudoin",
+      "unstructured": "Beaudoin, M. et al. Deep resequencing of GWAS loci identifies rare variants in CARD9, IL23R and RNF186 that are associated with ulcerative colitis. PLoS Genet. 9, e1003723 (2013).\u00a0Two papers\n20,21\u00a0describing exome-sequencing studies identifying risk and protective coding variants associated with IBD."
+    },
+    {
+      "key": "2025_CR22",
+      "doi": "10.1056/nejmoa0907206",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2009",
+      "author": "E-O Glocker",
+      "unstructured": "Glocker, E.-O. et al. Inflammatory bowel disease and mutations affecting the interleukin-10 receptor. N. Engl. J. Med. 361, 2033\u20132045 (2009)."
+    },
+    {
+      "key": "2025_CR23",
+      "doi": "10.1016/j.immuni.2014.03.011",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2014",
+      "author": "DS Shouval",
+      "unstructured": "Shouval, D. S. et al. Interleukin-10 receptor signaling in innate immune cells regulates mucosal immune tolerance and anti-inflammatory macrophage function. Immunity 40, 706\u2013719 (2014)."
+    },
+    {
+      "key": "2025_CR24",
+      "doi": "10.1016/j.immuni.2014.03.012",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2014",
+      "author": "E Zigmond",
+      "unstructured": "Zigmond, E. et al. Macrophage-restricted interleukin-10 receptor deficiency, but not IL-10 deficiency, causes severe spontaneous colitis. Immunity 40, 720\u2013733 (2014)."
+    },
+    {
+      "key": "2025_CR25",
+      "doi": "10.1126/sciimmunol.aau6571",
+      "title": "",
+      "journal": "Sci. Immunol.",
+      "year": "2019",
+      "author": "B Bernshtein",
+      "unstructured": "Bernshtein, B. et al. IL-23-producing IL-10R\u03b1-deficient gut macrophages elicit an IL-22-driven proinflammatory epithelial cell response. Sci. Immunol. 4, eaau6571 (2019)."
+    },
+    {
+      "key": "2025_CR26",
+      "doi": "10.1007/s12016-018-8689-9",
+      "title": "",
+      "journal": "Clin. Rev. Allergy Immunol.",
+      "year": "2019",
+      "author": "S Hartono",
+      "unstructured": "Hartono, S., Ippoliti, M. R., Mastroianni, M., Torres, R. & Rider, N. L. Gastrointestinal disorders associated with primary immunodeficiency diseases. Clin. Rev. Allergy Immunol. 57, 145\u2013165 (2019)."
+    },
+    {
+      "key": "2025_CR27",
+      "doi": "10.1007/s10875-019-00629-0",
+      "title": "",
+      "journal": "J. Clin. Immunol.",
+      "year": "2019",
+      "author": "S Frizinsky",
+      "unstructured": "Frizinsky, S. et al. Novel MALT1 mutation linked to immunodeficiency, immune dysregulation, and an abnormal T cell receptor repertoire. J. Clin. Immunol. 39, 401\u2013413 (2019)."
+    },
+    {
+      "key": "2025_CR28",
+      "doi": "10.1053/j.gastro.2018.02.016",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "2018",
+      "author": "LA Denson",
+      "unstructured": "Denson, L. A. et al. Clinical and genomic correlates of neutrophil reactive oxygen species production in pediatric patients with Crohn\u2019s disease. Gastroenterology 154, 2097\u20132110 (2018)."
+    },
+    {
+      "key": "2025_CR29",
+      "doi": "10.1136/gutjnl-2015-310382",
+      "title": "",
+      "journal": "Gut",
+      "year": "2017",
+      "author": "T Schwerd",
+      "unstructured": "Schwerd, T. et al. Impaired antibacterial autophagy links granulomatous intestinal inflammation in Niemann\u2013Pick disease type C1 and XIAP deficiency with NOD2 variants in Crohn\u2019s disease. Gut 66, 1060\u20131073 (2017)."
+    },
+    {
+      "key": "2025_CR30",
+      "doi": "10.1093/ecco-jcc/jjy068",
+      "title": "",
+      "journal": "J. Crohn\u2019s Colitis",
+      "year": "2018",
+      "author": "F Charbit-Henrion",
+      "unstructured": "Charbit-Henrion, F. et al. Diagnostic yield of next-generation sequencing in very early-onset inflammatory bowel diseases: a multicentre study. J. Crohn\u2019s Colitis 12, 1104\u20131112 (2018)."
+    },
+    {
+      "key": "2025_CR31",
+      "doi": "10.1016/j.jcmgh.2018.12.001",
+      "title": "",
+      "journal": "Cell. Mol. Gastroenterol. Hepatol.",
+      "year": "2019",
+      "author": "S Jardine",
+      "unstructured": "Jardine, S., Dhingani, N. & Muise, A. M. TTC7A: steward of intestinal health. Cell. Mol. Gastroenterol. Hepatol. 7, 555\u2013570 (2019)."
+    },
+    {
+      "key": "2025_CR32",
+      "doi": "10.1093/hmg/ddy394",
+      "title": "",
+      "journal": "Hum. Mol. Genet.",
+      "year": "2019",
+      "author": "L Holt-Danborg",
+      "unstructured": "Holt-Danborg, L. et al. SPINT2 (HAI-2) missense variants identified in congenital sodium diarrhea/tufting enteropathy affect the ability of HAI-2 to inhibit prostasin but not matriptase. Hum. Mol. Genet. 28, 828\u2013841 (2019)."
+    },
+    {
+      "key": "2025_CR33",
+      "doi": "10.1080/00365521.2018.1521867",
+      "title": "",
+      "journal": "Scand. J. Gastroenterol.",
+      "year": "2018",
+      "author": "RR Tronstad",
+      "unstructured": "Tronstad, R. R. et al. Genetic and transcriptional analysis of inflammatory bowel disease-associated pathways in patients with GUCY2C-linked familial diarrhea. Scand. J. Gastroenterol. 53, 1264\u20131273 (2018)."
+    },
+    {
+      "key": "2025_CR34",
+      "doi": "10.1016/j.immuni.2016.05.007",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2016",
+      "author": "KG Lassen",
+      "unstructured": "Lassen, K. G. et al. Genetic coding variant in GPR65 alters lysosomal pH and links lysosomal dysfunction with colitis risk. Immunity 44, 1392\u20131405 (2016)."
+    },
+    {
+      "key": "2025_CR35",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2015",
+      "author": "DB Graham",
+      "unstructured": "Graham, D. B. et al. Functional genomics identifies negative regulatory nodes controlling phagocyte oxidative burst. Nat. Commun. 6, 7838 (2015)."
+    },
+    {
+      "key": "2025_CR36",
+      "doi": "10.1016/j.cell.2015.11.009",
+      "title": "",
+      "journal": "Cell",
+      "year": "2015",
+      "author": "JT Gaublomme",
+      "unstructured": "Gaublomme, J. T. et al. Single-cell genomics unveils critical regulators of Th17 cell pathogenicity. Cell 163, 1400\u20131412 (2015)."
+    },
+    {
+      "key": "2025_CR37",
+      "doi": "10.1016/j.celrep.2018.06.081",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2018",
+      "author": "DB Graham",
+      "unstructured": "Graham, D. B. et al. Nitric oxide engages an anti-inflammatory feedback loop mediated by peroxiredoxin 5 in phagocytes. Cell Rep. 24, 838\u2013850 (2018)."
+    },
+    {
+      "key": "2025_CR38",
+      "doi": "10.1016/j.cell.2015.06.059",
+      "title": "",
+      "journal": "Cell",
+      "year": "2015",
+      "author": "O Parnas",
+      "unstructured": "Parnas, O. et al. A genome-wide CRISPR screen in primary immune cells to dissect regulatory networks. Cell 162, 675\u2013686 (2015)."
+    },
+    {
+      "key": "2025_CR39",
+      "doi": "10.1038/nature23875",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "DR Simeonov",
+      "unstructured": "Simeonov, D. R. et al. Discovery of stimulation-responsive immune enhancers with CRISPR activation. Nature 549, 111\u2013115 (2017)."
+    },
+    {
+      "key": "2025_CR40",
+      "doi": "10.1073/pnas.1904714116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "H Takeda",
+      "unstructured": "Takeda, H. et al. CRISPR\u2013Cas9-mediated gene knockout in intestinal tumor organoids provides functional validation for colorectal cancer driver genes. Proc. Natl Acad. Sci. USA 116, 15635\u201315644 (2019)."
+    },
+    {
+      "key": "2025_CR41",
+      "doi": "10.1016/j.cell.2018.10.008",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "M Biton",
+      "unstructured": "Biton, M. et al. T helper cell cytokines modulate intestinal stem cell renewal and differentiation. Cell 175, 1307\u20131320.e22 (2018)."
+    },
+    {
+      "key": "2025_CR42",
+      "doi": "10.1016/j.jcmgh.2017.12.010",
+      "title": "",
+      "journal": "Cell. Mol. Gastroenterol. Hepatol.",
+      "year": "2018",
+      "author": "A Bein",
+      "unstructured": "Bein, A. et al. Microfluidic organ-on-a-chip models of human intestine. Cell. Mol. Gastroenterol. Hepatol. 5, 659\u2013668 (2018)."
+    },
+    {
+      "key": "2025_CR43",
+      "doi": "10.1038/s41586-019-0992-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "K Parikh",
+      "unstructured": "Parikh, K. et al. Colonic epithelial cell diversity in health and inflammatory bowel disease. Nature 567, 49\u201355 (2019)."
+    },
+    {
+      "key": "2025_CR44",
+      "doi": "10.1016/j.cell.2018.08.067",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "J Kinchen",
+      "unstructured": "Kinchen, J. et al. Structural remodeling of the human colonic mesenchyme in inflammatory bowel disease. Cell 175, 372\u2013386.e17 (2018)."
+    },
+    {
+      "key": "2025_CR45",
+      "doi": "10.1016/j.cell.2019.06.029",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "CS Smillie",
+      "unstructured": "Smillie, C. S. et al. Intra- and inter-cellular rewiring of the human colon during ulcerative colitis. Cell 178, 714\u2013730.e22 (2019).References\n43,45 provide a holistic single-cell transcriptional map of UC."
+    },
+    {
+      "key": "2025_CR46",
+      "doi": "10.1016/j.cell.2019.08.008",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "JC Martin",
+      "unstructured": "Martin, J. C. et al. Single-cell analysis of Crohn\u2019s disease lesions identifies a pathogenic cellular module associated with resistance to anti-TNF therapy. Cell 178, 1493\u20131508.e20 (2019). This study provides a single cell transcriptional map of CD."
+    },
+    {
+      "key": "2025_CR47",
+      "doi": "10.1038/nature24489",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "AL Haber",
+      "unstructured": "Haber, A. L. et al. A single-cell survey of the small intestinal epithelium. Nature 551, 333\u2013339 (2017)."
+    },
+    {
+      "key": "2025_CR48",
+      "doi": "10.1038/nm.4307",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2017",
+      "author": "NR West",
+      "unstructured": "West, N. R. et al. Oncostatin M drives intestinal inflammation and predicts response to tumor necrosis factor-neutralizing therapy in patients with inflammatory bowel disease. Nat. Med. 23, 579\u2013589 (2017). This study uses transcriptomic signatures of treatment resistance to identify and functionally validate cytokine circuits associated with severe IBD."
+    },
+    {
+      "key": "2025_CR49",
+      "doi": "10.1038/ng.3528",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2016",
+      "author": "D Ellinghaus",
+      "unstructured": "Ellinghaus, D. et al. Analysis of five chronic inflammatory diseases identifies 27 new associations and highlights disease-specific patterns at shared loci. Nat. Genet. 48, 510\u2013518 (2016). This study compares GWAS risk loci across distinct inflammatory diseases to identify common and disease-specific genes."
+    },
+    {
+      "key": "2025_CR50",
+      "doi": "10.1016/j.immuni.2018.07.010",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2018",
+      "author": "A Metidji",
+      "unstructured": "Metidji, A. et al. The environmental sensor AHR protects from inflammatory damage by maintaining intestinal stem cell homeostasis and barrier integrity. Immunity 49, 353\u2013362.e5 (2018)."
+    },
+    {
+      "key": "2025_CR51",
+      "doi": "10.1038/s41586-019-1383-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "N Pentinmikko",
+      "unstructured": "Pentinmikko, N. et al. Notum produced by Paneth cells attenuates regeneration of aged intestinal epithelium. Nature 571, 398\u2013402 (2019)."
+    },
+    {
+      "key": "2025_CR52",
+      "doi": "10.1038/s41586-019-1146-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "D Serra",
+      "unstructured": "Serra, D. et al. Self-organization and symmetry breaking in intestinal organoid development. Nature 569, 66\u201372 (2019)."
+    },
+    {
+      "key": "2025_CR53",
+      "doi": "10.1053/j.gastro.2018.05.028",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "2018",
+      "author": "KL VanDussen",
+      "unstructured": "VanDussen, K. L. et al. Abnormal small intestinal epithelial microvilli in patients with Crohn\u2019s disease. Gastroenterology 155, 815\u2013828 (2018)."
+    },
+    {
+      "key": "2025_CR54",
+      "doi": "10.1038/s41467-019-08581-8",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "SK Ramakrishnan",
+      "unstructured": "Ramakrishnan, S. K. et al. Intestinal non-canonical NF\u03baB signaling shapes the local and systemic immune response. Nat. Commun. 10, 660 (2019)."
+    },
+    {
+      "key": "2025_CR55",
+      "doi": "10.1038/s41577-019-0176-x",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2019",
+      "author": "C Schneider",
+      "unstructured": "Schneider, C., O\u2019Leary, C. E. & Locksley, R. M. Regulation of immune responses by tuft cells. Nat. Rev. Immunol. 19, 584\u2013593 (2019)."
+    },
+    {
+      "key": "2025_CR56",
+      "doi": "10.1038/nature14966",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "D Gr\u00fcn",
+      "unstructured": "Gr\u00fcn, D. et al. Single-cell messenger RNA sequencing reveals rare intestinal cell types. Nature 525, 251\u2013255 (2015)."
+    },
+    {
+      "key": "2025_CR57",
+      "doi": "10.1038/s41556-018-0143-y",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2018",
+      "author": "J Beumer",
+      "unstructured": "Beumer, J. et al. Enteroendocrine cells switch hormone expression along the crypt-to-villus BMP signalling gradient. Nat. Cell Biol. 20, 909\u2013916 (2018)."
+    },
+    {
+      "key": "2025_CR58",
+      "doi": "10.1016/j.cell.2018.12.029",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "H Gehart",
+      "unstructured": "Gehart, H. et al. Identification of enteroendocrine regulators by real-time single-cell differentiation mapping. Cell 176, 1158\u20131173.e16 (2019)."
+    },
+    {
+      "key": "2025_CR59",
+      "doi": "10.1126/science.aan0814",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "V Mohanan",
+      "unstructured": "Mohanan, V. et al. C1orf106 is a colitis risk gene that regulates stability of epithelial adherens junctions. Science 359, 1161\u20131166 (2018)."
+    },
+    {
+      "key": "2025_CR60",
+      "doi": "10.4049/immunohorizons.1800027",
+      "title": "",
+      "journal": "Immunohorizons",
+      "year": "2018",
+      "author": "P Manzanillo",
+      "unstructured": "Manzanillo, P. et al. Inflammatory bowel disease susceptibility gene C1ORF106 regulates intestinal epithelial permeability. Immunohorizons 2, 164\u2013171 (2018)."
+    },
+    {
+      "key": "2025_CR61",
+      "doi": "10.1038/mi.2016.58",
+      "title": "",
+      "journal": "Mucosal Immunol.",
+      "year": "2017",
+      "author": "K Fujimoto",
+      "unstructured": "Fujimoto, K. et al. Regulation of intestinal homeostasis by the ulcerative colitis-associated gene RNF186. Mucosal Immunol. 10, 446\u2013459 (2017)."
+    },
+    {
+      "key": "2025_CR62",
+      "doi": "10.1016/j.cellsig.2018.09.008",
+      "title": "",
+      "journal": "Cell. Signal.",
+      "year": "2018",
+      "author": "X Tong",
+      "unstructured": "Tong, X. et al. RNF186 impairs insulin sensitivity by inducing ER stress in mouse primary hepatocytes. Cell. Signal. 52, 155\u2013162 (2018)."
+    },
+    {
+      "key": "2025_CR63",
+      "doi": "10.1093/hmg/ddu399",
+      "title": "",
+      "journal": "Hum. Mol. Genet.",
+      "year": "2014",
+      "author": "G Sveinbjornsson",
+      "unstructured": "Sveinbjornsson, G. et al. Rare mutations associating with serum creatinine and chronic kidney disease. Hum. Mol. Genet. 23, 6935\u20136943 (2014)."
+    },
+    {
+      "key": "2025_CR64",
+      "doi": "10.1016/j.abb.2018.12.022",
+      "title": "",
+      "journal": "Arch. Biochem. Biophys.",
+      "year": "2019",
+      "author": "T Mukherjee",
+      "unstructured": "Mukherjee, T. et al. NOD1 and NOD2 in inflammation, immunity and disease. Arch. Biochem. Biophys. 670, 69\u201381 (2019)."
+    },
+    {
+      "key": "2025_CR65",
+      "doi": "10.1038/35079114",
+      "title": "",
+      "journal": "Nature",
+      "year": "2001",
+      "author": "Y Ogura",
+      "unstructured": "Ogura, Y. et al. A frameshift mutation in NOD2 associated with susceptibility to Crohn\u2019s disease. Nature 411, 603\u2013606 (2001)."
+    },
+    {
+      "key": "2025_CR66",
+      "doi": "10.1073/pnas.0802726105",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2008",
+      "author": "L-C Hsu",
+      "unstructured": "Hsu, L.-C. et al. A NOD2\u2013NALP1 complex mediates caspase-1-dependent IL-1\u03b2 secretion in response to Bacillus anthracis infection and muramyl dipeptide. Proc. Natl Acad. Sci. USA 105, 7803\u20137808 (2008)."
+    },
+    {
+      "key": "2025_CR67",
+      "doi": "10.1016/j.cub.2004.10.027",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2004",
+      "author": "F Martinon",
+      "unstructured": "Martinon, F., Agostini, L., Meylan, E. & Tschopp, J. Identification of bacterial muramyl dipeptide as activator of the NALP3/cryopyrin inflammasome. Curr. Biol. 14, 1929\u20131934 (2004)."
+    },
+    {
+      "key": "2025_CR68",
+      "doi": "10.4049/jimmunol.1001854",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2011",
+      "author": "Y-G Kim",
+      "unstructured": "Kim, Y.-G. et al. Cutting edge: Crohn\u2019s disease-associated Nod2 mutation limits production of proinflammatory cytokines to protect the host from Enterococcus faecalis-induced lethality. J. Immunol. 187, 2849\u20132852 (2011)."
+    },
+    {
+      "key": "2025_CR69",
+      "doi": "10.1177/1753425919826367",
+      "title": "",
+      "journal": "Innate Immun.",
+      "year": "2019",
+      "author": "B Umiker",
+      "unstructured": "Umiker, B. et al. The NLRP3 inflammasome mediates DSS-induced intestinal inflammation in Nod2 knockout mice. Innate Immun. 25, 132\u2013143 (2019)."
+    },
+    {
+      "key": "2025_CR70",
+      "doi": "10.1126/sciimmunol.aaw4341",
+      "title": "",
+      "journal": "Sci. Immunol.",
+      "year": "2019",
+      "author": "R Caruso",
+      "unstructured": "Caruso, R. et al. A specific gene\u2013microbe interaction drives the development of Crohn\u2019s disease-like colitis in mice. Sci. Immunol. 4, eaaw4341 (2019)."
+    },
+    {
+      "key": "2025_CR71",
+      "doi": "10.1074/jbc.m117.781500",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2017",
+      "author": "SM Chirieleison",
+      "unstructured": "Chirieleison, S. M. et al. Nucleotide-binding oligomerization domain (NOD) signaling defects and cell death susceptibility cannot be uncoupled in X-linked inhibitor of apoptosis (XIAP)-driven inflammatory disease. J. Biol. Chem. 292, 9666\u20139679 (2017)."
+    },
+    {
+      "key": "2025_CR72",
+      "doi": "10.1016/j.semcdb.2015.01.015",
+      "title": "",
+      "journal": "Semin. Cell Dev. Biol.",
+      "year": "2015",
+      "author": "S Latour",
+      "unstructured": "Latour, S. & Aguilar, C. XIAP deficiency syndrome in humans. Semin. Cell Dev. Biol. 39, 115\u2013123 (2015)."
+    },
+    {
+      "key": "2025_CR73",
+      "doi": "10.1053/j.gastro.2016.01.031",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "2016",
+      "author": "Q Li",
+      "unstructured": "Li, Q. et al. Variants in TRIM22 that affect NOD2 signaling are associated with very-early-onset inflammatory bowel disease. Gastroenterology 150, 1196\u20131207 (2016)."
+    },
+    {
+      "key": "2025_CR74",
+      "doi": "10.1038/s41590-019-0492-0",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2019",
+      "author": "NW Zammit",
+      "unstructured": "Zammit, N. W. et al. Denisovan, modern human and mouse TNFAIP3 alleles tune A20 phosphorylation and immunity. Nat. Immunol. 20, 1299\u20131310 (2019)."
+    },
+    {
+      "key": "2025_CR75",
+      "doi": "10.15252/embj.201899372",
+      "title": "",
+      "journal": "EMBO J.",
+      "year": "2018",
+      "author": "M Hrdinka",
+      "unstructured": "Hrdinka, M. et al. Small molecule inhibitors reveal an indispensable scaffolding role of RIPK2 in NOD2 signaling. EMBO J. 37, e99372 (2018)."
+    },
+    {
+      "key": "2025_CR76",
+      "doi": "10.1021/acs.jmedchem.9b00575",
+      "title": "",
+      "journal": "J. Med. Chem.",
+      "year": "2019",
+      "author": "PA Haile",
+      "unstructured": "Haile, P. A. et al. Discovery of a first-in-class receptor interacting protein 2 (RIP2) kinase specific clinical candidate, 2-((4-(benzo[d]thiazol-5-ylamino)-6-(tert-butylsulfonyl)quinazolin-7-yl)oxy)ethyl dihydrogen phosphate, for the treatment of inflammatory diseases. J. Med. Chem. 62, 6482\u20136494 (2019)."
+    },
+    {
+      "key": "2025_CR77",
+      "doi": "10.1038/ni1466",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2007",
+      "author": "H Hara",
+      "unstructured": "Hara, H. et al. The adaptor protein CARD9 is essential for the activation of myeloid cells through ITAM-associated and Toll-like receptors. Nat. Immunol. 8, 619\u2013629 (2007)."
+    },
+    {
+      "key": "2025_CR78",
+      "doi": "10.1038/s41590-018-0112-4",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2018",
+      "author": "X Xu",
+      "unstructured": "Xu, X. et al. CARD9S12N facilitates the production of IL-5 by alveolar macrophages for the induction of type 2 immune responses. Nat. Immunol. 19, 547\u2013560 (2018)."
+    },
+    {
+      "key": "2025_CR79",
+      "doi": "10.1016/j.chom.2019.01.007",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2019",
+      "author": "JJ Limon",
+      "unstructured": "Limon, J. J. et al. Malassezia is associated with Crohn\u2019s disease and exacerbates colitis in mouse models. Cell Host Microbe 25, 377\u2013388.e6 (2019)."
+    },
+    {
+      "key": "2025_CR80",
+      "doi": "10.1016/j.immuni.2015.10.005",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2015",
+      "author": "Z Cao",
+      "unstructured": "Cao, Z. et al. Ubiquitin ligase TRIM62 regulates CARD9-mediated anti-fungal immunity and intestinal inflammation. Immunity 43, 715\u2013726 (2015)."
+    },
+    {
+      "key": "2025_CR81",
+      "doi": "10.1073/pnas.1705748114",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "ES Leshchiner",
+      "unstructured": "Leshchiner, E. S. et al. Small-molecule inhibitors directly target CARD9 and mimic its protective variant in inflammatory bowel disease. Proc. Natl Acad. Sci. USA 114, 11392\u201311397 (2017)."
+    },
+    {
+      "key": "2025_CR82",
+      "doi": "10.1016/j.immuni.2018.08.011",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2018",
+      "author": "JJ Bunker",
+      "unstructured": "Bunker, J. J. & Bendelac, A. IgA responses to microbiota. Immunity 49, 211\u2013224 (2018)."
+    },
+    {
+      "key": "2025_CR83",
+      "doi": "10.1016/j.immuni.2019.02.006",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2019",
+      "author": "T Castro-Dopico",
+      "unstructured": "Castro-Dopico, T. et al. Anti-commensal IgG drives intestinal inflammation and type 17 immunity in ulcerative colitis. Immunity 50, 1099\u20131114.e10 (2019)."
+    },
+    {
+      "key": "2025_CR84",
+      "doi": "10.1016/j.cell.2019.07.045",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "DR Plichta",
+      "unstructured": "Plichta, D. R., Graham, D. B., Subramanian, S. & Xavier, R. J. Therapeutic opportunities in inflammatory bowel disease: mechanistic dissection of host\u2013microbiome relationships. Cell 178, 1041\u20131056 (2019). This review covers the role of the microbiome and environmental factors that affect IBD."
+    },
+    {
+      "key": "2025_CR85",
+      "doi": "10.1038/ng.3176",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2015",
+      "author": "P Goyette",
+      "unstructured": "Goyette, P. et al. High-density mapping of the MHC identifies a shared role for HLA-DRB1*01:03 in inflammatory bowel diseases and heterozygous advantage in ulcerative colitis. Nat. Genet. 47, 172\u2013179 (2015). This fine-mapping GWAS implicated specific HLA alleles in IBD risk."
+    },
+    {
+      "key": "2025_CR86",
+      "doi": "10.1038/ng.3755",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2017",
+      "author": "JC Lee",
+      "unstructured": "Lee, J. C. et al. Genome-wide association study identifies distinct genetic contributions to prognosis and susceptibility in Crohn\u2019s disease. Nat. Genet. 49, 262\u2013268 (2017)."
+    },
+    {
+      "key": "2025_CR87",
+      "doi": "10.1126/sciimmunol.aao1314",
+      "title": "",
+      "journal": "Sci. Immunol.",
+      "year": "2017",
+      "author": "KA Knoop",
+      "unstructured": "Knoop, K. A. et al. Microbial antigen encounter during a preweaning interval is critical for tolerance to gut bacteria. Sci. Immunol. 2, eaao1314 (2017)."
+    },
+    {
+      "key": "2025_CR88",
+      "doi": "10.1038/s41385-018-0046-z",
+      "title": "",
+      "journal": "Mucosal Immunol.",
+      "year": "2018",
+      "author": "J Wu",
+      "unstructured": "Wu, J. et al. Expanded TCR\u03b2 CDR3 clonotypes distinguish Crohn\u2019s disease and ulcerative colitis patients. Mucosal Immunol. 11, 1487\u20131495 (2018)."
+    },
+    {
+      "key": "2025_CR89",
+      "doi": "10.1038/s41591-019-0403-9",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2019",
+      "author": "A Christophersen",
+      "unstructured": "Christophersen, A. et al. Distinct phenotype of CD4+ T cells driving celiac disease identified in multiple autoimmune conditions. Nat. Med. 25, 734\u2013737 (2019)."
+    },
+    {
+      "key": "2025_CR90",
+      "doi": "10.1016/j.cell.2018.07.017",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "E Vivier",
+      "unstructured": "Vivier, E. et al. Innate lymphoid cells: 10 years on. Cell 174, 1054\u20131066 (2018)."
+    },
+    {
+      "key": "2025_CR91",
+      "doi": "10.1038/s41586-019-1082-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "L Zhou",
+      "unstructured": "Zhou, L. et al. Innate lymphoid cells support regulatory T cells in the intestine through interleukin-2. Nature 568, 405\u2013409 (2019)."
+    },
+    {
+      "key": "2025_CR92",
+      "doi": "10.1016/j.immuni.2019.03.017",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2019",
+      "author": "M Friedrich",
+      "unstructured": "Friedrich, M., Pohin, M. & Powrie, F. Cytokine networks in the pathophysiology of inflammatory bowel disease. Immunity 50, 992\u20131006 (2019)."
+    },
+    {
+      "key": "2025_CR93",
+      "doi": "10.1126/science.1135245",
+      "title": "",
+      "journal": "Science",
+      "year": "2006",
+      "author": "RH Duerr",
+      "unstructured": "Duerr, R. H. et al. A genome-wide association study identifies IL23R as an inflammatory bowel disease gene. Science 314, 1461\u20131463 (2006)."
+    },
+    {
+      "key": "2025_CR94",
+      "doi": "10.1016/j.immuni.2018.07.007",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2018",
+      "author": "D Bauch\u00e9",
+      "unstructured": "Bauch\u00e9, D. et al. LAG3+ regulatory T cells restrain interleukin-23-producing CX3CR1+ gut-resident macrophages during group 3 innate lymphoid cell-driven colitis. Immunity 49, 342\u2013352.e5 (2018)."
+    },
+    {
+      "key": "2025_CR95",
+      "doi": "10.1038/ni1488",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2007",
+      "author": "L Zhou",
+      "unstructured": "Zhou, L. et al. IL-6 programs TH-17 cell differentiation by promoting sequential engagement of the IL-21 and IL-23 pathways. Nat. Immunol. 8, 967\u2013974 (2007)."
+    },
+    {
+      "key": "2025_CR96",
+      "doi": "10.1016/j.immuni.2015.08.019",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2015",
+      "author": "JR Maxwell",
+      "unstructured": "Maxwell, J. R. et al. Differential roles for interleukin-23 and interleukin-17 in intestinal immunoregulation. Immunity 43, 739\u2013750 (2015)."
+    },
+    {
+      "key": "2025_CR97",
+      "doi": "10.1038/s41590-018-0134-y",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2018",
+      "author": "C Tang",
+      "unstructured": "Tang, C. et al. Suppression of IL-17F, but not of IL-17A, provides protection against colitis by inducing Treg cells through modification of the intestinal microbiota. Nat. Immunol. 19, 755\u2013765 (2018)."
+    },
+    {
+      "key": "2025_CR98",
+      "doi": "10.1053/j.gastro.2008.10.018",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "2009",
+      "author": "M Leppkes",
+      "unstructured": "Leppkes, M. et al. ROR\u03b3-expressing Th17 cells induce murine chronic intestinal inflammation via redundant effects of IL-17A and IL-17F. Gastroenterology 136, 257\u2013267 (2009)."
+    },
+    {
+      "key": "2025_CR99",
+      "doi": "10.1242/jcs.207365",
+      "title": "",
+      "journal": "J. Cell Sci.",
+      "year": "2017",
+      "author": "A Malik",
+      "unstructured": "Malik, A. & Kanneganti, T.-D. Inflammasome activation and assembly at a glance. J. Cell Sci. 130, 3955\u20133963 (2017)."
+    },
+    {
+      "key": "2025_CR100",
+      "doi": "10.1053/j.gastro.2016.08.055",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "2016",
+      "author": "DS Shouval",
+      "unstructured": "Shouval, D. S. et al. Interleukin 1\u03b2 mediates intestinal inflammation in mice and patients with interleukin 10 receptor deficiency. Gastroenterology 151, 1100\u20131104 (2016)."
+    },
+    {
+      "key": "2025_CR101",
+      "doi": "10.1073/pnas.1322831111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "A de Luca",
+      "unstructured": "de Luca, A. et al. IL-1 receptor blockade restores autophagy and reduces inflammation in chronic granulomatous disease in mice and in humans. Proc. Natl Acad. Sci. USA 111, 3526\u20133531 (2014)."
+    },
+    {
+      "key": "2025_CR102",
+      "doi": "10.1038/nature07383",
+      "title": "",
+      "journal": "Nature",
+      "year": "2008",
+      "author": "T Saitoh",
+      "unstructured": "Saitoh, T. et al. Loss of the autophagy protein Atg16L1 enhances endotoxin-induced IL-1\u03b2 production. Nature 456, 264\u2013268 (2008)."
+    },
+    {
+      "key": "2025_CR103",
+      "doi": "10.1073/pnas.1407001111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "KG Lassen",
+      "unstructured": "Lassen, K. G. et al. Atg16L1 T300A variant decreases selective autophagy resulting in altered cytokine signaling and decreased antibacterial defense. Proc. Natl Acad. Sci. USA 111, 7741\u20137746 (2014)."
+    },
+    {
+      "key": "2025_CR104",
+      "doi": "10.1038/nature13044",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "A Murthy",
+      "unstructured": "Murthy, A. et al. A Crohn\u2019s disease variant in Atg16l1 enhances its degradation by caspase 3. Nature 506, 456\u2013462 (2014)."
+    },
+    {
+      "key": "2025_CR105",
+      "doi": "10.1038/s41590-017-0042-6",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2018",
+      "author": "M Samie",
+      "unstructured": "Samie, M. et al. Selective autophagy of the adaptor TRIF regulates innate inflammatory signaling. Nat. Immunol. 19, 246\u2013254 (2018)."
+    },
+    {
+      "key": "2025_CR106",
+      "doi": "10.1182/blood-2017-12-820852",
+      "title": "",
+      "journal": "Blood",
+      "year": "2018",
+      "author": "ES Weiss",
+      "unstructured": "Weiss, E. S. et al. Interleukin-18 diagnostically distinguishes and pathogenically promotes human and murine macrophage activation syndrome. Blood 131, 1442\u20131455 (2018)."
+    },
+    {
+      "key": "2025_CR107",
+      "doi": "10.1038/nature13449",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "H Xu",
+      "unstructured": "Xu, H. et al. Innate immune sensing of bacterial modifications of Rho GTPases by the pyrin inflammasome. Nature 513, 237\u2013241 (2014)."
+    },
+    {
+      "key": "2025_CR108",
+      "doi": "10.1016/j.immuni.2012.02.001",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2012",
+      "author": "S Khare",
+      "unstructured": "Khare, S. et al. An NLRP7-containing inflammasome mediates recognition of microbial lipopeptides in human macrophages. Immunity 36, 464\u2013476 (2012)."
+    },
+    {
+      "key": "2025_CR109",
+      "doi": "10.1038/nature13577",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "C Schiering",
+      "unstructured": "Schiering, C. et al. The alarmin IL-33 promotes regulatory T-cell function in the intestine. Nature 513, 564\u2013568 (2014)."
+    },
+    {
+      "key": "2025_CR110",
+      "doi": "10.1038/nature08900",
+      "title": "",
+      "journal": "Nature",
+      "year": "2010",
+      "author": "DR Neill",
+      "unstructured": "Neill, D. R. et al. Nuocytes represent a new innate effector leukocyte that mediates type-2 immunity. Nature 464, 1367\u20131370 (2010)."
+    },
+    {
+      "key": "2025_CR111",
+      "doi": "",
+      "title": "",
+      "journal": "Cell Death Dis.",
+      "year": "2018",
+      "author": "Z He",
+      "unstructured": "He, Z. et al. Mast cells are essential intermediaries in regulating IL-33/ST2 signaling for an immune network favorable to mucosal healing in experimentally inflamed colons. Cell Death Dis. 9, 1173 (2018)."
+    },
+    {
+      "key": "2025_CR112",
+      "doi": "10.1053/j.gastro.2018.11.029",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "2019",
+      "author": "K Scheibe",
+      "unstructured": "Scheibe, K. et al. Inhibiting interleukin 36 receptor signaling reduces fibrosis in mice with chronic intestinal inflammation. Gastroenterology 156, 1082\u20131097.e11 (2019)."
+    },
+    {
+      "key": "2025_CR113",
+      "doi": "10.1038/ng2032",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2007",
+      "author": "JD Rioux",
+      "unstructured": "Rioux, J. D. et al. Genome-wide association study identifies new susceptibility loci for Crohn disease and implicates autophagy in disease pathogenesis. Nat. Genet. 39, 596\u2013604 (2007)."
+    },
+    {
+      "key": "2025_CR114",
+      "doi": "10.1038/ng.215",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2008",
+      "author": "SA McCarroll",
+      "unstructured": "McCarroll, S. A. et al. Deletion polymorphism upstream of IRGM associated with altered IRGM expression and Crohn\u2019s disease. Nat. Genet. 40, 1107\u20131112 (2008)."
+    },
+    {
+      "key": "2025_CR115",
+      "doi": "10.1038/ng1954",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2007",
+      "author": "J Hampe",
+      "unstructured": "Hampe, J. et al. A genome-wide association scan of nonsynonymous SNPs identifies a susceptibility variant for Crohn disease in ATG16L1. Nat. Genet. 39, 207\u2013211 (2007)."
+    },
+    {
+      "key": "2025_CR116",
+      "doi": "10.1126/scitranslmed.aai7795",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2018",
+      "author": "KY Hui",
+      "unstructured": "Hui, K. Y. et al. Functional variants in the LRRK2 gene confer shared effects on risk for Crohn\u2019s disease and Parkinson\u2019s disease. Sci. Transl. Med. 10, eaai7795 (2018)."
+    },
+    {
+      "key": "2025_CR117",
+      "doi": "10.1126/scitranslmed.aan8162",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2018",
+      "author": "T Takagawa",
+      "unstructured": "Takagawa, T. et al. An increase in LRRK2 suppresses autophagy and enhances dectin-1-induced immunity in a mouse model of colitis. Sci. Transl. Med. 10, eaan8162 (2018)."
+    },
+    {
+      "key": "2025_CR118",
+      "doi": "10.1038/nature07416",
+      "title": "",
+      "journal": "Nature",
+      "year": "2008",
+      "author": "K Cadwell",
+      "unstructured": "Cadwell, K. et al. A key role for autophagy and the autophagy gene Atg16l1 in mouse and human intestinal Paneth cells. Nature 456, 259\u2013263 (2008)."
+    },
+    {
+      "key": "2025_CR119",
+      "doi": "10.1053/j.gastro.2013.09.048",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "2014",
+      "author": "KL VanDussen",
+      "unstructured": "VanDussen, K. L. et al. Genetic variants synthesize to produce Paneth cell phenotypes that define subtypes of Crohn\u2019s disease. Gastroenterology 146, 200\u2013209 (2014)."
+    },
+    {
+      "key": "2025_CR120",
+      "doi": "10.1136/gutjnl-2012-303527",
+      "title": "",
+      "journal": "Gut",
+      "year": "2014",
+      "author": "JJ Deuring",
+      "unstructured": "Deuring, J. J. et al. Genomic ATG16L1 risk allele-restricted Paneth cell ER stress in quiescent Crohn\u2019s disease. Gut 63, 1081\u20131091 (2014)."
+    },
+    {
+      "key": "2025_CR121",
+      "doi": "10.1126/science.aat7186",
+      "title": "",
+      "journal": "Science",
+      "year": "2019",
+      "author": "J Grootjans",
+      "unstructured": "Grootjans, J. et al. Epithelial endoplasmic reticulum stress orchestrates a protective IgA response. Science 363, 993\u2013998 (2019)."
+    },
+    {
+      "key": "2025_CR122",
+      "doi": "10.1016/j.cell.2008.07.021",
+      "title": "",
+      "journal": "Cell",
+      "year": "2008",
+      "author": "A Kaser",
+      "unstructured": "Kaser, A. et al. XBP1 links ER stress to intestinal inflammation and confers genetic risk for human inflammatory bowel disease. Cell 134, 743\u2013756 (2008)."
+    },
+    {
+      "key": "2025_CR123",
+      "doi": "10.1038/nature12599",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "TE Adolph",
+      "unstructured": "Adolph, T. E. et al. Paneth cells as a site of origin for intestinal inflammation. Nature 503, 272\u2013276 (2013)."
+    },
+    {
+      "key": "2025_CR124",
+      "doi": "10.1084/jem.20162041",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2017",
+      "author": "S Hosomi",
+      "unstructured": "Hosomi, S. et al. Intestinal epithelial cell endoplasmic reticulum stress promotes MULT1 up-regulation and NKG2D-mediated inflammation. J. Exp. Med. 214, 2985\u20132997 (2017)."
+    },
+    {
+      "key": "2025_CR125",
+      "doi": "10.1016/j.celrep.2016.11.042",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2016",
+      "author": "DB Graham",
+      "unstructured": "Graham, D. B. et al. TMEM258 is a component of the oligosaccharyltransferase complex controlling ER stress and intestinal inflammation. Cell Rep. 17, 2955\u20132965 (2016)."
+    },
+    {
+      "key": "2025_CR126",
+      "doi": "10.1016/j.ajhg.2015.11.003",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2015",
+      "author": "JH Park",
+      "unstructured": "Park, J. H. et al. SLC39A8 deficiency: a disorder of manganese transport and glycosylation. Am. J. Hum. Genet. 97, 894\u2013903 (2015)."
+    },
+    {
+      "key": "2025_CR127",
+      "doi": "10.1111/ahg.12220",
+      "title": "",
+      "journal": "Ann. Hum. Genet.",
+      "year": "2018",
+      "author": "F Bastaki",
+      "unstructured": "Bastaki, F. et al. Single-center experience of N-linked congenital disorders of glycosylation with a summary of molecularly characterized cases in Arabs. Ann. Hum. Genet. 82, 35\u201347 (2018)."
+    },
+    {
+      "key": "2025_CR128",
+      "doi": "10.1038/nri.2017.103",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2017",
+      "author": "CT Taylor",
+      "unstructured": "Taylor, C. T. & Colgan, S. P. Regulation of immunity and inflammation by hypoxia in immunological niches. Nat. Rev. Immunol. 17, 774\u2013785 (2017)."
+    },
+    {
+      "key": "2025_CR129",
+      "doi": "10.1016/j.immuni.2013.11.020",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2014",
+      "author": "EL Campbell",
+      "unstructured": "Campbell, E. L. et al. Transmigrating neutrophils shape the mucosal microenvironment through localized oxygen depletion to influence resolution of inflammation. Immunity 40, 66\u201377 (2014)."
+    },
+    {
+      "key": "2025_CR130",
+      "doi": "10.1096/fj.14-259663",
+      "title": "",
+      "journal": "FASEB J.",
+      "year": "2015",
+      "author": "VF Curtis",
+      "unstructured": "Curtis, V. F. et al. Stabilization of HIF through inhibition of cullin-2 neddylation is protective in mucosal inflammatory responses. FASEB J. 29, 208\u2013215 (2015)."
+    },
+    {
+      "key": "2025_CR131",
+      "doi": "10.1053/j.gastro.2013.07.010",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "2013",
+      "author": "X Xue",
+      "unstructured": "Xue, X. et al. Endothelial PAS domain protein 1 activates the inflammatory response in the intestinal epithelium to promote colitis in mice. Gastroenterology 145, 831\u2013841 (2013)."
+    },
+    {
+      "key": "2025_CR132",
+      "doi": "10.1152/ajpgi.00081.2019",
+      "title": "",
+      "journal": "Am. J. Physiol. Gastrointest. Liver Physiol.",
+      "year": "2019",
+      "author": "S Solanki",
+      "unstructured": "Solanki, S., Devenport, S. N., Ramakrishnan, S. K. & Shah, Y. M. Temporal induction of intestinal epithelial hypoxia-inducible factor-2\u03b1 is sufficient to drive colitis. Am. J. Physiol. Gastrointest. Liver Physiol. 317, G98\u2013G107 (2019)."
+    },
+    {
+      "key": "2025_CR133",
+      "doi": "10.1073/pnas.1302840110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "LE Glover",
+      "unstructured": "Glover, L. E. et al. Control of creatine metabolism by HIF is an endogenous mechanism of barrier regulation in colitis. Proc. Natl Acad. Sci. USA 110, 19820\u201319825 (2013)."
+    },
+    {
+      "key": "2025_CR134",
+      "doi": "10.1038/nature11986",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "GM Tannahill",
+      "unstructured": "Tannahill, G. M. et al. Succinate is an inflammatory signal that induces IL-1\u03b2 through HIF-1\u03b1. Nature 496, 238\u2013242 (2013)."
+    },
+    {
+      "key": "2025_CR135",
+      "doi": "10.1016/j.immuni.2018.06.016",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2018",
+      "author": "MS Nadjsombati",
+      "unstructured": "Nadjsombati, M. S. et al. Detection of succinate by intestinal tuft cells triggers a type 2 innate immune circuit. Immunity 49, 33\u201341.e7 (2018)."
+    },
+    {
+      "key": "2025_CR136",
+      "doi": "10.1084/jem.20180118",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2018",
+      "author": "S Nair",
+      "unstructured": "Nair, S. et al. Irg1 expression in myeloid cells prevents immunopathology during M. tuberculosis infection. J. Exp. Med. 215, 1035\u20131045 (2018)."
+    },
+    {
+      "key": "2025_CR137",
+      "doi": "10.1038/nature25986",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "EL Mills",
+      "unstructured": "Mills, E. L. et al. Itaconate is an anti-inflammatory metabolite that activates Nrf2 via alkylation of KEAP1. Nature 556, 113\u2013117 (2018)."
+    },
+    {
+      "key": "2025_CR138",
+      "doi": "10.4049/jimmunol.1800636",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2019",
+      "author": "C Skon-Hegg",
+      "unstructured": "Skon-Hegg, C. et al. LACC1 regulates TNF and IL-17 in mouse models of arthritis and inflammation. J. Immunol. 202, 183\u2013193 (2019)."
+    },
+    {
+      "key": "2025_CR139",
+      "doi": "10.1038/ncomms15614",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "A Lahiri",
+      "unstructured": "Lahiri, A., Hedl, M., Yan, J. & Abraham, C. Human LACC1 increases innate receptor-induced responses and a LACC1 disease-risk variant modulates these outcomes. Nat. Commun. 8, 15614 (2017)."
+    },
+    {
+      "key": "2025_CR140",
+      "doi": "10.1038/ni.3532",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2016",
+      "author": "MZ Cader",
+      "unstructured": "Cader, M. Z. et al. C13orf31 (FAMIN) is a central regulator of immunometabolic function. Nat. Immunol. 17, 1046\u20131056 (2016)."
+    },
+    {
+      "key": "2025_CR141",
+      "doi": "10.1016/j.immuni.2015.06.006",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2015",
+      "author": "AB Molofsky",
+      "unstructured": "Molofsky, A. B., Savage, A. K. & Locksley, R. M. Interleukin-33 in tissue homeostasis, injury, and inflammation. Immunity 42, 1005\u20131019 (2015)."
+    },
+    {
+      "key": "2025_CR142",
+      "doi": "10.1038/nature24676",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "S Schafer",
+      "unstructured": "Schafer, S. et al. IL-11 is a crucial determinant of cardiovascular fibrosis. Nature 552, 110\u2013115 (2017)."
+    },
+    {
+      "key": "2025_CR143",
+      "doi": "10.1038/s41588-018-0063-6",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "D Kotlarz",
+      "unstructured": "Kotlarz, D. et al. Human TGF-\u03b21 deficiency causes severe inflammatory bowel disease and encephalopathy. Nat. Genet. 50, 344\u2013348 (2018)."
+    },
+    {
+      "key": "2025_CR144",
+      "doi": "10.1002/ibd.21351",
+      "title": "",
+      "journal": "Inflamm. Bowel Dis.",
+      "year": "2011",
+      "author": "RS Flynn",
+      "unstructured": "Flynn, R. S. et al. Endogenous IGFBP-3 regulates excess collagen expression in intestinal smooth muscle cells of Crohn\u2019s disease strictures. Inflamm. Bowel Dis. 17, 193\u2013201 (2011)."
+    },
+    {
+      "key": "2025_CR145",
+      "doi": "10.1002/jlb.4a0718-283rr",
+      "title": "",
+      "journal": "J. Leukoc. Biol.",
+      "year": "2019",
+      "author": "R Geesala",
+      "unstructured": "Geesala, R. et al. Loss of RHBDF2 results in an early-onset spontaneous murine colitis. J. Leukoc. Biol. 105, 767\u2013781 (2019)."
+    },
+    {
+      "key": "2025_CR146",
+      "doi": "10.1073/pnas.1813582116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "Y Li",
+      "unstructured": "Li, Y. et al. Human RIPK1 deficiency causes combined immunodeficiency and inflammatory bowel diseases. Proc. Natl Acad. Sci. USA 116, 970\u2013975 (2019)."
+    },
+    {
+      "key": "2025_CR147",
+      "doi": "10.3389/fphar.2019.00671",
+      "title": "",
+      "journal": "Front. Pharmacol.",
+      "year": "2019",
+      "author": "C Pagnini",
+      "unstructured": "Pagnini, C., Pizarro, T. T. & Cominelli, F. Novel pharmacological therapy in inflammatory bowel diseases: beyond anti-tumor necrosis factor. Front. Pharmacol. 10, 671 (2019)."
+    },
+    {
+      "key": "2025_CR148",
+      "doi": "10.1007/s40265-019-01169-y",
+      "title": "",
+      "journal": "Drugs",
+      "year": "2019",
+      "author": "C Ma",
+      "unstructured": "Ma, C. et al. Innovations in oral therapies for inflammatory bowel disease. Drugs 79, 1321\u20131335 (2019)."
+    }
+  ]
+}

@@ -1,0 +1,1783 @@
+{
+  "article": {
+    "slug": "s41586-024-08474-x",
+    "doi": "10.1038/s41586-024-08474-x",
+    "title": "The neuroimmune connectome in health and disease",
+    "url": "https://www.nature.com/articles/s41586-024-08474-x",
+    "abbrev": "neuroimmune-connectome-health-disease",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/neuroimmune-connectome-health-disease"
+  },
+  "meta": {
+    "title": "The neuroimmune connectome in health and disease",
+    "authors": [
+      "Michael A. Wheeler",
+      "Francisco J. Quintana"
+    ],
+    "published": [
+      2025,
+      2,
+      12
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-024-08474-x",
+    "n_references": 195,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "8474_CR1",
+      "doi": "10.1038/268068a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1977",
+      "author": "M Ha\u0161ek",
+      "unstructured": "Ha\u0161ek, M., Chutna, J., Sl\u00e1de\u010dek, M. & Lodin, Z. Immunological tolerance and tumor allografts in the brain. Nature 268, 68\u201369 (1977)."
+    },
+    {
+      "key": "8474_CR2",
+      "doi": "",
+      "title": "",
+      "journal": "Br. J. Exp. Pathol.",
+      "year": "1948",
+      "author": "PB Medawar",
+      "unstructured": "Medawar, P. B. Immunity to homologous grafted skin; the fate of skin homografts transplanted to the brain, to subcutaneous tissue, and to the anterior chamber of the eye. Br. J. Exp. Pathol. 29, 58\u201369 (1948)."
+    },
+    {
+      "key": "8474_CR3",
+      "doi": "10.1038/s41586-022-05474-7",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Rustenhoven, J. & Kipnis, J. Brain borders at the central stage of neuroimmunology. Nature 612, 417\u2013429 (2022)."
+    },
+    {
+      "key": "8474_CR4",
+      "doi": "10.1126/science.abo7649",
+      "title": "",
+      "journal": "Science",
+      "year": "2023",
+      "author": "G Castellani",
+      "unstructured": "Castellani, G., Croese, T., Peralta Ramos, J. M. & Schwartz, M. Transforming the understanding of brain immunity. Science 380, eabo7649 (2023)."
+    },
+    {
+      "key": "8474_CR5",
+      "doi": "10.1038/s41586-023-06993-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "LCD Smyth",
+      "unstructured": "Smyth, L. C. D. et al. Identification of direct connections between the dura and the brain. Nature 627, 165\u2013173 (2024). This study was the first to describe bona fide conduits that convey peripheral molecules to the subarachnoid space adjoining the brain."
+    },
+    {
+      "key": "8474_CR6",
+      "doi": "10.1038/s41586-024-07202-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "Z Fitzpatrick",
+      "unstructured": "Fitzpatrick, Z. et al. Venous-plexus-associated lymphoid hubs support meningeal humoral immunity. Nature 628, 612\u2013619 (2024). This study describes meningeal structures that facilitate humoral immunity to pathogens."
+    },
+    {
+      "key": "8474_CR7",
+      "doi": "10.1126/science.abf7844",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "A Cugurra",
+      "unstructured": "Cugurra, A. et al. Skull and vertebral bone marrow are myeloid cell reservoirs for the meninges and CNS parenchyma. Science\u00a0373,\u00a0eabf7844\u00a0(2021)."
+    },
+    {
+      "key": "8474_CR8",
+      "doi": "10.1038/nature14432",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "A Louveau",
+      "unstructured": "Louveau, A. et al. Structural and functional features of central nervous system lymphatic vessels. Nature 523, 337\u2013341 (2015)."
+    },
+    {
+      "key": "8474_CR9",
+      "doi": "10.1016/j.cell.2021.04.003",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "N Dani",
+      "unstructured": "Dani, N. et al. A cellular and spatial map of the choroid plexus across brain ventricles and ages. Cell 184, 3056\u20133074 (2021)."
+    },
+    {
+      "key": "8474_CR10",
+      "doi": "10.1084/jem.20172295",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2018",
+      "author": "J Kipnis",
+      "unstructured": "Kipnis, J. Immune system: the \u201cseventh sense\u201d. J. Exp. Med. 215, 397\u2013398 (2018)."
+    },
+    {
+      "key": "8474_CR11",
+      "doi": "10.1038/ni1078",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2004",
+      "author": "L Steinman",
+      "unstructured": "Steinman, L. Elaborate interactions between the immune and nervous systems. Nat. Immunol. 5, 575\u2013581 (2004)."
+    },
+    {
+      "key": "8474_CR12",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Charcot, J.-M. Histologie de la scl\u00e9rose en plaques, le\u00e7on faite \u00e0 l'hospice de la Salp\u00eatri\u00e8re. (Gaz. des H\u00f4pitaux, 1869)."
+    },
+    {
+      "key": "8474_CR13",
+      "doi": "10.1038/s41573-022-00390-x",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2022",
+      "author": "H-G Lee",
+      "unstructured": "Lee, H.-G., Wheeler, M. A. & Quintana, F. J. Function and therapeutic value of astrocytes in neurological diseases. Nat. Rev. Drug Discov. 21, 339\u2013358 (2022)."
+    },
+    {
+      "key": "8474_CR14",
+      "doi": "10.1016/j.cell.2023.03.008",
+      "title": "",
+      "journal": "Cell",
+      "year": "2023",
+      "author": "M Charabati",
+      "unstructured": "Charabati, M., Wheeler, M. A., Weiner, H. L. & Quintana, F. J. Multiple sclerosis: neuroimmune crosstalk and therapeutic targeting. Cell 186, 1309\u20131327 (2023)."
+    },
+    {
+      "key": "8474_CR15",
+      "doi": "10.1126/science.1194637",
+      "title": "",
+      "journal": "Science",
+      "year": "2010",
+      "author": "F Ginhoux",
+      "unstructured": "Ginhoux, F. et al. Fate mapping analysis reveals that adult microglia derive from primitive macrophages. Science 330, 841\u2013845 (2010). This elegant study elucidated microglial developmental origins."
+    },
+    {
+      "key": "8474_CR16",
+      "doi": "10.1146/annurev-immunol-093019-110159",
+      "title": "",
+      "journal": "Annu. Rev. Immunol.",
+      "year": "2021",
+      "author": "M Prinz",
+      "unstructured": "Prinz, M., Masuda, T., Wheeler, M. A. & Quintana, F. J. Microglia and central nervous system-associated macrophages\u2014from origin to disease modulation. Annu. Rev. Immunol. 39, 251\u2013277 (2021)."
+    },
+    {
+      "key": "8474_CR17",
+      "doi": "10.1038/nri.2016.144",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2017",
+      "author": "T Korn",
+      "unstructured": "Korn, T. & Kallies, A. T cell responses in the central nervous system. Nat. Rev. Immunol. 17, 179\u2013194 (2017)."
+    },
+    {
+      "key": "8474_CR18",
+      "doi": "10.1172/jci200318104",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2003",
+      "author": "A Monsonego",
+      "unstructured": "Monsonego, A. et al. Increased T cell reactivity to amyloid \u03b2 protein in older humans and patients with Alzheimer disease. J. Clin. Invest. 112, 415\u2013422 (2003)."
+    },
+    {
+      "key": "8474_CR19",
+      "doi": "10.1038/s41586-019-1895-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "D Gate",
+      "unstructured": "Gate, D. et al. Clonally expanded CD8 T cells patrol the cerebrospinal fluid in Alzheimer\u2019s disease. Nature 577, 399\u2013404 (2020)."
+    },
+    {
+      "key": "8474_CR20",
+      "doi": "10.1038/s41586-023-05788-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "X Chen",
+      "unstructured": "Chen, X. et al. Microglia-mediated T cell infiltration drives neurodegeneration in tauopathy. Nature 615, 668\u2013677 (2023)."
+    },
+    {
+      "key": "8474_CR21",
+      "doi": "10.1038/nature22815",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "D Sulzer",
+      "unstructured": "Sulzer, D. et al. T cells from patients with Parkinson\u2019s disease recognize \u03b1-synuclein peptides. Nature 546, 656\u2013661 (2017)."
+    },
+    {
+      "key": "8474_CR22",
+      "doi": "10.1038/s41586-019-0964-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "D Lodygin",
+      "unstructured": "Lodygin, D. et al. \u03b2-Synuclein-reactive T cells induce autoimmune CNS grey matter degeneration. Nature 566, 503\u2013508 (2019)."
+    },
+    {
+      "key": "8474_CR23",
+      "doi": "10.1038/s41586-019-1362-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "BW Dulken",
+      "unstructured": "Dulken, B. W. et al. Single-cell analysis reveals T cell infiltration in old neurogenic niches. Nature 571, 205\u2013210 (2019)."
+    },
+    {
+      "key": "8474_CR24",
+      "doi": "10.1126/science.abn7747",
+      "title": "",
+      "journal": "Science",
+      "year": "2022",
+      "author": "L Zhou",
+      "unstructured": "Zhou, L. et al. Reversible CD8 T cell-neuron cross-talk causes aging-dependent neuronal regenerative decline. Science 376, eabd5926 (2022)."
+    },
+    {
+      "key": "8474_CR25",
+      "doi": "10.1038/nature13154",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "H Lee",
+      "unstructured": "Lee, H. et al. Synapse elimination and learning rules co-regulated by MHC class I H2-Db. Nature 509, 195\u2013200 (2014)."
+    },
+    {
+      "key": "8474_CR26",
+      "doi": "10.1038/nrn1428",
+      "title": "",
+      "journal": "Nat. Rev. Neurosci.",
+      "year": "2004",
+      "author": "LM Boulanger",
+      "unstructured": "Boulanger, L. M. & Shatz, C. J. Immune signalling in neural development, synaptic plasticity and disease. Nat. Rev. Neurosci. 5, 521\u2013531 (2004)."
+    },
+    {
+      "key": "8474_CR27",
+      "doi": "10.1126/science.290.5499.2155",
+      "title": "",
+      "journal": "Science",
+      "year": "2000",
+      "author": "GS Huh",
+      "unstructured": "Huh, G. S. et al. Functional requirement for class I MHC in CNS development and plasticity. Science 290, 2155\u20132159 (2000)."
+    },
+    {
+      "key": "8474_CR28",
+      "doi": "10.1126/science.7624779",
+      "title": "",
+      "journal": "Science",
+      "year": "1995",
+      "author": "H Neumann",
+      "unstructured": "Neumann, H., Cavali\u00e9, A., Jenne, D. E. & Wekerle, H. Induction of MHC class I genes in neurons. Science 269, 549\u2013552 (1995)."
+    },
+    {
+      "key": "8474_CR29",
+      "doi": "10.1126/science.abf7266",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "D Gate",
+      "unstructured": "Gate, D. et al. CD4+ T cells contribute to neurodegeneration in Lewy body dementia. Science 374, 868\u2013874 (2021)."
+    },
+    {
+      "key": "8474_CR30",
+      "doi": "10.1038/ni.2027",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2011",
+      "author": "L Codarri",
+      "unstructured": "Codarri, L. et al. ROR\u03b3t drives production of the cytokine GM-CSF in helper T cells, which is essential for the effector phase of autoimmune neuroinflammation. Nat. Immunol. 12, 560\u2013567 (2011)."
+    },
+    {
+      "key": "8474_CR31",
+      "doi": "10.1038/s41591-019-0521-4",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2019",
+      "author": "E Galli",
+      "unstructured": "Galli, E. et al. GM-CSF and CXCR4 define a T helper cell signature in multiple sclerosis. Nat. Med. 25, 1290\u20131300 (2019)."
+    },
+    {
+      "key": "8474_CR32",
+      "doi": "10.1038/4734",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "1999",
+      "author": "G Moalem",
+      "unstructured": "Moalem, G. et al. Autoimmune T cells protect neurons from secondary degeneration after central nervous system axotomy. Nat. Med. 5, 49\u201355 (1999)."
+    },
+    {
+      "key": "8474_CR33",
+      "doi": "10.1016/j.cell.2024.03.038",
+      "title": "",
+      "journal": "Cell",
+      "year": "2024",
+      "author": "R Medzhitov",
+      "unstructured": "Medzhitov, R. & Iwasaki, A. Exploring new perspectives in immunology. Cell 187, 2079\u20132094 (2024)."
+    },
+    {
+      "key": "8474_CR34",
+      "doi": "10.1038/ncomms8967",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2015",
+      "author": "K Baruch",
+      "unstructured": "Baruch, K. et al. Breaking immune tolerance by targeting Foxp3+ regulatory T cells mitigates Alzheimer\u2019s disease pathology. Nat. Commun. 6, 7967 (2015)."
+    },
+    {
+      "key": "8474_CR35",
+      "doi": "10.1038/s41467-023-40982-8",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2023",
+      "author": "M Linnerbauer",
+      "unstructured": "Linnerbauer, M. et al. PD-L1 positive astrocytes attenuate inflammatory functions of PD-1 positive microglia in models of autoimmune neuroinflammation. Nat. Commun. 14, 5555 (2023)."
+    },
+    {
+      "key": "8474_CR36",
+      "doi": "10.1038/s41586-024-07906-y",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Gao, W. et al. Engineered T cell therapy for central nervous system injury. Nature 634, 693\u2013701 (2024)."
+    },
+    {
+      "key": "8474_CR37",
+      "doi": "10.1016/j.neuron.2020.08.012",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2020",
+      "author": "M Linnerbauer",
+      "unstructured": "Linnerbauer, M., Wheeler, M. A. & Quintana, F. J. Astrocyte crosstalk in CNS inflammation. Neuron 108, 608\u2013622 (2020)."
+    },
+    {
+      "key": "8474_CR38",
+      "doi": "",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2023",
+      "author": "H-G Lee",
+      "unstructured": "Lee, H.-G., Lee, J.-H., Flausino, L. E. & Quintana, F. J. Neuroinflammation: an astrocyte perspective. Sci. Transl. Med. 15, eadi7828 (2023)."
+    },
+    {
+      "key": "8474_CR39",
+      "doi": "10.1038/s41586-020-1999-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "MA Wheeler",
+      "unstructured": "Wheeler, M. A. et al. MAFG-driven astrocytes promote CNS inflammation. Nature 578, 593\u2013599 (2020)."
+    },
+    {
+      "key": "8474_CR40",
+      "doi": "10.1038/307273a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1984",
+      "author": "A Fontana",
+      "unstructured": "Fontana, A., Fierz, W. & Wekerle, H. Astrocytes present myelin basic protein to encephalitogenic T-cell lines. Nature 307, 273\u2013276 (1984)."
+    },
+    {
+      "key": "8474_CR41",
+      "doi": "10.1038/s41586-020-03116-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "LM Sanmarco",
+      "unstructured": "Sanmarco, L. M. et al. Gut-licensed IFN\u03b3+ NK cells drive LAMP1+TRAIL+ anti-inflammatory astrocytes. Nature 590, 473\u2013479 (2021)."
+    },
+    {
+      "key": "8474_CR42",
+      "doi": "10.1038/s41586-018-0824-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "M Ito",
+      "unstructured": "Ito, M. et al. Brain regulatory T cells suppress astrogliosis and potentiate neurological recovery. Nature 565, 246\u2013250 (2019)."
+    },
+    {
+      "key": "8474_CR43",
+      "doi": "10.1073/pnas.2016451117",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2020",
+      "author": "JE Kenison",
+      "unstructured": "Kenison, J. E. et al. Tolerogenic nanoparticles suppress central nervous system inflammation. Proc. Natl Acad. Sci. USA 117, 32017\u201332028 (2020)."
+    },
+    {
+      "key": "8474_CR44",
+      "doi": "10.1016/j.cell.2018.11.035",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "OL Rojas",
+      "unstructured": "Rojas, O. L. et al. Recirculating intestinal IgA-producing cells regulate neuroinflammation via IL-10. Cell 176, 610\u2013624.e18 (2019). This work describes a unique immunoregulatory circuit mediated by IL-10-producing B cells that migrate from the gut to the CNS."
+    },
+    {
+      "key": "8474_CR45",
+      "doi": "",
+      "title": "",
+      "journal": "Science",
+      "year": "2019",
+      "author": "MJC Jord\u00e3o",
+      "unstructured": "Jord\u00e3o, M. J. C. et al. Single-cell profiling identifies myeloid cell subsets with distinct fates during neuroinflammation. Science 363, eaat7554 (2019)."
+    },
+    {
+      "key": "8474_CR46",
+      "doi": "10.1016/j.cell.2022.05.020",
+      "title": "",
+      "journal": "Cell",
+      "year": "2022",
+      "author": "K Shi",
+      "unstructured": "Shi, K. et al. Bone marrow hematopoiesis drives multiple sclerosis progression. Cell 185, 2234\u20132247 (2022)."
+    },
+    {
+      "key": "8474_CR47",
+      "doi": "10.1126/science.aal3589",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "ID Vainchtein",
+      "unstructured": "Vainchtein, I. D. et al. Astrocyte-derived interleukin-33 promotes microglial synapse engulfment and neural circuit development. Science 359, 1269\u20131273 (2018). This study describes local neuroimmune cell circuits in the brain that influence behaviour."
+    },
+    {
+      "key": "8474_CR48",
+      "doi": "10.1038/s41586-018-0119-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "V Rothhammer",
+      "unstructured": "Rothhammer, V. et al. Microglial control of astrocytes in response to microbial metabolites. Nature 557, 724\u2013728 (2018)."
+    },
+    {
+      "key": "8474_CR49",
+      "doi": "10.1038/s41591-018-0051-5",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2018",
+      "author": "SP Yun",
+      "unstructured": "Yun, S. P. et al. Block of A1 astrocyte conversion by microglia is neuroprotective in models of Parkinson\u2019s disease. Nat. Med. 24, 931\u2013938 (2018)."
+    },
+    {
+      "key": "8474_CR50",
+      "doi": "10.1126/science.abq4822",
+      "title": "",
+      "journal": "Science",
+      "year": "2023",
+      "author": "MA Wheeler",
+      "unstructured": "Wheeler, M. A. et al. Droplet-based forward genetic screening of astrocyte\u2013microglia cross-talk. Science 379, 1023\u20131030 (2023). This work develops a screening platform to define and validate neuroimmune interactions at high throughput using CRISPR screens."
+    },
+    {
+      "key": "8474_CR51",
+      "doi": "10.1126/science.abf1230",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "IC Clark",
+      "unstructured": "Clark, I. C. et al. Barcoded viral tracing of single-cell interactions in central nervous system inflammation. Science 372, eabf1230 (2021). This study developed a single-cell method to profile neuroimmune contacts using viral tracing."
+    },
+    {
+      "key": "8474_CR52",
+      "doi": "10.1016/j.immuni.2019.04.006",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2019",
+      "author": "J Komuczki",
+      "unstructured": "Komuczki, J. et al. Fate-mapping of GM-CSF expression identifies a discrete subset of inflammation-driving T helper cells regulated by cytokines IL-23 and IL-1\u03b2. Immunity 50, 1289\u20131304 (2019)."
+    },
+    {
+      "key": "8474_CR53",
+      "doi": "10.1038/nm.3681",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2014",
+      "author": "L Mayo",
+      "unstructured": "Mayo, L. et al. Regulation of astrocyte activation by glycolipids drives chronic CNS inflammation. Nat. Med. 20, 1147\u20131156 (2014)."
+    },
+    {
+      "key": "8474_CR54",
+      "doi": "10.1016/j.immuni.2023.04.013",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2023",
+      "author": "MG Kiss",
+      "unstructured": "Kiss, M. G. et al. Interleukin-3 coordinates glial-peripheral immune crosstalk to incite multiple sclerosis. Immunity 56, 1502\u20131514 (2023)."
+    },
+    {
+      "key": "8474_CR55",
+      "doi": "10.1038/s41586-021-03734-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "CS McAlpine",
+      "unstructured": "McAlpine, C. S. et al. Astrocytic interleukin-3 programs microglia and limits Alzheimer\u2019s disease. Nature 595, 701\u2013706 (2021). This study describes the role of astrocyte production of the GM-CSF family cytokine IL-3 on the regulation of microglial responses, complementing previous findings on GM-CSF (Mayo et al., 2014)."
+    },
+    {
+      "key": "8474_CR56",
+      "doi": "10.1038/s41586-022-05534-y",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "McNamara, N. B. et al. Microglia regulate central nervous system myelin growth and integrity. Nature 613, 120\u2013129 (2023)."
+    },
+    {
+      "key": "8474_CR57",
+      "doi": "10.1038/s41586-022-05056-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "JA Stogsdill",
+      "unstructured": "Stogsdill, J. A. et al. Pyramidal neuron subtype diversity governs microglia states in the neocortex. Nature 608, 750\u2013756 (2022)."
+    },
+    {
+      "key": "8474_CR58",
+      "doi": "10.1126/science.aax6752",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "C Cser\u00e9p",
+      "unstructured": "Cser\u00e9p, C. et al. Microglia monitor and protect neuronal function through specialized somatic purinergic junctions. Science 367, 528\u2013537 (2020)."
+    },
+    {
+      "key": "8474_CR59",
+      "doi": "10.1016/j.cell.2020.05.050",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "PT Nguyen",
+      "unstructured": "Nguyen, P. T. et al. Microglial remodeling of the extracellular matrix promotes synapse plasticity. Cell 182, 388\u2013403 (2020)."
+    },
+    {
+      "key": "8474_CR60",
+      "doi": "10.1016/j.cell.2021.06.018",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "E Favuzzi",
+      "unstructured": "Favuzzi, E. et al. GABA-receptive microglia selectively sculpt developing inhibitory circuits. Cell 184, 4048\u20134063 (2021)."
+    },
+    {
+      "key": "8474_CR61",
+      "doi": "10.1016/j.cell.2024.05.058",
+      "title": "",
+      "journal": "Cell",
+      "year": "2024",
+      "author": "N Scott-Hewitt",
+      "unstructured": "Scott-Hewitt, N. et al. Microglial-derived C1q integrates into neuronal ribonucleoprotein complexes and impacts protein homeostasis in the aging brain. Cell 187, 4193\u20134212 (2024)."
+    },
+    {
+      "key": "8474_CR62",
+      "doi": "10.1038/s41593-023-01487-1",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2023",
+      "author": "JA Mazzitelli",
+      "unstructured": "Mazzitelli, J. A. et al. Skull bone marrow channels as immune gateways to the central nervous system. Nat. Neurosci. 26, 2052\u20132062 (2023)."
+    },
+    {
+      "key": "8474_CR63",
+      "doi": "10.1016/j.cell.2024.08.050",
+      "title": "",
+      "journal": "Cell",
+      "year": "2024",
+      "author": "M Sammons",
+      "unstructured": "Sammons, M. et al. Brain-body physiology: local, reflex, and central communication. Cell 187, 5877\u20135890 (2024)."
+    },
+    {
+      "key": "8474_CR64",
+      "doi": "10.1038/nri2566",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2009",
+      "author": "KJ Tracey",
+      "unstructured": "Tracey, K. J. Reflex control of immunity. Nat. Rev. Immunol. 9, 418\u2013428 (2009)."
+    },
+    {
+      "key": "8474_CR65",
+      "doi": "10.1038/35013070",
+      "title": "",
+      "journal": "Nature",
+      "year": "2000",
+      "author": "LV Borovikova",
+      "unstructured": "Borovikova, L. V. et al. Vagus nerve stimulation attenuates the systemic inflammatory response to endotoxin. Nature 405, 458\u2013462 (2000)."
+    },
+    {
+      "key": "8474_CR66",
+      "doi": "10.1126/science.1209985",
+      "title": "",
+      "journal": "Science",
+      "year": "2011",
+      "author": "M Rosas-Ballina",
+      "unstructured": "Rosas-Ballina, M. et al. Acetylcholine-synthesizing T cells relay neural signals in a vagus nerve circuit. Science 334, 98\u2013101 (2011)."
+    },
+    {
+      "key": "8474_CR67",
+      "doi": "10.1038/s41586-020-2235-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "X Zhang",
+      "unstructured": "Zhang, X. et al. Brain control of humoral immune responses amenable to behavioural modulation. Nature 581, 204\u2013208 (2020). This study demonstrated that peripheral B cell responses are tuned by multiple brain circuits."
+    },
+    {
+      "key": "8474_CR68",
+      "doi": "10.1016/j.cell.2020.11.028",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "S Huang",
+      "unstructured": "Huang, S. et al. Lymph nodes are innervated by a unique population of sensory neurons with immunomodulatory potential. Cell 184, 441\u2013459 (2021)."
+    },
+    {
+      "key": "8474_CR69",
+      "doi": "10.1126/science.abm5658",
+      "title": "",
+      "journal": "Science",
+      "year": "2023",
+      "author": "P Han\u010d",
+      "unstructured": "Han\u010d, P. et al. Multimodal control of dendritic cell functions by nociceptors. Science 379, eabm5658 (2023)."
+    },
+    {
+      "key": "8474_CR70",
+      "doi": "10.1038/s41586-024-08049-w",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Hou, Y. et al. Neuropeptide signalling orchestrates T cell differentiation. Nature 635, 444\u2013452 (2024)."
+    },
+    {
+      "key": "8474_CR71",
+      "doi": "10.1038/nature24029",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "A Wallrapp",
+      "unstructured": "Wallrapp, A. et al. The neuropeptide NMU amplifies ILC2-driven allergic lung inflammation. Nature 549, 351\u2013356 (2017)."
+    },
+    {
+      "key": "8474_CR72",
+      "doi": "10.1038/nature23676",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "CSN Klose",
+      "unstructured": "Klose, C. S. N. et al. The neuropeptide neuromedin U stimulates innate lymphoid cells and type 2 inflammation. Nature 549, 282\u2013286 (2017)."
+    },
+    {
+      "key": "8474_CR73",
+      "doi": "10.1038/nature23469",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "V Cardoso",
+      "unstructured": "Cardoso, V. et al. Neuronal regulation of type 2 innate lymphoid cells via neuromedin U. Nature 549, 277\u2013281 (2017)."
+    },
+    {
+      "key": "8474_CR74",
+      "doi": "10.1038/s41586-022-04890-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "WC Poller",
+      "unstructured": "Poller, W. C. et al. Brain motor and fear circuits regulate leukocytes during acute stress. Nature 607, 578\u2013584 (2022). This paper delineated how brain circuits mobilize multiple populations of immune cells in response to acute psychological stress."
+    },
+    {
+      "key": "8474_CR75",
+      "doi": "10.1038/nm.3589",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2014",
+      "author": "T Heidt",
+      "unstructured": "Heidt, T. et al. Chronic variable stress activates hematopoietic stem cells. Nat. Med. 20, 754\u2013758 (2014)."
+    },
+    {
+      "key": "8474_CR76",
+      "doi": "10.1016/j.cell.2020.02.018",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "JY Hong",
+      "unstructured": "Hong, J. Y. et al. Long-term programming of CD8 T cell immunity by perinatal exposure to glucocorticoids. Cell 180, 847\u2013861 (2020)."
+    },
+    {
+      "key": "8474_CR77",
+      "doi": "10.1038/s41586-023-07015-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "F Cathomas",
+      "unstructured": "Cathomas, F. et al. Circulating myeloid-derived MMP8 in stress susceptibility and depression. Nature 626, 1108\u20131115 (2024)."
+    },
+    {
+      "key": "8474_CR78",
+      "doi": "10.1038/s41593-017-0010-3",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2017",
+      "author": "C Menard",
+      "unstructured": "Menard, C. et al. Social stress induces neurovascular pathology promoting depression. Nat. Neurosci. 20, 1752\u20131760 (2017)."
+    },
+    {
+      "key": "8474_CR79",
+      "doi": "10.1038/s41467-021-27604-x",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "L Dion-Albert",
+      "unstructured": "Dion-Albert, L. et al. Vascular and blood-brain barrier-related changes underlie stress responses and resilience in female mice and depression in human tissue. Nat. Commun. 13, 164 (2022)."
+    },
+    {
+      "key": "8474_CR80",
+      "doi": "10.1016/j.cell.2020.05.054",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "H Qing",
+      "unstructured": "Qing, H. et al. Origin and function of stress-induced IL-6 in murine models. Cell 182, 372\u2013387 (2020)."
+    },
+    {
+      "key": "8474_CR81",
+      "doi": "10.1126/science.adi1025",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Barron, J. J. et al. Group 2 innate lymphoid cells promote inhibitory synapse development and social behavior. Science 386, eadi1025 (2024)."
+    },
+    {
+      "key": "8474_CR82",
+      "doi": "10.1016/j.cell.2021.10.013",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "T Koren",
+      "unstructured": "Koren, T. et al. Insular cortex neurons encode and retrieve specific immune responses. Cell 184, 5902\u20135915 (2021). This study established that cortical neurons encode and actuate peripheral immunity."
+    },
+    {
+      "key": "8474_CR83",
+      "doi": "10.1038/s41586-024-07469-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "H Jin",
+      "unstructured": "Jin, H., Li, M., Jeong, E., Castro-Martinez, F. & Zuker, C. S. A body\u2013brain circuit that regulates body inflammatory responses. Nature 630, 695\u2013703 (2024)."
+    },
+    {
+      "key": "8474_CR84",
+      "doi": "10.1038/s41586-024-07608-5",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Su, Y. et al. Brainstem Dbh+ neurons control allergen-induced airway hyperreactivity. Nature 631, 601\u2013609 (2024)."
+    },
+    {
+      "key": "8474_CR85",
+      "doi": "10.1038/s41586-024-07187-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "H-G Lee",
+      "unstructured": "Lee, H.-G. et al. Disease-associated astrocyte epigenetic memory promotes CNS pathology. Nature 627, 865\u2013872 (2024). This paper showed that in CNS inflammation, non-haematopoietic CNS glial cells exhibit a molecularly defined and retrievable immune memory."
+    },
+    {
+      "key": "8474_CR86",
+      "doi": "10.1038/s41586-020-2424-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "T Krausgruber",
+      "unstructured": "Krausgruber, T. et al. Structural cells are key regulators of organ-specific immune responses. Nature 583, 296\u2013302 (2020). This paper defines a brainstem nucleus that directly tunes peripheral inflammatory responses."
+    },
+    {
+      "key": "8474_CR87",
+      "doi": "10.1038/nature11028",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "X Liu",
+      "unstructured": "Liu, X. et al. Optogenetic stimulation of a hippocampal engram activates fear memory recall. Nature 484, 381\u2013385 (2012)."
+    },
+    {
+      "key": "8474_CR88",
+      "doi": "10.1016/j.cell.2023.05.001",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Schneider, K. M. et al. The enteric nervous system relays psychological stress to intestinal inflammation. Cell 186, 2823\u20132838.e20 (2023)."
+    },
+    {
+      "key": "8474_CR89",
+      "doi": "10.1016/j.immuni.2024.03.008",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2024",
+      "author": "L Deng",
+      "unstructured": "Deng, L., Gillis, J. E., Chiu, I. M. & Kaplan, D. H. Sensory neurons: an integrated component of innate immunity. Immunity 57, 815\u2013831 (2024)."
+    },
+    {
+      "key": "8474_CR90",
+      "doi": "10.1038/s41586-023-06816-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "A Cui",
+      "unstructured": "Cui, A. et al. Dictionary of immune responses to cytokines at single-cell resolution. Nature\u00a0625, 377\u2013384\u00a0(2024)."
+    },
+    {
+      "key": "8474_CR91",
+      "doi": "10.1038/nrn2297",
+      "title": "",
+      "journal": "Nat. Rev. Neurosci.",
+      "year": "2008",
+      "author": "R Dantzer",
+      "unstructured": "Dantzer, R., O\u2019Connor, J. C., Freund, G. G., Johnson, R. W. & Kelley, K. W. From inflammation to sickness and depression: when the immune system subjugates the brain. Nat. Rev. Neurosci. 9, 46\u201356 (2008)."
+    },
+    {
+      "key": "8474_CR92",
+      "doi": "10.1016/j.neuron.2022.01.033",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2022",
+      "author": "F Cathomas",
+      "unstructured": "Cathomas, F. et al. Beyond the neuron: role of non-neuronal cells in stress disorders. Neuron 110, 1116\u20131138 (2022)."
+    },
+    {
+      "key": "8474_CR93",
+      "doi": "10.1016/j.cell.2019.10.001",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "K-Q Fan",
+      "unstructured": "Fan, K.-Q. et al. Stress-induced metabolic disorder in peripheral CD4+ T cells leads to anxiety-like behavior. Cell 179, 864\u2013879 (2019)."
+    },
+    {
+      "key": "8474_CR94",
+      "doi": "10.1038/ni.3867",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2017",
+      "author": "M Miyajima",
+      "unstructured": "Miyajima, M. et al. Metabolic shift induced by systemic activation of T cells in PD-1-deficient mice perturbs brain monoamines and emotional behavior. Nat. Immunol. 18, 1342\u20131352 (2017)."
+    },
+    {
+      "key": "8474_CR95",
+      "doi": "10.1126/science.aad0314",
+      "title": "",
+      "journal": "Science",
+      "year": "2016",
+      "author": "GB Choi",
+      "unstructured": "Choi, G. B. et al. The maternal interleukin-17a pathway in mice promotes autism-like phenotypes in offspring. Science 351, 933\u2013939 (2016). This study shows long-term changes in offspring behaviour in response to maternal TH17 cell activation."
+    },
+    {
+      "key": "8474_CR96",
+      "doi": "10.1038/s41590-020-0776-4",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2020",
+      "author": "K Alves de Lima",
+      "unstructured": "Alves de Lima, K. et al. Meningeal \u03b3\u03b4 T cells regulate anxiety-like behavior via IL-17a signaling in neurons. Nat. Immunol. 21, 1421\u20131429 (2020)."
+    },
+    {
+      "key": "8474_CR97",
+      "doi": "10.1038/nm.4340",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2017",
+      "author": "JM Garr\u00e9",
+      "unstructured": "Garr\u00e9, J. M., Silva, H. M., Lafaille, J. J. & Yang, G. CX3CR1+ monocytes modulate learning and learning-dependent dendritic spine remodeling via TNF-\u03b1. Nat. Med. 23, 714\u2013722 (2017)."
+    },
+    {
+      "key": "8474_CR98",
+      "doi": "10.1016/j.bbi.2024.05.004",
+      "title": "",
+      "journal": "Brain Behav. Immun.",
+      "year": "2024",
+      "author": "EB Thorp",
+      "unstructured": "Thorp, E. B. et al. CCR2+ monocytes promote white matter injury and cognitive dysfunction after myocardial infarction. Brain Behav. Immun. 119, 818\u2013835 (2024)."
+    },
+    {
+      "key": "8474_CR99",
+      "doi": "10.1038/s41586-023-05748-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "B Hsueh",
+      "unstructured": "Hsueh, B. et al. Cardiogenic control of affective behavioural state. Nature 615, 292\u2013299 (2023)."
+    },
+    {
+      "key": "8474_CR100",
+      "doi": "10.1016/j.immuni.2023.11.011",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2023",
+      "author": "CM Wilk",
+      "unstructured": "Wilk, C. M. et al. Circulating senescent myeloid cells infiltrate the brain and cause neurodegeneration in histiocytic disorders. Immunity 56, 2790\u20132802 (2023)."
+    },
+    {
+      "key": "8474_CR101",
+      "doi": "10.1038/nrn.2016.69",
+      "title": "",
+      "journal": "Nat. Rev. Neurosci.",
+      "year": "2016",
+      "author": "ES Wohleb",
+      "unstructured": "Wohleb, E. S., Franklin, T., Iwata, M. & Duman, R. S. Integrating neuroimmune systems in the neurobiology of depression. Nat. Rev. Neurosci. 17, 497\u2013511 (2016)."
+    },
+    {
+      "key": "8474_CR102",
+      "doi": "10.1038/nn.4113",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2015",
+      "author": "GE Hodes",
+      "unstructured": "Hodes, G. E., Kana, V., Menard, C., Merad, M. & Russo, S. J. Neuroimmune mechanisms of depression. Nat. Neurosci. 18, 1386\u20131393 (2015)."
+    },
+    {
+      "key": "8474_CR103",
+      "doi": "10.1016/j.neuron.2018.08.031",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2018",
+      "author": "L Leng",
+      "unstructured": "Leng, L. et al. Menin deficiency leads to depressive-like behaviors in mice by modulating astrocyte-mediated neuroinflammation. Neuron 100, 551\u2013563 (2018)."
+    },
+    {
+      "key": "8474_CR104",
+      "doi": "10.1038/nature18626",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "AJ Filiano",
+      "unstructured": "Filiano, A. J. et al. Unexpected role of interferon-\u03b3 in regulating neuronal connectivity and social behaviour. Nature 535, 425\u2013429 (2016)."
+    },
+    {
+      "key": "8474_CR105",
+      "doi": "10.1084/jem.20091419",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2010",
+      "author": "NC Derecki",
+      "unstructured": "Derecki, N. C. et al. Regulation of learning and memory by meningeal immunity: a key role for IL-4. J. Exp. Med. 207, 1067\u20131080 (2010)."
+    },
+    {
+      "key": "8474_CR106",
+      "doi": "10.1016/j.cell.2019.11.016",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "C-C Chao",
+      "unstructured": "Chao, C.-C. et al. Metabolic control of astrocyte pathogenic activity via cPLA2-MAVS. Cell 179, 1483\u20131498 (2019)."
+    },
+    {
+      "key": "8474_CR107",
+      "doi": "10.1038/nm.3868",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2015",
+      "author": "ID Mascanfroni",
+      "unstructured": "Mascanfroni, I. D. et al. Metabolic control of type 1 regulatory T cell differentiation by AHR and HIF1-\u03b1. Nat. Med. 21, 638\u2013646 (2015)."
+    },
+    {
+      "key": "8474_CR108",
+      "doi": "10.1038/s41586-023-06409-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "LM Sanmarco",
+      "unstructured": "Sanmarco, L. M. et al. Lactate limits CNS autoimmunity by stabilizing HIF-1\u03b1 in dendritic cells. Nature 620, 881\u2013889 (2023)."
+    },
+    {
+      "key": "8474_CR109",
+      "doi": "10.1016/j.cell.2011.02.018",
+      "title": "",
+      "journal": "Cell",
+      "year": "2011",
+      "author": "A Suzuki",
+      "unstructured": "Suzuki, A. et al. Astrocyte-neuron lactate transport is required for long-term memory formation. Cell 144, 810\u2013823 (2011)."
+    },
+    {
+      "key": "8474_CR110",
+      "doi": "10.1038/nature11007",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "U F\u00fcnfschilling",
+      "unstructured": "F\u00fcnfschilling, U. et al. Glycolytic oligodendrocytes maintain myelin and long-term axonal integrity. Nature 485, 517\u2013521 (2012)."
+    },
+    {
+      "key": "8474_CR111",
+      "doi": "10.1038/nature13490",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "OR Colegio",
+      "unstructured": "Colegio, O. R. et al. Functional polarization of tumour-associated macrophages by tumour-derived lactic acid. Nature 513, 559\u2013563 (2014)."
+    },
+    {
+      "key": "8474_CR112",
+      "doi": "10.1038/s41586-023-06362-4",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Florsheim, E. B. et al. Immune sensing of food allergens promotes avoidance behaviour. Nature 620, 643\u2013650 (2023)."
+    },
+    {
+      "key": "8474_CR113",
+      "doi": "10.1038/s41586-023-06188-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "T Plum",
+      "unstructured": "Plum, T. et al. Mast cells link immune sensing to antigen-avoidance behaviour. Nature 620, 634\u2013642 (2023)."
+    },
+    {
+      "key": "8474_CR114",
+      "doi": "10.1038/s41586-022-04793-z",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Osterhout, J. A. et al. A preoptic neuronal population controls fever and appetite during sickness. Nature 606, 937\u2013944 (2022). This study, together with Ilanges et al. (2022) and Bin et al. (2023), defines important circuit-level conduits underlying sickness behaviour."
+    },
+    {
+      "key": "8474_CR115",
+      "doi": "10.1038/s41586-022-05161-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "A Ilanges",
+      "unstructured": "Ilanges, A. et al. Brainstem ADCYAP1+ neurons control multiple aspects of sickness behaviour. Nature 609, 761\u2013771 (2022)."
+    },
+    {
+      "key": "8474_CR116",
+      "doi": "10.1038/s41586-023-05796-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "N-R Bin",
+      "unstructured": "Bin, N.-R. et al. An airway-to-brain sensory pathway mediates influenza-induced sickness. Nature 615, 660\u2013667 (2023)."
+    },
+    {
+      "key": "8474_CR117",
+      "doi": "10.1016/j.cell.2024.07.002",
+      "title": "",
+      "journal": "Cell",
+      "year": "2024",
+      "author": "H Xu",
+      "unstructured": "Xu, H. et al. The choroid plexus synergizes with immune cells during neuroinflammation. Cell 187, 4946\u20134963 (2024)."
+    },
+    {
+      "key": "8474_CR118",
+      "doi": "10.1523/jneurosci.1671-13.2013",
+      "title": "",
+      "journal": "J. Neurosci.",
+      "year": "2013",
+      "author": "ES Wohleb",
+      "unstructured": "Wohleb, E. S., Powell, N. D., Godbout, J. P. & Sheridan, J. F. Stress-induced recruitment of bone marrow-derived monocytes to the brain promotes anxiety-like behavior. J. Neurosci. 33, 13820\u201313833 (2013)."
+    },
+    {
+      "key": "8474_CR119",
+      "doi": "10.1158/1055-9965.epi-05-0456",
+      "title": "",
+      "journal": "Cancer Epidemiol. Biomarkers Prev.",
+      "year": "2005",
+      "author": "CP Wild",
+      "unstructured": "Wild, C. P. Complementing the genome with an \u201cexposome\u201d: the outstanding challenge of environmental exposure measurement in molecular epidemiology. Cancer Epidemiol. Biomarkers Prev. 14, 1847\u20131850 (2005)."
+    },
+    {
+      "key": "8474_CR120",
+      "doi": "10.1126/science.1192603",
+      "title": "",
+      "journal": "Science",
+      "year": "2010",
+      "author": "SM Rappaport",
+      "unstructured": "Rappaport, S. M. & Smith, M. T. Environment and disease risks. Science 330, 460\u2013461 (2010)."
+    },
+    {
+      "key": "8474_CR121",
+      "doi": "10.1126/science.aay3164",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "R Vermeulen",
+      "unstructured": "Vermeulen, R., Schymanski, E. L., Barab\u00e1si, A.-L. & Miller, G. W. The exposome and health: where chemistry meets biology. Science 367, 392\u2013396 (2020)."
+    },
+    {
+      "key": "8474_CR122",
+      "doi": "10.1038/s41577-019-0125-8",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2019",
+      "author": "V Rothhammer",
+      "unstructured": "Rothhammer, V. & Quintana, F. J. The aryl hydrocarbon receptor: an environmental sensor integrating immune responses in health and disease. Nat. Rev. Immunol. 19, 184\u2013197 (2019)."
+    },
+    {
+      "key": "8474_CR123",
+      "doi": "10.1016/j.immuni.2017.12.012",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2018",
+      "author": "C Guti\u00e9rrez-V\u00e1zquez",
+      "unstructured": "Guti\u00e9rrez-V\u00e1zquez, C. & Quintana, F. J. Regulation of the immune response by the aryl hydrocarbon receptor. Immunity 48, 19\u201333 (2018)."
+    },
+    {
+      "key": "8474_CR124",
+      "doi": "10.1021/tx400021f",
+      "title": "",
+      "journal": "Chem. Res. Toxicol.",
+      "year": "2013",
+      "author": "NS Sipes",
+      "unstructured": "Sipes, N. S. et al. Profiling 976 ToxCast chemicals across 331 enzymatic and receptor signaling assays. Chem. Res. Toxicol. 26, 878\u2013895 (2013)."
+    },
+    {
+      "key": "8474_CR125",
+      "doi": "10.1038/s41586-022-05308-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "LM Sanmarco",
+      "unstructured": "Sanmarco, L. M. et al. Identification of environmental factors that promote intestinal inflammation. Nature 611, 801\u2013809 (2022)."
+    },
+    {
+      "key": "8474_CR126",
+      "doi": "10.1016/j.cell.2018.12.012",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "MA Wheeler",
+      "unstructured": "Wheeler, M. A. et al. Environmental control of astrocyte pathogenic activities in CNS inflammation. Cell 176, 581\u2013596 (2019)."
+    },
+    {
+      "key": "8474_CR127",
+      "doi": "10.1038/s41593-024-01599-2",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2024",
+      "author": "EF Cohn",
+      "unstructured": "Cohn, E. F. et al. Pervasive environmental chemicals impair oligodendrocyte development. Nat. Neurosci. 27, 836\u2013845 (2024)."
+    },
+    {
+      "key": "8474_CR128",
+      "doi": "10.1038/nature10554",
+      "title": "",
+      "journal": "Nature",
+      "year": "2011",
+      "author": "K Berer",
+      "unstructured": "Berer, K. et al. Commensal microbiota and myelin autoantigen cooperate to trigger autoimmune demyelination. Nature 479, 538\u2013541 (2011). This is a seminal study on the role of the intestinal commensal flora in the control of CNS autoimmunity."
+    },
+    {
+      "key": "8474_CR129",
+      "doi": "10.1016/j.cell.2009.09.033",
+      "title": "",
+      "journal": "Cell",
+      "year": "2009",
+      "author": "II Ivanov",
+      "unstructured": "Ivanov, I. I. et al. Induction of intestinal Th17 cells by segmented filamentous bacteria. Cell 139, 485\u2013498 (2009)."
+    },
+    {
+      "key": "8474_CR130",
+      "doi": "10.1038/nature07240",
+      "title": "",
+      "journal": "Nature",
+      "year": "2008",
+      "author": "K Atarashi",
+      "unstructured": "Atarashi, K. et al. ATP drives lamina propria TH17 cell differentiation. Nature 455, 808\u2013812 (2008)."
+    },
+    {
+      "key": "8474_CR131",
+      "doi": "10.1038/s41586-020-2886-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "Z Fitzpatrick",
+      "unstructured": "Fitzpatrick, Z. et al. Gut-educated IgA plasma cells defend the meningeal venous sinuses. Nature 587, 472\u2013476 (2020)."
+    },
+    {
+      "key": "8474_CR132",
+      "doi": "10.1016/j.cell.2022.12.037",
+      "title": "",
+      "journal": "Cell",
+      "year": "2023",
+      "author": "M Enamorado",
+      "unstructured": "Enamorado, M. et al. Immunity to the microbiota promotes sensory neuron regeneration. Cell 186, 607\u2013620 (2023)."
+    },
+    {
+      "key": "8474_CR133",
+      "doi": "10.1038/nature11337",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "F Odoardi",
+      "unstructured": "Odoardi, F. et al. T cells become licensed in the lung to enter the central nervous system. Nature 488, 675\u2013679 (2012)."
+    },
+    {
+      "key": "8474_CR134",
+      "doi": "10.1038/s41586-022-04427-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "L Hosang",
+      "unstructured": "Hosang, L. et al. The lung microbiome regulates brain autoimmunity. Nature 603, 138\u2013144 (2022). This is a pioneering study on the role of the lung commensal flora in the control of CNS autoimmunity."
+    },
+    {
+      "key": "8474_CR135",
+      "doi": "10.1016/j.cell.2013.11.024",
+      "title": "",
+      "journal": "Cell",
+      "year": "2013",
+      "author": "EY Hsiao",
+      "unstructured": "Hsiao, E. Y. et al. Microbiota modulate behavioral and physiological abnormalities associated with neurodevelopmental disorders. Cell 155, 1451\u20131463 (2013)."
+    },
+    {
+      "key": "8474_CR136",
+      "doi": "10.1038/nature23910",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "S Kim",
+      "unstructured": "Kim, S. et al. Maternal gut bacteria promote neurodevelopmental abnormalities in mouse offspring. Nature 549, 528\u2013532 (2017)."
+    },
+    {
+      "key": "8474_CR137",
+      "doi": "10.1038/nm.4106",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2016",
+      "author": "V Rothhammer",
+      "unstructured": "Rothhammer, V. et al. Type I interferons and microbial metabolites of tryptophan modulate astrocyte activity and central nervous system inflammation via the aryl hydrocarbon receptor. Nat. Med. 22, 586\u2013597 (2016)."
+    },
+    {
+      "key": "8474_CR138",
+      "doi": "10.1038/s41593-017-0059-z",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2018",
+      "author": "G Faraco",
+      "unstructured": "Faraco, G. et al. Dietary salt promotes neurovascular and cognitive dysfunction through a gut-initiated TH17 response. Nat. Neurosci. 21, 240\u2013249 (2018)."
+    },
+    {
+      "key": "8474_CR139",
+      "doi": "10.1038/s41593-023-01497-z",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2024",
+      "author": "MM Santisteban",
+      "unstructured": "Santisteban, M. M. et al. Meningeal interleukin-17-producing T cells mediate cognitive impairment in a mouse model of salt-sensitive hypertension. Nat. Neurosci. 27, 63\u201377 (2024)."
+    },
+    {
+      "key": "8474_CR140",
+      "doi": "10.1016/j.cmet.2021.10.010",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2021",
+      "author": "D Erny",
+      "unstructured": "Erny, D. et al. Microbiota-derived acetate enables the metabolic fitness of the brain innate immune system during health and disease. Cell Metab. 33, 2260\u20132276 (2021)."
+    },
+    {
+      "key": "8474_CR141",
+      "doi": "10.1016/j.cell.2016.11.018",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "TR Sampson",
+      "unstructured": "Sampson, T. R. et al. Gut microbiota regulate motor deficits and neuroinflammation in a model of Parkinson\u2019s disease. Cell 167, 1469\u20131480 (2016)."
+    },
+    {
+      "key": "8474_CR142",
+      "doi": "10.1038/nn.4030",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2015",
+      "author": "D Erny",
+      "unstructured": "Erny, D. et al. Host microbiota constantly control maturation and function of microglia in the CNS. Nat. Neurosci. 18, 965\u2013977 (2015)."
+    },
+    {
+      "key": "8474_CR143",
+      "doi": "10.1038/s41586-022-05525-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "L Dohnalov\u00e1",
+      "unstructured": "Dohnalov\u00e1, L. et al. A microbiome-dependent gut\u2013brain pathway regulates motivation for exercise. Nature 612, 739\u2013747 (2022)."
+    },
+    {
+      "key": "8474_CR144",
+      "doi": "10.1038/s41591-022-01683-9",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2022",
+      "author": "A Stewart Campbell",
+      "unstructured": "Stewart Campbell, A. et al. Safety and target engagement of an oral small-molecule sequestrant in adolescents with autism spectrum disorder: an open-label phase 1b/2a trial. Nat. Med. 28, 528\u2013534 (2022)."
+    },
+    {
+      "key": "8474_CR145",
+      "doi": "10.1016/j.cell.2020.02.035",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "A Duscha",
+      "unstructured": "Duscha, A. et al. Propionic acid shapes the multiple sclerosis disease course by an immunomodulatory mechanism. Cell 180, 1067\u20131080 (2020)."
+    },
+    {
+      "key": "8474_CR146",
+      "doi": "10.1038/s41591-021-01390-x",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Scott, B. M. et al. Self-tunable engineered yeast probiotics for the treatment of inflammatory bowel disease. Nat. Med. 27, 1212\u20131222 (2021)."
+    },
+    {
+      "key": "8474_CR147",
+      "doi": "10.1126/science.abj8188",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "MA Grandner",
+      "unstructured": "Grandner, M. A. & Fernandez, F.-X. The translational neuroscience of sleep: a contextual framework. Science 374, 568\u2013573 (2021)."
+    },
+    {
+      "key": "8474_CR148",
+      "doi": "10.1016/j.cell.2015.08.025",
+      "title": "",
+      "journal": "Cell",
+      "year": "2015",
+      "author": "MF Farez",
+      "unstructured": "Farez, M. F. et al. Melatonin contributes to the seasonality of multiple sclerosis relapses. Cell 162, 1338\u20131352 (2015)."
+    },
+    {
+      "key": "8474_CR149",
+      "doi": "10.1038/s41586-019-0948-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "CS McAlpine",
+      "unstructured": "McAlpine, C. S. et al. Sleep modulates haematopoiesis and protects against atherosclerosis. Nature 566, 383\u2013387 (2019)."
+    },
+    {
+      "key": "8474_CR150",
+      "doi": "10.1126/science.abn6366",
+      "title": "",
+      "journal": "Science",
+      "year": "2023",
+      "author": "KA Ziegler",
+      "unstructured": "Ziegler, K. A. et al. Immune-mediated denervation of the pineal gland underlies sleep disturbance in cardiac disease. Science 381, 285\u2013290 (2023)."
+    },
+    {
+      "key": "8474_CR151",
+      "doi": "10.1016/j.cell.2023.10.025",
+      "title": "",
+      "journal": "Cell",
+      "year": "2023",
+      "author": "D Sang",
+      "unstructured": "Sang, D. et al. Prolonged sleep deprivation induces a cytokine-storm-like syndrome in mammals. Cell 186, 5500\u20135516 (2023)."
+    },
+    {
+      "key": "8474_CR152",
+      "doi": "10.1038/s41586-018-0540-1",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "D Latorre",
+      "unstructured": "Latorre, D. et al. T cells in patients with narcolepsy target self-antigens of hypocretin neurons. Nature 562, 63\u201368 (2018)."
+    },
+    {
+      "key": "8474_CR153",
+      "doi": "10.1073/pnas.1603325113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "R Bernard-Valnet",
+      "unstructured": "Bernard-Valnet, R. et al. CD8 T cell-mediated killing of orexinergic neurons induces a narcolepsy-like phenotype in mice. Proc. Natl Acad. Sci. USA 113, 10956\u201310961 (2016)."
+    },
+    {
+      "key": "8474_CR154",
+      "doi": "10.1038/ni.3768",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2017",
+      "author": "MM Davis",
+      "unstructured": "Davis, M. M., Tato, C. M. & Furman, D. Systems immunology: just getting started. Nat. Immunol. 18, 725\u2013732 (2017)."
+    },
+    {
+      "key": "8474_CR155",
+      "doi": "10.1038/s41576-023-00685-8",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Armingol, E., Baghdassarian, H. M., & Lewis, N. E. The diversification of methods for studying cell\u2013cell interactions and communication. Nat. Rev. Genet. 25, 381\u2013400 (2024)."
+    },
+    {
+      "key": "8474_CR156",
+      "doi": "10.1016/j.neuron.2007.01.033",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2007",
+      "author": "IR Wickersham",
+      "unstructured": "Wickersham, I. R. et al. Monosynaptic restriction of transsynaptic tracing from single, genetically targeted neurons. Neuron 53, 639\u2013647 (2007)."
+    },
+    {
+      "key": "8474_CR157",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "A Saunders",
+      "unstructured": "Saunders, A. et al. Ascertaining cells\u2019 synaptic connections and RNA expression simultaneously with barcoded rabies virus libraries. Nat. Commun. 13, 6993 (2022)."
+    },
+    {
+      "key": "8474_CR158",
+      "doi": "10.1038/s41586-025-08634-7",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Sun, Y. et al. Brain-wide neuronal circuit connectome of human glioblastoma. Nature https://doi.org/10.1038/s41586-025-08634-7 (2025)."
+    },
+    {
+      "key": "8474_CR159",
+      "doi": "10.7554/elife.49291",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "CW Mount",
+      "unstructured": "Mount, C. W., Yal\u00e7\u0131n, B., Cunliffe-Koehler, K., Sundaresh, S. & Monje, M. Monosynaptic tracing maps brain-wide afferent oligodendrocyte precursor cell connectivity. eLife 8, e49291 (2019)."
+    },
+    {
+      "key": "8474_CR160",
+      "doi": "10.3389/fnins.2019.00897",
+      "title": "",
+      "journal": "Front. Neurosci.",
+      "year": "2019",
+      "author": "C Saleeba",
+      "unstructured": "Saleeba, C., Dempsey, B., Le, S., Goodchild, A. & McMullan, S. A student\u2019s guide to neural circuit tracing. Front. Neurosci. 13, 897 (2019)."
+    },
+    {
+      "key": "8474_CR161",
+      "doi": "10.1016/j.cell.2020.05.029",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "L Huang",
+      "unstructured": "Huang, L. et al. BRICseq bridges brain-wide interregional connectivity to neural activity and gene expression in single animals. Cell 182, 177\u2013188 (2020)."
+    },
+    {
+      "key": "8474_CR162",
+      "doi": "10.1016/j.neuron.2016.07.036",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2016",
+      "author": "JM Kebschull",
+      "unstructured": "Kebschull, J. M. et al. High-throughput mapping of single-neuron projections by sequencing of barcoded RNA. Neuron 91, 975\u2013987 (2016)."
+    },
+    {
+      "key": "8474_CR163",
+      "doi": "10.1038/d41586-024-00426-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "MA Wheeler",
+      "unstructured": "Wheeler, M. A. Interactions between immune cells recorded. Nature 627, 277\u2013279 (2024)."
+    },
+    {
+      "key": "8474_CR164",
+      "doi": "10.1038/s41587-020-0442-2",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2020",
+      "author": "A Giladi",
+      "unstructured": "Giladi, A. et al. Dissecting cellular crosstalk by sequencing physically interacting cells. Nat. Biotechnol. 38, 629\u2013637 (2020). This paper describes a pioneering approach in delineating mechanisms of cell\u2013cell communication, using enrichment of antibody-labelled cellular pairs."
+    },
+    {
+      "key": "8474_CR165",
+      "doi": "10.1038/s43018-022-00338-5",
+      "title": "",
+      "journal": "Nat. Cancer",
+      "year": "2022",
+      "author": "M Cohen",
+      "unstructured": "Cohen, M. et al. The interaction of CD4+ helper T cells with dendritic cells shapes the tumor microenvironment and immune checkpoint blockade response. Nat. Cancer 3, 303\u2013317 (2022)."
+    },
+    {
+      "key": "8474_CR166",
+      "doi": "10.1038/nature25442",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "G Pasqual",
+      "unstructured": "Pasqual, G. et al. Monitoring T cell\u2013dendritic cell interactions in vivo by intercellular enzymatic labelling. Nature 553, 496\u2013500 (2018)."
+    },
+    {
+      "key": "8474_CR167",
+      "doi": "10.1038/s41586-024-07134-4",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Nakandakari-Higa, S. et al. Universal recording of immune cell interactions in vivo. Nature 627, 399\u2013406 (2024). This important study used an innovative method to systematically define the physical contacts of immune cells."
+    },
+    {
+      "key": "8474_CR168",
+      "doi": "10.1038/s41586-022-05613-0",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Clark, I. C. et al. Identification of astrocyte regulators by nucleic acid cytometry. Nature 614, 326\u2013333 (2023)."
+    },
+    {
+      "key": "8474_CR169",
+      "doi": "10.1038/s41586-022-05556-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "IC Clark",
+      "unstructured": "Clark, I. C. et al. HIV silencing and cell survival signatures in infected T cell reservoirs. Nature 614, 318\u2013325 (2023)."
+    },
+    {
+      "key": "8474_CR170",
+      "doi": "10.1016/j.cell.2023.11.032",
+      "title": "",
+      "journal": "Cell",
+      "year": "2024",
+      "author": "D Kirschenbaum",
+      "unstructured": "Kirschenbaum, D. et al. Time-resolved single-cell transcriptomics defines immune trajectories in glioblastoma. Cell 187, 149\u2013165 (2024). This work used an innovative method to incorporate a temporal dimension into spatial transcriptomic data."
+    },
+    {
+      "key": "8474_CR171",
+      "doi": "10.1146/annurev-neuro-111020-100834",
+      "title": "",
+      "journal": "Annu. Rev. Neurosci.",
+      "year": "2022",
+      "author": "RC Challis",
+      "unstructured": "Challis, R. C. et al. Adeno-associated virus toolkit to target diverse brain cells. Annu. Rev. Neurosci. 45, 447\u2013469 (2022)."
+    },
+    {
+      "key": "8474_CR172",
+      "doi": "10.1126/science.adm8386",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Huang, Q. et al. An AAV capsid reprogrammed to bind human transferrin receptor mediates brain-wide gene delivery. Science 384, 1220\u20131227 (2024)."
+    },
+    {
+      "key": "8474_CR173",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2023",
+      "author": "X Chen",
+      "unstructured": "Chen, X. et al. Functional gene delivery to and across brain vasculature of systemic AAVs with endothelial-specific tropism in rodents and broad tropism in primates. Nat. Commun. 14, 3345 (2023)."
+    },
+    {
+      "key": "8474_CR174",
+      "doi": "10.1016/j.cell.2022.12.022",
+      "title": "",
+      "journal": "Cell",
+      "year": "2023",
+      "author": "WA Nyberg",
+      "unstructured": "Nyberg, W. A. et al. An evolved AAV variant enables efficient genetic engineering of murine T cells. Cell 186, 446\u2013460 (2023)."
+    },
+    {
+      "key": "8474_CR175",
+      "doi": "10.1073/pnas.2302997120",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2023",
+      "author": "A Young",
+      "unstructured": "Young, A. et al. Targeted evolution of adeno-associated virus capsids for systemic transgene delivery to microglia and tissue-resident macrophages. Proc. Natl Acad. Sci. USA 120, e2302997120 (2023)."
+    },
+    {
+      "key": "8474_CR176",
+      "doi": "10.1038/s41592-022-01547-7",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2022",
+      "author": "R Lin",
+      "unstructured": "Lin, R. et al. Directed evolution of adeno-associated virus for efficient gene delivery to microglia. Nat. Methods 19, 976\u2013998 (2022)."
+    },
+    {
+      "key": "8474_CR177",
+      "doi": "10.1016/j.cell.2023.03.023",
+      "title": "",
+      "journal": "Cell",
+      "year": "2023",
+      "author": "Q Li",
+      "unstructured": "Li, Q. et al. Multimodal charting of molecular and functional cell states via in situ electro-sequencing. Cell 186, 2002\u20132017 (2023)."
+    },
+    {
+      "key": "8474_CR178",
+      "doi": "10.1126/science.add3067",
+      "title": "",
+      "journal": "Science",
+      "year": "2023",
+      "author": "H Zeng",
+      "unstructured": "Zeng, H. et al. Spatially resolved single-cell translatomics at molecular resolution. Science 380, eadd3067 (2023)."
+    },
+    {
+      "key": "8474_CR179",
+      "doi": "10.1038/s41586-023-06837-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "AJC Russell",
+      "unstructured": "Russell, A. J. C. et al. Slide-tags enables single-nucleus barcoding for multimodal spatial genomics. Nature 625, 101\u2013109 (2024)."
+    },
+    {
+      "key": "8474_CR180",
+      "doi": "10.1038/s43586-023-00276-1",
+      "title": "",
+      "journal": "Nat. Rev. Methods Primers",
+      "year": "2023",
+      "author": "HJ Kang",
+      "unstructured": "Kang, H. J., Minamimoto, T., Wess, J. & Roth, B. L. Chemogenetics for cell-type-specific modulation of signalling and neuronal activity. Nat. Rev. Methods Primers 3, 93 (2023)."
+    },
+    {
+      "key": "8474_CR181",
+      "doi": "10.1038/nn.4091",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2015",
+      "author": "K Deisseroth",
+      "unstructured": "Deisseroth, K. Optogenetics: 10 years of microbial opsins in neuroscience. Nat. Neurosci. 18, 1213\u20131225 (2015)."
+    },
+    {
+      "key": "8474_CR182",
+      "doi": "10.1038/nrn.2017.15",
+      "title": "",
+      "journal": "Nat. Rev. Neurosci.",
+      "year": "2017",
+      "author": "CK Kim",
+      "unstructured": "Kim, C. K., Adhikari, A. & Deisseroth, K. Integration of optogenetics with complementary methodologies in systems neuroscience. Nat. Rev. Neurosci. 18, 222\u2013235 (2017)."
+    },
+    {
+      "key": "8474_CR183",
+      "doi": "10.1126/science.aaw5202",
+      "title": "",
+      "journal": "Science",
+      "year": "2019",
+      "author": "JH Marshel",
+      "unstructured": "Marshel, J. H. et al. Cortical layer-specific critical dynamics triggering perception. Science 365, eaaw5202 (2019)."
+    },
+    {
+      "key": "8474_CR184",
+      "doi": "10.1038/s41587-020-0679-9",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2021",
+      "author": "R Chen",
+      "unstructured": "Chen, R. et al. Deep brain optogenetics without intracranial surgery. Nat. Biotechnol. 39, 161\u2013164 (2021)."
+    },
+    {
+      "key": "8474_CR185",
+      "doi": "10.1016/j.neuron.2020.03.032",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2020",
+      "author": "X Gong",
+      "unstructured": "Gong, X. et al. An ultra-sensitive step-function opsin for minimally invasive optogenetic stimulation in mice and macaques. Neuron 107, 38\u201351 (2020)."
+    },
+    {
+      "key": "8474_CR186",
+      "doi": "10.1038/s41587-023-01833-5",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Sahasrabudhe, A. et al. Multifunctional microelectronic fibers enable wireless modulation of gut and brain neural circuits. Nat. Biotechnol. 42, 892\u2013904 (2024)."
+    },
+    {
+      "key": "8474_CR187",
+      "doi": "10.1038/nature12107",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "K Chung",
+      "unstructured": "Chung, K. et al. Structural and molecular interrogation of intact biological systems. Nature 497, 332\u2013337 (2013)."
+    },
+    {
+      "key": "8474_CR188",
+      "doi": "10.1126/science.adh9979",
+      "title": "",
+      "journal": "Science",
+      "year": "2024",
+      "author": "J Park",
+      "unstructured": "Park, J. et al. Integrated platform for multiscale molecular imaging and phenotyping of the human brain. Science 384, eadh9979 (2024)."
+    },
+    {
+      "key": "8474_CR189",
+      "doi": "10.1016/j.cell.2016.05.007",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "N Renier",
+      "unstructured": "Renier, N. et al. Mapping of brain activity by automated volume analysis of immediate early genes. Cell 165, 1789\u20131802 (2016)."
+    },
+    {
+      "key": "8474_CR190",
+      "doi": "10.1038/s41587-023-01846-0",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2024",
+      "author": "H Mai",
+      "unstructured": "Mai, H. et al. Whole-body cellular mapping in mouse using standard IgG antibodies. Nat. Biotechnol.\u00a042, 617\u2013627\u00a0(2024)."
+    },
+    {
+      "key": "8474_CR191",
+      "doi": "10.1038/s41592-022-01427-0",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2022",
+      "author": "V Nudell",
+      "unstructured": "Nudell, V. et al. HYBRiD: hydrogel-reinforced DISCO for clearing mammalian bodies. Nat. Methods 19, 479\u2013485 (2022)."
+    },
+    {
+      "key": "8474_CR192",
+      "doi": "10.1016/j.cell.2020.01.028",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "C Kirst",
+      "unstructured": "Kirst, C. et al. Mapping the fine-scale organization and plasticity of the brain vasculature. Cell 180, 780\u2013795 (2020)."
+    },
+    {
+      "key": "8474_CR193",
+      "doi": "10.1371/journal.pcbi.0010042",
+      "title": "",
+      "journal": "PLoS Comput. Biol.",
+      "year": "2005",
+      "author": "O Sporns",
+      "unstructured": "Sporns, O., Tononi, G. & K\u00f6tter, R. The human connectome: a structural description of the human brain. PLoS Comput. Biol. 1, e42 (2005)."
+    },
+    {
+      "key": "8474_CR194",
+      "doi": "10.1038/s41577-020-0285-6",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2020",
+      "author": "MG Netea",
+      "unstructured": "Netea, M. G. et al. Defining trained immunity and its role in health and disease. Nat. Rev. Immunol. 20, 375\u2013388 (2020)."
+    },
+    {
+      "key": "8474_CR195",
+      "doi": "10.1038/s41593-018-0192-3",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2018",
+      "author": "P Ayata",
+      "unstructured": "Ayata, P. et al. Epigenetic regulation of brain region-specific microglias clearance activity. Nat. Neurosci. 21, 1049\u20131060 (2018)."
+    }
+  ]
+}

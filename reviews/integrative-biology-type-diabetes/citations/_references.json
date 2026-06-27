@@ -1,0 +1,1333 @@
+{
+  "article": {
+    "slug": "s41586-019-1797-8",
+    "doi": "10.1038/s41586-019-1797-8",
+    "title": "The integrative biology of type 2 diabetes",
+    "url": "https://www.nature.com/articles/s41586-019-1797-8",
+    "abbrev": "integrative-biology-type-diabetes",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/integrative-biology-type-diabetes"
+  },
+  "meta": {
+    "title": "The integrative biology of type 2 diabetes",
+    "authors": [
+      "Michael Roden",
+      "Gerald I. Shulman"
+    ],
+    "published": [
+      2019,
+      12,
+      4
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-019-1797-8",
+    "n_references": 145,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "1797_CR1",
+      "doi": "10.1016/j.diabres.2018.02.023",
+      "title": "",
+      "journal": "Diabetes Res. Clin. Pract.",
+      "year": "2018",
+      "author": "NH Cho",
+      "unstructured": "Cho, N. H. et al. IDF Diabetes Atlas: global estimates of diabetes prevalence for 2017 and projections for 2045. Diabetes Res. Clin. Pract. 138, 271\u2013281 (2018)."
+    },
+    {
+      "key": "1797_CR2",
+      "doi": "10.1038/s41588-018-0084-1",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "A Mahajan",
+      "unstructured": "Mahajan, A. et al. Refining the accuracy of validated target identification through coding variant fine-mapping in type 2 diabetes. Nat. Genet. 50, 559\u2013571 (2018)."
+    },
+    {
+      "key": "1797_CR3",
+      "doi": "10.2337/diabetes.54.3.603",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2005",
+      "author": "KF Petersen",
+      "unstructured": "Petersen, K. F. et al. Reversal of nonalcoholic hepatic steatosis, hepatic insulin resistance, and hyperglycemia by moderate weight reduction in patients with type 2 diabetes. Diabetes 54, 603\u2013608 (2005)."
+    },
+    {
+      "key": "1797_CR4",
+      "doi": "10.1016/s2213-8587(19)30068-3",
+      "title": "",
+      "journal": "Lancet Diabetes Endocrinol.",
+      "year": "2019",
+      "author": "MEJ Lean",
+      "unstructured": "Lean, M. E. J. et al. Durability of a primary care-led weight-management intervention for remission of type 2 diabetes: 2-year results of the DiRECT open-label, cluster-randomised trial. Lancet Diabetes Endocrinol. 7, 344\u2013355 (2019)."
+    },
+    {
+      "key": "1797_CR5",
+      "doi": "10.1371/journal.pone.0194127",
+      "title": "",
+      "journal": "PLoS One",
+      "year": "2018",
+      "author": "V Bellou",
+      "unstructured": "Bellou, V., Belbasis, L., Tzoulaki, I. & Evangelou, E. Risk factors for type 2 diabetes mellitus: an exposure-wide umbrella review of meta-analyses. PLoS One 13, e0194127 (2018)."
+    },
+    {
+      "key": "1797_CR6",
+      "doi": "10.1038/nrendo.2016.87",
+      "title": "",
+      "journal": "Nat. Rev. Endocrinol.",
+      "year": "2016",
+      "author": "R Barr\u00e8s",
+      "unstructured": "Barr\u00e8s, R. & Zierath, J. R. The role of diet and exercise in the transgenerational epigenetic landscape of T2DM. Nat. Rev. Endocrinol. 12, 441\u2013451 (2016)."
+    },
+    {
+      "key": "1797_CR7",
+      "doi": "10.1038/nature20784",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "S Wahl",
+      "unstructured": "Wahl, S. et al. Epigenome-wide association study of body mass index, and the adverse outcomes of adiposity. Nature 541, 81\u201386 (2017)."
+    },
+    {
+      "key": "1797_CR8",
+      "doi": "10.1056/nejm197003192821209",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "1970",
+      "author": "GF Cahill Jr.",
+      "unstructured": "Cahill, G. F. Jr. Starvation in man. N. Engl. J. Med. 282, 668\u2013675 (1970)."
+    },
+    {
+      "key": "1797_CR9",
+      "doi": "10.1126/science.1948033",
+      "title": "",
+      "journal": "Science",
+      "year": "1991",
+      "author": "DL Rothman",
+      "unstructured": "Rothman, D. L., Magnusson, I., Katz, L. D., Shulman, R. G. & Shulman, G. I. Quantitation of hepatic glycogenolysis and gluconeogenesis in fasting humans with 13C NMR. Science 254, 573\u2013576 (1991)."
+    },
+    {
+      "key": "1797_CR10",
+      "doi": "10.1016/j.cell.2017.12.001",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "RJ Perry",
+      "unstructured": "Perry, R. J. et al. Leptin mediates a glucose-fatty acid cycle to maintain glucose homeostasis in starvation. Cell 172, 234\u2013248 (2018). This study describes the physiological response to starving, which integrates hormone secretion and metabolic fluxes to promote the shift from carbohydrate to fat metabolism for maintaining gluconeogenesis, reflecting key features of insulin resistance."
+    },
+    {
+      "key": "1797_CR11",
+      "doi": "10.1016/j.cmet.2017.10.004",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2018",
+      "author": "RJ Perry",
+      "unstructured": "Perry, R. J. et al. Mechanisms by which a very-low-calorie diet reverses hyperglycemia in a rat model of type 2 diabetes. Cell Metab. 27, 210\u2013217 (2018)."
+    },
+    {
+      "key": "1797_CR12",
+      "doi": "10.1172/jci.insight.121434",
+      "title": "",
+      "journal": "JCI Insight",
+      "year": "2018",
+      "author": "ML Steinhauser",
+      "unstructured": "Steinhauser, M. L. et al. The circulating metabolome of human starvation. JCI Insight 3, e121434 (2018)."
+    },
+    {
+      "key": "1797_CR13",
+      "doi": "10.1172/jci83349",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2015",
+      "author": "PK Fazeli",
+      "unstructured": "Fazeli, P. K. et al. FGF21 and the late adaptive response to starvation in humans. J. Clin. Invest. 125, 4601\u20134611 (2015)."
+    },
+    {
+      "key": "1797_CR14",
+      "doi": "10.1016/j.cell.2015.01.012",
+      "title": "",
+      "journal": "Cell",
+      "year": "2015",
+      "author": "RJ Perry",
+      "unstructured": "Perry, R. J. et al. Hepatic acetyl CoA links adipose tissue inflammation to hepatic insulin resistance and type 2 diabetes. Cell 160, 745\u2013758 (2015)."
+    },
+    {
+      "key": "1797_CR15",
+      "doi": "10.2337/diabetes.49.5.701",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2000",
+      "author": "M Roden",
+      "unstructured": "Roden, M. et al. Effects of free fatty acid elevation on postabsorptive endogenous glucose production and gluconeogenesis in humans. Diabetes 49, 701\u2013707 (2000)."
+    },
+    {
+      "key": "1797_CR16",
+      "doi": "10.1073/pnas.1423952112",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2015",
+      "author": "DF Vatner",
+      "unstructured": "Vatner, D. F. et al. Insulin-independent regulation of hepatic triglyceride synthesis by fatty acids. Proc. Natl Acad. Sci. USA 112, 1143\u20131148 (2015)."
+    },
+    {
+      "key": "1797_CR17",
+      "doi": "10.1172/jci86013",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2016",
+      "author": "MC Petersen",
+      "unstructured": "Petersen, M. C. et al. Insulin receptor Thr1160 phosphorylation mediates lipid-induced hepatic insulin resistance. J. Clin. Invest. 126, 4361\u20134371 (2016)."
+    },
+    {
+      "key": "1797_CR18",
+      "doi": "10.1172/jci129913",
+      "title": "",
+      "journal": "J. Clin. Invest",
+      "year": "2019",
+      "author": "KF Peterson",
+      "unstructured": "Peterson, K. F., Dufour, F., Cline, G. W. & Shulman, G. I. Regulation of hepatic mitochondrial oxidation by glucose-alanine cycling during starvation in humans. J. Clin. Invest. 129, 4671\u20134675 (2019)."
+    },
+    {
+      "key": "1797_CR19",
+      "doi": "10.1172/jci131931",
+      "title": "",
+      "journal": "J. Clin. Invest",
+      "year": "2019",
+      "author": "T Sarabhai",
+      "unstructured": "Sarabhai, T. & Roden, M. Hungry for your alanine: when liver depends on muscle proteolysis. J. Clin. Invest. 129, 4563\u20134566 (2019)."
+    },
+    {
+      "key": "1797_CR20",
+      "doi": "10.1038/oby.2010.316",
+      "title": "",
+      "journal": "Obesity",
+      "year": "2011",
+      "author": "SM Pasiakos",
+      "unstructured": "Pasiakos, S. M., Caruso, C. M., Kellogg, M. D., Kramer, F. M. & Lieberman, H. R. Appetite and endocrine regulators of energy balance after 2 days of energy restriction: insulin, leptin, ghrelin, and DHEA-S. Obesity 19, 1124\u20131130 (2011)."
+    },
+    {
+      "key": "1797_CR21",
+      "doi": "10.1038/nrendo.2016.175",
+      "title": "",
+      "journal": "Nat. Rev. Endocrinol.",
+      "year": "2017",
+      "author": "M Schorr",
+      "unstructured": "Schorr, M. & Miller, K. K. The endocrine manifestations of anorexia nervosa: mechanisms and management. Nat. Rev. Endocrinol. 13, 174\u2013186 (2017)."
+    },
+    {
+      "key": "1797_CR22",
+      "doi": "10.1016/j.cmet.2014.09.002",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2014",
+      "author": "Y Ravussin",
+      "unstructured": "Ravussin, Y., Leibel, R. L. & Ferrante, A. W. Jr. A missing link in body weight homeostasis: the catabolic signal of the overfed state. Cell Metab. 20, 565\u2013572 (2014)."
+    },
+    {
+      "key": "1797_CR23",
+      "doi": "10.1172/jci91578",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2016",
+      "author": "J Friedman",
+      "unstructured": "Friedman, J. The long road to leptin. J. Clin. Invest. 126, 4727\u20134734 (2016)."
+    },
+    {
+      "key": "1797_CR24",
+      "doi": "10.1038/nature26136",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "MR Riddle",
+      "unstructured": "Riddle, M. R. et al. Insulin resistance in cavefish as an adaptation to a nutrient-limited environment. Nature 555, 647\u2013651 (2018). Certain cave-adapted fish populations develop diminished insulin signalling in a nutrient-restricted environment, which protects them from blood glucose decline, reflecting a beneficial effect of insulin resistance."
+    },
+    {
+      "key": "1797_CR25",
+      "doi": "10.1093/hmg/2.9.1437",
+      "title": "",
+      "journal": "Hum. Mol. Genet.",
+      "year": "1993",
+      "author": "P Carrera",
+      "unstructured": "Carrera, P. et al. Substitution of Leu for Pro-193 in the insulin receptor in a patient with a genetic form of severe insulin resistance. Hum. Mol. Genet. 2, 1437\u20131441 (1993)."
+    },
+    {
+      "key": "1797_CR26",
+      "doi": "10.2337/dc09-s309",
+      "title": "",
+      "journal": "Diabetes Care",
+      "year": "2009",
+      "author": "MA Abdul-Ghani",
+      "unstructured": "Abdul-Ghani, M. A. & DeFronzo, R. A. Plasma glucose concentration and prediction of future risk of type 2 diabetes. Diabetes Care 32, S194\u2013S198 (2009)."
+    },
+    {
+      "key": "1797_CR27",
+      "doi": "10.1016/s0140-6736(09)60619-x",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2009",
+      "author": "AG Tab\u00e1k",
+      "unstructured": "Tab\u00e1k, A. G. et al. Trajectories of glycaemia, insulin sensitivity, and insulin secretion before diagnosis of type 2 diabetes: an analysis from the Whitehall II study. Lancet 373, 2215\u20132221 (2009)."
+    },
+    {
+      "key": "1797_CR28",
+      "doi": "10.1016/s2213-8587(15)00336-8",
+      "title": "",
+      "journal": "Lancet Diabetes Endocrinol.",
+      "year": "2016",
+      "author": "JH Ohn",
+      "unstructured": "Ohn, J. H. et al. 10-year trajectory of \u03b2-cell function and insulin sensitivity in the development of type 2 diabetes: a community-based prospective cohort study. Lancet Diabetes Endocrinol. 4, 27\u201334 (2016)."
+    },
+    {
+      "key": "1797_CR29",
+      "doi": "10.2337/dc09-s302",
+      "title": "",
+      "journal": "Diabetes Care",
+      "year": "2009",
+      "author": "RA DeFronzo",
+      "unstructured": "DeFronzo, R. A. & Tripathy, D. Skeletal muscle insulin resistance is the primary defect in type 2 diabetes. Diabetes Care 32, S157\u2013S163 (2009)."
+    },
+    {
+      "key": "1797_CR30",
+      "doi": "10.1073/pnas.0705408104",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2007",
+      "author": "KF Petersen",
+      "unstructured": "Petersen, K. F. et al. The role of skeletal muscle insulin resistance in the pathogenesis of the metabolic syndrome. Proc. Natl Acad. Sci. USA 104, 12587\u201312594 (2007)."
+    },
+    {
+      "key": "1797_CR31",
+      "doi": "10.1172/jci92035",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2017",
+      "author": "AR Saltiel",
+      "unstructured": "Saltiel, A. R. & Olefsky, J. M. Inflammatory mechanisms linking obesity and metabolic disease. J. Clin. Invest. 127, 1\u20134 (2017)."
+    },
+    {
+      "key": "1797_CR32",
+      "doi": "10.1038/s41574-019-0165-y",
+      "title": "",
+      "journal": "Nat. Rev. Endocrinol.",
+      "year": "2019",
+      "author": "A Guilherme",
+      "unstructured": "Guilherme, A., Henriques, F., Bedard, A. H. & Czech, M. P. Molecular pathways linking adipose innervation to insulin action in obesity and diabetes mellitus. Nat. Rev. Endocrinol. 15, 207\u2013225 (2019)."
+    },
+    {
+      "key": "1797_CR33",
+      "doi": "10.7326/0003-4819-144-5-200603070-00011",
+      "title": "",
+      "journal": "Ann. Intern. Med.",
+      "year": "2006",
+      "author": "GE Umpierrez",
+      "unstructured": "Umpierrez, G. E., Smiley, D. & Kitabchi, A. E. Narrative review: ketosis-prone type 2 diabetes mellitus. Ann. Intern. Med. 144, 350\u2013357 (2006)."
+    },
+    {
+      "key": "1797_CR34",
+      "doi": "10.1073/pnas.0608537103",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2006",
+      "author": "KF Petersen",
+      "unstructured": "Petersen, K. F. et al. Increased prevalence of insulin resistance and nonalcoholic fatty liver disease in Asian-Indian men. Proc. Natl Acad. Sci. USA 103, 18273\u201318277 (2006)."
+    },
+    {
+      "key": "1797_CR35",
+      "doi": "10.1016/s2213-8587(19)30187-1",
+      "title": "",
+      "journal": "Lancet. Diabetol. Endocrinol.",
+      "year": "2019",
+      "author": "OP Zaharia",
+      "unstructured": "Zaharia, O. P. et al. Clusters of patients with recent-onset diabetes show different risk profiles for diabetes-associated diseases during a 5-year follow-up. Lancet. Diabetol. Endocrinol. 7, 684\u2013694 (2019). A subgroup of people with diabetes exhibit severe insulin resistance along with higher ectopic fat accumulation and increased risk of comorbidities, which require specific attention for precise prevention and treatment."
+    },
+    {
+      "key": "1797_CR36",
+      "doi": "10.1016/s2213-8587(18)30051-2",
+      "title": "",
+      "journal": "Lancet Diabetes Endocrinol.",
+      "year": "2018",
+      "author": "E Ahlqvist",
+      "unstructured": "Ahlqvist, E. et al. Novel subgroups of adult-onset diabetes and their association with outcomes: a data-driven cluster analysis of six variables. Lancet Diabetes Endocrinol. 6, 361\u2013369 (2018)."
+    },
+    {
+      "key": "1797_CR37",
+      "doi": "10.1371/journal.pmed.1002654",
+      "title": "",
+      "journal": "PLoS Med.",
+      "year": "2018",
+      "author": "MS Udler",
+      "unstructured": "Udler, M. S. et al. Type 2 diabetes genetic loci informed by multi-trait associations point to disease mechanisms and subtypes: a soft clustering analysis. PLoS Med. 15, e1002654 (2018)."
+    },
+    {
+      "key": "1797_CR38",
+      "doi": "10.1172/jci115997",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "1992",
+      "author": "I Magnusson",
+      "unstructured": "Magnusson, I., Rothman, D. L., Katz, L. D., Shulman, R. G. & Shulman, G. I. Increased rate of gluconeogenesis in type II diabetes mellitus. A 13C nuclear magnetic resonance study. J. Clin. Invest. 90, 1323\u20131327 (1992)."
+    },
+    {
+      "key": "1797_CR39",
+      "doi": "10.2337/diabetes.53.12.3048",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2004",
+      "author": "M Krssak",
+      "unstructured": "Krssak, M. et al. Alterations in postprandial hepatic glycogen metabolism in type 2 diabetes. Diabetes 53, 3048\u20133056 (2004)."
+    },
+    {
+      "key": "1797_CR40",
+      "doi": "10.2337/db10-1032",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2010",
+      "author": "RA Rizza",
+      "unstructured": "Rizza, R. A. Pathogenesis of fasting and postprandial hyperglycemia in type 2 diabetes: implications for therapy. Diabetes 59, 2697\u20132707 (2010)."
+    },
+    {
+      "key": "1797_CR41",
+      "doi": "10.2337/diabetes.49.8.1367",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2000",
+      "author": "A Gastaldelli",
+      "unstructured": "Gastaldelli, A. et al. Influence of obesity and type 2 diabetes on gluconeogenesis and glucose output in humans: a quantitative study. Diabetes 49, 1367\u20131373 (2000)."
+    },
+    {
+      "key": "1797_CR42",
+      "doi": "10.1172/jci118846",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "1996",
+      "author": "K Rebrin",
+      "unstructured": "Rebrin, K., Steil, G. M., Mittelman, S. D. & Bergman, R. N. Causal linkage between insulin suppression of lipolysis and suppression of liver glucose output in dogs. J. Clin. Invest. 98, 741\u2013749 (1996)."
+    },
+    {
+      "key": "1797_CR43",
+      "doi": "10.1172/jci23109",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2005",
+      "author": "C Buettner",
+      "unstructured": "Buettner, C. et al. Severe impairment in liver insulin signaling fails to alter hepatic insulin action in conscious mice. J. Clin. Invest. 115, 1306\u20131313 (2005)."
+    },
+    {
+      "key": "1797_CR44",
+      "doi": "10.1172/jci200525152",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2005",
+      "author": "AD Cherrington",
+      "unstructured": "Cherrington, A. D. The role of hepatic insulin receptors in the regulation of glucose production. J. Clin. Invest. 115, 1136\u20131139 (2005)."
+    },
+    {
+      "key": "1797_CR45",
+      "doi": "10.1038/nm.2686",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2012",
+      "author": "M Lu",
+      "unstructured": "Lu, M. et al. Insulin regulates liver metabolism in vivo in the absence of hepatic Akt and Foxo1. Nat. Med. 18, 388\u2013395 (2012)."
+    },
+    {
+      "key": "1797_CR46",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2015",
+      "author": "I O-Sullivan",
+      "unstructured": "O-Sullivan, I. et al. FoxO1 integrates direct and indirect effects of insulin on hepatic glucose production and glucose utilization. Nat. Commun. 6, 7079 (2015)."
+    },
+    {
+      "key": "1797_CR47",
+      "doi": "10.1038/ncomms8078",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2015",
+      "author": "PM Titchenell",
+      "unstructured": "Titchenell, P. M., Chu, Q., Monks, B. R. & Birnbaum, M. J. Hepatic insulin signalling is dispensable for suppression of glucose output by insulin in vivo. Nat. Commun. 6, 7078 (2015). This mouse study showed that in the absence of FOXO1, insulin signals independently of the hepatic insulin receptor\u2013AKT\u2013FOXO1 axis via an intermediary extrahepatic tissue to regulate hepatic glucose production."
+    },
+    {
+      "key": "1797_CR48",
+      "doi": "10.1016/j.cmet.2007.12.009",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2008",
+      "author": "MS Brown",
+      "unstructured": "Brown, M. S. & Goldstein, J. L. Selective versus total insulin resistance: a pathogenic paradox. Cell Metab. 7, 95\u201396 (2008)."
+    },
+    {
+      "key": "1797_CR49",
+      "doi": "10.1172/jci23621",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2005",
+      "author": "KL Donnelly",
+      "unstructured": "Donnelly, K. L. et al. Sources of fatty acids stored in liver and secreted via lipoproteins in patients with nonalcoholic fatty liver disease. J. Clin. Invest. 115, 1343\u20131351 (2005)."
+    },
+    {
+      "key": "1797_CR50",
+      "doi": "10.1056/nejmoa1315496",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2014",
+      "author": "JS Albert",
+      "unstructured": "Albert, J. S. et al. Null mutation in hormone-sensitive lipase gene and risk of type 2 diabetes. N. Engl. J. Med. 370, 2307\u20132315 (2014)."
+    },
+    {
+      "key": "1797_CR51",
+      "doi": "10.2337/db14-1409",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2015",
+      "author": "AH Ali",
+      "unstructured": "Ali, A. H., Mundi, M., Koutsari, C., Bernlohr, D. A. & Jensen, M. D. Adipose tissue free fatty acid storage in vivo: effects of insulin versus niacin as a control for suppression of lipolysis. Diabetes 64, 2828\u20132835 (2015)."
+    },
+    {
+      "key": "1797_CR52",
+      "doi": "10.1172/jci112558",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "1986",
+      "author": "JF Caro",
+      "unstructured": "Caro, J. F. et al. Studies on the mechanism of insulin resistance in the liver from humans with noninsulin-dependent diabetes. Insulin action and binding in isolated hepatocytes, insulin receptor structure, and kinase activity. J. Clin. Invest. 78, 249\u2013258 (1986)."
+    },
+    {
+      "key": "1797_CR53",
+      "doi": "10.1016/j.cmet.2017.07.004",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2017",
+      "author": "A Abdul-Wahed",
+      "unstructured": "Abdul-Wahed, A., Guilmeau, S. & Postic, C. Sweet sixteenth for ChREBP: established roles and future goals. Cell Metab. 26, 324\u2013341 (2017)."
+    },
+    {
+      "key": "1797_CR54",
+      "doi": "10.1073/pnas.0914798107",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2010",
+      "author": "S Li",
+      "unstructured": "Li, S., Brown, M. S. & Goldstein, J. L. Bifurcation of insulin signaling pathway in rat liver: mTORC1 required for stimulation of lipogenesis, but not inhibition of gluconeogenesis. Proc. Natl Acad. Sci. USA 107, 3441\u20133446 (2010)."
+    },
+    {
+      "key": "1797_CR55",
+      "doi": "10.1016/j.tem.2016.06.005",
+      "title": "",
+      "journal": "Trends Endocrinol. Metab.",
+      "year": "2016",
+      "author": "MA Herman",
+      "unstructured": "Herman, M. A. & Samuel, V. T. The sweet path to metabolic demise: fructose and lipid synthesis. Trends Endocrinol. Metab. 27, 719\u2013730 (2016)."
+    },
+    {
+      "key": "1797_CR56",
+      "doi": "10.1073/pnas.1113359108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "N Kumashiro",
+      "unstructured": "Kumashiro, N. et al. Cellular mechanism of insulin resistance in nonalcoholic fatty liver disease. Proc. Natl Acad. Sci. USA 108, 16381\u201316385 (2011)."
+    },
+    {
+      "key": "1797_CR57",
+      "doi": "10.1053/j.gastro.2012.03.003",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "2012",
+      "author": "F Magkos",
+      "unstructured": "Magkos, F. et al. Intrahepatic diacylglycerol content is associated with hepatic insulin resistance in obese subjects. Gastroenterology 142, 1444\u20131446 (2012)."
+    },
+    {
+      "key": "1797_CR58",
+      "doi": "10.1016/j.jhep.2016.01.002",
+      "title": "",
+      "journal": "J. Hepatol.",
+      "year": "2016",
+      "author": "PK Luukkonen",
+      "unstructured": "Luukkonen, P. K. et al. Hepatic ceramides dissociate steatosis and insulin resistance in patients with non-alcoholic fatty liver disease. J. Hepatol. 64, 1167\u20131175 (2016)."
+    },
+    {
+      "key": "1797_CR59",
+      "doi": "10.1016/j.jhep.2016.01.002",
+      "title": "",
+      "journal": "J. Hepatol.",
+      "year": "2016",
+      "author": "KW ter Horst",
+      "unstructured": "ter Horst, K. W. et al. Hepatic diacylglycerol-associated protein kinase C\u03b5 translocation links hepatic steatosis to hepatic insulin resistance in humans. J. Hepatol. 64, 1167\u20131175 (2016)."
+    },
+    {
+      "key": "1797_CR60",
+      "doi": "10.1016/j.celrep.2016.12.070",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2017",
+      "author": "MA Ruby",
+      "unstructured": "Ruby, M. A. et al. Human carboxylesterase 2 reverses obesity-induced diacylglycerol accumulation and glucose intolerance. Cell Rep. 18, 636\u2013646 (2017)."
+    },
+    {
+      "key": "1797_CR61",
+      "doi": "10.2337/dc17-1318",
+      "title": "",
+      "journal": "Diabetes Care",
+      "year": "2018",
+      "author": "M Apostolopoulou",
+      "unstructured": "Apostolopoulou, M. et al. Specific hepatic sphingolipids relate to insulin resistance, oxidative stress, and inflammation in nonalcoholic steatohepatitis. Diabetes Care 41, 1235\u20131243 (2018)."
+    },
+    {
+      "key": "1797_CR62",
+      "doi": "10.1016/j.cmet.2015.04.004",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2015",
+      "author": "C Koliaki",
+      "unstructured": "Koliaki, C. et al. Adaptation of hepatic mitochondrial function in humans with non-alcoholic fatty liver is lost in steatohepatitis. Cell Metab. 21, 739\u2013746 (2015)."
+    },
+    {
+      "key": "1797_CR63",
+      "doi": "10.1126/science.aav3722",
+      "title": "",
+      "journal": "Science",
+      "year": "2019",
+      "author": "B Chaurasia",
+      "unstructured": "Chaurasia, B. et al. Targeting a ceramide double bond improves insulin resistance and hepatic steatosis. Science 365, 386\u2013392 (2019)."
+    },
+    {
+      "key": "1797_CR64",
+      "doi": "10.1016/j.cell.2019.05.008",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "P Hammerschmidt",
+      "unstructured": "Hammerschmidt, P. et al. CerS6-derived sphingolipids interact with Mff and promote mitochondrial fragmentation in besity. Cell 177, 1536\u20131552 (2019)."
+    },
+    {
+      "key": "1797_CR65",
+      "doi": "10.1073/pnas.1219456110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "JL Cantley",
+      "unstructured": "Cantley, J. L. et al. CGI-58 knockdown sequesters diacylglycerols in lipid droplets/ER-preventing diacylglycerol-mediated hepatic insulin resistance. Proc. Natl Acad. Sci. USA 110, 1869\u20131874 (2013)."
+    },
+    {
+      "key": "1797_CR66",
+      "doi": "10.1172/jci89444",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2017",
+      "author": "E\u00c1 Hern\u00e1ndez",
+      "unstructured": "Hern\u00e1ndez, E. \u00c1. et al. Acute dietary fat intake initiates alterations in energy metabolism and insulin resistance. J. Clin. Invest. 127, 695\u2013708 (2017)."
+    },
+    {
+      "key": "1797_CR67",
+      "doi": "10.1172/jci92407",
+      "title": "",
+      "journal": "J. Clin. Invest",
+      "year": "2017",
+      "author": "E Parks",
+      "unstructured": "Parks, E., Yki-J\u00e4rvinen, H. & Hawkins, M. Out of the frying pan: dietary saturated fat influences nonalcoholic fatty liver disease. J. Clin. Invest. 127, 454\u2013456 (2017)."
+    },
+    {
+      "key": "1797_CR68",
+      "doi": "10.2337/dc18-0071",
+      "title": "",
+      "journal": "Diabetes Care",
+      "year": "2018",
+      "author": "PK Luukkonen",
+      "unstructured": "Luukkonen, P. K. et al. Saturated fat is more metabolically harmful for the human liver than unsaturated fat or simple sugars. Diabetes Care 41, 1732\u20131739 (2018)."
+    },
+    {
+      "key": "1797_CR69",
+      "doi": "10.1038/s41586-018-0849-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "S He",
+      "unstructured": "He, S. et al. Gut intraepithelial T cells calibrate metabolism and accelerate cardiovascular disease. Nature 566, 115\u2013119 (2019)."
+    },
+    {
+      "key": "1797_CR70",
+      "doi": "10.1016/j.cmet.2015.07.007",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2015",
+      "author": "S Ussar",
+      "unstructured": "Ussar, S. et al. Interactions between gut microbiota, host genetics and diet modulate the predisposition to obesity and metabolic syndrome. Cell Metab. 22, 516\u2013530 (2015)."
+    },
+    {
+      "key": "1797_CR71",
+      "doi": "10.1038/nature18646",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "HK Pedersen",
+      "unstructured": "Pedersen, H. K. et al. Human gut microbes impact host serum metabolome and insulin sensitivity. Nature 535, 376\u2013381 (2016)."
+    },
+    {
+      "key": "1797_CR72",
+      "doi": "10.1038/s41591-018-0061-3",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2018",
+      "author": "L Hoyles",
+      "unstructured": "Hoyles, L. et al. Molecular phenomics and metagenomics of hepatic steatosis in non-diabetic obese women. Nat. Med. 24, 1070\u20131080 (2018)."
+    },
+    {
+      "key": "1797_CR73",
+      "doi": "10.1038/s41588-019-0350-x",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2019",
+      "author": "S Sanna",
+      "unstructured": "Sanna, S. et al. Causal relationships among the gut microbiome, short-chain fatty acids and metabolic diseases. Nat. Genet. 51, 600\u2013605 (2019)."
+    },
+    {
+      "key": "1797_CR74",
+      "doi": "10.1016/j.cmet.2018.07.003",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2018",
+      "author": "R Taylor",
+      "unstructured": "Taylor, R. et al. Remission of human type 2 diabetes requires decrease in liver and pancreas fat content but is dependent upon capacity for \u03b2 cell recovery. Cell Metab. 28, 547\u2013556 (2018)."
+    },
+    {
+      "key": "1797_CR75",
+      "doi": "10.1056/nejm199907223410404",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "1999",
+      "author": "GW Cline",
+      "unstructured": "Cline, G. W. et al. Impaired glucose transport as a cause of decreased insulin-stimulated muscle glycogen synthesis in type 2 diabetes. N. Engl. J. Med. 341, 240\u2013246 (1999)."
+    },
+    {
+      "key": "1797_CR76",
+      "doi": "10.1056/nejm199610313351804",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "1996",
+      "author": "G Perseghin",
+      "unstructured": "Perseghin, G. et al. Increased glucose transport\u2013phosphorylation and muscle glycogen synthesis after exercise training in insulin-resistant subjects. N. Engl. J. Med. 335, 1357\u20131362 (1996)."
+    },
+    {
+      "key": "1797_CR77",
+      "doi": "10.1172/jci118742",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "1996",
+      "author": "M Roden",
+      "unstructured": "Roden, M. et al. Mechanism of free fatty acid-induced insulin resistance in humans. J. Clin. Invest. 97, 2859\u20132865 (1996)."
+    },
+    {
+      "key": "1797_CR78",
+      "doi": "10.1172/jci5001",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "1999",
+      "author": "A Dresner",
+      "unstructured": "Dresner, A. et al. Effects of free fatty acids on glucose transport and IRS-1-associated phosphatidylinositol 3-kinase activity. J. Clin. Invest. 103, 253\u2013259 (1999)."
+    },
+    {
+      "key": "1797_CR79",
+      "doi": "10.1371/journal.pmed.0040154",
+      "title": "",
+      "journal": "PLoS Med.",
+      "year": "2007",
+      "author": "J Szendroedi",
+      "unstructured": "Szendroedi, J. et al. Muscle mitochondrial ATP synthesis and glucose transport/phosphorylation in type 2 diabetes. PLoS Med. 4, e154 (2007)."
+    },
+    {
+      "key": "1797_CR80",
+      "doi": "10.1172/jci6928",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "1999",
+      "author": "YB Kim",
+      "unstructured": "Kim, Y. B., Nikoulina, S. E., Ciaraldi, T. P., Henry, R. R. & Kahn, B. B. Normal insulin-dependent activation of Akt/protein kinase B, with diminished activation of phosphoinositide 3-kinase, in muscle in type 2 diabetes. J. Clin. Invest. 104, 733\u2013741 (1999)."
+    },
+    {
+      "key": "1797_CR81",
+      "doi": "10.1194/jlr.r087510",
+      "title": "",
+      "journal": "J. Lipid Res.",
+      "year": "2019",
+      "author": "DJ Fazakerley",
+      "unstructured": "Fazakerley, D. J., Krycer, J. R., Kearney, A. L., Hocking, S. L. & James, D. E. Muscle and adipose tissue insulin resistance: malady without mechanism? J. Lipid Res. 60, 1720\u20131732 (2019)."
+    },
+    {
+      "key": "1797_CR82",
+      "doi": "10.1038/nm.4350",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2017",
+      "author": "MP Czech",
+      "unstructured": "Czech, M. P. Insulin action and resistance in obesity and type 2 diabetes. Nat. Med. 23, 804\u2013814 (2017)."
+    },
+    {
+      "key": "1797_CR83",
+      "doi": "10.1016/j.cmet.2013.06.001",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2013",
+      "author": "M Wan",
+      "unstructured": "Wan, M. et al. A noncanonical, GSK3-independent pathway controls postprandial hepatic glycogen deposition. Cell Metab. 18, 99\u2013105 (2013)."
+    },
+    {
+      "key": "1797_CR84",
+      "doi": "10.1016/j.cmet.2010.10.006",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2010",
+      "author": "M Bouskila",
+      "unstructured": "Bouskila, M. et al. Allosteric regulation of glycogen synthase controls glycogen synthesis in muscle. Cell Metab. 12, 456\u2013466 (2010)."
+    },
+    {
+      "key": "1797_CR85",
+      "doi": "10.2337/db13-0880",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2013",
+      "author": "A von Wilamowitz-Moellendorff",
+      "unstructured": "von Wilamowitz-Moellendorff, A. et al. Glucose-6-phosphate-mediated activation of liver glycogen synthase plays a key role in hepatic glycogen synthesis. Diabetes 62, 4070\u20134082 (2013)."
+    },
+    {
+      "key": "1797_CR86",
+      "doi": "10.2337/diabetes.50.5.921",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2001",
+      "author": "N Musi",
+      "unstructured": "Musi, N. et al. AMP-activated protein kinase (AMPK) is activated in muscle of subjects with type 2 diabetes during exercise. Diabetes 50, 921\u2013927 (2001)."
+    },
+    {
+      "key": "1797_CR87",
+      "doi": "10.1073/pnas.1110105108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "R Rab\u00f8l",
+      "unstructured": "Rab\u00f8l, R., Petersen, K. F., Dufour, S., Flannery, C. & Shulman, G. I. Reversal of muscle insulin resistance with exercise reduces postprandial hepatic de novo lipogenesis in insulin resistant individuals. Proc. Natl Acad. Sci. USA 108, 13705\u201313709 (2011)."
+    },
+    {
+      "key": "1797_CR88",
+      "doi": "10.1172/jci120843",
+      "title": "",
+      "journal": "J. Clin. Invest",
+      "year": "2018",
+      "author": "GN Ruegsegger",
+      "unstructured": "Ruegsegger, G. N., Creo, A. L., Cortes, T. M., Dasari, S. & Nair, K. S. Altered mitochondrial function in insulin-deficient and insulin-resistant states. J. Clin. Invest. 128, 3671\u20133681 (2018)."
+    },
+    {
+      "key": "1797_CR89",
+      "doi": "10.1126/science.1082889",
+      "title": "",
+      "journal": "Science",
+      "year": "2003",
+      "author": "KF Petersen",
+      "unstructured": "Petersen, K. F. et al. Mitochondrial dysfunction in the elderly: possible role in insulin resistance. Science 300, 1140\u20131142 (2003)."
+    },
+    {
+      "key": "1797_CR90",
+      "doi": "10.1016/j.ajhg.2018.12.001",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2019",
+      "author": "AT Kraja",
+      "unstructured": "Kraja, A. T. et al. Associations of mitochondrial and nuclear mitochondrial variants and genes with seven metabolic traits. Am. J. Hum. Genet. 104, 112\u2013138 (2019)."
+    },
+    {
+      "key": "1797_CR91",
+      "doi": "10.2337/db08-1240",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2009",
+      "author": "G Kacerovsky-Bielesz",
+      "unstructured": "Kacerovsky-Bielesz, G. et al. Short-term exercise training does not stimulate skeletal muscle ATP synthesis in relatives of humans with type 2 diabetes. Diabetes 58, 1333\u20131341 (2009)."
+    },
+    {
+      "key": "1797_CR92",
+      "doi": "10.2337/db12-1107",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2013",
+      "author": "JO Holloszy",
+      "unstructured": "Holloszy, J. O. \u201cDeficiency\u201d of mitochondria in muscle does not cause insulin resistance. Diabetes 62, 1036\u20131040 (2013)."
+    },
+    {
+      "key": "1797_CR93",
+      "doi": "10.1016/j.cell.2007.08.047",
+      "title": "",
+      "journal": "Cell",
+      "year": "2007",
+      "author": "JA Pospisilik",
+      "unstructured": "Pospisilik, J. A. et al. Targeted deletion of AIF decreases mitochondrial oxidative phosphorylation and protects from obesity and diabetes. Cell 131, 476\u2013491 (2007)."
+    },
+    {
+      "key": "1797_CR94",
+      "doi": "10.2337/db19-1552-p",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2019",
+      "author": "JH Koh",
+      "unstructured": "Koh, J. H. et al. TFAM enhances fat oxidation and attenuates high fat diet induced insulin resistance in skeletal muscle. Diabetes 68, 1552\u20131564 (2019)."
+    },
+    {
+      "key": "1797_CR95",
+      "doi": "10.1038/ng.3714",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2017",
+      "author": "LA Lotta",
+      "unstructured": "Lotta, L. A. et al. Integrative genomic analysis implicates limited peripheral adipose storage capacity in the pathogenesis of human insulin resistance. Nat. Genet. 49, 17\u201326 (2017)."
+    },
+    {
+      "key": "1797_CR96",
+      "doi": "10.1172/jci74692",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2015",
+      "author": "JW Knowles",
+      "unstructured": "Knowles, J. W. et al. Identification and validation of N-acetyltransferase 2 as an insulin sensitivity gene. J. Clin. Invest. 125, 1739\u20131751 (2015)."
+    },
+    {
+      "key": "1797_CR97",
+      "doi": "10.1016/j.celrep.2016.09.005",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2016",
+      "author": "I Chennamsetty",
+      "unstructured": "Chennamsetty, I. et al. Nat1 deficiency is associated with mitochondrial dysfunction and exercise intolerance in mice. Cell Rep. 17, 527\u2013540 (2016)."
+    },
+    {
+      "key": "1797_CR98",
+      "doi": "10.1016/j.celrep.2018.08.036",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2018",
+      "author": "SK Maurya",
+      "unstructured": "Maurya, S. K. et al. Sarcolipin signaling promotes mitochondrial biogenesis and oxidative metabolism in skeletal muscle. Cell Rep. 24, 2919\u20132931 (2018)."
+    },
+    {
+      "key": "1797_CR99",
+      "doi": "10.2337/db17-1142",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2018",
+      "author": "A Latva-Rasku",
+      "unstructured": "Latva-Rasku, A. et al. A partial loss-of-function variant in AKT2 is associated with reduced insulin-mediated glucose uptake in multiple insulin-sensitive tissues: a genotype-based callback positron emission tomography study. Diabetes 67, 334\u2013342 (2018)."
+    },
+    {
+      "key": "1797_CR100",
+      "doi": "10.1126/science.1210878",
+      "title": "",
+      "journal": "Science",
+      "year": "2011",
+      "author": "K Hussain",
+      "unstructured": "Hussain, K. et al. An activating mutation of AKT2 and human hypoglycemia. Science 334, 474 (2011)."
+    },
+    {
+      "key": "1797_CR101",
+      "doi": "10.1073/pnas.0900909106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "S Dash",
+      "unstructured": "Dash, S. et al. A truncation mutation in TBC1D4 in a family with acanthosis nigricans and postprandial hyperinsulinemia. Proc. Natl Acad. Sci. USA 106, 9350\u20139355 (2009)."
+    },
+    {
+      "key": "1797_CR102",
+      "doi": "10.1038/nature13425",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "I Moltke",
+      "unstructured": "Moltke, I. et al. A common Greenlandic TBC1D4 variant confers muscle insulin resistance and type 2 diabetes. Nature 512, 190\u2013193 (2014)."
+    },
+    {
+      "key": "1797_CR103",
+      "doi": "10.2337/db12-1148",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2013",
+      "author": "L Sylow",
+      "unstructured": "Sylow, L. et al. Rac1 signaling is required for insulin-stimulated glucose uptake and is dysregulated in insulin-resistant murine and human skeletal muscle. Diabetes 62, 1865\u20131875 (2013)."
+    },
+    {
+      "key": "1797_CR104",
+      "doi": "10.1016/s0026-0495(78)80007-9",
+      "title": "",
+      "journal": "Metabolism",
+      "year": "1978",
+      "author": "CR Kahn",
+      "unstructured": "Kahn, C. R. Insulin resistance, insulin insensitivity, and insulin unresponsiveness: a necessary distinction. Metabolism 27, 1893\u20131902 (1978)."
+    },
+    {
+      "key": "1797_CR105",
+      "doi": "10.1172/jci113744",
+      "title": "",
+      "journal": "J. Clin. Invest",
+      "year": "1988",
+      "author": "GR Freidenberg",
+      "unstructured": "Freidenberg, G. R., Reichart, D., Olefsky, J. M. & Henry, R. R. Reversibility of defective adipocyte insulin receptor kinase activity in non-insulin-dependent diabetes mellitus. Effect of weight loss. J. Clin. Invest. 82, 1398\u20131406 (1988)."
+    },
+    {
+      "key": "1797_CR106",
+      "doi": "10.1172/jci10842",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2000",
+      "author": "BB Kahn",
+      "unstructured": "Kahn, B. B. & Flier, J. S. Obesity and insulin resistance. J. Clin. Invest. 106, 473\u2013481 (2000)."
+    },
+    {
+      "key": "1797_CR107",
+      "doi": "10.1111/eci.13017",
+      "title": "",
+      "journal": "Eur. J. Clin. Invest.",
+      "year": "2018",
+      "author": "K B\u00f3dis",
+      "unstructured": "B\u00f3dis, K. & Roden, M. Energy metabolism of white adipose tissue and insulin resistance in humans. Eur. J. Clin. Invest. 48, e13017 (2018)."
+    },
+    {
+      "key": "1797_CR108",
+      "doi": "10.1007/s00125-018-4777-x",
+      "title": "",
+      "journal": "Diabetologia",
+      "year": "2019",
+      "author": "PE Scherer",
+      "unstructured": "Scherer, P. E. The many secret lives of adipocytes: implications for diabetes. Diabetologia 62, 223\u2013232 (2019)."
+    },
+    {
+      "key": "1797_CR109",
+      "doi": "10.1038/s41586-019-1156-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "X Zeng",
+      "unstructured": "Zeng, X. et al. Innervation of thermogenic adipose tissue via a calsyntenin 3\u03b2\u2013S100b axis. Nature 569, 229\u2013235 (2019)."
+    },
+    {
+      "key": "1797_CR110",
+      "doi": "10.2337/db10-0867",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2011",
+      "author": "SE McQuaid",
+      "unstructured": "McQuaid, S. E. et al. Downregulation of adipose tissue fatty acid trafficking in obesity: a driver for ectopic fat deposition? Diabetes 60, 47\u201355 (2011)."
+    },
+    {
+      "key": "1797_CR111",
+      "doi": "10.1038/ng.2274",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2012",
+      "author": "AK Manning",
+      "unstructured": "Manning, A. K. et al. A genome-wide approach accounting for body mass index identifies genetic variants influencing fasting glycemic traits and insulin resistance. Nat. Genet. 44, 659\u2013669 (2012)."
+    },
+    {
+      "key": "1797_CR112",
+      "doi": "10.1038/nature14132",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "D Shungin",
+      "unstructured": "Shungin, D. et al. New genetic loci link adipose and insulin biology to body fat distribution. Nature 518, 187\u2013196 (2015)."
+    },
+    {
+      "key": "1797_CR113",
+      "doi": "10.1073/pnas.1716990115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "JP Camporez",
+      "unstructured": "Camporez, J. P. et al. Mechanism by which arylamine N-acetyltransferase 1 ablation causes insulin resistance in mice. Proc. Natl Acad. Sci. USA 114, E11285\u2013E11292 (2017)."
+    },
+    {
+      "key": "1797_CR114",
+      "doi": "10.1093/hmg/ddy093",
+      "title": "",
+      "journal": "Hum. Mol. Genet.",
+      "year": "2018",
+      "author": "LD Orozco",
+      "unstructured": "Orozco, L. D. et al. Epigenome-wide association in adipose tissue from the METSIM cohort. Hum. Mol. Genet. 27, 1830\u20131846 (2018)."
+    },
+    {
+      "key": "1797_CR115",
+      "doi": "10.1016/j.cell.2014.05.012",
+      "title": "",
+      "journal": "Cell",
+      "year": "2014",
+      "author": "YS Lee",
+      "unstructured": "Lee, Y. S. et al. Increased adipocyte O2 consumption triggers HIF-1\u03b1, causing inflammation and insulin resistance in obesity. Cell 157, 1339\u20131352 (2014)."
+    },
+    {
+      "key": "1797_CR116",
+      "doi": "10.1038/s42255-018-0003-x",
+      "title": "",
+      "journal": "Nat. Metab.",
+      "year": "2019",
+      "author": "JB Seo",
+      "unstructured": "Seo, J. B. et al. Knockdown of ANT2 reduces adipocyte hypoxia and improves insulin resistance in obesity. Nat. Metab. 1, 86\u201397 (2019). Using mouse models, this study shows that adipocyte oxygen demand rather than oxygen supply or angiogenesis is the key determinant of intracellular hypoxia, which may be the initial event leading to adipose tissue inflammation."
+    },
+    {
+      "key": "1797_CR117",
+      "doi": "10.1016/j.cmet.2014.08.010",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2014",
+      "author": "M Kratz",
+      "unstructured": "Kratz, M. et al. Metabolic dysfunction drives a mechanistically distinct proinflammatory phenotype in adipose tissue macrophages. Cell Metab. 20, 614\u2013625 (2014)."
+    },
+    {
+      "key": "1797_CR118",
+      "doi": "10.1073/pnas.1133870100",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2003",
+      "author": "P Sartipy",
+      "unstructured": "Sartipy, P. & Loskutoff, D. J. Monocyte chemoattractant protein 1 in obesity and insulin resistance. Proc. Natl Acad. Sci. USA 100, 7265\u20137270 (2003)."
+    },
+    {
+      "key": "1797_CR119",
+      "doi": "10.1172/jci90350",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2017",
+      "author": "W Ying",
+      "unstructured": "Ying, W. et al. Adipose tissue B2 cells promote insulin resistance through leukotriene LTB4/LTB4R1 signaling. J. Clin. Invest. 127, 1019\u20131030 (2017)."
+    },
+    {
+      "key": "1797_CR120",
+      "doi": "10.1016/j.cmet.2016.03.002",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2016",
+      "author": "B-C Lee",
+      "unstructured": "Lee, B.-C. et al. Adipose natural killer cells regulate adipose tissue macrophages to promote insulin resistance in obesity. Cell Metab. 23, 685\u2013698 (2016)."
+    },
+    {
+      "key": "1797_CR121",
+      "doi": "10.1038/ni.3120",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2015",
+      "author": "FM Wensveen",
+      "unstructured": "Wensveen, F. M. et al. NK cells link obesity-induced adipose stress to inflammation and insulin resistance. Nat. Immunol. 16, 376\u2013385 (2015)."
+    },
+    {
+      "key": "1797_CR122",
+      "doi": "10.1016/j.jacc.2018.03.002",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2018",
+      "author": "BM Everett",
+      "unstructured": "Everett, B. M. et al. Anti-inflammatory therapy with canakinumab for the prevention and management of diabetes. J. Am. Coll. Cardiol. 71, 2392\u20132401 (2018)."
+    },
+    {
+      "key": "1797_CR123",
+      "doi": "10.1016/j.cmet.2017.06.006",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2017",
+      "author": "EA Oral",
+      "unstructured": "Oral, E. A. et al. Inhibition of IKK\u03b5 and TBK1 improves glucose control in a subset of patients with type 2 diabetes. Cell Metab. 26, 157\u2013170 (2017)."
+    },
+    {
+      "key": "1797_CR124",
+      "doi": "10.1172/jci30400",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2007",
+      "author": "VT Samuel",
+      "unstructured": "Samuel, V. T. et al. Inhibition of protein kinase C\u03b5 prevents hepatic insulin resistance in nonalcoholic fatty liver disease. J. Clin. Invest. 117, 739\u2013745 (2007)."
+    },
+    {
+      "key": "1797_CR125",
+      "doi": "10.1038/nm.1964",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2009",
+      "author": "S Nishimura",
+      "unstructured": "Nishimura, S. et al. CD8+ effector T cells contribute to macrophage recruitment and adipose tissue inflammation in obesity. Nat. Med. 15, 914\u2013920 (2009)."
+    },
+    {
+      "key": "1797_CR126",
+      "doi": "10.2337/db07-0767",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2007",
+      "author": "KJ Strissel",
+      "unstructured": "Strissel, K. J. et al. Adipocyte death, adipose tissue remodeling, and obesity complications. Diabetes 56, 2910\u20132918 (2007)."
+    },
+    {
+      "key": "1797_CR127",
+      "doi": "10.1038/nature21365",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "T Thomou",
+      "unstructured": "Thomou, T. et al. Adipose-derived circulating miRNAs regulate gene expression in other tissues. Nature 542, 450\u2013455 (2017)."
+    },
+    {
+      "key": "1797_CR128",
+      "doi": "10.1152/physrev.00032.2015",
+      "title": "",
+      "journal": "Physiol. Rev.",
+      "year": "2016",
+      "author": "S Kullmann",
+      "unstructured": "Kullmann, S. et al. Brain insulin resistance at the crossroads of metabolic and cognitive disorders in humans. Physiol. Rev. 96, 1169\u20131209 (2016)."
+    },
+    {
+      "key": "1797_CR129",
+      "doi": "10.1172/jci88878",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2017",
+      "author": "A Jais",
+      "unstructured": "Jais, A. & Br\u00fcning, J. C. Hypothalamic inflammation in obesity and metabolic disease. J. Clin. Invest. 127, 24\u201332 (2017)."
+    },
+    {
+      "key": "1797_CR130",
+      "doi": "10.1172/jci59660",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2012",
+      "author": "JP Thaler",
+      "unstructured": "Thaler, J. P. et al. Obesity is associated with hypothalamic injury in rodents and humans. J. Clin. Invest. 122, 153\u2013162 (2012)."
+    },
+    {
+      "key": "1797_CR131",
+      "doi": "10.1038/nm1202-798",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2002",
+      "author": "S Obici",
+      "unstructured": "Obici, S., Zhang, B. B., Karkanias, G. & Rossetti, L. Hypothalamic insulin signaling is required for inhibition of glucose production. Nat. Med. 8, 1376\u20131382 (2002)."
+    },
+    {
+      "key": "1797_CR132",
+      "doi": "10.1038/nature03439",
+      "title": "",
+      "journal": "Nature",
+      "year": "2005",
+      "author": "A Pocai",
+      "unstructured": "Pocai, A. et al. Hypothalamic KATP channels control hepatic glucose production. Nature 434, 1026\u20131031 (2005)."
+    },
+    {
+      "key": "1797_CR133",
+      "doi": "10.1016/j.cmet.2006.02.009",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2006",
+      "author": "H Inoue",
+      "unstructured": "Inoue, H. et al. Role of hepatic STAT3 in brain-insulin action on hepatic glucose production. Cell Metab. 3, 267\u2013275 (2006)."
+    },
+    {
+      "key": "1797_CR134",
+      "doi": "10.1016/j.cmet.2005.11.013",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2006",
+      "author": "RW Gelling",
+      "unstructured": "Gelling, R. W. et al. Insulin action in the brain contributes to glucose lowering during insulin treatment of diabetes. Cell Metab. 3, 67\u201373 (2006)."
+    },
+    {
+      "key": "1797_CR135",
+      "doi": "10.1016/j.cmet.2011.01.008",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2011",
+      "author": "T Scherer",
+      "unstructured": "Scherer, T. et al. Brain insulin controls adipose tissue lipolysis and lipogenesis. Cell Metab. 13, 183\u2013194 (2011)."
+    },
+    {
+      "key": "1797_CR136",
+      "doi": "10.1016/j.cmet.2012.03.006",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2012",
+      "author": "CJ Ramnanan",
+      "unstructured": "Ramnanan, C. J., Edgerton, D. S. & Cherrington, A. D. Evidence against a physiologic role for acute changes in CNS insulin action in the rapid regulation of hepatic glucose production. Cell Metab. 15, 656\u2013664 (2012). This perspective discusses the evidence that the brain can sense insulin and regulate hepatic glucoregulatory enzyme expression, although the action of cerebral insulin is not essential for the rapid insulin-mediated suppression of glucose production."
+    },
+    {
+      "key": "1797_CR137",
+      "doi": "10.1172/jci79895",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2016",
+      "author": "JJ Winnick",
+      "unstructured": "Winnick, J. J. et al. Hepatic glycogen can regulate hypoglycemic counterregulation via a liver\u2013brain axis. J. Clin. Invest. 126, 2236\u20132248 (2016)."
+    },
+    {
+      "key": "1797_CR138",
+      "doi": "10.2337/db14-0892",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2015",
+      "author": "S Gancheva",
+      "unstructured": "Gancheva, S. et al. Intranasal insulin lowers hepatic fat accumulation and improves energy metabolism in humans. Diabetes 64, 1966\u20131975 (2015)."
+    },
+    {
+      "key": "1797_CR139",
+      "doi": "10.1172/jci58035",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2011",
+      "author": "P Kishore",
+      "unstructured": "Kishore, P. et al. Activation of KATP\u00a0channels suppresses glucose production in humans. J. Clin. Invest. 121, 4916\u20134920 (2011)."
+    },
+    {
+      "key": "1797_CR140",
+      "doi": "10.2337/db15-1465",
+      "title": "",
+      "journal": "Diabetes",
+      "year": "2016",
+      "author": "YB Esterson",
+      "unstructured": "Esterson, Y. B. et al. Central regulation of glucose production may be impaired in type 2 diabetes. Diabetes 65, 2569\u20132579 (2016)."
+    },
+    {
+      "key": "1797_CR141",
+      "doi": "10.1016/j.celrep.2016.02.032",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2016",
+      "author": "K Kimura",
+      "unstructured": "Kimura, K. et al. Central insulin action activates Kupffer cells by suppressing hepatic vagal activation via the nicotinic alpha 7 acetylcholine receptor. Cell Rep. 14, 2362\u20132374 (2016)."
+    },
+    {
+      "key": "1797_CR142",
+      "doi": "10.1172/jci.insight.96805",
+      "title": "",
+      "journal": "JCI Insight",
+      "year": "2018",
+      "author": "L Perreault",
+      "unstructured": "Perreault, L. et al. Intracellular localization of diacylglycerols and sphingolipids influences insulin sensitivity and mitochondrial function in human skeletal muscle. JCI Insight 3, e96805 (2018)."
+    },
+    {
+      "key": "1797_CR143",
+      "doi": "10.1016/j.cmet.2018.09.013",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2019",
+      "author": "AE Brandon",
+      "unstructured": "Brandon, A. E. et al. Protein kinase C epsilon deletion in adipose tissue, but not in liver, improves glucose tolerance. Cell Metab. 29, 183\u2013191 (2019)."
+    },
+    {
+      "key": "1797_CR144",
+      "doi": "10.1038/s41467-019-12081-0",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "S Gancheva",
+      "unstructured": "Gancheva, S. et al. Dynamic changes of muscle insulin sensitivity after metabolic surgery. Nat. Commun. 10, 4179 (2019)."
+    },
+    {
+      "key": "1797_CR145",
+      "doi": "10.1038/s41586-019-0984-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "BL Parker",
+      "unstructured": "Parker, B. L. et al. An integrative systems genetic analysis of mammalian lipid metabolism. Nature 567, 187\u2013193 (2019)."
+    }
+  ]
+}

@@ -1,0 +1,1472 @@
+{
+  "article": {
+    "slug": "s41586-023-06945-1",
+    "doi": "10.1038/s41586-023-06945-1",
+    "title": "Natural killer cell therapies",
+    "url": "https://www.nature.com/articles/s41586-023-06945-1",
+    "abbrev": "natural-killer-cell-therapies",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/natural-killer-cell-therapies"
+  },
+  "meta": {
+    "title": "Natural killer cell therapies",
+    "authors": [
+      "Eric Vivier",
+      "Lucas Rebuffet",
+      "Emilie Narni-Mancinelli",
+      "St\u00e9phanie Cornen",
+      "Rob Y. Igarashi",
+      "Valeria R. Fantin"
+    ],
+    "published": [
+      2024,
+      2,
+      21
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-023-06945-1",
+    "n_references": 160,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "6945_CR1",
+      "doi": "10.1093/jnci/51.5.1509",
+      "title": "",
+      "journal": "J. Natl Cancer Inst.",
+      "year": "1973",
+      "author": "RB Herberman",
+      "unstructured": "Herberman, R. B., Nunn, M. E., Lavrin, D. H. & Asofsky, R. Effect of antibody to theta antigen on cell-mediated immunity induced in syngeneic mice by murine sarcoma virus. J. Natl Cancer Inst. 51, 1509\u20131512 (1973)."
+    },
+    {
+      "key": "6945_CR2",
+      "doi": "10.4049/jimmunol.111.6.1862",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "1973",
+      "author": "RK Oldham",
+      "unstructured": "Oldham, R. K. & Herberman, R. B. Evaluation of cell-mediated cytotoxic reactivity against tumor associated antigens with 125I-iododeoxyuridine labeled target cells. J. Immunol. 111, 862\u2013871 (1973)."
+    },
+    {
+      "key": "6945_CR3",
+      "doi": "",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "1973",
+      "author": "M Takasugi",
+      "unstructured": "Takasugi, M., Mickey, M. R. & Terasaki, P. I. Reactivity of lymphocytes from normal persons on cultured tumor cells. Cancer Res. 33, 2898\u20132902 (1973)."
+    },
+    {
+      "key": "6945_CR4",
+      "doi": "10.1002/eji.1830050208",
+      "title": "",
+      "journal": "Eur. J. Immunol.",
+      "year": "1975",
+      "author": "R Kiessling",
+      "unstructured": "Kiessling, R., Klein, E. & Wigzell, H. \u201cNatural\u201d killer cells in the mouse. I. Cytotoxic cells with specificity for mouse Moloney leukemia cells. Specificity and distribution according to genotype. Eur. J. Immunol. 5, 112\u2013117 (1975)."
+    },
+    {
+      "key": "6945_CR5",
+      "doi": "10.1002/eji.1830050209",
+      "title": "",
+      "journal": "Eur. J. Immunol.",
+      "year": "1975",
+      "author": "R Kiessling",
+      "unstructured": "Kiessling, R., Klein, E., Pross, H. & Wigzell, H. \u201cNatural\u201d killer cells in the mouse. II. Cytotoxic cells with specificity for mouse Moloney leukemia cells. Characteristics of the killer cell. Eur. J. Immunol. 5, 117\u2013121 (1975)."
+    },
+    {
+      "key": "6945_CR6",
+      "doi": "10.1126/science.1198687",
+      "title": "",
+      "journal": "Science",
+      "year": "2011",
+      "author": "E Vivier",
+      "unstructured": "Vivier, E. et al. Innate or adaptive immunity? The example of natural killer cells. Science 331, 44\u201349 (2011)."
+    },
+    {
+      "key": "6945_CR7",
+      "doi": "10.1038/nri3365",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2013",
+      "author": "H Spits",
+      "unstructured": "Spits, H. et al. Innate lymphoid cells\u2014a proposal for uniform nomenclature. Nat. Rev. Immunol. 13, 145\u2013149 (2013)."
+    },
+    {
+      "key": "6945_CR8",
+      "doi": "10.1016/j.cell.2018.07.017",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "E Vivier",
+      "unstructured": "Vivier, E. et al. Innate lymphoid cells: 10 years on. Cell 174, 1054\u20131066 (2018)."
+    },
+    {
+      "key": "6945_CR9",
+      "doi": "10.7554/elife.01659",
+      "title": "",
+      "journal": "eLife",
+      "year": "2014",
+      "author": "DK Sojka",
+      "unstructured": "Sojka, D. K. et al. Tissue-resident natural killer (NK) cells are cell lineages distinct from thymic and conventional splenic NK cells. eLife 3, e01659 (2014)."
+    },
+    {
+      "key": "6945_CR10",
+      "doi": "10.1002/1521-4141(200205)32:5<1205::aid-immu1205>3.0.co;2-y",
+      "title": "",
+      "journal": "Eur. J. Immunol.",
+      "year": "2002",
+      "author": "L Moretta",
+      "unstructured": "Moretta, L. et al. Human natural killer cells: their origin, receptors and function. Eur. J. Immunol. 32, 1205\u20131211 (2002)."
+    },
+    {
+      "key": "6945_CR11",
+      "doi": "10.1038/ni0102-6",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2002",
+      "author": "A Moretta",
+      "unstructured": "Moretta, A., Bottino, C., Mingari, M. C., Biassoni, R. & Moretta, L. What is a natural killer cell? Nat. Immunol. 3, 6\u20138 (2002)."
+    },
+    {
+      "key": "6945_CR12",
+      "doi": "10.1038/ni1582",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2008",
+      "author": "E Vivier",
+      "unstructured": "Vivier, E., Tomasello, E., Baratin, M., Walzer, T. & Ugolini, S. Functions of natural killer cells. Nat. Immunol. 9, 503\u2013510 (2008)."
+    },
+    {
+      "key": "6945_CR13",
+      "doi": "10.1038/nrc.2015.5",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2016",
+      "author": "MG Morvan",
+      "unstructured": "Morvan, M. G. & Lanier, L. L. NK cells and cancer: you can teach innate cells new tricks. Nat. Rev. Cancer 16, 7\u201319 (2016)."
+    },
+    {
+      "key": "6945_CR14",
+      "doi": "10.1016/j.immuni.2017.10.008",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2017",
+      "author": "AG Freud",
+      "unstructured": "Freud, A. G., Mundy-Bosse, B. L., Yu, J. & Caligiuri, M. A. The broad spectrum of human natural killer cell diversity. Immunity 47, 820\u2013833 (2017)."
+    },
+    {
+      "key": "6945_CR15",
+      "doi": "10.1073/pnas.2308511120",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2023",
+      "author": "R Sender",
+      "unstructured": "Sender, R. et al. The total mass, number, and distribution of immune cells in the human body. Proc. Natl Acad. Sci. USA 120, e2308511120 (2023)."
+    },
+    {
+      "key": "6945_CR16",
+      "doi": "10.4049/jimmunol.136.12.4480",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "1986",
+      "author": "LL Lanier",
+      "unstructured": "Lanier, L. L., Le, A. M., Civin, C. I., Loken, M. R. & Phillips, J. H. The relationship of CD16 (Leu-11) and Leu-19 (NKH-1) antigen expression on human peripheral blood NK cells and cytotoxic T lymphocytes. J. Immunol. 136, 4480\u20134486 (1986)."
+    },
+    {
+      "key": "6945_CR17",
+      "doi": "10.1016/j.immuni.2018.09.009",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2018",
+      "author": "A Crinier",
+      "unstructured": "Crinier, A. et al. High-dimensional single-cell analysis identifies organ-specific signatures and conserved NK cell subsets in humans and mice. Immunity 49, 971\u2013986 (2018)."
+    },
+    {
+      "key": "6945_CR18",
+      "doi": "10.21203/rs.3.rs-3870228/v1",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Vivier, E. et al. High-dimensional single-cell analysis of natural killer cell heterogeneity in human blood. Preprint at Research Square https://doi.org/10.21203/rs.3.rs-3870228/v1 (2024)."
+    },
+    {
+      "key": "6945_CR19",
+      "doi": "10.4049/jimmunol.1303211",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2014",
+      "author": "DW Hendricks",
+      "unstructured": "Hendricks, D. W. et al. Cutting edge: NKG2ChiCD57+ NK cells respond specifically to acute infection with cytomegalovirus and not Epstein-Barr virus. J. Immunol. 192, 4492\u20134496 (2014)."
+    },
+    {
+      "key": "6945_CR20",
+      "doi": "10.1182/blood-2010-04-282301",
+      "title": "",
+      "journal": "Blood",
+      "year": "2010",
+      "author": "S Lopez-Verges",
+      "unstructured": "Lopez-Verges, S. et al. CD57 defines a functionally distinct population of mature NK cells in the human CD56dimCD16+ NK-cell subset. Blood 116, 3865\u20133874 (2010)."
+    },
+    {
+      "key": "6945_CR21",
+      "doi": "10.1073/pnas.1110900108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "S Lopez-Verges",
+      "unstructured": "Lopez-Verges, S. et al. Expansion of a unique CD57+NKG2Chi natural killer cell subset during acute human cytomegalovirus infection. Proc. Natl Acad. Sci. USA 108, 14725\u201314732 (2011)."
+    },
+    {
+      "key": "6945_CR22",
+      "doi": "10.1038/nature07665",
+      "title": "",
+      "journal": "Nature",
+      "year": "2009",
+      "author": "JC Sun",
+      "unstructured": "Sun, J. C., Beilke, J. N. & Lanier, L. L. Adaptive immune features of natural killer cells. Nature 457, 557\u2013561 (2009). This study, along with ref. 23, describes NK cells with memory-like functions."
+    },
+    {
+      "key": "6945_CR23",
+      "doi": "10.1073/pnas.0813192106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "MA Cooper",
+      "unstructured": "Cooper, M. A. et al. Cytokine-induced memory-like natural killer cells. Proc. Natl Acad. Sci. USA 106, 1915\u20131919 (2009)."
+    },
+    {
+      "key": "6945_CR24",
+      "doi": "10.1111/j.0105-2896.2010.00891.x",
+      "title": "",
+      "journal": "Immunol. Rev.",
+      "year": "2010",
+      "author": "MA Cooper",
+      "unstructured": "Cooper, M. A. & Yokoyama, W. M. Memory-like responses of natural killer cells. Immunol. Rev. 235, 297\u2013305 (2010)."
+    },
+    {
+      "key": "6945_CR25",
+      "doi": "10.1016/j.immuni.2015.02.013",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2015",
+      "author": "J Lee",
+      "unstructured": "Lee, J. et al. Epigenetic modification and antibody-dependent expansion of memory-like NK cells in human cytomegalovirus-infected individuals. Immunity 42, 431\u2013442 (2015)."
+    },
+    {
+      "key": "6945_CR26",
+      "doi": "10.1016/j.immuni.2015.02.008",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2015",
+      "author": "H Schlums",
+      "unstructured": "Schlums, H. et al. Cytomegalovirus infection drives adaptive epigenetic diversification of NK cells with altered signaling and effector function. Immunity 42, 443\u2013456 (2015)."
+    },
+    {
+      "key": "6945_CR27",
+      "doi": "10.1038/s41590-022-01327-7",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2022",
+      "author": "T R\u00fcckert",
+      "unstructured": "R\u00fcckert, T., Lareau, C. A., Mashreghi, M. F., Ludwig, L. S. & Romagnani, C. Clonal expansion and epigenetic inheritance of long-lasting NK cell memory. Nat. Immunol. 23, 1551\u20131563 (2022)."
+    },
+    {
+      "key": "6945_CR28",
+      "doi": "10.1073/pnas.2016580118",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2021",
+      "author": "D Brownlie",
+      "unstructured": "Brownlie, D. et al. Expansions of adaptive-like NK cells with a tissue-resident phenotype in human lung and blood. Proc. Natl Acad. Sci. USA 118, e2016580118 (2021)."
+    },
+    {
+      "key": "6945_CR29",
+      "doi": "10.1016/j.cell.2023.07.034",
+      "title": "",
+      "journal": "Cell",
+      "year": "2023",
+      "author": "F Tang",
+      "unstructured": "Tang, F. et al. A pan-cancer single-cell panorama of human natural killer cells. Cell 186, 4235\u20134251 (2023)."
+    },
+    {
+      "key": "6945_CR30",
+      "doi": "10.1038/ni.3482",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2016",
+      "author": "H Spits",
+      "unstructured": "Spits, H., Bernink, J. H. & Lanier, L. NK cells and type 1 innate lymphoid cells: partners in host defense. Nat. Immunol. 17, 758\u2013764 (2016)."
+    },
+    {
+      "key": "6945_CR31",
+      "doi": "10.1038/ni.3809",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2017",
+      "author": "VS Cortez",
+      "unstructured": "Cortez, V. S. et al. SMAD4 impedes the conversion of NK cells into ILC1-like cells by curtailing non-canonical TGF-\u03b2 signaling. Nat. Immunol. 18, 995\u20131003 (2017). This study, along with ref. 32, describes the TGF\u03b2-induced transition of NK cells into ILC1-like cells with a decrease antitumour functions."
+    },
+    {
+      "key": "6945_CR32",
+      "doi": "10.1038/ni.3800",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2017",
+      "author": "Y Gao",
+      "unstructured": "Gao, Y. et al. Tumor immunoevasion by the conversion of effector NK cells into type 1 innate lymphoid cells. Nat. Immunol. 18, 1004\u20131015 (2017)."
+    },
+    {
+      "key": "6945_CR33",
+      "doi": "10.1038/s41590-022-01213-2",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2022",
+      "author": "ER Kansler",
+      "unstructured": "Kansler, E. R. et al. Cytotoxic innate lymphoid cells sense cancer cell-expressed interleukin-15 to suppress human and murine malignancies. Nat. Immunol. 23, 904\u2013915 (2022)."
+    },
+    {
+      "key": "6945_CR34",
+      "doi": "10.1073/pnas.2306761120",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2023",
+      "author": "G Scarno",
+      "unstructured": "Scarno, G. et al. Divergent roles for STAT4 in shaping differentiation of cytotoxic ILC1 and NK cells during gut inflammation. Proc. Natl Acad. Sci. USA 120, e2306761120 (2023)."
+    },
+    {
+      "key": "6945_CR35",
+      "doi": "10.1016/j.xcrm.2022.100812",
+      "title": "",
+      "journal": "Cell Rep. Med.",
+      "year": "2022",
+      "author": "N Lopes",
+      "unstructured": "Lopes, N. et al. Tissue-specific transcriptional profiles and heterogeneity of natural killer cells and group 1 innate lymphoid cells. Cell Rep. Med. 3, 100812 (2022)."
+    },
+    {
+      "key": "6945_CR36",
+      "doi": "10.1084/jem.20190490",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2019",
+      "author": "M Nagasawa",
+      "unstructured": "Nagasawa, M. et al. KLRG1 and NKp46 discriminate subpopulations of human CD117+CRTH2\u2212 ILCs biased toward ILC2 or ILC3. J. Exp. Med. 216, 1762\u20131776 (2019)."
+    },
+    {
+      "key": "6945_CR37",
+      "doi": "10.1016/j.smim.2020.101424",
+      "title": "",
+      "journal": "Semin. Immunol.",
+      "year": "2021",
+      "author": "A Crinier",
+      "unstructured": "Crinier, A. et al. Multidimensional molecular controls defining NK/ILC1 identity in cancers. Semin. Immunol. 52, 101424 (2021)."
+    },
+    {
+      "key": "6945_CR38",
+      "doi": "10.1016/j.immuni.2019.01.012",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2019",
+      "author": "NA Yudanin",
+      "unstructured": "Yudanin, N. A. et al. Spatial and temporal mapping of human innate lymphoid cells reveals elements of tissue specificity. Immunity 50, 505\u2013519 (2019)."
+    },
+    {
+      "key": "6945_CR39",
+      "doi": "10.1038/s41577-021-00558-3",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2022",
+      "author": "NK Bj\u00f6rkstr\u00f6m",
+      "unstructured": "Bj\u00f6rkstr\u00f6m, N. K., Strunz, B. & Ljunggren, H. G. Natural killer cells in antiviral immunity. Nat. Rev. Immunol. 22, 112\u2013123 (2022)."
+    },
+    {
+      "key": "6945_CR40",
+      "doi": "10.1126/science.1103478",
+      "title": "",
+      "journal": "Science",
+      "year": "2004",
+      "author": "E Vivier",
+      "unstructured": "Vivier, E., Nunes, J. A. & Vely, F. Natural killer cell signaling pathways. Science 306, 1517\u20131519 (2004)."
+    },
+    {
+      "key": "6945_CR41",
+      "doi": "10.1111/j.1600-065x.2008.00660.x",
+      "title": "",
+      "journal": "Immunol. Rev.",
+      "year": "2008",
+      "author": "EO Long",
+      "unstructured": "Long, E. O. Negative signaling by inhibitory receptors: the NK cell paradigm. Immunol. Rev. 224, 70\u201384 (2008)."
+    },
+    {
+      "key": "6945_CR42",
+      "doi": "10.1038/nature03884",
+      "title": "",
+      "journal": "Nature",
+      "year": "2005",
+      "author": "S Gasser",
+      "unstructured": "Gasser, S., Orsulic, S., Brown, E. J. & Raulet, D. H. The DNA damage pathway regulates innate immune system ligands of the NKG2D receptor. Nature 436, 1186\u20131190 (2005). This study, along with refs. 43\u201346, describes stress-induced ligands recognized by NK-cell-activating receptors."
+    },
+    {
+      "key": "6945_CR43",
+      "doi": "10.1038/nri2604",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2009",
+      "author": "DH Raulet",
+      "unstructured": "Raulet, D. H. & Guerra, N. Oncogenic stress sensed by the immune system: role of natural killer cell receptors. Nat. Rev. Immunol. 9, 568\u2013580 (2009)."
+    },
+    {
+      "key": "6945_CR44",
+      "doi": "10.1126/science.285.5428.727",
+      "title": "",
+      "journal": "Science",
+      "year": "1999",
+      "author": "S Bauer",
+      "unstructured": "Bauer, S. et al. Activation of NK cells and T cells by NKG2D, a receptor for stress-inducible MICA. Science 285, 727\u2013729 (1999)."
+    },
+    {
+      "key": "6945_CR45",
+      "doi": "10.1038/s41586-023-05912-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "S Sen Santara",
+      "unstructured": "Sen Santara, S. et al. The NK cell receptor NKp46 recognizes ecto-calreticulin on ER-stressed cells. Nature 616, 348\u2013356 (2023)."
+    },
+    {
+      "key": "6945_CR46",
+      "doi": "10.1084/jem.20090681",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2009",
+      "author": "CS Brandt",
+      "unstructured": "Brandt, C. S. et al. The B7 family member B7-H6 is a tumor cell ligand for the activating natural killer cell receptor NKp30 in humans. J. Exp. Med. 206, 1495\u20131503 (2009)."
+    },
+    {
+      "key": "6945_CR47",
+      "doi": "10.1038/s41577-022-00732-1",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2023",
+      "author": "NK Wolf",
+      "unstructured": "Wolf, N. K., Kissiov, D. U. & Raulet, D. H. Roles of natural killer cells in immunity to cancer, and applications to immunotherapy. Nat. Rev. Immunol. 23, 90\u2013105 (2023)."
+    },
+    {
+      "key": "6945_CR48",
+      "doi": "10.1038/ni1581",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2008",
+      "author": "LL Lanier",
+      "unstructured": "Lanier, L. L. Up on the tightrope: natural killer cell activation and inhibition. Nat. Immunol. 9, 495\u2013502 (2008)."
+    },
+    {
+      "key": "6945_CR49",
+      "doi": "10.1038/s41571-020-0426-7",
+      "title": "",
+      "journal": "Nat. Rev. Clin. Oncol.",
+      "year": "2021",
+      "author": "JA Myers",
+      "unstructured": "Myers, J. A. & Miller, J. S. Exploring the NK cell platform for cancer immunotherapy. Nat. Rev. Clin. Oncol. 18, 85\u2013100 (2021)."
+    },
+    {
+      "key": "6945_CR50",
+      "doi": "10.1038/s41568-022-00491-0",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2022",
+      "author": "TJ Laskowski",
+      "unstructured": "Laskowski, T. J., Biederstadt, A. & Rezvani, K. Natural killer cells in antitumour adoptive cell immunotherapy. Nat. Rev. Cancer 22, 557\u2013575 (2022)."
+    },
+    {
+      "key": "6945_CR51",
+      "doi": "10.1182/blood-2007-01-070656",
+      "title": "",
+      "journal": "Blood",
+      "year": "2007",
+      "author": "E Hatjiharissi",
+      "unstructured": "Hatjiharissi, E. et al. Increased natural killer cell expression of CD16, augmented binding and ADCC activity to rituximab among individuals expressing the Fc\u03b3RIIIa-158 V/V and V/F polymorphism. Blood 110, 2561\u20132564 (2007)."
+    },
+    {
+      "key": "6945_CR52",
+      "doi": "10.1242/jcs.258570",
+      "title": "",
+      "journal": "J. Cell Sci.",
+      "year": "2021",
+      "author": "D Friedman",
+      "unstructured": "Friedman, D. et al. Natural killer cell immune synapse formation and cytotoxicity are controlled by tension of the target interface. J. Cell Sci. 134, jcs258570 (2021)."
+    },
+    {
+      "key": "6945_CR53",
+      "doi": "10.1016/j.ejcb.2010.10.006",
+      "title": "",
+      "journal": "Eur. J. Cell Biol.",
+      "year": "2011",
+      "author": "M Lettau",
+      "unstructured": "Lettau, M., Paulsen, M., Schmidt, H. & Janssen, O. Insights into the molecular regulation of FasL (CD178) biology. Eur. J. Cell Biol. 90, 456\u2013466 (2011)."
+    },
+    {
+      "key": "6945_CR54",
+      "doi": "10.1038/nature11824",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "H Braumuller",
+      "unstructured": "Braumuller, H. et al. T-helper-1-cell cytokines drive cancer into senescence. Nature 494, 361\u2013365 (2013)."
+    },
+    {
+      "key": "6945_CR55",
+      "doi": "10.1016/j.cell.2023.03.006",
+      "title": "",
+      "journal": "Cell",
+      "year": "2023",
+      "author": "P Sharma",
+      "unstructured": "Sharma, P. et al. Immune checkpoint therapy-current perspectives and future directions. Cell 186, 1652\u20131669 (2023)."
+    },
+    {
+      "key": "6945_CR56",
+      "doi": "10.1038/s41586-023-06243-w",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "DJ Baker",
+      "unstructured": "Baker, D. J., Arany, Z., Baur, J. A., Epstein, J. A. & June, C. H. CAR T therapy beyond cancer: the evolution of a living drug. Nature 619, 707\u2013715 (2023)."
+    },
+    {
+      "key": "6945_CR57",
+      "doi": "10.1038/s41586-019-1593-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "O Demaria",
+      "unstructured": "Demaria, O. et al. Harnessing innate immunity in cancer therapy. Nature 574, 45\u201356 (2019)."
+    },
+    {
+      "key": "6945_CR58",
+      "doi": "10.1016/j.immuni.2023.07.018",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2023",
+      "author": "LL Cao",
+      "unstructured": "Cao, L. L. & Kagan, J. C. Targeting innate immune pathways for cancer immunotherapy. Immunity 56, 2206\u20132217 (2023)."
+    },
+    {
+      "key": "6945_CR59",
+      "doi": "10.1016/j.ccell.2017.06.009",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2017",
+      "author": "A Lopez-Soto",
+      "unstructured": "Lopez-Soto, A., Gonzalez, S., Smyth, M. J. & Galluzzi, L. Control of metastasis by NK cells. Cancer Cell 32, 135\u2013154 (2017). This report, along with refs. 60 and 61, describes anti-metastatic functions of NK cells."
+    },
+    {
+      "key": "6945_CR60",
+      "doi": "10.1016/j.ccell.2023.01.001",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2023",
+      "author": "X Liu",
+      "unstructured": "Liu, X. et al. Immune checkpoint HLA-E:CD94-NKG2A mediates evasion of circulating tumor cells from NK cell surveillance. Cancer Cell 41, 272\u2013287 (2023)."
+    },
+    {
+      "key": "6945_CR61",
+      "doi": "10.1038/s41586-021-03614-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "AL Correia",
+      "unstructured": "Correia, A. L. et al. Hepatic stellate cells suppress NK cell-sustained breast cancer dormancy. Nature 594, 566\u2013571 (2021)."
+    },
+    {
+      "key": "6945_CR62",
+      "doi": "10.1016/j.cell.2018.01.004",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "JP Bottcher",
+      "unstructured": "Bottcher, J. P. et al. NK cells stimulate recruitment of cDC1 into the tumor microenvironment promoting cancer immune control. Cell 172, 1022\u20131037 (2018). This study, along with ref. 63, describes the role of cytokines and chemokines secreted by NK cells in eliciting a multicellular antitumour immune response."
+    },
+    {
+      "key": "6945_CR63",
+      "doi": "10.1038/s41591-018-0085-8",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2018",
+      "author": "KC Barry",
+      "unstructured": "Barry, K. C. et al. A natural killer-dendritic cell axis defines checkpoint therapy-responsive tumor microenvironments. Nat. Med. 24, 1178\u20131191 (2018)."
+    },
+    {
+      "key": "6945_CR64",
+      "doi": "10.1126/scitranslmed.abm9043",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2022",
+      "author": "N Kirchhammer",
+      "unstructured": "Kirchhammer, N. et al. NK cells with tissue-resident traits shape response to immunotherapy by inducing adaptive antitumor immunity. Sci. Transl. Med. 14, eabm9043 (2022)."
+    },
+    {
+      "key": "6945_CR65",
+      "doi": "10.1182/blood-2009-05-222190",
+      "title": "",
+      "journal": "Blood",
+      "year": "2010",
+      "author": "JA Olson",
+      "unstructured": "Olson, J. A. et al. NK cells mediate reduction of GVHD by inhibiting activated, alloreactive T cells while retaining GVT effects. Blood 115, 4293\u20134301 (2010)."
+    },
+    {
+      "key": "6945_CR66",
+      "doi": "10.3389/fimmu.2017.00465",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2017",
+      "author": "F Simonetta",
+      "unstructured": "Simonetta, F., Alvarez, M. & Negrin, R. S. Natural killer cells in graft-versus-host-disease after allogeneic hematopoietic cell transplantation. Front. Immunol. 8, 465 (2017)."
+    },
+    {
+      "key": "6945_CR67",
+      "doi": "10.3389/fimmu.2021.636568",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2021",
+      "author": "K Dhatchinamoorthy",
+      "unstructured": "Dhatchinamoorthy, K., Colbert, J. D. & Rock, K. L. Cancer immune evasion through loss of MHC class I antigen presentation. Front. Immunol. 12, 636568 (2021)."
+    },
+    {
+      "key": "6945_CR68",
+      "doi": "10.1038/319675a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1986",
+      "author": "K K\u00e4rre",
+      "unstructured": "K\u00e4rre, K., Ljunggren, H. G., Piontek, G. & Kiessling, R. Selective rejection of H-2-deficient lymphoma variants suggests alternative immune defence strategy. Nature 319, 675\u2013678 (1986)."
+    },
+    {
+      "key": "6945_CR69",
+      "doi": "10.1111/j.1600-065x.1997.tb00943.x",
+      "title": "",
+      "journal": "Immunol. Rev.",
+      "year": "1997",
+      "author": "A Moretta",
+      "unstructured": "Moretta, A. et al. Major histocompatibility complex class I-specific receptors on human natural killer and T lymphocytes. Immunol. Rev. 155, 105\u2013117 (1997)."
+    },
+    {
+      "key": "6945_CR70",
+      "doi": "10.1385/ir:32:1-3:317",
+      "title": "",
+      "journal": "Immunol. Res.",
+      "year": "2005",
+      "author": "WM Yokoyama",
+      "unstructured": "Yokoyama, W. M. Natural killer cell immune responses. Immunol. Res. 32, 317\u2013325 (2005)."
+    },
+    {
+      "key": "6945_CR71",
+      "doi": "10.1038/nri1570",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2005",
+      "author": "P Parham",
+      "unstructured": "Parham, P. MHC class I molecules and KIRs in human history, health and survival. Nat. Rev. Immunol. 5, 201\u2013214 (2005)."
+    },
+    {
+      "key": "6945_CR72",
+      "doi": "10.1016/j.cell.2018.10.014",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "P Andr\u00e9",
+      "unstructured": "Andr\u00e9, P. et al. Anti-NKG2A mAb is a checkpoint inhibitor that promotes anti-tumor immunity by unleashing both T and NK cells. Cell 175, 1731\u20131743 (2018). This study, along with ref. 74, describes the role of monalizumab in promoting antitumour immunity."
+    },
+    {
+      "key": "6945_CR73",
+      "doi": "10.1016/j.cell.2018.10.028",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "N van Montfoort",
+      "unstructured": "van Montfoort, N. et al. NKG2A blockade potentiates CD8 T cell immunity induced by cancer vaccines. Cell 175, 1744\u20131755 (2018)."
+    },
+    {
+      "key": "6945_CR74",
+      "doi": "10.1182/blood-2003-01-0273",
+      "title": "",
+      "journal": "Blood",
+      "year": "2003",
+      "author": "S Andreae",
+      "unstructured": "Andreae, S., Buisson, S. & Triebel, F. MHC class II signal transduction in human dendritic cells induced by a natural ligand, the LAG-3 protein (CD223). Blood 102, 2130\u20132137 (2003)."
+    },
+    {
+      "key": "6945_CR75",
+      "doi": "10.1084/jem.176.2.327",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1992",
+      "author": "E Baixeras",
+      "unstructured": "Baixeras, E. et al. Characterization of the lymphocyte activation gene 3-encoded protein. A new ligand for human leukocyte antigen class II antigens. J. Exp. Med. 176, 327\u2013337 (1992)."
+    },
+    {
+      "key": "6945_CR76",
+      "doi": "10.1002/eji.200526090",
+      "title": "",
+      "journal": "Eur. J. Immunol.",
+      "year": "2005",
+      "author": "M Kisielow",
+      "unstructured": "Kisielow, M., Kisielow, J., Capoferri-Sollami, G. & Karjalainen, K. Expression of lymphocyte activation gene 3 (LAG-3) on B cells is induced by T cells. Eur. J. Immunol. 35, 2081\u20132088 (2005)."
+    },
+    {
+      "key": "6945_CR77",
+      "doi": "10.1172/jci125916",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2019",
+      "author": "A Merino",
+      "unstructured": "Merino, A. et al. Chronic stimulation drives human NK cell dysfunction and epigenetic reprograming. J. Clin. Invest. 129, 3770\u20133785 (2019)."
+    },
+    {
+      "key": "6945_CR78",
+      "doi": "10.1073/pnas.94.11.5744",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1997",
+      "author": "B Huard",
+      "unstructured": "Huard, B. et al. Characterization of the major histocompatibility complex class II binding site on LAG-3 protein. Proc. Natl Acad. Sci. USA 94, 5744\u20135749 (1997)."
+    },
+    {
+      "key": "6945_CR79",
+      "doi": "10.1002/1521-4141(200208)32:8<2255::aid-immu2255>3.0.co;2-a",
+      "title": "",
+      "journal": "Eur. J. Immunol.",
+      "year": "2002",
+      "author": "CJ Workman",
+      "unstructured": "Workman, C. J., Rice, D. S., Dugger, K. J., Kurschner, C. & Vignali, D. A. Phenotypic analysis of the murine CD4-related glycoprotein, CD223 (LAG-3). Eur. J. Immunol. 32, 2255\u20132263 (2002)."
+    },
+    {
+      "key": "6945_CR80",
+      "doi": "10.1016/j.jaut.2020.102504",
+      "title": "",
+      "journal": "J. Autoimmun.",
+      "year": "2020",
+      "author": "S Hu",
+      "unstructured": "Hu, S., Liu, X., Li, T., Li, Z. & Hu, F. LAG3 (CD223) and autoimmunity: emerging evidence. J. Autoimmun. 112, 102504 (2020)."
+    },
+    {
+      "key": "6945_CR81",
+      "doi": "10.1158/2326-6066.cir-14-0150",
+      "title": "",
+      "journal": "Cancer Immunol. Res.",
+      "year": "2015",
+      "author": "T Kouo",
+      "unstructured": "Kouo, T. et al. Galectin-3 shapes antitumor immune responses by suppressing CD8+ T cells via LAG-3 and inhibiting expansion of plasmacytoid dendritic cells. Cancer Immunol. Res. 3, 412\u2013423 (2015)."
+    },
+    {
+      "key": "6945_CR82",
+      "doi": "10.1038/leu.2017.226",
+      "title": "",
+      "journal": "Leukemia",
+      "year": "2018",
+      "author": "E Liu",
+      "unstructured": "Liu, E. et al. Cord blood NK cells engineered to express IL-15 and a CD19-targeted CAR show long-term persistence and potent antitumor activity. Leukemia 32, 520\u2013531 (2018)."
+    },
+    {
+      "key": "6945_CR83",
+      "doi": "10.3390/cancers13092112",
+      "title": "",
+      "journal": "Cancers",
+      "year": "2021",
+      "author": "C Sordo-Bahamonde",
+      "unstructured": "Sordo-Bahamonde, C. et al. LAG-3 blockade with relatlimab (BMS-986016) restores anti-leukemic responses in chronic lymphocytic leukemia. Cancers 13, 2112 (2021)."
+    },
+    {
+      "key": "6945_CR84",
+      "doi": "10.1016/j.cell.2018.11.010",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "J Wang",
+      "unstructured": "Wang, J. et al. Fibrinogen-like protein 1 is a major immune inhibitory ligand of LAG-3. Cell 176, 334\u2013347 (2019)."
+    },
+    {
+      "key": "6945_CR85",
+      "doi": "10.3389/fimmu.2020.00167",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2020",
+      "author": "M Khan",
+      "unstructured": "Khan, M., Arooj, S. & Wang, H. NK cell-based immune checkpoint inhibition. Front. Immunol. 11, 167 (2020)."
+    },
+    {
+      "key": "6945_CR86",
+      "doi": "10.1182/blood-2011-11-392951",
+      "title": "",
+      "journal": "Blood",
+      "year": "2012",
+      "author": "LC Ndhlovu",
+      "unstructured": "Ndhlovu, L. C. et al. Tim-3 marks human natural killer cell maturation and suppresses cell-mediated cytotoxicity. Blood 119, 3734\u20133743 (2012)."
+    },
+    {
+      "key": "6945_CR87",
+      "doi": "10.1158/2326-6066.cir-17-0708",
+      "title": "",
+      "journal": "Cancer Immunol. Res.",
+      "year": "2018",
+      "author": "H Seo",
+      "unstructured": "Seo, H. et al. IL21 therapy combined with PD-1 and Tim-3 blockade provides enhanced NK cell antitumor activity against MHC class I-deficient tumors. Cancer Immunol. Res. 6, 685\u2013695 (2018)."
+    },
+    {
+      "key": "6945_CR88",
+      "doi": "10.1158/2326-6066.cir-13-0171",
+      "title": "",
+      "journal": "Cancer Immunol. Res.",
+      "year": "2014",
+      "author": "IP da Silva",
+      "unstructured": "da Silva, I. P. et al. Reversal of NK-cell exhaustion in advanced melanoma by Tim-3 blockade. Cancer Immunol. Res. 2, 410\u2013422 (2014)."
+    },
+    {
+      "key": "6945_CR89",
+      "doi": "10.1016/j.intimp.2015.09.017",
+      "title": "",
+      "journal": "Int. Immunopharmacol.",
+      "year": "2015",
+      "author": "L Xu",
+      "unstructured": "Xu, L. et al. Increased Tim-3 expression in peripheral NK cells predicts a poorer prognosis and Tim-3 blockade improves NK cell-mediated cytotoxicity in human lung adenocarcinoma. Int. Immunopharmacol. 29, 635\u2013641 (2015)."
+    },
+    {
+      "key": "6945_CR90",
+      "doi": "10.3389/fonc.2022.739976",
+      "title": "",
+      "journal": "Front. Oncol",
+      "year": "2022",
+      "author": "W Jiang",
+      "unstructured": "Jiang, W. et al. Tim-3 blockade elicits potent anti-multiple myeloma immunity of natural killer cells. Front. Oncol .12, 739976 (2022)."
+    },
+    {
+      "key": "6945_CR91",
+      "doi": "10.3390/cancers11060877",
+      "title": "",
+      "journal": "Cancers",
+      "year": "2019",
+      "author": "B Sanchez-Correa",
+      "unstructured": "Sanchez-Correa, B. et al. DNAM-1 and the TIGIT/PVRIG/TACTILE axis: novel immune checkpoints for natural killer cell-based cancer immunotherapy. Cancers 11, 877 (2019)."
+    },
+    {
+      "key": "6945_CR92",
+      "doi": "10.1158/2159-8290.cd-20-1248",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2021",
+      "author": "Z Alteber",
+      "unstructured": "Alteber, Z. et al. Therapeutic targeting of checkpoint receptors within the DNAM1 axis. Cancer Discov. 11, 1040\u20131051 (2021)."
+    },
+    {
+      "key": "6945_CR93",
+      "doi": "10.1038/s41590-018-0132-0",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2018",
+      "author": "Q Zhang",
+      "unstructured": "Zhang, Q. et al. Blockade of the checkpoint receptor TIGIT prevents NK cell exhaustion and elicits potent anti-tumor immunity. Nat. Immunol. 19, 723\u2013732 (2018)."
+    },
+    {
+      "key": "6945_CR94",
+      "doi": "10.4049/jimmunol.1900985",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2019",
+      "author": "AR Temming",
+      "unstructured": "Temming, A. R. et al. Functional attributes of antibodies, effector cells, and target cells affecting nk cell-mediated antibody-dependent cellular cytotoxicity. J. Immunol. 203, 3126\u20133135 (2019)."
+    },
+    {
+      "key": "6945_CR95",
+      "doi": "10.3390/cancers12103041",
+      "title": "",
+      "journal": "Cancers",
+      "year": "2020",
+      "author": "HJ van der Horst",
+      "unstructured": "van der Horst, H. J., Nijhof, I. S., Mutis, T. & Chamuleau, M. E. D. Fc-engineered antibodies with enhanced Fc-effector function for the treatment of B-cell malignancies. Cancers 12, 3041 (2020)."
+    },
+    {
+      "key": "6945_CR96",
+      "doi": "10.1074/jbc.m202069200",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2002",
+      "author": "RL Shields",
+      "unstructured": "Shields, R. L. et al. Lack of fucose on human IgG1 N-linked oligosaccharide improves binding to human Fc\u03b3RIII and antibody-dependent cellular toxicity. J. Biol. Chem. 277, 26733\u201326740 (2002)."
+    },
+    {
+      "key": "6945_CR97",
+      "doi": "10.1158/1078-0432.ccr-06-1335",
+      "title": "",
+      "journal": "Clin. Cancer Res.",
+      "year": "2007",
+      "author": "E Suzuki",
+      "unstructured": "Suzuki, E. et al. A nonfucosylated anti-HER2 antibody augments antibody-dependent cellular cytotoxicity in breast cancer patients. Clin. Cancer Res. 13, 1875\u20131882 (2007)."
+    },
+    {
+      "key": "6945_CR98",
+      "doi": "10.1007/s13238-017-0473-8",
+      "title": "",
+      "journal": "Protein Cell",
+      "year": "2018",
+      "author": "X Wang",
+      "unstructured": "Wang, X., Mathieu, M. & Brezski, R. J. IgG Fc engineering to modulate antibody effector functions. Protein Cell 9, 63\u201373 (2018)."
+    },
+    {
+      "key": "6945_CR99",
+      "doi": "10.1182/blood-2014-12-614636",
+      "title": "",
+      "journal": "Blood",
+      "year": "2015",
+      "author": "A Rothe",
+      "unstructured": "Rothe, A. et al. A phase 1 study of the bispecific anti-CD30/CD16A antibody construct AFM13 in patients with relapsed or refractory Hodgkin lymphoma. Blood 125, 4024\u20134031 (2015)."
+    },
+    {
+      "key": "6945_CR100",
+      "doi": "10.1158/1078-0432.ccr-13-0505",
+      "title": "",
+      "journal": "Clin. Cancer Res.",
+      "year": "2013",
+      "author": "A Wiernik",
+      "unstructured": "Wiernik, A. et al. Targeting natural killer cells to acute myeloid leukemia in vitro with a CD16 \u00d7 33 bispecific killer cell engager and ADAM17 inhibition. Clin. Cancer Res. 19, 3844\u20133855 (2013)."
+    },
+    {
+      "key": "6945_CR101",
+      "doi": "",
+      "title": "",
+      "journal": "Cancer Biother. Radiopharm.",
+      "year": "2013",
+      "author": "DA Vallera",
+      "unstructured": "Vallera, D. A. et al. Heterodimeric bispecific single-chain variable-fragment antibodies against EpCAM and CD16 induce effective antibody-dependent cellular cytotoxicity against human carcinoma cells. Cancer Biother. Radiopharm. 28, 274\u2013282 (2013)."
+    },
+    {
+      "key": "6945_CR102",
+      "doi": "10.1158/1535-7163.mct-12-0692",
+      "title": "",
+      "journal": "Mol. Cancer Ther.",
+      "year": "2012",
+      "author": "MK Gleason",
+      "unstructured": "Gleason, M. K. et al. Bispecific and trispecific killer cell engagers directly activate human NK cells through CD16 signaling and induce cytotoxicity and cytokine production. Mol. Cancer Ther. 11, 2674\u20132684 (2012)."
+    },
+    {
+      "key": "6945_CR103",
+      "doi": "10.1182/blood-2013-10-533398",
+      "title": "",
+      "journal": "Blood",
+      "year": "2014",
+      "author": "MK Gleason",
+      "unstructured": "Gleason, M. K. et al. CD16xCD33 bispecific killer cell engager (BiKE) activates NK cells against primary MDS and MDSC CD33+ targets. Blood 123, 3016\u20133026 (2014)."
+    },
+    {
+      "key": "6945_CR104",
+      "doi": "10.1158/1078-0432.ccr-15-2710",
+      "title": "",
+      "journal": "Clin. Cancer Res.",
+      "year": "2016",
+      "author": "DA Vallera",
+      "unstructured": "Vallera, D. A. et al. IL15 trispecific killer engagers (TriKE) make natural killer cells specific to CD33+ targets while also inducing persistence, in vivo expansion, and enhanced function. Clin. Cancer Res. 22, 3440\u20133450 (2016)."
+    },
+    {
+      "key": "6945_CR105",
+      "doi": "10.4143/crt.2016.491",
+      "title": "",
+      "journal": "Cancer Res. Treat.",
+      "year": "2017",
+      "author": "JU Schmohl",
+      "unstructured": "Schmohl, J. U. et al. Engineering of anti-CD133 trispecific molecule capable of inducing NK expansion and driving antibody-dependent cell-mediated cytotoxicity. Cancer Res. Treat. 49, 1140\u20131152 (2017)."
+    },
+    {
+      "key": "6945_CR106",
+      "doi": "10.1158/2326-6066.cir-19-0837",
+      "title": "",
+      "journal": "Cancer Immunol. Res.",
+      "year": "2020",
+      "author": "M Felices",
+      "unstructured": "Felices, M. et al. Potent cytolytic activity and specific IL15 delivery in a second-generation trispecific killer engager. Cancer Immunol. Res. 8, 1139\u20131149 (2020)."
+    },
+    {
+      "key": "6945_CR107",
+      "doi": "10.1097/01.hs9.0000845360.01071.5e",
+      "title": "",
+      "journal": "HemaSphere",
+      "year": "2022",
+      "author": "J Miller",
+      "unstructured": "Miller, J. et al. P618: second-generation CD19 targeting tri-specific killer engager drives robust nk cell function against B cell malignancies. HemaSphere 6, 517\u2013518 (2022)."
+    },
+    {
+      "key": "6945_CR108",
+      "doi": "10.1182/blood-2012-04-425397",
+      "title": "",
+      "journal": "Blood",
+      "year": "2013",
+      "author": "R Romee",
+      "unstructured": "Romee, R. et al. NK cell CD16 surface expression and function is regulated by a disintegrin and metalloprotease-17 (ADAM17). Blood 121, 3599\u20133608 (2013)."
+    },
+    {
+      "key": "6945_CR109",
+      "doi": "10.1182/blood-2007-07-100057",
+      "title": "",
+      "journal": "Blood",
+      "year": "2008",
+      "author": "JD Coudert",
+      "unstructured": "Coudert, J. D., Scarpellino, L., Gros, F., Vivier, E. & Held, W. Sustained NKG2D engagement induces cross-tolerance of multiple distinct NK cell activation pathways. Blood 111, 3571\u20133578 (2008)."
+    },
+    {
+      "key": "6945_CR110",
+      "doi": "10.1158/2326-6066.cir-17-0649",
+      "title": "",
+      "journal": "Cancer Immunol. Res.",
+      "year": "2018",
+      "author": "WK Chan",
+      "unstructured": "Chan, W. K. et al. A CS1-NKG2D bispecific antibody collectively activates cytolytic immune cells against multiple myeloma. Cancer Immunol. Res. 6, 776\u2013787 (2018)."
+    },
+    {
+      "key": "6945_CR111",
+      "doi": "10.1080/2162402x.2020.1854529",
+      "title": "",
+      "journal": "Oncoimmunology",
+      "year": "2020",
+      "author": "A Raynaud",
+      "unstructured": "Raynaud, A. et al. Anti-NKG2D single domain-based antibodies for the modulation of anti-tumor immune response. Oncoimmunology 10, 1854529 (2020)."
+    },
+    {
+      "key": "6945_CR112",
+      "doi": "10.1200/jco.2023.41.16_suppl.2508",
+      "title": "",
+      "journal": "J. Clin. Oncol.",
+      "year": "2023",
+      "author": "H Safran",
+      "unstructured": "Safran, H. et al. Phase 1/2 study of DF1001, a novel tri-specific, NK cell engager therapy targeting HER2, in patients with advanced solid tumors: phase 1 DF1001 monotherapy dose-escalation results. J. Clin. Oncol. 41, 2508\u20132508 (2023)."
+    },
+    {
+      "key": "6945_CR113",
+      "doi": "10.1182/blood-2005-05-2177",
+      "title": "",
+      "journal": "Blood",
+      "year": "2006",
+      "author": "EP von Strandmann",
+      "unstructured": "von Strandmann, E. P. et al. A novel bispecific protein (ULBP2-BB4) targeting the NKG2D receptor on natural killer (NK) cells and CD138 activates NK cells and has potent antitumor activity against human multiple myeloma in vitro and in vivo. Blood 107, 1955\u20131962 (2006)."
+    },
+    {
+      "key": "6945_CR114",
+      "doi": "10.1097/cji.0000000000000320",
+      "title": "",
+      "journal": "J. Immunother.",
+      "year": "2020",
+      "author": "Y Wang",
+      "unstructured": "Wang, Y. et al. BCMA-targeting bispecific antibody that simultaneously stimulates NKG2D-enhanced efficacy against multiple myeloma. J. Immunother. 43, 175\u2013188 (2020)."
+    },
+    {
+      "key": "6945_CR115",
+      "doi": "10.1016/j.cell.2019.04.041",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "L Gauthier",
+      "unstructured": "Gauthier, L. et al. Multifunctional natural killer cell engagers targeting NKp46 trigger protective tumor immunity. Cell 177, 1701\u20131713 (2019)."
+    },
+    {
+      "key": "6945_CR116",
+      "doi": "10.1084/jem.188.5.953",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1998",
+      "author": "A Pessino",
+      "unstructured": "Pessino, A. et al. Molecular cloning of NKp46: a novel member of the immunoglobulin superfamily involved in triggering of natural cytotoxicity. J. Exp. Med. 188, 953\u2013960 (1998)."
+    },
+    {
+      "key": "6945_CR117",
+      "doi": "10.1073/pnas.0609692104",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2007",
+      "author": "T Walzer",
+      "unstructured": "Walzer, T. et al. Identification, activation, and selective in vivo ablation of mouse NK cells via NKp46. Proc. Natl Acad. Sci. USA 104, 3384\u20133389 (2007)."
+    },
+    {
+      "key": "6945_CR118",
+      "doi": "10.1038/s41587-022-01626-2",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2023",
+      "author": "L Gauthier",
+      "unstructured": "Gauthier, L. et al. Control of acute myeloid leukemia by a trifunctional NKp46-CD16a-NK cell engager targeting CD123. Nat. Biotechnol. 41, 1296\u20131306 (2023)."
+    },
+    {
+      "key": "6945_CR119",
+      "doi": "10.1158/2326-6066.cir-21-0843",
+      "title": "",
+      "journal": "Cancer Immunol. Res.",
+      "year": "2022",
+      "author": "N Colomar-Carando",
+      "unstructured": "Colomar-Carando, N. et al. Exploiting natural killer cell engagers to control pediatric B-cell precursor acute lymphoblastic leukemia. Cancer Immunol. Res. 10, 291\u2013302 (2022)."
+    },
+    {
+      "key": "6945_CR120",
+      "doi": "10.1016/j.xcrm.2022.100783",
+      "title": "",
+      "journal": "Cell Rep. Med.",
+      "year": "2022",
+      "author": "O Demaria",
+      "unstructured": "Demaria, O. et al. Antitumor immunity induced by antibody-based natural killer cell engager therapeutics armed with not-alpha IL-2 variant. Cell Rep. Med. 3, 100783 (2022). This study describes the first tetraspecific NK cell engagers armed with a variant of IL-2."
+    },
+    {
+      "key": "6945_CR121",
+      "doi": "10.1016/j.annonc.2022.07.882",
+      "title": "",
+      "journal": "Ann. Oncol.",
+      "year": "2022",
+      "author": "A Arulanandam",
+      "unstructured": "Arulanandam, A. et al. 756P glypican-3 (GPC3) and NKp46 directed FLEX-NK engager antibody (CYT-303) recruits natural killer (NK) cells to tumors in a preclinical hepatocellular carcinoma (HCC) mouse model. Ann. Oncol. 33, S889 (2022)."
+    },
+    {
+      "key": "6945_CR122",
+      "doi": "10.1097/01.hs9.0000846252.68296.03",
+      "title": "",
+      "journal": "HemaSphere",
+      "year": "2022",
+      "author": "L Lin",
+      "unstructured": "Lin, L. et al. P842: novel multifunctional tetravalent CD38 NKp46 FLEX-NK engagers actively target and kill multiple myeloma cells. HemaSphere 6, 736\u2013737 (2022)."
+    },
+    {
+      "key": "6945_CR123",
+      "doi": "10.1084/jem.190.10.1505",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1999",
+      "author": "D Pende",
+      "unstructured": "Pende, D. et al. Identification and molecular characterization of NKp30, a novel triggering receptor involved in natural cytotoxicity mediated by human natural killer cells. J. Exp. Med. 190, 1505\u20131516 (1999)."
+    },
+    {
+      "key": "6945_CR124",
+      "doi": "10.1111/bph.15222",
+      "title": "",
+      "journal": "Br. J. Pharmacol.",
+      "year": "2020",
+      "author": "PF Pinheiro",
+      "unstructured": "Pinheiro, P. F., Justino, G. C. & Marques, M. M. NKp30\u2014a prospective target for new cancer immunotherapy strategies. Br. J. Pharmacol. 177, 4563\u20134580 (2020)."
+    },
+    {
+      "key": "6945_CR125",
+      "doi": "10.3389/fimmu.2022.898745",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2022",
+      "author": "H Medjouel Khlifi",
+      "unstructured": "Medjouel Khlifi, H., Guia, S., Vivier, E. & Narni-Mancinelli, E. Role of the ITAM-bearing receptors expressed by natural killer cells in cancer. Front. Immunol. 13, 898745 (2022)."
+    },
+    {
+      "key": "6945_CR126",
+      "doi": "10.1080/2162402x.2014.1001224",
+      "title": "",
+      "journal": "Oncoimmunology",
+      "year": "2015",
+      "author": "S Pesce",
+      "unstructured": "Pesce, S. et al. B7-H6-mediated downregulation of NKp30 in NK cells contributes to ovarian carcinoma immune escape. Oncoimmunology 4, e1001224 (2015)."
+    },
+    {
+      "key": "6945_CR127",
+      "doi": "10.1182/blood.2022016200",
+      "title": "",
+      "journal": "Blood",
+      "year": "2023",
+      "author": "MM Berrien-Elliott",
+      "unstructured": "Berrien-Elliott, M. M., Jacobs, M. T. & Fehniger, T. A. Allogeneic natural killer cell therapy. Blood 141, 856\u2013868 (2023)."
+    },
+    {
+      "key": "6945_CR128",
+      "doi": "10.1053/j.seminhematol.2023.02.002",
+      "title": "",
+      "journal": "Semin. Hematol.",
+      "year": "2023",
+      "author": "S Piccinelli",
+      "unstructured": "Piccinelli, S., Romee, R. & Shapiro, R. M. The natural killer cell immunotherapy platform: an overview of the landscape of clinical trials in liquid and solid tumors. Semin. Hematol. 60, 42\u201351 (2023)."
+    },
+    {
+      "key": "6945_CR129",
+      "doi": "10.1016/j.xcrm.2022.100508",
+      "title": "",
+      "journal": "Cell Rep. Med.",
+      "year": "2022",
+      "author": "H Nahi",
+      "unstructured": "Nahi, H. et al. Autologous NK cells as consolidation therapy following stem cell transplantation in multiple myeloma. Cell Rep. Med. 3, 100508 (2022)."
+    },
+    {
+      "key": "6945_CR130",
+      "doi": "10.1126/sciadv.add6997",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2023",
+      "author": "L Li",
+      "unstructured": "Li, L. et al. Loss of metabolic fitness drives tumor resistance after CAR-NK cell therapy and can be overcome by cytokine engineering. Sci. Adv. 9, eadd6997 (2023)."
+    },
+    {
+      "key": "6945_CR131",
+      "doi": "10.3390/cancers10110423",
+      "title": "",
+      "journal": "Cancers",
+      "year": "2018",
+      "author": "JA Foltz",
+      "unstructured": "Foltz, J. A., Moseman, J. E., Thakkar, A., Chakravarti, N. & Lee, D. A. TGF\u03b2 imprinting during activation promotes natural killer cell cytokine hypersecretion. Cancers 10, 423 (2018)."
+    },
+    {
+      "key": "6945_CR132",
+      "doi": "10.3389/fimmu.2022.884648",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2022",
+      "author": "I Terr\u00e9n",
+      "unstructured": "Terr\u00e9n, I. et al. Cytokine-induced memory-like NK cells: from the basics to clinical applications. Front. Immunol. 13, 884648 (2022)."
+    },
+    {
+      "key": "6945_CR133",
+      "doi": "10.1016/j.it.2016.09.005",
+      "title": "",
+      "journal": "Trends Immunol.",
+      "year": "2016",
+      "author": "TA Fehniger",
+      "unstructured": "Fehniger, T. A. & Cooper, M. A. Harnessing NK cell memory for cancer immunotherapy. Trends Immunol. 37, 877\u2013888 (2016)."
+    },
+    {
+      "key": "6945_CR134",
+      "doi": "10.1158/1078-0432.ccr-21-0164",
+      "title": "",
+      "journal": "Clin. Cancer Res.",
+      "year": "2021",
+      "author": "LN Kerbauy",
+      "unstructured": "Kerbauy, L. N. et al. Combining AFM13, a bispecific CD30/CD16 antibody, with cytokine-activated blood and cord blood-derived NK cells facilitates CAR-like responses against CD30+ malignancies. Clin. Cancer Res. 27, 3744\u20133756 (2021). This study describes the advantages of combining NK cell infusions and NK cell engagers."
+    },
+    {
+      "key": "6945_CR135",
+      "doi": "10.1172/jci154334",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2022",
+      "author": "RM Shapiro",
+      "unstructured": "Shapiro, R. M. et al. Expansion, persistence, and efficacy of donor memory-like NK cells infused for posttransplant relapse. J. Clin. Invest. 132, e154334 (2022)."
+    },
+    {
+      "key": "6945_CR136",
+      "doi": "10.1016/j.jcyt.2016.02.006",
+      "title": "",
+      "journal": "Cytotherapy",
+      "year": "2016",
+      "author": "JL Oyer",
+      "unstructured": "Oyer, J. L. et al. Natural killer cells stimulated with PM21 particles expand and biodistribute in vivo: Clinical implications for cancer treatment. Cytotherapy 18, 653\u2013663 (2016)."
+    },
+    {
+      "key": "6945_CR137",
+      "doi": "10.1371/journal.pone.0030264",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2012",
+      "author": "CJ Denman",
+      "unstructured": "Denman, C. J. et al. Membrane-bound IL-21 promotes sustained ex vivo proliferation of human natural killer cells. PLoS ONE 7, e30264 (2012)."
+    },
+    {
+      "key": "6945_CR138",
+      "doi": "10.3389/fimmu.2022.861681",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2022",
+      "author": "JL Oyer",
+      "unstructured": "Oyer, J. L. et al. Cryopreserved PM21-particle-expanded natural killer cells maintain cytotoxicity and effector functions in vitro and in vivo. Front. Immunol. 13, 861681 (2022)."
+    },
+    {
+      "key": "6945_CR139",
+      "doi": "10.3390/cancers15061743",
+      "title": "",
+      "journal": "Cancers",
+      "year": "2023",
+      "author": "KM Coyle",
+      "unstructured": "Coyle, K. M., Hawke, L. G. & Ormiston, M. L. Addressing natural killer cell dysfunction and plasticity in cell-based cancer therapeutics. Cancers 15, 1743 (2023)."
+    },
+    {
+      "key": "6945_CR140",
+      "doi": "10.1002/eji.202250103",
+      "title": "",
+      "journal": "Eur. J. Immunol.",
+      "year": "2023",
+      "author": "BM Balzasch",
+      "unstructured": "Balzasch, B. M. & Cerwenka, A. Microenvironmental signals shaping NK-cell reactivity in cancer. Eur. J. Immunol. 53, e2250103 (2023)."
+    },
+    {
+      "key": "6945_CR141",
+      "doi": "10.1186/s12943-022-01672-z",
+      "title": "",
+      "journal": "Mol. Cancer",
+      "year": "2022",
+      "author": "L Tong",
+      "unstructured": "Tong, L. et al. NK cells and solid tumors: therapeutic potential and persisting obstacles. Mol. Cancer 21, 206 (2022)."
+    },
+    {
+      "key": "6945_CR142",
+      "doi": "10.1158/1078-0432.ccr-18-3183",
+      "title": "",
+      "journal": "Clin. Cancer Res.",
+      "year": "2019",
+      "author": "RA Burga",
+      "unstructured": "Burga, R. A. et al. Engineering the TGF\u03b2 receptor to enhance the therapeutic potential of natural killer cells as an immunotherapy for neuroblastoma. Clin. Cancer Res. 25, 4400\u20134412 (2019)."
+    },
+    {
+      "key": "6945_CR143",
+      "doi": "10.1136/jitc-2019-000246",
+      "title": "",
+      "journal": "J. Immunother. Cancer",
+      "year": "2020",
+      "author": "K Solocinski",
+      "unstructured": "Solocinski, K. et al. Overcoming hypoxia-induced functional suppression of NK cells. J. Immunother. Cancer 8, e000246 (2020)."
+    },
+    {
+      "key": "6945_CR144",
+      "doi": "10.1016/j.stem.2020.05.008",
+      "title": "",
+      "journal": "Cell Stem Cell",
+      "year": "2020",
+      "author": "H Zhu",
+      "unstructured": "Zhu, H. et al. Metabolic reprograming via deletion of CISH in human iPSC-derived NK cells promotes in vivo persistence and enhances anti-tumor activity. Cell Stem Cell 27, 224\u2013237 (2020)."
+    },
+    {
+      "key": "6945_CR145",
+      "doi": "10.1182/blood.2020007748",
+      "title": "",
+      "journal": "Blood",
+      "year": "2021",
+      "author": "M Daher",
+      "unstructured": "Daher, M. et al. Targeting a cytokine checkpoint enhances the fitness of armored cord blood CAR-NK cells. Blood 137, 624\u2013636 (2021)."
+    },
+    {
+      "key": "6945_CR146",
+      "doi": "10.1038/s41467-018-04719-2",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "RM Loftus",
+      "unstructured": "Loftus, R. M. et al. Amino acid-dependent cMyc expression is essential for NK cell metabolic and functional responses in mice. Nat. Commun. 9, 2341 (2018)."
+    },
+    {
+      "key": "6945_CR147",
+      "doi": "10.1016/j.omtm.2018.12.009",
+      "title": "",
+      "journal": "Mol. Ther. Methods Clin. Dev.",
+      "year": "2019",
+      "author": "S Guedan",
+      "unstructured": "Guedan, S., Calderon, H., Posey, A. D. Jr & Maus, M. V. Engineering and design of chimeric antigen receptors. Mol. Ther. Methods Clin. Dev. 12, 145\u2013156 (2019)."
+    },
+    {
+      "key": "6945_CR148",
+      "doi": "10.1007/s12185-021-03209-4",
+      "title": "",
+      "journal": "Int. J. Hematol.",
+      "year": "2021",
+      "author": "A Biederst\u00e4dt",
+      "unstructured": "Biederst\u00e4dt, A. & Rezvani, K. Engineering the next generation of CAR-NK immunotherapies. Int. J. Hematol. 114, 554\u2013571 (2021)."
+    },
+    {
+      "key": "6945_CR149",
+      "doi": "10.1056/nejmoa1910607",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2020",
+      "author": "E Liu",
+      "unstructured": "Liu, E. et al. Use of CAR-transduced natural killer cells in CD19-positive lymphoid tumors. N. Engl. J. Med. 382, 545\u2013553 (2020). This study describes the clinical efficacy of CAR NK cells against B cell malignancies."
+    },
+    {
+      "key": "6945_CR150",
+      "doi": "10.3390/cancers14174229",
+      "title": "",
+      "journal": "Cancers",
+      "year": "2022",
+      "author": "G Leem",
+      "unstructured": "Leem, G. et al. Safety and efficacy of allogeneic natural killer cells in combination with pembrolizumab in patients with chemotherapy-refractory biliary tract cancer: a multicenter open-label phase 1/2a trial. Cancers 14, 4229 (2022)."
+    },
+    {
+      "key": "6945_CR151",
+      "doi": "10.1016/j.cytogfr.2020.06.005",
+      "title": "",
+      "journal": "Cytokine Growth Factor Rev.",
+      "year": "2020",
+      "author": "M Marotel",
+      "unstructured": "Marotel, M., Hasim, M. S., Hagerman, A. & Ardolino, M. The two-faces of NK cells in oncolytic virotherapy. Cytokine Growth Factor Rev. 56, 59\u201368 (2020)."
+    },
+    {
+      "key": "6945_CR152",
+      "doi": "10.1126/science.aas9090",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "M Ruscetti",
+      "unstructured": "Ruscetti, M. et al. NK cell-mediated cytotoxicity contributes to tumor control by a cytostatic drug combination. Science 362, 1416\u20131422 (2018)."
+    },
+    {
+      "key": "6945_CR153",
+      "doi": "10.1016/j.cell.2022.03.030",
+      "title": "",
+      "journal": "Cell",
+      "year": "2022",
+      "author": "R Pan",
+      "unstructured": "Pan, R., Ryan, J., Pan, D., Wucherpfennig, K. W. & Letai, A. Augmenting NK cell-based immunotherapy by targeting mitochondrial apoptosis. Cell 185, 1521\u20131538 (2022)."
+    },
+    {
+      "key": "6945_CR154",
+      "doi": "10.1126/sciadv.abh4050",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2022",
+      "author": "T Walle",
+      "unstructured": "Walle, T. et al. Radiotherapy orchestrates natural killer cell dependent antitumor immune responses through CXCL8. Sci. Adv. 8, eabh4050 (2022)."
+    },
+    {
+      "key": "6945_CR155",
+      "doi": "10.1038/ni.3470",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2016",
+      "author": "RB Delconte",
+      "unstructured": "Delconte, R. B. et al. CIS is a potent checkpoint in NK cell-mediated tumor immunity. Nat. Immunol. 17, 816\u2013824 (2016)."
+    },
+    {
+      "key": "6945_CR156",
+      "doi": "10.1038/s41467-022-35127-2",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "F Cichocki",
+      "unstructured": "Cichocki, F. et al. Quadruple gene-engineered natural killer cells enable multi-antigen targeting for durable antitumor activity against multiple myeloma. Nat. Commun. 13, 7341 (2022)."
+    },
+    {
+      "key": "6945_CR157",
+      "doi": "10.1126/scitranslmed.ade3341",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2023",
+      "author": "F Cichocki",
+      "unstructured": "Cichocki, F. et al. Nicotinamide enhances natural killer cell function and yields remissions in patients with non-Hodgkin lymphoma. Sci. Transl. Med. 15, eade3341 (2023)."
+    },
+    {
+      "key": "6945_CR158",
+      "doi": "10.1093/jleuko/qiad026",
+      "title": "",
+      "journal": "J. Leukocyte Biol.",
+      "year": "2023",
+      "author": "MR Lordo",
+      "unstructured": "Lordo, M. R., Stiff, A. R., Oakes, C. C. & Mundy-Bosse, B. L. Effects of epigenetic therapy on natural killer cell function and development in hematologic malignancy. J. Leukocyte Biol. 113, 518\u2013524 (2023)."
+    },
+    {
+      "key": "6945_CR159",
+      "doi": "10.1158/2159-8290.cd-21-1683",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2022",
+      "author": "RM Young",
+      "unstructured": "Young, R. M., Engel, N. W., Uslu, U., Wellhausen, N. & June, C. H. Next-generation CAR T-cell therapies. Cancer Discov. 12, 1625\u20131633 (2022)."
+    },
+    {
+      "key": "6945_CR160",
+      "doi": "10.1016/j.xcrm.2020.100003",
+      "title": "",
+      "journal": "Cell Rep. Med.",
+      "year": "2020",
+      "author": "SD Reighard",
+      "unstructured": "Reighard, S. D. et al. Therapeutic targeting of follicular T cells with chimeric antigen receptor-expressing natural killer cells. Cell Rep. Med. 1, 100003 (2020)."
+    }
+  ]
+}

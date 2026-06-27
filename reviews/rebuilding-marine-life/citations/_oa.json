@@ -1,0 +1,1230 @@
+{
+  "article": {
+    "slug": "s41586-020-2146-7",
+    "doi": "10.1038/s41586-020-2146-7",
+    "title": "Rebuilding marine life",
+    "url": "https://www.nature.com/articles/s41586-020-2146-7",
+    "abbrev": "rebuilding-marine-life",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/rebuilding-marine-life"
+  },
+  "n_refs": 144,
+  "n_with_doi": 127,
+  "n_oa": 72,
+  "records": [
+    {
+      "doi": "10.1525/bio.2009.59.11.8",
+      "title": "",
+      "year": "2009",
+      "journal": "Bioscience",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1701262114",
+      "title": "",
+      "year": "2017",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/114/24/6167.full.pdf",
+      "file": "10.1073_pnas.1701262114.md"
+    },
+    {
+      "doi": "10.3389/fmars.2018.00337",
+      "title": "",
+      "year": "2018",
+      "journal": "Front. Mar. Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fmars.2018.00337/pdf",
+      "file": "10.3389_fmars.2018.00337.md"
+    },
+    {
+      "doi": "10.1126/science.1059199",
+      "title": "",
+      "year": "2001",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.tree.2008.12.004",
+      "title": "",
+      "year": "2009",
+      "journal": "Trends Ecol. Evol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1255641",
+      "title": "",
+      "year": "2015",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://escholarship.org/content/qt1gj9w82r/qt1gj9w82r.pdf?t=nvg2ee",
+      "file": "10.1126_science.1255641.md"
+    },
+    {
+      "doi": "10.1111/j.1365-2486.2010.02311.x",
+      "title": "",
+      "year": "2011",
+      "journal": "Glob. Change Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aac4722",
+      "title": "",
+      "year": "2015",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature22901",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://researchonline.jcu.edu.au/50952/6/JCU_50952_Hughes_et_al_2017_Accepted.pdf",
+      "file": "10.1038_nature22901.md"
+    },
+    {
+      "doi": "10.1126/science.aan8048",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://eprints.lancs.ac.uk/id/eprint/89736/1/Hughes_et_al._Science_2018_accepted.pdf",
+      "file": "10.1126_science.aan8048.md"
+    },
+    {
+      "doi": "10.1073/pnas.1900194116",
+      "title": "",
+      "year": "2019",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/116/26/12907.full.pdf",
+      "file": "10.1073_pnas.1900194116.md"
+    },
+    {
+      "doi": "10.1126/science.aad5443",
+      "title": "",
+      "year": "2015",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/387253a0",
+      "title": "",
+      "year": "1997",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature21895",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1185198",
+      "title": "",
+      "year": "2010",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aam7240",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://repository.library.noaa.gov/view/noaa/60289/noaa_60289_DS1.pdf",
+      "file": "10.1126_science.aam7240.md"
+    },
+    {
+      "doi": "10.1093/acprof:oso/9780199535095.003.0006",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cub.2018.06.010",
+      "title": "",
+      "year": "2018",
+      "journal": "Curr. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0960982218307723/pdf",
+      "file": "10.1016_j.cub.2018.06.010.md"
+    },
+    {
+      "doi": "10.1038/ncomms4271",
+      "title": "",
+      "year": "2014",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms4271.pdf",
+      "file": "10.1038_ncomms4271.md"
+    },
+    {
+      "doi": "10.1007/s00114-010-0696-5",
+      "title": "",
+      "year": "2010",
+      "journal": "Naturwissenschaften",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://link.springer.com/content/pdf/10.1007/s00114-010-0696-5.pdf",
+      "file": "10.1007_s00114-010-0696-5.md"
+    },
+    {
+      "doi": "10.1016/j.marpolbul.2007.11.018",
+      "title": "",
+      "year": "2008",
+      "journal": "Mar. Pollut. Bull.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3354/meps08538",
+      "title": "",
+      "year": "2010",
+      "journal": "Mar. Ecol. Prog. Ser.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.int-res.com/articles/meps2010/405/m405p231.pdf",
+      "file": "10.3354_meps08538.md"
+    },
+    {
+      "doi": "10.1007/s12237-009-9191-7",
+      "title": "",
+      "year": "2010",
+      "journal": "Estuaries Coast.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.0802812105",
+      "title": "",
+      "year": "2008",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2556419?pdf=render",
+      "file": "10.1073_pnas.0802812105.md"
+    },
+    {
+      "doi": "10.3389/fmars.2014.00063",
+      "title": "",
+      "year": "2014",
+      "journal": "Front. Mar. Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fmars.2014.00063/pdf",
+      "file": "10.3389_fmars.2014.00063.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0077908",
+      "title": "",
+      "year": "2013",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0077908&type=printable",
+      "file": "10.1371_journal.pone.0077908.md"
+    },
+    {
+      "doi": "10.1016/j.tree.2011.07.008",
+      "title": "",
+      "year": "2011",
+      "journal": "Trends Ecol. Evol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1520420113",
+      "title": "",
+      "year": "2016",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4983844?pdf=render",
+      "file": "10.1073_pnas.1520420113.md"
+    },
+    {
+      "doi": "10.1023/a:1014235924952",
+      "title": "",
+      "year": "2001",
+      "journal": "Rev. Fish Biol. Fish.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature21728",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1173146",
+      "title": "",
+      "year": "2009",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://digitalcommons.uri.edu/gsofacpubs/930",
+      "file": "10.1126_science.1173146.md"
+    },
+    {
+      "doi": "10.1038/nclimate1970",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Clim. Change",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/sciadv.aar8195",
+      "title": "",
+      "year": "2018",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/doi/pdf/10.1126/sciadv.aar8195?download=true",
+      "file": "10.1126_sciadv.aar8195.md"
+    },
+    {
+      "doi": "10.3389/fmars.2019.00123",
+      "title": "",
+      "year": "2019",
+      "journal": "Front. Mar. Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fmars.2019.00123/pdf",
+      "file": "10.3389_fmars.2019.00123.md"
+    },
+    {
+      "doi": "10.1126/science.1260352",
+      "title": "",
+      "year": "2015",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1098/rstb.2004.1578",
+      "title": "",
+      "year": "2005",
+      "journal": "Phil. Trans. R. Soc. B",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1636100?pdf=render",
+      "file": "10.1098_rstb.2004.1578.md"
+    },
+    {
+      "doi": "10.1073/pnas.0810440106",
+      "title": "",
+      "year": "2009",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2678660?pdf=render",
+      "file": "10.1073_pnas.0810440106.md"
+    },
+    {
+      "doi": "10.1098/rsbl.2018.0251",
+      "title": "",
+      "year": "2018",
+      "journal": "Biol. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsbl.2018.0251",
+      "file": "10.1098_rsbl.2018.0251.md"
+    },
+    {
+      "doi": "10.1126/science.1128035",
+      "title": "",
+      "year": "2006",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.tree.2015.04.003",
+      "title": "",
+      "year": "2015",
+      "journal": "Trends Ecol. Evol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.marpol.2015.05.007",
+      "title": "",
+      "year": "2016",
+      "journal": "Mar. Policy",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1578/am.40.1.2014.20",
+      "title": "",
+      "year": "2014",
+      "journal": "Aquat. Mamm.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/sciadv.1600730",
+      "title": "",
+      "year": "2017",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://advances.sciencemag.org/content/advances/3/9/e1600730.full.pdf",
+      "file": "10.1126_sciadv.1600730.md"
+    },
+    {
+      "doi": "10.1111/j.1467-2979.2011.00435.x",
+      "title": "",
+      "year": "2012",
+      "journal": "Fish Fish.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1641/0006-3568(2004)054[0297:mfpccf]2.0.co;2",
+      "title": "",
+      "year": "2004",
+      "journal": "Bioscience",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.scitotenv.2018.08.268",
+      "title": "",
+      "year": "2019",
+      "journal": "Sci. Total Environ.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.gca.2018.05.005",
+      "title": "",
+      "year": "2018",
+      "journal": "Geochim. Cosmochim. Acta",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.marenvres.2018.11.011",
+      "title": "",
+      "year": "2019",
+      "journal": "Mar. Environ. Res.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/11250/2622076",
+      "file": "10.1016_j.marenvres.2018.11.011.md"
+    },
+    {
+      "doi": "10.1007/s12237-008-9111-2",
+      "title": "",
+      "year": "2009",
+      "journal": "Estuaries Coast.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://link.springer.com/content/pdf/10.1007/s12237-008-9111-2.pdf",
+      "file": "10.1007_s12237-008-9111-2.md"
+    },
+    {
+      "doi": "10.1073/pnas.1715798115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/115/14/3658.full.pdf",
+      "file": "10.1073_pnas.1715798115.md"
+    },
+    {
+      "doi": "10.1016/j.marpolbul.2018.08.049",
+      "title": "",
+      "year": "2018",
+      "journal": "Mar. Pollut. Bull.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41467-019-11340-4",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://hdl.handle.net/10261/187375",
+      "file": "10.1038_s41467-019-11340-4.md"
+    },
+    {
+      "doi": "10.3354/meps08183",
+      "title": "",
+      "year": "2009",
+      "journal": "Mar. Ecol. Prog. Ser.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.int-res.com/articles/meps2009/390/m390p129.pdf",
+      "file": "10.3354_meps08183.md"
+    },
+    {
+      "doi": "10.1007/s11273-015-9479-2",
+      "title": "",
+      "year": "2016",
+      "journal": "Wetl. Ecol. Manag.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3390/rs10101669",
+      "title": "",
+      "year": "2018",
+      "journal": "Remote Sens.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/2072-4292/10/10/1669/pdf?version=1540207964",
+      "file": "10.3390_rs10101669.md"
+    },
+    {
+      "doi": "10.1111/geb.12449",
+      "title": "",
+      "year": "2016",
+      "journal": "Glob. Ecol. Biogeogr.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/geb.12449",
+      "file": "10.1111_geb.12449.md"
+    },
+    {
+      "doi": "10.1016/j.biocon.2018.08.020",
+      "title": "",
+      "year": "2018",
+      "journal": "Biol. Conserv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://eprints.whiterose.ac.uk/136938/1/Biol_Cons_paper.pdf",
+      "file": "10.1016_j.biocon.2018.08.020.md"
+    },
+    {
+      "doi": "10.1016/j.ecss.2015.11.027",
+      "title": "",
+      "year": "2016",
+      "journal": "Estuar. Coast. Shelf Sci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s10661-018-6472-2",
+      "title": "",
+      "year": "2018",
+      "journal": "Environ. Monit. Assess.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/jpe/rtp009",
+      "title": "",
+      "year": "2009",
+      "journal": "J. Plant Ecol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jpe/article-pdf/2/2/45/2730961/rtp009.pdf",
+      "file": "10.1093_jpe_rtp009.md"
+    },
+    {
+      "doi": "10.3354/esr00753",
+      "title": "",
+      "year": "2016",
+      "journal": "Species Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.int-res.com/articles/esr2016/31/n031p103.pdf",
+      "file": "10.3354_esr00753.md"
+    },
+    {
+      "doi": "10.1139/f2012-077",
+      "title": "",
+      "year": "2012",
+      "journal": "Can. J. Fish. Aquat. Sci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/2016gl071751",
+      "title": "",
+      "year": "2017",
+      "journal": "Geophys. Res. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/2016GL071751",
+      "file": "10.1002_2016gl071751.md"
+    },
+    {
+      "doi": "10.1890/1540-9295(2006)4[303:rufpap]2.0.co;2",
+      "title": "",
+      "year": "2006",
+      "journal": "Front. Ecol. Environ.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1230441",
+      "title": "",
+      "year": "2013",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1113725",
+      "title": "",
+      "year": "2005",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://digitalcommons.uri.edu/gsofacpubs/939",
+      "file": "10.1126_science.1113725.md"
+    },
+    {
+      "doi": "10.1038/nature14358",
+      "title": "",
+      "year": "2015",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1371/journal.pone.0040542",
+      "title": "",
+      "year": "2012",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0040542&type=printable",
+      "file": "10.1371_journal.pone.0040542.md"
+    },
+    {
+      "doi": "10.1002/fee.1935",
+      "title": "",
+      "year": "2018",
+      "journal": "Front. Ecol. Environ.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3354/meps148269",
+      "title": "",
+      "year": "1997",
+      "journal": "Mar. Ecol. Prog. Ser.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.int-res.com/articles/meps/148/m148p269.pdf",
+      "file": "10.3354_meps148269.md"
+    },
+    {
+      "doi": "10.2307/2937118",
+      "title": "",
+      "year": "1992",
+      "journal": "Ecol. Monogr.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1046/j.1526-100x.2002.02031.x",
+      "title": "",
+      "year": "2002",
+      "journal": "Restor. Ecol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.ecss.2007.08.024",
+      "title": "",
+      "year": "2008",
+      "journal": "Estuar. Coast. Shelf Sci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1080/00785236.1995.10422039",
+      "title": "",
+      "year": "1995",
+      "journal": "Ophelia",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.csr.2011.08.003",
+      "title": "",
+      "year": "2011",
+      "journal": "Cont. Shelf Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/1365-2664.13141",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Appl. Ecol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://besjournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1365-2664.13141",
+      "file": "10.1111_1365-2664.13141.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1081-y",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/ncomms14163",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms14163.pdf",
+      "file": "10.1038_ncomms14163.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0011767",
+      "title": "",
+      "year": "2010",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0011767&type=printable",
+      "file": "10.1371_journal.pone.0011767.md"
+    },
+    {
+      "doi": "10.1038/ncomms15325",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms15325.pdf",
+      "file": "10.1038_ncomms15325.md"
+    },
+    {
+      "doi": "10.1126/science.aao6379",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://www.osti.gov/biblio/1425334",
+      "file": "10.1126_science.aao6379.md"
+    },
+    {
+      "doi": "10.1038/ncomms1013",
+      "title": "",
+      "year": "2010",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms1013.pdf",
+      "file": "10.1038_ncomms1013.md"
+    },
+    {
+      "doi": "10.1007/s13280-018-1065-4",
+      "title": "",
+      "year": "2019",
+      "journal": "Ambio",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://link.springer.com/content/pdf/10.1007/s13280-018-1065-4.pdf",
+      "file": "10.1007_s13280-018-1065-4.md"
+    },
+    {
+      "doi": "10.1111/j.1365-2664.2009.01662.x",
+      "title": "",
+      "year": "2009",
+      "journal": "J. Appl. Ecol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/sciadv.aaw2869",
+      "title": "",
+      "year": "2019",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://advances.sciencemag.org/content/advances/5/4/eaaw2869.full.pdf",
+      "file": "10.1126_sciadv.aaw2869.md"
+    },
+    {
+      "doi": "10.1016/j.marpol.2018.02.004",
+      "title": "",
+      "year": "2018",
+      "journal": "Mar. Policy",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1016/j.marpol.2018.02.004",
+      "file": "10.1016_j.marpol.2018.02.004.md"
+    },
+    {
+      "doi": "10.1016/j.tree.2015.06.011",
+      "title": "",
+      "year": "2015",
+      "journal": "Trends Ecol. Evol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature21708",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://researchonline.lshtm.ac.uk/id/eprint/4671663/2/Whitmee_Gill%20et%20al%20MPAglobalanalysis%20Nautre%20supplemental%2014Jan17.pdf",
+      "file": "10.1038_nature21708.md"
+    },
+    {
+      "doi": "10.1093/biosci/biy021",
+      "title": "",
+      "year": "2018",
+      "journal": "Bioscience",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/bioscience/article-pdf/68/5/359/25082923/biy021.pdf",
+      "file": "10.1093_biosci_biy021.md"
+    },
+    {
+      "doi": "10.1890/15-1077",
+      "title": "",
+      "year": "2016",
+      "journal": "Ecol. Appl.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://esajournals.onlinelibrary.wiley.com/doi/pdfdirect/10.1890/15-1077",
+      "file": "10.1890_15-1077.md"
+    },
+    {
+      "doi": "10.1038/524285a",
+      "title": "",
+      "year": "2015",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/524285a.pdf",
+      "file": "10.1038_524285a.md"
+    },
+    {
+      "doi": "10.1038/nature12859",
+      "title": "",
+      "year": "2013",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://zenodo.org/record/3425700",
+      "file": "10.1038_nature12859.md"
+    },
+    {
+      "doi": "10.1111/1365-2664.12562",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Appl. Ecol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/1365-2664.12562",
+      "file": "10.1111_1365-2664.12562.md"
+    },
+    {
+      "doi": "10.1111/rec.12916",
+      "title": "",
+      "year": "2019",
+      "journal": "Restor. Ecol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/rec.12916",
+      "file": "10.1111_rec.12916.md"
+    },
+    {
+      "doi": "10.1016/j.ecoleng.2004.10.003",
+      "title": "",
+      "year": "2005",
+      "journal": "Ecol. Eng.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1422301112",
+      "title": "",
+      "year": "2015",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/112/8/2307.full.pdf",
+      "file": "10.1073_pnas.1422301112.md"
+    },
+    {
+      "doi": "10.17226/25279",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41559-019-0942-y",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Ecol. Evol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41559-019-0942-y.pdf",
+      "file": "10.1038_s41559-019-0942-y.md"
+    },
+    {
+      "doi": "10.3389/fmars.2018.00470",
+      "title": "",
+      "year": "2018",
+      "journal": "Front. Mar. Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fmars.2018.00470/pdf",
+      "file": "10.3389_fmars.2018.00470.md"
+    },
+    {
+      "doi": "10.1038/srep46613",
+      "title": "",
+      "year": "2017",
+      "journal": "Sci. Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/srep46613.pdf",
+      "file": "10.1038_srep46613.md"
+    },
+    {
+      "doi": "10.1021/acs.est.8b03655",
+      "title": "",
+      "year": "2019",
+      "journal": "Environ. Sci. Technol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/acs.est.6b06187",
+      "title": "",
+      "year": "2017",
+      "journal": "Environ. Sci. Technol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pubs.acs.org/doi/pdf/10.1021/acs.est.6b06187?ref=article_openPDF",
+      "file": "10.1021_acs.est.6b06187.md"
+    },
+    {
+      "doi": "10.1038/484289a",
+      "title": "",
+      "year": "2012",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/484289a.pdf",
+      "file": "10.1038_484289a.md"
+    },
+    {
+      "doi": "10.1016/j.ocecoaman.2019.104853",
+      "title": "",
+      "year": "2019",
+      "journal": "Ocean Coast. Manage.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://hdl.handle.net/20.500.11815/1698",
+      "file": "10.1016_j.ocecoaman.2019.104853.md"
+    },
+    {
+      "doi": "10.17863/cam.39153",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/2013wr014651",
+      "title": "",
+      "year": "2014",
+      "journal": "Water Resour. Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-018-0476-5",
+      "title": "",
+      "year": "2018",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-018-0476-5.pdf",
+      "file": "10.1038_s41586-018-0476-5.md"
+    },
+    {
+      "doi": "10.1016/j.marpolbul.2004.11.028",
+      "title": "",
+      "year": "2005",
+      "journal": "Mar. Pollut. Bull.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature18307",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://pure.iiasa.ac.at/id/eprint/13307/1/nature18307_proof1.pdf",
+      "file": "10.1038_nature18307.md"
+    },
+    {
+      "doi": "10.1038/s41558-018-0118-9",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Clim. Change",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://www.research.ed.ac.uk/en/publications/b63a88c8-33f4-48ea-82c0-f96e2c6b9941",
+      "file": "10.1038_s41558-018-0118-9.md"
+    },
+    {
+      "doi": "10.1038/s41558-018-0149-2",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Clim. Change",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41467-019-09238-2",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-019-09238-2.pdf",
+      "file": "10.1038_s41467-019-09238-2.md"
+    },
+    {
+      "doi": "10.1126/science.aar3454",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.0403239101",
+      "title": "",
+      "year": "2004",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC470737?pdf=render",
+      "file": "10.1073_pnas.0403239101.md"
+    },
+    {
+      "doi": "10.1073/pnas.0909335107",
+      "title": "",
+      "year": "2010",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/107/43/18278.full.pdf",
+      "file": "10.1073_pnas.0909335107.md"
+    },
+    {
+      "doi": "10.1126/science.aao4248",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1604982113",
+      "title": "",
+      "year": "2016",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/113/51/14507.full.pdf",
+      "file": "10.1073_pnas.1604982113.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0166681",
+      "title": "",
+      "year": "2016",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0166681&type=printable",
+      "file": "10.1371_journal.pone.0166681.md"
+    },
+    {
+      "doi": "10.1073/pnas.1902796116",
+      "title": "",
+      "year": "2019",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/116/12/5209.full.pdf",
+      "file": "10.1073_pnas.1902796116.md"
+    },
+    {
+      "doi": "10.1080/09644016.2017.1327485",
+      "title": "",
+      "year": "2017",
+      "journal": "Env. Polit.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.1080/09644016.2017.1327485?needAccess=true",
+      "file": "10.1080_09644016.2017.1327485.md"
+    },
+    {
+      "doi": "10.1890/06-1896.1",
+      "title": "",
+      "year": "2008",
+      "journal": "Ecol. Appl.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://americanae.aecid.es/americanae/es/registros/registro.do?tipoRegistro=MTD&idBib=3262115",
+      "file": "10.1890_06-1896.1.md"
+    },
+    {
+      "doi": "10.1016/j.gloenvcha.2018.04.002",
+      "title": "",
+      "year": "2018",
+      "journal": "Glob. Environ. Change",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aan4082",
+      "title": "",
+      "year": "2017",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/505475a",
+      "title": "",
+      "year": "2014",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://www.openaccessrepository.it/record/168904",
+      "file": "10.1038_505475a.md"
+    },
+    {
+      "doi": "10.1016/j.marpol.2011.11.003",
+      "title": "",
+      "year": "2012",
+      "journal": "Mar. Policy",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1145560",
+      "title": "",
+      "year": "2007",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1088/1748-9326/aab212",
+      "title": "",
+      "year": "2018",
+      "journal": "Environ. Res. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://iopscience.iop.org/article/10.1088/1748-9326/aab212/pdf",
+      "file": "10.1088_1748-9326_aab212.md"
+    }
+  ]
+}

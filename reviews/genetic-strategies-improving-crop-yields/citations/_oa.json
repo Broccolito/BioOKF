@@ -1,0 +1,1399 @@
+{
+  "article": {
+    "slug": "s41586-019-1679-0",
+    "doi": "10.1038/s41586-019-1679-0",
+    "title": "Genetic strategies for improving crop yields",
+    "url": "https://www.nature.com/articles/s41586-019-1679-0",
+    "abbrev": "genetic-strategies-improving-crop-yields",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/genetic-strategies-improving-crop-yields"
+  },
+  "n_refs": 156,
+  "n_with_doi": 143,
+  "n_oa": 97,
+  "records": [
+    {
+      "doi": "10.1073/pnas.0912953109",
+      "title": "",
+      "year": "2012",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/109/31/12302.full.pdf",
+      "file": "10.1073_pnas.0912953109.md"
+    },
+    {
+      "doi": "10.1002/ps.3863",
+      "title": "",
+      "year": "2015",
+      "journal": "Pest Manag. Sci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nbt.2597",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1104/pp.108.118828",
+      "title": "",
+      "year": "2008",
+      "journal": "Plant Physiol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2409020?pdf=render",
+      "file": "10.1104_pp.108.118828.md"
+    },
+    {
+      "doi": "10.1146/annurev-arplant-043014-114734",
+      "title": "",
+      "year": "2015",
+      "journal": "Annu. Rev. Plant Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/pbi.12650",
+      "title": "",
+      "year": "2017",
+      "journal": "Plant Biotechnol. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/pbi.12650",
+      "file": "10.1111_pbi.12650.md"
+    },
+    {
+      "doi": "10.1271/bbb.65.383",
+      "title": "",
+      "year": "2001",
+      "journal": "Biosci. Biotechnol. Biochem.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1467-7652.2008.00363.x",
+      "title": "",
+      "year": "2008",
+      "journal": "Plant Biotechnol. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1467-7652.2008.00363.x",
+      "file": "10.1111_j.1467-7652.2008.00363.x.md"
+    },
+    {
+      "doi": "10.1016/s2542-5196(17)30007-4",
+      "title": "",
+      "year": "2017",
+      "journal": "Lancet Planet. Health",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S2542519617300074/pdf",
+      "file": "10.1016_s2542-5196_17_30007-4.md"
+    },
+    {
+      "doi": "10.1111/gcb.14381",
+      "title": "",
+      "year": "2018",
+      "journal": "Chang. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/gcb.14381",
+      "file": "10.1111_gcb.14381.md"
+    },
+    {
+      "doi": "10.1038/nrg.2017.82",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Rev. Genet.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature11420",
+      "title": "",
+      "year": "2012",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1098/rstb.2013.0164",
+      "title": "",
+      "year": "2013",
+      "journal": "Phil. Trans. R. Soc. Lond. B",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rstb.2013.0164",
+      "file": "10.1098_rstb.2013.0164.md"
+    },
+    {
+      "doi": "10.1038/news.2010.498",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1259855",
+      "title": "",
+      "year": "2015",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/cms/asset/1d5f4d98-8da4-4e48-b570-4b1d0c420d6c/pap.pdf",
+      "file": "10.1126_science.1259855.md"
+    },
+    {
+      "doi": "10.5194/acp-15-13849-2015",
+      "title": "",
+      "year": "2015",
+      "journal": "Atmos. Chem. Phys.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.atmos-chem-phys.net/15/13849/2015/acp-15-13849-2015.pdf",
+      "file": "10.5194_acp-15-13849-2015.md"
+    },
+    {
+      "doi": "10.1146/annurev-phyto-080614-120106",
+      "title": "",
+      "year": "2017",
+      "journal": "Annu. Rev. Phytopathol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-phyto-080614-120106",
+      "file": "10.1146_annurev-phyto-080614-120106.md"
+    },
+    {
+      "doi": "10.1146/annurev-phyto-080417-045817",
+      "title": "",
+      "year": "2018",
+      "journal": "Annu. Rev. Phytopathol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ddd.uab.cat/record/200471",
+      "file": "10.1146_annurev-phyto-080417-045817.md"
+    },
+    {
+      "doi": "10.1038/s41477-018-0194-x",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Plants",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ueaeprints.uea.ac.uk/id/eprint/68161/1/Accepted_manuscript.pdf",
+      "file": "10.1038_s41477-018-0194-x.md"
+    },
+    {
+      "doi": "10.1111/pbi.12999",
+      "title": "",
+      "year": "2019",
+      "journal": "Plant Biotechnol. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/pbi.12999",
+      "file": "10.1111_pbi.12999.md"
+    },
+    {
+      "doi": "10.1007/s11248-018-0099-5",
+      "title": "",
+      "year": "2019",
+      "journal": "Transgenic Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature22372",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aat2623",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1371/journal.pgen.1002813",
+      "title": "",
+      "year": "2012",
+      "journal": "PLoS Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1002813&type=printable",
+      "file": "10.1371_journal.pgen.1002813.md"
+    },
+    {
+      "doi": "10.1126/science.1236011",
+      "title": "",
+      "year": "2013",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nbt.3540",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ueaeprints.uea.ac.uk/id/eprint/58440/10/NBT_JJones_etal_2016_AcceleratedCloning_AAM.pdf",
+      "file": "10.1038_nbt.3540.md"
+    },
+    {
+      "doi": "10.1038/nature22011",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ueaeprints.uea.ac.uk/id/eprint/63752/1/Bevan_Insight_v2_copy.pdf",
+      "file": "10.1038_nature22011.md"
+    },
+    {
+      "doi": "10.1186/s13059-018-1392-6",
+      "title": "",
+      "year": "2018",
+      "journal": "Genome Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-018-1392-6",
+      "file": "10.1186_s13059-018-1392-6.md"
+    },
+    {
+      "doi": "10.1038/s41587-018-0007-9",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1146/annurev-phyto-102313-045854",
+      "title": "",
+      "year": "2014",
+      "journal": "Annu. Rev. Phytopathol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-phyto-102313-045854",
+      "file": "10.1146_annurev-phyto-102313-045854.md"
+    },
+    {
+      "doi": "10.1111/tpj.13775",
+      "title": "",
+      "year": "2018",
+      "journal": "Plant J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/tpj.13775",
+      "file": "10.1111_tpj.13775.md"
+    },
+    {
+      "doi": "10.1111/pbi.12987",
+      "title": "",
+      "year": "2019",
+      "journal": "Plant Biotechnol. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/pbi.12987",
+      "file": "10.1111_pbi.12987.md"
+    },
+    {
+      "doi": "10.1038/nbt.2969",
+      "title": "",
+      "year": "2014",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/pbi.12631",
+      "title": "",
+      "year": "2017",
+      "journal": "Plant Biotechnol. J.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5316926?pdf=render",
+      "file": "10.1111_pbi.12631.md"
+    },
+    {
+      "doi": "10.1186/s13059-019-1678-3",
+      "title": "",
+      "year": "2019",
+      "journal": "Genome Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-019-1678-3",
+      "file": "10.1186_s13059-019-1678-3.md"
+    },
+    {
+      "doi": "10.1038/nclimate1990",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Clim. Chang.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1094/phyto-12-18-0488-fi",
+      "title": "",
+      "year": "2019",
+      "journal": "Phytopathology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://apsjournals.apsnet.org/doi/pdf/10.1094/PHYTO-12-18-0488-FI",
+      "file": "10.1094_phyto-12-18-0488-fi.md"
+    },
+    {
+      "doi": "10.1016/j.cub.2018.03.054",
+      "title": "",
+      "year": "2018",
+      "journal": "Curr. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0960982218304123/pdf",
+      "file": "10.1016_j.cub.2018.03.054.md"
+    },
+    {
+      "doi": "10.1371/journal.pgen.1007287",
+      "title": "",
+      "year": "2018",
+      "journal": "PLoS Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1007287&type=printable",
+      "file": "10.1371_journal.pgen.1007287.md"
+    },
+    {
+      "doi": "10.1073/pnas.1706277114",
+      "title": "",
+      "year": "2017",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/114/45/E9483.full.pdf",
+      "file": "10.1073_pnas.1706277114.md"
+    },
+    {
+      "doi": "10.1038/nrg3901",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Rev. Genet.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1146/annurev-arplant-042916-040936",
+      "title": "",
+      "year": "2017",
+      "journal": "Annu. Rev. Plant Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-arplant-042916-040936",
+      "file": "10.1146_annurev-arplant-042916-040936.md"
+    },
+    {
+      "doi": "10.1111/nph.13209",
+      "title": "",
+      "year": "2015",
+      "journal": "New Phytol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/nph.13209",
+      "file": "10.1111_nph.13209.md"
+    },
+    {
+      "doi": "10.1038/nature04920",
+      "title": "",
+      "year": "2006",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1105/tpc.106.043000",
+      "title": "",
+      "year": "2006",
+      "journal": "Plant Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/plcell/article-pdf/18/8/2021/36904221/plcell_v18_8_2021.pdf",
+      "file": "10.1105_tpc.106.043000.md"
+    },
+    {
+      "doi": "10.1038/nature08258",
+      "title": "",
+      "year": "2009",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aat1577",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://nagoya.repo.nii.ac.jp/records/26408",
+      "file": "10.1126_science.aat1577.md"
+    },
+    {
+      "doi": "10.1270/jsbbs.52.143",
+      "title": "",
+      "year": "2002",
+      "journal": "Breed. Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jstage.jst.go.jp/article/jsbbs/52/2/52_2_143/_pdf",
+      "file": "10.1270_jsbbs.52.143.md"
+    },
+    {
+      "doi": "10.1038/s41588-018-0040-0",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41588-018-0040-0.pdf",
+      "file": "10.1038_s41588-018-0040-0.md"
+    },
+    {
+      "doi": "10.1038/nature10534",
+      "title": "",
+      "year": "2011",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://nottingham-repository.worktribe.com/output/2804504",
+      "file": "10.1038_nature10534.md"
+    },
+    {
+      "doi": "10.1038/nature10536",
+      "title": "",
+      "year": "2011",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/pbi.12334",
+      "title": "",
+      "year": "2016",
+      "journal": "Plant Biotechnol. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/pbi.12334",
+      "file": "10.1111_pbi.12334.md"
+    },
+    {
+      "doi": "10.1073/pnas.1818507116",
+      "title": "",
+      "year": "2019",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://pure-oai.bham.ac.uk/ws/files/57764858/Lin_et_al_accepted_file.pdf",
+      "file": "10.1073_pnas.1818507116.md"
+    },
+    {
+      "doi": "10.1038/35008089",
+      "title": "",
+      "year": "2000",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1173041",
+      "title": "",
+      "year": "2009",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2827199?pdf=render",
+      "file": "10.1126_science.1173041.md"
+    },
+    {
+      "doi": "10.1126/science.1172408",
+      "title": "",
+      "year": "2009",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1522840113",
+      "title": "",
+      "year": "2016",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/113/7/1949.full.pdf",
+      "file": "10.1073_pnas.1522840113.md"
+    },
+    {
+      "doi": "10.1073/pnas.1601954113",
+      "title": "",
+      "year": "2016",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://mediatum.ub.tum.de/node?id=1366571",
+      "file": "10.1073_pnas.1601954113.md"
+    },
+    {
+      "doi": "10.1038/nature14123",
+      "title": "",
+      "year": "2015",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41477-019-0361-8",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Plants",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/tpj.14110",
+      "title": "",
+      "year": "2019",
+      "journal": "Plant J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/tpj.14110",
+      "file": "10.1111_tpj.14110.md"
+    },
+    {
+      "doi": "10.1146/annurev-arplant-050213-040000",
+      "title": "",
+      "year": "2014",
+      "journal": "Annu. Rev. Plant Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jbiotec.2016.01.014",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Biotechnol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.sciencedirect.com/science/article/pii/S0168165616300165",
+      "file": "10.1016_j.jbiotec.2016.01.014.md"
+    },
+    {
+      "doi": "10.1111/j.1365-313x.2005.02463.x",
+      "title": "",
+      "year": "2005",
+      "journal": "Plant J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/j.1365-313X.2005.02463.x",
+      "file": "10.1111_j.1365-313x.2005.02463.x.md"
+    },
+    {
+      "doi": "10.3389/fpls.2017.01251",
+      "title": "",
+      "year": "2017",
+      "journal": "Front. Plant Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fpls.2017.01251/pdf",
+      "file": "10.3389_fpls.2017.01251.md"
+    },
+    {
+      "doi": "10.1038/ng.2725",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Genet.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/srep05563",
+      "title": "",
+      "year": "2014",
+      "journal": "Sci. Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/srep05563.pdf",
+      "file": "10.1038_srep05563.md"
+    },
+    {
+      "doi": "10.1093/pcp/pcy141",
+      "title": "",
+      "year": "2018",
+      "journal": "Plant Cell Physiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/pcp/article-pdf/59/10/1919/25992961/pcy141.pdf",
+      "file": "10.1093_pcp_pcy141.md"
+    },
+    {
+      "doi": "10.1073/pnas.1400966111",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://hal.inrae.fr/hal-02636761",
+      "file": "10.1073_pnas.1400966111.md"
+    },
+    {
+      "doi": "10.1126/science.aau3956",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://nottingham-repository.worktribe.com/output/1365597",
+      "file": "10.1126_science.aau3956.md"
+    },
+    {
+      "doi": "10.1016/j.fcr.2012.05.014",
+      "title": "",
+      "year": "2013",
+      "journal": "Field Crops Res.",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1016/j.fcr.2012.05.014",
+      "file": "10.1016_j.fcr.2012.05.014.md"
+    },
+    {
+      "doi": "10.1016/j.plantsci.2018.01.020",
+      "title": "",
+      "year": "2018",
+      "journal": "Plant Sci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.270.5242.1660",
+      "title": "",
+      "year": "1995",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s0014-5793(02)03488-9",
+      "title": "",
+      "year": "2002",
+      "journal": "FEBS Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1016/S0014-5793%2802%2903488-9",
+      "file": "10.1016_s0014-5793_02_03488-9.md"
+    },
+    {
+      "doi": "10.1038/ng1643",
+      "title": "",
+      "year": "2005",
+      "journal": "Nat. Genet.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1365-313x.2005.02595.x",
+      "title": "",
+      "year": "2005",
+      "journal": "Plant J.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nbt.2120",
+      "title": "",
+      "year": "2012",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2015.12.021",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867415016852/pdf",
+      "file": "10.1016_j.cell.2015.12.021.md"
+    },
+    {
+      "doi": "10.1105/tpc.112.107227",
+      "title": "",
+      "year": "2013",
+      "journal": "Plant Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.plantcell.org/content/plantcell/25/1/324.full.pdf",
+      "file": "10.1105_tpc.112.107227.md"
+    },
+    {
+      "doi": "10.1105/tpc.108.064543",
+      "title": "",
+      "year": "2009",
+      "journal": "Plant Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/plcell/article-pdf/21/2/655/36917789/plcell_v21_2_655.pdf",
+      "file": "10.1105_tpc.108.064543.md"
+    },
+    {
+      "doi": "10.1073/pnas.1220766110",
+      "title": "",
+      "year": "2013",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/110/13/5241.full.pdf",
+      "file": "10.1073_pnas.1220766110.md"
+    },
+    {
+      "doi": "10.1038/nature13538",
+      "title": "",
+      "year": "2014",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s40641-016-0042-x",
+      "title": "",
+      "year": "2016",
+      "journal": "Curr. Clim. Change Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://link.springer.com/content/pdf/10.1007%2Fs40641-016-0042-x.pdf",
+      "file": "10.1007_s40641-016-0042-x.md"
+    },
+    {
+      "doi": "10.1126/science.1251423",
+      "title": "",
+      "year": "2014",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1701762114",
+      "title": "",
+      "year": "2017",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ddd.uab.cat/record/181051",
+      "file": "10.1073_pnas.1701762114.md"
+    },
+    {
+      "doi": "10.1029/wr017i004p01133",
+      "title": "",
+      "year": "1981",
+      "journal": "Wat. Resour. Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/jxb/eru064",
+      "title": "",
+      "year": "2014",
+      "journal": "J. Exp. Bot.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jxb/article-pdf/65/21/6191/18044162/eru064.pdf",
+      "file": "10.1093_jxb_eru064.md"
+    },
+    {
+      "doi": "10.1038/nbt.3277",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nplants.2015.124",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Plants",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature20591",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://nottingham-repository.worktribe.com/output/3788608",
+      "file": "10.1038_nature20591.md"
+    },
+    {
+      "doi": "10.1146/annurev-arplant-042809-112206",
+      "title": "",
+      "year": "2010",
+      "journal": "Annu. Rev. Plant Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-arplant-042809-112206",
+      "file": "10.1146_annurev-arplant-042809-112206.md"
+    },
+    {
+      "doi": "10.1098/rstb.2016.0380",
+      "title": "",
+      "year": "2017",
+      "journal": "Phil. Trans. R. Soc. Lond. B",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rstb.2016.0380",
+      "file": "10.1098_rstb.2016.0380.md"
+    },
+    {
+      "doi": "10.1104/pp.110.161687",
+      "title": "",
+      "year": "2010",
+      "journal": "Plant Physiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/plphys/article-pdf/154/2/434/48202596/plphys_v154_2_434.pdf",
+      "file": "10.1104_pp.110.161687.md"
+    },
+    {
+      "doi": "10.1007/bf00386231",
+      "title": "",
+      "year": "1980",
+      "journal": "Planta",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2015.03.019",
+      "title": "",
+      "year": "2015",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867415003062/pdf",
+      "file": "10.1016_j.cell.2015.03.019.md"
+    },
+    {
+      "doi": "10.1073/pnas.1424031112",
+      "title": "",
+      "year": "2015",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/112/28/8529.full.pdf",
+      "file": "10.1073_pnas.1424031112.md"
+    },
+    {
+      "doi": "10.1093/jxb/ery366",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Exp. Bot.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jxb/article-pdf/70/1/7/27267446/ery366.pdf",
+      "file": "10.1093_jxb_ery366.md"
+    },
+    {
+      "doi": "10.1104/pp.110.168831",
+      "title": "",
+      "year": "2011",
+      "journal": "Plant Physiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/plphys/article-pdf/155/1/86/38109479/plphys_v155_1_86.pdf",
+      "file": "10.1104_pp.110.168831.md"
+    },
+    {
+      "doi": "10.1093/jxb/erw076",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Exp. Bot.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jxb/article-pdf/67/10/2977/18073047/erw076.pdf",
+      "file": "10.1093_jxb_erw076.md"
+    },
+    {
+      "doi": "10.1104/pp.17.00622",
+      "title": "",
+      "year": "2017",
+      "journal": "Plant Physiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.plantphysiol.org/content/plantphysiol/175/1/134.full.pdf",
+      "file": "10.1104_pp.17.00622.md"
+    },
+    {
+      "doi": "10.1126/science.1220177",
+      "title": "",
+      "year": "2012",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1098/rstb.1997.0069",
+      "title": "",
+      "year": "1997",
+      "journal": "Phil. Trans. R. Soc. Lond. B",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1691977?pdf=render",
+      "file": "10.1098_rstb.1997.0069.md"
+    },
+    {
+      "doi": "10.1111/nph.14351",
+      "title": "",
+      "year": "2017",
+      "journal": "New Phytol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://nph.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/nph.14351",
+      "file": "10.1111_nph.14351.md"
+    },
+    {
+      "doi": "10.1038/s41477-018-0252-4",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Plants",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.17863/cam.38299",
+      "file": "10.1038_s41477-018-0252-4.md"
+    },
+    {
+      "doi": "10.1098/rstb.2016.0384",
+      "title": "",
+      "year": "2017",
+      "journal": "Trans. R. Soc. Lond. B",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rstb.2016.0384",
+      "file": "10.1098_rstb.2016.0384.md"
+    },
+    {
+      "doi": "10.1126/science.aai8878",
+      "title": "",
+      "year": "2016",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://eprints.lancs.ac.uk/id/eprint/83711/1/Revised_main_manuscript.pdf",
+      "file": "10.1126_science.aai8878.md"
+    },
+    {
+      "doi": "10.1126/science.aat9077",
+      "title": "",
+      "year": "2019",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://digitalcommons.lsu.edu/cgi/viewcontent.cgi?article=4210&context=biosci_pubs",
+      "file": "10.1126_science.aat9077.md"
+    },
+    {
+      "doi": "10.1016/j.cub.2018.10.015",
+      "title": "",
+      "year": "2018",
+      "journal": "Curr. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0960982218313447/pdf",
+      "file": "10.1016_j.cub.2018.10.015.md"
+    },
+    {
+      "doi": "10.1073/pnas.1809204115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/115/42/E9971.full.pdf",
+      "file": "10.1073_pnas.1809204115.md"
+    },
+    {
+      "doi": "10.1038/ncb2009",
+      "title": "",
+      "year": "2010",
+      "journal": "Nat. Cell Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/nph.12104",
+      "title": "",
+      "year": "2013",
+      "journal": "New Phytol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/nph.12104",
+      "file": "10.1111_nph.12104.md"
+    },
+    {
+      "doi": "10.1104/pp.16.01844",
+      "title": "",
+      "year": "2017",
+      "journal": "Plant Physiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.plantphysiol.org/content/plantphysiol/174/2/776.full.pdf",
+      "file": "10.1104_pp.16.01844.md"
+    },
+    {
+      "doi": "10.1111/nph.15344",
+      "title": "",
+      "year": "2019",
+      "journal": "New Phytol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://nph.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/nph.15344",
+      "file": "10.1111_nph.15344.md"
+    },
+    {
+      "doi": "10.1038/s41467-018-03231-x",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-018-03231-x.pdf",
+      "file": "10.1038_s41467-018-03231-x.md"
+    },
+    {
+      "doi": "10.1104/pp.109.144113",
+      "title": "",
+      "year": "2009",
+      "journal": "Plant Physiol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2773101?pdf=render",
+      "file": "10.1104_pp.109.144113.md"
+    },
+    {
+      "doi": "10.1038/nature11909",
+      "title": "",
+      "year": "2013",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://api.research-repository.uwa.edu.au/ws/files/33274313/Schroeder_et_al_2013_Using_membrane_transporters_to.pdf",
+      "file": "10.1038_nature11909.md"
+    },
+    {
+      "doi": "10.1038/s41586-018-0415-5",
+      "title": "",
+      "year": "2018",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/pbr.12371",
+      "title": "",
+      "year": "2016",
+      "journal": "Plant Breed.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/pbr.12371",
+      "file": "10.1111_pbr.12371.md"
+    },
+    {
+      "doi": "10.1038/nrmicro2990",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Rev. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1146/annurev.micro.58.030603.123749",
+      "title": "",
+      "year": "2005",
+      "journal": "Annu. Rev. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1146/annurev-phyto-080516-035521",
+      "title": "",
+      "year": "2018",
+      "journal": "Annu. Rev. Phytopathol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-phyto-080516-035521",
+      "file": "10.1146_annurev-phyto-080516-035521.md"
+    },
+    {
+      "doi": "10.1093/mp/sss115",
+      "title": "",
+      "year": "2013",
+      "journal": "Mol. Plant",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1674205214608819/pdf",
+      "file": "10.1093_mp_sss115.md"
+    },
+    {
+      "doi": "10.1073/pnas.1804992115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/115/36/E8509.full.pdf",
+      "file": "10.1073_pnas.1804992115.md"
+    },
+    {
+      "doi": "10.1093/femsle/fnx274",
+      "title": "",
+      "year": "2018",
+      "journal": "FEMS Microbiol. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/femsle/article-pdf/365/2/fnx274/23923940/fnx274.pdf",
+      "file": "10.1093_femsle_fnx274.md"
+    },
+    {
+      "doi": "10.1126/science.aat1743",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/11336/117667",
+      "file": "10.1126_science.aat1743.md"
+    },
+    {
+      "doi": "10.1073/pnas.1721395115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/115/20/E4700.full.pdf",
+      "file": "10.1073_pnas.1721395115.md"
+    },
+    {
+      "doi": "10.1371/journal.pbio.2001793",
+      "title": "",
+      "year": "2017",
+      "journal": "PLoS Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2001793&type=printable",
+      "file": "10.1371_journal.pbio.2001793.md"
+    },
+    {
+      "doi": "10.1371/journal.pbio.2003862",
+      "title": "",
+      "year": "2018",
+      "journal": "PLoS Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2003862&type=printable",
+      "file": "10.1371_journal.pbio.2003862.md"
+    },
+    {
+      "doi": "10.1038/nature21417",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.osti.gov/servlets/purl/1599005",
+      "file": "10.1038_nature21417.md"
+    },
+    {
+      "doi": "10.1146/annurev-phyto-082712-102340",
+      "title": "",
+      "year": "2014",
+      "journal": "Annu. Rev. Phytopathol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://dspace.library.uu.nl/handle/1874/297859",
+      "file": "10.1146_annurev-phyto-082712-102340.md"
+    },
+    {
+      "doi": "10.1038/nbt.4232",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1469-8137.1995.tb03033.x",
+      "title": "",
+      "year": "1995",
+      "journal": "New Phytol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s005720100097",
+      "title": "",
+      "year": "2001",
+      "journal": "Mycorrhiza",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1717617115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://utoronto.scholaris.ca/bitstreams/e3497f10-c3eb-47fc-9834-1ee339987ef4/download",
+      "file": "10.1073_pnas.1717617115.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2016.02.028",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867416301301/pdf",
+      "file": "10.1016_j.cell.2016.02.028.md"
+    },
+    {
+      "doi": "10.1371/journal.pbio.2006352",
+      "title": "",
+      "year": "2018",
+      "journal": "PLoS Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosbiology/article/file?id=10.1371/journal.pbio.2006352&type=printable",
+      "file": "10.1371_journal.pbio.2006352.md"
+    },
+    {
+      "doi": "10.1038/nclimate3061",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Clim. Chang.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.gfs.2017.01.008",
+      "title": "",
+      "year": "2017",
+      "journal": "Glob. Food Sec.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5439485?pdf=render",
+      "file": "10.1016_j.gfs.2017.01.008.md"
+    },
+    {
+      "doi": "10.1088/1748-9326/11/11/114006",
+      "title": "",
+      "year": "2016",
+      "journal": "Environ. Res. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://iopscience.iop.org/article/10.1088/1748-9326/11/11/114006/pdf",
+      "file": "10.1088_1748-9326_11_11_114006.md"
+    },
+    {
+      "doi": "10.1038/499023a",
+      "title": "",
+      "year": "2013",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/499023a.pdf",
+      "file": "10.1038_499023a.md"
+    },
+    {
+      "doi": "10.1038/s41586-018-0785-8",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/pbi.12953",
+      "title": "",
+      "year": "2019",
+      "journal": "Plant Biotechnol. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/pbi.12953",
+      "file": "10.1111_pbi.12953.md"
+    },
+    {
+      "doi": "10.1038/nature13776",
+      "title": "",
+      "year": "2014",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    }
+  ]
+}

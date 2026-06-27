@@ -1,0 +1,1252 @@
+{
+  "article": {
+    "slug": "s41586-022-05474-7",
+    "doi": "10.1038/s41586-022-05474-7",
+    "title": "Brain borders at the central stage of neuroimmunology",
+    "url": "https://www.nature.com/articles/s41586-022-05474-7",
+    "abbrev": "brain-borders-central-stage-neuroimmunology",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/brain-borders-central-stage-neuroimmunology"
+  },
+  "meta": {
+    "title": "Brain borders at the central stage of neuroimmunology",
+    "authors": [
+      "Justin Rustenhoven",
+      "Jonathan Kipnis"
+    ],
+    "published": [
+      2022,
+      12,
+      14
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-022-05474-7",
+    "n_references": 136,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "5474_CR1",
+      "doi": "10.1016/j.neuron.2021.10.022",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2021",
+      "author": "J Herz",
+      "unstructured": "Herz, J. et al. GABAergic neuronal IL-4R mediates T cell effect on memory. Neuron 109, 3609\u20133618.e9 (2021)."
+    },
+    {
+      "key": "5474_CR2",
+      "doi": "10.1038/s41590-020-0776-4",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2020",
+      "author": "K Alves de Lima",
+      "unstructured": "Alves de Lima, K. et al. Meningeal \u03b3\u03b4 T cells regulate anxiety-like behavior via IL-17a signaling in neurons. Nat. Immunol. 21, 1421\u20131429 (2020)."
+    },
+    {
+      "key": "5474_CR3",
+      "doi": "10.1126/science.aad0314",
+      "title": "",
+      "journal": "Science",
+      "year": "2016",
+      "author": "GB Choi",
+      "unstructured": "Choi, G. B. et al. The maternal interleukin-17a pathway in mice promotes autism-like phenotypes in offspring. Science 351, 933\u2013939 (2016)."
+    },
+    {
+      "key": "5474_CR4",
+      "doi": "10.4049/jimmunol.1100028",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2011",
+      "author": "N Mikami",
+      "unstructured": "Mikami, N. et al. Calcitonin gene-related peptide is an important regulator of cutaneous immunity: effect on dendritic cell and T cell functions. J. Immunol. 186, 6886\u20136893 (2011)."
+    },
+    {
+      "key": "5474_CR5",
+      "doi": "10.1038/gene.2010.72",
+      "title": "",
+      "journal": "Genes Immun.",
+      "year": "2011",
+      "author": "J Qian",
+      "unstructured": "Qian, J., Galitovskiy, V., Chernyavsky, A. I., Marchenko, S. & Grando, S. A. Plasticity of the murine spleen T-cell cholinergic receptors and their role in in vitro differentiation of na\u00efve CD4 T cells toward the Th1, Th2 and Th17 lineages. Genes Immun. 12, 222\u2013230 (2011)."
+    },
+    {
+      "key": "5474_CR6",
+      "doi": "10.1101/2021.12.01.470746",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Li, S. et al. Interleukin-13 and its receptor are synaptic proteins involved in plasticity and neuroprotection. Preprint at bioRxiv https://doi.org/10.1101/2021.12.01.470746 (2021)."
+    },
+    {
+      "key": "5474_CR7",
+      "doi": "10.1038/nature13154",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "H Lee",
+      "unstructured": "Lee, H. et al. Synapse elimination and learning rules coregulated by MHC class I H2-Db. Nature 509, 195\u2013200 (2014)."
+    },
+    {
+      "key": "5474_CR8",
+      "doi": "10.1126/science.aaz2288",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "C Wang",
+      "unstructured": "Wang, C. et al. Microglia mediate forgetting via complement-dependent synaptic elimination. Science 367, 688\u2013694 (2020)."
+    },
+    {
+      "key": "5474_CR9",
+      "doi": "10.1038/s41586-021-04082-1",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "B Zhang",
+      "unstructured": "Zhang, B. et al. B cell-derived GABA elicits IL-10+ macrophages to limit anti-tumour immunity. Nature 599, 471\u2013476 (2021)."
+    },
+    {
+      "key": "5474_CR10",
+      "doi": "10.1038/s41586-019-1843-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "MD Reed",
+      "unstructured": "Reed, M. D. et al. IL-17a promotes sociability in mouse models of neurodevelopmental disorders. Nature 577, 249\u2013253 (2020)."
+    },
+    {
+      "key": "5474_CR11",
+      "doi": "10.1038/s41577-021-00508-z",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2021",
+      "author": "AF Salvador",
+      "unstructured": "Salvador, A. F., de Lima, K. A. & Kipnis, J. Neuromodulation by the immune system: a focus on cytokines. Nat. Rev. Immunol. 21, 526\u2013541 (2021)."
+    },
+    {
+      "key": "5474_CR12",
+      "doi": "10.1016/j.celrep.2019.05.082",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2019",
+      "author": "X Ding",
+      "unstructured": "Ding, X. et al. Panicle-shaped sympathetic architecture in the spleen parenchyma modulates antibacterial innate immunity. Cell Rep. 27, 3799\u20133807.e3 (2019)."
+    },
+    {
+      "key": "5474_CR13",
+      "doi": "10.1016/j.cell.2020.11.028",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "S Huang",
+      "unstructured": "Huang, S. et al. Lymph nodes are innervated by a unique population of sensory neurons with immunomodulatory potential. Cell 184, 441\u2013459.e25 (2021)."
+    },
+    {
+      "key": "5474_CR14",
+      "doi": "10.1038/s43587-022-00268-y",
+      "title": "",
+      "journal": "Nat. Aging",
+      "year": "2022",
+      "author": "DH Goldman",
+      "unstructured": "Goldman, D. H. et al. Age-associated suppression of exploratory activity during sickness is linked to meningeal lymphatic dysfunction and microglia activation. Nat. Aging 2, 704\u2013713 (2022)."
+    },
+    {
+      "key": "5474_CR15",
+      "doi": "10.1016/j.cell.2021.10.013",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "T Koren",
+      "unstructured": "Koren, T. et al. Insular cortex neurons encode and retrieve specific immune responses. Cell 184, 5902\u20135915.e17 (2021)."
+    },
+    {
+      "key": "5474_CR16",
+      "doi": "10.1186/1743-8454-2-8",
+      "title": "",
+      "journal": "Cerebrospinal Fluid Res.",
+      "year": "2005",
+      "author": "M Schulz",
+      "unstructured": "Schulz, M. & Engelhardt, B. The circumventricular organs participate in the immunopathogenesis of experimental autoimmune encephalomyelitis. Cerebrospinal Fluid Res. 2, 8 (2005)."
+    },
+    {
+      "key": "5474_CR17",
+      "doi": "10.1186/2045-8118-8-4",
+      "title": "",
+      "journal": "Fluids Barriers CNS",
+      "year": "2011",
+      "author": "B Engelhardt",
+      "unstructured": "Engelhardt, B. & Coisne, C. Fluids and barriers of the CNS establish immune privilege by confining immune surveillance to a two-walled castle moat surrounding the CNS castle. Fluids Barriers CNS 8, 4 (2011)."
+    },
+    {
+      "key": "5474_CR18",
+      "doi": "10.1038/ni.3666",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2017",
+      "author": "B Engelhardt",
+      "unstructured": "Engelhardt, B., Vajkoczy, P. & Weller, R. O. The movers and shapers in immune privilege of the CNS. Nat. Immunol. 18, 123\u2013131 (2017)."
+    },
+    {
+      "key": "5474_CR19",
+      "doi": "10.1038/s41583-018-0070-8",
+      "title": "",
+      "journal": "Nat. Rev. Neurosci.",
+      "year": "2018",
+      "author": "JV Forrester",
+      "unstructured": "Forrester, J. V., McMenamin, P. G. & Dando, S. J. CNS infection and immune privilege. Nat. Rev. Neurosci. 19, 655\u2013671 (2018)."
+    },
+    {
+      "key": "5474_CR20",
+      "doi": "10.1016/j.it.2006.11.004",
+      "title": "",
+      "journal": "Trends Immunol.",
+      "year": "2007",
+      "author": "I Galea",
+      "unstructured": "Galea, I., Bechmann, I. & Perry, V. H. What is immune privilege (not)? Trends Immunol. 28, 12\u201318 (2007)."
+    },
+    {
+      "key": "5474_CR21",
+      "doi": "10.1016/j.it.2015.08.006",
+      "title": "",
+      "journal": "Trends Immunol.",
+      "year": "2015",
+      "author": "A Louveau",
+      "unstructured": "Louveau, A., Harris, T. H. & Kipnis, J. Revisiting the concept of CNS immune privilege. Trends Immunol. 36, 569\u2013577 (2015)."
+    },
+    {
+      "key": "5474_CR22",
+      "doi": "10.1084/jem.38.2.183",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1923",
+      "author": "JB Murphy",
+      "unstructured": "Murphy, J. B. & Sturm, E. Conditions determining the transplantability of tissues in the brain. J. Exp. Med. 38, 183\u2013197 (1923)."
+    },
+    {
+      "key": "5474_CR23",
+      "doi": "",
+      "title": "",
+      "journal": "Br. J. Exp. Pathol.",
+      "year": "1948",
+      "author": "PB Medawar",
+      "unstructured": "Medawar, P. B. Immunity to homologous grafted skin; the fate of skin homografts transplanted to the brain, to subcutaneous tissue, and to the anterior chamber of the eye. Br. J. Exp. Pathol. 29, 58\u201369 (1948)."
+    },
+    {
+      "key": "5474_CR24",
+      "doi": "10.1111/j.1750-3639.1992.tb00703.x",
+      "title": "",
+      "journal": "Brain Pathol.",
+      "year": "1992",
+      "author": "HF Cserr",
+      "unstructured": "Cserr, H. F., Harling-Berg, C. J. & Knopf, P. M. Drainage of brain extracellular fluid into blood and deep cervical lymph and its immunological significance. Brain Pathol. 2, 269\u2013276 (1992)."
+    },
+    {
+      "key": "5474_CR25",
+      "doi": "10.1038/332843a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1988",
+      "author": "D Sun",
+      "unstructured": "Sun, D., Qin, Y., Chluba, J., Epplen, J. T. & Wekerle, H. Suppression of experimentally induced autoimmune encephalomyelitis by cytolytic T\u2013T cell interactions. Nature 332, 843\u2013845 (1988)."
+    },
+    {
+      "key": "5474_CR26",
+      "doi": "10.1002/jnr.490280213",
+      "title": "",
+      "journal": "J. Neurosci. Res.",
+      "year": "1991",
+      "author": "WF Hickey",
+      "unstructured": "Hickey, W. F., Hsu, B. L. & Kimura, H. T-lymphocyte entry into the central nervous system. J. Neurosci. Res. 28, 254\u2013260 (1991)."
+    },
+    {
+      "key": "5474_CR27",
+      "doi": "10.1126/scitranslmed.3003748",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2012",
+      "author": "JJ Iliff",
+      "unstructured": "Iliff, J. J. et al. A paravascular pathway facilitates CSF flow through the brain parenchyma and the clearance of interstitial solutes, including amyloid \u03b2. Sci. Transl. Med. 4, 147ra111 (2012)."
+    },
+    {
+      "key": "5474_CR28",
+      "doi": "10.1038/s41593-018-0227-9",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2018",
+      "author": "A Louveau",
+      "unstructured": "Louveau, A. et al. CNS lymphatic drainage and neuroinflammation are regulated by meningeal lymphatic vasculature. Nat. Neurosci. 21, 1380\u20131391 (2018)."
+    },
+    {
+      "key": "5474_CR29",
+      "doi": "10.1038/s41586-019-1912-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "E Song",
+      "unstructured": "Song, E. et al. VEGF-C-driven lymphatic drainage enables immunosurveillance of brain tumours. Nature 577, 689\u2013694 (2020). This study demonstrates how augmentation of meningeal lymphatic drainage can enhance CNS antigen drainage and promote T cell-mediated rejection of primary brain tumours."
+    },
+    {
+      "key": "5474_CR30",
+      "doi": "",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2020",
+      "author": "RO Carare",
+      "unstructured": "Carare, R. O. et al. Clearance of interstitial fluid (ISF) and CSF (CLIC) group\u2014part of Vascular Professional Interest Area (PIA). Alzheimers Dement. 12, e12053 (2020)."
+    },
+    {
+      "key": "5474_CR31",
+      "doi": "10.1111/bpa.12159",
+      "title": "",
+      "journal": "Brain Pathol.",
+      "year": "2014",
+      "author": "CA Hawkes",
+      "unstructured": "Hawkes, C. A., Jayakody, N., Johnston, D. A., Bechmann, I. & Carare, R. O. Failure of perivascular drainage of \u03b2-amyloid in cerebral amyloid angiopathy. Brain Pathol. 24, 396\u2013403 (2014)."
+    },
+    {
+      "key": "5474_CR32",
+      "doi": "10.1038/s41422-020-0287-8",
+      "title": "",
+      "journal": "Cell Res.",
+      "year": "2020",
+      "author": "X Hu",
+      "unstructured": "Hu, X. et al. Meningeal lymphatic vessels regulate brain tumor drainage and immunity. Cell Res. 30, 229\u2013243 (2020)."
+    },
+    {
+      "key": "5474_CR33",
+      "doi": "10.1126/science.abl7122",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "J Rustenhoven",
+      "unstructured": "Rustenhoven, J. A privileged brain. Science 374, 548\u2013548 (2021)."
+    },
+    {
+      "key": "5474_CR34",
+      "doi": "10.1016/j.cell.2020.12.040",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "J Rustenhoven",
+      "unstructured": "Rustenhoven, J. et al. Functional characterization of the dural sinuses as a neuroimmune interface. Cell 184, 1000\u20131016.e27 (2021). This study reveals how exposure to CNS antigens and immune trafficking via the dural sinuses enables antigen presentation and immune surveillance of the brain from a distal site."
+    },
+    {
+      "key": "5474_CR35",
+      "doi": "10.1038/s41593-022-01029-1",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2022",
+      "author": "JA Mazzitelli",
+      "unstructured": "Mazzitelli, J. A. et al. Cerebrospinal fluid regulates skull bone marrow niches via direct access through dural channels. Nat. Neurosci. 25, 555\u2013560 (2022). This study reveals how CSF can access CNS-associated bone marrow and enhance haematopoiesis and immune cell migration under inflammatory conditions."
+    },
+    {
+      "key": "5474_CR36",
+      "doi": "10.1038/s41593-022-01060-2",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2022",
+      "author": "FE Pulous",
+      "unstructured": "Pulous, F. E. et al. Cerebrospinal fluid can exit into the skull bone marrow and instruct cranial hematopoiesis in mice with bacterial meningitis. Nat. Neurosci. 25, 567\u2013576 (2022). This study reveals how CSF can access the skull bone marrow and enhance haematopoiesis following CNS infection."
+    },
+    {
+      "key": "5474_CR37",
+      "doi": "10.1093/brain/awab388",
+      "title": "",
+      "journal": "Brain J. Neurol.",
+      "year": "2021",
+      "author": "G Ringstad",
+      "unstructured": "Ringstad, G. & Eide, P. K. Molecular trans-dural efflux to skull bone marrow in humans with cerebrospinal fluid disorders. Brain J. Neurol. 145, 1464\u20131472 (2021). This study reveals how the CSF efflux routes to the skull bone marrow observed in rodents are conserved in humans."
+    },
+    {
+      "key": "5474_CR38",
+      "doi": "10.1016/j.immuni.2021.09.016",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2021",
+      "author": "Y Wang",
+      "unstructured": "Wang, Y. et al. Early developing B cells undergo negative selection by central nervous system-specific antigens in the meninges. Immunity 54, 2784\u20132794.e6 (2021). This study demonstrates how exposure to CNS-derived antigens in the dural mater shapes the B cell repertoire and contributes to immune tolerance by eliminating cells with CNS-reactive B cell receptors."
+    },
+    {
+      "key": "5474_CR39",
+      "doi": "10.1038/s41586-020-2886-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "Z Fitzpatrick",
+      "unstructured": "Fitzpatrick, Z. et al. Gut-educated IgA plasma cells defend the meningeal venous sinuses. Nature 587, 472\u2013476 (2020). This study demonstrates the importance of dural sinus-associated plasma cells as a first-line of defence in preventing CNS infection by blood pathogens."
+    },
+    {
+      "key": "5474_CR40",
+      "doi": "10.1126/sciimmunol.aay5199",
+      "title": "",
+      "journal": "Sci. Immunol.",
+      "year": "2019",
+      "author": "M Ribeiro",
+      "unstructured": "Ribeiro, M. et al. Meningeal \u03b3\u03b4 T cell-derived IL-17 controls synaptic plasticity and short-term memory. Sci. Immunol. 4, eaay5199 (2019)."
+    },
+    {
+      "key": "5474_CR41",
+      "doi": "10.1038/nature18626",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "AJ Filiano",
+      "unstructured": "Filiano, A. J. et al. Unexpected role of interferon-\u03b3 in regulating neuronal connectivity and social behaviour. Nature 535, 425\u2013429 (2016)."
+    },
+    {
+      "key": "5474_CR42",
+      "doi": "10.1126/science.abf7844",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "A Cugurra",
+      "unstructured": "Cugurra, A. et al. Skull and vertebral bone marrow are myeloid cell reservoirs for the meninges and CNS parenchyma. Science 373, eabf7844 (2021). This study highlights how the CNS-associated bone marrow can supply myeloid cells to the brain and spinal cord meninges under homeostasis and during diverse pathologies."
+    },
+    {
+      "key": "5474_CR43",
+      "doi": "10.1126/science.abf9277",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "S Brioschi",
+      "unstructured": "Brioschi, S. et al. Heterogeneity of meningeal B cells reveals a lymphopoietic niche at the CNS borders. Science 373, eabf9277 (2021). This study demonstrates how the CNS-associated bone marrow can supply B cells to the meninges and how the meninges function as an active site for B cell maturation."
+    },
+    {
+      "key": "5474_CR44",
+      "doi": "10.1038/s41593-018-0213-2",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2018",
+      "author": "F Herisson",
+      "unstructured": "Herisson, F. et al. Direct vascular channels connect skull bone marrow and the brain surface enabling myeloid cell migration. Nat. Neurosci. 21, 1209\u20131217 (2018). This study was the first to identify the presence of skull bone marrow channels that connect this haematopoietic site with the underlying brain meninges, enabling immune cell trafficking."
+    },
+    {
+      "key": "5474_CR45",
+      "doi": "10.1016/j.gde.2010.12.005",
+      "title": "",
+      "journal": "Curr. Opin. Genet. Dev.",
+      "year": "2011",
+      "author": "JA Siegenthaler",
+      "unstructured": "Siegenthaler, J. A. & Pleasure, S. J. We have got you \u2018covered\u2019: how the meninges control brain development. Curr. Opin. Genet. Dev. 21, 249\u2013255 (2011)."
+    },
+    {
+      "key": "5474_CR46",
+      "doi": "10.1016/j.cell.2009.10.004",
+      "title": "",
+      "journal": "Cell",
+      "year": "2009",
+      "author": "JA Siegenthaler",
+      "unstructured": "Siegenthaler, J. A. et al. Retinoic acid from the meninges regulates cortical neuron generation. Cell 139, 597\u2013609 (2009)."
+    },
+    {
+      "key": "5474_CR47",
+      "doi": "10.1016/j.immuni.2018.01.011",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2018",
+      "author": "D Mrdjen",
+      "unstructured": "Mrdjen, D. et al. High-dimensional single-cell mapping of central nervous system immune cells reveals distinct myeloid subsets in health, aging, and disease. Immunity 48, 380\u2013395.e6 (2018)."
+    },
+    {
+      "key": "5474_CR48",
+      "doi": "10.1038/s41593-019-0393-4",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2019",
+      "author": "H Van Hove",
+      "unstructured": "Van Hove, H. et al. A single-cell atlas of mouse brain macrophages reveals unique transcriptional identities shaped by ontogeny and tissue environment. Nat. Neurosci. 22, 1021\u20131035 (2019). This study provides a comprehensive atlas of immune cell populations at the various CNS borders including the dura, leptomeninges and choroid plexus."
+    },
+    {
+      "key": "5474_CR49",
+      "doi": "10.1038/s41593-018-0100-x",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2018",
+      "author": "B Ajami",
+      "unstructured": "Ajami, B. et al. Single-cell mass cytometry reveals distinct populations of brain myeloid cells in mouse neuroinflammation and neurodegeneration models. Nat. Neurosci. 21, 541\u2013551 (2018)."
+    },
+    {
+      "key": "5474_CR50",
+      "doi": "10.1038/s41586-022-05397-3",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "A Drieu",
+      "unstructured": "Drieu, A. et al. Parenchymal border macrophages regulate the flow dynamics of the cerebrospinal fluid. Nature 611, 585\u2013593 (2022)."
+    },
+    {
+      "key": "5474_CR51",
+      "doi": "10.1038/s41586-019-1895-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "D Gate",
+      "unstructured": "Gate, D. et al. Clonally expanded CD8 T cells patrol the cerebrospinal fluid in Alzheimer\u2019s disease. Nature 577, 399\u2013404 (2020). This study highlights the importance of adaptive immune cells in the brain borders of human neurodegenerative disease by demonstrating the presence of clonally expanded T cells that recognize Epstein\u2013Barr viral antigens in the CSF of patients with Alzheimer\u2019s disease."
+    },
+    {
+      "key": "5474_CR52",
+      "doi": "10.1038/s41467-019-14118-w",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "D Schafflick",
+      "unstructured": "Schafflick, D. et al. Integrated single cell analysis of blood and cerebrospinal fluid leukocytes in multiple sclerosis. Nat. Commun. 11, 247 (2020)."
+    },
+    {
+      "key": "5474_CR53",
+      "doi": "10.1084/jem.20161982",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2017",
+      "author": "SP Gadani",
+      "unstructured": "Gadani, S. P., Smirnov, I., Wiltbank, A. T., Overall, C. C. & Kipnis, J. Characterization of meningeal type 2 innate lymphocytes and their response to CNS injury. J. Exp. Med. 214, 285\u2013296 (2017)."
+    },
+    {
+      "key": "5474_CR54",
+      "doi": "10.1038/s41593-022-01108-3",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2022",
+      "author": "A Merlini",
+      "unstructured": "Merlini, A. et al. Distinct roles of the meningeal layers in CNS autoimmunity. Nat. Neurosci. 25, 887\u2013899 (2022)."
+    },
+    {
+      "key": "5474_CR55",
+      "doi": "10.1038/nature16939",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "C Schl\u00e4ger",
+      "unstructured": "Schl\u00e4ger, C. et al. Effector T-cell trafficking between the leptomeninges and the cerebrospinal fluid. Nature 530, 349\u2013353 (2016)."
+    },
+    {
+      "key": "5474_CR56",
+      "doi": "10.1084/jem.20091419",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2010",
+      "author": "NC Derecki",
+      "unstructured": "Derecki, N. C. et al. Regulation of learning and memory by meningeal immunity: a key role for IL-4. J. Exp. Med. 207, 1067\u20131080 (2010)."
+    },
+    {
+      "key": "5474_CR57",
+      "doi": "10.1016/j.bbi.2019.07.017",
+      "title": "",
+      "journal": "Brain. Behav. Immun.",
+      "year": "2019",
+      "author": "L Chaskiel",
+      "unstructured": "Chaskiel, L. et al. Interleukin-1 reduces food intake and body weight in rat by acting in the arcuate hypothalamus. Brain. Behav. Immun. 81, 560\u2013573 (2019)."
+    },
+    {
+      "key": "5474_CR58",
+      "doi": "10.1101/cshperspect.a020412",
+      "title": "",
+      "journal": "Cold Spring Harb. Perspect. Biol.",
+      "year": "2015",
+      "author": "R Daneman",
+      "unstructured": "Daneman, R. & Prat, A. The blood\u2013brain barrier. Cold Spring Harb. Perspect. Biol. 7, a020412 (2015)."
+    },
+    {
+      "key": "5474_CR59",
+      "doi": "10.1038/s41593-019-0497-x",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2019",
+      "author": "RN Munji",
+      "unstructured": "Munji, R. N. et al. Profiling the mouse brain endothelial transcriptome in health and disease models reveals a core blood\u2013brain barrier dysfunction module. Nat. Neurosci. 22, 1892\u20131902 (2019)."
+    },
+    {
+      "key": "5474_CR60",
+      "doi": "10.1084/jem.20050011",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2005",
+      "author": "N Kawakami",
+      "unstructured": "Kawakami, N. et al. Live imaging of effector cell trafficking and autoantigen recognition within the unfolding autoimmune encephalomyelitis lesion. J. Exp. Med. 201, 1805\u20131814 (2005)."
+    },
+    {
+      "key": "5474_CR61",
+      "doi": "10.1038/s41467-019-14195-x",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "G Ringstad",
+      "unstructured": "Ringstad, G. & Eide, P. K. Cerebrospinal fluid tracer efflux to parasagittal dura in humans. Nat. Commun. 11, 354 (2020). This study reveals how the CSF efflux routes to the dural sinuses observed in rodents are conserved in humans."
+    },
+    {
+      "key": "5474_CR62",
+      "doi": "10.1016/j.brainres.2021.147669",
+      "title": "",
+      "journal": "Brain Res.",
+      "year": "2021",
+      "author": "PK Eide",
+      "unstructured": "Eide, P. K. & Ringstad, G. Cerebrospinal fluid egress to human parasagittal dura and the impact of sleep deprivation. Brain Res. 1772, 147669 (2021)."
+    },
+    {
+      "key": "5474_CR63",
+      "doi": "10.1038/s41593-021-00880-y",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2021",
+      "author": "D Schafflick",
+      "unstructured": "Schafflick, D. et al. Single-cell profiling of CNS border compartment leukocytes reveals that B cells and their progenitors reside in non-diseased meninges. Nat. Neurosci. 24, 1225\u20131234 (2021)."
+    },
+    {
+      "key": "5474_CR64",
+      "doi": "10.7554/elife.29738",
+      "title": "",
+      "journal": "eLife",
+      "year": "2017",
+      "author": "M Absinta",
+      "unstructured": "Absinta, M. et al. Human and nonhuman primate meninges harbor lymphatic vessels that can be visualized noninvasively by MRI. eLife 6, e29738 (2017)."
+    },
+    {
+      "key": "5474_CR65",
+      "doi": "10.1038/nature14432",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "A Louveau",
+      "unstructured": "Louveau, A. et al. Structural and functional features of central nervous system lymphatics. Nature 523, 337\u2013341 (2015). This study demonstrates the presence of a lymphatic network in the dural meninges that drains cerebrospinal fluid."
+    },
+    {
+      "key": "5474_CR66",
+      "doi": "10.1084/jem.20142290",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2015",
+      "author": "A Aspelund",
+      "unstructured": "Aspelund, A. et al. A dural lymphatic vascular system that drains brain interstitial fluid and macromolecules. J. Exp. Med. 212, 991\u2013999 (2015). This study demonstrates the presence of a lymphatic network in the dural meninges that drains CSF."
+    },
+    {
+      "key": "5474_CR67",
+      "doi": "10.1161/circresaha.120.317372",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2021",
+      "author": "D Castranova",
+      "unstructured": "Castranova, D. et al. Live imaging of intracranial lymphatics in the zebrafish. Circ. Res. 128, 42\u201358 (2021)."
+    },
+    {
+      "key": "5474_CR68",
+      "doi": "10.1084/jem.20170391",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2017",
+      "author": "S Antila",
+      "unstructured": "Antila, S. et al. Development and plasticity of meningeal lymphatic vessels. J. Exp. Med. 214, 3645\u20133667 (2017)."
+    },
+    {
+      "key": "5474_CR69",
+      "doi": "10.1038/s41586-019-1419-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "JH Ahn",
+      "unstructured": "Ahn, J. H. et al. Meningeal lymphatic vessels at the skull base drain cerebrospinal fluid. Nature 572, 62\u201366 (2019)."
+    },
+    {
+      "key": "5474_CR70",
+      "doi": "10.1038/s41586-021-03489-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "S Da Mesquita",
+      "unstructured": "Da Mesquita, S. et al. Meningeal lymphatics affect microglia responses and anti-A\u03b2 immunotherapy. Nature 593, 255\u2013260 (2021)."
+    },
+    {
+      "key": "5474_CR71",
+      "doi": "10.1038/s41586-018-0368-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "S Da Mesquita",
+      "unstructured": "Da Mesquita, S. et al. Functional aspects of meningeal lymphatics in ageing and Alzheimer\u2019s disease. Nature 560, 185\u2013191 (2018)."
+    },
+    {
+      "key": "5474_CR72",
+      "doi": "10.1242/dev.200065",
+      "title": "",
+      "journal": "Development",
+      "year": "2022",
+      "author": "PS Ang",
+      "unstructured": "Ang, P. S., Matrongolo, M. J. & Tischfield, M. A. The growth and expansion of meningeal lymphatic networks are affected in craniosynostosis. Development 149, dev200065 (2022)."
+    },
+    {
+      "key": "5474_CR73",
+      "doi": "10.1084/jem.20220035",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2022",
+      "author": "L Jacob",
+      "unstructured": "Jacob, L. et al. Conserved meningeal lymphatic drainage circuits in mice and humans. J. Exp. Med. 219, e20220035 (2022). This study highlights the key pathways for lymphatic drainage of CSF in rodents and demonstrates how these are conserved in humans."
+    },
+    {
+      "key": "5474_CR74",
+      "doi": "10.1038/s41586-022-04596-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "T Masuda",
+      "unstructured": "Masuda, T. et al. Specification of CNS macrophage subsets occurs postnatally in defined niches. Nature 604, 740\u2013748 (2022)."
+    },
+    {
+      "key": "5474_CR75",
+      "doi": "10.1186/s12987-022-00323-1",
+      "title": "",
+      "journal": "Fluids Barriers CNS",
+      "year": "2022",
+      "author": "N MacAulay",
+      "unstructured": "MacAulay, N., Keep, R. F. & Zeuthen, T. Cerebrospinal fluid production by the choroid plexus: a century of barrier research revisited. Fluids Barriers CNS 19, 26 (2022)."
+    },
+    {
+      "key": "5474_CR76",
+      "doi": "10.1016/j.cell.2021.04.003",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "N Dani",
+      "unstructured": "Dani, N. et al. A cellular and spatial map of the choroid plexus across brain ventricles and ages. Cell 184, 3056\u20133074.e21 (2021). This study provides a comprehensive atlas for probing choroid plexus immune cell phenotypes across distinct anatomical regions and during development."
+    },
+    {
+      "key": "5474_CR77",
+      "doi": "10.1016/j.neuron.2020.08.024",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2020",
+      "author": "FB Shipley",
+      "unstructured": "Shipley, F. B. et al. Tracking calcium dynamics and immune surveillance at the choroid plexus blood\u2013cerebrospinal fluid interface. Neuron 108, 623\u2013639.e10 (2020)."
+    },
+    {
+      "key": "5474_CR78",
+      "doi": "10.1016/j.immuni.2013.02.012",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2013",
+      "author": "R Shechter",
+      "unstructured": "Shechter, R. et al. Recruitment of beneficial M2 macrophages to injured spinal cord is orchestrated by remote brain choroid plexus. Immunity 38, 555\u2013569 (2013)."
+    },
+    {
+      "key": "5474_CR79",
+      "doi": "10.3389/fimmu.2018.01066",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2018",
+      "author": "I Strominger",
+      "unstructured": "Strominger, I. et al. The choroid plexus functions as a niche for T-cell stimulation within the central nervous system. Front. Immunol. 9, 1066 (2018)."
+    },
+    {
+      "key": "5474_CR80",
+      "doi": "10.3171/jns.1985.63.6.0867",
+      "title": "",
+      "journal": "J. Neurosurg.",
+      "year": "1985",
+      "author": "ML Upton",
+      "unstructured": "Upton, M. L. & Weller, R. O. The morphology of cerebrospinal fluid drainage pathways in human arachnoid granulations. J. Neurosurg. 63, 867\u2013875 (1985)."
+    },
+    {
+      "key": "5474_CR81",
+      "doi": "10.1038/s41467-017-01484-6",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "Q Ma",
+      "unstructured": "Ma, Q., Ineichen, B. V., Detmar, M. & Proulx, S. T. Outflow of cerebrospinal fluid is predominantly through lymphatic vessels and is reduced in aged mice. Nat. Commun. 8, 1434 (2017)."
+    },
+    {
+      "key": "5474_CR82",
+      "doi": "10.1172/jci.insight.150881",
+      "title": "",
+      "journal": "JCI Insight",
+      "year": "2022",
+      "author": "Y Decker",
+      "unstructured": "Decker, Y. et al. Magnetic resonance imaging of cerebrospinal fluid outflow after low-rate lateral ventricle infusion in mice. JCI Insight 8, e150881 (2022)."
+    },
+    {
+      "key": "5474_CR83",
+      "doi": "10.1007/s00401-018-1916-x",
+      "title": "",
+      "journal": "Acta Neuropathol.",
+      "year": "2019",
+      "author": "Q Ma",
+      "unstructured": "Ma, Q. et al. Rapid lymphatic efflux limits cerebrospinal fluid flow to the brain. Acta Neuropathol. 137, 151\u2013165 (2019)."
+    },
+    {
+      "key": "5474_CR84",
+      "doi": "10.1038/s41467-018-08163-0",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "M Hsu",
+      "unstructured": "Hsu, M. et al. Neuroinflammation-induced lymphangiogenesis near the cribriform plate contributes to drainage of CNS-derived antigens and immune cells. Nat. Commun. 10, 229 (2019)."
+    },
+    {
+      "key": "5474_CR85",
+      "doi": "10.1186/s40035-019-0147-y",
+      "title": "",
+      "journal": "Transl. Neurodegener.",
+      "year": "2019",
+      "author": "W Zou",
+      "unstructured": "Zou, W. et al. Blocking meningeal lymphatic drainage aggravates Parkinson\u2019s disease-like pathology in mice overexpressing mutated \u03b1-synuclein. Transl. Neurodegener. 8, 7 (2019)."
+    },
+    {
+      "key": "5474_CR86",
+      "doi": "10.1016/j.jneuroim.2004.12.018",
+      "title": "",
+      "journal": "J. Neuroimmunol.",
+      "year": "2005",
+      "author": "BO Fabriek",
+      "unstructured": "Fabriek, B. O. et al. In vivo detection of myelin proteins in cervical lymph nodes of MS patients using ultrasound-guided fine-needle aspiration cytology. J. Neuroimmunol. 161, 190\u2013194 (2005)."
+    },
+    {
+      "key": "5474_CR87",
+      "doi": "10.1038/s41586-018-0342-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "H Yao",
+      "unstructured": "Yao, H. et al. Leukaemia hijacks a neural mechanism to invade the central nervous system. Nature 560, 55\u201360 (2018)."
+    },
+    {
+      "key": "5474_CR88",
+      "doi": "10.1038/s41593-018-0301-3",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2019",
+      "author": "R Cai",
+      "unstructured": "Cai, R. et al. Panoptic imaging of transparent mice reveals whole-body neuronal projections and skull-meninges connections. Nat. Neurosci. 22, 317\u2013327 (2019)."
+    },
+    {
+      "key": "5474_CR89",
+      "doi": "",
+      "title": "",
+      "journal": "Front. Cell. Neurosci.",
+      "year": "2021",
+      "author": "J Derk",
+      "unstructured": "Derk, J., Jones, H. E., Como, C., Pawlikowski, B. & Siegenthaler, J. A. Living on the edge of the CNS: meninges cell diversity in health and disease. Front. Cell. Neurosci. 15, 245 (2021)."
+    },
+    {
+      "key": "5474_CR90",
+      "doi": "10.1038/nature12808",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "TL Roth",
+      "unstructured": "Roth, T. L. et al. Transcranial amelioration of inflammation and cell death after brain injury. Nature 505, 223\u2013228 (2014)."
+    },
+    {
+      "key": "5474_CR91",
+      "doi": "10.1038/nrneurol.2017.188",
+      "title": "",
+      "journal": "Nat. Rev. Neurol.",
+      "year": "2018",
+      "author": "MD Sweeney",
+      "unstructured": "Sweeney, M. D., Sagare, A. P. & Zlokovic, B. V. Blood\u2013brain barrier breakdown in Alzheimer disease and other neurodegenerative disorders. Nat. Rev. Neurol. 14, 133\u2013150 (2018)."
+    },
+    {
+      "key": "5474_CR92",
+      "doi": "10.1101/2021.12.24.473988",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Kolabas, Z. I. et al. Multi-omics and 3D-imaging reveal bone heterogeneity and unique calvaria cells in neuroinflammation. Preprint at bioRxiv https://doi.org/10.1101/2021.12.24.473988 (2021)."
+    },
+    {
+      "key": "5474_CR93",
+      "doi": "10.1038/s41590-020-0661-1",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2020",
+      "author": "A Giladi",
+      "unstructured": "Giladi, A. et al. Cxcl10+ monocytes define a pathogenic subset in the central nervous system during autoimmune neuroinflammation. Nat. Immunol. 21, 525\u2013534 (2020)."
+    },
+    {
+      "key": "5474_CR94",
+      "doi": "10.1038/nm.4022",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2016",
+      "author": "K Baruch",
+      "unstructured": "Baruch, K. et al. PD-1 immune checkpoint blockade reduces pathology and improves memory in mouse models of Alzheimer\u2019s disease. Nat. Med. 22, 135\u2013137 (2016)."
+    },
+    {
+      "key": "5474_CR95",
+      "doi": "10.1016/j.immuni.2017.08.008",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2017",
+      "author": "S Krasemann",
+      "unstructured": "Krasemann, S. et al. The TREM2-APOE pathway drives the transcriptional phenotype of dysfunctional microglia in neurodegenerative diseases. Immunity 47, 566\u2013581.e9 (2017)."
+    },
+    {
+      "key": "5474_CR96",
+      "doi": "10.1038/s41593-018-0296-9",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2019",
+      "author": "S Parhizkar",
+      "unstructured": "Parhizkar, S. et al. Loss of TREM2 function increases amyloid seeding but reduces plaque-associated ApoE. Nat. Neurosci. 22, 191\u2013204 (2019)."
+    },
+    {
+      "key": "5474_CR97",
+      "doi": "10.1126/scitranslmed.abe3947",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2021",
+      "author": "FA Sayed",
+      "unstructured": "Sayed, F. A. et al. AD-linked R47H-TREM2 mutation induces disease-enhancing microglial states via AKT hyperactivation. Sci. Transl. Med. 13, eabe3947 (2021)."
+    },
+    {
+      "key": "5474_CR98",
+      "doi": "10.1016/j.cell.2017.05.018",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "H Keren-Shaul",
+      "unstructured": "Keren-Shaul, H. et al. A unique microglia type associated with restricting development of Alzheimer\u2019s disease. Cell 169, 1276\u20131290.e17 (2017)."
+    },
+    {
+      "key": "5474_CR99",
+      "doi": "10.1038/s41588-022-01024-z",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2022",
+      "author": "C Bellenguez",
+      "unstructured": "Bellenguez, C. et al. New insights into the genetic etiology of Alzheimer\u2019s disease and related dementias. Nat. Genet. 54, 412\u2013436 (2022)."
+    },
+    {
+      "key": "5474_CR100",
+      "doi": "10.1038/s41588-019-0358-2",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2019",
+      "author": "BW Kunkle",
+      "unstructured": "Kunkle, B. W. et al. Genetic meta-analysis of diagnosed Alzheimer\u2019s disease identifies new risk loci and implicates A\u03b2, tau, immunity and lipid processing. Nat. Genet. 51, 414\u2013430 (2019)."
+    },
+    {
+      "key": "5474_CR101",
+      "doi": "10.1038/s41582-018-0072-1",
+      "title": "",
+      "journal": "Nat. Rev. Neurol.",
+      "year": "2018",
+      "author": "TK Ulland",
+      "unstructured": "Ulland, T. K. & Colonna, M. TREM2\u2014a key player in microglial biology and Alzheimer disease. Nat. Rev. Neurol. 14, 667\u2013675 (2018)."
+    },
+    {
+      "key": "5474_CR102",
+      "doi": "10.1038/s41586-021-04369-3",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "AC Yang",
+      "unstructured": "Yang, A. C. et al. A human brain vascular atlas reveals diverse mediators of Alzheimer\u2019s risk. Nature 603, 885\u2013892 (2022)."
+    },
+    {
+      "key": "5474_CR103",
+      "doi": "10.1038/s41586-019-1362-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "BW Dulken",
+      "unstructured": "Dulken, B. W. et al. Single-cell analysis reveals T cell infiltration in old neurogenic niches. Nature 571, 205\u2013210 (2019)."
+    },
+    {
+      "key": "5474_CR104",
+      "doi": "10.1093/brain/awt259",
+      "title": "",
+      "journal": "Brain J. Neurol.",
+      "year": "2013",
+      "author": "G Kunis",
+      "unstructured": "Kunis, G. et al. IFN-\u03b3-dependent activation of the brain\u2019s choroid plexus for CNS immune surveillance and repair. Brain J. Neurol. 136, 3427\u20133440 (2013)."
+    },
+    {
+      "key": "5474_CR105",
+      "doi": "10.1186/s13024-019-0312-x",
+      "title": "",
+      "journal": "Mol. Neurodegener.",
+      "year": "2019",
+      "author": "TK Patel",
+      "unstructured": "Patel, T. K. et al. Dural lymphatics regulate clearance of extracellular tau from the CNS. Mol. Neurodegener. 14, 11 (2019)."
+    },
+    {
+      "key": "5474_CR106",
+      "doi": "10.1038/s41588-021-00921-z",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2021",
+      "author": "DP Wightman",
+      "unstructured": "Wightman, D. P. et al. A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer\u2019s disease. Nat. Genet. 53, 1276\u20131282 (2021)."
+    },
+    {
+      "key": "5474_CR107",
+      "doi": "10.1038/nn.4025",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2015",
+      "author": "Z Zhao",
+      "unstructured": "Zhao, Z. et al. Central role for PICALM in amyloid-\u03b2 blood\u2013brain barrier transcytosis and clearance. Nat. Neurosci. 18, 978\u2013987 (2015)."
+    },
+    {
+      "key": "5474_CR108",
+      "doi": "10.1073/pnas.1701137114",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "AM Wojtas",
+      "unstructured": "Wojtas, A. M. et al. Loss of clusterin shifts amyloid deposition to the cerebrovasculature via disruption of perivascular drainage pathways. Proc. Natl Acad. Sci. USA 114, E6962\u2013E6971 (2017)."
+    },
+    {
+      "key": "5474_CR109",
+      "doi": "10.1186/s13195-022-00999-5",
+      "title": "",
+      "journal": "Alzheimers Res. Ther.",
+      "year": "2022",
+      "author": "M Simon",
+      "unstructured": "Simon, M. et al. Loss of perivascular aquaporin-4 localization impairs glymphatic exchange and promotes amyloid \u03b2 plaque formation in mice. Alzheimers Res. Ther. 14, 59 (2022)."
+    },
+    {
+      "key": "5474_CR110",
+      "doi": "10.1038/ni1507",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2007",
+      "author": "HF McFarland",
+      "unstructured": "McFarland, H. F. & Martin, R. Multiple sclerosis: a complicated picture of autoimmunity. Nat. Immunol. 8, 913\u2013919 (2007)."
+    },
+    {
+      "key": "5474_CR111",
+      "doi": "10.1038/356063a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1992",
+      "author": "TA Yednock",
+      "unstructured": "Yednock, T. A. et al. Prevention of experimental autoimmune encephalomyelitis by antibodies against \u03b14\u03b21 integrin. Nature 356, 63\u201366 (1992)."
+    },
+    {
+      "key": "5474_CR112",
+      "doi": "10.1146/annurev.iy.08.040190.003051",
+      "title": "",
+      "journal": "Annu. Rev. Immunol.",
+      "year": "1990",
+      "author": "SS Zamvil",
+      "unstructured": "Zamvil, S. S. & Steinman, L. The T lymphocyte in experimental allergic encephalomyelitis. Annu. Rev. Immunol. 8, 579\u2013621 (1990)."
+    },
+    {
+      "key": "5474_CR113",
+      "doi": "10.1007/978-1-4939-8709-2_3",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Louveau, A. in Tertiary Lymphoid Structures: Methods and Protocols (ed. Dieu-Nosjean, M.-C.) 31\u201345 (Springer, 2018)."
+    },
+    {
+      "key": "5474_CR114",
+      "doi": "10.1002/path.2476",
+      "title": "",
+      "journal": "J. Pathol.",
+      "year": "2009",
+      "author": "M van Zwam",
+      "unstructured": "van Zwam, M. et al. Surgical excision of CNS-draining lymph nodes reduces relapse severity in chronic-relapsing experimental autoimmune encephalomyelitis. J. Pathol. 217, 543\u2013551 (2009)."
+    },
+    {
+      "key": "5474_CR115",
+      "doi": "10.1038/nrdp.2015.17",
+      "title": "",
+      "journal": "Nat. Rev. Dis. Primer",
+      "year": "2015",
+      "author": "M Weller",
+      "unstructured": "Weller, M. et al. Glioma. Nat. Rev. Dis. Primer 1, 15017 (2015)."
+    },
+    {
+      "key": "5474_CR116",
+      "doi": "10.1038/s41593-020-00789-y",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2021",
+      "author": "AR Pombo Antunes",
+      "unstructured": "Pombo Antunes, A. R. et al. Single-cell profiling of myeloid cells in glioblastoma across species and disease stage reveals macrophage competition and specialization. Nat. Neurosci. 24, 595\u2013610 (2021)."
+    },
+    {
+      "key": "5474_CR117",
+      "doi": "10.1038/s41586-021-03850-3",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "F Nassiri",
+      "unstructured": "Nassiri, F. et al. A clinically applicable integrative molecular classification of meningiomas. Nature 597, 119\u2013125 (2021)."
+    },
+    {
+      "key": "5474_CR118",
+      "doi": "10.1101/2021.08.03.454066",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Wang, A. Z. et al. Single cell atlas of human dura reveals cellular meningeal landscape and insights into meningioma immune response. Preprint at biorXiv http://biorxiv.org/lookup/doi/10.1101/2021.08.03.454066 (2021)."
+    },
+    {
+      "key": "5474_CR119",
+      "doi": "10.1038/s41588-022-01061-8",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2022",
+      "author": "A Choudhury",
+      "unstructured": "Choudhury, A. et al. Meningioma DNA methylation groups identify biological drivers and therapeutic vulnerabilities. Nat. Genet. 54, 649\u2013659 (2022)."
+    },
+    {
+      "key": "5474_CR120",
+      "doi": "10.1172/jci86950",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2016",
+      "author": "G Faraco",
+      "unstructured": "Faraco, G. et al. Perivascular macrophages mediate the neurovascular and cognitive dysfunction associated with hypertension. J. Clin. Invest. 126, 4674\u20134689 (2016)."
+    },
+    {
+      "key": "5474_CR121",
+      "doi": "10.1161/hypertensionaha.120.15581",
+      "title": "",
+      "journal": "Hypertension",
+      "year": "2020",
+      "author": "MM Santisteban",
+      "unstructured": "Santisteban, M. M. et al. Endothelium\u2013macrophage crosstalk mediates blood\u2013brain barrier dysfunction in hypertension. Hypertension 76, 795\u2013807 (2020)."
+    },
+    {
+      "key": "5474_CR122",
+      "doi": "10.1186/s40478-018-0581-6",
+      "title": "",
+      "journal": "Acta Neuropathol. Commun.",
+      "year": "2018",
+      "author": "J Pedragosa",
+      "unstructured": "Pedragosa, J. et al. CNS-border associated macrophages respond to acute ischemic stroke attracting granulocytes and promoting vascular leakage. Acta Neuropathol. Commun. 6, 76 (2018)."
+    },
+    {
+      "key": "5474_CR123",
+      "doi": "10.1126/science.abi7377",
+      "title": "",
+      "journal": "Science",
+      "year": "2022",
+      "author": "EA Winkler",
+      "unstructured": "Winkler, E. A. et al. A single-cell atlas of the normal and malformed human brain vasculature. Science 375, eabi7377 (2022)."
+    },
+    {
+      "key": "5474_CR124",
+      "doi": "10.3389/fcvm.2020.00005",
+      "title": "",
+      "journal": "Front. Cardiovasc. Med.",
+      "year": "2020",
+      "author": "C Sierra",
+      "unstructured": "Sierra, C. Hypertension and the risk of dementia. Front. Cardiovasc. Med. 7, 5 (2020)."
+    },
+    {
+      "key": "5474_CR125",
+      "doi": "10.1038/s41591-018-0297-y",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2019",
+      "author": "DA Nation",
+      "unstructured": "Nation, D. A. et al. Blood\u2013brain barrier breakdown is an early biomarker of human cognitive dysfunction. Nat. Med. 25, 270\u2013276 (2019)."
+    },
+    {
+      "key": "5474_CR126",
+      "doi": "10.1161/circresaha.117.311054",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2017",
+      "author": "L Park",
+      "unstructured": "Park, L. et al. Brain perivascular macrophages initiate the neurovascular dysfunction of Alzheimer A\u03b2 peptides. Circ. Res. 121, 258\u2013269 (2017)."
+    },
+    {
+      "key": "5474_CR127",
+      "doi": "10.1038/s41590-018-0086-2",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2018",
+      "author": "MV Russo",
+      "unstructured": "Russo, M. V., Latour, L. L. & McGavern, D. B. Distinct myeloid cell subsets promote meningeal remodeling and vascular repair after mild traumatic brain injury. Nat. Immunol. 19, 442\u2013452 (2018)."
+    },
+    {
+      "key": "5474_CR128",
+      "doi": "10.1172/jci10498",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2000",
+      "author": "M Shibata",
+      "unstructured": "Shibata, M. et al. Clearance of Alzheimer\u2019s amyloid-\u03b21\u201340 peptide from brain by LDL receptor\u2013related protein-1 at the blood\u2013brain barrier. J. Clin. Invest. 106, 1489\u20131499 (2000)."
+    },
+    {
+      "key": "5474_CR129",
+      "doi": "10.1172/jci81108",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2016",
+      "author": "SE Storck",
+      "unstructured": "Storck, S. E. et al. Endothelial LRP1 transports amyloid-\u03b21\u201342 across the blood\u2013brain barrier. J. Clin. Invest. 126, 123\u2013136 (2016)."
+    },
+    {
+      "key": "5474_CR130",
+      "doi": "10.1038/nature19323",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "J Sevigny",
+      "unstructured": "Sevigny, J. et al. The antibody aducanumab reduces A\u03b2 plaques in Alzheimer\u2019s disease. Nature 537, 50\u201356 (2016)."
+    },
+    {
+      "key": "5474_CR131",
+      "doi": "10.1001/jamaneurol.2021.4161",
+      "title": "",
+      "journal": "JAMA Neurol.",
+      "year": "2022",
+      "author": "S Salloway",
+      "unstructured": "Salloway, S. et al. Amyloid-related imaging abnormalities in 2 phase 3 studies evaluating aducanumab in patients with early Alzheimer disease. JAMA Neurol. 79, 13\u201321 (2022)."
+    },
+    {
+      "key": "5474_CR132",
+      "doi": "10.1002/alz.12213",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2021",
+      "author": "DS Knopman",
+      "unstructured": "Knopman, D. S., Jones, D. T. & Greicius, M. D. Failure to demonstrate efficacy of aducanumab: an analysis of the EMERGE and ENGAGE trials as reported by Biogen, December 2019. Alzheimers Dement. 17, 696\u2013701 (2021)."
+    },
+    {
+      "key": "5474_CR133",
+      "doi": "10.1038/s41423-020-0488-6",
+      "title": "",
+      "journal": "Cell. Mol. Immunol.",
+      "year": "2020",
+      "author": "Y Zhang",
+      "unstructured": "Zhang, Y. & Zhang, Z. The history and advances in cancer immunotherapy: understanding the characteristics of tumor-infiltrating immune cells and their therapeutic implications. Cell. Mol. Immunol. 17, 807\u2013821 (2020)."
+    },
+    {
+      "key": "5474_CR134",
+      "doi": "10.3389/fmed.2020.00222",
+      "title": "",
+      "journal": "Front. Med.",
+      "year": "2020",
+      "author": "M Pl\u00fc\u00df",
+      "unstructured": "Pl\u00fc\u00df, M. et al. Clinical efficacy of routinely administered belimumab on proteinuria and neuropsychiatric lupus. Front. Med. 7, 222 (2020)."
+    },
+    {
+      "key": "5474_CR135",
+      "doi": "10.1007/s13311-021-01178-4",
+      "title": "",
+      "journal": "Neurotherapeutics",
+      "year": "2022",
+      "author": "I Smets",
+      "unstructured": "Smets, I. & Titulaer, M. J. Antibody therapies in autoimmune encephalitis. Neurotherapeutics 19, 823\u2013831 (2022)."
+    },
+    {
+      "key": "5474_CR136",
+      "doi": "10.1016/s1474-4422(08)70110-8",
+      "title": "",
+      "journal": "Lancet Neurol.",
+      "year": "2008",
+      "author": "A Lutterotti",
+      "unstructured": "Lutterotti, A. & Martin, R. Getting specific: monoclonal antibodies in multiple sclerosis. Lancet Neurol. 7, 538\u2013547 (2008)."
+    }
+  ]
+}

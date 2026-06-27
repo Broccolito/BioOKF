@@ -1,0 +1,1435 @@
+{
+  "article": {
+    "slug": "s41586-019-1679-0",
+    "doi": "10.1038/s41586-019-1679-0",
+    "title": "Genetic strategies for improving crop yields",
+    "url": "https://www.nature.com/articles/s41586-019-1679-0",
+    "abbrev": "genetic-strategies-improving-crop-yields",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/genetic-strategies-improving-crop-yields"
+  },
+  "meta": {
+    "title": "Genetic strategies for improving crop yields",
+    "authors": [
+      "Julia Bailey-Serres",
+      "Jane E. Parker",
+      "Elizabeth A. Ainsworth",
+      "Giles E. D. Oldroyd",
+      "Julian I. Schroeder"
+    ],
+    "published": [
+      2019,
+      11,
+      6
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-019-1679-0",
+    "n_references": 156,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "1679_CR1",
+      "doi": "",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2013",
+      "author": "DK Ray",
+      "unstructured": "Ray, D. K., Mueller, N. D., West, P. C. & Foley, J. A. Yield trends are insufficient to double global crop production by 2050. PLoS ONE 8, e66428 (2013)."
+    },
+    {
+      "key": "1679_CR2",
+      "doi": "10.1073/pnas.0912953109",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2012",
+      "author": "PL Pingali",
+      "unstructured": "Pingali, P. L. Green revolution: impacts, limits, and the path ahead. Proc. Natl Acad. Sci. USA 109, 12302\u201312308 (2012)."
+    },
+    {
+      "key": "1679_CR3",
+      "doi": "10.1002/ps.3863",
+      "title": "",
+      "journal": "Pest Manag. Sci.",
+      "year": "2015",
+      "author": "SO Duke",
+      "unstructured": "Duke, S. O. Perspectives on transgenic, herbicide-resistant crops in the United States almost 20 years after introduction. Pest Manag. Sci. 71, 652\u2013657 (2015)."
+    },
+    {
+      "key": "1679_CR4",
+      "doi": "10.1038/nbt.2597",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2013",
+      "author": "BE Tabashnik",
+      "unstructured": "Tabashnik, B. E., Br\u00e9vault, T. & Carri\u00e8re, Y. Insect resistance to Bt crops: lessons from the first billion acres. Nat. Biotechnol. 31, 510\u2013521 (2013)."
+    },
+    {
+      "key": "1679_CR5",
+      "doi": "",
+      "title": "",
+      "journal": "Bio/Technology",
+      "year": "1992",
+      "author": "MMM Fitch",
+      "unstructured": "Fitch, M. M. M., Manshardt, R. M., Gonsalves, D., Slightom, J. L. & Sanford, J. C. Virus resistant papaya plants derived from tissues bombarded with the coat protein gene of papaya ringspot virus. Bio/Technology 10, 1466\u20131472 (1992)."
+    },
+    {
+      "key": "1679_CR6",
+      "doi": "10.1104/pp.108.118828",
+      "title": "",
+      "journal": "Plant Physiol.",
+      "year": "2008",
+      "author": "P Castiglioni",
+      "unstructured": "Castiglioni, P. et al. Bacterial RNA chaperones confer abiotic stress tolerance in plants and improved grain yield in maize under water-limited conditions. Plant Physiol. 147, 446\u2013455 (2008)."
+    },
+    {
+      "key": "1679_CR7",
+      "doi": "10.1146/annurev-arplant-043014-114734",
+      "title": "",
+      "journal": "Annu. Rev. Plant Biol.",
+      "year": "2015",
+      "author": "I Potrykus",
+      "unstructured": "Potrykus, I. From the concept of totipotency to biofortified cereals. Annu. Rev. Plant Biol. 66, 1\u201322 (2015)."
+    },
+    {
+      "key": "1679_CR8",
+      "doi": "10.1111/pbi.12650",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2017",
+      "author": "J-Y Paul",
+      "unstructured": "Paul, J.-Y. et al. Golden bananas in the field: elevated fruit pro-vitamin A from the expression of a single banana transgene. Plant Biotechnol. J. 15, 520\u2013532 (2017)."
+    },
+    {
+      "key": "1679_CR9",
+      "doi": "10.1271/bbb.65.383",
+      "title": "",
+      "journal": "Biosci. Biotechnol. Biochem.",
+      "year": "2001",
+      "author": "M Murata",
+      "unstructured": "Murata, M. et al. A transgenic apple callus showing reduced polyphenol oxidase activity and lower browning potential. Biosci. Biotechnol. Biochem. 65, 383\u2013388 (2001)."
+    },
+    {
+      "key": "1679_CR10",
+      "doi": "10.1111/j.1467-7652.2008.00363.x",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2008",
+      "author": "CM Rommens",
+      "unstructured": "Rommens, C. M., Yan, H., Swords, K., Richael, C. & Ye, J. Low-acrylamide French fries and potato chips. Plant Biotechnol. J. 6, 843\u2013853 (2008)."
+    },
+    {
+      "key": "1679_CR11",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "FAO. How to Feed the World in 2050, http://www.fao.org/fileadmin/templates/wsfs/docs/expert_paper/How_to_Feed_the_World_in_2050.pdf (FAO, 2009)."
+    },
+    {
+      "key": "1679_CR12",
+      "doi": "10.1016/s2542-5196(17)30007-4",
+      "title": "",
+      "journal": "Lancet Planet. Health",
+      "year": "2017",
+      "author": "M Herrero",
+      "unstructured": "Herrero, M. et al. Farming and the geography of nutrient production for human use: a transdisciplinary analysis. Lancet Planet. Health 1, e33\u2013e42 (2017)."
+    },
+    {
+      "key": "1679_CR13",
+      "doi": "10.1111/gcb.14381",
+      "title": "",
+      "journal": "Chang. Biol.",
+      "year": "2018",
+      "author": "G Mills",
+      "unstructured": "Mills, G. et al. Closing the global ozone yield gap: quantification and cobenefits for multistress tolerance. Glob. Chang. Biol. 24, 4869\u20134893 (2018)."
+    },
+    {
+      "key": "1679_CR14",
+      "doi": "10.1038/nrg.2017.82",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2018",
+      "author": "R Nelson",
+      "unstructured": "Nelson, R., Wiesner-Hanks, T., Wisser, R. & Balint-Kurti, P. Navigating complexity to breed disease-resistant crops. Nat. Rev. Genet. 19, 21\u201333 (2018)."
+    },
+    {
+      "key": "1679_CR15",
+      "doi": "10.1038/nature11420",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "ND Mueller",
+      "unstructured": "Mueller, N. D. et al. Closing yield gaps through nutrient and water management. Nature 490, 254\u2013257 (2012)."
+    },
+    {
+      "key": "1679_CR16",
+      "doi": "10.1098/rstb.2013.0164",
+      "title": "",
+      "journal": "Phil. Trans. R. Soc. Lond. B",
+      "year": "2013",
+      "author": "D Fowler",
+      "unstructured": "Fowler, D. et al. The global nitrogen cycle in the twenty-first century. Phil. Trans. R. Soc. Lond. B 368, 20130164 (2013)."
+    },
+    {
+      "key": "1679_CR17",
+      "doi": "10.1038/news.2010.498",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Qiu, J. Phosphate fertilizer warning for China. Nature News https://doi.org/10.1038/news.2010.498 (2010)."
+    },
+    {
+      "key": "1679_CR18",
+      "doi": "10.1126/science.1259855",
+      "title": "",
+      "journal": "Science",
+      "year": "2015",
+      "author": "W Steffen",
+      "unstructured": "Steffen, W. et al. Planetary boundaries: guiding human development on a changing planet. Science 347, 1259855 (2015)."
+    },
+    {
+      "key": "1679_CR19",
+      "doi": "10.5194/acp-15-13849-2015",
+      "title": "",
+      "journal": "Atmos. Chem. Phys.",
+      "year": "2015",
+      "author": "D Fowler",
+      "unstructured": "Fowler, D. et al. Effects of global change during the 21st century on the nitrogen cycle. Atmos. Chem. Phys. 15, 13849\u201313893 (2015)."
+    },
+    {
+      "key": "1679_CR20",
+      "doi": "10.1146/annurev-phyto-080614-120106",
+      "title": "",
+      "journal": "Annu. Rev. Phytopathol.",
+      "year": "2017",
+      "author": "F Boutrot",
+      "unstructured": "Boutrot, F. & Zipfel, C. Function, discovery, and exploitation of plant pattern recognition receptors for broad-spectrum disease resistance. Annu. Rev. Phytopathol. 55, 257\u2013286 (2017)."
+    },
+    {
+      "key": "1679_CR21",
+      "doi": "10.1146/annurev-phyto-080417-045817",
+      "title": "",
+      "journal": "Annu. Rev. Phytopathol.",
+      "year": "2018",
+      "author": "F Monteiro",
+      "unstructured": "Monteiro, F. & Nishimura, M. T. Structural, functional, and genomic diversity of plant NLR proteins: an evolved resource for rational engineering of plant immunity. Annu. Rev. Phytopathol. 56, 243\u2013267 (2018)."
+    },
+    {
+      "key": "1679_CR22",
+      "doi": "10.1038/s41477-018-0194-x",
+      "title": "",
+      "journal": "Nat. Plants",
+      "year": "2018",
+      "author": "JC De la Concepcion",
+      "unstructured": "De la Concepcion, J. C. et al. Polymorphic residues in rice NLRs expand binding and response to effectors of the blast pathogen. Nat. Plants 4, 576\u2013585 (2018)."
+    },
+    {
+      "key": "1679_CR23",
+      "doi": "10.1111/pbi.12999",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2019",
+      "author": "S Pfeilmeier",
+      "unstructured": "Pfeilmeier, S. et al. Expression of the Arabidopsis thaliana immune receptor EFR in Medicago truncatula reduces infection by a root pathogenic bacterium, but not nitrogen-fixing rhizobial symbiosis. Plant Biotechnol. J. 17, 569\u2013579 (2019)."
+    },
+    {
+      "key": "1679_CR24",
+      "doi": "10.1007/s11248-018-0099-5",
+      "title": "",
+      "journal": "Transgenic Res.",
+      "year": "2019",
+      "author": "T Koller",
+      "unstructured": "Koller, T. et al. Field grown transgenic Pm3e wheat lines show powdery mildew resistance and no fitness costs associated with high transgene expression. Transgenic Res. 28, 9\u201320 (2019)."
+    },
+    {
+      "key": "1679_CR25",
+      "doi": "10.1038/nature22372",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "G Xu",
+      "unstructured": "Xu, G. et al. uORF-mediated translation allows engineered plant disease resistance without fitness costs. Nature 545, 491\u2013494 (2017). The engineering of a pathogen-responsive upstream open reading frame cassette fused to a central Arabidopsis disease-resistance component (NPR1) in transgenic rice creates a crop line that exhibits broad-spectrum disease resistance without a yield penalty."
+    },
+    {
+      "key": "1679_CR26",
+      "doi": "10.1126/science.aat2623",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "C-H Wu",
+      "unstructured": "Wu, C.-H., Derevnina, L. & Kamoun, S. Receptor networks underpin plant immunity. Science 360, 1300\u20131301 (2018)."
+    },
+    {
+      "key": "1679_CR27",
+      "doi": "10.1371/journal.pgen.1002813",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2012",
+      "author": "AC H\u00f6rger",
+      "unstructured": "H\u00f6rger, A. C. et al. Balancing selection at the tomato RCR3 Guardee gene family maintains variation in strength of pathogen defense. PLoS Genet. 8, e1002813 (2012)."
+    },
+    {
+      "key": "1679_CR28",
+      "doi": "",
+      "title": "",
+      "journal": "Front. Plant Sci.",
+      "year": "2016",
+      "author": "C Chen",
+      "unstructured": "Chen, C., E, Z. & Lin, H.-X. Evolution and molecular control of hybrid incompatibility in plants. Front. Plant Sci. 7, 1208 (2016)."
+    },
+    {
+      "key": "1679_CR29",
+      "doi": "10.1126/science.1236011",
+      "title": "",
+      "journal": "Science",
+      "year": "2013",
+      "author": "JL Dangl",
+      "unstructured": "Dangl, J. L., Horvath, D. M. & Staskawicz, B. J. Pivoting the plant immune system from dissection to deployment. Science 341, 746\u2013751 (2013)."
+    },
+    {
+      "key": "1679_CR30",
+      "doi": "10.1038/nbt.3540",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2016",
+      "author": "K Witek",
+      "unstructured": "Witek, K. et al. Accelerated cloning of a potato late blight-resistance gene using RenSeq and SMRT sequencing. Nat. Biotechnol. 34, 656\u2013660 (2016)."
+    },
+    {
+      "key": "1679_CR31",
+      "doi": "10.1038/nature22011",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "MW Bevan",
+      "unstructured": "Bevan, M. W. et al. Genomic innovation for crop improvement. Nature 543, 346\u2013354 (2017)."
+    },
+    {
+      "key": "1679_CR32",
+      "doi": "10.1186/s13059-018-1392-6",
+      "title": "",
+      "journal": "Genome Biol.",
+      "year": "2018",
+      "author": "PC Bailey",
+      "unstructured": "Bailey, P. C. et al. Dominant integration locus drives continuous diversification of plant immune receptors with exogenous domain fusions. Genome Biol. 19, 23 (2018)."
+    },
+    {
+      "key": "1679_CR33",
+      "doi": "10.1038/s41587-018-0007-9",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2019",
+      "author": "S Arora",
+      "unstructured": "Arora, S. et al. Resistance gene cloning from a wild crop relative by sequence capture and association genetics. Nat. Biotechnol. 37, 139\u2013143 (2019)."
+    },
+    {
+      "key": "1679_CR34",
+      "doi": "10.1146/annurev-phyto-102313-045854",
+      "title": "",
+      "journal": "Annu. Rev. Phytopathol.",
+      "year": "2014",
+      "author": "CCN van Schie",
+      "unstructured": "van Schie, C. C. N. & Takken, F. L. W. Susceptibility genes 101: how to be a good host. Annu. Rev. Phytopathol. 52, 551\u2013581 (2014)."
+    },
+    {
+      "key": "1679_CR35",
+      "doi": "10.1111/tpj.13775",
+      "title": "",
+      "journal": "Plant J.",
+      "year": "2018",
+      "author": "M Bezrutczyk",
+      "unstructured": "Bezrutczyk, M. et al. Sugar flux and signaling in plant\u2013microbe interactions. Plant J. 93, 675\u2013685 (2018). The engineering of recently identified plant sugar transporters, which provide pathogens with carbohydrates, enables the restriction of disease through reducing the nutrients available to these pathogens."
+    },
+    {
+      "key": "1679_CR36",
+      "doi": "10.1111/pbi.12987",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2019",
+      "author": "MA Gomez",
+      "unstructured": "Gomez, M. A. et al. Simultaneous CRISPR/Cas9-mediated editing of cassava eIF4E isoforms nCBP-1 and nCBP-2 reduces cassava brown streak disease symptom severity and incidence. Plant Biotechnol. J. 17, 421\u2013434 (2019)."
+    },
+    {
+      "key": "1679_CR37",
+      "doi": "10.1038/nbt.2969",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2014",
+      "author": "Y Wang",
+      "unstructured": "Wang, Y. et al. Simultaneous editing of three homoeoalleles in hexaploid bread wheat confers heritable resistance to powdery mildew. Nat. Biotechnol. 32, 947\u2013951 (2014)."
+    },
+    {
+      "key": "1679_CR38",
+      "doi": "10.1111/pbi.12631",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2017",
+      "author": "J Acevedo-Garcia",
+      "unstructured": "Acevedo-Garcia, J. et al. mlo-based powdery mildew resistance in hexaploid bread wheat generated by a non-transgenic TILLING approach. Plant Biotechnol. J. 15, 367\u2013378 (2017)."
+    },
+    {
+      "key": "1679_CR39",
+      "doi": "10.1186/s13059-019-1678-3",
+      "title": "",
+      "journal": "Genome Biol.",
+      "year": "2019",
+      "author": "D Mehta",
+      "unstructured": "Mehta, D. et al. Linking CRISPR-Cas9 interference in cassava to the evolution of editing-resistant geminiviruses. Genome Biol. 20, 80 (2019)."
+    },
+    {
+      "key": "1679_CR40",
+      "doi": "10.1038/nclimate1990",
+      "title": "",
+      "journal": "Nat. Clim. Chang.",
+      "year": "2013",
+      "author": "DP Bebber",
+      "unstructured": "Bebber, D. P., Ramotowski, M. A. T. & Gurr, S. J. Crop pests and pathogens move polewards in a warming world. Nat. Clim. Chang. 3, 985\u2013988 (2013)."
+    },
+    {
+      "key": "1679_CR41",
+      "doi": "10.1094/phyto-12-18-0488-fi",
+      "title": "",
+      "journal": "Phytopathology",
+      "year": "2019",
+      "author": "RPP Almeida",
+      "unstructured": "Almeida, R. P. P. et al. Addressing the new global threat of Xylella fastidiosa. Phytopathology 109, 172\u2013174 (2019)."
+    },
+    {
+      "key": "1679_CR42",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2013",
+      "author": "C Cheng",
+      "unstructured": "Cheng, C. et al. Plant immune response to pathogens differs with changing temperatures. Nat. Commun. 4, 2530 (2013)."
+    },
+    {
+      "key": "1679_CR43",
+      "doi": "10.1016/j.cub.2018.03.054",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2018",
+      "author": "AC Vel\u00e1squez",
+      "unstructured": "Vel\u00e1squez, A. C., Castroverde, C. D. M. & He, S. Y. Plant-pathogen warfare under changing climate conditions. Curr. Biol. 28, R619\u2013R634 (2018)."
+    },
+    {
+      "key": "1679_CR44",
+      "doi": "10.1371/journal.pgen.1007287",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2018",
+      "author": "S Chen",
+      "unstructured": "Chen, S., Zhang, W., Bolus, S., Rouse, M. N. & Dubcovsky, J. Identification and characterization of wheat stem rust resistance gene Sr21 effective against the Ug99 race group at high temperature. PLoS Genet. 14, e1007287 (2018). Resistance (NLR) genes that function at high temperature are effective against a fungal strain (ug99) that causes wheat stem rust disease and is threatening global wheat production."
+    },
+    {
+      "key": "1679_CR45",
+      "doi": "10.1073/pnas.1706277114",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "W Zhang",
+      "unstructured": "Zhang, W. et al. Identification and characterization of Sr13, a tetraploid wheat gene that confers resistance to the Ug99 stem rust race group. Proc. Natl Acad. Sci. USA 114, E9483\u2013E9492 (2017)."
+    },
+    {
+      "key": "1679_CR46",
+      "doi": "10.1038/nrg3901",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2015",
+      "author": "MV Mickelbart",
+      "unstructured": "Mickelbart, M. V., Hasegawa, P. M. & Bailey-Serres, J. Genetic mechanisms of abiotic stress tolerance that translate to crop yield stability. Nat. Rev. Genet. 16, 237\u2013251 (2015)."
+    },
+    {
+      "key": "1679_CR47",
+      "doi": "10.1146/annurev-arplant-042916-040936",
+      "title": "",
+      "journal": "Annu. Rev. Plant Biol.",
+      "year": "2017",
+      "author": "AM Ismail",
+      "unstructured": "Ismail, A. M. & Horie, T. Genomics, physiology, and molecular breeding approaches for improving salt tolerance. Annu. Rev. Plant Biol. 68, 405\u2013434 (2017)."
+    },
+    {
+      "key": "1679_CR48",
+      "doi": "10.1111/nph.13209",
+      "title": "",
+      "journal": "New Phytol.",
+      "year": "2015",
+      "author": "LACJ Voesenek",
+      "unstructured": "Voesenek, L. A. C. J. & Bailey-Serres, J. Flood adaptive traits and processes: an overview. New Phytol. 206, 57\u201373 (2015)."
+    },
+    {
+      "key": "1679_CR49",
+      "doi": "",
+      "title": "",
+      "journal": "AoB Plants",
+      "year": "2014",
+      "author": "S Singh",
+      "unstructured": "Singh, S., Mackill, D. J. & Ismail, A. M. Physiological basis of tolerance to complete submergence in rice involves genetic factors in addition to the SUB1 gene. AoB Plants 6, plu060 (2014)."
+    },
+    {
+      "key": "1679_CR50",
+      "doi": "10.1038/nature04920",
+      "title": "",
+      "journal": "Nature",
+      "year": "2006",
+      "author": "K Xu",
+      "unstructured": "Xu, K. et al. Sub1A is an ethylene-response-factor-like gene that confers submergence tolerance to rice. Nature 442, 705\u2013708 (2006)."
+    },
+    {
+      "key": "1679_CR51",
+      "doi": "10.1105/tpc.106.043000",
+      "title": "",
+      "journal": "Plant Cell",
+      "year": "2006",
+      "author": "T Fukao",
+      "unstructured": "Fukao, T., Xu, K., Ronald, P. C. & Bailey-Serres, J. A variable cluster of ethylene response factor-like genes regulates metabolic and developmental acclimation responses to submergence in rice. Plant Cell 18, 2021\u20132034 (2006)."
+    },
+    {
+      "key": "1679_CR52",
+      "doi": "",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2018",
+      "author": "MH Dar",
+      "unstructured": "Dar, M. H. et al. No yield penalty under favorable conditions paving the way for successful adoption of flood tolerant rice. Sci. Rep. 8, 9245 (2018)."
+    },
+    {
+      "key": "1679_CR53",
+      "doi": "10.1038/nature08258",
+      "title": "",
+      "journal": "Nature",
+      "year": "2009",
+      "author": "Y Hattori",
+      "unstructured": "Hattori, Y. et al. The ethylene response factors SNORKEL1 and SNORKEL2 allow rice to adapt to deep water. Nature 460, 1026\u20131030 (2009)."
+    },
+    {
+      "key": "1679_CR54",
+      "doi": "10.1126/science.aat1577",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "T Kuroha",
+      "unstructured": "Kuroha, T. et al. Ethylene\u2013gibberellin signaling underlies adaptation of rice to periodic flooding. Science 361, 181\u2013186 (2018). A loss-of-function allele of SEMIDWARF 1 confers short stature in Green Revolution rice, whereas a functional ethylene-induced allele enables elongation of submerged internodes for grain production above floodwaters."
+    },
+    {
+      "key": "1679_CR55",
+      "doi": "10.1270/jsbbs.52.143",
+      "title": "",
+      "journal": "Breed. Sci.",
+      "year": "2002",
+      "author": "M Ashikari",
+      "unstructured": "Ashikari, M. et al. Loss-of-function of a rice gibberellin biosynthetic gene, GA20 oxidase (GA20ox-2), led to the rice \u2018green revolution\u2019. Breed. Sci. 52, 143\u2013150 (2002)."
+    },
+    {
+      "key": "1679_CR56",
+      "doi": "10.1038/s41588-018-0040-0",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2018",
+      "author": "JC Stein",
+      "unstructured": "Stein, J. C. et al. Genomes of 13 domesticated and wild rice relatives highlight genetic conservation, turnover and innovation across the genus Oryza. Nat. Genet. 50, 285\u2013296 (2018). This inventory of genetic variation in the Oryza genus, and other recent pan-genome studies of crops, empower the exploration of phylogenetic relationships and genetic variation at disease-resistance and stress-resilience loci."
+    },
+    {
+      "key": "1679_CR57",
+      "doi": "10.1038/nature10534",
+      "title": "",
+      "journal": "Nature",
+      "year": "2011",
+      "author": "DJ Gibbs",
+      "unstructured": "Gibbs, D. J. et al. Homeostatic response to hypoxia is regulated by the N-end rule pathway in plants. Nature 479, 415\u2013418 (2011)."
+    },
+    {
+      "key": "1679_CR58",
+      "doi": "10.1038/nature10536",
+      "title": "",
+      "journal": "Nature",
+      "year": "2011",
+      "author": "F Licausi",
+      "unstructured": "Licausi, F. et al. Oxygen sensing in plants is mediated by an N-end rule pathway for protein destabilization. Nature 479, 419\u2013422 (2011)."
+    },
+    {
+      "key": "1679_CR59",
+      "doi": "10.1111/pbi.12334",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2016",
+      "author": "GM Mendiondo",
+      "unstructured": "Mendiondo, G. M. et al. Enhanced waterlogging tolerance in barley by manipulation of expression of the N-end rule pathway E3 ligase PROTEOLYSIS6. Plant Biotechnol. J. 14, 40\u201350 (2016)."
+    },
+    {
+      "key": "1679_CR60",
+      "doi": "10.1073/pnas.1818507116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "C-C Lin",
+      "unstructured": "Lin, C.-C. et al. Regulatory cascade involving transcriptional and N-end rule pathways in rice under submergence. Proc. Natl Acad. Sci. USA 116, 3300\u20133309 (2019). The submergence tolerance regulator SUB1A is unusual among ethylene-responsive transcription factors\u2014including two related transcription factors encoded by genes it activates\u2014in its insensitivity to oxygen-dependent turnover."
+    },
+    {
+      "key": "1679_CR61",
+      "doi": "10.1038/35008089",
+      "title": "",
+      "journal": "Nature",
+      "year": "2000",
+      "author": "SJ Liljegren",
+      "unstructured": "Liljegren, S. J. et al. SHATTERPROOF MADS-box genes control seed dispersal in Arabidopsis. Nature 404, 766\u2013770 (2000)."
+    },
+    {
+      "key": "1679_CR62",
+      "doi": "10.1126/science.1173041",
+      "title": "",
+      "journal": "Science",
+      "year": "2009",
+      "author": "S-Y Park",
+      "unstructured": "Park, S.-Y. et al. Abscisic acid inhibits type 2C protein phosphatases via the PYR/PYL family of START proteins. Science 324, 1068\u20131071 (2009)."
+    },
+    {
+      "key": "1679_CR63",
+      "doi": "10.1126/science.1172408",
+      "title": "",
+      "journal": "Science",
+      "year": "2009",
+      "author": "Y Ma",
+      "unstructured": "Ma, Y. et al. Regulators of PP2C phosphatase activity function as abscisic acid sensors. Science 324, 1064\u20131068 (2009)."
+    },
+    {
+      "key": "1679_CR64",
+      "doi": "10.1073/pnas.1522840113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "Y Zhao",
+      "unstructured": "Zhao, Y. et al. ABA receptor PYL9 promotes drought resistance and leaf senescence. Proc. Natl Acad. Sci. USA 113, 1949\u20131954 (2016)."
+    },
+    {
+      "key": "1679_CR65",
+      "doi": "10.1073/pnas.1601954113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "Z Yang",
+      "unstructured": "Yang, Z. et al. Leveraging abscisic acid receptors for efficient water use in Arabidopsis. Proc. Natl Acad. Sci. USA 113, 6791\u20136796 (2016)."
+    },
+    {
+      "key": "1679_CR66",
+      "doi": "10.1038/nature14123",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "S-Y Park",
+      "unstructured": "Park, S.-Y. et al. Agrochemical control of plant water use using engineered abscisic acid receptors. Nature 520, 545\u2013548 (2015)."
+    },
+    {
+      "key": "1679_CR67",
+      "doi": "10.1038/s41477-019-0361-8",
+      "title": "",
+      "journal": "Nat. Plants",
+      "year": "2019",
+      "author": "R Mega",
+      "unstructured": "Mega, R. et al. Tuning water-use efficiency and drought tolerance in wheat using abscisic acid receptors. Nat. Plants 5, 153\u2013159 (2019)."
+    },
+    {
+      "key": "1679_CR68",
+      "doi": "10.1111/tpj.14110",
+      "title": "",
+      "journal": "Plant J.",
+      "year": "2019",
+      "author": "M Kudo",
+      "unstructured": "Kudo, M. et al. A gene-stacking approach to overcome the trade-off between drought stress tolerance and growth in Arabidopsis. Plant J. 97, 240\u2013256 (2019)."
+    },
+    {
+      "key": "1679_CR69",
+      "doi": "10.1146/annurev-arplant-050213-040000",
+      "title": "",
+      "journal": "Annu. Rev. Plant Biol.",
+      "year": "2014",
+      "author": "H Hu",
+      "unstructured": "Hu, H. & Xiong, L. Genetic engineering and breeding of drought-resistant crops. Annu. Rev. Plant Biol. 65, 715\u2013741 (2014)."
+    },
+    {
+      "key": "1679_CR70",
+      "doi": "10.1016/j.jbiotec.2016.01.014",
+      "title": "",
+      "journal": "J. Biotechnol.",
+      "year": "2016",
+      "author": "C D\u00e9cima Oneto",
+      "unstructured": "D\u00e9cima Oneto, C. et al. Water deficit stress tolerance in maize conferred by expression of an isopentenyltransferase (IPT) gene driven by a stress- and maturation-induced promoter. J. Biotechnol. 220, 66\u201377 (2016)."
+    },
+    {
+      "key": "1679_CR71",
+      "doi": "10.1111/j.1365-313x.2005.02463.x",
+      "title": "",
+      "journal": "Plant J.",
+      "year": "2005",
+      "author": "Y Wang",
+      "unstructured": "Wang, Y. et al. Molecular tailoring of farnesylation for plant drought tolerance and yield protection. Plant J. 43, 413\u2013424 (2005)."
+    },
+    {
+      "key": "1679_CR72",
+      "doi": "10.3389/fpls.2017.01251",
+      "title": "",
+      "journal": "Front. Plant Sci.",
+      "year": "2017",
+      "author": "R Saradadevi",
+      "unstructured": "Saradadevi, R., Palta, J. A. & Siddique, K. H. M. ABA-mediated stomatal response in regulating water use during the development of terminal drought in wheat. Front. Plant Sci. 8, 1251 (2017)."
+    },
+    {
+      "key": "1679_CR73",
+      "doi": "10.1038/ng.2725",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2013",
+      "author": "Y Uga",
+      "unstructured": "Uga, Y. et al. Control of root system architecture by DEEPER ROOTING 1 increases rice yield under drought conditions. Nat. Genet. 45, 1097\u20131102 (2013)."
+    },
+    {
+      "key": "1679_CR74",
+      "doi": "10.1038/srep05563",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2014",
+      "author": "Y Arai-Sanoh",
+      "unstructured": "Arai-Sanoh, Y. et al. Deep rooting conferred by DEEPER ROOTING 1 enhances rice yield in paddy fields. Sci. Rep. 4, 5563 (2014)."
+    },
+    {
+      "key": "1679_CR75",
+      "doi": "",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2017",
+      "author": "X Li",
+      "unstructured": "Li, X. et al. Genetic control of the root system in rice under normal and drought stress conditions by genome-wide association study. PLoS Genet. 13, e1006889 (2017)."
+    },
+    {
+      "key": "1679_CR76",
+      "doi": "10.1093/pcp/pcy141",
+      "title": "",
+      "journal": "Plant Cell Physiol.",
+      "year": "2018",
+      "author": "AL Bray",
+      "unstructured": "Bray, A. L. & Topp, C. N. The quantitative genetic control of root architecture in maize. Plant Cell Physiol. 59, 1919\u20131930 (2018)."
+    },
+    {
+      "key": "1679_CR77",
+      "doi": "10.1073/pnas.1400966111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "Y Bao",
+      "unstructured": "Bao, Y. et al. Plant roots use a patterning mechanism to position lateral root branches toward available water. Proc. Natl Acad. Sci. USA 111, 9319\u20139324 (2014)."
+    },
+    {
+      "key": "1679_CR78",
+      "doi": "10.1126/science.aau3956",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "B Orosa-Puente",
+      "unstructured": "Orosa-Puente, B. et al. Root branching toward water involves posttranslational modification of transcription factor ARF7. Science 362, 1407\u20131410 (2018)."
+    },
+    {
+      "key": "1679_CR79",
+      "doi": "10.1016/j.fcr.2012.05.014",
+      "title": "",
+      "journal": "Field Crops Res.",
+      "year": "2013",
+      "author": "AJ Hall",
+      "unstructured": "Hall, A. J. & Richards, R. A. Prognosis for genetic improvement of yield potential and water-limited yield of major grain crops. Field Crops Res. 143, 18\u201333 (2013)."
+    },
+    {
+      "key": "1679_CR80",
+      "doi": "10.1016/j.plantsci.2018.01.020",
+      "title": "",
+      "journal": "Plant Sci.",
+      "year": "2018",
+      "author": "ML Nuccio",
+      "unstructured": "Nuccio, M. L., Paul, M., Bate, N. J., Cohn, J. & Cutler, S. R. Where are the drought tolerant crops? An assessment of more than two decades of plant biotechnology effort in crop improvement. Plant Sci. 273, 110\u2013119 (2018)."
+    },
+    {
+      "key": "1679_CR81",
+      "doi": "10.1126/science.270.5242.1660",
+      "title": "",
+      "journal": "Science",
+      "year": "1995",
+      "author": "F Rubio",
+      "unstructured": "Rubio, F., Gassmann, W. & Schroeder, J. I. Sodium-driven potassium uptake by the plant potassium transporter HKT1 and mutations conferring salt tolerance. Science 270, 1660\u20131663 (1995)."
+    },
+    {
+      "key": "1679_CR82",
+      "doi": "10.1016/s0014-5793(02)03488-9",
+      "title": "",
+      "journal": "FEBS Lett.",
+      "year": "2002",
+      "author": "P M\u00e4ser",
+      "unstructured": "M\u00e4ser, P. et al. Altered shoot/root Na+ distribution and bifurcating salt sensitivity in Arabidopsis by genetic disruption of the Na+ transporter AtHKT1. FEBS Lett. 531, 157\u2013161 (2002)."
+    },
+    {
+      "key": "1679_CR83",
+      "doi": "10.1038/ng1643",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2005",
+      "author": "Z-H Ren",
+      "unstructured": "Ren, Z.-H. et al. A rice quantitative trait locus for salt tolerance encodes a sodium transporter. Nat. Genet. 37, 1141\u20131146 (2005)."
+    },
+    {
+      "key": "1679_CR84",
+      "doi": "10.1111/j.1365-313x.2005.02595.x",
+      "title": "",
+      "journal": "Plant J.",
+      "year": "2005",
+      "author": "H Sunarpi",
+      "unstructured": "Sunarpi, et al. Enhanced salt tolerance mediated by AtHKT1 transporter-induced Na+ unloading from xylem vessels to xylem parenchyma cells. Plant J. 44, 928\u2013938 (2005)."
+    },
+    {
+      "key": "1679_CR85",
+      "doi": "10.1038/nbt.2120",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2012",
+      "author": "R Munns",
+      "unstructured": "Munns, R. et al. Wheat grain yield on saline soils is improved by an ancestral Na+ transporter gene. Nat. Biotechnol. 30, 360\u2013364 (2012).An HKT1 allele that confers sodium tolerance is crossed into a commercial durum wheat variety, thus enhancing yield under salinity stress."
+    },
+    {
+      "key": "1679_CR86",
+      "doi": "10.1016/j.cell.2015.12.021",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "M Barberon",
+      "unstructured": "Barberon, M. et al. Adaptation of root function by nutrient-induced plasticity of endodermal differentiation. Cell 164, 447\u2013459 (2016)."
+    },
+    {
+      "key": "1679_CR87",
+      "doi": "10.1105/tpc.112.107227",
+      "title": "",
+      "journal": "Plant Cell",
+      "year": "2013",
+      "author": "L Duan",
+      "unstructured": "Duan, L. et al. Endodermal ABA signaling promotes lateral root quiescence during salt stress in Arabidopsis seedlings. Plant Cell 25, 324\u2013341 (2013).Root growth dynamics under salinity stress are regulated by processes in a specific cell layer, and effective gene engineering of these dynamics may require use of promoters with defined spatial and temporal activity."
+    },
+    {
+      "key": "1679_CR88",
+      "doi": "10.1105/tpc.108.064543",
+      "title": "",
+      "journal": "Plant Cell",
+      "year": "2009",
+      "author": "CF Huang",
+      "unstructured": "Huang, C. F. et al. A bacterial-type ABC transporter is involved in aluminum tolerance in rice. Plant Cell 21, 655\u2013667 (2009)."
+    },
+    {
+      "key": "1679_CR89",
+      "doi": "10.1073/pnas.1220766110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "LG Maron",
+      "unstructured": "Maron, L. G. et al. Aluminum tolerance in maize is associated with higher MATE1 gene copy number. Proc. Natl Acad. Sci. USA 110, 5241\u20135246 (2013)."
+    },
+    {
+      "key": "1679_CR90",
+      "doi": "10.1038/nature13538",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "M Pallotta",
+      "unstructured": "Pallotta, M. et al. Molecular basis of adaptation to high soil boron in wheat landraces and elite cultivars. Nature 514, 88\u201391 (2014).The molecular characterization of loci associated with boron tolerance uncovers variation in gene copy number and expression patterns that translate to the field."
+    },
+    {
+      "key": "1679_CR91",
+      "doi": "10.1007/s40641-016-0042-x",
+      "title": "",
+      "journal": "Curr. Clim. Change Rep.",
+      "year": "2016",
+      "author": "RM Horton",
+      "unstructured": "Horton, R. M., Mankin, J. S., Lesk, C., Coffel, E. & Raymond, C. A review of recent advances in research on extreme heat events. Curr. Clim. Change Rep. 2, 242\u2013259 (2016)."
+    },
+    {
+      "key": "1679_CR92",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "FC Moore",
+      "unstructured": "Moore, F. C., Baldos, U., Hertel, T. & Diaz, D. New science of climate change impacts on agriculture implies higher social cost of carbon. Nat. Commun. 8, 1607 (2017)."
+    },
+    {
+      "key": "1679_CR93",
+      "doi": "10.1126/science.1251423",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "DB Lobell",
+      "unstructured": "Lobell, D. B. et al. Greater sensitivity to drought accompanies maize yield increase in the U.S. Midwest. Science 344, 516\u2013519 (2014)."
+    },
+    {
+      "key": "1679_CR94",
+      "doi": "10.1073/pnas.1701762114",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "C Zhao",
+      "unstructured": "Zhao, C. et al. Temperature increase reduces global yields of major crops in four independent estimates. Proc. Natl Acad. Sci. USA 114, 9326\u20139331 (2017)."
+    },
+    {
+      "key": "1679_CR95",
+      "doi": "",
+      "title": "",
+      "journal": "Front. Plant Sci.",
+      "year": "2013",
+      "author": "CE Bita",
+      "unstructured": "Bita, C. E. & Gerats, T. Plant tolerance to high temperature in a changing environment: scientific fundamentals and production of heat stress-tolerant crops. Front. Plant Sci. 4, 273 (2013)."
+    },
+    {
+      "key": "1679_CR96",
+      "doi": "10.1029/wr017i004p01133",
+      "title": "",
+      "journal": "Wat. Resour. Res.",
+      "year": "1981",
+      "author": "RD Jackson",
+      "unstructured": "Jackson, R. D., Idso, S. B., Reginato, R. J. & Pinter, P. J. Jr. Canopy temperature as a crop water stress indicator. Wat. Resour. Res. 17, 1133\u20131138 (1981)."
+    },
+    {
+      "key": "1679_CR97",
+      "doi": "10.1093/jxb/eru064",
+      "title": "",
+      "journal": "J. Exp. Bot.",
+      "year": "2014",
+      "author": "M Cooper",
+      "unstructured": "Cooper, M., Gho, C., Leafgren, R., Tang, T. & Messina, C. Breeding drought-tolerant maize hybrids for the US corn-belt: discovery to product. J. Exp. Bot. 65, 6191\u20136204 (2014)."
+    },
+    {
+      "key": "1679_CR98",
+      "doi": "10.1038/nbt.3277",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2015",
+      "author": "ML Nuccio",
+      "unstructured": "Nuccio, M. L. et al. Expression of trehalose-6-phosphate phosphatase in maize ears improves yield in well-watered and drought conditions. Nat. Biotechnol. 33, 862\u2013869 (2015).Improving drought resilience of maize yield was achieved through the design of a promoter that targets maize-ear tissue in a stage-specific manner."
+    },
+    {
+      "key": "1679_CR99",
+      "doi": "10.1038/nplants.2015.124",
+      "title": "",
+      "journal": "Nat. Plants",
+      "year": "2015",
+      "author": "T Kretzschmar",
+      "unstructured": "Kretzschmar, T. et al. A trehalose-6-phosphate phosphatase enhances anaerobic germination tolerance in rice. Nat. Plants 1, 15124 (2015)."
+    },
+    {
+      "key": "1679_CR100",
+      "doi": "10.1038/nature20591",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "CA Griffiths",
+      "unstructured": "Griffiths, C. A. et al. Chemical intervention in plant sugar signalling increases yield and resilience. Nature 540, 574\u2013578 (2016).The effective delivery of membrane-permeable and activatable small molecules could provide a new management strategy for drought protection."
+    },
+    {
+      "key": "1679_CR101",
+      "doi": "10.1146/annurev-arplant-042809-112206",
+      "title": "",
+      "journal": "Annu. Rev. Plant Biol.",
+      "year": "2010",
+      "author": "X-G Zhu",
+      "unstructured": "Zhu, X.-G., Long, S. P. & Ort, D. R. Improving photosynthetic efficiency for greater yield. Annu. Rev. Plant Biol. 61, 235\u2013261 (2010)."
+    },
+    {
+      "key": "1679_CR102",
+      "doi": "10.1098/rstb.2016.0380",
+      "title": "",
+      "journal": "Phil. Trans. R. Soc. Lond. B",
+      "year": "2017",
+      "author": "M Dann",
+      "unstructured": "Dann, M. & Leister, D. Enhancing (crop) plant photosynthesis by introducing novel genetic diversity. Phil. Trans. R. Soc. Lond. B 372, 20160380 (2017)."
+    },
+    {
+      "key": "1679_CR103",
+      "doi": "10.1104/pp.110.161687",
+      "title": "",
+      "journal": "Plant Physiol.",
+      "year": "2010",
+      "author": "RE Blankenship",
+      "unstructured": "Blankenship, R. E. Early evolution of photosynthesis. Plant Physiol. 154, 434\u2013438 (2010)."
+    },
+    {
+      "key": "1679_CR104",
+      "doi": "10.1007/bf00386231",
+      "title": "",
+      "journal": "Planta",
+      "year": "1980",
+      "author": "GD Farquhar",
+      "unstructured": "Farquhar, G. D., von Caemmerer, S. & Berry, J. A. A biochemical model of photosynthetic CO2 assimilation in leaves of C3 species. Planta 149, 78\u201390 (1980)."
+    },
+    {
+      "key": "1679_CR105",
+      "doi": "10.1016/j.cell.2015.03.019",
+      "title": "",
+      "journal": "Cell",
+      "year": "2015",
+      "author": "SP Long",
+      "unstructured": "Long, S. P., Marshall-Colon, A. & Zhu, X.-G. Meeting the global food demand of the future by engineering crop photosynthesis and yield potential. Cell 161, 56\u201366 (2015)."
+    },
+    {
+      "key": "1679_CR106",
+      "doi": "10.1073/pnas.1424031112",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2015",
+      "author": "DR Ort",
+      "unstructured": "Ort, D. R. et al. Redesigning photosynthesis to sustainably meet global food and bioenergy demand. Proc. Natl Acad. Sci. USA 112, 8529\u20138536 (2015)."
+    },
+    {
+      "key": "1679_CR107",
+      "doi": "10.1093/jxb/ery366",
+      "title": "",
+      "journal": "J. Exp. Bot.",
+      "year": "2019",
+      "author": "JR Evans",
+      "unstructured": "Evans, J. R. & Clarke, V. C. The nitrogen cost of photosynthesis. J. Exp. Bot. 70, 7\u201315 (2019)."
+    },
+    {
+      "key": "1679_CR108",
+      "doi": "10.1104/pp.110.168831",
+      "title": "",
+      "journal": "Plant Physiol.",
+      "year": "2011",
+      "author": "EH Murchie",
+      "unstructured": "Murchie, E. H. & Niyogi, K. K. Manipulation of photoprotection to improve plant photosynthesis. Plant Physiol. 155, 86\u201392 (2011)."
+    },
+    {
+      "key": "1679_CR109",
+      "doi": "10.1093/jxb/erw076",
+      "title": "",
+      "journal": "J. Exp. Bot.",
+      "year": "2016",
+      "author": "M Betti",
+      "unstructured": "Betti, M. et al. Manipulating photorespiration to increase plant productivity: recent advances and perspectives for crop improvement. J. Exp. Bot. 67, 2977\u20132988 (2016)."
+    },
+    {
+      "key": "1679_CR110",
+      "doi": "10.1104/pp.17.00622",
+      "title": "",
+      "journal": "Plant Physiol.",
+      "year": "2017",
+      "author": "AJ Simkin",
+      "unstructured": "Simkin, A. J., McAusland, L., Lawson, T. & Raines, C. A. Overexpression of the RieskeFeS protein increases electron transport rates and biomass yield. Plant Physiol. 175, 134\u2013145 (2017)."
+    },
+    {
+      "key": "1679_CR111",
+      "doi": "10.1126/science.1220177",
+      "title": "",
+      "journal": "Science",
+      "year": "2012",
+      "author": "S von Caemmerer",
+      "unstructured": "von Caemmerer, S., Quick, W. P. & Furbank, R. T. The development of C4 rice: current progress and future challenges. Science 336, 1671\u20131672 (2012)."
+    },
+    {
+      "key": "1679_CR112",
+      "doi": "10.1098/rstb.1997.0069",
+      "title": "",
+      "journal": "Phil. Trans. R. Soc. Lond. B",
+      "year": "1997",
+      "author": "LT Evans",
+      "unstructured": "Evans, L. T. Adapting and improving crops: the endless task. Phil. Trans. R. Soc. Lond. B 352, 901\u2013906 (1997)."
+    },
+    {
+      "key": "1679_CR113",
+      "doi": "10.1111/nph.14351",
+      "title": "",
+      "journal": "New Phytol.",
+      "year": "2017",
+      "author": "RE Sharwood",
+      "unstructured": "Sharwood, R. E. Engineering chloroplasts to improve Rubisco catalysis: prospects for translating improvements into food and fiber crops. New Phytol. 213, 494\u2013510 (2017)."
+    },
+    {
+      "key": "1679_CR114",
+      "doi": "10.1038/s41477-018-0252-4",
+      "title": "",
+      "journal": "Nat. Plants",
+      "year": "2018",
+      "author": "CE Salesse-Smith",
+      "unstructured": "Salesse-Smith, C. E. et al. Overexpression of Rubisco subunits with RAF1 increases Rubisco content in maize. Nat. Plants 4, 802\u2013810 (2018)."
+    },
+    {
+      "key": "1679_CR115",
+      "doi": "10.1098/rstb.2016.0384",
+      "title": "",
+      "journal": "Trans. R. Soc. Lond. B",
+      "year": "2017",
+      "author": "SM Driever",
+      "unstructured": "Driever, S. M. et al. Increased SBPase activity improves photosynthesis and grain yield in wheat grown in greenhouse conditions. Phil. Trans. R. Soc. Lond. B 372, 20160384 (2017)."
+    },
+    {
+      "key": "1679_CR116",
+      "doi": "10.1126/science.aai8878",
+      "title": "",
+      "journal": "Science",
+      "year": "2016",
+      "author": "J Kromdijk",
+      "unstructured": "Kromdijk, J. et al. Improving photosynthesis and crop productivity by accelerating recovery from photoprotection. Science 354, 857\u2013861 (2016).Transgenic tobacco with accelerated interconversion of violaxanthin and zeaxanthin in the xanthophyll cycle, and increased amounts of a photosystem II subunit, yielded 15% greater production of plant biomass in natural field conditions."
+    },
+    {
+      "key": "1679_CR117",
+      "doi": "10.1126/science.aat9077",
+      "title": "",
+      "journal": "Science",
+      "year": "2019",
+      "author": "PF South",
+      "unstructured": "South, P. F., Cavanagh, A. P., Liu, H. W. & Ort, D. R. Synthetic glycolate metabolism pathways stimulate crop growth and productivity in the field. Science 363, eaat9077 (2019).Transgenic tobacco with synthetic glycolate metabolism in the chloroplast showed enhanced photosynthesis and increased biomass in the field."
+    },
+    {
+      "key": "1679_CR118",
+      "doi": "10.1016/j.cub.2018.10.015",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2018",
+      "author": "J Zhang",
+      "unstructured": "Zhang, J. et al. Insights into the molecular mechanisms of CO2-mediated regulation of stomatal movements. Curr. Biol. 28, R1356\u2013R1363 (2018)."
+    },
+    {
+      "key": "1679_CR119",
+      "doi": "10.1073/pnas.1809204115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "P-K Hsu",
+      "unstructured": "Hsu, P.-K. et al. Abscisic acid-independent stomatal CO2 signal transduction pathway and convergence of CO2 and ABA signaling downstream of OST1 kinase. Proc. Natl Acad. Sci. USA 115, E9971\u2013E9980 (2018)."
+    },
+    {
+      "key": "1679_CR120",
+      "doi": "10.1038/ncb2009",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2010",
+      "author": "H Hu",
+      "unstructured": "Hu, H. et al. Carbonic anhydrases are upstream regulators of CO2-controlled stomatal movements in guard cells. Nat. Cell Biol. 12, 87\u201393 (2010).A strategy for improving water use efficiency via modulating the stomatal CO 2 response is shown."
+    },
+    {
+      "key": "1679_CR121",
+      "doi": "10.1111/nph.12104",
+      "title": "",
+      "journal": "New Phytol.",
+      "year": "2013",
+      "author": "PJ Franks",
+      "unstructured": "Franks, P. J. et al. Sensitivity of plants to changing atmospheric CO2 concentration: from the geological past to the next century. New Phytol. 197, 1077\u20131094 (2013)."
+    },
+    {
+      "key": "1679_CR122",
+      "doi": "10.1104/pp.16.01844",
+      "title": "",
+      "journal": "Plant Physiol.",
+      "year": "2017",
+      "author": "J Hughes",
+      "unstructured": "Hughes, J. et al. Reducing stomatal density in barley improves drought tolerance without impacting on yield. Plant Physiol. 174, 776\u2013787 (2017)."
+    },
+    {
+      "key": "1679_CR123",
+      "doi": "10.1111/nph.15344",
+      "title": "",
+      "journal": "New Phytol.",
+      "year": "2019",
+      "author": "RS Caine",
+      "unstructured": "Caine, R. S. et al. Rice with reduced stomatal density conserves water and has improved drought tolerance under future climate conditions. New Phytol. 221, 371\u2013384 (2019)."
+    },
+    {
+      "key": "1679_CR124",
+      "doi": "10.1038/s41467-018-03231-x",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "K G\u0142owacka",
+      "unstructured": "G\u0142owacka, K. et al. Photosystem II subunit S overexpression increases the efficiency of water use in a field-grown crop. Nat. Commun. 9, 868 (2018)."
+    },
+    {
+      "key": "1679_CR125",
+      "doi": "10.1104/pp.109.144113",
+      "title": "",
+      "journal": "Plant Physiol.",
+      "year": "2009",
+      "author": "A Rogers",
+      "unstructured": "Rogers, A., Ainsworth, E. A. & Leakey, A. D. B. Will elevated carbon dioxide concentration amplify the benefits of nitrogen fixation in legumes? Plant Physiol. 151, 1009\u20131016 (2009)."
+    },
+    {
+      "key": "1679_CR126",
+      "doi": "10.1038/nature11909",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "JI Schroeder",
+      "unstructured": "Schroeder, J. I. et al. Using membrane transporters to improve crops for sustainable food production. Nature 497, 60\u201366 (2013)."
+    },
+    {
+      "key": "1679_CR127",
+      "doi": "10.1038/s41586-018-0415-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "S Li",
+      "unstructured": "Li, S. et al. Modulating plant growth-metabolism coordination for sustainable agriculture. Nature 560, 595\u2013600 (2018)."
+    },
+    {
+      "key": "1679_CR128",
+      "doi": "10.1111/pbr.12371",
+      "title": "",
+      "journal": "Plant Breed.",
+      "year": "2016",
+      "author": "F Cormier",
+      "unstructured": "Cormier, F. et al. Breeding for increased nitrogen-use efficiency: a review for wheat (T. aestivum L.). Plant Breed. 135, 255\u2013278 (2016)."
+    },
+    {
+      "key": "1679_CR129",
+      "doi": "10.1038/nrmicro2990",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2013",
+      "author": "GED Oldroyd",
+      "unstructured": "Oldroyd, G. E. D. Speak, friend, and enter: signalling systems that promote beneficial symbiotic associations in plants. Nat. Rev. Microbiol. 11, 252\u2013263 (2013)."
+    },
+    {
+      "key": "1679_CR130",
+      "doi": "10.1146/annurev.micro.58.030603.123749",
+      "title": "",
+      "journal": "Annu. Rev. Microbiol.",
+      "year": "2005",
+      "author": "MJ Harrison",
+      "unstructured": "Harrison, M. J. Signaling in the arbuscular mycorrhizal symbiosis. Annu. Rev. Microbiol. 59, 19\u201342 (2005)."
+    },
+    {
+      "key": "1679_CR131",
+      "doi": "10.1146/annurev-phyto-080516-035521",
+      "title": "",
+      "journal": "Annu. Rev. Phytopathol.",
+      "year": "2018",
+      "author": "J Choi",
+      "unstructured": "Choi, J., Summers, W. & Paszkowski, U. Mechanisms underlying establishment of arbuscular mycorrhizal symbioses. Annu. Rev. Phytopathol. 56, 135\u2013160 (2018)."
+    },
+    {
+      "key": "1679_CR132",
+      "doi": "10.1093/mp/sss115",
+      "title": "",
+      "journal": "Mol. Plant",
+      "year": "2013",
+      "author": "E Foo",
+      "unstructured": "Foo, E., Yoneyama, K., Hugill, C. J., Quittenden, L. J. & Reid, J. B. Strigolactones and the regulation of pea symbioses in response to nitrate and phosphate deficiency. Mol. Plant 6, 76\u201387 (2013)."
+    },
+    {
+      "key": "1679_CR133",
+      "doi": "10.1073/pnas.1804992115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "J Yang",
+      "unstructured": "Yang, J. et al. Polyprotein strategy for stoichiometric assembly of nitrogen fixation components for synthetic biology. Proc. Natl Acad. Sci. USA 115, E8509\u2013E8517 (2018)."
+    },
+    {
+      "key": "1679_CR134",
+      "doi": "10.1093/femsle/fnx274",
+      "title": "",
+      "journal": "FEMS Microbiol. Lett.",
+      "year": "2018",
+      "author": "S Bur\u00e9n",
+      "unstructured": "Bur\u00e9n, S. & Rubio, L. M. State of the art in eukaryotic nitrogenase engineering. FEMS Microbiol. Lett. 365, fnx274 (2018)."
+    },
+    {
+      "key": "1679_CR135",
+      "doi": "10.1126/science.aat1743",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "M Griesmann",
+      "unstructured": "Griesmann, M. et al. Phylogenomics reveals multiple losses of nitrogen-fixing root nodule symbiosis. Science 361, eaat1743 (2018)."
+    },
+    {
+      "key": "1679_CR136",
+      "doi": "10.1073/pnas.1721395115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "R van Velzen",
+      "unstructured": "van Velzen, R. et al. Comparative genomics of the nonlegume Parasponia reveals insights into evolution of nitrogen-fixing rhizobium symbioses. Proc. Natl Acad. Sci. USA 115, E4700\u2013E4709 (2018)."
+    },
+    {
+      "key": "1679_CR137",
+      "doi": "10.1371/journal.pbio.2001793",
+      "title": "",
+      "journal": "PLoS Biol.",
+      "year": "2017",
+      "author": "PE Busby",
+      "unstructured": "Busby, P. E. et al. Research priorities for harnessing plant microbiomes in sustainable agriculture. PLoS Biol. 15, e2001793 (2017)."
+    },
+    {
+      "key": "1679_CR138",
+      "doi": "10.1371/journal.pbio.2003862",
+      "title": "",
+      "journal": "PLoS Biol.",
+      "year": "2018",
+      "author": "JA Edwards",
+      "unstructured": "Edwards, J. A. et al. Compositional shifts in root-associated bacterial and archaeal microbiota track the plant life cycle in field-grown rice. PLoS Biol. 16, e2003862 (2018)."
+    },
+    {
+      "key": "1679_CR139",
+      "doi": "10.1038/nature21417",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "G Castrillo",
+      "unstructured": "Castrillo, G. et al. Root microbiota drive direct integration of phosphate stress and immunity. Nature 543, 513\u2013518 (2017)."
+    },
+    {
+      "key": "1679_CR140",
+      "doi": "10.1146/annurev-phyto-082712-102340",
+      "title": "",
+      "journal": "Annu. Rev. Phytopathol.",
+      "year": "2014",
+      "author": "CMJ Pieterse",
+      "unstructured": "Pieterse, C. M. J. et al. Induced systemic resistance by beneficial microbes. Annu. Rev. Phytopathol. 52, 347\u2013375 (2014)."
+    },
+    {
+      "key": "1679_CR141",
+      "doi": "10.1038/nbt.4232",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2018",
+      "author": "M-J Kwak",
+      "unstructured": "Kwak, M.-J. et al. Rhizosphere microbiome structure alters to enable wilt resistance in tomato. Nat. Biotechnol. 36, 1100\u20131109 (2018).Comparative rhizosphere metagenomics enables the identification of protective microbial strains from the root-associated microbiota of disease-resistant tomato plants."
+    },
+    {
+      "key": "1679_CR142",
+      "doi": "10.1111/j.1469-8137.1995.tb03033.x",
+      "title": "",
+      "journal": "New Phytol.",
+      "year": "1995",
+      "author": "KS Subramanian",
+      "unstructured": "Subramanian, K. S., Charest, C., Dwyer, L. M. & Hamilton, R. I. Arbuscular mycorrhizas and water relations in maize under drought stress at tasselling. New Phytol. 129, 643\u2013650 (1995)."
+    },
+    {
+      "key": "1679_CR143",
+      "doi": "10.1007/s005720100097",
+      "title": "",
+      "journal": "Mycorrhiza",
+      "year": "2001",
+      "author": "RM Aug\u00e9",
+      "unstructured": "Aug\u00e9, R. M. Water relations, drought and vesicular-arbuscular mycorrhizal symbiosis. Mycorrhiza 11, 3\u201342 (2001)."
+    },
+    {
+      "key": "1679_CR144",
+      "doi": "10.1073/pnas.1717617115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "CR Fitzpatrick",
+      "unstructured": "Fitzpatrick, C. R. et al. Assembly and ecological function of the root microbiome across angiosperm plant species. Proc. Natl Acad. Sci. USA 115, E1157\u2013E1165 (2018)."
+    },
+    {
+      "key": "1679_CR145",
+      "doi": "10.1016/j.cell.2016.02.028",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "K Hiruma",
+      "unstructured": "Hiruma, K. et al. Root endophyte Colletotrichum tofieldiae confers plant fitness benefits that are phosphate status dependent. Cell 165, 464\u2013474 (2016)."
+    },
+    {
+      "key": "1679_CR146",
+      "doi": "10.1371/journal.pbio.2006352",
+      "title": "",
+      "journal": "PLoS Biol.",
+      "year": "2018",
+      "author": "A Van Deynze",
+      "unstructured": "Van Deynze, A. et al. Nitrogen fixation in a landrace of maize is supported by a mucilage-associated diazotrophic microbiota. PLoS Biol. 16, e2006352 (2018).In this study, a maize landrace is demonstrated to stimulate symbiosis with microbes that have nitrogenase activity, which contributes to nitrogen nutrition."
+    },
+    {
+      "key": "1679_CR147",
+      "doi": "10.1038/nclimate3061",
+      "title": "",
+      "journal": "Nat. Clim. Chang.",
+      "year": "2016",
+      "author": "AJ Challinor",
+      "unstructured": "Challinor, A. J., Koehler, A.-K., Ramirez-Villegas, J., Whitfield, S. & Das, B. Current warming will reduce yields unless maize breeding and seed systems adapt immediately. Nat. Clim. Chang. 6, 954\u2013958 (2016)."
+    },
+    {
+      "key": "1679_CR148",
+      "doi": "10.1016/j.gfs.2017.01.008",
+      "title": "",
+      "journal": "Glob. Food Sec.",
+      "year": "2017",
+      "author": "GN Atlin",
+      "unstructured": "Atlin, G. N., Cairns, J. E. & Das, B. Rapid breeding and varietal replacement are critical to adaptation of cropping systems in the developing world to climate change. Glob. Food Sec. 12, 31\u201337 (2017)."
+    },
+    {
+      "key": "1679_CR149",
+      "doi": "10.1088/1748-9326/11/11/114006",
+      "title": "",
+      "journal": "Environ. Res. Lett.",
+      "year": "2016",
+      "author": "MJ Walsh",
+      "unstructured": "Walsh, M. J. et al. Algal food and fuel coproduction can mitigate greenhouse gas emissions while improving land and water-use efficiency. Environ. Res. Lett. 11, 114006 (2016)."
+    },
+    {
+      "key": "1679_CR150",
+      "doi": "",
+      "title": "",
+      "journal": "Food Syst.",
+      "year": "2014",
+      "author": "H Dempewolf",
+      "unstructured": "Dempewolf, H. et al. Adapting agriculture to climate change: a global initiative to collect, conserve, and use crop wild relatives. Agroecol. Sustain. Food Syst. 38, 369\u2013377 (2014)."
+    },
+    {
+      "key": "1679_CR151",
+      "doi": "10.1038/499023a",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "S McCouch",
+      "unstructured": "McCouch, S. et al. Agriculture: feeding the future. Nature 499, 23\u201324 (2013)."
+    },
+    {
+      "key": "1679_CR152",
+      "doi": "10.1038/s41586-018-0785-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "I Khanday",
+      "unstructured": "Khanday, I., Skinner, D., Yang, B., Mercier, R. & Sundaresan, V. A male-expressed rice embryogenic trigger redirected for asexual propagation through seeds. Nature 565, 91\u201395 (2019)."
+    },
+    {
+      "key": "1679_CR153",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Becker, R. A. & Wilks, A. R. Maps: draw geographical maps, v.3.3.0, https://cran.r-project.org/package=maps/ (2018)."
+    },
+    {
+      "key": "1679_CR154",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Brakenridge, G. R. Global Active Archive of Large Flood Events (Dartmouth Flood Observatory, University of Colorado), http://floodobservatory.colorado.edu/Archives/index.html (accessed 2019)."
+    },
+    {
+      "key": "1679_CR155",
+      "doi": "10.1111/pbi.12953",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2019",
+      "author": "PE L\u00f3pez-Calcagno",
+      "unstructured": "L\u00f3pez-Calcagno, P. E. et al. Overexpressing the H-protein of the glycine cleavage system increases biomass yield in glasshouse and field-grown transgenic tobacco plants. Plant Biotechnol. J. 17, 141\u2013151 (2019)."
+    },
+    {
+      "key": "1679_CR156",
+      "doi": "10.1038/nature13776",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "MT Lin",
+      "unstructured": "Lin, M. T., Occhialini, A., Andralojc, P. J., Parry, M. A. J. & Hanson, M. R. A faster Rubisco with potential to increase photosynthesis in crops. Nature 513, 547\u2013550 (2014)."
+    }
+  ]
+}

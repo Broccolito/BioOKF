@@ -1,0 +1,689 @@
+{
+  "article": {
+    "slug": "s41586-019-1717-y",
+    "doi": "10.1038/s41586-019-1717-y",
+    "title": "A new twenty-first century science for effective epidemic response",
+    "url": "https://www.nature.com/articles/s41586-019-1717-y",
+    "abbrev": "twenty-first-century-science-effective-epidemic",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/twenty-first-century-science-effective-epidemic"
+  },
+  "n_refs": 95,
+  "n_with_doi": 69,
+  "n_oa": 53,
+  "records": [
+    {
+      "doi": "10.1038/001009a0",
+      "title": "",
+      "year": "1869",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/001009a0.pdf",
+      "file": "10.1038_001009a0.md"
+    },
+    {
+      "doi": "10.1093/ije/dym132",
+      "title": "",
+      "year": "2007",
+      "journal": "Int. J. Epidemiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/ije/article-pdf/36/5/985/2327037/dym132.pdf",
+      "file": "10.1093_ije_dym132.md"
+    },
+    {
+      "doi": "10.1016/j.ajog.2018.11.1084",
+      "title": "",
+      "year": "2019",
+      "journal": "Am. J. Obstet. Gynecol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1136/jech.2009.087957",
+      "title": "",
+      "year": "2011",
+      "journal": "J. Epidemiol. Community Health",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s0140-6736(13)60771-0",
+      "title": "",
+      "year": "2013",
+      "journal": "Lancet",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://durham-repository.worktribe.com/output/1472626",
+      "file": "10.1016_s0140-6736_13_60771-0.md"
+    },
+    {
+      "doi": "10.1136/bmj.288.6414.379",
+      "title": "",
+      "year": "1984",
+      "journal": "Br. Med. J. (Clin. Res. Ed.)",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.bmj.com/content/bmj/288/6414/379.full.pdf",
+      "file": "10.1136_bmj.288.6414.379.md"
+    },
+    {
+      "doi": "10.2307/3349375",
+      "title": "",
+      "year": "1971",
+      "journal": "Milbank Mem. Fund Q.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.annepidem.2016.12.002",
+      "title": "",
+      "year": "2017",
+      "journal": "Ann. Epidemiol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5578705?pdf=render",
+      "file": "10.1016_j.annepidem.2016.12.002.md"
+    },
+    {
+      "doi": "10.1017/s0025727300043738",
+      "title": "",
+      "year": "1985",
+      "journal": "Med. Hist.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F0D2C4916532B1BF6CAE81C766F7563B/S0025727300043738a.pdf/div-class-title-ignaz-semmelweis-carl-mayrhofer-and-the-rise-of-germ-theory-div.pdf",
+      "file": "10.1017_s0025727300043738.md"
+    },
+    {
+      "doi": "10.1073/pnas.1400472111",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/111/34/12283.full.pdf",
+      "file": "10.1073_pnas.1400472111.md"
+    },
+    {
+      "doi": "10.1016/0196-6553(82)90003-7",
+      "title": "",
+      "year": "1982",
+      "journal": "Am. J. Infect. Control",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/aje/kwq320",
+      "title": "",
+      "year": "2010",
+      "journal": "Am. J. Epidemiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/aje/article-pdf/172/11/1213/487097/kwq320.pdf",
+      "file": "10.1093_aje_kwq320.md"
+    },
+    {
+      "doi": "10.1001/jama.1990.03440110088033",
+      "title": "",
+      "year": "1990",
+      "journal": "J. Am. Med. Assoc.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/ije/30.1.1",
+      "title": "",
+      "year": "2001",
+      "journal": "Int. J. Epidemiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/ije/article-pdf/30/1/1/18478209/300001.pdf",
+      "file": "10.1093_ije_30.1.1.md"
+    },
+    {
+      "doi": "10.1098/rsif.2014.0950",
+      "title": "",
+      "year": "2014",
+      "journal": "J. R. Soc. Interface",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2014.0950",
+      "file": "10.1098_rsif.2014.0950.md"
+    },
+    {
+      "doi": "10.1186/s13690-017-0223-7",
+      "title": "",
+      "year": "2017",
+      "journal": "Arch. Public Health",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://archpublichealth.biomedcentral.com/track/pdf/10.1186/s13690-017-0223-7",
+      "file": "10.1186_s13690-017-0223-7.md"
+    },
+    {
+      "doi": "10.1073/pnas.0903423106",
+      "title": "",
+      "year": "2009",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2720408?pdf=render",
+      "file": "10.1073_pnas.0903423106.md"
+    },
+    {
+      "doi": "10.1001/jama.2014.14387",
+      "title": "",
+      "year": "2014",
+      "journal": "J. Am. Med. Assoc.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1089/bsp.2014.0032",
+      "title": "",
+      "year": "2014",
+      "journal": "Biosecur. Bioterror.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4170985?pdf=render",
+      "file": "10.1089_bsp.2014.0032.md"
+    },
+    {
+      "doi": "10.1371/currents.outbreaks.aa1f2b60e8d43939b43fbd93e1a63a94",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4739438?pdf=render",
+      "file": "10.1371_currents.outbreaks.aa1f2b60e8d43939b43fbd93e1a63a94.md"
+    },
+    {
+      "doi": "10.1371/journal.ppat.1004438",
+      "title": "",
+      "year": "2014",
+      "journal": "PLoS Pathog.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plospathogens/article/file?id=10.1371/journal.ppat.1004438&type=printable",
+      "file": "10.1371_journal.ppat.1004438.md"
+    },
+    {
+      "doi": "10.1038/d41586-019-00789-4",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://media.nature.com/original/magazine-assets/d41586-019-00789-4/d41586-019-00789-4.pdf",
+      "file": "10.1038_d41586-019-00789-4.md"
+    },
+    {
+      "doi": "10.1016/s0140-6736(71)92410-x",
+      "title": "",
+      "year": "1971",
+      "journal": "Lancet",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1016/s0140-6736(71)92410-x",
+      "file": "10.1016_s0140-6736_71_92410-x.md"
+    },
+    {
+      "doi": "10.1093/scipol/scz007",
+      "title": "",
+      "year": "2019",
+      "journal": "Sci. Public Policy",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/spp/article-pdf/46/4/620/29210228/scz007.pdf",
+      "file": "10.1093_scipol_scz007.md"
+    },
+    {
+      "doi": "10.3201/eid1311.061093",
+      "title": "",
+      "year": "2007",
+      "journal": "Emerg. Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://wwwnc.cdc.gov/eid/article/13/11/pdfs/06-1093.pdf",
+      "file": "10.3201_eid1311.061093.md"
+    },
+    {
+      "doi": "10.1016/s1473-3099(19)30063-5",
+      "title": "",
+      "year": "2019",
+      "journal": "Lancet Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S1473309919300635/pdf",
+      "file": "10.1016_s1473-3099_19_30063-5.md"
+    },
+    {
+      "doi": "10.1136/bmjgh-2017-000534",
+      "title": "",
+      "year": "2018",
+      "journal": "BMJ Glob. Health",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://gh.bmj.com/content/bmjgh/3/2/e000534.full.pdf",
+      "file": "10.1136_bmjgh-2017-000534.md"
+    },
+    {
+      "doi": "10.1136/sextrans-2014-051879",
+      "title": "",
+      "year": "2015",
+      "journal": "Sex. Transm. Infect.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4777342?pdf=render",
+      "file": "10.1136_sextrans-2014-051879.md"
+    },
+    {
+      "doi": "10.2471/blt.16.175984",
+      "title": "",
+      "year": "2017",
+      "journal": "Bull. World Health Organ.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://doi.org/10.2471/blt.16.175984",
+      "file": "10.2471_blt.16.175984.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-0956-2",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6776470?pdf=render",
+      "file": "10.1038_s41586-019-0956-2.md"
+    },
+    {
+      "doi": "10.1093/ije/dyy095",
+      "title": "",
+      "year": "2018",
+      "journal": "Int. J. Epidemiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/ije/article-pdf/47/5/1562/26258038/dyy095.pdf",
+      "file": "10.1093_ije_dyy095.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0083672",
+      "title": "",
+      "year": "2013",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0083672&type=printable",
+      "file": "10.1371_journal.pone.0083672.md"
+    },
+    {
+      "doi": "10.1111/1468-0009.12038",
+      "title": "",
+      "year": "2014",
+      "journal": "Milbank Q.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature16996",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4817224/pdf/emss-66776.pdf",
+      "file": "10.1038_nature16996.md"
+    },
+    {
+      "doi": "10.1016/j.ajic.2016.05.015",
+      "title": "",
+      "year": "2017",
+      "journal": "Am. J. Infect. Control",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1259657",
+      "title": "",
+      "year": "2014",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4431643?pdf=render",
+      "file": "10.1126_science.1259657.md"
+    },
+    {
+      "doi": "10.1038/nature14490",
+      "title": "",
+      "year": "2015",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/nature14490.pdf",
+      "file": "10.1038_nature14490.md"
+    },
+    {
+      "doi": "10.1056/nejmoa1804498",
+      "title": "",
+      "year": "2018",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa1804498?articleTools=true",
+      "file": "10.1056_nejmoa1804498.md"
+    },
+    {
+      "doi": "10.3201/eid1811.120453",
+      "title": "",
+      "year": "2012",
+      "journal": "Emerg. Infect. Dis.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://pure.eur.nl/en/publications/6ac0f26b-d3c5-4f75-ad9f-ddd519902302",
+      "file": "10.3201_eid1811.120453.md"
+    },
+    {
+      "doi": "10.1016/s0140-6736(16)32621-6",
+      "title": "",
+      "year": "2017",
+      "journal": "Lancet",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S0140673616326216/pdf",
+      "file": "10.1016_s0140-6736_16_32621-6.md"
+    },
+    {
+      "doi": "10.2105/ajph.2015.302996",
+      "title": "",
+      "year": "2016",
+      "journal": "Am. J. Public Health",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4816142?pdf=render",
+      "file": "10.2105_ajph.2015.302996.md"
+    },
+    {
+      "doi": "10.1073/pnas.1817329116",
+      "title": "",
+      "year": "2019",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/116/20/10178.full.pdf",
+      "file": "10.1073_pnas.1817329116.md"
+    },
+    {
+      "doi": "10.1016/s1473-3099(17)30234-7",
+      "title": "",
+      "year": "2017",
+      "journal": "Lancet Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S1473309917302347/pdf",
+      "file": "10.1016_s1473-3099_17_30234-7.md"
+    },
+    {
+      "doi": "10.1016/s2468-2667(18)30029-x",
+      "title": "",
+      "year": "2018",
+      "journal": "Lancet Public Health",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S246826671830029X/pdf",
+      "file": "10.1016_s2468-2667_18_30029-x.md"
+    },
+    {
+      "doi": "10.1016/s1473-3099(17)30062-2",
+      "title": "",
+      "year": "2017",
+      "journal": "Lancet Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S1473309917300622/pdf",
+      "file": "10.1016_s1473-3099_17_30062-2.md"
+    },
+    {
+      "doi": "10.1016/s1473-3099(14)70999-5",
+      "title": "",
+      "year": "2015",
+      "journal": "Lancet Infect. Dis.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4712379?pdf=render",
+      "file": "10.1016_s1473-3099_14_70999-5.md"
+    },
+    {
+      "doi": "10.1136/medethics-2016-103474",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Med. Ethics",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://jme.bmj.com/content/medethics/44/1/3.full.pdf",
+      "file": "10.1136_medethics-2016-103474.md"
+    },
+    {
+      "doi": "10.1126/science.aam8334",
+      "title": "",
+      "year": "2017",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.molmed.2015.12.005",
+      "title": "",
+      "year": "2016",
+      "journal": "Trends Mol. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S147149141500235X/pdf",
+      "file": "10.1016_j.molmed.2015.12.005.md"
+    },
+    {
+      "doi": "10.1016/s0140-6736(19)30160-6",
+      "title": "",
+      "year": "2019",
+      "journal": "Lancet",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S0140673619301606/pdf",
+      "file": "10.1016_s0140-6736_19_30160-6.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0203387",
+      "title": "",
+      "year": "2018",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0203387&type=printable",
+      "file": "10.1371_journal.pone.0203387.md"
+    },
+    {
+      "doi": "10.3389/fvets.2018.00014",
+      "title": "",
+      "year": "2018",
+      "journal": "Front. Vet. Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fvets.2018.00014/pdf",
+      "file": "10.3389_fvets.2018.00014.md"
+    },
+    {
+      "doi": "10.3201/eid1812.120664",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3557867?pdf=render",
+      "file": "10.3201_eid1812.120664.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0109986",
+      "title": "",
+      "year": "2014",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0109986&type=printable",
+      "file": "10.1371_journal.pone.0109986.md"
+    },
+    {
+      "doi": "10.1093/infdis/jiy213",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Infect. Dis.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s2214-109x(15)00065-0",
+      "title": "",
+      "year": "2015",
+      "journal": "Lancet Glob. Health",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://doaj.org/article/5d67cf25671d4d6cb9a3f230cadf2229",
+      "file": "10.1016_s2214-109x_15_00065-0.md"
+    },
+    {
+      "doi": "10.1136/bmjgh-2015-000007",
+      "title": "",
+      "year": "2016",
+      "journal": "BMJ Glob. Health",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://gh.bmj.com/content/bmjgh/1/1/e000007.full.pdf",
+      "file": "10.1136_bmjgh-2015-000007.md"
+    },
+    {
+      "doi": "10.1016/s2352-4642(18)30021-x",
+      "title": "",
+      "year": "2018",
+      "journal": "Lancet Child Adolesc. Health",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S235246421830021X/pdf",
+      "file": "10.1016_s2352-4642_18_30021-x.md"
+    },
+    {
+      "doi": "10.1016/s0140-6736(19)31211-5",
+      "title": "",
+      "year": "2019",
+      "journal": "Lancet",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.amjmed.2017.10.035",
+      "title": "",
+      "year": "2018",
+      "journal": "Am. J. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3390/ijerph15122796",
+      "title": "",
+      "year": "2018",
+      "journal": "Int. J. Environ. Res. Public Health",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/1660-4601/15/12/2796/pdf?version=1544414546",
+      "file": "10.3390_ijerph15122796.md"
+    },
+    {
+      "doi": "10.1126/science.1234914",
+      "title": "",
+      "year": "2013",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4459498?pdf=render",
+      "file": "10.1126_science.1234914.md"
+    },
+    {
+      "doi": "10.1016/j.vaccine.2017.02.069",
+      "title": "",
+      "year": "2017",
+      "journal": "Vaccine",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7115529?pdf=render",
+      "file": "10.1016_j.vaccine.2017.02.069.md"
+    },
+    {
+      "doi": "10.1038/540189a",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1056/nejmp1806634",
+      "title": "",
+      "year": "2018",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s0140-6736(18)32741-7",
+      "title": "",
+      "year": "2018",
+      "journal": "Lancet",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.7554/elife.43481",
+      "title": "",
+      "year": "2019",
+      "journal": "eLife",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6478433?pdf=render",
+      "file": "10.7554_elife.43481.md"
+    },
+    {
+      "doi": "10.1016/j.vaccine.2019.01.011",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7735377?pdf=render",
+      "file": "10.1016_j.vaccine.2019.01.011.md"
+    },
+    {
+      "doi": "10.1001/jama.2018.17716",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Am. Med. Assoc.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    }
+  ]
+}

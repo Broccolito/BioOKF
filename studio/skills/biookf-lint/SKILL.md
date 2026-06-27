@@ -1,0 +1,29 @@
+---
+name: biookf-lint
+description: Use when validating or repairing a BioOKF knowledge base — run the deterministic scan, then fix Errors then Warnings by rewriting the offending pages.
+---
+
+# Skill: biookf-lint
+
+`okf_lint` returns a JSON report of `findings` with `severity` (error/warn/info), `rule`, `subject`, `message`, `path`.
+
+## Fix order
+1. **Errors first** (the bundle is non-conformant until these are 0):
+   - `type.invalid` / `predicate.invalid` → change to one of the 28 / 23.
+   - `identifier.duplicate` → rename one (add a parenthetical facet, e.g. `IL6 (gene)` vs `IL6 (protein)`).
+   - `edge.missing_*` / `edge.invalid_*` (knowledge_level/agent_type/primary_source) → add/correct the provenance triplet.
+   - `parse` → fix the YAML (usually an unquoted `": "` in a value).
+2. **Warnings** (quality):
+   - `edge.object_unresolved` → create the missing concept doc, or fix the `object` to match an existing `identifier`.
+   - `identifier.opaque` → rename to human-readable; move the CURIE to `xref`.
+   - `edge.primary_source_unresolved` / `_not_source` → point `primary_source` at a real Publication/Study/Dataset/Agent node (create it once).
+   - `source.unanchored` → add `raw_source` (ingested) or an `xref` CURIE (external) to the source node.
+   - `edge.range` → fix the domain/range (e.g. `treats` must target a Disease/Phenotype).
+   - `node.orphan` → connect it (often a missing `reported_in` edge).
+   - `edge.contradiction` → reconcile or annotate which claim is authoritative.
+3. **Infos** are advisory (`subtype.missing`, `predicate.inverse`, `edge.missing_direction`) — address opportunistically.
+
+## How to fix
+For each offending page: `okf_read_page` → edit → `okf_validate_page` → `okf_write_page`. Re-run `okf_lint` until Errors = 0. Record what you changed with `okf_append_log`.
+
+A missing `xref` is an enrichment opportunity, never an error. `subtype` is never linted against a list.

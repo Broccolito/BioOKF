@@ -1,0 +1,1831 @@
+{
+  "article": {
+    "slug": "s41586-020-2612-2",
+    "doi": "10.1038/s41586-020-2612-2",
+    "title": "Effects of extracellular matrix viscoelasticity on cellular behaviour",
+    "url": "https://www.nature.com/articles/s41586-020-2612-2",
+    "abbrev": "effects-extracellular-matrix-viscoelasticity-cellular-b",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/effects-extracellular-matrix-viscoelasticity-cellular-b"
+  },
+  "meta": {
+    "title": "Effects of extracellular matrix viscoelasticity on cellular behaviour",
+    "authors": [
+      "Ovijit Chaudhuri",
+      "Justin Cooper-White",
+      "Paul A. Janmey",
+      "David J. Mooney",
+      "Vivek B. Shenoy"
+    ],
+    "published": [
+      2020,
+      8,
+      26
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-020-2612-2",
+    "n_references": 200,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "2612_CR1",
+      "doi": "10.1126/science.114.2965.431",
+      "title": "",
+      "journal": "Science",
+      "year": "1951",
+      "author": "AA Katzberg",
+      "unstructured": "Katzberg, A. A. Distance as a factor in the development of attraction fields between growing tissues in culture. Science 114, 431\u2013432 (1951)."
+    },
+    {
+      "key": "2612_CR2",
+      "doi": "10.1016/0014-4827(91)90406-k",
+      "title": "",
+      "journal": "Exp. Cell Res.",
+      "year": "1991",
+      "author": "CR Keese",
+      "unstructured": "Keese, C. R. & Giaever, I. Substrate mechanics and cell spreading. Exp. Cell Res. 195, 528\u2013532 (1991)."
+    },
+    {
+      "key": "2612_CR3",
+      "doi": "10.1073/pnas.94.25.13661",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1997",
+      "author": "RJ Pelham Jr",
+      "unstructured": "Pelham, R. J. Jr & Wang, Y. Cell locomotion and focal adhesions are regulated by substrate flexibility. Proc. Natl Acad. Sci. USA 94, 13661\u201313665 (1997)."
+    },
+    {
+      "key": "2612_CR4",
+      "doi": "10.1126/science.1116995",
+      "title": "",
+      "journal": "Science",
+      "year": "2005",
+      "author": "DE Discher",
+      "unstructured": "Discher, D. E., Janmey, P. & Wang, Y. L. Tissue cells feel and respond to the stiffness of their substrate. Science 310, 1139\u20131143 (2005)."
+    },
+    {
+      "key": "2612_CR5",
+      "doi": "10.1038/nrm3112",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2011",
+      "author": "CC DuFort",
+      "unstructured": "DuFort, C. C., Paszek, M. J. & Weaver, V. M. Balancing forces: architectural control of mechanotransduction. Nat. Rev. Mol. Cell Biol. 12, 308\u2013319 (2011)."
+    },
+    {
+      "key": "2612_CR6",
+      "doi": "10.1038/nrm1890",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2006",
+      "author": "V Vogel",
+      "unstructured": "Vogel, V. & Sheetz, M. Local force and geometry sensing regulate cell functions. Nat. Rev. Mol. Cell Biol. 7, 265\u2013275 (2006)."
+    },
+    {
+      "key": "2612_CR7",
+      "doi": "10.1038/nrm3896",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2014",
+      "author": "JD Humphrey",
+      "unstructured": "Humphrey, J. D., Dufresne, E. R. & Schwartz, M. A. Mechanotransduction and extracellular matrix homeostasis. Nat. Rev. Mol. Cell Biol. 15, 802\u2013812 (2014)."
+    },
+    {
+      "key": "2612_CR8",
+      "doi": "10.1038/s41580-019-0134-2",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2019",
+      "author": "JZ Kechagia",
+      "unstructured": "Kechagia, J. Z., Ivaska, J. & Roca-Cusachs, P. Integrins as biomechanical sensors of the microenvironment. Nat. Rev. Mol. Cell Biol. 20, 457\u2013473 (2019)."
+    },
+    {
+      "key": "2612_CR9",
+      "doi": "10.1152/physrev.00013.2019",
+      "title": "",
+      "journal": "Physiol. Rev.",
+      "year": "2020",
+      "author": "PA Janmey",
+      "unstructured": "Janmey, P. A., Fletcher, D. & Reinhart-King, C. A. Stiffness sensing in cells and tissues. Physiol. Rev. 100, 695\u2013724 (2020)."
+    },
+    {
+      "key": "2612_CR10",
+      "doi": "10.1073/pnas.0902639106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "RM Bellin",
+      "unstructured": "Bellin, R. M. et al. Defining the role of syndecan-4 in mechanotransduction using surface-modification approaches. Proc. Natl Acad. Sci. USA 106, 22102\u201322107 (2009)."
+    },
+    {
+      "key": "2612_CR11",
+      "doi": "10.1038/nmat3889",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2014",
+      "author": "C Yang",
+      "unstructured": "Yang, C., Tibbitt, M. W., Basta, L. & Anseth, K. S. Mechanical memory and dosing influence stem cell fate. Nat. Mater. 13, 645\u2013652 (2014)."
+    },
+    {
+      "key": "2612_CR12",
+      "doi": "10.1039/c2ib00149g",
+      "title": "",
+      "journal": "Integr. Biol.",
+      "year": "2012",
+      "author": "JL Balestrini",
+      "unstructured": "Balestrini, J. L., Chaudhry, S., Sarrazy, V., Koehler, A. & Hinz, B. The mechanical memory of lung myofibroblasts. Integr. Biol. 4, 410\u2013421 (2012)."
+    },
+    {
+      "key": "2612_CR13",
+      "doi": "10.1038/s41551-019-0420-5",
+      "title": "",
+      "journal": "Nat. Biomed. Eng.",
+      "year": "2019",
+      "author": "RS Stowers",
+      "unstructured": "Stowers, R. S. et al. Matrix stiffness induces a tumorigenic phenotype in mammary epithelium through changes in chromatin accessibility. Nat. Biomed. Eng. 3, 1009\u20131019 (2019)."
+    },
+    {
+      "key": "2612_CR14",
+      "doi": "10.1039/b610522j",
+      "title": "",
+      "journal": "Soft Matter",
+      "year": "2007",
+      "author": "I Levental",
+      "unstructured": "Levental, I., Georges, P. C. & Janmey, P. A. Soft biological materials and their impact on cell function. Soft Matter 3, 299\u2013306 (2007)."
+    },
+    {
+      "key": "2612_CR15",
+      "doi": "10.1126/science.1240104",
+      "title": "",
+      "journal": "Science",
+      "year": "2013",
+      "author": "J Swift",
+      "unstructured": "Swift, J. et al. Nuclear lamin-A scales with tissue stiffness and enhances matrix-directed differentiation. Science 341, 1240104 (2013)."
+    },
+    {
+      "key": "2612_CR16",
+      "doi": "10.1038/nrm2592",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2009",
+      "author": "MA Wozniak",
+      "unstructured": "Wozniak, M. A. & Chen, C. S. Mechanotransduction in development: a growing role for contractility. Nat. Rev. Mol. Cell Biol. 10, 34\u201343 (2009)."
+    },
+    {
+      "key": "2612_CR17",
+      "doi": "10.1038/nrm2597",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2009",
+      "author": "DE Jaalouk",
+      "unstructured": "Jaalouk, D. E. & Lammerding, J. Mechanotransduction gone awry. Nat. Rev. Mol. Cell Biol. 10, 63\u201373 (2009)."
+    },
+    {
+      "key": "2612_CR18",
+      "doi": "10.1016/j.jbiomech.2005.05.011",
+      "title": "",
+      "journal": "J. Biomech.",
+      "year": "2006",
+      "author": "JH Wang",
+      "unstructured": "Wang, J. H. Mechanobiology of tendon. J. Biomech. 39, 1563\u20131582 (2006)."
+    },
+    {
+      "key": "2612_CR19",
+      "doi": "10.1007/s10237-005-0074-y",
+      "title": "",
+      "journal": "Biomech. Model. Mechanobiol.",
+      "year": "2005",
+      "author": "E Mazza",
+      "unstructured": "Mazza, E., Papes, O., Rubin, M. B., Bodner, S. R. & Binur, N. S. Nonlinear elastic-viscoplastic constitutive equations for aging facial tissues. Biomech. Model. Mechanobiol. 4, 178\u2013189 (2005)."
+    },
+    {
+      "key": "2612_CR20",
+      "doi": "10.1371/journal.pcbi.1006684",
+      "title": "",
+      "journal": "PLoS Comput. Biol.",
+      "year": "2019",
+      "author": "A Malandrino",
+      "unstructured": "Malandrino, A., Trepat, X., Kamm, R. D. & Mak, M. Dynamic filopodial forces induce accumulation, damage, and plastic remodeling of 3D extracellular matrices. PLoS Comput. Biol. 15, e1006684 (2019)."
+    },
+    {
+      "key": "2612_CR21",
+      "doi": "10.1016/j.bpj.2017.11.3739",
+      "title": "",
+      "journal": "Biophys. J.",
+      "year": "2018",
+      "author": "E Ban",
+      "unstructured": "Ban, E. et al. Mechanisms of plastic deformation in collagen networks induced by cellular forces. Biophys. J. 114, 450\u2013461 (2018). This study used computational modelling to show that the observed plasticity of collagen networks is caused by the formation of new crosslinks if moderate strains are applied at small rates or due to permanent fibre elongation if large strains are applied over short periods, matching experimental findings."
+    },
+    {
+      "key": "2612_CR22",
+      "doi": "10.1016/j.bpj.2016.10.002",
+      "title": "",
+      "journal": "Biophys. J.",
+      "year": "2016",
+      "author": "S Nam",
+      "unstructured": "Nam, S., Lee, J., Brownfield, D. G. & Chaudhuri, O. Viscoplasticity enables mechanical remodeling of matrix by cells. Biophys. J. 111, 2296\u20132308 (2016)."
+    },
+    {
+      "key": "2612_CR23",
+      "doi": "10.1016/j.cub.2017.09.005",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2017",
+      "author": "R Clement",
+      "unstructured": "Clement, R., Dehapiot, B., Collinet, C., Lecuit, T. & Lenne, P. F. Viscoelastic dissipation stabilizes cell shape changes during tissue morphogenesis. Curr. Biol. 27, 3132\u20133142 (2017)."
+    },
+    {
+      "key": "2612_CR24",
+      "doi": "10.1038/s41586-019-1509-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "A Lardennois",
+      "unstructured": "Lardennois, A. et al. An actin-based viscoplastic lock ensures progressive body-axis elongation. Nature 573, 266\u2013270 (2019)."
+    },
+    {
+      "key": "2612_CR25",
+      "doi": "10.1038/nature03521",
+      "title": "",
+      "journal": "Nature",
+      "year": "2005",
+      "author": "C Storm",
+      "unstructured": "Storm, C., Pastore, J. J., MacKintosh, F. C., Lubensky, T. C. & Janmey, P. A. Nonlinear elasticity in biological gels. Nature 435, 191\u2013194 (2005)."
+    },
+    {
+      "key": "2612_CR26",
+      "doi": "10.1242/jeb.202.23.3305",
+      "title": "",
+      "journal": "J. Exp. Biol.",
+      "year": "1999",
+      "author": "RE Shadwick",
+      "unstructured": "Shadwick, R. E. Mechanical design in arteries. J. Exp. Biol. 202, 3305\u20133313 (1999)."
+    },
+    {
+      "key": "2612_CR27",
+      "doi": "10.1016/j.jmbbm.2019.103460",
+      "title": "",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "year": "2020",
+      "author": "W Li",
+      "unstructured": "Li, W., Shepherd, D. E. T. & Espino, D. M. Frequency dependent viscoelastic properties of porcine brain tissue. J. Mech. Behav. Biomed. Mater. 102, 103460 (2020)."
+    },
+    {
+      "key": "2612_CR28",
+      "doi": "10.3233/bir-1997-34603",
+      "title": "",
+      "journal": "Biorheology",
+      "year": "1997",
+      "author": "LE Bilston",
+      "unstructured": "Bilston, L. E., Liu, Z. & Phan-Thien, N. Linear viscoelastic properties of bovine brain tissue in shear. Biorheology 34, 377\u2013385 (1997)."
+    },
+    {
+      "key": "2612_CR29",
+      "doi": "10.1016/j.jmbbm.2017.07.014",
+      "title": "",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "year": "2017",
+      "author": "S Budday",
+      "unstructured": "Budday, S., Sommer, G., Holzapfel, G. A., Steinmann, P. & Kuhl, E. Viscoelastic parameter identification of human brain tissue. J. Mech. Behav. Biomed. Mater. 74, 463\u2013476 (2017)."
+    },
+    {
+      "key": "2612_CR30",
+      "doi": "10.1038/nmat4489",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2016",
+      "author": "O Chaudhuri",
+      "unstructured": "Chaudhuri, O. et al. Hydrogels with tunable stress relaxation regulate stem cell fate and activity. Nat. Mater. 15, 326\u2013334 (2016). This study demonstrated an approach to modulating the stress relaxation or loss modulus of alginate hydrogels independent of the initial elastic modulus, and found that increased stress relaxation promoted cell spreading, proliferation and osteogenic differentiation of mesenchymal stem cells in three-dimensional culture."
+    },
+    {
+      "key": "2612_CR31",
+      "doi": "10.1002/adma.201303680",
+      "title": "",
+      "journal": "Adv. Mater.",
+      "year": "2014",
+      "author": "DD McKinnon",
+      "unstructured": "McKinnon, D. D., Domaille, D. W., Cha, J. N. & Anseth, K. S. Biophysically defined and cytocompatible covalently adaptable networks as viscoelastic 3D cell culture systems. Adv. Mater. 26, 865\u2013872 (2014). This study demonstrated the use of hydrozone bonds to form viscoelastic PEG gels, and found that the viscoelastic gels enabled myoblast spreading in three-dimensional culture."
+    },
+    {
+      "key": "2612_CR32",
+      "doi": "10.1016/s0021-9290(98)00088-8",
+      "title": "",
+      "journal": "J. Biomech.",
+      "year": "1998",
+      "author": "R Reihsner",
+      "unstructured": "Reihsner, R. & Menzel, E. J. Two-dimensional stress-relaxation behavior of human skin as influenced by non-enzymatic glycation and the inhibitory agent aminoguanidine. J. Biomech. 31, 985\u2013993 (1998)."
+    },
+    {
+      "key": "2612_CR33",
+      "doi": "10.3233/bir-2008-0517",
+      "title": "",
+      "journal": "Biorheology",
+      "year": "2008",
+      "author": "M Geerligs",
+      "unstructured": "Geerligs, M., Peters, G. W., Ackermans, P. A., Oomens, C. W. & Baaijens, F. P. Linear viscoelastic behavior of subcutaneous adipose tissue. Biorheology 45, 677\u2013688 (2008)."
+    },
+    {
+      "key": "2612_CR34",
+      "doi": "10.1016/j.jbiomech.2018.01.007",
+      "title": "",
+      "journal": "J. Biomech.",
+      "year": "2018",
+      "author": "S Qiu",
+      "unstructured": "Qiu, S. et al. Characterizing viscoelastic properties of breast cancer tissue in a mouse model using indentation. J. Biomech. 69, 81\u201389 (2018)."
+    },
+    {
+      "key": "2612_CR35",
+      "doi": "",
+      "title": "",
+      "journal": "Biorheology",
+      "year": "2000",
+      "author": "Z Liu",
+      "unstructured": "Liu, Z. & Bilston, L. On the viscoelastic character of liver tissue: experiments and modelling of the linear behaviour. Biorheology 37, 191\u2013201 (2000)."
+    },
+    {
+      "key": "2612_CR36",
+      "doi": "10.1371/journal.pone.0146588",
+      "title": "",
+      "journal": "PLoS One",
+      "year": "2016",
+      "author": "M Perepelyuk",
+      "unstructured": "Perepelyuk, M. et al. Normal and fibrotic rat livers demonstrate shear strain softening and compression stiffening: a model for soft tissue mechanics. PLoS One 11, e0146588 (2016)."
+    },
+    {
+      "key": "2612_CR37",
+      "doi": "10.1016/s0006-3495(98)77932-9",
+      "title": "",
+      "journal": "Biophys. J.",
+      "year": "1998",
+      "author": "G Forgacs",
+      "unstructured": "Forgacs, G., Foty, R. A., Shafrir, Y. & Steinberg, M. S. Viscoelastic properties of living embryonic tissues: a quantitative study. Biophys. J. 74, 2227\u20132234 (1998)."
+    },
+    {
+      "key": "2612_CR38",
+      "doi": "10.1160/th09-03-0199",
+      "title": "",
+      "journal": "Thromb. Haemost.",
+      "year": "2009",
+      "author": "KC Gersh",
+      "unstructured": "Gersh, K. C., Nagaswami, C. & Weisel, J. W. Fibrin network structure and clot mechanical properties are altered by incorporation of erythrocytes. Thromb. Haemost. 102, 1169\u20131175 (2009)."
+    },
+    {
+      "key": "2612_CR39",
+      "doi": "10.1371/journal.pone.0110588",
+      "title": "",
+      "journal": "PLoS One",
+      "year": "2014",
+      "author": "KJ Streitberger",
+      "unstructured": "Streitberger, K. J. et al. High-resolution mechanical imaging of glioblastoma by multifrequency magnetic resonance elastography. PLoS One 9, e110588 (2014)."
+    },
+    {
+      "key": "2612_CR40",
+      "doi": "10.1016/j.neuroimage.2009.02.040",
+      "title": "",
+      "journal": "Neuroimage",
+      "year": "2009",
+      "author": "I Sack",
+      "unstructured": "Sack, I. et al. The impact of aging and gender on brain viscoelasticity. Neuroimage 46, 652\u2013657 (2009)."
+    },
+    {
+      "key": "2612_CR41",
+      "doi": "10.1371/journal.pone.0029888",
+      "title": "",
+      "journal": "PLoS One",
+      "year": "2012",
+      "author": "KJ Streitberger",
+      "unstructured": "Streitberger, K. J. et al. Brain viscoelasticity alteration in chronic-progressive multiple sclerosis. PLoS One 7, e29888 (2012)."
+    },
+    {
+      "key": "2612_CR42",
+      "doi": "10.1002/mrm.21404",
+      "title": "",
+      "journal": "Magn. Reson. Med.",
+      "year": "2007",
+      "author": "R Sinkus",
+      "unstructured": "Sinkus, R. et al. MR elastography of breast lesions: understanding the solid/liquid duality can improve the specificity of contrast-enhanced MR mammography. Magn. Reson. Med. 58, 1135\u20131144 (2007). These studies (Streitberger et al. (2014) and Sinkus et al. (2007)) utilized magnetic resonance elastography to analyse changes in tissue viscoelasticity during cancer, and find that there were striking differences in viscoelasticity between malignant and benign breast tumors, and between glioblastoma and healthy brain parenchyma."
+    },
+    {
+      "key": "2612_CR43",
+      "doi": "10.1073/pnas.1523906113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "S Nam",
+      "unstructured": "Nam, S., Hu, K. H., Butte, M. J. & Chaudhuri, O. Strain-enhanced stress relaxation impacts nonlinear elasticity in collagen gels. Proc. Natl Acad. Sci. USA 113, 5492\u20135497 (2016)."
+    },
+    {
+      "key": "2612_CR44",
+      "doi": "10.1016/0301-4622(74)80046-3",
+      "title": "",
+      "journal": "Biophys. Chem.",
+      "year": "1974",
+      "author": "C Gerth",
+      "unstructured": "Gerth, C., Roberts, W. W. & Ferry, J. D. Rheology of fibrin clots. II. Linear viscoelastic behavior in shear creep. Biophys. Chem. 2, 208\u2013217 (1974)."
+    },
+    {
+      "key": "2612_CR45",
+      "doi": "10.1126/science.1127317",
+      "title": "",
+      "journal": "Science",
+      "year": "2006",
+      "author": "W Liu",
+      "unstructured": "Liu, W. et al. Fibrin fibers have extraordinary extensibility and elasticity. Science 313, 634 (2006)."
+    },
+    {
+      "key": "2612_CR46",
+      "doi": "10.1115/1.4038745",
+      "title": "",
+      "journal": "J. Biomech. Eng.",
+      "year": "2018",
+      "author": "BK Connizzo",
+      "unstructured": "Connizzo, B. K. & Grodzinsky, A. J. Multiscale poroviscoelastic compressive properties of mouse supraspinatus tendons are altered in young and aged mice. J. Biomech. Eng. 140, 051002 (2018). This and earlier related studies emphasize the importance of poroelastic relaxation in the design of tissues and their changes with injury, disease and ageing."
+    },
+    {
+      "key": "2612_CR47",
+      "doi": "10.1039/c8sm02264j",
+      "title": "",
+      "journal": "Soft Matter",
+      "year": "2019",
+      "author": "F Sauer",
+      "unstructured": "Sauer, F. et al. Collagen networks determine viscoelastic properties of connective tissues yet do not hinder diffusion of the aqueous solvent. Soft Matter 15, 3055\u20133064 (2019)."
+    },
+    {
+      "key": "2612_CR48",
+      "doi": "10.1073/pnas.1222787110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "S Munster",
+      "unstructured": "Munster, S. et al. Strain history dependence of the nonlinear stress response of fibrin and collagen networks. Proc. Natl Acad. Sci. USA 110, 12197\u201312202 (2013)."
+    },
+    {
+      "key": "2612_CR49",
+      "doi": "10.1038/ncomms7649",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2015",
+      "author": "W Yang",
+      "unstructured": "Yang, W. et al. On the tear resistance of skin. Nat. Commun. 6, 6649 (2015)."
+    },
+    {
+      "key": "2612_CR50",
+      "doi": "10.1016/s0021-9290(03)00135-0",
+      "title": "",
+      "journal": "J. Biomech.",
+      "year": "2003",
+      "author": "FH Silver",
+      "unstructured": "Silver, F. H., Freeman, J. W. & Seehra, G. P. Collagen self-assembly and the development of tendon mechanical properties. J. Biomech. 36, 1529\u20131553 (2003)."
+    },
+    {
+      "key": "2612_CR51",
+      "doi": "10.1016/0021-9290(88)90172-8",
+      "title": "",
+      "journal": "J. Biomech.",
+      "year": "1988",
+      "author": "H Oxlund",
+      "unstructured": "Oxlund, H., Manschot, J. & Viidik, A. The role of elastin in the mechanical properties of skin. J. Biomech. 21, 213\u2013218 (1988)."
+    },
+    {
+      "key": "2612_CR52",
+      "doi": "10.1016/s0021-9290(97)00122-x",
+      "title": "",
+      "journal": "J. Biomech.",
+      "year": "1997",
+      "author": "I Vesely",
+      "unstructured": "Vesely, I. The role of elastin in aortic valve mechanics. J. Biomech. 31, 115\u2013123 (1997)."
+    },
+    {
+      "key": "2612_CR53",
+      "doi": "10.1039/c8sm02046a",
+      "title": "",
+      "journal": "Soft Matter",
+      "year": "2019",
+      "author": "EP DeBenedictis",
+      "unstructured": "DeBenedictis, E. P. & Keten, S. Mechanical unfolding of alpha- and beta-helical protein motifs. Soft Matter 15, 1243\u20131252 (2019)."
+    },
+    {
+      "key": "2612_CR54",
+      "doi": "10.1039/c3sm52272e",
+      "title": "",
+      "journal": "Soft Matter",
+      "year": "2014",
+      "author": "XH Zhao",
+      "unstructured": "Zhao, X. H. Multi-scale multi-mechanism design of tough hydrogels: building dissipation into stretchy networks. Soft Matter 10, 672\u2013687 (2014)."
+    },
+    {
+      "key": "2612_CR55",
+      "doi": "10.1126/science.1172484",
+      "title": "",
+      "journal": "Science",
+      "year": "2009",
+      "author": "AE Brown",
+      "unstructured": "Brown, A. E., Litvinov, R. I., Discher, D. E., Purohit, P. K. & Weisel, J. W. Multiscale mechanics of fibrin polymer: gel stretching with protein unfolding and loss of water. Science 325, 741\u2013744 (2009)."
+    },
+    {
+      "key": "2612_CR56",
+      "doi": "10.1529/biophysj.105.066977",
+      "title": "",
+      "journal": "Biophys. J.",
+      "year": "2006",
+      "author": "S Paramore",
+      "unstructured": "Paramore, S., Ayton, G. S. & Voth, G. A. Extending a spectrin repeat unit. II: rupture behavior. Biophys. J. 90, 101\u2013111 (2006)."
+    },
+    {
+      "key": "2612_CR57",
+      "doi": "10.1021/acsnano.7b08973",
+      "title": "",
+      "journal": "ACS Nano",
+      "year": "2018",
+      "author": "H Takahashi",
+      "unstructured": "Takahashi, H., Rico, F., Chipot, C. & Scheuring, S. \u03b1-Helix unwinding as force buffer in spectrins. ACS Nano 12, 2719\u20132727 (2018)."
+    },
+    {
+      "key": "2612_CR58",
+      "doi": "10.1126/sciadv.aat1161",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2018",
+      "author": "J Block",
+      "unstructured": "Block, J. et al. Viscoelastic properties of vimentin originate from nonequilibrium conformational changes. Sci. Adv. 4, eaat1161 (2018)."
+    },
+    {
+      "key": "2612_CR59",
+      "doi": "10.1016/j.actbio.2018.01.041",
+      "title": "",
+      "journal": "Acta Biomater.",
+      "year": "2018",
+      "author": "R Oftadeh",
+      "unstructured": "Oftadeh, R., Connizzo, B. K., Nia, H. T., Ortiz, C. & Grodzinsky, A. J. Biological connective tissues exhibit viscoelastic and poroelastic behavior at different frequency regimes: application to tendon and skin biophysics. Acta Biomater. 70, 249\u2013259 (2018)."
+    },
+    {
+      "key": "2612_CR60",
+      "doi": "10.1038/srep19270",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2016",
+      "author": "AS van Oosten",
+      "unstructured": "van Oosten, A. S. et al. Uncoupling shear and uniaxial elastic moduli of semiflexible biopolymer networks: compression-softening and stretch-stiffening. Sci. Rep. 6, 19270 (2016)."
+    },
+    {
+      "key": "2612_CR61",
+      "doi": "10.1016/j.jmbbm.2017.11.001",
+      "title": "",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "year": "2018",
+      "author": "K Mollaeian",
+      "unstructured": "Mollaeian, K., Liu, Y., Bi, S. & Ren, J. Atomic force microscopy study revealed velocity-dependence and nonlinearity of nanoscale poroelasticity of eukaryotic cells. J. Mech. Behav. Biomed. Mater. 78, 65\u201373 (2018)."
+    },
+    {
+      "key": "2612_CR62",
+      "doi": "10.1073/pnas.1702488114",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "J Hu",
+      "unstructured": "Hu, J. et al. Size- and speed-dependent mechanical behavior in living mammalian cytoplasm. Proc. Natl Acad. Sci. USA 114, 9529\u20139534 (2017)."
+    },
+    {
+      "key": "2612_CR63",
+      "doi": "10.1016/j.semcdb.2008.01.008",
+      "title": "",
+      "journal": "Semin. Cell Dev. Biol.",
+      "year": "2008",
+      "author": "TJ Mitchison",
+      "unstructured": "Mitchison, T. J., Charras, G. T. & Mahadevan, L. Implications of a poroelastic cytoplasm for the dynamics of animal cell shape. Semin. Cell Dev. Biol. 19, 215\u2013223 (2008)."
+    },
+    {
+      "key": "2612_CR64",
+      "doi": "10.1038/nmat3517",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2013",
+      "author": "E Moeendarbary",
+      "unstructured": "Moeendarbary, E. et al. The cytoplasm of living cells behaves as a poroelastic material. Nat. Mater. 12, 253\u2013261 (2013)."
+    },
+    {
+      "key": "2612_CR65",
+      "doi": "10.1016/j.cell.2014.06.051",
+      "title": "",
+      "journal": "Cell",
+      "year": "2014",
+      "author": "M Guo",
+      "unstructured": "Guo, M. et al. Probing the stochastic, motor-driven properties of the cytoplasm using force spectrum microscopy. Cell 158, 822\u2013832 (2014)."
+    },
+    {
+      "key": "2612_CR66",
+      "doi": "10.1038/416413a",
+      "title": "",
+      "journal": "Nature",
+      "year": "2002",
+      "author": "D Humphrey",
+      "unstructured": "Humphrey, D., Duggan, C., Saha, D., Smith, D. & Kas, J. Active fluidization of polymer networks through molecular motors. Nature 416, 413\u2013416 (2002)."
+    },
+    {
+      "key": "2612_CR67",
+      "doi": "10.1371/journal.pone.0005902",
+      "title": "",
+      "journal": "PLoS One",
+      "year": "2009",
+      "author": "D Vader",
+      "unstructured": "Vader, D., Kabla, A., Weitz, D. & Mahadevan, L. Strain-induced alignment in collagen gels. PLoS One 4, e5902 (2009)."
+    },
+    {
+      "key": "2612_CR68",
+      "doi": "10.1073/pnas.1613058113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "MS Hall",
+      "unstructured": "Hall, M. S. et al. Fibrous nonlinear elasticity enables positive mechanical feedback between cells and ECMs. Proc. Natl Acad. Sci. USA 113, 14043\u201314048 (2016)."
+    },
+    {
+      "key": "2612_CR69",
+      "doi": "10.1038/nmeth.3685",
+      "title": "",
+      "journal": "Nat. Methods",
+      "year": "2016",
+      "author": "J Steinwachs",
+      "unstructured": "Steinwachs, J. et al. Three-dimensional force microscopy of cells in biopolymer networks. Nat. Methods 13, 171\u2013176 (2016)."
+    },
+    {
+      "key": "2612_CR70",
+      "doi": "10.1016/j.bpj.2014.09.044",
+      "title": "",
+      "journal": "Biophys. J.",
+      "year": "2014",
+      "author": "H Wang",
+      "unstructured": "Wang, H., Abhilash, A. S., Chen, C. S., Wells, R. G. & Shenoy, V. B. Long-range force transmission in fibrous matrices enabled by tension-driven alignment of fibers. Biophys. J. 107, 2592\u20132603 (2014)."
+    },
+    {
+      "key": "2612_CR71",
+      "doi": "10.1073/pnas.1504258112",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2015",
+      "author": "AJ Licup",
+      "unstructured": "Licup, A. J. et al. Stress controls the mechanics of collagen networks. Proc. Natl Acad. Sci. USA 112, 9573\u20139578 (2015)."
+    },
+    {
+      "key": "2612_CR72",
+      "doi": "10.1073/pnas.1722619115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "YL Han",
+      "unstructured": "Han, Y. L. et al. Cell contraction induces long-ranged stress stiffening in the extracellular matrix. Proc. Natl Acad. Sci. USA 115, 4075\u20134080 (2018)."
+    },
+    {
+      "key": "2612_CR73",
+      "doi": "10.1073/pnas.1815659116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "E Ban",
+      "unstructured": "Ban, E. et al. Strong triaxial coupling and anomalous Poisson effect in collagen networks. Proc. Natl Acad. Sci. USA 116, 6790\u20136799 (2019)."
+    },
+    {
+      "key": "2612_CR74",
+      "doi": "10.1126/science.1095087",
+      "title": "",
+      "journal": "Science",
+      "year": "2004",
+      "author": "ML Gardel",
+      "unstructured": "Gardel, M. L. et al. Elastic behavior of cross-linked and bundled actin networks. Science 304, 1301\u20131305 (2004)."
+    },
+    {
+      "key": "2612_CR75",
+      "doi": "10.1038/nature05459",
+      "title": "",
+      "journal": "Nature",
+      "year": "2007",
+      "author": "O Chaudhuri",
+      "unstructured": "Chaudhuri, O., Parekh, S. H. & Fletcher, D. A. Reversible stress softening of actin networks. Nature 445, 295\u2013298 (2007)."
+    },
+    {
+      "key": "2612_CR76",
+      "doi": "10.1016/j.biomaterials.2011.04.003",
+      "title": "",
+      "journal": "Biomaterials",
+      "year": "2011",
+      "author": "AR Cameron",
+      "unstructured": "Cameron, A. R., Frith, J. E. & Cooper-White, J. J. The influence of substrate creep on mesenchymal stem cell behaviour and phenotype. Biomaterials 32, 5979\u20135993 (2011). This study demonstrated an approach to modulating the loss modulus of PAM hydrogels independently of the elastic modulus, thereby creating a range of stiffness-matched substrates of varying viscoelasticity, showing that substrates that permitted increased creep under cell-generated stresses promoted increased cell spreading, proliferation, and tri-lineage differentiation of mesenchymal stem cells in two-dimensional culture."
+    },
+    {
+      "key": "2612_CR77",
+      "doi": "10.1016/j.biomaterials.2013.11.023",
+      "title": "",
+      "journal": "Biomaterials",
+      "year": "2014",
+      "author": "AR Cameron",
+      "unstructured": "Cameron, A. R., Frith, J. E., Gomez, G. A., Yap, A. S. & Cooper-White, J. J. The effect of time-dependent deformation of viscoelastic hydrogels on myogenic induction and Rac1 activity in mesenchymal stem cells. Biomaterials 35, 1857\u20131868 (2014). This study demonstrated that increasing levels of dissipation in viscoelastic substrates matching skeletal muscle stiffness biased Rho-GTPase activity to drive Rac1-mediated myogenic induction of mesenchymal stem cells in two-dimensional culture."
+    },
+    {
+      "key": "2612_CR78",
+      "doi": "10.1038/ncomms7365",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2015",
+      "author": "O Chaudhuri",
+      "unstructured": "Chaudhuri, O. et al. Substrate stress relaxation regulates cell spreading. Nat. Commun. 6, 6365 (2015)."
+    },
+    {
+      "key": "2612_CR79",
+      "doi": "10.1038/s41467-018-02906-9",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "EE Charrier",
+      "unstructured": "Charrier, E. E., Pogoda, K., Wells, R. G. & Janmey, P. A. Control of cell morphology and differentiation by substrates with independently tunable elasticity and viscous dissipation. Nat. Commun. 9, 449 (2018). This study reported a method of producing viscoelastic solid substrates with separately tunable elastic and viscous moduli and showed that several cell types respond to viscoelastic substrates as though they were softer than purely elastic substrates of the same elastic modulus."
+    },
+    {
+      "key": "2612_CR80",
+      "doi": "10.1021/acs.biomac.9b00965",
+      "title": "",
+      "journal": "Biomacromolecules",
+      "year": "2019",
+      "author": "E Hui",
+      "unstructured": "Hui, E., Gimeno, K. I., Guan, G. & Caliari, S. R. Spatiotemporal control of viscoelasticity in phototunable hyaluronic acid hydrogels. Biomacromolecules 20, 4126\u20134134 (2019)."
+    },
+    {
+      "key": "2612_CR81",
+      "doi": "10.1039/c9bm01339c",
+      "title": "",
+      "journal": "Biomater. Sci.",
+      "year": "2020",
+      "author": "K Mandal",
+      "unstructured": "Mandal, K., Gong, Z., Rylander, A., Shenoy, V. B. & Janmey, P. A. Opposite responses of normal hepatocytes and hepatocellular carcinoma cells to substrate viscoelasticity. Biomater. Sci. 8, 1316\u20131328 (2020)."
+    },
+    {
+      "key": "2612_CR82",
+      "doi": "10.1016/j.bpj.2013.06.027",
+      "title": "",
+      "journal": "Biophys. J.",
+      "year": "2013",
+      "author": "BL Bangasser",
+      "unstructured": "Bangasser, B. L., Rosenfeld, S. S. & Odde, D. J. Determinants of maximal force transmission in a motor-clutch model of cell traction in a compliant microenvironment. Biophys. J. 105, 581\u2013592 (2013)."
+    },
+    {
+      "key": "2612_CR83",
+      "doi": "10.1126/science.1163595",
+      "title": "",
+      "journal": "Science",
+      "year": "2008",
+      "author": "CE Chan",
+      "unstructured": "Chan, C. E. & Odde, D. J. Traction dynamics of filopodia on compliant substrates. Science 322, 1687\u20131691 (2008)."
+    },
+    {
+      "key": "2612_CR84",
+      "doi": "10.1038/ncomms15313",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "BL Bangasser",
+      "unstructured": "Bangasser, B. L. et al. Shifting the optimal stiffness for cell migration. Nat. Commun. 8, 15313 (2017)."
+    },
+    {
+      "key": "2612_CR85",
+      "doi": "",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "Z Gong",
+      "unstructured": "Gong, Z. et al. Matching material and cellular timescales maximizes cell spreading on viscoelastic substrates. Proc. Natl Acad. Sci. USA 115, E2686\u2013E2695 (2018). This study used analytical and Monte Carlo methods to simulate the dynamics of motor clutches (focal adhesions) formed between the cell and a viscoelastic substrate, and found that that intermediate viscosity maximizes cell spreading on soft substrates, while cell spreading is independent of viscosity on stiff substrates, in agreement with experiments on three different material systems."
+    },
+    {
+      "key": "2612_CR86",
+      "doi": "10.1038/ncb3336",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2016",
+      "author": "A Elosegui-Artola",
+      "unstructured": "Elosegui-Artola, A. et al. Mechanical regulation of a molecular clutch defines force transmission and transduction in response to matrix rigidity. Nat. Cell Biol. 18, 540\u2013548 (2016)."
+    },
+    {
+      "key": "2612_CR87",
+      "doi": "10.1073/pnas.1710653115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "M Bennett",
+      "unstructured": "Bennett, M. et al. Molecular clutch drives cell response to surface viscosity. Proc. Natl Acad. Sci. USA 115, 1192\u20131197 (2018)."
+    },
+    {
+      "key": "2612_CR88",
+      "doi": "",
+      "title": "",
+      "journal": "J. Cell Sci.",
+      "year": "2012",
+      "author": "BM Baker",
+      "unstructured": "Baker, B. M. & Chen, C. S. Deconstructing the third dimension: how 3D culture microenvironments alter cellular cues. J. Cell Sci. 125, 3015\u20133024 (2012)."
+    },
+    {
+      "key": "2612_CR89",
+      "doi": "10.1073/pnas.89.19.9064",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1992",
+      "author": "OW Petersen",
+      "unstructured": "Petersen, O. W., Ronnov-Jessen, L., Howlett, A. R. & Bissell, M. J. Interaction with basement membrane serves to rapidly distinguish growth and differentiation pattern of normal and malignant human breast epithelial cells. Proc. Natl Acad. Sci. USA 89, 9064\u20139068 (1992)."
+    },
+    {
+      "key": "2612_CR90",
+      "doi": "10.1038/267531a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1977",
+      "author": "K von der Mark",
+      "unstructured": "von der Mark, K., Gauss, V., von der Mark, H. & Muller, P. Relationship between cell shape and type of collagen synthesised as chondrocytes lose their cartilage phenotype in culture. Nature 267, 531\u2013532 (1977)."
+    },
+    {
+      "key": "2612_CR91",
+      "doi": "10.1073/pnas.0703723104",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2007",
+      "author": "S Gerecht",
+      "unstructured": "Gerecht, S. et al. Hyaluronic acid hydrogel for controlled self-renewal and differentiation of human embryonic stem cells. Proc. Natl Acad. Sci. USA 104, 11298\u201311303 (2007)."
+    },
+    {
+      "key": "2612_CR92",
+      "doi": "10.1038/nature10137",
+      "title": "",
+      "journal": "Nature",
+      "year": "2011",
+      "author": "S Dupont",
+      "unstructured": "Dupont, S. et al. Role of YAP/TAZ in mechanotransduction. Nature 474, 179\u2013183 (2011)."
+    },
+    {
+      "key": "2612_CR93",
+      "doi": "10.1038/s41467-019-09755-0",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "JY Lee",
+      "unstructured": "Lee, J. Y. et al. YAP-independent mechanotransduction drives breast cancer progression. Nat. Commun. 10, 1848 (2019)."
+    },
+    {
+      "key": "2612_CR94",
+      "doi": "10.1016/j.biomaterials.2016.06.061",
+      "title": "",
+      "journal": "Biomaterials",
+      "year": "2016",
+      "author": "SR Caliari",
+      "unstructured": "Caliari, S. R., Vega, S. L., Kwon, M., Soulas, E. M. & Burdick, J. A. Dimensionality and spreading influence MSC YAP/TAZ signaling in hydrogel environments. Biomaterials 103, 314\u2013323 (2016)."
+    },
+    {
+      "key": "2612_CR95",
+      "doi": "10.1038/s41563-020-0615-x",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2020",
+      "author": "AC Tito Panciera",
+      "unstructured": "Tito Panciera, A. C. et al. Reprogramming normal cells into tumour precursors requires ECM stiffness and oncogenemediated changes of cell mechanical properties. Nat. Mater. 19, 797\u2013806 (2020)."
+    },
+    {
+      "key": "2612_CR96",
+      "doi": "10.1016/j.biomaterials.2019.02.004",
+      "title": "",
+      "journal": "Biomaterials",
+      "year": "2019",
+      "author": "S Nam",
+      "unstructured": "Nam, S., Stowers, R., Lou, J., Xia, Y. & Chaudhuri, O. Varying PEG density to control stress relaxation in alginate-PEG hydrogels for 3D cell culture studies. Biomaterials 200, 15\u201324 (2019)."
+    },
+    {
+      "key": "2612_CR97",
+      "doi": "10.1016/j.biomaterials.2017.11.004",
+      "title": "",
+      "journal": "Biomaterials",
+      "year": "2018",
+      "author": "J Lou",
+      "unstructured": "Lou, J., Stowers, R., Nam, S., Xia, Y. & Chaudhuri, O. Stress relaxing hyaluronic acid-collagen hydrogels promote cell spreading, fiber remodeling, and focal adhesion formation in 3D cell culture. Biomaterials 154, 213\u2013222 (2018)."
+    },
+    {
+      "key": "2612_CR98",
+      "doi": "10.1126/sciadv.aaw6171",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2019",
+      "author": "S Nam",
+      "unstructured": "Nam, S. et al. Cell cycle progression in confining microenvironments is regulated by a growth-responsive TRPV4\u2013PI3K/Akt-p27Kip1 signaling axis. Sci. Adv. 5, eaaw6171 (2019)."
+    },
+    {
+      "key": "2612_CR99",
+      "doi": "10.1038/s41567-018-0092-1",
+      "title": "",
+      "journal": "Nat. Phys.",
+      "year": "2018",
+      "author": "S Nam",
+      "unstructured": "Nam, S. & Chaudhuri, O. Mitotic cells generate protrusive extracellular forces to divide in three-dimensional microenvironments. Nat. Phys. 14, 621\u2013628 (2018)."
+    },
+    {
+      "key": "2612_CR100",
+      "doi": "10.1073/pnas.1802568115",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2018",
+      "author": "M Darnell",
+      "unstructured": "Darnell, M. et al. Material microenvironmental properties couple to induce distinct transcriptional programs in mammalian stem cells. Proc. Natl Acad. Sci. USA 115, E8368\u2013E8377 (2018). This work revealed that the transcriptional responses of cells in three-dimensional culture to stress relaxation, matrix stiffness and adhesion ligand density exhibit substantial independent effects and coupling among these properties, demonstrating a clear cell type and context dependence of viscoelasticity sensing."
+    },
+    {
+      "key": "2612_CR101",
+      "doi": "10.1038/nmat5020",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2017",
+      "author": "CM Madl",
+      "unstructured": "Madl, C. M. et al. Maintenance of neural progenitor cell stemness in 3D hydrogels requires matrix remodelling. Nat. Mater. 16, 1233\u20131242 (2017)."
+    },
+    {
+      "key": "2612_CR102",
+      "doi": "10.1038/nmat4993",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2017",
+      "author": "HP Lee",
+      "unstructured": "Lee, H. P., Gu, L., Mooney, D. J., Levenston, M. E. & Chaudhuri, O. Mechanical confinement regulates cartilage matrix formation by chondrocytes. Nat. Mater. 16, 1243\u20131251 (2017)."
+    },
+    {
+      "key": "2612_CR103",
+      "doi": "10.1098/rsif.2014.1074",
+      "title": "",
+      "journal": "J. R. Soc. Interface",
+      "year": "2015",
+      "author": "H Mohammadi",
+      "unstructured": "Mohammadi, H., Arora, P. D., Simmons, C. A., Janmey, P. A. & McCulloch, C. A. Inelastic behaviour of collagen networks in cell-matrix interactions and mechanosensation. J. R. Soc. Interface 12, 20141074 (2015)."
+    },
+    {
+      "key": "2612_CR104",
+      "doi": "10.1038/s41467-017-01011-7",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2017",
+      "author": "J Kim",
+      "unstructured": "Kim, J. et al. Stress-induced plasticity of dynamic collagen networks. Nat. Commun. 8, 842 (2017)."
+    },
+    {
+      "key": "2612_CR105",
+      "doi": "10.1038/srep33919",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2016",
+      "author": "AS Liu",
+      "unstructured": "Liu, A. S. et al. Matrix viscoplasticity and its shielding by active mechanics in microtissue models: experiments and mathematical modeling. Sci. Rep. 6, 33919 (2016)."
+    },
+    {
+      "key": "2612_CR106",
+      "doi": "10.1038/s41467-018-06641-z",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "KM Wisdom",
+      "unstructured": "Wisdom, K. M. et al. Matrix mechanical plasticity regulates cancer cell migration through confining microenvironments. Nat. Commun. 9, 4144 (2018). This study demonstrated that mechanical plasticity in nanoporous matrices allows protease-independent migration of cancer cells, with cells using invadopodial protrusions to mechanically open up micrometre-size channels to migrate through."
+    },
+    {
+      "key": "2612_CR107",
+      "doi": "10.1038/nrc.2016.123",
+      "title": "",
+      "journal": "Nat. Rev. Cancer",
+      "year": "2017",
+      "author": "CD Paul",
+      "unstructured": "Paul, C. D., Mistriotis, P. & Konstantopoulos, K. Cancer cell motility: lessons from migration in confined spaces. Nat. Rev. Cancer 17, 131\u2013140 (2017)."
+    },
+    {
+      "key": "2612_CR108",
+      "doi": "10.1038/nmat4536",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2016",
+      "author": "M Caiazzo",
+      "unstructured": "Caiazzo, M. et al. Defined three-dimensional microenvironments boost induction of pluripotency. Nat. Mater. 15, 344\u2013352 (2016)."
+    },
+    {
+      "key": "2612_CR109",
+      "doi": "10.1083/jcb.200807195",
+      "title": "",
+      "journal": "J. Cell Biol.",
+      "year": "2009",
+      "author": "F Sabeh",
+      "unstructured": "Sabeh, F., Shimizu-Hirota, R. & Weiss, S. J. Protease-dependent versus -independent cancer cell invasion programs: three-dimensional amoeboid movement revisited. J. Cell Biol. 185, 11\u201319 (2009)."
+    },
+    {
+      "key": "2612_CR110",
+      "doi": "10.1083/jcb.201210152",
+      "title": "",
+      "journal": "J. Cell Biol.",
+      "year": "2013",
+      "author": "K Wolf",
+      "unstructured": "Wolf, K. et al. Physical limits of cell migration: control by ECM space and nuclear deformation and tuning by proteolysis and traction force. J. Cell Biol. 201, 1069\u20131084 (2013)."
+    },
+    {
+      "key": "2612_CR111",
+      "doi": "10.1083/jcb.201308029",
+      "title": "",
+      "journal": "J. Cell Biol.",
+      "year": "2014",
+      "author": "T Harada",
+      "unstructured": "Harada, T. et al. Nuclear lamin stiffness is a barrier to 3D migration, but softness can limit survival. J. Cell Biol. 204, 669\u2013682 (2014)."
+    },
+    {
+      "key": "2612_CR112",
+      "doi": "",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2015",
+      "author": "KM Schultz",
+      "unstructured": "Schultz, K. M., Kyburz, K. A. & Anseth, K. S. Measuring dynamic cell-material interactions and remodeling during 3D human mesenchymal stem cell migration in hydrogels. Proc. Natl Acad. Sci. USA 112, E3757\u2013E3764 (2015). This study examined how the viscoelastic properties of PEG hydrogels with degradable crosslinks were altered due to cellular degradation during migration of mesenchymal stem cells and found that the cells converted the elastic hydrogel into a viscoelastic fluid."
+    },
+    {
+      "key": "2612_CR113",
+      "doi": "10.1038/nmat2732",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2010",
+      "author": "N Huebsch",
+      "unstructured": "Huebsch, N. et al. Harnessing traction-mediated manipulation of the cell/matrix interface to control stem-cell fate. Nat. Mater. 9, 518\u2013526 (2010)."
+    },
+    {
+      "key": "2612_CR114",
+      "doi": "10.1038/s41467-019-08465-x",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "HP Lee",
+      "unstructured": "Lee, H. P., Stowers, R. & Chaudhuri, O. Volume expansion and TRPV4 activation regulate stem cell fate in three-dimensional microenvironments. Nat. Commun. 10, 529 (2019). This study identified the role of cell volume expansion and activation of mechanosensitive ion channels in mediating how mesenchymal stem cells sense matrix viscoelasticity."
+    },
+    {
+      "key": "2612_CR115",
+      "doi": "10.1126/science.8493529",
+      "title": "",
+      "journal": "Science",
+      "year": "1993",
+      "author": "R Langer",
+      "unstructured": "Langer, R. & Vacanti, J. P. Tissue engineering. Science 260, 920\u2013926 (1993)."
+    },
+    {
+      "key": "2612_CR116",
+      "doi": "10.1038/nature08601",
+      "title": "",
+      "journal": "Nature",
+      "year": "2009",
+      "author": "N Huebsch",
+      "unstructured": "Huebsch, N. & Mooney, D. J. Inspiration and application in the evolution of biomaterials. Nature 462, 426\u2013432 (2009)."
+    },
+    {
+      "key": "2612_CR117",
+      "doi": "10.1021/acsami.7b19818",
+      "title": "",
+      "journal": "ACS Appl. Mater. Interfaces",
+      "year": "2018",
+      "author": "AK Grosskopf",
+      "unstructured": "Grosskopf, A. K. et al. Viscoplastic matrix materials for embedded 3D printing. ACS Appl. Mater. Interfaces 10, 23353\u201323361 (2018)."
+    },
+    {
+      "key": "2612_CR118",
+      "doi": "10.1038/nature21003",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "RL Truby",
+      "unstructured": "Truby, R. L. & Lewis, J. A. Printing soft matter in three dimensions. Nature 540, 371\u2013378 (2016)."
+    },
+    {
+      "key": "2612_CR119",
+      "doi": "10.1016/j.cell.2016.05.082",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "H Clevers",
+      "unstructured": "Clevers, H. Modeling development and disease with organoids. Cell 165, 1586\u20131597 (2016)."
+    },
+    {
+      "key": "2612_CR120",
+      "doi": "10.1146/annurev-pharmtox-010716-104748",
+      "title": "",
+      "journal": "Annu. Rev. Pharmacol. Toxicol.",
+      "year": "2018",
+      "author": "R Prantil-Baun",
+      "unstructured": "Prantil-Baun, R. et al. Physiologically based pharmacokinetic and pharmacodynamic analysis enabled by microfluidically linked organs-on-chips. Annu. Rev. Pharmacol. Toxicol. 58, 37\u201364 (2018)."
+    },
+    {
+      "key": "2612_CR121",
+      "doi": "10.1038/nmat4407",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2015",
+      "author": "N Huebsch",
+      "unstructured": "Huebsch, N. et al. Matrix elasticity of void-forming hydrogels controls transplanted-stem-cell-mediated bone formation. Nat. Mater. 14, 1269\u20131277 (2015)."
+    },
+    {
+      "key": "2612_CR122",
+      "doi": "10.1002/adhm.201601185",
+      "title": "",
+      "journal": "Adv. Healthc. Mater.",
+      "year": "2017",
+      "author": "M Darnell",
+      "unstructured": "Darnell, M. et al. Substrate stress-relaxation regulates scaffold remodeling and bone formation in vivo. Adv. Healthc. Mater. 6, 1601185 (2017)."
+    },
+    {
+      "key": "2612_CR123",
+      "doi": "10.1016/j.biomaterials.2010.08.074",
+      "title": "",
+      "journal": "Biomaterials",
+      "year": "2011",
+      "author": "YM Kolambkar",
+      "unstructured": "Kolambkar, Y. M. et al. An alginate-based hybrid system for growth factor delivery in the functional repair of large bone defects. Biomaterials 32, 65\u201374 (2011)."
+    },
+    {
+      "key": "2612_CR124",
+      "doi": "10.1016/j.bone.2011.05.010",
+      "title": "",
+      "journal": "Bone",
+      "year": "2011",
+      "author": "YM Kolambkar",
+      "unstructured": "Kolambkar, Y. M. et al. Spatiotemporal delivery of bone morphogenetic protein enhances functional repair of segmental bone defects. Bone 49, 485\u2013492 (2011)."
+    },
+    {
+      "key": "2612_CR125",
+      "doi": "10.1038/s41551-019-0380-9",
+      "title": "",
+      "journal": "Nat. Biomed. Eng.",
+      "year": "2019",
+      "author": "X Lin",
+      "unstructured": "Lin, X. et al. A viscoelastic adhesive epicardial patch for treating myocardial infarction. Nat. Biomed. Eng. 3, 632\u2013643 (2019)."
+    },
+    {
+      "key": "2612_CR126",
+      "doi": "10.1016/j.addr.2015.04.021",
+      "title": "",
+      "journal": "Adv. Drug Deliv. Rev.",
+      "year": "2016",
+      "author": "E Ruvinov",
+      "unstructured": "Ruvinov, E. & Cohen, S. Alginate biomaterial for the treatment of myocardial infarction: progress, translational strategies, and clinical outlook: from ocean algae to patient bedside. Adv. Drug Deliv. Rev. 96, 54\u201376 (2016)."
+    },
+    {
+      "key": "2612_CR127",
+      "doi": "10.1097/moo.0b013e32833f85d1",
+      "title": "",
+      "journal": "Curr. Opin. Otolaryngol. Head Neck Surg.",
+      "year": "2010",
+      "author": "DK Chhetri",
+      "unstructured": "Chhetri, D. K. & Mendelsohn, A. H. Hyaluronic acid for the treatment of vocal fold scars. Curr. Opin. Otolaryngol. Head Neck Surg. 18, 498\u2013502 (2010)."
+    },
+    {
+      "key": "2612_CR128",
+      "doi": "10.1016/s0022-5347(17)32671-x",
+      "title": "",
+      "journal": "J. Urol.",
+      "year": "1994",
+      "author": "A Atala",
+      "unstructured": "Atala, A., Kim, W., Paige, K. T., Vacanti, C. A. & Retik, A. B. Endoscopic treatment of vesicoureteral reflux with a chondrocyte-alginate suspension. J. Urol. 152, 641\u2013643 (1994)."
+    },
+    {
+      "key": "2612_CR129",
+      "doi": "10.1002/adma.201304606",
+      "title": "",
+      "journal": "Adv. Mater.",
+      "year": "2014",
+      "author": "J Boekhoven",
+      "unstructured": "Boekhoven, J. & Stupp, S. I. 25th anniversary article: supramolecular materials for regenerative medicine. Adv. Mater. 26, 1642\u20131659 (2014)."
+    },
+    {
+      "key": "2612_CR130",
+      "doi": "10.1126/science.1234852",
+      "title": "",
+      "journal": "Science",
+      "year": "2013",
+      "author": "T Sato",
+      "unstructured": "Sato, T. & Clevers, H. Growing self-organizing mini-guts from a single intestinal stem cell: mechanism and applications. Science 340, 1190\u20131194 (2013)."
+    },
+    {
+      "key": "2612_CR131",
+      "doi": "10.1007/s11626-997-0118-y",
+      "title": "",
+      "journal": "In Vitro Cell. Dev. Biol. Anim.",
+      "year": "1997",
+      "author": "J Shansky",
+      "unstructured": "Shansky, J., Del Tatto, M., Chromiak, J. & Vandenburgh, H. A simplified method for tissue engineering skeletal muscle organoids in vitro. In Vitro Cell. Dev. Biol. Anim. 33, 659\u2013661 (1997)."
+    },
+    {
+      "key": "2612_CR132",
+      "doi": "10.1016/j.molmed.2019.09.010",
+      "title": "",
+      "journal": "Trends Mol. Med.",
+      "year": "2019",
+      "author": "DA Balikov",
+      "unstructured": "Balikov, D. A., Neal, E. H. & Lippmann, E. S. Organotypic neurovascular models: past results and future directions. Trends Mol. Med. 26, 273\u2013284 (2019)."
+    },
+    {
+      "key": "2612_CR133",
+      "doi": "10.1136/gutjnl-2019-319256",
+      "title": "",
+      "journal": "Gut",
+      "year": "2019",
+      "author": "N Prior",
+      "unstructured": "Prior, N., Inacio, P. & Huch, M. Liver organoids: from basic research to therapeutic applications. Gut 68, 2228\u20132237 (2019)."
+    },
+    {
+      "key": "2612_CR134",
+      "doi": "10.1177/154405910308201111",
+      "title": "",
+      "journal": "J. Dent. Res.",
+      "year": "2003",
+      "author": "E Alsberg",
+      "unstructured": "Alsberg, E. et al. Regulating bone formation via controlled scaffold degradation. J. Dent. Res. 82, 903\u2013908 (2003)."
+    },
+    {
+      "key": "2612_CR135",
+      "doi": "10.1016/j.bone.2004.02.027",
+      "title": "",
+      "journal": "Bone",
+      "year": "2004",
+      "author": "CA Simmons",
+      "unstructured": "Simmons, C. A., Alsberg, E., Hsiong, S., Kim, W. J. & Mooney, D. J. Dual growth factor delivery and controlled scaffold degradation enhance in vivo bone formation by transplanted bone marrow stromal cells. Bone 35, 562\u2013569 (2004)."
+    },
+    {
+      "key": "2612_CR136",
+      "doi": "10.1038/nmat3586",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2013",
+      "author": "S Khetan",
+      "unstructured": "Khetan, S. et al. Degradation-mediated cellular traction directs stem cell fate in covalently crosslinked three-dimensional hydrogels. Nat. Mater. 12, 458\u2013465 (2013)."
+    },
+    {
+      "key": "2612_CR137",
+      "doi": "10.1002/jbm.1217",
+      "title": "",
+      "journal": "J. Biomed. Mater. Res.",
+      "year": "2002",
+      "author": "SJ Bryant",
+      "unstructured": "Bryant, S. J. & Anseth, K. S. Hydrogel properties influence ECM production by chondrocytes photoencapsulated in poly(ethylene glycol) hydrogels. J. Biomed. Mater. Res. 59, 63\u201372 (2002)."
+    },
+    {
+      "key": "2612_CR138",
+      "doi": "10.1038/s41563-019-0307-6",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2019",
+      "author": "C Loebel",
+      "unstructured": "Loebel, C., Mauck, R. L. & Burdick, J. A. Local nascent protein deposition and remodelling guide mesenchymal stromal cell mechanosensing and fate in three-dimensional hydrogels. Nat. Mater. 18, 883\u2013891 (2019). This study found that mesenchymal stem cells deposit matrix within a day of culture in proteolytically degradable covalently crosslinked or dynamically crosslinked viscoelastic hyaluronic acid hydrogels, and that the deposited proteins mediated mechanotransduction."
+    },
+    {
+      "key": "2612_CR139",
+      "doi": "10.1038/nature20168",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "N Gjorevski",
+      "unstructured": "Gjorevski, N. et al. Designer matrices for intestinal stem cell and organoid culture. Nature 539, 560\u2013564 (2016)."
+    },
+    {
+      "key": "2612_CR140",
+      "doi": "10.1038/ncb3632",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2017",
+      "author": "R Cruz-Acuna",
+      "unstructured": "Cruz-Acuna, R. et al. Synthetic hydrogels for human intestinal organoid generation and colonic wound repair. Nat. Cell Biol. 19, 1326\u20131335 (2017). These studies (Gjorevski et al. (2016) and Cruz-Acuna et al. (2017)) demonstrated the use of synthetic covalently crosslinked hydrogels for organoid formation, and identified gel degradability as an important design parameter."
+    },
+    {
+      "key": "2612_CR141",
+      "doi": "10.1016/j.biomaterials.2018.11.002",
+      "title": "",
+      "journal": "Biomaterials",
+      "year": "2019",
+      "author": "K Sadtler",
+      "unstructured": "Sadtler, K. et al. Divergent immune responses to synthetic and biological scaffolds. Biomaterials 192, 405\u2013415 (2019)."
+    },
+    {
+      "key": "2612_CR142",
+      "doi": "10.1126/sciadv.aav9394",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2019",
+      "author": "S Ehrig",
+      "unstructured": "Ehrig, S. et al. Surface tension determines tissue shape and growth kinetics. Sci. Adv. 5, eaav9394 (2019)."
+    },
+    {
+      "key": "2612_CR143",
+      "doi": "10.1038/s41467-018-06504-7",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "A Petersen",
+      "unstructured": "Petersen, A. et al. A biomaterial with a channel-like pore architecture induces endochondral healing of bone defects. Nat. Commun. 9, 4430 (2018)."
+    },
+    {
+      "key": "2612_CR144",
+      "doi": "10.1038/s41563-018-0190-6",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2018",
+      "author": "N Jain",
+      "unstructured": "Jain, N. & Vogel, V. Spatial confinement downsizes the inflammatory response of macrophages. Nat. Mater. 17, 1134\u20131144 (2018)."
+    },
+    {
+      "key": "2612_CR145",
+      "doi": "10.1038/srep18948",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2016",
+      "author": "A Reimer",
+      "unstructured": "Reimer, A. et al. Scalable topographies to support proliferation and Oct4 expression by human induced pluripotent stem cells. Sci. Rep. 6, 18948 (2016)."
+    },
+    {
+      "key": "2612_CR146",
+      "doi": "10.1021/acsnano.9b03914",
+      "title": "",
+      "journal": "ACS Nano",
+      "year": "2019",
+      "author": "P Han",
+      "unstructured": "Han, P. et al. Five piconewtons: the difference between osteogenic and adipogenic fate choice in human mesenchymal stem cells. ACS Nano 13, 11129\u201311143 (2019)."
+    },
+    {
+      "key": "2612_CR147",
+      "doi": "10.1038/nrm.2017.108",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2017",
+      "author": "KH Vining",
+      "unstructured": "Vining, K. H. & Mooney, D. J. Mechanical forces direct stem cell behaviour in development and regeneration. Nat. Rev. Mol. Cell Biol. 18, 728\u2013742 (2017)."
+    },
+    {
+      "key": "2612_CR148",
+      "doi": "10.1038/nrm.2017.87",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2017",
+      "author": "T Panciera",
+      "unstructured": "Panciera, T., Azzolin, L., Cordenonsi, M. & Piccolo, S. Mechanobiology of YAP and TAZ in physiology and disease. Nat. Rev. Mol. Cell Biol. 18, 758\u2013770 (2017)."
+    },
+    {
+      "key": "2612_CR149",
+      "doi": "10.1126/science.1257998",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "BC Chen",
+      "unstructured": "Chen, B. C. et al. Lattice light-sheet microscopy: imaging molecules to embryos at high spatiotemporal resolution. Science 346, 1257998 (2014)."
+    },
+    {
+      "key": "2612_CR150",
+      "doi": "10.1038/nature09198",
+      "title": "",
+      "journal": "Nature",
+      "year": "2010",
+      "author": "C Grashoff",
+      "unstructured": "Grashoff, C. et al. Measuring mechanical tension across vinculin reveals regulation of focal adhesion dynamics. Nature 466, 263\u2013266 (2010)."
+    },
+    {
+      "key": "2612_CR151",
+      "doi": "10.1038/natrevmats.2015.12",
+      "title": "",
+      "journal": "Nat. Rev. Mater.",
+      "year": "2016",
+      "author": "AM Rosales",
+      "unstructured": "Rosales, A. M. & Anseth, K. S. The design of reversible hydrogels to capture extracellular matrix dynamics. Nat. Rev. Mater. 1, 15012 (2016)."
+    },
+    {
+      "key": "2612_CR152",
+      "doi": "10.1039/c6ib00251j",
+      "title": "",
+      "journal": "Integr. Biol.",
+      "year": "2017",
+      "author": "AP Liu",
+      "unstructured": "Liu, A. P., Chaudhuri, O. & Parekh, S. H. New advances in probing cell-extracellular matrix interactions. Integr. Biol. 9, 383\u2013405 (2017)."
+    },
+    {
+      "key": "2612_CR153",
+      "doi": "10.1016/j.biomaterials.2018.10.013",
+      "title": "",
+      "journal": "Biomaterials",
+      "year": "2019",
+      "author": "KH Vining",
+      "unstructured": "Vining, K. H., Stafford, A. & Mooney, D. J. Sequential modes of crosslinking tune viscoelasticity of cell-instructive hydrogels. Biomaterials 188, 187\u2013197 (2019)."
+    },
+    {
+      "key": "2612_CR154",
+      "doi": "10.1038/nmat4444",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2015",
+      "author": "BM Baker",
+      "unstructured": "Baker, B. M. et al. Cell-mediated fibre recruitment drives extracellular matrix mechanosensing in engineered fibrillar microenvironments. Nat. Mater. 14, 1262\u20131268 (2015)."
+    },
+    {
+      "key": "2612_CR155",
+      "doi": "10.1016/j.progpolymsci.2006.11.002",
+      "title": "",
+      "journal": "Prog. Polym. Sci.",
+      "year": "2007",
+      "author": "WA Braunecker",
+      "unstructured": "Braunecker, W. A. & Matyjaszewski, K. Controlled/living radical polymerization: features, developments, and perspectives. Prog. Polym. Sci. 32, 93\u2013146 (2007)."
+    },
+    {
+      "key": "2612_CR156",
+      "doi": "10.1038/nature24648",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "LL Ong",
+      "unstructured": "Ong, L. L. et al. Programmable self-assembly of three-dimensional nanostructures from 10,000 unique components. Nature 552, 72\u201377 (2017)."
+    },
+    {
+      "key": "2612_CR157",
+      "doi": "10.1021/acs.biomac.8b01445",
+      "title": "",
+      "journal": "Biomacromolecules",
+      "year": "2019",
+      "author": "KZ Liu",
+      "unstructured": "Liu, K. Z., Mihaila, S. M., Rowan, A., Oosterwijk, E. & Kouwer, P. H. J. Synthetic extracellular matrices with nonlinear elasticity regulate cellular organization. Biomacromolecules 20, 826\u2013834 (2019)."
+    },
+    {
+      "key": "2612_CR158",
+      "doi": "10.1002/ange.201911364",
+      "title": "",
+      "journal": "Angew. Chem.",
+      "year": "2020",
+      "author": "YM Wang",
+      "unstructured": "Wang, Y. M. et al. Biomimetic strain-stiffening self-assembled hydrogels. Angew. Chem. 132, 4860\u20134864 (2020)."
+    },
+    {
+      "key": "2612_CR159",
+      "doi": "10.1016/j.eml.2019.100557",
+      "title": "",
+      "journal": "Extreme Mech. Lett.",
+      "year": "2019",
+      "author": "YF Wang",
+      "unstructured": "Wang, Y. F. et al. Architected lattices with adaptive energy absorption. Extreme Mech. Lett. 33, 100557 (2019)."
+    },
+    {
+      "key": "2612_CR160",
+      "doi": "10.1002/adma.201905719",
+      "title": "",
+      "journal": "Adv. Mater.",
+      "year": "2020",
+      "author": "MD Davidson",
+      "unstructured": "Davidson, M. D. et al. Mechanochemical adhesion and plasticity in multifiber hydrogel networks. Adv. Mater. 32, 1905719 (2020)."
+    },
+    {
+      "key": "2612_CR161",
+      "doi": "10.1016/j.ceb.2018.12.001",
+      "title": "",
+      "journal": "Curr. Opin. Cell Biol.",
+      "year": "2019",
+      "author": "GV Shivashankar",
+      "unstructured": "Shivashankar, G. V. Mechanical regulation of genome architecture and cell-fate decisions. Curr. Opin. Cell Biol. 56, 115\u2013121 (2019)."
+    },
+    {
+      "key": "2612_CR162",
+      "doi": "10.1007/bf00366667",
+      "title": "",
+      "journal": "Rheol. Acta",
+      "year": "1997",
+      "author": "JV Shah",
+      "unstructured": "Shah, J. V. & Janmey, P. A. Strain hardening of fibrin gels and plasma clots. Rheol. Acta 36, 262\u2013268 (1997)."
+    },
+    {
+      "key": "2612_CR163",
+      "doi": "10.1121/1.1736272",
+      "title": "",
+      "journal": "J. Acoust. Soc. Am.",
+      "year": "2004",
+      "author": "RW Chan",
+      "unstructured": "Chan, R. W. Measurements of vocal fold tissue viscoelasticity: approaching the male phonatory frequency range. J. Acoust. Soc. Am. 115, 3161\u20133170 (2004)."
+    },
+    {
+      "key": "2612_CR164",
+      "doi": "10.1007/s003970200017",
+      "title": "",
+      "journal": "Rheol. Acta",
+      "year": "2002",
+      "author": "S Nasseri",
+      "unstructured": "Nasseri, S., Bilston, L. E. & Phan-Thien, N. Viscoelastic properties of pig kidney in shear, experimental results and modeling. Rheol. Acta 41, 180\u2013192 (2002)."
+    },
+    {
+      "key": "2612_CR165",
+      "doi": "10.1016/j.jbiomech.2013.11.019",
+      "title": "",
+      "journal": "J. Biomech.",
+      "year": "2014",
+      "author": "H Hatami-Marbini",
+      "unstructured": "Hatami-Marbini, H. Viscoelastic shear properties of the corneal stroma. J. Biomech. 47, 723\u2013728 (2014)."
+    },
+    {
+      "key": "2612_CR166",
+      "doi": "10.1016/j.joca.2014.07.001",
+      "title": "",
+      "journal": "Osteoarthritis Cartilage",
+      "year": "2014",
+      "author": "H Pereira",
+      "unstructured": "Pereira, H. et al. Biomechanical and cellular segmental characterization of human meniscus: building the basis for tissue engineering therapies. Osteoarthritis Cartilage 22, 1271\u20131281 (2014)."
+    },
+    {
+      "key": "2612_CR167",
+      "doi": "",
+      "title": "",
+      "journal": "J. Appl. Biomater. Funct. Mater.",
+      "year": "2017",
+      "author": "L Coluccino",
+      "unstructured": "Coluccino, L. et al. Anisotropy in the viscoelastic response of knee meniscus cartilage. J. Appl. Biomater. Funct. Mater. 15, e77\u2013e83 (2017)."
+    },
+    {
+      "key": "2612_CR168",
+      "doi": "10.1038/nmat4009",
+      "title": "",
+      "journal": "Nat. Mater.",
+      "year": "2014",
+      "author": "O Chaudhuri",
+      "unstructured": "Chaudhuri, O. et al. Extracellular matrix stiffness and composition jointly regulate the induction of malignant phenotypes in mammary epithelium. Nat. Mater. 13, 970\u2013978 (2014)."
+    },
+    {
+      "key": "2612_CR169",
+      "doi": "10.1016/j.jmbbm.2015.06.023",
+      "title": "",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "year": "2015",
+      "author": "LE Jansen",
+      "unstructured": "Jansen, L. E., Birch, N. P., Schiffman, J. D., Crosby, A. J. & Peyton, S. R. Mechanics of intact bone marrow. J. Mech. Behav. Biomed. Mater. 50, 299\u2013307 (2015)."
+    },
+    {
+      "key": "2612_CR170",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Suki, B. & Lutchen, K. R. in Wiley Encyclopedia of Biomedical Engineering (Wiley, 2006)."
+    },
+    {
+      "key": "2612_CR171",
+      "doi": "10.1016/j.jbiomech.2008.06.008",
+      "title": "",
+      "journal": "J. Biomech.",
+      "year": "2008",
+      "author": "B Holt",
+      "unstructured": "Holt, B., Tripathi, A. & Morgan, J. Viscoelastic response of human skin to low magnitude physiologically relevant shear. J. Biomech. 41, 2689\u20132695 (2008)."
+    },
+    {
+      "key": "2612_CR172",
+      "doi": "10.1016/j.jmbbm.2016.03.012",
+      "title": "",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "year": "2016",
+      "author": "SC Barnes",
+      "unstructured": "Barnes, S. C. et al. Viscoelastic properties of human bladder tumours. J. Mech. Behav. Biomed. Mater. 61, 250\u2013257 (2016)."
+    },
+    {
+      "key": "2612_CR173",
+      "doi": "10.1088/0031-9155/49/18/002",
+      "title": "",
+      "journal": "Phys. Med. Biol.",
+      "year": "2004",
+      "author": "MZ Kiss",
+      "unstructured": "Kiss, M. Z., Varghese, T. & Hall, T. J. Viscoelastic characterization of in vitro canine tissue. Phys. Med. Biol. 49, 4207\u20134218 (2004)."
+    },
+    {
+      "key": "2612_CR174",
+      "doi": "10.3233/bir-2010-0565",
+      "title": "",
+      "journal": "Biorheology",
+      "year": "2010",
+      "author": "D Klatt",
+      "unstructured": "Klatt, D. et al. Viscoelastic properties of liver measured by oscillatory rheometry and multifrequency magnetic resonance elastography. Biorheology 47, 133\u2013141 (2010)."
+    },
+    {
+      "key": "2612_CR175",
+      "doi": "10.1016/j.jmbbm.2010.07.010",
+      "title": "",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "year": "2010",
+      "author": "S Nicolle",
+      "unstructured": "Nicolle, S. & Palierne, J. F. Dehydration effect on the mechanical behaviour of biological soft tissues: observations on kidney tissues. J. Mech. Behav. Biomed. Mater. 3, 630\u2013635 (2010)."
+    },
+    {
+      "key": "2612_CR176",
+      "doi": "",
+      "title": "",
+      "journal": "Biorheology",
+      "year": "2005",
+      "author": "S Nicolle",
+      "unstructured": "Nicolle, S., Lounis, M., Willinger, R. & Palierne, J. F. Shear linear behavior of brain tissue over a large frequency range. Biorheology 42, 209\u2013223 (2005)."
+    },
+    {
+      "key": "2612_CR177",
+      "doi": "",
+      "title": "",
+      "journal": "Biorheology",
+      "year": "2006",
+      "author": "M Hrapko",
+      "unstructured": "Hrapko, M., van Dommelen, J. A., Peters, G. W. & Wismans, J. S. The mechanical behaviour of brain tissue: large strain response and constitutive modelling. Biorheology 43, 623\u2013636 (2006)."
+    },
+    {
+      "key": "2612_CR178",
+      "doi": "10.1007/bf00122175",
+      "title": "",
+      "journal": "J. Mater. Sci. Mater. Med.",
+      "year": "1996",
+      "author": "P Netti",
+      "unstructured": "Netti, P., D\u2019amore, A., Ronca, D., Ambrosio, L. & Nicolais, L. Structure-mechanical properties relationship of natural tendons and ligaments. J. Mater. Sci. Mater. Med. 7, 525\u2013530 (1996)."
+    },
+    {
+      "key": "2612_CR179",
+      "doi": "10.1016/j.jbiomech.2006.06.022",
+      "title": "",
+      "journal": "J. Biomech.",
+      "year": "2007",
+      "author": "E Tanaka",
+      "unstructured": "Tanaka, E. et al. Dynamic shear properties of the porcine molar periodontal ligament. J. Biomech. 40, 1477\u20131483 (2007)."
+    },
+    {
+      "key": "2612_CR180",
+      "doi": "10.1007/s10439-006-9209-2",
+      "title": "",
+      "journal": "Ann. Biomed. Eng.",
+      "year": "2006",
+      "author": "E Tanaka",
+      "unstructured": "Tanaka, E. et al. Comparison of dynamic shear properties of the porcine molar and incisor periodontal ligament. Ann. Biomed. Eng. 34, 1917\u20131923 (2006)."
+    },
+    {
+      "key": "2612_CR181",
+      "doi": "10.1016/j.actbio.2010.09.003",
+      "title": "",
+      "journal": "Acta Biomater.",
+      "year": "2011",
+      "author": "KL Troyer",
+      "unstructured": "Troyer, K. L. & Puttlitz, C. M. Human cervical spine ligaments exhibit fully nonlinear viscoelastic behavior. Acta Biomater. 7, 700\u2013709 (2011)."
+    },
+    {
+      "key": "2612_CR182",
+      "doi": "10.1016/j.matbio.2009.08.002",
+      "title": "",
+      "journal": "Matrix Biol.",
+      "year": "2009",
+      "author": "G Fessel",
+      "unstructured": "Fessel, G. & Snedeker, J. G. Evidence against proteoglycan mediated collagen fibril load transmission and dynamic viscoelasticity in tendon. Matrix Biol. 28, 503\u2013510 (2009)."
+    },
+    {
+      "key": "2612_CR183",
+      "doi": "10.1016/j.clinbiomech.2008.02.002",
+      "title": "",
+      "journal": "Clin. Biomech.",
+      "year": "2008",
+      "author": "K Nagasawa",
+      "unstructured": "Nagasawa, K., Noguchi, M., Ikoma, K. & Kubo, T. Static and dynamic biomechanical properties of the regenerating rabbit Achilles tendon. Clin. Biomech. 23, 832\u2013838 (2008)."
+    },
+    {
+      "key": "2612_CR184",
+      "doi": "10.1016/j.jbiomech.2006.10.019",
+      "title": "",
+      "journal": "J. Biomech.",
+      "year": "2007",
+      "author": "JH Koolstra",
+      "unstructured": "Koolstra, J. H., Tanaka, E. & Van Eijden, T. M. Viscoelastic material model for the temporomandibular joint disc derived from dynamic shear tests or strain-relaxation tests. J. Biomech. 40, 2330\u20132334 (2007)."
+    },
+    {
+      "key": "2612_CR185",
+      "doi": "10.1177/154405910408300608",
+      "title": "",
+      "journal": "J. Dent. Res.",
+      "year": "2004",
+      "author": "E Tanaka",
+      "unstructured": "Tanaka, E. et al. Shear properties of the temporomandibular joint disc in relation to compressive and shear strain. J. Dent. Res. 83, 476\u2013479 (2004)."
+    },
+    {
+      "key": "2612_CR186",
+      "doi": "10.1016/j.jbiomech.2007.12.012",
+      "title": "",
+      "journal": "J. Biomech.",
+      "year": "2008",
+      "author": "E Tanaka",
+      "unstructured": "Tanaka, E. et al. Dynamic shear behavior of mandibular condylar cartilage is dependent on testing direction. J. Biomech. 41, 1119\u20131123 (2008)."
+    },
+    {
+      "key": "2612_CR187",
+      "doi": "10.1016/s8756-3282(02)00843-8",
+      "title": "",
+      "journal": "Bone",
+      "year": "2002",
+      "author": "J T\u00f6yr\u00e4s",
+      "unstructured": "T\u00f6yr\u00e4s, J., Nieminen, M. T., Kroger, H. & Jurvelin, J. S. Bone mineral density, ultrasound velocity, and broadband attenuation predict mechanical properties of trabecular bone differently. Bone 31, 503\u2013507 (2002)."
+    },
+    {
+      "key": "2612_CR188",
+      "doi": "10.1016/j.jbiomech.2010.04.017",
+      "title": "",
+      "journal": "J. Biomech.",
+      "year": "2010",
+      "author": "H Isaksson",
+      "unstructured": "Isaksson, H. et al. Precision of nanoindentation protocols for measurement of viscoelasticity in cortical and trabecular bone. J. Biomech. 43, 2410\u20132417 (2010)."
+    },
+    {
+      "key": "2612_CR189",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Cowin, S. C., Van Buskirk, W. C. & Ashman, R. B. in Handbook of Bioengineering (McGraw-Hill, 1987)."
+    },
+    {
+      "key": "2612_CR190",
+      "doi": "10.1016/j.orthres.2004.12.001",
+      "title": "",
+      "journal": "J. Orthop. Res.",
+      "year": "2005",
+      "author": "CM Les",
+      "unstructured": "Les, C. M. et al. Long-term ovariectomy decreases ovine compact bone viscoelasticity. J. Orthop. Res. 23, 869\u2013876 (2005)."
+    },
+    {
+      "key": "2612_CR191",
+      "doi": "10.1007/s00223-012-9575-8",
+      "title": "",
+      "journal": "Calcif. Tissue Int.",
+      "year": "2012",
+      "author": "BJ Polly",
+      "unstructured": "Polly, B. J., Yuya, P. A., Akhter, M. P., Recker, R. R. & Turner, J. A. Intrinsic material properties of trabecular bone by nanoindentation testing of biopsies taken from healthy women before and after menopause. Calcif. Tissue Int. 90, 286\u2013293 (2012)."
+    },
+    {
+      "key": "2612_CR192",
+      "doi": "10.1016/j.jmbbm.2010.10.001",
+      "title": "",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "year": "2011",
+      "author": "AA Abdel-Wahab",
+      "unstructured": "Abdel-Wahab, A. A., Alam, K. & Silberschmidt, V. V. Analysis of anisotropic viscoelastoplastic properties of cortical bone tissues. J. Mech. Behav. Biomed. Mater. 4, 807\u2013820 (2011)."
+    },
+    {
+      "key": "2612_CR193",
+      "doi": "10.1242/jeb.201.1.135",
+      "title": "",
+      "journal": "J. Exp. Biol.",
+      "year": "1998",
+      "author": "PP Purslow",
+      "unstructured": "Purslow, P. P., Wess, T. J. & Hukins, D. W. Collagen orientation and molecular spacing during creep and stress-relaxation in soft connective tissues. J. Exp. Biol. 201, 135\u2013142 (1998)."
+    },
+    {
+      "key": "2612_CR194",
+      "doi": "10.1039/c8sm00646f",
+      "title": "",
+      "journal": "Soft Matter",
+      "year": "2018",
+      "author": "GA Parada",
+      "unstructured": "Parada, G. A. & Zhao, X. H. Ideal reversible polymer networks. Soft Matter 14, 5186\u20135196 (2018)."
+    },
+    {
+      "key": "2612_CR195",
+      "doi": "10.1002/advs.201800638",
+      "title": "",
+      "journal": "Adv. Sci.",
+      "year": "2018",
+      "author": "SC Tang",
+      "unstructured": "Tang, S. C. et al. Adaptable fast relaxing boronate-based hydrogels for probing cell-matrix interactions. Adv. Sci. 5, 1800638 (2018)."
+    },
+    {
+      "key": "2612_CR196",
+      "doi": "10.1016/j.biomaterials.2018.03.060",
+      "title": "",
+      "journal": "Biomaterials",
+      "year": "2018",
+      "author": "TE Brown",
+      "unstructured": "Brown, T. E. et al. Photopolymerized dynamic hydrogels with tunable viscoelastic properties through thioester exchange. Biomaterials 178, 496\u2013503 (2018)."
+    },
+    {
+      "key": "2612_CR197",
+      "doi": "10.1016/j.biomaterials.2019.119430",
+      "title": "",
+      "journal": "Biomaterials",
+      "year": "2019",
+      "author": "IA Marozas",
+      "unstructured": "Marozas, I. A., Anseth, K. S. & Cooper-White, J. J. Adaptable boronate ester hydrogels with tunable viscoelastic spectra to probe timescale dependent mechanotransduction. Biomaterials 223, 119430 (2019)."
+    },
+    {
+      "key": "2612_CR198",
+      "doi": "10.1063/1.3343265",
+      "title": "",
+      "journal": "J. Appl. Phys.",
+      "year": "2010",
+      "author": "XH Zhao",
+      "unstructured": "Zhao, X. H., Huebsch, N., Mooney, D. J. & Suo, Z. G. Stress-relaxation behavior in gels with ionic and covalent crosslinks. J. Appl. Phys. 107, 063509 (2010)."
+    },
+    {
+      "key": "2612_CR199",
+      "doi": "10.1002/adma.201506216",
+      "title": "",
+      "journal": "Adv. Mater.",
+      "year": "2016",
+      "author": "LJ Dooling",
+      "unstructured": "Dooling, L. J., Buck, M. E., Zhang, W. B. & Tirrell, D. A. Programming molecular association and viscoelastic behavior in protein networks. Adv. Mater. 28, 4651\u20134657 (2016)."
+    },
+    {
+      "key": "2612_CR200",
+      "doi": "10.1016/j.actbio.2018.11.014",
+      "title": "",
+      "journal": "Acta Biomater.",
+      "year": "2019",
+      "author": "BM Richardson",
+      "unstructured": "Richardson, B. M., Wilcox, D. G., Randolph, M. A. & Anseth, K. S. Hydrazone covalent adaptable networks modulate extracellular matrix deposition for cartilage tissue engineering. Acta Biomater. 83, 71\u201382 (2019)."
+    }
+  ]
+}

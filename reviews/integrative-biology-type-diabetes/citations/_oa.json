@@ -1,0 +1,1427 @@
+{
+  "article": {
+    "slug": "s41586-019-1797-8",
+    "doi": "10.1038/s41586-019-1797-8",
+    "title": "The integrative biology of type 2 diabetes",
+    "url": "https://www.nature.com/articles/s41586-019-1797-8",
+    "abbrev": "integrative-biology-type-diabetes",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/integrative-biology-type-diabetes"
+  },
+  "n_refs": 145,
+  "n_with_doi": 144,
+  "n_oa": 116,
+  "records": [
+    {
+      "doi": "10.1016/j.diabres.2018.02.023",
+      "title": "",
+      "year": "2018",
+      "journal": "Diabetes Res. Clin. Pract.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41588-018-0084-1",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://hdl.handle.net/2164/13762",
+      "file": "10.1038_s41588-018-0084-1.md"
+    },
+    {
+      "doi": "10.2337/diabetes.54.3.603",
+      "title": "",
+      "year": "2005",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetesjournals.org/diabetes/article-pdf/54/3/603/381115/zdb00305000603.pdf",
+      "file": "10.2337_diabetes.54.3.603.md"
+    },
+    {
+      "doi": "10.1016/s2213-8587(19)30068-3",
+      "title": "",
+      "year": "2019",
+      "journal": "Lancet Diabetes Endocrinol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://eprints.gla.ac.uk/view/journal_volume/Lancet_Diabetes_and_Endocrinology.html>,",
+      "file": "10.1016_s2213-8587_19_30068-3.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0194127",
+      "title": "",
+      "year": "2018",
+      "journal": "PLoS One",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0194127&type=printable",
+      "file": "10.1371_journal.pone.0194127.md"
+    },
+    {
+      "doi": "10.1038/nrendo.2016.87",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Rev. Endocrinol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature20784",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://research-information.bris.ac.uk/ws/files/94042032/Nature_2015_03_03573D_Supplementary_Information.pdf",
+      "file": "10.1038_nature20784.md"
+    },
+    {
+      "doi": "10.1056/nejm197003192821209",
+      "title": "",
+      "year": "1970",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1948033",
+      "title": "",
+      "year": "1991",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2017.12.001",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867417314435/pdf",
+      "file": "10.1016_j.cell.2017.12.001.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2017.10.004",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1550413117306162/pdf",
+      "file": "10.1016_j.cmet.2017.10.004.md"
+    },
+    {
+      "doi": "10.1172/jci.insight.121434",
+      "title": "",
+      "year": "2018",
+      "journal": "JCI Insight",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://insight.jci.org/articles/view/121434/files/pdf",
+      "file": "10.1172_jci.insight.121434.md"
+    },
+    {
+      "doi": "10.1172/jci83349",
+      "title": "",
+      "year": "2015",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4665770?pdf=render",
+      "file": "10.1172_jci83349.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2015.01.012",
+      "title": "",
+      "year": "2015",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867415000148/pdf",
+      "file": "10.1016_j.cell.2015.01.012.md"
+    },
+    {
+      "doi": "10.2337/diabetes.49.5.701",
+      "title": "",
+      "year": "2000",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetesjournals.org/diabetes/article-pdf/49/5/701/365450/10905476.pdf",
+      "file": "10.2337_diabetes.49.5.701.md"
+    },
+    {
+      "doi": "10.1073/pnas.1423952112",
+      "title": "",
+      "year": "2015",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/112/4/1143.full.pdf",
+      "file": "10.1073_pnas.1423952112.md"
+    },
+    {
+      "doi": "10.1172/jci86013",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/86013/files/pdf",
+      "file": "10.1172_jci86013.md"
+    },
+    {
+      "doi": "10.1172/jci129913",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Clin. Invest",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/129913/files/pdf",
+      "file": "10.1172_jci129913.md"
+    },
+    {
+      "doi": "10.1172/jci131931",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Clin. Invest",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/131931/files/pdf",
+      "file": "10.1172_jci131931.md"
+    },
+    {
+      "doi": "10.1038/oby.2010.316",
+      "title": "",
+      "year": "2011",
+      "journal": "Obesity",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nrendo.2016.175",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Rev. Endocrinol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5998335?pdf=render",
+      "file": "10.1038_nrendo.2016.175.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2014.09.002",
+      "title": "",
+      "year": "2014",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1550413114003994/pdf",
+      "file": "10.1016_j.cmet.2014.09.002.md"
+    },
+    {
+      "doi": "10.1172/jci91578",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/91578/files/pdf",
+      "file": "10.1172_jci91578.md"
+    },
+    {
+      "doi": "10.1038/nature26136",
+      "title": "",
+      "year": "2018",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/hmg/2.9.1437",
+      "title": "",
+      "year": "1993",
+      "journal": "Hum. Mol. Genet.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.2337/dc09-s309",
+      "title": "",
+      "year": "2009",
+      "journal": "Diabetes Care",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetesjournals.org/care/article-pdf/32/suppl_2/S194/605813/zdc1110900s194.pdf",
+      "file": "10.2337_dc09-s309.md"
+    },
+    {
+      "doi": "10.1016/s0140-6736(09)60619-x",
+      "title": "",
+      "year": "2009",
+      "journal": "Lancet",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S014067360960619X/pdf",
+      "file": "10.1016_s0140-6736_09_60619-x.md"
+    },
+    {
+      "doi": "10.1016/s2213-8587(15)00336-8",
+      "title": "",
+      "year": "2016",
+      "journal": "Lancet Diabetes Endocrinol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.2337/dc09-s302",
+      "title": "",
+      "year": "2009",
+      "journal": "Diabetes Care",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetesjournals.org/care/article-pdf/32/suppl_2/S157/606112/zdc1110900s157.pdf",
+      "file": "10.2337_dc09-s302.md"
+    },
+    {
+      "doi": "10.1073/pnas.0705408104",
+      "title": "",
+      "year": "2007",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1924794?pdf=render",
+      "file": "10.1073_pnas.0705408104.md"
+    },
+    {
+      "doi": "10.1172/jci92035",
+      "title": "",
+      "year": "2017",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/92035/files/pdf",
+      "file": "10.1172_jci92035.md"
+    },
+    {
+      "doi": "10.1038/s41574-019-0165-y",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Rev. Endocrinol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7073451?pdf=render",
+      "file": "10.1038_s41574-019-0165-y.md"
+    },
+    {
+      "doi": "10.7326/0003-4819-144-5-200603070-00011",
+      "title": "",
+      "year": "2006",
+      "journal": "Ann. Intern. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.0608537103",
+      "title": "",
+      "year": "2006",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1693873?pdf=render",
+      "file": "10.1073_pnas.0608537103.md"
+    },
+    {
+      "doi": "10.1016/s2213-8587(19)30187-1",
+      "title": "",
+      "year": "2019",
+      "journal": "Lancet. Diabetol. Endocrinol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s2213-8587(18)30051-2",
+      "title": "",
+      "year": "2018",
+      "journal": "Lancet Diabetes Endocrinol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://hdl.handle.net/10138/302057",
+      "file": "10.1016_s2213-8587_18_30051-2.md"
+    },
+    {
+      "doi": "10.1371/journal.pmed.1002654",
+      "title": "",
+      "year": "2018",
+      "journal": "PLoS Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.1002654&type=printable",
+      "file": "10.1371_journal.pmed.1002654.md"
+    },
+    {
+      "doi": "10.1172/jci115997",
+      "title": "",
+      "year": "1992",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/115997/files/pdf",
+      "file": "10.1172_jci115997.md"
+    },
+    {
+      "doi": "10.2337/diabetes.53.12.3048",
+      "title": "",
+      "year": "2004",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetesjournals.org/diabetes/article-pdf/53/12/3048/375599/zdb01204003048.pdf",
+      "file": "10.2337_diabetes.53.12.3048.md"
+    },
+    {
+      "doi": "10.2337/db10-1032",
+      "title": "",
+      "year": "2010",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetesjournals.org/diabetes/article-pdf/59/11/2697/396338/zdb01110002697.pdf",
+      "file": "10.2337_db10-1032.md"
+    },
+    {
+      "doi": "10.2337/diabetes.49.8.1367",
+      "title": "",
+      "year": "2000",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetesjournals.org/diabetes/article-pdf/49/8/1367/365058/10923639.pdf",
+      "file": "10.2337_diabetes.49.8.1367.md"
+    },
+    {
+      "doi": "10.1172/jci118846",
+      "title": "",
+      "year": "1996",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/118846/files/pdf",
+      "file": "10.1172_jci118846.md"
+    },
+    {
+      "doi": "10.1172/jci23109",
+      "title": "",
+      "year": "2005",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/23109/files/pdf",
+      "file": "10.1172_jci23109.md"
+    },
+    {
+      "doi": "10.1172/jci200525152",
+      "title": "",
+      "year": "2005",
+      "journal": "J. Clin. Invest.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nm.2686",
+      "title": "",
+      "year": "2012",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/ncomms8078",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms8078.pdf",
+      "file": "10.1038_ncomms8078.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2007.12.009",
+      "title": "",
+      "year": "2008",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1550413107003828/pdf",
+      "file": "10.1016_j.cmet.2007.12.009.md"
+    },
+    {
+      "doi": "10.1172/jci23621",
+      "title": "",
+      "year": "2005",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC1087172/pdf/JCI0523621.pdf",
+      "file": "10.1172_jci23621.md"
+    },
+    {
+      "doi": "10.1056/nejmoa1315496",
+      "title": "",
+      "year": "2014",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa1315496?articleTools=true",
+      "file": "10.1056_nejmoa1315496.md"
+    },
+    {
+      "doi": "10.2337/db14-1409",
+      "title": "",
+      "year": "2015",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetes.diabetesjournals.org/content/diabetes/64/8/2828.full.pdf",
+      "file": "10.2337_db14-1409.md"
+    },
+    {
+      "doi": "10.1172/jci112558",
+      "title": "",
+      "year": "1986",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/112558/files/pdf",
+      "file": "10.1172_jci112558.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2017.07.004",
+      "title": "",
+      "year": "2017",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1550413117304254/pdf",
+      "file": "10.1016_j.cmet.2017.07.004.md"
+    },
+    {
+      "doi": "10.1073/pnas.0914798107",
+      "title": "",
+      "year": "2010",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2840492?pdf=render",
+      "file": "10.1073_pnas.0914798107.md"
+    },
+    {
+      "doi": "10.1016/j.tem.2016.06.005",
+      "title": "",
+      "year": "2016",
+      "journal": "Trends Endocrinol. Metab.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5035631?pdf=render",
+      "file": "10.1016_j.tem.2016.06.005.md"
+    },
+    {
+      "doi": "10.1073/pnas.1113359108",
+      "title": "",
+      "year": "2011",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/108/39/16381.full.pdf",
+      "file": "10.1073_pnas.1113359108.md"
+    },
+    {
+      "doi": "10.1053/j.gastro.2012.03.003",
+      "title": "",
+      "year": "2012",
+      "journal": "Gastroenterology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.gastrojournal.org/article/S0016508512003368/pdf",
+      "file": "10.1053_j.gastro.2012.03.003.md"
+    },
+    {
+      "doi": "10.1016/j.jhep.2016.01.002",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Hepatol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://hdl.handle.net/10138/223963",
+      "file": "10.1016_j.jhep.2016.01.002.md"
+    },
+    {
+      "doi": "10.1016/j.jhep.2016.01.002",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Hepatol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://hdl.handle.net/10138/223963",
+      "file": "10.1016_j.jhep.2016.01.002.md"
+    },
+    {
+      "doi": "10.1016/j.celrep.2016.12.070",
+      "title": "",
+      "year": "2017",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2211124716317776/pdf",
+      "file": "10.1016_j.celrep.2016.12.070.md"
+    },
+    {
+      "doi": "10.2337/dc17-1318",
+      "title": "",
+      "year": "2018",
+      "journal": "Diabetes Care",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cmet.2015.04.004",
+      "title": "",
+      "year": "2015",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S155041311500159X/pdf",
+      "file": "10.1016_j.cmet.2015.04.004.md"
+    },
+    {
+      "doi": "10.1126/science.aav3722",
+      "title": "",
+      "year": "2019",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6787918?pdf=render",
+      "file": "10.1126_science.aav3722.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2019.05.008",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1219456110",
+      "title": "",
+      "year": "2013",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/110/5/1869.full.pdf",
+      "file": "10.1073_pnas.1219456110.md"
+    },
+    {
+      "doi": "10.1172/jci89444",
+      "title": "",
+      "year": "2017",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/89444/files/pdf",
+      "file": "10.1172_jci89444.md"
+    },
+    {
+      "doi": "10.1172/jci92407",
+      "title": "",
+      "year": "2017",
+      "journal": "J. Clin. Invest",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/92407/files/pdf",
+      "file": "10.1172_jci92407.md"
+    },
+    {
+      "doi": "10.2337/dc18-0071",
+      "title": "",
+      "year": "2018",
+      "journal": "Diabetes Care",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://care.diabetesjournals.org/content/diacare/41/8/1732.full.pdf",
+      "file": "10.2337_dc18-0071.md"
+    },
+    {
+      "doi": "10.1038/s41586-018-0849-9",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6367023?pdf=render",
+      "file": "10.1038_s41586-018-0849-9.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2015.07.007",
+      "title": "",
+      "year": "2015",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1550413115003368/pdf",
+      "file": "10.1016_j.cmet.2015.07.007.md"
+    },
+    {
+      "doi": "10.1038/nature18646",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://zenodo.org/record/3425712",
+      "file": "10.1038_nature18646.md"
+    },
+    {
+      "doi": "10.1038/s41591-018-0061-3",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://cnrs.hal.science/hal-03090150",
+      "file": "10.1038_s41591-018-0061-3.md"
+    },
+    {
+      "doi": "10.1038/s41588-019-0350-x",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pure.rug.nl/ws/files/121569444/s41588_019_0350_x.pdf",
+      "file": "10.1038_s41588-019-0350-x.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2018.07.003",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1550413118304467/pdf",
+      "file": "10.1016_j.cmet.2018.07.003.md"
+    },
+    {
+      "doi": "10.1056/nejm199907223410404",
+      "title": "",
+      "year": "1999",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1056/nejm199610313351804",
+      "title": "",
+      "year": "1996",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1172/jci118742",
+      "title": "",
+      "year": "1996",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/118742/files/pdf",
+      "file": "10.1172_jci118742.md"
+    },
+    {
+      "doi": "10.1172/jci5001",
+      "title": "",
+      "year": "1999",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/5001/files/pdf",
+      "file": "10.1172_jci5001.md"
+    },
+    {
+      "doi": "10.1371/journal.pmed.0040154",
+      "title": "",
+      "year": "2007",
+      "journal": "PLoS Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.0040154&type=printable",
+      "file": "10.1371_journal.pmed.0040154.md"
+    },
+    {
+      "doi": "10.1172/jci6928",
+      "title": "",
+      "year": "1999",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/6928/files/pdf",
+      "file": "10.1172_jci6928.md"
+    },
+    {
+      "doi": "10.1194/jlr.r087510",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Lipid Res.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6795081?pdf=render",
+      "file": "10.1194_jlr.r087510.md"
+    },
+    {
+      "doi": "10.1038/nm.4350",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6048953?pdf=render",
+      "file": "10.1038_nm.4350.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2013.06.001",
+      "title": "",
+      "year": "2013",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1550413113002441/pdf",
+      "file": "10.1016_j.cmet.2013.06.001.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2010.10.006",
+      "title": "",
+      "year": "2010",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S155041311000358X/pdf",
+      "file": "10.1016_j.cmet.2010.10.006.md"
+    },
+    {
+      "doi": "10.2337/db13-0880",
+      "title": "",
+      "year": "2013",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetes.diabetesjournals.org/content/diabetes/62/12/4070.full.pdf",
+      "file": "10.2337_db13-0880.md"
+    },
+    {
+      "doi": "10.2337/diabetes.50.5.921",
+      "title": "",
+      "year": "2001",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetesjournals.org/diabetes/article-pdf/50/5/921/367466/921.pdf",
+      "file": "10.2337_diabetes.50.5.921.md"
+    },
+    {
+      "doi": "10.1073/pnas.1110105108",
+      "title": "",
+      "year": "2011",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1172/jci120843",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Clin. Invest",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/120843/files/pdf",
+      "file": "10.1172_jci120843.md"
+    },
+    {
+      "doi": "10.1126/science.1082889",
+      "title": "",
+      "year": "2003",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3004429?pdf=render",
+      "file": "10.1126_science.1082889.md"
+    },
+    {
+      "doi": "10.1016/j.ajhg.2018.12.001",
+      "title": "",
+      "year": "2019",
+      "journal": "Am. J. Hum. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S000292971830452X/pdf",
+      "file": "10.1016_j.ajhg.2018.12.001.md"
+    },
+    {
+      "doi": "10.2337/db08-1240",
+      "title": "",
+      "year": "2009",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2682667?pdf=render",
+      "file": "10.2337_db08-1240.md"
+    },
+    {
+      "doi": "10.2337/db12-1107",
+      "title": "",
+      "year": "2013",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetes.diabetesjournals.org/content/diabetes/62/4/1036.full.pdf",
+      "file": "10.2337_db12-1107.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2007.08.047",
+      "title": "",
+      "year": "2007",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S009286740701197X/pdf",
+      "file": "10.1016_j.cell.2007.08.047.md"
+    },
+    {
+      "doi": "10.2337/db19-1552-p",
+      "title": "",
+      "year": "2019",
+      "journal": "Diabetes",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/ng.3714",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pure.amsterdamumc.nl/files/159166232/Integrative-genomic-analysis-implicates-limited-peripheral-adipose-storage-capacity-in-the-pathogenesis-of-human-insulin.pdf",
+      "file": "10.1038_ng.3714.md"
+    },
+    {
+      "doi": "10.1172/jci74692",
+      "title": "",
+      "year": "2015",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://lup.lub.lu.se/record/5402932",
+      "file": "10.1172_jci74692.md"
+    },
+    {
+      "doi": "10.1016/j.celrep.2016.09.005",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2211124716312104/pdf",
+      "file": "10.1016_j.celrep.2016.09.005.md"
+    },
+    {
+      "doi": "10.1016/j.celrep.2018.08.036",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S221112471831307X/pdf",
+      "file": "10.1016_j.celrep.2018.08.036.md"
+    },
+    {
+      "doi": "10.2337/db17-1142",
+      "title": "",
+      "year": "2018",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetes.diabetesjournals.org/content/diabetes/67/2/334.full.pdf",
+      "file": "10.2337_db17-1142.md"
+    },
+    {
+      "doi": "10.1126/science.1210878",
+      "title": "",
+      "year": "2011",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3204221?pdf=render",
+      "file": "10.1126_science.1210878.md"
+    },
+    {
+      "doi": "10.1073/pnas.0900909106",
+      "title": "",
+      "year": "2009",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2695078?pdf=render",
+      "file": "10.1073_pnas.0900909106.md"
+    },
+    {
+      "doi": "10.1038/nature13425",
+      "title": "",
+      "year": "2014",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "landing",
+      "link": "https://escholarship.org/uc/item/8gp1z278",
+      "file": "10.1038_nature13425.md"
+    },
+    {
+      "doi": "10.2337/db12-1148",
+      "title": "",
+      "year": "2013",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetes.diabetesjournals.org/content/diabetes/62/6/1865.full.pdf",
+      "file": "10.2337_db12-1148.md"
+    },
+    {
+      "doi": "10.1016/s0026-0495(78)80007-9",
+      "title": "",
+      "year": "1978",
+      "journal": "Metabolism",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1172/jci113744",
+      "title": "",
+      "year": "1988",
+      "journal": "J. Clin. Invest",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/113744/files/pdf",
+      "file": "10.1172_jci113744.md"
+    },
+    {
+      "doi": "10.1172/jci10842",
+      "title": "",
+      "year": "2000",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/10842/files/pdf",
+      "file": "10.1172_jci10842.md"
+    },
+    {
+      "doi": "10.1111/eci.13017",
+      "title": "",
+      "year": "2018",
+      "journal": "Eur. J. Clin. Invest.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s00125-018-4777-x",
+      "title": "",
+      "year": "2019",
+      "journal": "Diabetologia",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://link.springer.com/content/pdf/10.1007/s00125-018-4777-x.pdf",
+      "file": "10.1007_s00125-018-4777-x.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1156-9",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6589139?pdf=render",
+      "file": "10.1038_s41586-019-1156-9.md"
+    },
+    {
+      "doi": "10.2337/db10-0867",
+      "title": "",
+      "year": "2011",
+      "journal": "Diabetes",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/ng.2274",
+      "title": "",
+      "year": "2012",
+      "journal": "Nat. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://iris.unil.ch/bitstreams/16cc1823-1061-4a01-b073-70177a06221d/download",
+      "file": "10.1038_ng.2274.md"
+    },
+    {
+      "doi": "10.1038/nature14132",
+      "title": "",
+      "year": "2015",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/nature14132.pdf",
+      "file": "10.1038_nature14132.md"
+    },
+    {
+      "doi": "10.1073/pnas.1716990115",
+      "title": "",
+      "year": "2017",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/114/52/E11285.full.pdf",
+      "file": "10.1073_pnas.1716990115.md"
+    },
+    {
+      "doi": "10.1093/hmg/ddy093",
+      "title": "",
+      "year": "2018",
+      "journal": "Hum. Mol. Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/hmg/article-pdf/27/10/1830/25087072/ddy093.pdf",
+      "file": "10.1093_hmg_ddy093.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2014.05.012",
+      "title": "",
+      "year": "2014",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867414006060/pdf",
+      "file": "10.1016_j.cell.2014.05.012.md"
+    },
+    {
+      "doi": "10.1038/s42255-018-0003-x",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Metab.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cmet.2014.08.010",
+      "title": "",
+      "year": "2014",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1550413114003763/pdf",
+      "file": "10.1016_j.cmet.2014.08.010.md"
+    },
+    {
+      "doi": "10.1073/pnas.1133870100",
+      "title": "",
+      "year": "2003",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC165864?pdf=render",
+      "file": "10.1073_pnas.1133870100.md"
+    },
+    {
+      "doi": "10.1172/jci90350",
+      "title": "",
+      "year": "2017",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/90350/files/pdf",
+      "file": "10.1172_jci90350.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2016.03.002",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S155041311630105X/pdf",
+      "file": "10.1016_j.cmet.2016.03.002.md"
+    },
+    {
+      "doi": "10.1038/ni.3120",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jacc.2018.03.002",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Am. Coll. Cardiol.",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "http://doi.org/10.1016/j.jacc.2018.03.002",
+      "file": "10.1016_j.jacc.2018.03.002.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2017.06.006",
+      "title": "",
+      "year": "2017",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1550413117303480/pdf",
+      "file": "10.1016_j.cmet.2017.06.006.md"
+    },
+    {
+      "doi": "10.1172/jci30400",
+      "title": "",
+      "year": "2007",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/30400/files/pdf",
+      "file": "10.1172_jci30400.md"
+    },
+    {
+      "doi": "10.1038/nm.1964",
+      "title": "",
+      "year": "2009",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.2337/db07-0767",
+      "title": "",
+      "year": "2007",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetesjournals.org/diabetes/article-pdf/56/12/2910/386113/zdb01207002910.pdf",
+      "file": "10.2337_db07-0767.md"
+    },
+    {
+      "doi": "10.1038/nature21365",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5330251?pdf=render",
+      "file": "10.1038_nature21365.md"
+    },
+    {
+      "doi": "10.1152/physrev.00032.2015",
+      "title": "",
+      "year": "2016",
+      "journal": "Physiol. Rev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1172/jci88878",
+      "title": "",
+      "year": "2017",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/88878/files/pdf",
+      "file": "10.1172_jci88878.md"
+    },
+    {
+      "doi": "10.1172/jci59660",
+      "title": "",
+      "year": "2012",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/59660/files/pdf",
+      "file": "10.1172_jci59660.md"
+    },
+    {
+      "doi": "10.1038/nm1202-798",
+      "title": "",
+      "year": "2002",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature03439",
+      "title": "",
+      "year": "2005",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cmet.2006.02.009",
+      "title": "",
+      "year": "2006",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1550413106000696/pdf",
+      "file": "10.1016_j.cmet.2006.02.009.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2005.11.013",
+      "title": "",
+      "year": "2006",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1550413105003499/pdf",
+      "file": "10.1016_j.cmet.2005.11.013.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2011.01.008",
+      "title": "",
+      "year": "2011",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S155041311100009X/pdf",
+      "file": "10.1016_j.cmet.2011.01.008.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2012.03.006",
+      "title": "",
+      "year": "2012",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1550413112001015/pdf",
+      "file": "10.1016_j.cmet.2012.03.006.md"
+    },
+    {
+      "doi": "10.1172/jci79895",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/79895/files/pdf",
+      "file": "10.1172_jci79895.md"
+    },
+    {
+      "doi": "10.2337/db14-0892",
+      "title": "",
+      "year": "2015",
+      "journal": "Diabetes",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1172/jci58035",
+      "title": "",
+      "year": "2011",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.jci.org/articles/view/58035/files/pdf",
+      "file": "10.1172_jci58035.md"
+    },
+    {
+      "doi": "10.2337/db15-1465",
+      "title": "",
+      "year": "2016",
+      "journal": "Diabetes",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://diabetes.diabetesjournals.org/content/diabetes/65/9/2569.full.pdf",
+      "file": "10.2337_db15-1465.md"
+    },
+    {
+      "doi": "10.1016/j.celrep.2016.02.032",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2211124716301358/pdf",
+      "file": "10.1016_j.celrep.2016.02.032.md"
+    },
+    {
+      "doi": "10.1172/jci.insight.96805",
+      "title": "",
+      "year": "2018",
+      "journal": "JCI Insight",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://insight.jci.org/articles/view/96805/files/pdf",
+      "file": "10.1172_jci.insight.96805.md"
+    },
+    {
+      "doi": "10.1016/j.cmet.2018.09.013",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell Metab.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1550413118305783/pdf",
+      "file": "10.1016_j.cmet.2018.09.013.md"
+    },
+    {
+      "doi": "10.1038/s41467-019-12081-0",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-019-12081-0.pdf",
+      "file": "10.1038_s41467-019-12081-0.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-0984-y",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6656374?pdf=render",
+      "file": "10.1038_s41586-019-0984-y.md"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "examples",
+    "name": "COVID-19 immunology (examples)",
+    "file": "data/examples.json",
+    "node_count": 19,
+    "edge_count": 22,
+    "updated": "2026-06-27",
+    "lint": {
+      "errors": 0,
+      "infos": 0,
+      "warnings": 10
+    }
+  },
+  {
+    "id": "view-drug-resistance-cancer",
+    "name": "Drug resistance in cancer",
+    "file": "data/view-drug-resistance-cancer.json",
+    "node_count": 24,
+    "edge_count": 56,
+    "updated": "2026-06-27",
+    "lint": {
+      "errors": 0,
+      "infos": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "id": "integrative-biology-type-diabetes",
+    "name": "Type 2 diabetes",
+    "file": "data/integrative-biology-type-diabetes.json",
+    "node_count": 29,
+    "edge_count": 92,
+    "updated": "2026-06-27",
+    "lint": {
+      "errors": 0,
+      "infos": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "id": "host-microbiota-maladaptation-colorectal-cancer",
+    "name": "Microbiota & colorectal cancer",
+    "file": "data/host-microbiota-maladaptation-colorectal-cancer.json",
+    "node_count": 28,
+    "edge_count": 88,
+    "updated": "2026-06-27",
+    "lint": {
+      "errors": 0,
+      "infos": 0,
+      "warnings": 0
+    }
+  },
+  {
+    "id": "fungal-impacts-earth-ecosystems",
+    "name": "Fungal impacts on ecosystems",
+    "file": "data/fungal-impacts-earth-ecosystems.json",
+    "node_count": 31,
+    "edge_count": 71,
+    "updated": "2026-06-27",
+    "lint": {
+      "errors": 0,
+      "infos": 0,
+      "warnings": 0
+    }
+  }
+]

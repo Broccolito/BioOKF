@@ -1,0 +1,1155 @@
+{
+  "article": {
+    "slug": "s41586-021-03307-7",
+    "doi": "10.1038/s41586-021-03307-7",
+    "title": "The central role of DNA damage in the ageing process",
+    "url": "https://www.nature.com/articles/s41586-021-03307-7",
+    "abbrev": "central-role-dna-damage-ageing-process",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/central-role-dna-damage-ageing-process"
+  },
+  "meta": {
+    "title": "The central role of DNA damage in the ageing process",
+    "authors": [
+      "Bj\u00f6rn Schumacher",
+      "Joris Pothof",
+      "Jan Vijg",
+      "Jan H. J. Hoeijmakers"
+    ],
+    "published": [
+      2021,
+      4,
+      28
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-021-03307-7",
+    "n_references": 125,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "3307_CR1",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Schumacher, B. The Mystery of Human Aging: Surprising Insights from a Science That\u2019s Still Young (Algora, 2017)."
+    },
+    {
+      "key": "3307_CR2",
+      "doi": "10.1093/genetics/156.3.927",
+      "title": "",
+      "journal": "Genetics",
+      "year": "2000",
+      "author": "B Charlesworth",
+      "unstructured": "Charlesworth, B. Fisher, Medawar, Hamilton and the evolution of aging. Genetics 156, 927\u2013931 (2000)."
+    },
+    {
+      "key": "3307_CR3",
+      "doi": "10.1111/j.1558-5646.1957.tb02911.x",
+      "title": "",
+      "journal": "Evolution",
+      "year": "1957",
+      "author": "GC Williams",
+      "unstructured": "Williams, G. C. Pleiotropy, natural selection, and the evolution of senescence. Evolution 11, 398\u2013411 (1957)."
+    },
+    {
+      "key": "3307_CR4",
+      "doi": "10.1016/j.cell.2013.05.039",
+      "title": "",
+      "journal": "Cell",
+      "year": "2013",
+      "author": "C L\u00f3pez-Ot\u00edn",
+      "unstructured": "L\u00f3pez-Ot\u00edn, C., Blasco, M. A., Partridge, L., Serrano, M. & Kroemer, G. The hallmarks of aging. Cell 153, 1194\u20131217 (2013)."
+    },
+    {
+      "key": "3307_CR5",
+      "doi": "10.1038/362709a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1993",
+      "author": "T Lindahl",
+      "unstructured": "Lindahl, T. Instability and decay of the primary structure of DNA. Nature 362, 709\u2013715 (1993)."
+    },
+    {
+      "key": "3307_CR6",
+      "doi": "10.1146/annurev-biochem-062917-012239",
+      "title": "",
+      "journal": "Annu. Rev. Biochem.",
+      "year": "2018",
+      "author": "LJ Niedernhofer",
+      "unstructured": "Niedernhofer, L. J. et al. Nuclear genomic instability and aging. Annu. Rev. Biochem. 87, 295\u2013322 (2018)."
+    },
+    {
+      "key": "3307_CR7",
+      "doi": "10.1016/j.critrevonc.2020.102963",
+      "title": "",
+      "journal": "Crit. Rev. Oncol. Hematol.",
+      "year": "2020",
+      "author": "S Lubberts",
+      "unstructured": "Lubberts, S., Meijer, C., Demaria, M. & Gietema, J. A. Early ageing after cytotoxic treatment for testicular cancer and cellular senescence: time to act. Crit. Rev. Oncol. Hematol. 151, 102963 (2020)."
+    },
+    {
+      "key": "3307_CR8",
+      "doi": "10.1016/j.arr.2016.06.007",
+      "title": "",
+      "journal": "Ageing Res. Rev.",
+      "year": "2017",
+      "author": "S Gonzalo",
+      "unstructured": "Gonzalo, S., Kreienkamp, R. & Askjaer, P. Hutchinson\u2013Gilford progeria syndrome: a premature aging disease caused by LMNA gene mutations. Ageing Res. Rev. 33, 18\u201329 (2017)."
+    },
+    {
+      "key": "3307_CR9",
+      "doi": "10.1093/acprof:oso/9780198569237.001.0001",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Vijg, J. Aging of the Genome (Oxford Univ. Press, 2007)."
+    },
+    {
+      "key": "3307_CR10",
+      "doi": "10.1016/0092-8674(89)90132-3",
+      "title": "",
+      "journal": "Cell",
+      "year": "1989",
+      "author": "V Lundblad",
+      "unstructured": "Lundblad, V. & Szostak, J. W. A mutant with a defect in telomere elongation leads to senescence in yeast. Cell 57, 633\u2013643 (1989)."
+    },
+    {
+      "key": "3307_CR11",
+      "doi": "10.1146/annurev-genet-032918-021921",
+      "title": "",
+      "journal": "Annu. Rev. Genet.",
+      "year": "2018",
+      "author": "T de Lange",
+      "unstructured": "de Lange, T. Shelterin-mediated telomere protection. Annu. Rev. Genet. 52, 223\u2013247 (2018)."
+    },
+    {
+      "key": "3307_CR12",
+      "doi": "10.1038/ncb2466",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2012",
+      "author": "M Fumagalli",
+      "unstructured": "Fumagalli, M. et al. Telomeric DNA damage is irreparable and causes persistent DNA-damage-response activation. Nat. Cell Biol. 14, 355\u2013365 (2012)."
+    },
+    {
+      "key": "3307_CR13",
+      "doi": "10.1038/ncb1911",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2009",
+      "author": "P Abdallah",
+      "unstructured": "Abdallah, P. et al. A two-step model for senescence triggered by a single critically short telomere. Nat. Cell Biol. 11, 988\u2013993 (2009)."
+    },
+    {
+      "key": "3307_CR14",
+      "doi": "10.1158/2159-8290.cd-16-0062",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2016",
+      "author": "JW Shay",
+      "unstructured": "Shay, J. W. Role of telomeres and telomerase in aging and cancer. Cancer Discov. 6, 584\u2013593 (2016)."
+    },
+    {
+      "key": "3307_CR15",
+      "doi": "10.1083/jcb.201610111",
+      "title": "",
+      "journal": "J. Cell Biol.",
+      "year": "2017",
+      "author": "P Mart\u00ednez",
+      "unstructured": "Mart\u00ednez, P. & Blasco, M. A. Telomere-driven diseases and telomere-targeting therapies. J. Cell Biol. 216, 875\u2013887 (2017)."
+    },
+    {
+      "key": "3307_CR16",
+      "doi": "10.1038/nature09603",
+      "title": "",
+      "journal": "Nature",
+      "year": "2011",
+      "author": "M Jaskelioff",
+      "unstructured": "Jaskelioff, M. et al. Telomerase reactivation reverses tissue degeneration in aged telomerase-deficient mice. Nature 469, 102\u2013106 (2011)."
+    },
+    {
+      "key": "3307_CR17",
+      "doi": "10.1126/science.aaz6876",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "K Demanelis",
+      "unstructured": "Demanelis, K. et al. Determinants of telomere length across human tissues. Science 369, eaaz6876 (2020)."
+    },
+    {
+      "key": "3307_CR18",
+      "doi": "10.1101/gad.251041.114",
+      "title": "",
+      "journal": "Genes Dev.",
+      "year": "2014",
+      "author": "JD Robin",
+      "unstructured": "Robin, J. D. et al. Telomere position effect: regulation of gene expression with progressive telomere shortening over long distances. Genes Dev. 28, 2464\u20132476 (2014)."
+    },
+    {
+      "key": "3307_CR19",
+      "doi": "10.1101/gad.307702.117",
+      "title": "",
+      "journal": "Genes Dev.",
+      "year": "2017",
+      "author": "MH Hauer",
+      "unstructured": "Hauer, M. H. & Gasser, S. M. Chromatin and nucleosome dynamics in DNA damage and repair. Genes Dev. 31, 2204\u20132221 (2017)."
+    },
+    {
+      "key": "3307_CR20",
+      "doi": "10.1038/nsmb.1897",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2010",
+      "author": "RJ O\u2019Sullivan",
+      "unstructured": "O\u2019Sullivan, R. J., Kubicek, S., Schreiber, S. L. & Karlseder, J. Reduced histone biosynthesis and chromatin changes arising from a damage signal at telomeres. Nat. Struct. Mol. Biol. 17, 1218\u20131225 (2010)."
+    },
+    {
+      "key": "3307_CR21",
+      "doi": "10.1101/gad.233221.113",
+      "title": "",
+      "journal": "Genes Dev.",
+      "year": "2014",
+      "author": "Z Hu",
+      "unstructured": "Hu, Z. et al. Nucleosome loss leads to global transcriptional up-regulation and genomic instability during yeast aging. Genes Dev. 28, 396\u2013408 (2014)."
+    },
+    {
+      "key": "3307_CR22",
+      "doi": "10.18632/aging.101684",
+      "title": "",
+      "journal": "Aging",
+      "year": "2019",
+      "author": "AT Lu",
+      "unstructured": "Lu, A. T. et al. DNA methylation GrimAge strongly predicts lifespan and healthspan. Aging 11, 303\u2013327 (2019)."
+    },
+    {
+      "key": "3307_CR23",
+      "doi": "10.1073/pnas.0501034102",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2005",
+      "author": "O Mortusewicz",
+      "unstructured": "Mortusewicz, O., Schermelleh, L., Walter, J., Cardoso, M. C. & Leonhardt, H. Recruitment of DNA methyltransferase I to DNA repair sites. Proc. Natl Acad. Sci. USA 102, 8905\u20138909 (2005)."
+    },
+    {
+      "key": "3307_CR24",
+      "doi": "10.1038/s41594-020-00513-1",
+      "title": "",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "year": "2020",
+      "author": "S Wang",
+      "unstructured": "Wang, S., Meyer, D. H. D. H. & Schumacher, B. H3K4me2 regulates the recovery of protein biosynthesis and homeostasis following DNA damage. Nat. Struct. Mol. Biol. 27, 1165\u20131177 (2020).\u00a0S.\u00a0Wang and colleagues revealed that, after the repair of DNA lesions, the epigenetic mark H3K4me2 is deposited to restore protein homeostasis and thus antagonize DNA damage-driven ageing."
+    },
+    {
+      "key": "3307_CR25",
+      "doi": "10.1016/j.celrep.2018.03.002",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2018",
+      "author": "T Ito",
+      "unstructured": "Ito, T., Teo, Y. V., Evans, S. A., Neretti, N. & Sedivy, J. M. Regulation of cellular senescence by polycomb chromatin modifiers through distinct DNA damage- and histone methylation-dependent pathways. Cell Rep. 22, 3480\u20133492 (2018)."
+    },
+    {
+      "key": "3307_CR26",
+      "doi": "10.1038/ncb1095",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2004",
+      "author": "OA Sedelnikova",
+      "unstructured": "Sedelnikova, O. A. et al. Senescing human cells and ageing mice accumulate DNA lesions with unrepairable double-strand breaks. Nat. Cell Biol. 6, 168\u2013170 (2004)."
+    },
+    {
+      "key": "3307_CR27",
+      "doi": "10.1242/jcs.071340",
+      "title": "",
+      "journal": "J. Cell Sci.",
+      "year": "2011",
+      "author": "F Rodier",
+      "unstructured": "Rodier, F. et al. DNA-SCARS: distinct nuclear structures that sustain damage-induced senescence growth arrest and inflammatory cytokine secretion. J. Cell Sci. 124, 68\u201381 (2011)."
+    },
+    {
+      "key": "3307_CR28",
+      "doi": "",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2016",
+      "author": "G Russo",
+      "unstructured": "Russo, G. et al. DNA damage and repair modify DNA methylation and chromatin domain of the targeted locus: mechanism of allele methylation polymorphism. Sci. Rep. 6, 33222 (2016)."
+    },
+    {
+      "key": "3307_CR29",
+      "doi": "10.1016/j.cell.2014.03.026",
+      "title": "",
+      "journal": "Cell",
+      "year": "2014",
+      "author": "EF Fang",
+      "unstructured": "Fang, E. F. et al. Defective mitophagy in XPA via PARP-1 hyperactivation and NAD+/SIRT1 reduction. Cell 157, 882\u2013896 (2014)."
+    },
+    {
+      "key": "3307_CR30",
+      "doi": "10.1016/j.cell.2008.10.025",
+      "title": "",
+      "journal": "Cell",
+      "year": "2008",
+      "author": "P Oberdoerffer",
+      "unstructured": "Oberdoerffer, P. et al. SIRT1 redistribution on chromatin promotes genomic stability but alters gene expression during aging. Cell 135, 907\u2013918 (2008)."
+    },
+    {
+      "key": "3307_CR31",
+      "doi": "10.1038/nature04844",
+      "title": "",
+      "journal": "Nature",
+      "year": "2006",
+      "author": "R Bahar",
+      "unstructured": "Bahar, R. et al. Increased cell-to-cell variation in gene expression in ageing mouse heart. Nature 441, 1011\u20131014 (2006). R. Bahar and colleagues demonstrated that cell-to-cell variation in gene expression increases in aged single cardiomyocytes, suggesting that genome damage could trigger stochastic variations in transcript levels, thus compromising cellular function during ageing."
+    },
+    {
+      "key": "3307_CR32",
+      "doi": "",
+      "title": "",
+      "journal": "Clin. Neuropathol.",
+      "year": "1986",
+      "author": "K Takada",
+      "unstructured": "Takada, K. & Becker, L. E. Cockayne\u2019s syndrome: report of two autopsy cases associated with neurofibrillary tangles. Clin. Neuropathol. 5, 64\u201368 (1986)."
+    },
+    {
+      "key": "3307_CR33",
+      "doi": "10.1093/nar/gkaa795",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2020",
+      "author": "AFC Lopes",
+      "unstructured": "Lopes, A. F. C. et al. A C. elegans model for neurodegeneration in Cockayne syndrome. Nucleic Acids Res. 48, 10973\u201310985 (2020)."
+    },
+    {
+      "key": "3307_CR34",
+      "doi": "10.1016/j.dnarep.2013.07.005",
+      "title": "",
+      "journal": "DNA Repair",
+      "year": "2013",
+      "author": "N Bucholtz",
+      "unstructured": "Bucholtz, N. & Demuth, I. DNA-repair in mild cognitive impairment and Alzheimer\u2019s disease. DNA Repair 12, 811\u2013816 (2013)."
+    },
+    {
+      "key": "3307_CR35",
+      "doi": "10.1093/nar/gkm605",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2007",
+      "author": "L Weissman",
+      "unstructured": "Weissman, L. et al. Defective DNA base excision repair in brain from individuals with Alzheimer\u2019s disease and amnestic mild cognitive impairment. Nucleic Acids Res. 35, 5545\u20135555 (2007)."
+    },
+    {
+      "key": "3307_CR36",
+      "doi": "10.3390/ijms140612380",
+      "title": "",
+      "journal": "Int. J. Mol. Sci.",
+      "year": "2013",
+      "author": "GS Leandro",
+      "unstructured": "Leandro, G. S., Lobo, R. R., Oliveira, D. V. N. P., Moriguti, J. C. & Sakamoto-Hojo, E. T. Lymphocytes of patients with Alzheimer\u2019s disease display different DNA damage repair kinetics and expression profiles of DNA repair and stress response genes. Int. J. Mol. Sci. 14, 12380\u201312400 (2013)."
+    },
+    {
+      "key": "3307_CR37",
+      "doi": "10.1016/j.dnarep.2013.04.009",
+      "title": "",
+      "journal": "DNA Repair",
+      "year": "2013",
+      "author": "S Sepe",
+      "unstructured": "Sepe, S., Payan-Gomez, C., Milanese, C., Hoeijmakers, J. H. & Mastroberardino, P. G. Nucleotide excision repair in chronic neurodegenerative diseases. DNA Repair 12, 568\u2013577 (2013)."
+    },
+    {
+      "key": "3307_CR38",
+      "doi": "10.3109/00207450903411133",
+      "title": "",
+      "journal": "Int. J. Neurosci.",
+      "year": "2010",
+      "author": "M Obulesu",
+      "unstructured": "Obulesu, M. & Rao, D. M. DNA damage and impairment of DNA repair in Alzheimer\u2019s disease. Int. J. Neurosci. 120, 397\u2013403 (2010)."
+    },
+    {
+      "key": "3307_CR39",
+      "doi": "10.1016/j.celrep.2016.04.071",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2016",
+      "author": "S Sepe",
+      "unstructured": "Sepe, S. et al. Inefficient DNA repair is an aging-related modifier of Parkinson\u2019s disease. Cell Rep. 15, 1866\u20131875 (2016)."
+    },
+    {
+      "key": "3307_CR40",
+      "doi": "10.1016/s1474-4422(16)30350-7",
+      "title": "",
+      "journal": "Lancet Neurol.",
+      "year": "2017",
+      "author": "L Jones",
+      "unstructured": "Jones, L., Houlden, H. & Tabrizi, S. J. DNA repair in the trinucleotide repeat disorders. Lancet Neurol. 16, 88\u201396 (2017)."
+    },
+    {
+      "key": "3307_CR41",
+      "doi": "10.7554/elife.42988",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "R Gao",
+      "unstructured": "Gao, R. et al. Mutant huntingtin impairs PNKP and ATXN3, disrupting DNA repair and transcription. eLife 8, e42988 (2019)."
+    },
+    {
+      "key": "3307_CR42",
+      "doi": "10.1126/science.aao4426",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "MA Lodato",
+      "unstructured": "Lodato, M. A. et al. Aging and neurodegeneration are associated with increased mutations in single human neurons. Science 359, 555\u2013559 (2018). Using single-cell sequencing, this study revealed increasing somatic mutations in neurons during human ageing, indicating that even post-mitotic cell types accrue mutations that might trigger age-associated functional decline and degeneration."
+    },
+    {
+      "key": "3307_CR43",
+      "doi": "10.1038/nature19329",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "WP Vermeij",
+      "unstructured": "Vermeij, W. P. et al. Restricted diet delays accelerated ageing and genomic stress in DNA-repair-deficient mice. Nature 537, 427\u2013431 (2016). W. P.\u00a0Vermeij and colleagues showed that premature ageing in DNA repair-deficient mice could be alleviated by dietary restriction, suggesting that DNA repair is capable of reducing DNA damage infliction and promoting genome stability."
+    },
+    {
+      "key": "3307_CR44",
+      "doi": "",
+      "title": "",
+      "journal": "Genome Biol.",
+      "year": "2015",
+      "author": "YN Wei",
+      "unstructured": "Wei, Y. N. et al. Transcript and protein expression decoupling reveals RNA binding proteins and miRNAs as potential modulators of human aging. Genome Biol. 16, 41 (2015)."
+    },
+    {
+      "key": "3307_CR45",
+      "doi": "10.15252/msb.20209596",
+      "title": "",
+      "journal": "Mol. Syst. Biol.",
+      "year": "2020",
+      "author": "E Kelmer Sacramento",
+      "unstructured": "Kelmer Sacramento, E. et al. Reduced proteasome activity in the aging brain results in ribosome stoichiometry loss and aggregation. Mol. Syst. Biol. 16, e9596 (2020)."
+    },
+    {
+      "key": "3307_CR46",
+      "doi": "10.1016/j.celrep.2017.08.028",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2017",
+      "author": "D Edifizi",
+      "unstructured": "Edifizi, D. et al. Multilayered reprogramming in response to persistent DNA damage in C. elegans. Cell Rep. 20, 2026\u20132043 (2017)."
+    },
+    {
+      "key": "3307_CR47",
+      "doi": "10.1038/ncb1909",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2009",
+      "author": "F Rodier",
+      "unstructured": "Rodier, F. et al. Persistent DNA damage signalling triggers senescence-associated inflammatory cytokine secretion. Nat. Cell Biol. 11, 973\u2013979 (2009). This study established that senescent cells release cytokines and thus elicit non-cell-autonomous effects such as inflammatory responses."
+    },
+    {
+      "key": "3307_CR48",
+      "doi": "10.1534/genetics.119.302422",
+      "title": "",
+      "journal": "Genetics",
+      "year": "2019",
+      "author": "AB Williams",
+      "unstructured": "Williams, A. B. et al. Restoration of proteostasis in the endoplasmic reticulum reverses an inflammation-like response to cytoplasmic DNA in Caenorhabditis elegans. Genetics 212, 1259\u20131278 (2019)."
+    },
+    {
+      "key": "3307_CR49",
+      "doi": "10.1093/geronj/11.3.298",
+      "title": "",
+      "journal": "J. Gerontol.",
+      "year": "1956",
+      "author": "D Harman",
+      "unstructured": "Harman, D. Aging: a theory based on free radical and radiation chemistry. J. Gerontol. 11, 298\u2013300 (1956)."
+    },
+    {
+      "key": "3307_CR50",
+      "doi": "10.1016/j.cmet.2016.09.017",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2017",
+      "author": "TES Kauppila",
+      "unstructured": "Kauppila, T. E. S., Kauppila, J. H. K. & Larsson, N. G. Mammalian mitochondria and aging: an update. Cell Metab. 25, 57\u201371 (2017)."
+    },
+    {
+      "key": "3307_CR51",
+      "doi": "10.1038/nature02517",
+      "title": "",
+      "journal": "Nature",
+      "year": "2004",
+      "author": "A Trifunovic",
+      "unstructured": "Trifunovic, A. et al. Premature ageing in mice expressing defective mitochondrial DNA polymerase. Nature 429, 417\u2013423 (2004)."
+    },
+    {
+      "key": "3307_CR52",
+      "doi": "10.1126/science.1112125",
+      "title": "",
+      "journal": "Science",
+      "year": "2005",
+      "author": "GC Kujoth",
+      "unstructured": "Kujoth, G. C. et al. Mitochondrial DNA mutations, oxidative stress, and apoptosis in mammalian aging. Science 309, 481\u2013484 (2005)."
+    },
+    {
+      "key": "3307_CR53",
+      "doi": "10.1086/507132",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2006",
+      "author": "E Bua",
+      "unstructured": "Bua, E. et al. Mitochondrial DNA-deletion mutations accumulate intracellularly to detrimental levels in aged human skeletal muscle fibers. Am. J. Hum. Genet. 79, 469\u2013480 (2006)."
+    },
+    {
+      "key": "3307_CR54",
+      "doi": "10.1096/fj.00-0320com",
+      "title": "",
+      "journal": "FASEB J.",
+      "year": "2001",
+      "author": "J Wanagat",
+      "unstructured": "Wanagat, J., Cao, Z., Pathare, P. & Aiken, J. M. Mitochondrial DNA deletion mutations colocalize with segmental electron transport system abnormalities, muscle fiber atrophy, fiber splitting, and oxidative damage in sarcopenia. FASEB J. 15, 322\u2013332 (2001)."
+    },
+    {
+      "key": "3307_CR55",
+      "doi": "10.1038/ng1778",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2006",
+      "author": "Y Kraytsberg",
+      "unstructured": "Kraytsberg, Y. et al. Mitochondrial DNA deletions are abundant and cause functional impairment in aged human substantia nigra neurons. Nat. Genet. 38, 518\u2013520 (2006)."
+    },
+    {
+      "key": "3307_CR56",
+      "doi": "10.1172/jci19435",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2003",
+      "author": "RW Taylor",
+      "unstructured": "Taylor, R. W. et al. Mitochondrial DNA mutations in human colonic crypt stem cells. J. Clin. Invest. 112, 1351\u20131360 (2003)."
+    },
+    {
+      "key": "3307_CR57",
+      "doi": "10.1038/ng1988",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2007",
+      "author": "M Vermulst",
+      "unstructured": "Vermulst, M. et al. Mitochondrial point mutations do not limit the natural lifespan of mice. Nat. Genet. 39, 540\u2013543 (2007)."
+    },
+    {
+      "key": "3307_CR58",
+      "doi": "10.1101/gr.250480.119",
+      "title": "",
+      "journal": "Genome Res.",
+      "year": "2019",
+      "author": "R O\u2019Hara",
+      "unstructured": "O\u2019Hara, R. et al. Quantitative mitochondrial DNA copy number determination using droplet digital PCR with single-cell resolution. Genome Res. 29, 1878\u20131888 (2019)."
+    },
+    {
+      "key": "3307_CR59",
+      "doi": "10.1371/journal.pgen.1002028",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2011",
+      "author": "A Ameur",
+      "unstructured": "Ameur, A. et al. Ultra-deep sequencing of mouse mitochondrial DNA: mutational patterns and their origins. PLoS Genet. 7, e1002028 (2011)."
+    },
+    {
+      "key": "3307_CR60",
+      "doi": "10.1038/nature20790",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "NC Hoch",
+      "unstructured": "Hoch, N. C. et al. XRCC1 mutation is associated with PARP1 hyperactivation and cerebellar ataxia. Nature 541, 87\u201391 (2017)."
+    },
+    {
+      "key": "3307_CR61",
+      "doi": "10.1016/0014-4827(61)90192-6",
+      "title": "",
+      "journal": "Exp. Cell Res.",
+      "year": "1961",
+      "author": "L Hayflick",
+      "unstructured": "Hayflick, L. & Moorhead, P. S. The serial cultivation of human diploid cell strains. Exp. Cell Res. 25, 585\u2013621 (1961)."
+    },
+    {
+      "key": "3307_CR62",
+      "doi": "10.1126/science.279.5349.349",
+      "title": "",
+      "journal": "Science",
+      "year": "1998",
+      "author": "AG Bodnar",
+      "unstructured": "Bodnar, A. G. et al. Extension of life-span by introduction of telomerase into normal human cells. Science 279, 349\u2013352 (1998)."
+    },
+    {
+      "key": "3307_CR63",
+      "doi": "10.1016/j.devcel.2014.11.012",
+      "title": "",
+      "journal": "Dev. Cell",
+      "year": "2014",
+      "author": "M Demaria",
+      "unstructured": "Demaria, M. et al. An essential role for senescent cells in optimal wound healing through secretion of PDGF-AA. Dev. Cell 31, 722\u2013733 (2014)."
+    },
+    {
+      "key": "3307_CR64",
+      "doi": "10.1073/pnas.211053698",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2001",
+      "author": "A Krtolica",
+      "unstructured": "Krtolica, A., Parrinello, S., Lockett, S., Desprez, P.-Y. & Campisi, J. Senescent fibroblasts promote epithelial cell growth and tumorigenesis: a link between cancer and aging. Proc. Natl Acad. Sci. USA 98, 12072\u201312077 (2001)."
+    },
+    {
+      "key": "3307_CR65",
+      "doi": "10.1038/nature10600",
+      "title": "",
+      "journal": "Nature",
+      "year": "2011",
+      "author": "DJ Baker",
+      "unstructured": "Baker, D. J. et al. Clearance of p16Ink4a-positive senescent cells delays ageing-associated disorders. Nature 479, 232\u2013236 (2011). D. J. Baker and colleagues revealed that the elimination of senescent cells could delay ageing and provided the conceptual framework for eliminating senescence cells for therapeutic interventions aimed at extending healthspan."
+    },
+    {
+      "key": "3307_CR66",
+      "doi": "10.1126/science.aaf6659",
+      "title": "",
+      "journal": "Science",
+      "year": "2016",
+      "author": "BG Childs",
+      "unstructured": "Childs, B. G. et al. Senescent intimal foam cells are deleterious at all stages of atherosclerosis. Science 354, 472\u2013477 (2016)."
+    },
+    {
+      "key": "3307_CR67",
+      "doi": "10.1038/nm.4324",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2017",
+      "author": "OH Jeon",
+      "unstructured": "Jeon, O. H. et al. Local clearance of senescent cells attenuates the development of post-traumatic osteoarthritis and creates a pro-regenerative environment. Nat. Med. 23, 775\u2013781 (2017)."
+    },
+    {
+      "key": "3307_CR68",
+      "doi": "10.1158/2159-8290.cd-17-1461",
+      "title": "",
+      "journal": "Cancer Discov.",
+      "year": "2018",
+      "author": "P Kotsantis",
+      "unstructured": "Kotsantis, P., Petermann, E. & Boulton, S. J. Mechanisms of oncogene-induced replication stress: jigsaw falling into place. Cancer Discov. 8, 537\u2013555 (2018)."
+    },
+    {
+      "key": "3307_CR69",
+      "doi": "10.1016/j.cell.2019.10.005",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "V Gorgoulis",
+      "unstructured": "Gorgoulis, V. et al. Cellular senescence: defining a path forward. Cell 179, 813\u2013827 (2019)."
+    },
+    {
+      "key": "3307_CR70",
+      "doi": "10.1038/srep35218",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2016",
+      "author": "GA Andriani",
+      "unstructured": "Andriani, G. A. et al. Whole chromosome instability induces senescence and promotes SASP. Sci. Rep. 6, 35218 (2016)."
+    },
+    {
+      "key": "3307_CR71",
+      "doi": "10.1016/j.cmet.2015.11.011",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2016",
+      "author": "CD Wiley",
+      "unstructured": "Wiley, C. D. et al. Mitochondrial dysfunction induces senescence with a distinct secretory phenotype. Cell Metab. 23, 303\u2013314 (2016)."
+    },
+    {
+      "key": "3307_CR72",
+      "doi": "10.1007/s00439-019-02047-z",
+      "title": "",
+      "journal": "Hum. Genet.",
+      "year": "2020",
+      "author": "T McNeely",
+      "unstructured": "McNeely, T., Leone, M., Yanai, H. & Beerman, I. DNA damage in aging, the stem cell perspective. Hum. Genet. 139, 309\u2013331 (2020)."
+    },
+    {
+      "key": "3307_CR73",
+      "doi": "10.1126/science.aad4395",
+      "title": "",
+      "journal": "Science",
+      "year": "2016",
+      "author": "H Matsumura",
+      "unstructured": "Matsumura, H. et al Hair follicle aging is driven by transepidermal elimination of stem cells via COL17A1 proteolysis. Science 351, aad4395 (2016)."
+    },
+    {
+      "key": "3307_CR74",
+      "doi": "10.1002/jcsm.12404",
+      "title": "",
+      "journal": "J. Cachexia Sarcopenia Muscle",
+      "year": "2019",
+      "author": "K Alyodawi",
+      "unstructured": "Alyodawi, K. et al. Compression of morbidity in a progeroid mouse model through the attenuation of myostatin/activin signalling. J. Cachexia Sarcopenia Muscle 10, 662\u2013686 (2019)."
+    },
+    {
+      "key": "3307_CR75",
+      "doi": "10.1038/nri3433",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2013",
+      "author": "H Geiger",
+      "unstructured": "Geiger, H., de Haan, G. & Florian, M. C. The ageing haematopoietic stem cell compartment. Nat. Rev. Immunol. 13, 376\u2013389 (2013)."
+    },
+    {
+      "key": "3307_CR76",
+      "doi": "10.1016/j.stem.2014.04.016",
+      "title": "",
+      "journal": "Cell Stem Cell",
+      "year": "2014",
+      "author": "I Beerman",
+      "unstructured": "Beerman, I., Seita, J., Inlay, M. A., Weissman, I. L. & Rossi, D. J. Quiescent hematopoietic stem cells accumulate DNA damage during aging that is repaired upon entry into cell cycle. Cell Stem Cell 15, 37\u201350 (2014)."
+    },
+    {
+      "key": "3307_CR77",
+      "doi": "10.1038/nature13619",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "J Flach",
+      "unstructured": "Flach, J. et al. Replication stress is a potent driver of functional decline in ageing haematopoietic stem cells. Nature 512, 198\u2013202 (2014). This study established that increasing DNA replication stress in ageing haematopoietic stem cells leads to their functional decline."
+    },
+    {
+      "key": "3307_CR78",
+      "doi": "10.1016/j.stem.2010.06.014",
+      "title": "",
+      "journal": "Cell Stem Cell",
+      "year": "2010",
+      "author": "M Mohrin",
+      "unstructured": "Mohrin, M. et al. Hematopoietic stem cell quiescence promotes error-prone DNA repair and mutagenesis. Cell Stem Cell 7, 174\u2013185 (2010)."
+    },
+    {
+      "key": "3307_CR79",
+      "doi": "10.1038/nature05862",
+      "title": "",
+      "journal": "Nature",
+      "year": "2007",
+      "author": "DJ Rossi",
+      "unstructured": "Rossi, D. J. et al. Deficiencies in DNA damage repair limit the function of haematopoietic stem cells with age. Nature 447, 725\u2013729 (2007)."
+    },
+    {
+      "key": "3307_CR80",
+      "doi": "10.1038/s41586-018-0497-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "H Lee-Six",
+      "unstructured": "Lee-Six, H. et al. Population dynamics of normal human blood inferred from somatic mutations. Nature 561, 473\u2013478 (2018)."
+    },
+    {
+      "key": "3307_CR81",
+      "doi": "10.1182/blood-2017-02-769869",
+      "title": "",
+      "journal": "Blood",
+      "year": "2017",
+      "author": "F Zink",
+      "unstructured": "Zink, F. et al. Clonal hematopoiesis, with and without candidate driver mutations, is common in the elderly. Blood 130, 742\u2013752 (2017)."
+    },
+    {
+      "key": "3307_CR82",
+      "doi": "10.1146/annurev-genet-120417-031501",
+      "title": "",
+      "journal": "Annu. Rev. Genet.",
+      "year": "2018",
+      "author": "L Zhang",
+      "unstructured": "Zhang, L. & Vijg, J. Somatic mutagenesis in mammals and its implications for human disease and aging. Annu. Rev. Genet. 52, 397\u2013419 (2018)."
+    },
+    {
+      "key": "3307_CR83",
+      "doi": "10.1038/s41467-018-03244-6",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "I Franco",
+      "unstructured": "Franco, I. et al. Somatic mutagenesis in satellite cells associates with human skeletal muscle aging. Nat. Commun. 9, 800 (2018)."
+    },
+    {
+      "key": "3307_CR84",
+      "doi": "10.1038/nm1578",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2007",
+      "author": "Z Ju",
+      "unstructured": "Ju, Z. et al. Telomere dysfunction induces environmental alterations limiting hematopoietic stem cell function and engraftment. Nat. Med. 13, 742\u2013747 (2007)."
+    },
+    {
+      "key": "3307_CR85",
+      "doi": "10.1016/j.cell.2005.11.044",
+      "title": "",
+      "journal": "Cell",
+      "year": "2006",
+      "author": "R Mostoslavsky",
+      "unstructured": "Mostoslavsky, R. et al. Genomic instability and aging-like phenotype in the absence of mammalian SIRT6. Cell 124, 315\u2013329 (2006)."
+    },
+    {
+      "key": "3307_CR86",
+      "doi": "10.1016/j.stem.2018.08.019",
+      "title": "",
+      "journal": "Cell Stem Cell",
+      "year": "2018",
+      "author": "L Liu",
+      "unstructured": "Liu, L. et al. Impaired Notch signaling leads to a decrease in p53 activity and mitotic catastrophe in aged muscle stem cells. Cell Stem Cell 23, 544\u2013556.e4 (2018)."
+    },
+    {
+      "key": "3307_CR87",
+      "doi": "10.1016/j.devcel.2019.06.012",
+      "title": "",
+      "journal": "Dev. Cell",
+      "year": "2019",
+      "author": "H-L Ou",
+      "unstructured": "Ou, H.-L., Kim, C. S., Uszkoreit, S., Wickstr\u00f6m, S. A. & Schumacher, B. Somatic niche cells regulate the CEP-1/p53-mediated DNA damage response in primordial germ cells. Dev. Cell 50, 167\u2013183.e8 (2019)."
+    },
+    {
+      "key": "3307_CR88",
+      "doi": "10.1038/366461a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1993",
+      "author": "C Kenyon",
+      "unstructured": "Kenyon, C., Chang, J., Gensch, E., Rudner, A. & Tabtiang, R. A C. elegans mutant that lives twice as long as wild type. Nature 366, 461\u2013464 (1993)."
+    },
+    {
+      "key": "3307_CR89",
+      "doi": "10.1016/j.cell.2017.02.004",
+      "title": "",
+      "journal": "Cell",
+      "year": "2017",
+      "author": "RA Saxton",
+      "unstructured": "Saxton, R. A. & Sabatini, D. M. mTOR signaling in growth, metabolism, and disease. Cell 168, 960\u2013976 (2017)."
+    },
+    {
+      "key": "3307_CR90",
+      "doi": "10.1111/php.12687",
+      "title": "",
+      "journal": "Photochem. Photobiol.",
+      "year": "2017",
+      "author": "R Prasad",
+      "unstructured": "Prasad, R. & Katiyar, S. K. Crosstalk among UV-induced inflammatory mediators, DNA damage and epigenetic regulators facilitates suppression of the immune system. Photochem. Photobiol. 93, 930\u2013936 (2017)."
+    },
+    {
+      "key": "3307_CR91",
+      "doi": "10.1038/nature12452",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "MA Ermolaeva",
+      "unstructured": "Ermolaeva, M. A. et al. DNA damage in germ cells induces an innate immune response that triggers systemic stress resistance. Nature 501, 416\u2013420 (2013)."
+    },
+    {
+      "key": "3307_CR92",
+      "doi": "10.1371/journal.pgen.1000161",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2008",
+      "author": "B Schumacher",
+      "unstructured": "Schumacher, B. et al. Delayed and accelerated aging share common longevity assurance mechanisms. PLoS Genet. 4, e1000161 (2008)."
+    },
+    {
+      "key": "3307_CR93",
+      "doi": "10.1038/nature05456",
+      "title": "",
+      "journal": "Nature",
+      "year": "2006",
+      "author": "LJ Niedernhofer",
+      "unstructured": "Niedernhofer, L. J. et al. A new progeroid syndrome reveals that genotoxic stress suppresses the somatotroph axis. Nature 444, 1038\u20131043 (2006). This study linked unrepaired DNA damage to genetic regulators of longevity by showing that ILS is attenuated in progeroid mice deficient in DNA repair."
+    },
+    {
+      "key": "3307_CR94",
+      "doi": "10.1038/ncb1866",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2009",
+      "author": "GA Garinis",
+      "unstructured": "Garinis, G. A. et al. Persistent transcription-blocking DNA lesions trigger somatic growth attenuation associated with longevity. Nat. Cell Biol. 11, 604\u2013615 (2009)."
+    },
+    {
+      "key": "3307_CR95",
+      "doi": "10.1038/ncb3071",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2014",
+      "author": "MM Mueller",
+      "unstructured": "Mueller, M. M. et al. DAF-16/FOXO and EGL-27/GATA promote developmental growth in response to persistent somatic DNA damage. Nat. Cell Biol. 16, 1168\u20131179 (2014). Using C. elegans,\u00a0M. M. Mueller and colleagues demonstrated that the longevity regulator DAF-16 responds to DNA damage and elevates the tolerance of the organism tolerance to persistent DNA lesions."
+    },
+    {
+      "key": "3307_CR96",
+      "doi": "10.1093/jn/18.1.1",
+      "title": "",
+      "journal": "J. Nutr.",
+      "year": "1939",
+      "author": "CM McCay",
+      "unstructured": "McCay, C. M., Maynard, L. A., Sperling, G. & Barnes, L. L. Retarded growth, life span, ultimate body size and age changes in the albino rat after feeding diets restricted in calories. J. Nutr. 18, 1\u201313 (1939)."
+    },
+    {
+      "key": "3307_CR97",
+      "doi": "10.1016/j.cell.2016.07.031",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "C L\u00f3pez-Ot\u00edn",
+      "unstructured": "L\u00f3pez-Ot\u00edn, C., Galluzzi, L., Freije, J. M. P., Madeo, F. & Kroemer, G. Metabolic control of longevity. Cell 166, 802\u2013821 (2016)."
+    },
+    {
+      "key": "3307_CR98",
+      "doi": "10.1126/science.1140321",
+      "title": "",
+      "journal": "Science",
+      "year": "2007",
+      "author": "S Matsuoka",
+      "unstructured": "Matsuoka, S. et al. ATM and ATR substrate analysis reveals extensive protein networks responsive to DNA damage. Science 316, 1160\u20131166 (2007)."
+    },
+    {
+      "key": "3307_CR99",
+      "doi": "10.1111/acel.12525",
+      "title": "",
+      "journal": "Aging Cell",
+      "year": "2017",
+      "author": "G Dominick",
+      "unstructured": "Dominick, G., Bowman, J., Li, X., Miller, R. A. & Garcia, G. G. mTOR regulates the expression of DNA damage response enzymes in long-lived Snell dwarf, GHRKO, and PAPPA-KO mice. Aging Cell 16, 52\u201360 (2017)."
+    },
+    {
+      "key": "3307_CR100",
+      "doi": "10.3390/ijms20133153",
+      "title": "",
+      "journal": "Int. J. Mol. Sci.",
+      "year": "2019",
+      "author": "DK Alves-Fernandes",
+      "unstructured": "Alves-Fernandes, D. K. & Jasiulionis, M. G. The role of SIRT1 on DNA damage response and epigenetic alterations in cancer. Int. J. Mol. Sci. 20, 1\u201313 (2019)."
+    },
+    {
+      "key": "3307_CR101",
+      "doi": "10.1038/onc.2012.279",
+      "title": "",
+      "journal": "Oncogene",
+      "year": "2013",
+      "author": "CL Wu",
+      "unstructured": "Wu, C. L. et al. Role of AMPK in UVB-induced DNA damage repair and growth control. Oncogene 32, 2682\u20132689 (2013)."
+    },
+    {
+      "key": "3307_CR102",
+      "doi": "10.1016/j.bbamcr.2018.06.011",
+      "title": "",
+      "journal": "Biochim. Biophys. Acta",
+      "year": "2018",
+      "author": "Y Ma",
+      "unstructured": "Ma, Y., Vassetzky, Y. & Dokudovskaya, S. mTORC1 pathway in DNA damage response. Biochim. Biophys. Acta 1865, 1293\u20131311 (2018)."
+    },
+    {
+      "key": "3307_CR103",
+      "doi": "10.1016/j.celrep.2016.07.038",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2016",
+      "author": "M Adamowicz",
+      "unstructured": "Adamowicz, M., Vermezovic, J. & d\u2019Adda di Fagagna, F. NOTCH1 inhibits activation of ATM by impairing the formation of an ATM-FOXO3a-KAT5/Tip60 complex. Cell Rep. 16, 2068\u20132076 (2016)."
+    },
+    {
+      "key": "3307_CR104",
+      "doi": "10.1016/j.cell.2019.03.043",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "X Tian",
+      "unstructured": "Tian, X. et al. SIRT6 is responsible for more efficient DNA double-strand break repair in long-lived species. Cell 177, 622\u2013638.e22 (2019)."
+    },
+    {
+      "key": "3307_CR105",
+      "doi": "10.1038/nature10815",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "Y Kanfi",
+      "unstructured": "Kanfi, Y. et al. The sirtuin SIRT6 regulates lifespan in male mice. Nature 483, 218\u2013221 (2012). This study established that in male mice transgenic expression of SIRT6 leads to reduced IGF-1 signalling and lifespan extension."
+    },
+    {
+      "key": "3307_CR106",
+      "doi": "10.1038/srep15299",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2015",
+      "author": "M Shaposhnikov",
+      "unstructured": "Shaposhnikov, M., Proshkina, E., Shilova, L., Zhavoronkov, A. & Moskalev, A. Lifespan and stress resistance in Drosophila with overexpressed DNA repair genes. Sci. Rep. 5, 15299 (2015)."
+    },
+    {
+      "key": "3307_CR107",
+      "doi": "10.1073/pnas.1902510116",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2019",
+      "author": "L Zhang",
+      "unstructured": "Zhang, L. et al. Single-cell whole-genome sequencing reveals the functional landscape of somatic mutations in B lymphocytes across the human lifespan. Proc. Natl Acad. Sci. USA 116, 9014\u20139019 (2019). Using single cell sequencing,\u00a0 L. Zhang and colleagues show increased somatic mutations during normal human ageing occurring in genes and regulatory regions indicating their role in the age-dependent functional decline."
+    },
+    {
+      "key": "3307_CR108",
+      "doi": "10.1126/sciadv.aax2659",
+      "title": "",
+      "journal": "Sci. Adv.",
+      "year": "2020",
+      "author": "K Brazhnik",
+      "unstructured": "Brazhnik, K. et al. Single-cell analysis reveals different age-related somatic mutation profiles between stem and differentiated cells in human liver. Sci. Adv. 6, eaax2659 (2020)."
+    },
+    {
+      "key": "3307_CR109",
+      "doi": "10.1186/s13059-019-1892-z",
+      "title": "",
+      "journal": "Genome Biol.",
+      "year": "2019",
+      "author": "I Franco",
+      "unstructured": "Franco, I. et al. Whole genome DNA sequencing provides an atlas of somatic mutagenesis in healthy human cells and identifies a tumor-prone cell type. Genome Biol. 20, 285 (2019)."
+    },
+    {
+      "key": "3307_CR110",
+      "doi": "10.1126/science.aaw0726",
+      "title": "",
+      "journal": "Science",
+      "year": "2019",
+      "author": "K Yizhak",
+      "unstructured": "Yizhak, K. et al. RNA sequence analysis reveals macroscopic somatic clonal expansion across normal tissues. Science 364, eaaw0726 (2019). This study used RNA sequencing to reveal the clonal expansion of somatic mutations in different human tissues."
+    },
+    {
+      "key": "3307_CR111",
+      "doi": "10.1111/acel.12362",
+      "title": "",
+      "journal": "Aging Cell",
+      "year": "2015",
+      "author": "SC Johnson",
+      "unstructured": "Johnson, S. C., Dong, X., Vijg, J. & Suh, Y. Genetic evidence for common pathways in human age-related diseases. Aging Cell 14, 809\u2013817 (2015)."
+    },
+    {
+      "key": "3307_CR112",
+      "doi": "10.1038/ng.3412",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2015",
+      "author": "FR Day",
+      "unstructured": "Day, F. R. et al. Large-scale genomic analyses link reproductive aging to hypothalamic signaling, breast cancer susceptibility and BRCA1-mediated DNA repair. Nat. Genet. 47, 1294\u20131303 (2015)."
+    },
+    {
+      "key": "3307_CR113",
+      "doi": "10.1016/j.maturitas.2016.07.006",
+      "title": "",
+      "journal": "Maturitas",
+      "year": "2016",
+      "author": "JSE Laven",
+      "unstructured": "Laven, J. S. E., Visser, J. A., Uitterlinden, A. G., Vermeij, W. P. & Hoeijmakers, J. H. J. Menopause: Genome stability as new paradigm. Maturitas 92, 15\u201323 (2016)."
+    },
+    {
+      "key": "3307_CR114",
+      "doi": "10.1148/49.3.349",
+      "title": "",
+      "journal": "Radiology",
+      "year": "1947",
+      "author": "PS Henshaw",
+      "unstructured": "Henshaw, P. S., Riley, E. F. & Stapleton, G. E. The biologic effects of pile radiations. Radiology 49, 349\u2013360 (1947)."
+    },
+    {
+      "key": "3307_CR115",
+      "doi": "",
+      "title": "",
+      "journal": "Symp. Soc. Exp. Biol.",
+      "year": "1967",
+      "author": "P Alexander",
+      "unstructured": "Alexander, P. The role of DNA lesions in the processes leading to aging in mice. Symp. Soc. Exp. Biol. 21, 29\u201350 (1967)."
+    },
+    {
+      "key": "3307_CR116",
+      "doi": "10.1016/j.cub.2005.01.001",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2005",
+      "author": "J Jans",
+      "unstructured": "Jans, J. et al. Powerful skin cancer protection by a CPD-photolyase transgene. Curr. Biol. 15, 105\u2013115 (2005)."
+    },
+    {
+      "key": "3307_CR117",
+      "doi": "10.1073/pnas.71.6.2169",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "1974",
+      "author": "RW Hart",
+      "unstructured": "Hart, R. W. & Setlow, R. B. Correlation between deoxyribonucleic acid excision-repair and life-span in a number of mammalian species. Proc. Natl Acad. Sci. USA 71, 2169\u20132173 (1974)."
+    },
+    {
+      "key": "3307_CR118",
+      "doi": "10.1086/412317",
+      "title": "",
+      "journal": "Q. Rev. Biol.",
+      "year": "1981",
+      "author": "HL Gensler",
+      "unstructured": "Gensler, H. L. & Bernstein, H. DNA damage as the primary cause of aging. Q. Rev. Biol. 56, 279\u2013303 (1981)."
+    },
+    {
+      "key": "3307_CR119",
+      "doi": "10.1126/science.1070174",
+      "title": "",
+      "journal": "Science",
+      "year": "2002",
+      "author": "J de Boer",
+      "unstructured": "de Boer, J. et al. Premature aging in mice deficient in DNA repair and transcription. Science 296, 1276\u20131279 (2002). J. de Boer and colleagues established that genetic defects in DNA repair accelerate the mammalian ageing process."
+    },
+    {
+      "key": "3307_CR120",
+      "doi": "10.1016/j.mad.2016.03.011",
+      "title": "",
+      "journal": "Mech. Ageing Dev.",
+      "year": "2017",
+      "author": "A Barzilai",
+      "unstructured": "Barzilai, A., Schumacher, B. & Shiloh, Y. Genome instability: linking ageing and brain degeneration. Mech. Ageing Dev. 161 (Pt A), 4\u201318 (2017)."
+    },
+    {
+      "key": "3307_CR121",
+      "doi": "10.1038/s41596-018-0094-6",
+      "title": "",
+      "journal": "Nat. Protoc.",
+      "year": "2019",
+      "author": "FR Traube",
+      "unstructured": "Traube, F. R. et al. Isotope-dilution mass spectrometry for exact quantification of noncanonical DNA nucleosides. Nat. Protoc. 14, 283\u2013312 (2019)."
+    },
+    {
+      "key": "3307_CR122",
+      "doi": "10.1016/j.dnarep.2019.04.004",
+      "title": "",
+      "journal": "DNA Repair",
+      "year": "2019",
+      "author": "T Mori",
+      "unstructured": "Mori, T. et al. High levels of oxidatively generated DNA damage 8,5\u2032-cyclo-2\u2032-deoxyadenosine accumulate in the brain tissues of xeroderma pigmentosum group A gene-knockout mice. DNA Repair 80, 52\u201358 (2019)."
+    },
+    {
+      "key": "3307_CR123",
+      "doi": "10.1016/s0921-8777(00)00018-5",
+      "title": "",
+      "journal": "Mutat. Res.",
+      "year": "2000",
+      "author": "B Van Houten",
+      "unstructured": "Van Houten, B., Cheng, S. & Chen, Y. Measuring gene-specific nucleotide excision repair in human cells using quantitative amplification of long targets from nanogram quantities of DNA. Mutat. Res. 460, 81\u201394 (2000)."
+    },
+    {
+      "key": "3307_CR124",
+      "doi": "10.1016/j.cell.2020.02.010",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "Y Nakazawa",
+      "unstructured": "Nakazawa, Y. et al. Ubiquitination of DNA damage-stalled RNAPII promotes transcription-coupled repair. Cell 180, 1228\u20131244.e24 (2020)."
+    },
+    {
+      "key": "3307_CR125",
+      "doi": "10.1039/d0cs00647e",
+      "title": "",
+      "journal": "Chem. Soc. Rev.",
+      "year": "2020",
+      "author": "C Mingard",
+      "unstructured": "Mingard, C., Wu, J., McKeague, M. & Sturla, S. J. Next-generation DNA damage sequencing. Chem. Soc. Rev. 49, 7354\u20137377 (2020)."
+    }
+  ]
+}

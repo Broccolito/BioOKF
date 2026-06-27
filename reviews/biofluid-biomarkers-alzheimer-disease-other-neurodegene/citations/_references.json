@@ -1,0 +1,1729 @@
+{
+  "article": {
+    "slug": "s41586-025-10018-w",
+    "doi": "10.1038/s41586-025-10018-w",
+    "title": "Biofluid biomarkers in Alzheimer\u2019s disease\u00a0and other neurodegenerative dementias",
+    "url": "https://www.nature.com/articles/s41586-025-10018-w",
+    "abbrev": "biofluid-biomarkers-alzheimer-disease-other-neurodegene",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/biofluid-biomarkers-alzheimer-disease-other-neurodegene"
+  },
+  "meta": {
+    "title": "Biofluid biomarkers in Alzheimer\u2019s disease\u00a0and other neurodegenerative dementias",
+    "authors": [
+      "Henrik Zetterberg",
+      "Barbara B. Bendlin"
+    ],
+    "published": [
+      2026,
+      2,
+      4
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-025-10018-w",
+    "n_references": 189,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "10018_CR1",
+      "doi": "10.1186/s13024-025-00819-y",
+      "title": "",
+      "journal": "Mol. Neurodegener.",
+      "year": "2025",
+      "author": "DR Thal",
+      "unstructured": "Thal, D. R., Poesen, K., Vandenberghe, R. & De Meyer, S. Alzheimer\u2019s disease neuropathology and its estimation with fluid and imaging biomarkers. Mol. Neurodegener. 20, 33 (2025)."
+    },
+    {
+      "key": "10018_CR2",
+      "doi": "10.1002/alz.12756",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2022",
+      "author": "O Hansson",
+      "unstructured": "Hansson, O. et al. The Alzheimer\u2019s Association appropriate use recommendations for blood biomarkers in Alzheimer\u2019s disease. Alzheimers Dement. 18, 2669\u20132686 (2022)."
+    },
+    {
+      "key": "10018_CR3",
+      "doi": "10.1038/s41582-024-00942-2",
+      "title": "",
+      "journal": "Nat. Rev. Neurol.",
+      "year": "2024",
+      "author": "J Therriault",
+      "unstructured": "Therriault, J. et al. Biomarker-based staging of Alzheimer disease: rationale and clinical applications. Nat. Rev. Neurol. 20, 232\u2013244 (2024)."
+    },
+    {
+      "key": "10018_CR4",
+      "doi": "",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "JL Cummings",
+      "unstructured": "Cummings, J. L. et al. Alzheimer\u2019s disease drug development pipeline: 2025. Alzheimers Dement. 11, e70098 (2025)."
+    },
+    {
+      "key": "10018_CR5",
+      "doi": "10.1097/nen.0b013e31824b211b",
+      "title": "",
+      "journal": "J. Neuropathol. Exp. Neurol.",
+      "year": "2012",
+      "author": "TG Beach",
+      "unstructured": "Beach, T. G., Monsell, S. E., Phillips, L. E. & Kukull, W. Accuracy of the clinical diagnosis of Alzheimer disease at National Institute on Aging Alzheimer Disease Centers, 2005-2010. J. Neuropathol. Exp. Neurol. 71, 266\u2013273 (2012)."
+    },
+    {
+      "key": "10018_CR6",
+      "doi": "10.1002/alz.70291",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "AD Cohen",
+      "unstructured": "Cohen, A. D. & Villemagne, V. L. A brief history of A\u03b2 imaging. Alzheimers Dement. 21, e70291 (2025)."
+    },
+    {
+      "key": "10018_CR7",
+      "doi": "10.1016/s0896-6273(03)00124-7",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2003",
+      "author": "F Kamenetz",
+      "unstructured": "Kamenetz, F. et al. APP processing and synaptic function. Neuron 37, 925\u2013937 (2003)."
+    },
+    {
+      "key": "10018_CR8",
+      "doi": "10.1371/journal.pbio.3002727",
+      "title": "",
+      "journal": "PLoS Biol.",
+      "year": "2024",
+      "author": "RM Rajani",
+      "unstructured": "Rajani, R. M. et al. Selective suppression of oligodendrocyte-derived amyloid beta rescues neuronal dysfunction in Alzheimer\u2019s disease. PLoS Biol. 22, e3002727 (2024)."
+    },
+    {
+      "key": "10018_CR9",
+      "doi": "10.1387/ijdb.8074993",
+      "title": "",
+      "journal": "Int. J. Dev. Biol.",
+      "year": "1994",
+      "author": "J Avila",
+      "unstructured": "Avila, J., Dominguez, J. & Diaz-Nido, J. Regulation of microtubule dynamics by microtubule-associated protein expression and phosphorylation during neuronal development. Int. J. Dev. Biol. 38, 13\u201325 (1994)."
+    },
+    {
+      "key": "10018_CR10",
+      "doi": "10.1016/0896-6273(95)90232-5",
+      "title": "",
+      "journal": "Neuron",
+      "year": "1995",
+      "author": "J Busciglio",
+      "unstructured": "Busciglio, J., Lorenzo, A., Yeh, J. & Yankner, B. A. \u03b2-Amyloid fibrils induce tau phosphorylation and loss of microtubule binding. Neuron 14, 879\u2013888 (1995)."
+    },
+    {
+      "key": "10018_CR11",
+      "doi": "10.1016/j.cell.2015.12.056",
+      "title": "",
+      "journal": "Cell",
+      "year": "2016",
+      "author": "E Karran",
+      "unstructured": "Karran, E. & De Strooper, B. The cellular phase of Alzheimer\u2019s disease. Cell 164, 603\u2013615 (2016)."
+    },
+    {
+      "key": "10018_CR12",
+      "doi": "10.1212/01.wnl.0000046581.81650.d0",
+      "title": "",
+      "journal": "Neurology",
+      "year": "2003",
+      "author": "D Strozyk",
+      "unstructured": "Strozyk, D., Blennow, K., White, L. R. & Launer, L. J. CSF A\u03b2 42 levels correlate with amyloid-neuropathology in a population-based autopsy study. Neurology 60, 652\u2013656 (2003)."
+    },
+    {
+      "key": "10018_CR13",
+      "doi": "10.1016/j.neurobiolaging.2007.02.016",
+      "title": "",
+      "journal": "Neurobiol. Aging",
+      "year": "2008",
+      "author": "S Engelborghs",
+      "unstructured": "Engelborghs, S. et al. Diagnostic performance of a CSF-biomarker panel in autopsy-confirmed dementia. Neurobiol. Aging 29, 1143\u20131159 (2008)."
+    },
+    {
+      "key": "10018_CR14",
+      "doi": "10.1016/s1474-4422(20)30314-8",
+      "title": "",
+      "journal": "Lancet Neurol.",
+      "year": "2020",
+      "author": "G Chetelat",
+      "unstructured": "Chetelat, G. et al. Amyloid-PET and 18F-FDG-PET in the diagnostic investigation of Alzheimer\u2019s disease and other dementias. Lancet Neurol. 19, 951\u2013962 (2020)."
+    },
+    {
+      "key": "10018_CR15",
+      "doi": "10.1186/s13195-019-0485-0",
+      "title": "",
+      "journal": "Alzheimers Res. Ther.",
+      "year": "2019",
+      "author": "O Hansson",
+      "unstructured": "Hansson, O., Lehmann, S., Otto, M., Zetterberg, H. & Lewczuk, P. Advantages and disadvantages of the use of the CSF amyloid \u03b2 (A\u03b2) 42/40 ratio in the diagnosis of Alzheimer\u2019s disease. Alzheimers Res. Ther. 11, 34 (2019)."
+    },
+    {
+      "key": "10018_CR16",
+      "doi": "10.1002/alz.14528",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "A Leuzy",
+      "unstructured": "Leuzy, A. et al. Considerations in the clinical use of amyloid PET and CSF biomarkers for Alzheimer\u2019s disease. Alzheimers Dement. 21, e14528 (2025)."
+    },
+    {
+      "key": "10018_CR17",
+      "doi": "10.1016/j.jalz.2018.01.010",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2018",
+      "author": "O Hansson",
+      "unstructured": "Hansson, O. et al. CSF biomarkers of Alzheimer\u2019s disease concord with amyloid-beta PET and predict clinical progression: a study of fully automated immunoassays in BioFINDER and ADNI cohorts. Alzheimers Dement. 14, 1470\u20131481 (2018)."
+    },
+    {
+      "key": "10018_CR18",
+      "doi": "10.1016/0006-291x(90)90635-z",
+      "title": "",
+      "journal": "Biochem. Biophys. Res. Commun.",
+      "year": "1990",
+      "author": "MB Podlisny",
+      "unstructured": "Podlisny, M. B. et al. Detection of soluble forms of the beta-amyloid precursor protein in human plasma. Biochem. Biophys. Res. Commun. 167, 1094\u20131101 (1990)."
+    },
+    {
+      "key": "10018_CR19",
+      "doi": "10.1016/s1474-4422(16)00070-3",
+      "title": "",
+      "journal": "Lancet Neurol",
+      "year": "2016",
+      "author": "B Olsson",
+      "unstructured": "Olsson, B. et al. CSF and blood biomarkers for the diagnosis of Alzheimer\u2019s disease: a systematic review and meta-analysis. Lancet Neurol. 15, 673\u2013684 (2016)."
+    },
+    {
+      "key": "10018_CR20",
+      "doi": "10.1016/j.jalz.2017.06.2266",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2017",
+      "author": "V Ovod",
+      "unstructured": "Ovod, V. et al. Amyloid beta concentrations and stable isotope labeling kinetics of human plasma specific to central nervous system amyloidosis. Alzheimers Dement. 13, 841\u2013849 (2017). This study showed a convincing association of plasma A\u03b242/A\u03b240 ratio with cerebral A\u03b2 pathology."
+    },
+    {
+      "key": "10018_CR21",
+      "doi": "10.1038/nature25456",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "A Nakamura",
+      "unstructured": "Nakamura, A. et al. High performance plasma amyloid-beta biomarkers for Alzheimer\u2019s disease. Nature 554, 249\u2013254 (2018)."
+    },
+    {
+      "key": "10018_CR22",
+      "doi": "",
+      "title": "",
+      "journal": "Brain",
+      "year": "2021",
+      "author": "A Keshavan",
+      "unstructured": "Keshavan, A. et al. Population-based blood screening for preclinical Alzheimer\u2019s disease in a British birth cohort at age 70. Brain 144, 434\u2013449 (2021)."
+    },
+    {
+      "key": "10018_CR23",
+      "doi": "10.1038/srep26801",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2016",
+      "author": "S Janelidze",
+      "unstructured": "Janelidze, S. et al. Plasma beta-amyloid in Alzheimer\u2019s disease and vascular disease. Sci. Rep. 6, 26801 (2016)."
+    },
+    {
+      "key": "10018_CR24",
+      "doi": "10.1002/alz.12751",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2023",
+      "author": "S Palmqvist",
+      "unstructured": "Palmqvist, S. et al. An accurate fully automated panel of plasma biomarkers for Alzheimer\u2019s disease. Alzheimers Dement. 19, 1204\u20131215 (2023). A fully automated clinical chemistry test for plasma A\u03b242/A\u03b240 ratio."
+    },
+    {
+      "key": "10018_CR25",
+      "doi": "10.1212/wnl.0000000000008081",
+      "title": "",
+      "journal": "Neurology",
+      "year": "2019",
+      "author": "SE Schindler",
+      "unstructured": "Schindler, S. E. et al. High-precision plasma beta-amyloid 42/40 predicts current and future brain amyloidosis. Neurology 93, e1647\u2013e1659 (2019)."
+    },
+    {
+      "key": "10018_CR26",
+      "doi": "10.1006/bbrc.1995.2103",
+      "title": "",
+      "journal": "Biochem. Biophys. Res. Commun.",
+      "year": "1995",
+      "author": "M Chen",
+      "unstructured": "Chen, M., Inestrosa, N. C., Ross, G. S. & Fernandez, H. L. Platelets are the primary source of amyloid beta-peptide in human blood. Biochem. Biophys. Res. Commun. 213, 96\u2013103 (1995)."
+    },
+    {
+      "key": "10018_CR27",
+      "doi": "10.1016/j.cell.2022.12.032",
+      "title": "",
+      "journal": "Cell",
+      "year": "2023",
+      "author": "DM Wilson III",
+      "unstructured": "Wilson, D. M. III et al. Hallmarks of neurodegenerative diseases. Cell 186, 693\u2013714 (2023)."
+    },
+    {
+      "key": "10018_CR28",
+      "doi": "10.1002/alz.13859",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2024",
+      "author": "CR Jack Jr.",
+      "unstructured": "Jack, C. R. Jr et al. Revised criteria for diagnosis and staging of Alzheimer\u2019s disease: Alzheimer\u2019s Association Workgroup. Alzheimers Dement. 20, 5143\u20135169 (2024). A landmark paper describing how biomarkers can be used to improve our understanding of onset and progression of AD in living people."
+    },
+    {
+      "key": "10018_CR29",
+      "doi": "10.1002/alz.12236",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2021",
+      "author": "TK Karikari",
+      "unstructured": "Karikari, T. K. et al. Head-to-head comparison of clinical performance of CSF phospho-tau T181 and T217 biomarkers for Alzheimer\u2019s disease diagnosis. Alzheimers Dement. 17, 755\u2013767 (2021)."
+    },
+    {
+      "key": "10018_CR30",
+      "doi": "10.1038/s41591-020-0781-z",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2020",
+      "author": "NR Barthelemy",
+      "unstructured": "Barthelemy, N. R. et al. A soluble phosphorylated tau signature links tau, amyloid and the evolution of stages of dominantly inherited Alzheimer\u2019s disease. Nat. Med. 26, 398\u2013407 (2020)."
+    },
+    {
+      "key": "10018_CR31",
+      "doi": "10.1186/s13024-022-00586-0",
+      "title": "",
+      "journal": "Mol. Neurodegener.",
+      "year": "2022",
+      "author": "J Gobom",
+      "unstructured": "Gobom, J. et al. Antibody-free measurement of cerebrospinal fluid tau phosphorylation across the Alzheimer\u2019s disease continuum. Mol. Neurodegener. 17, 81 (2022)."
+    },
+    {
+      "key": "10018_CR32",
+      "doi": "10.1038/sj.mp.4001220",
+      "title": "",
+      "journal": "Mol. Psychiatry",
+      "year": "2003",
+      "author": "M Riemenschneider",
+      "unstructured": "Riemenschneider, M. et al. Phospho-tau/total tau ratio in cerebrospinal fluid discriminates Creutzfeldt-Jakob disease from other dementias. Mol. Psychiatry 8, 343\u2013347 (2003)."
+    },
+    {
+      "key": "10018_CR33",
+      "doi": "10.1038/s41582-022-00665-2",
+      "title": "",
+      "journal": "Nat. Rev. Neurol.",
+      "year": "2022",
+      "author": "TK Karikari",
+      "unstructured": "Karikari, T. K. et al. Blood phospho-tau in Alzheimer disease: analysis, interpretation, and clinical utility. Nat. Rev. Neurol. 18, 400\u2013418 (2022). A pioneering paper showing the use of plasma p-tau to detect the onset and progression of AD."
+    },
+    {
+      "key": "10018_CR34",
+      "doi": "10.1002/alz.14397",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "CE Teunissen",
+      "unstructured": "Teunissen, C. E. et al. Plasma p-tau immunoassays in clinical research for Alzheimer\u2019s disease. Alzheimers Dement. 21, e14397 (2025)."
+    },
+    {
+      "key": "10018_CR35",
+      "doi": "10.1038/s41467-020-15436-0",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "S Janelidze",
+      "unstructured": "Janelidze, S. et al. Cerebrospinal fluid p-tau217 performs better than p-tau181 as a biomarker of Alzheimer\u2019s disease. Nat. Commun. 11, 1683 (2020)."
+    },
+    {
+      "key": "10018_CR36",
+      "doi": "10.1016/s1474-4422(20)30071-5",
+      "title": "",
+      "journal": "Lancet Neurol.",
+      "year": "2020",
+      "author": "TK Karikari",
+      "unstructured": "Karikari, T. K. et al. Blood phosphorylated tau 181 as a biomarker for Alzheimer\u2019s disease: a diagnostic performance and prediction modelling study using data from four prospective cohorts. Lancet Neurol. 19, 422\u2013433 (2020)."
+    },
+    {
+      "key": "10018_CR37",
+      "doi": "10.1007/s00401-023-02659-w",
+      "title": "",
+      "journal": "Acta Neuropathol.",
+      "year": "2024",
+      "author": "J Lantero-Rodriguez",
+      "unstructured": "Lantero-Rodriguez, J. et al. CSF p-tau205: a biomarker of tau pathology in Alzheimer\u2019s disease. Acta Neuropathol. 147, 12 (2024)."
+    },
+    {
+      "key": "10018_CR38",
+      "doi": "10.1038/s41467-024-46876-7",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2024",
+      "author": "PR Kac",
+      "unstructured": "Kac, P. R. et al. Plasma p-tau212 antemortem diagnostic performance and prediction of autopsy verification of Alzheimer\u2019s disease neuropathology. Nat. Commun. 15, 2615 (2024)."
+    },
+    {
+      "key": "10018_CR39",
+      "doi": "10.1002/alz.70689",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "EM McDade",
+      "unstructured": "McDade, E. M. et al. The relationship of soluble tau species with Alzheimer\u2019s disease amyloid plaque removal and tau pathology. Alzheimers Dement. 21, e70689 (2025)."
+    },
+    {
+      "key": "10018_CR40",
+      "doi": "10.1007/s00401-025-02863-w",
+      "title": "",
+      "journal": "Acta Neuropathol.",
+      "year": "2025",
+      "author": "J Lantero-Rodriguez",
+      "unstructured": "Lantero-Rodriguez, J. et al. Biofluid-based staging of Alzheimer\u2019s disease. Acta Neuropathol. 149, 27 (2025)."
+    },
+    {
+      "key": "10018_CR41",
+      "doi": "10.1002/ana.1054",
+      "title": "",
+      "journal": "Ann. Neurol.",
+      "year": "2001",
+      "author": "N Itoh",
+      "unstructured": "Itoh, N. et al. Large-scale, multicenter study of cerebrospinal fluid tau protein phosphorylated at serine 199 for the antemortem diagnosis of Alzheimer\u2019s disease. Ann. Neurol. 50, 150\u2013156 (2001)."
+    },
+    {
+      "key": "10018_CR42",
+      "doi": "10.1007/s00401-020-02195-x",
+      "title": "",
+      "journal": "Acta Neuropathol.",
+      "year": "2020",
+      "author": "J Lantero Rodriguez",
+      "unstructured": "Lantero Rodriguez, J. et al. Plasma p-tau181 accurately predicts Alzheimer\u2019s disease pathology at least 8 years prior to post-mortem and improves the clinical characterisation of cognitive decline. Acta Neuropathol. 140, 267\u2013278 (2020)."
+    },
+    {
+      "key": "10018_CR43",
+      "doi": "10.1007/s00401-022-02408-5",
+      "title": "",
+      "journal": "Acta Neuropathol.",
+      "year": "2022",
+      "author": "DS Smirnov",
+      "unstructured": "Smirnov, D. S. et al. Plasma biomarkers for Alzheimer\u2019s disease in relation to neuropathology and cognitive change. Acta Neuropathol. 143, 487\u2013503 (2022)."
+    },
+    {
+      "key": "10018_CR44",
+      "doi": "10.1016/j.neuron.2018.04.035",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2018",
+      "author": "C Sato",
+      "unstructured": "Sato, C. et al. Tau kinetics in neurons and the human central nervous system. Neuron 98, 861\u2013864 (2018). This paper demonstrates the relationship between A\u03b2 pathology and tau phosphorylation as reflected by biofluid-based biomarkers."
+    },
+    {
+      "key": "10018_CR45",
+      "doi": "10.1126/scitranslmed.3006446",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2013",
+      "author": "LF Maia",
+      "unstructured": "Maia, L. F. et al. Changes in amyloid-beta and tau in the cerebrospinal fluid of transgenic mice overexpressing amyloid precursor protein. Sci. Transl. Med. 5, 194re192 (2013). This paper suggested that A\u03b2 pathology results in increased tau secretion from neurons that are still alive but affected by the pathology."
+    },
+    {
+      "key": "10018_CR46",
+      "doi": "10.1523/jneurosci.0387-15.2015",
+      "title": "",
+      "journal": "J. Neurosci.",
+      "year": "2015",
+      "author": "D Kanmert",
+      "unstructured": "Kanmert, D. et al. C-Terminally truncated forms of tau, but not full-length tau or Its C-terminal fragments, are released from neurons independently of cell death. J. Neurosci. 35, 10851\u201310865 (2015)."
+    },
+    {
+      "key": "10018_CR47",
+      "doi": "10.15252/emmm.202217123",
+      "title": "",
+      "journal": "EMBO Mol. Med.",
+      "year": "2023",
+      "author": "G Salvado",
+      "unstructured": "Salvado, G. et al. Specific associations between plasma biomarkers and postmortem amyloid plaque and tau tangle loads. EMBO Mol. Med. 15, e17123 (2023)."
+    },
+    {
+      "key": "10018_CR48",
+      "doi": "10.1002/alz.12749",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2023",
+      "author": "CM Moloney",
+      "unstructured": "Moloney, C. M. et al. Phosphorylated tau sites that are elevated in Alzheimer\u2019s disease fluid biomarkers are visualized in early neurofibrillary tangle maturity levels in the post mortem brain. Alzheimers Dement. 19, 1029\u20131040 (2023)."
+    },
+    {
+      "key": "10018_CR49",
+      "doi": "10.3233/jad-150962",
+      "title": "",
+      "journal": "J. Alzheimers Dis.",
+      "year": "2016",
+      "author": "NR Barthelemy",
+      "unstructured": "Barthelemy, N. R. et al. Differential mass spectrometry profiles of tau protein in the cerebrospinal fluid of patients with Alzheimer\u2019s disease, progressive supranuclear palsy, and dementia with Lewy bodies. J. Alzheimers Dis. 51, 1033\u20131043 (2016)."
+    },
+    {
+      "key": "10018_CR50",
+      "doi": "10.1002/alz.70048",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "L Wang",
+      "unstructured": "Wang, L. et al. Tau degradation in Alzheimer\u2019s disease: mechanisms and therapeutic opportunities. Alzheimers Dement. 21, e70048 (2025)."
+    },
+    {
+      "key": "10018_CR51",
+      "doi": "10.1016/j.sbi.2020.05.011",
+      "title": "",
+      "journal": "Curr. Opin. Struct. Biol.",
+      "year": "2020",
+      "author": "SH Scheres",
+      "unstructured": "Scheres, S. H., Zhang, W., Falcon, B. & Goedert, M. Cryo-EM structures of tau filaments. Curr. Opin. Struct. Biol. 64, 17\u201325 (2020)."
+    },
+    {
+      "key": "10018_CR52",
+      "doi": "10.1186/s13195-022-01142-0",
+      "title": "",
+      "journal": "Alzheimers Res. Ther.",
+      "year": "2022",
+      "author": "J Simren",
+      "unstructured": "Simren, J. et al. CSF tau368/total-tau ratio reflects cognitive performance and neocortical tau better compared to p-tau181 and p-tau217 in cognitively impaired individuals. Alzheimers Res. Ther. 14, 192 (2022)."
+    },
+    {
+      "key": "10018_CR53",
+      "doi": "10.1038/s41591-023-02443-z",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2023",
+      "author": "K Horie",
+      "unstructured": "Horie, K. et al. CSF MTBR-tau243 is a specific biomarker of tau tangle pathology in Alzheimer\u2019s disease. Nat. Med. 29, 1954\u20131963 (2023)."
+    },
+    {
+      "key": "10018_CR54",
+      "doi": "10.1038/s41591-025-03617-7",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2025",
+      "author": "K Horie",
+      "unstructured": "Horie, K. et al. Plasma MTBR-tau243 biomarker identifies tau tangle pathology in Alzheimer\u2019s disease. Nat. Med. 31, 2044\u20132053 (2025). This may be a direct blood-based biomarker of tau tangle pathology in AD, with potential relevance for biofluid-based tau staging."
+    },
+    {
+      "key": "10018_CR55",
+      "doi": "10.1016/j.neures.2009.11.012",
+      "title": "",
+      "journal": "Neurosci. Res.",
+      "year": "2010",
+      "author": "N Mattsson",
+      "unstructured": "Mattsson, N., Savman, K., Osterlundh, G., Blennow, K. & Zetterberg, H. Converging molecular pathways in human neural development and degeneration. Neurosci. Res. 66, 330\u2013332 (2010)."
+    },
+    {
+      "key": "10018_CR56",
+      "doi": "10.1093/braincomms/fcaf221",
+      "title": "",
+      "journal": "Brain Commun.",
+      "year": "2025",
+      "author": "F Gonzalez-Ortiz",
+      "unstructured": "Gonzalez-Ortiz, F. et al. The potential dual role of tau phosphorylation: plasma phosphorylated-tau217 in newborns and Alzheimer\u2019s disease. Brain Commun. 7, fcaf221 (2025)."
+    },
+    {
+      "key": "10018_CR57",
+      "doi": "10.1002/ana.25702",
+      "title": "",
+      "journal": "Ann. Neurol.",
+      "year": "2020",
+      "author": "NR Barthelemy",
+      "unstructured": "Barthelemy, N. R. et al. Sleep deprivation affects tau phosphorylation in human cerebrospinal fluid. Ann. Neurol. 87, 700\u2013709 (2020)."
+    },
+    {
+      "key": "10018_CR58",
+      "doi": "10.3389/fnana.2019.00009",
+      "title": "",
+      "journal": "Front. Neuroanat.",
+      "year": "2019",
+      "author": "JM Horowitz",
+      "unstructured": "Horowitz, J. M. & Horwitz, B. A. Extreme neuroplasticity of hippocampal CA1 pyramidal neurons in hibernating mammalian species. Front. Neuroanat. 13, 9 (2019)."
+    },
+    {
+      "key": "10018_CR59",
+      "doi": "10.1021/bi981874p",
+      "title": "",
+      "journal": "Biochemistry",
+      "year": "1999",
+      "author": "A Schneider",
+      "unstructured": "Schneider, A., Biernat, J., von Bergen, M., Mandelkow, E. & Mandelkow, E. M. Phosphorylation that detaches tau protein from microtubules (Ser262, Ser214) also protects it against aggregation into Alzheimer paired helical filaments. Biochemistry 38, 3549\u20133558 (1999)."
+    },
+    {
+      "key": "10018_CR60",
+      "doi": "10.1002/hipo.20712",
+      "title": "",
+      "journal": "Hippocampus",
+      "year": "2010",
+      "author": "XP Hong",
+      "unstructured": "Hong, X. P. et al. Essential role of tau phosphorylation in adult hippocampal neurogenesis. Hippocampus 20, 1339\u20131349 (2010)."
+    },
+    {
+      "key": "10018_CR61",
+      "doi": "10.1056/nejmoa2212948",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2023",
+      "author": "CH van Dyck",
+      "unstructured": "van Dyck, C. H. et al. Lecanemab in early Alzheimer\u2019s disease. N. Engl. J. Med. 388, 9\u201321 (2023). One of the first studies showing disease modification of an A\u03b2-targeted antibody in AD, as well as downstream effects on tau pathophysiology, as reflected by biomarkers."
+    },
+    {
+      "key": "10018_CR62",
+      "doi": "10.1001/jama.2023.13239",
+      "title": "",
+      "journal": "JAMA",
+      "year": "2023",
+      "author": "JR Sims",
+      "unstructured": "Sims, J. R. et al. Donanemab in early symptomatic Alzheimer disease: the TRAILBLAZER-ALZ 2 randomized clinical trial. JAMA 330, 512\u2013527 (2023). One of the first studies showing disease modification of an A\u03b2-targeted antibody in AD, as well as downstream effects on tau pathophysiology, as reflected by biomarkers."
+    },
+    {
+      "key": "10018_CR63",
+      "doi": "10.1007/bf02815140",
+      "title": "",
+      "journal": "Mol. Chem. Neuropathol.",
+      "year": "1995",
+      "author": "K Blennow",
+      "unstructured": "Blennow, K. et al. Tau protein in cerebrospinal fluid: a biochemical marker for axonal degeneration in Alzheimer disease? Mol. Chem. Neuropathol. 26, 231\u2013245 (1995)."
+    },
+    {
+      "key": "10018_CR64",
+      "doi": "10.1046/j.1471-4159.1999.0720741.x",
+      "title": "",
+      "journal": "J. Neurochem.",
+      "year": "1999",
+      "author": "FP Zemlan",
+      "unstructured": "Zemlan, F. P. et al. Quantification of axonal damage in traumatic brain injury: affinity purification and characterization of cerebrospinal fluid tau proteins. J. Neurochem. 72, 741\u2013750 (1999)."
+    },
+    {
+      "key": "10018_CR65",
+      "doi": "10.1016/j.jalz.2016.06.001",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2016",
+      "author": "JL Dage",
+      "unstructured": "Dage, J. L. et al. Levels of tau protein in plasma are associated with neurodegeneration and cognitive function in a population-based elderly cohort. Alzheimers Dement. 12, 1226\u20131234 (2016)."
+    },
+    {
+      "key": "10018_CR66",
+      "doi": "10.1093/brain/awac407",
+      "title": "",
+      "journal": "Brain",
+      "year": "2023",
+      "author": "F Gonzalez-Ortiz",
+      "unstructured": "Gonzalez-Ortiz, F. et al. Brain-derived tau: a novel blood-based biomarker for Alzheimer\u2019s disease-type neurodegeneration. Brain 146, 1152\u20131165 (2023)."
+    },
+    {
+      "key": "10018_CR67",
+      "doi": "10.1001/jamanetworkopen.2023.21554",
+      "title": "",
+      "journal": "JAMA Netw. Open",
+      "year": "2023",
+      "author": "F Gonzalez-Ortiz",
+      "unstructured": "Gonzalez-Ortiz, F. et al. Association of serum brain-derived tau with clinical outcome and longitudinal change in patients with severe traumatic brain injury. JAMA Netw. Open 6, e2321554 (2023)."
+    },
+    {
+      "key": "10018_CR68",
+      "doi": "10.1111/joim.20041",
+      "title": "",
+      "journal": "J. Intern. Med.",
+      "year": "2025",
+      "author": "F Gonzalez-Ortiz",
+      "unstructured": "Gonzalez-Ortiz, F. et al. Plasma brain-derived tau correlates with cerebral infarct volume. J. Intern. Med. 297, 173\u2013185 (2025)."
+    },
+    {
+      "key": "10018_CR69",
+      "doi": "10.1002/alz.13516",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2024",
+      "author": "F Gonzalez-Ortiz",
+      "unstructured": "Gonzalez-Ortiz, F. et al. Levels of plasma brain-derived tau and p-tau181 in Alzheimer\u2019s disease and rapidly progressive dementias. Alzheimers Dement. 20, 745\u2013751 (2024)."
+    },
+    {
+      "key": "10018_CR70",
+      "doi": "10.1038/s41467-024-47286-5",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2024",
+      "author": "F Gonzalez-Ortiz",
+      "unstructured": "Gonzalez-Ortiz, F. et al. Plasma brain-derived tau is an amyloid-associated neurodegeneration biomarker in Alzheimer\u2019s disease. Nat. Commun. 15, 2908 (2024)."
+    },
+    {
+      "key": "10018_CR71",
+      "doi": "10.1002/alz.14422",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "GM Bentivenga",
+      "unstructured": "Bentivenga, G. M. et al. Clinical value of novel blood-based tau biomarkers in Creutzfeldt-Jakob disease. Alzheimers Dement. 21, e14422 (2025)."
+    },
+    {
+      "key": "10018_CR72",
+      "doi": "10.1038/s41582-024-00955-x",
+      "title": "",
+      "journal": "Nat. Rev. Neurol.",
+      "year": "2024",
+      "author": "M Khalil",
+      "unstructured": "Khalil, M. et al. Neurofilaments as biomarkers in neurological disorders\u2014towards clinical application. Nat. Rev. Neurol. 20, 269\u2013287 (2024)."
+    },
+    {
+      "key": "10018_CR73",
+      "doi": "10.1001/jamaneurol.2019.1534",
+      "title": "",
+      "journal": "JAMA Neurol.",
+      "year": "2019",
+      "author": "C Bridel",
+      "unstructured": "Bridel, C. et al. Diagnostic value of cerebrospinal fluid neurofilament light protein in neurology: a systematic review and meta-analysis. JAMA Neurol. 76, 1035\u20131048 (2019)."
+    },
+    {
+      "key": "10018_CR74",
+      "doi": "10.1212/wnl.0000000000004667",
+      "title": "",
+      "journal": "Neurology",
+      "year": "2017",
+      "author": "PSJ Weston",
+      "unstructured": "Weston, P. S. J. et al. Serum neurofilament light in familial Alzheimer disease: A marker of early neurodegeneration. Neurology 89, 2167\u20132175 (2017). An early study showing the use of blood NfL in detecting the onset and intensity of neurodegeneration in AD."
+    },
+    {
+      "key": "10018_CR75",
+      "doi": "10.1186/s13195-019-0472-5",
+      "title": "",
+      "journal": "Alzheimers Res. Ther.",
+      "year": "2019",
+      "author": "PSJ Weston",
+      "unstructured": "Weston, P. S. J. et al. Longitudinal measurement of serum neurofilament light in presymptomatic familial Alzheimer\u2019s disease. Alzheimers Res. Ther. 11, 19 (2019)."
+    },
+    {
+      "key": "10018_CR76",
+      "doi": "10.1038/s41591-018-0304-3",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2019",
+      "author": "O Preische",
+      "unstructured": "Preische, O. et al. Serum neurofilament dynamics predicts neurodegeneration and clinical progression in presymptomatic Alzheimer\u2019s disease. Nat. Med. 25, 277\u2013283 (2019)."
+    },
+    {
+      "key": "10018_CR77",
+      "doi": "10.1016/s1474-4422(20)30137-x",
+      "title": "",
+      "journal": "Lancet Neurol.",
+      "year": "2020",
+      "author": "YT Quiroz",
+      "unstructured": "Quiroz, Y. T. et al. Plasma neurofilament light chain in the presenilin 1 E280A autosomal dominant Alzheimer\u2019s disease kindred: a cross-sectional and longitudinal cohort study. Lancet Neurol. 19, 513\u2013521 (2020)."
+    },
+    {
+      "key": "10018_CR78",
+      "doi": "10.1038/s41467-024-52937-8",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2024",
+      "author": "A Hofmann",
+      "unstructured": "Hofmann, A. et al. Comparative neurofilament light chain trajectories in CSF and plasma in autosomal dominant Alzheimer\u2019s disease. Nat. Commun. 15, 9982 (2024)."
+    },
+    {
+      "key": "10018_CR79",
+      "doi": "10.1001/jamaneurol.2016.6117",
+      "title": "",
+      "journal": "JAMA Neurol.",
+      "year": "2017",
+      "author": "N Mattsson",
+      "unstructured": "Mattsson, N., Andreasson, U., Zetterberg, H., Blennow, K. & Alzheimer\u2019s Disease Neuroimaging Initiative. Association of plasma neurofilament light with neurodegeneration in patients with Alzheimer disease. JAMA Neurol. 74, 557\u2013566 (2017)."
+    },
+    {
+      "key": "10018_CR80",
+      "doi": "10.1056/nejmoa2204705",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2022",
+      "author": "TM Miller",
+      "unstructured": "Miller, T. M. et al. Trial of antisense oligonucleotide tofersen for SOD1 ALS. N. Engl. J. Med. 387, 1099\u20131110 (2022)."
+    },
+    {
+      "key": "10018_CR81",
+      "doi": "10.1007/s00415-019-09389-8",
+      "title": "",
+      "journal": "J. Neurol.",
+      "year": "2019",
+      "author": "B Olsson",
+      "unstructured": "Olsson, B. et al. NFL is a marker of treatment response in children with SMA treated with nusinersen. J. Neurol. 266, 2129\u20132136 (2019)."
+    },
+    {
+      "key": "10018_CR82",
+      "doi": "10.1515/cclm-2023-1311",
+      "title": "",
+      "journal": "Clin. Chem. Lab. Med.",
+      "year": "2024",
+      "author": "S Bayoumy",
+      "unstructured": "Bayoumy, S. et al. Neurofilament light protein as a biomarker for spinal muscular atrophy: a review and reference ranges. Clin. Chem. Lab. Med. 62, 1252\u20131265 (2024)."
+    },
+    {
+      "key": "10018_CR83",
+      "doi": "10.1001/jamaneurol.2022.3392",
+      "title": "",
+      "journal": "JAMA Neurol.",
+      "year": "2022",
+      "author": "MJ Pontecorvo",
+      "unstructured": "Pontecorvo, M. J. et al. Association of donanemab treatment with exploratory plasma biomarkers in early symptomatic Alzheimer disease: a secondary analysis of the TRAILBLAZER-ALZ randomized clinical trial. JAMA Neurol. 79, 1250\u20131259 (2022)."
+    },
+    {
+      "key": "10018_CR84",
+      "doi": "10.1056/nejmoa2304430",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2023",
+      "author": "RJ Bateman",
+      "unstructured": "Bateman, R. J. et al. Two phase 3 trials of gantenerumab in early Alzheimer\u2019s disease. N. Engl. J. Med. 389, 1862\u20131876 (2023)."
+    },
+    {
+      "key": "10018_CR85",
+      "doi": "10.3389/fnins.2021.689938",
+      "title": "",
+      "journal": "Front. Neurosci.",
+      "year": "2021",
+      "author": "A Yuan",
+      "unstructured": "Yuan, A. & Nixon, R. A. Neurofilament proteins as biomarkers to monitor neurological diseases and the efficacy of therapies. Front. Neurosci. 15, 689938 (2021)."
+    },
+    {
+      "key": "10018_CR86",
+      "doi": "10.1007/s00415-025-13428-y",
+      "title": "",
+      "journal": "J. Neurol.",
+      "year": "2025",
+      "author": "FJ Meda",
+      "unstructured": "Meda, F. J. et al. Alpha-internexin as a brain-specific neurodegeneration marker: development and validation of a novel CSF assay. J. Neurol. 272, 676 (2025)."
+    },
+    {
+      "key": "10018_CR87",
+      "doi": "10.1093/brain/awad234",
+      "title": "",
+      "journal": "Brain",
+      "year": "2023",
+      "author": "S Keddie",
+      "unstructured": "Keddie, S. et al. Peripherin is a biomarker of axonal damage in peripheral nervous system disease. Brain 146, 4562\u20134573 (2023)."
+    },
+    {
+      "key": "10018_CR88",
+      "doi": "10.1038/s41380-025-02939-9",
+      "title": "",
+      "journal": "Mol. Psychiatry",
+      "year": "2025",
+      "author": "MT Heneka",
+      "unstructured": "Heneka, M. T. et al. Neuroinflammatory fluid biomarkers in patients with Alzheimer\u2019s disease: a systematic literature review. Mol. Psychiatry 30, 2783\u20132798 (2025)."
+    },
+    {
+      "key": "10018_CR89",
+      "doi": "10.3390/cells12091309",
+      "title": "",
+      "journal": "Cells",
+      "year": "2023",
+      "author": "KY Kim",
+      "unstructured": "Kim, K. Y., Shin, K. Y. & Chang, K. A. GFAP as a potential biomarker for Alzheimer\u2019s disease: a systematic review and meta-analysis. Cells 12, 1309 (2023)."
+    },
+    {
+      "key": "10018_CR90",
+      "doi": "10.1002/alz.12806",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2022",
+      "author": "J Simren",
+      "unstructured": "Simren, J. et al. Differences between blood and cerebrospinal fluid glial fibrillary acidic protein levels: the effect of sample stability. Alzheimers Dement. 18, 1988\u20131992 (2022)."
+    },
+    {
+      "key": "10018_CR91",
+      "doi": "10.1016/j.ebiom.2023.104547",
+      "title": "",
+      "journal": "EBioMedicine",
+      "year": "2023",
+      "author": "L Montoliu-Gaya",
+      "unstructured": "Montoliu-Gaya, L. et al. Plasma and cerebrospinal fluid glial fibrillary acidic protein levels in adults with Down syndrome: a longitudinal cohort study. EBioMedicine 90, 104547 (2023)."
+    },
+    {
+      "key": "10018_CR92",
+      "doi": "10.1001/jamaneurol.2021.3671",
+      "title": "",
+      "journal": "JAMA Neurol.",
+      "year": "2021",
+      "author": "AL Benedet",
+      "unstructured": "Benedet, A. L. et al. Differences between plasma and cerebrospinal fluid glial fibrillary acidic protein levels across the Alzheimer disease continuum. JAMA Neurol. 78, 1471\u20131483 (2021)."
+    },
+    {
+      "key": "10018_CR93",
+      "doi": "10.1038/s43587-022-00300-1",
+      "title": "",
+      "journal": "Nat. Aging",
+      "year": "2022",
+      "author": "M Del Campo",
+      "unstructured": "Del Campo, M. et al. CSF proteome profiling across the Alzheimer\u2019s disease spectrum reflects the multifactorial nature of the disease and identifies specific biomarker panels. Nat. Aging 2, 1040\u20131053 (2022)."
+    },
+    {
+      "key": "10018_CR94",
+      "doi": "10.1002/alz.14621",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "NJ Ashton",
+      "unstructured": "Ashton, N. J. et al. Biomarker discovery in Alzheimer\u2019s and neurodegenerative diseases using nucleic acid linked immuno-sandwich assay. Alzheimers Dement. 21, e14621 (2025)."
+    },
+    {
+      "key": "10018_CR95",
+      "doi": "10.1002/alz.70171",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "I Pola",
+      "unstructured": "Pola, I. et al. Exploring inflammation-related protein expression and its relationship with TSPO PET in Alzheimer\u2019s disease. Alzheimers Dement. 21, e70171 (2025)."
+    },
+    {
+      "key": "10018_CR96",
+      "doi": "10.1002/alz.70166",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "RE Rea Reyes",
+      "unstructured": "Rea Reyes, R. E. et al. Targeted proteomic biomarker profiling using NULISA in a cohort enriched with risk for Alzheimer\u2019s disease and related dementias. Alzheimers Dement. 21, e70166 (2025)."
+    },
+    {
+      "key": "10018_CR97",
+      "doi": "10.1002/alz.14413",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "L Ibanez",
+      "unstructured": "Ibanez, L. et al. Benchmarking of a multi-biomarker low-volume panel for Alzheimer\u2019s disease and related dementia research. Alzheimers Dement. 21, e14413 (2025)."
+    },
+    {
+      "key": "10018_CR98",
+      "doi": "10.1002/alz.70116",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "R Durcan",
+      "unstructured": "Durcan, R. et al. Novel blood-based proteomic signatures across multiple neurodegenerative diseases. Alzheimers Dement. 21, e70116 (2025)."
+    },
+    {
+      "key": "10018_CR99",
+      "doi": "10.1002/alz.14535",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "X Zeng",
+      "unstructured": "Zeng, X. et al. Novel plasma biomarkers of amyloid plaque pathology and cortical thickness: evaluation of the NULISA targeted proteomic platform in an ethnically diverse cohort. Alzheimers Dement. 21, e14535 (2025)."
+    },
+    {
+      "key": "10018_CR100",
+      "doi": "10.1002/alz.70162",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "H Gezegen",
+      "unstructured": "Gezegen, H. et al. Unravelling the plasma proteome: pioneering biomarkers for differential dementia diagnosis. Alzheimers Dement. 21, e70162 (2025)."
+    },
+    {
+      "key": "10018_CR101",
+      "doi": "10.1186/s13024-021-00501-z",
+      "title": "",
+      "journal": "Mol. Neurodegener.",
+      "year": "2021",
+      "author": "S Koga",
+      "unstructured": "Koga, S., Sekiya, H., Kondru, N., Ross, O. A. & Dickson, D. W. Neuropathology and molecular diagnosis of synucleinopathies. Mol. Neurodegener. 16, 83 (2021)."
+    },
+    {
+      "key": "10018_CR102",
+      "doi": "10.1016/s1474-4422(11)70014-x",
+      "title": "",
+      "journal": "Lancet Neurol.",
+      "year": "2011",
+      "author": "B Mollenhauer",
+      "unstructured": "Mollenhauer, B. et al. \u03b1-Synuclein and tau concentrations in cerebrospinal fluid of patients presenting with parkinsonism: a cohort study. Lancet Neurol. 10, 230\u2013240 (2011)."
+    },
+    {
+      "key": "10018_CR103",
+      "doi": "10.3389/fnagi.2022.872629",
+      "title": "",
+      "journal": "Front. Aging Neurosci.",
+      "year": "2022",
+      "author": "T Coysh",
+      "unstructured": "Coysh, T. & Mead, S. The future of seed amplification assays and clinical trials. Front. Aging Neurosci. 14, 872629 (2022)."
+    },
+    {
+      "key": "10018_CR104",
+      "doi": "10.1001/jamaneurol.2016.4547",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Shahnawaz, M. et al. Development of a biochemical diagnosis of Parkinson disease by detection of alpha-synuclein misfolded aggregates in cerebrospinal fluid. JAMA Neurol. 74, 163\u2013172 (2016). One of two early studies suggesting that \u03b1-synuclein pathology in the brain can be reliably detected using a CSF test."
+    },
+    {
+      "key": "10018_CR105",
+      "doi": "10.1002/acn3.338",
+      "title": "",
+      "journal": "Ann. Clin. Transl. Neurol.",
+      "year": "2016",
+      "author": "G Fairfoul",
+      "unstructured": "Fairfoul, G. et al. Alpha-synuclein RT-QuIC in the CSF of patients with alpha-synucleinopathies. Ann. Clin. Transl. Neurol. 3, 812\u2013818 (2016). One of two early studies suggesting that \u03b1-synuclein pathology in the brain can be reliably detected using a CSF test."
+    },
+    {
+      "key": "10018_CR106",
+      "doi": "10.1016/j.parkreldis.2023.105807",
+      "title": "",
+      "journal": "Parkinsonism Relat. Disord.",
+      "year": "2023",
+      "author": "B Fernandes Gomes",
+      "unstructured": "Fernandes Gomes, B. et al. \u03b1-Synuclein seed amplification assay as a diagnostic tool for parkinsonian disorders. Parkinsonism Relat. Disord. 117, 105807 (2023)."
+    },
+    {
+      "key": "10018_CR107",
+      "doi": "10.1016/s1474-4422(24)00395-8",
+      "title": "",
+      "journal": "Lancet Neurol.",
+      "year": "2024",
+      "author": "Y Ma",
+      "unstructured": "Ma, Y. et al. Sensitivity and specificity of a seed amplification assay for diagnosis of multiple system atrophy: a multicentre cohort study. Lancet Neurol. 23, 1225\u20131237 (2024)."
+    },
+    {
+      "key": "10018_CR108",
+      "doi": "10.1038/s41591-023-02450-0",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2023",
+      "author": "S Palmqvist",
+      "unstructured": "Palmqvist, S. et al. Cognitive effects of Lewy body pathology in clinically unimpaired individuals. Nat. Med. 29, 1971\u20131978 (2023)."
+    },
+    {
+      "key": "10018_CR109",
+      "doi": "10.1002/alz.70205",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "EM Jonaitis",
+      "unstructured": "Jonaitis, E. M. et al. Misfolded alpha-synuclein co-occurrence with Alzheimer\u2019s disease proteinopathy. Alzheimers Dement. 21, e70205 (2025)."
+    },
+    {
+      "key": "10018_CR110",
+      "doi": "10.1038/s41572-023-00447-0",
+      "title": "",
+      "journal": "Nat. Rev. Dis. Primers",
+      "year": "2023",
+      "author": "M Grossman",
+      "unstructured": "Grossman, M. et al. Frontotemporal lobar degeneration. Nat. Rev. Dis. Primers 9, 40 (2023)."
+    },
+    {
+      "key": "10018_CR111",
+      "doi": "10.1016/j.neuron.2013.07.033",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2013",
+      "author": "SC Ling",
+      "unstructured": "Ling, S. C., Polymenidou, M. & Cleveland, D. W. Converging mechanisms in ALS and FTD: disrupted RNA and protein homeostasis. Neuron 79, 416\u2013438 (2013)."
+    },
+    {
+      "key": "10018_CR112",
+      "doi": "10.1093/brain/awz099",
+      "title": "",
+      "journal": "Brain",
+      "year": "2019",
+      "author": "PT Nelson",
+      "unstructured": "Nelson, P. T. et al. Limbic-predominant age-related TDP-43 encephalopathy (LATE): consensus working group report. Brain 142, 1503\u20131527 (2019)."
+    },
+    {
+      "key": "10018_CR113",
+      "doi": "10.1016/j.jmb.2005.02.038",
+      "title": "",
+      "journal": "J. Mol. Biol.",
+      "year": "2005",
+      "author": "YM Ayala",
+      "unstructured": "Ayala, Y. M. et al. Human, Drosophila, and C. elegans TDP43: nucleic acid binding properties and splicing regulatory function. J. Mol. Biol. 348, 575\u2013588 (2005)."
+    },
+    {
+      "key": "10018_CR114",
+      "doi": "10.3109/21678421.2014.905606",
+      "title": "",
+      "journal": "Amyotroph. Lateral Scler. Frontotemporal Degener.",
+      "year": "2014",
+      "author": "E Feneberg",
+      "unstructured": "Feneberg, E. et al. Limited role of free TDP-43 as a diagnostic tool in neurodegenerative diseases. Amyotroph. Lateral Scler. Frontotemporal Degener. 15, 351\u2013356 (2014)."
+    },
+    {
+      "key": "10018_CR115",
+      "doi": "10.1093/braincomms/fcaa142",
+      "title": "",
+      "journal": "Brain Commun.",
+      "year": "2020",
+      "author": "C Scialo",
+      "unstructured": "Scialo, C. et al. TDP-43 real-time quaking induced conversion reaction optimization and detection of seeding activity in CSF of amyotrophic lateral sclerosis and frontotemporal dementia patients. Brain Commun. 2, fcaa142 (2020)."
+    },
+    {
+      "key": "10018_CR116",
+      "doi": "10.1038/s12276-020-00513-7",
+      "title": "",
+      "journal": "Exp. Mol. Med.",
+      "year": "2020",
+      "author": "M Jo",
+      "unstructured": "Jo, M. et al. The role of TDP-43 propagation in neurodegenerative diseases: integrating insights from clinical and experimental studies. Exp. Mol. Med. 52, 1652\u20131662 (2020)."
+    },
+    {
+      "key": "10018_CR117",
+      "doi": "10.1038/s41591-023-02788-5",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2024",
+      "author": "KE Irwin",
+      "unstructured": "Irwin, K. E. et al. A fluid biomarker reveals loss of TDP-43 splicing repression in presymptomatic ALS-FTD. Nat. Med. 30, 382\u2013393 (2024). One of two early studies showing the diagnostic performance of cryptic exon-encoded peptides as a marker of TDP-43 pathology."
+    },
+    {
+      "key": "10018_CR118",
+      "doi": "10.1126/scitranslmed.adg7162",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2024",
+      "author": "S Seddighi",
+      "unstructured": "Seddighi, S. et al. Mis-spliced transcripts generate de novo proteins in TDP-43-related ALS/FTD. Sci. Transl. Med. 16, eadg7162 (2024). One of two early studies showing the diagnostic performance of cryptic exon-encoded peptides as a marker of TDP-43 pathology."
+    },
+    {
+      "key": "10018_CR119",
+      "doi": "10.1186/s13024-024-00718-8",
+      "title": "",
+      "journal": "Mol. Neurodegener.",
+      "year": "2024",
+      "author": "A Calliari",
+      "unstructured": "Calliari, A. et al. HDGFL2 cryptic proteins report presence of TDP-43 pathology in neurodegenerative diseases. Mol. Neurodegener. 19, 29 (2024)."
+    },
+    {
+      "key": "10018_CR120",
+      "doi": "10.1038/s41591-024-02937-4",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2024",
+      "author": "M Chatterjee",
+      "unstructured": "Chatterjee, M. et al. Plasma extracellular vesicle tau and TDP-43 as diagnostic biomarkers in FTD and ALS. Nat. Med. 30, 1771\u20131783 (2024)."
+    },
+    {
+      "key": "10018_CR121",
+      "doi": "10.1038/s41598-024-70822-8",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2024",
+      "author": "R Luthi-Carter",
+      "unstructured": "Luthi-Carter, R. et al. Location and function of TDP-43 in platelets, alterations in neurodegenerative diseases and arising considerations for current plasma biobank protocols. Sci. Rep. 14, 21837 (2024)."
+    },
+    {
+      "key": "10018_CR122",
+      "doi": "10.1016/j.arr.2024.102642",
+      "title": "",
+      "journal": "Ageing Res. Rev.",
+      "year": "2025",
+      "author": "Q Cheng",
+      "unstructured": "Cheng, Q. et al. Biomarkers of synaptic degeneration in Alzheimer\u2019s disease. Ageing Res. Rev. 104, 102642 (2025)."
+    },
+    {
+      "key": "10018_CR123",
+      "doi": "10.1093/brain/awae032",
+      "title": "",
+      "journal": "Brain",
+      "year": "2024",
+      "author": "J Nilsson",
+      "unstructured": "Nilsson, J. et al. Cerebrospinal fluid biomarker panel for synaptic dysfunction in a broad spectrum of neurodegenerative diseases. Brain 147, 2414\u20132427 (2024)."
+    },
+    {
+      "key": "10018_CR124",
+      "doi": "10.1038/s41591-025-03565-2",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2025",
+      "author": "HS Oh",
+      "unstructured": "Oh, H. S. et al. A cerebrospinal fluid synaptic protein biomarker for prediction of cognitive resilience versus decline in Alzheimer\u2019s disease. Nat. Med. 31, 1592\u20131603 (2025). A CSF-based synaptic health index was discovered and partially replicated in blood."
+    },
+    {
+      "key": "10018_CR125",
+      "doi": "10.1038/s41398-022-02024-7",
+      "title": "",
+      "journal": "Transl. Psychiatry",
+      "year": "2022",
+      "author": "H Targa Dias Anastacio",
+      "unstructured": "Targa Dias Anastacio, H., Matosin, N. & Ooi, L. Neuronal hyperexcitability in Alzheimer\u2019s disease: what are the drivers behind this aberrant phenotype? Transl. Psychiatry 12, 257 (2022)."
+    },
+    {
+      "key": "10018_CR126",
+      "doi": "10.1016/j.bbi.2016.07.148",
+      "title": "",
+      "journal": "Brain Behav. Immun.",
+      "year": "2016",
+      "author": "A Swanson",
+      "unstructured": "Swanson, A., Willette, A. A. & Alzheimer\u2019s Disease Neuroimaging initiative. Neuronal Pentraxin 2 predicts medial temporal atrophy and memory decline across the Alzheimer\u2019s disease spectrum. Brain Behav. Immun. 58, 201\u2013208 (2016)."
+    },
+    {
+      "key": "10018_CR127",
+      "doi": "10.1186/s13195-022-01042-3",
+      "title": "",
+      "journal": "Alzheimers Res. Ther.",
+      "year": "2022",
+      "author": "A Sogorb-Esteve",
+      "unstructured": "Sogorb-Esteve, A. et al. Differential impairment of cerebrospinal fluid synaptic biomarkers in the genetic forms of frontotemporal dementia. Alzheimers Res. Ther. 14, 118 (2022)."
+    },
+    {
+      "key": "10018_CR128",
+      "doi": "10.1002/mds.29287",
+      "title": "",
+      "journal": "Mov. Disord.",
+      "year": "2023",
+      "author": "J Nilsson",
+      "unstructured": "Nilsson, J. et al. Cerebrospinal fluid biomarkers of synaptic dysfunction are altered in Parkinson\u2019s disease and related disorders. Mov. Disord. 38, 267\u2013277 (2023)."
+    },
+    {
+      "key": "10018_CR129",
+      "doi": "10.7554/elife.23798",
+      "title": "",
+      "journal": "eLife",
+      "year": "2017",
+      "author": "MF Xiao",
+      "unstructured": "Xiao, M. F. et al. NPTX2 and cognitive dysfunction in Alzheimer\u2019s disease. eLife 6, e23798 (2017)."
+    },
+    {
+      "key": "10018_CR130",
+      "doi": "10.1016/j.neuron.2015.02.020",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2015",
+      "author": "KA Pelkey",
+      "unstructured": "Pelkey, K. A. et al. Pentraxins coordinate excitatory synapse maturation and circuit integration of parvalbumin interneurons. Neuron 85, 1257\u20131272 (2015)."
+    },
+    {
+      "key": "10018_CR131",
+      "doi": "10.1038/s41598-025-04319-3",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2025",
+      "author": "EM Planalp",
+      "unstructured": "Planalp, E. M. et al. Synaptic markers are associated with cognitive decline after accounting for amyloid burden among an at-risk Alzheimer\u2019s disease cohort. Sci. Rep. 15, 19399 (2025)."
+    },
+    {
+      "key": "10018_CR132",
+      "doi": "10.3389/fnins.2022.864514",
+      "title": "",
+      "journal": "Front. Neurosci.",
+      "year": "2022",
+      "author": "R Rossi",
+      "unstructured": "Rossi, R., Arjmand, S., Baerentzen, S. L., Gjedde, A. & Landau, A. M. Synaptic vesicle glycoprotein 2A: features and functions. Front. Neurosci. 16, 864514 (2022)."
+    },
+    {
+      "key": "10018_CR133",
+      "doi": "10.1002/alz.70344",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "AP Mecca",
+      "unstructured": "Mecca, A. P. et al. Cerebrospinal fluid and brain positron emission tomography measures of synaptic vesicle glycoprotein 2A: biomarkers of synaptic density in Alzheimer\u2019s disease. Alzheimers Dement. 21, e70344 (2025)."
+    },
+    {
+      "key": "10018_CR134",
+      "doi": "10.1021/acs.jproteome.9b00824",
+      "title": "",
+      "journal": "J. Proteome Res.",
+      "year": "2020",
+      "author": "P Oeckl",
+      "unstructured": "Oeckl, P. et al. Targeted mass spectrometry suggests beta-synuclein as synaptic blood marker in Alzheimer\u2019s disease. J. Proteome Res. 19, 1310\u20131318 (2020). The paper describes a blood biomarker of potential relevance for synaptic dysfunction and degeneration in AD."
+    },
+    {
+      "key": "10018_CR135",
+      "doi": "10.1002/alz.13103",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2023",
+      "author": "P Oeckl",
+      "unstructured": "Oeckl, P. et al. Higher plasma beta-synuclein indicates early synaptic degeneration in Alzheimer\u2019s disease. Alzheimers Dement. 19, 5095\u20135102 (2023)."
+    },
+    {
+      "key": "10018_CR136",
+      "doi": "10.1002/alz.13046",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2023",
+      "author": "P Oeckl",
+      "unstructured": "Oeckl, P. et al. Blood beta-synuclein is related to amyloid PET positivity in memory clinic patients. Alzheimers Dement. 19, 4896\u20134907 (2023)."
+    },
+    {
+      "key": "10018_CR137",
+      "doi": "10.1002/alz.70146",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "P Oeckl",
+      "unstructured": "Oeckl, P. et al. Early increase of the synaptic blood marker beta-synuclein in asymptomatic autosomal dominant Alzheimer\u2019s disease. Alzheimers Dement. 21, e70146 (2025)."
+    },
+    {
+      "key": "10018_CR138",
+      "doi": "10.1177/0271678x241293537",
+      "title": "",
+      "journal": "J. Cereb. Blood Flow Metab.",
+      "year": "2025",
+      "author": "JK Gundersen",
+      "unstructured": "Gundersen, J. K. et al. Neuronal plasma biomarkers in acute ischemic stroke. J. Cereb. Blood Flow Metab. 45, 77\u201384 (2025)."
+    },
+    {
+      "key": "10018_CR139",
+      "doi": "10.3389/fneur.2024.1411307",
+      "title": "",
+      "journal": "Front. Neurol.",
+      "year": "2024",
+      "author": "J Rahmig",
+      "unstructured": "Rahmig, J. et al. Blood-based protein biomarkers during the acute ischemic stroke treatment window: a systematic review. Front. Neurol. 15, 1411307 (2024)."
+    },
+    {
+      "key": "10018_CR140",
+      "doi": "10.1089/neu.2019.6375",
+      "title": "",
+      "journal": "J. Neurotrauma",
+      "year": "2019",
+      "author": "E Thelin",
+      "unstructured": "Thelin, E. et al. A serum protein biomarker panel improves outcome prediction in human traumatic brain injury. J. Neurotrauma 36, 2850\u20132862 (2019)."
+    },
+    {
+      "key": "10018_CR141",
+      "doi": "10.3233/jad-230680",
+      "title": "",
+      "journal": "J. Alzheimers Dis.",
+      "year": "2023",
+      "author": "E Axelsson Andren",
+      "unstructured": "Axelsson Andren, E. et al. Diagnostic performance of cerebrospinal fluid neurofilament light chain and soluble amyloid-beta protein precursor beta in the subcortical small vessel type of dementia. J. Alzheimers Dis. 96, 1515\u20131528 (2023)."
+    },
+    {
+      "key": "10018_CR142",
+      "doi": "10.3233/jad-2011-110566",
+      "title": "",
+      "journal": "J. Alzheimers Dis.",
+      "year": "2011",
+      "author": "M Bjerke",
+      "unstructured": "Bjerke, M. et al. Cerebrospinal fluid matrix metalloproteinases and tissue inhibitor of metalloproteinases in combination with subcortical and cortical biomarkers in vascular dementia and Alzheimer\u2019s disease. J. Alzheimers Dis. 27, 665\u2013676 (2011)."
+    },
+    {
+      "key": "10018_CR143",
+      "doi": "10.3389/fneur.2022.839307",
+      "title": "",
+      "journal": "Front. Neurol.",
+      "year": "2022",
+      "author": "A Jeppsson",
+      "unstructured": "Jeppsson, A. et al. Shared CSF biomarker profile in idiopathic normal pressure hydrocephalus and subcortical small vessel disease. Front. Neurol. 13, 839307 (2022)."
+    },
+    {
+      "key": "10018_CR144",
+      "doi": "10.1038/s41591-018-0297-y",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2019",
+      "author": "DA Nation",
+      "unstructured": "Nation, D. A. et al. Blood-brain barrier breakdown is an early biomarker of human cognitive dysfunction. Nat. Med. 25, 270\u2013276 (2019)."
+    },
+    {
+      "key": "10018_CR145",
+      "doi": "10.1002/alz.12639",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2023",
+      "author": "Z Winder",
+      "unstructured": "Winder, Z. et al. Examining the association between blood-based biomarkers and human post mortem neuropathology in the University of Kentucky Alzheimer\u2019s Disease Research Center autopsy cohort. Alzheimers Dement. 19, 67\u201378 (2023)."
+    },
+    {
+      "key": "10018_CR146",
+      "doi": "10.1002/alz.12974",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2023",
+      "author": "JD Hinman",
+      "unstructured": "Hinman, J. D. et al. Placental growth factor as a sensitive biomarker for vascular cognitive impairment. Alzheimers Dement. 19, 3519\u20133527 (2023)."
+    },
+    {
+      "key": "10018_CR147",
+      "doi": "10.3233/jad-191254",
+      "title": "",
+      "journal": "J. Alzheimers Dis.",
+      "year": "2020",
+      "author": "G Banerjee",
+      "unstructured": "Banerjee, G. et al. Cerebrospinal fluid biomarkers in cerebral amyloid angiopathy. J. Alzheimers Dis. 74, 1189\u20131201 (2020)."
+    },
+    {
+      "key": "10018_CR148",
+      "doi": "10.3390/ijms22062931",
+      "title": "",
+      "journal": "Int. J. Mol. Sci.",
+      "year": "2021",
+      "author": "P Chatterjee",
+      "unstructured": "Chatterjee, P. et al. Plasma amyloid-beta levels in a pre-symptomatic Dutch-type hereditary cerebral amyloid angiopathy pedigree: a cross-sectional and longitudinal investigation. Int. J. Mol. Sci. 22, 2931 (2021)."
+    },
+    {
+      "key": "10018_CR149",
+      "doi": "10.1038/s41598-020-76990-7",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2020",
+      "author": "S Akamine",
+      "unstructured": "Akamine, S. et al. Renal function is associated with blood neurofilament light chain level in older adults. Sci. Rep. 10, 20350 (2020)."
+    },
+    {
+      "key": "10018_CR150",
+      "doi": "10.1002/alz.12466",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2022",
+      "author": "JA Syrjanen",
+      "unstructured": "Syrjanen, J. A. et al. Associations of amyloid and neurodegeneration plasma biomarkers with comorbidities. Alzheimers Dement. 18, 1128\u20131140 (2022)."
+    },
+    {
+      "key": "10018_CR151",
+      "doi": "10.1038/s41591-022-01822-2",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2022",
+      "author": "MM Mielke",
+      "unstructured": "Mielke, M. M. et al. Performance of plasma phosphorylated tau 181 and 217 in the community. Nat. Med. 28, 1398\u20131405 (2022). This paper highlights important confounding factors in blood-based Alzheimer diagnostics."
+    },
+    {
+      "key": "10018_CR152",
+      "doi": "10.1002/alz.70288",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "GE Ennis",
+      "unstructured": "Ennis, G. E. et al. The performance of plasma p-tau217 in Black middle-aged and older adults. Alzheimers Dement. 21, e70288 (2025)."
+    },
+    {
+      "key": "10018_CR153",
+      "doi": "10.1111/joim.20035",
+      "title": "",
+      "journal": "J. Intern. Med.",
+      "year": "2025",
+      "author": "A Akesson",
+      "unstructured": "Akesson, A. et al. Different ways of diagnosing selective glomerular hypofiltration syndromes such as shrunken pore syndrome and the associated increase in mortality. J. Intern. Med. 297, 79\u201392 (2025)."
+    },
+    {
+      "key": "10018_CR154",
+      "doi": "10.5414/cn107188",
+      "title": "",
+      "journal": "Clin. Nephrol.",
+      "year": "2012",
+      "author": "E Mambelli",
+      "unstructured": "Mambelli, E. et al. The prevalence of peripheral neuropathy in hemodialysis patients. Clin. Nephrol. 77, 468\u2013475 (2012)."
+    },
+    {
+      "key": "10018_CR155",
+      "doi": "10.1186/s13195-025-01786-8",
+      "title": "",
+      "journal": "Alzheimers Res. Ther.",
+      "year": "2025",
+      "author": "NZ Anita",
+      "unstructured": "Anita, N. Z. et al. Kidney function is associated with plasma ATN biomarkers among Hispanics/Latinos: SOL-INCA and HCHS/SOL results. Alzheimers Res. Ther. 17, 137 (2025)."
+    },
+    {
+      "key": "10018_CR156",
+      "doi": "",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "S De Meyer",
+      "unstructured": "De Meyer, S. et al. Serum biomarkers as prognostic markers for Alzheimer\u2019s disease in a clinical setting. Alzheimers Dement. 17, e70071 (2025)."
+    },
+    {
+      "key": "10018_CR157",
+      "doi": "10.1186/s12882-025-04130-2",
+      "title": "",
+      "journal": "BMC Nephrol.",
+      "year": "2025",
+      "author": "T Axelsson",
+      "unstructured": "Axelsson, T. et al. Plasma concentrations of neurofilament light, p-Tau231 and glial fibrillary acidic protein are elevated in patients with chronic kidney disease and correlate with measured glomerular filtration rate. BMC Nephrol. 26, 231 (2025)."
+    },
+    {
+      "key": "10018_CR158",
+      "doi": "10.1016/s1474-4422(22)00009-6",
+      "title": "",
+      "journal": "Lancet Neurol.",
+      "year": "2022",
+      "author": "P Benkert",
+      "unstructured": "Benkert, P. et al. Serum neurofilament light chain for individual prognostication of disease activity in people with multiple sclerosis: a retrospective modelling and validation study. Lancet Neurol. 21, 246\u2013257 (2022)."
+    },
+    {
+      "key": "10018_CR159",
+      "doi": "10.1002/alz.13860",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2024",
+      "author": "M Valletta",
+      "unstructured": "Valletta, M. et al. Blood biomarkers of Alzheimer\u2019s disease in the community: variation by chronic diseases and inflammatory status. Alzheimers Dement. 20, 4115\u20134125 (2024)."
+    },
+    {
+      "key": "10018_CR160",
+      "doi": "10.1002/ana.26462",
+      "title": "",
+      "journal": "Ann. Neurol.",
+      "year": "2022",
+      "author": "KAQ Cousins",
+      "unstructured": "Cousins, K. A. Q. et al. Elevated plasma phosphorylated tau 181 in amyotrophic lateral sclerosis. Ann. Neurol. 92, 807\u2013818 (2022)."
+    },
+    {
+      "key": "10018_CR161",
+      "doi": "10.1002/cne.903580209",
+      "title": "",
+      "journal": "J. Comp. Neurol.",
+      "year": "1995",
+      "author": "LJ Boyne",
+      "unstructured": "Boyne, L. J., Tessler, A., Murray, M. & Fischer, I. Distribution of Big tau in the central nervous system of the adult and developing rat. J. Comp. Neurol. 358, 279\u2013293 (1995)."
+    },
+    {
+      "key": "10018_CR162",
+      "doi": "10.1038/s41467-025-57144-7",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2025",
+      "author": "S Abu-Rumeileh",
+      "unstructured": "Abu-Rumeileh, S. et al. Phosphorylated tau 181 and 217 are elevated in serum and muscle of patients with amyotrophic lateral sclerosis. Nat. Commun. 16, 2019 (2025)."
+    },
+    {
+      "key": "10018_CR163",
+      "doi": "10.1002/alz.70208",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "S Janelidze",
+      "unstructured": "Janelidze, S. et al. A comparison of p-tau assays for the specificity to detect tau changes in Alzheimer\u2019s disease. Alzheimers Dement. 21, e70208 (2025)."
+    },
+    {
+      "key": "10018_CR164",
+      "doi": "10.1093/braincomms/fcae375",
+      "title": "",
+      "journal": "Brain Commun.",
+      "year": "2024",
+      "author": "F Gonzalez-Ortiz",
+      "unstructured": "Gonzalez-Ortiz, F. et al. Plasma phosphorylated-tau217 is increased in Niemann-Pick disease type C. Brain Commun. 6, fcae375 (2024)."
+    },
+    {
+      "key": "10018_CR165",
+      "doi": "10.1093/braincomms/fcae151",
+      "title": "",
+      "journal": "Brain Commun.",
+      "year": "2024",
+      "author": "MA Kolanko",
+      "unstructured": "Kolanko, M. A. et al. Quantification of neurofilament light and glial fibrillary acidic protein in finger-prick blood. Brain Commun. 6, fcae151 (2024)."
+    },
+    {
+      "key": "10018_CR166",
+      "doi": "10.1002/alz.13697",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2024",
+      "author": "H Huber",
+      "unstructured": "Huber, H. et al. Biomarkers of Alzheimer\u2019s disease and neurodegeneration in dried blood spots\u2014a new collection method for remote settings. Alzheimers Dement. 20, 2340\u20132352 (2024)."
+    },
+    {
+      "key": "10018_CR167",
+      "doi": "10.1002/alz.13823",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2024",
+      "author": "A Badhwar",
+      "unstructured": "Badhwar, A. et al. Assessment of brain-derived extracellular vesicle enrichment for blood biomarker analysis in age-related neurodegenerative diseases: an international overview. Alzheimers Dement. 20, 4411\u20134422 (2024)."
+    },
+    {
+      "key": "10018_CR168",
+      "doi": "10.1002/alz.14420",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "TKS Ng",
+      "unstructured": "Ng, T. K. S. et al. Guidelines for the standardization of pre-analytical variables for salivary biomarker studies in Alzheimer\u2019s disease research: an updated review and consensus of the Salivary Biomarkers for Dementia Research Working Group. Alzheimers Dement. 21, e14420 (2025)."
+    },
+    {
+      "key": "10018_CR169",
+      "doi": "10.1001/jamaneurol.2017.0655",
+      "title": "",
+      "journal": "JAMA Neurol.",
+      "year": "2017",
+      "author": "R Rubenstein",
+      "unstructured": "Rubenstein, R. et al. Comparing plasma phospho tau, total tau, and phospho tau-total tau ratio as acute and chronic traumatic brain injury biomarkers. JAMA Neurol. 74, 1063\u20131072 (2017)."
+    },
+    {
+      "key": "10018_CR170",
+      "doi": "10.1002/alz.14587",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "G Wang",
+      "unstructured": "Wang, G. et al. The CentiMarker project: standardizing quantitative Alzheimer\u2019s disease fluid biomarkers for biologic interpretation. Alzheimers Dement. 21, e14587 (2025)."
+    },
+    {
+      "key": "10018_CR171",
+      "doi": "10.1002/alz.70038",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "J Wang",
+      "unstructured": "Wang, J. et al. Diagnostic accuracy of plasma p-tau217/Abeta42 for Alzheimer\u2019s disease in clinical and community cohorts. Alzheimers Dement. 21, e70038 (2025)."
+    },
+    {
+      "key": "10018_CR172",
+      "doi": "10.1002/alz.70173",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "DJ Figdore",
+      "unstructured": "Figdore, D. J. et al. Differences in Alzheimer\u2019s disease blood biomarker stability: Implications for the use of tau/amyloid ratios. Alzheimers Dement. 21, e70173 (2025)."
+    },
+    {
+      "key": "10018_CR173",
+      "doi": "10.1001/jamaneurol.2023.4719",
+      "title": "",
+      "journal": "JAMA Neurol.",
+      "year": "2024",
+      "author": "WS Brum",
+      "unstructured": "Brum, W. S. et al. Effect of neprilysin inhibition on Alzheimer disease plasma biomarkers: a secondary analysis of a randomized clinical trial. JAMA Neurol. 81, 197\u2013200 (2024)."
+    },
+    {
+      "key": "10018_CR174",
+      "doi": "10.1002/alz.12447",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2022",
+      "author": "P Chatterjee",
+      "unstructured": "Chatterjee, P. et al. Diagnostic and prognostic plasma biomarkers for preclinical Alzheimer\u2019s disease. Alzheimers Dement. 18, 1141\u20131154 (2022)."
+    },
+    {
+      "key": "10018_CR175",
+      "doi": "10.1001/jamaneurol.2025.3217",
+      "title": "",
+      "journal": "JAMA Neurol.",
+      "year": "2025",
+      "author": "G Salvado",
+      "unstructured": "Salvado, G. et al. Plasma phosphorylated tau 217 to identify preclinical Alzheimer disease. JAMA Neurol. 82, 1122\u20131134 (2025). This paper examines the diagnostic performance of blood biomarkers to identify preclinical AD\u2014a topic that will gain in relevance if the preclinical treatment studies with anti-A\u03b2 antibodies show positive results."
+    },
+    {
+      "key": "10018_CR176",
+      "doi": "10.1101/2025.05.01.25326668",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Langhough, R. E. et al. Use of preclinical Alzheimer\u2019s disease trajectories for clinical trial design. Preprint at medRxiv https://doi.org/10.1101/2025.05.01.25326668 (2025)."
+    },
+    {
+      "key": "10018_CR177",
+      "doi": "10.3390/medicina57050503",
+      "title": "",
+      "journal": "Medicina",
+      "year": "2021",
+      "author": "TF Monaghan",
+      "unstructured": "Monaghan, T. F. et al. Foundational statistical principles in medical research: sensitivity, specificity, positive predictive value, and negative predictive value. Medicina 57, 503 (2021)."
+    },
+    {
+      "key": "10018_CR178",
+      "doi": "10.1016/s1474-4422(09)70299-6",
+      "title": "",
+      "journal": "Lancet Neurol.",
+      "year": "2010",
+      "author": "CR Jack Jr",
+      "unstructured": "Jack, C. R. Jr et al. Hypothetical model of dynamic biomarkers of the Alzheimer\u2019s pathological cascade. Lancet Neurol. 9, 119\u2013128 (2010)."
+    },
+    {
+      "key": "10018_CR179",
+      "doi": "10.1007/s13311-021-01047-0",
+      "title": "",
+      "journal": "Neurotherapeutics",
+      "year": "2021",
+      "author": "DA Wilkenfeld",
+      "unstructured": "Wilkenfeld, D. A., Orbell, S. L. & Lingler, J. H. Ethical considerations in communicating Alzheimer\u2019s disease neuroimaging biomarker test results to symptomatic individuals. Neurotherapeutics 18, 673\u2013685 (2021)."
+    },
+    {
+      "key": "10018_CR180",
+      "doi": "10.1212/wnl.0000000000206891",
+      "title": "",
+      "journal": "Neurology",
+      "year": "2023",
+      "author": "EA Largent",
+      "unstructured": "Largent, E. A. et al. Testing for Alzheimer disease biomarkers and disclosing results across the disease continuum. Neurology 100, 1010\u20131019 (2023)."
+    },
+    {
+      "key": "10018_CR181",
+      "doi": "10.1177/1073110518782955",
+      "title": "",
+      "journal": "J. Law Med. Ethics",
+      "year": "2018",
+      "author": "JJ Arias",
+      "unstructured": "Arias, J. J., Tyler, A. M., Oster, B. J. & Karlawish, J. The proactive patient: long-term care insurance discrimination risks of Alzheimer\u2019s disease biomarkers. J. Law Med. Ethics 46, 485\u2013498 (2018)."
+    },
+    {
+      "key": "10018_CR182",
+      "doi": "10.1002/alz.14333",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "A Atri",
+      "unstructured": "Atri, A. et al. Alzheimer\u2019s Association Clinical Practice Guideline for the Diagnostic Evaluation, Testing, Counseling, and Disclosure of Suspected Alzheimer\u2019s Disease and Related Disorders (DETeCD-ADRD): executive summary of recommendations for primary care. Alzheimers Dement. 21, e14333 (2025)."
+    },
+    {
+      "key": "10018_CR183",
+      "doi": "10.1002/alz.14337",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "BC Dickerson",
+      "unstructured": "Dickerson, B. C. et al. The Alzheimer\u2019s Association Clinical Practice Guideline for the Diagnostic Evaluation, Testing, Counseling, and Disclosure of Suspected Alzheimer\u2019s Disease and Related Disorders (DETeCD-ADRD): executive summary of recommendations for specialty care. Alzheimers Dement. 21, e14337 (2025)."
+    },
+    {
+      "key": "10018_CR184",
+      "doi": "10.1002/alz.70418",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2025",
+      "author": "A Rahman-Filipiak",
+      "unstructured": "Rahman-Filipiak, A. et al. Return of research results across the Alzheimer\u2019s Disease Research Centers network. Alzheimers Dement. 21, e70418 (2025)."
+    },
+    {
+      "key": "10018_CR185",
+      "doi": "10.1001/jamaneurol.2024.3770",
+      "title": "",
+      "journal": "JAMA Neurol.",
+      "year": "2024",
+      "author": "B Dubois",
+      "unstructured": "Dubois, B. et al. Alzheimer disease as a clinical-biological construct\u2014an international working group recommendation. JAMA Neurol. 81, 1304\u20131311 (2024)."
+    },
+    {
+      "key": "10018_CR186",
+      "doi": "10.1038/s41582-024-00977-5",
+      "title": "",
+      "journal": "Nat. Rev. Neurol.",
+      "year": "2024",
+      "author": "SE Schindler",
+      "unstructured": "Schindler, S. E. et al. Acceptable performance of blood biomarker tests of amyloid pathology\u2014recommendations from the Global CEO Initiative on Alzheimer\u2019s Disease. Nat. Rev. Neurol. 20, 426\u2013439 (2024)."
+    },
+    {
+      "key": "10018_CR187",
+      "doi": "10.1002/alz.12316",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2021",
+      "author": "O Hansson",
+      "unstructured": "Hansson, O. et al. The Alzheimer\u2019s Association international guidelines for handling of cerebrospinal fluid for routine clinical measurements of amyloid beta and tau. Alzheimers Dement. 17, 1575\u20131582 (2021)."
+    },
+    {
+      "key": "10018_CR188",
+      "doi": "10.1007/978-1-0716-3774-6_5",
+      "title": "",
+      "journal": "Methods Mol. Biol.",
+      "year": "2024",
+      "author": "A Jethwa",
+      "unstructured": "Jethwa, A. & Stockl, L. Optimized pre-analytical handling protocol for blood-based biomarkers of Alzheimer\u2019s disease. Methods Mol. Biol. 2785, 67\u201373 (2024)."
+    },
+    {
+      "key": "10018_CR189",
+      "doi": "",
+      "title": "",
+      "journal": "Alzheimers Dement.",
+      "year": "2023",
+      "author": "C Giangrande",
+      "unstructured": "Giangrande, C. et al. Harmonization and standardization of biofluid-based biomarker measurements for AT(N) classification in Alzheimer\u2019s disease. Alzheimers Dement. 15, e12465 (2023)."
+    }
+  ]
+}

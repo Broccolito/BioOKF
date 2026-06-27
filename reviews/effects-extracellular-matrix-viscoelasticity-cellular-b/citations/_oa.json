@@ -1,0 +1,1835 @@
+{
+  "article": {
+    "slug": "s41586-020-2612-2",
+    "doi": "10.1038/s41586-020-2612-2",
+    "title": "Effects of extracellular matrix viscoelasticity on cellular behaviour",
+    "url": "https://www.nature.com/articles/s41586-020-2612-2",
+    "abbrev": "effects-extracellular-matrix-viscoelasticity-cellular-b",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/effects-extracellular-matrix-viscoelasticity-cellular-b"
+  },
+  "n_refs": 200,
+  "n_with_doi": 191,
+  "n_oa": 101,
+  "records": [
+    {
+      "doi": "10.1126/science.114.2965.431",
+      "title": "",
+      "year": "1951",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/0014-4827(91)90406-k",
+      "title": "",
+      "year": "1991",
+      "journal": "Exp. Cell Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.94.25.13661",
+      "title": "",
+      "year": "1997",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC28362?pdf=render",
+      "file": "10.1073_pnas.94.25.13661.md"
+    },
+    {
+      "doi": "10.1126/science.1116995",
+      "title": "",
+      "year": "2005",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nrm3112",
+      "title": "",
+      "year": "2011",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nrm1890",
+      "title": "",
+      "year": "2006",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nrm3896",
+      "title": "",
+      "year": "2014",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41580-019-0134-2",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1152/physrev.00013.2019",
+      "title": "",
+      "year": "2020",
+      "journal": "Physiol. Rev.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7276923?pdf=render",
+      "file": "10.1152_physrev.00013.2019.md"
+    },
+    {
+      "doi": "10.1073/pnas.0902639106",
+      "title": "",
+      "year": "2009",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "http://doi.org/10.1073/pnas.0902639106",
+      "file": "10.1073_pnas.0902639106.md"
+    },
+    {
+      "doi": "10.1038/nmat3889",
+      "title": "",
+      "year": "2014",
+      "journal": "Nat. Mater.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4031270?pdf=render",
+      "file": "10.1038_nmat3889.md"
+    },
+    {
+      "doi": "10.1039/c2ib00149g",
+      "title": "",
+      "year": "2012",
+      "journal": "Integr. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41551-019-0420-5",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Biomed. Eng.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1039/b610522j",
+      "title": "",
+      "year": "2007",
+      "journal": "Soft Matter",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1240104",
+      "title": "",
+      "year": "2013",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nrm2592",
+      "title": "",
+      "year": "2009",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2952188?pdf=render",
+      "file": "10.1038_nrm2592.md"
+    },
+    {
+      "doi": "10.1038/nrm2597",
+      "title": "",
+      "year": "2009",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jbiomech.2005.05.011",
+      "title": "",
+      "year": "2006",
+      "journal": "J. Biomech.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s10237-005-0074-y",
+      "title": "",
+      "year": "2005",
+      "journal": "Biomech. Model. Mechanobiol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/20.500.11850/35246",
+      "file": "10.1007_s10237-005-0074-y.md"
+    },
+    {
+      "doi": "10.1371/journal.pcbi.1006684",
+      "title": "",
+      "year": "2019",
+      "journal": "PLoS Comput. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1006684&type=printable",
+      "file": "10.1371_journal.pcbi.1006684.md"
+    },
+    {
+      "doi": "10.1016/j.bpj.2017.11.3739",
+      "title": "",
+      "year": "2018",
+      "journal": "Biophys. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0006349517349718/pdf",
+      "file": "10.1016_j.bpj.2017.11.3739.md"
+    },
+    {
+      "doi": "10.1016/j.bpj.2016.10.002",
+      "title": "",
+      "year": "2016",
+      "journal": "Biophys. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0006349516308876/pdf",
+      "file": "10.1016_j.bpj.2016.10.002.md"
+    },
+    {
+      "doi": "10.1016/j.cub.2017.09.005",
+      "title": "",
+      "year": "2017",
+      "journal": "Curr. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-019-1509-4",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://polytechnique.hal.science/hal-02372075v1/file/328621_0_art_file_2997780_p8ttzx_convrt%20%281%29.pdf",
+      "file": "10.1038_s41586-019-1509-4.md"
+    },
+    {
+      "doi": "10.1038/nature03521",
+      "title": "",
+      "year": "2005",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://arxiv.org/pdf/cond-mat/0406016",
+      "file": "10.1038_nature03521.md"
+    },
+    {
+      "doi": "10.1242/jeb.202.23.3305",
+      "title": "",
+      "year": "1999",
+      "journal": "J. Exp. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jmbbm.2019.103460",
+      "title": "",
+      "year": "2020",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://www.sciencedirect.com/science/article/pii/S1751616119307180",
+      "file": "10.1016_j.jmbbm.2019.103460.md"
+    },
+    {
+      "doi": "10.3233/bir-1997-34603",
+      "title": "",
+      "year": "1997",
+      "journal": "Biorheology",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jmbbm.2017.07.014",
+      "title": "",
+      "year": "2017",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nmat4489",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Mater.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pure.amsterdamumc.nl/files/160594391/Hydrogels-with-tunable-stress-relaxation-regulate-stem-cell-fate-and-activity.pdf",
+      "file": "10.1038_nmat4489.md"
+    },
+    {
+      "doi": "10.1002/adma.201303680",
+      "title": "",
+      "year": "2014",
+      "journal": "Adv. Mater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s0021-9290(98)00088-8",
+      "title": "",
+      "year": "1998",
+      "journal": "J. Biomech.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3233/bir-2008-0517",
+      "title": "",
+      "year": "2008",
+      "journal": "Biorheology",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jbiomech.2018.01.007",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Biomech.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1371/journal.pone.0146588",
+      "title": "",
+      "year": "2016",
+      "journal": "PLoS One",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0146588&type=printable",
+      "file": "10.1371_journal.pone.0146588.md"
+    },
+    {
+      "doi": "10.1016/s0006-3495(98)77932-9",
+      "title": "",
+      "year": "1998",
+      "journal": "Biophys. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0006349598779329/pdf",
+      "file": "10.1016_s0006-3495_98_77932-9.md"
+    },
+    {
+      "doi": "10.1160/th09-03-0199",
+      "title": "",
+      "year": "2009",
+      "journal": "Thromb. Haemost.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2840711?pdf=render",
+      "file": "10.1160_th09-03-0199.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0110588",
+      "title": "",
+      "year": "2014",
+      "journal": "PLoS One",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0110588&type=printable",
+      "file": "10.1371_journal.pone.0110588.md"
+    },
+    {
+      "doi": "10.1016/j.neuroimage.2009.02.040",
+      "title": "",
+      "year": "2009",
+      "journal": "Neuroimage",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1371/journal.pone.0029888",
+      "title": "",
+      "year": "2012",
+      "journal": "PLoS One",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0029888&type=printable",
+      "file": "10.1371_journal.pone.0029888.md"
+    },
+    {
+      "doi": "10.1002/mrm.21404",
+      "title": "",
+      "year": "2007",
+      "journal": "Magn. Reson. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/mrm.21404",
+      "file": "10.1002_mrm.21404.md"
+    },
+    {
+      "doi": "10.1073/pnas.1523906113",
+      "title": "",
+      "year": "2016",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/113/20/5492.full.pdf",
+      "file": "10.1073_pnas.1523906113.md"
+    },
+    {
+      "doi": "10.1016/0301-4622(74)80046-3",
+      "title": "",
+      "year": "1974",
+      "journal": "Biophys. Chem.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1127317",
+      "title": "",
+      "year": "2006",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1950267?pdf=render",
+      "file": "10.1126_science.1127317.md"
+    },
+    {
+      "doi": "10.1115/1.4038745",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Biomech. Eng.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://asmedigitalcollection.asme.org/biomechanical/article-pdf/140/5/051002/6413989/bio_140_05_051002.pdf",
+      "file": "10.1115_1.4038745.md"
+    },
+    {
+      "doi": "10.1039/c8sm02264j",
+      "title": "",
+      "year": "2019",
+      "journal": "Soft Matter",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pubs.rsc.org/en/content/articlepdf/2019/sm/c8sm02264j",
+      "file": "10.1039_c8sm02264j.md"
+    },
+    {
+      "doi": "10.1073/pnas.1222787110",
+      "title": "",
+      "year": "2013",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/110/30/12197.full.pdf",
+      "file": "10.1073_pnas.1222787110.md"
+    },
+    {
+      "doi": "10.1038/ncomms7649",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms7649.pdf",
+      "file": "10.1038_ncomms7649.md"
+    },
+    {
+      "doi": "10.1016/s0021-9290(03)00135-0",
+      "title": "",
+      "year": "2003",
+      "journal": "J. Biomech.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/0021-9290(88)90172-8",
+      "title": "",
+      "year": "1988",
+      "journal": "J. Biomech.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s0021-9290(97)00122-x",
+      "title": "",
+      "year": "1997",
+      "journal": "J. Biomech.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1039/c8sm02046a",
+      "title": "",
+      "year": "2019",
+      "journal": "Soft Matter",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1039/c3sm52272e",
+      "title": "",
+      "year": "2014",
+      "journal": "Soft Matter",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4040255?pdf=render",
+      "file": "10.1039_c3sm52272e.md"
+    },
+    {
+      "doi": "10.1126/science.1172484",
+      "title": "",
+      "year": "2009",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2846107?pdf=render",
+      "file": "10.1126_science.1172484.md"
+    },
+    {
+      "doi": "10.1529/biophysj.105.066977",
+      "title": "",
+      "year": "2006",
+      "journal": "Biophys. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0006349506721944/pdf",
+      "file": "10.1529_biophysj.105.066977.md"
+    },
+    {
+      "doi": "10.1021/acsnano.7b08973",
+      "title": "",
+      "year": "2018",
+      "journal": "ACS Nano",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://amu.hal.science/hal-02106340",
+      "file": "10.1021_acsnano.7b08973.md"
+    },
+    {
+      "doi": "10.1126/sciadv.aat1161",
+      "title": "",
+      "year": "2018",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://advances.sciencemag.org/content/advances/4/6/eaat1161.full.pdf",
+      "file": "10.1126_sciadv.aat1161.md"
+    },
+    {
+      "doi": "10.1016/j.actbio.2018.01.041",
+      "title": "",
+      "year": "2018",
+      "journal": "Acta Biomater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/srep19270",
+      "title": "",
+      "year": "2016",
+      "journal": "Sci. Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/srep19270.pdf",
+      "file": "10.1038_srep19270.md"
+    },
+    {
+      "doi": "10.1016/j.jmbbm.2017.11.001",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1702488114",
+      "title": "",
+      "year": "2017",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/1721.1/114912",
+      "file": "10.1073_pnas.1702488114.md"
+    },
+    {
+      "doi": "10.1016/j.semcdb.2008.01.008",
+      "title": "",
+      "year": "2008",
+      "journal": "Semin. Cell Dev. Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2696638?pdf=render",
+      "file": "10.1016_j.semcdb.2008.01.008.md"
+    },
+    {
+      "doi": "10.1038/nmat3517",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Mater.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://nrs.harvard.edu/urn-3:HUL.InstRepos:11879812",
+      "file": "10.1038_nmat3517.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2014.06.051",
+      "title": "",
+      "year": "2014",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867414009246/pdf",
+      "file": "10.1016_j.cell.2014.06.051.md"
+    },
+    {
+      "doi": "10.1038/416413a",
+      "title": "",
+      "year": "2002",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1371/journal.pone.0005902",
+      "title": "",
+      "year": "2009",
+      "journal": "PLoS One",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0005902&type=printable",
+      "file": "10.1371_journal.pone.0005902.md"
+    },
+    {
+      "doi": "10.1073/pnas.1613058113",
+      "title": "",
+      "year": "2016",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/113/49/14043.full.pdf",
+      "file": "10.1073_pnas.1613058113.md"
+    },
+    {
+      "doi": "10.1038/nmeth.3685",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Methods",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.bpj.2014.09.044",
+      "title": "",
+      "year": "2014",
+      "journal": "Biophys. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0006349514011096/pdf",
+      "file": "10.1016_j.bpj.2014.09.044.md"
+    },
+    {
+      "doi": "10.1073/pnas.1504258112",
+      "title": "",
+      "year": "2015",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/112/31/9573.full.pdf",
+      "file": "10.1073_pnas.1504258112.md"
+    },
+    {
+      "doi": "10.1073/pnas.1722619115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/115/16/4075.full.pdf",
+      "file": "10.1073_pnas.1722619115.md"
+    },
+    {
+      "doi": "10.1073/pnas.1815659116",
+      "title": "",
+      "year": "2019",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/116/14/6790.full.pdf",
+      "file": "10.1073_pnas.1815659116.md"
+    },
+    {
+      "doi": "10.1126/science.1095087",
+      "title": "",
+      "year": "2004",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature05459",
+      "title": "",
+      "year": "2007",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3236682?pdf=render",
+      "file": "10.1038_nature05459.md"
+    },
+    {
+      "doi": "10.1016/j.biomaterials.2011.04.003",
+      "title": "",
+      "year": "2011",
+      "journal": "Biomaterials",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.biomaterials.2013.11.023",
+      "title": "",
+      "year": "2014",
+      "journal": "Biomaterials",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/ncomms7365",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms7365.pdf",
+      "file": "10.1038_ncomms7365.md"
+    },
+    {
+      "doi": "10.1038/s41467-018-02906-9",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-018-02906-9.pdf",
+      "file": "10.1038_s41467-018-02906-9.md"
+    },
+    {
+      "doi": "10.1021/acs.biomac.9b00965",
+      "title": "",
+      "year": "2019",
+      "journal": "Biomacromolecules",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7329014?pdf=render",
+      "file": "10.1021_acs.biomac.9b00965.md"
+    },
+    {
+      "doi": "10.1039/c9bm01339c",
+      "title": "",
+      "year": "2020",
+      "journal": "Biomater. Sci.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8317444?pdf=render",
+      "file": "10.1039_c9bm01339c.md"
+    },
+    {
+      "doi": "10.1016/j.bpj.2013.06.027",
+      "title": "",
+      "year": "2013",
+      "journal": "Biophys. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0006349513007066/pdf",
+      "file": "10.1016_j.bpj.2013.06.027.md"
+    },
+    {
+      "doi": "10.1126/science.1163595",
+      "title": "",
+      "year": "2008",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/ncomms15313",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms15313.pdf",
+      "file": "10.1038_ncomms15313.md"
+    },
+    {
+      "doi": "10.1038/ncb3336",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Cell Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1710653115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/115/6/1192.full.pdf",
+      "file": "10.1073_pnas.1710653115.md"
+    },
+    {
+      "doi": "10.1073/pnas.89.19.9064",
+      "title": "",
+      "year": "1992",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC50065?pdf=render",
+      "file": "10.1073_pnas.89.19.9064.md"
+    },
+    {
+      "doi": "10.1038/267531a0",
+      "title": "",
+      "year": "1977",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.0703723104",
+      "title": "",
+      "year": "2007",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2040893?pdf=render",
+      "file": "10.1073_pnas.0703723104.md"
+    },
+    {
+      "doi": "10.1038/nature10137",
+      "title": "",
+      "year": "2011",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/11380/673649",
+      "file": "10.1038_nature10137.md"
+    },
+    {
+      "doi": "10.1038/s41467-019-09755-0",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-019-09755-0.pdf",
+      "file": "10.1038_s41467-019-09755-0.md"
+    },
+    {
+      "doi": "10.1016/j.biomaterials.2016.06.061",
+      "title": "",
+      "year": "2016",
+      "journal": "Biomaterials",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41563-020-0615-x",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Mater.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7316573?pdf=render",
+      "file": "10.1038_s41563-020-0615-x.md"
+    },
+    {
+      "doi": "10.1016/j.biomaterials.2019.02.004",
+      "title": "",
+      "year": "2019",
+      "journal": "Biomaterials",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6463514?pdf=render",
+      "file": "10.1016_j.biomaterials.2019.02.004.md"
+    },
+    {
+      "doi": "10.1016/j.biomaterials.2017.11.004",
+      "title": "",
+      "year": "2018",
+      "journal": "Biomaterials",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/sciadv.aaw6171",
+      "title": "",
+      "year": "2019",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://advances.sciencemag.org/content/advances/5/8/eaaw6171.full.pdf",
+      "file": "10.1126_sciadv.aaw6171.md"
+    },
+    {
+      "doi": "10.1038/s41567-018-0092-1",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Phys.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1802568115",
+      "title": "",
+      "year": "2018",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/115/36/E8368.full.pdf",
+      "file": "10.1073_pnas.1802568115.md"
+    },
+    {
+      "doi": "10.1038/nmat5020",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Mater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nmat4993",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Mater.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5701824?pdf=render",
+      "file": "10.1038_nmat4993.md"
+    },
+    {
+      "doi": "10.1098/rsif.2014.1074",
+      "title": "",
+      "year": "2015",
+      "journal": "J. R. Soc. Interface",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsif.2014.1074",
+      "file": "10.1098_rsif.2014.1074.md"
+    },
+    {
+      "doi": "10.1038/s41467-017-01011-7",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-017-01011-7.pdf",
+      "file": "10.1038_s41467-017-01011-7.md"
+    },
+    {
+      "doi": "10.1038/srep33919",
+      "title": "",
+      "year": "2016",
+      "journal": "Sci. Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/srep33919.pdf",
+      "file": "10.1038_srep33919.md"
+    },
+    {
+      "doi": "10.1038/s41467-018-06641-z",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-018-06641-z.pdf",
+      "file": "10.1038_s41467-018-06641-z.md"
+    },
+    {
+      "doi": "10.1038/nrc.2016.123",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Rev. Cancer",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5364498?pdf=render",
+      "file": "10.1038_nrc.2016.123.md"
+    },
+    {
+      "doi": "10.1038/nmat4536",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Mater.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://infoscience.epfl.ch/record/217679",
+      "file": "10.1038_nmat4536.md"
+    },
+    {
+      "doi": "10.1083/jcb.200807195",
+      "title": "",
+      "year": "2009",
+      "journal": "J. Cell Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2700505?pdf=render",
+      "file": "10.1083_jcb.200807195.md"
+    },
+    {
+      "doi": "10.1083/jcb.201210152",
+      "title": "",
+      "year": "2013",
+      "journal": "J. Cell Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://jcb.rupress.org/content/jcb/201/7/1069.full.pdf",
+      "file": "10.1083_jcb.201210152.md"
+    },
+    {
+      "doi": "10.1083/jcb.201308029",
+      "title": "",
+      "year": "2014",
+      "journal": "J. Cell Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://jcb.rupress.org/content/jcb/204/5/669.full.pdf",
+      "file": "10.1083_jcb.201308029.md"
+    },
+    {
+      "doi": "10.1038/nmat2732",
+      "title": "",
+      "year": "2010",
+      "journal": "Nat. Mater.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2919753?pdf=render",
+      "file": "10.1038_nmat2732.md"
+    },
+    {
+      "doi": "10.1038/s41467-019-08465-x",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-019-08465-x.pdf",
+      "file": "10.1038_s41467-019-08465-x.md"
+    },
+    {
+      "doi": "10.1126/science.8493529",
+      "title": "",
+      "year": "1993",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature08601",
+      "title": "",
+      "year": "2009",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2848528?pdf=render",
+      "file": "10.1038_nature08601.md"
+    },
+    {
+      "doi": "10.1021/acsami.7b19818",
+      "title": "",
+      "year": "2018",
+      "journal": "ACS Appl. Mater. Interfaces",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature21003",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2016.05.082",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867416307292/pdf",
+      "file": "10.1016_j.cell.2016.05.082.md"
+    },
+    {
+      "doi": "10.1146/annurev-pharmtox-010716-104748",
+      "title": "",
+      "year": "2018",
+      "journal": "Annu. Rev. Pharmacol. Toxicol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-pharmtox-010716-104748",
+      "file": "10.1146_annurev-pharmtox-010716-104748.md"
+    },
+    {
+      "doi": "10.1038/nmat4407",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Mater.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/nmat4407.pdf",
+      "file": "10.1038_nmat4407.md"
+    },
+    {
+      "doi": "10.1002/adhm.201601185",
+      "title": "",
+      "year": "2017",
+      "journal": "Adv. Healthc. Mater.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adhm.201601185",
+      "file": "10.1002_adhm.201601185.md"
+    },
+    {
+      "doi": "10.1016/j.biomaterials.2010.08.074",
+      "title": "",
+      "year": "2011",
+      "journal": "Biomaterials",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://eprints.qut.edu.au/37829/1/nihms240508.pdf",
+      "file": "10.1016_j.biomaterials.2010.08.074.md"
+    },
+    {
+      "doi": "10.1016/j.bone.2011.05.010",
+      "title": "",
+      "year": "2011",
+      "journal": "Bone",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.sciencedirect.com/science/article/pii/S8756328211009847",
+      "file": "10.1016_j.bone.2011.05.010.md"
+    },
+    {
+      "doi": "10.1038/s41551-019-0380-9",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Biomed. Eng.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.addr.2015.04.021",
+      "title": "",
+      "year": "2016",
+      "journal": "Adv. Drug Deliv. Rev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1097/moo.0b013e32833f85d1",
+      "title": "",
+      "year": "2010",
+      "journal": "Curr. Opin. Otolaryngol. Head Neck Surg.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s0022-5347(17)32671-x",
+      "title": "",
+      "year": "1994",
+      "journal": "J. Urol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/adma.201304606",
+      "title": "",
+      "year": "2014",
+      "journal": "Adv. Mater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1234852",
+      "title": "",
+      "year": "2013",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s11626-997-0118-y",
+      "title": "",
+      "year": "1997",
+      "journal": "In Vitro Cell. Dev. Biol. Anim.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.molmed.2019.09.010",
+      "title": "",
+      "year": "2019",
+      "journal": "Trends Mol. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1136/gutjnl-2019-319256",
+      "title": "",
+      "year": "2019",
+      "journal": "Gut",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://gut.bmj.com/content/gutjnl/68/12/2228.full.pdf",
+      "file": "10.1136_gutjnl-2019-319256.md"
+    },
+    {
+      "doi": "10.1177/154405910308201111",
+      "title": "",
+      "year": "2003",
+      "journal": "J. Dent. Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.bone.2004.02.027",
+      "title": "",
+      "year": "2004",
+      "journal": "Bone",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nmat3586",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Mater.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3633615?pdf=render",
+      "file": "10.1038_nmat3586.md"
+    },
+    {
+      "doi": "10.1002/jbm.1217",
+      "title": "",
+      "year": "2002",
+      "journal": "J. Biomed. Mater. Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41563-019-0307-6",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Mater.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6650309?pdf=render",
+      "file": "10.1038_s41563-019-0307-6.md"
+    },
+    {
+      "doi": "10.1038/nature20168",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://infoscience.epfl.ch/record/225029",
+      "file": "10.1038_nature20168.md"
+    },
+    {
+      "doi": "10.1038/ncb3632",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Cell Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5664213?pdf=render",
+      "file": "10.1038_ncb3632.md"
+    },
+    {
+      "doi": "10.1016/j.biomaterials.2018.11.002",
+      "title": "",
+      "year": "2019",
+      "journal": "Biomaterials",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/sciadv.aav9394",
+      "title": "",
+      "year": "2019",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/doi/pdf/10.1126/sciadv.aav9394?download=true",
+      "file": "10.1126_sciadv.aav9394.md"
+    },
+    {
+      "doi": "10.1038/s41467-018-06504-7",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-018-06504-7.pdf",
+      "file": "10.1038_s41467-018-06504-7.md"
+    },
+    {
+      "doi": "10.1038/s41563-018-0190-6",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Mater.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6615903?pdf=render",
+      "file": "10.1038_s41563-018-0190-6.md"
+    },
+    {
+      "doi": "10.1038/srep18948",
+      "title": "",
+      "year": "2016",
+      "journal": "Sci. Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/srep18948.pdf",
+      "file": "10.1038_srep18948.md"
+    },
+    {
+      "doi": "10.1021/acsnano.9b03914",
+      "title": "",
+      "year": "2019",
+      "journal": "ACS Nano",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nrm.2017.108",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nrm.2017.87",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6192510?pdf=render",
+      "file": "10.1038_nrm.2017.87.md"
+    },
+    {
+      "doi": "10.1126/science.1257998",
+      "title": "",
+      "year": "2014",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature09198",
+      "title": "",
+      "year": "2010",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2901888?pdf=render",
+      "file": "10.1038_nature09198.md"
+    },
+    {
+      "doi": "10.1038/natrevmats.2015.12",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Rev. Mater.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5714327?pdf=render",
+      "file": "10.1038_natrevmats.2015.12.md"
+    },
+    {
+      "doi": "10.1039/c6ib00251j",
+      "title": "",
+      "year": "2017",
+      "journal": "Integr. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/ib/article-pdf/9/5/383/27270305/c6ib00251j.pdf",
+      "file": "10.1039_c6ib00251j.md"
+    },
+    {
+      "doi": "10.1016/j.biomaterials.2018.10.013",
+      "title": "",
+      "year": "2019",
+      "journal": "Biomaterials",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nmat4444",
+      "title": "",
+      "year": "2015",
+      "journal": "Nat. Mater.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://infoscience.epfl.ch/record/216027",
+      "file": "10.1038_nmat4444.md"
+    },
+    {
+      "doi": "10.1016/j.progpolymsci.2006.11.002",
+      "title": "",
+      "year": "2007",
+      "journal": "Prog. Polym. Sci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature24648",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://nrs.harvard.edu/urn-3:HUL.InstRepos:37298503",
+      "file": "10.1038_nature24648.md"
+    },
+    {
+      "doi": "10.1021/acs.biomac.8b01445",
+      "title": "",
+      "year": "2019",
+      "journal": "Biomacromolecules",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://hdl.handle.net/2066/201544",
+      "file": "10.1021_acs.biomac.8b01445.md"
+    },
+    {
+      "doi": "10.1002/ange.201911364",
+      "title": "",
+      "year": "2020",
+      "journal": "Angew. Chem.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.eml.2019.100557",
+      "title": "",
+      "year": "2019",
+      "journal": "Extreme Mech. Lett.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/adma.201905719",
+      "title": "",
+      "year": "2020",
+      "journal": "Adv. Mater.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7042082?pdf=render",
+      "file": "10.1002_adma.201905719.md"
+    },
+    {
+      "doi": "10.1016/j.ceb.2018.12.001",
+      "title": "",
+      "year": "2019",
+      "journal": "Curr. Opin. Cell Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/bf00366667",
+      "title": "",
+      "year": "1997",
+      "journal": "Rheol. Acta",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1121/1.1736272",
+      "title": "",
+      "year": "2004",
+      "journal": "J. Acoust. Soc. Am.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s003970200017",
+      "title": "",
+      "year": "2002",
+      "journal": "Rheol. Acta",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jbiomech.2013.11.019",
+      "title": "",
+      "year": "2014",
+      "journal": "J. Biomech.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.joca.2014.07.001",
+      "title": "",
+      "year": "2014",
+      "journal": "Osteoarthritis Cartilage",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nmat4009",
+      "title": "",
+      "year": "2014",
+      "journal": "Nat. Mater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jmbbm.2015.06.023",
+      "title": "",
+      "year": "2015",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://scholarworks.umass.edu/che_faculty_pubs/842",
+      "file": "10.1016_j.jmbbm.2015.06.023.md"
+    },
+    {
+      "doi": "10.1016/j.jbiomech.2008.06.008",
+      "title": "",
+      "year": "2008",
+      "journal": "J. Biomech.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2584606?pdf=render",
+      "file": "10.1016_j.jbiomech.2008.06.008.md"
+    },
+    {
+      "doi": "10.1016/j.jmbbm.2016.03.012",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1088/0031-9155/49/18/002",
+      "title": "",
+      "year": "2004",
+      "journal": "Phys. Med. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3233/bir-2010-0565",
+      "title": "",
+      "year": "2010",
+      "journal": "Biorheology",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jmbbm.2010.07.010",
+      "title": "",
+      "year": "2010",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/bf00122175",
+      "title": "",
+      "year": "1996",
+      "journal": "J. Mater. Sci. Mater. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jbiomech.2006.06.022",
+      "title": "",
+      "year": "2007",
+      "journal": "J. Biomech.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/s10439-006-9209-2",
+      "title": "",
+      "year": "2006",
+      "journal": "Ann. Biomed. Eng.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.actbio.2010.09.003",
+      "title": "",
+      "year": "2011",
+      "journal": "Acta Biomater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.matbio.2009.08.002",
+      "title": "",
+      "year": "2009",
+      "journal": "Matrix Biol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": ""
+    },
+    {
+      "doi": "10.1016/j.clinbiomech.2008.02.002",
+      "title": "",
+      "year": "2008",
+      "journal": "Clin. Biomech.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jbiomech.2006.10.019",
+      "title": "",
+      "year": "2007",
+      "journal": "J. Biomech.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1177/154405910408300608",
+      "title": "",
+      "year": "2004",
+      "journal": "J. Dent. Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jbiomech.2007.12.012",
+      "title": "",
+      "year": "2008",
+      "journal": "J. Biomech.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s8756-3282(02)00843-8",
+      "title": "",
+      "year": "2002",
+      "journal": "Bone",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jbiomech.2010.04.017",
+      "title": "",
+      "year": "2010",
+      "journal": "J. Biomech.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.orthres.2004.12.001",
+      "title": "",
+      "year": "2005",
+      "journal": "J. Orthop. Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1016/j.orthres.2004.12.001",
+      "file": "10.1016_j.orthres.2004.12.001.md"
+    },
+    {
+      "doi": "10.1007/s00223-012-9575-8",
+      "title": "",
+      "year": "2012",
+      "journal": "Calcif. Tissue Int.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.jmbbm.2010.10.001",
+      "title": "",
+      "year": "2011",
+      "journal": "J. Mech. Behav. Biomed. Mater.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://figshare.com/articles/journal_contribution/Analysis_of_anisotropic_viscoelastoplastic_properties_of_cortical_bone_tissues/9572393",
+      "file": "10.1016_j.jmbbm.2010.10.001.md"
+    },
+    {
+      "doi": "10.1242/jeb.201.1.135",
+      "title": "",
+      "year": "1998",
+      "journal": "J. Exp. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1039/c8sm00646f",
+      "title": "",
+      "year": "2018",
+      "journal": "Soft Matter",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pubs.rsc.org/en/content/articlepdf/2018/sm/c8sm00646f",
+      "file": "10.1039_c8sm00646f.md"
+    },
+    {
+      "doi": "10.1002/advs.201800638",
+      "title": "",
+      "year": "2018",
+      "journal": "Adv. Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/advs.201800638",
+      "file": "10.1002_advs.201800638.md"
+    },
+    {
+      "doi": "10.1016/j.biomaterials.2018.03.060",
+      "title": "",
+      "year": "2018",
+      "journal": "Biomaterials",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.biomaterials.2019.119430",
+      "title": "",
+      "year": "2019",
+      "journal": "Biomaterials",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6764851?pdf=render",
+      "file": "10.1016_j.biomaterials.2019.119430.md"
+    },
+    {
+      "doi": "10.1063/1.3343265",
+      "title": "",
+      "year": "2010",
+      "journal": "J. Appl. Phys.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pubs.aip.org/aip/jap/article-pdf/doi/10.1063/1.3343265/13199999/063509_1_online.pdf",
+      "file": "10.1063_1.3343265.md"
+    },
+    {
+      "doi": "10.1002/adma.201506216",
+      "title": "",
+      "year": "2016",
+      "journal": "Adv. Mater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.actbio.2018.11.014",
+      "title": "",
+      "year": "2019",
+      "journal": "Acta Biomater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    }
+  ]
+}

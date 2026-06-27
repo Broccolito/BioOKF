@@ -1,0 +1,1355 @@
+{
+  "article": {
+    "slug": "s41586-023-06388-8",
+    "doi": "10.1038/s41586-023-06388-8",
+    "title": "From target discovery to clinical drug development with human genetics",
+    "url": "https://www.nature.com/articles/s41586-023-06388-8",
+    "abbrev": "target-discovery-clinical-drug-development-human",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/target-discovery-clinical-drug-development-human"
+  },
+  "meta": {
+    "title": "From target discovery to clinical drug development with human genetics",
+    "authors": [
+      "Katerina Trajanoska",
+      "Claude Bh\u00e9rer",
+      "Daniel Taliun",
+      "Sirui Zhou",
+      "J. Brent Richards",
+      "Vincent Mooser"
+    ],
+    "published": [
+      2023,
+      8,
+      23
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-023-06388-8",
+    "n_references": 147,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "6388_CR1",
+      "doi": "10.1038/nrd4090",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2013",
+      "author": "J Arrowsmith",
+      "unstructured": "Arrowsmith, J. & Miller, P. Trial watch: phase II and phase III attrition rates 2011-2012. Nat. Rev. Drug Discov. 12, 569 (2013)."
+    },
+    {
+      "key": "6388_CR2",
+      "doi": "10.1038/nrd.2016.184",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2016",
+      "author": "RK Harrison",
+      "unstructured": "Harrison, R. K. Phase II and phase III failures: 2013-2015. Nat. Rev. Drug Discov. 15, 817\u2013818 (2016)."
+    },
+    {
+      "key": "6388_CR3",
+      "doi": "10.1001/jama.2020.1166",
+      "title": "",
+      "journal": "JAMA",
+      "year": "2020",
+      "author": "OJ Wouters",
+      "unstructured": "Wouters, O. J., McKee, M. & Luyten, J. Estimated research and development investment needed to bring a new medicine to market, 2009-2018. JAMA 323, 844\u2013853 (2020)."
+    },
+    {
+      "key": "6388_CR4",
+      "doi": "10.1038/nrd4309",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2014",
+      "author": "D Cook",
+      "unstructured": "Cook, D. et al. Lessons learned from the fate of AstraZeneca\u2019s drug pipeline: a five-dimensional framework. Nat. Rev. Drug Discov.\u00a013, 419\u2013431 (2014)."
+    },
+    {
+      "key": "6388_CR5",
+      "doi": "10.1101/2023.02.07.23285407",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Razuvayevskaya, O., Lopez, I., Dunham, I. & Ochoa, D. Why clinical trials stop: the role of genetics. Preprint at medRxiv https://doi.org/10.1101/2023.02.07.23285407 (2023)."
+    },
+    {
+      "key": "6388_CR6",
+      "doi": "10.1056/nejm199907013410106",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "1999",
+      "author": "FS Collins",
+      "unstructured": "Collins, F. S. Shattuck lecture\u2014Medical and societal consequences of the Human Genome Project. N. Engl. J. Med. 341, 28\u201337 (1999)."
+    },
+    {
+      "key": "6388_CR7",
+      "doi": "10.1038/35057062",
+      "title": "",
+      "journal": "Nature",
+      "year": "2001",
+      "author": "ES Lander",
+      "unstructured": "Lander, E. S. et al. Initial sequencing and analysis of the human genome. Nature 409, 860\u2013921 (2001)."
+    },
+    {
+      "key": "6388_CR8",
+      "doi": "10.1126/science.1058040",
+      "title": "",
+      "journal": "Science",
+      "year": "2001",
+      "author": "JC Venter",
+      "unstructured": "Venter, J. C. et al. The sequence of the human genome. Science 291, 1304\u20131351 (2001)."
+    },
+    {
+      "key": "6388_CR9",
+      "doi": "10.1038/s43018-020-0052-4",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Spotlight on cancer genomics. Nat. Cancer 1, 265\u2013266 (2020)."
+    },
+    {
+      "key": "6388_CR10",
+      "doi": "10.1038/s41431-019-0508-0",
+      "title": "",
+      "journal": "Eur. J. Hum. Genet.",
+      "year": "2020",
+      "author": "S Nguengang Wakap",
+      "unstructured": "Nguengang Wakap, S. et al. Estimating cumulative point prevalence of rare diseases: analysis of the Orphanet database. Eur. J. Hum. Genet. 28, 165\u2013173 (2020)."
+    },
+    {
+      "key": "6388_CR11",
+      "doi": "10.1016/j.ajhg.2022.12.011",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2023",
+      "author": "A Abdellaoui",
+      "unstructured": "Abdellaoui, A., Yengo, L., Verweij, K. J. H. & Visscher, P. M. 15 years of GWAS discovery: realizing the promise. Am. J. Hum. Genet. 110, 179\u2013194 (2023)."
+    },
+    {
+      "key": "6388_CR12",
+      "doi": "10.1186/s13073-019-0703-1",
+      "title": "",
+      "journal": "Genome Med.",
+      "year": "2020",
+      "author": "ER Malone",
+      "unstructured": "Malone, E. R., Oliva, M., Sabatini, P. J. B., Stockley, T. L. & Siu, L. L. Molecular profiling for precision cancer therapies. Genome Med. 12, 8 (2020)."
+    },
+    {
+      "key": "6388_CR13",
+      "doi": "10.1172/jci154943",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2022",
+      "author": "MR Waarts",
+      "unstructured": "Waarts, M. R., Stonestrom, A. J., Park, Y. C. & Levine, R. L. Targeting mutations in cancer. J. Clin. Invest. 132, e154943 (2022)."
+    },
+    {
+      "key": "6388_CR14",
+      "doi": "10.1056/nejmoa1500858",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2015",
+      "author": "MS Sabatine",
+      "unstructured": "Sabatine, M. S. et al. Efficacy and safety of evolocumab in reducing lipids and cardiovascular events. N. Engl. J. Med. 372, 1500\u20131509 (2015)."
+    },
+    {
+      "key": "6388_CR15",
+      "doi": "10.1038/496152a",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "SS Hall",
+      "unstructured": "Hall, S. S. Genetics: a gene of rare effect. Nature 496, 152\u2013155 (2013)."
+    },
+    {
+      "key": "6388_CR16",
+      "doi": "10.1038/ng1161",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2003",
+      "author": "M Abifadel",
+      "unstructured": "Abifadel, M. et al. Mutations in PCSK9 cause autosomal dominant hypercholesterolemia. Nat. Genet. 34, 154\u2013156 (2003)."
+    },
+    {
+      "key": "6388_CR17",
+      "doi": "10.1086/507488",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2006",
+      "author": "Z Zhao",
+      "unstructured": "Zhao, Z. et al. Molecular characterization of loss-of-function mutations in PCSK9 and identification of a compound heterozygote. Am. J. Hum. Genet. 79, 514\u2013523 (2006)."
+    },
+    {
+      "key": "6388_CR18",
+      "doi": "10.1056/nejmoa054013",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2006",
+      "author": "JC Cohen",
+      "unstructured": "Cohen, J. C., Boerwinkle, E., Mosley, T. H. Jr. & Hobbs, H. H. Sequence variations in PCSK9, low LDL, and protection against coronary heart disease. N. Engl. J. Med. 354, 1264\u20131272 (2006). To our knowledge, refs. 16\u201318 provided the first genetic rationale for the discovery and development of PCKS9 inhibitors as a safe way to treat familial hypercholesterolemia and coronary artery disease."
+    },
+    {
+      "key": "6388_CR19",
+      "doi": "",
+      "title": "",
+      "journal": "Am. Health Drug Benefits",
+      "year": "2016",
+      "author": "LA Raedler",
+      "unstructured": "Raedler, L. A. Praluent (alirocumab): first PCSK9 inhibitor approved by the FDA for hypercholesterolemia. Am. Health Drug Benefits 9, 123\u2013126 (2016)."
+    },
+    {
+      "key": "6388_CR20",
+      "doi": "10.1371/journal.pgen.1008489",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2019",
+      "author": "EA King",
+      "unstructured": "King, E. A., Davis, J. W. & Degner, J. F. Are drug targets with genetic support twice as likely to be approved? Revised estimates of the impact of genetic support for drug mechanisms on the probability of drug approval. PLoS Genet. 15, e1008489 (2019)."
+    },
+    {
+      "key": "6388_CR21",
+      "doi": "10.1038/ng.3314",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2015",
+      "author": "MR Nelson",
+      "unstructured": "Nelson, M. R. et al. The support of human genetic evidence for approved drug indications. Nat. Genet. 47, 856\u2013860 (2015). References 20,21\u00a0 demonstrated retrospectively that genetically supported targets are more likely to lead to approved therapies."
+    },
+    {
+      "key": "6388_CR22",
+      "doi": "10.1038/d41573-022-00120-3",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2022",
+      "author": "D Ochoa",
+      "unstructured": "Ochoa, D. et al. Human genetics evidence supports two-thirds of the 2021 FDA-approved drugs. Nat. Rev. Drug Discov. 21, 551 (2022)."
+    },
+    {
+      "key": "6388_CR23",
+      "doi": "",
+      "title": "",
+      "journal": "Glob. Cardiol. Sci. Pract.",
+      "year": "2017",
+      "author": "NG Seidah",
+      "unstructured": "Seidah, N. G. The PCSK9 revolution and the potential of PCSK9-based therapies to reduce LDL-cholesterol. Glob. Cardiol. Sci. Pract. 2017, e201702 (2017)."
+    },
+    {
+      "key": "6388_CR24",
+      "doi": "10.1093/nar/gkac1046",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2022",
+      "author": "D Ochoa",
+      "unstructured": "Ochoa, D. et al. The next-generation Open Targets Platform: reimagined, redesigned, rebuilt. Nucleic Acids Res. 51, D1353\u2013D1359 (2022)."
+    },
+    {
+      "key": "6388_CR25",
+      "doi": "10.1093/nar/gkj067",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2006",
+      "author": "DS Wishart",
+      "unstructured": "Wishart, D. S. et al. DrugBank: a comprehensive resource for in silico drug discovery and exploration. Nucleic Acids Res. 34, D668\u2013672 (2006)."
+    },
+    {
+      "key": "6388_CR26",
+      "doi": "10.1152/ajpheart.00023.2020",
+      "title": "",
+      "journal": "Am. J. Physiol. Heart. Circ. Physiol.",
+      "year": "2020",
+      "author": "AJ Sparrow",
+      "unstructured": "Sparrow, A. J., Watkins, H., Daniels, M. J., Redwood, C. & Robinson, P. Mavacamten rescues increased myofilament calcium sensitivity and dysregulation of Ca2+ flux caused by thin filament hypertrophic cardiomyopathy mutations. Am. J. Physiol. Heart. Circ. Physiol. 318, H715\u2013h722 (2020)."
+    },
+    {
+      "key": "6388_CR27",
+      "doi": "10.1056/nejmra0902923",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2011",
+      "author": "H Watkins",
+      "unstructured": "Watkins, H., Ashrafian, H. & Redwood, C. Inherited cardiomyopathies. N. Engl. J. Med. 364, 1643\u20131656 (2011)."
+    },
+    {
+      "key": "6388_CR28",
+      "doi": "10.1161/circulationaha.119.042339",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2020",
+      "author": "CN Toepfer",
+      "unstructured": "Toepfer, C. N. et al. Myosin sequestration regulates sarcomere function, cardiomyocyte energetics, and metabolism, informing the pathogenesis of hypertrophic cardiomyopathy. Circulation 141, 828\u2013842 (2020)."
+    },
+    {
+      "key": "6388_CR29",
+      "doi": "10.1038/nrd.2016.230",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2017",
+      "author": "R Santos",
+      "unstructured": "Santos, R. et al. A comprehensive map of molecular drug targets. Nat. Rev. Drug Discov. 16, 19\u201334 (2017)."
+    },
+    {
+      "key": "6388_CR30",
+      "doi": "10.1038/nrg1828",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2006",
+      "author": "RR Brinkman",
+      "unstructured": "Brinkman, R. R., Dube, M. P., Rouleau, G. A., Orr, A. C. & Samuels, M. E. Human monogenic disorders\u2014a source of novel drug targets. Nat. Rev. Genet. 7, 249\u2013260 (2006)."
+    },
+    {
+      "key": "6388_CR31",
+      "doi": "10.1146/annurev-genom-090711-163739",
+      "title": "",
+      "journal": "Annu. Rev. Genomics Hum. Genet.",
+      "year": "2012",
+      "author": "RJ Desnick",
+      "unstructured": "Desnick, R. J. & Schuchman, E. H. Enzyme replacement therapy for lysosomal diseases: lessons from 20 years of experience and remaining challenges. Annu. Rev. Genomics Hum. Genet. 13, 307\u2013335 (2012)."
+    },
+    {
+      "key": "6388_CR32",
+      "doi": "10.1074/jbc.m303098200",
+      "title": "",
+      "journal": "J. Biol. Chem.",
+      "year": "2003",
+      "author": "H Yang",
+      "unstructured": "Yang, H. et al. Nanomolar affinity small molecule correctors of defective Delta F508-CFTR chloride channel gating. J. Biol. Chem. 278, 35079\u201335085 (2003)."
+    },
+    {
+      "key": "6388_CR33",
+      "doi": "10.1073/pnas.0904709106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "F Van Goor",
+      "unstructured": "Van Goor, F. et al. Rescue of CF airway epithelial cell function in vitro by a CFTR potentiator, VX-770. Proc. Natl Acad. Sci. USA 106, 18825\u201318830 (2009)."
+    },
+    {
+      "key": "6388_CR34",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "RNAi therapeutics market: growing investments in RNAi therapies. BioSpace https://www.biospace.com/article/rnai-therapeutics-market-growing-investments-in-rnai-therapies/ (2021)."
+    },
+    {
+      "key": "6388_CR35",
+      "doi": "10.1056/nejmoa1813279",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2019",
+      "author": "J Kim",
+      "unstructured": "Kim, J. et al. Patient-customized oligonucleotide therapy for a rare genetic disease. N. Engl. J. Med. 381, 1644\u20131652 (2019)."
+    },
+    {
+      "key": "6388_CR36",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "European Medicines Agency recommends first gene therapy for approval. European Medicines Agency https://www.ema.europa.eu/en/news/european-medicines-agency-recommends-first-gene-therapy-approval (2012)."
+    },
+    {
+      "key": "6388_CR37",
+      "doi": "10.1056/nejmoa1609677",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2017",
+      "author": "JA Ribeil",
+      "unstructured": "Ribeil, J. A. et al. Gene therapy in a patient with sickle cell disease. N. Engl. J. Med. 376, 848\u2013855 (2017)."
+    },
+    {
+      "key": "6388_CR38",
+      "doi": "10.1056/nejmoa2029392",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2021",
+      "author": "EB Esrick",
+      "unstructured": "Esrick, E. B. et al. Post-transcriptional genetic silencing of BCL11A to treat sickle cell disease. N. Engl. J. Med. 384, 205\u2013215 (2021)."
+    },
+    {
+      "key": "6388_CR39",
+      "doi": "10.1056/nejmoa1705342",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2018",
+      "author": "AA Thompson",
+      "unstructured": "Thompson, A. A. et al. Gene therapy in patients with transfusion-dependent beta-thalassemia. N. Engl. J. Med. 378, 1479\u20131493 (2018)."
+    },
+    {
+      "key": "6388_CR40",
+      "doi": "10.1038/s41392-019-0089-y",
+      "title": "",
+      "journal": "Signal Transduct. Target. Ther.",
+      "year": "2020",
+      "author": "H Li",
+      "unstructured": "Li, H. et al. Applications of genome editing technology in the targeted therapy of human diseases: mechanisms, advances and prospects. Signal Transduct. Target. Ther. 5, 1 (2020)."
+    },
+    {
+      "key": "6388_CR41",
+      "doi": "10.1056/nejmoa2031054",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2021",
+      "author": "H Frangoul",
+      "unstructured": "Frangoul, H. et al. CRISPR\u2013Cas9 gene editing for sickle cell disease and beta-thalassemia. N. Engl. J. Med. 384, 252\u2013260 (2021)."
+    },
+    {
+      "key": "6388_CR42",
+      "doi": "10.1126/science.273.5283.1856",
+      "title": "",
+      "journal": "Science",
+      "year": "1996",
+      "author": "M Dean",
+      "unstructured": "Dean, M. et al. Genetic restriction of HIV-1 infection and progression to AIDS by a deletion allele of the CKR5 structural gene. Hemophilia Growth and Development Study, Multicenter AIDS Cohort Study, Multicenter Hemophilia Cohort Study, San Francisco City Cohort, ALIVE Study. Science 273, 1856\u20131862 (1996)."
+    },
+    {
+      "key": "6388_CR43",
+      "doi": "10.1038/382722a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1996",
+      "author": "M Samson",
+      "unstructured": "Samson, M. et al. Resistance to HIV-1 infection in Caucasian individuals bearing mutant alleles of the CCR-5 chemokine receptor gene. Nature 382, 722\u2013725 (1996)."
+    },
+    {
+      "key": "6388_CR44",
+      "doi": "10.1089/apc.2007.9970",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "FDA approves maraviroc tablets. AIDS Patient Care STDs 21, 702 (2007)."
+    },
+    {
+      "key": "6388_CR45",
+      "doi": "10.1002/humu.21274",
+      "title": "",
+      "journal": "Hum. Mutat.",
+      "year": "2010",
+      "author": "E Piters",
+      "unstructured": "Piters, E. et al. First missense mutation in the SOST gene causing sclerosteosis by loss of sclerostin function. Hum. Mutat. 31, E1526\u2013E1543 (2010)."
+    },
+    {
+      "key": "6388_CR46",
+      "doi": "10.1136/jmg.39.2.91",
+      "title": "",
+      "journal": "J. Med. Genet.",
+      "year": "2002",
+      "author": "W Balemans",
+      "unstructured": "Balemans, W. et al. Identification of a 52\u2009kb deletion downstream of the SOST gene in patients with van Buchem disease. J. Med. Genet. 39, 91\u201397 (2002)."
+    },
+    {
+      "key": "6388_CR47",
+      "doi": "10.1056/nejmoa1002926",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2010",
+      "author": "K Musunuru",
+      "unstructured": "Musunuru, K. et al. Exome sequencing, ANGPTL3 mutations, and familial combined hypolipidemia. N. Engl. J. Med. 363, 2220\u20132227 (2010)."
+    },
+    {
+      "key": "6388_CR48",
+      "doi": "10.1016/j.cca.2011.11.020",
+      "title": "",
+      "journal": "Clin. Chim. Acta",
+      "year": "2012",
+      "author": "JM Martin-Campos",
+      "unstructured": "Martin-Campos, J. M. et al. Identification of a novel mutation in the ANGPTL3 gene in two families diagnosed of familial hypobetalipoproteinemia without APOB mutation. Clin. Chim. Acta 413, 552\u2013555 (2012)."
+    },
+    {
+      "key": "6388_CR49",
+      "doi": "",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2009",
+      "author": "S Romeo",
+      "unstructured": "Romeo, S. et al. Rare loss-of-function mutations in ANGPTL family members contribute to plasma triglyceride levels in humans. J. Clin. Invest. 119, 70\u201379 (2009)."
+    },
+    {
+      "key": "6388_CR50",
+      "doi": "",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2021",
+      "author": "A Mullard",
+      "unstructured": "Mullard, A. FDA approves first anti-ANGPTL3 antibody, for rare cardiovascular indication. Nat. Rev. Drug Discov. 20, 251 (2021)."
+    },
+    {
+      "key": "6388_CR51",
+      "doi": "10.1080/14740338.2022.1988568",
+      "title": "",
+      "journal": "Expert Opin. Drug Saf.",
+      "year": "2022",
+      "author": "Y Banerjee",
+      "unstructured": "Banerjee, Y. et al. Inclisiran: a small interfering RNA strategy targeting PCSK9 to treat hypercholesterolemia. Expert Opin. Drug Saf. 21, 9\u201320 (2022)."
+    },
+    {
+      "key": "6388_CR52",
+      "doi": "10.1016/j.ymthe.2021.02.020",
+      "title": "",
+      "journal": "Mol. Ther.",
+      "year": "2021",
+      "author": "L Wang",
+      "unstructured": "Wang, L. et al. Long-term stable reduction of low-density lipoprotein in nonhuman primates following in vivo genome editing of PCSK9. Mol. Ther. 29, 2019\u20132029 (2021)."
+    },
+    {
+      "key": "6388_CR53",
+      "doi": "10.1038/s41586-021-03534-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "K Musunuru",
+      "unstructured": "Musunuru, K. et al. In vivo CRISPR base editing of PCSK9 durably lowers cholesterol in primates. Nature 593, 429\u2013434 (2021)."
+    },
+    {
+      "key": "6388_CR54",
+      "doi": "10.1161/atv.0000000000000147",
+      "title": "",
+      "journal": "Arterioscler. Thromb. Vasc. Biol.",
+      "year": "2022",
+      "author": "G Reyes-Soffer",
+      "unstructured": "Reyes-Soffer, G. et al. Lipoprotein(a): a genetically determined, causal, and prevalent risk factor for atherosclerotic cardiovascular disease: a scientific statement from the American Heart Association. Arterioscler. Thromb. Vasc. Biol. 42, e48\u2013e60 (2022)."
+    },
+    {
+      "key": "6388_CR55",
+      "doi": "10.1056/nejmoa1905239",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2020",
+      "author": "S Tsimikas",
+      "unstructured": "Tsimikas, S. et al. Lipoprotein(a) reduction in persons with cardiovascular disease. N. Engl. J. Med. 382, 244\u2013255 (2020)."
+    },
+    {
+      "key": "6388_CR56",
+      "doi": "10.1016/j.jacc.2021.12.032",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2022",
+      "author": "C Yeang",
+      "unstructured": "Yeang, C. et al. Effect of pelacarsen on lipoprotein(a) cholesterol and corrected low-density lipoprotein cholesterol. J. Am. Coll. Cardiol. 79, 1035\u20131046 (2022)."
+    },
+    {
+      "key": "6388_CR57",
+      "doi": "10.1038/s41591-021-01634-w",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2022",
+      "author": "MJ Koren",
+      "unstructured": "Koren, M. J. et al. Preclinical development and phase 1 trial of a novel siRNA targeting lipoprotein(a). Nat. Med. 28, 96\u2013103 (2022)."
+    },
+    {
+      "key": "6388_CR58",
+      "doi": "10.1016/j.jsbmb.2016.05.020",
+      "title": "",
+      "journal": "J. Steroid Biochem. Mol. Biol.",
+      "year": "2016",
+      "author": "BB Mendonca",
+      "unstructured": "Mendonca, B. B. et al. Steroid 5\u03b1-reductase 2 deficiency. J. Steroid Biochem. Mol. Biol. 163, 206\u2013211 (2016)."
+    },
+    {
+      "key": "6388_CR59",
+      "doi": "10.1056/nejm199210223271701",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "1992",
+      "author": "GJ Gormley",
+      "unstructured": "Gormley, G. J. et al. The effect of finasteride in men with benign prostatic hyperplasia. The Finasteride Study Group. N. Engl. J. Med. 327, 1185\u20131191 (1992)."
+    },
+    {
+      "key": "6388_CR60",
+      "doi": "10.1016/s0190-9622(98)70007-6",
+      "title": "",
+      "journal": "J. Am. Acad. Dermatol.",
+      "year": "1998",
+      "author": "KD Kaufman",
+      "unstructured": "Kaufman, K. D. et al. Finasteride in the treatment of men with androgenetic alopecia. Finasteride Male Pattern Hair Loss Study Group. J. Am. Acad. Dermatol. 39, 578\u2013589 (1998)."
+    },
+    {
+      "key": "6388_CR61",
+      "doi": "10.2337/dc07-1785",
+      "title": "",
+      "journal": "Diabetes Care",
+      "year": "2008",
+      "author": "M Rafiq",
+      "unstructured": "Rafiq, M. et al. Effective treatment with oral sulfonylureas in patients with diabetes due to sulfonylurea receptor 1 (SUR1) mutations. Diabetes Care 31, 204\u2013209 (2008)."
+    },
+    {
+      "key": "6388_CR62",
+      "doi": "10.1177/1759720x221084848",
+      "title": "",
+      "journal": "Ther. Adv. Musculoskelet. Dis.",
+      "year": "2022",
+      "author": "R Savarirayan",
+      "unstructured": "Savarirayan, R. et al. Infigratinib in children with achondroplasia: the PROPEL and PROPEL 2 studies. Ther. Adv. Musculoskelet. Dis. 14, 1759720x221084848 (2022)."
+    },
+    {
+      "key": "6388_CR63",
+      "doi": "10.1126/science.1135245",
+      "title": "",
+      "journal": "Science",
+      "year": "2006",
+      "author": "RH Duerr",
+      "unstructured": "Duerr, R. H. et al. A genome-wide association study identifies IL23R as an inflammatory bowel disease gene. Science 314, 1461\u20131463 (2006)."
+    },
+    {
+      "key": "6388_CR64",
+      "doi": "10.1038/ng.2007.17",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2007",
+      "author": "Wellcome Trust Case Control Consortium.",
+      "unstructured": "Wellcome Trust Case Control Consortium. Association scan of 14,500 nonsynonymous SNPs in four diseases identifies autoimmunity variants. Nat. Genet. 39, 1329\u20131337 (2007)."
+    },
+    {
+      "key": "6388_CR65",
+      "doi": "10.1038/s41598-019-45747-2",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2019",
+      "author": "LE Mokry",
+      "unstructured": "Mokry, L. E. et al. Interleukin-18 as a drug repositioning opportunity for inflammatory bowel disease: a Mendelian randomization study. Sci. Rep. 9, 9386 (2019)."
+    },
+    {
+      "key": "6388_CR66",
+      "doi": "10.1038/s41586-021-03767-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "MEK Niemi",
+      "unstructured": "Niemi, M. E. K. et al. Mapping the human genetic architecture of COVID-19. Nature 600, 472\u2013477 (2021)."
+    },
+    {
+      "key": "6388_CR67",
+      "doi": "10.1016/s0140-6736(22)01866-9",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2022",
+      "author": "RECOVERY Collaborative Group.",
+      "unstructured": "RECOVERY Collaborative Group. Baricitinib in patients admitted to hospital with COVID-19 (RECOVERY): a randomised, controlled, open-label, platform trial and updated meta-analysis. Lancet 400, 1102 (2022)."
+    },
+    {
+      "key": "6388_CR68",
+      "doi": "10.1146/annurev.genom.4.070802.110226",
+      "title": "",
+      "journal": "Annu. Rev. Genomics Hum. Genet.",
+      "year": "2003",
+      "author": "SA Tishkoff",
+      "unstructured": "Tishkoff, S. A. & Verrelli, B. C. Patterns of human genetic diversity: implications for human evolutionary history and disease. Annu. Rev. Genomics Hum. Genet. 4, 293\u2013340 (2003)."
+    },
+    {
+      "key": "6388_CR69",
+      "doi": "10.1086/423146",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2004",
+      "author": "M Slatkin",
+      "unstructured": "Slatkin, M. A population-genetic test of founder effects and implications for Ashkenazi Jewish diseases. Am. J. Hum. Genet. 75, 282\u2013293 (2004)."
+    },
+    {
+      "key": "6388_CR70",
+      "doi": "10.1136/jmg.30.10.857",
+      "title": "",
+      "journal": "J. Med. Genet.",
+      "year": "1993",
+      "author": "A de la Chapelle",
+      "unstructured": "de la Chapelle, A. Disease gene mapping in isolated human populations: the example of Finland. J. Med. Genet. 30, 857\u2013865 (1993)."
+    },
+    {
+      "key": "6388_CR71",
+      "doi": "10.1038/s41586-022-05473-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "MI Kurki",
+      "unstructured": "Kurki, M. I. et al. FinnGen provides genetic insights from a well-phenotyped isolated population. Nature 613, 508\u2013518 (2023)."
+    },
+    {
+      "key": "6388_CR72",
+      "doi": "10.1038/ng1195-321",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "1995",
+      "author": "HW Moises",
+      "unstructured": "Moises, H. W. et al. An international two-stage genome-wide search for schizophrenia susceptibility genes. Nat. Genet. 11, 321\u2013324 (1995)."
+    },
+    {
+      "key": "6388_CR73",
+      "doi": "10.1038/s41431-021-00850-9",
+      "title": "",
+      "journal": "Eur. J. Hum. Genet.",
+      "year": "2021",
+      "author": "B Spedicati",
+      "unstructured": "Spedicati, B. et al. Natural human knockouts and Mendelian disorders: deep phenotyping in Italian isolates. Eur. J. Hum. Genet. 29, 1272\u20131281 (2021)."
+    },
+    {
+      "key": "6388_CR74",
+      "doi": "10.1038/gim.2015.123",
+      "title": "",
+      "journal": "Genet. Med.",
+      "year": "2016",
+      "author": "B Baskovich",
+      "unstructured": "Baskovich, B. et al. Expanded genetic screening panel for the Ashkenazi Jewish population. Genet. Med. 18, 522\u2013528 (2016)."
+    },
+    {
+      "key": "6388_CR75",
+      "doi": "10.1002/ajpa.21424",
+      "title": "",
+      "journal": "Am. J. Phys. Anthropol.",
+      "year": "2011",
+      "author": "C Bherer",
+      "unstructured": "Bherer, C. et al. Admixed ancestry and stratification of Quebec regional populations. Am. J. Phys. Anthropol. 144, 432\u2013441 (2011)."
+    },
+    {
+      "key": "6388_CR76",
+      "doi": "10.1111/j.1399-0004.2005.00497.x",
+      "title": "",
+      "journal": "Clin. Genet.",
+      "year": "2005",
+      "author": "AM Laberge",
+      "unstructured": "Laberge, A. M. et al. Population history and its impact on medical genetics in Quebec. Clin. Genet. 68, 287\u2013301 (2005)."
+    },
+    {
+      "key": "6388_CR77",
+      "doi": "10.1038/s41586-019-1457-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "AE Locke",
+      "unstructured": "Locke, A. E. et al. Exome sequencing of Finnish isolates enhances rare-variant association power. Nature 572, 323\u2013328 (2019)."
+    },
+    {
+      "key": "6388_CR78",
+      "doi": "10.1111/ahg.12150",
+      "title": "",
+      "journal": "Ann. Hum. Genet.",
+      "year": "2016",
+      "author": "AM Erzurumluoglu",
+      "unstructured": "Erzurumluoglu, A. M., Shihab, H. A., Rodriguez, S., Gaunt, T. R. & Day, I. N. Importance of genetic studies in consanguineous populations for the characterization of novel human gene functions. Ann. Hum. Genet. 80, 187\u2013196 (2016)."
+    },
+    {
+      "key": "6388_CR79",
+      "doi": "10.1038/s41586-020-2267-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "EV Minikel",
+      "unstructured": "Minikel, E. V. et al. Evaluating drug targets through human loss-of-function genetic variation. Nature 581, 459\u2013464 (2020). This analysis provides a comprehensive roadmap for human knockout studies to discover relevant loss-of-function variants that can guide drug discovery and development."
+    },
+    {
+      "key": "6388_CR80",
+      "doi": "10.1038/nature22034",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "D Saleheen",
+      "unstructured": "Saleheen, D. et al. Human knockouts and phenotypic analysis in a cohort with a high rate of consanguinity. Nature 544, 235\u2013239 (2017)."
+    },
+    {
+      "key": "6388_CR81",
+      "doi": "10.1038/s41436-020-01007-7",
+      "title": "",
+      "journal": "Genet. Med.",
+      "year": "2021",
+      "author": "T Lu",
+      "unstructured": "Lu, T. et al. Individuals with common diseases but with a low polygenic risk score could be prioritized for rare variant screening. Genet. Med. 23, 508\u2013515 (2021)."
+    },
+    {
+      "key": "6388_CR82",
+      "doi": "10.1161/circgen.120.003106",
+      "title": "",
+      "journal": "Circ. Genom. Precis. Med.",
+      "year": "2021",
+      "author": "H Wu",
+      "unstructured": "Wu, H. et al. Polygenic risk score for low-density lipoprotein cholesterol is associated with risk of ischemic heart disease and enriches for individuals with familial hypercholesterolemia. Circ. Genom. Precis. Med. 14, e003106 (2021)."
+    },
+    {
+      "key": "6388_CR83",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Pfizer and Ionis announce discontinuation of vupanorsen clinical development program. CISION https://www.prnewswire.com/news-releases/pfizer-and-ionis-announce-discontinuation-of-vupanorsen-clinical-development-program-301471041.html (2022)."
+    },
+    {
+      "key": "6388_CR84",
+      "doi": "10.1038/d41573-021-00088-6",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2021",
+      "author": "K Kingwell",
+      "unstructured": "Kingwell, K. Double setback for ASO trials in Huntington disease. Nat. Rev. Drug Discov. 20, 412\u2013413 (2021)."
+    },
+    {
+      "key": "6388_CR85",
+      "doi": "10.1038/ng.257",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2008",
+      "author": "S Romeo",
+      "unstructured": "Romeo, S. et al. Genetic variation in PNPLA3 confers susceptibility to nonalcoholic fatty liver disease. Nat. Genet. 40, 1461\u20131465 (2008)."
+    },
+    {
+      "key": "6388_CR86",
+      "doi": "10.1016/j.ajhg.2008.09.012",
+      "title": "",
+      "journal": "Am. J. Hum. Genet.",
+      "year": "2008",
+      "author": "X Yuan",
+      "unstructured": "Yuan, X. et al. Population-based genome-wide association studies reveal six loci influencing plasma levels of liver enzymes. Am. J. Hum. Genet. 83, 520\u2013528 (2008)."
+    },
+    {
+      "key": "6388_CR87",
+      "doi": "10.1093/hmg/ddu328",
+      "title": "",
+      "journal": "Hum. Mol. Genet.",
+      "year": "2014",
+      "author": "G Davey Smith",
+      "unstructured": "Davey Smith, G. & Hemani, G. Mendelian randomization: genetic anchors for causal inference in epidemiological studies. Hum. Mol. Genet. 23, R89\u201398 (2014)."
+    },
+    {
+      "key": "6388_CR88",
+      "doi": "10.12688/wellcomeopenres.16544.1",
+      "title": "",
+      "journal": "Wellcome Open Res.",
+      "year": "2021",
+      "author": "D Gill",
+      "unstructured": "Gill, D. et al. Mendelian randomization for studying the effects of perturbing drug targets. Wellcome Open Res. 6, 16 (2021)."
+    },
+    {
+      "key": "6388_CR89",
+      "doi": "10.1097/mol.0000000000000247",
+      "title": "",
+      "journal": "Curr. Opin. Lipidol.",
+      "year": "2015",
+      "author": "BA Ference",
+      "unstructured": "Ference, B. A. Mendelian randomization studies: using naturally randomized genetic data to fill evidence gaps. Curr. Opin. Lipidol. 26, 566\u2013571 (2015)."
+    },
+    {
+      "key": "6388_CR90",
+      "doi": "10.1038/s41467-020-16969-0",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "AF Schmidt",
+      "unstructured": "Schmidt, A. F. et al. Genetic drug target validation using Mendelian randomisation. Nat. Commun. 11, 3255 (2020). This study provides an analytical framework on how to utilize Mendelian randomization for drug target validation."
+    },
+    {
+      "key": "6388_CR91",
+      "doi": "10.1038/s41588-020-0682-6",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2020",
+      "author": "J Zheng",
+      "unstructured": "Zheng, J. et al. Phenome-wide Mendelian randomization mapping the influence of the plasma proteome on complex diseases. Nat. Genet. 52, 1122\u20131131 (2020)."
+    },
+    {
+      "key": "6388_CR92",
+      "doi": "10.1038/s41588-021-00978-w",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2021",
+      "author": "E Ferkingstad",
+      "unstructured": "Ferkingstad, E. et al. Large-scale integration of the plasma proteome with genetics and disease. Nat. Genet. 53, 1712\u20131721 (2021). This article depicts in great depth the largest genome-wide association studies of plasma protein levels to date and describes 938 genes encoding potential drug targets with variants that influence levels of protein biomarkers."
+    },
+    {
+      "key": "6388_CR93",
+      "doi": "10.1038/ncomms12092",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "CL Miller",
+      "unstructured": "Miller, C. L. et al. Integrative functional genomics identifies regulatory mechanisms at coronary artery disease loci. Nat. Commun. 7, 12092 (2016)."
+    },
+    {
+      "key": "6388_CR94",
+      "doi": "10.1186/s13148-019-0776-0",
+      "title": "",
+      "journal": "Clin. Epigenetics",
+      "year": "2019",
+      "author": "A Ganesan",
+      "unstructured": "Ganesan, A., Arimondo, P. B., Rots, M. G., Jeronimo, C. & Berdasco, M. The timeline of epigenetic drug discovery: from reality to dreams. Clin. Epigenetics 11, 174 (2019)."
+    },
+    {
+      "key": "6388_CR95",
+      "doi": "10.1038/s41598-017-09335-6",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2017",
+      "author": "J Steinberg",
+      "unstructured": "Steinberg, J. et al. Integrative epigenomics, transcriptomics and proteomics of patient chondrocytes reveal genes and pathways involved in osteoarthritis. Sci. Rep. 7, 8935 (2017)."
+    },
+    {
+      "key": "6388_CR96",
+      "doi": "10.3390/genes11080942",
+      "title": "",
+      "journal": "Genes",
+      "year": "2020",
+      "author": "R Spreafico",
+      "unstructured": "Spreafico, R., Soriaga, L. B., Grosse, J., Virgin, H. W. & Telenti, A. Advances in genomics for drug development. Genes 11, 942 (2020)."
+    },
+    {
+      "key": "6388_CR97",
+      "doi": "10.1038/s41591-021-01281-1",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2021",
+      "author": "S Zhou",
+      "unstructured": "Zhou, S. et al. A Neanderthal OAS1 isoform protects individuals of European ancestry against COVID-19 susceptibility and severity. Nat. Med. 27, 659\u2013667 (2021)."
+    },
+    {
+      "key": "6388_CR98",
+      "doi": "10.1038/s42255-023-00742-w",
+      "title": "",
+      "journal": "Nat. Metab.",
+      "year": "2023",
+      "author": "S Yoshiji",
+      "unstructured": "Yoshiji, S. et al. Proteome-wide Mendelian randomization implicates nephronectin as an actionable mediator of the effect of obesity on COVID-19 severity. Nat. Metab. 5, 248\u2013264 (2023)."
+    },
+    {
+      "key": "6388_CR99",
+      "doi": "10.1038/s41573-022-00561-w",
+      "title": "",
+      "journal": "Nat. Rev. Drug Discov.",
+      "year": "2023",
+      "author": "KJ Carss",
+      "unstructured": "Carss, K. J. et al. Using human genetics to improve safety assessment of therapeutics. Nat. Rev. Drug Discov.\u00a022, 145\u2013162 (2023). This review discusses how genetics can be used to anticipate potential safety issues associated with a particular drug target and to de-risk clinical development."
+    },
+    {
+      "key": "6388_CR100",
+      "doi": "10.1371/journal.pone.0122271",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2015",
+      "author": "D Diogo",
+      "unstructured": "Diogo, D. et al. TYK2 protein-coding variants protect against rheumatoid arthritis and autoimmunity, with no evidence of major pleiotropic effects on non-autoimmune complex traits. PLoS ONE 10, e0122271 (2015)."
+    },
+    {
+      "key": "6388_CR101",
+      "doi": "10.1038/524503a",
+      "title": "",
+      "journal": "Nature",
+      "year": "2015",
+      "author": "V Marx",
+      "unstructured": "Marx, V. The DNA of a nation. Nature 524, 503\u2013505 (2015)."
+    },
+    {
+      "key": "6388_CR102",
+      "doi": "10.1056/nejmoa2035790",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2021",
+      "author": "100,000 Genomes Project Pilot Investigators",
+      "unstructured": "100,000 Genomes Project Pilot Investigators. 100,000 Genomes Pilot on Rare-Disease Diagnosis in Health Care\u2014preliminary report. N. Engl. J. Med. 385, 1868\u20131880 (2021)."
+    },
+    {
+      "key": "6388_CR103",
+      "doi": "10.1093/annonc/mdy054",
+      "title": "",
+      "journal": "Ann. Oncol.",
+      "year": "2018",
+      "author": "C Turnbull",
+      "unstructured": "Turnbull, C. Introducing whole-genome sequencing into routine cancer care: the Genomics England 100,000 Genomes Project. Ann. Oncol. 29, 784\u2013787 (2018)."
+    },
+    {
+      "key": "6388_CR104",
+      "doi": "10.1038/s41586-022-04576-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "A Kousathanas",
+      "unstructured": "Kousathanas, A. et al. Whole-genome sequencing reveals host factors underlying critical COVID-19. Nature 607, 97\u2013103 (2022)."
+    },
+    {
+      "key": "6388_CR105",
+      "doi": "10.1038/s41586-018-0579-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "C Bycroft",
+      "unstructured": "Bycroft, C. et al. The UK Biobank resource with deep phenotyping and genomic data. Nature 562, 203\u2013209 (2018)."
+    },
+    {
+      "key": "6388_CR106",
+      "doi": "10.1038/gim.2016.183",
+      "title": "",
+      "journal": "Genet. Med.",
+      "year": "2017",
+      "author": "PL Sankar",
+      "unstructured": "Sankar, P. L. & Parker, L. S. The Precision Medicine Initiative\u2019s All of Us research program: an agenda for research on its ethical, legal, and social issues. Genet. Med. 19, 743\u2013750 (2017)."
+    },
+    {
+      "key": "6388_CR107",
+      "doi": "10.1038/ng.3247",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2015",
+      "author": "DF Gudbjartsson",
+      "unstructured": "Gudbjartsson, D. F. et al. Large-scale whole-genome sequencing of the Icelandic population. Nat. Genet. 47, 435\u2013444 (2015)."
+    },
+    {
+      "key": "6388_CR108",
+      "doi": "10.1038/s41588-021-00931-x",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2021",
+      "author": "S Sakaue",
+      "unstructured": "Sakaue, S. et al. A cross-population atlas of genetic associations for 220 human phenotypes. Nat. Genet. 53, 1415\u20131424 (2021). This study provides an atlas of up to 220 genotype\u2013phenotype associations in non-Europeans that enriches the field with data from diverse populations."
+    },
+    {
+      "key": "6388_CR109",
+      "doi": "10.1016/j.je.2016.12.005",
+      "title": "",
+      "journal": "J. Epidemiol.",
+      "year": "2017",
+      "author": "A Nagai",
+      "unstructured": "Nagai, A. et al. Overview of the BioBank Japan Project: study design and profile. J. Epidemiol. 27, S2\u2013s8 (2017)."
+    },
+    {
+      "key": "6388_CR110",
+      "doi": "10.1093/ije/dyt268",
+      "title": "",
+      "journal": "Int. J. Epidemiol.",
+      "year": "2014",
+      "author": "L Leitsalu",
+      "unstructured": "Leitsalu, L. et al. Cohort profile: Estonian Biobank of the Estonian Genome Center, University of Tartu. Int. J. Epidemiol. 44, 1137\u20131147 (2014)."
+    },
+    {
+      "key": "6388_CR111",
+      "doi": "10.1038/s41467-020-20851-4",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2021",
+      "author": "P Gharahkhani",
+      "unstructured": "Gharahkhani, P. et al. Genome-wide meta-analysis identifies 127 open-angle glaucoma loci with consistent effect across ancestries. Nat. Commun. 12, 1258 (2021)."
+    },
+    {
+      "key": "6388_CR112",
+      "doi": "10.1371/journal.pgen.1008682",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2020",
+      "author": "Y Tanigawa",
+      "unstructured": "Tanigawa, Y. et al. Rare protein-altering variants in ANGPTL7 lower intraocular pressure and protect against glaucoma. PLoS Genet. 16, e1008682 (2020)."
+    },
+    {
+      "key": "6388_CR113",
+      "doi": "10.1126/science.abf8683",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "P Akbari",
+      "unstructured": "& Akbari, P. et al. Sequencing of 640,000 exomes identifies GPR75 variants associated with protection from obesity. Science 373, eab8683 (2021). This publication reports the discovery of loss-of-function variants in GPR75 and protection from obesity."
+    },
+    {
+      "key": "6388_CR114",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Regeneron Genetics Center discovers GPR75 gene mutations that protect against obesity. Regeneron https://investor.regeneron.com/news-releases/news-release-details/regeneron-genetics-center-discovers-gpr75-gene-mutations-protect (2021)."
+    },
+    {
+      "key": "6388_CR115",
+      "doi": "10.1056/nejmoa1712191",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2018",
+      "author": "NS Abul-Husn",
+      "unstructured": "Abul-Husn, N. S. et al. A protein-truncating HSD17B13 variant and protection from chronic liver disease. N. Engl. J. Med. 378, 1096\u20131106 (2018)."
+    },
+    {
+      "key": "6388_CR116",
+      "doi": "10.1016/j.cell.2019.02.048",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "G Sirugo",
+      "unstructured": "Sirugo, G., Williams, S. M. & Tishkoff, S. A. The missing diversity in human genetic studies. Cell 177, 26\u201331 (2019)."
+    },
+    {
+      "key": "6388_CR117",
+      "doi": "10.1038/s41588-019-0379-x",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2019",
+      "author": "AR Martin",
+      "unstructured": "Martin, A. R. et al. Clinical use of current polygenic risk scores may exacerbate health disparities. Nat. Genet. 51, 584\u2013591 (2019)."
+    },
+    {
+      "key": "6388_CR118",
+      "doi": "10.1002/cpt.61",
+      "title": "",
+      "journal": "Clin. Pharmacol. Ther.",
+      "year": "2015",
+      "author": "A Ramamoorthy",
+      "unstructured": "Ramamoorthy, A., Pacanowski, M. A., Bull, J. & Zhang, L. Racial/ethnic differences in drug disposition and response: review of recently approved drugs. Clin. Pharmacol. Ther. 97, 263\u2013273 (2015)."
+    },
+    {
+      "key": "6388_CR119",
+      "doi": "10.1038/s41576-019-0144-0",
+      "title": "",
+      "journal": "Nat. Rev. Genet.",
+      "year": "2019",
+      "author": "D Gurdasani",
+      "unstructured": "Gurdasani, D., Barroso, I., Zeggini, E. & Sandhu, M. S. Genomics of disease risk in globally diverse populations. Nat. Rev. Genet. 20, 520\u2013535 (2019)."
+    },
+    {
+      "key": "6388_CR120",
+      "doi": "10.1038/s41591-021-01672-4",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2022",
+      "author": "S Fatumo",
+      "unstructured": "Fatumo, S. et al. A roadmap to increase diversity in genomic studies. Nat. Med. 28, 243\u2013250 (2022)."
+    },
+    {
+      "key": "6388_CR121",
+      "doi": "10.1038/538161a",
+      "title": "",
+      "journal": "Nature",
+      "year": "2016",
+      "author": "AB Popejoy",
+      "unstructured": "Popejoy, A. B. & Fullerton, S. M. Genomics is failing on diversity. Nature 538, 161\u2013164 (2016)."
+    },
+    {
+      "key": "6388_CR122",
+      "doi": "10.1146/annurev-genom-091416-035517",
+      "title": "",
+      "journal": "Annu. Rev. Genomics Hum. Genet.",
+      "year": "2019",
+      "author": "SA Bien",
+      "unstructured": "Bien, S. A. et al. The future of genomic studies must be globally representative: perspectives from PAGE. Annu. Rev. Genomics Hum. Genet. 20, 181\u2013200 (2019)."
+    },
+    {
+      "key": "6388_CR123",
+      "doi": "10.1038/d41586-021-00313-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "A Wonkam",
+      "unstructured": "Wonkam, A. Sequence three million genomes across Africa. Nature 590, 209\u2013211 (2021). This commentary discusses the research benefits of analysing Africa\u2019s genetic variation andsets up a framework to sequence three million African genomes."
+    },
+    {
+      "key": "6388_CR124",
+      "doi": "10.1126/science.1251546",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "H3Africa Consortium",
+      "unstructured": "H3Africa Consortium. Research capacity. Enabling the genomic revolution in Africa. Science 344, 1346\u20131348 (2014)."
+    },
+    {
+      "key": "6388_CR125",
+      "doi": "10.1038/s41586-020-2859-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "A Choudhury",
+      "unstructured": "Choudhury, A. et al. High-depth African genomes inform human migration and health. Nature 586, 741\u2013748 (2020)."
+    },
+    {
+      "key": "6388_CR126",
+      "doi": "10.1161/circulationaha.117.033278",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2018",
+      "author": "KH Wade",
+      "unstructured": "Wade, K. H. et al. Assessing the causal role of body mass index on cardiovascular health in young adults: Mendelian randomization and recall-by-genotype analyses. Circulation 138, 2187\u20132201 (2018)."
+    },
+    {
+      "key": "6388_CR127",
+      "doi": "10.1007/s11306-020-01689-9",
+      "title": "",
+      "journal": "Metabolomics",
+      "year": "2020",
+      "author": "LJ Corbin",
+      "unstructured": "Corbin, L. J. et al. Metabolic characterisation of disturbances in the APOC3/triglyceride-rich lipoprotein pathway through sample-based recall by genotype. Metabolomics 16, 69 (2020)."
+    },
+    {
+      "key": "6388_CR128",
+      "doi": "10.1186/s12881-015-0244-4",
+      "title": "",
+      "journal": "BMC Med. Genet.",
+      "year": "2015",
+      "author": "C Hellmich",
+      "unstructured": "Hellmich, C. et al. Genetics, sleep and memory: a recall-by-genotype study of ZNF804A variants and sleep neurophysiology. BMC Med. Genet. 16, 96 (2015)."
+    },
+    {
+      "key": "6388_CR129",
+      "doi": "10.1038/s41436-018-0311-2",
+      "title": "",
+      "journal": "Genet. Med.",
+      "year": "2019",
+      "author": "M Alver",
+      "unstructured": "Alver, M. et al. Recall by genotype and cascade screening for familial hypercholesterolemia in a population-based biobank from Estonia. Genet. Med. 21, 1173\u20131180 (2019)."
+    },
+    {
+      "key": "6388_CR130",
+      "doi": "10.1038/s41431-021-00860-7",
+      "title": "",
+      "journal": "Eur. J. Hum. Genet.",
+      "year": "2021",
+      "author": "D Mascalzoni",
+      "unstructured": "Mascalzoni, D. et al. Balancing scientific interests and the rights of participants in designing a recall by genotype study. Eur. J. Hum. Genet. 29, 1146\u20131157 (2021). This article describes the best practices and policies for recall-by-genotype studies."
+    },
+    {
+      "key": "6388_CR131",
+      "doi": "10.1371/journal.pone.0245031",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2021",
+      "author": "K Tremblay",
+      "unstructured": "Tremblay, K. et al. The Biobanque quebecoise de la COVID-19 (BQC19)-A cohort to prospectively study the clinical and biological determinants of COVID-19 clinical trajectories. PLoS ONE 16, e0245031 (2021)."
+    },
+    {
+      "key": "6388_CR132",
+      "doi": "",
+      "title": "",
+      "journal": "Swiss Med. Wkly",
+      "year": "2014",
+      "author": "V Mooser",
+      "unstructured": "Mooser, V. & Currat, C. The Lausanne Institutional Biobank: a new resource to catalyse research in personalised medicine and pharmaceutical sciences. Swiss Med. Wkly 144, w14033 (2014)."
+    },
+    {
+      "key": "6388_CR133",
+      "doi": "",
+      "title": "",
+      "journal": "Swiss Med. Wkly",
+      "year": "2016",
+      "author": "F Maurer",
+      "unstructured": "Maurer, F. et al. Identification and molecular characterisation of Lausanne Institutional Biobank participants with familial hypercholesterolaemia\u2014a proof-of-concept study. Swiss Med. Wkly 146, w14326 (2016)."
+    },
+    {
+      "key": "6388_CR134",
+      "doi": "",
+      "title": "",
+      "journal": "Swiss Med. Wkly",
+      "year": "2017",
+      "author": "M Bochud",
+      "unstructured": "Bochud, M., Currat, C., Chapatte, L., Roth, C. & Mooser, V. High participation rate among 25,721 patients with broad age range in a hospital-based research project involving whole-genome sequencing\u2014the Lausanne Institutional Biobank. Swiss Med. Wkly 147, w14528 (2017)."
+    },
+    {
+      "key": "6388_CR135",
+      "doi": "10.1056/nejm198108273050902",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "1981",
+      "author": "H Mabuchi",
+      "unstructured": "Mabuchi, H. et al. Effect of an inhibitor of 3-hydroxy-3-methyglutaryl coenzyme A reductase on serum lipoproteins and ubiquinone-10-levels in patients with familial hypercholesterolemia. N. Engl. J. Med. 305, 478\u2013482 (1981)."
+    },
+    {
+      "key": "6388_CR136",
+      "doi": "10.1056/nejmoa1105185",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2011",
+      "author": "BW Ramsey",
+      "unstructured": "Ramsey, B. W. et al. A CFTR potentiator in patients with cystic fibrosis and the G551D mutation. N. Engl. J. Med. 365, 1663\u20131672 (2011)."
+    },
+    {
+      "key": "6388_CR137",
+      "doi": "10.1056/nejmoa1103782",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2011",
+      "author": "PB Chapman",
+      "unstructured": "Chapman, P. B. et al. Improved survival with vemurafenib in melanoma with BRAF V600E mutation. N. Engl. J. Med. 364, 2507\u20132516 (2011)."
+    },
+    {
+      "key": "6388_CR138",
+      "doi": "10.1001/jamaneurol.2015.4885",
+      "title": "",
+      "journal": "JAMA Neurol.",
+      "year": "2016",
+      "author": "S Mead",
+      "unstructured": "Mead, S. et al. Clinical trial simulations based on genetic stratification and the natural history of a functional outcome measure in Creutzfeldt\u2013Jakob disease. JAMA Neurol. 73, 447\u2013455 (2016)."
+    },
+    {
+      "key": "6388_CR139",
+      "doi": "10.1186/s13195-021-00927-z",
+      "title": "",
+      "journal": "Alzheimers Res. Ther.",
+      "year": "2021",
+      "author": "P van Bokhoven",
+      "unstructured": "van Bokhoven, P. et al. The Alzheimer\u2019s disease drug development landscape. Alzheimers Res. Ther. 13, 186 (2021)."
+    },
+    {
+      "key": "6388_CR140",
+      "doi": "10.1186/s13195-021-00819-2",
+      "title": "",
+      "journal": "Alzheimers Res. Ther.",
+      "year": "2021",
+      "author": "I Lopes Alves",
+      "unstructured": "Lopes Alves, I. et al. Strategies to reduce sample sizes in Alzheimer\u2019s disease primary and secondary prevention trials using longitudinal amyloid PET imaging. Alzheimers Res. Ther. 13, 82 (2021)."
+    },
+    {
+      "key": "6388_CR141",
+      "doi": "10.1038/s41467-022-30675-z",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "AC Fahed",
+      "unstructured": "Fahed, A. C., Philippakis, A. A. & Khera, A. V. The potential of polygenic scores to improve cost and efficiency of clinical trials. Nat. Commun. 13, 2922 (2022)."
+    },
+    {
+      "key": "6388_CR142",
+      "doi": "10.1161/circulationaha.119.044434",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2020",
+      "author": "A Damask",
+      "unstructured": "Damask, A. et al. Patients with high genome-wide polygenic risk scores for coronary artery disease may receive greater clinical benefit from alirocumab treatment in the ODYSSEY OUTCOMES trial. Circulation 141, 624\u2013636 (2020)."
+    },
+    {
+      "key": "6388_CR143",
+      "doi": "10.1161/circulationaha.119.043805",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2020",
+      "author": "NA Marston",
+      "unstructured": "Marston, N. A. et al. Predicting benefit from evolocumab therapy in patients with atherosclerotic disease using a genetic risk score: results from the FOURIER trial. Circulation 141, 616\u2013623 (2020). These two independent articles (refs. 142,143) show that patients with a high polygenic risk score for coronary artery disease benefit most from PCSK9 inhibition, suggesting that the selection of participants based on their genomic profile may be useful in early trials."
+    },
+    {
+      "key": "6388_CR144",
+      "doi": "10.1002/cpt.1035",
+      "title": "",
+      "journal": "Clin. Pharmacol. Ther.",
+      "year": "2018",
+      "author": "DM Roden",
+      "unstructured": "Roden, D. M. et al. Benefit of preemptive pharmacogenetic information on clinical outcome. Clin. Pharmacol. Ther. 103, 787\u2013794 (2018)."
+    },
+    {
+      "key": "6388_CR145",
+      "doi": "10.1038/s41431-019-0480-8",
+      "title": "",
+      "journal": "Eur J Hum Genet",
+      "year": "2020",
+      "author": "J Petrovi\u0107",
+      "unstructured": "Petrovi\u0107, J., Pe\u0161i\u0107, V. & Lauschke, V. M. Frequencies of clinically important CYP2C19 and CYP2D6 alleles are graded across Europe. Eur J Hum Genet 28, 88\u201394 (2020)."
+    },
+    {
+      "key": "6388_CR146",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "US Department of Health and Human Services et al. Clinical Pharmacogenomics: Premarket Evaluation in Early-Phase Clinical Studies and Recommendations for Labeling https://www.fda.gov/files/drugs/published/Clinical-Pharmacogenomics--Premarket-Evaluation-in-Early-Phase-Clinical-Studies-and-Recommendations-for-Labeling.pdf (FDA, 2013)."
+    },
+    {
+      "key": "6388_CR147",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Government Chief Scientific Adviser. Genomics Beyond Health https://www.gov.uk/government/publications/genomics-beyond-health (Government Office for Science, 2022)."
+    }
+  ]
+}

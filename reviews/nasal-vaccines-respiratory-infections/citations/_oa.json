@@ -1,0 +1,1465 @@
+{
+  "article": {
+    "slug": "s41586-025-08910-6",
+    "doi": "10.1038/s41586-025-08910-6",
+    "title": "Nasal vaccines for respiratory infections",
+    "url": "https://www.nature.com/articles/s41586-025-08910-6",
+    "abbrev": "nasal-vaccines-respiratory-infections",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/nasal-vaccines-respiratory-infections"
+  },
+  "n_refs": 154,
+  "n_with_doi": 148,
+  "n_oa": 118,
+  "records": [
+    {
+      "doi": "10.1016/j.coviro.2012.03.009",
+      "title": "",
+      "year": "2012",
+      "journal": "Curr. Opin. Virol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.2183/pjab.91.423",
+      "title": "",
+      "year": "2015",
+      "journal": "Proc. Jpn Acad. B",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jstage.jst.go.jp/article/pjab/91/8/91_PJA9108B-04/_pdf",
+      "file": "10.2183_pjab.91.423.md"
+    },
+    {
+      "doi": "10.1016/b978-0-12-811924-2.00001-8",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nri1439",
+      "title": "",
+      "year": "2004",
+      "journal": "Nat. Rev. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/nri1439.pdf",
+      "file": "10.1038_nri1439.md"
+    },
+    {
+      "doi": "10.1038/s41586-021-03738-2",
+      "title": "",
+      "year": "2021",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-021-03738-2.pdf",
+      "file": "10.1038_s41586-021-03738-2.md"
+    },
+    {
+      "doi": "10.1177/0194599820982633",
+      "title": "",
+      "year": "2021",
+      "journal": "Otolaryngol. Head Neck Surg.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.ijpharm.2021.120686",
+      "title": "",
+      "year": "2021",
+      "journal": "Int. J. Pharm.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8099545?pdf=render",
+      "file": "10.1016_j.ijpharm.2021.120686.md"
+    },
+    {
+      "doi": "10.1016/j.ebiom.2021.103788",
+      "title": "",
+      "year": "2022",
+      "journal": "eBioMedicine",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S235239642100582X/pdf",
+      "file": "10.1016_j.ebiom.2021.103788.md"
+    },
+    {
+      "doi": "10.1126/sciimmunol.add4853",
+      "title": "",
+      "year": "2022",
+      "journal": "Sci. Immunol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9348751?pdf=render",
+      "file": "10.1126_sciimmunol.add4853.md"
+    },
+    {
+      "doi": "10.1586/erv.09.61",
+      "title": "",
+      "year": "2009",
+      "journal": "Expert Rev. Vaccines",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/intimm/dxab056",
+      "title": "",
+      "year": "2021",
+      "journal": "Int. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/intimm/article-pdf/33/12/767/41323690/dxab056.pdf",
+      "file": "10.1093_intimm_dxab056.md"
+    },
+    {
+      "doi": "10.4049/jimmunol.1102243",
+      "title": "",
+      "year": "2011",
+      "journal": "J. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jimmunol.org/content/jimmunol/187/11/5510.full.pdf",
+      "file": "10.4049_jimmunol.1102243.md"
+    },
+    {
+      "doi": "10.1038/s41541-023-00665-3",
+      "title": "",
+      "year": "2023",
+      "journal": "NPJ Vaccines",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41541-023-00665-3.pdf",
+      "file": "10.1038_s41541-023-00665-3.md"
+    },
+    {
+      "doi": "10.1038/s41586-023-06937-1",
+      "title": "",
+      "year": "2024",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11040656/pdf/nihms-1983085.pdf",
+      "file": "10.1038_s41586-023-06937-1.md"
+    },
+    {
+      "doi": "10.1038/nm1213",
+      "title": "",
+      "year": "2005",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/nm1213.pdf",
+      "file": "10.1038_nm1213.md"
+    },
+    {
+      "doi": "10.1080/21645515.2022.2045853",
+      "title": "",
+      "year": "2022",
+      "journal": "Hum. Vaccin. Immunother.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.1080/21645515.2022.2045853?needAccess=true",
+      "file": "10.1080_21645515.2022.2045853.md"
+    },
+    {
+      "doi": "10.1016/j.molmed.2022.10.009",
+      "title": "",
+      "year": "2023",
+      "journal": "Trends Mol. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1080/14760584.2023.2268724",
+      "title": "",
+      "year": "2023",
+      "journal": "Expert Rev. Vaccines",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.1080/14760584.2023.2268724?download=true",
+      "file": "10.1080_14760584.2023.2268724.md"
+    },
+    {
+      "doi": "10.2174/156720112803529828",
+      "title": "",
+      "year": "2012",
+      "journal": "Curr. Drug Deliv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.eurekaselect.com/article/46400",
+      "file": "10.2174_156720112803529828.md"
+    },
+    {
+      "doi": "10.1002/path.4843",
+      "title": "",
+      "year": "2017",
+      "journal": "J. Pathol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/path.4843",
+      "file": "10.1002_path.4843.md"
+    },
+    {
+      "doi": "10.1378/chest.08-0412",
+      "title": "",
+      "year": "2009",
+      "journal": "Chest",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1248/bpb.b14-00398",
+      "title": "",
+      "year": "2015",
+      "journal": "Biol. Pharm. Bull.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jstage.jst.go.jp/article/bpb/38/4/38_b14-00398/_pdf",
+      "file": "10.1248_bpb.b14-00398.md"
+    },
+    {
+      "doi": "10.1016/j.vaccine.2015.07.022",
+      "title": "",
+      "year": "2015",
+      "journal": "Vaccine",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-024-07748-8",
+      "title": "",
+      "year": "2024",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://escholarship.org/content/qt47m919bz/qt47m919bz.pdf",
+      "file": "10.1038_s41586-024-07748-8.md"
+    },
+    {
+      "doi": "10.1111/j.1574-695x.2007.00359.x",
+      "title": "",
+      "year": "2008",
+      "journal": "FEMS Immunol. Med. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/femspd/article-pdf/52/1/2/19170123/52-1-2.pdf",
+      "file": "10.1111_j.1574-695x.2007.00359.x.md"
+    },
+    {
+      "doi": "10.4049/jimmunol.182.1.5",
+      "title": "",
+      "year": "2009",
+      "journal": "J. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.aai.org/jimmunol/article-pdf/182/1/5/1270074/zim00109000005.pdf",
+      "file": "10.4049_jimmunol.182.1.5.md"
+    },
+    {
+      "doi": "10.1111/pim.12508",
+      "title": "",
+      "year": "2018",
+      "journal": "Parasite Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.mucimm.2024.07.009",
+      "title": "",
+      "year": "2024",
+      "journal": "Mucosal Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.mucosalimmunology.org/article/S1933021924000758/pdf",
+      "file": "10.1016_j.mucimm.2024.07.009.md"
+    },
+    {
+      "doi": "10.1038/s41586-024-07729-x",
+      "title": "",
+      "year": "2024",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1080/14760584.2017.1395702",
+      "title": "",
+      "year": "2017",
+      "journal": "Expert Rev. Vaccines",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.4049/jimmunol.173.6.3668",
+      "title": "",
+      "year": "2004",
+      "journal": "J. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.aai.org/jimmunol/article-pdf/173/6/3668/1189786/3668.pdf",
+      "file": "10.4049_jimmunol.173.6.3668.md"
+    },
+    {
+      "doi": "10.1084/jem.20140625",
+      "title": "",
+      "year": "2014",
+      "journal": "J. Exp. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://rupress.org/jem/article-pdf/211/12/2397/640110/jem_20140625.pdf",
+      "file": "10.1084_jem.20140625.md"
+    },
+    {
+      "doi": "10.4049/jimmunol.122.5.1892",
+      "title": "",
+      "year": "1979",
+      "journal": "J. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.immuni.2022.08.017",
+      "title": "",
+      "year": "2022",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9649878?pdf=render",
+      "file": "10.1016_j.immuni.2022.08.017.md"
+    },
+    {
+      "doi": "10.3389/fimmu.2014.00065",
+      "title": "",
+      "year": "2014",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fimmu.2014.00065/pdf",
+      "file": "10.3389_fimmu.2014.00065.md"
+    },
+    {
+      "doi": "10.3389/fimmu.2013.00185",
+      "title": "",
+      "year": "2013",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fimmu.2013.00185/pdf",
+      "file": "10.3389_fimmu.2013.00185.md"
+    },
+    {
+      "doi": "10.3390/ijms22052284",
+      "title": "",
+      "year": "2021",
+      "journal": "Int. J. Mol. Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/1422-0067/22/5/2284/pdf?version=1614313448",
+      "file": "10.3390_ijms22052284.md"
+    },
+    {
+      "doi": "10.3389/fimmu.2013.00222",
+      "title": "",
+      "year": "2013",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fimmu.2013.00222/pdf",
+      "file": "10.3389_fimmu.2013.00222.md"
+    },
+    {
+      "doi": "10.1073/pnas.2314808120",
+      "title": "",
+      "year": "2023",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/doi/pdf/10.1073/pnas.2314808120",
+      "file": "10.1073_pnas.2314808120.md"
+    },
+    {
+      "doi": "10.1073/pnas.2315354120",
+      "title": "",
+      "year": "2024",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/doi/pdf/10.1073/pnas.2315354120",
+      "file": "10.1073_pnas.2315354120.md"
+    },
+    {
+      "doi": "10.4049/jimmunol.0903794",
+      "title": "",
+      "year": "2011",
+      "journal": "J. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.aai.org/jimmunol/article-pdf/186/7/4253/1340249/0903794.pdf",
+      "file": "10.4049_jimmunol.0903794.md"
+    },
+    {
+      "doi": "10.1038/mi.2014.135",
+      "title": "",
+      "year": "2015",
+      "journal": "Mucosal Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/mi2014135.pdf",
+      "file": "10.1038_mi.2014.135.md"
+    },
+    {
+      "doi": "10.7883/yoken.jjid.2005.195",
+      "title": "",
+      "year": "2005",
+      "journal": "Jpn J. Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jstage.jst.go.jp/article/yoken/58/4/58_JJID.2005.195/_pdf",
+      "file": "10.7883_yoken.jjid.2005.195.md"
+    },
+    {
+      "doi": "10.1126/sciimmunol.abj5129",
+      "title": "",
+      "year": "2021",
+      "journal": "Sci. Immunol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8762609?pdf=render",
+      "file": "10.1126_sciimmunol.abj5129.md"
+    },
+    {
+      "doi": "10.1016/s0264-410x(99)00334-5",
+      "title": "",
+      "year": "1999",
+      "journal": "Vaccine",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1016/s0264-410x(99)00334-5",
+      "file": "10.1016_s0264-410x_99_00334-5.md"
+    },
+    {
+      "doi": "10.1038/s41467-023-43842-7",
+      "title": "",
+      "year": "2023",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-023-43842-7.pdf",
+      "file": "10.1038_s41467-023-43842-7.md"
+    },
+    {
+      "doi": "10.1097/mlg.0b013e3180383651",
+      "title": "",
+      "year": "2007",
+      "journal": "Laryngoscope",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.22270/jddt.v2i3.163",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://jddtonline.info/index.php/jddt/article/download/163/82",
+      "file": "10.22270_jddt.v2i3.163.md"
+    },
+    {
+      "doi": "10.1016/j.copbio.2007.10.010",
+      "title": "",
+      "year": "2007",
+      "journal": "Curr. Opin. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41467-020-20228-7",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-020-20228-7.pdf",
+      "file": "10.1038_s41467-020-20228-7.md"
+    },
+    {
+      "doi": "10.3389/fmolb.2021.635337",
+      "title": "",
+      "year": "2021",
+      "journal": "Front. Mol. Biosci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/journals/molecular-biosciences/articles/10.3389/fmolb.2021.635337/pdf",
+      "file": "10.3389_fmolb.2021.635337.md"
+    },
+    {
+      "doi": "10.3390/vaccines2030624",
+      "title": "",
+      "year": "2014",
+      "journal": "Vaccines",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/2076-393X/2/3/624/pdf?version=1406618762",
+      "file": "10.3390_vaccines2030624.md"
+    },
+    {
+      "doi": "10.1126/sciadv.adj7611",
+      "title": "",
+      "year": "2023",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10599610/pdf/sciadv.adj7611.pdf",
+      "file": "10.1126_sciadv.adj7611.md"
+    },
+    {
+      "doi": "10.1016/j.imlet.2018.03.006",
+      "title": "",
+      "year": "2018",
+      "journal": "Immunol. Lett.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1128/msphere.00061-18",
+      "title": "",
+      "year": "2018",
+      "journal": "mSphere",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://msphere.asm.org/content/msph/3/3/e00061-18.full.pdf",
+      "file": "10.1128_msphere.00061-18.md"
+    },
+    {
+      "doi": "10.1016/j.ijbiomac.2021.08.232",
+      "title": "",
+      "year": "2021",
+      "journal": "Int. J. Biol. Macromol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8421092?pdf=render",
+      "file": "10.1016_j.ijbiomac.2021.08.232.md"
+    },
+    {
+      "doi": "10.1016/j.dmpk.2021.100432",
+      "title": "",
+      "year": "2022",
+      "journal": "Drug Metab. Pharmacokinet.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8585960?pdf=render",
+      "file": "10.1016_j.dmpk.2021.100432.md"
+    },
+    {
+      "doi": "10.3390/polym13071027",
+      "title": "",
+      "year": "2021",
+      "journal": "Polymers",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/2073-4360/13/7/1027/pdf?version=1617936913",
+      "file": "10.3390_polym13071027.md"
+    },
+    {
+      "doi": "10.3389/fphar.2021.757761",
+      "title": "",
+      "year": "2021",
+      "journal": "Front. Pharmacol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fphar.2021.757761/pdf",
+      "file": "10.3389_fphar.2021.757761.md"
+    },
+    {
+      "doi": "10.1177/2051013614541440",
+      "title": "",
+      "year": "2014",
+      "journal": "Ther. Adv. Vaccines",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.sagepub.com/doi/pdf/10.1177/2051013614541440",
+      "file": "10.1177_2051013614541440.md"
+    },
+    {
+      "doi": "10.1080/02652048.2022.2051626",
+      "title": "",
+      "year": "2022",
+      "journal": "J. Microencapsul.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1080/02648725.2013.801226",
+      "title": "",
+      "year": "2013",
+      "journal": "Biotechnol. Genet. Eng. Rev.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.1080/02648725.2013.801226?download=true",
+      "file": "10.1080_02648725.2013.801226.md"
+    },
+    {
+      "doi": "10.1080/21645515.2018.1461298",
+      "title": "",
+      "year": "2018",
+      "journal": "Hum. Vaccin. Immunother.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.1080/21645515.2018.1461298?needAccess=true",
+      "file": "10.1080_21645515.2018.1461298.md"
+    },
+    {
+      "doi": "10.1016/j.bbrc.2007.12.112",
+      "title": "",
+      "year": "2008",
+      "journal": "Biochem. Biophys. Res. Commun.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/bc700422s",
+      "title": "",
+      "year": "2008",
+      "journal": "Bioconjug. Chem.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nmat2784",
+      "title": "",
+      "year": "2010",
+      "journal": "Nat. Mater.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1128/iai.00240-13",
+      "title": "",
+      "year": "2013",
+      "journal": "Infect. Immun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://iai.asm.org/content/iai/81/5/1625.full.pdf",
+      "file": "10.1128_iai.00240-13.md"
+    },
+    {
+      "doi": "10.1038/mi.2015.5",
+      "title": "",
+      "year": "2015",
+      "journal": "Mucosal Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/mi20155.pdf",
+      "file": "10.1038_mi.2015.5.md"
+    },
+    {
+      "doi": "10.1016/j.vaccine.2021.04.069",
+      "title": "",
+      "year": "2021",
+      "journal": "Vaccine",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1016/j.vaccine.2021.04.069",
+      "file": "10.1016_j.vaccine.2021.04.069.md"
+    },
+    {
+      "doi": "10.3389/fimmu.2022.819859",
+      "title": "",
+      "year": "2022",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fimmu.2022.819859/pdf",
+      "file": "10.3389_fimmu.2022.819859.md"
+    },
+    {
+      "doi": "10.1128/iai.58.10.3293-3299.1990",
+      "title": "",
+      "year": "1990",
+      "journal": "Infect. Immun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://iai.asm.org/content/iai/58/10/3293.full.pdf",
+      "file": "10.1128_iai.58.10.3293-3299.1990.md"
+    },
+    {
+      "doi": "10.1016/s0264-410x(99)00530-7",
+      "title": "",
+      "year": "2000",
+      "journal": "Vaccine",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.vaccine.2014.07.108",
+      "title": "",
+      "year": "2014",
+      "journal": "Vaccine",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1403353111",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/111/14/5439.full.pdf",
+      "file": "10.1073_pnas.1403353111.md"
+    },
+    {
+      "doi": "10.1056/nejmoa1405870",
+      "title": "",
+      "year": "2015",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa1405870?articleTools=true",
+      "file": "10.1056_nejmoa1405870.md"
+    },
+    {
+      "doi": "10.1016/s0140-6736(17)30938-8",
+      "title": "",
+      "year": "2017",
+      "journal": "Lancet",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S0140673617309388/pdf",
+      "file": "10.1016_s0140-6736_17_30938-8.md"
+    },
+    {
+      "doi": "10.1016/s2214-109x(17)30344-3",
+      "title": "",
+      "year": "2017",
+      "journal": "Lancet Glob. Health",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S2214109X17303443/pdf",
+      "file": "10.1016_s2214-109x_17_30344-3.md"
+    },
+    {
+      "doi": "10.1128/msphere.00577-20",
+      "title": "",
+      "year": "2020",
+      "journal": "mSphere",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pure.amsterdamumc.nl/files/177695599/Antibody-and-local-cytokine-response-to-respiratory-syncytial-virus-infection-in-community-dwelling-older-adults.pdf",
+      "file": "10.1128_msphere.00577-20.md"
+    },
+    {
+      "doi": "10.1016/s2666-5247(23)00195-7",
+      "title": "",
+      "year": "2023",
+      "journal": "Lancet Microbe",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S2666524723001957/pdf",
+      "file": "10.1016_s2666-5247_23_00195-7.md"
+    },
+    {
+      "doi": "10.15252/emmm.201404005",
+      "title": "",
+      "year": "2014",
+      "journal": "EMBO Mol. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.15252/emmm.201404005",
+      "file": "10.15252_emmm.201404005.md"
+    },
+    {
+      "doi": "10.1038/s41541-023-00700-3",
+      "title": "",
+      "year": "2023",
+      "journal": "NPJ Vaccines",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41541-023-00700-3.pdf",
+      "file": "10.1038_s41541-023-00700-3.md"
+    },
+    {
+      "doi": "10.1002/ejlt.201400219",
+      "title": "",
+      "year": "2014",
+      "journal": "Eur. J. Lipid Sci. Technol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ejlt.201400219",
+      "file": "10.1002_ejlt.201400219.md"
+    },
+    {
+      "doi": "10.1128/jvi.01006-22",
+      "title": "",
+      "year": "2022",
+      "journal": "J. Virol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9555155?pdf=render",
+      "file": "10.1128_jvi.01006-22.md"
+    },
+    {
+      "doi": "10.1039/c6nr03256g",
+      "title": "",
+      "year": "2016",
+      "journal": "Nanoscale",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pubs.rsc.org/en/content/articlepdf/2016/nr/c6nr03256g",
+      "file": "10.1039_c6nr03256g.md"
+    },
+    {
+      "doi": "10.1021/mp200572t",
+      "title": "",
+      "year": "2012",
+      "journal": "Mol. Pharm.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3390/vaccines10111906",
+      "title": "",
+      "year": "2022",
+      "journal": "Vaccines",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/2076-393X/10/11/1906/pdf?version=1668665685",
+      "file": "10.3390_vaccines10111906.md"
+    },
+    {
+      "doi": "10.3390/molecules23020229",
+      "title": "",
+      "year": "2018",
+      "journal": "Molecules",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/1420-3049/23/2/229/pdf?version=1516870416",
+      "file": "10.3390_molecules23020229.md"
+    },
+    {
+      "doi": "10.1128/iai.71.2.726-732.2003",
+      "title": "",
+      "year": "2003",
+      "journal": "Infect. Immun.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC145378?pdf=render",
+      "file": "10.1128_iai.71.2.726-732.2003.md"
+    },
+    {
+      "doi": "10.1056/nejmoa1101245",
+      "title": "",
+      "year": "2011",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa1101245?articleTools=true",
+      "file": "10.1056_nejmoa1101245.md"
+    },
+    {
+      "doi": "10.1086/657087",
+      "title": "",
+      "year": "2010",
+      "journal": "J. Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jid/article-pdf/202/11/1649/18062015/202-11-1649.pdf",
+      "file": "10.1086_657087.md"
+    },
+    {
+      "doi": "10.1128/spectrum.04998-22",
+      "title": "",
+      "year": "2024",
+      "journal": "Microbiol. Spectr.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10923206/pdf/spectrum.04998-22.pdf",
+      "file": "10.1128_spectrum.04998-22.md"
+    },
+    {
+      "doi": "10.1126/sciimmunol.adj9285",
+      "title": "",
+      "year": "2024",
+      "journal": "Sci. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://unsworks.unsw.edu.au/bitstreams/a8fe180f-b81b-4c31-a695-ed9897c3aa6c/download",
+      "file": "10.1126_sciimmunol.adj9285.md"
+    },
+    {
+      "doi": "10.1038/s41541-022-00493-x",
+      "title": "",
+      "year": "2022",
+      "journal": "NPJ Vaccines",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41541-022-00493-x.pdf",
+      "file": "10.1038_s41541-022-00493-x.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2022.11.006",
+      "title": "",
+      "year": "2022",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867422014180/pdf",
+      "file": "10.1016_j.cell.2022.11.006.md"
+    },
+    {
+      "doi": "10.1073/pnas.2109744118",
+      "title": "",
+      "year": "2021",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8685679?pdf=render",
+      "file": "10.1073_pnas.2109744118.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.abh0755",
+      "title": "",
+      "year": "2021",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9267380?pdf=render",
+      "file": "10.1126_scitranslmed.abh0755.md"
+    },
+    {
+      "doi": "10.1038/s41590-024-01743-x",
+      "title": "",
+      "year": "2024",
+      "journal": "Nat. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41590-024-01743-x.pdf",
+      "file": "10.1038_s41590-024-01743-x.md"
+    },
+    {
+      "doi": "10.1016/j.ebiom.2022.104298",
+      "title": "",
+      "year": "2022",
+      "journal": "eBioMedicine",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S2352396422004807/pdf",
+      "file": "10.1016_j.ebiom.2022.104298.md"
+    },
+    {
+      "doi": "10.1126/sciadv.abm8563",
+      "title": "",
+      "year": "2022",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9401629?pdf=render",
+      "file": "10.1126_sciadv.abm8563.md"
+    },
+    {
+      "doi": "10.2174/156652311796150372",
+      "title": "",
+      "year": "2011",
+      "journal": "Curr. Gene Ther.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": ""
+    },
+    {
+      "doi": "10.1038/s41467-024-45348-2",
+      "title": "",
+      "year": "2024",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-024-45348-2.pdf",
+      "file": "10.1038_s41467-024-45348-2.md"
+    },
+    {
+      "doi": "10.1126/science.abo2523",
+      "title": "",
+      "year": "2022",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/cms/asset/c13a421e-d241-4d29-8a83-cc2fdef32a1a/science.abo2523.v1.pdf",
+      "file": "10.1126_science.abo2523.md"
+    },
+    {
+      "doi": "10.1038/s41586-023-06951-3",
+      "title": "",
+      "year": "2024",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-023-06951-3_reference.pdf",
+      "file": "10.1038_s41586-023-06951-3.md"
+    },
+    {
+      "doi": "10.1038/s41590-024-01951-5",
+      "title": "",
+      "year": "2024",
+      "journal": "Nat. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41590-024-01951-5.pdf",
+      "file": "10.1038_s41590-024-01951-5.md"
+    },
+    {
+      "doi": "10.1016/j.scib.2022.05.018",
+      "title": "",
+      "year": "2022",
+      "journal": "Sci. Bull.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9134758?pdf=render",
+      "file": "10.1016_j.scib.2022.05.018.md"
+    },
+    {
+      "doi": "10.3390/vaccines8040771",
+      "title": "",
+      "year": "2020",
+      "journal": "Vaccines",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/2076-393X/8/4/771/pdf?version=1608191687",
+      "file": "10.3390_vaccines8040771.md"
+    },
+    {
+      "doi": "10.1016/s0140-6736(20)31866-3",
+      "title": "",
+      "year": "2020",
+      "journal": "Lancet",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S0140673620318663/pdf",
+      "file": "10.1016_s0140-6736_20_31866-3.md"
+    },
+    {
+      "doi": "10.1128/jvi.01989-24",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC11998504?pdf=render",
+      "file": "10.1128_jvi.01989-24.md"
+    },
+    {
+      "doi": "10.1126/sciadv.abi5246",
+      "title": "",
+      "year": "2021",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC11057785?pdf=render",
+      "file": "10.1126_sciadv.abi5246.md"
+    },
+    {
+      "doi": "10.1038/s41541-022-00509-6",
+      "title": "",
+      "year": "2022",
+      "journal": "NPJ Vaccines",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41541-022-00509-6.pdf",
+      "file": "10.1038_s41541-022-00509-6.md"
+    },
+    {
+      "doi": "10.1073/pnas.2102775118",
+      "title": "",
+      "year": "2021",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8307828?pdf=render",
+      "file": "10.1073_pnas.2102775118.md"
+    },
+    {
+      "doi": "10.1016/j.ebiom.2023.104924",
+      "title": "",
+      "year": "2024",
+      "journal": "eBioMedicine",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S2352396423004905/pdf",
+      "file": "10.1016_j.ebiom.2023.104924.md"
+    },
+    {
+      "doi": "10.1016/j.tim.2022.12.008",
+      "title": "",
+      "year": "2023",
+      "journal": "Trends Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0966842X22003420/pdf",
+      "file": "10.1016_j.tim.2022.12.008.md"
+    },
+    {
+      "doi": "10.1093/infdis/jiaa415",
+      "title": "",
+      "year": "2020",
+      "journal": "J. Infect. Dis.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jid/article-pdf/222/9/1435/33828351/jiaa415.pdf",
+      "file": "10.1093_infdis_jiaa415.md"
+    },
+    {
+      "doi": "10.1038/s41564-024-01903-7",
+      "title": "",
+      "year": "2025",
+      "journal": "Nat. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41564-024-01903-7.pdf",
+      "file": "10.1038_s41564-024-01903-7.md"
+    },
+    {
+      "doi": "10.1101/2022.02.12.480188",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.biorxiv.org/content/biorxiv/early/2022/02/14/2022.02.12.480188.full.pdf",
+      "file": "10.1101_2022.02.12.480188.md"
+    },
+    {
+      "doi": "10.1021/acsnano.1c01243",
+      "title": "",
+      "year": "2021",
+      "journal": "ACS Nano",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s2213-2600(22)00087-x",
+      "title": "",
+      "year": "2022",
+      "journal": "Lancet Respir. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9122540?pdf=render",
+      "file": "10.1016_s2213-2600_22_00087-x.md"
+    },
+    {
+      "doi": "10.1016/j.ebiom.2021.103762",
+      "title": "",
+      "year": "2022",
+      "journal": "eBioMedicine",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8687884?pdf=render",
+      "file": "10.1016_j.ebiom.2021.103762.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2020.08.026",
+      "title": "",
+      "year": "2020",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867420310680/pdf",
+      "file": "10.1016_j.cell.2020.08.026.md"
+    },
+    {
+      "doi": "10.1016/j.celrep.2021.109400",
+      "title": "",
+      "year": "2021",
+      "journal": "Cell Rep.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2211124721007981/pdf",
+      "file": "10.1016_j.celrep.2021.109400.md"
+    },
+    {
+      "doi": "10.3389/fimmu.2022.836745",
+      "title": "",
+      "year": "2022",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9179012?pdf=render",
+      "file": "10.3389_fimmu.2022.836745.md"
+    },
+    {
+      "doi": "10.1016/s0140-6736(21)00234-8",
+      "title": "",
+      "year": "2021",
+      "journal": "Lancet",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.thelancet.com/article/S0140673621002348/pdf",
+      "file": "10.1016_s0140-6736_21_00234-8.md"
+    },
+    {
+      "doi": "10.3389/fbioe.2021.718753",
+      "title": "",
+      "year": "2021",
+      "journal": "Front. Bioeng. Biotechnol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fbioe.2021.718753/pdf",
+      "file": "10.3389_fbioe.2021.718753.md"
+    },
+    {
+      "doi": "10.3389/fimmu.2022.896958",
+      "title": "",
+      "year": "2022",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fimmu.2022.896958/pdf",
+      "file": "10.3389_fimmu.2022.896958.md"
+    },
+    {
+      "doi": "10.1016/j.jconrel.2016.02.043",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Control. Release",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3389/fphar.2022.974666",
+      "title": "",
+      "year": "2022",
+      "journal": "Front. Pharmacol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fphar.2022.974666/pdf",
+      "file": "10.3389_fphar.2022.974666.md"
+    },
+    {
+      "doi": "10.1021/acs.molpharmaceut.0c00170",
+      "title": "",
+      "year": "2020",
+      "journal": "Mol. Pharm.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/scitranslmed.abq0603",
+      "title": "",
+      "year": "2023",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11137749/pdf/nihms-1991139.pdf",
+      "file": "10.1126_scitranslmed.abq0603.md"
+    },
+    {
+      "doi": "10.1126/sciadv.adh1655",
+      "title": "",
+      "year": "2023",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/doi/pdf/10.1126/sciadv.adh1655?download=true",
+      "file": "10.1126_sciadv.adh1655.md"
+    },
+    {
+      "doi": "10.1038/d41586-022-02824-3",
+      "title": "",
+      "year": "2022",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/sciimmunol.add9947",
+      "title": "",
+      "year": "2022",
+      "journal": "Sci. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41577-021-00583-2",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Rev. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41577-021-00583-2.pdf",
+      "file": "10.1038_s41577-021-00583-2.md"
+    },
+    {
+      "doi": "10.2165/11206860-000000000-00000",
+      "title": "",
+      "year": "2011",
+      "journal": "Drugs",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41577-020-00434-6",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Rev. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41577-020-00434-6.pdf",
+      "file": "10.1038_s41577-020-00434-6.md"
+    },
+    {
+      "doi": "10.1038/nm1726",
+      "title": "",
+      "year": "2008",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1089/vim.2017.0026",
+      "title": "",
+      "year": "2017",
+      "journal": "Viral Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.liebertpub.com/doi/pdf/10.1089/vim.2017.0026",
+      "file": "10.1089_vim.2017.0026.md"
+    },
+    {
+      "doi": "10.1038/s41392-023-01557-7",
+      "title": "",
+      "year": "2023",
+      "journal": "Signal Transduct. Target Ther.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41392-023-01557-7.pdf",
+      "file": "10.1038_s41392-023-01557-7.md"
+    },
+    {
+      "doi": "10.1016/j.otc.2005.07.006",
+      "title": "",
+      "year": "2005",
+      "journal": "Otolaryngol. Clin. North Am.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/ar.23844",
+      "title": "",
+      "year": "2018",
+      "journal": "Anat. Rec.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://anatomypubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/ar.23844",
+      "file": "10.1002_ar.23844.md"
+    },
+    {
+      "doi": "10.1016/b978-0-323-39981-4.00015-4",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7151830?pdf=render",
+      "file": "10.1016_b978-0-323-39981-4.00015-4.md"
+    },
+    {
+      "doi": "10.1172/jci.insight.160277",
+      "title": "",
+      "year": "2022",
+      "journal": "JCI Insight",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://insight.jci.org/articles/view/160277/files/pdf",
+      "file": "10.1172_jci.insight.160277.md"
+    },
+    {
+      "doi": "10.1056/nejmoa030595",
+      "title": "",
+      "year": "2004",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa030595?articleTools=true",
+      "file": "10.1056_nejmoa030595.md"
+    },
+    {
+      "doi": "10.1136/bmj.f794",
+      "title": "",
+      "year": "2013",
+      "journal": "Brit. Med. J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.bmj.com/content/bmj/346/bmj.f794.full.pdf",
+      "file": "10.1136_bmj.f794.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0033536",
+      "title": "",
+      "year": "2012",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0033536&type=printable",
+      "file": "10.1371_journal.pone.0033536.md"
+    },
+    {
+      "doi": "10.5665/sleep.5752",
+      "title": "",
+      "year": "2016",
+      "journal": "Sleep",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/sleep/article-pdf/39/5/1051/26674287/aasm.39.5.1051.pdf",
+      "file": "10.5665_sleep.5752.md"
+    },
+    {
+      "doi": "10.1093/brain/awt187",
+      "title": "",
+      "year": "2013",
+      "journal": "Brain",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/brain/article-pdf/136/8/2486/11140176/awt187.pdf",
+      "file": "10.1093_brain_awt187.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0139368",
+      "title": "",
+      "year": "2015",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0139368&type=printable",
+      "file": "10.1371_journal.pone.0139368.md"
+    }
+  ]
+}

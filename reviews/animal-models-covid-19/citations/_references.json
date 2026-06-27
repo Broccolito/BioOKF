@@ -1,0 +1,837 @@
+{
+  "article": {
+    "slug": "s41586-020-2787-6",
+    "doi": "10.1038/s41586-020-2787-6",
+    "title": "Animal models for COVID-19",
+    "url": "https://www.nature.com/articles/s41586-020-2787-6",
+    "abbrev": "animal-models-covid-19",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/animal-models-covid-19"
+  },
+  "meta": {
+    "title": "Animal models for COVID-19",
+    "authors": [
+      "C\u00e9sar Mu\u00f1oz-Fontela",
+      "William E. Dowling",
+      "Simon G. P. Funnell",
+      "Pierre-S. Gsell",
+      "A. Ximena Riveros-Balta",
+      "Randy A. Albrecht",
+      "Hanne Andersen",
+      "Ralph S. Baric",
+      "Miles W. Carroll",
+      "Marco Cavaleri",
+      "Chuan Qin",
+      "Ian Crozier",
+      "Kai Dallmeier",
+      "Leon de Waal",
+      "Emmie de Wit",
+      "Leen Delang",
+      "Erik Dohm",
+      "W. Paul Duprex",
+      "Darryl Falzarano",
+      "Courtney L. Finch",
+      "Matthew B. Frieman",
+      "Barney S. Graham",
+      "Lisa E. Gralinski",
+      "Kate Guilfoyle",
+      "Bart L. Haagmans",
+      "Geraldine A. Hamilton",
+      "Amy L. Hartman",
+      "Sander Herfst",
+      "Suzanne J. F. Kaptein",
+      "William B. Klimstra",
+      "Ivana Knezevic",
+      "Philip R. Krause",
+      "Jens H. Kuhn",
+      "Roger Le Grand",
+      "Mark G. Lewis",
+      "Wen-Chun Liu",
+      "Pauline Maisonnasse",
+      "Anita K. McElroy",
+      "Vincent Munster",
+      "Nadia Oreshkova",
+      "Angela L. Rasmussen",
+      "Joana Rocha-Pereira",
+      "Barry Rockx",
+      "Estefan\u00eda Rodr\u00edguez",
+      "Thomas F. Rogers",
+      "Francisco J. Salguero",
+      "Michael Schotsaert",
+      "Koert J. Stittelaar",
+      "Hendrik Jan Thibaut",
+      "Chien-Te Tseng",
+      "J\u00falia Vergara-Alert",
+      "Martin Beer",
+      "Trevor Brasel",
+      "Jasper F. W. Chan",
+      "Adolfo Garc\u00eda-Sastre",
+      "Johan Neyts",
+      "Stanley Perlman",
+      "Douglas S. Reed",
+      "Juergen A. Richt",
+      "Chad J. Roy",
+      "Joaquim Segal\u00e9s",
+      "Seshadri S. Vasan",
+      "Ana Mar\u00eda Henao-Restrepo",
+      "Dan H. Barouch"
+    ],
+    "published": [
+      2020,
+      9,
+      23
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-020-2787-6",
+    "n_references": 83,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "2787_CR1",
+      "doi": "10.1016/s1473-3099(20)30243-7",
+      "title": "",
+      "journal": "Lancet Infect. Dis.",
+      "year": "2020",
+      "author": "R Verity",
+      "unstructured": "Verity, R. et al. Estimates of the severity of coronavirus disease 2019: a model-based analysis. Lancet Infect. Dis. 20, 669\u2013677 (2020)."
+    },
+    {
+      "key": "2787_CR2",
+      "doi": "10.1371/journal.ppat.1008536",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2020",
+      "author": "D Tang",
+      "unstructured": "Tang, D., Comish, P. & Kang, R. The hallmarks of COVID-19 disease. PLoS Pathog. 16, e1008536 (2020)."
+    },
+    {
+      "key": "2787_CR3",
+      "doi": "",
+      "title": "",
+      "journal": "JACC: Case Reports",
+      "year": "2020",
+      "author": "VQ Chau",
+      "unstructured": "Chau, V. Q. et al. The imperfect cytokine storm: severe COVID-19 with ARDS in a patient on durable LVAD support. JACC: Case Reports 2, 1315\u20131320 (2020)."
+    },
+    {
+      "key": "2787_CR4",
+      "doi": "10.1152/physrev.00013.2020",
+      "title": "",
+      "journal": "Physiol. Rev.",
+      "year": "2020",
+      "author": "H-L Ji",
+      "unstructured": "Ji, H.-L., Zhao, R., Matalon, S. & Matthay, M. A. Elevated plasmin(ogen) as a common risk factor for COVID-19 susceptibility. Physiol. Rev. 100, 1065\u20131075 (2020)."
+    },
+    {
+      "key": "2787_CR5",
+      "doi": "10.1038/d41587-020-00005-z",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2020",
+      "author": "J Hodgson",
+      "unstructured": "Hodgson, J. The pandemic pipeline. Nat. Biotechnol. 38, 523\u2013532 (2020)."
+    },
+    {
+      "key": "2787_CR6",
+      "doi": "10.1111/tbed.13588",
+      "title": "",
+      "journal": "Transbound. Emerg. Dis.",
+      "year": "2020",
+      "author": "DC Bauer",
+      "unstructured": "Bauer, D. C. et al. Supporting pandemic response using genomics and bioinformatics: a case study on the emergent SARS-CoV-2 outbreak. Transbound. Emerg. Dis. 67, 1453\u20131462 (2020)."
+    },
+    {
+      "key": "2787_CR7",
+      "doi": "",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2020",
+      "author": "Y Wan",
+      "unstructured": "Wan, Y., Shang, J., Graham, R., Baric, R. S. & Li, F. Receptor recognition by novel coronavirus from Wuhan: an analysis based on decade-long structural studies of SARS coronavirus. J. Virol. 94, e00127-20 (2020)."
+    },
+    {
+      "key": "2787_CR8",
+      "doi": "10.1101/2020.05.02.073411",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Gu, H. et al. Rapid adaptation of SARS-CoV-2 in BALB/c mice: novel mouse model for vaccine efficacy. Preprint at https://doi.org/10.1101/2020.05.02.073411 (2020)."
+    },
+    {
+      "key": "2787_CR9",
+      "doi": "10.1038/s41586-020-2708-8",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Dinnon, K. H. et al. A mouse-adapted model of SARS-CoV-2 to test COVID-19 countermeasures.\u00a0Nature\u00a0https://doi.org/10.1038/s41586-020-2708-8 (2020)."
+    },
+    {
+      "key": "2787_CR10",
+      "doi": "10.1128/jvi.02012-06",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2007",
+      "author": "PB McCray Jr",
+      "unstructured": "McCray, P. B. Jr et al. Lethal infection of K18-hACE2 mice infected with severe acute respiratory syndrome coronavirus. J. Virol. 81, 813\u2013821 (2007)."
+    },
+    {
+      "key": "2787_CR11",
+      "doi": "10.1128/jvi.01702-06",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2007",
+      "author": "C-TK Tseng",
+      "unstructured": "Tseng, C.-T. K. et al. Severe acute respiratory syndrome coronavirus infection of mice transgenic for the human angiotensin-converting enzyme 2 virus receptor. J. Virol. 81, 1162\u20131173 (2007)."
+    },
+    {
+      "key": "2787_CR12",
+      "doi": "10.1038/s41586-020-2312-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "L Bao",
+      "unstructured": "Bao, L. et al. The pathogenicity of SARS-CoV-2 in hACE2 transgenic mice. Nature 583, 830\u2013833 (2020). A study that shows that transgenic mice that express human ACE2 undergo severe disease after SARS-CoV-2 infection."
+    },
+    {
+      "key": "2787_CR13",
+      "doi": "10.1128/jvi.00737-08",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2008",
+      "author": "J Netland",
+      "unstructured": "Netland, J., Meyerholz, D. K., Moore, S., Cassell, M. & Perlman, S. Severe acute respiratory syndrome coronavirus infection causes neuronal death in the absence of encephalitis in mice transgenic for human ACE2. J. Virol. 82, 7264\u20137275 (2008)."
+    },
+    {
+      "key": "2787_CR14",
+      "doi": "10.1101/2020.07.06.190066",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Rathnasinghe, R. et al. Comparison of transgenic and adenovirus hACE2 mouse models for SARS-CoV-2 infection. Preprint at https://doi.org/10.1101/2020.07.06.190066 (2020)."
+    },
+    {
+      "key": "2787_CR15",
+      "doi": "10.1101/2020.07.09.196188",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Winkler, E. S. et al. SARS-CoV-2 infection in the lungs of human ACE2 transgenic mice causes severe inflammation, immune cell infiltration, and compromised respiratory function. Preprint at https://doi.org/10.1101/2020.07.09.196188 (2020)."
+    },
+    {
+      "key": "2787_CR16",
+      "doi": "10.1101/2020.08.07.242073",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Zheng, J. et al. K18-hACE2 mice for studies of COVID-19 treatments and pathogenesis including anosmia. Preprint at https://doi.org/10.1101/2020.08.07.242073 (2020)."
+    },
+    {
+      "key": "2787_CR17",
+      "doi": "10.1038/nmicrobiol.2016.226",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2017",
+      "author": "AS Cockrell",
+      "unstructured": "Cockrell, A. S. et al. A mouse model for MERS coronavirus-induced acute respiratory distress syndrome. Nat. Microbiol. 2, 16226 (2017)."
+    },
+    {
+      "key": "2787_CR18",
+      "doi": "",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2017",
+      "author": "K Li",
+      "unstructured": "Li, K. et al. Mouse-adapted MERS coronavirus causes lethal lung disease in human DPP4 knockin mice. Proc. Natl Acad. Sci. USA 114, E3119\u2013E3128 (2017)."
+    },
+    {
+      "key": "2787_CR19",
+      "doi": "10.1073/pnas.1510830112",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2015",
+      "author": "KE Pascal",
+      "unstructured": "Pascal, K. E. et al. Pre- and postexposure efficacy of fully human antibodies against Spike protein in a novel humanized mouse model of MERS-CoV infection. Proc. Natl Acad. Sci. USA 112, 8738\u20138743 (2015)."
+    },
+    {
+      "key": "2787_CR20",
+      "doi": "10.1016/j.chom.2020.05.020",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2020",
+      "author": "S-H Sun",
+      "unstructured": "Sun, S.-H. et al. A mouse model of SARS-CoV-2 infection and pathogenesis. Cell Host Microbe 28, 124\u2013133.e4 (2020)."
+    },
+    {
+      "key": "2787_CR21",
+      "doi": "10.1073/pnas.1323279111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "J Zhao",
+      "unstructured": "Zhao, J. et al. Rapid generation of a mouse model for Middle East respiratory syndrome. Proc. Natl Acad. Sci. USA 111, 4970\u20134975 (2014)."
+    },
+    {
+      "key": "2787_CR22",
+      "doi": "10.1016/j.cell.2020.06.011",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "AO Hassan",
+      "unstructured": "Hassan, A. O. et al. A SARS-CoV-2 infection model in mice demonstrates protection by neutralizing antibodies. Cell 182, 744\u2013753.e4 (2020)."
+    },
+    {
+      "key": "2787_CR23",
+      "doi": "10.1084/jem.20201241",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2020",
+      "author": "B Israelow",
+      "unstructured": "Israelow, B. et al. Mouse model of SARS-CoV-2 reveals inflammatory role of type I interferon signaling. J. Exp. Med. 217, e20201241 (2020)."
+    },
+    {
+      "key": "2787_CR24",
+      "doi": "10.1093/infdis/jix562",
+      "title": "",
+      "journal": "J. Infect. Dis.",
+      "year": "2018",
+      "author": "JR Spengler",
+      "unstructured": "Spengler, J. R. et al. Severity of disease in humanized mice infected with Ebola virus or Reston virus is associated with magnitude of early viral replication in liver. J. Infect. Dis. 217, 58\u201363 (2018)."
+    },
+    {
+      "key": "2787_CR25",
+      "doi": "10.1128/jvi.03085-13",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2014",
+      "author": "N Frias-Staheli",
+      "unstructured": "Frias-Staheli, N. et al. Utility of humanized BLT mice for analysis of dengue virus infection and antiviral drug testing. J. Virol. 88, 2205\u20132218 (2014)."
+    },
+    {
+      "key": "2787_CR26",
+      "doi": "10.1016/j.celrep.2020.01.026",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2020",
+      "author": "A Price",
+      "unstructured": "Price, A. et al. Transcriptional correlates of tolerance and lethality in mice predict Ebola virus disease patient outcomes. Cell Rep. 30, 1702\u20131713.e6 (2020)."
+    },
+    {
+      "key": "2787_CR27",
+      "doi": "10.1126/science.1259595",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "AL Rasmussen",
+      "unstructured": "Rasmussen, A. L. et al. Host genetic diversity enables Ebola hemorrhagic fever pathogenesis and resistance. Science 346, 987\u2013991 (2014)."
+    },
+    {
+      "key": "2787_CR28",
+      "doi": "10.1371/journal.pgen.1005504",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2015",
+      "author": "LE Gralinski",
+      "unstructured": "Gralinski, L. E. et al. Genome wide identification of SARS-CoV susceptibility loci using the collaborative cross. PLoS Genet. 11, e1005504 (2015)."
+    },
+    {
+      "key": "2787_CR29",
+      "doi": "10.1056/nejmoa2021680",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2020",
+      "author": "LR Feldstein",
+      "unstructured": "Feldstein, L. R. et al. Multisystem inflammatory syndrome in U.S. children and adolescents. N. Engl. J. Med. 383, 334\u2013346 (2020)."
+    },
+    {
+      "key": "2787_CR30",
+      "doi": "10.1056/nejmoa2015432",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2020",
+      "author": "M Ackermann",
+      "unstructured": "Ackermann, M. et al. Pulmonary vascular endothelialitis, thrombosis, and angiogenesis in Covid-19. N. Engl. J. Med. 383, 120\u2013128 (2020)."
+    },
+    {
+      "key": "2787_CR31",
+      "doi": "10.3389/fimmu.2019.02329",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2019",
+      "author": "J Miao",
+      "unstructured": "Miao, J., Chard, L. S., Wang, Z. & Wang, Y. Syrian hamster as an animal model for the study on infectious diseases. Front. Immunol. 10, 2329 (2019)."
+    },
+    {
+      "key": "2787_CR32",
+      "doi": "10.1128/jvi.79.1.503-511.2005",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2005",
+      "author": "A Roberts",
+      "unstructured": "Roberts, A. et al. Severe acute respiratory syndrome coronavirus infection of golden Syrian hamsters. J. Virol. 79, 503\u2013511 (2005)."
+    },
+    {
+      "key": "2787_CR33",
+      "doi": "10.1128/jvi.01693-17",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2018",
+      "author": "K Iwatsuki-Horimoto",
+      "unstructured": "Iwatsuki-Horimoto, K. et al. Syrian hamster as an animal model for the study of human influenza virus infection. J. Virol. 92, e01693-17 (2018)."
+    },
+    {
+      "key": "2787_CR34",
+      "doi": "10.1016/b978-0-12-398342-8.00003-3",
+      "title": "",
+      "journal": "Adv. Cancer Res.",
+      "year": "2012",
+      "author": "WSM Wold",
+      "unstructured": "Wold, W. S. M. & Toth, K. Chapter three \u2013 Syrian hamster as an animal model to study oncolytic adenoviruses and to evaluate the efficacy of antiviral compounds. Adv. Cancer Res. 115, 69\u201392 (2012)."
+    },
+    {
+      "key": "2787_CR35",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Chan, J. F.-W. et al. Simulation of the clinical and pathological manifestations of coronavirus disease 2019 (COVID-19) in golden Syrian hamster model: implications for disease pathogenesis and transmissibility. Clin. Infect. Dis. ciaa325 (2020)."
+    },
+    {
+      "key": "2787_CR36",
+      "doi": "10.1101/2020.04.23.056838",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Boudewijns, R. et al. STAT2 signaling as double-edged sword restricting viral dissemination but driving severe pneumonia in SARS-CoV-2 infected hamsters. Preprint at https://doi.org/10.1101/2020.04.23.056838 (2020)."
+    },
+    {
+      "key": "2787_CR37",
+      "doi": "10.3390/v12070779",
+      "title": "",
+      "journal": "Viruses",
+      "year": "2020",
+      "author": "N Osterrieder",
+      "unstructured": "Osterrieder, N. et al. Age-dependent progression of SARS-CoV-2 infection in Syrian hamsters. Viruses 12, 779 (2020)."
+    },
+    {
+      "key": "2787_CR38",
+      "doi": "10.1073/pnas.2009799117",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2020",
+      "author": "M Imai",
+      "unstructured": "Imai, M. et al. Syrian hamsters as a small animal model for SARS-CoV-2 infection and countermeasure development. Proc. Natl Acad. Sci. USA 117, 16587\u201316595 (2020)."
+    },
+    {
+      "key": "2787_CR39",
+      "doi": "10.1038/s41586-020-2342-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "SF Sia",
+      "unstructured": "Sia, S. F. et al. Pathogenesis and transmission of SARS-CoV-2 in golden hamsters. Nature 583, 834\u2013838 (2020). A comprehensive description of SARS-CoV-2 pathogenesis in the Syrian hamster model and its applicability for transmission studies."
+    },
+    {
+      "key": "2787_CR40",
+      "doi": "10.1101/2020.06.19.159053",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Kaptein, S. J. et al. Antiviral treatment of SARS-CoV-2-infected hamsters reveals a weak effect of favipiravir and a complete lack of effect for hydroxychloroquine. Preprint at https://doi.org/10.1101/2020.06.19.159053 (2020)."
+    },
+    {
+      "key": "2787_CR41",
+      "doi": "10.1101/2020.07.07.191775",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Driouich, J.-S. et al. Favipiravir and severe acute respiratory syndrome coronavirus 2 in hamster model. Preprint at https://doi.org/10.1101/2020.07.07.191775 (2020)."
+    },
+    {
+      "key": "2787_CR42",
+      "doi": "10.1101/2020.07.08.193045",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Sanchez-Felipe, L. et al. A single-dose live-attenuated YF17D-vectored SARS-CoV2 vaccine candidate. Preprint at https://doi.org/10.1101/2020.07.08.193045 (2020)."
+    },
+    {
+      "key": "2787_CR43",
+      "doi": "10.1126/science.abc7520",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "TF Rogers",
+      "unstructured": "Rogers, T. F. et al. Isolation of potent SARS-CoV-2 neutralizing antibodies and protection from disease in a small animal model. Science 369, 956\u2013963 (2020)."
+    },
+    {
+      "key": "2787_CR44",
+      "doi": "10.1016/j.virol.2015.03.017",
+      "title": "",
+      "journal": "Virology",
+      "year": "2015",
+      "author": "T Enkirch",
+      "unstructured": "Enkirch, T. & von Messling, V. Ferret models of viral pathogenesis. Virology 479\u2013480, 259\u2013270 (2015)."
+    },
+    {
+      "key": "2787_CR45",
+      "doi": "10.1038/d41586-020-00698-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "E Callaway",
+      "unstructured": "Callaway, E. Labs rush to study coronavirus in transgenic animals \u2014\u00a0some are in short supply. Nature 579, 183 (2020)."
+    },
+    {
+      "key": "2787_CR46",
+      "doi": "10.1016/j.cell.2020.04.026",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "D Blanco-Melo",
+      "unstructured": "Blanco-Melo, D. et al. Imbalanced host response to SARS-CoV-2 drives development of COVID-19. Cell 181, 1036\u20131045.e9 (2020). A comparative pathogenesis study that compares host immune responses and pathophysiology hallmarks of SARS-CoV-2 infections in several animal models."
+    },
+    {
+      "key": "2787_CR47",
+      "doi": "10.1016/j.chom.2020.03.023",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2020",
+      "author": "Y-I Kim",
+      "unstructured": "Kim, Y.-I. et al. Infection and rapid transmission of SARS-CoV-2 in ferrets. Cell Host Microbe 27, 704\u2013709.e2 (2020)."
+    },
+    {
+      "key": "2787_CR48",
+      "doi": "10.1101/2020.05.29.123810",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Ryan, K. A. et al. Dose-dependent response to infection with SARS-CoV-2 in the ferret model: evidence of protection to re-challenge. Preprint at https://doi.org/10.1101/2020.05.29.123810 (2020)."
+    },
+    {
+      "key": "2787_CR49",
+      "doi": "10.2139/ssrn.3578792",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Schlottau, K. et al. Experimental transmission studies of SARS-CoV-2 in fruit bats, ferrets, pigs and chickens. Preprint at https://ssrn.com/abstract=3578792 (2020)."
+    },
+    {
+      "key": "2787_CR50",
+      "doi": "10.1126/science.abb7015",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "J Shi",
+      "unstructured": "Shi, J. et al. Susceptibility of ferrets, cats, dogs, and other domesticated animals to SARS-coronavirus 2. Science 368, 1016\u20131020 (2020). The infection profile of SARS-CoV-2 in ferrets as well as other species, with implications for public health."
+    },
+    {
+      "key": "2787_CR51",
+      "doi": "10.1038/s41467-020-17367-2",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "M Richard",
+      "unstructured": "Richard, M. et al. SARS-CoV-2 is transmitted via contact and via the air between ferrets. Nat. Commun. 11, 3496 (2020)."
+    },
+    {
+      "key": "2787_CR52",
+      "doi": "10.1038/s41586-020-2324-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "VJ Munster",
+      "unstructured": "Munster, V. J. et al. Respiratory disease in rhesus macaques inoculated with SARS-CoV-2. Nature 585, 268\u2013272 (2020). The pathogenesis of SARS-CoV-2 infection in the rhesus macaque model."
+    },
+    {
+      "key": "2787_CR53",
+      "doi": "10.1126/science.abb7314",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "B Rockx",
+      "unstructured": "Rockx, B. et al. Comparative pathogenesis of COVID-19, MERS, and SARS in a nonhuman primate model. Science 368, 1012\u20131015 (2020). The comparative pathogenesis of SARS-CoV-2 and other highly pathogenic coronaviruses in the non-human primate model."
+    },
+    {
+      "key": "2787_CR54",
+      "doi": "10.1126/science.abc4776",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "A Chandrashekar",
+      "unstructured": "Chandrashekar, A. et al. SARS-CoV-2 infection protects against rechallenge in rhesus macaques. Science 369, 812\u2013817 (2020). This study provides evidence that natural infection protects against SARS-CoV-2 rechallenge in non-human primates."
+    },
+    {
+      "key": "2787_CR55",
+      "doi": "10.1101/2020.05.14.096727",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Finch, C. L. et al. Characteristic and quantifiable COVID-19-like abnormalities in CT- and PET/CT-imaged lungs of SARS-CoV-2-infected crab-eating macaques (Macaca fascicularis). Preprint at https://doi.org/10.1101/2020.05.14.096727 (2020)."
+    },
+    {
+      "key": "2787_CR56",
+      "doi": "10.1002/ame2.12108",
+      "title": "",
+      "journal": "Animal Model. Exp. Med.",
+      "year": "2020",
+      "author": "P Yu",
+      "unstructured": "Yu, P. et al. Age-related rhesus macaque models of COVID-19. Animal Model. Exp. Med. 3, 93\u201397 (2020)."
+    },
+    {
+      "key": "2787_CR57",
+      "doi": "10.1126/science.abc6284",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "J Yu",
+      "unstructured": "Yu, J. et al. DNA vaccine protection against SARS-CoV-2 in rhesus macaques. Science 369, 806\u2013811 (2020)."
+    },
+    {
+      "key": "2787_CR58",
+      "doi": "10.1126/science.abc1932",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "Q Gao",
+      "unstructured": "Gao, Q. et al. Development of an inactivated vaccine candidate for SARS-CoV-2. Science 369, 77\u201381 (2020)."
+    },
+    {
+      "key": "2787_CR59",
+      "doi": "10.1038/s41586-020-2607-z",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Mercado, N. B. et al. Single-shot Ad26 vaccine protects against SARS-CoV-2 in rhesus macaques. Nature https://doi.org/10.1038/s41586-020-2607-z (2020)."
+    },
+    {
+      "key": "2787_CR60",
+      "doi": "10.1038/s41586-020-2608-y",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "van Doremalen, N. et al. ChAdOx1 nCoV-19 vaccine prevents SARS-CoV-2 pneumonia in rhesus macaques. Nature https://doi.org/10.1038/s41586-020-2608-y (2020)."
+    },
+    {
+      "key": "2787_CR61",
+      "doi": "10.1056/nejmoa2024671",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Corbett, K. S. et al. Evaluation of the mRNA-1273 vaccine against SARS-CoV-2 in nonhuman primates. N. Engl. J. Med.\u00a0https://doi.org/10.1056/NEJMoa2024671 (2020)."
+    },
+    {
+      "key": "2787_CR62",
+      "doi": "10.1016/j.virusres.2007.03.012",
+      "title": "",
+      "journal": "Virus Res.",
+      "year": "2008",
+      "author": "Z Shi",
+      "unstructured": "Shi, Z. & Hu, Z. A review of studies on animal reservoirs of the SARS coronavirus. Virus Res. 133, 74\u201387 (2008)."
+    },
+    {
+      "key": "2787_CR63",
+      "doi": "10.1128/jcm.42.7.3196-3206.2004",
+      "title": "",
+      "journal": "J. Clin. Microbiol.",
+      "year": "2004",
+      "author": "L Gillim-Ross",
+      "unstructured": "Gillim-Ross, L. et al. Discovery of novel human and animal cells infected by the severe acute respiratory syndrome coronavirus by replication-specific multiplex reverse transcription-PCR. J. Clin. Microbiol. 42, 3196\u20133206 (2004)."
+    },
+    {
+      "key": "2787_CR64",
+      "doi": "10.2807/1560-7917.es.2020.25.23.2001005",
+      "title": "",
+      "journal": "Euro Surveill.",
+      "year": "2020",
+      "author": "N Oreshkova",
+      "unstructured": "Oreshkova, N. et al. SARS-CoV-2 infection in farmed minks, the Netherlands, April and May 2020. Euro Surveill. 25, 1016 (2020)."
+    },
+    {
+      "key": "2787_CR65",
+      "doi": "10.1056/nejmc2013400",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2020",
+      "author": "PJ Halfmann",
+      "unstructured": "Halfmann, P. J. et al. Transmission of SARS-CoV-2 in domestic cats. N. Engl. J. Med. 383, 592\u2013594 (2020)."
+    },
+    {
+      "key": "2787_CR66",
+      "doi": "10.1101/2020.05.28.120998",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Bosco-Lauth, A. M. et al. Pathogenesis, transmission and response to re-exposure of SARS-CoV-2 in domestic cats. Preprint at https://doi.org/10.1101/2020.05.28.120998 (2020)."
+    },
+    {
+      "key": "2787_CR67",
+      "doi": "10.3201/eid1103.040824",
+      "title": "",
+      "journal": "Emerg. Infect. Dis.",
+      "year": "2005",
+      "author": "W Chen",
+      "unstructured": "Chen, W. et al. SARS-associated coronavirus transmitted from human to pig. Emerg. Infect. Dis. 11, 446\u2013448 (2005)."
+    },
+    {
+      "key": "2787_CR68",
+      "doi": "10.3201/eid1002.030677",
+      "title": "",
+      "journal": "Emerg. Infect. Dis.",
+      "year": "2004",
+      "author": "HM Weingartl",
+      "unstructured": "Weingartl, H. M. et al. Susceptibility of pigs and chickens to SARS coronavirus. Emerg. Infect. Dis. 10, 179\u2013184 (2004)."
+    },
+    {
+      "key": "2787_CR69",
+      "doi": "10.1038/s41586-018-0010-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "P Zhou",
+      "unstructured": "Zhou, P. et al. Fatal swine acute diarrhoea syndrome caused by an HKU2-related coronavirus of bat origin. Nature 556, 255\u2013258 (2018)."
+    },
+    {
+      "key": "2787_CR70",
+      "doi": "10.12688/f1000research.22149.3",
+      "title": "",
+      "journal": "F1000Res.",
+      "year": "2020",
+      "author": "V Veljkovic",
+      "unstructured": "Veljkovic, V., Vergara-Alert, J., Segal\u00e9s, J. & Paessler, S. Use of the informational spectrum methodology for rapid biological analysis of the novel coronavirus 2019-nCoV: prediction of potential receptor, natural reservoir, tropism and therapeutic/vaccine target. F1000Res. 9, 52 (2020)."
+    },
+    {
+      "key": "2787_CR71",
+      "doi": "10.2807/1560-7917.es.2020.25.25.2001122",
+      "title": "",
+      "journal": "Euro Surveill.",
+      "year": "2020",
+      "author": "IG Barr",
+      "unstructured": "Barr, I. G., Rynehart, C., Whitney, P. & Druce, J. SARS-CoV-2 does not replicate in embryonated hen\u2019s eggs or in MDCK cell lines. Euro Surveill. 25, 737 (2020)."
+    },
+    {
+      "key": "2787_CR72",
+      "doi": "10.3201/eid1005.030827",
+      "title": "",
+      "journal": "Emerg. Infect. Dis.",
+      "year": "2004",
+      "author": "DE Swayne",
+      "unstructured": "Swayne, D. E. et al. Domestic poultry and SARS coronavirus, southern China. Emerg. Infect. Dis. 10, 914\u2013916 (2004)."
+    },
+    {
+      "key": "2787_CR73",
+      "doi": "10.1038/nm.3985",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2015",
+      "author": "VD Menachery",
+      "unstructured": "Menachery, V. D. et al. A SARS-like cluster of circulating bat coronaviruses shows potential for human emergence. Nat. Med. 21, 1508\u20131513 (2015)."
+    },
+    {
+      "key": "2787_CR74",
+      "doi": "10.1073/pnas.1517719113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "VD Menachery",
+      "unstructured": "Menachery, V. D. et al. SARS-like WIV1-CoV poised for human emergence. Proc. Natl Acad. Sci. USA 113, 3048\u20133053 (2016)."
+    },
+    {
+      "key": "2787_CR75",
+      "doi": "10.1126/science.1118391",
+      "title": "",
+      "journal": "Science",
+      "year": "2005",
+      "author": "W Li",
+      "unstructured": "Li, W. et al. Bats are natural reservoirs of SARS-like coronaviruses. Science 310, 676\u2013679 (2005)."
+    },
+    {
+      "key": "2787_CR76",
+      "doi": "10.1038/s41591-020-0820-9",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2020",
+      "author": "KG Andersen",
+      "unstructured": "Andersen, K. G., Rambaut, A., Lipkin, W. I., Holmes, E. C. & Garry, R. F. The proximal origin of SARS-CoV-2. Nat. Med. 26, 450\u2013452 (2020)."
+    },
+    {
+      "key": "2787_CR77",
+      "doi": "10.3390/v10120727",
+      "title": "",
+      "journal": "Viruses",
+      "year": "2018",
+      "author": "N van Doremalen",
+      "unstructured": "van Doremalen, N. et al. SARS-like coronavirus WIV1-CoV does not replicate in Egyptian fruit bats (Rousettus aegyptiacus). Viruses 10, 727 (2018)."
+    },
+    {
+      "key": "2787_CR78",
+      "doi": "10.1101/2020.05.05.079095",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Han, Y. et al. Identification of candidate COVID-19 therapeutics using hPSC-derived lung organoids. Preprint at https://doi.org/10.1101/2020.05.05.079095 (2020)."
+    },
+    {
+      "key": "2787_CR79",
+      "doi": "10.1101/2020.04.13.039917",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Si, L. et al. Human organs-on-chips as tools for repurposing approved drugs as potential influenza and COVID19 therapeutics in viral pandemics. Preprint at https://doi.org/10.1101/2020.04.13.039917 (2020)."
+    },
+    {
+      "key": "2787_CR80",
+      "doi": "10.1128/jvi.00831-20",
+      "title": "",
+      "journal": "J. Virol.",
+      "year": "2020",
+      "author": "X Zhai",
+      "unstructured": "Zhai, X. et al. Comparison of severe acute respiratory syndrome coronavirus 2 spike protein binding to ACE2 receptors from human, pets, farm animals, and putative intermediate hosts. J. Virol. 94, 1199 (2020)."
+    },
+    {
+      "key": "2787_CR81",
+      "doi": "10.1073/pnas.2010146117",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2020",
+      "author": "J Damas",
+      "unstructured": "Damas, J. et al. Broad host range of SARS-CoV-2 predicted by comparative and structural analysis of ACE2 in vertebrates. Proc. Natl Acad. Sci. USA 117, 22311\u201322322 (2020)."
+    },
+    {
+      "key": "2787_CR82",
+      "doi": "10.1038/s41586-020-2423-5",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "BN Williamson",
+      "unstructured": "Williamson, B. N. et al. Clinical benefit of remdesivir in rhesus macaques infected with SARS-CoV-2. Nature 585, 273\u2013276 (2020)."
+    },
+    {
+      "key": "2787_CR83",
+      "doi": "10.1126/science.abb8923",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "BS Graham",
+      "unstructured": "Graham, B. S. Rapid COVID-19 vaccine development. Science 368, 945\u2013946 (2020)."
+    }
+  ]
+}

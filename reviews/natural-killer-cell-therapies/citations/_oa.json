@@ -1,0 +1,1553 @@
+{
+  "article": {
+    "slug": "s41586-023-06945-1",
+    "doi": "10.1038/s41586-023-06945-1",
+    "title": "Natural killer cell therapies",
+    "url": "https://www.nature.com/articles/s41586-023-06945-1",
+    "abbrev": "natural-killer-cell-therapies",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/natural-killer-cell-therapies"
+  },
+  "n_refs": 160,
+  "n_with_doi": 158,
+  "n_oa": 116,
+  "records": [
+    {
+      "doi": "10.1093/jnci/51.5.1509",
+      "title": "",
+      "year": "1973",
+      "journal": "J. Natl Cancer Inst.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.4049/jimmunol.111.6.1862",
+      "title": "",
+      "year": "1973",
+      "journal": "J. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/eji.1830050208",
+      "title": "",
+      "year": "1975",
+      "journal": "Eur. J. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/eji.1830050209",
+      "title": "",
+      "year": "1975",
+      "journal": "Eur. J. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1198687",
+      "title": "",
+      "year": "2011",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3089969?pdf=render",
+      "file": "10.1126_science.1198687.md"
+    },
+    {
+      "doi": "10.1038/nri3365",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Rev. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2018.07.017",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867418309115/pdf",
+      "file": "10.1016_j.cell.2018.07.017.md"
+    },
+    {
+      "doi": "10.7554/elife.01659",
+      "title": "",
+      "year": "2014",
+      "journal": "eLife",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3975579?pdf=render",
+      "file": "10.7554_elife.01659.md"
+    },
+    {
+      "doi": "10.1002/1521-4141(200205)32:5<1205::aid-immu1205>3.0.co;2-y",
+      "title": "",
+      "year": "2002",
+      "journal": "Eur. J. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/1521-4141%28200205%2932%3A5%3C1205%3A%3AAID-IMMU1205%3E3.0.CO%3B2-Y",
+      "file": "10.1002_1521-4141_200205_32_5_1205__aid-immu1205_3.0.co_2-y.md"
+    },
+    {
+      "doi": "10.1038/ni0102-6",
+      "title": "",
+      "year": "2002",
+      "journal": "Nat. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/ni1582",
+      "title": "",
+      "year": "2008",
+      "journal": "Nat. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ni1582.pdf",
+      "file": "10.1038_ni1582.md"
+    },
+    {
+      "doi": "10.1038/nrc.2015.5",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Rev. Cancer",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.immuni.2017.10.008",
+      "title": "",
+      "year": "2017",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761317304624/pdf",
+      "file": "10.1016_j.immuni.2017.10.008.md"
+    },
+    {
+      "doi": "10.1073/pnas.2308511120",
+      "title": "",
+      "year": "2023",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10623016/pdf/pnas.202308511.pdf",
+      "file": "10.1073_pnas.2308511120.md"
+    },
+    {
+      "doi": "10.4049/jimmunol.136.12.4480",
+      "title": "",
+      "year": "1986",
+      "journal": "J. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.immuni.2018.09.009",
+      "title": "",
+      "year": "2018",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761318304242/pdf",
+      "file": "10.1016_j.immuni.2018.09.009.md"
+    },
+    {
+      "doi": "10.21203/rs.3.rs-3870228/v1",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.researchsquare.com/article/rs-3870228/latest.pdf",
+      "file": "10.21203_rs.3.rs-3870228_v1.md"
+    },
+    {
+      "doi": "10.4049/jimmunol.1303211",
+      "title": "",
+      "year": "2014",
+      "journal": "J. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jimmunol.org/content/jimmunol/192/10/4492.full.pdf",
+      "file": "10.4049_jimmunol.1303211.md"
+    },
+    {
+      "doi": "10.1182/blood-2010-04-282301",
+      "title": "",
+      "year": "2010",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2981540?pdf=render",
+      "file": "10.1182_blood-2010-04-282301.md"
+    },
+    {
+      "doi": "10.1073/pnas.1110900108",
+      "title": "",
+      "year": "2011",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature07665",
+      "title": "",
+      "year": "2009",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2674434?pdf=render",
+      "file": "10.1038_nature07665.md"
+    },
+    {
+      "doi": "10.1073/pnas.0813192106",
+      "title": "",
+      "year": "2009",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2644138?pdf=render",
+      "file": "10.1073_pnas.0813192106.md"
+    },
+    {
+      "doi": "10.1111/j.0105-2896.2010.00891.x",
+      "title": "",
+      "year": "2010",
+      "journal": "Immunol. Rev.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2907109?pdf=render",
+      "file": "10.1111_j.0105-2896.2010.00891.x.md"
+    },
+    {
+      "doi": "10.1016/j.immuni.2015.02.013",
+      "title": "",
+      "year": "2015",
+      "journal": "Immunity",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.immuni.2015.02.008",
+      "title": "",
+      "year": "2015",
+      "journal": "Immunity",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41590-022-01327-7",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41590-022-01327-7.pdf",
+      "file": "10.1038_s41590-022-01327-7.md"
+    },
+    {
+      "doi": "10.1073/pnas.2016580118",
+      "title": "",
+      "year": "2021",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7980282?pdf=render",
+      "file": "10.1073_pnas.2016580118.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2023.07.034",
+      "title": "",
+      "year": "2023",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1016/j.cell.2023.07.034",
+      "file": "10.1016_j.cell.2023.07.034.md"
+    },
+    {
+      "doi": "10.1038/ni.3482",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://escholarship.org/content/qt97d3m4w4/qt97d3m4w4.pdf",
+      "file": "10.1038_ni.3482.md"
+    },
+    {
+      "doi": "10.1038/ni.3809",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/ni.3800",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41590-022-01213-2",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Immunol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9202504?pdf=render",
+      "file": "10.1038_s41590-022-01213-2.md"
+    },
+    {
+      "doi": "10.1073/pnas.2306761120",
+      "title": "",
+      "year": "2023",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pasteur.hal.science/pasteur-04632857/document",
+      "file": "10.1073_pnas.2306761120.md"
+    },
+    {
+      "doi": "10.1016/j.xcrm.2022.100812",
+      "title": "",
+      "year": "2022",
+      "journal": "Cell Rep. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.cell.com/cell-reports-medicine/pdf/S2666-3791(22)00371-8.pdf",
+      "file": "10.1016_j.xcrm.2022.100812.md"
+    },
+    {
+      "doi": "10.1084/jem.20190490",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Exp. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://rupress.org/jem/article-pdf/216/8/1762/1173267/jem_20190490.pdf",
+      "file": "10.1084_jem.20190490.md"
+    },
+    {
+      "doi": "10.1016/j.smim.2020.101424",
+      "title": "",
+      "year": "2021",
+      "journal": "Semin. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.immuni.2019.01.012",
+      "title": "",
+      "year": "2019",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1074761319300354/pdf",
+      "file": "10.1016_j.immuni.2019.01.012.md"
+    },
+    {
+      "doi": "10.1038/s41577-021-00558-3",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Rev. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41577-021-00558-3.pdf",
+      "file": "10.1038_s41577-021-00558-3.md"
+    },
+    {
+      "doi": "10.1126/science.1103478",
+      "title": "",
+      "year": "2004",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1600-065x.2008.00660.x",
+      "title": "",
+      "year": "2008",
+      "journal": "Immunol. Rev.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2587243?pdf=render",
+      "file": "10.1111_j.1600-065x.2008.00660.x.md"
+    },
+    {
+      "doi": "10.1038/nature03884",
+      "title": "",
+      "year": "2005",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1352168?pdf=render",
+      "file": "10.1038_nature03884.md"
+    },
+    {
+      "doi": "10.1038/nri2604",
+      "title": "",
+      "year": "2009",
+      "journal": "Nat. Rev. Immunol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3017432?pdf=render",
+      "file": "10.1038_nri2604.md"
+    },
+    {
+      "doi": "10.1126/science.285.5428.727",
+      "title": "",
+      "year": "1999",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-023-05912-0",
+      "title": "",
+      "year": "2023",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10165876/pdf/nihms-1895409.pdf",
+      "file": "10.1038_s41586-023-05912-0.md"
+    },
+    {
+      "doi": "10.1084/jem.20090681",
+      "title": "",
+      "year": "2009",
+      "journal": "J. Exp. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://rupress.org/jem/article-pdf/206/7/1495/1200762/jem_20090681.pdf",
+      "file": "10.1084_jem.20090681.md"
+    },
+    {
+      "doi": "10.1038/s41577-022-00732-1",
+      "title": "",
+      "year": "2023",
+      "journal": "Nat. Rev. Immunol.",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1038/s41577-022-00732-1",
+      "file": "10.1038_s41577-022-00732-1.md"
+    },
+    {
+      "doi": "10.1038/ni1581",
+      "title": "",
+      "year": "2008",
+      "journal": "Nat. Immunol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2669298?pdf=render",
+      "file": "10.1038_ni1581.md"
+    },
+    {
+      "doi": "10.1038/s41571-020-0426-7",
+      "title": "",
+      "year": "2021",
+      "journal": "Nat. Rev. Clin. Oncol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8316981?pdf=render",
+      "file": "10.1038_s41571-020-0426-7.md"
+    },
+    {
+      "doi": "10.1038/s41568-022-00491-0",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Rev. Cancer",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41568-022-00491-0.pdf",
+      "file": "10.1038_s41568-022-00491-0.md"
+    },
+    {
+      "doi": "10.1182/blood-2007-01-070656",
+      "title": "",
+      "year": "2007",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ashpublications.org/blood/article-pdf/110/7/2561/483298/zh801907002561.pdf",
+      "file": "10.1182_blood-2007-01-070656.md"
+    },
+    {
+      "doi": "10.1242/jcs.258570",
+      "title": "",
+      "year": "2021",
+      "journal": "J. Cell Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.biologists.com/jcs/article-pdf/134/7/jcs258570/2026316/jcs258570.pdf",
+      "file": "10.1242_jcs.258570.md"
+    },
+    {
+      "doi": "10.1016/j.ejcb.2010.10.006",
+      "title": "",
+      "year": "2011",
+      "journal": "Eur. J. Cell Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature11824",
+      "title": "",
+      "year": "2013",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": ""
+    },
+    {
+      "doi": "10.1016/j.cell.2023.03.006",
+      "title": "",
+      "year": "2023",
+      "journal": "Cell",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-023-06243-w",
+      "title": "",
+      "year": "2023",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12522170/pdf/nihms-2110220.pdf",
+      "file": "10.1038_s41586-023-06243-w.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1593-5",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.immuni.2023.07.018",
+      "title": "",
+      "year": "2023",
+      "journal": "Immunity",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S107476132300331X/pdf",
+      "file": "10.1016_j.immuni.2023.07.018.md"
+    },
+    {
+      "doi": "10.1016/j.ccell.2017.06.009",
+      "title": "",
+      "year": "2017",
+      "journal": "Cancer Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S153561081730260X/pdf",
+      "file": "10.1016_j.ccell.2017.06.009.md"
+    },
+    {
+      "doi": "10.1016/j.ccell.2023.01.001",
+      "title": "",
+      "year": "2023",
+      "journal": "Cancer Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1535610823000016/pdf",
+      "file": "10.1016_j.ccell.2023.01.001.md"
+    },
+    {
+      "doi": "10.1038/s41586-021-03614-z",
+      "title": "",
+      "year": "2021",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": ""
+    },
+    {
+      "doi": "10.1016/j.cell.2018.01.004",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867418300394/pdf",
+      "file": "10.1016_j.cell.2018.01.004.md"
+    },
+    {
+      "doi": "10.1038/s41591-018-0085-8",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Med.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/scitranslmed.abm9043",
+      "title": "",
+      "year": "2022",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": ""
+    },
+    {
+      "doi": "10.1182/blood-2009-05-222190",
+      "title": "",
+      "year": "2010",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ashpublications.org/blood/article-pdf/115/21/4293/1488952/zh802110004293.pdf",
+      "file": "10.1182_blood-2009-05-222190.md"
+    },
+    {
+      "doi": "10.3389/fimmu.2017.00465",
+      "title": "",
+      "year": "2017",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fimmu.2017.00465/pdf",
+      "file": "10.3389_fimmu.2017.00465.md"
+    },
+    {
+      "doi": "10.3389/fimmu.2021.636568",
+      "title": "",
+      "year": "2021",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fimmu.2021.636568/pdf",
+      "file": "10.3389_fimmu.2021.636568.md"
+    },
+    {
+      "doi": "10.1038/319675a0",
+      "title": "",
+      "year": "1986",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1600-065x.1997.tb00943.x",
+      "title": "",
+      "year": "1997",
+      "journal": "Immunol. Rev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1385/ir:32:1-3:317",
+      "title": "",
+      "year": "2005",
+      "journal": "Immunol. Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nri1570",
+      "title": "",
+      "year": "2005",
+      "journal": "Nat. Rev. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2018.10.014",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1016/j.cell.2018.10.014",
+      "file": "10.1016_j.cell.2018.10.014.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2018.10.028",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867418313813/pdf",
+      "file": "10.1016_j.cell.2018.10.028.md"
+    },
+    {
+      "doi": "10.1182/blood-2003-01-0273",
+      "title": "",
+      "year": "2003",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ashpublications.org/blood/article-pdf/102/6/2130/1690289/h81803002130.pdf",
+      "file": "10.1182_blood-2003-01-0273.md"
+    },
+    {
+      "doi": "10.1084/jem.176.2.327",
+      "title": "",
+      "year": "1992",
+      "journal": "J. Exp. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://jem.rupress.org/content/jem/176/2/327.full.pdf",
+      "file": "10.1084_jem.176.2.327.md"
+    },
+    {
+      "doi": "10.1002/eji.200526090",
+      "title": "",
+      "year": "2005",
+      "journal": "Eur. J. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1172/jci125916",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Clin. Invest.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.94.11.5744",
+      "title": "",
+      "year": "1997",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC20850?pdf=render",
+      "file": "10.1073_pnas.94.11.5744.md"
+    },
+    {
+      "doi": "10.1002/1521-4141(200208)32:8<2255::aid-immu2255>3.0.co;2-a",
+      "title": "",
+      "year": "2002",
+      "journal": "Eur. J. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/1521-4141%28200208%2932%3A8%3C2255%3A%3AAID-IMMU2255%3E3.0.CO%3B2-A",
+      "file": "10.1002_1521-4141_200208_32_8_2255__aid-immu2255_3.0.co_2-a.md"
+    },
+    {
+      "doi": "10.1016/j.jaut.2020.102504",
+      "title": "",
+      "year": "2020",
+      "journal": "J. Autoimmun.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1158/2326-6066.cir-14-0150",
+      "title": "",
+      "year": "2015",
+      "journal": "Cancer Immunol. Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aacrjournals.org/cancerimmunolres/article-pdf/3/4/412/2347785/412.pdf",
+      "file": "10.1158_2326-6066.cir-14-0150.md"
+    },
+    {
+      "doi": "10.1038/leu.2017.226",
+      "title": "",
+      "year": "2018",
+      "journal": "Leukemia",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3390/cancers13092112",
+      "title": "",
+      "year": "2021",
+      "journal": "Cancers",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/2072-6694/13/9/2112/pdf?version=1619578536",
+      "file": "10.3390_cancers13092112.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2018.11.010",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3389/fimmu.2020.00167",
+      "title": "",
+      "year": "2020",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7031489?pdf=render",
+      "file": "10.3389_fimmu.2020.00167.md"
+    },
+    {
+      "doi": "10.1182/blood-2011-11-392951",
+      "title": "",
+      "year": "2012",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ashpublications.org/blood/article-pdf/119/16/3734/1476342/zh801612003734.pdf",
+      "file": "10.1182_blood-2011-11-392951.md"
+    },
+    {
+      "doi": "10.1158/2326-6066.cir-17-0708",
+      "title": "",
+      "year": "2018",
+      "journal": "Cancer Immunol. Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aacrjournals.org/cancerimmunolres/article-pdf/6/6/685/2352689/685.pdf",
+      "file": "10.1158_2326-6066.cir-17-0708.md"
+    },
+    {
+      "doi": "10.1158/2326-6066.cir-13-0171",
+      "title": "",
+      "year": "2014",
+      "journal": "Cancer Immunol. Res.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4046278?pdf=render",
+      "file": "10.1158_2326-6066.cir-13-0171.md"
+    },
+    {
+      "doi": "10.1016/j.intimp.2015.09.017",
+      "title": "",
+      "year": "2015",
+      "journal": "Int. Immunopharmacol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.3389/fonc.2022.739976",
+      "title": "",
+      "year": "2022",
+      "journal": "Front. Oncol",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8913933?pdf=render",
+      "file": "10.3389_fonc.2022.739976.md"
+    },
+    {
+      "doi": "10.3390/cancers11060877",
+      "title": "",
+      "year": "2019",
+      "journal": "Cancers",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/2072-6694/11/6/877/pdf?version=1561275423",
+      "file": "10.3390_cancers11060877.md"
+    },
+    {
+      "doi": "10.1158/2159-8290.cd-20-1248",
+      "title": "",
+      "year": "2021",
+      "journal": "Cancer Discov.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aacrjournals.org/cancerdiscovery/article-pdf/11/5/1040/3102129/1040.pdf",
+      "file": "10.1158_2159-8290.cd-20-1248.md"
+    },
+    {
+      "doi": "10.1038/s41590-018-0132-0",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.4049/jimmunol.1900985",
+      "title": "",
+      "year": "2019",
+      "journal": "J. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.jimmunol.org/content/jimmunol/203/12/3126.full.pdf",
+      "file": "10.4049_jimmunol.1900985.md"
+    },
+    {
+      "doi": "10.3390/cancers12103041",
+      "title": "",
+      "year": "2020",
+      "journal": "Cancers",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/2072-6694/12/10/3041/pdf?version=1603276459",
+      "file": "10.3390_cancers12103041.md"
+    },
+    {
+      "doi": "10.1074/jbc.m202069200",
+      "title": "",
+      "year": "2002",
+      "journal": "J. Biol. Chem.",
+      "is_oa": true,
+      "kind": "doi",
+      "link": "https://doi.org/10.1074/jbc.m202069200",
+      "file": "10.1074_jbc.m202069200.md"
+    },
+    {
+      "doi": "10.1158/1078-0432.ccr-06-1335",
+      "title": "",
+      "year": "2007",
+      "journal": "Clin. Cancer Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aacrjournals.org/clincancerres/article-pdf/13/6/1875/1975057/1875.pdf",
+      "file": "10.1158_1078-0432.ccr-06-1335.md"
+    },
+    {
+      "doi": "10.1007/s13238-017-0473-8",
+      "title": "",
+      "year": "2018",
+      "journal": "Protein Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://link.springer.com/content/pdf/10.1007/s13238-017-0473-8.pdf",
+      "file": "10.1007_s13238-017-0473-8.md"
+    },
+    {
+      "doi": "10.1182/blood-2014-12-614636",
+      "title": "",
+      "year": "2015",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ashpublications.org/blood/article-pdf/125/26/4024/1386739/4024.pdf",
+      "file": "10.1182_blood-2014-12-614636.md"
+    },
+    {
+      "doi": "10.1158/1078-0432.ccr-13-0505",
+      "title": "",
+      "year": "2013",
+      "journal": "Clin. Cancer Res.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3715574?pdf=render",
+      "file": "10.1158_1078-0432.ccr-13-0505.md"
+    },
+    {
+      "doi": "10.1158/1535-7163.mct-12-0692",
+      "title": "",
+      "year": "2012",
+      "journal": "Mol. Cancer Ther.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1182/blood-2013-10-533398",
+      "title": "",
+      "year": "2014",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4014844?pdf=render",
+      "file": "10.1182_blood-2013-10-533398.md"
+    },
+    {
+      "doi": "10.1158/1078-0432.ccr-15-2710",
+      "title": "",
+      "year": "2016",
+      "journal": "Clin. Cancer Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://clincancerres.aacrjournals.org/content/clincanres/22/14/3440.full.pdf",
+      "file": "10.1158_1078-0432.ccr-15-2710.md"
+    },
+    {
+      "doi": "10.4143/crt.2016.491",
+      "title": "",
+      "year": "2017",
+      "journal": "Cancer Res. Treat.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.e-crt.org/upload/pdf/crt-2016-491.pdf",
+      "file": "10.4143_crt.2016.491.md"
+    },
+    {
+      "doi": "10.1158/2326-6066.cir-19-0837",
+      "title": "",
+      "year": "2020",
+      "journal": "Cancer Immunol. Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aacrjournals.org/cancerimmunolres/article-pdf/8/9/1139/2343370/1139.pdf",
+      "file": "10.1158_2326-6066.cir-19-0837.md"
+    },
+    {
+      "doi": "10.1097/01.hs9.0000845360.01071.5e",
+      "title": "",
+      "year": "2022",
+      "journal": "HemaSphere",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://doaj.org/article/6c71c19570f646e9aa0a918d0c54458c",
+      "file": "10.1097_01.hs9.0000845360.01071.5e.md"
+    },
+    {
+      "doi": "10.1182/blood-2012-04-425397",
+      "title": "",
+      "year": "2013",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3643761?pdf=render",
+      "file": "10.1182_blood-2012-04-425397.md"
+    },
+    {
+      "doi": "10.1182/blood-2007-07-100057",
+      "title": "",
+      "year": "2008",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ashpublications.org/blood/article-pdf/111/7/3571/1484436/zh800708003571.pdf",
+      "file": "10.1182_blood-2007-07-100057.md"
+    },
+    {
+      "doi": "10.1158/2326-6066.cir-17-0649",
+      "title": "",
+      "year": "2018",
+      "journal": "Cancer Immunol. Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://cancerimmunolres.aacrjournals.org/content/canimm/6/7/776.full.pdf",
+      "file": "10.1158_2326-6066.cir-17-0649.md"
+    },
+    {
+      "doi": "10.1080/2162402x.2020.1854529",
+      "title": "",
+      "year": "2020",
+      "journal": "Oncoimmunology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.1080/2162402X.2020.1854529?needAccess=true",
+      "file": "10.1080_2162402x.2020.1854529.md"
+    },
+    {
+      "doi": "10.1200/jco.2023.41.16_suppl.2508",
+      "title": "",
+      "year": "2023",
+      "journal": "J. Clin. Oncol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1182/blood-2005-05-2177",
+      "title": "",
+      "year": "2006",
+      "journal": "Blood",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1097/cji.0000000000000320",
+      "title": "",
+      "year": "2020",
+      "journal": "J. Immunother.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2019.04.041",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S009286741930460X/pdf",
+      "file": "10.1016_j.cell.2019.04.041.md"
+    },
+    {
+      "doi": "10.1084/jem.188.5.953",
+      "title": "",
+      "year": "1998",
+      "journal": "J. Exp. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://rupress.org/jem/article-pdf/188/5/953/1117597/953.pdf",
+      "file": "10.1084_jem.188.5.953.md"
+    },
+    {
+      "doi": "10.1073/pnas.0609692104",
+      "title": "",
+      "year": "2007",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1805551?pdf=render",
+      "file": "10.1073_pnas.0609692104.md"
+    },
+    {
+      "doi": "10.1038/s41587-022-01626-2",
+      "title": "",
+      "year": "2023",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41587-022-01626-2.pdf",
+      "file": "10.1038_s41587-022-01626-2.md"
+    },
+    {
+      "doi": "10.1158/2326-6066.cir-21-0843",
+      "title": "",
+      "year": "2022",
+      "journal": "Cancer Immunol. Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aacrjournals.org/cancerimmunolres/article-pdf/10/3/291/3223847/291.pdf",
+      "file": "10.1158_2326-6066.cir-21-0843.md"
+    },
+    {
+      "doi": "10.1016/j.xcrm.2022.100783",
+      "title": "",
+      "year": "2022",
+      "journal": "Cell Rep. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S266637912200338X/pdf",
+      "file": "10.1016_j.xcrm.2022.100783.md"
+    },
+    {
+      "doi": "10.1016/j.annonc.2022.07.882",
+      "title": "",
+      "year": "2022",
+      "journal": "Ann. Oncol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1097/01.hs9.0000846252.68296.03",
+      "title": "",
+      "year": "2022",
+      "journal": "HemaSphere",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9429495?pdf=render",
+      "file": "10.1097_01.hs9.0000846252.68296.03.md"
+    },
+    {
+      "doi": "10.1084/jem.190.10.1505",
+      "title": "",
+      "year": "1999",
+      "journal": "J. Exp. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://rupress.org/jem/article-pdf/190/10/1505/1122866/99-1172.pdf",
+      "file": "10.1084_jem.190.10.1505.md"
+    },
+    {
+      "doi": "10.1111/bph.15222",
+      "title": "",
+      "year": "2020",
+      "journal": "Br. J. Pharmacol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/bph.15222",
+      "file": "10.1111_bph.15222.md"
+    },
+    {
+      "doi": "10.3389/fimmu.2022.898745",
+      "title": "",
+      "year": "2022",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fimmu.2022.898745/pdf",
+      "file": "10.3389_fimmu.2022.898745.md"
+    },
+    {
+      "doi": "10.1080/2162402x.2014.1001224",
+      "title": "",
+      "year": "2015",
+      "journal": "Oncoimmunology",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.1080/2162402X.2014.1001224?needAccess=true",
+      "file": "10.1080_2162402x.2014.1001224.md"
+    },
+    {
+      "doi": "10.1182/blood.2022016200",
+      "title": "",
+      "year": "2023",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ashpublications.org/blood/article-pdf/141/8/856/2036461/blood_bld-2022-016200-c-main.pdf",
+      "file": "10.1182_blood.2022016200.md"
+    },
+    {
+      "doi": "10.1053/j.seminhematol.2023.02.002",
+      "title": "",
+      "year": "2023",
+      "journal": "Semin. Hematol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.xcrm.2022.100508",
+      "title": "",
+      "year": "2022",
+      "journal": "Cell Rep. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2666379122000015/pdf",
+      "file": "10.1016_j.xcrm.2022.100508.md"
+    },
+    {
+      "doi": "10.1126/sciadv.add6997",
+      "title": "",
+      "year": "2023",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.science.org/doi/pdf/10.1126/sciadv.add6997?download=true",
+      "file": "10.1126_sciadv.add6997.md"
+    },
+    {
+      "doi": "10.3390/cancers10110423",
+      "title": "",
+      "year": "2018",
+      "journal": "Cancers",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/2072-6694/10/11/423/pdf?version=1541413111",
+      "file": "10.3390_cancers10110423.md"
+    },
+    {
+      "doi": "10.3389/fimmu.2022.884648",
+      "title": "",
+      "year": "2022",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fimmu.2022.884648/pdf",
+      "file": "10.3389_fimmu.2022.884648.md"
+    },
+    {
+      "doi": "10.1016/j.it.2016.09.005",
+      "title": "",
+      "year": "2016",
+      "journal": "Trends Immunol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5135622?pdf=render",
+      "file": "10.1016_j.it.2016.09.005.md"
+    },
+    {
+      "doi": "10.1158/1078-0432.ccr-21-0164",
+      "title": "",
+      "year": "2021",
+      "journal": "Clin. Cancer Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aacrjournals.org/clincancerres/article-pdf/27/13/3744/3086576/3744.pdf",
+      "file": "10.1158_1078-0432.ccr-21-0164.md"
+    },
+    {
+      "doi": "10.1172/jci154334",
+      "title": "",
+      "year": "2022",
+      "journal": "J. Clin. Invest.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9151697?pdf=render",
+      "file": "10.1172_jci154334.md"
+    },
+    {
+      "doi": "10.1016/j.jcyt.2016.02.006",
+      "title": "",
+      "year": "2016",
+      "journal": "Cytotherapy",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://stars.library.ucf.edu/scopus2015/3479",
+      "file": "10.1016_j.jcyt.2016.02.006.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0030264",
+      "title": "",
+      "year": "2012",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0030264&type=printable",
+      "file": "10.1371_journal.pone.0030264.md"
+    },
+    {
+      "doi": "10.3389/fimmu.2022.861681",
+      "title": "",
+      "year": "2022",
+      "journal": "Front. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fimmu.2022.861681/pdf",
+      "file": "10.3389_fimmu.2022.861681.md"
+    },
+    {
+      "doi": "10.3390/cancers15061743",
+      "title": "",
+      "year": "2023",
+      "journal": "Cancers",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/2072-6694/15/6/1743/pdf?version=1678711610",
+      "file": "10.3390_cancers15061743.md"
+    },
+    {
+      "doi": "10.1002/eji.202250103",
+      "title": "",
+      "year": "2023",
+      "journal": "Eur. J. Immunol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/eji.202250103",
+      "file": "10.1002_eji.202250103.md"
+    },
+    {
+      "doi": "10.1186/s12943-022-01672-z",
+      "title": "",
+      "year": "2022",
+      "journal": "Mol. Cancer",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://molecular-cancer.biomedcentral.com/counter/pdf/10.1186/s12943-022-01672-z",
+      "file": "10.1186_s12943-022-01672-z.md"
+    },
+    {
+      "doi": "10.1158/1078-0432.ccr-18-3183",
+      "title": "",
+      "year": "2019",
+      "journal": "Clin. Cancer Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://clincancerres.aacrjournals.org/content/clincanres/25/14/4400.full.pdf",
+      "file": "10.1158_1078-0432.ccr-18-3183.md"
+    },
+    {
+      "doi": "10.1136/jitc-2019-000246",
+      "title": "",
+      "year": "2020",
+      "journal": "J. Immunother. Cancer",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://jitc.bmj.com/content/jitc/8/1/e000246.full.pdf",
+      "file": "10.1136_jitc-2019-000246.md"
+    },
+    {
+      "doi": "10.1016/j.stem.2020.05.008",
+      "title": "",
+      "year": "2020",
+      "journal": "Cell Stem Cell",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7415618?pdf=render",
+      "file": "10.1016_j.stem.2020.05.008.md"
+    },
+    {
+      "doi": "10.1182/blood.2020007748",
+      "title": "",
+      "year": "2021",
+      "journal": "Blood",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://ashpublications.org/blood/article-pdf/137/5/624/1798880/bloodbld2020007748.pdf",
+      "file": "10.1182_blood.2020007748.md"
+    },
+    {
+      "doi": "10.1038/s41467-018-04719-2",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-018-04719-2.pdf",
+      "file": "10.1038_s41467-018-04719-2.md"
+    },
+    {
+      "doi": "10.1016/j.omtm.2018.12.009",
+      "title": "",
+      "year": "2019",
+      "journal": "Mol. Ther. Methods Clin. Dev.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2329050118301335/pdf",
+      "file": "10.1016_j.omtm.2018.12.009.md"
+    },
+    {
+      "doi": "10.1007/s12185-021-03209-4",
+      "title": "",
+      "year": "2021",
+      "journal": "Int. J. Hematol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8397867?pdf=render",
+      "file": "10.1007_s12185-021-03209-4.md"
+    },
+    {
+      "doi": "10.1056/nejmoa1910607",
+      "title": "",
+      "year": "2020",
+      "journal": "N. Engl. J. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nejm.org/doi/pdf/10.1056/NEJMoa1910607?articleTools=true",
+      "file": "10.1056_nejmoa1910607.md"
+    },
+    {
+      "doi": "10.3390/cancers14174229",
+      "title": "",
+      "year": "2022",
+      "journal": "Cancers",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/2072-6694/14/17/4229/pdf?version=1662016041",
+      "file": "10.3390_cancers14174229.md"
+    },
+    {
+      "doi": "10.1016/j.cytogfr.2020.06.005",
+      "title": "",
+      "year": "2020",
+      "journal": "Cytokine Growth Factor Rev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aas9090",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6711172?pdf=render",
+      "file": "10.1126_science.aas9090.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2022.03.030",
+      "title": "",
+      "year": "2022",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9097966?pdf=render",
+      "file": "10.1016_j.cell.2022.03.030.md"
+    },
+    {
+      "doi": "10.1126/sciadv.abh4050",
+      "title": "",
+      "year": "2022",
+      "journal": "Sci. Adv.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8942354?pdf=render",
+      "file": "10.1126_sciadv.abh4050.md"
+    },
+    {
+      "doi": "10.1038/ni.3470",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Immunol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41467-022-35127-2",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-022-35127-2.pdf",
+      "file": "10.1038_s41467-022-35127-2.md"
+    },
+    {
+      "doi": "10.1126/scitranslmed.ade3341",
+      "title": "",
+      "year": "2023",
+      "journal": "Sci. Transl. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10859734/pdf/nihms-1956869.pdf",
+      "file": "10.1126_scitranslmed.ade3341.md"
+    },
+    {
+      "doi": "10.1093/jleuko/qiad026",
+      "title": "",
+      "year": "2023",
+      "journal": "J. Leukocyte Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/jleukbio/article-pdf/113/5/518/50172137/qiad026.pdf",
+      "file": "10.1093_jleuko_qiad026.md"
+    },
+    {
+      "doi": "10.1158/2159-8290.cd-21-1683",
+      "title": "",
+      "year": "2022",
+      "journal": "Cancer Discov.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9262817?pdf=render",
+      "file": "10.1158_2159-8290.cd-21-1683.md"
+    },
+    {
+      "doi": "10.1016/j.xcrm.2020.100003",
+      "title": "",
+      "year": "2020",
+      "journal": "Cell Rep. Med.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S2666379120300033/pdf",
+      "file": "10.1016_j.xcrm.2020.100003.md"
+    }
+  ]
+}

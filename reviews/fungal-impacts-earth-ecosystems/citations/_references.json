@@ -1,0 +1,1400 @@
+{
+  "article": {
+    "slug": "s41586-024-08419-4",
+    "doi": "10.1038/s41586-024-08419-4",
+    "title": "Fungal impacts on Earth\u2019s ecosystems",
+    "url": "https://www.nature.com/articles/s41586-024-08419-4",
+    "abbrev": "fungal-impacts-earth-ecosystems",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/fungal-impacts-earth-ecosystems"
+  },
+  "meta": {
+    "title": "Fungal impacts on Earth\u2019s ecosystems",
+    "authors": [
+      "Nicola T. Case",
+      "Sarah J. Gurr",
+      "Matthew C. Fisher",
+      "David S. Blehert",
+      "Charles Boone",
+      "Arturo Casadevall",
+      "Anuradha Chowdhary",
+      "Christina A. Cuomo",
+      "Cameron R. Currie",
+      "David W. Denning",
+      "Iuliana V. Ene",
+      "Lillian K. Fritz-Laylin",
+      "Aleeza C. Gerstein",
+      "Neil A. R. Gow",
+      "Asiya Gusa",
+      "Iliyan D. Iliev",
+      "Timothy Y. James",
+      "Hailing Jin",
+      "Regine Kahmann",
+      "Bruce S. Klein",
+      "James W. Kronstad",
+      "Kyla S. Ost",
+      "Kabir G. Peay",
+      "Rebecca S. Shapiro",
+      "Donald C. Sheppard",
+      "Neta Shlezinger",
+      "Jason E. Stajich",
+      "Eva H. Stukenbrock",
+      "John W. Taylor",
+      "Gerard D. Wright",
+      "Leah E. Cowen",
+      "Joseph Heitman",
+      "Julia A. Segre"
+    ],
+    "published": [
+      2025,
+      2,
+      5
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-024-08419-4",
+    "n_references": 149,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "8419_CR1",
+      "doi": "10.1128/microbiolspec.funk-0052-2016",
+      "title": "",
+      "journal": "Microbiol. Spectr.",
+      "year": "2017",
+      "author": "DL Hawksworth",
+      "unstructured": "Hawksworth, D. L. & L\u00fccking, R. Fungal diversity revisited: 2.2 to 3.8 million species. Microbiol. Spectr. 5, FUNK-0052-2016 (2017)."
+    },
+    {
+      "key": "8419_CR2",
+      "doi": "10.1007/978-3-031-29199-9_10",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Baldrian, P., Kohout, P. & V\u011btrovsk\u00fd, T. in Evolution of Fungi and Fungal-Like Organisms (eds. P\u00f6ggeler, S. & James, T.) 227\u2013238 (Springer, 2023)."
+    },
+    {
+      "key": "8419_CR3",
+      "doi": "10.1146/annurev-environ-112621-090937",
+      "title": "",
+      "journal": "Annu. Rev. Environ. Resour.",
+      "year": "2023",
+      "author": "T Niskanen",
+      "unstructured": "Niskanen, T. et al. Pushing the frontiers of biodiversity research: unveiling the global diversity, distribution, and conservation of fungi. Annu. Rev. Environ. Resour. 48, 149\u2013176 (2023)."
+    },
+    {
+      "key": "8419_CR4",
+      "doi": "10.1111/nph.14976",
+      "title": "",
+      "journal": "New Phytol.",
+      "year": "2018",
+      "author": "MC Brundrett",
+      "unstructured": "Brundrett, M. C. & Tedersoo, L. Evolutionary history of mycorrhizal symbioses and global host plant diversity. New Phytol. 220, 1108\u20131115 (2018)."
+    },
+    {
+      "key": "8419_CR5",
+      "doi": "10.1128/mbio.00212-10",
+      "title": "",
+      "journal": "mBio",
+      "year": "2010",
+      "author": "A Bergman",
+      "unstructured": "Bergman, A. & Casadevall, A. Mammalian endothermy optimally restricts fungi and metabolic costs. mBio 1, e00212-10 (2010)."
+    },
+    {
+      "key": "8419_CR6",
+      "doi": "10.1016/s1473-3099(23)00692-8",
+      "title": "",
+      "journal": "Lancet Infect. Dis.",
+      "year": "2024",
+      "author": "DW Denning",
+      "unstructured": "Denning, D. W. Global incidence and mortality of severe fungal disease. Lancet Infect. Dis. 24, e428\u2013e438 (2024)."
+    },
+    {
+      "key": "8419_CR7",
+      "doi": "10.1016/b978-0-323-91140-5.00001-4",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Lilleskov, E. A., Kuyper, T. W., Bidartondo, M. I. & Hobbie, E. A. in Atmospheric Nitrogen Deposition to Global Forests (eds. Du, E. & de Vries, W.) 95\u2013118 (Academic, 2024)."
+    },
+    {
+      "key": "8419_CR8",
+      "doi": "10.1016/j.mib.2022.102233",
+      "title": "",
+      "journal": "Curr. Opin. Microbiol.",
+      "year": "2022",
+      "author": "MM Raza",
+      "unstructured": "Raza, M. M. & Bebber, D. P. Climate change and plant pathogens. Curr. Opin. Microbiol. 70, 102233 (2022)."
+    },
+    {
+      "key": "8419_CR9",
+      "doi": "10.1016/s2542-5196(22)00202-9",
+      "title": "",
+      "journal": "Lancet Planet. Health",
+      "year": "2022",
+      "author": "JR Head",
+      "unstructured": "Head, J. R. et al. Effects of precipitation, heat, and drought on incidence and expansion of coccidioidomycosis in western USA: a longitudinal surveillance study. Lancet Planet. Health 6, e793\u2013e803 (2022)."
+    },
+    {
+      "key": "8419_CR10",
+      "doi": "10.1111/jbi.13802",
+      "title": "",
+      "journal": "J. Biogeogr.",
+      "year": "2020",
+      "author": "BS Steidinger",
+      "unstructured": "Steidinger, B. S. et al. Ectomycorrhizal fungal diversity predicted to substantially decline due to climate changes in North American Pinaceae forests. J. Biogeogr. 47, 772\u2013782 (2020)."
+    },
+    {
+      "key": "8419_CR11",
+      "doi": "10.1111/geb.13684",
+      "title": "",
+      "journal": "Glob. Ecol. Biogeogr.",
+      "year": "2023",
+      "author": "C Qin",
+      "unstructured": "Qin, C., Pellitier, P. T., Van Nuland, M. E., Peay, K. G. & Zhu, K. Niche modelling predicts that soil fungi occupy a precarious climate in boreal forests. Glob. Ecol. Biogeogr. 32, 1127\u20131139 (2023)."
+    },
+    {
+      "key": "8419_CR12",
+      "doi": "10.1038/s41564-023-01514-8",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2023",
+      "author": "ME Van Nuland",
+      "unstructured": "Van Nuland, M. E. et al. Above- and belowground fungal biodiversity of Populus trees on a continental scale. Nat. Microbiol. 8, 2406\u20132419 (2023)."
+    },
+    {
+      "key": "8419_CR13",
+      "doi": "10.1086/644642",
+      "title": "",
+      "journal": "J. Infect. Dis.",
+      "year": "2009",
+      "author": "VA Robert",
+      "unstructured": "Robert, V. A. & Casadevall, A. Vertebrate endothermy restricts most fungi as potential pathogens. J. Infect. Dis. 200, 1623\u20131626 (2009)."
+    },
+    {
+      "key": "8419_CR14",
+      "doi": "10.1016/s2666-5247(24)00039-9",
+      "title": "",
+      "journal": "Lancet Microbe",
+      "year": "2024",
+      "author": "D Seidel",
+      "unstructured": "Seidel, D. et al. Impact of climate change and natural disasters on fungal infections. Lancet Microbe 5, e594\u2013e605 (2024)."
+    },
+    {
+      "key": "8419_CR15",
+      "doi": "10.1128/mbio.00061-10",
+      "title": "",
+      "journal": "mBio",
+      "year": "2010",
+      "author": "MA Garcia-Solache",
+      "unstructured": "Garcia-Solache, M. A. & Casadevall, A. Global warming will bring new fungal diseases for mammals. mBio 1, e00061-10 (2010)."
+    },
+    {
+      "key": "8419_CR16",
+      "doi": "10.1111/ina.13039",
+      "title": "",
+      "journal": "Indoor Air",
+      "year": "2022",
+      "author": "T Salthammer",
+      "unstructured": "Salthammer, T. et al. A holistic modeling framework for estimating the influence of climate change on indoor air quality. Indoor Air 32, e13039 (2022)."
+    },
+    {
+      "key": "8419_CR17",
+      "doi": "10.1016/j.eclinm.2022.101801",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Awaab Ishak and the politics of mould in the UK. eClinicalMedicine 54, 101801 (2022)."
+    },
+    {
+      "key": "8419_CR18",
+      "doi": "10.1097/jom.0000000000002928",
+      "title": "",
+      "journal": "J. Occup. Environ. Med.",
+      "year": "2023",
+      "author": "Y Li",
+      "unstructured": "Li, Y. et al. Impact of Hurricane Harvey on inpatient asthma hospitalization visits within southeast Texas, 2016\u20132019. J. Occup. Environ. Med. 65, 924\u2013930 (2023)."
+    },
+    {
+      "key": "8419_CR19",
+      "doi": "10.1093/ofid/ofad093",
+      "title": "",
+      "journal": "Open Forum Infect. Dis.",
+      "year": "2023",
+      "author": "M Toda",
+      "unstructured": "Toda, M. et al. Invasive mold infections following Hurricane Harvey\u2014Houston, Texas. Open Forum Infect. Dis. 10, ofad093 (2023)."
+    },
+    {
+      "key": "8419_CR20",
+      "doi": "10.1186/s12889-020-8424-3",
+      "title": "",
+      "journal": "BMC Public Health",
+      "year": "2020",
+      "author": "R Mulchandani",
+      "unstructured": "Mulchandani, R. et al. The English National Cohort Study of Flooding & Health: psychological morbidity at three years of follow up. BMC Public Health 20, 321 (2020)."
+    },
+    {
+      "key": "8419_CR21",
+      "doi": "10.1128/microbiolspec.funk-0023-2016",
+      "title": "",
+      "journal": "Microbiol. Spectr.",
+      "year": "2017",
+      "author": "G Doehlemann",
+      "unstructured": "Doehlemann, G., \u00d6kmen, B., Zhu, W. & Sharon, A. Plant pathogenic fungi. Microbiol. Spectr. 5, FUNK-0023-2016 (2017)."
+    },
+    {
+      "key": "8419_CR22",
+      "doi": "10.1038/d41586-023-01465-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "E Stukenbrock",
+      "unstructured": "Stukenbrock, E. & Gurr, S. Address the growing urgency of fungal disease in crops. Nature 617, 31\u201334 (2023)."
+    },
+    {
+      "key": "8419_CR23",
+      "doi": "10.1126/science.aap7999",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "MC Fisher",
+      "unstructured": "Fisher, M. C., Hawkins, N. J., Sanglard, D. & Gurr, S. J. Worldwide emergence of resistance to antifungal drugs challenges human health and food security. Science 360, 739\u2013742 (2018)."
+    },
+    {
+      "key": "8419_CR24",
+      "doi": "10.1073/pnas.2020230118",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2021",
+      "author": "MT Robey",
+      "unstructured": "Robey, M. T., Caesar, L. K., Drott, M. T., Keller, N. P. & Kelleher, N. L. An interpreted atlas of biosynthetic gene clusters from 1,000 fungal genomes. Proc. Natl Acad. Sci. USA 118, e2020230118 (2021). Comprehensive characterization of the biosynthetic potential of fungi to produce natural products."
+    },
+    {
+      "key": "8419_CR25",
+      "doi": "10.3390/jof8080772",
+      "title": "",
+      "journal": "J. Fungi",
+      "year": "2022",
+      "author": "AH Ekanayaka",
+      "unstructured": "Ekanayaka, A. H. et al. A review of the fungi that degrade plastic. J. Fungi 8, 772 (2022)."
+    },
+    {
+      "key": "8419_CR26",
+      "doi": "10.1186/s40694-023-00169-8",
+      "title": "",
+      "journal": "Fungal Biol. Biotechnol.",
+      "year": "2023",
+      "author": "B Schmidt",
+      "unstructured": "Schmidt, B. et al. Mechanical, physical and thermal properties of composite materials produced with the basidiomycete Fomes fomentarius. Fungal Biol. Biotechnol. 10, 22 (2023)."
+    },
+    {
+      "key": "8419_CR27",
+      "doi": "10.1016/j.fbr.2016.12.003",
+      "title": "",
+      "journal": "Fungal Biol. Rev.",
+      "year": "2017",
+      "author": "RJB Cordero",
+      "unstructured": "Cordero, R. J. B. & Casadevall, A. Functions of fungal melanin beyond virulence. Fungal Biol. Rev. 31, 99\u2013112 (2017)."
+    },
+    {
+      "key": "8419_CR28",
+      "doi": "10.1371/journal.pone.0000457",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2007",
+      "author": "E Dadachova",
+      "unstructured": "Dadachova, E. et al. Ionizing radiation changes the electronic properties of melanin and enhances the growth of melanized fungi. PLoS ONE\u00a02, e457 (2007)."
+    },
+    {
+      "key": "8419_CR29",
+      "doi": "10.1146/annurev-micro-030117-020324",
+      "title": "",
+      "journal": "Annu. Rev. Microbiol.",
+      "year": "2017",
+      "author": "ML Berbee",
+      "unstructured": "Berbee, M. L., James, T. Y. & Strullu-Derrien, C. Early diverging fungi: diversity and impact at the dawn of terrestrial life. Annu. Rev. Microbiol. 71, 41\u201360 (2017)."
+    },
+    {
+      "key": "8419_CR30",
+      "doi": "10.1128/mbio.01189-18",
+      "title": "",
+      "journal": "mBio",
+      "year": "2019",
+      "author": "A Amend",
+      "unstructured": "Amend, A. et al. Fungi in the marine environment: open questions and unsolved problems. mBio 10, e01189-18 (2019)."
+    },
+    {
+      "key": "8419_CR31",
+      "doi": "10.1038/28079",
+      "title": "",
+      "journal": "Nature",
+      "year": "1998",
+      "author": "DM Geiser",
+      "unstructured": "Geiser, D. M., Taylor, J. W., Ritchie, K. B. & Smith, G. W. Cause of sea fan death in the West Indies. Nature 394, 137\u2013138 (1998)."
+    },
+    {
+      "key": "8419_CR32",
+      "doi": "10.7589/2015-11-299",
+      "title": "",
+      "journal": "J. Wildl. Dis.",
+      "year": "2016",
+      "author": "JF Rosenberg",
+      "unstructured": "Rosenberg, J. F. et al. Cryptococcus gattii type VGIIa infection in harbor seals (Phoca vitulina) in British Columbia, Canada. J. Wildl. Dis. 52, 677\u2013681 (2016)."
+    },
+    {
+      "key": "8419_CR33",
+      "doi": "10.7589/jwd-d-23-00045",
+      "title": "",
+      "journal": "J. Wildl. Dis.",
+      "year": "2024",
+      "author": "HS Harris",
+      "unstructured": "Harris, H. S. et al. Novel presentation of coccidioidomycosis with myriad free-floating proteinaceous spheres in the pericardial sac of a southern sea otter (Enhydra lutris nereis). J. Wildl. Dis. 60, 223\u2013228 (2024)."
+    },
+    {
+      "key": "8419_CR34",
+      "doi": "10.1007/978-3-319-72093-7_9",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Vilela, R. & Mendoza, L. in Emerging and Epizootic Fungal Infections in Animals (eds. Seyedmousavi, S. et al.) 177\u2013196 (Springer, 2018)."
+    },
+    {
+      "key": "8419_CR35",
+      "doi": "10.1039/d1np00022e",
+      "title": "",
+      "journal": "Nat. Prod. Rep.",
+      "year": "2022",
+      "author": "S Schmidt",
+      "unstructured": "Schmidt, S., Kildgaard, S., Guo, H., Beemelmanns, C. & Poulsen, M. The chemical ecology of the fungus-farming termite symbiosis. Nat. Prod. Rep. 39, 231\u2013248 (2022)."
+    },
+    {
+      "key": "8419_CR36",
+      "doi": "10.1126/science.1119744",
+      "title": "",
+      "journal": "Science",
+      "year": "2006",
+      "author": "CR Currie",
+      "unstructured": "Currie, C. R., Poulsen, M., Mendenhall, J., Boomsma, J. J. & Billen, J. Coevolved crypts and exocrine glands support mutualistic bacteria in fungus-growing ants. Science 311, 81\u201383 (2006). The authors discover modifications in fungus-growing ants for maintaining bacterial symbionts that produce antimicrobials to suppress fungal pathogens, illustrating the complexity of fungus\u2013insect interactions."
+    },
+    {
+      "key": "8419_CR37",
+      "doi": "10.1016/j.funeco.2019.06.002",
+      "title": "",
+      "journal": "Fungal Ecol.",
+      "year": "2019",
+      "author": "GR Boyce",
+      "unstructured": "Boyce, G. R. et al. Psychoactive plant- and mushroom-associated alkaloids from two behavior modifying cicada pathogens. Fungal Ecol. 41, 147\u2013164 (2019)."
+    },
+    {
+      "key": "8419_CR38",
+      "doi": "10.1641/b580607",
+      "title": "",
+      "journal": "Bioscience",
+      "year": "2008",
+      "author": "KF Raffa",
+      "unstructured": "Raffa, K. F. et al. Cross-scale drivers of natural disturbances prone to anthropogenic amplification: the dynamics of bark beetle eruptions. Bioscience 58, 501\u2013517 (2008)."
+    },
+    {
+      "key": "8419_CR39",
+      "doi": "10.1371/journal.pbio.3001887",
+      "title": "",
+      "journal": "PLoS Biol.",
+      "year": "2023",
+      "author": "D Kandasamy",
+      "unstructured": "Kandasamy, D. et al. Conifer-killing bark beetles locate fungal symbionts by detecting volatile fungal metabolites of host tree resin monoterpenes. PLoS Biol. 21, e3001887 (2023)."
+    },
+    {
+      "key": "8419_CR40",
+      "doi": "10.1126/science.aav0379",
+      "title": "",
+      "journal": "Science",
+      "year": "2019",
+      "author": "BC Scheele",
+      "unstructured": "Scheele, B. C. et al. Amphibian fungal panzootic causes catastrophic and ongoing loss of biodiversity. Science 363, 1459\u20131463 (2019). Analysis showing the extent to which the amphibian chytridiomycosis panzootic has caused the greatest recorded loss of biodiversity attributable to a disease."
+    },
+    {
+      "key": "8419_CR41",
+      "doi": "10.1038/s41579-020-00493-5",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2021",
+      "author": "JR Hoyt",
+      "unstructured": "Hoyt, J. R., Kilpatrick, A. M. & Langwig, K. E. Ecology and impacts of white-nose syndrome on bats. Nat. Rev. Microbiol. 19, 196\u2013210 (2021). Summarizes the origin and introduction of Pseudogymnoascus destructans, the fungal pathogen that causes bat white-nose syndrome, to North America and describes the impacts and epidemiology of this devastating wildlife disease."
+    },
+    {
+      "key": "8419_CR42",
+      "doi": "10.1002/ppp3.11",
+      "title": "",
+      "journal": "Plants People Planet",
+      "year": "2019",
+      "author": "TLR Coker",
+      "unstructured": "Coker, T. L. R. et al. Estimating mortality rates of European ash (Fraxinus excelsior) under the ash dieback (Hymenoscyphus fraxineus) epidemic. Plants People Planet 1, 48\u201358 (2019)."
+    },
+    {
+      "key": "8419_CR43",
+      "doi": "10.1126/science.aar1965",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "SJ O\u2019Hanlon",
+      "unstructured": "O\u2019Hanlon, S. J. et al. Recent Asian origin of chytrid fungi causing global amphibian declines. Science 360, 621\u2013627 (2018). Genomic analysis identifying the centre of origin and dating the worldwide expansion of the amphibian chytridiomycosis panzootic."
+    },
+    {
+      "key": "8419_CR44",
+      "doi": "10.1073/pnas.1307356110",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2013",
+      "author": "A Martel",
+      "unstructured": "Martel, A. et al. Batrachochytrium salamandrivorans sp. nov. causes lethal chytridiomycosis in amphibians. Proc. Natl Acad. Sci. USA 110, 15325\u201315329 (2013)."
+    },
+    {
+      "key": "8419_CR45",
+      "doi": "10.1126/science.1188594",
+      "title": "",
+      "journal": "Science",
+      "year": "2010",
+      "author": "WF Frick",
+      "unstructured": "Frick, W. F. et al. An emerging disease causes regional population collapse of a common North American bat species. Science 329, 679\u2013682 (2010)."
+    },
+    {
+      "key": "8419_CR46",
+      "doi": "10.1038/s41559-018-0548-9",
+      "title": "",
+      "journal": "Nat. Ecol. Evol.",
+      "year": "2018",
+      "author": "M McMullan",
+      "unstructured": "McMullan, M. et al. The ash dieback invasion of Europe was founded by two genetically divergent individuals. Nat. Ecol. Evol. 2, 1000\u20131008 (2018)."
+    },
+    {
+      "key": "8419_CR47",
+      "doi": "10.1038/nature10947",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "MC Fisher",
+      "unstructured": "Fisher, M. C. et al. Emerging fungal threats to animal, plant and ecosystem health. Nature 484, 186\u2013194 (2012)."
+    },
+    {
+      "key": "8419_CR48",
+      "doi": "10.1088/1748-9326/ac8e1d",
+      "title": "",
+      "journal": "Environ. Res. Lett.",
+      "year": "2022",
+      "author": "MR Springborn",
+      "unstructured": "Springborn, M. R., Weill, J. A., Lips, K. R., Ib\u00e1\u00f1ez, R. & Ghosh, A. Amphibian collapses increased malaria incidence in Central America. Environ. Res. Lett. 17, 104012 (2022)."
+    },
+    {
+      "key": "8419_CR49",
+      "doi": "10.1126/science.1201366",
+      "title": "",
+      "journal": "Science",
+      "year": "2011",
+      "author": "JG Boyles",
+      "unstructured": "Boyles, J. G., Cryan, P. M., McCracken, G. F. & Kunz, T. H. Economic importance of bats in agriculture. Science 332, 41\u201342 (2011)."
+    },
+    {
+      "key": "8419_CR50",
+      "doi": "10.1016/j.cub.2019.03.033",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2019",
+      "author": "L Hill",
+      "unstructured": "Hill, L. et al. The \u00a315 billion cost of ash dieback in Britain. Curr. Biol. 29, R315\u2013R316 (2019)."
+    },
+    {
+      "key": "8419_CR51",
+      "doi": "10.1093/mmy/myy039",
+      "title": "",
+      "journal": "Med. Mycol.",
+      "year": "2019",
+      "author": "JW Taylor",
+      "unstructured": "Taylor, J. W. & Barker, B. M. The endozoan, small-mammal reservoir hypothesis and the life cycle of Coccidioides species. Med. Mycol. 57, S16\u2013S20 (2019)."
+    },
+    {
+      "key": "8419_CR52",
+      "doi": "10.1175/wcas-d-20-0036.1",
+      "title": "",
+      "journal": "Weather Clim. Soc.",
+      "year": "2021",
+      "author": "ME Gorris",
+      "unstructured": "Gorris, M. E., Neumann, J. E., Kinney, P. L., Sheahan, M. & Sarofim, M. C. Economic valuation of coccidioidomycosis (valley fever) projections in the United States in response to climate change. Weather Clim. Soc. 13, 107\u2013123 (2021)."
+    },
+    {
+      "key": "8419_CR53",
+      "doi": "10.1029/2019gh000209",
+      "title": "",
+      "journal": "GeoHealth",
+      "year": "2019",
+      "author": "ME Gorris",
+      "unstructured": "Gorris, M. E., Treseder, K. K., Zender, C. S. & Randerson, J. T. Expansion of coccidioidomycosis endemic regions in the United States in response to climate change. GeoHealth 3, 308\u2013327 (2019)."
+    },
+    {
+      "key": "8419_CR54",
+      "doi": "10.1038/s41598-019-43210-w",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2019",
+      "author": "TE Rocke",
+      "unstructured": "Rocke, T. E. et al. Virally-vectored vaccine candidates against white-nose syndrome induce anti-fungal immune response in little brown bats (Myotis lucifugus). Sci. Rep. 9, 6788 (2019)."
+    },
+    {
+      "key": "8419_CR55",
+      "doi": "10.1126/science.adn5606",
+      "title": "",
+      "journal": "Science",
+      "year": "2024",
+      "author": "M Isidoro-Ayza",
+      "unstructured": "Isidoro-Ayza, M. & Klein, B. S. Pathogenic strategies of Pseudogymnoascus destructans during torpor and arousal of hibernating bats. Science 385, 194\u2013200 (2024)."
+    },
+    {
+      "key": "8419_CR56",
+      "doi": "10.1038/s41586-024-07582-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "AW Waddle",
+      "unstructured": "Waddle, A. W. et al. Hotspot shelters stimulate frog resistance to chytridiomycosis. Nature 631, 344\u2013349 (2024)."
+    },
+    {
+      "key": "8419_CR57",
+      "doi": "10.1146/annurev.py.32.090194.003053",
+      "title": "",
+      "journal": "Annu. Rev. Phytopathol.",
+      "year": "1994",
+      "author": "U Heiniger",
+      "unstructured": "Heiniger, U. & Rigling, D. Biological control of chestnut blight in Europe. Annu. Rev. Phytopathol. 32, 581\u2013599 (1994)."
+    },
+    {
+      "key": "8419_CR58",
+      "doi": "10.1016/j.molp.2020.08.016",
+      "title": "",
+      "journal": "Mol. Plant",
+      "year": "2020",
+      "author": "H Zhang",
+      "unstructured": "Zhang, H. et al. A 2-kb mycovirus converts a pathogenic fungus into a beneficial endophyte for Brassica protection and yield enhancement. Mol. Plant 13, 1420\u20131433 (2020)."
+    },
+    {
+      "key": "8419_CR59",
+      "doi": "10.1128/msphere.01022-21",
+      "title": "",
+      "journal": "mSphere",
+      "year": "2022",
+      "author": "V Thapa",
+      "unstructured": "Thapa, V., Keller, N. P. & Roossinck, M. J. Evaluation of virus-free and wild-type isolates of Pseudogymnoascus destructans using a porcine ear model. mSphere 7, P1420\u2013P1433 (2022)."
+    },
+    {
+      "key": "8419_CR60",
+      "doi": "10.1016/j.cub.2024.02.062",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2024",
+      "author": "RA Clemons",
+      "unstructured": "Clemons, R. A. et al. An endogenous DNA virus in an amphibian-killing fungus associated with pathogen genotype and virulence. Curr. Biol. 34, 1469\u20131478 (2024)."
+    },
+    {
+      "key": "8419_CR61",
+      "doi": "10.1038/s41598-018-28920-x",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2018",
+      "author": "FAA Feijen",
+      "unstructured": "Feijen, F. A. A., Vos, R. A., Nuytinck, J. & Merckx, V. S. F. T. Evolutionary dynamics of mycorrhizal symbiosis in land plant diversification. Sci. Rep. 8, 10698 (2018)."
+    },
+    {
+      "key": "8419_CR62",
+      "doi": "10.1371/journal.pbio.2001793",
+      "title": "",
+      "journal": "PLoS Biol.",
+      "year": "2017",
+      "author": "PE Busby",
+      "unstructured": "Busby, P. E. et al. Research priorities for harnessing plant microbiomes in sustainable agriculture. PLoS Biol. 15, e2001793 (2017)."
+    },
+    {
+      "key": "8419_CR63",
+      "doi": "10.1126/science.adf2027",
+      "title": "",
+      "journal": "Science",
+      "year": "2023",
+      "author": "CM Allsup",
+      "unstructured": "Allsup, C. M., George, I. & Lankau, R. A. Shifting microbial communities can enhance tree tolerance to changing climates. Science 380, 835\u2013840 (2023)."
+    },
+    {
+      "key": "8419_CR64",
+      "doi": "10.1371/journal.ppat.1011816",
+      "title": "",
+      "journal": "PLoS Pathog.",
+      "year": "2023",
+      "author": "CV Hawkes",
+      "unstructured": "Hawkes, C. V., Allen, X., Balint-Kurti, P. & Cowger, C. Manipulating the plant mycobiome to enhance resilience: Ecological and evolutionary opportunities and challenges. PLoS Pathog. 19, e1011816 (2023)."
+    },
+    {
+      "key": "8419_CR65",
+      "doi": "10.3389/fpls.2020.561007",
+      "title": "",
+      "journal": "Front. Plant Sci.",
+      "year": "2020",
+      "author": "VR Chitnis",
+      "unstructured": "Chitnis, V. R. et al. Fungal endophyte-mediated crop improvement: the way ahead. Front. Plant Sci. 11, 561007 (2020)."
+    },
+    {
+      "key": "8419_CR66",
+      "doi": "10.3390/microorganisms12071357",
+      "title": "",
+      "journal": "Microorganisms",
+      "year": "2024",
+      "author": "AT Morales-Vargas",
+      "unstructured": "Morales-Vargas, A. T., L\u00f3pez-Ram\u00edrez, V., \u00c1lvarez-Mej\u00eda, C. & V\u00e1zquez-Mart\u00ednez, J. Endophytic fungi for crops adaptation to abiotic stresses. Microorganisms 12, 1357 (2024)."
+    },
+    {
+      "key": "8419_CR67",
+      "doi": "10.3390/jof10020116",
+      "title": "",
+      "journal": "J. Fungi",
+      "year": "2024",
+      "author": "HG Gowtham",
+      "unstructured": "Gowtham, H. G. et al. Fungal endophytes as mitigators against biotic and abiotic stresses in crop plants. J. Fungi 10, 116 (2024)."
+    },
+    {
+      "key": "8419_CR68",
+      "doi": "10.1016/j.cub.2023.02.027",
+      "title": "",
+      "journal": "Curr. Biol.",
+      "year": "2023",
+      "author": "HJ Hawkins",
+      "unstructured": "Hawkins, H. J. et al. Mycorrhizal mycelium as a global carbon pool. Curr. Biol. 33, R560\u2013R573 (2023). The first global quantification of carbon allocation from plants to mycorrhizal fungi estimates that 13.12\u2009Gt of CO2 emissions fixed by terrestrial plants is, at least temporarily, allocated to the underground mycelium of mycorrhizal fungi per year, equating to around 36% of current annual CO2 emissions from fossil fuels."
+    },
+    {
+      "key": "8419_CR69",
+      "doi": "10.1016/j.envpol.2018.11.074",
+      "title": "",
+      "journal": "Environ. Pollut.",
+      "year": "2019",
+      "author": "EA Lilleskov",
+      "unstructured": "Lilleskov, E. A., Kuyper, T. W., Bidartondo, M. I. & Hobbie, E. A. Atmospheric nitrogen deposition impacts on the structure and function of forest mycorrhizal communities: a review. Environ. Pollut. 246, 148\u2013162 (2019)."
+    },
+    {
+      "key": "8419_CR70",
+      "doi": "10.1101/gr.118851.110",
+      "title": "",
+      "journal": "Genome Res.",
+      "year": "2011",
+      "author": "EH Stukenbrock",
+      "unstructured": "Stukenbrock, E. H. et al. The making of a new pathogen: insights from comparative population genomics of the domesticated wheat pathogen Mycosphaerella graminicola and its wild sister species. Genome Res. 21, 2157\u20132166 (2011)."
+    },
+    {
+      "key": "8419_CR71",
+      "doi": "10.1038/s41467-022-31975-0",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "AG Sotiropoulos",
+      "unstructured": "Sotiropoulos, A. G. et al. Global genomic analyses of wheat powdery mildew reveal association of pathogen spread with historical human migration and trade. Nat. Commun. 13, 4315 (2022). This study traced the historical spread of wheat powdery mildew, revealing the role of human migration as well as rapid evolution through hybridization."
+    },
+    {
+      "key": "8419_CR72",
+      "doi": "10.1038/s43016-020-0075-0",
+      "title": "",
+      "journal": "Nat. Food",
+      "year": "2020",
+      "author": "HN Fones",
+      "unstructured": "Fones, H. N. et al. Threats to global food security from emerging fungal and oomycete crop pathogens. Nat. Food 1, 332\u2013342 (2020)."
+    },
+    {
+      "key": "8419_CR73",
+      "doi": "10.1016/j.biocontrol.2009.05.001",
+      "title": "",
+      "journal": "Biol. Control",
+      "year": "2009",
+      "author": "RR Sharma",
+      "unstructured": "Sharma, R. R., Singh, D. & Singh, R. Biological control of postharvest diseases of fruits and vegetables by microbial antagonists: a review. Biol. Control 50, 205\u2013221 (2009)."
+    },
+    {
+      "key": "8419_CR74",
+      "doi": "10.1094/phyto-01-15-0030-fi",
+      "title": "",
+      "journal": "Phytopathology",
+      "year": "2015",
+      "author": "RP Singh",
+      "unstructured": "Singh, R. P. et al. Emergence and spread of new races of wheat stem rust fungus: continued threat to food security and prospects of genetic control. Phytopathology 105, 872\u2013884 (2015)."
+    },
+    {
+      "key": "8419_CR75",
+      "doi": "10.1002/evl3.117",
+      "title": "",
+      "journal": "Evol. Lett.",
+      "year": "2019",
+      "author": "J Grandaubert",
+      "unstructured": "Grandaubert, J., Dutheil, J. Y. & Stukenbrock, E. H. The genomic determinants of adaptive evolution in a fungal pathogen. Evol. Lett. 3, 299\u2013312 (2019)."
+    },
+    {
+      "key": "8419_CR76",
+      "doi": "10.1186/s12915-016-0309-7",
+      "title": "",
+      "journal": "BMC Biol.",
+      "year": "2016",
+      "author": "MT Islam",
+      "unstructured": "Islam, M. T. et al. Emergence of wheat blast in Bangladesh was caused by a South American lineage of Magnaporthe oryzae. BMC Biol. 14, 84 (2016)."
+    },
+    {
+      "key": "8419_CR77",
+      "doi": "10.1080/10408398.2019.1658570",
+      "title": "",
+      "journal": "Crit. Rev. Food Sci. Nutr.",
+      "year": "2020",
+      "author": "M Eskola",
+      "unstructured": "Eskola, M. et al. Worldwide contamination of food-crops with mycotoxins: validity of the widely cited \u2018FAO estimate\u2019 of 25. Crit. Rev. Food Sci. Nutr. 60, 2773\u20132789 (2020)."
+    },
+    {
+      "key": "8419_CR78",
+      "doi": "10.3389/fcimb.2018.00060",
+      "title": "",
+      "journal": "Front. Cell. Infect. Microbiol.",
+      "year": "2018",
+      "author": "WPP Liew",
+      "unstructured": "Liew, W. P. P. & Mohd-Redzwan, S. Mycotoxin: its impact on gut health and microbiota. Front. Cell. Infect. Microbiol. 8, 60 (2018)."
+    },
+    {
+      "key": "8419_CR79",
+      "doi": "10.1038/s43016-022-00655-z",
+      "title": "",
+      "journal": "Nat. Food",
+      "year": "2022",
+      "author": "LE Johns",
+      "unstructured": "Johns, L. E., Bebber, D. P., Gurr, S. J. & Brown, N. A. Emerging health threat and cost of Fusarium mycotoxins in European wheat. Nat. Food 3, 1014\u20131019 (2022)."
+    },
+    {
+      "key": "8419_CR80",
+      "doi": "10.3390/toxins15030187",
+      "title": "",
+      "journal": "Toxins",
+      "year": "2023",
+      "author": "Y Sun",
+      "unstructured": "Sun, Y., Song, Y., Long, M. & Yang, S. Immunotoxicity of three environmental mycotoxins and their risks of increasing pathogen infections. Toxins 15, 187 (2023)."
+    },
+    {
+      "key": "8419_CR81",
+      "doi": "10.1038/s41579-022-00710-3",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2022",
+      "author": "Y Wang",
+      "unstructured": "Wang, Y., Pruitt, R. N., N\u00fcrnberger, T. & Wang, Y. Evasion of plant immunity by microbial pathogens. Nat. Rev. Microbiol. 20, 449\u2013464 (2022)."
+    },
+    {
+      "key": "8419_CR82",
+      "doi": "10.1126/science.1239705",
+      "title": "",
+      "journal": "Science",
+      "year": "2013",
+      "author": "A Weiberg",
+      "unstructured": "Weiberg, A. et al. Fungal small RNAs suppress plant immunity by hijacking host RNA interference pathways. Science 342, 118\u2013123 (2013). This study discovered the mechanism of cross-kingdom RNA interference (RNAi), in which small RNAs from a fungal pathogen are transported into plant hosts and use the plant RNAi machinery to silence plant immunity genes."
+    },
+    {
+      "key": "8419_CR83",
+      "doi": "10.3389/fpls.2022.847086",
+      "title": "",
+      "journal": "Front. Plant Sci.",
+      "year": "2022",
+      "author": "B Zhang",
+      "unstructured": "Zhang, B., Sen, Li,Y. C., Guo, H. S. & Zhao, J. H. Verticillium dahliae secretes small RNA to target host MIR157d and retard plant floral transition during infection. Front. Plant Sci. 13, 847086 (2022)."
+    },
+    {
+      "key": "8419_CR84",
+      "doi": "10.1126/science.aar4142",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "Q Cai",
+      "unstructured": "Cai, Q. et al. Plants send small RNAs in extracellular vesicles to fungal pathogen to silence virulence genes. Science 360, 1126\u20131129 (2018)."
+    },
+    {
+      "key": "8419_CR85",
+      "doi": "10.1038/s41558-021-01104-8",
+      "title": "",
+      "journal": "Nat. Clim. Change",
+      "year": "2021",
+      "author": "TM Chaloner",
+      "unstructured": "Chaloner, T. M., Gurr, S. J. & Bebber, D. P. Plant pathogen infection risk tracks global crop yields under climate change. Nat. Clim. Change 11, 710\u2013715 (2021)."
+    },
+    {
+      "key": "8419_CR86",
+      "doi": "10.1079/9781780641669.0000",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Oliver, R. P. & Hewitt, H. G. Fungicides in Crop Protection (CABI, 2014)."
+    },
+    {
+      "key": "8419_CR87",
+      "doi": "10.1038/s41467-020-14949-y",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "G Steinberg",
+      "unstructured": "Steinberg, G. et al. A lipophilic cation protects crops against fungal pathogens by multiple modes of action. Nat. Commun. 11, 1608 (2020)."
+    },
+    {
+      "key": "8419_CR88",
+      "doi": "10.1094/phyto-04-14-0121-rvw",
+      "title": "",
+      "journal": "Phytopathology",
+      "year": "2014",
+      "author": "F Van Den Bosch",
+      "unstructured": "Van Den Bosch, F., Paveley, N., Van Den Berg, F., Hobbelen, P. & Oliver, R. Mixtures as a fungicide resistance management tactic. Phytopathology 104, 1264\u20131273 (2014)."
+    },
+    {
+      "key": "8419_CR89",
+      "doi": "10.1038/s41564-021-00896-x",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2021",
+      "author": "N Ludwig",
+      "unstructured": "Ludwig, N. et al. A cell surface-exposed protein complex with an essential virulence function in Ustilago maydis. Nat. Microbiol. 6, 722\u2013730 (2021). This study describes a complex of seven Ustilago maydis proteins likely to be involved in effector delivery to the host."
+    },
+    {
+      "key": "8419_CR90",
+      "doi": "10.1016/j.copbio.2021.06.005",
+      "title": "",
+      "journal": "Curr. Opin. Biotechnol.",
+      "year": "2021",
+      "author": "D Niu",
+      "unstructured": "Niu, D. et al. RNAs\u2014a new frontier in crop protection. Curr. Opin. Biotechnol. 70, 204\u2013212 (2021)."
+    },
+    {
+      "key": "8419_CR91",
+      "doi": "10.1146/annurev-arplant-081720-010616",
+      "title": "",
+      "journal": "Annu. Rev. Plant Biol.",
+      "year": "2021",
+      "author": "Q Cai",
+      "unstructured": "Cai, Q. et al. Message in a bubble: shuttling small RNAs and proteins between cells and interacting organisms using extracellular vesicles. Annu. Rev. Plant Biol. 72, 497\u2013524 (2021)."
+    },
+    {
+      "key": "8419_CR92",
+      "doi": "10.1111/pbi.14001",
+      "title": "",
+      "journal": "Plant Biotechnol. J.",
+      "year": "2023",
+      "author": "L Qiao",
+      "unstructured": "Qiao, L. et al. Artificial nanovesicles for dsRNA delivery in spray-induced gene silencing for crop protection. Plant Biotechnol. J. 21, 854\u2013865 (2023)."
+    },
+    {
+      "key": "8419_CR93",
+      "doi": "10.1038/s41587-020-00770-x",
+      "title": "",
+      "journal": "Nat. Biotechnol.",
+      "year": "2021",
+      "author": "M Luo",
+      "unstructured": "Luo, M. et al. A five-transgene cassette confers broad-spectrum resistance to a fungal rust pathogen in wheat. Nat. Biotechnol. 39, 561\u2013566 (2021)."
+    },
+    {
+      "key": "8419_CR94",
+      "doi": "10.1126/science.abn4116",
+      "title": "",
+      "journal": "Science",
+      "year": "2023",
+      "author": "J Kourelis",
+      "unstructured": "Kourelis, J., Marchal, C., Posbeyikian, A., Harant, A. & Kamoun, S. NLR immune receptor-nanobody fusions confer plant disease resistance. Science 379, 934\u2013939 (2023)."
+    },
+    {
+      "key": "8419_CR95",
+      "doi": "10.1126/scitranslmed.3004404",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2012",
+      "author": "GD Brown",
+      "unstructured": "Brown, G. D. et al. Hidden killers: human fungal infections. Sci. Transl. Med. 4, 165rv13 (2012)."
+    },
+    {
+      "key": "8419_CR96",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "World Health Organization. WHO Fungal Priority Pathogens List to Guide Research, Development and Public Health Action (WHO, 2022)."
+    },
+    {
+      "key": "8419_CR97",
+      "doi": "10.1038/s41577-022-00826-w",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2023",
+      "author": "MS Lionakis",
+      "unstructured": "Lionakis, M. S., Drummond, R. A. & Hohl, T. M. Immune responses to human fungal pathogens and therapeutic prospects. Nat. Rev. Immunol. 23, 433\u2013452 (2023)."
+    },
+    {
+      "key": "8419_CR98",
+      "doi": "10.1038/s41564-022-01172-2",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2022",
+      "author": "M Hoenigl",
+      "unstructured": "Hoenigl, M. et al. COVID-19-associated fungal infections. Nat. Microbiol. 7, 1127\u20131140 (2022)."
+    },
+    {
+      "key": "8419_CR99",
+      "doi": "10.1186/s40168-017-0373-4",
+      "title": "",
+      "journal": "Microbiome",
+      "year": "2017",
+      "author": "AK Nash",
+      "unstructured": "Nash, A. K. et al. The gut mycobiome of the Human Microbiome Project healthy cohort. Microbiome 5, 153 (2017)."
+    },
+    {
+      "key": "8419_CR100",
+      "doi": "10.1016/j.cell.2022.01.017",
+      "title": "",
+      "journal": "Cell",
+      "year": "2022",
+      "author": "I Leonardi",
+      "unstructured": "Leonardi, I. et al. Mucosal fungi promote gut barrier function and social behavior via type 17 immunity. Cell 185, 831\u2013846 (2022)."
+    },
+    {
+      "key": "8419_CR101",
+      "doi": "10.1038/s41586-022-04502-w",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "XV Li",
+      "unstructured": "Li, X. V. et al. Immune regulation by fungal strain diversity in inflammatory bowel disease. Nature 603, 672\u2013678 (2022)."
+    },
+    {
+      "key": "8419_CR102",
+      "doi": "10.1038/s41591-023-02556-5",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2023",
+      "author": "GR Martini",
+      "unstructured": "Martini, G. R. et al. Selection of cross-reactive T cells by commensal and food-derived yeasts drives cytotoxic TH1 cell responses in Crohn\u2019s disease. Nat. Med. 29, 2602\u20132614 (2023)."
+    },
+    {
+      "key": "8419_CR103",
+      "doi": "10.1016/j.cell.2019.01.041",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "P Bacher",
+      "unstructured": "Bacher, P. et al. Human anti-fungal Th17 immunity and pathology rely on cross-reactivity against Candida albicans. Cell 176, 1340\u20131355 (2019). This study showed that intestinal Candida albicans is the most common inducer of TH17 responses in the gut of humans, and that these cells are cross-reactive to Aspergillus in the airway causing inflammation. This is suggestive of a gut-to-lung axis in which TH17 immune protective responses in the gut can exacerbate pathological inflammation in the lung."
+    },
+    {
+      "key": "8419_CR104",
+      "doi": "10.1016/j.chom.2019.02.004",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2019",
+      "author": "TY Shao",
+      "unstructured": "Shao, T. Y. et al. Commensal Candida albicans positively calibrates systemic Th17 immunological responses. Cell Host Microbe 25, 404\u2013417 (2019)."
+    },
+    {
+      "key": "8419_CR105",
+      "doi": "10.1080/21505594.2016.1237332",
+      "title": "",
+      "journal": "Virulence",
+      "year": "2017",
+      "author": "LL Bradford",
+      "unstructured": "Bradford, L. L. & Ravel, J. The vaginal mycobiome: a contemporary perspective on fungi in women\u2019s health and diseases. Virulence 8, 342\u2013351 (2017)."
+    },
+    {
+      "key": "8419_CR106",
+      "doi": "10.1371/journal.pgen.1005614",
+      "title": "",
+      "journal": "PLoS Genet.",
+      "year": "2015",
+      "author": "G Wu",
+      "unstructured": "Wu, G. et al. Genus-wide comparative genomics of Malassezia delineates its phylogeny, physiology, and niche adaptation on human skin. PLoS Genet. 11, e1005614 (2015)."
+    },
+    {
+      "key": "8419_CR107",
+      "doi": "10.1038/nature12171",
+      "title": "",
+      "journal": "Nature",
+      "year": "2013",
+      "author": "K Findley",
+      "unstructured": "Findley, K. et al. Topographic diversity of fungal and bacterial communities in human skin. Nature 498, 367\u2013370 (2013)."
+    },
+    {
+      "key": "8419_CR108",
+      "doi": "10.1016/j.chom.2019.02.002",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2019",
+      "author": "F Sparber",
+      "unstructured": "Sparber, F. et al. The skin commensal yeast Malassezia triggers a type 17 response that coordinates anti-fungal immunity and exacerbates skin inflammation. Cell Host Microbe 25, 389\u2013403 (2019)."
+    },
+    {
+      "key": "8419_CR109",
+      "doi": "10.1016/j.chom.2018.02.011",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2018",
+      "author": "N Hern\u00e1ndez-Santos",
+      "unstructured": "Hern\u00e1ndez-Santos, N. et al. Lung epithelial cells coordinate innate lymphocytes and immunity against pulmonary fungal infection. Cell Host Microbe 23, 511\u2013522 (2018)."
+    },
+    {
+      "key": "8419_CR110",
+      "doi": "10.1016/j.chom.2016.10.001",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2016",
+      "author": "HR Conti",
+      "unstructured": "Conti, H. R. et al. IL-17 receptor signaling in oral epithelial cells is critical for protection against oropharyngeal candidiasis. Cell Host Microbe 20, 606\u2013617 (2016)."
+    },
+    {
+      "key": "8419_CR111",
+      "doi": "10.1038/s41586-021-03722-w",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "KS Ost",
+      "unstructured": "Ost, K. S. et al. Adaptive immunity induces mutualism between commensal eukaryotes. Nature 596, 114\u2013118 (2021)."
+    },
+    {
+      "key": "8419_CR112",
+      "doi": "10.1038/s41564-021-00983-z",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2021",
+      "author": "I Doron",
+      "unstructured": "Doron, I. et al. Mycobiota-induced IgA antibodies regulate fungal commensalism in the gut and are dysregulated in Crohn\u2019s disease. Nat. Microbiol. 6, 1493\u20131504 (2021)."
+    },
+    {
+      "key": "8419_CR113",
+      "doi": "10.1016/j.cell.2021.01.016",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "I Doron",
+      "unstructured": "Doron, I. et al. Human gut mycobiota tune immunity via CARD9-dependent induction of anti-fungal IgG antibodies. Cell 184, 1017\u20131031 (2021)."
+    },
+    {
+      "key": "8419_CR114",
+      "doi": "10.1038/s41586-024-07142-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2024",
+      "author": "SH Liang",
+      "unstructured": "Liang, S. H. et al. The hyphal-specific toxin candidalysin promotes fungal gut commensalism. Nature 627, 620\u2013627 (2024)."
+    },
+    {
+      "key": "8419_CR115",
+      "doi": "10.1038/s41564-022-01091-2",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2022",
+      "author": "J Rhodes",
+      "unstructured": "Rhodes, J. et al. Population genomics confirms acquisition of drug-resistant Aspergillus fumigatus infection by humans from the environment. Nat. Microbiol. 7, 663\u2013674 (2022). Genomic analysis revealing the infection of patients with antifungal resistant isolates acquired from environment exposures."
+    },
+    {
+      "key": "8419_CR116",
+      "doi": "10.12688/f1000research.28327.1",
+      "title": "",
+      "journal": "F1000Research",
+      "year": "2021",
+      "author": "SE Jacobs",
+      "unstructured": "Jacobs, S. E., Zagaliotis, P. & Walsh, T. J. Novel antifungal agents in clinical trials. F1000Research 10, 507 (2021)."
+    },
+    {
+      "key": "8419_CR117",
+      "doi": "10.1038/s41586-023-06710-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2023",
+      "author": "A Maji",
+      "unstructured": "Maji, A. et al. Tuning sterol extraction kinetics yields a renal-sparing polyene antifungal. Nature 623, 1079\u20131085 (2023)."
+    },
+    {
+      "key": "8419_CR118",
+      "doi": "10.1038/s41564-023-01542-4",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2023",
+      "author": "N van Rhijn",
+      "unstructured": "van Rhijn, N. et al. Aspergillus fumigatus strains that evolve resistance to the agrochemical fungicide ipflufenoquin in vitro are also resistant to olorofim. Nat. Microbiol. 9, 29\u201334 (2023)."
+    },
+    {
+      "key": "8419_CR119",
+      "doi": "10.1126/science.aay5731",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "TJ Break",
+      "unstructured": "Break, T. J. et al. Aberrant type 1 immunity drives susceptibility to mucosal fungal infections. Science 371, eaay5731 (2021)."
+    },
+    {
+      "key": "8419_CR120",
+      "doi": "10.1038/s41541-021-00294-8",
+      "title": "",
+      "journal": "NPJ Vaccines",
+      "year": "2021",
+      "author": "LVN Oliveira",
+      "unstructured": "Oliveira, L. V. N., Wang, R., Specht, C. A. & Levitz, S. M. Vaccines for human fungal diseases: close but still a long way to go. NPJ Vaccines 6, 33 (2021)."
+    },
+    {
+      "key": "8419_CR121",
+      "doi": "10.1093/pnasnexus/pgac248",
+      "title": "",
+      "journal": "PNAS Nexus",
+      "year": "2022",
+      "author": "E Rayens",
+      "unstructured": "Rayens, E. et al. Immunogenicity and protective efficacy of a pan-fungal vaccine in preclinical models of aspergillosis, candidiasis, and pneumocystosis. PNAS Nexus 1, pgac248 (2022)."
+    },
+    {
+      "key": "8419_CR122",
+      "doi": "10.1038/s41579-023-00960-9",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2023",
+      "author": "SR Lockhart",
+      "unstructured": "Lockhart, S. R., Chowdhary, A. & Gold, J. A. W. The rapid emergence of antifungal-resistant human-pathogenic fungi. Nat. Rev. Microbiol. 21, 818\u2013832 (2023). This study describes the global population structure of Candida auris and defines the four major clades that arose contemporaneously, revealing the low diversity of isolates within each clade and high diversity between clades. This led to many hypotheses about what could have led to the rapid emergence of this pathogen with its complex population structure."
+    },
+    {
+      "key": "8419_CR123",
+      "doi": "10.1111/1462-2920.15660",
+      "title": "",
+      "journal": "Environ. Microbiol.",
+      "year": "2021",
+      "author": "TMN Duong",
+      "unstructured": "Duong, T. M. N. et al. Azole-resistant Aspergillus fumigatus is highly prevalent in the environment of Vietnam, with marked variability by land use type. Environ. Microbiol. 23, 7632\u20137642 (2021)."
+    },
+    {
+      "key": "8419_CR124",
+      "doi": "10.1128/mbio.03364-19",
+      "title": "",
+      "journal": "mBio",
+      "year": "2020",
+      "author": "NA Chow",
+      "unstructured": "Chow, N. A. et al. Tracing the evolutionary history and global expansion of Candida auris using population genomic analyses. mBio 11, e03364-19 (2020)."
+    },
+    {
+      "key": "8419_CR125",
+      "doi": "10.1128/mbio.03181-20",
+      "title": "",
+      "journal": "mBio",
+      "year": "2021",
+      "author": "P Arora",
+      "unstructured": "Arora, P. et al. Environmental isolation of Candida auris from the coastal wetlands of Andaman Islands, India. mBio 12, e03181-20 (2021)."
+    },
+    {
+      "key": "8419_CR126",
+      "doi": "10.1128/mbio.00518-22",
+      "title": "",
+      "journal": "mBio",
+      "year": "2022",
+      "author": "A Yadav",
+      "unstructured": "Yadav, A. et al. Candida auris on apples: diversity and clinical significance. mBio 13, e0051822 (2022)."
+    },
+    {
+      "key": "8419_CR127",
+      "doi": "10.1128/mbio.00365-20",
+      "title": "",
+      "journal": "mBio",
+      "year": "2020",
+      "author": "JM Rybak",
+      "unstructured": "Rybak, J. M. et al. Mutations in TAC1B: a novel genetic determinant of clinical fluconazole resistance in Candida auris. mBio 11, e00365-20 (2020)."
+    },
+    {
+      "key": "8419_CR128",
+      "doi": "10.1093/cid/ciw691",
+      "title": "",
+      "journal": "Clin. Infect. Dis.",
+      "year": "2017",
+      "author": "SR Lockhart",
+      "unstructured": "Lockhart, S. R. et al. Simultaneous emergence of multidrug-resistant Candida auris on 3 continents confirmed by whole-genome sequencing and epidemiological analyses. Clin. Infect. Dis. 64, 134\u2013140 (2017)."
+    },
+    {
+      "key": "8419_CR129",
+      "doi": "10.1128/mbio.01397-19",
+      "title": "",
+      "journal": "mBio",
+      "year": "2019",
+      "author": "A Casadevall",
+      "unstructured": "Casadevall, A., Kontoyiannis, D. P. & Robert, V. On the emergence of Candida auris: climate change, azoles, swamps, and birds. mBio 10, e01397-19 (2019)."
+    },
+    {
+      "key": "8419_CR130",
+      "doi": "10.3390/jof5030058",
+      "title": "",
+      "journal": "J. Fungi",
+      "year": "2019",
+      "author": "BR Jackson",
+      "unstructured": "Jackson, B. R. et al. On the origins of a species: what might explain the rise of Candida auris? J. Fungi 5, 58 (2019)."
+    },
+    {
+      "key": "8419_CR131",
+      "doi": "10.3390/jof8070757",
+      "title": "",
+      "journal": "J. Fungi",
+      "year": "2022",
+      "author": "S Uhrla\u00df",
+      "unstructured": "Uhrla\u00df, S. et al. Trichophyton indotineae\u2014an emerging pathogen causing recalcitrant dermatophytoses in India and worldwide\u2014a multidimensional perspective. J. Fungi 8, 757 (2022). Summary of the characteristics of a rapidly emerging epidemic fungus in India, Trichophyton indotineae, that causes a skin-to-skin transmission affecting the groin, body and face. T. indotineae is resistant to terbinafine, which is normally the antifungal of choice for dermatophyte fungi."
+    },
+    {
+      "key": "8419_CR132",
+      "doi": "10.3390/jof7030170",
+      "title": "",
+      "journal": "J. Fungi",
+      "year": "2021",
+      "author": "A Etchecopaz",
+      "unstructured": "Etchecopaz, A. et al. Sporothrix brasiliensis: a review of an emerging South American fungal pathogen, its related disease, presentation and spread in Argentina. J. Fungi 7, 170 (2021)."
+    },
+    {
+      "key": "8419_CR133",
+      "doi": "10.1016/j.mmcr.2022.12.004",
+      "title": "",
+      "journal": "Med. Mycol. Case Rep.",
+      "year": "2022",
+      "author": "JR Barnacle",
+      "unstructured": "Barnacle, J. R. et al. The first three reported cases of Sporothrix brasiliensis cat-transmitted sporotrichosis outside South America. Med. Mycol. Case Rep. 39, 14\u201317 (2022)."
+    },
+    {
+      "key": "8419_CR134",
+      "doi": "10.3390/jof9070720",
+      "title": "",
+      "journal": "J. Fungi",
+      "year": "2023",
+      "author": "A Yadav",
+      "unstructured": "Yadav, A. et al. Candida auris in dog ears. J. Fungi 9, 720 (2023)."
+    },
+    {
+      "key": "8419_CR135",
+      "doi": "10.1128/mbio.03080-23",
+      "title": "",
+      "journal": "mBio",
+      "year": "2024",
+      "author": "TC White",
+      "unstructured": "White, T. C. et al. Candida auris detected in the oral cavity of a dog in Kansas. mBio 15, e0308023 (2024)."
+    },
+    {
+      "key": "8419_CR136",
+      "doi": "10.1038/s41564-024-01720-y",
+      "title": "",
+      "journal": "Nat. Microbiol.",
+      "year": "2024",
+      "author": "J Huang",
+      "unstructured": "Huang, J. et al. Pan-drug resistance and hypervirulence in a human fungal pathogen are enabled by mutagenesis induced by mammalian body temperature. Nat. Microbiol. 9, 1686\u20131699 (2024)."
+    },
+    {
+      "key": "8419_CR137",
+      "doi": "10.1038/s41467-023-37891-1",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2023",
+      "author": "AE Graham",
+      "unstructured": "Graham, A. E. & Ledesma-Amaro, R. The microbial food revolution. Nat. Commun. 14, 2231 (2023)."
+    },
+    {
+      "key": "8419_CR138",
+      "doi": "10.1016/j.cell.2022.12.002",
+      "title": "",
+      "journal": "Cell",
+      "year": "2023",
+      "author": "LJ Jahn",
+      "unstructured": "Jahn, L. J., Rekdal, V. M. & Sommer, M. O. A. Microbial foods for improving human and planetary health. Cell 186, 469\u2013478 (2023)."
+    },
+    {
+      "key": "8419_CR139",
+      "doi": "10.1080/1040841x.2020.1828815",
+      "title": "",
+      "journal": "Crit. Rev. Microbiol.",
+      "year": "2020",
+      "author": "BC Behera",
+      "unstructured": "Behera, B. C. Citric acid from Aspergillus niger: a comprehensive overview. Crit. Rev. Microbiol. 46, 727\u2013749 (2020)."
+    },
+    {
+      "key": "8419_CR140",
+      "doi": "10.1177/1091581818766318",
+      "title": "",
+      "journal": "Int. J. Toxicol.",
+      "year": "2018",
+      "author": "RZ Fraser",
+      "unstructured": "Fraser, R. Z., Shitut, M., Agrawal, P., Mendes, O. & Klapholz, S. Safety evaluation of soy leghemoglobin protein preparation derived from Pichia pastoris, intended for use as a flavor catalyst in plant-based meat. Int. J. Toxicol. 37, 241\u2013262 (2018). This study revealed no evidence for toxicity for the haem cofactor from plant leghaemoglobin that confers meat-like flavours upon cooking."
+    },
+    {
+      "key": "8419_CR141",
+      "doi": "10.1146/annurev-phyto-080614-120336",
+      "title": "",
+      "journal": "Annu. Rev. Phytopathol.",
+      "year": "2015",
+      "author": "J Li",
+      "unstructured": "Li, J. et al. Molecular mechanisms of nematode\u2013nematophagous microbe interactions: basis for biological control of plant-parasitic nematodes. Annu. Rev. Phytopathol. 53, 67\u201395 (2015)."
+    },
+    {
+      "key": "8419_CR142",
+      "doi": "10.1128/mbio.01211-18",
+      "title": "",
+      "journal": "mBio",
+      "year": "2018",
+      "author": "X Yang",
+      "unstructured": "Yang, X. et al. Cyclosporine biosynthesis in Tolypocladium inflatum benefits fungal adaptation to the environment. mBio 9, e01211-18 (2018)."
+    },
+    {
+      "key": "8419_CR143",
+      "doi": "10.1007/978-3-319-51639-4_3",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Sanchez, S. & Demain, A. L. in Food Bioactives (ed. Puri, M.) 59\u201387 (Springer, 2017)."
+    },
+    {
+      "key": "8419_CR144",
+      "doi": "10.1016/j.neuropharm.2022.109257",
+      "title": "",
+      "journal": "Neuropharmacology",
+      "year": "2023",
+      "author": "D Nutt",
+      "unstructured": "Nutt, D., Spriggs, M. & Erritzoe, D. Psychedelics therapeutics: what we know, what we think, and what we need to research. Neuropharmacology 223, 109257 (2023)."
+    },
+    {
+      "key": "8419_CR145",
+      "doi": "10.1073/pnas.2101084119",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2022",
+      "author": "TJ Lark",
+      "unstructured": "Lark, T. J. et al. Environmental outcomes of the US Renewable Fuel Standard. Proc. Natl Acad. Sci. USA 119, e2101084119 (2022)."
+    },
+    {
+      "key": "8419_CR146",
+      "doi": "10.1073/pnas.2023008118",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2021",
+      "author": "NA Huq",
+      "unstructured": "Huq, N. A. et al. Toward net-zero sustainable aviation fuel with wet waste-derived volatile fatty acids. Proc. Natl Acad. Sci. USA 118, e2023008118 (2021)."
+    },
+    {
+      "key": "8419_CR147",
+      "doi": "10.1038/nrmicro2519",
+      "title": "",
+      "journal": "Nat. Rev. Microbiol.",
+      "year": "2011",
+      "author": "H Harms",
+      "unstructured": "Harms, H., Schlosser, D. & Wick, L. Y. Untapped potential: exploiting fungi in bioremediation of hazardous chemicals. Nat. Rev. Microbiol. 9, 177\u2013192 (2011)."
+    },
+    {
+      "key": "8419_CR148",
+      "doi": "10.1186/s40694-021-00128-1",
+      "title": "",
+      "journal": "Fungal Biol. Biotechnol.",
+      "year": "2021",
+      "author": "S Vandelook",
+      "unstructured": "Vandelook, S., Elsacker, E., Van Wylick, A., De Laet, L. & Peeters, E. Current state and future prospects of pure mycelium materials. Fungal Biol. Biotechnol. 8, 20 (2021)."
+    },
+    {
+      "key": "8419_CR149",
+      "doi": "10.1073/pnas.2221996120",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2023",
+      "author": "RJB Cordero",
+      "unstructured": "Cordero, R. J. B., Mattoon, E. R., Ramos, Z. & Casadevall, A. The hypothermic nature of fungi. Proc. Natl Acad. Sci. USA 120, e2221996120 (2023)."
+    }
+  ]
+}

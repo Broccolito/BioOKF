@@ -1,0 +1,1341 @@
+{
+  "article": {
+    "slug": "s41586-021-03392-8",
+    "doi": "10.1038/s41586-021-03392-8",
+    "title": "The changing landscape of atherosclerosis",
+    "url": "https://www.nature.com/articles/s41586-021-03392-8",
+    "abbrev": "changing-landscape-atherosclerosis",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/changing-landscape-atherosclerosis"
+  },
+  "meta": {
+    "title": "The changing landscape of atherosclerosis",
+    "authors": [
+      "Peter Libby"
+    ],
+    "published": [
+      2021,
+      4,
+      21
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-021-03392-8",
+    "n_references": 146,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "3392_CR1",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Gaziano, T. A., Prabhakaran, D. & Gaziano, J. M. in Braunwald\u2019s Heart Disease (eds Zipes, D. P. et al.) 1\u201318 (Saunders, 2018)."
+    },
+    {
+      "key": "3392_CR2",
+      "doi": "10.1093/ehjqcco/qcaa076",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Dai, H. et al. Global, regional, and national burden of ischemic heart disease and its attributable risk factors, 1990-2017: results from the global Burden of Disease Study 2017. Eur. Heart J. Qual. Care Clin. Outcomes, https://doi.org/10.1093/ehjqcco/qcaa076 (2020)."
+    },
+    {
+      "key": "3392_CR3",
+      "doi": "10.1038/s41572-019-0106-z",
+      "title": "",
+      "journal": "Nat. Rev. Dis. Primers",
+      "year": "2019",
+      "author": "P Libby",
+      "unstructured": "Libby, P. et al. Atherosclerosis. Nat. Rev. Dis. Primers 5, 56 (2019)."
+    },
+    {
+      "key": "3392_CR4",
+      "doi": "10.1161/cir.0000000000000950",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2021",
+      "author": "SS Virani",
+      "unstructured": "Virani, S. S. et al. Heart disease and stroke statistics\u20142021 update: a report from the American Heart Association. Circulation 143, e254\u2013e743 (2021)."
+    },
+    {
+      "key": "3392_CR5",
+      "doi": "10.1161/circulationaha.118.037137",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2019",
+      "author": "S Arora",
+      "unstructured": "Arora, S. et al. Twenty year trends and sex differences in young adults hospitalized with acute myocardial infarction. Circulation 139, 1047\u20131056 (2019)."
+    },
+    {
+      "key": "3392_CR6",
+      "doi": "10.1016/j.amjcard.2011.05.046",
+      "title": "",
+      "journal": "Am. J. Cardiol.",
+      "year": "2011",
+      "author": "A Towfighi",
+      "unstructured": "Towfighi, A., Markovic, D. & Ovbiagele, B. National gender-specific trends in myocardial infarction hospitalization rates among patients aged 35 to 64 years. Am. J. Cardiol. 108, 1102\u20131107 (2011)."
+    },
+    {
+      "key": "3392_CR7",
+      "doi": "10.1038/s41574-019-0176-8",
+      "title": "",
+      "journal": "Nat. Rev. Endocrinol.",
+      "year": "2019",
+      "author": "M Bl\u00fcher",
+      "unstructured": "Bl\u00fcher, M. Obesity: global epidemiology and pathogenesis. Nat. Rev. Endocrinol. 15, 288\u2013298 (2019)."
+    },
+    {
+      "key": "3392_CR8",
+      "doi": "10.1016/j.jacc.2020.11.010",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2020",
+      "author": "GA Roth",
+      "unstructured": "Roth, G. A. et al. Global burden of cardiovascular diseases and risk factors, 1990\u20132019: update from the GBD 2019 study. J. Am. Coll. Cardiol. 76, 2982\u20133021 (2020). This compilation provides recent data regarding cardiovascular risk factors in various regions of the world, and their import for cardiovascular diseases."
+    },
+    {
+      "key": "3392_CR9",
+      "doi": "10.1038/nature05488",
+      "title": "",
+      "journal": "Nature",
+      "year": "2006",
+      "author": "J-P Despr\u00e9s",
+      "unstructured": "Despr\u00e9s, J.-P. & Lemieux, I. Abdominal obesity and metabolic syndrome. Nature 444, 881\u2013887 (2006)."
+    },
+    {
+      "key": "3392_CR10",
+      "doi": "10.1016/s0140-6736(14)61177-6",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2014",
+      "author": "BG Nordestgaard",
+      "unstructured": "Nordestgaard, B. G. & Varbo, A. Triglycerides and cardiovascular disease. Lancet 384, 626\u2013635 (2014)."
+    },
+    {
+      "key": "3392_CR11",
+      "doi": "10.5888/pcd14.160287",
+      "title": "",
+      "journal": "Prev. Chronic Dis.",
+      "year": "2017",
+      "author": "JX Moore",
+      "unstructured": "Moore, J. X., Chaudhary, N. & Akinyemiju, T. Metabolic syndrome prevalence by race/ethnicity and sex in the United States, national health and nutrition examination survey, 1988\u20132012. Prev. Chronic Dis. 14, E24 (2017)."
+    },
+    {
+      "key": "3392_CR12",
+      "doi": "10.1093/eurheartj/ehx144",
+      "title": "",
+      "journal": "Eur. Heart J.",
+      "year": "2017",
+      "author": "BA Ference",
+      "unstructured": "Ference, B. A. et al. Low-density lipoproteins cause atherosclerotic cardiovascular disease. 1. Evidence from genetic, epidemiologic, and clinical studies. A consensus statement from the European Atherosclerosis Society Consensus Panel. Eur. Heart J. 38, 2459\u20132472 (2017)."
+    },
+    {
+      "key": "3392_CR13",
+      "doi": "10.1093/eurheartj/ehz962",
+      "title": "",
+      "journal": "Eur. Heart J.",
+      "year": "2020",
+      "author": "J Bor\u00e9n",
+      "unstructured": "Bor\u00e9n, J. et al. Low-density lipoproteins cause atherosclerotic cardiovascular disease: pathophysiological, genetic, and therapeutic insights: a consensus statement from the European Atherosclerosis Society Consensus Panel. Eur. Heart J. 41, 2313\u20132330 (2020)."
+    },
+    {
+      "key": "3392_CR14",
+      "doi": "10.1016/j.cell.2015.01.036",
+      "title": "",
+      "journal": "Cell",
+      "year": "2015",
+      "author": "JL Goldstein",
+      "unstructured": "Goldstein, J. L. & Brown, M. S. A century of cholesterol and coronaries: from plaques to genes to statins. Cell 161, 161\u2013172 (2015). A review of the involvement of LDL in atherosclerosis, which represents one of the major advances in cardiovascular science in the past century."
+    },
+    {
+      "key": "3392_CR15",
+      "doi": "10.1016/j.jacc.2020.07.059",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2020",
+      "author": "MJ Domanski",
+      "unstructured": "Domanski, M. J. et al. Time course of LDL cholesterol exposure and cardiovascular disease event risk. J. Am. Coll. Cardiol. 76, 1507\u20131516 (2020)."
+    },
+    {
+      "key": "3392_CR16",
+      "doi": "10.1161/circresaha.116.310527",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2017",
+      "author": "PM Ridker",
+      "unstructured": "Ridker, P. M. How common is residual inflammatory risk? Circ. Res. 120, 617\u2013619 (2017)."
+    },
+    {
+      "key": "3392_CR17",
+      "doi": "10.1056/nejmoa1615664",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2017",
+      "author": "MS Sabatine",
+      "unstructured": "Sabatine, M. S. et al. Evolocumab and clinical outcomes in patients with cardiovascular disease. N. Engl. J. Med. 376, 1713\u20131722 (2017)."
+    },
+    {
+      "key": "3392_CR18",
+      "doi": "10.1056/nejmoa1801174",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2018",
+      "author": "GG Schwartz",
+      "unstructured": "Schwartz, G. G. et al. Alirocumab and cardiovascular outcomes after acute coronary syndrome. N. Engl. J. Med. 379, 2097\u20132107 (2018)."
+    },
+    {
+      "key": "3392_CR19",
+      "doi": "10.1097/mca.0000000000000844",
+      "title": "",
+      "journal": "Coron. Artery Dis.",
+      "year": "2020",
+      "author": "CS Kwok",
+      "unstructured": "Kwok, C. S. et al. Unplanned hospital readmissions after acute myocardial infarction: a nationwide analysis of rates, trends, predictors and causes in the United States between 2010 and 2014. Coron. Artery Dis. 31, 354\u2013364 (2020)."
+    },
+    {
+      "key": "3392_CR20",
+      "doi": "10.1093/ajh/hpx109",
+      "title": "",
+      "journal": "Am. J. Hypertens.",
+      "year": "2018",
+      "author": "RD Brook",
+      "unstructured": "Brook, R. D., Newby, D. E. & Rajagopalan, S. Air pollution and cardiometabolic disease: an update and call for clinical trials. Am. J. Hypertens. 31, 1\u201310 (2018)."
+    },
+    {
+      "key": "3392_CR21",
+      "doi": "10.1093/cvr/cvz134",
+      "title": "",
+      "journal": "Cardiovasc. Res.",
+      "year": "2019",
+      "author": "T M\u00fcnzel",
+      "unstructured": "M\u00fcnzel, T. Up in the air: links between the environment and cardiovascular disease. Cardiovasc. Res. 115, e144\u2013e146 (2019)."
+    },
+    {
+      "key": "3392_CR22",
+      "doi": "10.1161/circulationaha.117.029400",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2017",
+      "author": "LF Drager",
+      "unstructured": "Drager, L. F., McEvoy, R. D., Barbe, F., Lorenzi-Filho, G. & Redline, S. Sleep apnea and cardiovascular disease: lessons from recent trials and need for team science. Circulation 136, 1840\u20131850 (2017)."
+    },
+    {
+      "key": "3392_CR23",
+      "doi": "10.1161/circulationaha.115.018585",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2016",
+      "author": "D Mozaffarian",
+      "unstructured": "Mozaffarian, D. Dietary and policy priorities for cardiovascular disease, diabetes, and obesity: a comprehensive review. Circulation 133, 187\u2013225 (2016)."
+    },
+    {
+      "key": "3392_CR24",
+      "doi": "10.3390/nu11081840",
+      "title": "",
+      "journal": "Nutrients",
+      "year": "2019",
+      "author": "VS Malik",
+      "unstructured": "Malik, V. S. & Hu, F. B. Sugar-sweetened beverages and cardiometabolic health: an update of the evidence. Nutrients 11, 1840 (2019)."
+    },
+    {
+      "key": "3392_CR25",
+      "doi": "10.1038/s41569-019-0202-5",
+      "title": "",
+      "journal": "Nat. Rev. Cardiol.",
+      "year": "2019",
+      "author": "C Andersson",
+      "unstructured": "Andersson, C., Johnson, A. D., Benjamin, E. J., Levy, D. & Vasan, R. S. 70-year legacy of the Framingham Heart Study. Nat. Rev. Cardiol. 16, 687\u2013698 (2019)."
+    },
+    {
+      "key": "3392_CR26",
+      "doi": "10.1161/circresaha.120.315928",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2020",
+      "author": "KG Aragam",
+      "unstructured": "Aragam, K. G. & Natarajan, P. Polygenic scores to assess atherosclerotic cardiovascular disease risk. Circ. Res. 126, 1159\u20131177 (2020). A recent review of the generation and use of polygenic risk scores for atherosclerosis."
+    },
+    {
+      "key": "3392_CR27",
+      "doi": "10.1001/jama.2019.22241",
+      "title": "",
+      "journal": "J. Am. Med. Assoc.",
+      "year": "2020",
+      "author": "J Elliott",
+      "unstructured": "Elliott, J. et al. Predictive accuracy of a polygenic risk score-enhanced prediction model vs a clinical risk score for coronary artery disease. J. Am. Med. Assoc. 323, 636\u2013645 (2020)."
+    },
+    {
+      "key": "3392_CR28",
+      "doi": "10.1001/jama.2019.21782",
+      "title": "",
+      "journal": "J. Am. Med. Assoc.",
+      "year": "2020",
+      "author": "JD Mosley",
+      "unstructured": "Mosley, J. D. et al. Predictive accuracy of a polygenic risk score compared with a clinical risk score for incident coronary heart disease. J. Am. Med. Assoc. 323, 627\u2013635 (2020)."
+    },
+    {
+      "key": "3392_CR29",
+      "doi": "10.1097/hco.0000000000000211",
+      "title": "",
+      "journal": "Curr. Opin. Cardiol.",
+      "year": "2015",
+      "author": "HK Siddiqi",
+      "unstructured": "Siddiqi, H. K., Kiss, D. & Rader, D. HDL-cholesterol and cardiovascular disease: rethinking our approach. Curr. Opin. Cardiol. 30, 536\u2013542 (2015)."
+    },
+    {
+      "key": "3392_CR30",
+      "doi": "10.1194/jlr.p120001000",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Thomas, D. G., Wei, Y. & Tall, A. R. Lipid and metabolic syndrome traits in coronary artery disease: a Mendelian randomization study. J. Lipid Res., https://doi.org/10.1194/jlr.P120001000 (2020)."
+    },
+    {
+      "key": "3392_CR31",
+      "doi": "10.1016/j.addr.2020.10.006",
+      "title": "",
+      "journal": "Adv. Drug Deliv. Rev.",
+      "year": "2020",
+      "author": "S Nazir",
+      "unstructured": "Nazir, S. et al. Interaction between high-density lipoproteins and inflammation: function matters more than concentration! Adv. Drug Deliv. Rev. 159, 94\u2013119 (2020)."
+    },
+    {
+      "key": "3392_CR32",
+      "doi": "10.1161/atvbaha.118.311366",
+      "title": "",
+      "journal": "Arterioscler. Thromb. Vasc. Biol.",
+      "year": "2019",
+      "author": "S Shea",
+      "unstructured": "Shea, S. et al. Cholesterol mass efflux capacity, incident cardiovascular disease, and progression of carotid plaque. Arterioscler. Thromb. Vasc. Biol. 39, 89\u201396 (2019)."
+    },
+    {
+      "key": "3392_CR33",
+      "doi": "10.1093/eurheartj/ehu500",
+      "title": "",
+      "journal": "Eur. Heart J.",
+      "year": "2015",
+      "author": "P Libby",
+      "unstructured": "Libby, P. Triglycerides on the rise: should we swap seats on the seesaw? Eur. Heart J. 36, 774\u2013776 (2015)."
+    },
+    {
+      "key": "3392_CR34",
+      "doi": "10.1161/circresaha.115.306398",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2016",
+      "author": "K Musunuru",
+      "unstructured": "Musunuru, K. & Kathiresan, S. Surprises from genetic analyses of lipid risk factors for atherosclerosis. Circ. Res. 118, 579\u2013585 (2016)."
+    },
+    {
+      "key": "3392_CR35",
+      "doi": "10.1016/s0140-6736(12)60312-2",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2012",
+      "author": "BF Voight",
+      "unstructured": "Voight, B. F. et al. Plasma HDL cholesterol and risk of myocardial infarction: a mendelian randomisation study. Lancet 380, 572\u2013580 (2012)."
+    },
+    {
+      "key": "3392_CR36",
+      "doi": "10.1038/ng.2795",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2013",
+      "author": "R Do",
+      "unstructured": "Do, R. et al. Common variants associated with plasma triglycerides and risk for coronary artery disease. Nat. Genet. 45, 1345\u20131352 (2013)."
+    },
+    {
+      "key": "3392_CR37",
+      "doi": "10.1001/jama.2017.0972",
+      "title": "",
+      "journal": "J. Am. Med. Assoc.",
+      "year": "2017",
+      "author": "AV Khera",
+      "unstructured": "Khera, A. V. et al. Association of rare and common variation in the lipoprotein lipase gene with coronary artery disease. J. Am. Med. Assoc. 317, 937\u2013946 (2017)."
+    },
+    {
+      "key": "3392_CR38",
+      "doi": "10.1210/er.2014-1062",
+      "title": "",
+      "journal": "Endocr. Rev.",
+      "year": "2015",
+      "author": "GF Lewis",
+      "unstructured": "Lewis, G. F., Xiao, C. & Hegele, R. A. Hypertriglyceridemia in the genomic era: a new paradigm. Endocr. Rev. 36, 131\u2013147 (2015)."
+    },
+    {
+      "key": "3392_CR39",
+      "doi": "10.1161/circulationaha.113.003008",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2013",
+      "author": "A Varbo",
+      "unstructured": "Varbo, A., Benn, M., Tybj\u00e6rg-Hansen, A. & Nordestgaard, B. G. Elevated remnant cholesterol causes both low-grade inflammation and ischemic heart disease, whereas elevated low-density lipoprotein cholesterol causes ischemic heart disease without inflammation. Circulation 128, 1298\u20131309 (2013). This contribution from the Copenhagen group presents evidence that remnant TGRL produce a greater inflammatory response than does LDL."
+    },
+    {
+      "key": "3392_CR40",
+      "doi": "10.1373/clinchem.2018.294926",
+      "title": "",
+      "journal": "Clin. Chem.",
+      "year": "2019",
+      "author": "SEJ Hansen",
+      "unstructured": "Hansen, S. E. J., Madsen, C. M., Varbo, A. & Nordestgaard, B. G. Low-grade inflammation in the association between mild-to-moderate hypertriglyceridemia and risk of acute pancreatitis: a study of more than 115000 individuals from the general population. Clin. Chem. 65, 321\u2013332 (2019)."
+    },
+    {
+      "key": "3392_CR41",
+      "doi": "10.1016/j.jacc.2016.11.042",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2017",
+      "author": "S Tsimikas",
+      "unstructured": "Tsimikas, S. A test in context: lipoprotein(a): diagnosis, prognosis, controversies, and emerging therapies. J. Am. Coll. Cardiol. 69, 692\u2013711 (2017)."
+    },
+    {
+      "key": "3392_CR42",
+      "doi": "10.1016/j.jacc.2012.04.038",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2012",
+      "author": "S Tsimikas",
+      "unstructured": "Tsimikas, S. & Hall, J. L. Lipoprotein(a) as a potential causal genetic risk factor of cardiovascular disease: a rationale for increased efforts to understand its pathophysiology and develop targeted therapies. J. Am. Coll. Cardiol. 60, 716\u2013721 (2012)."
+    },
+    {
+      "key": "3392_CR43",
+      "doi": "10.1056/nejmoa1109034",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2013",
+      "author": "G Thanassoulis",
+      "unstructured": "Thanassoulis, G. et al. Genetic associations with valvular calcification and aortic stenosis. N. Engl. J. Med. 368, 503\u2013512 (2013). This genome-wide association study pointed to lipoprotein(a) as causal for aortic stenosis, which is a common concomitant of atherosclerosis."
+    },
+    {
+      "key": "3392_CR44",
+      "doi": "10.1161/circulationaha.116.024611",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2017",
+      "author": "S-R Lee",
+      "unstructured": "Lee, S.-R. et al. LPA gene, ethnicity, and cardiovascular events. Circulation 135, 251\u2013263 (2017)."
+    },
+    {
+      "key": "3392_CR45",
+      "doi": "10.1161/circresaha.118.313864",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2019",
+      "author": "S Tsimikas",
+      "unstructured": "Tsimikas, S. Potential causality and emerging medical therapies for lipoprotein(a) and its associated oxidized phospholipids in calcific aortic valve stenosis. Circ. Res. 124, 405\u2013415 (2019)."
+    },
+    {
+      "key": "3392_CR46",
+      "doi": "10.1016/j.jacc.2019.07.061",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2019",
+      "author": "P Libby",
+      "unstructured": "Libby, P. & Hansson, G. K. From focal lipid storage to systemic inflammation: JACC review topic of the week. J. Am. Coll. Cardiol. 74, 1594\u20131607 (2019). This review provides an overview of various theories of atherogenesis, culminating in a portrayal of the current view that posits a synthesis that combines elements of many of the previous concepts."
+    },
+    {
+      "key": "3392_CR47",
+      "doi": "10.1016/j.cjca.2020.01.013",
+      "title": "",
+      "journal": "Can. J. Cardiol.",
+      "year": "2020",
+      "author": "L Xiao",
+      "unstructured": "Xiao, L. & Harrison, D. G. Inflammation in hypertension. Can. J. Cardiol. 36, 635\u2013647 (2020)."
+    },
+    {
+      "key": "3392_CR48",
+      "doi": "10.1093/eurheartj/ehy723",
+      "title": "",
+      "journal": "Eur. Heart J.",
+      "year": "2018",
+      "author": "PM Ridker",
+      "unstructured": "Ridker, P. M., Koenig, W., Kastelein, J. J., Mach, F. & L\u00fcscher, T. F. Has the time finally come to measure hsCRP universally in primary and secondary cardiovascular prevention? Eur. Heart J. 39, 4109\u20134111 (2018)."
+    },
+    {
+      "key": "3392_CR49",
+      "doi": "10.1016/j.jacc.2015.11.037",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2016",
+      "author": "PM Ridker",
+      "unstructured": "Ridker, P. M. A test in context: high-sensitivity C-reactive protein. J. Am. Coll. Cardiol. 67, 712\u2013723 (2016)."
+    },
+    {
+      "key": "3392_CR50",
+      "doi": "10.1161/circresaha.115.306427",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2016",
+      "author": "DFJ Ketelhuth",
+      "unstructured": "Ketelhuth, D. F. J. & Hansson, G. K. Adaptive response of T and B cells in atherosclerosis. Circ. Res. 118, 668\u2013678 (2016)."
+    },
+    {
+      "key": "3392_CR51",
+      "doi": "10.1038/s41586-018-0198-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "X Que",
+      "unstructured": "Que, X. et al. Oxidized phospholipids are proinflammatory and proatherogenic in hypercholesterolaemic mice. Nature 558, 301\u2013306 (2018)."
+    },
+    {
+      "key": "3392_CR52",
+      "doi": "10.1038/s41569-018-0106-9",
+      "title": "",
+      "journal": "Nat. Rev. Cardiol.",
+      "year": "2019",
+      "author": "AP Sage",
+      "unstructured": "Sage, A. P., Tsiantoulas, D., Binder, C. J. & Mallat, Z. The role of B cells in atherosclerosis. Nat. Rev. Cardiol. 16, 180\u2013196 (2019)."
+    },
+    {
+      "key": "3392_CR53",
+      "doi": "10.1038/s41586-020-2993-2",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "C Lorenzo",
+      "unstructured": "Lorenzo, C. et al. ALDH4A1 is an atherosclerosis auto-antigen targeted by protective antibodies. Nature 589, 287\u2013292 (2021)."
+    },
+    {
+      "key": "3392_CR54",
+      "doi": "10.1093/cvr/cvz166",
+      "title": "",
+      "journal": "Cardiovasc. Res.",
+      "year": "2019",
+      "author": "DFJ Ketelhuth",
+      "unstructured": "Ketelhuth, D. F. J. et al. Immunometabolism and atherosclerosis: perspectives and clinical significance: a position paper from the Working Group on Atherosclerosis and Vascular Biology of the European Society of Cardiology. Cardiovasc. Res. 115, 1385\u20131392 (2019)."
+    },
+    {
+      "key": "3392_CR55",
+      "doi": "10.1161/circresaha.119.315939",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2020",
+      "author": "I Tabas",
+      "unstructured": "Tabas, I. & Bornfeldt, K. E. Intracellular and intercellular aspects of macrophage immunometabolism in atherosclerosis. Circ. Res. 126, 1209\u20131227 (2020)."
+    },
+    {
+      "key": "3392_CR56",
+      "doi": "10.1016/j.tcb.2017.10.010",
+      "title": "",
+      "journal": "Trends Cell Biol.",
+      "year": "2018",
+      "author": "K Rohlenova",
+      "unstructured": "Rohlenova, K., Veys, K., Miranda-Santos, I., De Bock, K. & Carmeliet, P. Endothelial cell metabolism in health and disease. Trends Cell Biol. 28, 224\u2013236 (2018)."
+    },
+    {
+      "key": "3392_CR57",
+      "doi": "10.1128/iai.70.7.3959-3961.2002",
+      "title": "",
+      "journal": "Infect. Immun.",
+      "year": "2002",
+      "author": "JB Sakash",
+      "unstructured": "Sakash, J. B., Byrne, G. I., Lichtman, A. & Libby, P. Cytokines induce indoleamine 2,3-dioxygenase expression in human atheroma-asociated cells: implications for persistent Chlamydophila pneumoniae infection. Infect. Immun. 70, 3959\u20133961 (2002)."
+    },
+    {
+      "key": "3392_CR58",
+      "doi": "10.4049/jimmunol.179.8.5246",
+      "title": "",
+      "journal": "J. Immunol.",
+      "year": "2007",
+      "author": "MC Cuffy",
+      "unstructured": "Cuffy, M. C. et al. Induction of indoleamine 2,3-dioxygenase in vascular smooth muscle cells by interferon-\u03b3 contributes to medial immunoprivilege. J. Immunol. 179, 5246\u20135254 (2007)."
+    },
+    {
+      "key": "3392_CR59",
+      "doi": "10.1016/j.cyto.2017.09.004",
+      "title": "",
+      "journal": "Cytokine",
+      "year": "2019",
+      "author": "R Baumgartner",
+      "unstructured": "Baumgartner, R., Forteza, M. J. & Ketelhuth, D. F. J. The interplay between cytokines and the kynurenine pathway in inflammation and atherosclerosis. Cytokine 122, 154148 (2019)."
+    },
+    {
+      "key": "3392_CR60",
+      "doi": "10.1161/circulationaha.117.030484",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2017",
+      "author": "GK Hansson",
+      "unstructured": "Hansson, G. K. Inflammation and atherosclerosis: the end of a controversy. Circulation 136, 1875\u20131877 (2017)."
+    },
+    {
+      "key": "3392_CR61",
+      "doi": "10.1161/atvbaha.117.310097",
+      "title": "",
+      "journal": "Arterioscler. Thromb. Vasc. Biol.",
+      "year": "2017",
+      "author": "RA Baylis",
+      "unstructured": "Baylis, R. A., Gomez, D., Mallat, Z., Pasterkamp, G. & Owens, G. K. The CANTOS trial: one important step for clinical cardiology but a giant leap for vascular biology. Arterioscler. Thromb. Vasc. Biol. 37, e174\u2013e177 (2017)."
+    },
+    {
+      "key": "3392_CR62",
+      "doi": "10.1056/nejmoa1707914",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2017",
+      "author": "PM Ridker",
+      "unstructured": "Ridker, P. M. et al. Antiinflammatory therapy with canakinumab for atherosclerotic disease. N. Engl. J. Med. 377, 1119\u20131131 (2017). Results of the clinical trial that first established the role of inflammation in human atherosclerosis by showing improved cardiovascular and other outcomes by targeted neutralization of IL-1\u03b2."
+    },
+    {
+      "key": "3392_CR63",
+      "doi": "10.1016/s0140-6736(17)32247-x",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2017",
+      "author": "PM Ridker",
+      "unstructured": "Ridker, P. M. et al. Effect of interleukin-1\u03b2 inhibition with canakinumab on incident lung cancer in patients with atherosclerosis: exploratory results from a randomised, double-blind, placebo-controlled trial. Lancet 390, 1833\u20131842 (2017)."
+    },
+    {
+      "key": "3392_CR64",
+      "doi": "10.1056/nejmoa1912388",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2019",
+      "author": "JC Tardif",
+      "unstructured": "Tardif, J. C. et al. Efficacy and safety of low-dose colchicine after myocardial infarction. N. Engl. J. Med. 381, 2497\u20132505 (2019)."
+    },
+    {
+      "key": "3392_CR65",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Nidorf, S. M. et al. Colchicine in patients with chronic coronary disease. N. Engl. J. Med. 383, 1838\u20131847 (2020). Two studies64,65 that report the results of large-scale clinical trials, showing that treatment with colchicine can reduce recurrent events in patients with recent myocardial infarction or stable coronary artery disease."
+    },
+    {
+      "key": "3392_CR66",
+      "doi": "10.1161/atvbaha.118.310958",
+      "title": "",
+      "journal": "Arterioscler. Thromb. Vasc. Biol.",
+      "year": "2019",
+      "author": "P Libby",
+      "unstructured": "Libby, P. & Everett, B. M. Novel antiatherosclerotic therapies. Arterioscler. Thromb. Vasc. Biol. 39, 538\u2013545 (2019)."
+    },
+    {
+      "key": "3392_CR67",
+      "doi": "10.1056/nejmoa1809798",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2019",
+      "author": "PM Ridker",
+      "unstructured": "Ridker, P. M. et al. Low-dose methotrexate for the prevention of atherosclerotic events. N. Engl. J. Med. 380, 752\u2013762 (2019)."
+    },
+    {
+      "key": "3392_CR68",
+      "doi": "10.1038/s41574-019-0310-7",
+      "title": "",
+      "journal": "Nat. Rev. Endocrinol.",
+      "year": "2020",
+      "author": "R Ross",
+      "unstructured": "Ross, R. et al. Waist circumference as a vital sign in clinical practice: a consensus statement from the IAS and ICCR Working Group on Visceral Obesity. Nat. Rev. Endocrinol. 16, 177\u2013189 (2020)."
+    },
+    {
+      "key": "3392_CR69",
+      "doi": "10.1056/nejmoa1408617",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2014",
+      "author": "S Jaiswal",
+      "unstructured": "Jaiswal, S. et al. Age-related clonal hematopoiesis associated with adverse outcomes. N. Engl. J. Med. 371, 2488\u20132498 (2014)."
+    },
+    {
+      "key": "3392_CR70",
+      "doi": "10.1056/nejmoa1409405",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2014",
+      "author": "G Genovese",
+      "unstructured": "Genovese, G. et al. Clonal hematopoiesis and blood-cancer risk inferred from blood DNA sequence. N. Engl. J. Med. 371, 2477\u20132487 (2014)."
+    },
+    {
+      "key": "3392_CR71",
+      "doi": "10.1056/nejmoa1701719",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2017",
+      "author": "S Jaiswal",
+      "unstructured": "Jaiswal, S. et al. Clonal hematopoiesis and risk of atherosclerotic cardiovascular disease. N. Engl. J. Med. 377, 111\u2013121 (2017). This paper describes a newly recognized, potent, age-related, independent and common risk factor for atherosclerosis."
+    },
+    {
+      "key": "3392_CR72",
+      "doi": "10.1182/blood-2015-03-631747",
+      "title": "",
+      "journal": "Blood",
+      "year": "2015",
+      "author": "DP Steensma",
+      "unstructured": "Steensma, D. P. et al. Clonal hematopoiesis of indeterminate potential and its distinction from myelodysplastic syndromes. Blood 126, 9\u201316 (2015)."
+    },
+    {
+      "key": "3392_CR73",
+      "doi": "10.1016/j.jacc.2019.06.007",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2019",
+      "author": "P Libby",
+      "unstructured": "Libby, P. et al. Clonal hematopoiesis: crossroads of aging, cardiovascular disease, and cancer: JACC review topic of the week. J. Am. Coll. Cardiol. 74, 567\u2013577 (2019)."
+    },
+    {
+      "key": "3392_CR74",
+      "doi": "10.1126/science.aag1381",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "JJ Fuster",
+      "unstructured": "Fuster, J. J. et al. Clonal hematopoiesis associated with TET2 deficiency accelerates atherosclerosis development in mice. Science 355, 842\u2013847 (2017)."
+    },
+    {
+      "key": "3392_CR75",
+      "doi": "10.1038/s41586-021-03341-5",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Fidler, T. P. et al. The AIM2 inflammasome exacerbates atherosclerosis in clonal haematopoiesis. Nature, https://doi.org/10.1038/s41586-021-03341-5 (2021)."
+    },
+    {
+      "key": "3392_CR76",
+      "doi": "10.1161/circulationaha.118.034076",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2018",
+      "author": "A Gister\u00e5",
+      "unstructured": "Gister\u00e5, A. et al. Low-density lipoprotein-reactive T cells regulate plasma cholesterol levels and development of atherosclerosis in humanized hypercholesterolemic mice. Circulation 138, 2513\u20132526 (2018)."
+    },
+    {
+      "key": "3392_CR77",
+      "doi": "10.1161/circulationaha.118.038571",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2019",
+      "author": "CM Ram\u00edrez",
+      "unstructured": "Ram\u00edrez, C. M. et al. Caveolin-1 regulates atherogenesis by attenuating low-density lipoprotein transcytosis and vascular inflammation independently of endothelial nitric oxide synthase activation. Circulation 140, 225\u2013239 (2019)."
+    },
+    {
+      "key": "3392_CR78",
+      "doi": "10.1038/ncomms13516",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2016",
+      "author": "JR Kraehling",
+      "unstructured": "Kraehling, J. R. et al. Genome-wide RNAi screen reveals ALK1 mediates LDL uptake and transcytosis in endothelial cells. Nat. Commun. 7, 13516 (2016)."
+    },
+    {
+      "key": "3392_CR79",
+      "doi": "10.1038/s41586-019-1140-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "L Huang",
+      "unstructured": "Huang, L. et al. SR-B1 drives endothelial cell LDL transcytosis via DOCK4 to promote atherosclerosis. Nature 569, 565\u2013569 (2019)."
+    },
+    {
+      "key": "3392_CR80",
+      "doi": "10.1016/j.jacc.2011.12.033",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2012",
+      "author": "G Leibundgut",
+      "unstructured": "Leibundgut, G. et al. Oxidized phospholipids are present on plasminogen, affect fibrinolysis, and increase following acute myocardial infarction. J. Am. Coll. Cardiol. 59, 1426\u20131437 (2012)."
+    },
+    {
+      "key": "3392_CR81",
+      "doi": "10.1016/j.jacc.2012.01.023",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2012",
+      "author": "P Libby",
+      "unstructured": "Libby, P. Counterregulation rules in atherothrombosis. J. Am. Coll. Cardiol. 59, 1438\u20131440 (2012)."
+    },
+    {
+      "key": "3392_CR82",
+      "doi": "10.1097/00041433-200210000-00003",
+      "title": "",
+      "journal": "Curr. Opin. Lipidol.",
+      "year": "2002",
+      "author": "HS Kruth",
+      "unstructured": "Kruth, H. S. Sequestration of aggregated low-density lipoproteins by macrophages. Curr. Opin. Lipidol. 13, 483\u2013488 (2002)."
+    },
+    {
+      "key": "3392_CR83",
+      "doi": "10.1161/01.atv.20.6.1572",
+      "title": "",
+      "journal": "Arterioscler. Thromb. Vasc. Biol.",
+      "year": "2000",
+      "author": "V Llorente-Cortes",
+      "unstructured": "Llorente-Cortes, V., Martinez-Gonzalez, J. & Badimon, L. LDL receptor-related protein mediates uptake of aggregated LDL in human vascular smooth muscle cells. Arterioscler. Thromb. Vasc. Biol. 20, 1572\u20131579 (2000)."
+    },
+    {
+      "key": "3392_CR84",
+      "doi": "10.1038/nm.3258",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2013",
+      "author": "CS Robbins",
+      "unstructured": "Robbins, C. S. et al. Local proliferation dominates lesional macrophage accumulation in atherosclerosis. Nat. Med. 19, 1166\u20131172 (2013)."
+    },
+    {
+      "key": "3392_CR85",
+      "doi": "10.1172/jci63108",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2013",
+      "author": "AH Lichtman",
+      "unstructured": "Lichtman, A. H., Binder, C. J., Tsimikas, S. & Witztum, J. L. Adaptive immunity in atherogenesis: new insights and therapeutic approaches. J. Clin. Invest. 123, 27\u201336, (2013)."
+    },
+    {
+      "key": "3392_CR86",
+      "doi": "10.1038/nrneph.2017.51",
+      "title": "",
+      "journal": "Nat. Rev. Nephrol.",
+      "year": "2017",
+      "author": "A Gister\u00e5",
+      "unstructured": "Gister\u00e5, A. & Hansson, G. K. The immunology of atherosclerosis. Nat. Rev. Nephrol. 13, 368\u2013380 (2017)."
+    },
+    {
+      "key": "3392_CR87",
+      "doi": "10.1172/jci29950",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2007",
+      "author": "FK Swirski",
+      "unstructured": "Swirski, F. K. et al. Ly-6Chi monocytes dominate hypercholesterolemia-associated monocytosis and give rise to macrophages in atheromata. J. Clin. Invest. 117, 195\u2013205 (2007)."
+    },
+    {
+      "key": "3392_CR88",
+      "doi": "10.1172/jci28549",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2007",
+      "author": "F Tacke",
+      "unstructured": "Tacke, F. et al. Monocyte subsets differentially employ CCR2, CCR5, and CX3CR1 to accumulate within atherosclerotic plaques. J. Clin. Invest. 117, 185\u2013194 (2007)."
+    },
+    {
+      "key": "3392_CR89",
+      "doi": "10.1161/circresaha.115.306361",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2016",
+      "author": "MR Bennett",
+      "unstructured": "Bennett, M. R., Sinha, S. & Owens, G. K. Vascular smooth muscle cells in atherosclerosis. Circ. Res. 118, 692\u2013702 (2016)."
+    },
+    {
+      "key": "3392_CR90",
+      "doi": "10.1016/j.jacc.2009.07.078",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2010",
+      "author": "T Kubo",
+      "unstructured": "Kubo, T. et al. The dynamic nature of coronary artery lesion morphology assessed by serial virtual histology intravascular ultrasound tissue characterization. J. Am. Coll. Cardiol. 55, 1590\u20131597 (2010)."
+    },
+    {
+      "key": "3392_CR91",
+      "doi": "10.1016/j.jacc.2009.10.069",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2010",
+      "author": "EN Deliargyris",
+      "unstructured": "Deliargyris, E. N. Intravascular ultrasound virtual histology derived thin cap fibroatheroma now you see it, now you don\u2019t. J. Am. Coll. Cardiol. 55, 1598\u20131599 (2010)."
+    },
+    {
+      "key": "3392_CR92",
+      "doi": "10.1056/nejmra2000317",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2020",
+      "author": "R Vergallo",
+      "unstructured": "Vergallo, R. & Crea, F. Atherosclerotic plaque healing. N. Engl. J. Med. 383, 846\u2013857 (2020)."
+    },
+    {
+      "key": "3392_CR93",
+      "doi": "10.1126/science.aaf1098",
+      "title": "",
+      "journal": "Science",
+      "year": "2016",
+      "author": "MG Netea",
+      "unstructured": "Netea, M. G. et al. Trained immunity: a program of innate immune memory in health and disease. Science 352, aaf1098 (2016)."
+    },
+    {
+      "key": "3392_CR94",
+      "doi": "10.1016/j.cell.2017.12.013",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "A Christ",
+      "unstructured": "Christ, A. et al. Western diet triggers NLRP3-dependent innate immune reprogramming. Cell 172, 162\u2013175 (2018)."
+    },
+    {
+      "key": "3392_CR95",
+      "doi": "10.1161/circresaha.119.315940",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2020",
+      "author": "JW Williams",
+      "unstructured": "Williams, J. W. et al. Single cell RNA sequencing in atherosclerosis research. Circ. Res. 126, 1112\u20131126 (2020)."
+    },
+    {
+      "key": "3392_CR96",
+      "doi": "10.1161/circulationaha.118.038362",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2019",
+      "author": "AS Kalluri",
+      "unstructured": "Kalluri, A. S. et al. Single-cell analysis of the normal mouse aorta reveals functionally distinct endothelial cell populations. Circulation 140, 147\u2013163 (2019)."
+    },
+    {
+      "key": "3392_CR97",
+      "doi": "10.1016/j.cell.2020.01.015",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "J Kalucka",
+      "unstructured": "Kalucka, J. et al. Single-cell transcriptome atlas of murine endothelial cells. Cell 180, 764\u2013779 (2020)."
+    },
+    {
+      "key": "3392_CR98",
+      "doi": "10.1161/circresaha.120.315936",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2020",
+      "author": "MJ Schloss",
+      "unstructured": "Schloss, M. J., Swirski, F. K. & Nahrendorf, M. Modifiable cardiovascular risk, hematopoiesis, and innate immunity. Circ. Res. 126, 1242\u20131259 (2020). This paper summarizes work that links lifestyle and behavioural variables with alterations in the bone marrow that modify cardiovascular diseases."
+    },
+    {
+      "key": "3392_CR99",
+      "doi": "10.1016/j.jacc.2015.12.048",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2016",
+      "author": "P Libby",
+      "unstructured": "Libby, P., Nahrendorf, M. & Swirski, F. K. Leukocytes link local and systemic inflammation in ischemic cardiovascular disease: an expanded \u201ccardiovascular continuum\u201d. J. Am. Coll. Cardiol. 67, 1091\u20131103 (2016). This paper summarizes recent data that add the central nervous system and bone marrow to traditional cardiovascular risk schemes."
+    },
+    {
+      "key": "3392_CR100",
+      "doi": "10.3389/fcvm.2017.00086",
+      "title": "",
+      "journal": "Front. Cardiovasc. Med.",
+      "year": "2018",
+      "author": "A Yurdagul Jr",
+      "unstructured": "Yurdagul, A., Jr, Doran, A. C., Cai, B., Fredman, G. & Tabas, I. A. Mechanisms and consequences of defective efferocytosis in atherosclerosis. Front. Cardiovasc. Med. 4, 86 (2018)."
+    },
+    {
+      "key": "3392_CR101",
+      "doi": "",
+      "title": "",
+      "journal": "Arch. Pathol. Lab. Med.",
+      "year": "1987",
+      "author": "R Virmani",
+      "unstructured": "Virmani, R. et al. Coronary artery atherosclerosis revisited in Korean war combat casualties. Arch. Pathol. Lab. Med. 111, 972\u2013976 (1987). https://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&db=PubMed&list_uids=3307684&dopt=Abstract"
+    },
+    {
+      "key": "3392_CR102",
+      "doi": "10.1161/01.cir.103.22.2705",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2001",
+      "author": "EM Tuzcu",
+      "unstructured": "Tuzcu, E. M. et al. High prevalence of coronary atherosclerosis in asymptomatic teenagers and young adults: evidence from intravascular ultrasound. Circulation 103, 2705\u20132710 (2001)."
+    },
+    {
+      "key": "3392_CR103",
+      "doi": "10.1016/j.jacc.2018.12.075",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2019",
+      "author": "L Fern\u00e1ndez-Friera",
+      "unstructured": "Fern\u00e1ndez-Friera, L. et al. Vascular inflammation in subclinical atherosclerosis detected by hybrid PET/MRI. J. Am. Coll. Cardiol. 73, 1371\u20131382 (2019)."
+    },
+    {
+      "key": "3392_CR104",
+      "doi": "10.1161/01.cir.94.8.2013",
+      "title": "",
+      "journal": "Circulation",
+      "year": "1996",
+      "author": "MJ Davies",
+      "unstructured": "Davies, M. J. Stability and instability: two faces of coronary atherosclerosis. The Paul Dudley White Lecture 1995. Circulation 94, 2013\u20132020 (1996)."
+    },
+    {
+      "key": "3392_CR105",
+      "doi": "10.1016/j.ahj.2017.02.010",
+      "title": "",
+      "journal": "Am. Heart J.",
+      "year": "2017",
+      "author": "R Waksman",
+      "unstructured": "Waksman, R. et al. The lipid-rich plaque study of vulnerable plaques and vulnerable patients: study design and rationale. Am. Heart J. 192, 98\u2013104 (2017)."
+    },
+    {
+      "key": "3392_CR106",
+      "doi": "10.1056/nejmra1216063",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2013",
+      "author": "P Libby",
+      "unstructured": "Libby, P. Mechanisms of acute coronary syndromes and their implications for therapy. N. Engl. J. Med. 368, 2004\u20132013 (2013)."
+    },
+    {
+      "key": "3392_CR107",
+      "doi": "10.1172/jci67526",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2013",
+      "author": "P Libby",
+      "unstructured": "Libby, P. Collagenases and cracks in the plaque. J. Clin. Invest. 123, 3201\u20133203 (2013)."
+    },
+    {
+      "key": "3392_CR108",
+      "doi": "10.1056/nejmoa1002358",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2011",
+      "author": "GW Stone",
+      "unstructured": "Stone, G. W. et al. A prospective natural-history study of coronary atherosclerosis. N. Engl. J. Med. 364, 226\u2013235 (2011)."
+    },
+    {
+      "key": "3392_CR109",
+      "doi": "10.1056/nejmoa1805971",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2018",
+      "author": "The SCOT-HEART Investigators",
+      "unstructured": "The SCOT-HEART Investigators. Coronary CT angiography and 5-year risk of myocardial infarction. N. Engl. J. Med. 379, 924\u2013933 (2018)."
+    },
+    {
+      "key": "3392_CR110",
+      "doi": "10.1056/nejmoa1415516",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2015",
+      "author": "PS Douglas",
+      "unstructured": "Douglas, P. S. et al. Outcomes of anatomical versus functional testing for coronary artery disease. N. Engl. J. Med. 372, 1291\u20131300 (2015)."
+    },
+    {
+      "key": "3392_CR111",
+      "doi": "",
+      "title": "",
+      "journal": "Eur. Heart J.",
+      "year": "2015",
+      "author": "P Libby",
+      "unstructured": "Libby, P. & Pasterkamp, G. Requiem for the \u2018vulnerable plaque\u2019. Eur. Heart J. 36, 2984\u20132987 (2015)."
+    },
+    {
+      "key": "3392_CR112",
+      "doi": "10.1016/j.jacc.2014.11.041",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2015",
+      "author": "A Arbab-Zadeh",
+      "unstructured": "Arbab-Zadeh, A. & Fuster, V. The myth of the \u201cvulnerable plaque\u201d: transitioning from a focus on individual lesions to atherosclerotic disease burden for coronary artery disease risk assessment. J. Am. Coll. Cardiol. 65, 846\u2013855 (2015)."
+    },
+    {
+      "key": "3392_CR113",
+      "doi": "10.1038/nrcardio.2016.166",
+      "title": "",
+      "journal": "Nat. Rev. Cardiol.",
+      "year": "2017",
+      "author": "G Pasterkamp",
+      "unstructured": "Pasterkamp, G., den Ruijter, H. M. & Libby, P. Temporal shifts in clinical presentation and underlying mechanisms of atherosclerotic disease. Nat. Rev. Cardiol. 14, 21\u201329 (2017)."
+    },
+    {
+      "key": "3392_CR114",
+      "doi": "10.1093/eurheartj/ehy822",
+      "title": "",
+      "journal": "Eur. Heart J.",
+      "year": "2019",
+      "author": "G Franck",
+      "unstructured": "Franck, G. et al. Haemodynamic stress-induced breaches of the arterial intima trigger inflammation and drive atherogenesis. Eur. Heart J. 40, 928\u2013937 (2019)."
+    },
+    {
+      "key": "3392_CR115",
+      "doi": "10.1161/circulationaha.117.029870",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2017",
+      "author": "F Crea",
+      "unstructured": "Crea, F. & Libby, P. Acute coronary syndromes. Circulation 136, 1155\u20131166 (2017)."
+    },
+    {
+      "key": "3392_CR116",
+      "doi": "10.1161/circresaha.118.311098",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2019",
+      "author": "P Libby",
+      "unstructured": "Libby, P., Pasterkamp, G., Crea, F. & Jang, I. K. Reassessing the mechanisms of acute coronary syndromes. Circ. Res. 124, 150\u2013160 (2019)."
+    },
+    {
+      "key": "3392_CR117",
+      "doi": "10.1001/jama.2021.0069",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Kolte, D., Libby, P. & Jang, I-K. New insights into plaque erosion as a mechanism of acute coronary syndromes. J. Am. Med. Assoc., https://doi.org/10.1001/jama.2021.0069 (2021)."
+    },
+    {
+      "key": "3392_CR118",
+      "doi": "10.1093/eurheartj/ehz081",
+      "title": "",
+      "journal": "Eur. Heart J.",
+      "year": "2019",
+      "author": "P Libby",
+      "unstructured": "Libby, P. Once more unto the breach: endothelial permeability and atherogenesis. Eur. Heart J. 40, 938\u2013940 (2019)."
+    },
+    {
+      "key": "3392_CR119",
+      "doi": "10.1093/cvr/cvab074",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Molinaro, R. et al. Targeted delivery of protein arginine deiminase-4 inhibitors to limit arterial intimal NETosis and preserve endothelial integrity. Cardiovasc. Res., https://doi.org/10.1093/cvr/cvab074 (2012)."
+    },
+    {
+      "key": "3392_CR120",
+      "doi": "10.1056/nejmoa1605086",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2016",
+      "author": "AV Khera",
+      "unstructured": "Khera, A. V. et al. Genetic risk, adherence to a healthy lifestyle, and coronary disease. N. Engl. J. Med. 375, 2349\u20132358 (2016). This paper presents data that show that healthy behaviours can modify coronary disease risk that is conferred by inherited factors."
+    },
+    {
+      "key": "3392_CR121",
+      "doi": "10.1056/nejmoa0807646",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2008",
+      "author": "PM Ridker",
+      "unstructured": "Ridker, P. M. et al. Rosuvastatin to prevent vascular events in men and women with elevated C-reactive protein. N. Engl. J. Med. 359, 2195\u20132207 (2008)."
+    },
+    {
+      "key": "3392_CR122",
+      "doi": "10.1016/s0140-6736(16)31357-5",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2016",
+      "author": "R Collins",
+      "unstructured": "Collins, R. et al. Interpretation of the evidence for the efficacy and safety of statin therapy. Lancet 388, 2532\u20132561 (2016)."
+    },
+    {
+      "key": "3392_CR123",
+      "doi": "10.1056/nejmoa1410489",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2015",
+      "author": "CP Cannon",
+      "unstructured": "Cannon, C. P. et al. Ezetimibe added to statin therapy after acute coronary syndromes. N. Engl. J. Med. 372, 2387\u20132397 (2015)."
+    },
+    {
+      "key": "3392_CR124",
+      "doi": "10.1038/ng1161",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2003",
+      "author": "M Abifadel",
+      "unstructured": "Abifadel, M. et al. Mutations in PCSK9 cause autosomal dominant hypercholesterolemia. Nat. Genet. 34, 154\u2013156 (2003). This paper reports a molecular mechanism that regulates LDL concentrations, and that led to the rapid development of a class of lipid-lowering drugs that lower cardiovascular risk."
+    },
+    {
+      "key": "3392_CR125",
+      "doi": "10.1016/j.jacc.2019.11.072",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2020",
+      "author": "D Preiss",
+      "unstructured": "Preiss, D., Tobert, J. A., Hovingh, G. K. & Reith, C. Lipid-modifying agents, from statins to PCSK9 inhibitors: JACC focus seminar. J. Am. Coll. Cardiol. 75, 1945\u20131955 (2020)."
+    },
+    {
+      "key": "3392_CR126",
+      "doi": "10.1056/nejmoa1803917",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2019",
+      "author": "KK Ray",
+      "unstructured": "Ray, K. K. et al. Safety and efficacy of bempedoic acid to reduce LDL cholesterol. N. Engl. J. Med. 380, 1022\u20131032 (2019)."
+    },
+    {
+      "key": "3392_CR127",
+      "doi": "10.1056/nejmoa1615758",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2017",
+      "author": "KK Ray",
+      "unstructured": "Ray, K. K. et al. Inclisiran in patients at high cardiovascular risk with elevated LDL cholesterol. N. Engl. J. Med. 376, 1430\u20131440 (2017)."
+    },
+    {
+      "key": "3392_CR128",
+      "doi": "10.1056/nejmoa1905239",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2020",
+      "author": "S Tsimikas",
+      "unstructured": "Tsimikas, S. et al. Lipoprotein(a) reduction in persons with cardiovascular disease. N. Engl. J. Med. 382, 244\u2013255 (2020)."
+    },
+    {
+      "key": "3392_CR129",
+      "doi": "10.1016/j.jacbts.2016.08.007",
+      "title": "",
+      "journal": "JACC Basic Transl. Sci.",
+      "year": "2016",
+      "author": "P Libby",
+      "unstructured": "Libby, P. Lipoprotein (a): a frustrating final frontier in lipid management? JACC Basic Transl. Sci. 1, 428\u2013431 (2016)."
+    },
+    {
+      "key": "3392_CR130",
+      "doi": "10.1016/j.ahj.2018.09.011",
+      "title": "",
+      "journal": "Am. Heart J.",
+      "year": "2018",
+      "author": "AD Pradhan",
+      "unstructured": "Pradhan, A. D. et al. Rationale and design of the pemafibrate to reduce cardiovascular outcomes by reducing triglycerides in patients with diabetes (PROMINENT) study. Am. Heart J. 206, 80\u201393 (2018)."
+    },
+    {
+      "key": "3392_CR131",
+      "doi": "10.1056/nejmoa1812792",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2019",
+      "author": "DL Bhatt",
+      "unstructured": "Bhatt, D. L. et al. Cardiovascular risk reduction with icosapent ethyl for hypertriglyceridemia. N. Engl. J. Med. 380, 11\u201322 (2019)."
+    },
+    {
+      "key": "3392_CR132",
+      "doi": "10.1016/j.jacc.2019.02.032",
+      "title": "",
+      "journal": "J. Am. Coll. Cardiol.",
+      "year": "2019",
+      "author": "DL Bhatt",
+      "unstructured": "Bhatt, D. L. et al. Effects of icosapent ethyl on total ischemic events: from REDUCE-IT. J. Am. Coll. Cardiol. 73, 2791\u20132802 (2019)."
+    },
+    {
+      "key": "3392_CR133",
+      "doi": "10.1161/atvbaha.119.313286",
+      "title": "",
+      "journal": "Arterioscler. Thromb. Vasc. Biol.",
+      "year": "2020",
+      "author": "RP Mason",
+      "unstructured": "Mason, R. P., Libby, P. & Bhatt, D. L. Emerging mechanisms of cardiovascular protection for the omega-3 fatty acid eicosapentaenoic acid. Arterioscler. Thromb. Vasc. Biol. 40, 1135\u20131147 (2020)."
+    },
+    {
+      "key": "3392_CR134",
+      "doi": "10.1161/01.cir.0000037282.92395.ae",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2002",
+      "author": "P Libby",
+      "unstructured": "Libby, P. & Plutzky, J. Diabetic macrovascular disease: the glucose paradox? Circulation 106, 2760\u20132763 (2002)."
+    },
+    {
+      "key": "3392_CR135",
+      "doi": "10.1056/nejmoa1504720",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2015",
+      "author": "B Zinman",
+      "unstructured": "Zinman, B. et al. Empagliflozin, cardiovascular outcomes, and mortality in type 2 diabetes. N. Engl. J. Med. 373, 2117\u20132128 (2015)."
+    },
+    {
+      "key": "3392_CR136",
+      "doi": "10.1056/nejmoa1811744",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2019",
+      "author": "V Perkovic",
+      "unstructured": "Perkovic, V. et al. Canagliflozin and renal outcomes in type 2 diabetes and nephropathy. N. Engl. J. Med. 380, 2295\u20132306 (2019)."
+    },
+    {
+      "key": "3392_CR137",
+      "doi": "10.1161/circulationaha.118.035901",
+      "title": "",
+      "journal": "Circulation",
+      "year": "2018",
+      "author": "BL Neuen",
+      "unstructured": "Neuen, B. L. et al. Cardiovascular and renal outcomes with canagliflozin according to baseline kidney function. Circulation 138, 1537\u20131550 (2018)."
+    },
+    {
+      "key": "3392_CR138",
+      "doi": "10.1056/nejmoa1812389",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2019",
+      "author": "SD Wiviott",
+      "unstructured": "Wiviott, S. D. et al. Dapagliflozin and cardiovascular outcomes in type 2 diabetes. N. Engl. J. Med. 380, 347\u2013357 (2019)."
+    },
+    {
+      "key": "3392_CR139",
+      "doi": "10.1056/nejmoa1603827",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2016",
+      "author": "SP Marso",
+      "unstructured": "Marso, S. P. et al. Liraglutide and cardiovascular outcomes in type 2 diabetes. N. Engl. J. Med. 375, 311\u2013322 (2016)."
+    },
+    {
+      "key": "3392_CR140",
+      "doi": "10.1056/nejmoa1607141",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "2016",
+      "author": "SP Marso",
+      "unstructured": "Marso, S. P. et al. Semaglutide and cardiovascular outcomes in patients with type 2 diabetes. N. Engl. J. Med. 375, 1834\u20131844 (2016)."
+    },
+    {
+      "key": "3392_CR141",
+      "doi": "10.1016/s0140-6736(19)31149-3",
+      "title": "",
+      "journal": "Lancet",
+      "year": "2019",
+      "author": "HC Gerstein",
+      "unstructured": "Gerstein, H. C. et al. Dulaglutide and cardiovascular outcomes in type 2 diabetes (REWIND): a double-blind, randomised placebo-controlled trial. Lancet 394, 121\u2013130 (2019)."
+    },
+    {
+      "key": "3392_CR142",
+      "doi": "10.1161/circresaha.116.310197",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2017",
+      "author": "T Seeger",
+      "unstructured": "Seeger, T., Porteus, M. & Wu, J. C. Genome editing in cardiovascular biology. Circ. Res. 120, 778\u2013780 (2017)."
+    },
+    {
+      "key": "3392_CR143",
+      "doi": "10.1161/circresaha.117.305365",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2015",
+      "author": "I Karakikes",
+      "unstructured": "Karakikes, I., Ameen, M., Termglinchan, V. & Wu, J. C. Human induced pluripotent stem cell-derived cardiomyocytes. Circ. Res. 117, 80\u201388 (2015)."
+    },
+    {
+      "key": "3392_CR144",
+      "doi": "10.1161/circresaha.115.306300",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2016",
+      "author": "MW Feinberg",
+      "unstructured": "Feinberg, M. W. & Moore, K. J. MicroRNA regulation of atherosclerosis. Circ. Res. 118, 703\u2013720 (2016)."
+    },
+    {
+      "key": "3392_CR145",
+      "doi": "10.1161/circresaha.119.315938",
+      "title": "",
+      "journal": "Circ. Res.",
+      "year": "2020",
+      "author": "N Ja\u00e9",
+      "unstructured": "Ja\u00e9, N. & Dimmeler, S. Noncoding RNAs in vascular diseases. Circ. Res. 126, 1127\u20131145 (2020)."
+    },
+    {
+      "key": "3392_CR146",
+      "doi": "10.1161/atvbaha.119.312557",
+      "title": "",
+      "journal": "Arterioscler. Thromb. Vasc. Biol.",
+      "year": "2019",
+      "author": "KM Owsiany",
+      "unstructured": "Owsiany, K. M., Alencar, G. F. & Owens, G. K. Revealing the origins of foam cells in atherosclerotic lesions. Arterioscler. Thromb. Vasc. Biol. 39, 836\u2013838 (2019)."
+    }
+  ]
+}

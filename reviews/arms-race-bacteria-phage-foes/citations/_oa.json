@@ -1,0 +1,1681 @@
+{
+  "article": {
+    "slug": "s41586-019-1894-8",
+    "doi": "10.1038/s41586-019-1894-8",
+    "title": "The arms race between bacteria and their phage foes",
+    "url": "https://www.nature.com/articles/s41586-019-1894-8",
+    "abbrev": "arms-race-bacteria-phage-foes",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/arms-race-bacteria-phage-foes"
+  },
+  "n_refs": 173,
+  "n_with_doi": 171,
+  "n_oa": 127,
+  "records": [
+    {
+      "doi": "10.4161/viru.24498",
+      "title": "",
+      "year": "2013",
+      "journal": "Virulence",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.4161/viru.24498?needAccess=true",
+      "file": "10.4161_viru.24498.md"
+    },
+    {
+      "doi": "10.1038/nrmicro1750",
+      "title": "",
+      "year": "2007",
+      "journal": "Nat. Rev. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1186/gb-2013-14-11-r123",
+      "title": "",
+      "year": "2013",
+      "journal": "Genome Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://genomebiology.biomedcentral.com/counter/pdf/10.1186/gb-2013-14-11-r123",
+      "file": "10.1186_gb-2013-14-11-r123.md"
+    },
+    {
+      "doi": "10.1146/annurev-virology-031413-085500",
+      "title": "",
+      "year": "2014",
+      "journal": "Annu. Rev. Virol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1128/mmbr.00011-16",
+      "title": "",
+      "year": "2016",
+      "journal": "Microbiol. Mol. Biol. Rev.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://mmbr.asm.org/content/mmbr/80/3/745.full.pdf",
+      "file": "10.1128_mmbr.00011-16.md"
+    },
+    {
+      "doi": "10.1038/nrmicro3096",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Rev. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2019.03.040",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867419303411/pdf",
+      "file": "10.1016_j.cell.2019.03.040.md"
+    },
+    {
+      "doi": "10.1038/s41591-019-0437-z",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Med.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6557439?pdf=render",
+      "file": "10.1038_s41591-019-0437-z.md"
+    },
+    {
+      "doi": "10.1146/annurev-food-032818-121747",
+      "title": "",
+      "year": "2019",
+      "journal": "Annu. Rev. Food Sci. Technol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/trf.15126",
+      "title": "",
+      "year": "2019",
+      "journal": "Transfusion",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s0065-3527(08)60785-x",
+      "title": "",
+      "year": "1998",
+      "journal": "Adv. Virus Res.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7173057?pdf=render",
+      "file": "10.1016_s0065-3527_08_60785-x.md"
+    },
+    {
+      "doi": "10.4161/bact.1.1.14942",
+      "title": "",
+      "year": "2011",
+      "journal": "Bacteriophage",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.4161/bact.1.1.14942?needAccess=true",
+      "file": "10.4161_bact.1.1.14942.md"
+    },
+    {
+      "doi": "10.7554/elife.03497",
+      "title": "",
+      "year": "2014",
+      "journal": "eLife",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://doaj.org/article/a80bbcce4b904e378dbe1e2c2d25f265",
+      "file": "10.7554_elife.03497.md"
+    },
+    {
+      "doi": "10.1186/1471-2180-11-258",
+      "title": "",
+      "year": "2011",
+      "journal": "BMC Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://bmcmicrobiol.biomedcentral.com/counter/pdf/10.1186/1471-2180-11-258",
+      "file": "10.1186_1471-2180-11-258.md"
+    },
+    {
+      "doi": "10.1128/jb.00792-17",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Bacteriol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://jb.asm.org/content/jb/200/15/e00792-17.full.pdf",
+      "file": "10.1128_jb.00792-17.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2016.12.003",
+      "title": "",
+      "year": "2017",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867416316774/pdf",
+      "file": "10.1016_j.cell.2016.12.003.md"
+    },
+    {
+      "doi": "10.1146/annurev.genet.40.110405.090442",
+      "title": "",
+      "year": "2006",
+      "journal": "Annu. Rev. Genet.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/ismej.2011.174",
+      "title": "",
+      "year": "2012",
+      "journal": "ISME J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ismej2011174.pdf",
+      "file": "10.1038_ismej.2011.174.md"
+    },
+    {
+      "doi": "10.1038/s41564-017-0061-y",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/ismej.2016.79",
+      "title": "",
+      "year": "2016",
+      "journal": "ISME J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ismej201679.pdf",
+      "file": "10.1038_ismej.2016.79.md"
+    },
+    {
+      "doi": "10.1126/science.1214449",
+      "title": "",
+      "year": "2012",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3306806?pdf=render",
+      "file": "10.1126_science.1214449.md"
+    },
+    {
+      "doi": "10.1126/science.aar1954",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://science.sciencemag.org/content/sci/359/6383/1542.full.pdf",
+      "file": "10.1126_science.aar1954.md"
+    },
+    {
+      "doi": "10.1111/mmi.14231",
+      "title": "",
+      "year": "2019",
+      "journal": "Mol. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/mmi.14231",
+      "file": "10.1111_mmi.14231.md"
+    },
+    {
+      "doi": "10.1128/jvi.00801-12",
+      "title": "",
+      "year": "2012",
+      "journal": "J. Virol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://jvi.asm.org/content/jvi/86/19/10384.full.pdf",
+      "file": "10.1128_jvi.00801-12.md"
+    },
+    {
+      "doi": "10.3390/v10080396",
+      "title": "",
+      "year": "2018",
+      "journal": "Viruses",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/1999-4915/10/8/396/pdf",
+      "file": "10.3390_v10080396.md"
+    },
+    {
+      "doi": "10.1038/s41579-018-0070-8",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Rev. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pure.amsterdamumc.nl/ws/files/158816683/Targeting-mechanisms-of-tailed-bacteriophages.pdf",
+      "file": "10.1038_s41579-018-0070-8.md"
+    },
+    {
+      "doi": "10.1093/nar/gku734",
+      "title": "",
+      "year": "2014",
+      "journal": "Nucleic Acids Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/nar/article-pdf/42/16/10618/14123733/gku734.pdf",
+      "file": "10.1093_nar_gku734.md"
+    },
+    {
+      "doi": "10.1093/nar/gkt990",
+      "title": "",
+      "year": "2014",
+      "journal": "Nucleic Acids Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/nar/article-pdf/42/1/3/37018704/gkt990.pdf",
+      "file": "10.1093_nar_gkt990.md"
+    },
+    {
+      "doi": "10.1046/j.1365-2958.2002.02896.x",
+      "title": "",
+      "year": "2002",
+      "journal": "Mol. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.virol.2014.12.036",
+      "title": "",
+      "year": "2015",
+      "journal": "Virology",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4365076?pdf=render",
+      "file": "10.1016_j.virol.2014.12.036.md"
+    },
+    {
+      "doi": "10.15252/embj.201489455",
+      "title": "",
+      "year": "2015",
+      "journal": "EMBO J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://link.springer.com/content/pdf/10.15252/embj.201489455.pdf",
+      "file": "10.15252_embj.201489455.md"
+    },
+    {
+      "doi": "10.1093/nar/gky1125",
+      "title": "",
+      "year": "2019",
+      "journal": "Nucleic Acids Res.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6326788?pdf=render",
+      "file": "10.1093_nar_gky1125.md"
+    },
+    {
+      "doi": "10.1038/s41564-017-0051-0",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1128/mr.47.3.345-360.1983",
+      "title": "",
+      "year": "1983",
+      "journal": "Microbiol. Rev.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC281580?pdf=render",
+      "file": "10.1128_mr.47.3.345-360.1983.md"
+    },
+    {
+      "doi": "10.1128/mmbr.00044-12",
+      "title": "",
+      "year": "2013",
+      "journal": "Microbiol. Mol. Biol. Rev.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://mmbr.asm.org/content/mmbr/77/1/53.full.pdf",
+      "file": "10.1128_mmbr.00044-12.md"
+    },
+    {
+      "doi": "10.1099/00221287-139-6-1283",
+      "title": "",
+      "year": "1993",
+      "journal": "J. Gen. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1098/rsbl.2017.0646",
+      "title": "",
+      "year": "2017",
+      "journal": "Biol. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rsbl.2017.0646",
+      "file": "10.1098_rsbl.2017.0646.md"
+    },
+    {
+      "doi": "10.3390/v6125077",
+      "title": "",
+      "year": "2014",
+      "journal": "Viruses",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/1999-4915/6/12/5077/pdf?version=1431416931",
+      "file": "10.3390_v6125077.md"
+    },
+    {
+      "doi": "10.1016/0022-2836(86)90071-9",
+      "title": "",
+      "year": "1986",
+      "journal": "J. Mol. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/0022-2836(89)90437-3",
+      "title": "",
+      "year": "1989",
+      "journal": "J. Mol. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1128/aem.02229-13",
+      "title": "",
+      "year": "2013",
+      "journal": "Appl. Environ. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aem.asm.org/content/aem/79/24/7547.full.pdf",
+      "file": "10.1128_aem.02229-13.md"
+    },
+    {
+      "doi": "10.1016/0378-1119(83)90098-7",
+      "title": "",
+      "year": "1983",
+      "journal": "Gene",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/nar/15.9.3689",
+      "title": "",
+      "year": "1987",
+      "journal": "Nucleic Acids Res.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC340776?pdf=render",
+      "file": "10.1093_nar_15.9.3689.md"
+    },
+    {
+      "doi": "10.1016/0042-6822(87)90324-2",
+      "title": "",
+      "year": "1987",
+      "journal": "Virology",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/mmi.13705",
+      "title": "",
+      "year": "2017",
+      "journal": "Mol. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/mmi.13705",
+      "file": "10.1111_mmi.13705.md"
+    },
+    {
+      "doi": "10.1093/nar/gkf518",
+      "title": "",
+      "year": "2002",
+      "journal": "Nucleic Acids Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/nar/article-pdf/30/18/3936/6183543/gkf518.pdf",
+      "file": "10.1093_nar_gkf518.md"
+    },
+    {
+      "doi": "10.1016/s1097-2765(02)00435-5",
+      "title": "",
+      "year": "2002",
+      "journal": "Mol. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1097276502004355/pdf",
+      "file": "10.1016_s1097-2765_02_00435-5.md"
+    },
+    {
+      "doi": "10.1111/j.1365-2958.1993.tb01124.x",
+      "title": "",
+      "year": "1993",
+      "journal": "Mol. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1138140",
+      "title": "",
+      "year": "2007",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aal5056",
+      "title": "",
+      "year": "2017",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://resolver.tudelft.nl/uuid:0baaa190-8e07-4c91-9114-1bd0cc430238",
+      "file": "10.1126_science.aal5056.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2017.11.032",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867417313831/pdf",
+      "file": "10.1016_j.cell.2017.11.032.md"
+    },
+    {
+      "doi": "10.1098/rstb.2018.0087",
+      "title": "",
+      "year": "2019",
+      "journal": "Phil. Trans. R. Soc. B",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rstb.2018.0087",
+      "file": "10.1098_rstb.2018.0087.md"
+    },
+    {
+      "doi": "10.1016/j.mib.2017.05.008",
+      "title": "",
+      "year": "2017",
+      "journal": "Curr. Opin. Microbiol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://hdl.handle.net/1721.1/125357",
+      "file": "10.1016_j.mib.2017.05.008.md"
+    },
+    {
+      "doi": "10.1089/crispr.2018.0033",
+      "title": "",
+      "year": "2018",
+      "journal": "CRISPR J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.liebertpub.com/doi/pdf/10.1089/crispr.2018.0033",
+      "file": "10.1089_crispr.2018.0033.md"
+    },
+    {
+      "doi": "10.1126/science.1159689",
+      "title": "",
+      "year": "2008",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5898235?pdf=render",
+      "file": "10.1126_science.1159689.md"
+    },
+    {
+      "doi": "10.1073/pnas.1104144108",
+      "title": "",
+      "year": "2011",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://research.wur.nl/en/publications/interference-by-clustered-regularly-interspaced-short-palindromic",
+      "file": "10.1073_pnas.1104144108.md"
+    },
+    {
+      "doi": "10.1038/ncomms1937",
+      "title": "",
+      "year": "2012",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms1937.pdf",
+      "file": "10.1038_ncomms1937.md"
+    },
+    {
+      "doi": "10.1128/jb.01184-12",
+      "title": "",
+      "year": "2012",
+      "journal": "J. Bacteriol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://jb.asm.org/content/jb/194/21/5728.full.pdf",
+      "file": "10.1128_jb.01184-12.md"
+    },
+    {
+      "doi": "10.1016/j.cub.2015.01.065",
+      "title": "",
+      "year": "2015",
+      "journal": "Curr. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0960982215001293/pdf",
+      "file": "10.1016_j.cub.2015.01.065.md"
+    },
+    {
+      "doi": "10.1128/mbio.02406-17",
+      "title": "",
+      "year": "2018",
+      "journal": "mBio",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://mbio.asm.org/content/mbio/9/1/e02406-17.full.pdf",
+      "file": "10.1128_mbio.02406-17.md"
+    },
+    {
+      "doi": "10.1080/15476286.2019.1634965",
+      "title": "",
+      "year": "2019",
+      "journal": "RNA Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.1080/15476286.2019.1634965?needAccess=true",
+      "file": "10.1080_15476286.2019.1634965.md"
+    },
+    {
+      "doi": "10.1038/s41564-018-0274-8",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Microbiol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://resolver.sub.uni-goettingen.de/purl?gro-2/133902",
+      "file": "10.1038_s41564-018-0274-8.md"
+    },
+    {
+      "doi": "10.1111/mmi.12152",
+      "title": "",
+      "year": "2013",
+      "journal": "Mol. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cell.2015.04.027",
+      "title": "",
+      "year": "2015",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867415004444/pdf",
+      "file": "10.1016_j.cell.2015.04.027.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2015.12.053",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867415017171/pdf",
+      "file": "10.1016_j.cell.2015.12.053.md"
+    },
+    {
+      "doi": "10.1016/j.chom.2017.07.016",
+      "title": "",
+      "year": "2017",
+      "journal": "Cell Host Microbe",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1931312817302998/pdf",
+      "file": "10.1016_j.chom.2017.07.016.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0051663",
+      "title": "",
+      "year": "2012",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0051663&type=printable",
+      "file": "10.1371_journal.pone.0051663.md"
+    },
+    {
+      "doi": "10.1016/j.molcel.2014.09.027",
+      "title": "",
+      "year": "2014",
+      "journal": "Mol. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1097276514007849/pdf",
+      "file": "10.1016_j.molcel.2014.09.027.md"
+    },
+    {
+      "doi": "10.1038/nature13637",
+      "title": "",
+      "year": "2014",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4214910?pdf=render",
+      "file": "10.1038_nature13637.md"
+    },
+    {
+      "doi": "10.1126/science.aao0100",
+      "title": "",
+      "year": "2017",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature23467",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41564-018-0353-x",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Microbiol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6430669?pdf=render",
+      "file": "10.1038_s41564-018-0353-x.md"
+    },
+    {
+      "doi": "10.1016/j.tig.2019.03.009",
+      "title": "",
+      "year": "2019",
+      "journal": "Trends Genet.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6525018?pdf=render",
+      "file": "10.1016_j.tig.2019.03.009.md"
+    },
+    {
+      "doi": "10.1016/j.molcel.2016.08.038",
+      "title": "",
+      "year": "2016",
+      "journal": "Mol. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1097276516305172/pdf",
+      "file": "10.1016_j.molcel.2016.08.038.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2015.09.038",
+      "title": "",
+      "year": "2015",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867415012003/pdf",
+      "file": "10.1016_j.cell.2015.09.038.md"
+    },
+    {
+      "doi": "10.1093/nar/gkx1264",
+      "title": "",
+      "year": "2018",
+      "journal": "Nucleic Acids Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/nar/article-pdf/46/2/873/23595566/gkx1264.pdf",
+      "file": "10.1093_nar_gkx1264.md"
+    },
+    {
+      "doi": "10.1126/science.aaf5573",
+      "title": "",
+      "year": "2016",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://hdl.handle.net/1721.1/105791",
+      "file": "10.1126_science.aaf5573.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1257-5",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6570424?pdf=render",
+      "file": "10.1038_s41586-019-1257-5.md"
+    },
+    {
+      "doi": "10.1098/rstb.2018.0090",
+      "title": "",
+      "year": "2019",
+      "journal": "Phil. Trans. R. Soc. B",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://royalsocietypublishing.org/doi/pdf/10.1098/rstb.2018.0090",
+      "file": "10.1098_rstb.2018.0090.md"
+    },
+    {
+      "doi": "10.1128/jb.01412-07",
+      "title": "",
+      "year": "2008",
+      "journal": "J. Bacteriol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2238228?pdf=render",
+      "file": "10.1128_jb.01412-07.md"
+    },
+    {
+      "doi": "10.1111/j.1462-2920.2012.02879.x",
+      "title": "",
+      "year": "2013",
+      "journal": "Environ. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/nar/gku628",
+      "title": "",
+      "year": "2014",
+      "journal": "Nucleic Acids Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/nar/article-pdf/42/14/9504/25361490/gku628.pdf",
+      "file": "10.1093_nar_gku628.md"
+    },
+    {
+      "doi": "10.1128/mbio.00262-15",
+      "title": "",
+      "year": "2015",
+      "journal": "mBio",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://doaj.org/article/34119cd207cc4a53a00028261d4e0b44",
+      "file": "10.1128_mbio.00262-15.md"
+    },
+    {
+      "doi": "10.1080/15476286.2018.1509662",
+      "title": "",
+      "year": "2019",
+      "journal": "RNA Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.1080/15476286.2018.1509662?needAccess=true",
+      "file": "10.1080_15476286.2018.1509662.md"
+    },
+    {
+      "doi": "10.1016/j.chom.2019.09.002",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell Host Microbe",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S193131281930469X/pdf",
+      "file": "10.1016_j.chom.2019.09.002.md"
+    },
+    {
+      "doi": "10.1038/nature11723",
+      "title": "",
+      "year": "2013",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4931913?pdf=render",
+      "file": "10.1038_nature11723.md"
+    },
+    {
+      "doi": "10.1089/crispr.2018.0052",
+      "title": "",
+      "year": "2019",
+      "journal": "CRISPR J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.liebertpub.com/doi/pdf/10.1089/crispr.2018.0052",
+      "file": "10.1089_crispr.2018.0052.md"
+    },
+    {
+      "doi": "10.1093/femsle/fnz098",
+      "title": "",
+      "year": "2019",
+      "journal": "FEMS Microbiol. Lett.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/femsle/article-pdf/366/9/fnz098/28735657/fnz098.pdf",
+      "file": "10.1093_femsle_fnz098.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2019.09.003",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867419310098/pdf",
+      "file": "10.1016_j.cell.2019.09.003.md"
+    },
+    {
+      "doi": "10.1038/s41594-019-0206-1",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41594-019-0208-z",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Struct. Mol. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.osti.gov/biblio/1605236",
+      "file": "10.1038_s41594-019-0208-z.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2018.05.058",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867418307219/pdf",
+      "file": "10.1016_j.cell.2018.05.058.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2018.06.013",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867418307384/pdf",
+      "file": "10.1016_j.cell.2018.06.013.md"
+    },
+    {
+      "doi": "10.1038/nature11927",
+      "title": "",
+      "year": "2013",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3587790?pdf=render",
+      "file": "10.1038_nature11927.md"
+    },
+    {
+      "doi": "10.1128/mbio.01045-13",
+      "title": "",
+      "year": "2014",
+      "journal": "mBio",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://doaj.org/article/88bb06c6b06249f09013237401e1fa2b",
+      "file": "10.1128_mbio.01045-13.md"
+    },
+    {
+      "doi": "10.1128/mbio.02417-18",
+      "title": "",
+      "year": "2019",
+      "journal": "mBio",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://mbio.asm.org/content/mbio/10/2/e02417-18.full.pdf",
+      "file": "10.1128_mbio.02417-18.md"
+    },
+    {
+      "doi": "10.1038/nchembio.2044",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Chem. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.0808832106",
+      "title": "",
+      "year": "2009",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/doi/pdf/10.1073/pnas.0808832106",
+      "file": "10.1073_pnas.0808832106.md"
+    },
+    {
+      "doi": "10.1101/572362",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.biorxiv.org/content/biorxiv/early/2019/03/11/572362.full.pdf",
+      "file": "10.1101_572362.md"
+    },
+    {
+      "doi": "10.1038/s41579-019-0204-7",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Rev. Microbiol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC11165670?pdf=render",
+      "file": "10.1038_s41579-019-0204-7.md"
+    },
+    {
+      "doi": "10.1016/j.mib.2005.06.006",
+      "title": "",
+      "year": "2005",
+      "journal": "Curr. Opin. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nrmicro2315",
+      "title": "",
+      "year": "2010",
+      "journal": "Nat. Rev. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.chom.2016.08.010",
+      "title": "",
+      "year": "2016",
+      "journal": "Cell Host Microbe",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1931312816303547/pdf",
+      "file": "10.1016_j.chom.2016.08.010.md"
+    },
+    {
+      "doi": "10.1101/gad.6.3.497",
+      "title": "",
+      "year": "1992",
+      "journal": "Genes Dev.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://genesdev.cshlp.org/content/6/3/497.full.pdf",
+      "file": "10.1101_gad.6.3.497.md"
+    },
+    {
+      "doi": "10.1128/mbio.00196-19",
+      "title": "",
+      "year": "2019",
+      "journal": "mBio",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://mbio.asm.org/content/mbio/10/2/e00196-19.full.pdf",
+      "file": "10.1128_mbio.00196-19.md"
+    },
+    {
+      "doi": "10.1111/mmi.12129",
+      "title": "",
+      "year": "2013",
+      "journal": "Mol. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1093/nar/gkt1419",
+      "title": "",
+      "year": "2014",
+      "journal": "Nucleic Acids Res.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3985639?pdf=render",
+      "file": "10.1093_nar_gkt1419.md"
+    },
+    {
+      "doi": "10.1128/jb.178.7.2044-2050.1996",
+      "title": "",
+      "year": "1996",
+      "journal": "J. Bacteriol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC177903?pdf=render",
+      "file": "10.1128_jb.178.7.2044-2050.1996.md"
+    },
+    {
+      "doi": "10.1534/genetics.110.121798",
+      "title": "",
+      "year": "2011",
+      "journal": "Genetics",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/genetics/article-pdf/187/1/123/42178007/genetics0123.pdf",
+      "file": "10.1534_genetics.110.121798.md"
+    },
+    {
+      "doi": "10.1007/s00438-004-1048-y",
+      "title": "",
+      "year": "2004",
+      "journal": "Mol. Genet. Genomics",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1365-2958.1995.tb02255.x",
+      "title": "",
+      "year": "1995",
+      "journal": "Mol. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/j.1365-2958.2012.07975.x",
+      "title": "",
+      "year": "2012",
+      "journal": "Mol. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1128/jb.01111-06",
+      "title": "",
+      "year": "2007",
+      "journal": "J. Bacteriol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1797345?pdf=render",
+      "file": "10.1128_jb.01111-06.md"
+    },
+    {
+      "doi": "10.1371/journal.pgen.1003023",
+      "title": "",
+      "year": "2012",
+      "journal": "PLoS Genet.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosgenetics/article/file?id=10.1371/journal.pgen.1003023&type=printable",
+      "file": "10.1371_journal.pgen.1003023.md"
+    },
+    {
+      "doi": "10.1016/j.molcel.2013.02.002",
+      "title": "",
+      "year": "2013",
+      "journal": "Mol. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1097276513001299/pdf",
+      "file": "10.1016_j.molcel.2013.02.002.md"
+    },
+    {
+      "doi": "10.1111/mmi.13225",
+      "title": "",
+      "year": "2016",
+      "journal": "Mol. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/mmi.13225",
+      "file": "10.1111_mmi.13225.md"
+    },
+    {
+      "doi": "10.3390/v11010048",
+      "title": "",
+      "year": "2019",
+      "journal": "Viruses",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.mdpi.com/1999-4915/11/1/48/pdf?version=1547124249",
+      "file": "10.3390_v11010048.md"
+    },
+    {
+      "doi": "10.1128/aem.03229-16",
+      "title": "",
+      "year": "2017",
+      "journal": "Appl. Environ. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://aem.asm.org/content/aem/83/8/e03229-16.full.pdf",
+      "file": "10.1128_aem.03229-16.md"
+    },
+    {
+      "doi": "10.3389/fcimb.2018.00127",
+      "title": "",
+      "year": "2018",
+      "journal": "Front. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.frontiersin.org/articles/10.3389/fcimb.2018.00127/pdf",
+      "file": "10.3389_fcimb.2018.00127.md"
+    },
+    {
+      "doi": "10.4161/bact.23146",
+      "title": "",
+      "year": "2012",
+      "journal": "Bacteriophage",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.tandfonline.com/doi/pdf/10.4161/bact.23146?needAccess=true",
+      "file": "10.4161_bact.23146.md"
+    },
+    {
+      "doi": "10.1038/nmicrobiol.2016.251",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Microbiol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5508108?pdf=render",
+      "file": "10.1038_nmicrobiol.2016.251.md"
+    },
+    {
+      "doi": "10.1111/mmi.13946",
+      "title": "",
+      "year": "2018",
+      "journal": "Mol. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/mmi.13946",
+      "file": "10.1111_mmi.13946.md"
+    },
+    {
+      "doi": "10.1038/s41564-019-0510-x",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Microbiol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41564-019-0510-x.pdf",
+      "file": "10.1038_s41564-019-0510-x.md"
+    },
+    {
+      "doi": "10.1128/jb.05535-11",
+      "title": "",
+      "year": "2011",
+      "journal": "J. Bacteriol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://jb.asm.org/content/jb/193/21/6039.full.pdf",
+      "file": "10.1128_jb.05535-11.md"
+    },
+    {
+      "doi": "10.1126/science.aar4120",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://science.sciencemag.org/content/sci/359/6379/eaar4120.full.pdf",
+      "file": "10.1126_science.aar4120.md"
+    },
+    {
+      "doi": "10.1093/femsre/fuy010",
+      "title": "",
+      "year": "2018",
+      "journal": "FEMS Microbiol. Rev.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/femsre/article-pdf/42/3/376/25030310/fuy010.pdf",
+      "file": "10.1093_femsre_fuy010.md"
+    },
+    {
+      "doi": "10.1038/nrmicro.2017.73",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Rev. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature12971",
+      "title": "",
+      "year": "2014",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.molcel.2017.01.033",
+      "title": "",
+      "year": "2017",
+      "journal": "Mol. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1097276517300916/pdf",
+      "file": "10.1016_j.molcel.2017.01.033.md"
+    },
+    {
+      "doi": "10.1016/j.molcel.2013.08.014",
+      "title": "",
+      "year": "2013",
+      "journal": "Mol. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S109727651300587X/pdf",
+      "file": "10.1016_j.molcel.2013.08.014.md"
+    },
+    {
+      "doi": "10.1038/nmicrobiol.2017.34",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Microbiol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7616673?pdf=render",
+      "file": "10.1038_nmicrobiol.2017.34.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1605-5",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1101/694695",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.biorxiv.org/content/biorxiv/early/2019/07/06/694695.full.pdf",
+      "file": "10.1101_694695.md"
+    },
+    {
+      "doi": "10.1101/694703",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.biorxiv.org/content/biorxiv/early/2019/07/07/694703.full.pdf",
+      "file": "10.1101_694703.md"
+    },
+    {
+      "doi": "10.1038/s41586-018-0767-x",
+      "title": "",
+      "year": "2018",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aal2130",
+      "title": "",
+      "year": "2017",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6028185?pdf=render",
+      "file": "10.1126_science.aal2130.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1786-y",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-019-1786-y.pdf",
+      "file": "10.1038_s41586-019-1786-y.md"
+    },
+    {
+      "doi": "10.1038/s41564-019-0612-5",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature Microbiology",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1128/mbio.00362-12",
+      "title": "",
+      "year": "2013",
+      "journal": "mBio",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3624510?pdf=render",
+      "file": "10.1128_mbio.00362-12.md"
+    },
+    {
+      "doi": "10.1073/pnas.1617415113",
+      "title": "",
+      "year": "2017",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/114/1/131.full.pdf",
+      "file": "10.1073_pnas.1617415113.md"
+    },
+    {
+      "doi": "10.1016/j.molcel.2016.11.012",
+      "title": "",
+      "year": "2016",
+      "journal": "Mol. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1097276516307201/pdf",
+      "file": "10.1016_j.molcel.2016.11.012.md"
+    },
+    {
+      "doi": "10.1038/nature21049",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.chom.2019.03.017",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell Host Microbe",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1931312819301696/pdf",
+      "file": "10.1016_j.chom.2019.03.017.md"
+    },
+    {
+      "doi": "10.1038/s41564-018-0259-7",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.molcel.2019.01.025",
+      "title": "",
+      "year": "2019",
+      "journal": "Mol. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1097276519300450/pdf",
+      "file": "10.1016_j.molcel.2019.01.025.md"
+    },
+    {
+      "doi": "10.1038/s41421-019-0101-2",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell Discov.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41421-019-0101-2.pdf",
+      "file": "10.1038_s41421-019-0101-2.md"
+    },
+    {
+      "doi": "10.1128/mbio.00638-19",
+      "title": "",
+      "year": "2019",
+      "journal": "mBio",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://mbio.asm.org/content/mbio/10/2/e00638-19.full.pdf",
+      "file": "10.1128_mbio.00638-19.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2018.10.059",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867418314582/pdf",
+      "file": "10.1016_j.cell.2018.10.059.md"
+    },
+    {
+      "doi": "10.1371/journal.pone.0085131",
+      "title": "",
+      "year": "2014",
+      "journal": "PLoS ONE",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0085131&type=printable",
+      "file": "10.1371_journal.pone.0085131.md"
+    },
+    {
+      "doi": "10.1016/j.chom.2019.01.003",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell Host Microbe",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S193131281930040X/pdf",
+      "file": "10.1016_j.chom.2019.01.003.md"
+    },
+    {
+      "doi": "10.1146/annurev-micro-090816-093830",
+      "title": "",
+      "year": "2017",
+      "journal": "Annu. Rev. Microbiol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5898197?pdf=render",
+      "file": "10.1146_annurev-micro-090816-093830.md"
+    },
+    {
+      "doi": "10.1038/ncomms3087",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ncomms3087.pdf",
+      "file": "10.1038_ncomms3087.md"
+    },
+    {
+      "doi": "10.7554/elife.27601",
+      "title": "",
+      "year": "2017",
+      "journal": "eLife",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://doaj.org/article/7b4b834348f7496b8c87bd13feb3c884",
+      "file": "10.7554_elife.27601.md"
+    },
+    {
+      "doi": "10.1021/pr500796n",
+      "title": "",
+      "year": "2014",
+      "journal": "J. Proteome Res.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1007/978-1-4614-3567-9_16",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1111/1574-6976.12072",
+      "title": "",
+      "year": "2014",
+      "journal": "FEMS Microbiol. Rev.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://academic.oup.com/femsre/article-pdf/38/5/916/18143202/38-5-916.pdf",
+      "file": "10.1111_1574-6976.12072.md"
+    },
+    {
+      "doi": "10.1016/j.tim.2017.02.012",
+      "title": "",
+      "year": "2017",
+      "journal": "Trends Microbiol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.168.3934.992.b",
+      "title": "",
+      "year": "1970",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1086/284364",
+      "title": "",
+      "year": "1985",
+      "journal": "Am. Nat.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1098/rspb.2001.1945",
+      "title": "",
+      "year": "2002",
+      "journal": "Proc. R. Soc. Lond. B",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC1690980?pdf=render",
+      "file": "10.1098_rspb.2001.1945.md"
+    },
+    {
+      "doi": "10.1038/nature01164",
+      "title": "",
+      "year": "2002",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.meegid.2007.01.005",
+      "title": "",
+      "year": "2007",
+      "journal": "Infect. Genet. Evol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1198767",
+      "title": "",
+      "year": "2011",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1157358",
+      "title": "",
+      "year": "2008",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1101/gr.138297.112",
+      "title": "",
+      "year": "2012",
+      "journal": "Genome Res.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://genome.cshlp.org/content/22/10/1985.full.pdf",
+      "file": "10.1101_gr.138297.112.md"
+    },
+    {
+      "doi": "10.1155/2013/370871",
+      "title": "",
+      "year": "2013",
+      "journal": "Archaea",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://downloads.hindawi.com/journals/archaea/2013/370871.pdf",
+      "file": "10.1155_2013_370871.md"
+    },
+    {
+      "doi": "10.1038/s41467-017-00158-7",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-017-00158-7.pdf",
+      "file": "10.1038_s41467-017-00158-7.md"
+    },
+    {
+      "doi": "10.1016/j.molcel.2015.10.008",
+      "title": "",
+      "year": "2015",
+      "journal": "Mol. Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1097276515007753/pdf",
+      "file": "10.1016_j.molcel.2015.10.008.md"
+    },
+    {
+      "doi": "10.1038/nature21059",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.osti.gov/servlets/purl/1379729",
+      "file": "10.1038_nature21059.md"
+    },
+    {
+      "doi": "10.1038/ismej.2017.194",
+      "title": "",
+      "year": "2018",
+      "journal": "ISME J.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/ismej2017194.pdf",
+      "file": "10.1038_ismej.2017.194.md"
+    },
+    {
+      "doi": "10.1016/j.chom.2018.12.014",
+      "title": "",
+      "year": "2019",
+      "journal": "Cell Host Microbe",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S1931312818306413/pdf",
+      "file": "10.1016_j.chom.2018.12.014.md"
+    }
+  ]
+}

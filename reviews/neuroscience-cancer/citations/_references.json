@@ -1,0 +1,1648 @@
+{
+  "article": {
+    "slug": "s41586-023-05968-y",
+    "doi": "10.1038/s41586-023-05968-y",
+    "title": "The neuroscience of cancer",
+    "url": "https://www.nature.com/articles/s41586-023-05968-y",
+    "abbrev": "neuroscience-cancer",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/neuroscience-cancer"
+  },
+  "meta": {
+    "title": "The neuroscience of cancer",
+    "authors": [
+      "Rebecca Mancusi",
+      "Michelle Monje"
+    ],
+    "published": [
+      2023,
+      6,
+      14
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-023-05968-y",
+    "n_references": 180,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "5968_CR1",
+      "doi": "10.1126/science.294.5545.1354",
+      "title": "",
+      "journal": "Science",
+      "year": "2001",
+      "author": "DH Mauch",
+      "unstructured": "Mauch, D. H. et al. CNS synaptogenesis promoted by glia-derived cholesterol. Science 294, 1354\u20131357 (2001)."
+    },
+    {
+      "key": "5968_CR2",
+      "doi": "10.1111/j.1469-7793.2001.00665.x",
+      "title": "",
+      "journal": "J. Physiol.",
+      "year": "2001",
+      "author": "K Nagler",
+      "unstructured": "Nagler, K., Mauch, D. H. & Pfrieger, F. W. Glia-derived signals induce synapse formation in neurones of the rat central nervous system. J. Physiol. 533, 665\u2013679 (2001)."
+    },
+    {
+      "key": "5968_CR3",
+      "doi": "10.1126/science.291.5504.657",
+      "title": "",
+      "journal": "Science",
+      "year": "2001",
+      "author": "EM Ullian",
+      "unstructured": "Ullian, E. M., Sapperstein, S. K., Christopherson, K. S. & Barres, B. A. Control of synapse number by glia. Science 291, 657\u2013661 (2001)."
+    },
+    {
+      "key": "5968_CR4",
+      "doi": "10.1016/j.cell.2004.12.020",
+      "title": "",
+      "journal": "Cell",
+      "year": "2005",
+      "author": "KS Christopherson",
+      "unstructured": "Christopherson, K. S. et al. Thrombospondins are astrocyte-secreted proteins that promote CNS synaptogenesis. Cell 120, 421\u2013433 (2005)."
+    },
+    {
+      "key": "5968_CR5",
+      "doi": "10.1016/s0925-4773(97)00054-3",
+      "title": "",
+      "journal": "Mech. Dev.",
+      "year": "1997",
+      "author": "C Leclerc",
+      "unstructured": "Leclerc, C. et al. L-type calcium channel activation controls the in vivo transduction of the neuralizing signal in the amphibian embryos. Mech. Dev. 64, 105\u2013110 (1997)."
+    },
+    {
+      "key": "5968_CR6",
+      "doi": "10.1051/jbio/2001195030327",
+      "title": "",
+      "journal": "J. Soc. Biol.",
+      "year": "2001",
+      "author": "C Leclerc",
+      "unstructured": "Leclerc, C. et al. Neural determination in Xenopus laevis embryos: control of early neural gene expression by calcium. J. Soc. Biol. 195, 327\u2013337 (2001)."
+    },
+    {
+      "key": "5968_CR7",
+      "doi": "10.1016/j.ceca.2005.01.005",
+      "title": "",
+      "journal": "Cell Calcium",
+      "year": "2005",
+      "author": "SE Webb",
+      "unstructured": "Webb, S. E., Moreau, M., Leclerc, C. & Miller, A. L. Calcium transients and neural induction in vertebrates. Cell Calcium 37, 375\u2013385 (2005)."
+    },
+    {
+      "key": "5968_CR8",
+      "doi": "10.1523/jneurosci.0740-19.2019",
+      "title": "",
+      "journal": "J. Neurosci.",
+      "year": "2020",
+      "author": "Y Pan",
+      "unstructured": "Pan, Y. & Monje, M. Activity shapes neural circuit form and function: a historical perspective. J. Neurosci. 40, 944\u2013954 (2020)."
+    },
+    {
+      "key": "5968_CR9",
+      "doi": "10.1016/s0896-6273(00)80026-4",
+      "title": "",
+      "journal": "Neuron",
+      "year": "1996",
+      "author": "K Deisseroth",
+      "unstructured": "Deisseroth, K., Bito, H. & Tsien, R. W. Signaling from synapse to nucleus: postsynaptic CREB phosphorylation during multiple forms of hippocampal synaptic plasticity. Neuron 16, 89\u2013101 (1996)."
+    },
+    {
+      "key": "5968_CR10",
+      "doi": "10.1016/s0092-8674(00)81816-4",
+      "title": "",
+      "journal": "Cell",
+      "year": "1996",
+      "author": "H Bito",
+      "unstructured": "Bito, H., Deisseroth, K. & Tsien, R. W. CREB phosphorylation and dephosphorylation: a Ca2+- and stimulus duration-dependent switch for hippocampal gene expression. Cell 87, 1203\u20131214 (1996)."
+    },
+    {
+      "key": "5968_CR11",
+      "doi": "10.1038/32448",
+      "title": "",
+      "journal": "Nature",
+      "year": "1998",
+      "author": "K Deisseroth",
+      "unstructured": "Deisseroth, K., Heist, E. K. & Tsien, R. W. Translocation of calmodulin to the nucleus supports CREB phosphorylation in hippocampal neurons. Nature 392, 198\u2013202 (1998)."
+    },
+    {
+      "key": "5968_CR12",
+      "doi": "10.1523/jneurosci.17-18-07037.1997",
+      "title": "",
+      "journal": "J. Neurosci.",
+      "year": "1997",
+      "author": "K Bittman",
+      "unstructured": "Bittman, K., Owens, D. F., Kriegstein, A. R. & LoTurco, J. J. Cell coupling and uncoupling in the ventricular zone of developing neocortex. J. Neurosci. 17, 7037\u20137044 (1997)."
+    },
+    {
+      "key": "5968_CR13",
+      "doi": "10.1016/j.neuron.2004.08.015",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2004",
+      "author": "TA Weissman",
+      "unstructured": "Weissman, T. A., Riquelme, P. A., Ivic, L., Flint, A. C. & Kriegstein, A. R. Calcium waves propagate through radial glial cells and modulate proliferation in the developing neocortex. Neuron 43, 647\u2013661 (2004)."
+    },
+    {
+      "key": "5968_CR14",
+      "doi": "10.1016/0896-6273(95)90008-x",
+      "title": "",
+      "journal": "Neuron",
+      "year": "1995",
+      "author": "JJ LoTurco",
+      "unstructured": "LoTurco, J. J., Owens, D. F., Heath, M. J., Davis, M. B. & Kriegstein, A. R. GABA and glutamate depolarize cortical progenitor cells and inhibit DNA synthesis. Neuron 15, 1287\u20131298 (1995)."
+    },
+    {
+      "key": "5968_CR15",
+      "doi": "10.1159/000082139",
+      "title": "",
+      "journal": "Dev. Neurosci.",
+      "year": "2004",
+      "author": "KC Luk",
+      "unstructured": "Luk, K. C. & Sadikot, A. F. Glutamate and regulation of proliferation in the developing mammalian telencephalon. Dev. Neurosci. 26, 218\u2013228 (2004)."
+    },
+    {
+      "key": "5968_CR16",
+      "doi": "10.1523/jneurosci.3229-04.2004",
+      "title": "",
+      "journal": "J. Neurosci.",
+      "year": "2004",
+      "author": "AM Canudas",
+      "unstructured": "Canudas, A. M. et al. PHCCC, a specific enhancer of type 4 metabotropic glutamate receptors, reduces proliferation and promotes differentiation of cerebellar granule cell neuroprecursors. J. Neurosci. 24, 10343\u201310352 (2004)."
+    },
+    {
+      "key": "5968_CR17",
+      "doi": "10.1016/j.neuron.2010.03.009",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2010",
+      "author": "JC Platel",
+      "unstructured": "Platel, J. C. et al. NMDA receptors activated by subventricular zone astrocytic glutamate are critical for neuroblast survival prior to entering a synaptic network. Neuron 65, 859\u2013872 (2010)."
+    },
+    {
+      "key": "5968_CR18",
+      "doi": "10.1126/science.aar2866",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "C Ohtaka-Maruyama",
+      "unstructured": "Ohtaka-Maruyama, C. et al. Synaptic transmission from subplate neurons controls radial migration of neocortical neurons. Science 360, 313\u2013317 (2018)."
+    },
+    {
+      "key": "5968_CR19",
+      "doi": "10.1016/s0896-6273(01)00217-3",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2001",
+      "author": "G Ming",
+      "unstructured": "Ming, G., Henley, J., Tessier-Lavigne, M., Song, H. & Poo, M. Electrical activity modulates growth cone guidance by diffusible factors. Neuron 29, 441\u2013452 (2001)."
+    },
+    {
+      "key": "5968_CR20",
+      "doi": "10.1126/science.281.5376.559",
+      "title": "",
+      "journal": "Science",
+      "year": "1998",
+      "author": "SM Catalano",
+      "unstructured": "Catalano, S. M. & Shatz, C. J. Activity-dependent cortical target selection by thalamic axons. Science 281, 559\u2013562 (1998)."
+    },
+    {
+      "key": "5968_CR21",
+      "doi": "10.1523/jneurosci.18-11-04145.1998",
+      "title": "",
+      "journal": "J. Neurosci.",
+      "year": "1998",
+      "author": "JL Dantzker",
+      "unstructured": "Dantzker, J. L. & Callaway, E. M. The development of local, layer-specific visual cortical axons in the absence of extrinsic influences and intrinsic activity. J. Neurosci. 18, 4145\u20134154 (1998)."
+    },
+    {
+      "key": "5968_CR22",
+      "doi": "10.1002/dneu.20737",
+      "title": "",
+      "journal": "Dev. Neurobiol.",
+      "year": "2009",
+      "author": "M Marins",
+      "unstructured": "Marins, M. et al. Gap junctions are involved in cell migration in the early postnatal subventricular zone. Dev. Neurobiol. 69, 715\u2013730 (2009)."
+    },
+    {
+      "key": "5968_CR23",
+      "doi": "10.1523/jneurosci.14-06-03805.1994",
+      "title": "",
+      "journal": "J. Neurosci.",
+      "year": "1994",
+      "author": "AA Penn",
+      "unstructured": "Penn, A. A., Wong, R. O. & Shatz, C. J. Neuronal coupling in the developing mammalian retina. J. Neurosci. 14, 3805\u20133815 (1994)."
+    },
+    {
+      "key": "5968_CR24",
+      "doi": "10.1016/0896-6273(93)90246-n",
+      "title": "",
+      "journal": "Neuron",
+      "year": "1993",
+      "author": "A Peinado",
+      "unstructured": "Peinado, A., Yuste, R. & Katz, L. C. Extensive dye coupling between rat neocortical neurons during the period of circuit formation. Neuron 10, 103\u2013114 (1993)."
+    },
+    {
+      "key": "5968_CR25",
+      "doi": "10.1152/jn.00972.2002",
+      "title": "",
+      "journal": "J. Neurophysiol.",
+      "year": "2003",
+      "author": "HL Picken Bahrey",
+      "unstructured": "Picken Bahrey, H. L. & Moody, W. J. Early development of voltage-gated ion currents and firing properties in neurons of the mouse cerebral cortex. J. Neurophysiol. 89, 1761\u20131773 (2003)."
+    },
+    {
+      "key": "5968_CR26",
+      "doi": "10.1038/nature06233",
+      "title": "",
+      "journal": "Nature",
+      "year": "2007",
+      "author": "NX Tritsch",
+      "unstructured": "Tritsch, N. X., Yi, E., Gale, J. E., Glowatzki, E. & Bergles, D. E. The origin of spontaneous activity in the developing auditory system. Nature 450, 50\u201355 (2007)."
+    },
+    {
+      "key": "5968_CR27",
+      "doi": "10.1038/nrn2759",
+      "title": "",
+      "journal": "Nat. Rev. Neurosci.",
+      "year": "2010",
+      "author": "AG Blankenship",
+      "unstructured": "Blankenship, A. G. & Feller, M. B. Mechanisms underlying spontaneous patterned activity in developing neural circuits. Nat. Rev. Neurosci. 11, 18\u201329 (2010)."
+    },
+    {
+      "key": "5968_CR28",
+      "doi": "10.1113/jphysiol.2004.071621",
+      "title": "",
+      "journal": "J. Physiol.",
+      "year": "2004",
+      "author": "R Corlew",
+      "unstructured": "Corlew, R., Bosma, M. M. & Moody, W. J. Spontaneous, synchronous electrical activity in neonatal mouse cortical neurones. J. Physiol. 560, 377\u2013390 (2004)."
+    },
+    {
+      "key": "5968_CR29",
+      "doi": "10.1126/science.2035024",
+      "title": "",
+      "journal": "Science",
+      "year": "1991",
+      "author": "M Meister",
+      "unstructured": "Meister, M., Wong, R. O., Baylor, D. A. & Shatz, C. J. Synchronous bursts of action potentials in ganglion cells of the developing mammalian retina. Science 252, 939\u2013943 (1991)."
+    },
+    {
+      "key": "5968_CR30",
+      "doi": "10.1038/374716a0",
+      "title": "",
+      "journal": "Nature",
+      "year": "1995",
+      "author": "RO Wong",
+      "unstructured": "Wong, R. O., Chernjavsky, A., Smith, S. J. & Shatz, C. J. Early functional neural networks in the developing retina. Nature 374, 716\u2013718 (1995)."
+    },
+    {
+      "key": "5968_CR31",
+      "doi": "10.1111/j.1469-7793.1998.219bu.x",
+      "title": "",
+      "journal": "J. Physiol.",
+      "year": "1998",
+      "author": "O Garaschuk",
+      "unstructured": "Garaschuk, O., Hanse, E. & Konnerth, A. Developmental profile and synaptic origin of early network oscillations in the CA1 region of rat neonatal hippocampus. J. Physiol. 507, 219\u2013236 (1998)."
+    },
+    {
+      "key": "5968_CR32",
+      "doi": "10.1126/science.1071111",
+      "title": "",
+      "journal": "Science",
+      "year": "2002",
+      "author": "X Leinekugel",
+      "unstructured": "Leinekugel, X. et al. Correlated bursts of activity in the neonatal hippocampus in vivo. Science 296, 2049\u20132052 (2002)."
+    },
+    {
+      "key": "5968_CR33",
+      "doi": "10.1038/nn.2285",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2009",
+      "author": "AJ Watt",
+      "unstructured": "Watt, A. J. et al. Traveling waves in developing cerebellar cortex mediated by asymmetrical Purkinje cell connectivity. Nat. Neurosci. 12, 463\u2013473 (2009)."
+    },
+    {
+      "key": "5968_CR34",
+      "doi": "10.1523/jneurosci.14-03-01486.1994",
+      "title": "",
+      "journal": "J. Neurosci.",
+      "year": "1994",
+      "author": "WR Lippe",
+      "unstructured": "Lippe, W. R. Rhythmic spontaneous activity in the developing avian auditory system. J. Neurosci. 14, 1486\u20131495 (1994)."
+    },
+    {
+      "key": "5968_CR35",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Hebb, D. The Organization of Behavior (Wiley, 1949)."
+    },
+    {
+      "key": "5968_CR36",
+      "doi": "10.1126/science.274.5290.1133",
+      "title": "",
+      "journal": "Science",
+      "year": "1996",
+      "author": "LC Katz",
+      "unstructured": "Katz, L. C. & Shatz, C. J. Synaptic activity and the construction of cortical circuits. Science 274, 1133\u20131138 (1996)."
+    },
+    {
+      "key": "5968_CR37",
+      "doi": "10.1016/j.neuron.2013.10.030",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2013",
+      "author": "LA Kirkby",
+      "unstructured": "Kirkby, L. A., Sack, G. S., Firl, A. & Feller, M. B. A role for correlated spontaneous activity in the assembly of neural circuits. Neuron 80, 1129\u20131144 (2013)."
+    },
+    {
+      "key": "5968_CR38",
+      "doi": "10.1016/s0896-6273(04)00266-1",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2004",
+      "author": "K Deisseroth",
+      "unstructured": "Deisseroth, K. et al. Excitation\u2013neurogenesis coupling in adult neural stem/progenitor cells. Neuron 42, 535\u2013552 (2004)."
+    },
+    {
+      "key": "5968_CR39",
+      "doi": "10.1016/j.neuron.2005.08.023",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2005",
+      "author": "Y Tozuka",
+      "unstructured": "Tozuka, Y., Fukuda, S., Namba, T., Seki, T. & Hisatsune, T. GABAergic excitation promotes neuronal differentiation in adult hippocampal progenitor cells. Neuron 47, 803\u2013815 (2005)."
+    },
+    {
+      "key": "5968_CR40",
+      "doi": "10.1038/nn1522",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2005",
+      "author": "X Liu",
+      "unstructured": "Liu, X., Wang, Q., Haydar, T. F. & Bordey, A. Nonsynaptic GABA signaling in postnatal subventricular zone controls proliferation of GFAP-expressing progenitors. Nat. Neurosci. 8, 1179\u20131187 (2005)."
+    },
+    {
+      "key": "5968_CR41",
+      "doi": "10.1073/pnas.0803955106",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2009",
+      "author": "GC O\u2019Keeffe",
+      "unstructured": "O\u2019Keeffe, G. C. et al. Dopamine-induced proliferation of adult neural precursor cells in the mammalian subventricular zone is mediated through EGF. Proc. Natl Acad. Sci. USA 106, 8754\u20138759 (2009)."
+    },
+    {
+      "key": "5968_CR42",
+      "doi": "10.1038/sj.npp.1300320",
+      "title": "",
+      "journal": "Neuropsychopharmacology",
+      "year": "2004",
+      "author": "M Banasr",
+      "unstructured": "Banasr, M., Hery, M., Printemps, R. & Daszuta, A. Serotonin-induced increases in adult cell proliferation and neurogenesis are mediated through different and common 5-HT receptor subtypes in the dentate gyrus and the subventricular zone. Neuropsychopharmacology 29, 450\u2013460 (2004)."
+    },
+    {
+      "key": "5968_CR43",
+      "doi": "10.1038/nn.3734",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2014",
+      "author": "P Paez-Gonzalez",
+      "unstructured": "Paez-Gonzalez, P., Asrican, B., Rodriguez, E. & Kuo, C. T. Identification of distinct ChAT+ neurons and activity-dependent control of postnatal SVZ neurogenesis. Nat. Neurosci. 17, 934\u2013942 (2014)."
+    },
+    {
+      "key": "5968_CR44",
+      "doi": "10.1113/jphysiol.1949.sp004335",
+      "title": "",
+      "journal": "J. Physiol.",
+      "year": "1949",
+      "author": "AF Huxley",
+      "unstructured": "Huxley, A. F. & St\u00e4mpeli, R. Evidence for saltatory conduction in peripheral myelinated nerve fibres. J. Physiol. 108, 315\u2013339 (1949)."
+    },
+    {
+      "key": "5968_CR45",
+      "doi": "10.1038/nature11007",
+      "title": "",
+      "journal": "Nature",
+      "year": "2012",
+      "author": "U Funfschilling",
+      "unstructured": "Funfschilling, U. et al. Glycolytic oligodendrocytes maintain myelin and long-term axonal integrity. Nature 485, 517\u2013521 (2012)."
+    },
+    {
+      "key": "5968_CR46",
+      "doi": "10.1038/nn.3390",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2013",
+      "author": "E Hughes",
+      "unstructured": "Hughes, E., Kang, S., Fukaya, M. & Bergles, D. Oligodendrocyte progenitors balance growth with self-repulsion to achieve homeostasis in the adult brain. Nat. Neurosci. 16, 668\u2013676 (2013)."
+    },
+    {
+      "key": "5968_CR47",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Flechsig, P. Anatomie des Menschlichen Gehirns und R\u00fcckenmarks auf Myelogenetischer Grundlage (Thieme, 1920)."
+    },
+    {
+      "key": "5968_CR48",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Yakovlev, P. I. in Regional Development of the Brain in Early Life (ed. Minkowski, A.) 3\u201370 (Blackwell Scientific Publications, 1967)."
+    },
+    {
+      "key": "5968_CR49",
+      "doi": "10.1016/j.neuroimage.2011.11.094",
+      "title": "",
+      "journal": "Neuroimage",
+      "year": "2012",
+      "author": "C Lebel",
+      "unstructured": "Lebel, C. et al. Diffusion tensor imaging of white matter tract evolution over the lifespan. Neuroimage 60, 340\u2013352 (2012)."
+    },
+    {
+      "key": "5968_CR50",
+      "doi": "10.1038/s41593-018-0120-6",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2018",
+      "author": "RA Hill",
+      "unstructured": "Hill, R. A., Li, A. M. & Grutzendler, J. Lifelong cortical myelin plasticity and age-related degeneration in the live mammalian brain. Nat. Neurosci. 21, 683\u2013695 (2018)."
+    },
+    {
+      "key": "5968_CR51",
+      "doi": "10.1038/s41593-018-0121-5",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2018",
+      "author": "EG Hughes",
+      "unstructured": "Hughes, E. G., Orthmann-Murphy, J. L., Langseth, A. J. & Bergles, D. E. Myelin remodeling through experience-dependent oligodendrogenesis in the adult somatosensory cortex. Nat. Neurosci. 21, 696\u2013706 (2018)."
+    },
+    {
+      "key": "5968_CR52",
+      "doi": "10.1093/cercor/bhh060",
+      "title": "",
+      "journal": "Cereb. Cortex",
+      "year": "2004",
+      "author": "A Peters",
+      "unstructured": "Peters, A. & Sethares, C. Oligodendrocytes, their progenitors and other neuroglial cells in the aging primate cerebral cortex. Cereb. Cortex 14, 995\u20131007 (2004)."
+    },
+    {
+      "key": "5968_CR53",
+      "doi": "10.1016/j.neuron.2013.01.006",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2013",
+      "author": "KM Young",
+      "unstructured": "Young, K. M. et al. Oligodendrocyte dynamics in the healthy adult CNS: evidence for myelin remodeling. Neuron 77, 873\u2013885 (2013)."
+    },
+    {
+      "key": "5968_CR54",
+      "doi": "10.1016/j.cell.2014.10.011",
+      "title": "",
+      "journal": "Cell",
+      "year": "2014",
+      "author": "M Yeung",
+      "unstructured": "Yeung, M. et al. Dynamics of oligodendrocyte generation and myelination in the human brain. Cell 159, 766\u2013774 (2014)."
+    },
+    {
+      "key": "5968_CR55",
+      "doi": "10.1016/j.devcel.2021.06.006",
+      "title": "",
+      "journal": "Dev. Cell",
+      "year": "2021",
+      "author": "B Yalcin",
+      "unstructured": "Yalcin, B. & Monje, M. Microenvironmental interactions of oligodendroglial cells. Dev. Cell 56, 1821\u20131832 (2021)."
+    },
+    {
+      "key": "5968_CR56",
+      "doi": "10.1126/science.1252304",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "EM Gibson",
+      "unstructured": "Gibson, E. M. et al. Neuronal activity promotes oligodendrogenesis and adaptive myelination in the mammalian brain. Science 344, 1252304 (2014)."
+    },
+    {
+      "key": "5968_CR57",
+      "doi": "10.1016/j.neuron.2019.04.032",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2019",
+      "author": "AC Geraghty",
+      "unstructured": "Geraghty, A. C. et al. Loss of adaptive myelination contributes to methotrexate chemotherapy-related cognitive impairment. Neuron 103, 250\u2013265 (2019)."
+    },
+    {
+      "key": "5968_CR58",
+      "doi": "10.1038/s41467-017-02719-2",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2018",
+      "author": "S Mitew",
+      "unstructured": "Mitew, S. et al. Pharmacogenetic stimulation of neuronal activity increases myelination in an axon-specific manner. Nat. Commun. 9, 306 (2018)."
+    },
+    {
+      "key": "5968_CR59",
+      "doi": "10.1016/j.neuron.2019.10.013",
+      "title": "",
+      "journal": "Neuron",
+      "year": "2020",
+      "author": "PE Steadman",
+      "unstructured": "Steadman, P. E. et al. Disruption of oligodendrogenesis impairs memory consolidation in adult mice. Neuron 105, 150\u2013164 (2020)."
+    },
+    {
+      "key": "5968_CR60",
+      "doi": "10.1073/pnas.1916646117",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2020",
+      "author": "R Noori",
+      "unstructured": "Noori, R. et al. Activity-dependent myelination: a glial mechanism of oscillatory self-organization in large-scale brain networks. Proc. Natl Acad. Sci. USA 117, 13227\u201313237 (2020)."
+    },
+    {
+      "key": "5968_CR61",
+      "doi": "10.1126/science.1254960",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "I McKenzie",
+      "unstructured": "McKenzie, I. et al. Motor skill learning requires active central myelination. Science 346, 318\u2013322 (2014)."
+    },
+    {
+      "key": "5968_CR62",
+      "doi": "10.1038/s41593-019-0582-1",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2020",
+      "author": "S Pan",
+      "unstructured": "Pan, S., Mayoral, S. R., Choi, H. S., Chan, J. R. & Kheirbek, M. A. Preservation of a remote fear memory requires new myelin formation. Nat. Neurosci. 23, 487\u2013499 (2020)."
+    },
+    {
+      "key": "5968_CR63",
+      "doi": "10.1002/glia.20969",
+      "title": "",
+      "journal": "Glia",
+      "year": "2010",
+      "author": "MW Vondran",
+      "unstructured": "Vondran, M. W., Clinton-Luke, P., Honeywell, J. Z. & Dreyfus, C. F. BDNF+/\u2013 mice exhibit deficits in oligodendrocyte lineage cells of the basal forebrain. Glia 58, 848\u2013856 (2010)."
+    },
+    {
+      "key": "5968_CR64",
+      "doi": "10.1523/jneurosci.3990-12.2013",
+      "title": "",
+      "journal": "J. Neurosci.",
+      "year": "2013",
+      "author": "AW Wong",
+      "unstructured": "Wong, A. W., Xiao, J., Kemper, D., Kilpatrick, T. J. & Murray, S. S. Oligodendroglial expression of TrkB independently regulates myelination and progenitor cell proliferation. J. Neurosci. 33, 4947\u20134957 (2013)."
+    },
+    {
+      "key": "5968_CR65",
+      "doi": "10.1038/35012083",
+      "title": "",
+      "journal": "Nature",
+      "year": "2000",
+      "author": "DE Bergles",
+      "unstructured": "Bergles, D. E., Roberts, J. D., Somogyi, P. & Jahr, C. E. Glutamatergic synapses on oligodendrocyte precursor cells in the hippocampus. Nature 405, 187\u2013191 (2000). This report demonstrated that bona fide synapses form between neurons and OPCs, an interaction later shown to be hijacked in gliomas."
+    },
+    {
+      "key": "5968_CR66",
+      "doi": "10.1038/nn1162",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2004",
+      "author": "SC Lin",
+      "unstructured": "Lin, S. C. & Bergles, D. E. Synaptic signaling between GABAergic interneurons and oligodendrocyte precursor cells in the hippocampus. Nat. Neurosci. 7, 24\u201332 (2004)."
+    },
+    {
+      "key": "5968_CR67",
+      "doi": "10.1038/nature04302",
+      "title": "",
+      "journal": "Nature",
+      "year": "2005",
+      "author": "R Karadottir",
+      "unstructured": "Karadottir, R., Cavelier, P., Bergersen, L. & Attwell, D. NMDA receptors are expressed in oligodendrocytes and activated in ischaemia. Nature 438, 1162\u20131166 (2005)."
+    },
+    {
+      "key": "5968_CR68",
+      "doi": "10.7554/elife.49291",
+      "title": "",
+      "journal": "eLife",
+      "year": "2019",
+      "author": "CW Mount",
+      "unstructured": "Mount, C. W., Yalcin, B., Cunliffe-Koehler, K., Sundaresh, S. & Monje, M. Monosynaptic tracing maps brain-wide afferent oligodendrocyte precursor cell connectivity. eLife 8, e49291 (2019)."
+    },
+    {
+      "key": "5968_CR69",
+      "doi": "10.7554/elife.28080",
+      "title": "",
+      "journal": "eLife",
+      "year": "2017",
+      "author": "E Kougioumtzidou",
+      "unstructured": "Kougioumtzidou, E. et al. Signalling through AMPA receptors on oligodendrocyte precursors promotes myelination by enhancing oligodendrocyte survival. eLife 6, e28080 (2017)."
+    },
+    {
+      "key": "5968_CR70",
+      "doi": "10.1016/j.cell.2019.06.024",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "C Neftel",
+      "unstructured": "Neftel, C. et al. An integrative model of cellular states, plasticity, and genetics for glioblastoma. Cell 178, 835\u2013849 (2019)."
+    },
+    {
+      "key": "5968_CR71",
+      "doi": "10.1126/science.aao4750",
+      "title": "",
+      "journal": "Science",
+      "year": "2018",
+      "author": "MG Filbin",
+      "unstructured": "Filbin, M. G. et al. Developmental and oncogenic programs in H3K27M gliomas dissected by single-cell RNA-seq. Science 360, 331\u2013335 (2018)."
+    },
+    {
+      "key": "5968_CR72",
+      "doi": "10.1038/s41588-022-01236-3",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2022",
+      "author": "I Liu",
+      "unstructured": "Liu, I. et al. The landscape of tumor cell states and spatial organization in H3-K27M mutant diffuse midline glioma across age and location. Nat. Genet. 54, 1881\u20131894 (2022)."
+    },
+    {
+      "key": "5968_CR73",
+      "doi": "10.1016/j.cell.2011.06.014",
+      "title": "",
+      "journal": "Cell",
+      "year": "2011",
+      "author": "C Liu",
+      "unstructured": "Liu, C. et al. Mosaic analysis with double markers reveals tumor cell of origin in glioma. Cell 146, 209\u2013221 (2011). This study implicated OPCs as a cell of origin for adult glioblastoma."
+    },
+    {
+      "key": "5968_CR74",
+      "doi": "10.1073/pnas.1101657108",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2011",
+      "author": "M Monje",
+      "unstructured": "Monje, M. et al. Hedgehog-responsive candidate cell of origin for diffuse intrinsic pontine glioma. Proc. Natl Acad. Sci. USA 108, 4453\u20134458 (2011). This work implicated early OPCs as a cell of origin for diffuse intrinsic pontine glioma."
+    },
+    {
+      "key": "5968_CR75",
+      "doi": "10.1073/pnas.1414389111",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2014",
+      "author": "RP Galvao",
+      "unstructured": "Galvao, R. P. et al. Transformation of quiescent adult oligodendrocyte precursor cells into malignant glioma through a multistep reactivation process. Proc. Natl Acad. Sci. USA https://doi.org/10.1073/pnas.1414389111 (2014)."
+    },
+    {
+      "key": "5968_CR76",
+      "doi": "10.1016/j.ccell.2015.09.007",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2015",
+      "author": "SR Alcantara Llaguno",
+      "unstructured": "Alcantara Llaguno, S. R. et al. Adult lineage-restricted CNS progenitors specify distinct glioblastoma subtypes. Cancer Cell 28, 429\u2013440 (2015)."
+    },
+    {
+      "key": "5968_CR77",
+      "doi": "10.1016/j.ccell.2017.03.011",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2017",
+      "author": "S Nagaraja",
+      "unstructured": "Nagaraja, S. et al. Transcriptional dependencies in diffuse intrinsic pontine glioma. Cancer Cell 31, 635\u2013652 (2017)."
+    },
+    {
+      "key": "5968_CR78",
+      "doi": "10.1016/j.molcel.2019.08.030",
+      "title": "",
+      "journal": "Mol. Cell",
+      "year": "2019",
+      "author": "S Nagaraja",
+      "unstructured": "Nagaraja, S. et al. Histone variant and cell context determine H3K27M reprogramming of the enhancer landscape and oncogenic state. Mol. Cell 76, 965\u2013980 (2019)."
+    },
+    {
+      "key": "5968_CR79",
+      "doi": "10.1016/j.ccell.2020.06.003",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2020",
+      "author": "Z Wang",
+      "unstructured": "Wang, Z. et al. Cell lineage-based stratification for glioblastoma. Cancer Cell 38, 366\u2013379 (2020)."
+    },
+    {
+      "key": "5968_CR80",
+      "doi": "10.1038/s41588-022-01205-w",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2022",
+      "author": "S Jessa",
+      "unstructured": "Jessa, S. et al. K27M in canonical and noncanonical H3 variants occurs in distinct oligodendroglial cell lineages in brain midline gliomas. Nat. Genet. 54, 1865\u20131880 (2022)."
+    },
+    {
+      "key": "5968_CR81",
+      "doi": "10.1016/j.cell.2015.04.012",
+      "title": "",
+      "journal": "Cell",
+      "year": "2015",
+      "author": "HS Venkatesh",
+      "unstructured": "Venkatesh, H. S. et al. Neuronal activity promotes glioma growth through neuroligin-3 secretion. Cell 161, 803\u2013816 (2015). This study provided direct evidence that neuronal activity can drive glioma proliferation and growth and identified activity-regulated paracrine factors (NLGN3 and BDNF) contributing to glioma growth."
+    },
+    {
+      "key": "5968_CR82",
+      "doi": "10.1038/s41586-022-04719-9",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "P Chen",
+      "unstructured": "Chen, P. et al. Olfactory sensory experience regulates gliomagenesis via neuronal IGF1. Nature https://doi.org/10.1038/s41586-022-04719-9 (2022)."
+    },
+    {
+      "key": "5968_CR83",
+      "doi": "10.1038/s41586-021-03580-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "Y Pan",
+      "unstructured": "Pan, Y. et al. NF1 mutation drives neuronal activity-dependent initiation of optic glioma. Nature 594, 277\u2013282 (2021). This work demonstrated that visual experience and optic nerve activity regulate not only glioma growth but also tumour initiation and maintence in NF1-associated low-grade optic glioma."
+    },
+    {
+      "key": "5968_CR84",
+      "doi": "10.1038/nature24014",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "HS Venkatesh",
+      "unstructured": "Venkatesh, H. S. et al. Targeting neuronal activity-regulated neuroligin-3 dependency in high-grade glioma. Nature 549, 533\u2013537 (2017)."
+    },
+    {
+      "key": "5968_CR85",
+      "doi": "10.1038/s41467-020-15770-3",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2020",
+      "author": "X Guo",
+      "unstructured": "Guo, X. et al. Midkine activation of CD8+ T cells establishes a neuron\u2013immune\u2013cancer axis responsible for low-grade glioma growth. Nat. Commun. 11, 2177 (2020). This report established a three-way signalling relationship among neurons, immune cells (lymphocytes and microglia/macrophages) and glioma cells promoting tumour growth in NF1-associated low-grade glioma."
+    },
+    {
+      "key": "5968_CR86",
+      "doi": "10.1101/gad.310797.117",
+      "title": "",
+      "journal": "Genes Dev.",
+      "year": "2018",
+      "author": "Y Pan",
+      "unstructured": "Pan, Y. et al. Athymic mice reveal a requirement for T-cell\u2013microglia interactions in establishing a microenvironment supportive of Nf1 low-grade glioma growth. Genes Dev. 32, 491\u2013496 (2018)."
+    },
+    {
+      "key": "5968_CR87",
+      "doi": "10.1007/s11060-018-2967-5",
+      "title": "",
+      "journal": "J. Neurooncol.",
+      "year": "2018",
+      "author": "J Derks",
+      "unstructured": "Derks, J. et al. Oscillatory brain activity associates with neuroligin-3 expression and predicts progression free survival in patients with diffuse glioma. J. Neurooncol. 140, 403\u2013412 (2018)."
+    },
+    {
+      "key": "5968_CR88",
+      "doi": "10.1038/s41467-022-30466-6",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "C Anastasaki",
+      "unstructured": "Anastasaki, C. et al. Neuronal hyperexcitability drives central and peripheral nervous system tumor progression in models of neurofibromatosis-1. Nat. Commun. 13, 2785 (2022)."
+    },
+    {
+      "key": "5968_CR89",
+      "doi": "10.1038/s41586-019-1563-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "HS Venkatesh",
+      "unstructured": "Venkatesh, H. S. et al. Electrical and synaptic integration of glioma into neural circuits. Nature 573, 539\u2013545 (2019). This study discovered bona fide synaptic communication between neurons and glioma cells mediated by AMPA receptors that robustly contributes to tumour growth (published back to back with ref. 90)."
+    },
+    {
+      "key": "5968_CR90",
+      "doi": "10.1038/s41586-019-1564-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "V Venkataramani",
+      "unstructured": "Venkataramani, V. et al. Glutamatergic synaptic input to glioma cells drives brain tumour progression. Nature 573, 532\u2013538 (2019). This study discovered bona fide synaptic communication between neurons and glioma cells mediated by AMPA receptors that robustly contributes to tumour growth (published back to back with ref. 89)."
+    },
+    {
+      "key": "5968_CR91",
+      "doi": "10.1016/j.cell.2022.06.054",
+      "title": "",
+      "journal": "Cell",
+      "year": "2022",
+      "author": "VTK Venkataramani",
+      "unstructured": "Venkataramani, V. T. K. & Winkler, F. Glioblastoma hijacks neuronal mechanisms for brain invasion. Cell 85, 2899\u20132917 (2022). This report demonstrated that neuron-to-glioma synapses promote tumour cell invasion."
+    },
+    {
+      "key": "5968_CR92",
+      "doi": "10.1101/2021.11.04.467325",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Taylor, K. R. et al. Glioma synapses recruit mechanisms of adaptive plasticity. Preprint at bioRxiv https://doi.org/10.1101/2021.11.04.467325 (2021)."
+    },
+    {
+      "key": "5968_CR93",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Osswald, M. et al. Brain tumour cells interconnect to a functional and resistant network. Nature 528, 93\u201398 (2015). This work illustrated gap junctional connectivity between glioma cells, forming a tumour network through long extensions called tumour microtubes."
+    },
+    {
+      "key": "5968_CR94",
+      "doi": "10.1523/jneurosci.3532-16.2017",
+      "title": "",
+      "journal": "J. Neurosci.",
+      "year": "2017",
+      "author": "E Jung",
+      "unstructured": "Jung, E. et al. Tweety-homolog 1 drives brain colonization of gliomas. J. Neurosci. 37, 6837\u20136850 (2017)."
+    },
+    {
+      "key": "5968_CR95",
+      "doi": "10.1016/j.cell.2022.04.038",
+      "title": "",
+      "journal": "Cell",
+      "year": "2022",
+      "author": "FS Varn",
+      "unstructured": "Varn, F. S. et al. Glioma progression is shaped by genetic evolution and microenvironment interactions. Cell https://doi.org/10.1016/j.cell.2022.04.038 (2022)."
+    },
+    {
+      "key": "5968_CR96",
+      "doi": "10.1038/s41586-022-05520-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "D Hausmann",
+      "unstructured": "Hausmann, D. et al. Autonomous rhythmic activity in glioma networks drives brain tumour growth. Nature https://doi.org/10.1038/s41586-022-05520-4 (2022). This report identified highly gap junction-connected \u2018hub\u2019 cells with autonomous, periodic membrane depolarization driving synchronous calcium transients in the glioma network."
+    },
+    {
+      "key": "5968_CR97",
+      "doi": "10.1101/gad.330597.119",
+      "title": "",
+      "journal": "Genes Dev.",
+      "year": "2019",
+      "author": "BJ Piggott",
+      "unstructured": "Piggott, B. J. et al. Paralytic, the Drosophila voltage-gated sodium channel, regulates proliferation of neural progenitors. Genes Dev. 33, 1739\u20131750 (2019)."
+    },
+    {
+      "key": "5968_CR98",
+      "doi": "10.1038/s41586-019-1576-6",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "Q Zeng",
+      "unstructured": "Zeng, Q. et al. Synaptic proximity enables NMDAR signalling to promote brain metastasis. Nature 573, 526\u2013531 (2019). This study identified a tumour growth-promoting role for glutamatergic signalling through the NMDA receptor in breast cancer brain metasteses; the metastatic breast cancer cells form an astrocyte-like perisynaptic process to usurp perisynaptic glutamate in this \u2018pseudo-tripartite\u2019 positon."
+    },
+    {
+      "key": "5968_CR99",
+      "doi": "10.1038/nm.2453",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2011",
+      "author": "SC Buckingham",
+      "unstructured": "Buckingham, S. C. et al. Glutamate release by primary brain tumors induces epileptic activity. Nat. Med. 17, 1269\u20131274 (2011)."
+    },
+    {
+      "key": "5968_CR100",
+      "doi": "10.1111/j.1528-1167.2012.03557.x",
+      "title": "",
+      "journal": "Epilepsia",
+      "year": "2012",
+      "author": "SL Campbell",
+      "unstructured": "Campbell, S. L., Buckingham, S. C. & Sontheimer, H. Human glioma cells induce hyperexcitability in cortical networks. Epilepsia 53, 1360\u20131370 (2012). This work demonstrated that gliomas induce neuronal hyperexcitability, thereby driving glioma-associated seizures."
+    },
+    {
+      "key": "5968_CR101",
+      "doi": "10.1002/glia.22730",
+      "title": "",
+      "journal": "Glia",
+      "year": "2015",
+      "author": "SL Campbell",
+      "unstructured": "Campbell, S. L. et al. GABAergic disinhibition and impaired KCC2 cotransporter activity underlie tumor-associated epilepsy. Glia 63, 23\u201336 (2015)."
+    },
+    {
+      "key": "5968_CR102",
+      "doi": "10.1038/nn.4493",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "John Lin, C. C. et al. Identification of diverse astrocyte populations and their malignant analogs. Nat. Neurosci. 20, 396\u2013405 (2017). This study discovered that an astrocyte-like subpopulation of glioma cells in adult glioblastoma, similar to normal astrocytes, secrete synaptogenic factors that promote synaptogenesis and contribute to neuronal hyperexcitability and glioma-associated seizures."
+    },
+    {
+      "key": "5968_CR103",
+      "doi": "10.1038/s41586-020-1952-2",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Yu, K. et al. PIK3CA variants selectively initiate brain hyperactivity during gliomagenesis. Nature https://doi.org/10.1038/s41586-020-1952-2 (2020). This report demonstrated that glioma cells with different point mutations in the same oncogene differentially contribute to neruonal hyperexcitability and seizures."
+    },
+    {
+      "key": "5968_CR104",
+      "doi": "10.1172/jci133316",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2020",
+      "author": "A Hatcher",
+      "unstructured": "Hatcher, A. et al. Pathogenesis of peritumoral hyperexcitability in an immunocompetent CRISPR-based glioblastoma model. J. Clin. Invest. 130, 2286\u20132300 (2020)."
+    },
+    {
+      "key": "5968_CR105",
+      "doi": "10.1038/s41586-023-06036-1",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Krishna, S. et al. Glioblastoma remodeling of human neural circuits decreases survival. Nature https://doi.org/10.1038/s41586-023-06036-1 (2023). This work demonstrated that glioblastoma remodels functional neural circuits in the human brain to promote neuronal activity in the tumour microenvironment, thereby impairing cognition and decreasing patient survival."
+    },
+    {
+      "key": "5968_CR106",
+      "doi": "10.1007/s11060-019-03386-7",
+      "title": "",
+      "journal": "J. Neurooncol.",
+      "year": "2020",
+      "author": "V Belgers",
+      "unstructured": "Belgers, V. et al. Postoperative oscillatory brain activity as an add-on prognostic marker in diffuse glioma. J. Neurooncol. 147, 49\u201358 (2020)."
+    },
+    {
+      "key": "5968_CR107",
+      "doi": "10.1016/j.yexcr.2013.10.004",
+      "title": "",
+      "journal": "Exp. Cell. Res.",
+      "year": "2014",
+      "author": "M Kaucka",
+      "unstructured": "Kaucka, M. & Adameyko, I. Non-canonical functions of the peripheral nerve. Exp. Cell. Res. 321, 17\u201324 (2014)."
+    },
+    {
+      "key": "5968_CR108",
+      "doi": "10.1038/nrgastro.2012.32",
+      "title": "",
+      "journal": "Nat. Rev. Gastroenterol. Hepatol.",
+      "year": "2012",
+      "author": "JB Furness",
+      "unstructured": "Furness, J. B. The enteric nervous system and neurogastroenterology. Nat. Rev. Gastroenterol. Hepatol. 9, 286\u2013294 (2012)."
+    },
+    {
+      "key": "5968_CR109",
+      "doi": "10.1126/science.1192046",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Knox, S. M. et al. Parasympathetic innervation maintains epithelial progenitor cells during salivary organogenesis. Science 329, 1645\u20131647 (2010). This study demonstrated that innervation of the salivary gland during development regulates glandular organogenesis, highlighting the crucial role for tissue stem cell niche innervation in development."
+    },
+    {
+      "key": "5968_CR110",
+      "doi": "10.1016/j.devcel.2014.06.012",
+      "title": "",
+      "journal": "Dev. Cell",
+      "year": "2014",
+      "author": "PI Nedvetsky",
+      "unstructured": "Nedvetsky, P. I. et al. Parasympathetic innervation regulates tubulogenesis in the developing salivary gland. Dev. Cell 30, 449\u2013462 (2014)."
+    },
+    {
+      "key": "5968_CR111",
+      "doi": "10.1016/s0002-9440(10)64208-3",
+      "title": "",
+      "journal": "Am. J. Pathol.",
+      "year": "2002",
+      "author": "D Cassiman",
+      "unstructured": "Cassiman, D. et al. The vagal nerve stimulates activation of the hepatic progenitor cell compartment via muscarinic acetylcholine receptor type 3. Am. J. Pathol. 161, 521\u2013530 (2002)."
+    },
+    {
+      "key": "5968_CR112",
+      "doi": "10.1053/j.gastro.2012.05.007",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "2012",
+      "author": "ER Gross",
+      "unstructured": "Gross, E. R. et al. Neuronal serotonin regulates growth of the intestinal mucosa in mice. Gastroenterology 143, 408\u2013417 (2012)."
+    },
+    {
+      "key": "5968_CR113",
+      "doi": "10.1186/s12915-014-0092-2",
+      "title": "",
+      "journal": "BMC Biol.",
+      "year": "2014",
+      "author": "DV Bower",
+      "unstructured": "Bower, D. V. et al. Airway branching has conserved needs for local parasympathetic innervation but not neurotransmission. BMC Biol. 12, 92 (2014)."
+    },
+    {
+      "key": "5968_CR114",
+      "doi": "10.1038/s41467-019-10219-8",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2019",
+      "author": "GA Weiner",
+      "unstructured": "Weiner, G. A. et al. Cholinergic neural activity directs retinal layer-specific angiogenesis and blood retinal barrier formation. Nat. Commun. 10, 2477 (2019)."
+    },
+    {
+      "key": "5968_CR115",
+      "doi": "10.1095/biolreprod51.1.99",
+      "title": "",
+      "journal": "Biol. Reprod.",
+      "year": "1994",
+      "author": "KT McVary",
+      "unstructured": "McVary, K. T. et al. Growth of the rat prostate gland is facilitated by the autonomic nervous system. Biol. Reprod. 51, 99\u2013107 (1994)."
+    },
+    {
+      "key": "5968_CR116",
+      "doi": "10.1002/(sici)1097-0045(19980215)34:3<214::aid-pros9>3.0.co;2-h",
+      "title": "",
+      "journal": "Prostate",
+      "year": "1998",
+      "author": "E Golomb",
+      "unstructured": "Golomb, E., Kruglikova, A., Dvir, D., Parnes, N. & Abramovici, A. Induction of atypical prostatic hyperplasia in rats by sympathomimetic stimulation. Prostate 34, 214\u2013221 (1998)."
+    },
+    {
+      "key": "5968_CR117",
+      "doi": "10.1016/s0022-5347(17)38881-x",
+      "title": "",
+      "journal": "J. Urol.",
+      "year": "1989",
+      "author": "A Villers",
+      "unstructured": "Villers, A., McNeal, J. E., Redwine, E. A., Freiha, F. S. & Stamey, T. A. The role of perineural space invasion in the local spread of prostatic adenocarcinoma. J. Urol. 142, 763\u2013768 (1989)."
+    },
+    {
+      "key": "5968_CR118",
+      "doi": "10.1053/hupa.2001.26456",
+      "title": "",
+      "journal": "Hum. Pathol.",
+      "year": "2001",
+      "author": "N Maru",
+      "unstructured": "Maru, N., Ohori, M., Kattan, M. W., Scardino, P. T. & Wheeler, T. M. Prognostic significance of the diameter of perineural invasion in radical prostatectomy specimens. Hum. Pathol. 32, 828\u2013833 (2001)."
+    },
+    {
+      "key": "5968_CR119",
+      "doi": "10.1002/pros.1137",
+      "title": "",
+      "journal": "Prostate",
+      "year": "2001",
+      "author": "GE Ayala",
+      "unstructured": "Ayala, G. E. et al. In vitro dorsal root ganglia and human prostate cell line interaction: redefining perineural invasion in prostate cancer. Prostate 49, 213\u2013223 (2001). This report provided early in vitro evidence that interactions between nerves and prostate cancer cells can influence cancer growth."
+    },
+    {
+      "key": "5968_CR120",
+      "doi": "10.1126/science.1236361",
+      "title": "",
+      "journal": "Science",
+      "year": "2013",
+      "author": "C Magnon",
+      "unstructured": "Magnon, C. et al. Autonomic nerve development contributes to prostate cancer progression. Science 341, 1236361 (2013). This study demonstrated that prostate innervation by autonomic nerves (sympathetic and parasympathetic) regulates prostate cancer progression in vivo."
+    },
+    {
+      "key": "5968_CR121",
+      "doi": "10.1126/science.aah5072",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "AH Zahalka",
+      "unstructured": "Zahalka, A. H. et al. Adrenergic nerves activate an angio-metabolic switch in prostate cancer. Science 358, 321\u2013326 (2017)."
+    },
+    {
+      "key": "5968_CR122",
+      "doi": "10.1038/s41586-019-1219-y",
+      "title": "",
+      "journal": "Nature",
+      "year": "2019",
+      "author": "P Mauffrey",
+      "unstructured": "Mauffrey, P. et al. Progenitors from the central nervous system drive neurogenesis in cancer. Nature 569, 672\u2013678 (2019)."
+    },
+    {
+      "key": "5968_CR123",
+      "doi": "10.1038/s41598-017-16858-5",
+      "title": "",
+      "journal": "Sci. Rep.",
+      "year": "2017",
+      "author": "M Kotaka",
+      "unstructured": "Kotaka, M. et al. Adrenergic receptor agonists induce the differentiation of pluripotent stem cell-derived hepatoblasts into hepatocyte-like cells. Sci. Rep. 7, 16734 (2017)."
+    },
+    {
+      "key": "5968_CR124",
+      "doi": "10.1371/journal.pone.0016295",
+      "title": "",
+      "journal": "PLoS ONE",
+      "year": "2011",
+      "author": "O Lundgren",
+      "unstructured": "Lundgren, O., Jodal, M., Jansson, M., Ryberg, A. T. & Svensson, L. Intestinal epithelial stem/progenitor cells are controlled by mucosal afferent nerves. PLoS ONE 6, e16295 (2011)."
+    },
+    {
+      "key": "5968_CR125",
+      "doi": "10.1158/0008-5472.can-07-6810",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2008",
+      "author": "JP Raufman",
+      "unstructured": "Raufman, J. P. et al. Genetic ablation of M3 muscarinic receptors attenuates murine colon epithelial cell proliferation and neoplasia. Cancer Res. 68, 3573\u20133578 (2008)."
+    },
+    {
+      "key": "5968_CR126",
+      "doi": "10.1053/j.gastro.2003.09.018",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "2003",
+      "author": "T Aihara",
+      "unstructured": "Aihara, T. et al. Impaired gastric secretion and lack of trophic responses to hypergastrinemia in M3 muscarinic receptor knockout mice. Gastroenterology 125, 1774\u20131784 (2003)."
+    },
+    {
+      "key": "5968_CR127",
+      "doi": "10.1016/0016-5085(84)90586-9",
+      "title": "",
+      "journal": "Gastroenterology",
+      "year": "1984",
+      "author": "R Hakanson",
+      "unstructured": "Hakanson, R., Vallgren, S., Ekelund, M., Rehfeld, J. F. & Sundler, F. The vagus exerts trophic control of the stomach in the rat. Gastroenterology 86, 28\u201332 (1984)."
+    },
+    {
+      "key": "5968_CR128",
+      "doi": "10.1016/0167-0115(88)90036-5",
+      "title": "",
+      "journal": "Regul. Pept.",
+      "year": "1988",
+      "author": "J Axelson",
+      "unstructured": "Axelson, J., Ekelund, M., Hakanson, R. & Sundler, F. Gastrin and the vagus interact in the trophic control of the rat oxyntic mucosa. Regul. Pept. 22, 237\u2013243 (1988)."
+    },
+    {
+      "key": "5968_CR129",
+      "doi": "10.1093/carcin/bgr118",
+      "title": "",
+      "journal": "Carcinogenesis",
+      "year": "2011",
+      "author": "JP Raufman",
+      "unstructured": "Raufman, J. P. et al. Muscarinic receptor subtype-3 gene ablation and scopolamine butylbromide treatment attenuate small intestinal neoplasia in Apcmin/+ mice. Carcinogenesis 32, 1396\u20131402 (2011)."
+    },
+    {
+      "key": "5968_CR130",
+      "doi": "10.1002/cncr.26117",
+      "title": "",
+      "journal": "Cancer",
+      "year": "2011",
+      "author": "D Albo",
+      "unstructured": "Albo, D. et al. Neurogenesis in colorectal cancer is a marker of aggressive tumor behavior and poor outcomes. Cancer 117, 4834\u20134845 (2011)."
+    },
+    {
+      "key": "5968_CR131",
+      "doi": "10.1200/jco.2009.22.4949",
+      "title": "",
+      "journal": "J. Clin. Oncol.",
+      "year": "2009",
+      "author": "C Liebig",
+      "unstructured": "Liebig, C. et al. Perineural invasion is an independent predictor of outcome in colorectal cancer. J. Clin. Oncol. 27, 5131\u20135137 (2009)."
+    },
+    {
+      "key": "5968_CR132",
+      "doi": "10.1126/scitranslmed.3009569",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2014",
+      "author": "CM Zhao",
+      "unstructured": "Zhao, C. M. et al. Denervation suppresses gastric tumorigenesis. Sci. Transl. Med. 6, 250ra115 (2014). This report provided evidence that innervation of the stomach is crucial for gastric cancer progression."
+    },
+    {
+      "key": "5968_CR133",
+      "doi": "",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Hayakawa, Y. et al. Nerve growth factor promotes gastric tumorigenesis through aberrant cholinergic signaling. Cancer Cell 31, 21\u201334 (2017). This work identified a signalling loop in which parasympathetic nerve-derived acetylcholine stimulates gastrointestinal cancer oncogenic Wnt signalling and tumour growth and tumour cell-derived NGF promotes further nerve ingrowth into the tumour microenvironment."
+    },
+    {
+      "key": "5968_CR134",
+      "doi": "10.1016/j.cmet.2022.10.012",
+      "title": "",
+      "journal": "Cell Metab.",
+      "year": "2022",
+      "author": "Y Zhang",
+      "unstructured": "Zhang, Y. et al. Cancer cells co-opt nociceptive nerves to thrive in nutrient-poor environments and upon nutrient-starvation therapies. Cell Metab. 34, 1999\u20132017 (2022)."
+    },
+    {
+      "key": "5968_CR135",
+      "doi": "10.1097/00006676-199801000-00013",
+      "title": "",
+      "journal": "Pancreas",
+      "year": "1998",
+      "author": "MH Won",
+      "unstructured": "Won, M. H., Park, H. S., Jeong, Y. G. & Park, H. J. Afferent innervation of the rat pancreas: retrograde tracing and immunohistochemistry in the dorsal root ganglia. Pancreas 16, 80\u201387 (1998)."
+    },
+    {
+      "key": "5968_CR136",
+      "doi": "10.1002/cne.21736",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Fasanella, K. E., Christianson, J. A., Chanthaphavong, R. S. & Davis, B. M. Distribution and neurochemical identification of pancreatic afferents in the mouse. J. Comp. Neurol. 509, 42\u201352 (2008)."
+    },
+    {
+      "key": "5968_CR137",
+      "doi": "10.1007/bf02788369",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Kaneko, T. et al. Extrapancreatic nerve plexus invasion by carcinoma of the head of the pancreas. Diagnosis with intraportal endovascular ultrasonography. Int. J. Pancreatol. 19, 1\u20137 (1996)."
+    },
+    {
+      "key": "5968_CR138",
+      "doi": "10.1002/(sici)1096-9098(199707)65:3<164::aid-jso4>3.0.co;2-4",
+      "title": "",
+      "journal": "J. Surg. Oncol.",
+      "year": "1997",
+      "author": "T Takahashi",
+      "unstructured": "Takahashi, T. et al. Perineural invasion by ductal adenocarcinoma of the pancreas. J. Surg. Oncol. 65, 164\u2013170 (1997)."
+    },
+    {
+      "key": "5968_CR139",
+      "doi": "10.1097/pas.0b013e318065bfe6",
+      "title": "",
+      "journal": "Am. J. Surg. Pathol.",
+      "year": "2007",
+      "author": "S Mitsunaga",
+      "unstructured": "Mitsunaga, S. et al. Detail histologic analysis of nerve plexus invasion in invasive ductal carcinoma of the pancreas and its prognostic impact. Am. J. Surg. Pathol. 31, 1636\u20131644 (2007)."
+    },
+    {
+      "key": "5968_CR140",
+      "doi": "10.1200/jco.1999.17.8.2419",
+      "title": "",
+      "journal": "J. Clin. Oncol.",
+      "year": "1999",
+      "author": "Z Zhu",
+      "unstructured": "Zhu, Z. et al. Nerve growth factor expression correlates with perineural invasion and pain in human pancreatic cancer. J. Clin. Oncol. 17, 2419\u20132428 (1999)."
+    },
+    {
+      "key": "5968_CR141",
+      "doi": "10.1111/j.1440-1746.2006.04074.x",
+      "title": "",
+      "journal": "J. Gastroenterol. Hepatol.",
+      "year": "2006",
+      "author": "C Dang",
+      "unstructured": "Dang, C., Zhang, Y., Ma, Q. & Shimahara, Y. Expression of nerve growth factor receptors is correlated with progression and prognosis of human pancreatic cancer. J. Gastroenterol. Hepatol. 21, 850\u2013858 (2006)."
+    },
+    {
+      "key": "5968_CR142",
+      "doi": "10.1016/j.ccr.2007.01.012",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2007",
+      "author": "C Guerra",
+      "unstructured": "Guerra, C. et al. Chronic pancreatitis is essential for induction of pancreatic ductal adenocarcinoma by K-Ras oncogenes in adult mice. Cancer Cell 11, 291\u2013302 (2007)."
+    },
+    {
+      "key": "5968_CR143",
+      "doi": "10.1016/j.ccr.2011.05.011",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2011",
+      "author": "C Guerra",
+      "unstructured": "Guerra, C. et al. Pancreatitis-induced inflammation contributes to pancreatic cancer by inhibiting oncogene-induced senescence. Cancer Cell 19, 728\u2013739 (2011)."
+    },
+    {
+      "key": "5968_CR144",
+      "doi": "10.1158/0008-5472.can-13-2050",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2014",
+      "author": "RE Stopczynski",
+      "unstructured": "Stopczynski, R. E. et al. Neuroplastic changes occur early in the development of pancreatic ductal adenocarcinoma. Cancer Res. 74, 1718\u20131727 (2014)."
+    },
+    {
+      "key": "5968_CR145",
+      "doi": "10.1073/pnas.1512603113",
+      "title": "",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "year": "2016",
+      "author": "JL Saloman",
+      "unstructured": "Saloman, J. L. et al. Ablation of sensory neurons in a genetic model of pancreatic ductal adenocarcinoma slows initiation and progression of cancer. Proc. Natl Acad. Sci. USA 113, 3078\u20133083 (2016). This study showed that sensory innervation of pancreatic cancer, which often presents with pain as an early symptom, promotes PDAC tumorigenesis."
+    },
+    {
+      "key": "5968_CR146",
+      "doi": "10.4161/cbt.10.1.11944",
+      "title": "",
+      "journal": "Cancer Biol. Ther.",
+      "year": "2010",
+      "author": "D Zhang",
+      "unstructured": "Zhang, D., Ma, Q. Y., Hu, H. T. & Zhang, M. \u03b22-adrenergic antagonists suppress pancreatic cancer cell invasion by inhibiting CREB, NF\u03baB and AP-1. Cancer Biol. Ther. 10, 19\u201329 (2010)."
+    },
+    {
+      "key": "5968_CR147",
+      "doi": "10.1158/1535-7163.mct-12-0809",
+      "title": "",
+      "journal": "Mol. Cancer Ther.",
+      "year": "2013",
+      "author": "K Guo",
+      "unstructured": "Guo, K. et al. Interaction of the sympathetic nerve with pancreatic cancer cells promotes perineural invasion through the activation of STAT3 signaling. Mol. Cancer Ther. 12, 264\u2013273 (2013)."
+    },
+    {
+      "key": "5968_CR148",
+      "doi": "10.1016/j.bbi.2014.02.019",
+      "title": "",
+      "journal": "Brain Behav. Immun.",
+      "year": "2014",
+      "author": "C Kim-Fuchs",
+      "unstructured": "Kim-Fuchs, C. et al. Chronic stress accelerates pancreatic cancer growth and invasion: a critical role for \u03b2-adrenergic signaling in the pancreatic microenvironment. Brain Behav. Immun. 40, 40\u201347 (2014)."
+    },
+    {
+      "key": "5968_CR149",
+      "doi": "10.1136/bmj.j108",
+      "title": "",
+      "journal": "Br. Med. J.",
+      "year": "2017",
+      "author": "GD Batty",
+      "unstructured": "Batty, G. D., Russ, T. C., Stamatakis, E. & Kivimaki, M. Psychological distress in relation to site specific cancer mortality: pooling of unpublished data from 16 prospective cohort studies. Br. Med. J. 356, j108 (2017)."
+    },
+    {
+      "key": "5968_CR150",
+      "doi": "10.1016/j.ccell.2017.11.007",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2018",
+      "author": "BW Renz",
+      "unstructured": "Renz, B. W. et al. \u03b22 adrenergic\u2013neurotrophin feedforward loop promotes pancreatic cancer. Cancer Cell 33, 75\u201390 (2018). This study elucidated a crucial role for sympathetic nervous system signalling through \u03b22-adrenergic receptors on PDAC cells in tumour progression."
+    },
+    {
+      "key": "5968_CR151",
+      "doi": "10.1007/bf01003127",
+      "title": "",
+      "journal": "Histochem. J.",
+      "year": "1970",
+      "author": "C Hebb",
+      "unstructured": "Hebb, C. & Linzell, J. L. Innervation of the mammary gland. A histochemical study in the rabbit. Histochem. J. 2, 491\u2013505 (1970)."
+    },
+    {
+      "key": "5968_CR152",
+      "doi": "10.1016/s0306-4522(01)00399-2",
+      "title": "",
+      "journal": "Neuroscience",
+      "year": "2001",
+      "author": "I Gerendai",
+      "unstructured": "Gerendai, I. et al. Transneuronal labelling of nerve cells in the CNS of female rat from the mammary gland by viral tracing technique. Neuroscience 108, 103\u2013118 (2001)."
+    },
+    {
+      "key": "5968_CR153",
+      "doi": "10.1556/aphysiol.99.2012.2.8",
+      "title": "",
+      "journal": "Acta Physiol. Hung.",
+      "year": "2012",
+      "author": "K Koves",
+      "unstructured": "Koves, K., Gyorgyi, Z., Szabo, F. K. & Boldogkoi, Z. Characterization of the autonomic innervation of mammary gland in lactating rats studied by retrograde transynaptic virus labeling and immunohistochemistry. Acta Physiol. Hung. 99, 148\u2013158 (2012)."
+    },
+    {
+      "key": "5968_CR154",
+      "doi": "10.1126/science.1228258",
+      "title": "",
+      "journal": "Science",
+      "year": "2012",
+      "author": "Y Liu",
+      "unstructured": "Liu, Y. et al. Sexually dimorphic BDNF signaling directs sensory innervation of the mammary gland. Science 338, 1357\u20131360 (2012)."
+    },
+    {
+      "key": "5968_CR155",
+      "doi": "10.1097/md.0000000000000172",
+      "title": "",
+      "journal": "Medicine",
+      "year": "2014",
+      "author": "D Huang",
+      "unstructured": "Huang, D. et al. Nerve fibers in breast cancer tissues indicate aggressive tumor progression. Medicine 93, e172 (2014)."
+    },
+    {
+      "key": "5968_CR156",
+      "doi": "10.1016/j.molonc.2015.05.001",
+      "title": "",
+      "journal": "Mol. Oncol.",
+      "year": "2015",
+      "author": "J Pundavela",
+      "unstructured": "Pundavela, J. et al. Nerve fibers infiltrate the tumor microenvironment and are associated with nerve growth factor production and lymph node invasion in breast cancer. Mol. Oncol. 9, 1626\u20131635 (2015)."
+    },
+    {
+      "key": "5968_CR157",
+      "doi": "10.1016/j.bbi.2015.12.014",
+      "title": "",
+      "journal": "Brain Behav. Immun.",
+      "year": "2016",
+      "author": "MJ Szpunar",
+      "unstructured": "Szpunar, M. J., Belcher, E. K., Dawes, R. P. & Madden, K. S. Sympathetic innervation, norepinephrine content, and norepinephrine turnover in orthotopic and spontaneous models of breast cancer. Brain Behav. Immun. 53, 223\u2013233 (2016)."
+    },
+    {
+      "key": "5968_CR158",
+      "doi": "10.1038/s41593-019-0430-3",
+      "title": "",
+      "journal": "Nat. Neurosci.",
+      "year": "2019",
+      "author": "A Kamiya",
+      "unstructured": "Kamiya, A. et al. Genetic manipulation of autonomic nerve fiber innervation and activity and its effect on breast cancer progression. Nat. Neurosci. 22, 1289\u20131305 (2019). This work demonstrated that sympathetic innervation of breast cancer increases tumour progression whereas parasympathetic innervation decreases breast cancer progression in rodent models; in a human patient cohort, increased sympathetic innervation and decreased parasympathetic innervation of breast tumours correlated with poor clinical outcomes."
+    },
+    {
+      "key": "5968_CR159",
+      "doi": "10.1007/s10549-006-9219-7",
+      "title": "",
+      "journal": "Breast Cancer Res. Treat.",
+      "year": "2006",
+      "author": "N Erin",
+      "unstructured": "Erin, N., Zhao, W., Bylander, J., Chase, G. & Clawson, G. Capsaicin-induced inactivation of sensory neurons promotes a more aggressive gene expression phenotype in breast cancer cells. Breast Cancer Res. Treat. 99, 351\u2013364 (2006)."
+    },
+    {
+      "key": "5968_CR160",
+      "doi": "10.1158/0008-5472.can-10-0522",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "2010",
+      "author": "EK Sloan",
+      "unstructured": "Sloan, E. K. et al. The sympathetic nervous system induces a metastatic switch in primary breast cancer. Cancer Res. 70, 7042\u20137052 (2010). This report demonstrated that \u03b2-adrenergic signalling in the breast cancer microenvironment promotes metastatic spread through adrenergic effects on tumour-associated macrophages."
+    },
+    {
+      "key": "5968_CR161",
+      "doi": "10.1158/1078-0432.ccr-19-2641",
+      "title": "",
+      "journal": "Clin. Cancer Res.",
+      "year": "2020",
+      "author": "JG Hiller",
+      "unstructured": "Hiller, J. G. et al. Preoperative \u03b2-blockade with propranolol reduces biomarkers of metastasis in breast cancer: a phase II randomized trial. Clin. Cancer Res. 26, 1803\u20131811 (2020)."
+    },
+    {
+      "key": "5968_CR162",
+      "doi": "10.1016/j.stem.2015.02.006",
+      "title": "",
+      "journal": "Cell Stem Cell",
+      "year": "2015",
+      "author": "SC Peterson",
+      "unstructured": "Peterson, S. C. et al. Basal cell carcinoma preferentially arises from stem cells within hair follicle and mechanosensory niches. Cell Stem Cell 16, 400\u2013412 (2015). This study discovered that cutaneous mechanosensory nerves release Hedgehog ligand, signalling to the touch dome epithelial stem cells that give rise to basal cell carcinoma and thereby providing an oncogenic signal required for basal cell carcinoma initiation and growth."
+    },
+    {
+      "key": "5968_CR163",
+      "doi": "10.1038/s41577-021-00508-z",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2021",
+      "author": "AF Salvador",
+      "unstructured": "Salvador, A. F., de Lima, K. A. & Kipnis, J. Neuromodulation by the immune system: a focus on cytokines. Nat. Rev. Immunol. 21, 526\u2013541 (2021)."
+    },
+    {
+      "key": "5968_CR164",
+      "doi": "10.1172/jci129502",
+      "title": "",
+      "journal": "J. Clin. Invest.",
+      "year": "2019",
+      "author": "H Mohammadpour",
+      "unstructured": "Mohammadpour, H. et al. \u03b22 adrenergic receptor-mediated signaling regulates the immunosuppressive potential of myeloid-derived suppressor cells. J. Clin. Invest. 129, 5537\u20135552 (2019)."
+    },
+    {
+      "key": "5968_CR165",
+      "doi": "10.1136/gutjnl-2018-317479",
+      "title": "",
+      "journal": "Gut",
+      "year": "2019",
+      "author": "SH Jiang",
+      "unstructured": "Jiang, S. H. et al. GABRP regulates chemokine signalling, macrophage recruitment and tumour progression in pancreatic cancer through tuning KCNN4-mediated Ca2+ signalling in a GABA-independent manner. Gut 68, 1994\u20132006 (2019)."
+    },
+    {
+      "key": "5968_CR166",
+      "doi": "10.1038/s41591-019-0566-4",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2019",
+      "author": "H Yang",
+      "unstructured": "Yang, H. et al. Stress\u2013glucocorticoid\u2013TSC22D3 axis compromises therapy-induced antitumor immunity. Nat. Med. 25, 1428\u20131441 (2019)."
+    },
+    {
+      "key": "5968_CR167",
+      "doi": "10.3389/fimmu.2018.00164",
+      "title": "",
+      "journal": "Front. Immunol.",
+      "year": "2018",
+      "author": "G Qiao",
+      "unstructured": "Qiao, G., Chen, M., Bucsek, M. J., Repasky, E. A. & Hylander, B. L. Adrenergic signaling: a targetable checkpoint limiting development of the antitumor immune response. Front. Immunol. 9, 164 (2018)."
+    },
+    {
+      "key": "5968_CR168",
+      "doi": "10.1016/j.immuni.2021.03.025",
+      "title": "",
+      "journal": "Immunity",
+      "year": "2021",
+      "author": "S Devi",
+      "unstructured": "Devi, S. et al. Adrenergic regulation of the vasculature impairs leukocyte interstitial migration and suppresses immune responses. Immunity 54, 1219\u20131230 (2021)."
+    },
+    {
+      "key": "5968_CR169",
+      "doi": "10.1038/s41586-022-05374-w",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "M Balood",
+      "unstructured": "Balood, M. et al. Nociceptor neurons affect cancer immunosurveillance. Nature 611, 405\u2013412 (2022). This work showed that cutaneous nociceptor (pain-sensing) nerves promote CD8+ T cell exhaustion in the tumour microenvironment of melanoma through release of the CGRP neuropeptide."
+    },
+    {
+      "key": "5968_CR170",
+      "doi": "10.1038/s41556-021-00820-9",
+      "title": "",
+      "journal": "Nat. Cell Biol.",
+      "year": "2022",
+      "author": "D Huang",
+      "unstructured": "Huang, D. et al. Cancer-cell-derived GABA promotes \u03b2-catenin-mediated tumour growth and immunosuppression. Nat. Cell Biol. 24, 230\u2013241 (2022)."
+    },
+    {
+      "key": "5968_CR171",
+      "doi": "10.1038/s41586-021-04082-1",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "B Zhang",
+      "unstructured": "Zhang, B. et al. B cell-derived GABA elicits IL-10+ macrophages to limit anti-tumour immunity. Nature 599, 471\u2013476 (2021). This study showed that B lymphocytes secrete the neurotransmitter GABA, which signals to CD8+ T lymphocytes through GABAA receptors and reduces T cell function; B cell-derived GABA also induces an immune-suppressive phenotype in tumour-associated macrophages, blocking anti-cancer immunity and permitting increased tumour growth in a colon cancer model."
+    },
+    {
+      "key": "5968_CR172",
+      "doi": "10.1126/scitranslmed.abc8188",
+      "title": "",
+      "journal": "Sci. Transl. Med.",
+      "year": "2021",
+      "author": "MA Schneider",
+      "unstructured": "Schneider, M. A. et al. Attenuation of peripheral serotonin inhibits tumor growth and enhances immune checkpoint blockade therapy in murine tumor models. Sci. Transl. Med. 13, eabc8188 (2021)."
+    },
+    {
+      "key": "5968_CR173",
+      "doi": "10.1038/35013070",
+      "title": "",
+      "journal": "Nature",
+      "year": "2000",
+      "author": "LV Borovikova",
+      "unstructured": "Borovikova, L. V. et al. Vagus nerve stimulation attenuates the systemic inflammatory response to endotoxin. Nature 405, 458\u2013462 (2000)."
+    },
+    {
+      "key": "5968_CR174",
+      "doi": "10.1038/s41586-022-04890-z",
+      "title": "",
+      "journal": "Nature",
+      "year": "2022",
+      "author": "WC Poller",
+      "unstructured": "Poller, W. C. et al. Brain motor and fear circuits regulate leukocytes during acute stress. Nature https://doi.org/10.1038/s41586-022-04890-z (2022)."
+    },
+    {
+      "key": "5968_CR175",
+      "doi": "10.1016/j.cell.2005.10.041",
+      "title": "",
+      "journal": "Cell",
+      "year": "2006",
+      "author": "Y Katayama",
+      "unstructured": "Katayama, Y. et al. Signals from the sympathetic nervous system regulate hematopoietic stem cell egress from bone marrow. Cell 124, 407\u2013421 (2006)."
+    },
+    {
+      "key": "5968_CR176",
+      "doi": "10.1038/nature06685",
+      "title": "",
+      "journal": "Nature",
+      "year": "2008",
+      "author": "S Mendez-Ferrer",
+      "unstructured": "Mendez-Ferrer, S., Lucas, D., Battista, M. & Frenette, P. S. Haematopoietic stem cell release is regulated by circadian oscillations. Nature 452, 442\u2013447 (2008)."
+    },
+    {
+      "key": "5968_CR177",
+      "doi": "10.1084/jem.20160723",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "2016",
+      "author": "K Suzuki",
+      "unstructured": "Suzuki, K., Hayano, Y., Nakai, A., Furuta, F. & Noda, M. Adrenergic control of the adaptive immune response by diurnal lymphocyte recirculation through lymph nodes. J. Exp. Med. 213, 2567\u20132574 (2016)."
+    },
+    {
+      "key": "5968_CR178",
+      "doi": "10.1016/j.cell.2020.11.028",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "S Huang",
+      "unstructured": "Huang, S. et al. Lymph nodes are innervated by a unique population of sensory neurons with immunomodulatory potential. Cell 184, 441\u2013459 (2021)."
+    },
+    {
+      "key": "5968_CR179",
+      "doi": "10.1016/j.cell.2021.10.013",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "T Koren",
+      "unstructured": "Koren, T. et al. Insular cortex neurons encode and retrieve specific immune responses. Cell 184, 5902\u20135915 (2021). This work identified neuronal representation of immune reactions in the insular cortex, showing that reactivation of the neurons involved in encoding \u2018immunological memory\u2019 can recapitulate the immune response."
+    },
+    {
+      "key": "5968_CR180",
+      "doi": "10.21873/anticanres.12737",
+      "title": "",
+      "journal": "Anticancer Res.",
+      "year": "2018",
+      "author": "S Izumoto",
+      "unstructured": "Izumoto, S. et al. Seizures and tumor progression in glioma patients with uncontrollable epilepsy treated with perampanel. Anticancer Res. 38, 4361\u20134366 (2018)."
+    }
+  ]
+}

@@ -1,0 +1,1081 @@
+{
+  "article": {
+    "slug": "s41586-022-04456-z",
+    "doi": "10.1038/s41586-022-04456-z",
+    "title": "The road to fully programmable protein catalysis",
+    "url": "https://www.nature.com/articles/s41586-022-04456-z",
+    "abbrev": "road-fully-programmable-protein-catalysis",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/road-fully-programmable-protein-catalysis"
+  },
+  "n_refs": 112,
+  "n_with_doi": 112,
+  "n_oa": 58,
+  "records": [
+    {
+      "doi": "10.1126/science.1188934",
+      "title": "",
+      "year": "2010",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aay8484",
+      "title": "",
+      "year": "2019",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41929-019-0341-4",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Catal.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41570-018-0055-1",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Rev. Chem.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nchembio.203",
+      "title": "",
+      "year": "2009",
+      "journal": "Nat. Chem. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature11117",
+      "title": "",
+      "year": "2012",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1146/annurev-biochem-062917-012034",
+      "title": "",
+      "year": "2018",
+      "journal": "Annu. Rev. Biochem.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.annualreviews.org/doi/pdf/10.1146/annurev-biochem-062917-012034",
+      "file": "10.1146_annurev-biochem-062917-012034.md"
+    },
+    {
+      "doi": "10.1002/anie.201708408",
+      "title": "",
+      "year": "2018",
+      "journal": "Angew. Chem. Int. Ed.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/anie.201708408",
+      "file": "10.1002_anie.201708408.md"
+    },
+    {
+      "doi": "10.1002/anie.201901491",
+      "title": "",
+      "year": "2020",
+      "journal": "Angew. Chem. Int. Ed.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/s0167-7799(03)00194-x",
+      "title": "",
+      "year": "2003",
+      "journal": "Trends Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.copbio.2004.06.001",
+      "title": "",
+      "year": "2004",
+      "journal": "Curr. Opin. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.0910781107",
+      "title": "",
+      "year": "2010",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2840095?pdf=render",
+      "file": "10.1073_pnas.0910781107.md"
+    },
+    {
+      "doi": "10.1038/s41929-019-0340-5",
+      "title": "",
+      "year": "2019",
+      "journal": "Nat. Catal.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41929-019-0340-5.pdf",
+      "file": "10.1038_s41929-019-0340-5.md"
+    },
+    {
+      "doi": "10.1038/nature09929",
+      "title": "",
+      "year": "2011",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://nrs.harvard.edu/urn-3:HUL.InstRepos:17965339",
+      "file": "10.1038_nature09929.md"
+    },
+    {
+      "doi": "10.1038/nchembio.2474",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Chem. Biol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "http://nrs.harvard.edu/urn-3:HUL.InstRepos:37068282",
+      "file": "10.1038_nchembio.2474.md"
+    },
+    {
+      "doi": "10.1016/j.cell.2018.10.021",
+      "title": "",
+      "year": "2018",
+      "journal": "Cell",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "http://www.cell.com/article/S0092867418313308/pdf",
+      "file": "10.1016_j.cell.2018.10.021.md"
+    },
+    {
+      "doi": "10.1038/s41586-018-0808-5",
+      "title": "",
+      "year": "2018",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aar4239",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aaw1143",
+      "title": "",
+      "year": "2019",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://science.sciencemag.org/content/sci/364/6446/1166.full.pdf",
+      "file": "10.1126_science.aaw1143.md"
+    },
+    {
+      "doi": "10.1038/s41557-020-00633-7",
+      "title": "",
+      "year": "2021",
+      "journal": "Nat. Chem.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8675236?pdf=render",
+      "file": "10.1038_s41557-020-00633-7.md"
+    },
+    {
+      "doi": "10.1002/anie.201204077",
+      "title": "",
+      "year": "2013",
+      "journal": "Angew. Chem. Int. Ed.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1146/annurev-biochem-072611-101825",
+      "title": "",
+      "year": "2013",
+      "journal": "Annu. Rev. Biochem.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/pro.481",
+      "title": "",
+      "year": "2010",
+      "journal": "Protein Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/pro.481",
+      "file": "10.1002_pro.481.md"
+    },
+    {
+      "doi": "10.1038/nature19114",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": ""
+    },
+    {
+      "doi": "10.1021/jacs.8b07189",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Am. Chem. Soc.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": ""
+    },
+    {
+      "doi": "10.1016/j.copbio.2017.12.008",
+      "title": "",
+      "year": "2018",
+      "journal": "Curr. Opin. Biotechnol.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": ""
+    },
+    {
+      "doi": "10.1126/science.1226132",
+      "title": "",
+      "year": "2012",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3820005?pdf=render",
+      "file": "10.1126_science.1226132.md"
+    },
+    {
+      "doi": "10.1038/nchem.2643",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Chem.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature08620",
+      "title": "",
+      "year": "2009",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4297211?pdf=render",
+      "file": "10.1038_nature08620.md"
+    },
+    {
+      "doi": "10.1126/science.aat8474",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.osti.gov/servlets/purl/1470758",
+      "file": "10.1126_science.aat8474.md"
+    },
+    {
+      "doi": "10.1021/ar970004h",
+      "title": "",
+      "year": "2000",
+      "journal": "Acc. Chem. Res.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3050006?pdf=render",
+      "file": "10.1021_ar970004h.md"
+    },
+    {
+      "doi": "10.1039/b514972j",
+      "title": "",
+      "year": "2006",
+      "journal": "Dalton Trans.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nchembio.257",
+      "title": "",
+      "year": "2009",
+      "journal": "Nat. Chem. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1016/j.cbpa.2011.03.006",
+      "title": "",
+      "year": "2011",
+      "journal": "Curr. Opin. Chem. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nchem.1201",
+      "title": "",
+      "year": "2011",
+      "journal": "Nat. Chem.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3270697?pdf=render",
+      "file": "10.1038_nchem.1201.md"
+    },
+    {
+      "doi": "10.1073/pnas.1915054117",
+      "title": "",
+      "year": "2020",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/doi/full/10.1073/pnas.1915054117",
+      "file": "10.1073_pnas.1915054117.md"
+    },
+    {
+      "doi": "10.1002/anie.201707637",
+      "title": "",
+      "year": "2017",
+      "journal": "Angew. Chem. Int. Ed.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/acs.accounts.8b00674",
+      "title": "",
+      "year": "2019",
+      "journal": "Acc. Chem. Res.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7362765?pdf=render",
+      "file": "10.1021_acs.accounts.8b00674.md"
+    },
+    {
+      "doi": "10.1038/nchem.1454",
+      "title": "",
+      "year": "2012",
+      "journal": "Nat. Chem.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3568993?pdf=render",
+      "file": "10.1038_nchem.1454.md"
+    },
+    {
+      "doi": "10.1021/ja075261o",
+      "title": "",
+      "year": "2007",
+      "journal": "J. Am. Chem. Soc",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4832915?pdf=render",
+      "file": "10.1021_ja075261o.md"
+    },
+    {
+      "doi": "10.1021/ja208015j",
+      "title": "",
+      "year": "2012",
+      "journal": "J. Am. Chem. Soc.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/bi201881p",
+      "title": "",
+      "year": "2012",
+      "journal": "Biochemistry",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.aau3744",
+      "title": "",
+      "year": "2018",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.dora.lib4ri.ch/psi/dload/psi:26866/PDF2/view",
+      "file": "10.1126_science.aau3744.md"
+    },
+    {
+      "doi": "10.1038/s41557-020-00628-4",
+      "title": "",
+      "year": "2021",
+      "journal": "Nat. Chem.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://zenodo.org/record/4462998",
+      "file": "10.1038_s41557-020-00628-4.md"
+    },
+    {
+      "doi": "10.1038/nature24031",
+      "title": "",
+      "year": "2017",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1146/annurev.biochem.052308.105824",
+      "title": "",
+      "year": "2010",
+      "journal": "Annu. Rev. Biochem.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/ja076043y",
+      "title": "",
+      "year": "2007",
+      "journal": "J. Am. Chem. Soc",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/ja205927u",
+      "title": "",
+      "year": "2011",
+      "journal": "J. Am. Chem. Soc.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/jacs.6b06843",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Am. Chem. Soc.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC5063566?pdf=render",
+      "file": "10.1021_jacs.6b06843.md"
+    },
+    {
+      "doi": "10.1021/acscatal.9b05129",
+      "title": "",
+      "year": "2020",
+      "journal": "ACS Catal.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pubs.acs.org/doi/pdf/10.1021/acscatal.9b05129",
+      "file": "10.1021_acscatal.9b05129.md"
+    },
+    {
+      "doi": "10.1021/jacsau.1c00145",
+      "title": "",
+      "year": "2021",
+      "journal": "JACS Au",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC8317151?pdf=render",
+      "file": "10.1021_jacsau.1c00145.md"
+    },
+    {
+      "doi": "10.1021/jacs.8b07157",
+      "title": "",
+      "year": "2018",
+      "journal": "J. Am. Chem. Soc.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC6426444?pdf=render",
+      "file": "10.1021_jacs.8b07157.md"
+    },
+    {
+      "doi": "10.1021/jacs.6b07029",
+      "title": "",
+      "year": "2016",
+      "journal": "J. Am. Chem. Soc.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pubs.acs.org/doi/pdf/10.1021/jacs.6b07029",
+      "file": "10.1021_jacs.6b07029.md"
+    },
+    {
+      "doi": "10.1016/j.cbpa.2020.01.006",
+      "title": "",
+      "year": "2020",
+      "journal": "Curr. Opin. Chem. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-019-1262-8",
+      "title": "",
+      "year": "2019",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.251555398",
+      "title": "",
+      "year": "2001",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC64672?pdf=render",
+      "file": "10.1073_pnas.251555398.md"
+    },
+    {
+      "doi": "10.1021/ja3037367",
+      "title": "",
+      "year": "2012",
+      "journal": "J. Am. Chem. Soc.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://digitalcollection.zhaw.ch/handle/11475/9665",
+      "file": "10.1021_ja3037367.md"
+    },
+    {
+      "doi": "10.1038/nchembio.1498",
+      "title": "",
+      "year": "2014",
+      "journal": "Nat. Chem. Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC4048123?pdf=render",
+      "file": "10.1038_nchembio.1498.md"
+    },
+    {
+      "doi": "10.1021/jacs.5b07812",
+      "title": "",
+      "year": "2015",
+      "journal": "J. Am. Chem. Soc.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nchem.2555",
+      "title": "",
+      "year": "2016",
+      "journal": "Nat. Chem.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://hdl.handle.net/1983/2de8e72f-9f30-4cd5-8636-04db207278f5",
+      "file": "10.1038_nchem.2555.md"
+    },
+    {
+      "doi": "10.1038/s41557-018-0082-z",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Chem.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://research.rug.nl/files/64159926/s41557_018_0082_z_1_.pdf",
+      "file": "10.1038_s41557-018-0082-z.md"
+    },
+    {
+      "doi": "10.1002/anie.201813499",
+      "title": "",
+      "year": "2019",
+      "journal": "Angew. Chem. Int. Ed.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/anie.201813499",
+      "file": "10.1002_anie.201813499.md"
+    },
+    {
+      "doi": "10.1126/science.3787261",
+      "title": "",
+      "year": "1986",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.270.5243.1797",
+      "title": "",
+      "year": "1995",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.8211138",
+      "title": "",
+      "year": "1993",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1062722",
+      "title": "",
+      "year": "2001",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.10049109",
+      "title": "",
+      "year": "1993",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1146/annurev.biochem.69.1.751",
+      "title": "",
+      "year": "2000",
+      "journal": "Annu. Rev. Biochem.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature06879",
+      "title": "",
+      "year": "2008",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1073/pnas.1118082108",
+      "title": "",
+      "year": "2012",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/109/10/3790.full.pdf",
+      "file": "10.1073_pnas.1118082108.md"
+    },
+    {
+      "doi": "10.1126/science.1152692",
+      "title": "",
+      "year": "2008",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1190239",
+      "title": "",
+      "year": "2010",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nature12623",
+      "title": "",
+      "year": "2013",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://digitalcollection.zhaw.ch/handle/11475/9661",
+      "file": "10.1038_nature12623.md"
+    },
+    {
+      "doi": "10.1073/pnas.1401073111",
+      "title": "",
+      "year": "2014",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/111/22/8013.full.pdf",
+      "file": "10.1073_pnas.1401073111.md"
+    },
+    {
+      "doi": "10.1038/nchem.2596",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Chem.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41557-021-00833-9",
+      "title": "",
+      "year": "2022",
+      "journal": "Nat. Chem.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7612480?pdf=render",
+      "file": "10.1038_s41557-021-00833-9.md"
+    },
+    {
+      "doi": "10.1126/science.abd3623",
+      "title": "",
+      "year": "2020",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9616100?pdf=render",
+      "file": "10.1126_science.abd3623.md"
+    },
+    {
+      "doi": "10.1038/s41467-020-18619-x",
+      "title": "",
+      "year": "2020",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-020-18619-x.pdf",
+      "file": "10.1038_s41467-020-18619-x.md"
+    },
+    {
+      "doi": "10.1002/pro.2059",
+      "title": "",
+      "year": "2012",
+      "journal": "Protein Sci.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/nchembio.1276",
+      "title": "",
+      "year": "2013",
+      "journal": "Nat. Chem. Biol.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC3720730?pdf=render",
+      "file": "10.1038_nchembio.1276.md"
+    },
+    {
+      "doi": "10.1038/nbt.2109",
+      "title": "",
+      "year": "2012",
+      "journal": "Nat. Biotechnol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/cb3006227",
+      "title": "",
+      "year": "2013",
+      "journal": "ACS Chem. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/pro.462",
+      "title": "",
+      "year": "2010",
+      "journal": "Protein Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/pro.462",
+      "file": "10.1002_pro.462.md"
+    },
+    {
+      "doi": "10.1073/pnas.1010381107",
+      "title": "",
+      "year": "2010",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC2947920?pdf=render",
+      "file": "10.1073_pnas.1010381107.md"
+    },
+    {
+      "doi": "10.1038/s41557-021-00763-6",
+      "title": "",
+      "year": "2021",
+      "journal": "Nat. Chem.",
+      "is_oa": true,
+      "kind": "repo",
+      "link": "https://research-information.bris.ac.uk/en/publications/d337d956-2095-44c6-9713-7fd95541fc72",
+      "file": "10.1038_s41557-021-00763-6.md"
+    },
+    {
+      "doi": "10.1002/pro.3757",
+      "title": "",
+      "year": "2019",
+      "journal": "Protein Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/pro.3757",
+      "file": "10.1002_pro.3757.md"
+    },
+    {
+      "doi": "10.1038/nchembio.2503",
+      "title": "",
+      "year": "2017",
+      "journal": "Nat. Chem. Biol.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.abc0881",
+      "title": "",
+      "year": "2021",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://escholarship.org/content/qt1pn2d40b/qt1pn2d40b.pdf",
+      "file": "10.1126_science.abc0881.md"
+    },
+    {
+      "doi": "10.1038/nature19946",
+      "title": "",
+      "year": "2016",
+      "journal": "Nature",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1038/s41586-018-0509-0",
+      "title": "",
+      "year": "2018",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.osti.gov/servlets/purl/1601813",
+      "file": "10.1038_s41586-018-0509-0.md"
+    },
+    {
+      "doi": "10.1073/pnas.1914808117",
+      "title": "",
+      "year": "2020",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/117/13/7208.full.pdf",
+      "file": "10.1073_pnas.1914808117.md"
+    },
+    {
+      "doi": "10.1038/s41586-019-1923-7",
+      "title": "",
+      "year": "2020",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://discovery.ucl.ac.uk/10089234/1/343019_3_art_0_py4t4l_convrt.pdf",
+      "file": "10.1038_s41586-019-1923-7.md"
+    },
+    {
+      "doi": "10.1038/s41467-021-21511-x",
+      "title": "",
+      "year": "2021",
+      "journal": "Nat. Commun.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41467-021-21511-x.pdf",
+      "file": "10.1038_s41467-021-21511-x.md"
+    },
+    {
+      "doi": "10.1126/science.abj8754",
+      "title": "",
+      "year": "2021",
+      "journal": "Science",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://escholarship.org/content/qt3gz3w9v7/qt3gz3w9v7.pdf?t=rfdtpb",
+      "file": "10.1126_science.abj8754.md"
+    },
+    {
+      "doi": "10.1038/s41586-021-03819-2",
+      "title": "",
+      "year": "2021",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.nature.com/articles/s41586-021-03819-2.pdf",
+      "file": "10.1038_s41586-021-03819-2.md"
+    },
+    {
+      "doi": "10.1038/s41586-021-04184-w",
+      "title": "",
+      "year": "2021",
+      "journal": "Nature",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC9293396?pdf=render",
+      "file": "10.1038_s41586-021-04184-w.md"
+    },
+    {
+      "doi": "10.1021/acscatal.9b04321",
+      "title": "",
+      "year": "2020",
+      "journal": "ACS Catal.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://pubs.acs.org/doi/pdf/10.1021/acscatal.9b04321",
+      "file": "10.1021_acscatal.9b04321.md"
+    },
+    {
+      "doi": "10.1021/acscatal.1c02786",
+      "title": "",
+      "year": "2021",
+      "journal": "ACS Catal.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1371/journal.pcbi.1005786",
+      "title": "",
+      "year": "2017",
+      "journal": "PLoS Comput. Biol.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://journals.plos.org/ploscompbiol/article/file?id=10.1371/journal.pcbi.1005786&type=printable",
+      "file": "10.1371_journal.pcbi.1005786.md"
+    },
+    {
+      "doi": "10.1073/pnas.1901979116",
+      "title": "",
+      "year": "2019",
+      "journal": "Proc. Natl Acad. Sci. USA",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.pnas.org/content/pnas/116/18/8852.full.pdf",
+      "file": "10.1073_pnas.1901979116.md"
+    },
+    {
+      "doi": "10.1101/2020.11.29.402743",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.biorxiv.org/content/biorxiv/early/2020/11/29/2020.11.29.402743.full.pdf",
+      "file": "10.1101_2020.11.29.402743.md"
+    },
+    {
+      "doi": "10.1126/science.aba3304",
+      "title": "",
+      "year": "2020",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1101/2021.11.10.468128",
+      "title": "",
+      "year": "",
+      "journal": "",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://www.biorxiv.org/content/biorxiv/early/2021/11/15/2021.11.10.468128.full.pdf",
+      "file": "10.1101_2021.11.10.468128.md"
+    },
+    {
+      "doi": "10.1038/s41929-018-0105-6",
+      "title": "",
+      "year": "2018",
+      "journal": "Nat. Catal.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/acscatal.9b02272",
+      "title": "",
+      "year": "2019",
+      "journal": "ACS Catal.",
+      "is_oa": true,
+      "kind": "epmc",
+      "link": "https://europepmc.org/articles/PMC7111255?pdf=render",
+      "file": "10.1021_acscatal.9b02272.md"
+    },
+    {
+      "doi": "10.1021/cr068388p",
+      "title": "",
+      "year": "2007",
+      "journal": "Chem. Rev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/cr0684016",
+      "title": "",
+      "year": "2007",
+      "journal": "Chem. Rev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/cr068373r",
+      "title": "",
+      "year": "2007",
+      "journal": "Chem. Rev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/cr068370e",
+      "title": "",
+      "year": "2007",
+      "journal": "Chem. Rev.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1126/science.1142696",
+      "title": "",
+      "year": "2007",
+      "journal": "Science",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1021/acscatal.9b01464",
+      "title": "",
+      "year": "2019",
+      "journal": "ACS Catal.",
+      "is_oa": false,
+      "kind": null,
+      "link": null
+    },
+    {
+      "doi": "10.1002/pro.2128",
+      "title": "",
+      "year": "2012",
+      "journal": "Protein Sci.",
+      "is_oa": true,
+      "kind": "pdf",
+      "link": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/pro.2128",
+      "file": "10.1002_pro.2128.md"
+    }
+  ]
+}

@@ -1,0 +1,649 @@
+{
+  "article": {
+    "slug": "s41586-022-04919-3",
+    "doi": "10.1038/s41586-022-04919-3",
+    "title": "Inflammatory memory and tissue adaptation in sickness and in health",
+    "url": "https://www.nature.com/articles/s41586-022-04919-3",
+    "abbrev": "inflammatory-memory-tissue-adaptation-sickness-health",
+    "dir": "/Users/wanjun/Desktop/BioRouter/biokf/reviews/inflammatory-memory-tissue-adaptation-sickness-health"
+  },
+  "meta": {
+    "title": "Inflammatory memory and tissue adaptation in sickness and in health",
+    "authors": [
+      "Shruti Naik",
+      "Elaine Fuchs"
+    ],
+    "published": [
+      2022,
+      7,
+      13
+    ],
+    "container": "Nature",
+    "doi": "10.1038/s41586-022-04919-3",
+    "n_references": 69,
+    "abstract": ""
+  },
+  "references": [
+    {
+      "key": "4919_CR1",
+      "doi": "10.1146/annurev.phyto.42.040803.140421",
+      "title": "",
+      "journal": "Annu. Rev. Phytopathol.",
+      "year": "2004",
+      "author": "WE Durrant",
+      "unstructured": "Durrant, W. E. & Dong, X. Systemic acquired resistance. Annu. Rev. Phytopathol. 42, 185\u2013209 (2004)."
+    },
+    {
+      "key": "4919_CR2",
+      "doi": "10.3390/cells9092109",
+      "title": "",
+      "journal": "Cells",
+      "year": "2020",
+      "author": "ST Pasco",
+      "unstructured": "Pasco, S. T. & Anguita, J. Lessons from Bacillus Calmette\u2013Guerin: harnessing trained immunity for vaccine development. Cells 9, 2109 (2020)."
+    },
+    {
+      "key": "4919_CR3",
+      "doi": "10.1084/jem.86.1.29",
+      "title": "",
+      "journal": "J. Exp. Med.",
+      "year": "1947",
+      "author": "PB Beeson",
+      "unstructured": "Beeson, P. B. & Technical Assistance of Elizabeth Roberts. Tolerance to bacterial pyrogens: I. Factors influencing its development. J. Exp. Med. 86, 29\u201338 (1947)."
+    },
+    {
+      "key": "4919_CR4",
+      "doi": "10.1097/00003246-200201001-00009",
+      "title": "",
+      "journal": "Crit. Care Med.",
+      "year": "2002",
+      "author": "MA West",
+      "unstructured": "West, M. A. & Heagy, W. Endotoxin tolerance: a review. Crit. Care Med. 30, S64\u2013S73 (2002)."
+    },
+    {
+      "key": "4919_CR5",
+      "doi": "10.1016/j.socscimed.2013.10.027",
+      "title": "",
+      "journal": "Soc. Sci. Med.",
+      "year": "2014",
+      "author": "P Ekamper",
+      "unstructured": "Ekamper, P., van Poppel, F., Stein, A. D. & Lumey, L. H. Independent and additive association of prenatal famine exposure and intermediary life conditions with adult mortality between age 18\u201363 years. Soc. Sci. Med. 119, 232\u2013239 (2014)."
+    },
+    {
+      "key": "4919_CR6",
+      "doi": "10.1038/nri.2016.13",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2016",
+      "author": "DL Farber",
+      "unstructured": "Farber, D. L., Netea, M. G., Radbruch, A., Rajewsky, K. & Zinkernagel, R. M. Immunological memory: lessons from the past and a look to the future. Nat. Rev. Immunol. 16, 124\u2013128 (2016)."
+    },
+    {
+      "key": "4919_CR7",
+      "doi": "10.1101/2022.02.14.480394",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Muecksch, F. et al. Increased potency and breadth of SARS-CoV-2 neutralizing antibodies after a third mRNA vaccine dose. Preprint at bioRxiv https://doi.org/10.1101/2022.02.14.480394 (2022)."
+    },
+    {
+      "key": "4919_CR8",
+      "doi": "10.1038/s41577-021-00657-1",
+      "title": "",
+      "journal": "Nat. Rev. Immunol.",
+      "year": "2022",
+      "author": "BJ Laidlaw",
+      "unstructured": "Laidlaw, B. J. & Ellebedy, A. H. The germinal centre B cell response to SARS-CoV-2. Nat. Rev. Immunol. 22, 7\u201318 (2022)."
+    },
+    {
+      "key": "4919_CR9",
+      "doi": "10.1126/science.aay4014",
+      "title": "",
+      "journal": "Science",
+      "year": "2020",
+      "author": "B Pulendran",
+      "unstructured": "Pulendran, B. & Davis, M. M. The science and medicine of human immunology. Science 369, eaay4014 (2020)."
+    },
+    {
+      "key": "4919_CR10",
+      "doi": "10.1038/s41586-021-04060-7",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "A Cho",
+      "unstructured": "Cho, A. et al. Anti-SARS-CoV-2 receptor-binding domain antibody evolution after mRNA vaccination. Nature 600, 517\u2013522 (2021)."
+    },
+    {
+      "key": "4919_CR11",
+      "doi": "10.1038/nature24271",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "S Naik",
+      "unstructured": "Naik, S. et al. Inflammatory memory sensitizes skin epithelial stem cells to tissue damage. Nature 550, 475\u2013480 (2017). This study is the first to report that inflammatory memory is not a property unique to immune cells and is also found in skin epithelial stem cells."
+    },
+    {
+      "key": "4919_CR12",
+      "doi": "10.1038/nature05836",
+      "title": "",
+      "journal": "Nature",
+      "year": "2007",
+      "author": "SL Foster",
+      "unstructured": "Foster, S. L., Hargreaves, D. C. & Medzhitov, R. Gene-specific control of inflammation by TLR-induced chromatin modifications. Nature 447, 972\u2013978 (2007). This landmark study traces the roots of inflammatory memory and tolerence in marcophages to epigenetic changes in chromatin."
+    },
+    {
+      "key": "4919_CR13",
+      "doi": "10.1038/nature07665",
+      "title": "",
+      "journal": "Nature",
+      "year": "2009",
+      "author": "JC Sun",
+      "unstructured": "Sun, J. C., Beilke, J. N. & Lanier, L. L. Adaptive immune features of natural killer cells. Nature 457, 557\u2013561 (2009)."
+    },
+    {
+      "key": "4919_CR14",
+      "doi": "10.1016/j.chom.2011.04.006",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2011",
+      "author": "MG Netea",
+      "unstructured": "Netea, M. G., Quintin, J. & van der Meer, J. W. Trained immunity: a memory for innate host defense. Cell Host Microbe 9, 355\u2013361 (2011)."
+    },
+    {
+      "key": "4919_CR15",
+      "doi": "10.1038/s41586-018-0449-8",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "J Ordovas-Montanes",
+      "unstructured": "Ordovas-Montanes, J. et al. Allergic inflammatory memory in human respiratory epithelial progenitor cells. Nature 560, 649\u2013654 (2018)."
+    },
+    {
+      "key": "4919_CR16",
+      "doi": "10.1016/j.cell.2017.12.013",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "A Christ",
+      "unstructured": "Christ, A. et al. Western diet triggers NLRP3-dependent innate immune reprogramming. Cell 172, 162\u2013175.e14 (2018)."
+    },
+    {
+      "key": "4919_CR17",
+      "doi": "10.1016/j.cell.2017.12.031",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "E Kaufmann",
+      "unstructured": "Kaufmann, E. et al. BCG educates hematopoietic stem cells to generate protective innate immunity against tuberculosis. Cell 172, 176\u2013190.e19 (2018)."
+    },
+    {
+      "key": "4919_CR18",
+      "doi": "10.1126/science.abf3002",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "AI Lim",
+      "unstructured": "Lim, A. I. et al. Prenatal maternal infection promotes tissue-specific immunity and inflammation in offspring. Science 373, eabf3002 (2021). This study identifies intergenerational memory in intestinal offspring epithelial stem cells following in utero esposure to inflammatory mediators."
+    },
+    {
+      "key": "4919_CR19",
+      "doi": "10.1038/s41586-018-0023-4",
+      "title": "",
+      "journal": "Nature",
+      "year": "2018",
+      "author": "AC Wendeln",
+      "unstructured": "Wendeln, A. C. et al. Innate immune memory in the brain shapes neurological disease hallmarks. Nature 556, 332\u2013338 (2018). This study identifies a role for innate immune memory in brain-resident microglia in exacerbating Alzheimer disease."
+    },
+    {
+      "key": "4919_CR20",
+      "doi": "10.1038/s41590-020-00845-6",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2021",
+      "author": "M Divangahi",
+      "unstructured": "Divangahi, M. et al. Trained immunity, tolerance, priming and differentiation: distinct immunological processes. Nat. Immunol. 22, 2\u20136 (2021)."
+    },
+    {
+      "key": "4919_CR21",
+      "doi": "10.1126/science.1251086",
+      "title": "",
+      "journal": "Science",
+      "year": "2014",
+      "author": "S Saeed",
+      "unstructured": "Saeed, S. et al. Epigenetic programming of monocyte-to-macrophage differentiation and trained innate immunity. Science 345, 1251086 (2014)."
+    },
+    {
+      "key": "4919_CR22",
+      "doi": "10.1038/ni.2984",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2014",
+      "author": "F Chen",
+      "unstructured": "Chen, F. et al. Neutrophils prime a long-lived effector macrophage phenotype that mediates accelerated helminth expulsion. Nat. Immunol. 15, 938\u2013946 (2014)."
+    },
+    {
+      "key": "4919_CR23",
+      "doi": "10.1093/infdis/jiaa030",
+      "title": "",
+      "journal": "J. Infect. Dis.",
+      "year": "2020",
+      "author": "B Freyne",
+      "unstructured": "Freyne, B. et al. Neonatal BCG vaccination reduces interferon-gamma responsiveness to heterologous pathogens in infants from a randomized controlled trial. J. Infect. Dis. 221, 1999\u20132009 (2020)."
+    },
+    {
+      "key": "4919_CR24",
+      "doi": "10.1016/j.cell.2018.09.042",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "Y Yao",
+      "unstructured": "Yao, Y. et al. Induction of autonomous memory alveolar macrophages requires T cell help and is critical to trained immunity. Cell 175, 1634\u20131650.e17 (2018)."
+    },
+    {
+      "key": "4919_CR25",
+      "doi": "10.1126/science.aaz8777",
+      "title": "",
+      "journal": "Science",
+      "year": "2022",
+      "author": "N Serafini",
+      "unstructured": "Serafini, N. et al. Trained ILC3 responses promote intestinal defense. Science 375, 859\u2013863 (2022)."
+    },
+    {
+      "key": "4919_CR26",
+      "doi": "10.1016/j.cell.2017.11.034",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "I Mitroulis",
+      "unstructured": "Mitroulis, I. et al. Modulation of myelopoiesis progenitors is an integral component of trained immunity. Cell 172, 147\u2013161.e12 (2018)."
+    },
+    {
+      "key": "4919_CR27",
+      "doi": "10.1016/j.chom.2020.05.014",
+      "title": "",
+      "journal": "Cell Host Microbe",
+      "year": "2020",
+      "author": "B Cirovic",
+      "unstructured": "Cirovic, B. et al. BCG vaccination in humans elicits trained immunity via the hematopoietic progenitor compartment. Cell Host Microbe 28, 322\u2013334.e5 (2020)."
+    },
+    {
+      "key": "4919_CR28",
+      "doi": "10.1016/j.cell.2019.05.024",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "RS Moore",
+      "unstructured": "Moore, R. S., Kaletsky, R. & Murphy, C. T. Piwi/PRG-1 argonaute and TGF-beta mediate transgenerational learned pathogenic avoidance. Cell 177, 1827\u20131841.e12 (2019)."
+    },
+    {
+      "key": "4919_CR29",
+      "doi": "10.1126/science.aah6412",
+      "title": "",
+      "journal": "Science",
+      "year": "2017",
+      "author": "A Klosin",
+      "unstructured": "Klosin, A., Casas, E., Hidalgo-Carcedo, C., Vavouri, T. & Lehner, B. Transgenerational transmission of environmental information in C. elegans. Science 356, 316\u2013319 (2017)."
+    },
+    {
+      "key": "4919_CR30",
+      "doi": "10.1038/s41590-021-01052-7",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2021",
+      "author": "N Katzmarski",
+      "unstructured": "Katzmarski, N. et al. Transmission of trained immunity and heterologous resistance to infections across generations. Nat. Immunol. 22, 1382\u20131390 (2021)."
+    },
+    {
+      "key": "4919_CR31",
+      "doi": "10.1038/s41590-021-01102-0",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2022",
+      "author": "E Kaufmann",
+      "unstructured": "Kaufmann, E. et al. Lack of evidence for intergenerational inheritance of immune resistance to infections. Nat. Immunol. 23, 203\u2013207 (2022)."
+    },
+    {
+      "key": "4919_CR32",
+      "doi": "10.1016/j.ceb.2020.08.009",
+      "title": "",
+      "journal": "Curr. Opin. Cell Biol.",
+      "year": "2020",
+      "author": "Y Xing",
+      "unstructured": "Xing, Y. & Naik, S. Under pressure: stem cell\u2013niche interactions coordinate tissue adaptation to inflammation. Curr. Opin. Cell Biol. 67, 64\u201370 (2020)."
+    },
+    {
+      "key": "4919_CR33",
+      "doi": "10.1016/j.cell.2018.10.008",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "M Biton",
+      "unstructured": "Biton, M. et al. T helper cell cytokines modulate intestinal stem cell renewal and differentiation. Cell 175, 1307\u20131320.e22 (2018)."
+    },
+    {
+      "key": "4919_CR34",
+      "doi": "10.1126/science.abh2444",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "KAU Gonzales",
+      "unstructured": "Gonzales, K. A. U. et al. Stem cells expand potency and alter tissue fitness by accumulating diverse epigenetic memories. Science 374, eabh2444 (2021)."
+    },
+    {
+      "key": "4919_CR35",
+      "doi": "10.1126/science.abj0486",
+      "title": "",
+      "journal": "Science",
+      "year": "2021",
+      "author": "E Del Poggetto",
+      "unstructured": "Del Poggetto, E. et al. Epithelial memory of inflammation limits tissue damage while promoting pancreatic tumorigenesis. Science 373, eabj0486 (2021)."
+    },
+    {
+      "key": "4919_CR36",
+      "doi": "10.1016/j.cell.2021.05.036",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "RE Niec",
+      "unstructured": "Niec, R. E., Rudensky, A. Y. & Fuchs, E. Inflammatory adaptation in barrier tissues. Cell 184, 3361\u20133375 (2021)."
+    },
+    {
+      "key": "4919_CR37",
+      "doi": "10.1038/nature13255",
+      "title": "",
+      "journal": "Nature",
+      "year": "2014",
+      "author": "JT Rodgers",
+      "unstructured": "Rodgers, J. T. et al. mTORC1 controls the adaptive transition of quiescent stem cells from G0 to GAlert. Nature 510, 393\u2013396 (2014)."
+    },
+    {
+      "key": "4919_CR38",
+      "doi": "10.1038/s41590-018-0176-1",
+      "title": "",
+      "journal": "Nat. Immunol.",
+      "year": "2018",
+      "author": "CM Lau",
+      "unstructured": "Lau, C. M. et al. Epigenetic control of innate and adaptive immune memory. Nat. Immunol. 19, 963\u2013972 (2018)."
+    },
+    {
+      "key": "4919_CR39",
+      "doi": "10.1038/s41588-018-0298-2",
+      "title": "",
+      "journal": "Nat. Genet.",
+      "year": "2019",
+      "author": "S Fanucchi",
+      "unstructured": "Fanucchi, S. et al. Immune genes are primed for robust transcription by proximal long noncoding RNAs located in nuclear compartments. Nat. Genet. 51, 138\u2013150 (2019)."
+    },
+    {
+      "key": "4919_CR40",
+      "doi": "10.1016/j.tig.2011.06.006",
+      "title": "",
+      "journal": "Trends Genet.",
+      "year": "2011",
+      "author": "S Henikoff",
+      "unstructured": "Henikoff, S. & Shilatifard, A. Histone modification: cause or cog? Trends Genet. 27, 389\u2013396 (2011)."
+    },
+    {
+      "key": "4919_CR41",
+      "doi": "10.1146/annurev-genet-030220-015007",
+      "title": "",
+      "journal": "Annu. Rev. Genet.",
+      "year": "2020",
+      "author": "KS Zaret",
+      "unstructured": "Zaret, K. S. Pioneer transcription factors initiating gene network changes. Annu. Rev. Genet. 54, 367\u2013385 (2020)."
+    },
+    {
+      "key": "4919_CR42",
+      "doi": "10.1016/j.stem.2020.01.017",
+      "title": "",
+      "journal": "Cell Stem Cell",
+      "year": "2020",
+      "author": "B de Laval",
+      "unstructured": "de Laval, B. et al. C/EBP\u03b2-dependent epigenetic memory induces trained immunity in hematopoietic stem cells. Cell Stem Cell 26, 657\u2013674.e8 (2020)."
+    },
+    {
+      "key": "4919_CR43",
+      "doi": "10.1016/j.stem.2021.07.001",
+      "title": "",
+      "journal": "Cell Stem Cell",
+      "year": "2021",
+      "author": "SB Larsen",
+      "unstructured": "Larsen, S. B. et al. Establishment, maintenance, and recall of inflammatory memory. Cell Stem Cell 28, 1758\u20131774.e8 (2021). This study defines the transcription factor-depedent mechanisms underlying persistent chromatin modifications that mediate memory in epithelial stem cells."
+    },
+    {
+      "key": "4919_CR44",
+      "doi": "10.1038/nature05663",
+      "title": "",
+      "journal": "Nature",
+      "year": "2007",
+      "author": "MA Lowes",
+      "unstructured": "Lowes, M. A., Bowcock, A. M. & Krueger, J. G. Pathogenesis and therapy of psoriasis. Nature 445, 866\u2013873 (2007)."
+    },
+    {
+      "key": "4919_CR45",
+      "doi": "10.1038/jid.2010.280",
+      "title": "",
+      "journal": "J. Invest. Dermatol.",
+      "year": "2011",
+      "author": "M Suarez-Farinas",
+      "unstructured": "Suarez-Farinas, M., Fuentes-Duculan, J., Lowes, M. A. & Krueger, J. G. Resolved psoriasis lesions retain expression of a subset of disease-related genes. J. Invest. Dermatol. 131, 391\u2013400 (2011)."
+    },
+    {
+      "key": "4919_CR46",
+      "doi": "10.1016/j.cell.2019.10.015",
+      "title": "",
+      "journal": "Cell",
+      "year": "2019",
+      "author": "Y Wang",
+      "unstructured": "Wang, Y. et al. Long-term culture captures injury-repair cycles of colonic stem cells. Cell 179, 1144\u20131159.e15 (2019)."
+    },
+    {
+      "key": "4919_CR47",
+      "doi": "10.1016/j.celrep.2021.110283",
+      "title": "",
+      "journal": "Cell Rep.",
+      "year": "2022",
+      "author": "WD Rees",
+      "unstructured": "Rees, W. D. et al. An in vitro chronic damage model impairs inflammatory and regenerative responses in human colonoid monolayers. Cell Rep. 38, 110283 (2022)."
+    },
+    {
+      "key": "4919_CR48",
+      "doi": "10.1038/s41536-017-0034-z",
+      "title": "",
+      "journal": "NPJ Regen. Med.",
+      "year": "2017",
+      "author": "DM Bryant",
+      "unstructured": "Bryant, D. M. et al. Identification of regenerative roadblocks via repeat deployment of limb regeneration in axolotls. NPJ Regen. Med. 2, 30 (2017)."
+    },
+    {
+      "key": "4919_CR49",
+      "doi": "10.1093/nar/gky155",
+      "title": "",
+      "journal": "Nucleic Acids Res.",
+      "year": "2018",
+      "author": "T Maekawa",
+      "unstructured": "Maekawa, T. et al. ATF7 mediates TNF-alpha-induced telomere shortening. Nucleic Acids Res. 46, 4487\u20134504 (2018)."
+    },
+    {
+      "key": "4919_CR50",
+      "doi": "10.1038/s41580-019-0204-5",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Biol.",
+      "year": "2020",
+      "author": "W Zhang",
+      "unstructured": "Zhang, W., Qu, J., Liu, G. H. & Belmonte, J. C. I. The ageing epigenome and its rejuvenation. Nat. Rev. Mol. Cell Biol. 21, 137\u2013150 (2020)."
+    },
+    {
+      "key": "4919_CR51",
+      "doi": "10.1101/2022.02.09.479588",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Jin-Gyu Cheong, A. R. et al. Epigenetic memory of COVID-19 in innate immune cells and their progenitors. Preprint at bioRxiv https://doi.org/10.1101/2022.02.09.479588 (2022)."
+    },
+    {
+      "key": "4919_CR52",
+      "doi": "10.1016/j.cell.2022.03.043",
+      "title": "",
+      "journal": "Cell",
+      "year": "2022",
+      "author": "X Li",
+      "unstructured": "Li, X. et al. Maladaptive innate immune training of myelopoiesis links inflammatory comorbidities. Cell 185, 1709\u20131727.e18 (2022)."
+    },
+    {
+      "key": "4919_CR53",
+      "doi": "10.1056/nejm198612253152606",
+      "title": "",
+      "journal": "N. Engl. J. Med.",
+      "year": "1986",
+      "author": "HF Dvorak",
+      "unstructured": "Dvorak, H. F. Tumors: wounds that do not heal. Similarities between tumor stroma generation and wound healing. N. Engl. J. Med. 315, 1650\u20131659 (1986)."
+    },
+    {
+      "key": "4919_CR54",
+      "doi": "10.1038/nrm2455",
+      "title": "",
+      "journal": "Nat. Rev. Mol. Cell Bio.",
+      "year": "2008",
+      "author": "M Schafer",
+      "unstructured": "Schafer, M. & Werner, S. Cancer as an overhealing wound: an old hypothesis revisited. Nat. Rev. Mol. Cell Bio. 9, 628\u2013638 (2008)."
+    },
+    {
+      "key": "4919_CR55",
+      "doi": "",
+      "title": "",
+      "journal": "Cancer Res.",
+      "year": "1994",
+      "author": "M Martins-Green",
+      "unstructured": "Martins-Green, M., Boudreau, N. & Bissell, M. J. Inflammation is responsible for the development of wound-induced tumors in chickens infected with Rous sarcoma virus. Cancer Res. 54, 4334\u20134341 (1994)."
+    },
+    {
+      "key": "4919_CR56",
+      "doi": "10.1111/febs.14586",
+      "title": "",
+      "journal": "FEBS J.",
+      "year": "2018",
+      "author": "GM Sundaram",
+      "unstructured": "Sundaram, G. M., Quah, S. & Sampath, P. Cancer: the dark side of wound healing. FEBS J. 285, 4516\u20134534 (2018)."
+    },
+    {
+      "key": "4919_CR57",
+      "doi": "10.1016/j.ccr.2007.08.020",
+      "title": "",
+      "journal": "Cancer Cell",
+      "year": "2007",
+      "author": "G Guasch",
+      "unstructured": "Guasch, G. et al. Loss of TGF\u03b2 signaling destabilizes homeostasis and promotes squamous cell carcinomas in stratified epithelia. Cancer Cell 12, 313\u2013327 (2007)."
+    },
+    {
+      "key": "4919_CR58",
+      "doi": "10.1038/s41586-020-03147-x",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "D Alonso-Curbelo",
+      "unstructured": "Alonso-Curbelo, D. et al. A gene\u2013environment-induced epigenetic program initiates tumorigenesis. Nature 590, 642\u2013648 (2021)."
+    },
+    {
+      "key": "4919_CR59",
+      "doi": "10.1038/s41591-020-0964-7",
+      "title": "",
+      "journal": "Nat. Med.",
+      "year": "2020",
+      "author": "GJ Koelwyn",
+      "unstructured": "Koelwyn, G. J. et al. Myocardial infarction accelerates breast cancer via innate immune reprogramming. Nat. Med. 26, 1452\u20131458 (2020)."
+    },
+    {
+      "key": "4919_CR60",
+      "doi": "10.1101/2021.11.01.466807",
+      "title": "",
+      "journal": "",
+      "year": "",
+      "author": "",
+      "unstructured": "Falvo, D. J. et al. A lineage-specific epigenetic memory of inflammation potentiates Kras-driven pancreatic tumorigenesis. Preprint at bioRxiv https://doi.org/10.1101/2021.11.01.466807 (2021)."
+    },
+    {
+      "key": "4919_CR61",
+      "doi": "10.1038/s41467-022-28407-4",
+      "title": "",
+      "journal": "Nat. Commun.",
+      "year": "2022",
+      "author": "AE Geller",
+      "unstructured": "Geller, A. E. et al. The induction of peripheral trained immunity in the pancreas incites anti-tumor activity to control pancreatic cancer progression. Nat. Commun. 13, 759 (2022)."
+    },
+    {
+      "key": "4919_CR62",
+      "doi": "10.1038/s41586-021-04075-0",
+      "title": "",
+      "journal": "Nature",
+      "year": "2021",
+      "author": "G Pascual",
+      "unstructured": "Pascual, G. et al. Dietary palmitic acid promotes a prometastatic memory via Schwann cells. Nature 599, 485\u2013490 (2021)."
+    },
+    {
+      "key": "4919_CR63",
+      "doi": "10.1038/550451a",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "O Rozenblatt-Rosen",
+      "unstructured": "Rozenblatt-Rosen, O., Stubbington, M. J. T., Regev, A. & Teichmann, S. A. The Human Cell Atlas: from vision to reality. Nature 550, 451\u2013453 (2017)."
+    },
+    {
+      "key": "4919_CR64",
+      "doi": "10.1038/nature23910",
+      "title": "",
+      "journal": "Nature",
+      "year": "2017",
+      "author": "S Kim",
+      "unstructured": "Kim, S. et al. Maternal gut bacteria promote neurodevelopmental abnormalities in mouse offspring. Nature 549, 528\u2013532 (2017)."
+    },
+    {
+      "key": "4919_CR65",
+      "doi": "10.1126/science.aad0314",
+      "title": "",
+      "journal": "Science",
+      "year": "2016",
+      "author": "GB Choi",
+      "unstructured": "Choi, G. B. et al. The maternal interleukin-17a pathway in mice promotes autism-like phenotypes in offspring. Science 351, 933\u2013939 (2016)."
+    },
+    {
+      "key": "4919_CR66",
+      "doi": "10.1038/s41586-020-2745-3",
+      "title": "",
+      "journal": "Nature",
+      "year": "2020",
+      "author": "HE Vuong",
+      "unstructured": "Vuong, H. E. et al. The maternal microbiome modulates fetal neurodevelopment in mice. Nature 586, 281\u2013286 (2020)."
+    },
+    {
+      "key": "4919_CR67",
+      "doi": "10.1016/j.cell.2017.11.042",
+      "title": "",
+      "journal": "Cell",
+      "year": "2018",
+      "author": "MS Thion",
+      "unstructured": "Thion, M. S. et al. Microbiome influences prenatal and adult microglia in a sex-specific manner. Cell 172, 500\u2013516.e16 (2018)."
+    },
+    {
+      "key": "4919_CR68",
+      "doi": "10.1016/j.cell.2021.10.013",
+      "title": "",
+      "journal": "Cell",
+      "year": "2021",
+      "author": "T Koren",
+      "unstructured": "Koren, T. et al. Insular cortex neurons encode and retrieve specific immune responses. Cell 184, 5902\u20135915.e17 (2021)."
+    },
+    {
+      "key": "4919_CR69",
+      "doi": "10.1016/j.cell.2020.06.038",
+      "title": "",
+      "journal": "Cell",
+      "year": "2020",
+      "author": "WT Chen",
+      "unstructured": "Chen, W. T. et al. Spatial transcriptomics and in situ sequencing to study Alzheimer's disease. Cell 182, 976\u2013991.e19 (2020)."
+    }
+  ]
+}
