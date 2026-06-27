@@ -370,12 +370,16 @@ function closeLog(){
   if(d) d.classList.remove('open'); if(s) s.classList.remove('open');
 }
 
-document.getElementById('collapseBtn').onclick=()=>{const wb=document.getElementById('wbody');wb.classList.toggle('collapsed');document.getElementById('collapseBtn').textContent=wb.classList.contains('collapsed')?'›':'‹';setTimeout(resize,280);};
+function toggleSidebar(){const wb=document.getElementById('wbody');wb.classList.toggle('collapsed');document.getElementById('collapseBtn').textContent=wb.classList.contains('collapsed')?'›':'‹';setTimeout(resize,280);}
+document.getElementById('collapseBtn').onclick=(e)=>{e.stopPropagation();toggleSidebar();};
+// the logo mark is always visible (even when collapsed) and also toggles the sidebar
+document.querySelector('.mark').onclick=toggleSidebar;
 document.getElementById('legendToggle').onclick=()=>{const lg=document.getElementById('legend');lg.classList.toggle('min');document.getElementById('legendToggle').textContent=lg.classList.contains('min')?'show':'hide';};
 const searchInput=document.getElementById('searchInput');searchInput.addEventListener('input',e=>{searchTerm=e.target.value.trim().toLowerCase();});
 function zoomBy(f){const cx=W/2,cy=H/2,[wx,wy]=toWorld(cx,cy);view.k=Math.max(0.25,Math.min(5,view.k*f));view.x=cx-W/2-wx*view.k;view.y=cy-H/2-wy*view.k;}
 document.getElementById('zoomIn').onclick=()=>zoomBy(1.25);document.getElementById('zoomOut').onclick=()=>zoomBy(0.8);document.getElementById('zoomFit').onclick=()=>fitView();
-document.getElementById('logBtn').onclick=openLog;
+function toggleLog(){ document.getElementById('logDrawer').classList.contains('open') ? closeLog() : openLog(); }
+document.getElementById('logBtn').onclick=toggleLog;
 document.getElementById('logClose').onclick=closeLog;
 document.getElementById('logScrim').onclick=closeLog;
 window.addEventListener('keydown',e=>{if(e.key==='Escape')closeLog();});

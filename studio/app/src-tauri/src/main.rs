@@ -102,7 +102,7 @@ fn main() {
     let builder = builder.plugin(tauri_plugin_mcp::init_with_config(
         tauri_plugin_mcp::PluginConfig::new("BioOKF Studio".to_string())
             .start_socket_server(true)
-            .socket_path("/tmp/biookf-tauri-mcp.sock"),
+            .socket_path(std::path::PathBuf::from("/tmp/biookf-tauri-mcp.sock")),
     ));
 
     builder
