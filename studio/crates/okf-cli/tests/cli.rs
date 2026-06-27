@@ -110,3 +110,13 @@ edges:
 
     let _ = std::fs::remove_dir_all(&dir);
 }
+
+#[test]
+fn predicates_lists_24() {
+    let out = Command::new(okf()).args(["predicates", "--json"]).output().unwrap();
+    assert!(out.status.success());
+    let v: serde_json::Value = serde_json::from_slice(&out.stdout).unwrap();
+    assert_eq!(v["predicates"].as_array().unwrap().len(), 24);
+    assert!(v["predicates"].as_array().unwrap().iter().any(|p| p == "used_to_study"));
+    assert_eq!(v["node_types"].as_array().unwrap().len(), 28);
+}

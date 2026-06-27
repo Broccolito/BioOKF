@@ -11,8 +11,8 @@ A bundle is a directory: `raw/` (immutable sources you never edit), `knowledge/<
 THE TWO HARD RULES
 1) Every concept doc's `type` is EXACTLY ONE of these 28:
    Gene, Molecule, MolecularClass, Variant, SequenceFeature, Structure, Anatomy, CellType, Organism, BiologicalPathway, BiologicalFunction, Disease, Phenotype, BiomedicalMeasure, MethodOrProcedure, Exposure, SocialFactor, Food, Device, MaterialSample, Publication, Study, Dataset, Agent, Population, GeographicLocation, Concept, Other. If nothing fits, use Other with a `note:`. Never invent a type.
-2) Every relationship is a frontmatter `edges:` entry whose `predicate` is one of these 23 (forward-only — no inverses):
-   is_a, part_of, member_of, derives_from, located_in, expressed_in, encodes, interacts_with, binds, regulates, catalyzes, converts_to, participates_in, causes, predisposes_to, treats, prevents, contraindicated_in, affects_response_to, has_phenotype, measures, associated_with, reported_in. Direction is always this-document -> object.
+2) Every relationship is a frontmatter `edges:` entry whose `predicate` is one of these 24 (forward-only — no inverses):
+   is_a, part_of, member_of, derives_from, located_in, expressed_in, encodes, interacts_with, binds, regulates, catalyzes, converts_to, participates_in, causes, predisposes_to, treats, prevents, contraindicated_in, affects_response_to, has_phenotype, measures, associated_with, used_to_study, reported_in. Direction is always this-document -> object.
 
 MANDATORY FIELDS
 - Node: `type` and `identifier` (human-readable AND unique across the bundle; NOT a CURIE — put CURIEs in `xref`). Always also coin a lowercase `subtype` (no controlled list).
@@ -38,5 +38,5 @@ Read index.md -> okf_search to find relevant pages -> okf_read_page to open them
 === LINT ===
 Run okf_lint. It flags: invalid type/predicate; missing/duplicate/opaque identifiers; edge objects that don't resolve; missing or invalid provenance triplet; primary_source that isn't a source node; unanchored source nodes; domain/range violations; orphans; contradictions. Fix Errors first (rewrite the offending page with okf_write_page), then Warnings. A missing `xref` is an enrichment opportunity, not an error; `subtype` is never linted.
 
-TOOLS: okf_list_bases, okf_scaffold, okf_list_pages, okf_read_page, okf_write_page, okf_validate_page, okf_append_log, okf_lint, okf_graph, okf_search, okf_stats. Always okf_validate_page a concept doc before okf_write_page, and okf_lint after a batch of writes.
+TOOLS: okf_list_bases, okf_scaffold, okf_list_pages, okf_read_page, okf_write_page, okf_validate_page, okf_append_log, okf_lint, okf_graph, okf_search, okf_stats, okf_predicates. Always okf_validate_page a concept doc before okf_write_page, and okf_lint after a batch of writes.
 "#;

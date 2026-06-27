@@ -60,6 +60,11 @@ enum Cmd {
         #[arg(long)]
         name: Option<String>,
     },
+    /// Print the active controlled vocabulary (28 types, 24 predicates, enums).
+    Predicates {
+        #[arg(long)]
+        json: bool,
+    },
 }
 
 fn main() {
@@ -79,7 +84,27 @@ fn run() -> Result<()> {
         Cmd::Validate { file } => cmd_validate(file),
         Cmd::Get { path, identifier } => cmd_get(path, identifier),
         Cmd::Export { path, out, name } => cmd_export(path, out, name),
+        Cmd::Predicates { json } => cmd_predicates(json),
     }
+}
+
+fn cmd_predicates(json: bool) -> Result<()> {
+    use okf_core::model::{AGENT_TYPES, KNOWLEDGE_LEVELS, NODE_TYPES, PREDICATES};
+    if json {
+        let v = serde_json::json!({
+            "node_types": NODE_TYPES,
+            "predicates": PREDICATES,
+            "knowledge_levels": KNOWLEDGE_LEVELS,
+            "agent_types": AGENT_TYPES,
+        });
+        println!("{}", serde_json::to_string_pretty(&v)?);
+    } else {
+        println!("node types ({}):\n  {}", NODE_TYPES.len(), NODE_TYPES.join(", "));
+        println!("predicates ({}):\n  {}", PREDICATES.len(), PREDICATES.join(", "));
+        println!("knowledge_level: {}", KNOWLEDGE_LEVELS.join(", "));
+        println!("agent_type: {}", AGENT_TYPES.join(", "));
+    }
+    Ok(())
 }
 
 fn cmd_validate(file: PathBuf) -> Result<()> {

@@ -185,6 +185,13 @@ impl OkfServer {
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
+
+    #[tool(name = "okf_predicates", description = "Print the active BioOKF vocabulary: 28 node types, 24 predicates, knowledge_level/agent_type enums.")]
+    pub async fn predicates(&self) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        use okf_core::model::{AGENT_TYPES, KNOWLEDGE_LEVELS, NODE_TYPES, PREDICATES};
+        let v = serde_json::json!({"node_types": NODE_TYPES, "predicates": PREDICATES, "knowledge_levels": KNOWLEDGE_LEVELS, "agent_types": AGENT_TYPES});
+        ok(serde_json::to_string_pretty(&v).unwrap_or_default())
+    }
 }
 
 #[tokio::main]
