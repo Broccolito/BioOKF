@@ -1061,3 +1061,39 @@ async function boot(){
   requestAnimationFrame(loop);
 }
 boot();
+
+// --- CLI install popup -------------------------------------------------------
+// Shown 5s after launch when the bokf CLI is not on PATH. `?forceCliPopup=1`
+// forces it open (the visual test runs in a plain browser with no Tauri bridge).
+(function(){
+  const NEVER_KEY='bokf.cliPopup.never';
+  const forced=new URLSearchParams(location.search).get('forceCliPopup')==='1';
+  const $=id=>document.getElementById(id);
+  const show=()=>{ const m=$('cli-modal'); if(m) m.hidden=false; };
+  const hide=()=>{ const m=$('cli-modal'); if(m) m.hidden=true; };
+  const setError=msg=>{ const e=$('cli-modal-error'); if(!e) return; e.textContent=msg||''; e.hidden=!msg; };
+
+  async function maybeShow(){
+    if(localStorage.getItem(NEVER_KEY)==='1') return;
+    if(!isDesktop) return;                       // only meaningful inside the app
+    try{
+      const s=await tauriInvoke('cli_status');
+      if(s && s.installed===false) show();
+    }catch(_){/* not running under Tauri, or command missing */}
+  }
+
+  function wire(){
+    const install=$('cli-install'), later=$('cli-later'), never=$('cli-never');
+    if(install) install.onclick=async()=>{
+      setError(''); install.disabled=true; install.textContent='Installing...';
+      try{ await tauriInvoke('install_cli'); hide(); }
+      catch(e){ setError(String(e && e.message ? e.message : e)); }
+      finally{ install.disabled=false; install.textContent='Install CLI'; }
+    };
+    if(later) later.onclick=hide;
+    if(never) never.onclick=()=>{ localStorage.setItem(NEVER_KEY,'1'); hide(); };
+  }
+
+  wire();
+  if(forced) show(); else setTimeout(maybeShow, 5000);
+})();

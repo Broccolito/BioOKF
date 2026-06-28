@@ -47,3 +47,11 @@ test('sidebar collapses', async ({ page }) => {
   await page.click('#collapseBtn');
   await expect(page.locator('.wbody.collapsed')).toHaveCount(1);
 });
+
+test('cli install popup renders when forced', async ({ page }) => {
+  await page.goto(URL + '?forceCliPopup=1');
+  await page.waitForSelector('#cli-modal:not([hidden])', { timeout: 3000 });
+  await expect(page.locator('#cli-modal-title')).toHaveText(/Install the bokf CLI/);
+  await expect(page.locator('#cli-install')).toBeVisible();
+  await page.screenshot({ path: 'screens/cli-popup.png' });
+});
