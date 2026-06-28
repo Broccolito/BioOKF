@@ -9,6 +9,11 @@ use sha2::{Digest, Sha256};
 use std::io::{Cursor, Read};
 use std::path::{Path, PathBuf};
 
+/// Marker prepended to a `source.md` that still needs a faithful LLM conversion (unknown
+/// format, scanned PDF, or failed extraction). The agent removes it once the rendering is
+/// complete; `bokf lint`/`bokf verify` flag any source still carrying it.
+pub const NEEDS_CONVERSION_MARKER: &str = "<!-- bokf:needs-conversion -->";
+
 /// The result of converting one source's bytes to Markdown.
 #[derive(Debug, Clone)]
 pub struct Converted {
@@ -59,7 +64,7 @@ pub struct SourceRecord {
 pub fn convert_bytes(ext: &str, filename: &str, bytes: &[u8]) -> Converted {
     let ext = ext.to_ascii_lowercase();
     match ext.as_str() {
-        "md" | "markdown" | "txt" | "text" | "" => passthrough(bytes, "text"),
+        "md" | "markdown" | "txt" | "text" | "" | "xml" | "yaml" | "yml" | "rst" | "log" | "tex" | "org" => passthrough(bytes, "text"),
         "json" => {
             let body = String::from_utf8_lossy(bytes);
             Converted { markdown: format!("```json\n{}\n```\n", body.trim_end()), title: String::new(), format: "json".into(), needs_llm_fallback: false }
@@ -82,10 +87,19 @@ pub fn convert_bytes(ext: &str, filename: &str, bytes: &[u8]) -> Converted {
             needs_llm_fallback: true,
         },
         _ => {
-            // best-effort: treat as UTF-8 text; flag for review if it looks binary
+            // Unknown format: keep a best-effort text extract, but ALWAYS flag for the LLM to
+            // render the original faithfully — by the end every source must be complete Markdown.
             let lossy = String::from_utf8_lossy(bytes);
-            let binary = lossy.chars().take(512).filter(|c| *c == '\u{fffd}').count() > 8;
-            Converted { markdown: if binary { format!("> unrecognized binary `{filename}` — stored verbatim; needs manual rendering.\n") } else { lossy.to_string() }, title: String::new(), format: ext, needs_llm_fallback: binary }
+            let snippet: String = lossy.chars().take(8000).collect();
+            Converted {
+                markdown: format!(
+                    "Unknown format `.{ext}` (`{filename}`) — best-effort text extract below; the agent must read `original.*` and render ALL content faithfully to Markdown.\n\n```\n{}\n```\n",
+                    snippet.trim_end()
+                ),
+                title: String::new(),
+                format: if ext.is_empty() { "unknown".into() } else { ext },
+                needs_llm_fallback: true,
+            }
         }
     }
 }
@@ -445,8 +459,12 @@ fn store(bundle_root: &Path, filename: &str, bytes: &[u8]) -> Result<SourceRecor
     // original bytes (immutable; gitignored)
     let orig_ext = if ext.is_empty() { "bin".to_string() } else { ext.clone() };
     std::fs::write(dir.join(format!("original.{orig_ext}")), bytes).map_err(|e| e.to_string())?;
-    // derived markdown
-    let banner = if converted.needs_llm_fallback { "> ⚠️ needs OCR/LLM extraction — see original.\n\n" } else { "" };
+    // derived markdown (prepend a machine-detectable marker when an LLM rendering is still needed)
+    let banner = if converted.needs_llm_fallback {
+        format!("{NEEDS_CONVERSION_MARKER}\n> ⚠️ Needs faithful Markdown conversion (unknown/binary format or scanned PDF). Read `original.*`, render ALL content to Markdown preserving every detail, then overwrite this file (removing this marker).\n\n")
+    } else {
+        String::new()
+    };
     std::fs::write(dir.join("source.md"), format!("{banner}{}", converted.markdown)).map_err(|e| e.to_string())?;
     // meta
     let meta = SourceMeta {
@@ -570,6 +588,21 @@ mod tests {
         let recs2 = ingest(root, SourceInput::Path(src.path().join("recovery-trial.md")), false).unwrap();
         assert!(recs2[0].reused);
         assert_eq!(recs2[0].source_id, *id);
+    }
+
+    #[test]
+    fn unknown_format_flags_needs_conversion() {
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        std::fs::create_dir_all(root.join("raw")).unwrap();
+        std::fs::create_dir_all(root.join("knowledge")).unwrap();
+        let src = tempfile::tempdir().unwrap();
+        std::fs::write(src.path().join("weird.xyz"), b"\x00\x01 some bytes that are not a known format").unwrap();
+        let recs = ingest(root, SourceInput::Path(src.path().join("weird.xyz")), false).unwrap();
+        assert!(recs[0].needs_llm_fallback, "unknown format must flag LLM fallback");
+        // the marker is present until the agent renders it
+        let report = crate::lint::lint(&crate::bundle::Bundle::open(root).unwrap());
+        assert!(report.findings.iter().any(|f| f.rule == "source.needs_conversion"), "{:?}", report.findings);
     }
 
     #[test]

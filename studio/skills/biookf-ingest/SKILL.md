@@ -5,7 +5,11 @@ description: Use when ingesting a source (paper, preprint, review, dataset, note
 
 # Skill: biookf-ingest
 
-You are curating a **BioOKF v0.5** bundle. Drive the `biookf` MCP tools (or the `bokf` CLI). Never edit `raw/`.
+You are curating a **BioOKF v0.5** bundle. Drive the `biookf` MCP tools (or the `bokf` CLI). Never edit `raw/`. (Step 0 — **biookf-convert** — has already put each source under `raw/` as faithful Markdown.)
+
+**Extract exactly the right nodes and edges — no more, no fewer:**
+- A **CONCEPT (node)** is a durable, typed, reusable knowledge unit denoting a stable referent that can stand alone as a wiki node. Mint a node ONLY for such a referent — never for a value, a one-off phrasing, or a relationship.
+- A **RELATIONSHIP (edge)** is a typed, atomic, provenance-aware assertion connecting two canonical concepts via a controlled predicate. "A relates to B" is an edge, not a node; a measurement value or a variant consequence is edge data, never a node.
 
 ## The loop (per source)
 
@@ -15,7 +19,7 @@ You are curating a **BioOKF v0.5** bundle. Drive the `biookf` MCP tools (or the 
 4. **Validate before writing.** Call `bokf_validate_page` on the draft, then `bokf_write_page` to `knowledge/<type>/<slug>.md`.
 5. **Enrich `xref`** with ontology CURIEs where known (HGNC, MONDO, UniProt…). Optional; backfill later.
 6. **Add edges with provenance.** Each claim → an `edges:` entry: `predicate` (one of 24 positive, forward-only — or `not_<X>` for an explicit negative finding, negatable only for the 11 effect predicates), `object` (target identifier), and the triplet `knowledge_level` / `agent_type` / `primary_source` (the **source node's identifier**). Put every number on the edge (`p_value`, `effect_size`+`effect_metric`, `ci_lower/upper`, `sample_size`, `direction` for regulates/expressed_in). Add a `reported_in` edge to the source node so provenance is traversable.
-7. **Bookkeep.** Update `index.md` (`bokf_write_page`) and append a dated entry to `log.md` (`bokf_append_log`). Then `bokf_lint` and fix any Errors.
+7. **Bookkeep + commit + verify.** Update `index.md` (`bokf_write_page`); record the step with `bokf_log_sync --kind ingest --summary "…" --counts` (appends to `log.md` AND git-commits, atomically). Then run **biookf-verify** / `bokf_verify` — fix every Error and walk the judgment checklist (each node a real concept, each edge atomic + provenance-aware) before declaring the source done.
 
 ## Concept-doc template
 

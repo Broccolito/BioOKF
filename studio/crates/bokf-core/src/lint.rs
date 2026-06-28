@@ -204,7 +204,35 @@ pub fn lint(bundle: &Bundle) -> LintReport {
     // --- near-duplicate subtypes within a type (merge candidates) ---
     lint_similar_subtypes(&mut r, bundle);
 
+    // --- raw sources still awaiting faithful LLM conversion to Markdown ---
+    lint_raw_conversion(&mut r, bundle);
+
     r
+}
+
+/// Flag any `raw/<id>/source.md` that still carries the needs-conversion marker — i.e. an
+/// unknown/binary source the agent has not yet rendered to faithful Markdown.
+fn lint_raw_conversion(r: &mut LintReport, bundle: &Bundle) {
+    let raw = bundle.root.join("raw");
+    let entries = match std::fs::read_dir(&raw) {
+        Ok(e) => e,
+        Err(_) => return,
+    };
+    for e in entries.flatten() {
+        let src = e.path().join("source.md");
+        if let Ok(txt) = std::fs::read_to_string(&src) {
+            if txt.contains(crate::convert::NEEDS_CONVERSION_MARKER) {
+                let id = e.file_name().to_string_lossy().to_string();
+                r.push(
+                    Severity::Warn,
+                    "source.needs_conversion",
+                    &id,
+                    "raw source still needs faithful Markdown conversion (read original.*, render ALL content, remove the marker)".to_string(),
+                    Some(format!("raw/{id}/source.md")),
+                );
+            }
+        }
+    }
 }
 
 /// Within each node type, flag distinct `subtype` tokens that normalize to the same
