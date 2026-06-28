@@ -160,6 +160,12 @@
   .d-reveal{position:absolute;top:13px;right:45px;width:26px;height:26px;border-radius:var(--r-sm);border:none;background:transparent;
     color:var(--faint);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .12s,color .12s;}
   .d-reveal:hover{background:var(--hover);color:var(--text);}
+  /* header Edit button — full-file edit affordance, sits left of the icon buttons */
+  .d-edit{position:absolute;top:13px;right:45px;height:26px;padding:0 10px;border-radius:var(--r-sm);font-size:11.5px;font-weight:550;
+    cursor:pointer;font-family:var(--sans);border:1px solid var(--hair);background:var(--bg-elev);color:var(--muted);
+    display:inline-flex;align-items:center;transition:background .12s,color .12s,border-color .12s;}
+  .d-edit.has-reveal{right:77px;}
+  .d-edit:hover{background:var(--hover);color:var(--text);}
   .chips{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;}
   .chip{font-size:11px;color:var(--muted);background:var(--bg-sunken);border-radius:var(--r-xs);padding:3px 8px;}
   .chip.xref{font-family:var(--mono);color:var(--muted);cursor:pointer;transition:background .12s,color .12s;}
@@ -199,9 +205,6 @@
   .prov .k{font-size:9.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--faint);}
   .prov .v{font-size:12px;color:var(--text);margin-top:3px;font-weight:550;word-break:break-word;}
   .prov .v.cite{font-weight:550;display:inline;border-bottom:1px solid rgba(79,90,138,0.32);}
-  .statgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:5px;}
-  .statgrid .cell{background:var(--bg-sunken);border-radius:var(--r-md);padding:8px;text-align:center;}
-  .statgrid .v{font-family:var(--mono);font-size:12.5px;font-weight:650;} .statgrid .k{font-size:9px;color:var(--faint);margin-top:3px;}
   .edge-headline{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13.5px;margin-top:9px;}
   .edge-headline .n{display:inline-flex;align-items:center;gap:6px;font-weight:600;cursor:pointer;}
   .edge-headline .n i{width:11px;height:11px;border-radius:3px;box-shadow:inset 0 0 0 0.5px rgba(0,0,0,0.18);}
@@ -215,8 +218,14 @@
   .meta-row{display:grid;grid-template-columns:104px 1fr;gap:8px;background:var(--bg-sunken);border-radius:var(--r-sm);padding:6px 9px;}
   .meta-k{font-size:10px;letter-spacing:.02em;text-transform:uppercase;color:var(--faint);font-weight:600;padding-top:1px;}
   .meta-v{font-size:12px;color:var(--text);word-break:break-word;line-height:1.45;}
-  .meta-v code{font-family:var(--mono);font-size:10.5px;background:var(--bg);border:1px solid var(--hair-2);padding:1px 5px;border-radius:4px;}
+  .meta-v code{font-family:var(--mono);font-size:11px;color:var(--muted);background:transparent;border:none;padding:0;}
   .chips.inline{margin-top:0;}
+  /* plain key/value rows (SIMPLE tier) — node frontmatter + edge stats/qualifiers/direction */
+  .kv{display:flex;flex-direction:column;gap:4px;}
+  .kv-row{display:grid;grid-template-columns:104px 1fr;gap:8px;background:var(--bg-sunken);border-radius:var(--r-sm);padding:6px 9px;align-items:start;}
+  .kv-k{font-size:10px;letter-spacing:.02em;text-transform:uppercase;color:var(--faint);font-weight:600;padding-top:2px;font-family:var(--mono);}
+  .kv-v{font-size:12.5px;color:var(--text);word-break:break-word;line-height:1.45;display:flex;flex-wrap:wrap;gap:5px;align-items:center;}
+  .kv-v code{font-family:var(--mono);font-size:11px;color:var(--muted);background:transparent;border:none;padding:0;}
   /* publications / qualifiers */
   .pub-list{display:flex;flex-direction:column;gap:5px;font-size:12px;word-break:break-all;}
   /* source / provenance */
@@ -232,7 +241,6 @@
   .fig-flag{font-size:9px;color:var(--muted);border:1px solid var(--hair);border-radius:4px;padding:0 4px;margin-left:3px;}
   .fig-flag.prov{color:var(--warn);border-color:var(--warn);} .fig-flag.undesc{color:var(--danger);border-color:var(--danger);}
   /* legend: external state swatch (dashed outline, mirrors the canvas) */
-  .sw i.sw-ext{box-shadow:none;border:1px dashed rgba(18,21,26,0.55);}
 
   /* ---------- inline node-body editor ---------- */
   .edit-toggle{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-weight:550;color:var(--accent-ink);
@@ -259,7 +267,10 @@
   .btn-mini.primary:hover{background:var(--accent-ink);}
   .btn-mini[disabled]{opacity:.5;cursor:not-allowed;}
   .btn-mini[disabled]:hover{background:var(--bg-elev);color:var(--muted);}
-  .fm-edit{min-height:150px;}
+  /* full-file editor (header Edit -> replaces the whole panel) */
+  .file-editor{flex:1 1 auto;display:flex;flex-direction:column;padding:12px 16px 14px;min-height:0;}
+  .file-edit{flex:1 1 auto;min-height:240px;resize:none;}
+  .file-editor .edit-bar{flex:0 0 auto;}
   /* notes section */
   .notes-section{border-top:1px solid var(--hair-2);margin-top:6px;padding-top:2px;}
   .notes-view{font-size:12.5px;line-height:1.55;color:#23262d;white-space:pre-wrap;word-break:break-word;}
@@ -421,6 +432,6 @@
 <script>document.documentElement.classList.toggle('tauri', !!(window.__TAURI__ || window.__TAURI_INTERNALS__));</script>
 <script src="vendor/xterm.js"></script>
 <script src="vendor/xterm-addon-fit.js"></script>
-<script src="app.js?v=10"></script>
+<script src="app.js?v=13"></script>
 </body>
 </html>

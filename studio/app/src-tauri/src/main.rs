@@ -343,6 +343,24 @@ fn save_node_notes(
     Ok(())
 }
 
+/// Persist an entire node/edge `.md` file in a single write, taking the full-file
+/// editor's text verbatim (frontmatter + body). The path is guarded by
+/// `safe_bundle_path`, which requires the file to already exist — correct here,
+/// since the editor only edits existing nodes. Logs the change.
+#[tauri::command]
+fn save_node_file(
+    base: String,
+    path: String,
+    content: String,
+    label: String,
+    date: String,
+) -> Result<(), String> {
+    let full = safe_bundle_path(&base, &path)?;
+    std::fs::write(&full, content).map_err(|e| e.to_string())?;
+    append_log_entry(&base, &date, &format!("- Edited `{}`", label))?;
+    Ok(())
+}
+
 /// Unquote a YAML scalar value: strip a single pair of surrounding single or
 /// double quotes (for matching purposes only — does not decode escapes).
 fn unquote_yaml(v: &str) -> &str {
@@ -744,6 +762,7 @@ fn main() {
             read_bundle_bytes,
             save_node_frontmatter,
             save_node_notes,
+            save_node_file,
             save_edge_note,
             reveal_in_finder,
             term_open,
@@ -751,7 +770,25 @@ fn main() {
             term_resize,
             term_close,
             source_info
-        ]);
+        ])
+        // Native menu so macOS actually delivers Cmd+K: WKWebView swallows Cmd-key
+        // combos as key equivalents before they reach the webview's JS keydown, so the
+        // shortcut needs a real accelerator. "Go ▸ Search ⌘K" emits a `menu-search`
+        // event the frontend focuses the search box on.
+        .menu(|app| {
+            let menu = tauri::menu::Menu::default(app)?;
+            let search = tauri::menu::MenuItemBuilder::with_id("search", "Search")
+                .accelerator("CmdOrCtrl+K")
+                .build(app)?;
+            let go = tauri::menu::SubmenuBuilder::new(app, "Go").item(&search).build()?;
+            menu.append(&go)?;
+            Ok(menu)
+        })
+        .on_menu_event(|app, event| {
+            if event.id().0.as_str() == "search" {
+                let _ = app.emit("menu-search", ());
+            }
+        });
 
     // Debug-only: expose the webview to AI agents over MCP (drive/inspect/screenshot).
     #[cfg(feature = "debug-mcp")]

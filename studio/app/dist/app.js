@@ -21,6 +21,9 @@ const FAMILIES = [
   ["Physical", ["Device","MaterialSample"]],
   ["Provenance & context", ["Publication","Study","Dataset","Agent","Population","GeographicLocation","Concept","Other"]]
 ];
+// External is NOT a node type — it's a referenced entity with no concept document yet
+// (an entity to curate). Light, outline-less; grouped under provenance/context in the legend.
+const EXTERNAL_COL='#D7DBE1';
 
 const cv=document.getElementById('graph'), ctx=cv.getContext('2d');
 let DPR=Math.max(1,window.devicePixelRatio||1), W=0,H=0;
@@ -186,7 +189,7 @@ function maybeLabel(e,emph,sx,sy,ex,ey,len){
   }
 }
 function drawNodeCircle(n,a,isFocus){
-  const [x,y]=toScreen(n.x,n.y),r=nodeR(n)*view.k,col=n.color||TYPE_COLOR[n.type]||"#9aa1ab";
+  const [x,y]=toScreen(n.x,n.y),r=nodeR(n)*view.k,col=n.external?EXTERNAL_COL:(n.color||TYPE_COLOR[n.type]||"#9aa1ab");
   ctx.globalAlpha=a;
   if(isFocus){
     const g=ctx.createRadialGradient(x,y,r,x,y,r+13);
@@ -194,8 +197,7 @@ function drawNodeCircle(n,a,isFocus){
     ctx.beginPath();ctx.arc(x,y,r+13,0,7);ctx.fillStyle=g;ctx.fill();
   }
   ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fillStyle=col;ctx.fill();
-  if(n.external){ctx.setLineDash([2,2]);ctx.strokeStyle="rgba(18,21,26,0.5)";ctx.lineWidth=1;ctx.stroke();ctx.setLineDash([]);}
-  else{ctx.lineWidth=1.1;ctx.strokeStyle="rgba(18,21,26,0.92)";ctx.stroke();}
+  ctx.lineWidth=1.1;ctx.strokeStyle="rgba(18,21,26,0.92)";ctx.stroke();
   ctx.globalAlpha=1;
 }
 function drawLabels(focusId){
@@ -226,8 +228,10 @@ function hexA(hex,a){const h=(hex||'#999').replace('#','');return `rgba(${parseI
    hard-coded list, so all 35 predicates (incl. the 11 negatives) are covered. */
 function isNegPred(p){return typeof p==='string' && p.startsWith('not_');}
 function negBase(p){return isNegPred(p)?p.slice(4):p;}
-/* Display label: negatives get a leading ¬ on the underlying predicate. */
-function predLabel(p){return isNegPred(p)?('¬'+negBase(p)):p;}
+/* Display label: negatives spell out the word "not" on the underlying predicate
+   (e.g. not_prevents -> "not prevents"), so the negation reads as plain language
+   everywhere predLabel is used (canvas tooltip, edge groups, headline, incoming rows). */
+function predLabel(p){return isNegPred(p)?('not '+negBase(p)):p;}
 function loop(){
   const needW=Math.round(cv.clientWidth*DPR), needH=Math.round(cv.clientHeight*DPR);
   if(needW>0&&needH>0&&(cv.width!==needW||cv.height!==needH)){W=cv.clientWidth;H=cv.clientHeight;cv.width=needW;cv.height=needH;}
@@ -300,15 +304,11 @@ function showNodeDetail(n){
       eh+=`<div class="erow" data-edge="${eid(e)}"><span class="arrow">${sym?'⇄':'→'}</span><span class="tgt"><i style="background:${tc}"></i><span>${esc(e.target)}</span>${isExt?'<span class="ext">ext</span>':''}</span>${st?`<span class="stat">${esc(st)}</span>`:''}</div>`;});
     eh+=`</div>`;
   });
-  const synonyms=(pg.synonyms||[]).map(s=>`<span class="chip">${esc(s)}</span>`).join('');
-  const xr=(pg.xref||[]).map(x=>`<span class="chip xref">${esc(x)}</span>`).join('');
-  detail.innerHTML=`<div class="d-head"><button class="d-close" id="dClose">×</button>${(isDesktop&&pg.path)?'<button class="d-reveal" id="dReveal" title="Reveal markdown file in Finder"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2.5h4v4"/><path d="M13.5 2.5l-6 6"/><path d="M11.5 9v2.5a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1H7"/></svg></button>':''}
-    <span class="d-badge" style="background:${col}">${esc(typeStr(pg.node_type))}</span><span class="d-sub">${esc(pg.subtype||n.subtype||'')}</span>
-    <div class="d-id">${esc(n.id)}</div>${pg.description?`<div class="d-desc">${esc(pg.description)}</div>`:''}
-    ${synonyms?`<div class="chips">${synonyms}</div>`:''}${xr?`<div class="chips">${xr}</div>`:''}</div>
+  detail.innerHTML=`<div class="d-head">${headBtns(pg.path)}
+    <span class="d-badge" style="background:${col}">${esc(typeStr(pg.node_type))}</span>
+    <div class="d-id">${esc(n.id)}</div></div>
     <div class="d-body">
-      <div class="d-section" id="fmSection">${fmSectionHtml(pg)}</div>
-      ${metadataSectionHtml(pg)}
+      <div class="d-section">${nodeFrontmatterHtml(pg,n)}</div>
       <div class="d-section" id="sourceSection"></div>
       ${eh?`<div class="d-section"><h5>Edges · this node → object (${out.length})</h5>${eh}</div>`:''}
       ${incomingSection(n.id)}
@@ -319,24 +319,40 @@ function showNodeDetail(n){
   detail.classList.add('open');wireDetail();
   hydrateSourceProvenance(pg);
 }
-/* Metadata block — surfaces the frontmatter fields the graph edge/headline drops:
-   in_taxon, tags, timestamp, note, raw_source paths, xref CURIEs, and any
-   preserved unknown frontmatter (pg.extra). */
-function metadataSectionHtml(pg){
+/* Shared header buttons (close, reveal-in-Finder, Edit). The Edit button enters
+   full-file edit mode for the given file path; desktop-only and only when a path
+   exists (external/source-less entities have no file to edit). */
+function headBtns(path){
+  const canEdit=isDesktop && !!path;
+  const hasReveal=isDesktop&&path;
+  const reveal=hasReveal?'<button class="d-reveal" id="dReveal" title="Reveal markdown file in Finder"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2.5h4v4"/><path d="M13.5 2.5l-6 6"/><path d="M11.5 9v2.5a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1H7"/></svg></button>':'';
+  // Edit sits just left of the icon buttons (right of reveal when reveal is shown).
+  const edit=canEdit?`<button class="d-edit${hasReveal?' has-reveal':''}" id="dEdit" data-edit-path="${esc(path)}" title="Edit the markdown file">✎ Edit</button>`:'';
+  return `<button class="d-close" id="dClose">×</button>${reveal}${edit}`;
+}
+/* Plain key/value row (SIMPLE tier) — value-agnostic, assumes no vocabulary. */
+function kvRow(k,v){ return `<div class="kv-row"><div class="kv-k">${esc(k)}</div><div class="kv-v">${v}</div></div>`; }
+function kvPlain(k,v){ return (v===undefined||v===null||v==='')?'':kvRow(k,esc(String(v))); }
+/* Node frontmatter — ONE ordered block matching the source .md (SPEC §4 template
+   order), de-duplicated. Controlled `type` stays rich (header badge); every other
+   field renders as a plain `label: value` row, value-agnostic. */
+function nodeFrontmatterHtml(pg,n){
   if(!pg) return '';
   const rows=[];
-  const kv=(k,v)=>{ if(v!==undefined&&v!==null&&v!=='') rows.push(`<div class="meta-row"><div class="meta-k">${esc(k)}</div><div class="meta-v">${esc(String(v))}</div></div>`); };
-  kv('in_taxon', pg.in_taxon);
-  if(pg.tags&&pg.tags.length) rows.push(`<div class="meta-row"><div class="meta-k">tags</div><div class="meta-v"><span class="chips inline">${pg.tags.map(t=>`<span class="chip">${esc(t)}</span>`).join('')}</span></div></div>`);
-  kv('timestamp', pg.timestamp);
-  kv('note', pg.note);
-  if(pg.raw_source&&pg.raw_source.length) rows.push(`<div class="meta-row"><div class="meta-k">raw_source</div><div class="meta-v">${pg.raw_source.map(p=>`<code>${esc(p)}</code>`).join('<br>')}</div></div>`);
-  if(pg.xref&&pg.xref.length) rows.push(`<div class="meta-row"><div class="meta-k">xref</div><div class="meta-v">${pg.xref.map(x=>`<code>${esc(x)}</code>`).join(' ')}</div></div>`);
+  rows.push(kvPlain('subtype', pg.subtype||n.subtype));
+  if(pg.xref&&pg.xref.length) rows.push(kvRow('xref', pg.xref.map(x=>`<code>${esc(x)}</code>`).join(' ')));
+  if(pg.synonyms&&pg.synonyms.length) rows.push(kvRow('synonyms', pg.synonyms.map(s=>`<span class="chip">${esc(s)}</span>`).join('')));
+  rows.push(kvPlain('in_taxon', pg.in_taxon));
+  rows.push(kvPlain('description', pg.description));
+  rows.push(kvPlain('note', pg.note));
+  if(pg.tags&&pg.tags.length) rows.push(kvRow('tags', pg.tags.map(t=>`<span class="chip">${esc(t)}</span>`).join('')));
+  if(pg.raw_source&&pg.raw_source.length) rows.push(kvRow('raw_source', pg.raw_source.map(p=>`<code>${esc(p)}</code>`).join('<br>')));
+  rows.push(kvPlain('timestamp', pg.timestamp));
   if(pg.extra && typeof pg.extra==='object'){
-    Object.keys(pg.extra).forEach(k=>{ const v=pg.extra[k]; kv(k, typeof v==='object'?JSON.stringify(v):v); });
+    Object.keys(pg.extra).forEach(k=>{ const v=pg.extra[k]; rows.push(kvPlain(k, typeof v==='object'?JSON.stringify(v):v)); });
   }
-  if(!rows.length) return '';
-  return `<div class="d-section"><h5>Metadata</h5><div class="metagrid">${rows.join('')}</div></div>`;
+  const body=rows.filter(Boolean).join('');
+  return body?`<div class="kv">${body}</div>`:'';
 }
 /* Source / Provenance — for a source node (one with raw_source[]) on desktop,
    pull the ingested source's raw/<id>/meta.yaml via the source_info connector and
@@ -409,36 +425,31 @@ function incomingSection(id){
     h+=`<div class="erow" data-edge="${eid(e)}"><span class="tgt"><i style="background:${sc}"></i><span>${esc(e.source)}</span></span><span class="stat${neg?' neg':''}">${esc(predLabel(e.predicate))} ${e.symmetric?'⇄':'→'}</span></div>`;});
   return h+`</div>`;
 }
-/* The recognised quantitative effect metrics (any one may stand in for
-   effect_size); used to label the lead stat cell from the data. */
-const EFFECT_METRICS=['odds_ratio','hazard_ratio','relative_risk','IC50','Ki','Kd','EC50','MIC','log2_fold_change','correlation_r','enrichment_score'];
 function showEdgeDetail(e){
   const sc=nodeColor(e.source),tc=nodeColor(e.target),sym=e.symmetric,neg=isNegPred(e.predicate);
   // Prefer the full page-edge stats (complete bundle); fall back to the graph edge.
   const full=edgeFull(e), st=(full&&full.stats)||e.stats||{};
-  const cells=[]; const seen=new Set();
-  const add=(v,k,key)=>{if(v!==undefined&&v!==null&&v!==''){cells.push(`<div class="cell"><div class="v">${esc(String(v))}</div><div class="k">${esc(k)}</div></div>`);if(key)seen.add(key);}};
-  // lead effect: generic effect_size, or any specific effect-metric variant
-  add(st.effect_size, st.effect_metric?st.effect_metric.replace(/_/g,' '):'effect','effect_size'); seen.add('effect_metric');
-  EFFECT_METRICS.forEach(m=>{ add(st[m], m.replace(/_/g,' '), m); });
-  add(st.p_value,'p-value','p_value'); add(st.adjusted_p_value,'adj. p-value','adjusted_p_value');
-  if(st.ci_lower!=null){ add(st.ci_lower+'–'+st.ci_upper,'95% CI'); seen.add('ci_lower'); seen.add('ci_upper'); }
-  add(st.standard_error,'std. error','standard_error'); add(st.confidence_score,'confidence','confidence_score');
-  add(st.sample_size!=null?('n='+st.sample_size):null,'sample','sample_size'); add(st.sensitivity,'sensitivity','sensitivity'); add(st.specificity,'specificity','specificity');
-  add(st.auc,'AUC','auc'); add(st.direction,'direction','direction'); add(st.frequency,'frequency','frequency'); add(st.unit,'unit','unit');
-  add(st.clinical_phase,'phase','clinical_phase'); add(st.response_direction,'response','response_direction');
-  add(st.evidence_type,'evidence','evidence_type'); add(st.aspect,'aspect','aspect'); add(st.aggregator_source,'aggregator','aggregator_source');
-  // any remaining stat keys (forward-compatible) so nothing is silently dropped
-  Object.keys(st).forEach(k=>{ if(!seen.has(k)){ const v=st[k]; if(v!==null&&typeof v!=='object') add(v,k.replace(/_/g,' '),k); } });
-  // publications[] (out-links) and qualifiers{} from the full page edge
+  // stats — every key rendered uniformly as `key: value`; only the ci_lower–ci_upper
+  // merge is privileged (a display convenience), nothing else.
+  const statRows=[];
+  if(st.ci_lower!=null && st.ci_upper!=null) statRows.push(kvRow('95% CI', esc(st.ci_lower+'–'+st.ci_upper)));
+  Object.keys(st).forEach(k=>{ if(k==='ci_lower'||k==='ci_upper') return; const v=st[k]; if(v!=null&&v!==''&&typeof v!=='object') statRows.push(kvRow(k, esc(String(v)))); });
+  const statHtml=statRows.length?`<div class="d-section"><h5>Stats</h5><div class="kv">${statRows.join('')}</div></div>`:'';
+  // qualifiers{} — every key rendered uniformly, no hard-coded ordering.
+  const qobj=(full&&full.qualifiers)||{};
+  const qRows=Object.keys(qobj).filter(k=>qobj[k]!=null&&qobj[k]!==''&&typeof qobj[k]!=='object').map(k=>kvRow(k, esc(String(qobj[k]))));
+  const qualHtml=qRows.length?`<div class="d-section"><h5>Qualifiers</h5><div class="kv">${qRows.join('')}</div></div>`:'';
+  // publications[] (out-links) from the full page edge — BEFORE stats (file order).
   const pubs=(full&&full.publications)||[];
   const pubHtml=pubs.length?`<div class="d-section"><h5>Publications (${pubs.length})</h5><div class="pub-list">${pubs.map(p=>{const ext=/^https?:\/\//i.test(p);return ext?`<a class="cite" href="${esc(p)}" target="_blank" rel="noopener">${esc(p)}</a>`:`<span class="cite" data-cite="${esc(p)}">${esc(p)}</span>`;}).join('')}</div></div>`:'';
-  const QUAL=['species_context','anatomical_context','cell_context','sex','age_group','timepoint','population'];
-  const qobj=(full&&full.qualifiers)||{};
-  const qkeys=QUAL.filter(k=>qobj[k]!=null&&qobj[k]!=='').concat(Object.keys(qobj).filter(k=>!QUAL.includes(k)&&qobj[k]!=null&&typeof qobj[k]!=='object'));
-  const qualHtml=qkeys.length?`<div class="d-section"><h5>Qualifiers</h5><div class="prov">${qkeys.map(k=>`<div class="cell"><div class="k">${esc(k)}</div><div class="v">${esc(String(qobj[k]))}</div></div>`).join('')}</div></div>`:'';
+  // direction / aspect — plain rows, no privileged labels.
+  const dir=(full&&full.direction)||st.direction, asp=(full&&full.aspect)||st.aspect;
+  const dirRows=[kvPlain('direction',dir),kvPlain('aspect',asp)].filter(Boolean).join('');
+  const dirHtml=dirRows?`<div class="d-section"><div class="kv">${dirRows}</div></div>`:'';
   const isExtT=byId[e.target]&&byId[e.target].external;
-  detail.innerHTML=`<div class="d-head"><button class="d-close" id="dClose">×</button>
+  // Edges live in their SOURCE node's file — Edit edits that file in context.
+  const srcPath=pages[e.source]&&pages[e.source].path;
+  detail.innerHTML=`<div class="d-head">${headBtns(srcPath)}
     <span class="d-badge" style="background:${neg?'#c4564b':'#7a828e'}">${neg?'NEGATIVE EDGE':'EDGE'}</span><span class="d-sub">${e.synthesized?'provenance (from primary_source)':(neg?'refuted relation · ':'')+(sym?'symmetric':'directed')}</span>
     <div class="edge-headline"><span class="n" data-node="${esc(e.source)}"><i style="background:${sc}"></i>${esc(e.source)}</span>
     <span class="p${neg?' neg':''}">${esc(predLabel(e.predicate))}${sym?' ⇄':' →'}</span>
@@ -450,12 +461,14 @@ function showEdgeDetail(e){
       <div class="cell"><div class="k">agent_type</div><div class="v">${esc(e.agent_type||'—')}</div></div>
       <div class="cell" style="grid-column:1/3"><div class="k">primary_source</div><div class="v${pages[e.primary_source]?' cite':''}"${pages[e.primary_source]?` data-cite="${esc(e.primary_source)}"`:''}>${esc(e.primary_source||'—')}</div></div>
     </div></div>`}
-    ${cells.length?`<div class="d-section"><h5>Quantitative attributes</h5><div class="statgrid">${cells.join('')}</div></div>`:''}
-    ${qualHtml}
+    ${dirHtml}
     ${pubHtml}
+    ${statHtml}
+    ${qualHtml}
     ${notesSectionHtml(noteCtxForEdge(e))}
     </div>`;
-  currentDetailPath=null;detail.classList.add('open');wireDetail();
+  // currentDetailPath = the file Edit/cites resolve against (the source node's file).
+  currentDetailPath=srcPath||null;detail.classList.add('open');wireDetail();
 }
 function wireDetail(){
   const c=document.getElementById('dClose');if(c)c.onclick=()=>{selected=null;selectedEdge=null;recomputeFocus();closeDetail();};
@@ -464,8 +477,8 @@ function wireDetail(){
   wireCites(detail, currentDetailPath);
   const rv=document.getElementById('dReveal');
   if(rv) rv.onclick=()=>{ if(isDesktop && currentDetailPath) tauriInvoke('reveal_in_finder', { base: activeBaseId, path: currentDetailPath }).catch(()=>{}); };
-  const nodeId = selected && selected.id;
-  if(nodeId && document.getElementById('fmSection')) wireFm(nodeId);
+  const ed=document.getElementById('dEdit');
+  if(ed && isDesktop) ed.onclick=()=>openFileEditor(ed.getAttribute('data-edit-path'));
   wireNotes();
   hydrateMdImages(detail);
 }
@@ -524,54 +537,58 @@ async function loadRawSource(base, path){
 }
 function closePreview(){ previewEl.classList.remove('open'); previewScrim.classList.remove('open'); }
 
-/* ---------- frontmatter editor (collapsed by default; Edit expands, Save collapses) ---------- */
-function fmSectionHtml(pg){
-  const canEdit = isDesktop && pg && pg.path;
-  return `<h5>Frontmatter<span class="sec-actions">
-      <button class="btn-mini" id="fmEdit"${canEdit?'':' disabled title="Editing is available in the desktop app"'}>✎ Edit</button>
-      <button class="btn-mini primary" id="fmSave" disabled style="display:none">Save</button>
-      <span class="edit-status" id="fmMsg"></span></span></h5>`;
-}
-function wireFm(id){
-  const e=document.getElementById('fmEdit'), s=document.getElementById('fmSave');
-  if(e && isDesktop && !e.disabled) e.onclick=()=>toggleFmEdit(id);
-  if(s) s.onclick=()=>saveFm(id);
-}
-async function toggleFmEdit(id){
-  const pg=pages[id], sec=document.getElementById('fmSection'); if(!pg||!sec) return;
-  if(document.getElementById('fmEditArea')){ collapseFm(id); return; }   // toggle off = cancel/collapse
-  const ta=document.createElement('textarea');
-  ta.className='md-edit fm-edit'; ta.id='fmEditArea'; ta.spellcheck=false; ta.disabled=true; ta.value='Loading frontmatter…';
-  sec.appendChild(ta);
-  document.getElementById('fmEdit').textContent='Cancel';
-  const fmSave=document.getElementById('fmSave'); fmSave.style.display=''; fmSave.disabled=false;
-  document.getElementById('fmMsg').textContent='';
+/* ---------- full-file editor (header Edit -> replaces the whole panel) ----------
+   Loads the ENTIRE .md (frontmatter AND body) into one textarea. Save writes the
+   whole file via save_node_file and regenerates the panel from fresh disk data;
+   Cancel re-renders the current node/edge detail, discarding edits. For an edge
+   panel the edited file is the SOURCE node's file (where the edge is defined). */
+let editorReturn=null;   // { kind:'node', node } | { kind:'edge', edge } — what to re-render on Save/Cancel
+async function openFileEditor(path){
+  if(!isDesktop || !path) return;
+  // capture what to re-render afterwards (current selection)
+  editorReturn = selectedEdge ? {kind:'edge', edge:selectedEdge} : (selected ? {kind:'node', node:selected} : null);
+  const label = (selected && selected.id) || (selectedEdge && (selectedEdge.source+' '+selectedEdge.predicate+' '+selectedEdge.target)) || path;
+  detail.innerHTML=`<div class="d-head"><button class="d-close" id="dClose">×</button>
+    <div class="d-id">${esc((selected&&selected.id)||(selectedEdge&&selectedEdge.source)||'Edit')}</div>
+    <div class="d-desc">Editing <code>${esc(path)}</code></div></div>
+    <div class="file-editor">
+      <textarea class="md-edit file-edit" id="fileEditArea" spellcheck="false" disabled>Loading file…</textarea>
+      <div class="edit-bar">
+        <button class="btn primary" id="fileSave" disabled>Save</button>
+        <button class="btn" id="fileCancel">Cancel</button>
+        <span class="edit-status" id="fileMsg"></span>
+      </div>
+    </div>`;
+  detail.classList.add('open');
+  const ta=document.getElementById('fileEditArea'), save=document.getElementById('fileSave'), cancel=document.getElementById('fileCancel');
+  document.getElementById('dClose').onclick=()=>cancelFileEditor();
+  cancel.onclick=()=>cancelFileEditor();
+  save.onclick=()=>saveFileEditor(path, label);
   try{
-    const raw=await tauriInvoke('read_bundle_file', { base: activeBaseId, path: pg.path });
-    ta.value=extractFrontmatter(raw); ta.disabled=false; ta.focus();
+    const raw=await tauriInvoke('read_bundle_file', { base: activeBaseId, path });
+    ta.value=raw||''; ta.disabled=false; save.disabled=false; ta.focus();
   }catch(err){ ta.value='# could not read file: '+String((err&&err.message)||err); ta.disabled=false; }
 }
-function collapseFm(id, savedMsg){
-  const sec=document.getElementById('fmSection'); if(!sec) return;
-  sec.innerHTML=fmSectionHtml(pages[id]);
-  if(savedMsg){ const m=document.getElementById('fmMsg'); if(m){ m.className='edit-status ok'; m.textContent=savedMsg; } }
-  wireFm(id);
+function cancelFileEditor(){
+  const r=editorReturn; editorReturn=null;
+  if(r&&r.kind==='node') showNodeDetail(r.node);
+  else if(r&&r.kind==='edge') showEdgeDetail(r.edge);
+  else closeDetail();
 }
-async function saveFm(id){
-  const pg=pages[id], ta=document.getElementById('fmEditArea'); if(!pg||!ta) return;
-  const fm=ta.value, s=document.getElementById('fmSave'), msg=document.getElementById('fmMsg');
-  s.disabled=true; msg.className='edit-status'; msg.textContent='Saving…';
+async function saveFileEditor(path, label){
+  const ta=document.getElementById('fileEditArea'), save=document.getElementById('fileSave'), msg=document.getElementById('fileMsg');
+  if(!ta) return;
+  save.disabled=true; msg.className='edit-status'; msg.textContent='Saving…';
   try{
-    await tauriInvoke('save_node_frontmatter', { base: activeBaseId, path: pg.path, frontmatter: fm, label: id, date: today() });
-    collapseFm(id, 'Saved ✓');   // auto-collapse the frontmatter section again
-  }catch(e){ s.disabled=false; msg.className='edit-status err'; msg.textContent='Save failed: '+String((e&&e.message)||e); }
-}
-function extractFrontmatter(raw){
-  const lines=(raw||'').split('\n');
-  if((lines[0]||'').trim()!=='---') return '';
-  const out=[];
-  for(let i=1;i<lines.length;i++){ if(lines[i].trim()==='---') break; out.push(lines[i]); }
-  return out.join('\n');
+    await tauriInvoke('save_node_file', { base: activeBaseId, path, content: ta.value, label, date: today() });
+    // The desktop app reads live from disk — refresh the bundle so pages/graph
+    // reflect the edit, then re-open the same node/edge detail.
+    const r=editorReturn; editorReturn=null;
+    const b=BASES.find(x=>x.id===activeBaseId);
+    if(b) await selectBase(b);   // reloads pages/graph; clears selection + detail
+    if(r&&r.kind==='node'){ const n=byId[r.node.id]; if(n){ selected=n;selectedEdge=null;recomputeFocus();showNodeDetail(n); } }
+    else if(r&&r.kind==='edge'){ const e=edges.find(x=>x.source===r.edge.source&&x.predicate===r.edge.predicate&&x.target===r.edge.target); if(e){ selectedEdge=e;selected=null;recomputeFocus();showEdgeDetail(e); } else closeDetail(); }
+  }catch(e){ save.disabled=false; msg.className='edit-status err'; msg.textContent='Save failed: '+String((e&&e.message)||e); }
 }
 
 /* ---------- notes — stored in markdown (node: `# Notes` body section; edge: the
@@ -619,10 +636,10 @@ function notesSectionHtml(ctx){
   const canEdit=isDesktop && (ctx.kind==='node'? !!ctx.path : !!ctx.srcPath);
   return `<div class="d-section notes-section" id="notesSection">
     <h5>Notes<span class="sec-actions">
-      <button class="btn-mini" id="noteEdit"${canEdit?'':' disabled title="Notes are saved in the desktop app"'}>✎ Edit</button>
+      <button class="btn-mini" id="noteEdit"${canEdit?'':' disabled title="Notes are saved in the desktop app"'}>✎ Add note</button>
       <button class="btn-mini primary" id="noteSave" disabled>Save</button>
       <span class="edit-status" id="noteMsg"></span></span></h5>
-    <div class="notes-view" id="notesView">${txt?renderMd(txt):'<span class="notes-empty">No notes yet — click Edit to add some.</span>'}</div>
+    <div class="notes-view" id="notesView">${txt?renderMd(txt):'<span class="notes-empty">No notes yet — click Add note to attach one.</span>'}</div>
   </div>`;
 }
 function wireNotes(){
@@ -641,10 +658,10 @@ function toggleNoteEdit(){
 function renderNotesView(){
   const sec=document.getElementById('notesSection'); if(!sec) return;
   const txt=(currentNoteCtx&&currentNoteCtx.note)||'';
-  const e=sec.querySelector('#noteEdit'); if(e) e.textContent='✎ Edit';
+  const e=sec.querySelector('#noteEdit'); if(e) e.textContent='✎ Add note';
   const s=sec.querySelector('#noteSave'); if(s) s.disabled=true;
   const area=document.getElementById('noteEditArea');
-  if(area) area.outerHTML=`<div class="notes-view" id="notesView">${txt?renderMd(txt):'<span class="notes-empty">No notes yet — click Edit to add some.</span>'}</div>`;
+  if(area) area.outerHTML=`<div class="notes-view" id="notesView">${txt?renderMd(txt):'<span class="notes-empty">No notes yet — click Add note to attach one.</span>'}</div>`;
 }
 async function saveNote(){
   const ta=document.getElementById('noteEditArea'); if(!ta||!currentNoteCtx) return;
@@ -718,13 +735,11 @@ function renderSidebar(){
     el.onclick=()=>selectBase(b);list.appendChild(el);});
 }
 function renderLegend(){
-  let h='';FAMILIES.forEach(([fam,types])=>{h+=`<div class="legend-fam"><div class="fam-name">${fam}</div><div class="swatches">`;types.forEach(t=>{h+=`<span class="sw"><i style="background:${TYPE_COLOR[t]}"></i><span>${t}</span></span>`;});h+=`</div></div>`;});
-  // Canvas states the type families don't cover: External pseudo-nodes (dashed
-  // outline, no concept doc) and Unknown (an invalid/unrecognised node type).
-  h+=`<div class="legend-fam"><div class="fam-name">Node state</div><div class="swatches">`+
-     `<span class="sw"><i class="sw-ext" style="background:#B6BBC4"></i><span>External</span></span>`+
-     `<span class="sw"><i style="background:#D14B4B"></i><span>Unknown</span></span>`+
-     `</div></div>`;
+  let h='';FAMILIES.forEach(([fam,types])=>{h+=`<div class="legend-fam"><div class="fam-name">${fam}</div><div class="swatches">`;types.forEach(t=>{h+=`<span class="sw"><i style="background:${TYPE_COLOR[t]}"></i><span>${t}</span></span>`;});
+    // External isn't a node type — a referenced entity with no concept doc yet (curate it).
+    // Grouped under provenance/context; solid light swatch like the rest (no special outline).
+    if(fam==='Provenance & context'){h+=`<span class="sw" title="Referenced by an edge but has no concept document yet — an entity to curate."><i style="background:${EXTERNAL_COL}"></i><span>External</span></span>`;}
+    h+=`</div></div>`;});
   document.getElementById('legendBody').innerHTML=h;
 }
 function updateChrome(b){
@@ -802,8 +817,11 @@ previewScrim.onclick=closePreview;
     if(pop.classList.contains('open') && !pop.contains(e.target) && e.target!==pill && !pill.contains(e.target)) closeLintPop(); });
 })();
 window.addEventListener('keydown',e=>{if(e.key==='Escape'){ if(document.getElementById('lintPop').classList.contains('open'))closeLintPop(); else if(previewEl.classList.contains('open'))closePreview(); else closeLog(); }});
-// Cmd/Ctrl+K focuses the search box
+// Cmd/Ctrl+K focuses the search box. On macOS WKWebView swallows Cmd-key combos, so
+// the keydown often never fires — a native "Go ▸ Search" menu accelerator emits
+// 'menu-search' as the reliable path; this keydown handler covers the other platforms.
 window.addEventListener('keydown',e=>{ if((e.metaKey||e.ctrlKey)&&(e.key==='k'||e.key==='K')){ e.preventDefault(); searchInput.focus(); searchInput.select(); } });
+if(window.__TAURI__&&window.__TAURI__.event){ window.__TAURI__.event.listen('menu-search',()=>{ searchInput.focus(); searchInput.select(); }); }
 
 /* ---------- integrated terminal (multi-tab xterm.js front-ends + N PTYs) ---------- */
 let terms=[], activeTid=null, termSeq=0, termFallbackShown=false;
