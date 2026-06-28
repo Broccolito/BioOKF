@@ -9,6 +9,7 @@
 pub mod active;
 pub mod bundle;
 pub mod convert;
+pub mod credibility;
 pub mod export;
 pub mod figures;
 pub mod git;

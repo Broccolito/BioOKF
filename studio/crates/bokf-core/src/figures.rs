@@ -70,6 +70,7 @@ mod tests {
             id: "x-abc123".into(), title: "X".into(), sha256: "d".into(), format: "image".into(),
             original_filename: None, ingested_at: "2026-06-27".into(), needs_llm_fallback: true,
             figures: vec![crate::convert::FigureMeta { file: "figures/fig-001.png".into(), provisional: true, described: false, origin: "data-uri".into() }],
+            ..Default::default()
         };
         std::fs::write(root.join("raw/x-abc123/meta.yaml"), serde_yaml::to_string(&meta).unwrap()).unwrap();
         let newp = name_figure(root, "x-abc123", "figures/fig-001.png", "Kaplan-Meier by arm").unwrap();

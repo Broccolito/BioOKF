@@ -547,7 +547,7 @@ mod tests {
         std::fs::create_dir_all(root.join("knowledge")).unwrap();
         std::fs::write(root.join("raw/x-1/figures/fig-001.png"), b"i").unwrap();
         std::fs::write(root.join("raw/x-1/source.md"), "![](figures/fig-001.png)").unwrap();
-        let meta = crate::convert::SourceMeta { id:"x-1".into(), title:"X".into(), sha256:"d".into(), format:"image".into(), original_filename:None, ingested_at:"2026-06-27".into(), needs_llm_fallback:true, figures: vec![crate::convert::FigureMeta{ file:"figures/fig-001.png".into(), provisional:true, described:false, origin:"data-uri".into() }] };
+        let meta = crate::convert::SourceMeta { id:"x-1".into(), title:"X".into(), sha256:"d".into(), format:"image".into(), original_filename:None, ingested_at:"2026-06-27".into(), needs_llm_fallback:true, figures: vec![crate::convert::FigureMeta{ file:"figures/fig-001.png".into(), provisional:true, described:false, origin:"data-uri".into() }], ..Default::default() };
         std::fs::write(root.join("raw/x-1/meta.yaml"), serde_yaml::to_string(&meta).unwrap()).unwrap();
         let rep = crate::lint::lint(&crate::bundle::Bundle::open(root).unwrap());
         assert!(rep.findings.iter().any(|f| f.rule == "source.figure_unnamed"));

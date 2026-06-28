@@ -46,7 +46,7 @@ pub struct FigureMeta {
 }
 
 /// On-disk provenance for a stored raw source.
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize, PartialEq)]
 pub struct SourceMeta {
     pub id: String,
     pub title: String,
@@ -58,6 +58,21 @@ pub struct SourceMeta {
     pub needs_llm_fallback: bool,
     #[serde(default, skip_serializing_if = "Vec::is_empty")]
     pub figures: Vec<FigureMeta>,
+    /// The URL this source was fetched from (URL ingestion only).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub url: Option<String>,
+    /// The post-redirect URL actually downloaded (URL ingestion only).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub final_url: Option<String>,
+    /// Origin/kind of the source, distinct from how much it is trusted.
+    #[serde(default, skip_serializing_if = "crate::credibility::SourceType::is_unknown")]
+    pub source_type: crate::credibility::SourceType,
+    /// Credibility verdict (tier, confidence, retraction, reasoning).
+    #[serde(default, skip_serializing_if = "crate::credibility::Credibility::is_unset")]
+    pub credibility: crate::credibility::Credibility,
+    /// Bibliographic identifiers extracted during ingestion.
+    #[serde(default, skip_serializing_if = "crate::credibility::SourceIds::is_empty")]
+    pub ids: crate::credibility::SourceIds,
 }
 
 /// A stored raw source after ingestion.
@@ -700,6 +715,7 @@ fn store_with_extra_figures(bundle_root: &Path, filename: &str, bytes: &[u8], ex
         ingested_at: today_iso(),
         needs_llm_fallback: needs,
         figures: figmeta,
+        ..Default::default()
     };
     std::fs::write(dir.join("meta.yaml"), serde_yaml::to_string(&meta).map_err(|e| e.to_string())?).map_err(|e| e.to_string())?;
     Ok(SourceRecord {
@@ -953,6 +969,7 @@ mod tests {
             format: "docx".into(), original_filename: Some("x.docx".into()),
             ingested_at: "2026-06-27".into(), needs_llm_fallback: false,
             figures: vec![FigureMeta { file: "figures/fig-001.png".into(), provisional: true, described: false, origin: "word/media/image1.png".into() }],
+            ..Default::default()
         };
         let y = serde_yaml::to_string(&m).unwrap();
         let back: SourceMeta = serde_yaml::from_str(&y).unwrap();
