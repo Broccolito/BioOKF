@@ -10,13 +10,13 @@ use std::sync::atomic::{AtomicU64, Ordering};
 use std::sync::{Mutex, OnceLock};
 
 use portable_pty::{native_pty_system, Child, CommandBuilder, MasterPty, PtySize};
-use tauri::{AppHandle, Emitter};
+use tauri::{AppHandle, Emitter, Manager};
 
-/// Root that contains the bundles (env `OKF_ROOT`, else the BioOKF repo root).
-fn repo_root() -> PathBuf {
-    std::env::var("OKF_ROOT")
-        .map(PathBuf::from)
-        .unwrap_or_else(|_| PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../.."))
+/// Canonical config dir holding `registry.yaml` + `.active-kb`
+/// (`~/.config/biookf-studio`), shared with the CLI and MCP server. This is what
+/// keeps the GUI's KB list from scattering across whatever dir it was opened in.
+fn config_root() -> PathBuf {
+    bokf_core::config::ensure_config_dir().unwrap_or_else(|_| bokf_core::config::config_dir())
 }
 
 /// Registered bundles, the source of truth for discovery: every `Base` in
@@ -24,7 +24,7 @@ fn repo_root() -> PathBuf {
 /// whose folder still exists and looks like a bundle. A KB whose folder was
 /// deleted or moved simply isn't returned.
 fn registered_bundles() -> Vec<(String, PathBuf)> {
-    bokf_core::registry::list(&repo_root())
+    bokf_core::registry::list(&config_root())
         .into_iter()
         .map(|b| (b.id, PathBuf::from(b.path)))
         .filter(|(_, p)| p.join("knowledge").is_dir() || p.join("index.md").is_file())
@@ -32,7 +32,7 @@ fn registered_bundles() -> Vec<(String, PathBuf)> {
 }
 
 fn resolve(id: &str) -> Option<PathBuf> {
-    bokf_core::registry::resolve(&repo_root(), id)
+    bokf_core::registry::resolve(&config_root(), id)
         .map(PathBuf::from)
         .filter(|p| p.is_dir())
 }
@@ -62,13 +62,13 @@ fn list_bases() -> Result<serde_json::Value, String> {
 /// Set the active KB pointer (`<root>/.active-kb`) to `id`.
 #[tauri::command]
 fn set_active_kb(id: String) -> Result<(), String> {
-    bokf_core::active::set_active(&repo_root(), Some(&id))
+    bokf_core::active::set_active(&config_root(), Some(&id))
 }
 
 /// Read the active KB pointer, `None` when unset.
 #[tauri::command]
 fn get_active_kb() -> Result<Option<String>, String> {
-    Ok(bokf_core::active::get_active(&repo_root()))
+    Ok(bokf_core::active::get_active(&config_root()))
 }
 
 /// Derive a kb-id from a folder name: lowercase, non-`[a-z0-9-]` → `-`, with
@@ -110,7 +110,7 @@ fn add_base(path: String) -> Result<serde_json::Value, String> {
     bokf_core::open_bundle(&p)
         .map_err(|e| format!("Not a valid BioOKF knowledge base: {e}"))?;
 
-    let root = repo_root();
+    let root = config_root();
     let dir_name = p.file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_default();
     let base_id = kb_id_from_dir_name(&dir_name);
 
@@ -753,6 +753,12 @@ fn term_open(app: AppHandle, rows: u16, cols: u16) -> Result<String, String> {
     let shell = std::env::var("SHELL").unwrap_or_else(|_| "/bin/zsh".to_string());
     let mut cmd = CommandBuilder::new(shell);
     cmd.env("TERM", "xterm-256color");
+    // Make the Studio-bundled `bokf`/`bokf-mcp` available in the integrated
+    // terminal even before the user installs the CLI system-wide.
+    if let Some(bin) = bundled_bin_dir(&app) {
+        let existing = std::env::var("PATH").unwrap_or_default();
+        cmd.env("PATH", format!("{}:{}", bin.display(), existing));
+    }
     if let Some(home) = std::env::var_os("HOME") {
         cmd.cwd(home);
     }
@@ -812,6 +818,106 @@ fn term_close(id: String) -> Result<(), String> {
     Ok(())
 }
 
+// --- bundled CLI: detect + install ------------------------------------------
+
+fn bokf_exe_name() -> &'static str {
+    if cfg!(windows) { "bokf.exe" } else { "bokf" }
+}
+
+/// Directory inside the app bundle that holds the shipped `bokf`/`bokf-mcp`.
+/// In a packaged `.app` this is `Contents/Resources/bin`; under `cargo run` it
+/// falls back to the workspace target dir next to the studio exe.
+fn bundled_bin_dir(app: &AppHandle) -> Option<PathBuf> {
+    if let Ok(res) = app.path().resource_dir() {
+        let p = res.join("bin");
+        if p.join(bokf_exe_name()).exists() {
+            return Some(p);
+        }
+    }
+    // Dev fallback: binaries sit next to the studio exe in target/<profile>.
+    if let Ok(exe) = std::env::current_exe() {
+        if let Some(dir) = exe.parent() {
+            if dir.join(bokf_exe_name()).exists() {
+                return Some(dir.to_path_buf());
+            }
+        }
+    }
+    None
+}
+
+/// The install path of `bokf` on the user's PATH (or the standard install
+/// location), if any.
+fn bokf_on_path() -> Option<String> {
+    let std_path = std::path::Path::new("/usr/local/bin/bokf");
+    if std_path.exists() {
+        return Some(std_path.display().to_string());
+    }
+    let path = std::env::var_os("PATH")?;
+    for dir in std::env::split_paths(&path) {
+        let cand = dir.join(bokf_exe_name());
+        if cand.exists() {
+            return Some(cand.display().to_string());
+        }
+    }
+    None
+}
+
+fn bokf_version(bin: &std::path::Path) -> Option<String> {
+    let out = std::process::Command::new(bin).arg("--version").output().ok()?;
+    let s = String::from_utf8_lossy(&out.stdout).trim().to_string();
+    if s.is_empty() { None } else { Some(s) }
+}
+
+/// Report whether the `bokf` CLI is installed on PATH, plus version info. The
+/// front-end uses `installed == false` to decide whether to show the install
+/// popup 5 seconds after launch.
+#[tauri::command]
+fn cli_status(app: AppHandle) -> serde_json::Value {
+    let installed_path = bokf_on_path();
+    let bundled = bundled_bin_dir(&app).map(|d| d.join(bokf_exe_name()));
+    let bundled_version = bundled.as_deref().and_then(bokf_version);
+    let installed_version = installed_path.as_deref().map(std::path::Path::new).and_then(bokf_version);
+    serde_json::json!({
+        "installed": installed_path.is_some(),
+        "path": installed_path,
+        "version": installed_version,
+        "bundledVersion": bundled_version,
+    })
+}
+
+/// Copy the bundled `bokf` to `/usr/local/bin/bokf` with one admin prompt.
+#[tauri::command]
+fn install_cli(app: AppHandle) -> Result<String, String> {
+    let dir = bundled_bin_dir(&app).ok_or("bundled bokf binary not found")?;
+    let src = dir.join(bokf_exe_name());
+    if !src.exists() {
+        return Err(format!("bundled bokf not found at {}", src.display()));
+    }
+    let dest = "/usr/local/bin/bokf";
+    // One admin prompt: ensure /usr/local/bin exists, copy, mark executable.
+    let script = format!(
+        "do shell script \"mkdir -p /usr/local/bin && cp '{}' '{}' && chmod 755 '{}'\" with administrator privileges",
+        src.display(),
+        dest,
+        dest
+    );
+    let out = std::process::Command::new("osascript")
+        .arg("-e")
+        .arg(&script)
+        .output()
+        .map_err(|e| format!("failed to launch osascript: {e}"))?;
+    if out.status.success() {
+        Ok(dest.to_string())
+    } else {
+        let err = String::from_utf8_lossy(&out.stderr);
+        if err.contains("-128") || err.to_lowercase().contains("cancel") {
+            Err("install cancelled".to_string())
+        } else {
+            Err(format!("install failed: {}", err.trim()))
+        }
+    }
+}
+
 fn main() {
     let builder = tauri::Builder::default()
         // Native folder picker for the "+ New base" dialog (a normal feature).
@@ -822,7 +928,6 @@ fn main() {
             // blurred desktop and the app's own surfaces layer on top.
             #[cfg(target_os = "macos")]
             {
-                use tauri::Manager;
                 use window_vibrancy::{apply_vibrancy, NSVisualEffectMaterial, NSVisualEffectState};
                 if let Some(win) = _app.get_webview_window("main") {
                     let _ = apply_vibrancy(
@@ -855,7 +960,9 @@ fn main() {
             term_write,
             term_resize,
             term_close,
-            source_info
+            source_info,
+            cli_status,
+            install_cli
         ])
         // Native menu so macOS actually delivers Cmd+K: WKWebView swallows Cmd-key
         // combos as key equivalents before they reach the webview's JS keydown, so the
