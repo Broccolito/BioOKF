@@ -394,22 +394,20 @@ async function hydrateSourceProvenance(pg){
       return `<figure class="src-fig"><img class="md-img" data-md-raw="raw/${esc(source_id)}/${esc(f.file||'')}" alt="${esc(f.file||('figure '+i))}"><figcaption>${esc(f.file||'')} ${flags.join(' ')}</figcaption></figure>`;
     }).join('')}</div>`;
   }
+  const credChips=`${info.source_type?`<span class="src-origin">${esc(info.source_type)}</span>`:''}<span class="src-tier ${tierClass}">${esc(tier)}</span>${cred.confidence!=null?`<span class="src-conf">conf ${esc(Number(cred.confidence).toFixed(2))}</span>`:''}${cred.retracted?'<span class="src-retracted">⚠ RETRACTED</span>':''}`;
+  // Same .kv rows as the rest of the panel (the credibility badges ride inline in one row),
+  // so the Source / Provenance block is stylistically consistent with the fields above/below it.
   sec.innerHTML=`<h5>Source / Provenance</h5>
-    <div class="src-badges">
-      ${info.source_type?`<span class="src-origin">${esc(info.source_type)}</span>`:''}
-      <span class="src-tier ${tierClass}">${esc(tier)}</span>
-      ${cred.confidence!=null?`<span class="src-conf">conf ${esc(Number(cred.confidence).toFixed(2))}</span>`:''}
-      ${cred.retracted?'<span class="src-retracted">⚠ RETRACTED</span>':''}
-    </div>
-    <div class="metagrid" style="margin-top:8px">
-      ${info.title?`<div class="meta-row"><div class="meta-k">title</div><div class="meta-v">${esc(info.title)}</div></div>`:''}
-      ${info.format?`<div class="meta-row"><div class="meta-k">format</div><div class="meta-v">${esc(info.format)}</div></div>`:''}
-      ${cred.venue?`<div class="meta-row"><div class="meta-k">venue</div><div class="meta-v">${esc(cred.venue)}</div></div>`:''}
-      ${cred.publisher?`<div class="meta-row"><div class="meta-k">publisher</div><div class="meta-v">${esc(cred.publisher)}</div></div>`:''}
-      ${cred.reasoning?`<div class="meta-row"><div class="meta-k">reasoning</div><div class="meta-v">${esc(cred.reasoning)}</div></div>`:''}
-      ${cred.classifier_version?`<div class="meta-row"><div class="meta-k">classifier</div><div class="meta-v">${esc(cred.classifier_version)}</div></div>`:''}
-      ${idLinks.length?`<div class="meta-row"><div class="meta-k">ids</div><div class="meta-v">${idLinks.join(' ')}</div></div>`:''}
-      ${urlLinks.length?`<div class="meta-row"><div class="meta-k">links</div><div class="meta-v">${urlLinks.join(' ')}</div></div>`:''}
+    <div class="kv">
+      ${kvRow('credibility', credChips)}
+      ${info.title?kvRow('title', esc(info.title)):''}
+      ${info.format?kvRow('format', esc(info.format)):''}
+      ${cred.venue?kvRow('venue', esc(cred.venue)):''}
+      ${cred.publisher?kvRow('publisher', esc(cred.publisher)):''}
+      ${cred.reasoning?kvRow('reasoning', esc(cred.reasoning)):''}
+      ${cred.classifier_version?kvRow('classifier', esc(String(cred.classifier_version))):''}
+      ${idLinks.length?kvRow('ids', idLinks.join(' ')):''}
+      ${urlLinks.length?kvRow('links', urlLinks.join(' ')):''}
     </div>${figHtml}`;
   hydrateMdImages(sec);
 }
@@ -548,6 +546,7 @@ async function openFileEditor(path){
   // capture what to re-render afterwards (current selection)
   editorReturn = selectedEdge ? {kind:'edge', edge:selectedEdge} : (selected ? {kind:'node', node:selected} : null);
   const label = (selected && selected.id) || (selectedEdge && (selectedEdge.source+' '+selectedEdge.predicate+' '+selectedEdge.target)) || path;
+  const keepH = detail.offsetHeight;   // pin the panel to its current (formatted) size so the editor doesn't shrink
   detail.innerHTML=`<div class="d-head"><button class="d-close" id="dClose">×</button>
     <div class="d-id">${esc((selected&&selected.id)||(selectedEdge&&selectedEdge.source)||'Edit')}</div>
     <div class="d-desc">Editing <code>${esc(path)}</code></div></div>
@@ -560,6 +559,7 @@ async function openFileEditor(path){
       </div>
     </div>`;
   detail.classList.add('open');
+  if(keepH) detail.style.height=keepH+'px';
   const ta=document.getElementById('fileEditArea'), save=document.getElementById('fileSave'), cancel=document.getElementById('fileCancel');
   document.getElementById('dClose').onclick=()=>cancelFileEditor();
   cancel.onclick=()=>cancelFileEditor();
@@ -570,6 +570,7 @@ async function openFileEditor(path){
   }catch(err){ ta.value='# could not read file: '+String((err&&err.message)||err); ta.disabled=false; }
 }
 function cancelFileEditor(){
+  detail.style.height='';
   const r=editorReturn; editorReturn=null;
   if(r&&r.kind==='node') showNodeDetail(r.node);
   else if(r&&r.kind==='edge') showEdgeDetail(r.edge);
@@ -581,6 +582,7 @@ async function saveFileEditor(path, label){
   save.disabled=true; msg.className='edit-status'; msg.textContent='Saving…';
   try{
     await tauriInvoke('save_node_file', { base: activeBaseId, path, content: ta.value, label, date: today() });
+    detail.style.height='';
     // The desktop app reads live from disk — refresh the bundle so pages/graph
     // reflect the edit, then re-open the same node/edge detail.
     const r=editorReturn; editorReturn=null;
