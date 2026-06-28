@@ -80,6 +80,18 @@ param!(ConvertParam {
     #[doc = "Title for inline text."] title: Option<String>,
     #[doc = "Concatenate archive/folder members into one source."] combined: Option<bool>,
 });
+param!(IndexParam {
+    #[doc = "Bundle directory."] bundle: String,
+    #[doc = "Only check currency (don't rewrite index.md)."] check: Option<bool>,
+});
+param!(MergeRawParam {
+    #[doc = "Main KB (canonical) bundle dir."] mkb: String,
+    #[doc = "Secondary KB bundle dir to relocate raw/ from."] skb: String,
+});
+param!(MergeSnapshotParam {
+    #[doc = "Main KB bundle dir."] mkb: String,
+    #[doc = "Verify against an existing snapshot instead of writing one."] verify: Option<bool>,
+});
 
 #[derive(Clone)]
 pub struct BokfServer {
@@ -295,6 +307,54 @@ impl BokfServer {
         };
         match ingest(Path::new(&p.0.bundle), input, p.0.combined.unwrap_or(false)) {
             Ok(recs) => ok(serde_json::to_string_pretty(&recs).unwrap_or_default()),
+            Err(e) => ok(format!("ERROR: {e}")),
+        }
+    }
+
+    #[tool(name = "bokf_index", description = "Regenerate index.md (identifier registry + by-type catalog + subtypes-in-use), or check=true to list identifiers missing from it.")]
+    pub async fn index(&self, p: Parameters<IndexParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        match bokf_core::open_bundle(&p.0.bundle) {
+            Ok(b) => {
+                if p.0.check.unwrap_or(false) {
+                    let missing = bokf_core::index::missing_from_index(&b);
+                    ok(serde_json::json!({"current": missing.is_empty(), "missing": missing}).to_string())
+                } else {
+                    let name = Path::new(&p.0.bundle).file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_else(|| "Knowledge base".into());
+                    match bokf_core::index::write_index(&b, &name) {
+                        Ok(()) => ok(format!("regenerated index.md ({} nodes)", b.nodes.len())),
+                        Err(e) => ok(format!("ERROR: {e}")),
+                    }
+                }
+            }
+            Err(e) => ok(format!("ERROR: {e}")),
+        }
+    }
+
+    #[tool(name = "bokf_merge_raw", description = "Relocate the SKB's raw/ into the MKB's raw/ (dedup by content, rename on collision); returns the source-id remapping for rewriting raw_source refs.")]
+    pub async fn merge_raw(&self, p: Parameters<MergeRawParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        match bokf_core::merge::merge_raw(Path::new(&p.0.mkb), Path::new(&p.0.skb)) {
+            Ok(res) => ok(serde_json::to_string_pretty(&res).unwrap_or_default()),
+            Err(e) => ok(format!("ERROR: {e}")),
+        }
+    }
+
+    #[tool(name = "bokf_merge_snapshot", description = "Snapshot the MKB identifier/path set before a merge, or verify=true to confirm the MKB stayed canonical afterward.")]
+    pub async fn merge_snapshot(&self, p: Parameters<MergeSnapshotParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        let root = Path::new(&p.0.mkb);
+        match bokf_core::open_bundle(&p.0.mkb) {
+            Ok(b) => {
+                if p.0.verify.unwrap_or(false) {
+                    match bokf_core::merge::verify_snapshot(root, &b) {
+                        Ok(issues) => ok(serde_json::json!({"unchanged": issues.is_empty(), "issues": issues}).to_string()),
+                        Err(e) => ok(format!("ERROR: {e}")),
+                    }
+                } else {
+                    match bokf_core::merge::write_snapshot(root, &bokf_core::merge::snapshot(&b)) {
+                        Ok(()) => ok(format!("snapshot written ({} identifiers)", b.nodes.len())),
+                        Err(e) => ok(format!("ERROR: {e}")),
+                    }
+                }
+            }
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }

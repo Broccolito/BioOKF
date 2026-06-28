@@ -143,6 +143,25 @@ enum Cmd {
         #[arg(long)]
         json: bool,
     },
+    /// Regenerate index.md (identifier registry + by-type catalog + subtypes-in-use), or --check it.
+    Index {
+        path: PathBuf,
+        #[arg(long)]
+        check: bool,
+    },
+    /// Relocate a Secondary KB's raw/ into the Main KB's raw/ (dedup by content, rename on collision).
+    MergeRaw {
+        mkb: PathBuf,
+        skb: PathBuf,
+        #[arg(long)]
+        json: bool,
+    },
+    /// Snapshot the MKB identifier/path set before a merge (default), or --verify it stayed canonical after.
+    MergeSnapshot {
+        mkb: PathBuf,
+        #[arg(long)]
+        verify: bool,
+    },
 }
 
 fn main() {
@@ -172,7 +191,64 @@ fn run() -> Result<()> {
         Cmd::Register { root, kb_id, path, list, unregister } => cmd_register(root, kb_id, path, list, unregister),
         Cmd::Verify { path, workflow, json } => cmd_verify(path, workflow, json),
         Cmd::Convert { path, text, title, into, combined, json } => cmd_convert(path, text, title, into, combined, json),
+        Cmd::Index { path, check } => cmd_index(path, check),
+        Cmd::MergeRaw { mkb, skb, json } => cmd_merge_raw(mkb, skb, json),
+        Cmd::MergeSnapshot { mkb, verify } => cmd_merge_snapshot(mkb, verify),
     }
+}
+
+fn cmd_index(path: PathBuf, check: bool) -> Result<()> {
+    let bundle = bokf_core::open_bundle(&path)?;
+    if check {
+        let missing = bokf_core::index::missing_from_index(&bundle);
+        if missing.is_empty() {
+            println!("index.md is current ({} nodes)", bundle.nodes.len());
+        } else {
+            for m in &missing {
+                println!("MISSING from index.md: {m}");
+            }
+            std::process::exit(1);
+        }
+    } else {
+        let name = path.file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_else(|| "Knowledge base".into());
+        bokf_core::index::write_index(&bundle, &name)?;
+        eprintln!("regenerated index.md ({} nodes)", bundle.nodes.len());
+    }
+    Ok(())
+}
+
+fn cmd_merge_raw(mkb: PathBuf, skb: PathBuf, json: bool) -> Result<()> {
+    let res = bokf_core::merge::merge_raw(&mkb, &skb).map_err(anyhow::Error::msg)?;
+    if json {
+        println!("{}", serde_json::to_string_pretty(&res)?);
+    } else {
+        eprintln!("merge-raw: {} moved, {} renamed, {} dropped (duplicates)", res.moved.len(), res.renamed.len(), res.dropped_duplicates.len());
+        for (old, new) in &res.id_map {
+            if old != new {
+                println!("raw/{old} -> raw/{new}");
+            }
+        }
+    }
+    Ok(())
+}
+
+fn cmd_merge_snapshot(mkb: PathBuf, verify: bool) -> Result<()> {
+    let bundle = bokf_core::open_bundle(&mkb)?;
+    if verify {
+        let issues = bokf_core::merge::verify_snapshot(&mkb, &bundle).map_err(anyhow::Error::msg)?;
+        if issues.is_empty() {
+            println!("MKB unchanged since snapshot ✓");
+        } else {
+            for i in &issues {
+                println!("CHANGED: {i}");
+            }
+            std::process::exit(1);
+        }
+    } else {
+        bokf_core::merge::write_snapshot(&mkb, &bokf_core::merge::snapshot(&bundle)).map_err(anyhow::Error::msg)?;
+        eprintln!("pre-merge snapshot written ({} identifiers)", bundle.nodes.len());
+    }
+    Ok(())
 }
 
 fn cmd_convert(path: Option<PathBuf>, text: Option<String>, title: Option<String>, into: PathBuf, combined: bool, json: bool) -> Result<()> {

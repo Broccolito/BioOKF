@@ -207,6 +207,13 @@ pub fn lint(bundle: &Bundle) -> LintReport {
     // --- raw sources still awaiting faithful LLM conversion to Markdown ---
     lint_raw_conversion(&mut r, bundle);
 
+    // --- index.md currency ---
+    if bundle.has_index_md {
+        for id in crate::index::missing_from_index(bundle) {
+            r.push(Severity::Warn, "index.stale", &id, "identifier is not registered in index.md — run `bokf index`".to_string(), None);
+        }
+    }
+
     r
 }
 
