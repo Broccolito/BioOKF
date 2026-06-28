@@ -210,6 +210,9 @@ pub fn lint(bundle: &Bundle) -> LintReport {
     // --- figures still provisional or referenced without a description ---
     lint_figures(&mut r, bundle);
 
+    // --- credibility of cited sources (peer-reviewed / preprint / archive vs web) ---
+    lint_provenance(&mut r, bundle);
+
     // --- index.md currency ---
     if bundle.has_index_md {
         for id in crate::index::missing_from_index(bundle) {
@@ -497,6 +500,75 @@ fn lint_domain_range(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, pa
     }
 }
 
+/// Read the `meta.yaml` of an ingested source node by following its `raw_source` path.
+/// Returns `None` for external-reference sources (xref only, no raw bytes) or unreadable meta.
+fn read_source_meta(bundle: &Bundle, src: &Node) -> Option<crate::convert::SourceMeta> {
+    for rs in &src.raw_source {
+        let p = std::path::Path::new(rs);
+        let dir = if p.extension().is_some() { p.parent()? } else { p };
+        let meta = bundle.root.join(dir).join("meta.yaml");
+        if let Ok(txt) = std::fs::read_to_string(&meta) {
+            if let Ok(m) = serde_yaml::from_str::<crate::convert::SourceMeta>(&txt) {
+                return Some(m);
+            }
+        }
+    }
+    None
+}
+
+/// Warn when a source used as a `primary_source` is not a recognized scholarly source: a
+/// classified `web`/`unknown` tier (`source.not_scholarly`), or a retracted source
+/// (`source.retracted`). Unclassified file sources (no credibility verdict) are not flagged.
+fn lint_provenance(r: &mut LintReport, bundle: &Bundle) {
+    use crate::credibility::CredibilityTier;
+    use std::collections::HashSet;
+    let mut seen: HashSet<String> = HashSet::new();
+    for n in &bundle.nodes {
+        for e in &n.edges {
+            let ps = match &e.primary_source {
+                Some(ps) if ps != "not_provided" => ps,
+                _ => continue,
+            };
+            if !seen.insert(ps.clone()) {
+                continue;
+            }
+            let src = match bundle.get(ps) {
+                Some(s) => s,
+                None => continue,
+            };
+            let meta = match read_source_meta(bundle, src) {
+                Some(m) => m,
+                None => continue,
+            };
+            if meta.credibility.classifier_version == 0 {
+                continue; // never classified: no signal, do not warn
+            }
+            if matches!(meta.credibility.tier, CredibilityTier::Web | CredibilityTier::Unknown) {
+                r.push(
+                    Severity::Warn,
+                    "source.not_scholarly",
+                    &src.identifier,
+                    format!(
+                        "source `{}` is cited as primary_source but classifies as `{}` (not peer-reviewed, a preprint archive, or a recognized database)",
+                        src.identifier,
+                        serde_yaml::to_string(&meta.credibility.tier).unwrap_or_default().trim()
+                    ),
+                    None,
+                );
+            }
+            if meta.credibility.retracted {
+                r.push(
+                    Severity::Warn,
+                    "source.retracted",
+                    &src.identifier,
+                    format!("source `{}` is cited as primary_source but is marked retracted", src.identifier),
+                    None,
+                );
+            }
+        }
+    }
+}
+
 fn lint_contradictions(r: &mut LintReport, bundle: &Bundle) {
     use std::collections::HashMap;
     // key: (subject, BASE predicate, object) -> (positive_seen, negative_seen)
@@ -537,6 +609,39 @@ mod tests {
             std::fs::write(&p, body).unwrap();
         }
         crate::lint::lint(&Bundle::open(dir.path()).unwrap())
+    }
+
+    #[test]
+    fn lints_flag_not_scholarly_and_retracted_sources() {
+        use crate::credibility::{Credibility, CredibilityTier};
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        std::fs::create_dir_all(root.join("knowledge/gene")).unwrap();
+        std::fs::create_dir_all(root.join("knowledge/publication")).unwrap();
+        std::fs::create_dir_all(root.join("raw/web-src")).unwrap();
+        let gene = "---\ntype: Gene\nidentifier: BRAF\nsubtype: protein_coding\nedges:\n  - predicate: associated_with\n    object: Type 2 Diabetes\n    knowledge_level: knowledge_assertion\n    agent_type: manual_assertion\n    primary_source: WebPaper\n---\n# BRAF\n";
+        let pubsrc = "---\ntype: Publication\nidentifier: WebPaper\nsubtype: web_page\nraw_source: [raw/web-src/source.md]\n---\n# WebPaper\n";
+        std::fs::write(root.join("knowledge/gene/braf.md"), gene).unwrap();
+        std::fs::write(root.join("knowledge/publication/webpaper.md"), pubsrc).unwrap();
+        std::fs::write(root.join("raw/web-src/source.md"), "body").unwrap();
+        let mut meta = crate::convert::SourceMeta {
+            id: "web-src".into(), title: "Blog".into(), sha256: "d".into(), format: "html".into(),
+            original_filename: None, ingested_at: "2026-06-27".into(), needs_llm_fallback: false,
+            figures: vec![],
+            url: Some("https://example.com/x".into()),
+            credibility: Credibility { tier: CredibilityTier::Web, confidence: 0.6, retracted: false, venue: None, publisher: None, reasoning: "host".into(), classifier_version: 1 },
+            ..Default::default()
+        };
+        std::fs::write(root.join("raw/web-src/meta.yaml"), serde_yaml::to_string(&meta).unwrap()).unwrap();
+        let rep = crate::lint::lint(&Bundle::open(root).unwrap());
+        assert!(rep.findings.iter().any(|f| f.rule == "source.not_scholarly"), "{:?}", rep.findings);
+
+        // A retracted but peer-reviewed source: source.retracted fires, source.not_scholarly does not.
+        meta.credibility = Credibility { tier: CredibilityTier::PeerReviewed, confidence: 0.9, retracted: true, venue: None, publisher: None, reasoning: "x".into(), classifier_version: 1 };
+        std::fs::write(root.join("raw/web-src/meta.yaml"), serde_yaml::to_string(&meta).unwrap()).unwrap();
+        let rep2 = crate::lint::lint(&Bundle::open(root).unwrap());
+        assert!(rep2.findings.iter().any(|f| f.rule == "source.retracted"), "{:?}", rep2.findings);
+        assert!(!rep2.findings.iter().any(|f| f.rule == "source.not_scholarly"));
     }
 
     #[test]
