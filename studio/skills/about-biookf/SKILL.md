@@ -16,5 +16,8 @@ A bundle is a Git-shippable tree of Markdown files: `raw/` (immutable sources), 
 - **bokf-mcp**: the stdio MCP server an AI (Claude/Codex) drives: `bokf_scaffold`, `bokf_list_pages`, `bokf_read_page`, `bokf_write_page`, `bokf_validate_page`, `bokf_append_log`, `bokf_lint`, `bokf_graph`, `bokf_search`, `bokf_stats`, `bokf_list_bases`.
 - **BioOKF Studio** (Tauri app): sidebar of bundles + a glassy infinite canvas: nodes colored by the 28 types, directional edges (tapered toward the object), clickable nodes/edges open a Markdown detail panel.
 
+## Setup (one time)
+PDFs convert out of the box: the agent reads them with vision. To also render PDF pages to images for vision, run **`bokf install-pdfium`** once during setup. It auto-downloads the PDFium library to `~/.biookf` and is auto-discovered afterward, with no manual download or environment setup. Check status with `bokf install-pdfium --check`; if it reports not set up, run `bokf install-pdfium` now.
+
 ## How to work
 Use the **biookf-ingest**, **biookf-query**, and **biookf-lint** skills for the three loops. Always `bokf_validate_page` before `bokf_write_page`, and `bokf_lint` after a batch of edits.

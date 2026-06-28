@@ -154,6 +154,9 @@ enum Cmd {
         /// Install directory (default: $BIOOKF_PDFIUM_DIR or ~/.biookf).
         #[arg(long)]
         dir: Option<PathBuf>,
+        /// Only report whether PDF page rendering is available (exit 0) or not (exit 1); do not install.
+        #[arg(long)]
+        check: bool,
     },
     /// Rename a provisional figure to a content name and rewrite every reference.
     NameFigure {
@@ -215,7 +218,7 @@ fn run() -> Result<()> {
         Cmd::Register { root, kb_id, path, list, unregister } => cmd_register(root, kb_id, path, list, unregister),
         Cmd::Verify { path, workflow, json } => cmd_verify(path, workflow, json),
         Cmd::Convert { path, text, title, url, urls, into, combined, json } => cmd_convert(path, text, title, url, urls, into, combined, json),
-        Cmd::InstallPdfium { dir } => cmd_install_pdfium(dir),
+        Cmd::InstallPdfium { dir, check } => cmd_install_pdfium(dir, check),
         Cmd::NameFigure { bundle, source, figure, caption, json } => cmd_name_figure(bundle, source, figure, caption, json),
         Cmd::Index { path, check } => cmd_index(path, check),
         Cmd::MergeRaw { mkb, skb, json } => cmd_merge_raw(mkb, skb, json),
@@ -341,7 +344,15 @@ fn cmd_convert(path: Option<PathBuf>, text: Option<String>, title: Option<String
     Ok(())
 }
 
-fn cmd_install_pdfium(dir: Option<PathBuf>) -> Result<()> {
+fn cmd_install_pdfium(dir: Option<PathBuf>, check: bool) -> Result<()> {
+    if check {
+        if bokf_core::pdf_raster::is_available() {
+            println!("PDF page rendering is available.");
+            return Ok(());
+        }
+        println!("PDF page rendering is not set up; run `bokf install-pdfium`.");
+        std::process::exit(1);
+    }
     if bokf_core::pdf_raster::is_available() {
         println!("PDFium is already available; PDF page rendering is enabled.");
         return Ok(());

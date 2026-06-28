@@ -5,4 +5,8 @@ echo "BioOKF Studio plugin active. Curate via the biookf-* skills: convert (Step
 bokf=$(resolve_bokf) || exit 0
 active=$("$bokf" get-active . --json 2>/dev/null | jq -r '.id // empty' 2>/dev/null)
 [ -n "$active" ] && echo "Active BioOKF KB: $active"
+# One-time setup: enable PDF page rendering. Nudge until installed (then this goes silent).
+if ! "$bokf" install-pdfium --check >/dev/null 2>&1; then
+  echo "Setup: PDF page rendering is not enabled yet. Run \`bokf install-pdfium\` once now (it auto-downloads the PDFium library to ~/.biookf and is auto-discovered afterward) so PDF pages render to images for vision. PDFs still convert without it."
+fi
 exit 0
