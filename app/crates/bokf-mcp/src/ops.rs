@@ -137,11 +137,11 @@ pub fn scaffold(bundle: &Path, name: &str) -> Result<String, String> {
     if repo.ensure_repo().is_ok() {
         let _ = repo.commit_all(bokf_core::git::ChangeKind::Manual, &format!("create knowledge base {name}"), None);
     }
-    if let (Some(id), Some(root)) = (bundle.file_name().map(|s| s.to_string_lossy().to_lowercase()), bundle.parent()) {
+    if let (Some(id), Ok(root)) = (bundle.file_name().map(|s| s.to_string_lossy().to_lowercase()), bokf_core::config::ensure_config_dir()) {
         if bokf_core::registry::validate_kb_id(&id).is_ok() {
             let abs = std::fs::canonicalize(bundle).unwrap_or_else(|_| bundle.to_path_buf());
-            let _ = bokf_core::registry::register(root, &id, &abs.to_string_lossy());
-            let _ = bokf_core::active::set_active(root, Some(&id));
+            let _ = bokf_core::registry::register(&root, &id, &abs.to_string_lossy());
+            let _ = bokf_core::active::set_active(&root, Some(&id));
         }
     }
     Ok(format!("scaffolded BioOKF bundle '{name}' at {}", bundle.display()))

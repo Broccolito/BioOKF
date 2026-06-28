@@ -7,7 +7,7 @@ source "$(dirname "$0")/lib.sh" 2>/dev/null || true
 MAX_ATTEMPTS=3
 
 bokf=$(resolve_bokf) || exit 0                       # no binary -> allow stop
-active=$("$bokf" get-active . --json 2>/dev/null) || exit 0
+active=$("$bokf" get-active --json 2>/dev/null) || exit 0
 id=$(printf '%s' "$active" | jq -r '.id // empty' 2>/dev/null)
 path=$(printf '%s' "$active" | jq -r '.path // empty' 2>/dev/null)
 [ -n "$id" ] || exit 0                                # no active KB -> normal session, allow stop

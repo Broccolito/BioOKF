@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- WKWebView needs JIT + writable executable memory. -->
+    <key>com.apple.security.cs.allow-jit</key>
+    <true/>
+    <key>com.apple.security.cs.allow-unsigned-executable-memory</key>
+    <true/>
+    <!-- Let the signed .app launch the separately-built bundled `bokf` binaries. -->
+    <key>com.apple.security.cs.disable-library-validation</key>
+    <true/>
+    <!-- Outbound network (credibility checks, PDFium download). -->
+    <key>com.apple.security.network.client</key>
+    <true/>
+    <!-- Open user-selected knowledge-base folders. -->
+    <key>com.apple.security.files.user-selected.read-write</key>
+    <true/>
+</dict>
+</plist>

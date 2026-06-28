@@ -12,7 +12,7 @@ renamed/moved/collapsed. **Lose no information, break no links**: whenever an SK
 `primary_source`, `reported_in` object) so nothing dangles. (Adhere to `SCHEMA.md` + `docs/04`.)
 
 ## Loop
-1. `bokf set-active <root> <mkb-id>`; pass the SKB path explicitly (this encodes MKB-is-canonical).
+1. `bokf set-active <mkb-id>`; pass the SKB path explicitly (this encodes MKB-is-canonical).
 2. **Identifier resolution.** Compare MKB `index.md` vs SKB `index.md`; surface exact AND
    semantically-similar candidates **across the two KBs only** (never within one). When the index
    isn't enough, open the node `.md` files and reason over `synonyms`/`xref`/body. A `Disease` facet

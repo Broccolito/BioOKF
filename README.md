@@ -23,21 +23,41 @@ visualizer, all distributed together as a one-command Claude Code plugin.
 > mockups of the Studio UI (graph, inspector, and the live agent loop). Full function reference on the
 > [documentation page](https://broccolito.github.io/BioOKF/docs.html). The site's source lives in [`landing/`](landing).
 
-## Install (Claude Code plugin)
+## Install
 
-The whole toolchain (the `bokf` **MCP server**, the `bokf` **CLI**, and the **BioOKF Studio**
-desktop app) installs as a single Claude Code plugin. **You never compile anything**: the first
-time a tool runs, the plugin downloads the prebuilt binaries for your platform.
+BioOKF comes in two pieces you install separately: the **Studio desktop app**, which also
+installs the `bokf` CLI, and the **Claude Code plugin** (the "cloud plugin"), which is how you
+drive the Studio with Claude.
 
-In Claude Code, run these two commands:
+### 1. BioOKF Studio (desktop app)
+
+Download the notarized **`BioOKF Studio_<version>_aarch64.dmg`** from the
+[latest release](https://github.com/Broccolito/BioOKF/releases/latest), open it, and drag
+**BioOKF Studio** into Applications. It is signed and notarized by Apple, so it opens with no
+Gatekeeper warning.
+
+A few seconds after the first launch, the Studio offers to install the **`bokf` command-line
+tool** to `/usr/local/bin` (one admin prompt) so `bokf` works in every terminal. The Studio also
+has its own built-in terminal where `bokf` is already on the PATH.
+
+The Studio keeps all of its configuration (the knowledge-base registry and the active-KB pointer)
+under `~/.config/biookf-studio`, so those files never scatter onto your Desktop.
+
+(Apple Silicon for now; Intel and other platforms follow from the release pipeline.)
+
+### 2. The BioOKF Claude Code plugin (the cloud plugin)
+
+This is the primary way to work: describe what you want in plain language and Claude curates
+through the `bokf_*` MCP tools, driving the Studio live. In Claude Code:
 
 ```
 /plugin marketplace add Broccolito/BioOKF
 /plugin install biookf@biookf
 ```
 
-Then restart Claude Code. That's it: the `bokf_*` tools are now available, and
-`bokf_studio_open` will launch the visualizer.
+Then restart Claude Code. The `bokf_*` tools are now available, and `bokf_studio_open` launches
+the visualizer. **You never compile anything**: the first time a tool runs, the plugin downloads
+the prebuilt binaries for your platform.
 
 > **Want your coding agent to do it for you?** Paste this to Claude Code (or any agent that can run
 > slash commands):
@@ -208,9 +228,10 @@ bokf merge-snapshot ./main-kb
 bokf merge-raw ./main-kb ./secondary-kb
 bokf merge-snapshot ./main-kb --verify
 
-# Multi-bundle bookkeeping (a KB can live anywhere on disk)
-bokf register <root> mykb /abs/path/to/mykb     # also --list, --unregister <id>
-bokf set-active <root> mykb
+# Multi-bundle bookkeeping (a KB can live anywhere on disk; registry + active
+# pointer live in ~/.config/biookf-studio, shared by the CLI, MCP, and Studio)
+bokf register mykb /abs/path/to/mykb            # also --list, --unregister <id>; --root to override
+bokf set-active mykb
 bokf predicates                                 # print the controlled vocabulary
 ```
 
@@ -234,8 +255,8 @@ bokf predicates                                 # print the controlled vocabular
 | `commit` | Lower-level stage-all + commit (non-logged lifecycle commit). |
 | `log` | Show commit history (newest-first). |
 | `restore` | Forward-only restore to a prior commit. |
-| `register` | Register / `--list` / `--unregister` a known bundle under a root (KBs live anywhere). |
-| `set-active` / `get-active` | Set / read the active KB under a root. |
+| `register` | Register / `--list` / `--unregister` a known bundle (config dir by default; `--root` to override). |
+| `set-active` / `get-active` | Set / read the active KB (config dir by default; `--root` to override). |
 | `merge-raw` | Relocate a Secondary KB's `raw/` into a Main KB's `raw/` (dedup by content). |
 | `merge-snapshot` | Snapshot the Main KB before a merge, or `--verify` after. |
 | `name-figure` | Rename a provisional figure to a content caption and rewrite every reference. |

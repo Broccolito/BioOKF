@@ -291,7 +291,7 @@ impl BokfServer {
     #[tool(name = "bokf_set_active", description = "Set which KB is active under <root>.")]
     pub async fn set_active(&self, p: Parameters<RootKbParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
         narrate_to_studio(&format!("switching active KB · {}", p.0.kb_id));
-        match bokf_core::active::set_active(Path::new(&p.0.root), Some(&p.0.kb_id)) {
+        match bokf_core::active::set_active(&mcp_root(&p.0.root), Some(&p.0.kb_id)) {
             Ok(()) => ok(format!("active KB = {}", p.0.kb_id)),
             Err(e) => ok(format!("ERROR: {e}")),
         }
@@ -299,7 +299,8 @@ impl BokfServer {
 
     #[tool(name = "bokf_get_active", description = "Get the active KB id + resolved path under <root>.")]
     pub async fn get_active(&self, p: Parameters<RootParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        let root = Path::new(&p.0.root);
+        let root = mcp_root(&p.0.root);
+        let root = root.as_path();
         match bokf_core::active::get_active(root) {
             Some(id) => ok(serde_json::json!({"id": id, "path": bokf_core::registry::resolve(root, &id)}).to_string()),
             None => ok(serde_json::json!({ "id": null }).to_string()),
@@ -587,6 +588,17 @@ fn json_str(s: &str) -> String {
     serde_json::Value::String(s.to_string()).to_string()
 }
 
+/// Resolve the registry/active-pointer root: the caller-provided path if
+/// non-empty, else the canonical config dir (~/.config/biookf-studio). This is
+/// what keeps the MCP server, CLI, and Studio reading the same pointer.
+fn mcp_root(provided: &str) -> std::path::PathBuf {
+    if provided.trim().is_empty() {
+        bokf_core::config::ensure_config_dir().unwrap_or_else(|_| bokf_core::config::config_dir())
+    } else {
+        std::path::PathBuf::from(provided)
+    }
+}
+
 /// Locate the `biookf-studio` binary and spawn it detached with the control
 /// channel on. Order: env `BIOOKF_STUDIO_BIN`, else next to the current exe
 /// (the bokf-mcp and biookf-studio binaries sit together in target/{debug,release}).
@@ -597,9 +609,13 @@ fn spawn_studio(root: Option<&str>) -> Result<String, String> {
         .stdin(std::process::Stdio::null())
         .stdout(std::process::Stdio::null())
         .stderr(std::process::Stdio::null());
-    if let Some(r) = root {
-        cmd.env("OKF_ROOT", r);
-    }
+    // Point the spawned Studio at the same root: an explicit one if given, else
+    // the canonical config dir (the Studio defaults to it too; this is explicit).
+    let r = root
+        .filter(|s| !s.trim().is_empty())
+        .map(std::path::PathBuf::from)
+        .unwrap_or_else(|| bokf_core::config::ensure_config_dir().unwrap_or_else(|_| bokf_core::config::config_dir()));
+    cmd.env("OKF_ROOT", r);
     cmd.spawn().map_err(|e| format!("failed to spawn {}: {e}", bin.display()))?;
     Ok(bin.display().to_string())
 }

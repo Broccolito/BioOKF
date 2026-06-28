@@ -12,6 +12,7 @@ serde_json = { workspace = true }
 serde_yaml = { workspace = true }
 thiserror = { workspace = true }
 regex = { workspace = true }
+dirs = { workspace = true }
 uuid = { version = "1", features = ["v4"] }
 sha2 = "0.10"
 zip = { version = "2", default-features = false, features = ["deflate"] }

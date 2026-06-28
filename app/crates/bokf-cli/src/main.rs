@@ -101,17 +101,23 @@ enum Cmd {
         #[arg(long)]
         summary: Option<String>,
     },
-    /// Set the active KB id under <root>.
-    SetActive { root: PathBuf, kb_id: String },
-    /// Print the active KB id + resolved path under <root>.
+    /// Set the active KB id (defaults to the config dir).
+    SetActive {
+        #[arg(long)]
+        root: Option<PathBuf>,
+        kb_id: String,
+    },
+    /// Print the active KB id + resolved path (defaults to the config dir).
     GetActive {
-        root: PathBuf,
+        #[arg(long)]
+        root: Option<PathBuf>,
         #[arg(long)]
         json: bool,
     },
-    /// Register/list/unregister a known bundle under <root>.
+    /// Register/list/unregister a known bundle (defaults to the config dir).
     Register {
-        root: PathBuf,
+        #[arg(long)]
+        root: Option<PathBuf>,
         kb_id: Option<String>,
         path: Option<PathBuf>,
         #[arg(long)]
@@ -191,6 +197,14 @@ enum Cmd {
     },
 }
 
+/// The config/bundle root for registry + active-pointer ops: an explicit
+/// `--root` if given, else the canonical config dir (~/.config/biookf-studio).
+fn resolve_root(root: Option<PathBuf>) -> PathBuf {
+    root.unwrap_or_else(|| {
+        bokf_core::config::ensure_config_dir().unwrap_or_else(|_| bokf_core::config::config_dir())
+    })
+}
+
 fn main() {
     if let Err(e) = run() {
         eprintln!("error: {e:#}");
@@ -213,9 +227,9 @@ fn run() -> Result<()> {
         Cmd::Commit { path, kind, summary, delta } => cmd_commit(path, kind, summary, delta),
         Cmd::Log { path, limit, json } => cmd_log(path, limit, json),
         Cmd::Restore { path, sha, summary } => cmd_restore(path, sha, summary),
-        Cmd::SetActive { root, kb_id } => cmd_set_active(root, kb_id),
-        Cmd::GetActive { root, json } => cmd_get_active(root, json),
-        Cmd::Register { root, kb_id, path, list, unregister } => cmd_register(root, kb_id, path, list, unregister),
+        Cmd::SetActive { root, kb_id } => cmd_set_active(resolve_root(root), kb_id),
+        Cmd::GetActive { root, json } => cmd_get_active(resolve_root(root), json),
+        Cmd::Register { root, kb_id, path, list, unregister } => cmd_register(resolve_root(root), kb_id, path, list, unregister),
         Cmd::Verify { path, workflow, json } => cmd_verify(path, workflow, json),
         Cmd::Convert { path, text, title, url, urls, into, combined, json } => cmd_convert(path, text, title, url, urls, into, combined, json),
         Cmd::InstallPdfium { dir, check } => cmd_install_pdfium(dir, check),
@@ -682,11 +696,11 @@ fn cmd_scaffold(path: PathBuf, name: String) -> Result<()> {
         let _ = repo.commit_all(ChangeKind::Manual, &format!("create knowledge base {name}"), None);
     }
     let kb_id = path.file_name().map(|s| s.to_string_lossy().to_lowercase());
-    if let (Some(id), Some(root)) = (kb_id, path.parent()) {
+    if let (Some(id), Ok(root)) = (kb_id, bokf_core::config::ensure_config_dir()) {
         if bokf_core::registry::validate_kb_id(&id).is_ok() {
             let abs = std::fs::canonicalize(&path).unwrap_or_else(|_| path.clone());
-            let _ = bokf_core::registry::register(root, &id, &abs.to_string_lossy());
-            let _ = bokf_core::active::set_active(root, Some(&id));
+            let _ = bokf_core::registry::register(&root, &id, &abs.to_string_lossy());
+            let _ = bokf_core::active::set_active(&root, Some(&id));
         }
     }
     eprintln!("scaffolded bundle at {}", path.display());

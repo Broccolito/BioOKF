@@ -8,6 +8,7 @@
 
 pub mod active;
 pub mod bundle;
+pub mod config;
 pub mod convert;
 pub mod credibility;
 pub mod export;

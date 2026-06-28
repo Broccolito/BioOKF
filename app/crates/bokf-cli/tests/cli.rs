@@ -23,9 +23,10 @@ fn write(path: &std::path::Path, content: &str) {
 #[test]
 fn scaffold_lint_graph_search_roundtrip() {
     let dir = tmp_bundle("roundtrip");
+    let cfg = tempfile::tempdir().unwrap();
 
-    // scaffold
-    let out = Command::new(bokf()).args(["scaffold", dir.to_str().unwrap(), "--name", "Test KB"]).output().unwrap();
+    // scaffold (isolate the config dir so autoregister never touches ~/.config)
+    let out = Command::new(bokf()).args(["scaffold", dir.to_str().unwrap(), "--name", "Test KB"]).env("BIOOKF_CONFIG_DIR", cfg.path()).output().unwrap();
     assert!(out.status.success(), "scaffold failed: {}", String::from_utf8_lossy(&out.stderr));
     assert!(dir.join("index.md").exists());
     assert!(dir.join("knowledge").is_dir());
@@ -139,15 +140,42 @@ fn cli_log_sync_then_log() {
 #[test]
 fn scaffold_registers_inits_and_activates() {
     let root = tempfile::tempdir().unwrap();
+    let cfg = tempfile::tempdir().unwrap();
     let bundle = root.path().join("ms-kb");
     let s = Command::new(bokf())
-        .args(["scaffold", bundle.to_str().unwrap(), "--name", "MS KB"]).output().unwrap();
+        .args(["scaffold", bundle.to_str().unwrap(), "--name", "MS KB"])
+        .env("BIOOKF_CONFIG_DIR", cfg.path()).output().unwrap();
     assert!(s.status.success(), "{}", String::from_utf8_lossy(&s.stderr));
     assert!(bundle.join(".git").exists());
+    // get-active defaults to the config dir (no positional root)
     let ga = Command::new(bokf())
-        .args(["get-active", root.path().to_str().unwrap(), "--json"]).output().unwrap();
+        .args(["get-active", "--json"])
+        .env("BIOOKF_CONFIG_DIR", cfg.path()).output().unwrap();
     let v: serde_json::Value = serde_json::from_slice(&ga.stdout).unwrap();
     assert_eq!(v["id"], "ms-kb");
+}
+
+#[test]
+fn scaffold_registers_into_config_dir_not_parent() {
+    let cfg = tempfile::tempdir().unwrap();
+    let workdir = tempfile::tempdir().unwrap();
+    let kb = workdir.path().join("my-kb");
+
+    let status = Command::new(bokf())
+        .args(["scaffold", kb.to_str().unwrap(), "--name", "My KB"])
+        .env("BIOOKF_CONFIG_DIR", cfg.path())
+        .status()
+        .unwrap();
+    assert!(status.success());
+
+    // Registry + active pointer land in the config dir...
+    assert!(cfg.path().join("registry.yaml").exists(), "registry.yaml should be in config dir");
+    // ...and NOT scattered next to the new KB.
+    assert!(!workdir.path().join("registry.yaml").exists(), "must not scatter registry to parent");
+    assert!(!workdir.path().join(".active-kb").exists(), "must not scatter .active-kb to parent");
+
+    let reg = std::fs::read_to_string(cfg.path().join("registry.yaml")).unwrap();
+    assert!(reg.contains("my-kb"));
 }
 
 #[test]
@@ -188,11 +216,12 @@ fn verify_gate_passes_clean_fails_dirty() {
 #[test]
 fn end_to_end_scaffold_write_logsync_log_restore() {
     let root = tempfile::tempdir().unwrap();
+    let cfg = tempfile::tempdir().unwrap();
     let bundle = root.path().join("demo-kb");
-    let run = |args: &[&str]| Command::new(bokf()).args(args).output().unwrap();
+    let run = |args: &[&str]| Command::new(bokf()).args(args).env("BIOOKF_CONFIG_DIR", cfg.path()).output().unwrap();
 
     assert!(run(&["scaffold", bundle.to_str().unwrap(), "--name", "Demo"]).status.success());
-    let ga = run(&["get-active", root.path().to_str().unwrap(), "--json"]);
+    let ga = run(&["get-active", "--json"]);
     let v: serde_json::Value = serde_json::from_slice(&ga.stdout).unwrap();
     assert_eq!(v["id"], "demo-kb");
 

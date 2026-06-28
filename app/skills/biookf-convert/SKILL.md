@@ -10,7 +10,7 @@ Markdown rendering. By the end, **every source is complete `.md` with the most r
 preserved.** Never hand-edit `raw/` originals.
 
 ## Loop
-1. Make sure a KB is active (`bokf get-active <root>`); convert into it with `--into <bundle>`.
+1. Make sure a KB is active (`bokf get-active`); convert into it with `--into <bundle>`.
 2. Run **`bokf convert <path | --text "…">  --into <bundle> [--combined] --json`**. It writes
    `raw/<id>/{original.*, source.md, meta.yaml}` with a human-readable, **content-derived** id
    (title → slug; never a bare hash). A `.zip`/folder expands to **one source per member** (use
