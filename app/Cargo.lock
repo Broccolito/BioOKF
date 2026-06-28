@@ -293,7 +293,7 @@ dependencies = [
 
 [[package]]
 name = "biookf-studio"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "bokf-core",
  "portable-pty",
@@ -380,7 +380,7 @@ dependencies = [
 
 [[package]]
 name = "bokf-cli"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "anyhow",
  "bokf-core",
@@ -391,7 +391,7 @@ dependencies = [
 
 [[package]]
 name = "bokf-core"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "calamine",
  "dirs 5.0.1",
@@ -414,7 +414,7 @@ dependencies = [
 
 [[package]]
 name = "bokf-mcp"
-version = "0.2.0"
+version = "0.2.1"
 dependencies = [
  "anyhow",
  "bokf-core",
