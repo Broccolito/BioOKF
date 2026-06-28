@@ -132,7 +132,103 @@ pub struct ClassifyInput<'a> {
     pub online: bool,
 }
 
-// The `classify` waterfall is implemented in Task B8.
+/// Classify a source's origin and credibility with a deterministic-first waterfall:
+/// identifier extraction, then (when `online`) Crossref/OpenAlex DOI resolution, then URL host
+/// patterns, then a conservative text heuristic, then a default. Every branch here is
+/// deterministic and sets `classifier_version = 1`; an agentic fallback (version 2) is layered on
+/// by the calling skill when nothing deterministic fires.
+pub fn classify(input: &ClassifyInput) -> (SourceType, Credibility, SourceIds) {
+    let probe = format!(
+        "{} {} {}",
+        input.url.unwrap_or(""),
+        input.filename.unwrap_or(""),
+        input.body
+    );
+    let ids = identifiers::extract(&probe);
+
+    // 1. DOI resolution against the registries (online only). Crossref first, OpenAlex fallback.
+    if input.online {
+        if let Some(doi) = ids.doi.as_deref() {
+            let resolved = crossref::fetch(doi)
+                .and_then(|m| crossref::map_work(&m))
+                .or_else(|| openalex::fetch(doi).and_then(|m| openalex::map_work(&m)));
+            if let Some((st, tier, venue, publisher, retracted)) = resolved {
+                let allowlisted = publisher.as_deref().map(allowlist::is_allowlisted).unwrap_or(false);
+                let cred = Credibility {
+                    tier,
+                    confidence: if allowlisted { 0.95 } else { 0.85 },
+                    retracted,
+                    venue,
+                    publisher,
+                    reasoning: format!("registry resolved DOI {doi}"),
+                    classifier_version: 1,
+                };
+                return (st, cred, ids);
+            }
+        }
+    }
+
+    // 2. URL host patterns. A generic-web verdict can be upgraded by a DOI plus scholarly text.
+    if let Some(url) = input.url {
+        if let Some((st, tier, conf)) = host_patterns::classify_url(url) {
+            if matches!(tier, CredibilityTier::Web) {
+                if let Some((st2, tier2, conf2)) = text_signal::scholarly_text_signal(input.body, &ids) {
+                    let cred = Credibility {
+                        tier: tier2,
+                        confidence: conf2,
+                        retracted: false,
+                        venue: None,
+                        publisher: None,
+                        reasoning: "scholarly text over a generic web host".into(),
+                        classifier_version: 1,
+                    };
+                    return (st2, cred, ids);
+                }
+            }
+            let cred = Credibility {
+                tier,
+                confidence: conf,
+                retracted: false,
+                venue: None,
+                publisher: None,
+                reasoning: format!("host pattern for {url}"),
+                classifier_version: 1,
+            };
+            return (st, cred, ids);
+        }
+    }
+
+    // 3. Conservative scholarly text heuristic (files / pasted text with no resolvable DOI).
+    if let Some((st, tier, conf)) = text_signal::scholarly_text_signal(input.body, &ids) {
+        let cred = Credibility {
+            tier,
+            confidence: conf,
+            retracted: false,
+            venue: None,
+            publisher: None,
+            reasoning: "scholarly text signal".into(),
+            classifier_version: 1,
+        };
+        return (st, cred, ids);
+    }
+
+    // 4. Default: a web page when there is a URL/file, otherwise unattributed personal text.
+    let (st, tier, confidence, reasoning) = if input.url.is_some() || input.filename.is_some() {
+        (SourceType::WebPage, CredibilityTier::Web, 0.5, "no scholarly signal")
+    } else {
+        (SourceType::Personal, CredibilityTier::Unknown, 0.3, "no provenance")
+    };
+    let cred = Credibility {
+        tier,
+        confidence,
+        retracted: false,
+        venue: None,
+        publisher: None,
+        reasoning: reasoning.into(),
+        classifier_version: 1,
+    };
+    (st, cred, ids)
+}
 
 #[cfg(test)]
 mod tests {
@@ -153,5 +249,20 @@ mod tests {
         assert!(y.contains("tier: peer_reviewed"));
         let back: Credibility = serde_yaml::from_str(&y).unwrap();
         assert_eq!(c, back);
+    }
+
+    #[test]
+    fn classify_offline_uses_host_then_text() {
+        let inp = ClassifyInput {
+            url: Some("https://www.medrxiv.org/content/10.1101/2021.01.01.21249000v1"),
+            filename: None,
+            body: "",
+            online: false,
+        };
+        let (st, cred, ids) = classify(&inp);
+        assert!(matches!(st, SourceType::Preprint));
+        assert!(matches!(cred.tier, CredibilityTier::Preprint));
+        assert!(ids.doi.is_some());
+        assert_eq!(cred.classifier_version, 1);
     }
 }
