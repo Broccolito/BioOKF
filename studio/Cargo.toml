@@ -6,7 +6,15 @@ resolver = "2"
 edition = "2021"
 version = "0.1.0"
 license = "Apache-2.0"
-description = "BioOKF Studio — an MCP server, CLI, and visualizer for BioOKF knowledge bases"
+authors = [
+    "Wanjun Gu <wanjun.gu@ucsf.edu>",
+    "Gianmarco Bellucci",
+    "Ilan Ladabaum",
+    "James Xue",
+    "Jonathan Xue",
+    "Xi Zheng",
+]
+description = "BioOKF — an MCP server, CLI, and visualizer for BioOKF knowledge bases"
 
 [workspace.dependencies]
 serde = { version = "1.0", features = ["derive"] }

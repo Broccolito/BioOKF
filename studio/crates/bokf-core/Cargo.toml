@@ -3,6 +3,7 @@ name = "bokf-core"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
+authors.workspace = true
 description = "Core library for BioOKF: parse, normalize, graph, lint, and search a BioOKF bundle"
 
 [dependencies]

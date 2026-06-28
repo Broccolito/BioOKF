@@ -3,6 +3,7 @@ name = "bokf-cli"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
+authors.workspace = true
 description = "bokf — the BioOKF command-line tool (lint, graph, search, scaffold)"
 
 [[bin]]

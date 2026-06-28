@@ -3,6 +3,7 @@ name = "bokf-mcp"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
+authors.workspace = true
 description = "bokf-mcp — the BioOKF MCP server (stdio) that AI tools drive"
 
 [[bin]]

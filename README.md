@@ -79,3 +79,7 @@ graph (and vice-versa) with no remainder.
 *v0.5 (Draft), 2026-06-27. A community profile of OKF for biomedicine; not an official
 Google or UCSF product. See [SPEC.md §14](SPEC.md#14-changelog-and-deprecated-aliases) for the
 changelog.*
+
+## Authors
+
+Wanjun Gu (<wanjun.gu@ucsf.edu>), Gianmarco Bellucci, Ilan Ladabaum, James Xue, Jonathan Xue, and Xi Zheng.
