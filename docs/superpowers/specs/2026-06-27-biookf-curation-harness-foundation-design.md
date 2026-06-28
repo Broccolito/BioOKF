@@ -39,19 +39,19 @@ for.
 ## 2. SP0: Predicate reconciliation (23 → 24)
 
 ### Problem
-`schema.md` (authoritative per both workflow headers) defines **24** forward-only predicates: the
+`SCHEMA.md` (authoritative per both workflow headers) defines **24** forward-only predicates: the
 v0.1 to v0.4 core of 23 **plus `used_to_study`**. Current code encodes **23**, verified:
 `bokf-core/src/model.rs` `PREDICATES: [&str; 23]`, `bokf-core/src/lib.rs` asserts length 23, and no
 `UsedToStudy`/`used_to_study` token exists anywhere. Consequence today: a `used_to_study` edge
 parses to `Predicate::Unknown` and lints as `predicate.invalid` (Error), directly contradicting
-`schema.md` and the workflows. `SPEC.md` §6 also still says 23 ("unchanged"); `schema.md` wins.
+`SCHEMA.md` and the workflows. `SPEC.md` §6 also still says 23 ("unchanged"); `SCHEMA.md` wins.
 
 ### Changes
 1. **`bokf-core/src/model.rs`**: add `Predicate::UsedToStudy`; grow `PREDICATES` to `[&str; 24]`
    inserting `"used_to_study"` in canonical order (between `associated_with` and `reported_in`);
    add the `parse()` and `as_str()` arms. `used_to_study` is **not** symmetric.
 2. **`bokf-core/src/lib.rs`**: update the compile/test assertion from `== 23` to `== 24`.
-3. **Domain/range** (`lint.rs` domain/range checker): add `used_to_study` from `schema.md`:
+3. **Domain/range** (`lint.rs` domain/range checker): add `used_to_study` from `SCHEMA.md`:
    - **Domain:** `MethodOrProcedure`, `Study`, `Dataset`, `Device`, `Organism`, `CellType`,
      `MaterialSample`.
    - **Range:** `Disease`, `Phenotype`, `BiologicalPathway`, `BiologicalFunction`, `Gene`,
@@ -64,7 +64,7 @@ parses to `Predicate::Unknown` and lints as `predicate.invalid` (Error), directl
    `bokf_core::PREDICATES`/`NODE_TYPES` constants. This is the **single source of truth**: skills
    (authoring side) and the validator (checking side) both read it, so they can never disagree on
    the count.
-6. **Changelog**: record in `schema.md`/`SPEC.md` that the predicate set is reconciled to 24
+6. **Changelog**: record in `SCHEMA.md`/`SPEC.md` that the predicate set is reconciled to 24
    (note `SPEC.md` §6 was the stale side).
 
 ### Acceptance
@@ -104,7 +104,7 @@ new libgit2/C dependency, `GitRepo` shells out to the system `git` binary via
   branch; `commit_txn` **squash-merges** onto the main branch as one commit (so a 10-to-15-page ingest
   becomes a single history entry); `abort_txn` discards the branch.
 - **`.gitignore`**: `raw/**/original.*` (immutable source bytes are not version-controlled);
-  derived `raw/**/source.md` + `meta.yaml`, all of `knowledge/`, `index.md`, `log.md`, `schema.md`
+  derived `raw/**/source.md` + `meta.yaml`, all of `knowledge/`, `index.md`, `log.md`, `SCHEMA.md`
   **are** committed.
 
 **`bokf-core/src/types`, `ChangeKind`** (serde `snake_case`, exactly 8 variants):

@@ -8,7 +8,7 @@ description: Use to merge a Secondary KB (SKB) onto a canonical Main KB (MKB): c
 Merge an SKB **onto** the MKB. The **MKB is canonical** (it is the active KB): its identifiers, file
 paths, `raw/` locations, and subtype names **win on every collision**; the SKB side is the one
 renamed/moved/collapsed. **Lose no information, break no links.** (Follow `Merge_KBs_WF.md` +
-`schema.md` + `docs/04`.)
+`SCHEMA.md` + `docs/04`.)
 
 ## Loop
 1. `bokf set-active <root> <mkb-id>`; pass the SKB path explicitly (this encodes MKB-is-canonical).

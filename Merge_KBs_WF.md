@@ -7,13 +7,13 @@
 > on every collision. The SKB is the side that gets renamed, moved, or collapsed.
 >
 > **Primary references** (adhere to them, as in ingestion):
-> [`schema.md`](../Repo/schema.md) (the operating doc: 28 node types, 24 edge predicates,
+> [`SCHEMA.md`](../Repo/SCHEMA.md) (the operating doc: 28 node types, 24 edge predicates,
 > provenance rules) and
 > [`docs/04-classification_guidelines.md`](../Repo/docs/04-classification_guidelines.md) (identity
 > vs role, the facet rules) for judging when two entities are truly the same concept.
 >
-> **Note on the predicate set.** As in ingestion, follow `schema.md`'s **24** positive predicates +
-> **11** `not_<X>` negatives (**35 total**); `SPEC.md` §6 still lists the v0.4 core, and `schema.md` is
+> **Note on the predicate set.** As in ingestion, follow `SCHEMA.md`'s **24** positive predicates +
+> **11** `not_<X>` negatives (**35 total**); `SPEC.md` §6 still lists the v0.4 core, and `SCHEMA.md` is
 > authoritative.
 
 ## Governing rules (apply throughout)

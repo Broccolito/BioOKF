@@ -10,7 +10,7 @@
 
 ## Global Constraints
 
-- Predicate set is **24** (`schema.md` authoritative): the 23 core **+ `used_to_study`**. One source of truth: `bokf_core::model::PREDICATES`.
+- Predicate set is **24** (`SCHEMA.md` authoritative): the 23 core **+ `used_to_study`**. One source of truth: `bokf_core::model::PREDICATES`.
 - `log.md` headings stay **`## YYYY-MM-DD`** (newest-first); kind/summary/delta go in the body.
 - Version tracking shells out to system **`git`**, with **no `git2`** dependency. Preflight errors clearly if `git` is absent.
 - **`log_sync` is the sole step-committer** (log.md append + commit, atomic). The lower-level `bokf commit` is for non-logged lifecycle commits only. There is **no** per-tool auto-commit.

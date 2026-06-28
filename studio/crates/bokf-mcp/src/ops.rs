@@ -12,9 +12,9 @@ fn writable_path(bundle: &Path, page: &str) -> Result<PathBuf, String> {
         return Err("path traversal ('..') is not allowed".into());
     }
     let allowed = page.starts_with("knowledge/")
-        || matches!(page, "index.md" | "log.md" | "schema.md" | "README.md");
+        || matches!(page, "index.md" | "log.md" | "schema.md" | "SCHEMA.md" | "README.md");
     if !allowed {
-        return Err("page must be under knowledge/ or one of index.md/log.md/schema.md".into());
+        return Err("page must be under knowledge/ or one of index.md/log.md/SCHEMA.md".into());
     }
     Ok(bundle.join(page))
 }
@@ -128,8 +128,8 @@ pub fn scaffold(bundle: &Path, name: &str) -> Result<String, String> {
     )?;
     write_absent("log.md", format!("# Change log: {name}\n"))?;
     write_absent(
-        "schema.md",
-        "# BioOKF operating schema (v0.5)\n\n28 node types, 24 forward-only predicates. See the canonical schema.md.\n".to_string(),
+        "SCHEMA.md",
+        "# BioOKF operating schema (v0.5)\n\n28 node types, 35 forward-only predicates (24 positive + 11 negative). See the canonical SCHEMA.md.\n".to_string(),
     )?;
 
     // version-track + register + activate the new bundle (mirror the CLI).

@@ -130,7 +130,7 @@ OKF bundle (Markdown tree, YAML frontmatter, non-empty `type`, optional `index.m
 | Cross-document links | untyped Markdown links; relationship lives in prose | **typed edges** (`edges:` frontmatter) from a closed set of 23 predicates (§6); prose links remain legal as advisory "see also"                    |
 | Attributes           | only `type` required; others recommended            | per-type **required vs optional** attributes; edges require a provenance triplet (§7-8)                                                            |
 | Identifiers          | optional `resource` URI                             | a single human-readable, bundle-unique **`identifier`** (merges name + id; required); equivalent **external** CURIEs optional in `xref` (§7.1, §9) |
-| Reserved files       | `index.md`, `log.md`                                | **same**, plus an optional `schema.md` operating doc                                                                                               |
+| Reserved files       | `index.md`, `log.md`                                | **same**, plus an optional `SCHEMA.md` operating doc                                                                                               |
 | Consumer behavior    | MUST tolerate unknown types / broken links          | MUST tolerate broken links; **SHOULD validate** `type`/`predicate` against the universes and flag (not silently accept) unknowns                   |
 
 BioOKF also operationalizes Andrej Karpathy's **LLM Wiki** pattern (the gist OKF itself
@@ -140,7 +140,7 @@ cites). Its three layers and three operations map directly onto BioOKF:
 
 - **Wiki layer** → `knowledge/` (LLM-authored typed concept documents = the graph).
 
-- **Schema layer** → `schema.md` (the operating doc telling the agent the BioOKF
+- **Schema layer** → `SCHEMA.md` (the operating doc telling the agent the BioOKF
 conventions and the ingest/query/lint workflows).
 
 - **Operations** → ingest, query, lint (§10), specialized for biomedicine.
@@ -162,7 +162,7 @@ A BioOKF bundle is a directory (recommended: a Git repository). Reserved layout:
 
 ```
 my-kb/
-├── schema.md          # (recommended) the operating doc: conventions + workflows for the agent
+├── SCHEMA.md          # (recommended) the operating doc: conventions + workflows for the agent
 ├── index.md           # (reserved) progressive-disclosure catalog of all concept pages
 ├── log.md             # (reserved) newest-first dated change history
 ├── raw/               # immutable source material (the LLM reads, never edits)
@@ -181,7 +181,7 @@ my-kb/
     └── ...
 ```
 
-- **Reserved filenames** `index.md` and `log.md` (and the recommended `schema.md`) are
+- **Reserved filenames** `index.md` and `log.md` (and the recommended `SCHEMA.md`) are
 **not** concept documents and carry no `type`. Every other `*.md` file is a concept.
 
 - **Concept identifier** = each concept's `identifier` frontmatter field (§7.1): a
@@ -470,10 +470,10 @@ file/matrix/collection* is a `Dataset`.
 
 ---
 
-## 6\. The EDGE universe (24 positive + 11 negative `not_<X>` = 35; `schema.md` authoritative)
+## 6\. The EDGE universe (24 positive + 11 negative `not_<X>` = 35; `SCHEMA.md` authoritative)
 
 Cross-document relationships are **typed edges**. The v0.4 core **23** are tabulated below;
-`schema.md` (authoritative, implemented in `bokf-core`) extends these to **24 positive** (adds
+`SCHEMA.md` (authoritative, implemented in `bokf-core`) extends these to **24 positive** (adds
 `used_to_study`) and adds **11 `not_<X>` negatives** for the negatable effect predicates
 (**35 total**). The core 23 are organized under the five **UMLS super-relation families**
 (the canonical finite-but-exhaustive relation backbone). Direction is **subject (host
@@ -757,7 +757,7 @@ source by its `identifier`. See [§8.1](#81-provenance-is-node-based-v05).
 
 ## 10\. The ingest / query / lint workflow
 
-BioOKF specializes the LLM Wiki's three operations. An agent following `schema.md` runs:
+BioOKF specializes the LLM Wiki's three operations. An agent following `SCHEMA.md` runs:
 
 ### Ingest
 
@@ -1045,7 +1045,7 @@ predicates; every refinement is a domain/range extension or an attribute.
 - **`used_to_study` added** (24th positive predicate) and **11 `not_<X>` negatives** for the
   negatable effect predicates (`binds`, `interacts_with`, `causes`, `predisposes_to`, `prevents`,
   `treats`, `affects_response_to`, `associated_with`, `expressed_in`, `regulates`, `has_phenotype`)
-  → **35 predicates**. `schema.md` and `bokf-core` are authoritative; §6's table above still
+  → **35 predicates**. `SCHEMA.md` and `bokf-core` are authoritative; §6's table above still
   enumerates the v0.4 core 23. A legacy `negated: true` qualifier normalizes to `not_<X>` on read.
   Negating a non-negatable (structural/provenance) predicate is rejected (`edge.not_negatable`).
 

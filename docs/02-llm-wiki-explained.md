@@ -29,7 +29,7 @@ cost of keeping a wiki current drops toward zero.
 | **Wiki** | LLM-generated Markdown: summaries, **entity pages**, **concept pages**, comparisons, overviews, fully cross-referenced. | The **LLM** owns this entirely. |
 | **Schema** | A config doc (à la `CLAUDE.md`) describing the wiki's structure, conventions, and the workflows to follow. | The human + LLM agree on it. |
 
-BioOKF maps these to `raw/`, `knowledge/`, and `schema.md` respectively
+BioOKF maps these to `raw/`, `knowledge/`, and `SCHEMA.md` respectively
 ([SPEC.md §2](../SPEC.md#2-relationship-to-okf-and-to-the-llm-wiki)).
 
 ## 3. The three operations (universal)
@@ -72,7 +72,7 @@ concrete version with your agent. OKF made one such instantiation (generic, open
 
 | Universal LLM-Wiki step | Kept verbatim in BioOKF? | BioOKF specialization |
 |---|---|---|
-| Raw / Wiki / Schema layers | ✅ | `raw/` · `knowledge/` · `schema.md` |
+| Raw / Wiki / Schema layers | ✅ | `raw/` · `knowledge/` · `SCHEMA.md` |
 | Ingest: read → summarize → write/update pages → update index → log | ✅ | each page is one of **20 typed biomedical nodes**; a `Publication`/`Study`/`Dataset` node is created for the source; every claim gets a `reported_in` provenance edge |
 | Entity pages + concept pages | ✅ (becomes the node) | entity = a typed node; its `type` is controlled |
 | Cross-references between pages | ⛌ → **typed** | links become **23 typed, attributed edges** with domain/range and a provenance triplet |

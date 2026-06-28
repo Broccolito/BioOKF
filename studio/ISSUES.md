@@ -54,7 +54,7 @@
   `produces` (β-cell → Insulin) or `activates` (DAG → PKCε) and had to fall back to
   `catalyzes`/`participates_in`/`regulates`, which don't fit cleanly. The 23 forward predicates may
   have a genuine gap for a generic "gives rise to / secretes" relation.
-- **`affects_response_to` domain/range is undocumented** in schema.md's domain/range notes; agents
+- **`affects_response_to` domain/range is undocumented** in SCHEMA.md's domain/range notes; agents
   guessed `Variant`/`Gene`/`BiomedicalMeasure → Molecule` (pharmacogenomics). Worth documenting.
 - **Provenance granularity.** A review cites many primary studies (e.g. *Head et al. 2022*), but
   ingesting "the review" naturally yields one `primary_source` (the review) for every edge, so

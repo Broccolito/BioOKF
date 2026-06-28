@@ -1,5 +1,5 @@
 //! The MCP `instructions` block: the agent-facing operating brief. Mirrors how
-//! BioRouter prepends `schema.md + --- + <PROCEDURE>`; here the essentials are
+//! BioRouter prepends `SCHEMA.md + --- + <PROCEDURE>`; here the essentials are
 //! embedded so any client (Claude/Codex) knows the BioOKF v0.5 rules and the
 //! ingest / query / lint loops without extra round-trips.
 

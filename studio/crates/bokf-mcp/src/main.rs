@@ -36,7 +36,7 @@ param!(ReadParam {
 });
 param!(WriteParam {
     #[doc = "Path to the bundle directory."] bundle: String,
-    #[doc = "Page path under knowledge/ (or index.md/log.md/schema.md). raw/ is read-only."] page: String,
+    #[doc = "Page path under knowledge/ (or index.md/log.md/SCHEMA.md). raw/ is read-only."] page: String,
     #[doc = "Full file content (YAML frontmatter + Markdown body for concept docs)."] content: String,
 });
 param!(ValidateParam { #[doc = "Full concept-document content to validate (not written)."] content: String });
@@ -145,7 +145,7 @@ impl BokfServer {
         from_result(ops::list_bases(Path::new(&p.0.root)).map(|v| v.join("\n")))
     }
 
-    #[tool(name = "bokf_scaffold", description = "Create an empty BioOKF bundle (raw/, knowledge/, index.md, log.md, schema.md).")]
+    #[tool(name = "bokf_scaffold", description = "Create an empty BioOKF bundle (raw/, knowledge/, index.md, log.md, SCHEMA.md).")]
     pub async fn scaffold(&self, p: Parameters<ScaffoldParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
         let name = p.0.name.unwrap_or_else(|| "Untitled knowledge base".to_string());
         from_result(ops::scaffold(Path::new(&p.0.bundle), &name))

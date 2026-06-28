@@ -7,7 +7,7 @@
 > the human's.
 >
 > **Primary references (read these first; this workflow does not restate them):**
-> - [`schema.md`](../Repo/schema.md), the operating doc: the 28 node types, the 24 edge
+> - [`SCHEMA.md`](../Repo/SCHEMA.md), the operating doc: the 28 node types, the 24 edge
 >   predicates, required fields, domain/range notes, provenance rules. **Adhere to everything in it.**
 > - [`docs/04-classification_guidelines.md`](../Repo/docs/04-classification_guidelines.md), the
 >   classification tiebreakers (TB-1 disambiguate-by-use, TB-2 identity-over-role, TB-3
@@ -15,9 +15,9 @@
 >   deciding any ambiguous type.**
 > - [`SPEC.md`](../Repo/SPEC.md), the normative format when the operating doc is silent.
 >
-> **Note on the predicate set.** Follow `schema.md`: **24** positive predicates (the v0.1 to v0.4 core
+> **Note on the predicate set.** Follow `SCHEMA.md`: **24** positive predicates (the v0.1 to v0.4 core
 > of 23 plus `used_to_study`) **plus 11 `not_<X>` negatives** for the negatable effect predicates
-> (**35 total**). `SPEC.md` §6 still enumerates the v0.4 core; **`schema.md` is authoritative for
+> (**35 total**). `SPEC.md` §6 still enumerates the v0.4 core; **`SCHEMA.md` is authoritative for
 > this workflow** (it is the implemented set in `bokf-core`).
 
 ## Operating principles (apply throughout)
@@ -84,7 +84,7 @@ concepts*, it is an **edge** (Step 3), not a node.
 
 ### 2.2 For each entity: classify, deduplicate, then write
 
-1. **Classify the `type`** (one of the 28) using the `schema.md` cheatsheet and the `docs/04`
+1. **Classify the `type`** (one of the 28) using the `SCHEMA.md` cheatsheet and the `docs/04`
    tiebreakers, especially TB-1 (a word whose referent changes → classify by use here), the
    Disease vs Phenotype vs BiomedicalMeasure trio (one node per facet, linked by edges), and the
    §5.D boundary tests. When genuinely nothing fits, `Other` + a `note:`, but never invent a type.
@@ -137,7 +137,7 @@ new ones (create a target node only when the object is a legitimate entity that 
    express a reverse relation, author the **forward** edge on the *other* node (a gene's `encodes`,
    never a protein's `encoded_by`; `causes`, never `caused_by`).
 
-2. **`predicate`** is one of the **24** (schema.md). **`object`** is the **target node's
+2. **`predicate`** is one of the **24** (SCHEMA.md). **`object`** is the **target node's
    `identifier`** and must resolve to a real node. If the right target does not exist yet, create
    it per Step 2. Never bend the `object` onto a wrong existing node to avoid creating one.
 
@@ -153,7 +153,7 @@ new ones (create a target node only when the object is a legitimate entity that 
    (e.g. an ecological `associated_with` whose role is `natural_reservoir`), carry it in the edge's
    `subtype`, only when the bare predicate is already correct on its own.
 
-6. **Respect domain/range** (schema.md "Edges: domain/range notes"), e.g. `treats`/`prevents` →
+6. **Respect domain/range** (SCHEMA.md "Edges: domain/range notes"), e.g. `treats`/`prevents` →
    `Disease`/`Phenotype`; `member_of` → `MolecularClass`; `used_to_study` runs from the investigative
    resource → the entity under study.
 
@@ -168,7 +168,7 @@ new ones (create a target node only when the object is a legitimate entity that 
 
 ## Step 4: Self-review checklist
 
-Verify the run against every reference document, and confirm **no BioOKF principle in `schema.md`
+Verify the run against every reference document, and confirm **no BioOKF principle in `SCHEMA.md`
 is violated**. Walk this checklist and **fix anything that fails, then re-check**:
 
 **Source & provenance**

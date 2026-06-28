@@ -42,7 +42,7 @@ enum Cmd {
     },
     /// Summary statistics: node/edge counts by type/predicate.
     Stats { path: PathBuf },
-    /// Scaffold an empty BioOKF bundle (raw/, knowledge/, index.md, log.md, schema.md).
+    /// Scaffold an empty BioOKF bundle (raw/, knowledge/, index.md, log.md, SCHEMA.md).
     Scaffold {
         path: PathBuf,
         #[arg(long, default_value = "Untitled knowledge base")]
@@ -529,7 +529,7 @@ fn cmd_stats(path: PathBuf) -> Result<()> {
     }
     println!("Bundle: {}", path.display());
     println!("  {} nodes, {} edges", bundle.nodes.len(), edge_count);
-    println!("  reserved: index.md={} log.md={} schema.md={}", bundle.has_index_md, bundle.has_log_md, bundle.has_schema_md);
+    println!("  reserved: index.md={} log.md={} SCHEMA.md={}", bundle.has_index_md, bundle.has_log_md, bundle.has_schema_md);
     if !bundle.parse_errors.is_empty() {
         println!("  parse errors: {}", bundle.parse_errors.len());
     }
@@ -553,8 +553,8 @@ fn cmd_scaffold(path: PathBuf, name: String) -> Result<()> {
     write_if_absent(&path.join("index.md"), &index)?;
     write_if_absent(&path.join("log.md"), &format!("# Change log: {name}\n"))?;
     write_if_absent(
-        &path.join("schema.md"),
-        "# BioOKF operating schema (v0.5)\n\nSee the canonical schema.md for the 28 node types and 24 predicates.\n",
+        &path.join("SCHEMA.md"),
+        "# BioOKF operating schema (v0.5)\n\nSee the canonical SCHEMA.md for the 28 node types and 35 predicates (24 positive + 11 negative).\n",
     )?;
 
     // version-track + register + activate the new bundle (so the first post-scaffold
