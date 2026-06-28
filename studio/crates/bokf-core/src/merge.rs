@@ -131,8 +131,8 @@ pub fn verify_snapshot(root: &Path, current: &Bundle) -> Result<Vec<String>, Str
     let mut issues = Vec::new();
     for (id, path) in &snap.identifiers {
         match cur.get(id) {
-            None => issues.push(format!("MKB identifier `{id}` was removed/renamed — not allowed in a merge")),
-            Some(p) if p != path => issues.push(format!("MKB identifier `{id}` moved `{path}` → `{p}` — MKB paths must stay stable")),
+            None => issues.push(format!("MKB identifier `{id}` was removed/renamed; not allowed in a merge")),
+            Some(p) if p != path => issues.push(format!("MKB identifier `{id}` moved `{path}` → `{p}`; MKB paths must stay stable")),
             _ => {}
         }
     }

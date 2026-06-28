@@ -81,19 +81,19 @@ pub fn convert_bytes(ext: &str, filename: &str, bytes: &[u8]) -> Converted {
         "docx" => office_to_md(bytes, "word/document.xml", "</w:p>", None).unwrap_or_else(|e| Converted { markdown: format!("> docx conversion failed: {e}\n"), title: String::new(), format: "docx".into(), needs_llm_fallback: true }),
         "pptx" => pptx_to_md(bytes).unwrap_or_else(|e| Converted { markdown: format!("> pptx conversion failed: {e}\n"), title: String::new(), format: "pptx".into(), needs_llm_fallback: true }),
         "pdf" => Converted {
-            markdown: format!("> **PDF source — needs OCR/LLM extraction.** `{filename}` was stored verbatim under `raw/`; produce a faithful Markdown rendering in the next step.\n"),
+            markdown: format!("> **PDF source: needs OCR/LLM extraction.** `{filename}` was stored verbatim under `raw/`; produce a faithful Markdown rendering in the next step.\n"),
             title: String::new(),
             format: "pdf".into(),
             needs_llm_fallback: true,
         },
         _ => {
             // Unknown format: keep a best-effort text extract, but ALWAYS flag for the LLM to
-            // render the original faithfully — by the end every source must be complete Markdown.
+            // render the original faithfully; by the end every source must be complete Markdown.
             let lossy = String::from_utf8_lossy(bytes);
             let snippet: String = lossy.chars().take(8000).collect();
             Converted {
                 markdown: format!(
-                    "Unknown format `.{ext}` (`{filename}`) — best-effort text extract below; the agent must read `original.*` and render ALL content faithfully to Markdown.\n\n```\n{}\n```\n",
+                    "Unknown format `.{ext}` (`{filename}`): best-effort text extract below; the agent must read `original.*` and render ALL content faithfully to Markdown.\n\n```\n{}\n```\n",
                     snippet.trim_end()
                 ),
                 title: String::new(),
@@ -412,7 +412,7 @@ fn hash_bytes(bytes: &[u8]) -> String {
     format!("{:x}", h.finalize())
 }
 
-/// `<title-slug>-<6 hex>` — content-derived and human-readable, never a bare hash.
+/// `<title-slug>-<6 hex>`: content-derived and human-readable, never a bare hash.
 fn new_source_id(title: &str, sha: &str) -> String {
     let s = slug(title);
     let base = if s.is_empty() { "source".to_string() } else { s };

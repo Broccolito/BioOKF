@@ -1,4 +1,4 @@
-//! `bokf` — the BioOKF command-line tool. Thin wrapper over `bokf-core`; this is
+//! `bokf`, the BioOKF command-line tool. Thin wrapper over `bokf-core`; this is
 //! the primary terminal surface an AI agent (or human) drives.
 
 use anyhow::{Context, Result};
@@ -296,7 +296,7 @@ fn cmd_verify(path: PathBuf, workflow: Option<String>, json: bool) -> Result<()>
         println!("{}", serde_json::to_string_pretty(&v)?);
     } else {
         println!(
-            "verify [{wf}]: {} — {} errors · {} warnings · {} infos (index.md={}, log.md={})",
+            "verify [{wf}]: {} ({} errors, {} warnings, {} infos; index.md={}, log.md={})",
             if ok { "PASS" } else { "FAIL" },
             report.errors(),
             report.warnings(),
@@ -335,7 +335,7 @@ fn cmd_get_active(root: PathBuf, json: bool) -> Result<()> {
             if json {
                 println!("{}", serde_json::json!({ "id": null }));
             } else {
-                println!("(no active KB — run `bokf set-active`)");
+                println!("(no active KB; run `bokf set-active`)");
             }
         }
     }
@@ -363,7 +363,7 @@ fn cmd_register(root: PathBuf, kb_id: Option<String>, path: Option<PathBuf>, lis
 fn cmd_log_sync(path: PathBuf, kind: String, summary: String, delta: Option<String>) -> Result<()> {
     let sha = bokf_core::log_sync::log_sync(&path, ChangeKind::parse(&kind), &summary, delta.as_deref(), &today_iso())
         .map_err(anyhow::Error::msg)?;
-    eprintln!("[{}] {} — {}", kind, summary, &sha[..8.min(sha.len())]);
+    eprintln!("[{}] {}: {}", kind, summary, &sha[..8.min(sha.len())]);
     Ok(())
 }
 
@@ -416,9 +416,9 @@ fn cmd_validate(file: PathBuf) -> Result<()> {
     let content = std::fs::read_to_string(&file).with_context(|| format!("reading {}", file.display()))?;
     let v = bokf_core::validate::validate_doc(&content);
     if v.valid {
-        println!("VALID — type={} identifier={:?} {} edge(s)", v.node_type, v.identifier, v.edge_count);
+        println!("VALID: type={} identifier={:?} {} edge(s)", v.node_type, v.identifier, v.edge_count);
     } else {
-        println!("INVALID — type={} identifier={:?}", v.node_type, v.identifier);
+        println!("INVALID: type={} identifier={:?}", v.node_type, v.identifier);
     }
     for issue in &v.issues {
         println!("  - {issue}");
@@ -437,7 +437,7 @@ fn cmd_get(path: PathBuf, identifier: String) -> Result<()> {
             Ok(())
         }
         None => {
-            eprintln!("not found: `{identifier}` (no node with this identifier — safe to create a new one)");
+            eprintln!("not found: `{identifier}` (no node with this identifier; safe to create a new one)");
             std::process::exit(1);
         }
     }
@@ -551,7 +551,7 @@ fn cmd_scaffold(path: PathBuf, name: String) -> Result<()> {
         "# {name}\n\n> BioOKF bundle index (catalog of concept pages).\n\nokf_version: 0.5\nbiookf_version: 0.5\n"
     );
     write_if_absent(&path.join("index.md"), &index)?;
-    write_if_absent(&path.join("log.md"), &format!("# Change log — {name}\n"))?;
+    write_if_absent(&path.join("log.md"), &format!("# Change log: {name}\n"))?;
     write_if_absent(
         &path.join("schema.md"),
         "# BioOKF operating schema (v0.5)\n\nSee the canonical schema.md for the 28 node types and 24 predicates.\n",

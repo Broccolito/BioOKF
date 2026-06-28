@@ -101,7 +101,7 @@ fn get<'a>(m: &'a serde_yaml::Mapping, key: &str) -> Option<&'a Yaml> {
 }
 
 /// Parse YAML frontmatter, retrying with a repair pass if strict parsing fails.
-/// The repair quotes plain scalar values that contain an unescaped `": "` — the
+/// The repair quotes plain scalar values that contain an unescaped `": "`, the
 /// single most common LLM-authoring mistake (e.g. `description: A: B`).
 fn parse_yaml_lenient(fm: &str) -> Result<Yaml, serde_yaml::Error> {
     match serde_yaml::from_str(fm) {
@@ -294,7 +294,7 @@ fn parse_edge(item: &Yaml) -> Option<Edge> {
     }
 
     // negation: a `not_<X>` predicate (parsed above) OR a legacy `negated: true`
-    // qualifier on a negatable positive — both normalize to the canonical `not_<X>`.
+    // qualifier on a negatable positive: both normalize to the canonical `not_<X>`.
     let negated_flag = get(m, "negated").and_then(|v| v.as_bool()).unwrap_or(false);
     let mut predicate = parsed.predicate;
     if negated_flag {

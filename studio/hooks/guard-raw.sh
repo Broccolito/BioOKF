@@ -6,7 +6,7 @@ input=$(cat)
 path=$(printf '%s' "$input" | jq -r '.tool_input.file_path // .tool_input.path // empty' 2>/dev/null)
 case "$path" in
   */raw/*/original.*|*/raw/original.*)
-    echo "BioOKF guardrail: raw/ originals are immutable — never edit ingested source bytes. Render to source.md via bokf_convert instead." >&2
+    echo "BioOKF guardrail: raw/ originals are immutable; never edit ingested source bytes. Render to source.md via bokf_convert instead." >&2
     exit 2
     ;;
 esac

@@ -54,7 +54,7 @@ impl LintReport {
 }
 
 fn looks_like_bare_curie(id: &str) -> bool {
-    // e.g. "HGNC:6018", "MONDO:0100096", "infores:hgnc" — a colon, no spaces.
+    // e.g. "HGNC:6018", "MONDO:0100096", "infores:hgnc": a colon, no spaces.
     id.contains(':') && !id.contains(' ') && !id.contains('(')
 }
 
@@ -144,7 +144,7 @@ pub fn lint(bundle: &Bundle) -> LintReport {
                     Severity::Warn,
                     "type.path_mismatch",
                     &n.identifier,
-                    format!("node typed `{}` is filed under `{dir_l}/` — type and directory disagree (possible misclassification)", n.node_type.as_str()),
+                    format!("node typed `{}` is filed under `{dir_l}/`; type and directory disagree (possible misclassification)", n.node_type.as_str()),
                     path.clone(),
                 );
             }
@@ -210,14 +210,14 @@ pub fn lint(bundle: &Bundle) -> LintReport {
     // --- index.md currency ---
     if bundle.has_index_md {
         for id in crate::index::missing_from_index(bundle) {
-            r.push(Severity::Warn, "index.stale", &id, "identifier is not registered in index.md — run `bokf index`".to_string(), None);
+            r.push(Severity::Warn, "index.stale", &id, "identifier is not registered in index.md; run `bokf index`".to_string(), None);
         }
     }
 
     r
 }
 
-/// Flag any `raw/<id>/source.md` that still carries the needs-conversion marker — i.e. an
+/// Flag any `raw/<id>/source.md` that still carries the needs-conversion marker, i.e. an
 /// unknown/binary source the agent has not yet rendered to faithful Markdown.
 fn lint_raw_conversion(r: &mut LintReport, bundle: &Bundle) {
     let raw = bundle.root.join("raw");
@@ -243,7 +243,7 @@ fn lint_raw_conversion(r: &mut LintReport, bundle: &Bundle) {
 }
 
 /// Within each node type, flag distinct `subtype` tokens that normalize to the same
-/// form (e.g. `protein_coding` vs `protein-coding` vs `ProteinCoding`) — merge candidates.
+/// form (e.g. `protein_coding` vs `protein-coding` vs `ProteinCoding`), merge candidates.
 fn lint_similar_subtypes(r: &mut LintReport, bundle: &Bundle) {
     use std::collections::{BTreeMap, BTreeSet};
     let norm = |s: &str| -> String { s.chars().filter(|c| c.is_ascii_alphanumeric()).map(|c| c.to_ascii_lowercase()).collect() };
@@ -266,7 +266,7 @@ fn lint_similar_subtypes(r: &mut LintReport, bundle: &Bundle) {
                     Severity::Info,
                     "subtype.similar",
                     &ty,
-                    format!("type `{ty}` uses near-duplicate subtypes {list:?} — consider merging to one canonical token"),
+                    format!("type `{ty}` uses near-duplicate subtypes {list:?}; consider merging to one canonical token"),
                     None,
                 );
             }
@@ -293,7 +293,7 @@ fn lint_edge(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, path: &Opt
             Severity::Error,
             "edge.not_negatable",
             subj,
-            format!("`{}` is not a negatable predicate — only effect predicates (treats, causes, binds, associated_with, expressed_in, regulates, has_phenotype, …) may be negated", e.predicate.as_str()),
+            format!("`{}` is not a negatable predicate: only effect predicates (treats, causes, binds, associated_with, expressed_in, regulates, has_phenotype, …) may be negated", e.predicate.as_str()),
             path.clone(),
         );
     }
@@ -357,8 +357,8 @@ fn lint_edge(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, path: &Opt
     }
 }
 
-/// True when an identifier is a bare measurement value (e.g. `183 cm`, `2.9`, `45%`) — edge
-/// data masquerading as a node. Conservative: requires a leading number and at most a 1–3 letter
+/// True when an identifier is a bare measurement value (e.g. `183 cm`, `2.9`, `45%`): edge
+/// data masquerading as a node. Conservative: requires a leading number and at most a 1 to 3 letter
 /// (or `%`) unit, so real entities like `2-AG`, `5-HT`, `TP53` are not flagged.
 fn looks_like_measurement_value(id: &str) -> bool {
     let s = id.trim();

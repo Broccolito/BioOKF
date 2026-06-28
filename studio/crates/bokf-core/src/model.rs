@@ -1,5 +1,6 @@
-//! BioOKF v0.5 data model: the 28 controlled node types, 23 forward-only edge
-//! predicates, the provenance enums, and the in-memory `Node` / `Edge` structs.
+//! BioOKF v0.5 data model: the 28 controlled node types, 35 forward-only edge
+//! predicates (24 positive + 11 negative), the provenance enums, and the in-memory
+//! `Node` / `Edge` structs.
 
 use serde::{Deserialize, Serialize};
 use std::collections::BTreeMap;
@@ -260,7 +261,7 @@ pub const PREDICATES: [&str; 35] = [
     "interacts_with", "binds", "regulates", "catalyzes", "converts_to", "participates_in", "causes",
     "predisposes_to", "treats", "prevents", "contraindicated_in", "affects_response_to",
     "has_phenotype", "measures", "associated_with", "used_to_study", "reported_in",
-    // negative (polarity) predicates — canonical `not_<X>` for the 11 negatable predicates
+    // negative (polarity) predicates: canonical `not_<X>` for the 11 negatable predicates
     "not_binds", "not_interacts_with", "not_causes", "not_predisposes_to", "not_prevents",
     "not_treats", "not_affects_response_to", "not_associated_with", "not_expressed_in",
     "not_regulates", "not_has_phenotype",

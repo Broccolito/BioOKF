@@ -1,4 +1,4 @@
-//! bokf-mcp — the BioOKF MCP server (stdio). Exposes thin, idempotent primitives
+//! bokf-mcp: the BioOKF MCP server (stdio). Exposes thin, idempotent primitives
 //! over `bokf-core` that an AI client (Claude/Codex) drives to ingest, query, and
 //! lint BioOKF bundles. The Tauri GUI and CLI are alternate front-ends over the
 //! same `bokf-core`; this server is the agentic backbone.

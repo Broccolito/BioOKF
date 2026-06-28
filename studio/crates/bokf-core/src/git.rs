@@ -75,7 +75,7 @@ impl GitRepo {
     pub fn preflight() -> Result<(), String> {
         match Command::new("git").arg("--version").output() {
             Ok(o) if o.status.success() => Ok(()),
-            _ => Err("`git` not found on PATH — install git to enable BioOKF version tracking".into()),
+            _ => Err("`git` not found on PATH; install git to enable BioOKF version tracking".into()),
         }
     }
 

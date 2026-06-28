@@ -40,14 +40,14 @@ pub fn write_page(bundle: &Path, page: &str, content: &str) -> Result<String, St
     if page.starts_with("knowledge/") {
         match parse_node(content, Path::new(page)) {
             Ok(n) => Ok(format!(
-                "wrote {page} — parsed OK: type={}, identifier={:?}, {} edge(s){}",
+                "wrote {page}; parsed OK: type={}, identifier={:?}, {} edge(s){}",
                 n.node_type.as_str(),
                 n.identifier,
                 n.edges.len(),
                 if n.node_type.is_valid() { "" } else { "  [WARNING: invalid type]" }
             )),
             Err(e) => Ok(format!(
-                "wrote {page} — but it does NOT parse as a valid concept document: {e}. Fix and rewrite."
+                "wrote {page}, but it does NOT parse as a valid concept document: {e}. Fix and rewrite."
             )),
         }
     } else {
@@ -126,7 +126,7 @@ pub fn scaffold(bundle: &Path, name: &str) -> Result<String, String> {
         "index.md",
         format!("# {name}\n\nokf_version: 0.5\nbiookf_version: 0.5\n\n> Catalog of concept pages.\n"),
     )?;
-    write_absent("log.md", format!("# Change log — {name}\n"))?;
+    write_absent("log.md", format!("# Change log: {name}\n"))?;
     write_absent(
         "schema.md",
         "# BioOKF operating schema (v0.5)\n\n28 node types, 24 forward-only predicates. See the canonical schema.md.\n".to_string(),

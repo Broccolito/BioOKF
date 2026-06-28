@@ -1,5 +1,5 @@
 //! Build a self-contained bundle document (graph + per-node detail + lint
-//! summary) — the JSON the GUI consumes. Shared by the CLI (`bokf export`) and
+//! summary): the JSON the GUI consumes. Shared by the CLI (`bokf export`) and
 //! the Tauri commands so both surfaces return identical shapes.
 
 use crate::{lint, Bundle, Graph};

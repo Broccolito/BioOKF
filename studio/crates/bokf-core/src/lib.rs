@@ -1,10 +1,10 @@
-//! bokf-core — the BioOKF backend library.
+//! bokf-core: the BioOKF backend library.
 //!
 //! Parses a BioOKF v0.5 bundle (a Git-shippable tree of Markdown files with YAML
 //! frontmatter), derives a render-ready graph, lints it against the v0.5
 //! conformance rules, and provides BM25 search. This is the single source of
 //! truth shared by the CLI (`bokf`), the MCP server (`bokf-mcp`), and the Tauri
-//! visualizer — the GUI is only a front-end over this backend.
+//! visualizer; the GUI is only a front-end over this backend.
 
 pub mod active;
 pub mod bundle;
