@@ -729,6 +729,23 @@ recurring biomedical pattern *population → exposure → outcome, quantified by
 measure with confidence bounds* becomes a single `predisposes_to`/`associated_with` edge
 carrying `odds_ratio` \+ `ci_lower`/`ci_upper` \+ `p_value` \+ `sample_size` \+ `qualifiers.population`.
 
+### 8.2 Source origin and credibility
+
+When a source is converted (`bokf convert`, including `--url`/`--urls`), its `raw/<id>/meta.yaml`
+records two orthogonal facts about where it came from, separate from the graph itself:
+
+- **`source_type`** (origin): one of `journal_article`, `preprint`, `review`, `book`, `dataset`,
+  `database`, `clinical_guideline`, `gov_report`, `web_page`, `personal`, `unknown`. It guides
+  which source node the curator creates (a `Publication`, `Study`, or `Dataset`).
+- **`credibility`** (trust): a `tier` (`peer_reviewed` > `preprint` > `archive` > `gray_lit` >
+  `web` > `unknown`), plus `confidence`, a `retracted` flag, and a `reasoning` string. The verdict
+  is computed by a deterministic-first waterfall: identifier extraction, then Crossref then OpenAlex
+  DOI resolution, then URL host patterns, then a conservative text heuristic.
+
+This keeps the §8.1 node-based provenance (which traces *which* source supports a claim) distinct
+from *how credible* that source is. Lint surfaces weak evidence: `source.not_scholarly` warns when a
+`primary_source` classifies as `web`/`unknown`, and `source.retracted` warns when it is retracted.
+
 ---
 
 ## 9\. Identifiers and namespaces
