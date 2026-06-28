@@ -26,3 +26,11 @@ Thumbs.db
 registry.yaml
 .active-kb
 .active-kb.tmp
+
+# macOS notarization secrets: Developer ID .p12, app-specific password, etc.
+# NEVER commit these.
+notarization/
+
+# Bundled CLI binaries staged into the Tauri app (rebuilt each release)
+app/studio/src-tauri/bin/bokf
+app/studio/src-tauri/bin/bokf-mcp
