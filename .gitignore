@@ -21,3 +21,8 @@ Thumbs.db
 
 # Local Claude Code agent worktrees / state
 .claude/
+
+# Machine-specific KB registry + active pointer (absolute paths)
+registry.yaml
+.active-kb
+.active-kb.tmp

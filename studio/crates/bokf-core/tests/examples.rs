@@ -3,17 +3,48 @@
 
 use std::path::PathBuf;
 
-fn examples_root() -> PathBuf {
-    // studio/crates/bokf-core -> ../../.. -> BioOKF repo root
-    PathBuf::from(env!("CARGO_MANIFEST_DIR"))
-        .join("../../../examples")
-        .canonicalize()
-        .expect("examples dir should exist")
+/// Locate the `examples/` bundle, which may live in-repo (legacy) or anywhere on
+/// disk via the registry (it can be moved out, e.g. onto the Desktop). Resolution
+/// order: `OKF_EXAMPLES_DIR` override -> in-repo `examples/` -> registry id
+/// `examples` under the repo root. Returns `None` if it is not present anywhere,
+/// so the tests skip cleanly on a checkout that doesn't ship the bundle.
+fn examples_root() -> Option<PathBuf> {
+    if let Ok(p) = std::env::var("OKF_EXAMPLES_DIR") {
+        let pb = PathBuf::from(p);
+        if pb.is_dir() {
+            return pb.canonicalize().ok();
+        }
+    }
+    let repo = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../..");
+    let in_repo = repo.join("examples");
+    if in_repo.is_dir() {
+        return in_repo.canonicalize().ok();
+    }
+    if let Some(p) = bokf_core::registry::resolve(&repo, "examples") {
+        let pb = PathBuf::from(p);
+        if pb.is_dir() {
+            return pb.canonicalize().ok();
+        }
+    }
+    None
+}
+
+/// `let root = require_examples!();` — resolve or skip the test.
+macro_rules! require_examples {
+    () => {
+        match examples_root() {
+            Some(p) => p,
+            None => {
+                eprintln!("skip: examples bundle not present (set OKF_EXAMPLES_DIR or register id `examples`)");
+                return;
+            }
+        }
+    };
 }
 
 #[test]
 fn opens_examples_bundle() {
-    let bundle = bokf_core::open_bundle(examples_root()).expect("open bundle");
+    let bundle = bokf_core::open_bundle(require_examples!()).expect("open bundle");
     // 6 concept docs ship under examples/knowledge/
     assert!(bundle.nodes.len() >= 6, "expected >=6 nodes, got {}", bundle.nodes.len());
     assert!(bundle.parse_errors.is_empty(), "parse errors: {:?}", bundle.parse_errors);
@@ -23,7 +54,7 @@ fn opens_examples_bundle() {
 
 #[test]
 fn derives_graph_from_examples() {
-    let g = bokf_core::graph_of(examples_root()).expect("graph");
+    let g = bokf_core::graph_of(require_examples!()).expect("graph");
     assert!(!g.nodes.is_empty());
     assert!(!g.edges.is_empty());
     // every edge endpoint exists as a node (real or external stub)
@@ -36,7 +67,7 @@ fn derives_graph_from_examples() {
 
 #[test]
 fn lints_examples_bundle() {
-    let bundle = bokf_core::open_bundle(examples_root()).expect("open");
+    let bundle = bokf_core::open_bundle(require_examples!()).expect("open");
     let report = bokf_core::lint(&bundle);
     // v0.4 examples use infores: primary_source + CURIE objects -> lint should
     // produce findings (warnings), and must not panic.
@@ -51,7 +82,7 @@ fn lints_examples_bundle() {
 
 #[test]
 fn searches_examples_bundle() {
-    let bundle = bokf_core::open_bundle(examples_root()).expect("open");
+    let bundle = bokf_core::open_bundle(require_examples!()).expect("open");
     let index = bokf_core::SearchIndex::build(&bundle);
     let hits = index.search("interleukin cytokine", 5);
     assert!(!hits.is_empty(), "expected search hits for 'interleukin'");

@@ -101,7 +101,7 @@
     cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;flex:0 0 26px;transition:background .12s,color .12s;}
   .collapse:hover{background:var(--hover);color:var(--text);}
   .wbody.collapsed .sb-name,.wbody.collapsed .sb-label,.wbody.collapsed .kb-meta,.wbody.collapsed .kb-name,
-  .wbody.collapsed .kb-when,.wbody.collapsed .sb-foot{opacity:0;pointer-events:none;}
+  .wbody.collapsed .kb-when,.wbody.collapsed .kb-path,.wbody.collapsed .sb-foot{opacity:0;pointer-events:none;}
   .wbody.collapsed .sb-top{justify-content:center;padding:14px 0 10px;}
   .wbody.collapsed .collapse{margin:0;}
   .wbody.collapsed .sb-name{display:none;}
@@ -117,6 +117,7 @@
   .kb-text{min-width:0;flex:1;}
   .kb-name{display:block;font-size:13px;font-weight:550;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.35;}
   .kb-meta{display:block;font-size:11.5px;color:var(--faint);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums;}
+  .kb-path{display:block;font-family:var(--mono);font-size:10px;color:var(--faint);opacity:.7;margin-top:2px;direction:rtl;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .kb-when{display:block;font-size:10.5px;color:var(--faint);opacity:.85;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .sb-foot{padding:8px 12px 12px;}
   .new-kb{width:100%;text-align:left;padding:8px 10px;border-radius:var(--r-md);border:1px dashed var(--hair);background:transparent;
@@ -311,6 +312,29 @@
   .tip{position:absolute;z-index:9;pointer-events:none;background:var(--text);color:#fff;font-size:11px;padding:5px 9px;border-radius:var(--r-sm);
     display:none;white-space:nowrap;box-shadow:var(--shadow-md);} .tip .tp{font-family:var(--mono);opacity:.78;font-size:10px;}
 
+  /* ---------- toast / inline banner (flat, top-centre of the stage) ---------- */
+  .toast{position:absolute;top:16px;left:50%;transform:translate(-50%,-8px);z-index:40;max-width:min(520px,calc(100% - 48px));
+    background:var(--bg-elev);border:1px solid var(--hair);border-radius:var(--r-md);box-shadow:var(--shadow-md);
+    padding:10px 14px;font-size:12.5px;line-height:1.45;color:var(--text);
+    opacity:0;pointer-events:none;transition:opacity .18s ease,transform .18s cubic-bezier(.2,.8,.2,1);}
+  .toast.open{opacity:1;transform:translate(-50%,0);}
+  .toast.err{border-color:var(--danger);color:var(--danger);}
+  .toast.ok{border-color:var(--accent);color:var(--accent-ink);}
+  /* live "AI agent" activity chip — upper-left of the stage. Narrates whatever the
+     agent is doing over MCP (search, lint, merge, build, query…) with a three-dot
+     "working" indicator. On-brand (accent), squared, ephemeral. */
+  .ai-banner{position:absolute;top:14px;left:14px;z-index:41;display:flex;align-items:center;gap:8px;
+    background:var(--accent-soft);border:1px solid rgba(16,163,127,0.30);border-radius:var(--r-md);
+    box-shadow:var(--shadow-md);padding:7px 12px;font-size:12px;line-height:1;max-width:min(400px,calc(100% - 28px));
+    opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .16s ease,transform .16s cubic-bezier(.2,.8,.2,1);}
+  .ai-banner.open{opacity:1;transform:translateY(0);}
+  .ai-banner .ai-tag{font-weight:600;color:var(--accent-ink);flex:none;}
+  .ai-banner .ai-act{color:var(--accent-ink);opacity:.9;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .ai-banner .ai-dots{display:inline-flex;gap:3px;flex:none;margin-left:1px;}
+  .ai-banner .ai-dots i{width:4px;height:4px;border-radius:50%;background:var(--accent);animation:aiDot 1.05s infinite ease-in-out;}
+  .ai-banner .ai-dots i:nth-child(2){animation-delay:.16s;} .ai-banner .ai-dots i:nth-child(3){animation-delay:.32s;}
+  @keyframes aiDot{0%,70%,100%{opacity:.3;transform:translateY(0);}35%{opacity:1;transform:translateY(-2px);}}
+
   /* ---------- change-log drawer ---------- */
   .logscrim{position:absolute;inset:0;z-index:11;background:rgba(13,13,13,0.22);opacity:0;pointer-events:none;transition:opacity .25s ease;}
   .logscrim.open{opacity:1;pointer-events:auto;}
@@ -369,7 +393,7 @@
   @media (max-width:640px){
     /* sidebar folds to an icon rail (mirrors the collapsed treatment) */
     .sidebar{width:58px !important;flex-basis:58px !important;}
-    .sb-name,.sb-label,.kb-meta,.kb-name,.kb-when,.sb-foot,.collapse{opacity:0;pointer-events:none;}
+    .sb-name,.sb-label,.kb-meta,.kb-name,.kb-when,.kb-path,.sb-foot,.collapse{opacity:0;pointer-events:none;}
     .kb-mono{display:flex;} .kb-text{display:none;} .kb{justify-content:center;padding:7px 0;}
     .legend{display:none;}
     .detail{max-height:70%;}
@@ -432,6 +456,6 @@
 <script>document.documentElement.classList.toggle('tauri', !!(window.__TAURI__ || window.__TAURI_INTERNALS__));</script>
 <script src="vendor/xterm.js"></script>
 <script src="vendor/xterm-addon-fit.js"></script>
-<script src="app.js?v=14"></script>
+<script src="app.js?v=17"></script>
 </body>
 </html>

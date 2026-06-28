@@ -32,7 +32,7 @@ let nodes=[], edges=[], byId={}, pages={};
 let hover=null, hoverEdge=null, selected=null, selectedEdge=null;
 let drag=null, panning=null, moved=false, alpha=1, searchTerm='';
 let focusNeighbors=new Set();
-let BASES=[], activeBaseId=null, currentLog='', currentUpdated=null;
+let BASES=[], activeBaseId=null, currentLog='', currentUpdated=null, currentLint=null;
 let currentDetailPath=null;           // path of the open node doc, for resolving body links
 let currentNoteCtx=null;              // notes context (node/edge) for the open panel
 
@@ -57,7 +57,11 @@ async function tauriInvoke(cmd, args){
    execute_js — removed. */
 const cb = () => '?_=' + Date.now(); // dev cache-bust for the static JSON
 async function loadBases(){
-  if(inTauri){ try { return await invoke('list_bases'); } catch(e){ console.error(e); return []; } }
+  // Desktop reads the LIVE registry (list_bases): bundles tracked anywhere on disk,
+  // with broken/missing paths already filtered out by the backend. A KB whose folder
+  // was deleted simply won't be returned, so it disappears from the sidebar. The
+  // static data/bases.json snapshot is only the browser fallback.
+  if(isDesktop){ try { return await tauriInvoke('list_bases'); } catch(e){ console.error('list_bases failed; using snapshot', e); } }
   return await (await fetch('data/bases.json'+cb())).json();
 }
 async function loadBundle(base){
@@ -333,6 +337,9 @@ function headBtns(path){
 /* Plain key/value row (SIMPLE tier) — value-agnostic, assumes no vocabulary. */
 function kvRow(k,v){ return `<div class="kv-row"><div class="kv-k">${esc(k)}</div><div class="kv-v">${v}</div></div>`; }
 function kvPlain(k,v){ return (v===undefined||v===null||v==='')?'':kvRow(k,esc(String(v))); }
+/* Every list of short tokens (xref, synonyms, tags, …) renders identically as chips
+   so similar data looks the same across the panel. */
+function chips(arr){ return (arr||[]).map(x=>`<span class="chip">${esc(x)}</span>`).join(''); }
 /* Node frontmatter — ONE ordered block matching the source .md (SPEC §4 template
    order), de-duplicated. Controlled `type` stays rich (header badge); every other
    field renders as a plain `label: value` row, value-agnostic. */
@@ -340,12 +347,12 @@ function nodeFrontmatterHtml(pg,n){
   if(!pg) return '';
   const rows=[];
   rows.push(kvPlain('subtype', pg.subtype||n.subtype));
-  if(pg.xref&&pg.xref.length) rows.push(kvRow('xref', pg.xref.map(x=>`<code>${esc(x)}</code>`).join(' ')));
-  if(pg.synonyms&&pg.synonyms.length) rows.push(kvRow('synonyms', pg.synonyms.map(s=>`<span class="chip">${esc(s)}</span>`).join('')));
+  if(pg.xref&&pg.xref.length) rows.push(kvRow('xref', chips(pg.xref)));
+  if(pg.synonyms&&pg.synonyms.length) rows.push(kvRow('synonyms', chips(pg.synonyms)));
   rows.push(kvPlain('in_taxon', pg.in_taxon));
   rows.push(kvPlain('description', pg.description));
   rows.push(kvPlain('note', pg.note));
-  if(pg.tags&&pg.tags.length) rows.push(kvRow('tags', pg.tags.map(t=>`<span class="chip">${esc(t)}</span>`).join('')));
+  if(pg.tags&&pg.tags.length) rows.push(kvRow('tags', chips(pg.tags)));
   if(pg.raw_source&&pg.raw_source.length) rows.push(kvRow('raw_source', pg.raw_source.map(p=>`<code>${esc(p)}</code>`).join('<br>')));
   rows.push(kvPlain('timestamp', pg.timestamp));
   if(pg.extra && typeof pg.extra==='object'){
@@ -731,7 +738,8 @@ function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','
 function monogram(name){return (name||'').split(/\s+/).slice(0,2).map(w=>w[0]||'').join('').toUpperCase();}
 function renderSidebar(){
   const list=document.getElementById('kbList');list.innerHTML='';
-  BASES.forEach(b=>{const el=document.createElement('div');el.className='kb'+(b.id===activeBaseId?' active':'');el.title=b.name;
+  BASES.forEach(b=>{const el=document.createElement('div');el.className='kb'+(b.id===activeBaseId?' active':'');el.title=b.path?b.name+'\n'+b.path:b.name;
+    // Path lives in the hover tooltip (el.title) only — permanent gray text is just counts + updated.
     const when = b.updated ? `<span class="kb-when">updated ${esc(b.updated)}</span>` : '';
     el.innerHTML=`<span class="kb-mono">${esc(monogram(b.name))}</span><span class="kb-text"><span class="kb-name">${esc(b.name)}</span><span class="kb-meta">${b.node_count!=null?b.node_count+' nodes':''}${b.edge_count!=null?' · '+b.edge_count+' edges':''}</span>${when}</span>`;
     el.onclick=()=>selectBase(b);list.appendChild(el);});
@@ -753,15 +761,20 @@ function updateChrome(b){
   closeLintPop();
 }
 async function selectBase(b){
+  window.__bokfLoading=true;            // agent-visible: a bundle load is in flight
   activeBaseId=b.id;renderSidebar();closeLog();
+  // Sync the shared .active-kb pointer so a CLI/agent sees the GUI's selection
+  // (fire-and-forget; the poll below mirrors changes the other way).
+  if(isDesktop) tauriInvoke('set_active_kb',{id:b.id}).catch(()=>{});
   const bundle=await loadBundle(b);
   pages=bundle.pages||{};
-  currentLog=bundle.log||''; currentUpdated=bundle.updated||null;
+  currentLog=bundle.log||''; currentUpdated=bundle.updated||null; currentLint=bundle.lint||null;
   loadGraph(bundle.graph);
   // merge counts/lint from bundle if base index lacked them
   const merged=Object.assign({}, b, {node_count:bundle.node_count, edge_count:bundle.edge_count, lint:bundle.lint, name:b.name||bundle.name, updated:bundle.updated});
   updateChrome(merged);
   window.__BOKF_READY=true;
+  window.__bokfLoading=false;
 }
 
 /* ---------- change-log drawer (BioRouter-style history sheet) ---------- */
@@ -924,13 +937,124 @@ window.addEventListener('resize', ()=>{ if(termPanel.classList.contains('open'))
 function resize(){const rect=cv.getBoundingClientRect();W=rect.width;H=rect.height;DPR=Math.max(1,window.devicePixelRatio||1);cv.width=W*DPR;cv.height=H*DPR;}
 window.addEventListener('resize',resize);
 
-// expose for tests / Tauri automation
-window.__bokf = { selectBase:(id)=>{const b=BASES.find(x=>x.id===id);if(b)return selectBase(b);}, getState:()=>({nodes:nodes.length,edges:edges.length,base:activeBaseId}), selectNode:(id)=>{const n=byId[id];if(n){selected=n;selectedEdge=null;recomputeFocus();focusOn(n);showNodeDetail(n);}}, search:(q)=>{searchTerm=(q||'').toLowerCase();searchInput.value=q||'';} };
+/* ---------- live "AI agent" activity banner ----------------------------------
+   Every __bokf.* call below is an action driven by an AI agent over the MCP
+   control channel. We narrate each one in a flat banner so a human watching the
+   GUI sees, in real time, exactly what the agent is doing as it reads the graph.
+   (User-driven clicks call the internal selectBase/selectNode directly and are
+   NOT narrated — only agent-driven __bokf.* calls are.) */
+let aiBannerTimer=null;
+function aiNarrate(action){
+  window.__bokfLastAction={action, at:Date.now()};
+  let el=document.getElementById('aiBanner');
+  if(!el){ el=document.createElement('div'); el.id='aiBanner'; el.className='ai-banner'; (document.querySelector('.main')||document.body).appendChild(el); }
+  el.innerHTML=`<span class="ai-tag">AI agent</span><span class="ai-act">${esc(action)}</span><span class="ai-dots"><i></i><i></i><i></i></span>`;
+  el.classList.add('open');
+  clearTimeout(aiBannerTimer); aiBannerTimer=setTimeout(()=>{ el.classList.remove('open'); }, 5000);
+}
+
+// expose for the MCP control channel / tests — the agent's window into the GUI.
+window.__bokf = {
+  // --- generic narration: the MCP server pushes whatever the agent is doing
+  //     (linting, merging, building, querying, parsing…) so it shows live here ---
+  narrate:(msg)=>{ if(msg!=null && String(msg).trim()) aiNarrate(String(msg)); return true; },
+  // --- actions: drive the GUI (visible to the watching user) + narrate ---
+  selectBase:(id)=>{const b=BASES.find(x=>x.id===id);if(b){aiNarrate('opening · '+b.name);return selectBase(b);}},
+  selectNode:(id)=>{const n=byId[id];if(n){aiNarrate('inspecting node · '+(n.label||n.id));selected=n;selectedEdge=null;recomputeFocus();focusOn(n);showNodeDetail(n);return true;}return false;},
+  search:(q)=>{aiNarrate(q?('searching · "'+q+'"'):'clearing search');searchTerm=(q||'').toLowerCase();if(searchInput)searchInput.value=q||'';return true;},
+  reload:()=>{ const b=BASES.find(x=>x.id===activeBaseId); if(b){aiNarrate('reloading · '+b.name);return selectBase(b);} return null; },
+  // --- observation: the complete app status, so the agent never needs a screenshot ---
+  getState:()=>{
+    const ab=BASES.find(x=>x.id===activeBaseId)||{};
+    const sb=document.getElementById('wbody'), tp=document.getElementById('termPanel');
+    return {
+      base: activeBaseId,
+      baseName: ab.name||null,
+      basePath: ab.path||null,
+      loading: !!window.__bokfLoading,
+      counts:{nodes:nodes.length, edges:edges.length},
+      query: searchInput?searchInput.value:'',
+      selectedNode: selected?{id:(selected.identifier||selected.id), type:(selected.node_type||selected.type), label:selected.label||null}:null,
+      selectedEdge: selectedEdge?{predicate:selectedEdge.predicate, source:selectedEdge.source, target:selectedEdge.target}:null,
+      panelOpen: !!(typeof detail!=='undefined' && detail && detail.classList.contains('open')),
+      sidebarCollapsed: !!(sb && sb.classList.contains('collapsed')),
+      terminalOpen: !!(tp && tp.classList.contains('open')),
+      lint: currentLint?{errors:currentLint.errors, warnings:currentLint.warnings, infos:currentLint.infos}:null,
+      lastAgentAction: window.__bokfLastAction||null,
+      bases: BASES.map(b=>({id:b.id,name:b.name,path:b.path,node_count:b.node_count,edge_count:b.edge_count}))
+    };
+  },
+  getGraph:()=>({nodes: nodes.map(n=>({id:n.id, type:n.type, label:n.label, external:!!n.external, degree:n.degree})), edges: edges.map(e=>({source:e.source, target:e.target, predicate:e.predicate, symmetric:!!e.symmetric, synthesized:!!e.synthesized}))})
+};
+
+/* ---------- on-brand toast (flat banner, top-centre of the stage) ---------- */
+let toastTimer=null;
+function showToast(msg, kind){
+  let t=document.getElementById('bokfToast');
+  if(!t){ t=document.createElement('div'); t.id='bokfToast'; t.className='toast'; document.querySelector('.main').appendChild(t); }
+  t.textContent=msg; t.className='toast'+(kind?' '+kind:'')+' open';
+  clearTimeout(toastTimer); toastTimer=setTimeout(()=>{ t.classList.remove('open'); }, 4200);
+}
+
+/* ---------- "+ New base": native folder picker -> add_base -> refresh ---------- */
+async function addNewBase(){
+  if(!isDesktop) return;
+  const dlg=window.__TAURI__&&window.__TAURI__.dialog;
+  if(!dlg||!dlg.open){ showToast('Folder picker unavailable in this build.','err'); return; }
+  let path;
+  try{ path=await dlg.open({ directory:true, multiple:false, title:'Select a BioOKF knowledge base folder' }); }
+  catch(e){ console.error(e); return; }
+  if(path==null) return;                         // user cancelled
+  if(Array.isArray(path)) path=path[0];
+  try{
+    const added=await tauriInvoke('add_base',{path});
+    BASES=await loadBases();renderSidebar();
+    const b=(added&&added.id&&BASES.find(x=>x.id===added.id)) || BASES.find(x=>x.path===path);
+    if(b) await selectBase(b);
+  }catch(e){
+    showToast('Not a valid BioOKF knowledge base: '+(typeof e==='string'?e:(e&&e.message)||'unknown error'),'err');
+  }
+}
+
+/* ---------- .active-kb poll: follow a CLI/agent changing the shared pointer ---------- */
+let activeKbSyncing=false;
+async function pollActiveKb(){
+  if(!isDesktop || activeKbSyncing || !BASES.length) return;
+  let id; try{ id=await tauriInvoke('get_active_kb'); }catch(e){ return; }
+  if(!id || id===activeBaseId) return;
+  const b=BASES.find(x=>x.id===id); if(!b) return;
+  activeKbSyncing=true;
+  try{ await selectBase(b); } finally{ activeKbSyncing=false; }
+}
+
+/* Re-discover the registry so the sidebar stays true to disk: a KB whose folder
+   was deleted/unregistered drops out; one registered elsewhere (CLI `bokf
+   register`, an agent, or "+ New base") appears — all without a restart. */
+let lastBasesSig='';
+function basesSig(arr){ return (arr||[]).map(b=>b.id+':'+(b.node_count||0)+'/'+(b.edge_count||0)+'@'+(b.updated||'')).join('|'); }
+async function syncBases(){
+  if(!isDesktop || activeKbSyncing || window.__bokfLoading) return;
+  let list; try{ list=await tauriInvoke('list_bases'); }catch(e){ return; }
+  if(!Array.isArray(list)) return;
+  const sig=basesSig(list);
+  if(sig===lastBasesSig) return;        // registry unchanged on disk
+  lastBasesSig=sig;
+  BASES=list; renderSidebar();
+  if(activeBaseId && !BASES.find(b=>b.id===activeBaseId)){
+    // the active KB's folder was deleted/unregistered — move off it
+    if(BASES.length){ activeKbSyncing=true; try{ await selectBase(BASES[0]); } finally{ activeKbSyncing=false; } }
+    else { activeBaseId=null; }
+  }
+}
 
 async function boot(){
   renderLegend();resize();
+  const nb=document.querySelector('.new-kb');
+  if(nb){ if(isDesktop) nb.onclick=addNewBase; else nb.style.display='none'; }
   BASES=await loadBases();renderSidebar();
+  lastBasesSig=basesSig(BASES);
   if(BASES.length)await selectBase(BASES[0]);
+  if(isDesktop){ setInterval(pollActiveKb, 1500); setInterval(syncBases, 3000); }
   requestAnimationFrame(loop);
 }
 boot();

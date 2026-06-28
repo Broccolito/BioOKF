@@ -19,14 +19,18 @@ serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 # Real pseudo-terminal backing the integrated terminal panel.
 portable-pty = "0.8"
+# Native folder picker for the "+ New base" dialog (normal feature, always on).
+tauri-plugin-dialog = "2"
 
 [target.'cfg(target_os = "macos")'.dependencies]
 window-vibrancy = "0.6"
 
-# Debug-only MCP control plane to let an AI agent drive/inspect the webview.
-# Off by default (a git dependency); enable with `--features debug-mcp`.
+# Live-control plane to let an AI agent drive/inspect the webview over a socket.
+# Compiled in by default; the socket only LISTENS when BIOOKF_STUDIO_CONTROL is set.
 tauri-plugin-mcp = { git = "https://github.com/P3GLEG/tauri-plugin-mcp", optional = true }
 
 [features]
-default = []
-debug-mcp = ["dep:tauri-plugin-mcp"]
+default = ["control"]
+control = ["dep:tauri-plugin-mcp"]
+# Back-compat alias for the old feature name.
+debug-mcp = ["control"]

@@ -19,38 +19,119 @@ fn repo_root() -> PathBuf {
         .unwrap_or_else(|_| PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../.."))
 }
 
-/// Candidate bundle directories: the canonical `examples/` plus every dir under
-/// `studio/test-kb/`.
-fn candidate_bundles() -> Vec<PathBuf> {
-    let root = repo_root();
-    let mut v = vec![root.join("examples")];
-    if let Ok(rd) = std::fs::read_dir(root.join("studio/test-kb")) {
-        for e in rd.flatten() {
-            if e.path().is_dir() {
-                v.push(e.path());
-            }
-        }
-    }
-    v.into_iter()
-        .filter(|p| p.join("knowledge").is_dir() || p.join("index.md").is_file())
+/// Registered bundles, the source of truth for discovery: every `Base` in
+/// `<root>/registry.yaml` mapped to (registered-id, path), keeping only those
+/// whose folder still exists and looks like a bundle. A KB whose folder was
+/// deleted or moved simply isn't returned.
+fn registered_bundles() -> Vec<(String, PathBuf)> {
+    bokf_core::registry::list(&repo_root())
+        .into_iter()
+        .map(|b| (b.id, PathBuf::from(b.path)))
+        .filter(|(_, p)| p.join("knowledge").is_dir() || p.join("index.md").is_file())
         .collect()
 }
 
 fn resolve(id: &str) -> Option<PathBuf> {
-    candidate_bundles()
-        .into_iter()
-        .find(|p| p.file_name().map(|n| n.to_string_lossy() == id).unwrap_or(false))
+    bokf_core::registry::resolve(&repo_root(), id)
+        .map(PathBuf::from)
+        .filter(|p| p.is_dir())
+}
+
+/// JSON object for one bundle in the sidebar: `base_info(p)` with `"id"` set to
+/// the REGISTERED kb-id (not the dir name) and `"path"` inserted.
+fn base_entry(id: &str, p: &std::path::Path) -> Result<serde_json::Value, String> {
+    let mut info = bokf_core::export::base_info(p).map_err(|e| e.to_string())?;
+    if let Some(obj) = info.as_object_mut() {
+        obj.insert("id".into(), serde_json::Value::String(id.to_string()));
+        obj.insert("path".into(), serde_json::Value::String(p.to_string_lossy().to_string()));
+    }
+    Ok(info)
 }
 
 #[tauri::command]
 fn list_bases() -> Result<serde_json::Value, String> {
     let mut out = Vec::new();
-    for p in candidate_bundles() {
-        if let Ok(info) = bokf_core::export::base_info(&p) {
+    for (id, p) in registered_bundles() {
+        if let Ok(info) = base_entry(&id, &p) {
             out.push(info);
         }
     }
     Ok(serde_json::Value::Array(out))
+}
+
+/// Set the active KB pointer (`<root>/.active-kb`) to `id`.
+#[tauri::command]
+fn set_active_kb(id: String) -> Result<(), String> {
+    bokf_core::active::set_active(&repo_root(), Some(&id))
+}
+
+/// Read the active KB pointer, `None` when unset.
+#[tauri::command]
+fn get_active_kb() -> Result<Option<String>, String> {
+    Ok(bokf_core::active::get_active(&repo_root()))
+}
+
+/// Derive a kb-id from a folder name: lowercase, non-`[a-z0-9-]` → `-`, with
+/// runs collapsed and leading/trailing `-` stripped (so it passes
+/// `validate_kb_id`). Empty input yields `"base"`.
+fn kb_id_from_dir_name(name: &str) -> String {
+    let mut out = String::new();
+    let mut prev_dash = false;
+    for ch in name.chars() {
+        let c = ch.to_ascii_lowercase();
+        if c.is_ascii_lowercase() || c.is_ascii_digit() {
+            out.push(c);
+            prev_dash = false;
+        } else if !prev_dash {
+            out.push('-');
+            prev_dash = true;
+        }
+    }
+    let trimmed = out.trim_matches('-').to_string();
+    if trimmed.is_empty() { "base".to_string() } else { trimmed }
+}
+
+/// Validate a folder is a real BioOKF bundle and register it. Returns the same
+/// shape as `list_bases` entries so the frontend can add it to the sidebar.
+#[tauri::command]
+fn add_base(path: String) -> Result<serde_json::Value, String> {
+    let p = std::path::Path::new(&path)
+        .canonicalize()
+        .map_err(|e| format!("Not a valid BioOKF knowledge base: {e}"))?;
+    if !p.is_dir() {
+        return Err("Not a valid BioOKF knowledge base: not a directory".into());
+    }
+    if !(p.join("knowledge").is_dir() || p.join("index.md").is_file()) {
+        return Err(
+            "Not a valid BioOKF knowledge base: missing `knowledge/` directory or `index.md`".into(),
+        );
+    }
+    // It must parse as a bundle (lint errors are tolerated — only structure matters).
+    bokf_core::open_bundle(&p)
+        .map_err(|e| format!("Not a valid BioOKF knowledge base: {e}"))?;
+
+    let root = repo_root();
+    let dir_name = p.file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_default();
+    let base_id = kb_id_from_dir_name(&dir_name);
+
+    // If this exact path is already registered, return its existing entry.
+    let already: Vec<bokf_core::registry::Base> = bokf_core::registry::list(&root);
+    let path_str = p.to_string_lossy().to_string();
+    if let Some(b) = already.iter().find(|b| b.path == path_str) {
+        return base_entry(&b.id, &p);
+    }
+
+    // Pick an id that isn't taken: `base_id`, then `base_id-2`, `base_id-3`, …
+    let taken: std::collections::HashSet<&str> = already.iter().map(|b| b.id.as_str()).collect();
+    let mut id = base_id.clone();
+    let mut n = 2;
+    while taken.contains(id.as_str()) {
+        id = format!("{base_id}-{n}");
+        n += 1;
+    }
+    bokf_core::registry::validate_kb_id(&id)?;
+    bokf_core::registry::register(&root, &id, &path_str)?;
+    base_entry(&id, &p)
 }
 
 #[tauri::command]
@@ -733,6 +814,8 @@ fn term_close(id: String) -> Result<(), String> {
 
 fn main() {
     let builder = tauri::Builder::default()
+        // Native folder picker for the "+ New base" dialog (a normal feature).
+        .plugin(tauri_plugin_dialog::init())
         .setup(|_app| {
             // Native macOS vibrancy: the whole window becomes translucent frosted
             // glass (preserving the rounded window corners), so the canvas shows the
@@ -754,6 +837,9 @@ fn main() {
         })
         .invoke_handler(tauri::generate_handler![
             list_bases,
+            set_active_kb,
+            get_active_kb,
+            add_base,
             get_bundle,
             lint_bundle,
             search_bundle,
@@ -790,37 +876,43 @@ fn main() {
             }
         });
 
-    // Debug-only: expose the webview to AI agents over MCP (drive/inspect/screenshot).
-    #[cfg(feature = "debug-mcp")]
-    let builder = builder.plugin(tauri_plugin_mcp::init_with_config(
-        tauri_plugin_mcp::PluginConfig::new("BioOKF Studio".to_string())
-            .start_socket_server(true)
-            .socket_path(std::path::PathBuf::from("/tmp/biookf-tauri-mcp.sock")),
-    ));
+    // Live-control plane: compiled in by default, but the socket server and the
+    // guest-inject plugin are only ATTACHED when BIOOKF_STUDIO_CONTROL is set (the
+    // MCP `bokf_studio_open` sets it when launching). A normal build/run leaves the
+    // socket closed and injects nothing.
+    #[cfg(feature = "control")]
+    let builder = if std::env::var_os("BIOOKF_STUDIO_CONTROL").is_some() {
+        // Expose the webview to AI agents over the socket (drive/inspect/screenshot).
+        let builder = builder.plugin(tauri_plugin_mcp::init_with_config(
+            tauri_plugin_mcp::PluginConfig::new("BioOKF Studio".to_string())
+                .start_socket_server(true)
+                .socket_path(std::path::PathBuf::from("/tmp/biookf-tauri-mcp.sock")),
+        ));
 
-    // Debug-only: inject the tauri-plugin-mcp guest listeners so the webview answers
-    // the JS/DOM tools (execute_js, get_dom, get_page_map, manage_storage, selector
-    // clicks/typing, wait_for). Our no-bundler vanilla frontend can't `import` the
-    // npm guest bindings, so we eval a prebuilt IIFE on every page load. This entire
-    // block is compiled out of release builds — zero footprint in production.
-    #[cfg(feature = "debug-mcp")]
-    let builder = builder.plugin(
-        tauri::plugin::Builder::<tauri::Wry>::new("biookf-debug-guest")
-            .on_page_load(|webview, _payload| {
-                // on_page_load fires more than once per navigation; guard so the guest
-                // registers its execute-js listener exactly once (otherwise every
-                // execute_js evals N times — once per duplicate registration).
-                let js = concat!(
-                    "if(!window.__bokfGuestReady){window.__bokfGuestReady=1;\n",
-                    include_str!("mcp_guest.js"),
-                    "\n}"
-                );
-                if let Err(e) = webview.eval(js) {
-                    eprintln!("[biookf-debug-guest] failed to inject MCP guest listeners: {e}");
-                }
-            })
-            .build(),
-    );
+        // Inject the tauri-plugin-mcp guest listeners so the webview answers the
+        // JS/DOM tools (execute_js, get_dom, get_page_map, manage_storage, selector
+        // clicks/typing, wait_for). Our no-bundler vanilla frontend can't `import`
+        // the npm guest bindings, so we eval a prebuilt IIFE on every page load.
+        builder.plugin(
+            tauri::plugin::Builder::<tauri::Wry>::new("biookf-control-guest")
+                .on_page_load(|webview, _payload| {
+                    // on_page_load fires more than once per navigation; guard so the
+                    // guest registers its execute-js listener exactly once (otherwise
+                    // every execute_js evals N times — once per duplicate registration).
+                    let js = concat!(
+                        "if(!window.__bokfGuestReady){window.__bokfGuestReady=1;\n",
+                        include_str!("mcp_guest.js"),
+                        "\n}"
+                    );
+                    if let Err(e) = webview.eval(js) {
+                        eprintln!("[biookf-control-guest] failed to inject MCP guest listeners: {e}");
+                    }
+                })
+                .build(),
+        )
+    } else {
+        builder
+    };
 
     builder
         .run(tauri::generate_context!())
@@ -866,6 +958,9 @@ mod tests {
         std::fs::write(&file, "---\ntype: Gene\nidentifier: X\n---\n\n# X\n\nold body\n").unwrap();
 
         std::env::set_var("OKF_ROOT", &tmp);
+        // Registry is the source of truth now: register the temp bundle so
+        // `resolve("mybase")` finds it.
+        bokf_core::registry::register(&tmp, "mybase", &base.to_string_lossy()).unwrap();
         super::save_node_body(
             "mybase".into(),
             "knowledge/gene/x.md".into(),
