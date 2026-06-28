@@ -105,6 +105,22 @@ fn main() {
             .socket_path(std::path::PathBuf::from("/tmp/biookf-tauri-mcp.sock")),
     ));
 
+    // Debug-only: inject the tauri-plugin-mcp guest listeners so the webview answers
+    // the JS/DOM tools (execute_js, get_dom, get_page_map, manage_storage, selector
+    // clicks/typing, wait_for). Our no-bundler vanilla frontend can't `import` the
+    // npm guest bindings, so we eval a prebuilt IIFE on every page load. This entire
+    // block is compiled out of release builds — zero footprint in production.
+    #[cfg(feature = "debug-mcp")]
+    let builder = builder.plugin(
+        tauri::plugin::Builder::<tauri::Wry>::new("biookf-debug-guest")
+            .on_page_load(|webview, _payload| {
+                if let Err(e) = webview.eval(include_str!("mcp_guest.js")) {
+                    eprintln!("[biookf-debug-guest] failed to inject MCP guest listeners: {e}");
+                }
+            })
+            .build(),
+    );
+
     builder
         .run(tauri::generate_context!())
         .expect("error while running BioOKF Studio");
