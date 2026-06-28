@@ -25,30 +25,31 @@ visualizer, all distributed together as a one-command Claude Code plugin.
 
 ## Install
 
-BioOKF comes in two pieces you install separately: the **Studio desktop app**, which also
-installs the `bokf` CLI, and the **Claude Code plugin** (the "cloud plugin"), which is how you
-drive the Studio with Claude.
+BioOKF ships as two pieces you install separately: the **Studio desktop app** (which also
+installs the `bokf` CLI and `bokf-mcp` server), and the **Claude Code plugin** (the "cloud
+plugin"), which wires those tools into Claude.
 
-### 1. BioOKF Studio (desktop app)
+### 1. BioOKF Studio (desktop app + CLI + MCP)
 
 Download the notarized **`BioOKF Studio_<version>_aarch64.dmg`** from the
 [latest release](https://github.com/Broccolito/BioOKF/releases/latest), open it, and drag
-**BioOKF Studio** into Applications. It is signed and notarized by Apple, so it opens with no
-Gatekeeper warning.
+**BioOKF Studio** into Applications. The DMG is signed and notarized by Apple, so it opens with
+no Gatekeeper warning and no quarantine prompt.
 
-A few seconds after the first launch, the Studio offers to install the **`bokf` command-line
-tool** to `/usr/local/bin` (one admin prompt) so `bokf` works in every terminal. The Studio also
-has its own built-in terminal where `bokf` is already on the PATH.
+The bundle includes `bokf` (CLI) and `bokf-mcp` (MCP server) as signed binaries inside the
+`.app`. On first launch the Studio offers to install **`bokf`** to `/usr/local/bin` (one admin
+prompt) so it is available in every terminal. The Studio also has a built-in terminal where `bokf`
+is already on the PATH.
 
-The Studio keeps all of its configuration (the knowledge-base registry and the active-KB pointer)
-under `~/.config/biookf-studio`, so those files never scatter onto your Desktop.
+All configuration (the knowledge-base registry and the active-KB pointer) lives under
+`~/.config/biookf-studio`, shared by the Studio, the CLI, and the MCP server.
 
 (Apple Silicon for now; Intel and other platforms follow from the release pipeline.)
 
 ### 2. The BioOKF Claude Code plugin (the cloud plugin)
 
-This is the primary way to work: describe what you want in plain language and Claude curates
-through the `bokf_*` MCP tools, driving the Studio live. In Claude Code:
+Once the Studio is installed, add the Claude Code plugin to get the `bokf_*` MCP tools in Claude.
+In Claude Code:
 
 ```
 /plugin marketplace add Broccolito/BioOKF
@@ -56,27 +57,27 @@ through the `bokf_*` MCP tools, driving the Studio live. In Claude Code:
 ```
 
 Then restart Claude Code. The `bokf_*` tools are now available, and `bokf_studio_open` launches
-the visualizer. **You never compile anything**: the first time a tool runs, the plugin downloads
-the prebuilt binaries for your platform.
+the visualizer. The plugin's MCP launcher finds and starts the `bokf-mcp` binary that shipped
+inside the Studio app; no separate download is needed on macOS.
 
-> **Want your coding agent to do it for you?** Paste this to Claude Code (or any agent that can run
-> slash commands):
+> **Want your coding agent to do it for you?** Paste this to Claude Code (or any agent that can
+> run slash commands):
 >
 > > Install the BioOKF plugin from `https://github.com/Broccolito/BioOKF`: run
-> > `/plugin marketplace add Broccolito/BioOKF`, then `/plugin install biookf@biookf`, restart, and
-> > confirm the `bokf_studio_open` tool works.
+> > `/plugin marketplace add Broccolito/BioOKF`, then `/plugin install biookf@biookf`, restart,
+> > and confirm the `bokf_studio_open` tool works.
 
-**Requirements:** Claude Code; `curl` + `tar`; macOS (Apple Silicon or Intel; a self-contained
-`.app` is downloaded). Linux and Windows builds are produced by the release pipeline as they become
-available; until a prebuilt asset exists for your platform you can [build from
-source](#build-from-source) and point the plugin at your binary with `BIOOKF_MCP_BIN`.
+**Requirements:** Claude Code; the BioOKF Studio DMG installed (step 1 above); macOS Apple
+Silicon. Intel and other platforms ship as the release pipeline adds them; until a prebuilt asset
+exists for your platform you can [build from source](#build-from-source) and point the plugin at
+your binary with `BIOOKF_MCP_BIN`.
 
-**What "no compile" means.** The plugin registers one MCP server whose launcher
-(`plugins/biookf/scripts/bokf-mcp`) detects your OS/arch, downloads
-`biookf-<platform>.tar.gz` from this repo's [GitHub Release](https://github.com/Broccolito/BioOKF/releases),
-caches it under `~/.local/share/biookf`, de-quarantines it (macOS), and execs `bokf-mcp` with the
-bundled Studio app wired in. Override the version/cache/source via `BIOOKF_VERSION`, `BIOOKF_HOME`,
-and `BIOOKF_REPO`.
+**How the plugin finds the binaries.** The launcher (`plugins/biookf/scripts/bokf-mcp`) checks
+`BIOOKF_MCP_BIN` first (explicit override), then looks for `bokf-mcp` inside a locally installed
+`BioOKF Studio.app`, and falls back to downloading `biookf-<platform>.tar.gz` from this repo's
+[GitHub Release](https://github.com/Broccolito/BioOKF/releases) and caching it under
+`~/.local/share/biookf`. Override the version, cache root, or source repo via `BIOOKF_VERSION`,
+`BIOOKF_HOME`, and `BIOOKF_REPO`.
 
 ## What you get
 

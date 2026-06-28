@@ -181,40 +181,46 @@
 <section class="section" id="install">
   <div class="wrap">
     <p class="eyebrow">Install</p>
-    <h2 class="h-sec">One plugin. No compiling.</h2>
-    <p class="lead" style="margin-bottom:30px">The whole toolchain (the <code>bokf</code> MCP server, the <code>bokf</code> CLI, and the BioOKF Studio app)
-      installs as a single Claude Code plugin. The first time a tool runs, it downloads the prebuilt binaries for your platform.</p>
+    <h2 class="h-sec">Two steps. No compiling.</h2>
+    <p class="lead" style="margin-bottom:30px">Install the notarized Studio app (which bundles the CLI and MCP server), then add the Claude Code plugin to connect Claude to those tools.</p>
 
     <div class="install-grid">
       <div>
         <div class="code">
-          <div class="code-bar"><i></i><i></i><i></i><span>Claude Code</span></div>
-<pre><span class="com"># 1 · add the marketplace</span>
-<span class="cmd">/plugin</span> marketplace add Broccolito/BioOKF
-
-<span class="com"># 2 · install the plugin, then restart Claude Code</span>
-<span class="cmd">/plugin</span> install biookf@biookf
-
-<span class="com"># the bokf_* tools are now available.</span>
-<span class="com"># launch the visualizer:</span>
-<span class="ok">bokf_studio_open</span></pre>
+          <div class="code-bar"><i></i><i></i><i></i><span>Step 1 &mdash; Studio + CLI + MCP</span></div>
+<pre><span class="com"># Download the signed DMG from GitHub Releases:</span>
+<span class="com"># BioOKF Studio_<version>_aarch64.dmg</span>
+<span class="com"># Open it, drag BioOKF Studio to Applications.</span>
+<span class="com"># On first launch, accept the prompt to install</span>
+<span class="com"># bokf to /usr/local/bin.</span></pre>
         </div>
         <div class="copyline">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
-          Run these two commands in Claude Code, then restart. That is all.
+          <a href="https://github.com/Broccolito/BioOKF/releases/latest" target="_blank" rel="noopener" style="color:var(--accent-ink)">Download the latest release &rarr;</a>
+        </div>
+        <div class="code" style="margin-top:16px">
+          <div class="code-bar"><i></i><i></i><i></i><span>Step 2 &mdash; Claude Code plugin</span></div>
+<pre><span class="com"># Add the marketplace, install the plugin,</span>
+<span class="com"># then restart Claude Code.</span>
+<span class="cmd">/plugin</span> marketplace add Broccolito/BioOKF
+<span class="cmd">/plugin</span> install biookf@biookf
+
+<span class="com"># Launch the visualizer:</span>
+<span class="ok">bokf_studio_open</span></pre>
         </div>
       </div>
       <div>
         <div class="callout">
-          <b>Want your agent to do it?</b>
+          <b>Want your agent to do step 2?</b>
           Paste this into Claude Code: <em>"Install the BioOKF plugin from github.com/Broccolito/BioOKF.
           Run <code>/plugin marketplace add Broccolito/BioOKF</code>, then <code>/plugin install biookf@biookf</code>,
           restart, and confirm <code>bokf_studio_open</code> works."</em>
         </div>
         <ul class="req-list">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg><span class="rq">Claude Code, plus <code>curl</code> and <code>tar</code></span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg><span class="rq">macOS on Apple Silicon or Intel; a self-contained <code>.app</code> is downloaded for you</span></li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg><span class="rq">Linux and Windows builds land as the release pipeline ships them; until then, <a class="docbody" style="color:var(--accent-ink);border-bottom:1px solid var(--accent-line)" href="docs.html#build">build from source</a></span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg><span class="rq">BioOKF Studio DMG installed (step 1 above)</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg><span class="rq">Claude Code</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg><span class="rq">macOS Apple Silicon (the signed DMG); Intel and other platforms follow from the release pipeline</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg><span class="rq">No Gatekeeper prompts: the DMG, the <code>.app</code>, the CLI, and the MCP server are all Apple-notarized</span></li>
         </ul>
       </div>
     </div>
