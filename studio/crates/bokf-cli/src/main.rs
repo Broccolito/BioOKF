@@ -127,13 +127,19 @@ enum Cmd {
         #[arg(long)]
         json: bool,
     },
-    /// Convert a file/folder/zip (or --text) to raw Markdown under <bundle>'s raw/.
+    /// Convert a file/folder/zip/URL (or --text) to raw Markdown under <bundle>'s raw/.
     Convert {
         path: Option<PathBuf>,
         #[arg(long)]
         text: Option<String>,
         #[arg(long)]
         title: Option<String>,
+        /// Download and ingest a single URL (classifies its source provenance).
+        #[arg(long)]
+        url: Option<String>,
+        /// Download and ingest a list of URLs, one per line (blank lines and `#` comments skipped).
+        #[arg(long)]
+        urls: Option<PathBuf>,
         /// Bundle to write raw/ into.
         #[arg(long)]
         into: PathBuf,
@@ -202,7 +208,7 @@ fn run() -> Result<()> {
         Cmd::GetActive { root, json } => cmd_get_active(root, json),
         Cmd::Register { root, kb_id, path, list, unregister } => cmd_register(root, kb_id, path, list, unregister),
         Cmd::Verify { path, workflow, json } => cmd_verify(path, workflow, json),
-        Cmd::Convert { path, text, title, into, combined, json } => cmd_convert(path, text, title, into, combined, json),
+        Cmd::Convert { path, text, title, url, urls, into, combined, json } => cmd_convert(path, text, title, url, urls, into, combined, json),
         Cmd::NameFigure { bundle, source, figure, caption, json } => cmd_name_figure(bundle, source, figure, caption, json),
         Cmd::Index { path, check } => cmd_index(path, check),
         Cmd::MergeRaw { mkb, skb, json } => cmd_merge_raw(mkb, skb, json),
@@ -264,27 +270,57 @@ fn cmd_merge_snapshot(mkb: PathBuf, verify: bool) -> Result<()> {
     Ok(())
 }
 
-fn cmd_convert(path: Option<PathBuf>, text: Option<String>, title: Option<String>, into: PathBuf, combined: bool, json: bool) -> Result<()> {
-    use bokf_core::convert::{ingest, SourceInput};
-    let input = if let Some(t) = text {
-        SourceInput::Text { text: t, title }
-    } else if let Some(p) = path {
-        SourceInput::Path(p)
+#[allow(clippy::too_many_arguments)]
+fn cmd_convert(path: Option<PathBuf>, text: Option<String>, title: Option<String>, url: Option<String>, urls: Option<PathBuf>, into: PathBuf, combined: bool, json: bool) -> Result<()> {
+    use bokf_core::convert::{ingest, ingest_urls, SourceInput, SourceRecord};
+    let results: Vec<std::result::Result<SourceRecord, String>> = if let Some(urls_file) = urls {
+        let content = std::fs::read_to_string(&urls_file)
+            .map_err(|e| anyhow::anyhow!("reading {}: {e}", urls_file.display()))?;
+        let list: Vec<String> = content
+            .lines()
+            .map(|l| l.trim().to_string())
+            .filter(|l| !l.is_empty() && !l.starts_with('#'))
+            .collect();
+        if list.is_empty() {
+            anyhow::bail!("no URLs found in {}", urls_file.display());
+        }
+        ingest_urls(&into, list)
     } else {
-        anyhow::bail!("convert needs a <path> or --text");
+        let input = if let Some(u) = url {
+            SourceInput::Url(u)
+        } else if let Some(t) = text {
+            SourceInput::Text { text: t, title }
+        } else if let Some(p) = path {
+            SourceInput::Path(p)
+        } else {
+            anyhow::bail!("convert needs a <path>, --url, --urls <file>, or --text");
+        };
+        ingest(&into, input, combined)
+            .map_err(anyhow::Error::msg)?
+            .into_iter()
+            .map(Ok)
+            .collect()
     };
-    let recs = ingest(&into, input, combined).map_err(anyhow::Error::msg)?;
     if json {
-        println!("{}", serde_json::to_string_pretty(&recs)?);
+        let ok: Vec<&SourceRecord> = results.iter().filter_map(|r| r.as_ref().ok()).collect();
+        println!("{}", serde_json::to_string_pretty(&ok)?);
+        for r in &results {
+            if let Err(e) = r {
+                eprintln!("FAILED: {e}");
+            }
+        }
     } else {
-        for r in &recs {
-            println!(
-                "{}  ({}{})  -> {}",
-                r.source_id,
-                if r.reused { "reused" } else { "new" },
-                if r.needs_llm_fallback { ", needs OCR/LLM" } else { "" },
-                r.source_md_path
-            );
+        for r in &results {
+            match r {
+                Ok(rec) => println!(
+                    "{}  ({}{})  -> {}",
+                    rec.source_id,
+                    if rec.reused { "reused" } else { "new" },
+                    if rec.needs_llm_fallback { ", needs OCR/LLM" } else { "" },
+                    rec.source_md_path
+                ),
+                Err(e) => eprintln!("FAILED: {e}"),
+            }
         }
     }
     Ok(())
@@ -546,6 +582,17 @@ mod tests {
         use clap::Parser;
         let c = Cli::try_parse_from(["bokf", "name-figure", "kb", "--source", "x-1", "--figure", "figures/fig-001.png", "--as", "A B"]).unwrap();
         assert!(matches!(c.cmd, Cmd::NameFigure { .. }));
+    }
+
+    #[test]
+    fn cli_parses_convert_url() {
+        use clap::Parser;
+        let c = Cli::try_parse_from(["bokf", "convert", "--url", "https://x.org/a", "--into", "kb"]).unwrap();
+        if let Cmd::Convert { url, .. } = c.cmd {
+            assert_eq!(url.as_deref(), Some("https://x.org/a"));
+        } else {
+            panic!("expected Convert");
+        }
     }
 }
 
