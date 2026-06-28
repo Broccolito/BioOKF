@@ -149,6 +149,12 @@ enum Cmd {
         #[arg(long)]
         json: bool,
     },
+    /// Install the PDFium library so PDF pages render to images for vision (one-time, automatic).
+    InstallPdfium {
+        /// Install directory (default: $BIOOKF_PDFIUM_DIR or ~/.biookf).
+        #[arg(long)]
+        dir: Option<PathBuf>,
+    },
     /// Rename a provisional figure to a content name and rewrite every reference.
     NameFigure {
         bundle: PathBuf,
@@ -209,6 +215,7 @@ fn run() -> Result<()> {
         Cmd::Register { root, kb_id, path, list, unregister } => cmd_register(root, kb_id, path, list, unregister),
         Cmd::Verify { path, workflow, json } => cmd_verify(path, workflow, json),
         Cmd::Convert { path, text, title, url, urls, into, combined, json } => cmd_convert(path, text, title, url, urls, into, combined, json),
+        Cmd::InstallPdfium { dir } => cmd_install_pdfium(dir),
         Cmd::NameFigure { bundle, source, figure, caption, json } => cmd_name_figure(bundle, source, figure, caption, json),
         Cmd::Index { path, check } => cmd_index(path, check),
         Cmd::MergeRaw { mkb, skb, json } => cmd_merge_raw(mkb, skb, json),
@@ -323,6 +330,25 @@ fn cmd_convert(path: Option<PathBuf>, text: Option<String>, title: Option<String
             }
         }
     }
+    // If a PDF was just ingested but page rasterization is unavailable, surface the one optional
+    // step. PDFs still convert without it (the agent reads the PDF directly with vision).
+    let ingested_pdf = results.iter().filter_map(|r| r.as_ref().ok()).any(|r| {
+        into.join(format!("raw/{}/original.pdf", r.source_id)).exists()
+    });
+    if ingested_pdf && !bokf_core::pdf_raster::is_available() {
+        eprintln!("Tip: run `bokf install-pdfium` once to render PDF pages as images for higher-fidelity vision reading. PDFs already convert without it.");
+    }
+    Ok(())
+}
+
+fn cmd_install_pdfium(dir: Option<PathBuf>) -> Result<()> {
+    if bokf_core::pdf_raster::is_available() {
+        println!("PDFium is already available; PDF page rendering is enabled.");
+        return Ok(());
+    }
+    eprintln!("Downloading the PDFium library (one-time, a few MB)...");
+    let path = bokf_core::pdf_raster::install_pdfium(dir).map_err(anyhow::Error::msg)?;
+    println!("Installed PDFium to {}. PDF page rendering is now enabled.", path.display());
     Ok(())
 }
 

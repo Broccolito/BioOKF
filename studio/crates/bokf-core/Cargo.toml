@@ -21,6 +21,11 @@ reqwest = { version = "0.12", default-features = false, features = ["blocking", 
 # Used ONLY as a coverage guardrail (lint), never as the PDF converter: it reliably captures prose
 # (it garbles formulas), so it cross-checks that the LLM vision rendering did not drop large sections.
 pdf-extract = "0.12"
+# Rasterizes PDF pages to PNG images for the LLM to read with vision (NOT extraction/OCR). Needs the
+# PDFium native library at runtime; absent it, rasterization is a graceful no-op.
+pdfium-render = "0.9.2"
+image = { version = "0.25", default-features = false, features = ["jpeg"] }
 
 [dev-dependencies]
 tempfile = "3"
+printpdf = "0.9.1"

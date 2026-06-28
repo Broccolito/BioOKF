@@ -52,4 +52,8 @@ preserved.** Never hand-edit `raw/` originals.
 - Everything ends as faithful Markdown: the deterministic converter handles what it can, you handle
   the rest. Nothing is left binary-only.
 - Every figure ends both named by content and described in `source.md`.
+- **PDF page rendering (no setup needed):** PDFs always convert, because you read them with vision.
+  When the optional PDFium library is installed (one command, `bokf install-pdfium`), `bokf convert`
+  also writes high-resolution page images to `raw/<id>/pages/page-NNN.jpg` for you to read; when it
+  is not, read `raw/<id>/original.pdf` directly. The `pages/` cache is local-only (gitignored).
 - Then proceed to **biookf-ingest** (Step 2+): extract typed nodes and provenance-stamped edges.
