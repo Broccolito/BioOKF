@@ -1,10 +1,10 @@
-# BioOKF Curation Harness — Foundation (SP0+SP1+SP2) Implementation Plan
+# BioOKF Curation Harness: Foundation (SP0+SP1+SP2) Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Reconcile the predicate set to the authoritative 24, add git-backed version tracking (with a single step-committer that keeps `log.md` and git in lockstep), and add active-KB context — all as `bokf-core`/`bokf-cli`/`bokf-mcp` primitives.
+**Goal:** Reconcile the predicate set to the authoritative 24, add git-backed version tracking (with a single step-committer that keeps `log.md` and git in lockstep), and add active-KB context, all as `bokf-core`/`bokf-cli`/`bokf-mcp` primitives.
 
-**Architecture:** Pure logic stays in `bokf-core` (new modules `git.rs`, `log_sync.rs`, `registry.rs`, `active.rs`, plus a `model.rs` edit). The CLI (`bokf`) and MCP server (`bokf-mcp`, server name `biookf`) are thin front-ends. Git is driven by **shelling out to the system `git` binary** (`std::process::Command`) — no `git2`/libgit2 dependency.
+**Architecture:** Pure logic stays in `bokf-core` (new modules `git.rs`, `log_sync.rs`, `registry.rs`, `active.rs`, plus a `model.rs` edit). The CLI (`bokf`) and MCP server (`bokf-mcp`, server name `biookf`) are thin front-ends. Git is driven by **shelling out to the system `git` binary** (`std::process::Command`), with no `git2`/libgit2 dependency.
 
 **Tech Stack:** Rust 2021 workspace at `studio/`; crates `bokf-core`, `bokf-cli` (clap), `bokf-mcp` (rmcp); `serde`/`serde_yaml`/`serde_json`; new direct dep `uuid` (v4, already in lockfile), new dev-dep `tempfile`.
 
@@ -12,7 +12,7 @@
 
 - Predicate set is **24** (`schema.md` authoritative): the 23 core **+ `used_to_study`**. One source of truth: `bokf_core::model::PREDICATES`.
 - `log.md` headings stay **`## YYYY-MM-DD`** (newest-first); kind/summary/delta go in the body.
-- Version tracking shells out to system **`git`** — **no `git2`** dependency. Preflight errors clearly if `git` is absent.
+- Version tracking shells out to system **`git`**, with **no `git2`** dependency. Preflight errors clearly if `git` is absent.
 - **`log_sync` is the sole step-committer** (log.md append + commit, atomic). The lower-level `bokf commit` is for non-logged lifecycle commits only. There is **no** per-tool auto-commit.
 - `raw/**/original.*` is **gitignored** (immutable source bytes are not version-controlled).
 - `restore` is **forward-only** (commit the old tree on top of HEAD; never rewind).
@@ -40,15 +40,15 @@
 
 ---
 
-## SP0 — Predicate reconciliation
+## SP0: Predicate reconciliation
 
 ### Task 1: Add `used_to_study` to the model
 
 **Files:** Modify `crates/bokf-core/src/model.rs`; Modify `crates/bokf-core/src/lib.rs:90`
 
-**Interfaces — Produces:** `Predicate::UsedToStudy`; `PREDICATES: [&str; 24]` (adds `"used_to_study"` before `"reported_in"`).
+**Interfaces, Produces:** `Predicate::UsedToStudy`; `PREDICATES: [&str; 24]` (adds `"used_to_study"` before `"reported_in"`).
 
-- [ ] **Step 1 — failing test.** In `model.rs`, append a `#[cfg(test)] mod tests` (or add to lib.rs tests). Add to `crates/bokf-core/src/lib.rs` test `node_type_palette_is_complete`, change the predicate assertion and add a round-trip:
+- [ ] **Step 1: failing test.** In `model.rs`, append a `#[cfg(test)] mod tests` (or add to lib.rs tests). Add to `crates/bokf-core/src/lib.rs` test `node_type_palette_is_complete`, change the predicate assertion and add a round-trip:
 
 ```rust
         assert_eq!(model::PREDICATES.len(), 24);
@@ -59,9 +59,9 @@
 ```
 (Replace the existing `assert_eq!(model::PREDICATES.len(), 23);` line.)
 
-- [ ] **Step 2 — run, expect fail.** `cargo test -p bokf-core node_type_palette_is_complete` → FAIL (len is 23 / `used_to_study` parses to Unknown).
+- [ ] **Step 2: run, expect fail.** `cargo test -p bokf-core node_type_palette_is_complete` → FAIL (len is 23 / `used_to_study` parses to Unknown).
 
-- [ ] **Step 3 — implement.** In `model.rs`:
+- [ ] **Step 3: implement.** In `model.rs`:
   - Add variant `UsedToStudy,` to `enum Predicate` immediately before `ReportedIn,`.
   - Grow the const and insert the token before `"reported_in"`:
 ```rust
@@ -75,17 +75,17 @@ pub const PREDICATES: [&str; 24] = [
   - In `Predicate::parse`, add before the `reported_in` arm: `"used_to_study" => fwd(Predicate::UsedToStudy),`
   - In `Predicate::as_str`, add before the `ReportedIn` arm: `Predicate::UsedToStudy => "used_to_study",`
 
-- [ ] **Step 4 — run, expect pass.** `cargo test -p bokf-core node_type_palette_is_complete` → PASS.
+- [ ] **Step 4: run, expect pass.** `cargo test -p bokf-core node_type_palette_is_complete` → PASS.
 
-- [ ] **Step 5 — commit.** `git add -A && git commit -m "feat(bokf-core): add used_to_study predicate (24)"`
+- [ ] **Step 5: commit.** `git add -A && git commit -m "feat(bokf-core): add used_to_study predicate (24)"`
 
 ### Task 2: Domain/range for `used_to_study` + fix stale "23" messages
 
 **Files:** Modify `crates/bokf-core/src/lint.rs:160` and `:212-244`
 
-**Interfaces — Consumes:** `Predicate::UsedToStudy` (Task 1).
+**Interfaces, Consumes:** `Predicate::UsedToStudy` (Task 1).
 
-- [ ] **Step 1 — failing test.** Add to `crates/bokf-core/src/lint.rs` a `#[cfg(test)] mod tests` block (create if absent):
+- [ ] **Step 1: failing test.** Add to `crates/bokf-core/src/lint.rs` a `#[cfg(test)] mod tests` block (create if absent):
 
 ```rust
 #[cfg(test)]
@@ -122,9 +122,9 @@ mod tests {
 ```
 *(Note: replace the stray full-width characters if your editor inserts any; the assertion is `assert!(!r.findings.iter().any(|f| f.rule == "predicate.invalid"));`.)*
 
-- [ ] **Step 2 — run, expect fail.** `cargo test -p bokf-core used_to_study_range_violation_warns` → FAIL.
+- [ ] **Step 2: run, expect fail.** `cargo test -p bokf-core used_to_study_range_violation_warns` → FAIL.
 
-- [ ] **Step 3 — implement.** In `lint.rs`:
+- [ ] **Step 3: implement.** In `lint.rs`:
   - Line ~160, change the message `"... not one of the 23 controlled predicates"` → `"... not one of the 24 controlled predicates"`.
   - In `lint_domain_range`, add an arm before the `_ => {}`:
 ```rust
@@ -138,17 +138,17 @@ mod tests {
         }
 ```
 
-- [ ] **Step 4 — run, expect pass.** `cargo test -p bokf-core used_to_study_range_violation_warns` → PASS. Also `cargo test -p bokf-core` (whole crate) → PASS.
+- [ ] **Step 4: run, expect pass.** `cargo test -p bokf-core used_to_study_range_violation_warns` → PASS. Also `cargo test -p bokf-core` (whole crate) → PASS.
 
-- [ ] **Step 5 — commit.** `git add -A && git commit -m "feat(bokf-core): used_to_study domain/range lint + 24-predicate messaging"`
+- [ ] **Step 5: commit.** `git add -A && git commit -m "feat(bokf-core): used_to_study domain/range lint + 24-predicate messaging"`
 
 ### Task 3: `bokf predicates` CLI/MCP + sync instructions.md
 
 **Files:** Modify `crates/bokf-cli/src/main.rs`; Modify `crates/bokf-mcp/src/main.rs`; Modify `crates/bokf-mcp/src/instructions.rs`; Test `crates/bokf-cli/tests/cli.rs`
 
-**Interfaces — Produces:** CLI `bokf predicates [--json]`; MCP `bokf_predicates`.
+**Interfaces, Produces:** CLI `bokf predicates [--json]`; MCP `bokf_predicates`.
 
-- [ ] **Step 1 — failing test.** Append to `crates/bokf-cli/tests/cli.rs`:
+- [ ] **Step 1: failing test.** Append to `crates/bokf-cli/tests/cli.rs`:
 ```rust
 #[test]
 fn predicates_lists_24() {
@@ -162,9 +162,9 @@ fn predicates_lists_24() {
 }
 ```
 
-- [ ] **Step 2 — run, expect fail.** `cargo test -p bokf-cli predicates_lists_24` → FAIL (no `predicates` subcommand).
+- [ ] **Step 2: run, expect fail.** `cargo test -p bokf-cli predicates_lists_24` → FAIL (no `predicates` subcommand).
 
-- [ ] **Step 3 — implement (CLI).** In `main.rs`, add to `enum Cmd`:
+- [ ] **Step 3: implement (CLI).** In `main.rs`, add to `enum Cmd`:
 ```rust
     /// Print the active controlled vocabulary (28 types, 24 predicates, enums).
     Predicates {
@@ -194,9 +194,9 @@ fn cmd_predicates(json: bool) -> Result<()> {
 }
 ```
 
-- [ ] **Step 4 — run, expect pass.** `cargo test -p bokf-cli predicates_lists_24` → PASS.
+- [ ] **Step 4: run, expect pass.** `cargo test -p bokf-cli predicates_lists_24` → PASS.
 
-- [ ] **Step 5 — implement (MCP + instructions).** In `bokf-mcp/src/main.rs`, add a tool method inside the `#[tool_router]` impl:
+- [ ] **Step 5: implement (MCP + instructions).** In `bokf-mcp/src/main.rs`, add a tool method inside the `#[tool_router]` impl:
 ```rust
     #[tool(name = "bokf_predicates", description = "Print the active BioOKF vocabulary: 28 node types, 24 predicates, knowledge_level/agent_type enums.")]
     pub async fn predicates(&self) -> Result<CallToolResult, rmcp::model::ErrorData> {
@@ -207,31 +207,31 @@ fn cmd_predicates(json: bool) -> Result<()> {
 ```
 In `bokf-mcp/src/instructions.rs`, update any "23 predicates"/"23 forward-only" wording to **24** and mention `used_to_study`.
 
-- [ ] **Step 6 — verify + commit.** `cargo build && cargo test -p bokf-cli` → PASS. `git add -A && git commit -m "feat(bokf): bokf predicates tool + 24-predicate instructions"`
+- [ ] **Step 6: verify + commit.** `cargo build && cargo test -p bokf-cli` → PASS. `git add -A && git commit -m "feat(bokf): bokf predicates tool + 24-predicate instructions"`
 
 ---
 
-## SP1 — Git-backed version tracking
+## SP1: Git-backed version tracking
 
 ### Task 4: Crate deps (uuid + tempfile)
 
 **Files:** Modify `crates/bokf-core/Cargo.toml`
 
-- [ ] **Step 1 — edit.** Add to `[dependencies]`: `uuid = { version = "1", features = ["v4"] }`. Add a new section:
+- [ ] **Step 1: edit.** Add to `[dependencies]`: `uuid = { version = "1", features = ["v4"] }`. Add a new section:
 ```toml
 [dev-dependencies]
 tempfile = "3"
 ```
-- [ ] **Step 2 — verify it resolves.** `cargo build -p bokf-core` → succeeds (fetches `tempfile`; `uuid` already in lockfile). If offline and the fetch fails, run once with network.
-- [ ] **Step 3 — commit.** `git add -A && git commit -m "build(bokf-core): add uuid dep + tempfile dev-dep"`
+- [ ] **Step 2: verify it resolves.** `cargo build -p bokf-core` → succeeds (fetches `tempfile`; `uuid` already in lockfile). If offline and the fetch fails, run once with network.
+- [ ] **Step 3: commit.** `git add -A && git commit -m "build(bokf-core): add uuid dep + tempfile dev-dep"`
 
-### Task 5: `git.rs` — repo lifecycle + commit + a date helper
+### Task 5: `git.rs` repo lifecycle + commit + a date helper
 
 **Files:** Create `crates/bokf-core/src/git.rs`; Modify `crates/bokf-core/src/lib.rs`
 
-**Interfaces — Produces:** `ChangeKind` (8 variants, `as_str`/`parse`); `GitRepo::{open,preflight,is_repo,ensure_repo,commit_all,head_sha}`; `today_iso()`.
+**Interfaces, Produces:** `ChangeKind` (8 variants, `as_str`/`parse`); `GitRepo::{open,preflight,is_repo,ensure_repo,commit_all,head_sha}`; `today_iso()`.
 
-- [ ] **Step 1 — failing test.** Create `crates/bokf-core/tests/version.rs`:
+- [ ] **Step 1: failing test.** Create `crates/bokf-core/tests/version.rs`:
 ```rust
 use bokf_core::git::{ChangeKind, GitRepo};
 
@@ -256,8 +256,8 @@ fn today_iso_is_well_formed() {
     assert_eq!(&d[4..5], "-");
 }
 ```
-- [ ] **Step 2 — run, expect fail.** `cargo test -p bokf-core --test version` → FAIL (no module).
-- [ ] **Step 3 — implement.** Create `crates/bokf-core/src/git.rs`:
+- [ ] **Step 2: run, expect fail.** `cargo test -p bokf-core --test version` → FAIL (no module).
+- [ ] **Step 3: implement.** Create `crates/bokf-core/src/git.rs`:
 ```rust
 //! Git-backed version tracking for a BioOKF bundle by shelling out to the system
 //! `git` binary (no libgit2 dependency).
@@ -305,7 +305,7 @@ impl GitRepo {
     pub fn preflight() -> Result<(), String> {
         match Command::new("git").arg("--version").output() {
             Ok(o) if o.status.success() => Ok(()),
-            _ => Err("`git` not found on PATH — install git to enable BioOKF version tracking".into()),
+            _ => Err("`git` not found on PATH; install git to enable BioOKF version tracking".into()),
         }
     }
     pub fn is_repo(&self) -> bool { self.root.join(".git").exists() }
@@ -382,16 +382,16 @@ mod tests {
 ```
 In `lib.rs` add `pub mod git;` and re-export `pub use git::{ChangeKind, GitRepo, HistoryEntry};`.
 
-- [ ] **Step 4 — run, expect pass.** `cargo test -p bokf-core --test version && cargo test -p bokf-core git::` → PASS.
-- [ ] **Step 5 — commit.** `git add -A && git commit -m "feat(bokf-core): git.rs repo lifecycle, commit_all, ChangeKind, today_iso"`
+- [ ] **Step 4: run, expect pass.** `cargo test -p bokf-core --test version && cargo test -p bokf-core git::` → PASS.
+- [ ] **Step 5: commit.** `git add -A && git commit -m "feat(bokf-core): git.rs repo lifecycle, commit_all, ChangeKind, today_iso"`
 
-### Task 6: `git.rs` — `log()` and forward-only `restore_to()`
+### Task 6: `git.rs` `log()` and forward-only `restore_to()`
 
 **Files:** Modify `crates/bokf-core/src/git.rs`
 
-**Interfaces — Produces:** `GitRepo::{log,restore_to}`.
+**Interfaces, Produces:** `GitRepo::{log,restore_to}`.
 
-- [ ] **Step 1 — failing test.** Append to `crates/bokf-core/tests/version.rs`:
+- [ ] **Step 1: failing test.** Append to `crates/bokf-core/tests/version.rs`:
 ```rust
 #[test]
 fn log_parses_kind_and_restore_is_forward_only() {
@@ -414,8 +414,8 @@ fn log_parses_kind_and_restore_is_forward_only() {
     assert_eq!(repo.log(1).unwrap()[0].kind, ChangeKind::Restore);
 }
 ```
-- [ ] **Step 2 — run, expect fail.** `cargo test -p bokf-core --test version log_parses_kind_and_restore_is_forward_only` → FAIL.
-- [ ] **Step 3 — implement.** Add to `impl GitRepo`:
+- [ ] **Step 2: run, expect fail.** `cargo test -p bokf-core --test version log_parses_kind_and_restore_is_forward_only` → FAIL.
+- [ ] **Step 3: implement.** Add to `impl GitRepo`:
 ```rust
     pub fn log(&self, limit: usize) -> Result<Vec<HistoryEntry>, String> {
         if !self.has_head() { return Ok(vec![]); }
@@ -445,16 +445,16 @@ fn log_parses_kind_and_restore_is_forward_only() {
         self.commit_all(ChangeKind::Restore, &s, Some(&format!("restored tree of {sha}")))
     }
 ```
-- [ ] **Step 4 — run, expect pass.** `cargo test -p bokf-core --test version` → PASS.
-- [ ] **Step 5 — commit.** `git add -A && git commit -m "feat(bokf-core): git log parsing + forward-only restore"`
+- [ ] **Step 4: run, expect pass.** `cargo test -p bokf-core --test version` → PASS.
+- [ ] **Step 5: commit.** `git add -A && git commit -m "feat(bokf-core): git log parsing + forward-only restore"`
 
-### Task 7: `git.rs` — transactions (branch + squash)
+### Task 7: `git.rs` transactions (branch + squash)
 
 **Files:** Modify `crates/bokf-core/src/git.rs`; Modify `crates/bokf-core/src/lib.rs` (export `Txn`)
 
-**Interfaces — Produces:** `Txn { branch, base }`; `GitRepo::{begin_txn,commit_txn,abort_txn}`.
+**Interfaces, Produces:** `Txn { branch, base }`; `GitRepo::{begin_txn,commit_txn,abort_txn}`.
 
-- [ ] **Step 1 — failing test.** Append to `crates/bokf-core/tests/version.rs`:
+- [ ] **Step 1: failing test.** Append to `crates/bokf-core/tests/version.rs`:
 ```rust
 #[test]
 fn txn_squashes_to_one_entry() {
@@ -474,8 +474,8 @@ fn txn_squashes_to_one_entry() {
     assert!(std::fs::read_to_string(dir.path().join("n2.md")).is_ok());
 }
 ```
-- [ ] **Step 2 — run, expect fail.** → FAIL.
-- [ ] **Step 3 — implement.** Add to `git.rs`:
+- [ ] **Step 2: run, expect fail.** → FAIL.
+- [ ] **Step 3: implement.** Add to `git.rs`:
 ```rust
 pub struct Txn { pub branch: String, pub base: String }
 
@@ -514,16 +514,16 @@ fn short_id() -> String { uuid::Uuid::new_v4().simple().to_string()[..8].to_stri
 ```
 In `lib.rs` extend the re-export: `pub use git::{ChangeKind, GitRepo, HistoryEntry, Txn};`.
 
-- [ ] **Step 4 — run, expect pass.** `cargo test -p bokf-core --test version` → PASS.
-- [ ] **Step 5 — commit.** `git add -A && git commit -m "feat(bokf-core): git transactions (branch + squash-merge)"`
+- [ ] **Step 4: run, expect pass.** `cargo test -p bokf-core --test version` → PASS.
+- [ ] **Step 5: commit.** `git add -A && git commit -m "feat(bokf-core): git transactions (branch + squash-merge)"`
 
-### Task 8: `log_sync.rs` — the sole step-committer
+### Task 8: `log_sync.rs` the sole step-committer
 
 **Files:** Create `crates/bokf-core/src/log_sync.rs`; Modify `crates/bokf-core/src/lib.rs`
 
-**Interfaces — Produces:** `log_sync(bundle, kind, summary, delta, date) -> Result<String, String>`.
+**Interfaces, Produces:** `log_sync(bundle, kind, summary, delta, date) -> Result<String, String>`.
 
-- [ ] **Step 1 — failing test.** Append to `crates/bokf-core/tests/version.rs`:
+- [ ] **Step 1: failing test.** Append to `crates/bokf-core/tests/version.rs`:
 ```rust
 #[test]
 fn log_sync_appends_and_commits_atomically() {
@@ -541,8 +541,8 @@ fn log_sync_appends_and_commits_atomically() {
     assert_eq!(repo.log(1).unwrap()[0].kind, ChangeKind::Ingest);
 }
 ```
-- [ ] **Step 2 — run, expect fail.** → FAIL.
-- [ ] **Step 3 — implement.** Create `crates/bokf-core/src/log_sync.rs`:
+- [ ] **Step 2: run, expect fail.** → FAIL.
+- [ ] **Step 3: implement.** Create `crates/bokf-core/src/log_sync.rs`:
 ```rust
 //! The sole step-committer: append a dated `## YYYY-MM-DD` block to log.md AND
 //! git-commit, atomically, so log.md and history never drift.
@@ -569,16 +569,16 @@ pub fn log_sync(bundle: &Path, kind: ChangeKind, summary: &str, delta: Option<&s
 ```
 In `lib.rs` add `pub mod log_sync;`.
 
-- [ ] **Step 4 — run, expect pass.** `cargo test -p bokf-core --test version` → PASS.
-- [ ] **Step 5 — commit.** `git add -A && git commit -m "feat(bokf-core): log_sync sole step-committer (atomic log.md + commit)"`
+- [ ] **Step 4: run, expect pass.** `cargo test -p bokf-core --test version` → PASS.
+- [ ] **Step 5: commit.** `git add -A && git commit -m "feat(bokf-core): log_sync sole step-committer (atomic log.md + commit)"`
 
 ### Task 9: CLI wiring for commit/log/restore/log-sync
 
 **Files:** Modify `crates/bokf-cli/src/main.rs`; Test `crates/bokf-cli/tests/cli.rs`
 
-**Interfaces — Produces:** `bokf log-sync`, `bokf commit`, `bokf log`, `bokf restore`.
+**Interfaces, Produces:** `bokf log-sync`, `bokf commit`, `bokf log`, `bokf restore`.
 
-- [ ] **Step 1 — failing test.** Append to `crates/bokf-cli/tests/cli.rs`:
+- [ ] **Step 1: failing test.** Append to `crates/bokf-cli/tests/cli.rs`:
 ```rust
 #[test]
 fn cli_log_sync_then_log() {
@@ -596,8 +596,8 @@ fn cli_log_sync_then_log() {
 ```
 Add `tempfile = "3"` to `crates/bokf-cli/Cargo.toml` `[dev-dependencies]`.
 
-- [ ] **Step 2 — run, expect fail.** → FAIL.
-- [ ] **Step 3 — implement.** In `main.rs`, add variants to `enum Cmd`:
+- [ ] **Step 2: run, expect fail.** → FAIL.
+- [ ] **Step 3: implement.** In `main.rs`, add variants to `enum Cmd`:
 ```rust
     /// Append a dated log.md entry AND commit, atomically (the sole step-committer).
     LogSync {
@@ -632,7 +632,7 @@ use bokf_core::git::{today_iso, ChangeKind, GitRepo};
 fn cmd_log_sync(path: PathBuf, kind: String, summary: String, delta: Option<String>) -> Result<()> {
     let sha = bokf_core::log_sync::log_sync(&path, ChangeKind::parse(&kind), &summary, delta.as_deref(), &today_iso())
         .map_err(anyhow::Error::msg)?;
-    eprintln!("[{}] {} — {}", kind, summary, &sha[..8.min(sha.len())]);
+    eprintln!("[{}] {}: {}", kind, summary, &sha[..8.min(sha.len())]);
     Ok(())
 }
 fn cmd_commit(path: PathBuf, kind: String, summary: String, delta: Option<String>) -> Result<()> {
@@ -652,20 +652,20 @@ fn cmd_restore(path: PathBuf, sha: String, summary: Option<String>) -> Result<()
     Ok(())
 }
 ```
-- [ ] **Step 4 — run, expect pass.** `cargo test -p bokf-cli cli_log_sync_then_log` → PASS.
-- [ ] **Step 5 — commit.** `git add -A && git commit -m "feat(bokf-cli): log-sync/commit/log/restore subcommands"`
+- [ ] **Step 4: run, expect pass.** `cargo test -p bokf-cli cli_log_sync_then_log` → PASS.
+- [ ] **Step 5: commit.** `git add -A && git commit -m "feat(bokf-cli): log-sync/commit/log/restore subcommands"`
 
 ---
 
-## SP2 — Active-KB context
+## SP2: Active-KB context
 
-### Task 10: `registry.rs` — known-bundle registry + `validate_kb_id`
+### Task 10: `registry.rs` known-bundle registry + `validate_kb_id`
 
 **Files:** Create `crates/bokf-core/src/registry.rs`; Modify `crates/bokf-core/src/lib.rs`; Test `crates/bokf-core/tests/active.rs`
 
-**Interfaces — Produces:** `registry::{Base, register, unregister, list, resolve, validate_kb_id}`.
+**Interfaces, Produces:** `registry::{Base, register, unregister, list, resolve, validate_kb_id}`.
 
-- [ ] **Step 1 — failing test.** Create `crates/bokf-core/tests/active.rs`:
+- [ ] **Step 1: failing test.** Create `crates/bokf-core/tests/active.rs`:
 ```rust
 use bokf_core::registry;
 
@@ -681,8 +681,8 @@ fn register_resolve_and_reject_dupes_and_bad_ids() {
     assert!(registry::resolve(dir.path(), "ms-kb").is_none());
 }
 ```
-- [ ] **Step 2 — run, expect fail.** → FAIL.
-- [ ] **Step 3 — implement.** Create `crates/bokf-core/src/registry.rs`:
+- [ ] **Step 2: run, expect fail.** → FAIL.
+- [ ] **Step 3: implement.** Create `crates/bokf-core/src/registry.rs`:
 ```rust
 //! Known-bundle registry: <root>/registry.yaml = { bases: [ {id, path} ] }.
 use serde::{Deserialize, Serialize};
@@ -733,16 +733,16 @@ pub fn validate_kb_id(id: &str) -> Result<(), String> {
 ```
 In `lib.rs` add `pub mod registry;`.
 
-- [ ] **Step 4 — run, expect pass.** `cargo test -p bokf-core --test active` → PASS.
-- [ ] **Step 5 — commit.** `git add -A && git commit -m "feat(bokf-core): registry.rs known-bundle registry + validate_kb_id"`
+- [ ] **Step 4: run, expect pass.** `cargo test -p bokf-core --test active` → PASS.
+- [ ] **Step 5: commit.** `git add -A && git commit -m "feat(bokf-core): registry.rs known-bundle registry + validate_kb_id"`
 
-### Task 11: `active.rs` — active-KB pointer
+### Task 11: `active.rs` active-KB pointer
 
 **Files:** Create `crates/bokf-core/src/active.rs`; Modify `crates/bokf-core/src/lib.rs`
 
-**Interfaces — Produces:** `active::{get_active, set_active}`.
+**Interfaces, Produces:** `active::{get_active, set_active}`.
 
-- [ ] **Step 1 — failing test.** Append to `crates/bokf-core/tests/active.rs`:
+- [ ] **Step 1: failing test.** Append to `crates/bokf-core/tests/active.rs`:
 ```rust
 #[test]
 fn set_get_clear_active() {
@@ -755,8 +755,8 @@ fn set_get_clear_active() {
     assert!(bokf_core::active::get_active(dir.path()).is_none());
 }
 ```
-- [ ] **Step 2 — run, expect fail.** → FAIL.
-- [ ] **Step 3 — implement.** Create `crates/bokf-core/src/active.rs`:
+- [ ] **Step 2: run, expect fail.** → FAIL.
+- [ ] **Step 3: implement.** Create `crates/bokf-core/src/active.rs`:
 ```rust
 //! Active-KB pointer: <root>/.active-kb = plaintext kb-id of the active graph.
 use std::path::{Path, PathBuf};
@@ -785,16 +785,16 @@ pub fn set_active(root: &Path, id: Option<&str>) -> Result<(), String> {
 ```
 In `lib.rs` add `pub mod active;`.
 
-- [ ] **Step 4 — run, expect pass.** `cargo test -p bokf-core --test active` → PASS.
-- [ ] **Step 5 — commit.** `git add -A && git commit -m "feat(bokf-core): active.rs active-KB pointer"`
+- [ ] **Step 4: run, expect pass.** `cargo test -p bokf-core --test active` → PASS.
+- [ ] **Step 5: commit.** `git add -A && git commit -m "feat(bokf-core): active.rs active-KB pointer"`
 
 ### Task 12: CLI wiring for set-active/get-active/register + scaffold integration
 
 **Files:** Modify `crates/bokf-cli/src/main.rs`; Test `crates/bokf-cli/tests/cli.rs`
 
-**Interfaces — Produces:** `bokf set-active`, `bokf get-active`, `bokf register`; `bokf scaffold` now git-inits + registers + set-actives.
+**Interfaces, Produces:** `bokf set-active`, `bokf get-active`, `bokf register`; `bokf scaffold` now git-inits + registers + set-actives.
 
-- [ ] **Step 1 — failing test.** Append to `crates/bokf-cli/tests/cli.rs`:
+- [ ] **Step 1: failing test.** Append to `crates/bokf-cli/tests/cli.rs`:
 ```rust
 #[test]
 fn scaffold_registers_inits_and_activates() {
@@ -810,8 +810,8 @@ fn scaffold_registers_inits_and_activates() {
     assert_eq!(v["id"], "ms-kb");                                 // active set to the new bundle
 }
 ```
-- [ ] **Step 2 — run, expect fail.** → FAIL.
-- [ ] **Step 3 — implement.** Add to `enum Cmd`:
+- [ ] **Step 2: run, expect fail.** → FAIL.
+- [ ] **Step 3: implement.** Add to `enum Cmd`:
 ```rust
     /// Set the active KB id under <root>.
     SetActive { root: PathBuf, kb_id: String },
@@ -840,7 +840,7 @@ fn cmd_get_active(root: PathBuf, json: bool) -> Result<()> {
             if json { println!("{}", serde_json::json!({"id": id, "path": path})); }
             else { println!("{id}  {}", path.as_deref().unwrap_or("(unregistered path)")); }
         }
-        None => { if json { println!("{}", serde_json::json!({"id": null})); } else { println!("(no active KB — run `bokf set-active`)"); } }
+        None => { if json { println!("{}", serde_json::json!({"id": null})); } else { println!("(no active KB; run `bokf set-active`)"); } }
     }
     Ok(())
 }
@@ -854,7 +854,7 @@ fn cmd_register(root: PathBuf, kb_id: Option<String>, path: Option<PathBuf>, lis
     Ok(())
 }
 ```
-Update `cmd_scaffold` — after writing the files, before the final `eprintln!`:
+Update `cmd_scaffold`, after writing the files, before the final `eprintln!`:
 ```rust
     // version-track + register + activate
     let repo = bokf_core::git::GitRepo::open(&path);
@@ -870,18 +870,18 @@ Update `cmd_scaffold` — after writing the files, before the final `eprintln!`:
         let _ = bokf_core::active::set_active(root, Some(&id));
     }
 ```
-- [ ] **Step 4 — run, expect pass.** `cargo test -p bokf-cli scaffold_registers_inits_and_activates` → PASS.
-- [ ] **Step 5 — commit.** `git add -A && git commit -m "feat(bokf-cli): set-active/get-active/register + scaffold git-init+register+activate"`
+- [ ] **Step 4: run, expect pass.** `cargo test -p bokf-cli scaffold_registers_inits_and_activates` → PASS.
+- [ ] **Step 5: commit.** `git add -A && git commit -m "feat(bokf-cli): set-active/get-active/register + scaffold git-init+register+activate"`
 
 ### Task 13: MCP tools (log-sync/log/restore/set-active/get-active) + scaffold integration
 
 **Files:** Modify `crates/bokf-mcp/src/main.rs`; Modify `crates/bokf-mcp/src/ops.rs`
 
-**Interfaces — Produces:** `mcp__biookf__bokf_log_sync|bokf_log|bokf_restore|bokf_set_active|bokf_get_active`; `ops::scaffold` git-inits+registers+activates.
+**Interfaces, Produces:** `mcp__biookf__bokf_log_sync|bokf_log|bokf_restore|bokf_set_active|bokf_get_active`; `ops::scaffold` git-inits+registers+activates.
 
-- [ ] **Step 1 — implement (ops.rs scaffold).** At the end of `ops::scaffold`, before `Ok(...)`, mirror the CLI integration (git ensure_repo + initial commit + register + set-active) using `bokf_core::git`/`registry`/`active`. Reuse the same logic as Task 12 Step 3 (adapted to the `ops::scaffold(bundle, name)` signature; `root = bundle.parent()`).
+- [ ] **Step 1: implement (ops.rs scaffold).** At the end of `ops::scaffold`, before `Ok(...)`, mirror the CLI integration (git ensure_repo + initial commit + register + set-active) using `bokf_core::git`/`registry`/`active`. Reuse the same logic as Task 12 Step 3 (adapted to the `ops::scaffold(bundle, name)` signature; `root = bundle.parent()`).
 
-- [ ] **Step 2 — implement (main.rs tools).** Add `param!` structs and `#[tool]` methods:
+- [ ] **Step 2: implement (main.rs tools).** Add `param!` structs and `#[tool]` methods:
 ```rust
 param!(LogSyncParam { #[doc="Bundle dir."] bundle: String, #[doc="ingest|convert|link|merge|lint|index|restore|manual"] kind: String, #[doc="Summary."] summary: String, #[doc="Optional delta line."] delta: Option<String> });
 param!(LogParam { #[doc="Bundle dir."] bundle: String, #[doc="Max entries (default 20)."] limit: Option<usize> });
@@ -925,8 +925,8 @@ param!(RootParam2 { #[doc="Root dir containing bundles."] root: String });
         }
     }
 ```
-- [ ] **Step 3 — verify build.** `cargo build` → succeeds (whole workspace, incl. bokf-mcp).
-- [ ] **Step 4 — commit.** `git add -A && git commit -m "feat(bokf-mcp): version-tracking + active-KB MCP tools; scaffold integration"`
+- [ ] **Step 3: verify build.** `cargo build` → succeeds (whole workspace, incl. bokf-mcp).
+- [ ] **Step 4: commit.** `git add -A && git commit -m "feat(bokf-mcp): version-tracking + active-KB MCP tools; scaffold integration"`
 
 ---
 
@@ -936,7 +936,7 @@ param!(RootParam2 { #[doc="Root dir containing bundles."] root: String });
 
 **Files:** Test `crates/bokf-cli/tests/cli.rs`
 
-- [ ] **Step 1 — write the test.**
+- [ ] **Step 1: write the test.**
 ```rust
 #[test]
 fn end_to_end_scaffold_write_logsync_log_restore() {
@@ -967,18 +967,18 @@ fn end_to_end_scaffold_write_logsync_log_restore() {
     assert_eq!(e2[0]["kind"], "restore");
 }
 ```
-- [ ] **Step 2 — run.** `cargo test -p bokf-cli end_to_end_scaffold_write_logsync_log_restore` → PASS.
-- [ ] **Step 3 — full suite + lint.** `cargo test` (all crates) → PASS; `cargo build` → clean; optionally `cargo clippy`.
-- [ ] **Step 4 — commit.** `git add -A && git commit -m "test(bokf): end-to-end foundation (scaffold→write→log-sync→log→restore)"`
+- [ ] **Step 2: run.** `cargo test -p bokf-cli end_to_end_scaffold_write_logsync_log_restore` → PASS.
+- [ ] **Step 3: full suite + lint.** `cargo test` (all crates) → PASS; `cargo build` → clean; optionally `cargo clippy`.
+- [ ] **Step 4: commit.** `git add -A && git commit -m "test(bokf): end-to-end foundation (scaffold→write→log-sync→log→restore)"`
 
 ---
 
 ## Self-Review
 
-**Spec coverage:** SP0 → Tasks 1–3 (predicate add, domain/range, `bokf predicates`, instructions sync). SP1 → Tasks 4–9 (deps, git lifecycle/commit/date, log+restore, txn, log_sync, CLI). SP2 → Tasks 10–13 (registry, active, CLI, MCP+scaffold). Integration → Task 14. All foundation deliverables in the spec map to a task.
+**Spec coverage:** SP0 → Tasks 1-3 (predicate add, domain/range, `bokf predicates`, instructions sync). SP1 → Tasks 4-9 (deps, git lifecycle/commit/date, log+restore, txn, log_sync, CLI). SP2 → Tasks 10-13 (registry, active, CLI, MCP+scaffold). Integration → Task 14. All foundation deliverables in the spec map to a task.
 
-**Placeholder scan:** No TBD/TODO; every code step shows complete code. (Task 13 Step 1 says "mirror the CLI integration" — the exact code is given in Task 12 Step 3 and is reused verbatim with `root = bundle.parent()`.)
+**Placeholder scan:** No TBD/TODO; every code step shows complete code. (Task 13 Step 1 says "mirror the CLI integration"; the exact code is given in Task 12 Step 3 and is reused verbatim with `root = bundle.parent()`.)
 
-**Type consistency:** `ChangeKind`/`GitRepo`/`Txn`/`HistoryEntry` defined in Task 5/7 and consumed by Tasks 6/8/9/13 with matching signatures; `log_sync(bundle, kind, summary, delta, date)` consistent across Task 8/9/13; `validate_kb_id`/`register`/`resolve`/`get_active`/`set_active` consistent across Tasks 10–13.
+**Type consistency:** `ChangeKind`/`GitRepo`/`Txn`/`HistoryEntry` defined in Task 5/7 and consumed by Tasks 6/8/9/13 with matching signatures; `log_sync(bundle, kind, summary, delta, date)` consistent across Task 8/9/13; `validate_kb_id`/`register`/`resolve`/`get_active`/`set_active` consistent across Tasks 10-13.
 
-**Known caveats for the implementer:** (1) `tempfile` and `uuid` must resolve — run `cargo build` once with network (Task 4). (2) `git`'s default branch name (`main` vs `master`) doesn't matter here because transactions capture the base branch from `current_branch()`. (3) The Task 2 test contains a note to strip any full-width punctuation an editor may insert into the `assert!`.
+**Known caveats for the implementer:** (1) `tempfile` and `uuid` must resolve, so run `cargo build` once with network (Task 4). (2) `git`'s default branch name (`main` vs `master`) doesn't matter here because transactions capture the base branch from `current_branch()`. (3) The Task 2 test contains a note to strip any full-width punctuation an editor may insert into the `assert!`.

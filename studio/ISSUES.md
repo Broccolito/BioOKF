@@ -1,20 +1,20 @@
-# BioOKF Studio — flagged issues (agentic loops & spec/schema)
+# BioOKF Studio: flagged issues (agentic loops & spec/schema)
 
 > Per the build goal: surface problems in the ingestion / querying / linting loops, and
-> candidate spec/schema changes. **The spec & schema are NOT edited** — these are notes for
+> candidate spec/schema changes. **The spec & schema are NOT edited**; these are notes for
 > the maintainer. Loops are perfected in code; spec questions are only flagged.
 >
 > Evidence base: 4 real review articles were ingested by AI sub-agents acting as the MCP/CLI
 > client (ingest → self-lint/fix → query). All 4 produced bundles that lint **0 errors / 0
-> warnings / 0 infos** (24–31 nodes, 56–92 edges). The notes below are the issues those agents
+> warnings / 0 infos** (24 to 31 nodes, 56 to 92 edges). The notes below are the issues those agents
 > and the maintainer hit along the way.
 
-## A. Tooling / loop issues — FIXED in our code
+## A. Tooling / loop issues (FIXED in our code)
 
 - **[FIXED] Self-healing YAML frontmatter.** `examples/knowledge/dataset/sider.md` had an
   unquoted `": "` in a `description:` value (the #1 LLM-authoring mistake), which strict
   `serde_yaml` rejects. `bokf-core::parse` now retries with a repair pass that quotes such
-  scalars. (The ingest agents independently learned to quote these — both belt and suspenders.)
+  scalars. (The ingest agents independently learned to quote these, too: both belt and suspenders.)
 - **[FIXED] CLI ↔ skill tool parity.** ~5 ingest agents noted the skills reference MCP tools
   (`bokf_validate_page`, `bokf_write_page`, `bokf_search`, `bokf_append_log`) but the `bokf` CLI
   lacked a validate-before-write command. Added **`bokf validate <file>`** (single-doc validation
@@ -45,10 +45,10 @@
   curators confidence. (`bokf stats` partially covers this.)
 - **`effect_metric` is not validated.** Agents coined values outside the spec's documented
   `effect_metric` enum (e.g. `percent_change`). This is *correct* under the current rules (only
-  `type`/`predicate`/`knowledge_level`/`agent_type` are closed universes) — noting it in case the
+  `type`/`predicate`/`knowledge_level`/`agent_type` are closed universes), noting it in case the
   maintainer wants `effect_metric` checked (see C).
 
-## C. Candidate spec/schema questions (FLAG ONLY — do not change the spec)
+## C. Candidate spec/schema questions (FLAG ONLY: do not change the spec)
 
 - **No forward predicate for "produces / secretes / activates".** Multiple agents reached for
   `produces` (β-cell → Insulin) or `activates` (DAG → PKCε) and had to fall back to
@@ -63,7 +63,7 @@
 - **`effect_metric` enum: advisory or enforced?** The spec lists an enum but it is not in the
   closed-universe set. Decide whether lint should warn on out-of-enum values.
 - **Dual-facet entities** (`BiologicalPathway` vs `BiologicalFunction`, `Disease` vs `Phenotype`):
-  handled fine via §5.C/§5.D, but agents spent effort deciding — the boundary tests work as intended.
+  handled fine via §5.C/§5.D, but agents spent effort deciding; the boundary tests work as intended.
 
 ## D. Environment / harness notes (not product issues)
 

@@ -1,7 +1,7 @@
 # Authors
 
-BioOKF — the Open Knowledge Format biomedical profile, its `bokf` toolchain, and the
-Studio app + Claude Code extension — is developed by:
+BioOKF (the Open Knowledge Format biomedical profile, its `bokf` toolchain, and the
+Studio app + Claude Code extension) is developed by:
 
 - Wanjun Gu <wanjun.gu@ucsf.edu>
 - Gianmarco Bellucci

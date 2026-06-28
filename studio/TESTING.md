@@ -1,4 +1,4 @@
-# BioOKF Studio — test plan & results
+# BioOKF Studio: test plan & results
 
 BioOKF Studio is, first, an **agentic backend** (an MCP server + CLI over `bokf-core`) and,
 second, a **Tauri visualizer** front-end over that backend. The tests cover both, plus the
@@ -16,7 +16,7 @@ cd app/dist && python3 -m http.server 8754   # then open http://localhost:8754
 npx playwright test app/tests/visual.spec.mjs # frontend assertions (needs @playwright/test)
 ```
 
-## 1. Backend — `bokf-core` (library)  ✅ 7/7
+## 1. Backend: `bokf-core` (library)  ✅ 7/7
 
 `cargo test -p bokf-core`:
 - `parses_frontmatter_split`, `parses_a_node_with_edges_and_normalizes_legacy`
@@ -26,7 +26,7 @@ npx playwright test app/tests/visual.spec.mjs # frontend assertions (needs @play
   repairs the malformed `sider.md`), derives a graph whose every edge endpoint resolves,
   lints (produces findings, never panics), and BM25-searches ("interleukin").
 
-## 2. Backend — `bokf` CLI  ✅ 1/1 + manual
+## 2. Backend: `bokf` CLI  ✅ 1/1 + manual
 
 `cargo test -p bokf-cli` (`tests/cli.rs`): scaffold → author valid source + 2 concept docs with a
 provenance-stamped edge → `bokf lint --json` is clean (0 errors, exit 0) → `bokf graph` contains the
@@ -35,7 +35,7 @@ BRAF→Melanoma edge → `bokf search "kinase"` finds BRAF → introduce an inva
 Manual: `bokf validate <file>` (valid/invalid + issue list), `bokf get <bundle> <id>` (exact lookup),
 `bokf stats`, `bokf export`.
 
-## 3. Backend — `bokf-mcp` (MCP server)  ✅ verified
+## 3. Backend: `bokf-mcp` (MCP server)  ✅ verified
 
 A real MCP stdio handshake (`initialize` → `tools/list` → `tools/call`) confirms the server
 advertises **17 tools** (`bokf_scaffold`, `bokf_list_pages`, `bokf_read_page`, `bokf_write_page`,
@@ -60,7 +60,7 @@ The agents authored correct v0.5 (28 types, 23 forward-only predicates, node-bas
 `primary_source`, `raw_source`-anchored sources) and reached **zero findings**. Issues they flagged
 about the loops/spec are recorded in [ISSUES.md](ISSUES.md).
 
-## 5. Frontend — the visualizer  ✅ verified in-browser
+## 5. Frontend: the visualizer  ✅ verified in-browser
 
 The frontend (`app/dist`, identical to the Tauri webview) was driven with Playwright against
 **real `bokf-core` exports**:

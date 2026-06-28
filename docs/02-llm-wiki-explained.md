@@ -8,7 +8,7 @@
 
 ## 1. The core idea
 
-> *"Incrementally build and maintain a persistent wiki — a structured, interlinked
+> *"Incrementally build and maintain a persistent wiki, a structured, interlinked
 > collection of Markdown files that sits between you and the raw sources."*
 
 Instead of RAG (retrieve-augment-generate), where the LLM **re-discovers connections on
@@ -17,7 +17,7 @@ key line: *"the cross-references are already there; the contradictions have alre
 flagged."* The work of understanding is done **once** and **kept**.
 
 Why now: the tedious part of maintaining a knowledge base "is not the reading or the
-thinking — it's the **bookkeeping**." LLMs are extraordinarily good at exactly that
+thinking, it's the **bookkeeping**." LLMs are extraordinarily good at exactly that
 bookkeeping (cross-referencing, summarizing, touching many files in one pass), so the
 cost of keeping a wiki current drops toward zero.
 
@@ -25,8 +25,8 @@ cost of keeping a wiki current drops toward zero.
 
 | Layer | What it holds | Who owns it |
 |---|---|---|
-| **Raw sources** | Immutable source documents — articles, papers, images, data files. The source of truth, never modified. | The human curates *what* enters. |
-| **Wiki** | LLM-generated Markdown: summaries, **entity pages**, **concept pages**, comparisons, overviews — fully cross-referenced. | The **LLM** owns this entirely. |
+| **Raw sources** | Immutable source documents (articles, papers, images, data files). The source of truth, never modified. | The human curates *what* enters. |
+| **Wiki** | LLM-generated Markdown: summaries, **entity pages**, **concept pages**, comparisons, overviews, fully cross-referenced. | The **LLM** owns this entirely. |
 | **Schema** | A config doc (à la `CLAUDE.md`) describing the wiki's structure, conventions, and the workflows to follow. | The human + LLM agree on it. |
 
 BioOKF maps these to `raw/`, `knowledge/`, and `schema.md` respectively
@@ -37,7 +37,7 @@ BioOKF maps these to `raw/`, `knowledge/`, and `schema.md` respectively
 ### Ingest
 Add a source → the LLM **reads it, discusses takeaways, writes summary pages, updates the
 index, revises relevant entity & concept pages, and logs the activity.** *A single source
-typically affects **10–15 wiki pages.*** This multi-file fan-out is the whole point — the
+typically affects **10-15 wiki pages.*** This multi-file fan-out is the whole point: the
 human never does the bookkeeping.
 
 ### Query
@@ -50,10 +50,10 @@ Periodic health check identifying **contradictions, stale claims, orphan pages, 
 cross-references, and data gaps** to investigate.
 
 ### Navigation infrastructure
-- **`index.md`** — a content catalog listing every page with a one-line summary, organized
+- **`index.md`**: a content catalog listing every page with a one-line summary, organized
   by category. Read first when answering. Works well at moderate scale (~100 sources,
   hundreds of pages).
-- **`log.md`** — an append-only, dated, parseable record of ingests/queries/maintenance.
+- **`log.md`**: an append-only, dated, parseable record of ingests/queries/maintenance.
 
 ## 4. Division of labor
 
@@ -89,7 +89,7 @@ and relationships are typed + provenance-stamped, an agent can:
   re-embedding a corpus;
 - reason over a **graph** ("drugs that `treat` diseases `associated_with` gene X");
 - **trust-rank** its own memory (curated assertion vs tweet) via `knowledge_level`;
-- improve monotonically — each ingested source *compounds* the graph rather than adding
+- improve monotonically: each ingested source *compounds* the graph rather than adding
   another opaque chunk to a vector store.
 
 This is the line of value that runs from Karpathy's gist → OKF → **BioOKF for biomedicine**.
