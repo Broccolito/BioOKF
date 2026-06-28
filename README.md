@@ -135,12 +135,51 @@ as a marketplace and install the `biookf` plugin from it:
 Installing it makes the 8 `biookf-*` skills and the 4 guardrail hooks active in your Claude Code
 session. (Build the `bokf` binary first so the hooks can find it.)
 
-## Usage: the curation workflow
+## Usage
+
+There are two ways to drive BioOKF, and most people mix them: let a **coding agent** (Claude Code,
+or any MCP client) do the curation in natural language, and reach for the **`bokf` CLI** directly
+when you want a precise, scriptable operation. Both surfaces sit on the same `bokf-core`, so they
+are interchangeable.
+
+### Curating with Claude Code (or another coding agent)
+
+This is the intended day-to-day path. Install the `biookf` extension (above) and the agent gets
+the 8 `biookf-*` skills, the MCP `bokf_*` tools, and the guardrail hooks. You then describe what
+you want in plain language; the agent picks the right tools, runs the multi-step ingest loop, keeps
+provenance attached, and self-corrects against the `verify` gate (the `stop-verify` hook won't let
+it stop on a failing bundle). You stay in the loop by reviewing diffs and the dated `log.md`.
+
+A few things make this work better than hand-running the CLI: the agent reuses existing nodes
+instead of forking duplicates (it looks identifiers up first), it stamps every edge with
+`knowledge_level` / `agent_type` / `primary_source` automatically, and it batches the 10 to 15
+concept pages a single source produces into one coherent pass.
+
+Example prompts that map onto the workflow below:
+
+- **Scaffold:** "Create a new BioOKF bundle at `./mykb` called 'COVID immunology' and make it the
+  active KB."
+- **Ingest a paper:** "Ingest `./paper.pdf` into `mykb`: convert it to `raw/`, then distill the
+  entities and claims into typed concept docs with full provenance, reusing existing nodes where
+  they exist."
+- **Ingest a quick note:** "Add a bench note to `mykb`: 'IL6 elevation is associated with worse
+  COVID-19 outcomes' and wire up the gene/disease nodes and the edge between them."
+- **Query:** "What does `mykb` say about IL6, and which sources back each claim?" or "Show me
+  everything connected to the Disease node for COVID-19."
+- **Maintain:** "Lint `mykb`, fix any errors, then verify and log-sync the result." or "Merge
+  `./secondary-kb` into `mykb` and confirm the main KB stayed canonical."
+- **Explore the schema:** "What node types and edge predicates can I use, and which predicates are
+  negatable?"
+
+The agent translates each of these into the same `bokf` / `bokf_*` operations documented next, so
+the CLI walkthrough doubles as a reference for what the agent is doing under the hood.
+
+### The curation workflow (CLI)
 
 A typical end-to-end session, using the `bokf` CLI (the same operations are available as MCP
 `bokf_*` tools and as the `biookf-*` skills). Replace `mykb` with your bundle path.
 
-### 1. Scaffold a bundle
+#### 1. Scaffold a bundle
 
 ```bash
 bokf scaffold ./mykb --name "My knowledge base"
@@ -150,7 +189,7 @@ This creates `raw/`, `knowledge/`, `index.md`, `log.md`, and `SCHEMA.md`, makes 
 commit, and registers + activates the bundle so later steps are not blocked by the active-KB
 guardrail.
 
-### 2. Convert a source into `raw/`
+#### 2. Convert a source into `raw/`
 
 `convert` brings a file/folder/zip (pdf, html, docx, pptx, csv, xlsx) or inline text into the
 bundle's `raw/` as faithful Markdown, with a content-derived source id. It writes through
@@ -161,7 +200,7 @@ bokf convert ./paper.pdf --into ./mykb
 bokf convert --into ./mykb --text "IL6 elevation is associated with worse COVID-19 outcomes" --title "bench note"
 ```
 
-### 3. Ingest: distill the source into typed concepts
+#### 3. Ingest: distill the source into typed concepts
 
 Drive the `biookf-ingest` skill (or the MCP tools) to run the 7-step loop: create a source node
 for the document (with `raw_source` pointing at the `raw/` path), then for each entity create or
@@ -180,7 +219,7 @@ After writing pages, regenerate the catalog:
 bokf index ./mykb            # rewrite index.md; add --check to only report what's missing
 ```
 
-### 4. Version-track every step
+#### 4. Version-track every step
 
 `log-sync` is the sole step-committer: it appends a dated block to `log.md` and git-commits,
 atomically. Run it after each curation step.
@@ -191,7 +230,7 @@ bokf log ./mykb                                  # review history (newest-first)
 bokf restore ./mykb <sha>                        # forward-only restore to a prior commit
 ```
 
-### 5. Verify (the gate)
+#### 5. Verify (the gate)
 
 `verify` is the deterministic accountability gate: it lints plus runs structure checks and exits
 non-zero on any error. Run it at the end of an ingest or merge run. The `stop-verify` hook runs
@@ -202,7 +241,7 @@ bokf lint ./mykb                                 # full lint report
 bokf verify ./mykb --workflow ingest             # gate: PASS only if zero errors
 ```
 
-### 6. Query
+#### 6. Query
 
 Answer questions from the bundle, graph-shaped and provenance-cited:
 
@@ -212,7 +251,7 @@ bokf graph ./mykb --out graph.json               # nodes + directional edges as 
 bokf stats ./mykb                                # node/edge counts by type/predicate
 ```
 
-### 7. Merge two bundles
+#### 7. Merge two bundles
 
 Merge a Secondary KB onto a canonical Main KB. Snapshot the Main KB first, relocate the
 Secondary's `raw/` (deduplicating by content), then verify the Main KB stayed canonical:
@@ -223,7 +262,7 @@ bokf merge-raw ./main-kb ./secondary-kb          # relocate raw/, returns the so
 bokf merge-snapshot ./main-kb --verify           # confirm the Main KB stayed canonical
 ```
 
-### Multi-bundle bookkeeping
+#### Multi-bundle bookkeeping
 
 When you keep several bundles under one root, register them and set the active one (the hooks and
 the verify gate operate on the active KB):
@@ -289,12 +328,6 @@ The `bokf-mcp` server exposes these tools (1:1 with the CLI surface):
 | `bokf_merge_raw` | Relocate a Secondary KB's `raw/` into a Main KB's `raw/`. |
 | `bokf_merge_snapshot` | Snapshot the Main KB before a merge, or `verify=true` after. |
 
-## How it relates to BioRouter / SPOKE
-
-BioOKF is designed for [BioRouter](https://github.com/BaranziniLab/biorouter)'s Knowledge feature
-and is round-trippable to SPOKE (the Baranzini Lab knowledge graph) and the Biolink Model: every
-BioOKF node/edge maps to a SPOKE metanode/metaedge and a Biolink category/predicate.
-
 ## Authors
 
 Wanjun Gu (<wanjun.gu@ucsf.edu>), Gianmarco Bellucci, Ilan Ladabaum, James Xue, Jonathan Xue, and
@@ -303,8 +336,3 @@ Xi Zheng.
 ## License
 
 Apache-2.0.
-
----
-
-*v0.5 (Draft), 2026-06-27. A community profile of OKF for biomedicine; not an official Google or
-UCSF product. See [SPEC.md §14](SPEC.md#14-changelog-and-deprecated-aliases) for the changelog.*
