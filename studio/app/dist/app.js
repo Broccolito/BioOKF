@@ -741,7 +741,8 @@ function renderSidebar(){
   BASES.forEach(b=>{const el=document.createElement('div');el.className='kb'+(b.id===activeBaseId?' active':'');el.title=b.path?b.name+'\n'+b.path:b.name;
     // Path lives in the hover tooltip (el.title) only — permanent gray text is just counts + updated.
     const when = b.updated ? `<span class="kb-when">updated ${esc(b.updated)}</span>` : '';
-    el.innerHTML=`<span class="kb-mono">${esc(monogram(b.name))}</span><span class="kb-text"><span class="kb-name">${esc(b.name)}</span><span class="kb-meta">${b.node_count!=null?b.node_count+' nodes':''}${b.edge_count!=null?' · '+b.edge_count+' edges':''}</span>${when}</span>`;
+    const focus = b.id===aiFocusKb ? `<span class="kb-focus" title="AI agent is focused on this knowledge base"></span>` : '';
+    el.innerHTML=`<span class="kb-mono">${esc(monogram(b.name))}</span><span class="kb-text"><span class="kb-name">${esc(b.name)}</span><span class="kb-meta">${b.node_count!=null?b.node_count+' nodes':''}${b.edge_count!=null?' · '+b.edge_count+' edges':''}</span>${when}</span>${focus}`;
     el.onclick=()=>selectBase(b);list.appendChild(el);});
 }
 function renderLegend(){
@@ -842,7 +843,7 @@ if(window.__TAURI__&&window.__TAURI__.event){ window.__TAURI__.event.listen('men
 let terms=[], activeTid=null, termSeq=0, termFallbackShown=false;
 const termPanel=document.getElementById('termPanel'), termTabsEl=document.getElementById('termTabs'),
       termHostsEl=document.getElementById('termHosts');
-const TERM_THEME={ background:'#ffffff', foreground:'#1f242c', cursor:'#10a37f', cursorAccent:'#ffffff', selectionBackground:'rgba(16,163,127,0.20)',
+const TERM_THEME={ background:'#ffffff', foreground:'#1f242c', cursor:'#0ea5e9', cursorAccent:'#ffffff', selectionBackground:'rgba(14,165,233,0.20)',
   black:'#1f242c', red:'#c4564b', green:'#0c7a5e', yellow:'#9a6b1a', blue:'#3a6ea5', magenta:'#8a4f9e', cyan:'#1f7a8c', white:'#5b5d66',
   brightBlack:'#8e8ea0', brightRed:'#d4685c', brightGreen:'#10a37f', brightYellow:'#b07d3a', brightBlue:'#4f7fb5', brightMagenta:'#9a5fae', brightCyan:'#2e8c84', brightWhite:'#2b3038' };
 function termById(id){ return terms.find(t=>t.id===id); }
@@ -1017,14 +1018,16 @@ async function addNewBase(){
 }
 
 /* ---------- .active-kb poll: follow a CLI/agent changing the shared pointer ---------- */
-let activeKbSyncing=false;
+let activeKbSyncing=false, aiFocusKb=null;
+/* The AI agent setting the active KB (.active-kb, e.g. via bokf_set_active) does
+   NOT force the user's view to switch — instead we mark that KB in the sidebar as
+   the agent's current focus. When the agent explicitly drives the GUI (selectBase)
+   the active KB equals the displayed base, so no separate marker is shown. */
 async function pollActiveKb(){
-  if(!isDesktop || activeKbSyncing || !BASES.length) return;
+  if(!isDesktop || !BASES.length) return;
   let id; try{ id=await tauriInvoke('get_active_kb'); }catch(e){ return; }
-  if(!id || id===activeBaseId) return;
-  const b=BASES.find(x=>x.id===id); if(!b) return;
-  activeKbSyncing=true;
-  try{ await selectBase(b); } finally{ activeKbSyncing=false; }
+  const focus=(id && id!==activeBaseId && BASES.some(b=>b.id===id)) ? id : null;
+  if(focus!==aiFocusKb){ aiFocusKb=focus; renderSidebar(); }
 }
 
 /* Re-discover the registry so the sidebar stays true to disk: a KB whose folder
