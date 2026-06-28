@@ -30,6 +30,7 @@ pub struct Converted {
 pub enum SourceInput {
     Path(PathBuf),
     Text { text: String, title: Option<String> },
+    Url(String),
 }
 
 /// On-disk inventory entry for one extracted figure under `raw/<id>/figures/`.
@@ -728,11 +729,186 @@ fn store_with_extra_figures(bundle_root: &Path, filename: &str, bytes: &[u8], ex
     })
 }
 
+/// Download a URL's content. Returns `(bytes, final_url, ext)` where `final_url` is the
+/// post-redirect URL and `ext` is inferred from the URL path, the Content-Type, then the bytes.
+pub fn fetch_url(url: &str) -> Result<(Vec<u8>, String, String), String> {
+    let client = reqwest::blocking::Client::builder()
+        .timeout(std::time::Duration::from_secs(30))
+        .user_agent(concat!("BioOKF/", env!("CARGO_PKG_VERSION")))
+        .build()
+        .map_err(|e| e.to_string())?;
+    let resp = client.get(url).send().map_err(|e| e.to_string())?;
+    let final_url = resp.url().to_string();
+    let ctype = resp
+        .headers()
+        .get(reqwest::header::CONTENT_TYPE)
+        .and_then(|v| v.to_str().ok())
+        .unwrap_or("")
+        .to_string();
+    let bytes = resp.bytes().map_err(|e| e.to_string())?.to_vec();
+    let ext = ext_from_url_or_mime(&final_url, &ctype, &bytes);
+    Ok((bytes, final_url, ext))
+}
+
+/// Infer a file extension from the URL path, then the Content-Type, then byte sniffing.
+fn ext_from_url_or_mime(url: &str, ctype: &str, bytes: &[u8]) -> String {
+    let path = url.split(['?', '#']).next().unwrap_or(url);
+    let url_ext = ext_of(path);
+    if !url_ext.is_empty() && url_ext.len() <= 5 {
+        return url_ext;
+    }
+    let c = ctype.to_ascii_lowercase();
+    if c.contains("pdf") {
+        return "pdf".into();
+    }
+    if c.contains("html") {
+        return "html".into();
+    }
+    if c.contains("json") {
+        return "json".into();
+    }
+    if c.contains("csv") {
+        return "csv".into();
+    }
+    if c.contains("plain") {
+        return "txt".into();
+    }
+    if bytes.starts_with(b"%PDF") {
+        return "pdf".into();
+    }
+    let head = String::from_utf8_lossy(&bytes[..bytes.len().min(256)]).to_ascii_lowercase();
+    if head.contains("<html") || head.contains("<!doctype html") {
+        return "html".into();
+    }
+    "html".into()
+}
+
+/// A filename for a downloaded source: the URL's last path segment, with an extension.
+fn url_filename(url: &str, ext: &str) -> String {
+    let path = url.split(['?', '#']).next().unwrap_or(url);
+    let last = path.rsplit('/').find(|s| !s.is_empty()).unwrap_or("source");
+    if last.contains('.') {
+        last.to_string()
+    } else {
+        format!("{last}.{ext}")
+    }
+}
+
+/// Find an already-ingested source with the same source URL (URL-level dedup).
+fn find_by_url(bundle_root: &Path, url: &str) -> Option<String> {
+    let raw = bundle_root.join("raw");
+    let entries = std::fs::read_dir(&raw).ok()?;
+    for e in entries.flatten() {
+        if let Ok(txt) = std::fs::read_to_string(e.path().join("meta.yaml")) {
+            if let Ok(m) = serde_yaml::from_str::<SourceMeta>(&txt) {
+                if m.url.as_deref() == Some(url) {
+                    return Some(m.id);
+                }
+            }
+        }
+    }
+    None
+}
+
+fn reused_record(id: String) -> SourceRecord {
+    SourceRecord {
+        source_md_path: format!("raw/{id}/source.md"),
+        meta_path: format!("raw/{id}/meta.yaml"),
+        title: id.clone(),
+        source_id: id,
+        needs_llm_fallback: false,
+        reused: true,
+    }
+}
+
+/// Convert + store a downloaded source under `raw/<id>/`, classifying its origin and
+/// credibility. `online` gates the Crossref/OpenAlex network calls inside the classifier.
+/// Dedups by source URL first, then by content sha256.
+fn store_url(bundle_root: &Path, url: &str, final_url: &str, bytes: &[u8], ext: &str, online: bool) -> Result<SourceRecord, String> {
+    if let Some(id) = find_by_url(bundle_root, url) {
+        return Ok(reused_record(id));
+    }
+    let sha = hash_bytes(bytes);
+    if let Some(id) = find_existing(bundle_root, &sha) {
+        return Ok(reused_record(id));
+    }
+    let filename = url_filename(final_url, ext);
+    let converted = convert_bytes(ext, &filename, bytes);
+    let title = title_from(&converted.markdown, &filename, None);
+    let id = new_source_id(&title, &sha);
+    let dir = bundle_root.join("raw").join(&id);
+    std::fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
+    // original bytes (immutable; gitignored). URL ingests keep the raw download for fidelity.
+    let orig_ext = if ext.is_empty() { "bin".to_string() } else { ext.to_string() };
+    std::fs::write(dir.join(format!("original.{orig_ext}")), bytes).map_err(|e| e.to_string())?;
+
+    let (embedded, rewritten) = extract_figures(ext, bytes, &converted.markdown);
+    let mut body = rewritten.unwrap_or_else(|| converted.markdown.clone());
+    let (body2, figmeta) = write_figures(&dir, &embedded, &body, 0)?;
+    body = body2;
+
+    let (source_type, credibility, ids) = crate::credibility::classify(&crate::credibility::ClassifyInput {
+        url: Some(url),
+        filename: Some(&filename),
+        body: &converted.markdown,
+        online,
+    });
+
+    let needs = converted.needs_llm_fallback || !figmeta.is_empty();
+    let banner = if needs {
+        format!("{NEEDS_CONVERSION_MARKER}\n> ⚠️ Needs faithful Markdown conversion (unknown/binary format or scanned PDF). Read `original.*`, render ALL content to Markdown preserving every detail, then overwrite this file (removing this marker).\n\n")
+    } else {
+        String::new()
+    };
+    std::fs::write(dir.join("source.md"), format!("{banner}{body}")).map_err(|e| e.to_string())?;
+    let meta = SourceMeta {
+        id: id.clone(),
+        title: title.clone(),
+        sha256: sha,
+        format: converted.format,
+        original_filename: Some(filename),
+        ingested_at: today_iso(),
+        needs_llm_fallback: needs,
+        figures: figmeta,
+        url: Some(url.to_string()),
+        final_url: Some(final_url.to_string()),
+        source_type,
+        credibility,
+        ids,
+    };
+    std::fs::write(dir.join("meta.yaml"), serde_yaml::to_string(&meta).map_err(|e| e.to_string())?).map_err(|e| e.to_string())?;
+    Ok(SourceRecord {
+        source_md_path: format!("raw/{id}/source.md"),
+        meta_path: format!("raw/{id}/meta.yaml"),
+        title,
+        source_id: id,
+        needs_llm_fallback: needs,
+        reused: false,
+    })
+}
+
+/// Ingest a list of URLs sequentially, failing soft: each result is independent so one
+/// download error does not abort the batch.
+pub fn ingest_urls(bundle_root: &Path, urls: Vec<String>) -> Vec<Result<SourceRecord, String>> {
+    urls
+        .into_iter()
+        .map(|u| match fetch_url(&u) {
+            Ok((bytes, final_url, ext)) => store_url(bundle_root, &u, &final_url, &bytes, &ext, true),
+            Err(e) => Err(format!("{u}: {e}")),
+        })
+        .collect()
+}
+
 /// Ingest a source into a bundle's `raw/`. A `.zip` or folder expands to one source
 /// per member unless `combined`, which concatenates members into a single source.
 pub fn ingest(bundle_root: &Path, input: SourceInput, combined: bool) -> Result<Vec<SourceRecord>, String> {
     // Resolve to (filename, bytes) members.
     let members: Vec<(String, Vec<u8>)> = match input {
+        SourceInput::Url(u) => {
+            // URL ingestion captures provenance, so it does not go through the member path.
+            let (bytes, final_url, ext) = fetch_url(&u)?;
+            return Ok(vec![store_url(bundle_root, &u, &final_url, &bytes, &ext, true)?]);
+        }
         SourceInput::Text { text, title } => {
             let name = title.as_deref().map(|t| format!("{}.md", slug(t))).unwrap_or_else(|| "note.md".into());
             vec![(name, text.into_bytes())]
@@ -821,6 +997,25 @@ mod tests {
         assert!(md.contains("| gene | role |"));
         assert!(md.contains("| BRAF | kinase |"));
         assert!(md.contains("| --- |"));
+    }
+
+    #[test]
+    fn store_url_records_provenance_offline() {
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        std::fs::create_dir_all(root.join("raw")).unwrap();
+        let html = b"<html><body><h1>Study</h1><p>doi:10.1101/2020.01.02.123456 received: accepted:</p></body></html>";
+        let rec = store_url(root, "https://www.biorxiv.org/x", "https://www.biorxiv.org/x", html, "html", false).unwrap();
+        let meta: SourceMeta = serde_yaml::from_str(&std::fs::read_to_string(root.join(&rec.meta_path)).unwrap()).unwrap();
+        assert_eq!(meta.url.as_deref(), Some("https://www.biorxiv.org/x"));
+        assert!(matches!(meta.credibility.tier, crate::credibility::CredibilityTier::Preprint));
+        assert!(meta.ids.doi.is_some());
+        assert!(root.join(format!("raw/{}/original.html", rec.source_id)).exists());
+
+        // URL-level dedup: the same URL reuses the existing source.
+        let rec2 = store_url(root, "https://www.biorxiv.org/x", "https://www.biorxiv.org/x", html, "html", false).unwrap();
+        assert!(rec2.reused);
+        assert_eq!(rec2.source_id, rec.source_id);
     }
 
     #[test]
