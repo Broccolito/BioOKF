@@ -7,7 +7,7 @@
 > YAML frontmatter) and adds the one thing OKF deliberately leaves open: **meaning**.
 > It closes the document `type` to a finite, controlled universe of **28 biomedical node
 > types**, and it promotes OKF's untyped prose links to a finite, controlled universe of
-> **23 typed, attributed edges**. The result is a format that an LLM agent or a human curator
+> **35 typed, attributed edges (24 positive + 11 `not_<X>`)**. The result is a format that an LLM agent or a human curator
 > can follow to distill *any* biomedical source (a paper, a preprint, a bench note, a slide
 > deck, a CSV, a figure, a tweet) into an interlinked knowledge base that compounds over
 > time and can be queried as a graph.
@@ -60,7 +60,7 @@
 
 5. [The NODE universe (28 types)](#5-the-node-universe-28-types)
 
-6. [The EDGE universe (23 types)](#6-the-edge-universe-23-types)
+6. [The EDGE universe (35 predicates)](#6-the-edge-universe-35-predicates)
 
 7. [Attributes: required vs optional](#7-attributes-required-vs-optional)
 
@@ -127,7 +127,7 @@ OKF bundle (Markdown tree, YAML frontmatter, non-empty `type`, optional `index.m
 | Substrate            | Markdown tree + YAML frontmatter, Git-shippable     | **same**                                                                                                                                           |
 | `type` field         | required, **open vocabulary** (any string)          | required, **closed**: one of 28 biomedical node types (§5)                                                                                         |
 | `subtype` field      | none                                                | **expected, agent-coined**; open vocabulary with no controlled set (§5)                                                                            |
-| Cross-document links | untyped Markdown links; relationship lives in prose | **typed edges** (`edges:` frontmatter) from a closed set of 23 predicates (§6); prose links remain legal as advisory "see also"                    |
+| Cross-document links | untyped Markdown links; relationship lives in prose | **typed edges** (`edges:` frontmatter) from a closed set of 35 predicates (24 positive + 11 `not_<X>`) (§6); prose links remain legal as advisory "see also"                    |
 | Attributes           | only `type` required; others recommended            | per-type **required vs optional** attributes; edges require a provenance triplet (§7-8)                                                            |
 | Identifiers          | optional `resource` URI                             | a single human-readable, bundle-unique **`identifier`** (merges name + id; required); equivalent **external** CURIEs optional in `xref` (§7.1, §9) |
 | Reserved files       | `index.md`, `log.md`                                | **same**, plus an optional `SCHEMA.md` operating doc                                                                                               |
@@ -150,7 +150,7 @@ What is **universal** (inherited from the LLM Wiki / OKF) vs **special to BioOKF
 | Universal (any LLM Wiki)                                                          | Special to BioOKF                                                                                                                                                                                                                                                                    |
 | --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | read source → discuss takeaways → write/update pages → update `index.md` → log it | every page is one of **28 typed biomedical nodes**                                                                                                                                                                                                                                   |
-| cross-link related pages                                                          | links are **23 typed, attributed edges** with domain/range                                                                                                                                                                                                                           |
+| cross-link related pages                                                          | links are **35 typed, attributed edges (24 positive + 11 `not_<X>`)** with domain/range                                                                                                                                                                                                                           |
 | `index.md` catalog + `log.md` history                                             | every claim carries **provenance + evidence level**; quantitative claims (p-value, OR/HR, IC50…) are **first-class edge attributes**                                                                                                                                                 |
 | periodic lint for contradictions/staleness/orphans                                | lint additionally checks **type/predicate validity, `identifier` uniqueness/human-readability, node-based provenance resolution (`primary_source`→ a source node), and domain/range** (a missing external `xref` CURIE is only an enrichment opportunity, never a conformance error) |
 
@@ -470,19 +470,19 @@ file/matrix/collection* is a `Dataset`.
 
 ---
 
-## 6\. The EDGE universe (24 positive + 11 negative `not_<X>` = 35; `SCHEMA.md` authoritative)
+## 6\. The EDGE universe (35 predicates)
 
-Cross-document relationships are **typed edges**. The v0.4 core **23** are tabulated below;
-`SCHEMA.md` (authoritative, implemented in `bokf-core`) extends these to **24 positive** (adds
-`used_to_study`) and adds **11 `not_<X>` negatives** for the negatable effect predicates
-(**35 total**). The core 23 are organized under the five **UMLS super-relation families**
-(the canonical finite-but-exhaustive relation backbone). Direction is **subject (host
-document) → object** unless marked *symmetric*. The 23 are **forward-only**: there are **no
-inverse predicates**; express a reverse relationship by authoring the forward edge on the *other*
-node (a gene's `encodes`, never a protein's `encoded_by`; `causes`, never `caused_by`). Inverse
-names are accepted on read only as deprecated aliases (§14). Each edge carries the universal edge
-attributes in §7.2 (notably the required provenance triplet). The 28-type universe is
-expressed by **extending domain/range** to admit the new node types; it adds **no predicates**.
+Cross-document relationships are **typed edges**. The predicate set is **35**: **24 positive**
+predicates (tabulated below) plus **11 `not_<X>` negatives** for the negatable effect predicates
+(see Negation, end of this section). `SCHEMA.md` (authoritative, implemented in `bokf-core`) is the
+canonical source for this set. The 24 positive predicates are organized under the five **UMLS
+super-relation families** (the canonical finite-but-exhaustive relation backbone). Direction is
+**subject (host document) → object** unless marked *symmetric*. The 24 are **forward-only**: there
+are **no inverse predicates**; express a reverse relationship by authoring the forward edge on the
+*other* node (a gene's `encodes`, never a protein's `encoded_by`; `causes`, never `caused_by`).
+Inverse names are accepted on read only as deprecated aliases (§14). Each edge carries the universal
+edge attributes in §7.2 (notably the required provenance triplet). The 28-type universe is expressed
+by **extending domain/range** to admit the new node types; it adds **no predicates**.
 
 ### 6.A Structural & hierarchical: *physically\_related\_to*
 
@@ -531,18 +531,43 @@ expressed by **extending domain/range** to admit the new node types; it adds **n
 | 21  | **measures**         | subject ascertains the value of, or is diagnostic for, object (incl. `diagnoses`)                                                                                                       | →    | MethodOrProcedure·BiomedicalMeasure·Molecule → Disease·Phenotype·Molecule | UMLS `measures`·`diagnoses`; SemMedDB `MEASURES`/`DIAGNOSES`. *`sensitivity`, `specificity`, `auc`, `unit`*           |
 | 22  | **associated\_with** | a statistical / observed / co-occurrence association, non-causal, non-mechanistic (GWAS, eQTL, correlation, comorbidity, literature co-occurrence). The quantitative **umbrella** edge | sym  | any ↔ any                                                                 | UMLS `associated_with`·`co-occurs_with`; SemMedDB `ASSOCIATED_WITH`; Hetionet DaG·GcG. *Full statistical bundle (§8)* |
 | 23  | **reported\_in**     | the universal **provenance edge**: the subject node (or a reified claim) is reported / curated / studied / evidenced in the object Publication, Study, Dataset, or by an Agent          | →    | any → Publication·Study·Dataset·Agent                                     | Biolink `publications`·`provided_by`; CKG MENTIONED\_IN\_PUBLICATION                                                  |
+| 24  | **used\_to\_study**  | an investigative resource (method / study / dataset / device / research-model) is used to study, model, probe, or make tractable the object entity under investigation (resource → entity studied)          | →    | MethodOrProcedure·Study·Dataset·Device·Organism·CellType·MaterialSample → Disease·Phenotype·BiologicalPathway·BiologicalFunction·Gene·Variant·Molecule                                     | Biolink `studied_to_understand` / `models`; the "method/model → what it studies" axis                                                  |
 
-> **Why 23, and why these.** All 23 nest under one of UMLS's five super-relation families; all
+> **Why 24 positive, and why these.** All 24 nest under one of UMLS's five super-relation families; all
 > map to a canonical Biolink predicate; \~18 also map to a named SemMedDB/SemRep predicate. The
 > vocabulary stays small because **distinctions that other schemas mint as separate edges are
 > folded into attributes here**: up- vs down-regulation → `regulates` \+ `direction`; binding
-> affinity vs catalysis → `effect_metric`; negation → `negated`; temporal order / co-occurrence
-> → `associated_with` \+ `timepoint`; per-datasource edge identity → `primary_source`. Variant
+> affinity vs catalysis → `effect_metric`; temporal order / co-occurrence
+> → `associated_with` \+ `timepoint`; per-datasource edge identity → `primary_source`. (Negation is
+> the one exception: a tested-and-refuted finding is its own canonical `not_<X>` predicate, not an
+> attribute; see Negation below.) Variant
 > **consequence** (missense, 5′UTR, splice-donor; SO/VEP) is an **attribute** on the variant,
 > never a node; a measure's **value** in context is an **edge attribute**, never a node. This
 > mirrors Biolink's own "qualify, don't multiply" decision and keeps BioOKF reliably
 > *assignable* from messy sources while covering the Hetionet metaedges, the SemMedDB
 > predicates, and the PubTator3 relations with no remainder.
+
+### 6.F Negation (polarity)
+
+A genuine *negative* finding stated in the source ("X does **not** treat Y", "**no** association
+between X and Y", "drug A does **not** bind target B") is authored with the canonical negative
+predicate **`not_<X>`**. Only the **11 negatable effect predicates** are negatable, giving 11
+`not_<X>` predicates and a total of **24 positive + 11 negative = 35**:
+
+`binds`, `interacts_with`, `causes`, `predisposes_to`, `prevents`, `treats`,
+`affects_response_to`, `associated_with`, `expressed_in`, `regulates`, `has_phenotype`
+(hence `not_binds`, `not_interacts_with`, `not_causes`, `not_predisposes_to`, `not_prevents`,
+`not_treats`, `not_affects_response_to`, `not_associated_with`, `not_expressed_in`,
+`not_regulates`, `not_has_phenotype`).
+
+Each `not_<X>` **inherits its base predicate's domain/range and symmetry** (so `not_binds` has the
+domain/range of `binds`, `not_associated_with` is symmetric like `associated_with`); asserting both
+`<X>` and `not_<X>` for the same subject → object is a contradiction (flagged by lint). Negating a
+structural / definitional / provenance predicate (`is_a`, `part_of`, `encodes`, `measures`,
+`reported_in`, `used_to_study`, …) is meaningless under open-world semantics (absence already covers
+it) and is **rejected** (lint `edge.not_negatable`). The legacy `negated: true` qualifier (§7.2) is
+**accepted on read** on a negatable predicate and **normalized to** the canonical `not_<X>`; on a
+non-negatable predicate it is rejected (`edge.not_negatable`).
 
 ---
 
@@ -576,12 +601,12 @@ expressed by **extending domain/range** to admit the new node types; it adds **n
 
 | Attribute           | Req?                                                   | Meaning                                                                                                                                                                                                                                                                                                                                                                                         |
 | ------------------- | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `predicate`         | **required**                                           | one of the 23 edge types (§6)                                                                                                                                                                                                                                                                                                                                                                   |
+| `predicate`         | **required**                                           | one of the 35 edge types (24 positive + 11 `not_<X>`) (§6)                                                                                                                                                                                                                                                                                                                                                                   |
 | `object`            | **required**                                           | the **`identifier`** of the target node (human-readable, bundle-unique)                                                                                                                                                                                                                                                                                                                         |
 | `knowledge_level`   | **required**                                           | Biolink `KnowledgeLevelEnum`: `knowledge_assertion` · `statistical_association` · `prediction` · `observation` · `not_provided`                                                                                                                                                                                                                                                                 |
 | `agent_type`        | **required**                                           | Biolink `AgentTypeEnum`: `manual_agent` · `automated_agent` · `text_mining_agent` · `data_analysis_pipeline` · `computational_model` · `not_provided`                                                                                                                                                                                                                                           |
 | `primary_source`    | **required**                                           | the originating source: the `identifier` of a **source node** (a `Publication`/`Study`/`Dataset`/`Agent`), **not** a CURIE. (Old `infores:`-CURIE values normalize to a source node carrying that CURIE in `xref`.) The reserved value **`not_provided`** is the only non-node value, and is a **rare escape hatch** for claims whose origin is genuinely unknown, never a default (see §8.1) |
-| `negated`           | optional                                               | `true` if the claim is explicitly negative                                                                                                                                                                                                                                                                                                                                                      |
+| `negated`           | optional (**legacy**)                                  | **Legacy** polarity form. The canonical mechanism is the negative `not_<X>` predicate (§6.F). `negated: true` on a **negatable** predicate is accepted on read and **normalized to** the canonical `not_<X>`; `negated: true` on a **non-negatable** predicate is **rejected** (`edge.not_negatable`)                                                                                              |
 | `direction`         | required for `regulates`/`expressed_in`; else optional | `increased` · `decreased` · `unspecified`                                                                                                                                                                                                                                                                                                                                                       |
 | `aspect`            | optional (used with `regulates`)                       | what is regulated: `activity` · `abundance` · `expression` · `localization`                                                                                                                                                                                                                                                                                                                     |
 | `publications`      | optional                                               | supporting PMIDs/DOIs/NCTs                                                                                                                                                                                                                                                                                                                                                                      |
@@ -802,7 +827,7 @@ Good answers MAY be filed back as new concept pages.
 Periodic health check: contradictions (same subject-predicate-object with opposite
 `negated` / incompatible effect sizes), stale claims, orphan pages, missing
 cross-references, **plus BioOKF-specific checks**: invalid `type` (one of 28) / `predicate`
-(one of 23); **`identifier` validity: every node has one, each is unique across the bundle
+(one of 35: 24 positive + 11 `not_<X>`); **`identifier` validity: every node has one, each is unique across the bundle
 (flag duplicates), and each is human-readable (flag opaque codes / bare CURIEs)**; that every
 edge `object` resolves to some node's `identifier`; domain/range violations (e.g. a `treats`
 edge whose object is a `Molecule` rather than a `Disease`/`Phenotype`); edges missing the
@@ -825,7 +850,7 @@ with a non-empty `type`; `index.md`/`log.md`, if present, follow their structure
 
 2. **Closed node vocabulary**: every `type` is one of the 28 values in §5.
 
-3. **Closed edge vocabulary**: every `edges[].predicate` is one of the 23 values in §6.
+3. **Closed edge vocabulary**: every `edges[].predicate` is one of the 35 values in §6 (24 positive + 11 `not_<X>`).
 
 4. **Edge provenance**: every edge has `object`, `knowledge_level`, `agent_type`, and
 `primary_source`; `primary_source` references a **source node** (a
@@ -1024,10 +1049,11 @@ buys a provenance chain that terminates inside the bundle. Alternatives weighed:
 `primary_source` to rely on the node-level `reported_in` edge alone (rejected because it loses
 *per-claim* attribution when one page carries claims from many sources).
 
-- **23 edges via qualify-don't-multiply.** Direction, negation, affinity, temporal order, and
-per-source identity are *attributes*, not separate predicates: the single most important
-lever for keeping the edge set small yet exhaustive. The 28-type universe added **no**
-predicates; every refinement is a domain/range extension or an attribute.
+- **35 edges (24 positive + 11 `not_<X>`) via qualify-don't-multiply.** Direction, affinity,
+temporal order, and per-source identity are *attributes*, not separate predicates: the single most
+important lever for keeping the edge set small yet exhaustive (negation is the deliberate exception,
+carried as its own canonical `not_<X>` predicate rather than an attribute, §6.F). The 28-type
+universe added **no** predicates; every refinement is a domain/range extension or an attribute.
 
 ---
 
@@ -1045,8 +1071,9 @@ predicates; every refinement is a domain/range extension or an attribute.
 - **`used_to_study` added** (24th positive predicate) and **11 `not_<X>` negatives** for the
   negatable effect predicates (`binds`, `interacts_with`, `causes`, `predisposes_to`, `prevents`,
   `treats`, `affects_response_to`, `associated_with`, `expressed_in`, `regulates`, `has_phenotype`)
-  → **35 predicates**. `SCHEMA.md` and `bokf-core` are authoritative; §6's table above still
-  enumerates the v0.4 core 23. A legacy `negated: true` qualifier normalizes to `not_<X>` on read.
+  → **35 predicates** (24 positive + 11 negative). `SCHEMA.md` and `bokf-core` are authoritative;
+  §6 now enumerates the 24 positive predicates (the `used_to_study` row in §6.E) and the 11
+  negatives (§6.F Negation). A legacy `negated: true` qualifier normalizes to `not_<X>` on read.
   Negating a non-negatable (structural/provenance) predicate is rejected (`edge.not_negatable`).
 
 ### v0.5 (2026-06-27): node-based provenance (no entities/predicates added; 28 / 23 unchanged)

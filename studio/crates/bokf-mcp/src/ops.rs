@@ -12,7 +12,7 @@ fn writable_path(bundle: &Path, page: &str) -> Result<PathBuf, String> {
         return Err("path traversal ('..') is not allowed".into());
     }
     let allowed = page.starts_with("knowledge/")
-        || matches!(page, "index.md" | "log.md" | "schema.md" | "SCHEMA.md" | "README.md");
+        || matches!(page, "index.md" | "log.md" | "SCHEMA.md" | "README.md");
     if !allowed {
         return Err("page must be under knowledge/ or one of index.md/log.md/SCHEMA.md".into());
     }

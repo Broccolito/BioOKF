@@ -21,8 +21,7 @@ pub struct Bundle {
     pub has_schema_md: bool,
 }
 
-// `SCHEMA.md` is the operating-doc filename; lowercase `schema.md` is kept for back-compat.
-const RESERVED: [&str; 5] = ["index.md", "log.md", "schema.md", "SCHEMA.md", "README.md"];
+const RESERVED: [&str; 4] = ["index.md", "log.md", "SCHEMA.md", "README.md"];
 
 fn is_reserved(path: &Path) -> bool {
     path.file_name()
@@ -97,7 +96,7 @@ impl Bundle {
         Ok(Bundle {
             has_index_md: root.join("index.md").is_file(),
             has_log_md: root.join("log.md").is_file(),
-            has_schema_md: root.join("SCHEMA.md").is_file() || root.join("schema.md").is_file(),
+            has_schema_md: root.join("SCHEMA.md").is_file(),
             root,
             nodes,
             by_identifier,
