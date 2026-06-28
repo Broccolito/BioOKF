@@ -80,6 +80,57 @@ pub fn is_image_ext(ext: &str) -> bool {
     matches!(ext.to_ascii_lowercase().as_str(), "png" | "jpg" | "jpeg" | "gif" | "webp" | "tiff" | "tif" | "bmp" | "svg")
 }
 
+/// One image pulled out of a source during conversion.
+#[derive(Debug, Clone)]
+pub struct ExtractedFigure {
+    /// Provisional name (e.g. "fig-001.png") until renamed by content.
+    pub provisional_name: String,
+    /// The image bytes, copied verbatim.
+    pub bytes: Vec<u8>,
+    /// Where the figure came from inside the source.
+    pub origin: String,
+}
+
+/// Extract embedded figures from a source. Returns the figures plus an optionally
+/// rewritten Markdown (None for zip-media formats; html/md rewrite data URIs to local
+/// figure references in A4).
+pub fn extract_figures(ext: &str, bytes: &[u8], _markdown: &str) -> (Vec<ExtractedFigure>, Option<String>) {
+    let ext = ext.to_ascii_lowercase();
+    let media_prefix = match ext.as_str() {
+        "docx" => "word/media/",
+        "pptx" => "ppt/media/",
+        "xlsx" | "ods" => "xl/media/",
+        _ => return (vec![], None),
+    };
+    let mut figs = Vec::new();
+    if let Ok(mut zip) = zip::ZipArchive::new(Cursor::new(bytes.to_vec())) {
+        let mut names: Vec<String> = zip
+            .file_names()
+            .filter(|n| n.starts_with(media_prefix) && is_image_ext(&ext_of(n)))
+            .map(|s| s.to_string())
+            .collect();
+        names.sort();
+        for (i, name) in names.iter().enumerate() {
+            let mut buf = Vec::new();
+            match zip.by_name(name) {
+                Ok(mut f) => {
+                    if f.read_to_end(&mut buf).is_err() {
+                        continue;
+                    }
+                }
+                Err(_) => continue,
+            }
+            let ie = ext_of(name).to_ascii_lowercase();
+            figs.push(ExtractedFigure {
+                provisional_name: format!("fig-{:03}.{}", i + 1, ie),
+                bytes: buf,
+                origin: name.clone(),
+            });
+        }
+    }
+    (figs, None)
+}
+
 /// Convert a single file's bytes to Markdown, dispatching on extension.
 pub fn convert_bytes(ext: &str, filename: &str, bytes: &[u8]) -> Converted {
     let ext = ext.to_ascii_lowercase();
@@ -630,6 +681,26 @@ mod tests {
         // the marker is present until the agent renders it
         let report = crate::lint::lint(&crate::bundle::Bundle::open(root).unwrap());
         assert!(report.findings.iter().any(|f| f.rule == "source.needs_conversion"), "{:?}", report.findings);
+    }
+
+    #[test]
+    fn extract_figures_pulls_office_media() {
+        use std::io::Write;
+        let mut buf = Vec::new();
+        {
+            let mut zw = zip::ZipWriter::new(Cursor::new(&mut buf));
+            let opts: zip::write::FileOptions<()> = zip::write::FileOptions::default();
+            zw.start_file("word/document.xml", opts).unwrap();
+            zw.write_all(b"<w:p><w:t>hi</w:t></w:p>").unwrap();
+            zw.start_file("word/media/image1.png", opts).unwrap();
+            zw.write_all(&[0x89, b'P', b'N', b'G', 1, 2, 3]).unwrap();
+            zw.finish().unwrap();
+        }
+        let (figs, _md) = extract_figures("docx", &buf, "");
+        assert_eq!(figs.len(), 1);
+        assert_eq!(figs[0].provisional_name, "fig-001.png");
+        assert_eq!(figs[0].origin, "word/media/image1.png");
+        assert_eq!(figs[0].bytes, vec![0x89, b'P', b'N', b'G', 1, 2, 3]);
     }
 
     #[test]
