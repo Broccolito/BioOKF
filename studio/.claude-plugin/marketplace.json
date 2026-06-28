@@ -1,0 +1,11 @@
+{
+  "name": "biookf-studio",
+  "owner": { "name": "BioOKF" },
+  "plugins": [
+    {
+      "name": "biookf-studio",
+      "source": "./",
+      "description": "BioOKF curation skills + guardrail hooks over the bokf toolchain."
+    }
+  ]
+}
