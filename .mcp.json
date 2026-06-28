@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "tauri-debug": {
+      "command": "npx",
+      "args": ["-y", "-p", "tauri-plugin-mcp-server", "tauri-mcp-server"],
+      "env": {
+        "TAURI_MCP_IPC_PATH": "/tmp/biookf-tauri-mcp.sock"
+      }
+    }
+  }
+}
