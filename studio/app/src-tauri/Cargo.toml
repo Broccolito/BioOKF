@@ -17,6 +17,8 @@ bokf-core = { path = "../../crates/bokf-core" }
 tauri = { version = "2", features = ["macos-private-api"] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
+# Real pseudo-terminal backing the integrated terminal panel.
+portable-pty = "0.8"
 
 [target.'cfg(target_os = "macos")'.dependencies]
 window-vibrancy = "0.6"

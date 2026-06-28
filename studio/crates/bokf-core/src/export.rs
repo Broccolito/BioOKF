@@ -5,6 +5,34 @@
 use crate::{lint, Bundle, Graph};
 use std::path::Path;
 
+/// Read and parse the on-disk provenance for one raw source: `<bundle_root>/raw/<source_id>/meta.yaml`.
+/// Returns the full [`crate::convert::SourceMeta`] (source type, credibility, figures, ids …) as JSON
+/// so the GUI can render figures / credibility / source type. Additive — does not touch the spec.
+pub fn source_info(bundle_root: &Path, source_id: &str) -> Result<serde_json::Value, String> {
+    let meta_path = bundle_root.join("raw").join(source_id).join("meta.yaml");
+    let txt = std::fs::read_to_string(&meta_path)
+        .map_err(|e| format!("cannot read {}: {e}", meta_path.display()))?;
+    let meta: crate::convert::SourceMeta =
+        serde_yaml::from_str(&txt).map_err(|e| format!("invalid meta.yaml for source `{source_id}`: {e}"))?;
+    serde_json::to_value(&meta).map_err(|e| e.to_string())
+}
+
+/// List the raw source ids present under `<bundle_root>/raw/` (each subdir with a `meta.yaml`).
+pub fn list_sources(bundle_root: &Path) -> Vec<String> {
+    let mut ids = Vec::new();
+    if let Ok(rd) = std::fs::read_dir(bundle_root.join("raw")) {
+        for e in rd.flatten() {
+            if e.path().join("meta.yaml").is_file() {
+                if let Some(name) = e.file_name().to_str() {
+                    ids.push(name.to_string());
+                }
+            }
+        }
+    }
+    ids.sort();
+    ids
+}
+
 /// The most recent change date for a bundle: the newest `## YYYY-MM-DD` heading in
 /// `log.md` (the convention is newest-first), else `None`.
 pub fn last_updated(root: impl AsRef<Path>) -> Option<String> {

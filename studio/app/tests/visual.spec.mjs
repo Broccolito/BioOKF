@@ -11,7 +11,7 @@ const URL = 'http://localhost:8754/index.html';
 
 test('loads bundles and renders the graph', async ({ page }) => {
   await page.goto(URL);
-  await page.waitForFunction(() => window.__OKF_READY === true, null, { timeout: 5000 });
+  await page.waitForFunction(() => window.__BOKF_READY === true, null, { timeout: 5000 });
   const bases = await page.locator('.kb').count();
   expect(bases).toBeGreaterThanOrEqual(1);
   const state = await page.evaluate(() => window.__bokf.getState());
@@ -21,7 +21,7 @@ test('loads bundles and renders the graph', async ({ page }) => {
 
 test('node click opens a detail panel with frontmatter + edges', async ({ page }) => {
   await page.goto(URL);
-  await page.waitForFunction(() => window.__OKF_READY === true);
+  await page.waitForFunction(() => window.__BOKF_READY === true);
   // pick the first real (non-external) node and open it
   const ok = await page.evaluate(() => {
     const id = (window.__firstReal && window.__firstReal()) || null;
@@ -35,7 +35,7 @@ test('node click opens a detail panel with frontmatter + edges', async ({ page }
 
 test('search dims non-matching nodes', async ({ page }) => {
   await page.goto(URL);
-  await page.waitForFunction(() => window.__OKF_READY === true);
+  await page.waitForFunction(() => window.__BOKF_READY === true);
   await page.evaluate(() => window.__bokf.search('gene'));
   const term = await page.evaluate(() => document.getElementById('searchInput').value);
   expect(term).toBe('gene');
@@ -43,7 +43,7 @@ test('search dims non-matching nodes', async ({ page }) => {
 
 test('sidebar collapses', async ({ page }) => {
   await page.goto(URL);
-  await page.waitForFunction(() => window.__OKF_READY === true);
+  await page.waitForFunction(() => window.__BOKF_READY === true);
   await page.click('#collapseBtn');
   await expect(page.locator('.wbody.collapsed')).toHaveCount(1);
 });
