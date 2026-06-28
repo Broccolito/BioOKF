@@ -15,15 +15,24 @@ preserved.** Never hand-edit `raw/` originals.
    `raw/<id>/{original.*, source.md, meta.yaml}` with a human-readable, **content-derived** id
    (title → slug; never a bare hash). A `.zip`/folder expands to **one source per member** (use
    `--combined` to merge into one). Identical bytes are de-duplicated (`reused: true`).
-3. **LLM fallback (the important part).** Known formats convert deterministically; anything else
-   (an unknown extension like `random_file.xyz`, a scanned PDF, or a failed extraction) comes back
-   with `needs_llm_fallback: true` and leaves a `<!-- bokf:needs-conversion -->` marker in
-   `source.md`. **You must finish it:** read `raw/<id>/original.*`, render **all** content (text,
-   tables, figure/caption text) faithfully to Markdown, and overwrite `raw/<id>/source.md`,
-   **removing the marker**. Preserve raw detail; do not summarize.
-4. **Figures pass.** `bokf convert` pulls every embedded image (docx/pptx/xlsx media, html/md
-   data URIs, loose folder/zip images) into `raw/<id>/figures/` with a provisional name like
-   `fig-001.png`, references each in `source.md`, and records them in `meta.yaml`. For each figure:
+3. **Vision rendering (the important part).** **PDFs are always rendered by your vision**, not a
+   deterministic parser: pure-Rust PDF text extraction silently corrupts mathematical formulas and
+   special characters and misses figure content, so `bokf` does not attempt it. Unknown or scanned
+   formats and failed extractions also return `needs_llm_fallback: true` with a
+   `<!-- bokf:needs-conversion -->` marker in `source.md`. **You must finish each one:** open
+   `raw/<id>/original.*` and read every page with your vision, then overwrite `raw/<id>/source.md`
+   (removing the marker) with a faithful rendering:
+   - **Text and tables:** transcribe everything exactly, preserving structure and reading order.
+   - **Formulas:** render every equation and inline expression correctly as LaTeX (`$...$` /
+     `$$...$$`); never approximate, drop, or guess symbols, subscripts, or superscripts.
+   - **Figures:** for each figure, chart, diagram, gel, micrograph, or plot, describe what it shows
+     AND transcribe its axes, labels, legend, and data values. Key findings often live in the
+     figures, not only the text. Do not summarize away detail.
+4. **Figures pass (office, html, md sources).** For docx/pptx/xlsx media, html/md data URIs, and
+   loose folder/zip images, `bokf convert` pulls every embedded image into `raw/<id>/figures/` with
+   a provisional name like `fig-001.png`, references each in `source.md`, and records them in
+   `meta.yaml`. (PDF figures are NOT extracted to files; you read them directly from `original.pdf`
+   with your vision in step 3 and mine them for nodes/edges in biookf-ingest.) For each figure:
    - View the image file under `raw/<id>/figures/*` (use `bokf_read_page` on the figure path).
    - Write a faithful description of what the figure shows beside its reference in `source.md`,
      filling in the `![...]` alt text so the reference reads `![<description>](figures/<name>)`.

@@ -18,3 +18,6 @@ node_modules/
 *.swp
 *.swo
 Thumbs.db
+
+# Local Claude Code agent worktrees / state
+.claude/
