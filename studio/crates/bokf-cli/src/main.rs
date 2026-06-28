@@ -127,6 +127,22 @@ enum Cmd {
         #[arg(long)]
         json: bool,
     },
+    /// Convert a file/folder/zip (or --text) to raw Markdown under <bundle>'s raw/.
+    Convert {
+        path: Option<PathBuf>,
+        #[arg(long)]
+        text: Option<String>,
+        #[arg(long)]
+        title: Option<String>,
+        /// Bundle to write raw/ into.
+        #[arg(long)]
+        into: PathBuf,
+        /// Concatenate archive/folder members into one source.
+        #[arg(long)]
+        combined: bool,
+        #[arg(long)]
+        json: bool,
+    },
 }
 
 fn main() {
@@ -155,7 +171,34 @@ fn run() -> Result<()> {
         Cmd::GetActive { root, json } => cmd_get_active(root, json),
         Cmd::Register { root, kb_id, path, list, unregister } => cmd_register(root, kb_id, path, list, unregister),
         Cmd::Verify { path, workflow, json } => cmd_verify(path, workflow, json),
+        Cmd::Convert { path, text, title, into, combined, json } => cmd_convert(path, text, title, into, combined, json),
     }
+}
+
+fn cmd_convert(path: Option<PathBuf>, text: Option<String>, title: Option<String>, into: PathBuf, combined: bool, json: bool) -> Result<()> {
+    use bokf_core::convert::{ingest, SourceInput};
+    let input = if let Some(t) = text {
+        SourceInput::Text { text: t, title }
+    } else if let Some(p) = path {
+        SourceInput::Path(p)
+    } else {
+        anyhow::bail!("convert needs a <path> or --text");
+    };
+    let recs = ingest(&into, input, combined).map_err(anyhow::Error::msg)?;
+    if json {
+        println!("{}", serde_json::to_string_pretty(&recs)?);
+    } else {
+        for r in &recs {
+            println!(
+                "{}  ({}{})  -> {}",
+                r.source_id,
+                if r.reused { "reused" } else { "new" },
+                if r.needs_llm_fallback { ", needs OCR/LLM" } else { "" },
+                r.source_md_path
+            );
+        }
+    }
+    Ok(())
 }
 
 fn cmd_verify(path: PathBuf, workflow: Option<String>, json: bool) -> Result<()> {

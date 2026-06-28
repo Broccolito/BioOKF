@@ -73,6 +73,13 @@ param!(VerifyParam {
     #[doc = "Path to the bundle directory."] bundle: String,
     #[doc = "Workflow context: ingest|merge (optional)."] workflow: Option<String>,
 });
+param!(ConvertParam {
+    #[doc = "Bundle directory to write raw/ into."] bundle: String,
+    #[doc = "File/folder/zip path to convert (omit if using text)."] path: Option<String>,
+    #[doc = "Inline text to ingest instead of a path."] text: Option<String>,
+    #[doc = "Title for inline text."] title: Option<String>,
+    #[doc = "Concatenate archive/folder members into one source."] combined: Option<bool>,
+});
 
 #[derive(Clone)]
 pub struct BokfServer {
@@ -273,6 +280,22 @@ impl BokfServer {
                 ok(serde_json::to_string_pretty(&v).unwrap_or_default())
             }
             Err(e) => ok(format!("ERROR opening bundle: {e}")),
+        }
+    }
+
+    #[tool(name = "bokf_convert", description = "Convert a file/folder/zip (pdf/html/docx/pptx/csv/xlsx) or inline text into raw Markdown under the bundle's raw/, with a human-readable content-derived source id. Writes via bokf-core (not Edit), so raw/ guards don't block it.")]
+    pub async fn convert(&self, p: Parameters<ConvertParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        use bokf_core::convert::{ingest, SourceInput};
+        let input = if let Some(t) = p.0.text {
+            SourceInput::Text { text: t, title: p.0.title }
+        } else if let Some(path) = p.0.path {
+            SourceInput::Path(path.into())
+        } else {
+            return ok("ERROR: convert needs a `path` or `text`".to_string());
+        };
+        match ingest(Path::new(&p.0.bundle), input, p.0.combined.unwrap_or(false)) {
+            Ok(recs) => ok(serde_json::to_string_pretty(&recs).unwrap_or_default()),
+            Err(e) => ok(format!("ERROR: {e}")),
         }
     }
 }

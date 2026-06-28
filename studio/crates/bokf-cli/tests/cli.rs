@@ -151,6 +151,23 @@ fn scaffold_registers_inits_and_activates() {
 }
 
 #[test]
+fn cli_convert_writes_raw_with_readable_id() {
+    let dir = tmp_bundle("convert");
+    std::fs::create_dir_all(dir.join("raw")).unwrap();
+    let src = dir.join("recovery.md");
+    std::fs::write(&src, "# RECOVERY Trial\n\nDexamethasone reduced mortality.").unwrap();
+    let out = Command::new(bokf())
+        .args(["convert", src.to_str().unwrap(), "--into", dir.to_str().unwrap(), "--json"]).output().unwrap();
+    assert!(out.status.success(), "{}", String::from_utf8_lossy(&out.stderr));
+    let v: serde_json::Value = serde_json::from_slice(&out.stdout).unwrap();
+    let id = v[0]["source_id"].as_str().unwrap();
+    assert!(id.starts_with("recovery-trial-"), "id={id}");
+    assert!(dir.join(format!("raw/{id}/source.md")).exists());
+    assert!(dir.join(format!("raw/{id}/meta.yaml")).exists());
+    let _ = std::fs::remove_dir_all(&dir);
+}
+
+#[test]
 fn verify_gate_passes_clean_fails_dirty() {
     let dir = tmp_bundle("verify");
     std::fs::create_dir_all(dir.join("raw")).unwrap();
