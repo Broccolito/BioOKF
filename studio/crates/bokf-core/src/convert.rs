@@ -75,10 +75,21 @@ pub struct SourceRecord {
 // Conversion dispatch
 // ---------------------------------------------------------------------------
 
+/// True when `ext` names a raster or vector image format we copy verbatim as a figure.
+pub fn is_image_ext(ext: &str) -> bool {
+    matches!(ext.to_ascii_lowercase().as_str(), "png" | "jpg" | "jpeg" | "gif" | "webp" | "tiff" | "tif" | "bmp" | "svg")
+}
+
 /// Convert a single file's bytes to Markdown, dispatching on extension.
 pub fn convert_bytes(ext: &str, filename: &str, bytes: &[u8]) -> Converted {
     let ext = ext.to_ascii_lowercase();
     match ext.as_str() {
+        e if is_image_ext(e) => Converted {
+            markdown: format!("![{filename}](figures/{filename})\n"),
+            title: String::new(),
+            format: "image".into(),
+            needs_llm_fallback: true,
+        },
         "md" | "markdown" | "txt" | "text" | "" | "xml" | "yaml" | "yml" | "rst" | "log" | "tex" | "org" => passthrough(bytes, "text"),
         "json" => {
             let body = String::from_utf8_lossy(bytes);
@@ -619,6 +630,15 @@ mod tests {
         // the marker is present until the agent renders it
         let report = crate::lint::lint(&crate::bundle::Bundle::open(root).unwrap());
         assert!(report.findings.iter().any(|f| f.rule == "source.needs_conversion"), "{:?}", report.findings);
+    }
+
+    #[test]
+    fn image_file_becomes_image_source() {
+        assert!(is_image_ext("PNG"));
+        let c = convert_bytes("png", "Figure_3.png", &[0x89, b'P', b'N', b'G']);
+        assert_eq!(c.format, "image");
+        assert!(c.needs_llm_fallback);
+        assert!(c.markdown.contains("![Figure_3.png](figures/Figure_3.png)"), "{}", c.markdown);
     }
 
     #[test]
