@@ -207,6 +207,9 @@ pub fn lint(bundle: &Bundle) -> LintReport {
     // --- raw sources still awaiting faithful LLM conversion to Markdown ---
     lint_raw_conversion(&mut r, bundle);
 
+    // --- figures still provisional or referenced without a description ---
+    lint_figures(&mut r, bundle);
+
     // --- index.md currency ---
     if bundle.has_index_md {
         for id in crate::index::missing_from_index(bundle) {
@@ -240,6 +243,73 @@ fn lint_raw_conversion(r: &mut LintReport, bundle: &Bundle) {
             }
         }
     }
+}
+
+/// Walk `raw/*/meta.yaml` and flag figures that are still provisional (`source.figure_unnamed`)
+/// or referenced in `source.md` without a non-empty description (`source.figure_undescribed`).
+fn lint_figures(r: &mut LintReport, bundle: &Bundle) {
+    let raw = bundle.root.join("raw");
+    let entries = match std::fs::read_dir(&raw) {
+        Ok(e) => e,
+        Err(_) => return,
+    };
+    for e in entries.flatten() {
+        let dir = e.path();
+        let meta_path = dir.join("meta.yaml");
+        let txt = match std::fs::read_to_string(&meta_path) {
+            Ok(t) => t,
+            Err(_) => continue,
+        };
+        let meta: crate::convert::SourceMeta = match serde_yaml::from_str(&txt) {
+            Ok(m) => m,
+            Err(_) => continue,
+        };
+        if meta.figures.is_empty() {
+            continue;
+        }
+        let id = e.file_name().to_string_lossy().to_string();
+        let src_md = std::fs::read_to_string(dir.join("source.md")).unwrap_or_default();
+        for f in &meta.figures {
+            if f.provisional {
+                r.push(
+                    Severity::Warn,
+                    "source.figure_unnamed",
+                    &id,
+                    format!("figure `{}` still has a provisional name; run `bokf name-figure` to give it a content name", f.file),
+                    Some(format!("raw/{id}/{}", f.file)),
+                );
+            }
+            // Described when source.md carries `[<non-empty>](<file>)` for this figure.
+            if !figure_is_described(&src_md, &f.file) {
+                r.push(
+                    Severity::Warn,
+                    "source.figure_undescribed",
+                    &id,
+                    format!("figure `{}` is referenced without a description; write a faithful description beside its reference in source.md", f.file),
+                    Some(format!("raw/{id}/source.md")),
+                );
+            }
+        }
+    }
+}
+
+/// True when `source.md` references `file` with a non-empty alt/description, i.e.
+/// `[<non-empty>](<file>)` (the leading `!` of an image reference is optional).
+fn figure_is_described(md: &str, file: &str) -> bool {
+    let needle = format!("]({file})");
+    let mut from = 0;
+    while let Some(rel) = md[from..].find(&needle) {
+        let close = from + rel; // index of the `]` before `(`
+        // Walk back to the matching `[` and read the alt text between them.
+        if let Some(open_rel) = md[..close].rfind('[') {
+            let alt = md[open_rel + 1..close].trim();
+            if !alt.is_empty() {
+                return true;
+            }
+        }
+        from = close + needle.len();
+    }
+    false
 }
 
 /// Within each node type, flag distinct `subtype` tokens that normalize to the same
@@ -467,6 +537,21 @@ mod tests {
             std::fs::write(&p, body).unwrap();
         }
         crate::lint::lint(&Bundle::open(dir.path()).unwrap())
+    }
+
+    #[test]
+    fn lints_flag_unnamed_and_undescribed_figures() {
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        std::fs::create_dir_all(root.join("raw/x-1/figures")).unwrap();
+        std::fs::create_dir_all(root.join("knowledge")).unwrap();
+        std::fs::write(root.join("raw/x-1/figures/fig-001.png"), b"i").unwrap();
+        std::fs::write(root.join("raw/x-1/source.md"), "![](figures/fig-001.png)").unwrap();
+        let meta = crate::convert::SourceMeta { id:"x-1".into(), title:"X".into(), sha256:"d".into(), format:"image".into(), original_filename:None, ingested_at:"2026-06-27".into(), needs_llm_fallback:true, figures: vec![crate::convert::FigureMeta{ file:"figures/fig-001.png".into(), provisional:true, described:false, origin:"data-uri".into() }] };
+        std::fs::write(root.join("raw/x-1/meta.yaml"), serde_yaml::to_string(&meta).unwrap()).unwrap();
+        let rep = crate::lint::lint(&crate::bundle::Bundle::open(root).unwrap());
+        assert!(rep.findings.iter().any(|f| f.rule == "source.figure_unnamed"));
+        assert!(rep.findings.iter().any(|f| f.rule == "source.figure_undescribed"));
     }
 
     #[test]
