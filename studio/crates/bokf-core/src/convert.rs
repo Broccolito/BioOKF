@@ -91,11 +91,94 @@ pub struct ExtractedFigure {
     pub origin: String,
 }
 
+/// Map a `data:image/<subtype>` MIME subtype to a file extension.
+fn mime_subtype_to_ext(sub: &str) -> String {
+    match sub {
+        "jpeg" => "jpg".to_string(),
+        "svg+xml" => "svg".to_string(),
+        other => other.to_string(),
+    }
+}
+
+/// Decode a standard base64 string (no whitespace) into bytes. Returns None on any
+/// invalid character or malformed padding. No new dependency.
+fn b64_decode(s: &str) -> Option<Vec<u8>> {
+    fn val(c: u8) -> Option<u32> {
+        match c {
+            b'A'..=b'Z' => Some((c - b'A') as u32),
+            b'a'..=b'z' => Some((c - b'a' + 26) as u32),
+            b'0'..=b'9' => Some((c - b'0' + 52) as u32),
+            b'+' => Some(62),
+            b'/' => Some(63),
+            _ => None,
+        }
+    }
+    let bytes: Vec<u8> = s.bytes().filter(|&c| c != b'\n' && c != b'\r').collect();
+    let mut out = Vec::new();
+    let mut chunk = [0u32; 4];
+    let mut n = 0usize;
+    let mut pad = 0usize;
+    for &c in &bytes {
+        if c == b'=' {
+            chunk[n] = 0;
+            pad += 1;
+            n += 1;
+        } else {
+            chunk[n] = val(c)?;
+            n += 1;
+        }
+        if n == 4 {
+            let triple = (chunk[0] << 18) | (chunk[1] << 12) | (chunk[2] << 6) | chunk[3];
+            out.push((triple >> 16) as u8);
+            if pad < 2 {
+                out.push((triple >> 8) as u8);
+            }
+            if pad < 1 {
+                out.push(triple as u8);
+            }
+            n = 0;
+            pad = 0;
+        }
+    }
+    if n != 0 {
+        return None;
+    }
+    Some(out)
+}
+
 /// Extract embedded figures from a source. Returns the figures plus an optionally
-/// rewritten Markdown (None for zip-media formats; html/md rewrite data URIs to local
-/// figure references in A4).
-pub fn extract_figures(ext: &str, bytes: &[u8], _markdown: &str) -> (Vec<ExtractedFigure>, Option<String>) {
+/// rewritten Markdown (None for zip-media formats; for html/md the data URIs are
+/// rewritten to local figure references).
+pub fn extract_figures(ext: &str, bytes: &[u8], markdown: &str) -> (Vec<ExtractedFigure>, Option<String>) {
     let ext = ext.to_ascii_lowercase();
+    // html/md: decode inline base64 data URIs into figures and rewrite the references.
+    if matches!(ext.as_str(), "html" | "htm" | "md" | "markdown") {
+        let re = regex::Regex::new(r"data:image/([a-z0-9.+-]+);base64,([A-Za-z0-9+/=]+)").unwrap();
+        let mut figs = Vec::new();
+        let mut rewritten = String::new();
+        let mut last = 0usize;
+        for cap in re.captures_iter(markdown) {
+            let whole = cap.get(0).unwrap();
+            let sub = cap.get(1).unwrap().as_str();
+            let b64 = cap.get(2).unwrap().as_str();
+            let data = match b64_decode(b64) {
+                Some(d) => d,
+                None => continue,
+            };
+            let fext = mime_subtype_to_ext(sub);
+            let name = format!("fig-{:03}.{}", figs.len() + 1, fext);
+            rewritten.push_str(&markdown[last..whole.start()]);
+            rewritten.push_str(&format!("figures/{name}"));
+            last = whole.end();
+            figs.push(ExtractedFigure { provisional_name: name, bytes: data, origin: "data-uri".into() });
+        }
+        if figs.is_empty() {
+            return (figs, None);
+        }
+        rewritten.push_str(&markdown[last..]);
+        return (figs, Some(rewritten));
+    }
+    // docx/pptx/xlsx/ods: copy image members out of the zip media folder.
     let media_prefix = match ext.as_str() {
         "docx" => "word/media/",
         "pptx" => "ppt/media/",
@@ -681,6 +764,17 @@ mod tests {
         // the marker is present until the agent renders it
         let report = crate::lint::lint(&crate::bundle::Bundle::open(root).unwrap());
         assert!(report.findings.iter().any(|f| f.rule == "source.needs_conversion"), "{:?}", report.findings);
+    }
+
+    #[test]
+    fn extract_figures_decodes_data_uris() {
+        // "AAEC" base64 decodes to bytes [0,1,2]
+        let md = "text ![x](data:image/png;base64,AAEC) more";
+        let (figs, rewritten) = extract_figures("md", b"", md);
+        assert_eq!(figs.len(), 1);
+        assert_eq!(figs[0].provisional_name, "fig-001.png");
+        assert_eq!(figs[0].bytes, vec![0u8, 1, 2]);
+        assert!(rewritten.unwrap().contains("figures/fig-001.png"));
     }
 
     #[test]
