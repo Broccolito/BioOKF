@@ -1,0 +1,11 @@
+{
+  "name": "biookf",
+  "owner": { "name": "Wanjun Gu", "email": "wanjun.gu@ucsf.edu" },
+  "plugins": [
+    {
+      "name": "biookf",
+      "source": "./",
+      "description": "BioOKF curation skills + guardrail hooks over the bokf toolchain."
+    }
+  ]
+}

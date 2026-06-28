@@ -1,6 +1,6 @@
-/* BioOKF Studio frontend — data-driven from okf-core.
+/* BioOKF Studio frontend — data-driven from bokf-core.
    In the Tauri app it calls window.__TAURI__ invoke(); in a browser (and tests)
-   it fetches the JSON the `okf export` CLI emits. Visualization is identical. */
+   it fetches the JSON the `bokf export` CLI emits. Visualization is identical. */
 
 const TYPE_COLOR = {
   Gene:"#6366A8", Variant:"#8A86C4", SequenceFeature:"#AAA6DA", Structure:"#7C8FC9",
@@ -387,7 +387,7 @@ function resize(){const rect=cv.getBoundingClientRect();W=rect.width;H=rect.heig
 window.addEventListener('resize',resize);
 
 // expose for tests / Tauri automation
-window.__okf = { selectBase:(id)=>{const b=BASES.find(x=>x.id===id);if(b)return selectBase(b);}, getState:()=>({nodes:nodes.length,edges:edges.length,base:activeBaseId}), selectNode:(id)=>{const n=byId[id];if(n){selected=n;selectedEdge=null;recomputeFocus();focusOn(n);showNodeDetail(n);}}, search:(q)=>{searchTerm=(q||'').toLowerCase();searchInput.value=q||'';} };
+window.__bokf = { selectBase:(id)=>{const b=BASES.find(x=>x.id===id);if(b)return selectBase(b);}, getState:()=>({nodes:nodes.length,edges:edges.length,base:activeBaseId}), selectNode:(id)=>{const n=byId[id];if(n){selected=n;selectedEdge=null;recomputeFocus();focusOn(n);showNodeDetail(n);}}, search:(q)=>{searchTerm=(q||'').toLowerCase();searchInput.value=q||'';} };
 
 async function boot(){
   renderLegend();resize();

@@ -1,0 +1,6 @@
+{
+  "name": "biookf",
+  "version": "0.1.0",
+  "description": "BioOKF — curate biomedical knowledge bases: the biookf-* skills (convert/ingest/merge/query/lint/verify/version) plus guardrail hooks over the bokf toolchain.",
+  "author": { "name": "Wanjun Gu", "email": "wanjun.gu@ucsf.edu" }
+}

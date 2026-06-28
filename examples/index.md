@@ -8,7 +8,7 @@ A tiny, illustrative **BioOKF v0.5** bundle distilled from a few sources about I
 role in COVID-19. It demonstrates the bundle layout, several node types, the typed-edge layer, and —
 new in v0.5 — **node-based provenance**: every claim's `primary_source` names a **source node** by
 its `identifier`, and ingested sources anchor to `raw/` via `raw_source`. See
-[../SPEC.md](../SPEC.md) for the normative format and [../schema.md](../schema.md) for the workflow.
+[../SPEC.md](../SPEC.md) for the normative format and [../SCHEMA.md](../SCHEMA.md) for the workflow.
 
 ## Concept pages — biomedical entities
 - [knowledge/gene/il6](knowledge/gene/il6.md) — **Gene** (`protein_coding`) · IL6 (gene)

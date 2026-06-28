@@ -14,7 +14,7 @@ test('loads bundles and renders the graph', async ({ page }) => {
   await page.waitForFunction(() => window.__OKF_READY === true, null, { timeout: 5000 });
   const bases = await page.locator('.kb').count();
   expect(bases).toBeGreaterThanOrEqual(1);
-  const state = await page.evaluate(() => window.__okf.getState());
+  const state = await page.evaluate(() => window.__bokf.getState());
   expect(state.nodes).toBeGreaterThan(0);
   expect(state.edges).toBeGreaterThan(0);
 });
@@ -28,7 +28,7 @@ test('node click opens a detail panel with frontmatter + edges', async ({ page }
     return id;
   });
   // fall back: select COVID-19 if present
-  await page.evaluate(() => window.__okf.selectNode('COVID-19'));
+  await page.evaluate(() => window.__bokf.selectNode('COVID-19'));
   await expect(page.locator('.detail.open .d-id')).toBeVisible();
   await expect(page.locator('.detail .fm')).toBeVisible();
 });
@@ -36,7 +36,7 @@ test('node click opens a detail panel with frontmatter + edges', async ({ page }
 test('search dims non-matching nodes', async ({ page }) => {
   await page.goto(URL);
   await page.waitForFunction(() => window.__OKF_READY === true);
-  await page.evaluate(() => window.__okf.search('gene'));
+  await page.evaluate(() => window.__bokf.search('gene'));
   const term = await page.evaluate(() => document.getElementById('searchInput').value);
   expect(term).toBe('gene');
 });
