@@ -30,17 +30,56 @@ let hover=null, hoverEdge=null, selected=null, selectedEdge=null;
 let drag=null, panning=null, moved=false, alpha=1, searchTerm='';
 let focusNeighbors=new Set();
 let BASES=[], activeBaseId=null, currentLog='', currentUpdated=null;
+let currentDetailPath=null;           // path of the open node doc, for resolving body links
+let currentNoteCtx=null;              // notes context (node/edge) for the open panel
 
 /* ---------- data loading ---------- */
-const inTauri = !!(window.__TAURI__ && window.__TAURI__.core);
+/* Graph data always loads from the exported static JSON, which carries the
+   curated base names; the live `list_bases`/`base_info` backend returns
+   name = dir-id, so we deliberately do NOT use it for display. (withGlobalTauri
+   is on so the bridge + command invokes work — see tauriInvoke below.) */
+const inTauri = false;
 async function invoke(cmd, args){ return window.__TAURI__.core.invoke(cmd, args); }
+/* Desktop webview detection — gates editor/notes/terminal (backend-only paths). */
+const isDesktop = !!(window.__TAURI__ || window.__TAURI_INTERNALS__);
+async function tauriInvoke(cmd, args){
+  const core = window.__TAURI__ && window.__TAURI__.core && window.__TAURI__.core.invoke;
+  const fn = core || (window.__TAURI_INTERNALS__ && window.__TAURI_INTERNALS__.invoke);
+  if(!fn) throw new Error('available in the desktop app only');
+  return fn(cmd, args);
+}
+/* Debug MCP bridge: answer tauri-plugin-mcp execute-js eval requests. Only the
+   debug-mcp dev build emits 'execute-js' (with {_payload, _correlationId}); in a
+   normal build nothing emits it, so this stays dormant. Lets agents drive/inspect
+   the real desktop webview during development. */
+if (window.__TAURI__ && window.__TAURI__.event) {
+  window.__TAURI__.event.listen('execute-js', async (event) => {
+    const p = (event && event.payload) || {};
+    const cid = p._correlationId;
+    let out;
+    try {
+      let r = (0, eval)(p._payload);
+      if (r && typeof r.then === 'function') r = await r;
+      const type = typeof r;
+      let result;
+      if (typeof r === 'string') result = r;
+      else { try { result = JSON.stringify(r); } catch (e) { result = String(r); } }
+      out = { result: (result === undefined ? 'undefined' : result), type };
+    } catch (e) {
+      out = { error: String((e && e.message) || e) };
+    }
+    if (cid) window.__TAURI__.event.emit('execute-js-response-' + cid, out);
+  });
+}
 const cb = () => '?_=' + Date.now(); // dev cache-bust for the static JSON
 async function loadBases(){
   if(inTauri){ try { return await invoke('list_bases'); } catch(e){ console.error(e); return []; } }
   return await (await fetch('data/bases.json'+cb())).json();
 }
 async function loadBundle(base){
-  if(inTauri){ return await invoke('get_bundle', { id: base.id }); }
+  // On desktop read LIVE from the .md files so frontmatter/notes edits show up;
+  // the curated display name still comes from bases.json (see selectBase).
+  if(isDesktop){ try{ return await tauriInvoke('get_bundle', { id: base.id }); }catch(e){ console.error('get_bundle failed; using snapshot', e); } }
   return await (await fetch(base.file+cb())).json();
 }
 
@@ -215,6 +254,12 @@ function showTip(sx,sy,a,b){tip.style.display='block';tip.style.left=(sx+14)+'px
 function hideTip(){tip.style.display='none';}
 cv.addEventListener('mousedown',ev=>{const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top;moved=false;const n=pickNode(sx,sy);if(n)drag=n;else panning={x:sx,y:sy};cv.classList.add('grabbing');});
 window.addEventListener('mouseup',ev=>{
+  // Only handle releases that BEGAN on the canvas. A canvas mousedown always sets
+  // drag (a node) or panning (empty space); a click on the detail panel, preview
+  // popup, or terminal floating above the canvas sets neither. Without this guard,
+  // releasing such a click ran pickNode→closeDetail and swallowed the click — so
+  // Edit/Save/Notes/citation buttons appeared to "do nothing".
+  if(!drag && !panning){return;}
   const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top;cv.classList.remove('grabbing');
   if(!moved){
     const n=pickNode(sx,sy);
@@ -243,7 +288,7 @@ function showNodeDetail(n){
       <div class="d-id">${esc(n.id)}</div>
       <div class="d-desc">This identifier is referenced by ${inc.length+out.length} edge(s) but has no concept document in this bundle. Create one to enrich the graph.</div></div>
       <div class="d-body">${incomingSection(n.id)}</div>`;
-    detail.classList.add('open');wireDetail();return;
+    currentDetailPath=null;detail.classList.add('open');wireDetail();return;
   }
   const out=outEdges(n.id);
   const groups={};out.forEach(e=>{(groups[e.predicate]=groups[e.predicate]||[]).push(e);});
@@ -256,17 +301,24 @@ function showNodeDetail(n){
   });
   const synonyms=(pg.synonyms||[]).map(s=>`<span class="chip">${esc(s)}</span>`).join('');
   const xr=(pg.xref||[]).map(x=>`<span class="chip xref">${esc(x)}</span>`).join('');
-  detail.innerHTML=`<div class="d-head"><button class="d-close" id="dClose">×</button>
+  detail.innerHTML=`<div class="d-head"><button class="d-close" id="dClose">×</button>${(isDesktop&&pg.path)?'<button class="d-reveal" id="dReveal" title="Reveal markdown file in Finder"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2.5h4v4"/><path d="M13.5 2.5l-6 6"/><path d="M11.5 9v2.5a1 1 0 0 1-1 1h-6a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1H7"/></svg></button>':''}
     <span class="d-badge" style="background:${col}">${esc(typeStr(pg.node_type))}</span><span class="d-sub">${esc(pg.subtype||n.subtype||'')}</span>
     <div class="d-id">${esc(n.id)}</div>${pg.description?`<div class="d-desc">${esc(pg.description)}</div>`:''}
     ${synonyms?`<div class="chips">${synonyms}</div>`:''}${xr?`<div class="chips">${xr}</div>`:''}</div>
     <div class="d-body">
-      <div class="d-section"><h5>Frontmatter</h5><div class="fm">${esc(buildFm(pg,out))}</div></div>
+      <div class="d-section" id="fmSection">${fmSectionHtml(pg)}</div>
       ${eh?`<div class="d-section"><h5>Edges · this node → object (${out.length})</h5>${eh}</div>`:''}
       ${incomingSection(n.id)}
-      <div class="d-section"><h5>Document</h5><div class="md">${renderMd(pg.body||'')}</div></div>
+      <div class="d-section" id="docSection">${docSectionHtml(pg)}</div>
+      ${notesSectionHtml(noteCtxForNode(n,pg))}
     </div>`;
+  currentDetailPath=pg.path||null;
   detail.classList.add('open');wireDetail();
+}
+/* Document section — read-only rendered body (editing now happens on the
+   frontmatter above, per the requested workflow). */
+function docSectionHtml(pg){
+  return `<h5>Document</h5><div class="md" id="docMd">${renderMd(stripNotesSection(pg.body||''))}</div>`;
 }
 function incomingSection(id){
   const inc=inEdges(id); if(!inc.length)return '';
@@ -294,17 +346,210 @@ function showEdgeDetail(e){
     <div class="d-section"><h5>Provenance triplet</h5><div class="prov">
       <div class="cell"><div class="k">knowledge_level</div><div class="v">${esc(e.knowledge_level||'—')}</div></div>
       <div class="cell"><div class="k">agent_type</div><div class="v">${esc(e.agent_type||'—')}</div></div>
-      <div class="cell" style="grid-column:1/3"><div class="k">primary_source</div><div class="v" data-node="${esc(e.primary_source||'')}" style="${byId[e.primary_source]?'cursor:pointer;color:#4f5a8a':''}">${esc(e.primary_source||'—')}</div></div>
+      <div class="cell" style="grid-column:1/3"><div class="k">primary_source</div><div class="v${pages[e.primary_source]?' cite':''}"${pages[e.primary_source]?` data-cite="${esc(e.primary_source)}"`:''}>${esc(e.primary_source||'—')}</div></div>
     </div></div>`}
     ${cells.length?`<div class="d-section"><h5>Quantitative attributes</h5><div class="statgrid">${cells.join('')}</div></div>`:''}
+    ${notesSectionHtml(noteCtxForEdge(e))}
     </div>`;
-  detail.classList.add('open');wireDetail();
+  currentDetailPath=null;detail.classList.add('open');wireDetail();
 }
 function wireDetail(){
   const c=document.getElementById('dClose');if(c)c.onclick=()=>{selected=null;selectedEdge=null;recomputeFocus();closeDetail();};
   detail.querySelectorAll('[data-node]').forEach(el=>{el.onclick=()=>{const n=byId[el.getAttribute('data-node')];if(n){selected=n;selectedEdge=null;recomputeFocus();focusOn(n);showNodeDetail(n);}};});
   detail.querySelectorAll('[data-edge]').forEach(el=>{el.onclick=()=>{const e=edges[+el.getAttribute('data-edge')];if(e){selectedEdge=e;selected=null;recomputeFocus();showEdgeDetail(e);}};});
+  wireCites(detail, currentDetailPath);
+  const rv=document.getElementById('dReveal');
+  if(rv) rv.onclick=()=>{ if(isDesktop && currentDetailPath) tauriInvoke('reveal_in_finder', { base: activeBaseId, path: currentDetailPath }).catch(()=>{}); };
+  const nodeId = selected && selected.id;
+  if(nodeId && document.getElementById('fmSection')) wireFm(nodeId);
+  wireNotes();
 }
+
+/* ---------- citation previews ---------- */
+/* Resolve a citation reference (a node id, or a relative `.md` link from a node
+   body) to a page id we can preview. */
+function resolveCite(ref, fromPath){
+  if(!ref) return null;
+  if(pages[ref]) return ref;                       // direct node id (e.g. primary_source)
+  let href=ref.split('#')[0].split('?')[0];
+  const seg=(fromPath||'').split('/').slice(0,-1); // start in the current doc's folder
+  href.split('/').forEach(p=>{ if(p===''||p==='.')return; if(p==='..'){seg.pop();return;} seg.push(p); });
+  const norm=seg.join('/');
+  for(const id in pages){ if(pages[id].path===norm) return id; }
+  const fn=norm.split('/').pop();                  // fallback: match by filename
+  for(const id in pages){ const p=pages[id].path||''; if(p.split('/').pop()===fn) return id; }
+  return null;
+}
+function wireCites(root, fromPath){
+  if(!root) return;
+  root.querySelectorAll('[data-cite]').forEach(el=>{
+    el.onclick=(ev)=>{ ev.stopPropagation(); openPreview(el.getAttribute('data-cite'), fromPath); };
+  });
+}
+const previewEl=document.getElementById('preview'), previewScrim=document.getElementById('previewScrim');
+function openPreview(ref, fromPath){
+  const id=resolveCite(ref, fromPath);
+  if(!id || !pages[id]){
+    previewEl.innerHTML=`<div class="pv-head"><div><div class="pv-eyebrow">Citation</div><div class="pv-title">Source not in this base</div></div><button class="pv-close" id="pvClose">×</button></div>
+      <div class="pv-body"><div class="pv-missing">“${esc(ref||'')}” isn’t a document in this knowledge base.</div></div>`;
+  }else{
+    const pg=pages[id], col=nodeColor(id);
+    const hasRaw = pg.raw_source && pg.raw_source.length;
+    const rawBlock = hasRaw
+      ? `<div class="pv-raw"><div class="pv-rawhead">Original paper · <code>${esc(pg.raw_source[0])}</code></div><div class="md" id="pvRawBody"><span class="pv-missing">Loading source…</span></div></div>`
+      : '';
+    previewEl.innerHTML=`<div class="pv-head"><span class="pv-badge" style="background:${col}">${esc(typeStr(pg.node_type))}</span><div><div class="pv-eyebrow">Cited source</div><div class="pv-title">${esc(id)}</div></div><button class="pv-close" id="pvClose">×</button></div>
+      <div class="pv-body">${pg.description?`<div class="d-desc" style="margin-bottom:10px">${esc(pg.description)}</div>`:''}<div class="md">${renderMd(pg.body||'')}</div>${rawBlock}</div>`;
+    wireCites(previewEl, pg.path||null);
+    if(hasRaw) loadRawSource(activeBaseId, pg.raw_source[0]);
+  }
+  previewEl.classList.add('open'); previewScrim.classList.add('open');
+  const c=document.getElementById('pvClose'); if(c) c.onclick=closePreview;
+}
+/* Load the original ingested paper (raw/source.md) into an open preview. */
+async function loadRawSource(base, path){
+  const el=document.getElementById('pvRawBody'); if(!el) return;
+  if(!isDesktop){ el.innerHTML='<span class="pv-missing">Open the desktop app to read the original source paper.</span>'; return; }
+  try{
+    const text=await tauriInvoke('read_bundle_file', { base, path });
+    el.innerHTML=renderMd(text||'');
+  }catch(e){ el.innerHTML='<span class="pv-missing">Could not load source: '+esc(String((e&&e.message)||e))+'</span>'; }
+}
+function closePreview(){ previewEl.classList.remove('open'); previewScrim.classList.remove('open'); }
+
+/* ---------- frontmatter editor (collapsed by default; Edit expands, Save collapses) ---------- */
+function fmSectionHtml(pg){
+  const canEdit = isDesktop && pg && pg.path;
+  return `<h5>Frontmatter<span class="sec-actions">
+      <button class="btn-mini" id="fmEdit"${canEdit?'':' disabled title="Editing is available in the desktop app"'}>✎ Edit</button>
+      <button class="btn-mini primary" id="fmSave" disabled style="display:none">Save</button>
+      <span class="edit-status" id="fmMsg"></span></span></h5>`;
+}
+function wireFm(id){
+  const e=document.getElementById('fmEdit'), s=document.getElementById('fmSave');
+  if(e && isDesktop && !e.disabled) e.onclick=()=>toggleFmEdit(id);
+  if(s) s.onclick=()=>saveFm(id);
+}
+async function toggleFmEdit(id){
+  const pg=pages[id], sec=document.getElementById('fmSection'); if(!pg||!sec) return;
+  if(document.getElementById('fmEditArea')){ collapseFm(id); return; }   // toggle off = cancel/collapse
+  const ta=document.createElement('textarea');
+  ta.className='md-edit fm-edit'; ta.id='fmEditArea'; ta.spellcheck=false; ta.disabled=true; ta.value='Loading frontmatter…';
+  sec.appendChild(ta);
+  document.getElementById('fmEdit').textContent='Cancel';
+  const fmSave=document.getElementById('fmSave'); fmSave.style.display=''; fmSave.disabled=false;
+  document.getElementById('fmMsg').textContent='';
+  try{
+    const raw=await tauriInvoke('read_bundle_file', { base: activeBaseId, path: pg.path });
+    ta.value=extractFrontmatter(raw); ta.disabled=false; ta.focus();
+  }catch(err){ ta.value='# could not read file: '+String((err&&err.message)||err); ta.disabled=false; }
+}
+function collapseFm(id, savedMsg){
+  const sec=document.getElementById('fmSection'); if(!sec) return;
+  sec.innerHTML=fmSectionHtml(pages[id]);
+  if(savedMsg){ const m=document.getElementById('fmMsg'); if(m){ m.className='edit-status ok'; m.textContent=savedMsg; } }
+  wireFm(id);
+}
+async function saveFm(id){
+  const pg=pages[id], ta=document.getElementById('fmEditArea'); if(!pg||!ta) return;
+  const fm=ta.value, s=document.getElementById('fmSave'), msg=document.getElementById('fmMsg');
+  s.disabled=true; msg.className='edit-status'; msg.textContent='Saving…';
+  try{
+    await tauriInvoke('save_node_frontmatter', { base: activeBaseId, path: pg.path, frontmatter: fm, label: id, date: today() });
+    collapseFm(id, 'Saved ✓');   // auto-collapse the frontmatter section again
+  }catch(e){ s.disabled=false; msg.className='edit-status err'; msg.textContent='Save failed: '+String((e&&e.message)||e); }
+}
+function extractFrontmatter(raw){
+  const lines=(raw||'').split('\n');
+  if((lines[0]||'').trim()!=='---') return '';
+  const out=[];
+  for(let i=1;i<lines.length;i++){ if(lines[i].trim()==='---') break; out.push(lines[i]); }
+  return out.join('\n');
+}
+
+/* ---------- notes — stored in markdown (node: `# Notes` body section; edge: the
+   edge's frontmatter `note:` field). notes.json is gone. ---------- */
+function today(){ const d=new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+function extractNotesSection(body){
+  const lines=(body||'').split('\n');
+  const i=lines.findIndex(l=>l.trim()==='# Notes');
+  if(i<0) return '';
+  const out=[];
+  for(let j=i+1;j<lines.length;j++){ if(/^#\s+/.test(lines[j])) break; out.push(lines[j]); }
+  return out.join('\n').trim();
+}
+function stripNotesSection(body){
+  const lines=(body||'').split('\n');
+  const i=lines.findIndex(l=>l.trim()==='# Notes');
+  if(i<0) return body||'';
+  let end=lines.length;
+  for(let j=i+1;j<lines.length;j++){ if(/^#\s+/.test(lines[j])){ end=j; break; } }
+  return lines.slice(0,i).concat(lines.slice(end)).join('\n').replace(/\n{3,}/g,'\n\n').trim();
+}
+function upsertNotesInBody(body, notes){
+  const stripped=stripNotesSection(body);
+  if(!notes.trim()) return stripped;
+  return (stripped?stripped+'\n\n':'')+'# Notes\n\n'+notes.trim()+'\n';
+}
+function edgeNote(e){
+  const pg=pages[e.source]; if(!pg||!pg.edges) return '';
+  const m=pg.edges.find(x=>(x.raw_predicate===e.predicate||x.predicate===e.predicate)&&x.object===e.target);
+  return (m&&m.note)||'';
+}
+function noteCtxForNode(n,pg){ return { kind:'node', id:n.id, path:pg&&pg.path, note:extractNotesSection(pg&&pg.body) }; }
+function noteCtxForEdge(e){ const pg=pages[e.source];
+  return { kind:'edge', source:e.source, srcPath:pg&&pg.path, predicate:e.predicate, object:e.target, label:e.source+' '+e.predicate+' '+e.target, note:edgeNote(e) }; }
+function notesSectionHtml(ctx){
+  currentNoteCtx=ctx;
+  const txt=ctx.note||'';
+  const canEdit=isDesktop && (ctx.kind==='node'? !!ctx.path : !!ctx.srcPath);
+  return `<div class="d-section notes-section" id="notesSection">
+    <h5>Notes<span class="sec-actions">
+      <button class="btn-mini" id="noteEdit"${canEdit?'':' disabled title="Notes are saved in the desktop app"'}>✎ Edit</button>
+      <button class="btn-mini primary" id="noteSave" disabled>Save</button>
+      <span class="edit-status" id="noteMsg"></span></span></h5>
+    <div class="notes-view" id="notesView">${txt?renderMd(txt):'<span class="notes-empty">No notes yet — click Edit to add some.</span>'}</div>
+  </div>`;
+}
+function wireNotes(){
+  const e=document.getElementById('noteEdit'), s=document.getElementById('noteSave');
+  if(e && isDesktop && !e.disabled) e.onclick=()=>toggleNoteEdit();
+  if(s) s.onclick=()=>saveNote();
+}
+function toggleNoteEdit(){
+  if(document.getElementById('noteEditArea')){ renderNotesView(); return; }
+  const view=document.getElementById('notesView'); if(!view) return;
+  view.outerHTML='<textarea class="md-edit notes-edit" id="noteEditArea" placeholder="Type your notes (markdown supported)…"></textarea>';
+  const ta=document.getElementById('noteEditArea'); ta.value=(currentNoteCtx&&currentNoteCtx.note)||''; ta.focus();
+  document.getElementById('noteEdit').textContent='Cancel';
+  document.getElementById('noteSave').disabled=false;
+}
+function renderNotesView(){
+  const sec=document.getElementById('notesSection'); if(!sec) return;
+  const txt=(currentNoteCtx&&currentNoteCtx.note)||'';
+  const e=sec.querySelector('#noteEdit'); if(e) e.textContent='✎ Edit';
+  const s=sec.querySelector('#noteSave'); if(s) s.disabled=true;
+  const area=document.getElementById('noteEditArea');
+  if(area) area.outerHTML=`<div class="notes-view" id="notesView">${txt?renderMd(txt):'<span class="notes-empty">No notes yet — click Edit to add some.</span>'}</div>`;
+}
+async function saveNote(){
+  const ta=document.getElementById('noteEditArea'); if(!ta||!currentNoteCtx) return;
+  const ctx=currentNoteCtx, text=ta.value, s=document.getElementById('noteSave'), msg=document.getElementById('noteMsg');
+  s.disabled=true; msg.className='edit-status'; msg.textContent='Saving…';
+  try{
+    if(ctx.kind==='node'){
+      await tauriInvoke('save_node_notes', { base: activeBaseId, path: ctx.path, notes: text, label: ctx.id, date: today() });
+      if(pages[ctx.id]) pages[ctx.id].body=upsertNotesInBody(pages[ctx.id].body||'', text);
+    }else{
+      await tauriInvoke('save_edge_note', { base: activeBaseId, path: ctx.srcPath, predicate: ctx.predicate, object: ctx.object, note: text, label: ctx.label, date: today() });
+      const pg=pages[ctx.source]; if(pg&&pg.edges){ const m=pg.edges.find(x=>(x.raw_predicate===ctx.predicate||x.predicate===ctx.predicate)&&x.object===ctx.object); if(m) m.note=text; }
+    }
+    ctx.note=text;
+    msg.className='edit-status ok'; msg.textContent='Saved ✓';
+    renderNotesView();
+  }catch(e){ s.disabled=false; msg.className='edit-status err'; msg.textContent='Save failed: '+String((e&&e.message)||e); }
+}
+
 function eid(e){return edges.indexOf(e);}
 function focusOn(n){view.x=W*0.4-W/2-n.x*view.k;view.y=H*0.5-H/2-n.y*view.k;}
 function buildFm(pg,out){
@@ -321,7 +566,7 @@ function buildFm(pg,out){
 }
 function fmtStat(e){const st=e.stats||{};if(st.effect_size!=null)return (st.effect_metric?st.effect_metric.replace(/_/g,' ')+' ':'')+st.effect_size;if(st.sensitivity!=null)return 'sens '+st.sensitivity;if(st.frequency)return st.frequency;if(st.direction)return st.direction;if(st.unit)return st.unit;return '';}
 function renderMd(md){const lines=(md||'').split('\n');let h='',inL=false;for(let line of lines){if(/^#\s+/.test(line)){if(inL){h+='</ul>';inL=false;}h+='<h1>'+inl(line.replace(/^#\s+/,''))+'</h1>';continue;}if(/^##\s+/.test(line)){if(inL){h+='</ul>';inL=false;}h+='<h2>'+inl(line.replace(/^##\s+/,''))+'</h2>';continue;}if(/^\s*[-*]\s+/.test(line)){if(!inL){h+='<ul>';inL=true;}h+='<li>'+inl(line.replace(/^\s*[-*]\s+/,''))+'</li>';continue;}if(line.trim()===''){if(inL){h+='</ul>';inL=false;}continue;}if(inL){h+='</ul>';inL=false;}h+='<p>'+inl(line)+'</p>';}if(inL)h+='</ul>';return h;}
-function inl(s){s=esc(s);s=s.replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>');s=s.replace(/`([^`]+)`/g,'<code>$1</code>');s=s.replace(/\[([^\]]+)\]\(([^)]*)\)/g,'<a>$1</a>');return s;}
+function inl(s){s=esc(s);s=s.replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>');s=s.replace(/`([^`]+)`/g,'<code>$1</code>');s=s.replace(/\[([^\]]+)\]\(([^)]*)\)/g,(m,t,u)=>`<a class="cite" data-cite="${u}">${t}</a>`);return s;}
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 
 /* ---------- chrome ---------- */
@@ -351,7 +596,7 @@ async function selectBase(b){
   currentLog=bundle.log||''; currentUpdated=bundle.updated||null;
   loadGraph(bundle.graph);
   // merge counts/lint from bundle if base index lacked them
-  const merged=Object.assign({}, b, {node_count:bundle.node_count, edge_count:bundle.edge_count, lint:bundle.lint, name:bundle.name||b.name, updated:bundle.updated});
+  const merged=Object.assign({}, b, {node_count:bundle.node_count, edge_count:bundle.edge_count, lint:bundle.lint, name:b.name||bundle.name, updated:bundle.updated});
   updateChrome(merged);
   window.__OKF_READY=true;
 }
@@ -371,6 +616,7 @@ function closeLog(){
 }
 
 document.getElementById('collapseBtn').onclick=()=>{const wb=document.getElementById('wbody');wb.classList.toggle('collapsed');document.getElementById('collapseBtn').textContent=wb.classList.contains('collapsed')?'›':'‹';setTimeout(resize,280);};
+document.getElementById('expandBtn').onclick=()=>{const wb=document.getElementById('wbody');wb.classList.remove('collapsed');document.getElementById('collapseBtn').textContent='‹';setTimeout(resize,280);};
 document.getElementById('legendToggle').onclick=()=>{const lg=document.getElementById('legend');lg.classList.toggle('min');document.getElementById('legendToggle').textContent=lg.classList.contains('min')?'show':'hide';};
 const searchInput=document.getElementById('searchInput');searchInput.addEventListener('input',e=>{searchTerm=e.target.value.trim().toLowerCase();});
 function zoomBy(f){const cx=W/2,cy=H/2,[wx,wy]=toWorld(cx,cy);view.k=Math.max(0.25,Math.min(5,view.k*f));view.x=cx-W/2-wx*view.k;view.y=cy-H/2-wy*view.k;}
@@ -378,7 +624,60 @@ document.getElementById('zoomIn').onclick=()=>zoomBy(1.25);document.getElementBy
 document.getElementById('logBtn').onclick=openLog;
 document.getElementById('logClose').onclick=closeLog;
 document.getElementById('logScrim').onclick=closeLog;
-window.addEventListener('keydown',e=>{if(e.key==='Escape')closeLog();});
+previewScrim.onclick=closePreview;
+window.addEventListener('keydown',e=>{if(e.key==='Escape'){ if(previewEl.classList.contains('open'))closePreview(); else closeLog(); }});
+
+/* ---------- integrated terminal (xterm.js front-end + PTY backend) ---------- */
+let term=null, termFit=null, termId=null, termUnlisten=[];
+const termPanel=document.getElementById('termPanel'), termHost=document.getElementById('termHost');
+async function openTerminal(){
+  if(termPanel.classList.contains('open')) return;
+  termPanel.classList.add('open');
+  if(!isDesktop || typeof Terminal==='undefined'){
+    termHost.innerHTML='<div style="padding:16px;color:var(--muted);font-size:12.5px">The integrated terminal runs in the desktop app.</div>';
+    return;
+  }
+  term=new Terminal({
+    fontFamily:'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace',
+    fontSize:12.5, lineHeight:1.2, cursorBlink:true, scrollback:5000,
+    theme:{ background:'#ffffff', foreground:'#1f242c', cursor:'#10a37f', cursorAccent:'#ffffff', selectionBackground:'rgba(16,163,127,0.20)',
+      black:'#1f242c', red:'#c4564b', green:'#0c7a5e', yellow:'#9a6b1a', blue:'#3a6ea5', magenta:'#8a4f9e', cyan:'#1f7a8c', white:'#5b5d66',
+      brightBlack:'#8e8ea0', brightRed:'#d4685c', brightGreen:'#10a37f', brightYellow:'#b07d3a', brightBlue:'#4f7fb5', brightMagenta:'#9a5fae', brightCyan:'#2e8c84', brightWhite:'#2b3038' }
+  });
+  termFit=new FitAddon.FitAddon();
+  term.loadAddon(termFit);
+  term.open(termHost);
+  termFit.fit();
+  try{ termId=await tauriInvoke('term_open', { rows: term.rows, cols: term.cols }); }
+  catch(e){ term.write('\r\n[could not start shell: '+String((e&&e.message)||e)+']\r\n'); return; }
+  const un1=await window.__TAURI__.event.listen('term-output', ev=>{ if(ev.payload && ev.payload.id===termId) term.write(ev.payload.data); });
+  const un2=await window.__TAURI__.event.listen('term-exit', ev=>{ if(ev.payload===termId) term.write('\r\n[process exited — reopen to start a new shell]\r\n'); });
+  termUnlisten=[un1,un2];
+  term.onData(d=>{ if(termId) tauriInvoke('term_write', { id: termId, data: d }); });
+  term.focus();
+}
+async function closeTerminal(){
+  termPanel.classList.remove('open');
+  termUnlisten.forEach(u=>{ try{ u(); }catch(e){} }); termUnlisten=[];
+  if(termId){ try{ await tauriInvoke('term_close', { id: termId }); }catch(e){} termId=null; }
+  if(term){ try{ term.dispose(); }catch(e){} term=null; termFit=null; }
+  termHost.innerHTML='';
+}
+function toggleTerminal(){ termPanel.classList.contains('open') ? closeTerminal() : openTerminal(); }
+function fitTerminal(){ if(termFit && term){ try{ termFit.fit(); if(termId) tauriInvoke('term_resize', { id: termId, rows: term.rows, cols: term.cols }); }catch(e){} } }
+document.getElementById('termBtn').onclick=toggleTerminal;
+document.getElementById('termClose').onclick=closeTerminal;
+window.addEventListener('resize', ()=>{ if(termPanel.classList.contains('open')) fitTerminal(); });
+(function(){ const h=document.getElementById('termResize'); let dragging=false;
+  h.addEventListener('mousedown', e=>{ dragging=true; e.preventDefault(); document.body.style.cursor='ns-resize'; });
+  window.addEventListener('mousemove', e=>{ if(!dragging) return;
+    const main=document.querySelector('.main').getBoundingClientRect();
+    let hgt=Math.max(120, Math.min(main.height-70, main.bottom - e.clientY));
+    termPanel.style.height=hgt+'px'; fitTerminal();
+  });
+  window.addEventListener('mouseup', ()=>{ if(dragging){ dragging=false; document.body.style.cursor=''; fitTerminal(); } });
+})();
+
 function resize(){const rect=cv.getBoundingClientRect();W=rect.width;H=rect.height;DPR=Math.max(1,window.devicePixelRatio||1);cv.width=W*DPR;cv.height=H*DPR;}
 window.addEventListener('resize',resize);
 
