@@ -32,7 +32,9 @@ let nodes=[], edges=[], byId={}, pages={};
 let hover=null, hoverEdge=null, selected=null, selectedEdge=null;
 let drag=null, panning=null, moved=false, alpha=1, searchTerm='';
 let focusNeighbors=new Set();
+let neighborMap=new Map(); // pre-built in loadGraph: id → Set of neighbor ids
 let BASES=[], activeBaseId=null, currentLog='', currentUpdated=null, currentLint=null;
+let simSettled=false, settledFrames=0; // for auto-freeze after layout stabilises
 let currentDetailPath=null;           // path of the open node doc, for resolving body links
 let currentNoteCtx=null;              // notes context (node/edge) for the open panel
 
@@ -83,22 +85,72 @@ function loadGraph(g){
   const ranked=[...nodes].filter(n=>!n.external).sort((a,b)=>b.degree-a.degree);
   const hubSet=new Set(ranked.slice(0,6).map(n=>n.id));
   nodes.forEach(n=>n.hub=hubSet.has(n.id));
+  // pre-build neighbor map — O(1) lookup instead of O(e) per mousemove
+  neighborMap=new Map(); nodes.forEach(n=>neighborMap.set(n.id,new Set()));
+  edges.forEach(e=>{ const sn=neighborMap.get(e.source), tn=neighborMap.get(e.target); if(sn)sn.add(e.target); if(tn)tn.add(e.source); });
   selected=null;selectedEdge=null;hover=null;hoverEdge=null;focusNeighbors=new Set();closeDetail();
-  alpha=1;
-  for(let i=0;i<300;i++) tick(0.9*Math.pow(0.985,i)+0.02);
+  alpha=1; simSettled=false; settledFrames=0;
+  // Quick warm-start: fewer iterations now that quadtree makes each tick fast
+  for(let i=0;i<20;i++) tick(0.9*Math.pow(0.985,i)+0.02);
   fitView();
 }
 
-/* ---------- force sim ---------- */
+/* ---------- Barnes-Hut quadtree for O(n log n) n-body ---------- */
+const BH_THETA=0.9;
+class QNode{
+  constructor(x,y,w,h){ this.x=x;this.y=y;this.w=w;this.h=h; this.mass=0;this.cmx=0;this.cmy=0; this.body=null;this.children=null; }
+  insert(nx,ny,node){
+    if(this.mass===0 && !this.children){ this.body=node; this.mass=1; this.cmx=nx; this.cmy=ny; return; }
+    if(!this.children){
+      // subdivide — push the existing single body into a child
+      const ox=this.body.x, oy=this.body.y, old=this.body; this.body=null;
+      this.children=[null,null,null,null];
+      const hw=this.w/2, hh=this.h/2;
+      const qi0=this._quad(ox,oy,hw,hh); this.children[qi0]=new QNode(this.x+(qi0&1?hw:0),this.y+(qi0&2?hh:0),hw,hh);
+      this.children[qi0].insert(ox,oy,old);
+    }
+    const hw=this.w/2, hh=this.h/2, qi=this._quad(nx,ny,hw,hh);
+    if(!this.children[qi]) this.children[qi]=new QNode(this.x+(qi&1?hw:0),this.y+(qi&2?hh:0),hw,hh);
+    this.children[qi].insert(nx,ny,node);
+    this.mass++; // bookkeeping: just count for leaf detection
+    this.cmx=(this.cmx*(this.mass-1)+nx)/this.mass;
+    this.cmy=(this.cmy*(this.mass-1)+ny)/this.mass;
+  }
+  _quad(nx,ny,hw,hh){return (nx>=this.x+hw?1:0)|(ny>=this.y+hh?2:0);}
+  force(nx,ny,node,a){
+    if(this.mass===0)return;
+    if(this.body&&this.body!==node){
+      // leaf — direct force
+      let dx=nx-this.body.x, dy=ny-this.body.y, d2=dx*dx+dy*dy;
+      if(d2<0.01){d2=0.01;dx=Math.random()-0.5;dy=Math.random()-0.5;}
+      const d=Math.sqrt(d2), rep=4200/d2, fx=(dx/d)*rep, fy=(dy/d)*rep;
+      node.vx+=fx*a; node.vy+=fy*a;
+      return;
+    }
+    if(this.children){
+      // internal — use center-of-mass if far enough
+      let dx=nx-this.cmx, dy=ny-this.cmy, d2=dx*dx+dy*dy, d=Math.sqrt(d2)||0.01;
+      const s=Math.max(this.w,this.h);
+      if(s/d < BH_THETA){
+        // far enough — approximate with CoM
+        const rep=4200*this.mass/d2, fx=(dx/d)*rep, fy=(dy/d)*rep;
+        node.vx+=fx*a; node.vy+=fy*a;
+      } else {
+        for(const ch of this.children) if(ch) ch.force(nx,ny,node,a);
+      }
+    }
+  }
+}
 function tick(a){
   const M=nodes.length;
-  for(let i=0;i<M;i++){const ni=nodes[i];
-    for(let j=i+1;j<M;j++){const nj=nodes[j];
-      let dx=ni.x-nj.x,dy=ni.y-nj.y,d2=dx*dx+dy*dy;
-      if(d2<0.01){d2=0.01;dx=Math.random()-0.5;dy=Math.random()-0.5;}
-      const d=Math.sqrt(d2),rep=4200/d2,fx=(dx/d)*rep,fy=(dy/d)*rep;
-      ni.vx+=fx*a;ni.vy+=fy*a;nj.vx-=fx*a;nj.vy-=fy*a;}}
-  const L=92;
+  // --- Barnes-Hut: build quadtree, then compute forces via tree traversal ---
+  let mnx=1e9,mny=1e9,mxx=-1e9,mxy=-1e9;
+  for(let i=0;i<M;i++){ const n=nodes[i]; mnx=Math.min(mnx,n.x); mny=Math.min(mny,n.y); mxx=Math.max(mxx,n.x); mxy=Math.max(mxy,n.y); }
+  const qw=mxx-mnx||1, qh=mxy-mny||1, qs=Math.max(qw,qh);
+  const root=new QNode(mnx-qs*0.1, mny-qs*0.1, qs*1.2, qs*1.2);
+  for(let i=0;i<M;i++) root.insert(nodes[i].x, nodes[i].y, nodes[i]);
+  for(let i=0;i<M;i++) root.force(nodes[i].x, nodes[i].y, nodes[i], a);
+  // --- edge spring forces (unchanged) ---
   edges.forEach(e=>{const s=byId[e.source],t=byId[e.target]; if(!s||!t)return;
     let dx=t.x-s.x,dy=t.y-s.y,d=Math.sqrt(dx*dx+dy*dy)||0.01;
     const f=(d-L)*0.045*a,fx=(dx/d)*f,fy=(dy/d)*f;
@@ -113,10 +165,10 @@ function fitView(){
   if(!nodes.length)return;
   let mnx=1e9,mny=1e9,mxx=-1e9,mxy=-1e9;
   nodes.forEach(n=>{mnx=Math.min(mnx,n.x);mny=Math.min(mny,n.y);mxx=Math.max(mxx,n.x);mxy=Math.max(mxy,n.y);});
-  const pad=72,gw=mxx-mnx||1,gh=mxy-mny||1,k=Math.min((W-pad*2)/gw,(H-pad*2)/gh,1.6);
+  const pad=72,gw=mxx-mnx||1,gh=mxy-mny||1,usableW=Math.max(100,W-pad*2),usableH=Math.max(100,H-pad*2),k=Math.min(usableW/gw,usableH/gh,1.6);
   view.k=k;view.x=-((mnx+mxx)/2)*k;view.y=-((mny+mxy)/2)*k;
 }
-function neighborsOf(id){const s=new Set();edges.forEach(e=>{if(e.source===id)s.add(e.target);if(e.target===id)s.add(e.source);});return s;}
+function neighborsOf(id){return neighborMap.get(id)||new Set();}
 function recomputeFocus(){const id=(selected&&selected.id)||(hover&&hover.id)||null;focusNeighbors=id?neighborsOf(id):new Set();}
 function matches(n){const q=searchTerm;if(!q)return true;return (n.id||'').toLowerCase().includes(q)||(n.type||'').toLowerCase().includes(q)||(n.subtype||'').toLowerCase().includes(q);}
 
@@ -125,8 +177,20 @@ function draw(){
   ctx.setTransform(DPR,0,0,DPR,0,0);ctx.clearRect(0,0,W,H);drawGrid();
   const focusId=(selected&&selected.id)||(hover&&hover.id)||null;
   const focusEdge=selectedEdge||hoverEdge;
+  // --- viewport culling: compute visible world-space rect ---
+  const pad = 80; // screen px padding
+  const x1 = (0 - pad - W/2 - view.x) / view.k;
+  const x2 = (W + pad - W/2 - view.x) / view.k;
+  const wl = Math.min(x1, x2), wr = Math.max(x1, x2);
+  const y1 = (0 - pad - H/2 - view.y) / view.k;
+  const y2 = (H + pad - H/2 - view.y) / view.k;
+  const wt = Math.min(y1, y2), wb = Math.max(y1, y2);
+  function inView(n){ return n.x >= wl && n.x <= wr && n.y >= wt && n.y <= wb; }
+  // ---
   edges.forEach(e=>{
     const s=byId[e.source],t=byId[e.target]; if(!s||!t)return;
+    // cull: skip if both endpoints off-screen
+    if(!focusEdge && !focusId && !inView(s) && !inView(t)) return;
     let emph=0,dim=false;
     if(focusEdge===e)emph=2; else if(focusId&&(e.source===focusId||e.target===focusId))emph=1;
     if(focusId&&!(e.source===focusId||e.target===focusId))dim=true;
@@ -135,6 +199,7 @@ function draw(){
     drawEdge(s,t,e,emph,dim);
   });
   nodes.forEach(n=>{
+    if(!inView(n)) return; // cull off-screen nodes
     const isFocus=focusId===n.id, isNb=focusNeighbors.has(n.id);
     let a=1; if(searchTerm)a=matches(n)?1:0.12; else if(focusId&&!isFocus&&!isNb)a=0.26;
     drawNodeCircle(n,a,isFocus);
@@ -239,7 +304,14 @@ function predLabel(p){return isNegPred(p)?('not '+negBase(p)):p;}
 function loop(){
   const needW=Math.round(cv.clientWidth*DPR), needH=Math.round(cv.clientHeight*DPR);
   if(needW>0&&needH>0&&(cv.width!==needW||cv.height!==needH)){W=cv.clientWidth;H=cv.clientHeight;cv.width=needW;cv.height=needH;}
-  if(alpha>0.005){tick(alpha);alpha*=0.94;} draw(); requestAnimationFrame(loop);
+  if(alpha>0.005){
+    tick(alpha); alpha*=0.94;
+    // energy-based settle: freeze when total kinetic energy is very low for several frames
+    let ke=0; for(const n of nodes) ke+=n.vx*n.vx+n.vy*n.vy;
+    if(ke < nodes.length*0.008){ settledFrames++; if(settledFrames>30){ alpha=0; simSettled=true; } }
+    else settledFrames=0;
+  }
+  draw(); requestAnimationFrame(loop);
 }
 
 /* ---------- interaction ---------- */
@@ -260,7 +332,7 @@ window.addEventListener('mousemove',ev=>{
 });
 function showTip(sx,sy,a,b){tip.style.display='block';tip.style.left=(sx+14)+'px';tip.style.top=(sy+14)+'px';tip.innerHTML=`${esc(a)}<br><span class="tp">${esc(b)}</span>`;}
 function hideTip(){tip.style.display='none';}
-cv.addEventListener('mousedown',ev=>{const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top;moved=false;const n=pickNode(sx,sy);if(n)drag=n;else panning={x:sx,y:sy};cv.classList.add('grabbing');});
+cv.addEventListener('mousedown',ev=>{const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top;moved=false;const n=pickNode(sx,sy);if(n){drag=n; if(simSettled){alpha=1;simSettled=false;settledFrames=0;}}else panning={x:sx,y:sy};cv.classList.add('grabbing');});
 window.addEventListener('mouseup',ev=>{
   // Only handle releases that BEGAN on the canvas. A canvas mousedown always sets
   // drag (a node) or panning (empty space); a click on the detail panel, preview
@@ -276,7 +348,7 @@ window.addEventListener('mouseup',ev=>{
   }
   drag=null;panning=null;
 });
-cv.addEventListener('wheel',ev=>{ev.preventDefault();const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top,[wx,wy]=toWorld(sx,sy);const nk=Math.max(0.25,Math.min(5,view.k*Math.exp(-ev.deltaY*0.0014)));view.k=nk;view.x=sx-W/2-wx*view.k;view.y=sy-H/2-wy*view.k;},{passive:false});
+cv.addEventListener('wheel',ev=>{ev.preventDefault();const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top,[wx,wy]=toWorld(sx,sy);const nk=Math.max(0.25,Math.min(5,view.k*Math.exp(-ev.deltaY*0.0014)));view.k=nk;view.x=sx-W/2-wx*view.k;view.y=sy-H/2-wy*view.k; if(simSettled){alpha=0.25;simSettled=false;settledFrames=0;} },{passive:false});
 
 /* ---------- detail panels ---------- */
 const detail=document.getElementById('detail');
