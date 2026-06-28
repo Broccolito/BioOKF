@@ -32,6 +32,19 @@ pub enum SourceInput {
     Text { text: String, title: Option<String> },
 }
 
+/// On-disk inventory entry for one extracted figure under `raw/<id>/figures/`.
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+pub struct FigureMeta {
+    /// Path relative to `raw/<id>/`, e.g. "figures/kaplan-meier-by-arm.png".
+    pub file: String,
+    /// True until the figure is named by content.
+    pub provisional: bool,
+    /// True once `source.md` carries a non-empty description for this figure.
+    pub described: bool,
+    /// Where the figure came from: "word/media/image1.png", "data-uri", "folder:figure3.png", etc.
+    pub origin: String,
+}
+
 /// On-disk provenance for a stored raw source.
 #[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
 pub struct SourceMeta {
@@ -43,6 +56,8 @@ pub struct SourceMeta {
     pub original_filename: Option<String>,
     pub ingested_at: String,
     pub needs_llm_fallback: bool,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub figures: Vec<FigureMeta>,
 }
 
 /// A stored raw source after ingestion.
@@ -475,6 +490,7 @@ fn store(bundle_root: &Path, filename: &str, bytes: &[u8]) -> Result<SourceRecor
         original_filename: Some(filename.to_string()),
         ingested_at: today_iso(),
         needs_llm_fallback: converted.needs_llm_fallback,
+        figures: vec![],
     };
     std::fs::write(dir.join("meta.yaml"), serde_yaml::to_string(&meta).map_err(|e| e.to_string())?).map_err(|e| e.to_string())?;
     Ok(SourceRecord {
@@ -603,6 +619,22 @@ mod tests {
         // the marker is present until the agent renders it
         let report = crate::lint::lint(&crate::bundle::Bundle::open(root).unwrap());
         assert!(report.findings.iter().any(|f| f.rule == "source.needs_conversion"), "{:?}", report.findings);
+    }
+
+    #[test]
+    fn source_meta_roundtrips_figures() {
+        let m = SourceMeta {
+            id: "x-abc123".into(), title: "X".into(), sha256: "deadbeef".into(),
+            format: "docx".into(), original_filename: Some("x.docx".into()),
+            ingested_at: "2026-06-27".into(), needs_llm_fallback: false,
+            figures: vec![FigureMeta { file: "figures/fig-001.png".into(), provisional: true, described: false, origin: "word/media/image1.png".into() }],
+        };
+        let y = serde_yaml::to_string(&m).unwrap();
+        let back: SourceMeta = serde_yaml::from_str(&y).unwrap();
+        assert_eq!(m, back);
+        // empty figures is omitted from yaml
+        let mut m2 = m.clone(); m2.figures.clear();
+        assert!(!serde_yaml::to_string(&m2).unwrap().contains("figures"));
     }
 
     #[test]
