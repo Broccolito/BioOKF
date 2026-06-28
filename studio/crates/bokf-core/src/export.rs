@@ -78,7 +78,7 @@ pub fn bundle_doc(root: impl AsRef<Path>, name: Option<String>) -> std::io::Resu
         "edge_count": graph.edges.iter().filter(|e| !e.synthesized).count(),
         "updated": last_updated(root),
         "log": change_log(root),
-        "lint": { "errors": report.errors(), "warnings": report.warnings(), "infos": report.infos() },
+        "lint": { "errors": report.errors(), "warnings": report.warnings(), "infos": report.infos(), "findings": report.findings },
         "graph": graph.to_json(),
         "pages": pages,
     }))
@@ -97,6 +97,6 @@ pub fn base_info(root: impl AsRef<Path>) -> std::io::Result<serde_json::Value> {
         "node_count": bundle.nodes.len(),
         "edge_count": graph.edges.iter().filter(|e| !e.synthesized).count(),
         "updated": last_updated(root),
-        "lint": { "errors": report.errors(), "warnings": report.warnings(), "infos": report.infos() },
+        "lint": { "errors": report.errors(), "warnings": report.warnings(), "infos": report.infos(), "findings": report.findings },
     }))
 }

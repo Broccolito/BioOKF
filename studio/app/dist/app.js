@@ -48,29 +48,10 @@ async function tauriInvoke(cmd, args){
   if(!fn) throw new Error('available in the desktop app only');
   return fn(cmd, args);
 }
-/* Debug MCP bridge: answer tauri-plugin-mcp execute-js eval requests. Only the
-   debug-mcp dev build emits 'execute-js' (with {_payload, _correlationId}); in a
-   normal build nothing emits it, so this stays dormant. Lets agents drive/inspect
-   the real desktop webview during development. */
-if (window.__TAURI__ && window.__TAURI__.event) {
-  window.__TAURI__.event.listen('execute-js', async (event) => {
-    const p = (event && event.payload) || {};
-    const cid = p._correlationId;
-    let out;
-    try {
-      let r = (0, eval)(p._payload);
-      if (r && typeof r.then === 'function') r = await r;
-      const type = typeof r;
-      let result;
-      if (typeof r === 'string') result = r;
-      else { try { result = JSON.stringify(r); } catch (e) { result = String(r); } }
-      out = { result: (result === undefined ? 'undefined' : result), type };
-    } catch (e) {
-      out = { error: String((e && e.message) || e) };
-    }
-    if (cid) window.__TAURI__.event.emit('execute-js-response-' + cid, out);
-  });
-}
+/* Debug MCP bridge: tauri-plugin-mcp's guest bindings (mcp_guest.js, injected
+   debug-gated from main.rs) answer execute-js eval requests. A previous hand-rolled
+   listener lived here and duplicated that handling, causing N-fold eval of every
+   execute_js — removed. */
 const cb = () => '?_=' + Date.now(); // dev cache-bust for the static JSON
 async function loadBases(){
   if(inTauri){ try { return await invoke('list_bases'); } catch(e){ console.error(e); return []; } }
@@ -750,8 +731,9 @@ function updateChrome(b){
   document.getElementById('tbTitle').textContent=b.name;
   document.getElementById('tbSub').textContent=`${b.node_count!=null?b.node_count:nodes.filter(n=>!n.external).length} nodes · ${b.edge_count!=null?b.edge_count:edges.filter(e=>!e.synthesized).length} edges`;
   const pill=document.getElementById('lintPill');
-  if(b.lint){pill.style.display='inline-flex';pill.innerHTML=`<span class="e">${b.lint.errors}</span> err · <span class="w">${b.lint.warnings}</span> warn`;}
-  else pill.style.display='none';
+  if(b.lint){pill.style.display='inline-flex';pill.innerHTML=`<span class="e">${b.lint.errors}</span> err · <span class="w">${b.lint.warnings}</span> warn`;currentLintFindings=(b.lint&&b.lint.findings)||[];}
+  else {pill.style.display='none';currentLintFindings=[];}
+  closeLintPop();
 }
 async function selectBase(b){
   activeBaseId=b.id;renderSidebar();closeLog();
@@ -780,67 +762,143 @@ function closeLog(){
   if(d) d.classList.remove('open'); if(s) s.classList.remove('open');
 }
 
-document.getElementById('collapseBtn').onclick=()=>{const wb=document.getElementById('wbody');wb.classList.toggle('collapsed');document.getElementById('collapseBtn').textContent=wb.classList.contains('collapsed')?'›':'‹';setTimeout(resize,280);};
-document.getElementById('expandBtn').onclick=()=>{const wb=document.getElementById('wbody');wb.classList.remove('collapsed');document.getElementById('collapseBtn').textContent='‹';setTimeout(resize,280);};
+/* ---------- lint findings popup (anchored under the lint pill) ---------- */
+let currentLintFindings=[];
+const SEV_ORDER=[['error','Errors'],['warn','Warnings'],['info','Infos']];
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+function renderLintPop(){
+  const pop=document.getElementById('lintPop');
+  if(!currentLintFindings.length){ pop.innerHTML='<div class="lp-empty">No issues for this knowledge base.</div>'; return; }
+  let h='';
+  SEV_ORDER.forEach(([sev,label])=>{
+    const rows=currentLintFindings.filter(f=>f.severity===sev);
+    if(!rows.length) return;
+    h+=`<div class="lp-group">${label}</div>`;
+    rows.forEach(f=>{
+      h+=`<div class="lp-row"><span class="lp-dot ${sev}"></span><span class="lp-text">`+
+         `<span class="lp-rule">${esc(f.rule)}</span><span class="lp-subj">${esc(f.subject)}</span> ${esc(f.message)}`+
+         (f.path?`<span class="lp-path">${esc(f.path)}</span>`:'')+`</span></div>`;
+    });
+  });
+  pop.innerHTML=h;
+}
+function openLintPop(){ renderLintPop(); const pop=document.getElementById('lintPop'), pill=document.getElementById('lintPill'); pop.classList.add('open'); const r=pill.getBoundingClientRect(), pw=pop.offsetWidth||380; let left=r.left+r.width/2-pw/2; left=Math.max(8, Math.min(left, window.innerWidth-pw-8)); pop.style.left=left+'px'; pop.style.top=(r.bottom+6)+'px'; }
+function closeLintPop(){ const p=document.getElementById('lintPop'); if(p) p.classList.remove('open'); }
+function toggleLintPop(){ document.getElementById('lintPop').classList.contains('open') ? closeLintPop() : openLintPop(); }
+
+document.getElementById('collapseBtn').onclick=()=>{const wb=document.getElementById('wbody'),btn=document.getElementById('collapseBtn');wb.classList.toggle('collapsed');const c=wb.classList.contains('collapsed');btn.textContent=c?'›':'‹';btn.title=c?'Expand':'Collapse';setTimeout(resize,280);};
 document.getElementById('legendToggle').onclick=()=>{const lg=document.getElementById('legend');lg.classList.toggle('min');document.getElementById('legendToggle').textContent=lg.classList.contains('min')?'show':'hide';};
 const searchInput=document.getElementById('searchInput');searchInput.addEventListener('input',e=>{searchTerm=e.target.value.trim().toLowerCase();});
 function zoomBy(f){const cx=W/2,cy=H/2,[wx,wy]=toWorld(cx,cy);view.k=Math.max(0.25,Math.min(5,view.k*f));view.x=cx-W/2-wx*view.k;view.y=cy-H/2-wy*view.k;}
 document.getElementById('zoomIn').onclick=()=>zoomBy(1.25);document.getElementById('zoomOut').onclick=()=>zoomBy(0.8);document.getElementById('zoomFit').onclick=()=>fitView();
-document.getElementById('logBtn').onclick=openLog;
+document.getElementById('logBtn').onclick=()=>{ document.getElementById('logDrawer').classList.contains('open') ? closeLog() : openLog(); };
 document.getElementById('logClose').onclick=closeLog;
 document.getElementById('logScrim').onclick=closeLog;
 previewScrim.onclick=closePreview;
-window.addEventListener('keydown',e=>{if(e.key==='Escape'){ if(previewEl.classList.contains('open'))closePreview(); else closeLog(); }});
+(function(){ const pill=document.getElementById('lintPill');
+  pill.addEventListener('click',e=>{ e.stopPropagation(); toggleLintPop(); });
+  pill.addEventListener('keydown',e=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggleLintPop(); } });
+  document.addEventListener('click',e=>{ const pop=document.getElementById('lintPop');
+    if(pop.classList.contains('open') && !pop.contains(e.target) && e.target!==pill && !pill.contains(e.target)) closeLintPop(); });
+})();
+window.addEventListener('keydown',e=>{if(e.key==='Escape'){ if(document.getElementById('lintPop').classList.contains('open'))closeLintPop(); else if(previewEl.classList.contains('open'))closePreview(); else closeLog(); }});
+// Cmd/Ctrl+K focuses the search box
+window.addEventListener('keydown',e=>{ if((e.metaKey||e.ctrlKey)&&(e.key==='k'||e.key==='K')){ e.preventDefault(); searchInput.focus(); searchInput.select(); } });
 
-/* ---------- integrated terminal (xterm.js front-end + PTY backend) ---------- */
-let term=null, termFit=null, termId=null, termUnlisten=[];
-const termPanel=document.getElementById('termPanel'), termHost=document.getElementById('termHost');
-async function openTerminal(){
-  if(termPanel.classList.contains('open')) return;
+/* ---------- integrated terminal (multi-tab xterm.js front-ends + N PTYs) ---------- */
+let terms=[], activeTid=null, termSeq=0, termFallbackShown=false;
+const termPanel=document.getElementById('termPanel'), termTabsEl=document.getElementById('termTabs'),
+      termHostsEl=document.getElementById('termHosts');
+const TERM_THEME={ background:'#ffffff', foreground:'#1f242c', cursor:'#10a37f', cursorAccent:'#ffffff', selectionBackground:'rgba(16,163,127,0.20)',
+  black:'#1f242c', red:'#c4564b', green:'#0c7a5e', yellow:'#9a6b1a', blue:'#3a6ea5', magenta:'#8a4f9e', cyan:'#1f7a8c', white:'#5b5d66',
+  brightBlack:'#8e8ea0', brightRed:'#d4685c', brightGreen:'#10a37f', brightYellow:'#b07d3a', brightBlue:'#4f7fb5', brightMagenta:'#9a5fae', brightCyan:'#2e8c84', brightWhite:'#2b3038' };
+function termById(id){ return terms.find(t=>t.id===id); }
+function showFallback(){
+  if(termFallbackShown) return; termFallbackShown=true;
+  termHostsEl.innerHTML='<div style="padding:16px;color:var(--muted);font-size:12.5px">The integrated terminal runs in the desktop app.</div>';
+}
+// togglePanel(): the toolbar Terminal button only collapses/expands; never kills sessions.
+function togglePanel(){
+  if(termPanel.classList.contains('open')){ termPanel.classList.remove('open'); return; }
   termPanel.classList.add('open');
-  if(!isDesktop || typeof Terminal==='undefined'){
-    termHost.innerHTML='<div style="padding:16px;color:var(--muted);font-size:12.5px">The integrated terminal runs in the desktop app.</div>';
-    return;
-  }
-  term=new Terminal({
+  if(!isDesktop || typeof Terminal==='undefined'){ showFallback(); return; }
+  if(!terms.length) addTab(); else activateTab(activeTid);
+}
+async function addTab(){
+  if(!isDesktop || typeof Terminal==='undefined'){ termPanel.classList.add('open'); showFallback(); return; }
+  const n=++termSeq, label='Terminal '+n;
+  const host=document.createElement('div'); host.className='term-host'; termHostsEl.appendChild(host);
+  const term=new Terminal({
     fontFamily:'ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace',
-    fontSize:12.5, lineHeight:1.2, cursorBlink:true, scrollback:5000,
-    theme:{ background:'#ffffff', foreground:'#1f242c', cursor:'#10a37f', cursorAccent:'#ffffff', selectionBackground:'rgba(16,163,127,0.20)',
-      black:'#1f242c', red:'#c4564b', green:'#0c7a5e', yellow:'#9a6b1a', blue:'#3a6ea5', magenta:'#8a4f9e', cyan:'#1f7a8c', white:'#5b5d66',
-      brightBlack:'#8e8ea0', brightRed:'#d4685c', brightGreen:'#10a37f', brightYellow:'#b07d3a', brightBlue:'#4f7fb5', brightMagenta:'#9a5fae', brightCyan:'#2e8c84', brightWhite:'#2b3038' }
+    fontSize:12.5, lineHeight:1.2, cursorBlink:true, scrollback:5000, theme:TERM_THEME
   });
-  termFit=new FitAddon.FitAddon();
-  term.loadAddon(termFit);
-  term.open(termHost);
-  termFit.fit();
-  try{ termId=await tauriInvoke('term_open', { rows: term.rows, cols: term.cols }); }
-  catch(e){ term.write('\r\n[could not start shell: '+String((e&&e.message)||e)+']\r\n'); return; }
-  const un1=await window.__TAURI__.event.listen('term-output', ev=>{ if(ev.payload && ev.payload.id===termId) term.write(ev.payload.data); });
-  const un2=await window.__TAURI__.event.listen('term-exit', ev=>{ if(ev.payload===termId) term.write('\r\n[process exited — reopen to start a new shell]\r\n'); });
-  termUnlisten=[un1,un2];
-  term.onData(d=>{ if(termId) tauriInvoke('term_write', { id: termId, data: d }); });
-  term.focus();
+  const fit=new FitAddon.FitAddon(); term.loadAddon(fit); term.open(host); fit.fit();
+  const sess={ id:null, n, label, term, fit, host, unlisten:[] };
+  let id;
+  try{ id=await tauriInvoke('term_open', { rows: term.rows, cols: term.cols }); }
+  catch(e){ term.write('\r\n[could not start shell: '+String((e&&e.message)||e)+']\r\n'); }
+  sess.id=id;
+  if(id){
+    const un1=await window.__TAURI__.event.listen('term-output', ev=>{ if(ev.payload && ev.payload.id===id) term.write(ev.payload.data); });
+    const un2=await window.__TAURI__.event.listen('term-exit', ev=>{ if(ev.payload===id) term.write('\r\n[process exited — close this tab and open a new one]\r\n'); });
+    sess.unlisten=[un1,un2];
+    term.onData(d=>{ if(id) tauriInvoke('term_write', { id, data: d }); });
+  }
+  terms.push(sess); activeTid=id; renderTabs(); activateTab(id);
 }
-async function closeTerminal(){
-  termPanel.classList.remove('open');
-  termUnlisten.forEach(u=>{ try{ u(); }catch(e){} }); termUnlisten=[];
-  if(termId){ try{ await tauriInvoke('term_close', { id: termId }); }catch(e){} termId=null; }
-  if(term){ try{ term.dispose(); }catch(e){} term=null; termFit=null; }
-  termHost.innerHTML='';
+function activateTab(id){
+  const sess=termById(id); if(!sess) return;
+  activeTid=id;
+  terms.forEach(t=>{ t.host.style.display = (t.id===id)?'block':'none'; });
+  try{ sess.fit.fit(); if(sess.id) tauriInvoke('term_resize', { id: sess.id, rows: sess.term.rows, cols: sess.term.cols }); }catch(e){}
+  sess.term.focus(); renderTabs();
 }
-function toggleTerminal(){ termPanel.classList.contains('open') ? closeTerminal() : openTerminal(); }
-function fitTerminal(){ if(termFit && term){ try{ termFit.fit(); if(termId) tauriInvoke('term_resize', { id: termId, rows: term.rows, cols: term.cols }); }catch(e){} } }
-document.getElementById('termBtn').onclick=toggleTerminal;
-document.getElementById('termClose').onclick=closeTerminal;
-window.addEventListener('resize', ()=>{ if(termPanel.classList.contains('open')) fitTerminal(); });
+async function closeTab(id){
+  const i=terms.findIndex(t=>t.id===id); if(i<0) return;
+  const sess=terms[i];
+  sess.unlisten.forEach(u=>{ try{ u(); }catch(e){} });
+  if(sess.id){ try{ await tauriInvoke('term_close', { id: sess.id }); }catch(e){} }
+  try{ sess.term.dispose(); }catch(e){}
+  try{ sess.host.remove(); }catch(e){}
+  terms.splice(i,1);
+  if(!terms.length){ activeTid=null; termPanel.classList.remove('open'); renderTabs(); return; }
+  if(activeTid===id){ const next=terms[Math.min(i, terms.length-1)]; activateTab(next.id); }
+  else renderTabs();
+}
+async function closeAll(){
+  for(const sess of terms.slice()){
+    sess.unlisten.forEach(u=>{ try{ u(); }catch(e){} });
+    if(sess.id){ try{ await tauriInvoke('term_close', { id: sess.id }); }catch(e){} }
+    try{ sess.term.dispose(); }catch(e){}
+    try{ sess.host.remove(); }catch(e){}
+  }
+  terms=[]; activeTid=null; termPanel.classList.remove('open'); renderTabs();
+}
+function renderTabs(){
+  termTabsEl.innerHTML='';
+  terms.forEach(sess=>{
+    const tab=document.createElement('div'); tab.className='term-tab'+(sess.id===activeTid?' active':'');
+    const lbl=document.createElement('span'); lbl.textContent=sess.label; tab.appendChild(lbl);
+    const x=document.createElement('button'); x.className='term-tab-x'; x.title='Close '+sess.label; x.textContent='×';
+    x.onclick=ev=>{ ev.stopPropagation(); closeTab(sess.id); };
+    tab.appendChild(x);
+    tab.onclick=()=>{ if(sess.id!==activeTid) activateTab(sess.id); };
+    termTabsEl.appendChild(tab);
+  });
+}
+function fitActive(){ const sess=termById(activeTid); if(sess){ try{ sess.fit.fit(); if(sess.id) tauriInvoke('term_resize', { id: sess.id, rows: sess.term.rows, cols: sess.term.cols }); }catch(e){} } }
+document.getElementById('termBtn').onclick=togglePanel;
+document.getElementById('termAddTab').onclick=addTab;
+document.getElementById('termClose').onclick=closeAll;
+window.addEventListener('resize', ()=>{ if(termPanel.classList.contains('open')) fitActive(); });
 (function(){ const h=document.getElementById('termResize'); let dragging=false;
   h.addEventListener('mousedown', e=>{ dragging=true; e.preventDefault(); document.body.style.cursor='ns-resize'; });
   window.addEventListener('mousemove', e=>{ if(!dragging) return;
     const main=document.querySelector('.main').getBoundingClientRect();
     let hgt=Math.max(120, Math.min(main.height-70, main.bottom - e.clientY));
-    termPanel.style.height=hgt+'px'; fitTerminal();
+    termPanel.style.height=hgt+'px'; fitActive();
   });
-  window.addEventListener('mouseup', ()=>{ if(dragging){ dragging=false; document.body.style.cursor=''; fitTerminal(); } });
+  window.addEventListener('mouseup', ()=>{ if(dragging){ dragging=false; document.body.style.cursor=''; fitActive(); } });
 })();
 
 function resize(){const rect=cv.getBoundingClientRect();W=rect.width;H=rect.height;DPR=Math.max(1,window.devicePixelRatio||1);cv.width=W*DPR;cv.height=H*DPR;}

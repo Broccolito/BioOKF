@@ -770,7 +770,15 @@ fn main() {
     let builder = builder.plugin(
         tauri::plugin::Builder::<tauri::Wry>::new("biookf-debug-guest")
             .on_page_load(|webview, _payload| {
-                if let Err(e) = webview.eval(include_str!("mcp_guest.js")) {
+                // on_page_load fires more than once per navigation; guard so the guest
+                // registers its execute-js listener exactly once (otherwise every
+                // execute_js evals N times — once per duplicate registration).
+                let js = concat!(
+                    "if(!window.__bokfGuestReady){window.__bokfGuestReady=1;\n",
+                    include_str!("mcp_guest.js"),
+                    "\n}"
+                );
+                if let Err(e) = webview.eval(js) {
                     eprintln!("[biookf-debug-guest] failed to inject MCP guest listeners: {e}");
                 }
             })
