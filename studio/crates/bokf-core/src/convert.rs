@@ -596,9 +596,49 @@ fn find_existing(bundle_root: &Path, sha: &str) -> Option<String> {
     None
 }
 
+/// Write each figure's bytes under `dir/figures/<name>`, append a reference for any
+/// figure not already referenced in `markdown`, and return the (possibly appended)
+/// markdown together with a `FigureMeta` per figure. Provisional numbering continues
+/// from `start_index` so callers can append extra figures after a document's own.
+fn write_figures(dir: &Path, figs: &[ExtractedFigure], markdown: &str, start_index: usize) -> Result<(String, Vec<FigureMeta>), String> {
+    let mut md = markdown.to_string();
+    let mut metas = Vec::new();
+    if figs.is_empty() {
+        return Ok((md, metas));
+    }
+    let figdir = dir.join("figures");
+    std::fs::create_dir_all(&figdir).map_err(|e| e.to_string())?;
+    for (i, f) in figs.iter().enumerate() {
+        // Renumber provisional names to a continuous fig-NNN sequence per source.
+        let fext = ext_of(&f.provisional_name);
+        let name = if fext.is_empty() {
+            f.provisional_name.clone()
+        } else {
+            format!("fig-{:03}.{}", start_index + i + 1, fext.to_ascii_lowercase())
+        };
+        std::fs::write(figdir.join(&name), &f.bytes).map_err(|e| e.to_string())?;
+        let rel = format!("figures/{name}");
+        if !md.contains(&rel) {
+            if !md.ends_with('\n') {
+                md.push('\n');
+            }
+            md.push_str(&format!("\n![{name}](figures/{name})\n"));
+        }
+        metas.push(FigureMeta { file: rel, provisional: true, described: false, origin: f.origin.clone() });
+    }
+    Ok((md, metas))
+}
+
 /// Convert + store one source's bytes under `raw/<id>/`. Returns the record (with
 /// `reused=true` when an identical source already exists).
 fn store(bundle_root: &Path, filename: &str, bytes: &[u8]) -> Result<SourceRecord, String> {
+    store_with_extra_figures(bundle_root, filename, bytes, Vec::new())
+}
+
+/// Convert + store one source, optionally attaching `extra` loose images (from a folder
+/// or zip) as additional figures of this document. Each extra is `(member_name, bytes)`
+/// and is recorded with `origin = "folder:<member_name>"`.
+fn store_with_extra_figures(bundle_root: &Path, filename: &str, bytes: &[u8], extra: Vec<(String, Vec<u8>)>) -> Result<SourceRecord, String> {
     let sha = hash_bytes(bytes);
     if let Some(id) = find_existing(bundle_root, &sha) {
         return Ok(SourceRecord {
@@ -619,13 +659,37 @@ fn store(bundle_root: &Path, filename: &str, bytes: &[u8]) -> Result<SourceRecor
     // original bytes (immutable; gitignored)
     let orig_ext = if ext.is_empty() { "bin".to_string() } else { ext.clone() };
     std::fs::write(dir.join(format!("original.{orig_ext}")), bytes).map_err(|e| e.to_string())?;
+
+    // Extract embedded figures (may rewrite the markdown for html/md data URIs).
+    let (embedded, rewritten) = extract_figures(&ext, bytes, &converted.markdown);
+    let mut body = rewritten.unwrap_or_else(|| converted.markdown.clone());
+
+    // Write embedded figures, then append loose folder/zip images as further figures.
+    let (body2, mut figmeta) = write_figures(&dir, &embedded, &body, 0)?;
+    body = body2;
+    if !extra.is_empty() {
+        let extras: Vec<ExtractedFigure> = extra
+            .into_iter()
+            .map(|(member, ib)| {
+                let e = ext_of(&member);
+                let nm = if e.is_empty() { member.clone() } else { format!("x.{e}") };
+                ExtractedFigure { provisional_name: nm, bytes: ib, origin: format!("folder:{member}") }
+            })
+            .collect();
+        let (body3, more) = write_figures(&dir, &extras, &body, figmeta.len())?;
+        body = body3;
+        figmeta.extend(more);
+    }
+
+    let has_figures = !figmeta.is_empty();
+    let needs = converted.needs_llm_fallback || has_figures;
     // derived markdown (prepend a machine-detectable marker when an LLM rendering is still needed)
-    let banner = if converted.needs_llm_fallback {
+    let banner = if needs {
         format!("{NEEDS_CONVERSION_MARKER}\n> ⚠️ Needs faithful Markdown conversion (unknown/binary format or scanned PDF). Read `original.*`, render ALL content to Markdown preserving every detail, then overwrite this file (removing this marker).\n\n")
     } else {
         String::new()
     };
-    std::fs::write(dir.join("source.md"), format!("{banner}{}", converted.markdown)).map_err(|e| e.to_string())?;
+    std::fs::write(dir.join("source.md"), format!("{banner}{body}")).map_err(|e| e.to_string())?;
     // meta
     let meta = SourceMeta {
         id: id.clone(),
@@ -634,8 +698,8 @@ fn store(bundle_root: &Path, filename: &str, bytes: &[u8]) -> Result<SourceRecor
         format: converted.format,
         original_filename: Some(filename.to_string()),
         ingested_at: today_iso(),
-        needs_llm_fallback: converted.needs_llm_fallback,
-        figures: vec![],
+        needs_llm_fallback: needs,
+        figures: figmeta,
     };
     std::fs::write(dir.join("meta.yaml"), serde_yaml::to_string(&meta).map_err(|e| e.to_string())?).map_err(|e| e.to_string())?;
     Ok(SourceRecord {
@@ -764,6 +828,32 @@ mod tests {
         // the marker is present until the agent renders it
         let report = crate::lint::lint(&crate::bundle::Bundle::open(root).unwrap());
         assert!(report.findings.iter().any(|f| f.rule == "source.needs_conversion"), "{:?}", report.findings);
+    }
+
+    #[test]
+    fn store_writes_figures_and_meta() {
+        use std::io::Write;
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        std::fs::create_dir_all(root.join("raw")).unwrap();
+        let mut buf = Vec::new();
+        {
+            let mut zw = zip::ZipWriter::new(Cursor::new(&mut buf));
+            let opts: zip::write::FileOptions<()> = zip::write::FileOptions::default();
+            zw.start_file("ppt/slides/slide1.xml", opts).unwrap();
+            zw.write_all(b"<a:p><a:t>Slide</a:t></a:p>").unwrap();
+            zw.start_file("ppt/media/image1.png", opts).unwrap();
+            zw.write_all(&[0x89, b'P', b'N', b'G']).unwrap();
+            zw.finish().unwrap();
+        }
+        let rec = store(root, "deck.pptx", &buf).unwrap();
+        let figdir = root.join("raw").join(&rec.source_id).join("figures");
+        assert!(figdir.join("fig-001.png").exists());
+        let src = std::fs::read_to_string(root.join(&rec.source_md_path)).unwrap();
+        assert!(src.contains("figures/fig-001.png"));
+        let meta: SourceMeta = serde_yaml::from_str(&std::fs::read_to_string(root.join(&rec.meta_path)).unwrap()).unwrap();
+        assert_eq!(meta.figures.len(), 1);
+        assert!(meta.figures[0].provisional && !meta.figures[0].described);
     }
 
     #[test]
