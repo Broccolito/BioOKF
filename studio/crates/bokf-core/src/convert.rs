@@ -194,6 +194,14 @@ pub fn extract_figures(ext: &str, bytes: &[u8], markdown: &str) -> (Vec<Extracte
         rewritten.push_str(&markdown[last..]);
         return (figs, Some(rewritten));
     }
+    // pdf: extract embedded raster image XObjects losslessly (lopdf, no native deps).
+    if ext == "pdf" {
+        let figs: Vec<ExtractedFigure> = crate::pdf_figures::pdf_figures(bytes)
+            .into_iter()
+            .map(|(name, b)| ExtractedFigure { provisional_name: name, bytes: b, origin: "pdf:embedded".into() })
+            .collect();
+        return (figs, None);
+    }
     // docx/pptx/xlsx/ods: copy image members out of the zip media folder.
     let media_prefix = match ext.as_str() {
         "docx" => "word/media/",
@@ -256,12 +264,7 @@ pub fn convert_bytes(ext: &str, filename: &str, bytes: &[u8]) -> Converted {
         },
         "docx" => office_to_md(bytes, "word/document.xml", "</w:p>", None).unwrap_or_else(|e| Converted { markdown: format!("> docx conversion failed: {e}\n"), title: String::new(), format: "docx".into(), needs_llm_fallback: true }),
         "pptx" => pptx_to_md(bytes).unwrap_or_else(|e| Converted { markdown: format!("> pptx conversion failed: {e}\n"), title: String::new(), format: "pptx".into(), needs_llm_fallback: true }),
-        "pdf" => Converted {
-            markdown: format!("> **PDF source: needs OCR/LLM extraction.** `{filename}` was stored verbatim under `raw/`; produce a faithful Markdown rendering in the next step.\n"),
-            title: String::new(),
-            format: "pdf".into(),
-            needs_llm_fallback: true,
-        },
+        "pdf" => pdf_to_md(bytes, filename),
         _ => {
             // Unknown format: keep a best-effort text extract, but ALWAYS flag for the LLM to
             // render the original faithfully; by the end every source must be complete Markdown.
@@ -277,6 +280,29 @@ pub fn convert_bytes(ext: &str, filename: &str, bytes: &[u8]) -> Converted {
                 needs_llm_fallback: true,
             }
         }
+    }
+}
+
+/// Convert a PDF using the pure-Rust text layer when it is substantial; otherwise keep the
+/// `needs_llm_fallback` path so the agent renders the PDF with its own intelligence. Scanned PDFs,
+/// empty or thin text layers, and extraction failures all route to the LLM fallback, so the
+/// deterministic extractor only ever helps and never replaces the fallback.
+fn pdf_to_md(bytes: &[u8], filename: &str) -> Converted {
+    // Below this many characters the text layer is too thin to trust (scanned or image-only).
+    const MIN_PDF_TEXT: usize = 200;
+    match crate::pdf_text::pdf_text(bytes) {
+        Some(text) if text.trim().len() >= MIN_PDF_TEXT => Converted {
+            markdown: text,
+            title: String::new(),
+            format: "pdf".into(),
+            needs_llm_fallback: false,
+        },
+        _ => Converted {
+            markdown: format!("> **PDF source: needs OCR/LLM extraction.** `{filename}` has no usable text layer (likely scanned or image-only). Read `original.*` and render a faithful Markdown rendering in the next step.\n"),
+            title: String::new(),
+            format: "pdf".into(),
+            needs_llm_fallback: true,
+        },
     }
 }
 

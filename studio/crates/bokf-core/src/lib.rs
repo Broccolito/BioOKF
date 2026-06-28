@@ -20,6 +20,8 @@ pub mod log_sync;
 pub mod merge;
 pub mod model;
 pub mod parse;
+pub mod pdf_figures;
+pub mod pdf_text;
 pub mod registry;
 pub mod search;
 pub mod validate;
