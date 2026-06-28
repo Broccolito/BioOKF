@@ -100,7 +100,43 @@ The sources themselves must travel with their nodes:
 
 ---
 
-## Step 2: Subtype Resolution
+## Step 2: Documentation style and language harmonization
+
+The MKB sets the house style. Its concept docs may be concise and information-dense, while an SKB's
+docs may be long, repetitive, or written in another language. After the SKB nodes are in the MKB
+(collapsed or carried over), bring their **documentation prose** into the MKB's style and language so
+the merged bundle reads as one coherent KB.
+
+For every SKB-origin node now in the MKB (both collapsed bodies and carried-over files):
+
+1. **Match the house style.** Rewrite, rephrase, or condense the documentation/body prose to the
+   MKB's conventions: the same level of concision, the same section structure and headings, the same
+   voice. A verbose, low-signal SKB section becomes as tight and informative as an MKB section on a
+   comparable concept. Use existing MKB docs of the same `type` as the style reference.
+
+2. **Match the language.** If the SKB documentation is in a different language from the MKB,
+   translate it into the MKB's language. The merged KB is monolingual in the MKB's language.
+
+3. **Change prose only; never touch data or links.** Restyling and translation are restricted to
+   human-readable documentation text. Leave **byte-identical**: all frontmatter (`type`, `subtype`,
+   `identifier`, `synonyms`, `xref`), every `edges:` entry (`predicate`, `object`, `knowledge_level`,
+   `agent_type`, `primary_source`, `reported_in`, statistics, notes), and every `raw_source` path.
+   Preserve all facts, quantitative values, units, and citations exactly; restyling must not add,
+   drop, or alter any claim or number. If a value lives only in the prose (for example a reported
+   effect size), keep it verbatim inside the rephrased text.
+
+4. **Keep provenance intact.** The rewrite is editorial. It does not change
+   `knowledge_level`/`agent_type`/`primary_source` on any edge, and it does not detach a statement
+   from the `raw/` source it came from.
+
+> Why this is safe: the raw sources stay immutable in `raw/`, so the original-language, verbatim
+> record is never lost. Only the curated `knowledge/` documentation is harmonized, so the merged
+> graph is consistent in style and language while every claim remains traceable to its untouched
+> source.
+
+---
+
+## Step 3: Subtype Resolution
 
 Subtypes are agent-coined and have no controlled vocabulary, so the two KBs may name the same
 distinction differently. Harmonize them after the nodes are merged:
@@ -115,12 +151,13 @@ distinction differently. Harmonize them after the nodes are merged:
 
 ---
 
-## Step 3: Log and integrity check
+## Step 4: Log and integrity check
 
 1. **Append a merge report to the MKB `log.md`** under a `## YYYY-MM-DD` heading: the SKB name, how
    many candidate matches were reviewed, how many were collapsed, how many SKB entities were carried
    over (and how many renamed on collision), how many source nodes were merged, how many `raw/` files
-   moved/renamed, and which subtypes were harmonized.
+   moved/renamed, how many documentation pages were restyled or translated into the MKB language, and
+   which subtypes were harmonized.
 
 2. **Final integrity pass** (fix anything that fails, then re-check):
    - [ ] No duplicate identifiers in the merged `index.md`.
@@ -128,5 +165,7 @@ distinction differently. Harmonize them after the nodes are merged:
          resolves to a node that exists in the merged bundle.
    - [ ] Every source node's `raw_source` points to a real file under the MKB `raw/`.
    - [ ] Subtypes are harmonized (no equivalent-but-differently-named pairs remain).
+   - [ ] Carried-over and collapsed SKB documentation reads in the MKB's language and house style;
+         only prose was changed, while data, links, edges, and provenance stay unchanged.
    - [ ] The MKB's own identifiers, file paths, and `raw/` locations are **unchanged** except where a
          genuine merge required it.
