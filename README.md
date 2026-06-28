@@ -1,9 +1,11 @@
 # BioOKF: Biomedical Open Knowledge Format
 
-**BioOKF is a format and toolchain for turning any biomedical source (a paper, preprint, bench
-note, slide deck, CSV, figure, or tweet) into a structured, interlinked, version-controlled
-knowledge base that compounds over time and can be queried as a graph. It also comes with a desktop
-app that lets you and an AI agent explore that graph together, live.**
+**BioOKF is a periodic table for agentic biomedical research: a closed, controlled vocabulary of 28
+entity types and 35 relationship predicates that maps any biomedical source (a paper, preprint,
+bench note, slide deck, CSV, figure, or tweet) into a structured, interlinked, version-controlled
+knowledge base. It does not invent new concepts or new relationships; it gives biomedical knowledge a
+fixed organizing system, a knowledge harness that you and an AI agent can curate and explore together
+as a graph, live, in a desktop Studio.**
 
 It is a biomedical *profile* of Google Cloud's [Open Knowledge Format
 (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog), itself a formalization of
@@ -20,8 +22,6 @@ visualizer, all distributed together as a one-command Claude Code plugin.
 > what BioOKF does, how to install it, and live, interactive [HyperFrames](https://github.com/heygen-com/hyperframes)
 > mockups of the Studio UI (graph, inspector, and the live agent loop). Full function reference on the
 > [documentation page](https://broccolito.github.io/BioOKF/docs.html). The site's source lives in [`landing/`](landing).
-
----
 
 ## Install (Claude Code plugin)
 
@@ -58,8 +58,6 @@ caches it under `~/.local/share/biookf`, de-quarantines it (macOS), and execs `b
 bundled Studio app wired in. Override the version/cache/source via `BIOOKF_VERSION`, `BIOOKF_HOME`,
 and `BIOOKF_REPO`.
 
----
-
 ## What you get
 
 | Piece | What it is |
@@ -68,8 +66,6 @@ and `BIOOKF_REPO`.
 | **`bokf-mcp`** | A stdio MCP server: **33 tools** for curation, analysis, **and live control of the Studio GUI** (`bokf_studio_*`). It ships an operating brief on `initialize`, so an agent knows the BioOKF rules. |
 | **`bokf`** | The same engine as a scriptable CLI (23 subcommands): the precise terminal surface for curation. |
 | **The live loop** | The MCP server can open the Studio and **drive/observe it in real time**: an agent searches, selects, and moves around the graph while a human watches each action in an in-app "AI agent" banner, and reads the app's full status as structured JSON instead of taking screenshots. |
-
----
 
 ## The bundle format
 
@@ -105,8 +101,6 @@ Only `type` and `identifier` are mandatory on a node. The full normative format 
 [SPEC.md](SPEC.md); the agent-facing operating doc (conventions plus the ingest/query/lint workflow)
 is in [SCHEMA.md](SCHEMA.md).
 
----
-
 ## BioOKF Studio (the GUI)
 
 Studio is a Tauri desktop app and a pure visualizer; every operation delegates to `bokf-core`.
@@ -136,8 +130,6 @@ Studio is a Tauri desktop app and a pure visualizer; every operation delegates t
 - **Lint pill, search, history.** A toolbar lint pill opens a grouped findings popup; the search box
   filters/highlights the graph live (⌘K / Ctrl-K to focus); the change-log drawer renders `log.md`.
 
----
-
 ## The live CLI ↔ MCP ↔ GUI integration
 
 The three surfaces are wired together so an AI agent and a human can work on the same knowledge base
@@ -162,8 +154,6 @@ at the same time:
   agent post a custom status line, so a person watching the Studio always knows what the agent is
   exploring.
 
----
-
 ## Curating with a coding agent
 
 This is the intended day-to-day path. With the plugin installed, describe what you want in plain
@@ -183,8 +173,6 @@ Example prompts that map onto the workflow below:
 - **Maintain:** "Lint `mykb`, fix any errors, then verify and log-sync." / "Merge `./secondary-kb`
   into `mykb` and confirm the main KB stayed canonical."
 - **Schema:** "What node types and edge predicates can I use, and which predicates are negatable?"
-
----
 
 ## The curation workflow (CLI)
 
@@ -226,8 +214,6 @@ bokf set-active <root> mykb
 bokf predicates                                 # print the controlled vocabulary
 ```
 
----
-
 ## CLI command reference
 
 | Command | What it does |
@@ -255,8 +241,6 @@ bokf predicates                                 # print the controlled vocabular
 | `name-figure` | Rename a provisional figure to a content caption and rewrite every reference. |
 | `install-pdfium` | Install PDFium so PDF pages render to images for vision (one-time). |
 
----
-
 ## MCP tool reference
 
 `bokf-mcp` exposes 33 tools in three groups.
@@ -273,8 +257,6 @@ bokf predicates                                 # print the controlled vocabular
 `bokf_studio_state` (the complete GUI status as JSON; read this instead of a screenshot),
 `bokf_studio_graph`, `bokf_studio_select`, `bokf_studio_reload`, `bokf_studio_search`,
 `bokf_studio_screenshot`, `bokf_studio_narrate`.
-
----
 
 ## Build from source
 
@@ -299,8 +281,6 @@ extension at [`app/.claude-plugin`](app/.claude-plugin): 8 `biookf-*` curation s
 (convert / ingest / merge / query / lint / verify / version) plus 4 guardrail hooks (a session
 brief, a `raw/`-immutability guard, a post-write lint nudge, and a `bokf verify` Stop gate). Add
 `app/` as a marketplace to use them while working inside this repository.
-
----
 
 ## Authors
 

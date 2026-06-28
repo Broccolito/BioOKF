@@ -360,20 +360,20 @@
 
     <section class="doc-sec" id="build">
       <h2>Build from source</h2>
-      <p class="sec-lead">The toolchain is a Cargo workspace under <code>studio/</code>. For development, or for a platform
-        without a prebuilt release:</p>
-      <div class="doc-code"><span class="cmd">cd</span> studio
+      <p class="sec-lead">The toolchain is a Cargo workspace under <code>app/</code> (the Studio desktop source is in
+        <code>app/studio/</code>). For development, or for a platform without a prebuilt release:</p>
+      <div class="doc-code"><span class="cmd">cd</span> app
 <span class="cmd">cargo</span> build --release -p bokf-cli -p bokf-mcp     <span class="com"># the CLI and MCP server</span>
 <span class="cmd">cargo</span> install tauri-cli --version <span class="ok">"^2"</span>          <span class="com"># one-time, for the Studio app</span>
-( <span class="cmd">cd</span> app/src-tauri && <span class="cmd">cargo</span> tauri build --bundles app )   <span class="com"># BioOKF Studio.app</span>
+( <span class="cmd">cd</span> studio/src-tauri && <span class="cmd">cargo</span> tauri build --bundles app )   <span class="com"># BioOKF Studio.app</span>
 
 <span class="cmd">cargo</span> test --workspace                            <span class="com"># backend and integration tests</span></div>
-      <p>Binaries land in <code>studio/target/release/</code>, and the app under
-        <code>studio/target/release/bundle/</code>. To make the plugin use a local build instead of downloading a release,
-        set <code>BIOOKF_MCP_BIN=/path/to/studio/target/release/bokf-mcp</code>.</p>
+      <p>Binaries land in <code>app/target/release/</code>, and the app under
+        <code>app/target/release/bundle/</code>. To make the plugin use a local build instead of downloading a release,
+        set <code>BIOOKF_MCP_BIN=/path/to/app/target/release/bokf-mcp</code>.</p>
       <div class="note-box"><b>Repo dev plugin.</b> The repo also ships a developer-facing Claude Code extension at
-        <code>studio/.claude-plugin</code>: 8 <code>biookf-*</code> curation skills plus 4 guardrail hooks. Add
-        <code>studio/</code> as a marketplace to use them while working inside the repository.</div>
+        <code>app/.claude-plugin</code>: 8 <code>biookf-*</code> curation skills plus 4 guardrail hooks. Add
+        <code>app/</code> as a marketplace to use them while working inside the repository.</div>
       <p style="margin-top:26px"><a class="link" href="https://github.com/Broccolito/BioOKF" target="_blank" rel="noopener">Full source, spec, and issues on GitHub</a></p>
     </section>
 
