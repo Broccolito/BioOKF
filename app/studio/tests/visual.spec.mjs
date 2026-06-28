@@ -1,6 +1,6 @@
 // Frontend visualization tests for BioOKF Studio.
 // Run against the static frontend (same code as the Tauri webview):
-//   cd studio/app/dist && python3 -m http.server 8754 &
+//   cd app/studio/dist && python3 -m http.server 8754 &
 //   npx playwright test app/tests/visual.spec.mjs
 // (Requires @playwright/test. These assertions mirror the checks executed
 //  during development via the Playwright MCP tools.)

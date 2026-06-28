@@ -6,11 +6,11 @@
 
 **Architecture:** All logic lives in `bokf-core` and surfaces through `bokf` (CLI) and `bokf-mcp`. Slice A (figures) is offline and adds no dependency. Slice B (URL + provenance) adds a synchronous `reqwest` blocking client and a new `credibility/` module with a deterministic-first waterfall. The LLM stays in the loop only for figure description, figure-derived extraction, and scanned/paywalled PDFs.
 
-**Tech Stack:** Rust workspace at `studio/`. Existing: `zip`, `calamine`, `html2md`, `sha2`, `serde`/`serde_yaml`/`serde_json`, `regex`. New (Slice B only): `reqwest` blocking client.
+**Tech Stack:** Rust workspace at `app/`. Existing: `zip`, `calamine`, `html2md`, `sha2`, `serde`/`serde_yaml`/`serde_json`, `regex`. New (Slice B only): `reqwest` blocking client.
 
 ## Global Constraints
 
-- Rust edition 2021; workspace versions from `studio/Cargo.toml`. New dep (Slice B): `reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls", "json"] }` in `bokf-core`.
+- Rust edition 2021; workspace versions from `app/Cargo.toml`. New dep (Slice B): `reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls", "json"] }` in `bokf-core`.
 - `raw/<id>/original.*` is the only immutable, gitignored artifact; the `.gitignore` rule `raw/**/original.*` is unchanged, so `figures/` is committed by default.
 - Prose in code, docs, skills, tool messages uses plain language: no em-dashes, no AI-sounding filler. Controlled vocabulary, CURIEs, predicate names, node-type names unchanged.
 - Source ids and figure names are content-derived and human-readable, never a bare hash/uuid (`looks_machine_generated` guards both).
@@ -30,7 +30,7 @@
 - `crates/bokf-core/Cargo.toml` (modify, Slice B): add `reqwest`.
 - `crates/bokf-cli/src/main.rs` (modify): `--url`/`--urls` on `Convert`; new `NameFigure` subcommand.
 - `crates/bokf-mcp/src/{ops.rs,main.rs}` (modify): `bokf_name_figure`; `url`/`urls` args on `bokf_convert`.
-- `studio/skills/biookf-convert/SKILL.md`, `studio/skills/biookf-ingest/SKILL.md` (modify).
+- `app/skills/biookf-convert/SKILL.md`, `app/skills/biookf-ingest/SKILL.md` (modify).
 - `SCHEMA.md`, `SPEC.md` (modify, Slice B): document `source_type`/`credibility` and URL ingestion.
 
 ---
@@ -347,7 +347,7 @@ fn lints_flag_unnamed_and_undescribed_figures() {
 
 ### Task A10: skill updates (biookf-convert, biookf-ingest)
 
-**Files:** Modify `studio/skills/biookf-convert/SKILL.md`, `studio/skills/biookf-ingest/SKILL.md`.
+**Files:** Modify `app/skills/biookf-convert/SKILL.md`, `app/skills/biookf-ingest/SKILL.md`.
 
 - [ ] **Step 1:** Add to `biookf-convert` a figures pass: after `bokf convert`, view each `raw/<id>/figures/*`, write a faithful description beside its reference in `source.md`, and run `bokf name-figure` to give it a content name; clear `source.figure_unnamed`/`source.figure_undescribed` before finishing. No em-dashes.
 - [ ] **Step 2:** Add to `biookf-ingest` an explicit instruction to view `raw/<id>/figures/*` and extract typed nodes and provenance-stamped edges from figure content (a survival curve yields outcome edges; a pathway diagram yields `regulates`/`activates` edges).
@@ -660,7 +660,7 @@ fn cli_parses_convert_url() {
 
 ## Notes for the executor
 
-- Run all `cargo` commands from `studio/`. Keep `cargo test` (42 existing + new) green after each task.
+- Run all `cargo` commands from `app/`. Keep `cargo test` (42 existing + new) green after each task.
 - Independent tasks that touch only their own new file can be built in parallel: A3/A4 (after A1), and B2/B3/B4/B5/B6/B7 (after B1). A5, A6, B8, B9 are integration points and must follow their inputs. Slice A must land before Slice B opens (B1 adds the dep).
 - Do not edit `raw/**/original.*`; the raw-guard hook blocks it.
 - Branch: `biookf-raw-conversion-v2`.

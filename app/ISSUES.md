@@ -37,9 +37,9 @@
   (2) consider entity-name extraction or multi-query fan-out before ranking; (3) consider boosting
   identifier/synonym field matches in BM25.
 - **Lint domain/range coverage is partial.** Only `treats`/`prevents`/`has_phenotype`/`encodes`/
-  `reported_in` are range-checked, so a clean lint does **not** prove full domain/range conformance
-  (e.g. `located_in` with a `Disease` subject passed silently; `encodes` Gene→Variant correctly
-  warned). Expanding the domain/range table (as warnings) would tighten this.
+  `reported_in`/`used_to_study` are range-checked, so a clean lint does **not** prove full
+  domain/range conformance (e.g. `located_in` with a `Disease` subject passed silently; `encodes`
+  Gene→Variant correctly warned). Expanding the domain/range table (as warnings) would tighten this.
 - **Lint has no positive/summary output.** A clean bundle prints only `0 errors / 0 warnings`.
   A `--summary` reporting edges-resolved, provenance-complete %, and per-type counts would give
   curators confidence. (`bokf stats` partially covers this.)
@@ -69,5 +69,12 @@
 
 - The Tauri **GUI cannot run headless** here (no window server for the webview); the crate
   **compiles** and the **frontend is verified in a browser** (identical code to the webview).
-- `tauri-plugin-mcp` is a **git dependency**; wired behind the `debug-mcp` cargo feature so the
-  default build stays offline-clean. Enable with `cargo run -p biookf-studio --features debug-mcp`.
+  This is an environment limitation, not a loss of agent observability: agents can now drive and
+  inspect the running GUI over the control socket (the `bokf_studio_*` tool family + the
+  `studio_client` bridge), reading the GUI's structured status via `bokf_studio_state` instead of
+  screenshots.
+- `tauri-plugin-mcp` is a **git dependency** that is now compiled in **by default** via the
+  `control` feature (`default = ["control"]`); `debug-mcp` remains only as a back-compat alias for
+  `control`. The default build is therefore no longer offline-pure, but the control socket only
+  **listens when `BIOOKF_STUDIO_CONTROL=1`** (set automatically by the `bokf_studio_open` MCP tool);
+  a normal launch leaves it closed. You no longer need `--features debug-mcp`.

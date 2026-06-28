@@ -11,7 +11,7 @@ foundational sub-projects and treats SP3 to SP6 as out of scope (each gets its o
 ## 1. Context: the full harness, and where this slice sits
 
 The goal is to operationalize `Ingestion_WF.md` and `Merge_KBs_WF.md` as a Claude Code plugin
-(plugin root = `studio/`) made of three accountable layers: **CLI/MCP tools** (deterministic
+(plugin root = `app/`) made of three accountable layers: **CLI/MCP tools** (deterministic
 enforcement), **skills** (procedures + judgment), and **hooks** (guardrails). The work decomposes
 into seven sub-projects:
 
@@ -23,7 +23,7 @@ into seven sub-projects:
 | SP3 | convert-pipeline (docs → raw Markdown, naming, tests) | ❌ later spec |
 | SP4 | deterministic lint-extensions + `bokf verify` | ❌ later spec |
 | SP5 | skills (ingest/merge/convert/verify/version) | ❌ later spec |
-| SP6 | hooks + `studio/` plugin packaging | ❌ later spec |
+| SP6 | hooks + `app/` plugin packaging | ❌ later spec |
 
 **Approved decisions driving this slice:** (1) build foundation first; (2) conversion will be
 Rust-native in-process *(SP3, not here)*; (3) the eventual Stop gate blocks on Errors + verify
@@ -83,7 +83,7 @@ wants every curation step committed with comprehensive messages, and commit hist
 with `log.md`, for ingestion / linting / merging.
 
 ### Design decision: shell out to system `git`
-`git2` is **not** in `studio/Cargo.lock` (verified count 0; only `sha2` present). To avoid taking a
+`git2` is **not** in `app/Cargo.lock` (verified count 0; only `sha2` present). To avoid taking a
 new libgit2/C dependency, `GitRepo` shells out to the system `git` binary via
 `std::process::Command`. A preflight runs `git --version` and errors clearly if git is absent.
 
@@ -92,7 +92,7 @@ new libgit2/C dependency, `GitRepo` shells out to the system `git` binary via
 **`bokf-core/src/git.rs`, `GitRepo`** (thin wrapper over `std::process::Command`):
 - `ensure_repo(bundle)`: **init-on-first-use**: `git init` + bot identity config if no `.git`
   exists. Lives inside the committer path (not only in scaffold) so pre-existing un-versioned
-  bundles (e.g. `studio/test-kb/*`) get a repo before their first commit instead of failing.
+  bundles (e.g. `app/test-kb/*`) get a repo before their first commit instead of failing.
 - Bot identity per-invocation: `-c user.name='BioOKF Curation'
   -c user.email=curation@biookf.local -c commit.gpgsign=false`.
 - `commit_all(kind, summary, delta)`: `git add -A` then

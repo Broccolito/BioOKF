@@ -2,20 +2,69 @@
 
 **BioOKF is a format and toolchain for turning any biomedical source (a paper, preprint, bench
 note, slide deck, CSV, figure, or tweet) into a structured, interlinked, version-controlled
-knowledge base that compounds over time and can be queried as a graph.**
+knowledge base that compounds over time and can be queried as a graph — and a desktop app that lets
+you and an AI agent explore that graph together, live.**
 
 It is a biomedical *profile* of Google Cloud's [Open Knowledge Format
 (OKF)](https://github.com/GoogleCloudPlatform/knowledge-catalog), itself a formalization of
 Andrej Karpathy's [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f)
 pattern. BioOKF keeps OKF's portable substrate (a Git-shippable tree of Markdown with YAML
-frontmatter) and adds the one thing OKF leaves open: a closed, controlled universe of meaning.
-The goal is a format an **AI agent or human curator** can follow to distill entities (nodes) and
-relationships (edges) from heterogeneous biomedical sources, and reuse the result as persistent
-agent memory and a queryable knowledge graph.
+frontmatter) and adds the one thing OKF leaves open: a closed, controlled universe of meaning — 28
+node types and 35 edge predicates with node-based provenance on every claim.
 
-This repository contains both the format (the spec) and `bokf`/`biookf`, a toolchain that
-implements it: a Rust core library, a CLI, an MCP server, a desktop visualizer, and a Claude Code
-extension of skills plus guardrail hooks.
+This repository contains both the format (the [spec](SPEC.md)) and the toolchain that implements it:
+a Rust core, a CLI (`bokf`), an MCP server (`bokf-mcp`), and the **BioOKF Studio** desktop
+visualizer — all distributed together as a one-command Claude Code plugin.
+
+---
+
+## Install (Claude Code plugin)
+
+The whole toolchain — the `bokf` **MCP server**, the `bokf` **CLI**, and the **BioOKF Studio**
+desktop app — installs as a single Claude Code plugin. **You never compile anything**: the first
+time a tool runs, the plugin downloads the prebuilt binaries for your platform.
+
+In Claude Code, run these two commands:
+
+```
+/plugin marketplace add Broccolito/BioOKF
+/plugin install biookf@biookf
+```
+
+Then restart Claude Code. That's it — the `bokf_*` tools are now available, and
+`bokf_studio_open` will launch the visualizer.
+
+> **Want your coding agent to do it for you?** Paste this to Claude Code (or any agent that can run
+> slash commands):
+>
+> > Install the BioOKF plugin from `https://github.com/Broccolito/BioOKF`: run
+> > `/plugin marketplace add Broccolito/BioOKF`, then `/plugin install biookf@biookf`, restart, and
+> > confirm the `bokf_studio_open` tool works.
+
+**Requirements:** Claude Code; `curl` + `tar`; macOS (Apple Silicon or Intel — a self-contained
+`.app` is downloaded). Linux and Windows builds are produced by the release pipeline as they become
+available; until a prebuilt asset exists for your platform you can [build from
+source](#build-from-source) and point the plugin at your binary with `BIOOKF_MCP_BIN`.
+
+**What "no compile" means.** The plugin registers one MCP server whose launcher
+(`plugins/biookf/scripts/bokf-mcp`) detects your OS/arch, downloads
+`biookf-<platform>.tar.gz` from this repo's [GitHub Release](https://github.com/Broccolito/BioOKF/releases),
+caches it under `~/.local/share/biookf`, de-quarantines it (macOS), and execs `bokf-mcp` with the
+bundled Studio app wired in. Override the version/cache/source via `BIOOKF_VERSION`, `BIOOKF_HOME`,
+and `BIOOKF_REPO`.
+
+---
+
+## What you get
+
+| Piece | What it is |
+|---|---|
+| **BioOKF Studio** | A desktop app that renders a knowledge base as an interactive, type-colored graph, with node/edge detail panels, an integrated terminal, in-app editing, and a registry-driven sidebar of bundles that can live anywhere on disk. |
+| **`bokf-mcp`** | A stdio MCP server: **33 tools** for curation, analysis, **and live control of the Studio GUI** (`bokf_studio_*`). It ships an operating brief on `initialize`, so an agent knows the BioOKF rules. |
+| **`bokf`** | The same engine as a scriptable CLI (23 subcommands) — the precise terminal surface for curation. |
+| **The live loop** | The MCP server can open the Studio and **drive/observe it in real time**: an agent searches, selects, and navigates the graph while a human watches each action in an in-app "AI agent" banner — and reads the app's full status as structured JSON instead of taking screenshots. |
+
+---
 
 ## The bundle format
 
@@ -25,7 +74,7 @@ A BioOKF **bundle** is a Git-shippable directory tree of Markdown:
 |---|---|
 | `raw/` | Immutable ingested sources. You never edit these. |
 | `knowledge/<type>/<slug>.md` | The typed concept documents you author. These are the graph. |
-| `index.md` | The catalog (identifier registry + by-type list). |
+| `index.md` | The catalog (identifier registry + by-type list + subtypes in use). |
 | `log.md` | Newest-first dated change history. |
 | `SCHEMA.md` | The operating doc dropped at the bundle root. |
 
@@ -33,300 +82,220 @@ Each concept document is YAML frontmatter plus a Markdown body. Three rules make
 than plain OKF:
 
 - **28 node types.** Every document's `type` is exactly one of a closed set of 28 (20 biomedical
-  entity types plus 8 provenance/context types; `Other` is the closure). An agent-coined
-  `subtype` carries finer granularity and is never validated against a fixed list.
-- **35 edge predicates.** Relationships are first-class frontmatter `edges:` entries. The
-  predicate set is **24 positive predicates** (forward-only, no inverses) plus **11 negative
-  `not_<X>` predicates** for the negatable effect predicates, for 35 total. Direction is always
-  this-document to object.
-- **Node-based provenance.** Every edge carries `knowledge_level`, `agent_type`, and
-  `primary_source`. `primary_source` names a source *node* by its `identifier` (a
-  `Publication`/`Study`/`Dataset`/`Agent` in the bundle), never a bare CURIE. Ingested-document
-  sources anchor to the immutable bytes via `raw_source`; external references record their CURIE
-  in `xref`.
+  entity types plus 8 provenance/context types; `Other` is the closure). An agent-coined `subtype`
+  carries finer granularity and is never validated against a fixed list.
+- **35 edge predicates.** Relationships are first-class frontmatter `edges:` entries: **24 positive
+  predicates** (forward-only, no inverses) plus **11 negative `not_<X>` predicates** for the
+  negatable effect predicates, 35 total. Direction is always this-document to object; quantitative
+  claims go on edges, never prose.
+- **Node-based provenance.** Every edge carries `knowledge_level`
+  (`knowledge_assertion` / `statistical_association` / `prediction` / `observation` /
+  `not_provided`), `agent_type` (`manual_agent` / `automated_agent` / `text_mining_agent` /
+  `data_analysis_pipeline` / `computational_model` / `not_provided`), and `primary_source`.
+  `primary_source` names a source *node* by its `identifier` (a `Publication` / `Study` / `Dataset`
+  / `Agent` in the bundle), never a bare CURIE, plus a `reported_in` edge. Ingested-document sources
+  anchor to the immutable bytes via `raw_source`; external references record their CURIE in `xref`.
 
-Only `type` and `identifier` are mandatory on a node; the `identifier` is a single human-readable,
-bundle-unique key (external ontology CURIEs are optional, living in `xref`).
+Only `type` and `identifier` are mandatory on a node. The full normative format is in
+[SPEC.md](SPEC.md); the agent-facing operating doc (conventions plus the ingest/query/lint workflow)
+is in [SCHEMA.md](SCHEMA.md).
 
-The full normative format is in [SPEC.md](SPEC.md); the agent-facing operating doc (conventions
-plus the ingest/query/lint workflow) is in [SCHEMA.md](SCHEMA.md). See [examples/](examples/) for a
-small worked bundle.
+---
 
-## Components
+## BioOKF Studio (the GUI)
 
-Everything ships from the [`studio/`](studio) Cargo workspace plus the Claude Code extension that
-wraps it.
+Studio is a Tauri desktop app and a pure visualizer — every operation delegates to `bokf-core`.
 
-| Component | Crate / location | What it is |
-|---|---|---|
-| `bokf-core` | `studio/crates/bokf-core` | The library: parse, normalize (legacy aliases), build the graph, lint, BM25 search, convert, git/log-sync, merge. Everything else is a thin front-end over it. |
-| `bokf` | `studio/crates/bokf-cli` (binary `bokf`) | The command-line tool. The primary terminal surface for curation. |
-| `bokf-mcp` | `studio/crates/bokf-mcp` (binary `bokf-mcp`) | A stdio MCP server exposing the `bokf_*` tools, with an embedded operating brief, for AI clients (Claude/Codex). |
-| BioOKF Studio | `studio/app/src-tauri` (crate `biookf-studio`) | A Tauri desktop visualizer over `bokf-core`. |
-| `biookf` extension | `studio/.claude-plugin`, `studio/skills`, `studio/hooks` | A Claude Code plugin: 8 curation skills plus 4 guardrail hooks over the toolchain. |
+- **Registry-driven sidebar.** Knowledge bases are tracked by a registry of links, so a bundle can
+  live **anywhere on disk** — there is no fixed "knowledge bases" directory. Each entry shows its
+  name, node/edge counts, and last-updated date (the full path is the hover tooltip). Delete or move
+  a bundle's folder and it drops from the sidebar automatically; register one elsewhere and it
+  appears — no restart. The **+ New base** button opens a native folder picker that validates the
+  folder as a real BioOKF bundle before registering it.
+- **Interactive graph canvas.** A force-directed, type-colored graph with pan/zoom/drag,
+  fit-to-view, hub emphasis, hover tooltips, and neighbor-focus dimming. Negative `not_<X>` edges
+  render struck-through; synthesized provenance edges render faint; symmetric edges are styled
+  distinctly. A type-family legend covers all 28 types plus the light "External" swatch for
+  referenced-but-undocumented entities.
+- **Detail panels.** Click a node for its type badge, frontmatter (subtype, `xref`/synonyms/tags
+  chips, `raw_source`, description, notes), outgoing edges grouped by predicate, incoming
+  "referenced by" edges, the rendered Markdown body, and — for source nodes — a Source/Provenance
+  block with credibility tier, venue, DOI/PMID/arXiv links, and ingested figures. Click an edge for
+  its provenance triplet, direction, publications, and quantitative attributes. Citations open a
+  side preview of the cited source, including the ingested paper and its figures.
+- **In-app editing (desktop).** Edit a concept doc's full Markdown, a per-node notes section, or a
+  per-edge note — each writes live to disk and appends a dated `log.md` entry. A reveal-in-Finder
+  button opens the file in macOS Finder.
+- **Integrated terminal.** Multi-tab real PTY (`xterm.js`) running your `$SHELL`, with a resizable
+  panel — drive `bokf` without leaving the app.
+- **Lint pill, search, history.** A toolbar lint pill opens a grouped findings popup; the search box
+  filters/highlights the graph live (⌘K / Ctrl-K to focus); the change-log drawer renders `log.md`.
 
-### BioOKF Studio (the GUI)
+---
 
-BioOKF Studio is a Tauri desktop app and a pure visualizer; every command delegates to
-`bokf-core`. The window shows a sidebar of bundles and, on selecting one, a canvas that renders
-the graph: nodes are colored by their type and edges are drawn as directional links. Clicking a
-node opens a Markdown detail panel showing its frontmatter (synonyms, `xref` CURIEs) and its edges
-grouped by predicate; clicking an edge shows its provenance triplet and any quantitative
-attributes. The Tauri commands are `list_bases`, `get_bundle`, `lint_bundle`, and `search_bundle`.
-See [studio/TESTING.md](studio/TESTING.md) for exactly what is verified.
+## The live CLI ↔ MCP ↔ GUI integration
 
-### The `biookf` Claude Code extension
+The three surfaces are wired together so an AI agent and a human can work on the same knowledge base
+at the same time:
 
-The extension (named `biookf`) packages the curation know-how as a Claude Code plugin:
+- **One active KB, shared.** The CLI, the MCP server, and the GUI all read and write a shared
+  `.active-kb` pointer and a `registry.yaml` of bundle links. Selecting a base in the GUI updates
+  the pointer for the agent; an agent (or `bokf set-active`) changing the pointer is **mirrored back
+  into the GUI** — without yanking the user's view: the agent's active base is shown as a focus
+  marker in the sidebar.
+- **The agent drives the GUI.** The `bokf_studio_*` tools open the Studio and steer it:
+  `bokf_studio_select` / `bokf_studio_search` / `bokf_studio_reload` navigate the graph,
+  `bokf_studio_state` / `bokf_studio_graph` observe it. The control channel is a Unix socket; it
+  ships in normal builds and only listens when `BIOOKF_STUDIO_CONTROL=1` (set automatically when the
+  agent opens the app).
+- **Status without screenshots.** `bokf_studio_state` returns the GUI's complete status as
+  structured JSON — active base, counts, search query, current selection, which panels are open,
+  lint summary, and the last agent action — so an agent reads what the app is doing instead of
+  taking and interpreting screenshots.
+- **The human sees the agent work.** Every agent action is narrated in real time in an in-app **"AI
+  agent" activity banner** (search, lint, merge, build, query…) and `bokf_studio_narrate` lets the
+  agent post a custom status line — so a person watching the Studio always knows what the agent is
+  exploring.
 
-- **8 skills**: `about-biookf` (what the project is), `biookf-convert` (ingest Step 1: source to
-  `raw/`), `biookf-ingest` (the 7-step source-to-concepts loop), `biookf-query`,
-  `biookf-lint`, `biookf-verify`, `biookf-merge`, `biookf-version`.
-- **4 guardrail hooks** (wired in `studio/hooks/hooks.json`):
-  - `session-start.sh` (SessionStart) briefs the agent and surfaces the active KB.
-  - `guard-raw.sh` (PreToolUse on Edit/Write/MultiEdit) blocks edits to immutable `raw/`
-    originals.
-  - `post-write-lint.sh` (PostToolUse on Edit/Write/MultiEdit) surfaces lint errors after a
-    concept-doc write (advisory; it cannot block).
-  - `stop-verify.sh` (Stop) blocks the stop if the active KB fails `bokf verify`, up to a capped
-    number of attempts, so a failed gate becomes another correction pass.
+---
 
-## Build and install
+## Curating with a coding agent
 
-The toolchain is a Cargo workspace. Build all four crates from `studio/`:
-
-```bash
-cd studio
-cargo build                 # builds bokf-core, bokf (CLI), bokf-mcp, and the Tauri app
-cargo test -p bokf-core -p bokf-cli   # backend unit + integration tests
-```
-
-After a debug build the binaries land in `studio/target/debug/`:
-
-- `studio/target/debug/bokf` — the CLI
-- `studio/target/debug/bokf-mcp` — the MCP server
-- `studio/target/debug/biookf-studio` — the desktop app
-
-(Use `cargo build --release` for `studio/target/release/`.)
-
-### Run the MCP server
-
-`bokf-mcp` speaks JSON-RPC over stdio, so an MCP client launches it directly:
-
-```bash
-./target/debug/bokf-mcp
-```
-
-Point your client (Claude Code, Codex, etc.) at that binary as an MCP stdio server. On
-`initialize` it ships an operating brief (the BioOKF rules plus the ingest/query/lint procedures)
-and advertises the `bokf_*` tools.
-
-### Install the Claude Code extension
-
-The extension lives in `studio/` as a single-plugin marketplace
-(`studio/.claude-plugin/marketplace.json` plus `studio/.claude-plugin/plugin.json`). Add `studio/`
-as a marketplace and install the `biookf` plugin from it:
-
-```bash
-/plugin marketplace add /absolute/path/to/BioOKF/studio
-/plugin install biookf@biookf
-```
-
-Installing it makes the 8 `biookf-*` skills and the 4 guardrail hooks active in your Claude Code
-session. (Build the `bokf` binary first so the hooks can find it.)
-
-## Usage
-
-There are two ways to drive BioOKF, and most people mix them: let a **coding agent** (Claude Code,
-or any MCP client) do the curation in natural language, and reach for the **`bokf` CLI** directly
-when you want a precise, scriptable operation. Both surfaces sit on the same `bokf-core`, so they
-are interchangeable.
-
-### Curating with Claude Code (or another coding agent)
-
-This is the intended day-to-day path. Install the `biookf` extension (above) and the agent gets
-the 8 `biookf-*` skills, the MCP `bokf_*` tools, and the guardrail hooks. You then describe what
-you want in plain language; the agent picks the right tools, runs the multi-step ingest loop, keeps
-provenance attached, and self-corrects against the `verify` gate (the `stop-verify` hook won't let
-it stop on a failing bundle). You stay in the loop by reviewing diffs and the dated `log.md`.
-
-A few things make this work better than hand-running the CLI: the agent reuses existing nodes
-instead of forking duplicates (it looks identifiers up first), it stamps every edge with
-`knowledge_level` / `agent_type` / `primary_source` automatically, and it batches the 10 to 15
-concept pages a single source produces into one coherent pass.
+This is the intended day-to-day path. With the plugin installed, describe what you want in plain
+language and the agent picks the right tools, runs the multi-step ingest loop, keeps provenance
+attached, reuses existing nodes instead of forking duplicates, and self-corrects against the
+`verify` gate. You stay in the loop by reviewing diffs, the dated `log.md`, and the live graph.
 
 Example prompts that map onto the workflow below:
 
-- **Scaffold:** "Create a new BioOKF bundle at `./mykb` called 'COVID immunology' and make it the
-  active KB."
+- **Scaffold:** "Create a new BioOKF bundle at `./mykb` called 'COVID immunology' and make it active."
 - **Ingest a paper:** "Ingest `./paper.pdf` into `mykb`: convert it to `raw/`, then distill the
-  entities and claims into typed concept docs with full provenance, reusing existing nodes where
-  they exist."
-- **Ingest a quick note:** "Add a bench note to `mykb`: 'IL6 elevation is associated with worse
-  COVID-19 outcomes' and wire up the gene/disease nodes and the edge between them."
-- **Query:** "What does `mykb` say about IL6, and which sources back each claim?" or "Show me
-  everything connected to the Disease node for COVID-19."
-- **Maintain:** "Lint `mykb`, fix any errors, then verify and log-sync the result." or "Merge
-  `./secondary-kb` into `mykb` and confirm the main KB stayed canonical."
-- **Explore the schema:** "What node types and edge predicates can I use, and which predicates are
-  negatable?"
+  entities and claims into typed concept docs with full provenance, reusing existing nodes."
+- **Ingest a quick note:** "Add a note to `mykb`: 'IL6 elevation is associated with worse COVID-19
+  outcomes' and wire up the gene/disease nodes and the edge between them."
+- **Query:** "What does `mykb` say about IL6, and which sources back each claim?"
+- **Watch it work:** "Open the Studio, then walk me through the COVID-19 subgraph node by node."
+- **Maintain:** "Lint `mykb`, fix any errors, then verify and log-sync." / "Merge `./secondary-kb`
+  into `mykb` and confirm the main KB stayed canonical."
+- **Schema:** "What node types and edge predicates can I use, and which predicates are negatable?"
 
-The agent translates each of these into the same `bokf` / `bokf_*` operations documented next, so
-the CLI walkthrough doubles as a reference for what the agent is doing under the hood.
+---
 
-### The curation workflow (CLI)
+## The curation workflow (CLI)
 
-A typical end-to-end session, using the `bokf` CLI (the same operations are available as MCP
-`bokf_*` tools and as the `biookf-*` skills). Replace `mykb` with your bundle path.
-
-#### 1. Scaffold a bundle
+The same operations the agent runs are available as the `bokf` CLI and as MCP `bokf_*` tools.
+Replace `mykb` with your bundle path.
 
 ```bash
+# 1. Scaffold (creates raw/, knowledge/, index.md, log.md, SCHEMA.md; commits, registers, activates)
 bokf scaffold ./mykb --name "My knowledge base"
-```
 
-This creates `raw/`, `knowledge/`, `index.md`, `log.md`, and `SCHEMA.md`, makes the first git
-commit, and registers + activates the bundle so later steps are not blocked by the active-KB
-guardrail.
-
-#### 2. Convert a source into `raw/`
-
-`convert` brings a file/folder/zip (pdf, html, docx, pptx, csv, xlsx) or inline text into the
-bundle's `raw/` as faithful Markdown, with a content-derived source id. It writes through
-`bokf-core`, so the `raw/` guard does not block it.
-
-```bash
+# 2. Convert a source into raw/ (pdf/html/docx/pptx/csv/xlsx, inline --text, or a --url)
 bokf convert ./paper.pdf --into ./mykb
-bokf convert --into ./mykb --text "IL6 elevation is associated with worse COVID-19 outcomes" --title "bench note"
-```
+bokf convert --into ./mykb --text "IL6 elevation worsens COVID-19 outcomes" --title "bench note"
 
-#### 3. Ingest: distill the source into typed concepts
+# 3. Ingest: distill into typed concepts (validate before write; reuse identifiers, don't fork)
+bokf validate ./mykb/knowledge/gene/il6.md
+bokf get ./mykb "IL6"
+bokf index ./mykb                 # rebuild index.md (--check to only report what's missing)
 
-Drive the `biookf-ingest` skill (or the MCP tools) to run the 7-step loop: create a source node
-for the document (with `raw_source` pointing at the `raw/` path), then for each entity create or
-update its typed concept doc, and for each claim add a provenance-stamped `edges:` entry plus a
-`reported_in` edge. A single source typically creates or updates 10 to 15 concept pages. You can
-check a draft before writing it, and look up an existing identifier so you reuse rather than fork:
-
-```bash
-bokf validate ./mykb/knowledge/gene/il6.md     # validate-before-write
-bokf get ./mykb "IL6"                           # exact identifier lookup
-```
-
-After writing pages, regenerate the catalog:
-
-```bash
-bokf index ./mykb            # rewrite index.md; add --check to only report what's missing
-```
-
-#### 4. Version-track every step
-
-`log-sync` is the sole step-committer: it appends a dated block to `log.md` and git-commits,
-atomically. Run it after each curation step.
-
-```bash
+# 4. Version-track every step (log-sync = append log.md + commit, atomically)
 bokf log-sync ./mykb --kind ingest --summary "ingested COVID-19 / IL6 review" --delta "+12 nodes"
-bokf log ./mykb                                  # review history (newest-first)
-bokf restore ./mykb <sha>                        # forward-only restore to a prior commit
-```
 
-#### 5. Verify (the gate)
+# 5. Verify (the gate: lint + structure checks; exits non-zero on any error)
+bokf verify ./mykb --workflow ingest
 
-`verify` is the deterministic accountability gate: it lints plus runs structure checks and exits
-non-zero on any error. Run it at the end of an ingest or merge run. The `stop-verify` hook runs
-this automatically for the active KB.
+# 6. Query
+bokf search ./mykb "interleukin cytokine"
+bokf graph ./mykb --out graph.json
+bokf stats ./mykb
 
-```bash
-bokf lint ./mykb                                 # full lint report
-bokf verify ./mykb --workflow ingest             # gate: PASS only if zero errors
-```
+# 7. Merge a Secondary KB onto a canonical Main KB
+bokf merge-snapshot ./main-kb
+bokf merge-raw ./main-kb ./secondary-kb
+bokf merge-snapshot ./main-kb --verify
 
-#### 6. Query
-
-Answer questions from the bundle, graph-shaped and provenance-cited:
-
-```bash
-bokf search ./mykb "interleukin"                 # BM25 full-text search
-bokf graph ./mykb --out graph.json               # nodes + directional edges as JSON
-bokf stats ./mykb                                # node/edge counts by type/predicate
-```
-
-#### 7. Merge two bundles
-
-Merge a Secondary KB onto a canonical Main KB. Snapshot the Main KB first, relocate the
-Secondary's `raw/` (deduplicating by content), then verify the Main KB stayed canonical:
-
-```bash
-bokf merge-snapshot ./main-kb                    # snapshot identifiers/paths before merge
-bokf merge-raw ./main-kb ./secondary-kb          # relocate raw/, returns the source-id remapping
-bokf merge-snapshot ./main-kb --verify           # confirm the Main KB stayed canonical
-```
-
-#### Multi-bundle bookkeeping
-
-When you keep several bundles under one root, register them and set the active one (the hooks and
-the verify gate operate on the active KB):
-
-```bash
-bokf register <root> mykb ./mykb                 # also: --list, --unregister <id>
+# Multi-bundle bookkeeping (a KB can live anywhere on disk)
+bokf register <root> mykb /abs/path/to/mykb     # also --list, --unregister <id>
 bokf set-active <root> mykb
-bokf get-active <root>
-bokf export ./mykb --out mykb.json               # self-contained bundle JSON for the GUI
-bokf predicates                                  # print the controlled vocabulary
+bokf predicates                                 # print the controlled vocabulary
 ```
+
+---
 
 ## CLI command reference
 
 | Command | What it does |
 |---|---|
-| `scaffold` | Create an empty bundle (`raw/`, `knowledge/`, `index.md`, `log.md`, `SCHEMA.md`); commit, register, activate. |
-| `convert` | Convert a file/folder/zip or `--text` into raw Markdown under the bundle's `raw/`. |
+| `scaffold` | Create an empty bundle; commit, register, activate. |
+| `convert` | Convert a file/folder/zip, `--text`, or `--url`(s) into raw Markdown under `raw/`. |
 | `validate` | Validate a single concept-document file without writing it. |
 | `get` | Look up a node by exact identifier. |
 | `index` | Regenerate `index.md` (or `--check` it). |
-| `lint` | Lint a bundle against the v0.5 conformance rules (`--json`). |
-| `verify` | Deterministic gate: lint plus structure checks; exits 1 on any error. |
+| `lint` | Lint against the BioOKF v0.5 conformance rules (`--json`). |
+| `verify` | Deterministic gate: lint + structure checks; exits 1 on any error. |
 | `graph` | Derive the render-ready graph (nodes + directional edges). |
 | `search` | BM25 full-text search over concept documents. |
-| `stats` | Summary statistics: node/edge counts by type and predicate. |
-| `predicates` | Print the controlled vocabulary (28 types, 24 positive predicates, enums). |
+| `stats` | Node/edge counts by type and predicate. |
+| `predicates` | Print the controlled vocabulary (28 types, 35 predicates, enums). |
+| `export` | Export a self-contained bundle JSON (graph + per-node detail) for the GUI. |
 | `log-sync` | Append a dated `log.md` entry AND commit, atomically (the sole step-committer). |
 | `commit` | Lower-level stage-all + commit (non-logged lifecycle commit). |
 | `log` | Show commit history (newest-first). |
 | `restore` | Forward-only restore to a prior commit. |
-| `register` | Register/list/unregister a known bundle under a root. |
+| `register` | Register / `--list` / `--unregister` a known bundle under a root (KBs live anywhere). |
 | `set-active` / `get-active` | Set / read the active KB under a root. |
 | `merge-raw` | Relocate a Secondary KB's `raw/` into a Main KB's `raw/` (dedup by content). |
-| `merge-snapshot` | Snapshot the Main KB identifier/path set before a merge, or `--verify` after. |
-| `export` | Export a self-contained bundle JSON (graph + per-node detail) for the GUI. |
+| `merge-snapshot` | Snapshot the Main KB before a merge, or `--verify` after. |
+| `name-figure` | Rename a provisional figure to a content caption and rewrite every reference. |
+| `install-pdfium` | Install PDFium so PDF pages render to images for vision (one-time). |
+
+---
 
 ## MCP tool reference
 
-The `bokf-mcp` server exposes these tools (1:1 with the CLI surface):
+`bokf-mcp` exposes 33 tools in three groups.
 
-| Tool | What it does |
-|---|---|
-| `bokf_list_bases` | List bundles under a root directory. |
-| `bokf_scaffold` | Create an empty bundle. |
-| `bokf_set_active` / `bokf_get_active` | Set / read the active KB under a root. |
-| `bokf_list_pages` | List the concept-document pages under `knowledge/`. |
-| `bokf_read_page` | Read one page (concept doc, raw source, or index/log/schema). |
-| `bokf_write_page` | Create/overwrite a concept doc; validates concept docs on write. |
-| `bokf_validate_page` | Validate a concept-document draft without writing it. |
-| `bokf_append_log` | Append a dated entry to `log.md`. |
-| `bokf_log_sync` | Append a dated `log.md` entry AND commit, atomically. |
-| `bokf_lint` | Lint a bundle; returns a JSON report. |
-| `bokf_verify` | Deterministic gate: `ok=true` iff zero lint errors. |
-| `bokf_graph` | Return the render-ready graph as JSON. |
-| `bokf_search` | BM25 full-text search over concept documents. |
-| `bokf_stats` | Node/edge counts by type and predicate. |
-| `bokf_predicates` | Print the controlled vocabulary. |
-| `bokf_convert` | Convert a file/folder/zip or inline text into raw Markdown under `raw/`. |
-| `bokf_index` | Regenerate `index.md` (or `check=true`). |
-| `bokf_log` | Show commit history. |
-| `bokf_restore` | Forward-only restore to a prior commit. |
-| `bokf_merge_raw` | Relocate a Secondary KB's `raw/` into a Main KB's `raw/`. |
-| `bokf_merge_snapshot` | Snapshot the Main KB before a merge, or `verify=true` after. |
+**Curation** — `bokf_list_bases`, `bokf_scaffold`, `bokf_set_active`, `bokf_get_active`,
+`bokf_list_pages`, `bokf_read_page`, `bokf_write_page` (validates concept docs on write),
+`bokf_validate_page`, `bokf_append_log`, `bokf_log_sync`, `bokf_log`, `bokf_restore`,
+`bokf_convert`, `bokf_name_figure`, `bokf_index`, `bokf_merge_raw`, `bokf_merge_snapshot`.
+
+**Analysis** — `bokf_lint`, `bokf_verify`, `bokf_graph`, `bokf_search`, `bokf_stats`,
+`bokf_predicates`.
+
+**Studio GUI control** — `bokf_studio_open`, `bokf_studio_close`, `bokf_studio_status`,
+`bokf_studio_state` (the complete GUI status as JSON — read this instead of a screenshot),
+`bokf_studio_graph`, `bokf_studio_select`, `bokf_studio_reload`, `bokf_studio_search`,
+`bokf_studio_screenshot`, `bokf_studio_narrate`.
+
+---
+
+## Build from source
+
+The toolchain is a Cargo workspace under [`app/`](app) (with the Studio desktop source in
+`app/studio/`). For development, or for a platform without a prebuilt release:
+
+```bash
+cd app
+cargo build --release -p bokf-cli -p bokf-mcp     # the CLI + MCP server
+cargo install tauri-cli --version "^2"            # one-time, for the Studio app
+( cd studio/src-tauri && cargo tauri build --bundles app )   # BioOKF Studio.app
+
+cargo test --workspace                            # backend + integration tests
+```
+
+Binaries land in `app/target/release/` (and the app under
+`app/target/release/bundle/`). To make the plugin use a local build instead of downloading a
+release, set `BIOOKF_MCP_BIN=/path/to/app/target/release/bokf-mcp`.
+
+**Repo dev plugin (skills + guardrails).** The repo also ships a developer-facing Claude Code
+extension at [`app/.claude-plugin`](app/.claude-plugin): 8 `biookf-*` curation skills
+(convert / ingest / merge / query / lint / verify / version) plus 4 guardrail hooks (a session
+brief, a `raw/`-immutability guard, a post-write lint nudge, and a `bokf verify` Stop gate). Add
+`app/` as a marketplace to use them while working inside this repository.
+
+---
 
 ## Authors
 

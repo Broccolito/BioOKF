@@ -952,7 +952,7 @@ mod tests {
     #[test]
     fn save_node_body_writes_file_and_guards_traversal() {
         let tmp = std::env::temp_dir().join(format!("bokf-save-test-{}", std::process::id()));
-        let base = tmp.join("studio/test-kb/mybase");
+        let base = tmp.join("mybase");
         std::fs::create_dir_all(base.join("knowledge/gene")).unwrap();
         let file = base.join("knowledge/gene/x.md");
         std::fs::write(&file, "---\ntype: Gene\nidentifier: X\n---\n\n# X\n\nold body\n").unwrap();

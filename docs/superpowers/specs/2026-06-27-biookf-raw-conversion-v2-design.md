@@ -4,11 +4,11 @@
 
 **Architecture:** All new behavior lives in `bokf-core` and surfaces through `bokf` (CLI) and `bokf-mcp` (MCP tools), keeping the GUI and skills as thin clients. Figure extraction is offline and deterministic. URL download and provenance resolution are Rust-native (synchronous `reqwest` blocking client plus the free, no-auth Crossref and OpenAlex APIs). The LLM remains in the loop only for what deterministic code cannot do: describing figures, extracting concepts and edges from figure content, and rendering scanned or paywalled PDFs.
 
-**Tech Stack:** Rust workspace at `studio/`. Existing: `zip`, `calamine`, `html2md`, `sha2`, `serde`/`serde_yaml`/`serde_json`, `regex`. New: `reqwest` (blocking, rustls-tls, json) in `bokf-core`. No new image-processing dependency in this sub-project: extracted images are already-encoded bytes that we copy verbatim. PDF page rasterization (pdfium) is deferred to a follow-on slice.
+**Tech Stack:** Rust workspace at `app/`. Existing: `zip`, `calamine`, `html2md`, `sha2`, `serde`/`serde_yaml`/`serde_json`, `regex`. New: `reqwest` (blocking, rustls-tls, json) in `bokf-core`. No new image-processing dependency in this sub-project: extracted images are already-encoded bytes that we copy verbatim. PDF page rasterization (pdfium) is deferred to a follow-on slice.
 
 ## Global Constraints
 
-- Rust edition 2021; workspace versions from `studio/Cargo.toml`. New dep: `reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls", "json"] }` in `bokf-core` (blocking client so `bokf-core` stays synchronous and tokio-free).
+- Rust edition 2021; workspace versions from `app/Cargo.toml`. New dep: `reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls", "json"] }` in `bokf-core` (blocking client so `bokf-core` stays synchronous and tokio-free).
 - `raw/<id>/original.*` remains the only immutable, gitignored artifact. Everything else under `raw/<id>/` (including `figures/`) is committed by default; the current `.gitignore` rule `raw/**/original.*` already achieves this with no change.
 - Prose in code, docs, skills, and tool messages uses plain language: no em-dashes, no AI-sounding filler. Controlled vocabulary, CURIEs, predicate names, and node-type names are never altered.
 - Source ids and figure names are content-derived and human-readable, never a bare hash or uuid (the existing `looks_machine_generated` guard applies to both).

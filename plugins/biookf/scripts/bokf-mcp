@@ -1,0 +1,95 @@
+#!/usr/bin/env bash
+# BioOKF MCP launcher (Claude Code plugin entrypoint).
+#
+# On first run this downloads the PREBUILT bokf binaries + the BioOKF Studio
+# desktop app for your platform from the project's GitHub Release (no local
+# compile), caches them under ~/.local/share/biookf, and then execs the bokf-mcp
+# server over stdio so Claude Code can use the tool family. Subsequent runs reuse
+# the cache and start instantly.
+#
+# Overrides:
+#   BIOOKF_VERSION   release tag to install (default: the plugin's pinned version)
+#   BIOOKF_HOME      cache root (default: ~/.local/share/biookf)
+#   BIOOKF_REPO      owner/repo of the release (default: Broccolito/BioOKF)
+#   BIOOKF_MCP_BIN   path to an existing bokf-mcp binary (skip download entirely)
+set -euo pipefail
+
+VERSION="${BIOOKF_VERSION:-v0.1.0}"
+REPO="${BIOOKF_REPO:-Broccolito/BioOKF}"
+HOME_DIR="${BIOOKF_HOME:-$HOME/.local/share/biookf}"
+PREFIX="$HOME_DIR/$VERSION"
+BIN="$PREFIX/bin"
+
+log() { printf '[biookf] %s\n' "$*" >&2; }
+
+# Escape hatch: a developer/local build can point straight at a bokf-mcp binary.
+if [ -n "${BIOOKF_MCP_BIN:-}" ] && [ -x "${BIOOKF_MCP_BIN:-}" ]; then
+  exec "$BIOOKF_MCP_BIN"
+fi
+
+detect_target() {
+  local os arch
+  case "$(uname -s)" in
+    Darwin) os=macos ;;
+    Linux)  os=linux ;;
+    MINGW*|MSYS*|CYGWIN*) os=windows ;;
+    *) os=unknown ;;
+  esac
+  case "$(uname -m)" in
+    arm64|aarch64) arch=arm64 ;;
+    x86_64|amd64)  arch=x64 ;;
+    *) arch=unknown ;;
+  esac
+  printf '%s-%s' "$os" "$arch"
+}
+
+ensure_installed() {
+  [ -x "$BIN/bokf-mcp" ] && return 0
+
+  local target ext url tmp
+  target="$(detect_target)"
+  case "$target" in
+    windows-*) ext=zip ;;
+    *)         ext=tar.gz ;;
+  esac
+  url="https://github.com/$REPO/releases/download/$VERSION/biookf-${target}.${ext}"
+
+  log "first run: fetching prebuilt BioOKF ($target, $VERSION)"
+  log "  $url"
+  mkdir -p "$PREFIX"
+  tmp="$(mktemp -d)"
+  trap 'rm -rf "$tmp"' RETURN
+
+  if ! curl -fL --retry 3 -o "$tmp/pkg.$ext" "$url"; then
+    log "ERROR: no prebuilt package for platform '$target' at $VERSION."
+    log "       Build from source instead — see https://github.com/$REPO#install"
+    exit 1
+  fi
+
+  if [ "$ext" = "zip" ]; then
+    unzip -oq "$tmp/pkg.$ext" -d "$PREFIX"
+  else
+    tar -xzf "$tmp/pkg.$ext" -C "$PREFIX"
+  fi
+
+  # Unsigned macOS binaries carry a download-quarantine xattr that Gatekeeper
+  # blocks; strip it so the CLI/MCP and the Studio app launch cleanly.
+  if command -v xattr >/dev/null 2>&1; then
+    xattr -dr com.apple.quarantine "$PREFIX" >/dev/null 2>&1 || true
+  fi
+  chmod +x "$BIN"/* >/dev/null 2>&1 || true
+  log "installed to $PREFIX"
+}
+
+ensure_installed
+
+# Put bokf + bokf-mcp on PATH for any tool that shells out, and tell the MCP
+# server where the prebuilt Studio app lives so bokf_studio_open can launch it.
+export PATH="$BIN:$PATH"
+if [ -d "$PREFIX/BioOKF Studio.app" ]; then
+  export BIOOKF_STUDIO_BIN="$PREFIX/BioOKF Studio.app/Contents/MacOS/biookf-studio"
+elif [ -x "$BIN/biookf-studio" ]; then
+  export BIOOKF_STUDIO_BIN="$BIN/biookf-studio"
+fi
+
+exec "$BIN/bokf-mcp"

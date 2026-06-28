@@ -1,0 +1,121 @@
+name: release
+
+# Build the prebuilt BioOKF bundle (bokf CLI + bokf-mcp server + BioOKF Studio
+# desktop app) for each platform and publish them as assets on a GitHub Release.
+# The `biookf` Claude Code plugin downloads the asset matching the user's platform
+# on first run, so users never compile anything.
+#
+# Trigger: push a tag like `v0.1.0`, or run manually with a tag input.
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Release tag to publish assets to (e.g. v0.1.0)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: build (${{ matrix.target }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: macos-14      # Apple Silicon
+            target: macos-arm64
+            rust_target: aarch64-apple-darwin
+          - os: macos-13      # Intel
+            target: macos-x64
+            rust_target: x86_64-apple-darwin
+          - os: ubuntu-22.04
+            target: linux-x64
+            rust_target: x86_64-unknown-linux-gnu
+          - os: windows-2022
+            target: windows-x64
+            rust_target: x86_64-pc-windows-msvc
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Resolve tag
+        id: tag
+        run: echo "tag=${{ github.event.inputs.tag || github.ref_name }}" >> "$GITHUB_OUTPUT"
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.rust_target }}
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: app
+
+      # Linux Tauri runtime/build deps (WebKitGTK etc.)
+      - name: Linux deps
+        if: matrix.os == 'ubuntu-22.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libgtk-3-dev \
+            libayatana-appindicator3-dev librsvg2-dev patchelf
+
+      - name: Install tauri-cli
+        run: cargo install tauri-cli --version "^2.0" --locked
+
+      - name: Build bokf + bokf-mcp (release)
+        working-directory: app
+        run: cargo build --release -p bokf-cli -p bokf-mcp
+
+      - name: Build BioOKF Studio app (release)
+        working-directory: app/studio/src-tauri
+        run: cargo tauri build --bundles app
+
+      - name: Stage package
+        id: stage
+        working-directory: app
+        run: |
+          set -euo pipefail
+          STAGE="$RUNNER_TEMP/biookf-${{ matrix.target }}"
+          rm -rf "$STAGE"; mkdir -p "$STAGE/bin"
+          EXE=""
+          if [ "${{ matrix.os }}" = "windows-2022" ]; then EXE=".exe"; fi
+          cp "target/release/bokf$EXE"     "$STAGE/bin/"
+          cp "target/release/bokf-mcp$EXE" "$STAGE/bin/"
+
+          case "${{ matrix.target }}" in
+            macos-*)
+              # ship the self-contained .app bundle
+              cp -R "target/release/bundle/macos/BioOKF Studio.app" "$STAGE/"
+              ;;
+            *)
+              # ship the bare Studio executable (Linux needs WebKitGTK at runtime)
+              cp "target/release/biookf-studio$EXE" "$STAGE/bin/"
+              ;;
+          esac
+
+          mkdir -p "$RUNNER_TEMP/dist"
+          if [ "${{ matrix.os }}" = "windows-2022" ]; then
+            ASSET="$RUNNER_TEMP/dist/biookf-${{ matrix.target }}.zip"
+            ( cd "$STAGE" && 7z a -tzip "$ASSET" . >/dev/null )
+          else
+            ASSET="$RUNNER_TEMP/dist/biookf-${{ matrix.target }}.tar.gz"
+            tar -czf "$ASSET" -C "$STAGE" .
+          fi
+          echo "asset=$ASSET" >> "$GITHUB_OUTPUT"
+
+      - name: Publish to release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: BioOKF ${{ steps.tag.outputs.tag }}
+          files: ${{ steps.stage.outputs.asset }}
+          fail_on_unmatched_files: true
+          generate_release_notes: true

@@ -6,7 +6,7 @@
 
 **Architecture:** Pure logic stays in `bokf-core` (new modules `git.rs`, `log_sync.rs`, `registry.rs`, `active.rs`, plus a `model.rs` edit). The CLI (`bokf`) and MCP server (`bokf-mcp`, server name `biookf`) are thin front-ends. Git is driven by **shelling out to the system `git` binary** (`std::process::Command`), with no `git2`/libgit2 dependency.
 
-**Tech Stack:** Rust 2021 workspace at `studio/`; crates `bokf-core`, `bokf-cli` (clap), `bokf-mcp` (rmcp); `serde`/`serde_yaml`/`serde_json`; new direct dep `uuid` (v4, already in lockfile), new dev-dep `tempfile`.
+**Tech Stack:** Rust 2021 workspace at `app/`; crates `bokf-core`, `bokf-cli` (clap), `bokf-mcp` (rmcp); `serde`/`serde_yaml`/`serde_json`; new direct dep `uuid` (v4, already in lockfile), new dev-dep `tempfile`.
 
 ## Global Constraints
 
@@ -17,7 +17,7 @@
 - `raw/**/original.*` is **gitignored** (immutable source bytes are not version-controlled).
 - `restore` is **forward-only** (commit the old tree on top of HEAD; never rewind).
 - All file writes that replace existing files use **temp-write + atomic rename**.
-- Run all commands from `studio/`. Test runner: `cargo test`. Build: `cargo build`.
+- Run all commands from `app/`. Test runner: `cargo test`. Build: `cargo build`.
 
 ---
 
