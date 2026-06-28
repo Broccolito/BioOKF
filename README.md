@@ -208,9 +208,10 @@ bokf merge-snapshot ./main-kb
 bokf merge-raw ./main-kb ./secondary-kb
 bokf merge-snapshot ./main-kb --verify
 
-# Multi-bundle bookkeeping (a KB can live anywhere on disk)
-bokf register <root> mykb /abs/path/to/mykb     # also --list, --unregister <id>
-bokf set-active <root> mykb
+# Multi-bundle bookkeeping (a KB can live anywhere on disk; registry + active
+# pointer live in ~/.config/biookf-studio, shared by the CLI, MCP, and Studio)
+bokf register mykb /abs/path/to/mykb            # also --list, --unregister <id>; --root to override
+bokf set-active mykb
 bokf predicates                                 # print the controlled vocabulary
 ```
 
@@ -234,8 +235,8 @@ bokf predicates                                 # print the controlled vocabular
 | `commit` | Lower-level stage-all + commit (non-logged lifecycle commit). |
 | `log` | Show commit history (newest-first). |
 | `restore` | Forward-only restore to a prior commit. |
-| `register` | Register / `--list` / `--unregister` a known bundle under a root (KBs live anywhere). |
-| `set-active` / `get-active` | Set / read the active KB under a root. |
+| `register` | Register / `--list` / `--unregister` a known bundle (config dir by default; `--root` to override). |
+| `set-active` / `get-active` | Set / read the active KB (config dir by default; `--root` to override). |
 | `merge-raw` | Relocate a Secondary KB's `raw/` into a Main KB's `raw/` (dedup by content). |
 | `merge-snapshot` | Snapshot the Main KB before a merge, or `--verify` after. |
 | `name-figure` | Rename a provisional figure to a content caption and rewrite every reference. |
