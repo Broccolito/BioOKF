@@ -87,9 +87,10 @@ nav.top{
 .nav-links{display:flex;align-items:center;gap:26px;list-style:none;margin:0;padding:0;}
 .nav-links a{font-size:13.5px;color:var(--muted);transition:color .16s;}
 .nav-links a:hover{color:var(--ink);}
-.nav-cta{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:#fff;
-  background:var(--ink);border-radius:var(--r-sm);padding:7px 13px;transition:background .16s,transform .12s;}
-.nav-cta:hover{background:#2a2a2a;transform:translateY(-1px);}
+/* scoped under .nav-links a so the white text/icon beat the muted nav-link colour */
+.nav-links a.nav-cta{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:#fff;
+  background:var(--ink);border-radius:var(--r-sm);padding:7px 13px;transition:background .16s,color .16s,transform .12s;}
+.nav-links a.nav-cta:hover{background:var(--accent);color:#fff;transform:translateY(-1px);}
 .nav-burger{display:none;}
 
 /* ---------------------------------------------------------------- buttons - */
@@ -205,9 +206,9 @@ nav.top{
 .code .arg{color:#cdd3de;}
 .code .ok{color:#86efac;}
 .copyline{display:flex;align-items:center;gap:10px;margin-top:12px;font-size:12.5px;color:var(--faint);}
-/* flat, not card-like: a thin accent rule and breathing room, no boxed border */
-.callout{border:none;border-left:2px solid var(--accent-line);border-radius:0;
-  background:transparent;padding:3px 0 5px 18px;font-size:13.5px;color:var(--muted);line-height:1.66;}
+/* flat soft-blue info panel: filled + rounded, no left ribbon (matches the active docs item) */
+.callout{border:none;border-radius:var(--r);background:var(--accent-soft);
+  padding:14px 18px;font-size:13.5px;color:var(--muted);line-height:1.66;}
 .callout b{color:var(--ink);font-weight:650;}
 .callout .ce{display:block;font-size:10.5px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
   color:var(--accent-ink);margin-bottom:6px;}
@@ -280,10 +281,11 @@ footer{border-top:1px solid var(--border);padding:42px 0 56px;background:var(--b
 .docs-side .ds-group{font-size:10.5px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
   color:var(--faint);margin:22px 0 8px;}
 .docs-side .ds-group:first-child{margin-top:0;}
-.docs-side a{display:block;font-size:13px;color:var(--muted);padding:5px 10px;border-radius:var(--r-sm);
-  margin:1px 0;border-left:2px solid transparent;transition:background .14s,color .14s,border-color .14s;}
+.docs-side a{display:block;font-size:13px;color:var(--muted);padding:6px 11px;border-radius:var(--r-sm);
+  margin:1px 0;transition:background .14s,color .14s;}
 .docs-side a:hover{background:var(--bg-soft);color:var(--ink);}
-.docs-side a.active{color:var(--accent-ink);background:var(--accent-soft);border-left-color:var(--accent);font-weight:550;}
+/* active item: a clean rounded soft-blue panel, no left ribbon */
+.docs-side a.active{color:var(--accent-ink);background:var(--accent-soft);font-weight:600;}
 .docs-main{padding:40px 48px 100px;min-width:0;max-width:820px;}
 .docbody{font-size:15px;color:#22252b;line-height:1.72;}
 .docbody h2{font-size:25px;font-weight:700;letter-spacing:-0.026em;margin:0 0 6px;scroll-margin-top:76px;}
@@ -337,7 +339,9 @@ table.doc-table td.desc code{background:var(--bg-sunken);color:var(--muted);}
 .def-k i.ext{background:#D7DBE1;box-shadow:inset 0 0 0 1px #b9bfca;}
 .def-k code{font-family:var(--mono);font-size:12.5px;color:var(--accent-ink);background:var(--accent-soft);
   padding:2px 7px;border-radius:5px;font-weight:600;}
-.def-k code.neg{color:var(--danger);background:rgba(196,86,75,0.10);text-decoration:line-through;text-decoration-thickness:1px;}
+/* negatable predicate names: the not_ prefix already carries the negation, so no
+   strike-through here (a slash over "not_x" reads as a double negative). Red tint only. */
+.def-k code.neg{color:var(--danger);background:rgba(196,86,75,0.10);}
 .def-v{font-size:13px;color:var(--muted);line-height:1.58;}
 .def-v code{font-family:var(--mono);font-size:11.5px;background:var(--bg-sunken);color:var(--accent-ink);padding:1px 5px;border-radius:4px;}
 @media (max-width:560px){
@@ -348,7 +352,8 @@ table.doc-table td.desc code{background:var(--bg-sunken);color:var(--muted);}
   font-family:var(--mono);font-size:12.5px;line-height:1.7;color:#cdd3de;white-space:pre;}
 .doc-code .cmd{color:#7dd3fc;} .doc-code .com{color:#6b7180;} .doc-code .ok{color:#86efac;}
 
-.note-box{border:1px solid var(--border);border-left:3px solid var(--accent);background:var(--card);
+/* soft-blue info panel, no left ribbon (consistent with .callout and the active docs item) */
+.note-box{border:none;background:var(--accent-soft);
   border-radius:var(--r);padding:14px 16px;margin:16px 0;font-size:13.5px;color:var(--muted);}
 .note-box b{color:var(--ink);}
 
