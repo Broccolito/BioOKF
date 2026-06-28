@@ -371,7 +371,7 @@ async function hydrateSourceProvenance(pg){
   const source_id = ri>=0 ? parts[ri+1] : parts[parts.length-2];
   if(!source_id) return;
   let info;
-  try{ info=await tauriInvoke('source_info', { base: activeBaseId, source_id }); }
+  try{ info=await tauriInvoke('source_info', { base: activeBaseId, sourceId: source_id }); }
   catch(e){ return; }   // no meta.yaml / connector unavailable — omit the section
   if(!info || typeof info!=='object') return;
   const cred=info.credibility||{}, ids=info.ids||{};
@@ -393,14 +393,15 @@ async function hydrateSourceProvenance(pg){
   if(figs.length){
     figHtml=`<div class="src-figs">${figs.map((f,i)=>{
       const flags=[]; if(f.provisional)flags.push('<span class="fig-flag prov">provisional</span>'); if(f.described===false||f.described==='false')flags.push('<span class="fig-flag undesc">undescribed</span>'); if(f.origin)flags.push(`<span class="fig-flag">${esc(f.origin)}</span>`);
-      return `<figure class="src-fig"><img class="md-img" data-md-raw="raw/${esc(source_id)}/figures/${esc(f.file||'')}" alt="${esc(f.file||('figure '+i))}"><figcaption>${esc(f.file||'')} ${flags.join(' ')}</figcaption></figure>`;
+      // FigureMeta.file is already relative to raw/<id>/ (e.g. "figures/foo.png") — do not re-prefix.
+      return `<figure class="src-fig"><img class="md-img" data-md-raw="raw/${esc(source_id)}/${esc(f.file||'')}" alt="${esc(f.file||('figure '+i))}"><figcaption>${esc(f.file||'')} ${flags.join(' ')}</figcaption></figure>`;
     }).join('')}</div>`;
   }
   sec.innerHTML=`<h5>Source / Provenance</h5>
     <div class="src-badges">
       ${info.source_type?`<span class="src-origin">${esc(info.source_type)}</span>`:''}
       <span class="src-tier ${tierClass}">${esc(tier)}</span>
-      ${cred.confidence!=null?`<span class="src-conf">conf ${esc(String(cred.confidence))}</span>`:''}
+      ${cred.confidence!=null?`<span class="src-conf">conf ${esc(Number(cred.confidence).toFixed(2))}</span>`:''}
       ${cred.retracted?'<span class="src-retracted">⚠ RETRACTED</span>':''}
     </div>
     <div class="metagrid" style="margin-top:8px">
@@ -703,8 +704,8 @@ function inl(s){
 }
 /* Hydrate relative `raw/` markdown images to data URIs (desktop only): figures in
    ingested source papers live as binary files inside the bundle, so they can't be
-   loaded by relative URL in the webview. We read them via the read_bundle_file
-   connector and inline them. http(s) images are left untouched. */
+   loaded by relative URL in the webview. We read their raw bytes via the
+   read_bundle_bytes connector (base64) and inline them. http(s) images are left untouched. */
 async function hydrateMdImages(root){
   if(!root || !isDesktop) return;
   const imgs=root.querySelectorAll && root.querySelectorAll('img.md-img[data-md-raw]');
@@ -713,9 +714,9 @@ async function hydrateMdImages(root){
     const path=img.getAttribute('data-md-raw'); img.removeAttribute('data-md-raw');
     if(!path || /^https?:\/\//i.test(path)){ if(path) img.src=path; continue; }
     try{
-      const data=await tauriInvoke('read_bundle_file', { base: activeBaseId, path });
-      if(typeof data==='string' && data){
-        img.src = data.startsWith('data:') ? data : ('data:'+mimeForPath(path)+';base64,'+data);
+      const b64=await tauriInvoke('read_bundle_bytes', { base: activeBaseId, path });
+      if(typeof b64==='string' && b64){
+        img.src = b64.startsWith('data:') ? b64 : ('data:'+mimeForPath(path)+';base64,'+b64);
       }
     }catch(e){ /* missing figure — leave it unresolved */ }
   }

@@ -184,6 +184,31 @@ fn read_bundle_file(base: String, path: String) -> Result<String, String> {
     std::fs::read_to_string(&full).map_err(|e| e.to_string())
 }
 
+/// Standard base64 (RFC 4648) encode, std-only — used to ship binary bundle files
+/// (e.g. `raw/<id>/figures/*.png`) to the webview as data URIs.
+fn base64_encode(bytes: &[u8]) -> String {
+    const T: &[u8; 64] = b"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+    let mut out = String::with_capacity((bytes.len() + 2) / 3 * 4);
+    for c in bytes.chunks(3) {
+        let b = [c[0], *c.get(1).unwrap_or(&0), *c.get(2).unwrap_or(&0)];
+        let n = (b[0] as usize) << 16 | (b[1] as usize) << 8 | b[2] as usize;
+        out.push(T[(n >> 18) & 63] as char);
+        out.push(T[(n >> 12) & 63] as char);
+        out.push(if c.len() > 1 { T[(n >> 6) & 63] as char } else { '=' });
+        out.push(if c.len() > 2 { T[n & 63] as char } else { '=' });
+    }
+    out
+}
+
+/// Read a binary file inside a bundle (path-guarded) and return it base64-encoded,
+/// so figures and other non-text assets can be inlined as data URIs in the webview.
+#[tauri::command]
+fn read_bundle_bytes(base: String, path: String) -> Result<String, String> {
+    let full = safe_bundle_path(&base, &path)?;
+    let bytes = std::fs::read(&full).map_err(|e| e.to_string())?;
+    Ok(base64_encode(&bytes))
+}
+
 /// Persist an edited frontmatter block, preserving the document body verbatim.
 #[tauri::command]
 fn save_node_frontmatter(
@@ -716,6 +741,7 @@ fn main() {
             search_bundle,
             save_node_body,
             read_bundle_file,
+            read_bundle_bytes,
             save_node_frontmatter,
             save_node_notes,
             save_edge_note,

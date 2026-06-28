@@ -1,5 +1,18 @@
 [
   {
+    "id": "demo-statins-crc",
+    "name": "Statins & colorectal cancer (demo)",
+    "file": "data/demo-statins-crc.json",
+    "node_count": 6,
+    "edge_count": 10,
+    "updated": "2026-06-27",
+    "lint": {
+      "errors": 0,
+      "infos": 0,
+      "warnings": 2
+    }
+  },
+  {
     "id": "examples",
     "name": "COVID-19 immunology (examples)",
     "file": "data/examples.json",
