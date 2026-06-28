@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BioOKF Documentation</title>
+<meta name="description" content="BioOKF documentation: the bundle format, all 28 node types and 35 edge predicates defined, node-based provenance, the Studio, the live agent loop, and the full bokf CLI and MCP tool reference." />
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body id="top">
+
+<nav class="top">
+  <a class="brand" href="index.html" aria-label="BioOKF home">
+    <img src="assets/logo.svg" alt="BioOKF" height="22" />
+    <span class="tag">docs</span>
+  </a>
+  <button class="nav-burger" aria-label="Menu"><i></i><i></i><i></i></button>
+  <ul class="nav-links">
+    <li><a href="index.html#about">What it is</a></li>
+    <li><a href="index.html#demos">Demos</a></li>
+    <li><a href="index.html#install">Install</a></li>
+    <li><a href="docs.html">Docs</a></li>
+    <li><a class="nav-cta" href="https://github.com/Broccolito/BioOKF" target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 014 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      GitHub</a></li>
+  </ul>
+</nav>
+
+<div class="docs-shell">
+  <aside class="docs-side">
+    <div class="ds-group">Getting started</div>
+    <a href="#overview">Overview</a>
+    <a href="#install-docs">Install</a>
+    <div class="ds-group">The format</div>
+    <a href="#bundle">The bundle</a>
+    <a href="#types">Node types (28)</a>
+    <a href="#predicates">Edge predicates (35)</a>
+    <a href="#provenance">Provenance model</a>
+    <div class="ds-group">The Studio</div>
+    <a href="#studio">BioOKF Studio</a>
+    <a href="#live-loop">The live loop</a>
+    <div class="ds-group">Reference</div>
+    <a href="#cli">CLI commands</a>
+    <a href="#mcp">MCP tools</a>
+    <a href="#build">Build from source</a>
+  </aside>
+
+  <main class="docs-main docbody">
+
+    <section class="doc-sec" id="overview">
+      <h2>Overview</h2>
+      <p class="sec-lead">BioOKF is a format and toolchain for turning any biomedical source (a paper, preprint, bench
+        note, slide deck, CSV, figure, or tweet) into a structured, interlinked, version-controlled knowledge base that
+        compounds over time and can be queried as a graph.</p>
+      <p>It is a biomedical <em>profile</em> of Google Cloud's
+        <a class="link" href="https://github.com/GoogleCloudPlatform/knowledge-catalog" target="_blank" rel="noopener">Open Knowledge Format (OKF)</a>,
+        itself a formalization of Andrej Karpathy's LLM Wiki pattern. BioOKF keeps OKF's portable substrate, a
+        Git-shippable tree of Markdown with YAML frontmatter, and adds the one thing OKF leaves open: a closed,
+        controlled universe of meaning, with <strong>28 node types</strong>, <strong>35 edge predicates</strong>, and
+        node-based provenance on every claim.</p>
+      <p>The repository ships both the format (the spec) and the toolchain that implements it: a Rust core, the
+        <code>bokf</code> CLI, the <code>bokf-mcp</code> server, and the BioOKF Studio desktop visualizer, all
+        distributed together as a one-command Claude Code plugin.</p>
+      <div class="note-box"><b>Three surfaces, one engine.</b> The CLI, the MCP server, and the Studio GUI all delegate to
+        <code>bokf-core</code> and share an active-base pointer, so a script, an agent, and a human can curate the same base.</div>
+    </section>
+
+    <section class="doc-sec" id="install-docs">
+      <h2>Install</h2>
+      <p>The whole toolchain installs as a single Claude Code plugin. You never compile anything. The first time a tool
+        runs, the plugin downloads the prebuilt binaries for your platform and caches them under
+        <code>~/.local/share/biookf</code>.</p>
+      <div class="doc-code"><span class="com"># in Claude Code, run both, then restart</span>
+<span class="cmd">/plugin</span> marketplace add Broccolito/BioOKF
+<span class="cmd">/plugin</span> install biookf@biookf
+
+<span class="com"># the bokf_* tools are now available; launch the app with</span>
+<span class="ok">bokf_studio_open</span></div>
+      <p><strong>Requirements.</strong> Claude Code, plus <code>curl</code> and <code>tar</code>, on macOS (Apple Silicon
+        or Intel), where a self-contained <code>.app</code> is downloaded for you. Linux and Windows builds are produced
+        by the release pipeline as they become available; until a prebuilt asset exists for your platform you can
+        <a class="link" href="#build">build from source</a> and point the plugin at your binary with <code>BIOOKF_MCP_BIN</code>.</p>
+      <p>Override the version, cache location, or download source with <code>BIOOKF_VERSION</code>, <code>BIOOKF_HOME</code>,
+        and <code>BIOOKF_REPO</code>.</p>
+    </section>
+
+    <section class="doc-sec" id="bundle">
+      <h2>The bundle</h2>
+      <p class="sec-lead">A BioOKF <strong>bundle</strong> is a Git-shippable directory tree of Markdown.</p>
+      <table class="doc-table">
+        <thead><tr><th>Path</th><th>What it holds</th></tr></thead>
+        <tbody>
+          <tr><td><code>raw/</code></td><td class="desc">Immutable ingested sources. You never edit these; they anchor provenance to bytes.</td></tr>
+          <tr><td><code>knowledge/&lt;type&gt;/&lt;slug&gt;.md</code></td><td class="desc">The typed concept documents you author. These are the graph.</td></tr>
+          <tr><td><code>index.md</code></td><td class="desc">The catalog: identifier registry, by-type list, and subtypes in use.</td></tr>
+          <tr><td><code>log.md</code></td><td class="desc">Newest-first dated change history.</td></tr>
+          <tr><td><code>SCHEMA.md</code></td><td class="desc">The agent-facing operating doc, dropped at the bundle root.</td></tr>
+        </tbody>
+      </table>
+      <p>Each concept document is YAML frontmatter plus a Markdown body. Only <code>type</code> and <code>identifier</code>
+        are mandatory. An agent-coined <code>subtype</code> carries finer granularity and is never validated against a
+        fixed list. Three rules make it BioOKF rather than plain OKF: a closed set of node types, a closed set of edge
+        predicates, and node-based provenance on every edge.</p>
+    </section>
+
+    <section class="doc-sec" id="types">
+      <h2>Node types (28)</h2>
+      <p class="sec-lead">Every document's <code>type</code> is exactly one of 28: twenty biomedical entity types plus
+        eight provenance and context types, with <code>Other</code> as the closure. Studio colors each node by its type.
+        Definitions follow SPEC.md section 5.</p>
+
+      <div class="deflist">
+        <div class="def-fam">Genomic</div>
+        <div class="defrow"><span class="def-k"><i style="background:#6366A8"></i>Gene</span><span class="def-v">A heritable genomic locus: protein-coding, ncRNA, or miRNA. The fundamental unit of heredity.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#8A86C4"></i>Variant</span><span class="def-v">A deviation from the reference sequence (SNV, SNP, indel, CNV, structural variant, allele, genotype, haplotype, fusion, or STR). The encoded consequence is an attribute, not its own node.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#AAA6DA"></i>SequenceFeature</span><span class="def-v">A region of the reference sequence (enhancer, promoter, silencer, transcription-factor binding site, CpG island, open chromatin, transposon, or UTR) when it is itself the object of study.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#7C8FC9"></i>Structure</span><span class="def-v">A resolved or predicted three-dimensional atomic-coordinate structure of a macromolecule, distinguished by method (X-ray, cryo-EM, NMR, predicted) and optionally resolution.</span></div>
+
+        <div class="def-fam">Molecular and process</div>
+        <div class="defrow"><span class="def-k"><i style="background:#2E8C84"></i>Molecule</span><span class="def-v">A single chemically-defined entity: protein, peptide, antibody, enzyme, complex, small molecule, drug, metabolite, lipid, ion, cofactor, nutrient, or RNA species.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#5FB0A8"></i>MolecularClass</span><span class="def-v">A grouping of molecules rather than a single molecule: pharmacologic class, protein family or domain, gene set, or chemical class. Members attach with <code>member_of</code>.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#4FA38C"></i>BiologicalPathway</span><span class="def-v">A process: pathway, reaction, signaling cascade, GO biological process, physiologic or pathologic process, or behavior.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#7CC3B0"></i>BiologicalFunction</span><span class="def-v">An elemental molecular activity per the GO molecular-function aspect: catalytic, binding, or transporter activity of a gene product.</span></div>
+
+        <div class="def-fam">Anatomy and organism</div>
+        <div class="defrow"><span class="def-k"><i style="background:#3F9E6E"></i>Anatomy</span><span class="def-v">A body region, organ, organ system, tissue, gross structure, subcellular component, organelle, or body fluid. Kept distinct from cell type.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#62B889"></i>CellType</span><span class="def-v">A cell type, cell state, cell line, or organoid. Organelles are typed as Anatomy, not CellType.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#8FCBA6"></i>Organism</span><span class="def-v">A species, strain, taxon, pathogen, microbe, model organism, or host. Distinct from a Population, which is a group of people.</span></div>
+
+        <div class="def-fam">Clinical</div>
+        <div class="defrow"><span class="def-k"><i style="background:#C45B6B"></i>Disease</span><span class="def-v">A diagnosable condition state: disease, syndrome, disorder, neoplasm, infection, injury, or congenital or acquired abnormality. Not a manifestation or a measurement.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#D98AA0"></i>Phenotype</span><span class="def-v">An observable manifestation: symptom, sign, side effect, qualitative trait, or morphologic or behavioral feature. Not the disease itself or a measured value.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#D98C5A"></i>BiomedicalMeasure</span><span class="def-v">A named measurable variable: lab test, vital, score, scale (BMI, PRS, TNM), biomarker or omics readout, or imaging finding. Its unit or value rides on an edge.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#C99750"></i>MethodOrProcedure</span><span class="def-v">A clinical procedure, or independently a lab assay, technique, computational pipeline, tool, software, statistical method, model, algorithm, or protocol.</span></div>
+
+        <div class="def-fam">Exposome</div>
+        <div class="defrow"><span class="def-k"><i style="background:#B79A52"></i>Exposure</span><span class="def-v">A behavioral, environmental, occupational, or dietary-pattern exposure. A defined chemical exposure is a Molecule; a social determinant is a SocialFactor.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#C2A86A"></i>SocialFactor</span><span class="def-v">A social determinant of health: income, education, housing, employment, food security, access to care, or social support.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#CBB87E"></i>Food</span><span class="def-v">A food item, food group, or dietary product. Distinct from a dietary-pattern exposure or a nutritional molecule.</span></div>
+
+        <div class="def-fam">Physical</div>
+        <div class="defrow"><span class="def-k"><i style="background:#6E87A3"></i>Device</span><span class="def-v">An engineered artifact: medical device, implant, prosthesis, graft, mesh, drug-delivery device, research instrument, reagent, or kit.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#92A6BC"></i>MaterialSample</span><span class="def-v">A biospecimen or physical sample: serum, biopsy, aliquot, tissue block, or cell-line stock. The tangible material derived from or representing an organism.</span></div>
+
+        <div class="def-fam">Provenance and context</div>
+        <div class="defrow"><span class="def-k"><i style="background:#6B7280"></i>Publication</span><span class="def-v">A document or artifact: journal article, preprint, book, patent, drug label, guideline, abstract, poster, slide deck, blog, tweet, thread, lab-notebook entry, or meeting note. The substrate of raw sources.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#7A828E"></i>Study</span><span class="def-v">A designed investigation: clinical trial, cohort, case-control study, RCT, GWAS, observational study, registry, or screen.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#88909C"></i>Dataset</span><span class="def-v">A data artifact: dataset, data file, table, CSV, XLSX, omics matrix, image collection, or knowledge base.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#5E6672"></i>Agent</span><span class="def-v">An entity capable of authorship or action: a person, lab, consortium, organization, company, regulator, funder, software agent, or online handle.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#7E8896"></i>Population</span><span class="def-v">A group of people: cohort, study population, ancestry group, or demographic group. Distinct from Study (the investigation) and Organism (a taxon).</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#94A0A0"></i>GeographicLocation</span><span class="def-v">A country, region, or place. A spatial anchor for observations or interventions.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#9AA0A8"></i>Concept</span><span class="def-v">An abstract concept, attribute, classification system, unit, ontology term, or score definition not better typed as one of the substantive types.</span></div>
+        <div class="defrow"><span class="def-k"><i style="background:#AEB2B8"></i>Other</span><span class="def-v">The explicit escape hatch for a biomedical concept that fits none of the 27 substantive types. It must carry a <code>note</code> field explaining why.</span></div>
+      </div>
+
+      <div class="note-box"><b>External is a state, not a type.</b> An entity referenced by an edge but with no concept
+        document yet is <em>External</em>. Studio draws it as a light, dashed swatch
+        <span class="tnode" style="padding:2px 9px 2px 7px"><i style="background:#D7DBE1;box-shadow:inset 0 0 0 1px #b9bfca"></i>External</span>
+        so you can see what is referenced but not yet documented.</div>
+    </section>
+
+    <section class="doc-sec" id="predicates">
+      <h2>Edge predicates (35)</h2>
+      <p class="sec-lead">Relationships are first-class frontmatter <code>edges:</code> entries: <strong>24 positive
+        predicates</strong> (forward-only, no inverses) plus <strong>11 negative <code>not_&lt;X&gt;</code> predicates</strong>
+        for the negatable effect predicates. Direction is always this-document to object. Definitions follow SPEC.md section 6.</p>
+
+      <h3>24 positive predicates</h3>
+      <div class="deflist preds">
+        <div class="defrow"><span class="def-k"><code>is_a</code></span><span class="def-v">Subject is a more-specific kind or instance of object. The ontology backbone for type hierarchy and inheritance.</span></div>
+        <div class="defrow"><span class="def-k"><code>part_of</code></span><span class="def-v">A structural or compositional part relationship. Structural genomic partonomy (exon, intron, CDS, codon to gene) lives here.</span></div>
+        <div class="defrow"><span class="def-k"><code>member_of</code></span><span class="def-v">Subject belongs to a class, family, or group. Typical for molecule to drug-class, gene to gene-set, protein to family.</span></div>
+        <div class="defrow"><span class="def-k"><code>derives_from</code></span><span class="def-v">Material or data lineage: sample from donor, cell from tissue, metabolite from parent, dataset from study, structure from molecule.</span></div>
+        <div class="defrow"><span class="def-k"><code>located_in</code></span><span class="def-v">Subject is positioned or found in object: anatomically (disease in organ), genomically (variant in gene), or geographically.</span></div>
+        <div class="defrow"><span class="def-k"><code>expressed_in</code></span><span class="def-v">A gene or molecule is expressed, abundant, or present in an anatomical or cell context. Carries optional direction, effect_size, p_value.</span></div>
+        <div class="defrow"><span class="def-k"><code>encodes</code></span><span class="def-v">A gene encodes, or is transcribed and translated into, its product. Forward-only, with no encoded_by inverse.</span></div>
+        <div class="defrow"><span class="def-k"><code>interacts_with</code></span><span class="def-v">A physical or functional interaction (protein-protein, gene-gene, drug-drug, host-pathogen). Symmetric.</span></div>
+        <div class="defrow"><span class="def-k"><code>binds</code></span><span class="def-v">Direct binding with measurable affinity (drug-target, transcription-factor to DNA, antibody-antigen). Carries optional Kd, Ki, or IC50.</span></div>
+        <div class="defrow"><span class="def-k"><code>regulates</code></span><span class="def-v">Subject increases or decreases the activity, abundance, or expression of object. Requires a direction, optionally an aspect.</span></div>
+        <div class="defrow"><span class="def-k"><code>catalyzes</code></span><span class="def-v">An enzyme or complex catalyzes a reaction. Subject is the catalyst; object is the reaction.</span></div>
+        <div class="defrow"><span class="def-k"><code>converts_to</code></span><span class="def-v">Subject is chemically transformed or metabolized into object. A molecule-to-molecule conversion.</span></div>
+        <div class="defrow"><span class="def-k"><code>participates_in</code></span><span class="def-v">Subject takes part in, enables, or is an input or output of a pathway, process, or function.</span></div>
+        <div class="defrow"><span class="def-k"><code>causes</code></span><span class="def-v">Subject brings about, induces, or drives object: etiology (pathogen to disease), somatic drivers, drug to adverse event.</span></div>
+        <div class="defrow"><span class="def-k"><code>predisposes_to</code></span><span class="def-v">Subject raises the risk or likelihood of object without being a sufficient cause. Carries odds_ratio, hazard_ratio, or relative_risk.</span></div>
+        <div class="defrow"><span class="def-k"><code>treats</code></span><span class="def-v">Subject (drug, procedure, device, intervention) cures, manages, ameliorates, or palliates the object condition. Carries optional clinical_phase.</span></div>
+        <div class="defrow"><span class="def-k"><code>prevents</code></span><span class="def-v">Subject stops, hinders, or reduces the onset risk of the object condition.</span></div>
+        <div class="defrow"><span class="def-k"><code>contraindicated_in</code></span><span class="def-v">Subject (drug or procedure) must not be used in the object condition or context.</span></div>
+        <div class="defrow"><span class="def-k"><code>affects_response_to</code></span><span class="def-v">Subject (gene, variant, biomarker) modulates response, sensitivity, resistance, or metabolism of the object drug. The pharmacogenomics edge.</span></div>
+        <div class="defrow"><span class="def-k"><code>has_phenotype</code></span><span class="def-v">Subject (disease, organism, variant) presents or manifests the object phenotype, sign, or symptom. Carries optional frequency, onset, severity.</span></div>
+        <div class="defrow"><span class="def-k"><code>measures</code></span><span class="def-v">Subject ascertains the value of, or is diagnostic for, object. Includes diagnoses. Carries optional sensitivity, specificity, auc, unit.</span></div>
+        <div class="defrow"><span class="def-k"><code>associated_with</code></span><span class="def-v">A statistical or co-occurrence association that is neither causal nor mechanistic (GWAS hit, eQTL, correlation, comorbidity). Symmetric. The quantitative umbrella edge.</span></div>
+        <div class="defrow"><span class="def-k"><code>reported_in</code></span><span class="def-v">The universal provenance edge. The subject node, or a reified claim, is reported, curated, or evidenced in a Publication, Study, Dataset, or Agent.</span></div>
+        <div class="defrow"><span class="def-k"><code>used_to_study</code></span><span class="def-v">An investigative resource (method, study, dataset, device, model organism, cell type, sample) is used to study, model, or probe the object entity.</span></div>
+      </div>
+
+      <h3>11 negatable predicates</h3>
+      <p>For the negatable effect predicates, a <code>not_&lt;X&gt;</code> form records a refuted relationship. Studio
+        renders these struck-through and reddish, so a contradiction reads at a glance.</p>
+      <div class="deflist preds">
+        <div class="defrow"><span class="def-k"><code class="neg">not_binds</code></span><span class="def-v">A refuted binding claim: subject does not bind object with measurable affinity.</span></div>
+        <div class="defrow"><span class="def-k"><code class="neg">not_interacts_with</code></span><span class="def-v">A refuted interaction: subject has no physical or functional interaction with object. Symmetric.</span></div>
+        <div class="defrow"><span class="def-k"><code class="neg">not_causes</code></span><span class="def-v">A refuted causation: subject does not bring about object.</span></div>
+        <div class="defrow"><span class="def-k"><code class="neg">not_predisposes_to</code></span><span class="def-v">A refuted risk claim: subject does not raise the likelihood of object.</span></div>
+        <div class="defrow"><span class="def-k"><code class="neg">not_prevents</code></span><span class="def-v">A refuted prevention: subject does not reduce the onset risk of object.</span></div>
+        <div class="defrow"><span class="def-k"><code class="neg">not_treats</code></span><span class="def-v">A refuted treatment: subject does not cure, manage, ameliorate, or palliate object.</span></div>
+        <div class="defrow"><span class="def-k"><code class="neg">not_affects_response_to</code></span><span class="def-v">A refuted pharmacogenomic claim: subject does not modulate response to the object drug.</span></div>
+        <div class="defrow"><span class="def-k"><code class="neg">not_associated_with</code></span><span class="def-v">A refuted association: no statistical or co-occurrence link between subject and object. Symmetric.</span></div>
+        <div class="defrow"><span class="def-k"><code class="neg">not_expressed_in</code></span><span class="def-v">A refuted expression claim: the gene or molecule is not expressed in the anatomical or cell context.</span></div>
+        <div class="defrow"><span class="def-k"><code class="neg">not_regulates</code></span><span class="def-v">A refuted regulation: subject does not change the activity, abundance, or expression of object.</span></div>
+        <div class="defrow"><span class="def-k"><code class="neg">not_has_phenotype</code></span><span class="def-v">A refuted phenotype claim: subject does not present or manifest the object phenotype.</span></div>
+      </div>
+      <div class="note-box"><b>How negation works.</b> A <code>not_&lt;X&gt;</code> edge records a negative finding stated in the
+        source, for example "drug A does not bind target B". It is the only canonical way to negate. Asserting both
+        <code>&lt;X&gt;</code> and <code>not_&lt;X&gt;</code> for the same subject and object is a contradiction the linter
+        flags. Structural and provenance predicates (<code>is_a</code>, <code>part_of</code>, <code>encodes</code>,
+        <code>measures</code>, <code>reported_in</code>, <code>used_to_study</code>) cannot be negated.</div>
+    </section>
+
+    <section class="doc-sec" id="provenance">
+      <h2>Provenance model</h2>
+      <p class="sec-lead">Quantitative claims go on edges, never prose, and every edge says where it came from.</p>
+      <p>Each edge carries three provenance fields:</p>
+      <table class="doc-table">
+        <thead><tr><th>Field</th><th>Values</th></tr></thead>
+        <tbody>
+          <tr><td><code>knowledge_level</code></td><td class="desc"><code>knowledge_assertion</code> · <code>statistical_association</code> · <code>prediction</code> · <code>observation</code> · <code>not_provided</code></td></tr>
+          <tr><td><code>agent_type</code></td><td class="desc"><code>manual_agent</code> · <code>automated_agent</code> · <code>text_mining_agent</code> · <code>data_analysis_pipeline</code> · <code>computational_model</code> · <code>not_provided</code></td></tr>
+          <tr><td><code>primary_source</code></td><td class="desc">Names a source <em>node</em> by its <code>identifier</code> (a <code>Publication</code>, <code>Study</code>, <code>Dataset</code>, or <code>Agent</code> in the bundle), never a bare CURIE, plus a <code>reported_in</code> edge.</td></tr>
+        </tbody>
+      </table>
+      <p>Ingested-document sources anchor to the immutable bytes under <code>raw/</code> via <code>raw_source</code>;
+        external references record their CURIE in <code>xref</code>. The full normative format is in the spec; the
+        agent-facing operating doc (conventions plus the ingest, query, and lint workflow) is in the schema.</p>
+    </section>
+
+    <section class="doc-sec" id="studio">
+      <h2>BioOKF Studio</h2>
+      <p class="sec-lead">Studio is a Tauri desktop app and a pure visualizer; every operation delegates to <code>bokf-core</code>.</p>
+      <h3>Registry-driven sidebar</h3>
+      <p>Knowledge bases are tracked by a registry of links, so a bundle can live <strong>anywhere on disk</strong>; there
+        is no fixed directory. Each entry shows its name, node and edge counts, and last-updated date. Delete or move a
+        folder and it drops from the sidebar; register one elsewhere and it appears, with no restart.
+        <strong>+ New base</strong> opens a native folder picker that validates the folder as a real BioOKF bundle before
+        registering it.</p>
+      <h3>Interactive graph canvas</h3>
+      <p>A force-directed, type-colored graph with pan, zoom, drag, fit-to-view, hub emphasis, hover tooltips, and
+        neighbor-focus dimming. Negative <code>not_&lt;X&gt;</code> edges render struck-through; synthesized provenance
+        edges render faint; symmetric edges are styled distinctly. A type-family legend covers all 28 types plus the
+        light "External" swatch.</p>
+      <h3>Detail panels</h3>
+      <p>Click a node for its type badge, frontmatter (subtype, <code>xref</code>, synonyms, tags chips,
+        <code>raw_source</code>, description, notes), outgoing edges grouped by predicate, incoming "referenced by" edges,
+        the rendered Markdown body, and, for source nodes, a Source and Provenance block with credibility tier, venue,
+        DOI, PMID, or arXiv links, and ingested figures. Click an edge for its provenance triplet, direction,
+        publications, and quantitative attributes. Citations open a side preview of the cited source.</p>
+      <h3>In-app editing and terminal</h3>
+      <p>Edit a concept doc's full Markdown, a per-node notes section, or a per-edge note. Each writes live to disk and
+        appends a dated <code>log.md</code> entry; a reveal-in-Finder button opens the file. A multi-tab real PTY terminal
+        (<code>xterm.js</code>) runs your <code>$SHELL</code> in a resizable panel, so you can drive <code>bokf</code>
+        without leaving the app. A toolbar lint pill opens a grouped findings popup; the search box filters and highlights
+        the graph live (Cmd-K or Ctrl-K); the change-log drawer renders <code>log.md</code>.</p>
+    </section>
+
+    <section class="doc-sec" id="live-loop">
+      <h2>The live loop</h2>
+      <p class="sec-lead">The CLI, the MCP server, and the GUI are wired together so an agent and a human can work on the
+        same base at the same time.</p>
+      <ul>
+        <li><strong>One active base, shared.</strong> All three surfaces read and write a shared <code>.active-kb</code>
+          pointer and a <code>registry.yaml</code> of bundle links. Selecting a base in the GUI updates the pointer for the
+          agent; an agent changing the pointer is mirrored back into the GUI as a focus marker, without yanking your view.</li>
+        <li><strong>The agent drives the GUI.</strong> The <code>bokf_studio_*</code> tools open the Studio and steer it:
+          <code>select</code>, <code>search</code>, and <code>reload</code> navigate the graph, <code>state</code> and
+          <code>graph</code> observe it. The control channel is a Unix socket that only listens when
+          <code>BIOOKF_STUDIO_CONTROL=1</code>, set automatically when the agent opens the app.</li>
+        <li><strong>Status without screenshots.</strong> <code>bokf_studio_state</code> returns the GUI's complete status
+          as structured JSON (active base, counts, search query, current selection, which panels are open, lint summary,
+          and the last agent action), so an agent reads what the app is doing instead of interpreting a screenshot.</li>
+        <li><strong>The human sees the agent work.</strong> Every agent action is narrated in real time in an in-app
+          activity banner, and <code>bokf_studio_narrate</code> lets the agent post a custom status line.</li>
+      </ul>
+    </section>
+
+    <section class="doc-sec" id="cli">
+      <h2>CLI commands</h2>
+      <p class="sec-lead">The same operations the agent runs are available as the <code>bokf</code> CLI (23 subcommands)
+        and as MCP <code>bokf_*</code> tools.</p>
+      <table class="doc-table">
+        <thead><tr><th>Command</th><th>What it does</th></tr></thead>
+        <tbody>
+          <tr><td><code>scaffold</code></td><td class="desc">Create an empty bundle; commit, register, activate.</td></tr>
+          <tr><td><code>convert</code></td><td class="desc">Convert a file, folder, or zip, <code>--text</code>, or <code>--url</code>(s) into raw Markdown under <code>raw/</code>.</td></tr>
+          <tr><td><code>validate</code></td><td class="desc">Validate a single concept-document file without writing it.</td></tr>
+          <tr><td><code>get</code></td><td class="desc">Look up a node by exact identifier.</td></tr>
+          <tr><td><code>index</code></td><td class="desc">Regenerate <code>index.md</code>, or <code>--check</code> it.</td></tr>
+          <tr><td><code>lint</code></td><td class="desc">Lint against the BioOKF v0.5 conformance rules (<code>--json</code>).</td></tr>
+          <tr><td><code>verify</code></td><td class="desc">Deterministic gate: lint plus structure checks; exits 1 on any error.</td></tr>
+          <tr><td><code>graph</code></td><td class="desc">Derive the render-ready graph (nodes plus directional edges).</td></tr>
+          <tr><td><code>search</code></td><td class="desc">BM25 full-text search over concept documents.</td></tr>
+          <tr><td><code>stats</code></td><td class="desc">Node and edge counts by type and predicate.</td></tr>
+          <tr><td><code>predicates</code></td><td class="desc">Print the controlled vocabulary (28 types, 35 predicates, enums).</td></tr>
+          <tr><td><code>export</code></td><td class="desc">Export a self-contained bundle JSON (graph plus per-node detail) for the GUI.</td></tr>
+          <tr><td><code>log-sync</code></td><td class="desc">Append a dated <code>log.md</code> entry and commit, atomically.</td></tr>
+          <tr><td><code>commit</code></td><td class="desc">Lower-level stage-all plus commit (a non-logged lifecycle commit).</td></tr>
+          <tr><td><code>log</code></td><td class="desc">Show commit history, newest-first.</td></tr>
+          <tr><td><code>restore</code></td><td class="desc">Forward-only restore to a prior commit.</td></tr>
+          <tr><td><code>register</code></td><td class="desc">Register, <code>--list</code>, or <code>--unregister</code> a known bundle under a root.</td></tr>
+          <tr><td><code>set-active</code> / <code>get-active</code></td><td class="desc">Set or read the active base under a root.</td></tr>
+          <tr><td><code>merge-raw</code></td><td class="desc">Relocate a secondary base's <code>raw/</code> into a main base's <code>raw/</code> (dedup by content).</td></tr>
+          <tr><td><code>merge-snapshot</code></td><td class="desc">Snapshot the main base before a merge, or <code>--verify</code> after.</td></tr>
+          <tr><td><code>name-figure</code></td><td class="desc">Rename a provisional figure to a content caption and rewrite every reference.</td></tr>
+          <tr><td><code>install-pdfium</code></td><td class="desc">Install PDFium so PDF pages render to images for vision (one-time).</td></tr>
+        </tbody>
+      </table>
+      <h3>A typical curation workflow</h3>
+      <div class="doc-code"><span class="com"># scaffold, convert, ingest, log, verify, query</span>
+<span class="cmd">bokf</span> scaffold ./mykb <span class="com">--name "My knowledge base"</span>
+<span class="cmd">bokf</span> convert ./paper.pdf --into ./mykb
+<span class="cmd">bokf</span> validate ./mykb/knowledge/gene/il6.md
+<span class="cmd">bokf</span> index ./mykb
+<span class="cmd">bokf</span> log-sync ./mykb --kind ingest --summary <span class="ok">"ingested IL6 review"</span>
+<span class="cmd">bokf</span> verify ./mykb --workflow ingest
+<span class="cmd">bokf</span> search ./mykb <span class="ok">"interleukin cytokine"</span></div>
+    </section>
+
+    <section class="doc-sec" id="mcp">
+      <h2>MCP tools</h2>
+      <p class="sec-lead"><code>bokf-mcp</code> exposes 33 tools in three groups. It ships an operating brief on
+        <code>initialize</code>, so an agent knows the BioOKF rules before it acts.</p>
+      <h3>Curation, 17 tools</h3>
+      <div class="pred-cols">
+        <span class="pc">bokf_list_bases</span><span class="pc">bokf_scaffold</span>
+        <span class="pc">bokf_set_active</span><span class="pc">bokf_get_active</span>
+        <span class="pc">bokf_list_pages</span><span class="pc">bokf_read_page</span>
+        <span class="pc">bokf_write_page</span><span class="pc">bokf_validate_page</span>
+        <span class="pc">bokf_append_log</span><span class="pc">bokf_log_sync</span>
+        <span class="pc">bokf_log</span><span class="pc">bokf_restore</span>
+        <span class="pc">bokf_convert</span><span class="pc">bokf_name_figure</span>
+        <span class="pc">bokf_index</span><span class="pc">bokf_merge_raw</span>
+        <span class="pc">bokf_merge_snapshot</span><span class="pc"></span>
+      </div>
+      <h3>Analysis, 6 tools</h3>
+      <div class="pred-cols">
+        <span class="pc">bokf_lint</span><span class="pc">bokf_verify</span>
+        <span class="pc">bokf_graph</span><span class="pc">bokf_search</span>
+        <span class="pc">bokf_stats</span><span class="pc">bokf_predicates</span>
+      </div>
+      <h3>Studio GUI control, 10 tools</h3>
+      <div class="pred-cols">
+        <span class="pc">bokf_studio_open</span><span class="pc">bokf_studio_close</span>
+        <span class="pc">bokf_studio_status</span><span class="pc">bokf_studio_state</span>
+        <span class="pc">bokf_studio_graph</span><span class="pc">bokf_studio_select</span>
+        <span class="pc">bokf_studio_reload</span><span class="pc">bokf_studio_search</span>
+        <span class="pc">bokf_studio_screenshot</span><span class="pc">bokf_studio_narrate</span>
+      </div>
+      <div class="note-box"><b>Read the GUI, do not screenshot it.</b> <code>bokf_studio_state</code> returns the complete GUI
+        status as JSON, the recommended way for an agent to know what the app is showing.</div>
+    </section>
+
+    <section class="doc-sec" id="build">
+      <h2>Build from source</h2>
+      <p class="sec-lead">The toolchain is a Cargo workspace under <code>studio/</code>. For development, or for a platform
+        without a prebuilt release:</p>
+      <div class="doc-code"><span class="cmd">cd</span> studio
+<span class="cmd">cargo</span> build --release -p bokf-cli -p bokf-mcp     <span class="com"># the CLI and MCP server</span>
+<span class="cmd">cargo</span> install tauri-cli --version <span class="ok">"^2"</span>          <span class="com"># one-time, for the Studio app</span>
+( <span class="cmd">cd</span> app/src-tauri && <span class="cmd">cargo</span> tauri build --bundles app )   <span class="com"># BioOKF Studio.app</span>
+
+<span class="cmd">cargo</span> test --workspace                            <span class="com"># backend and integration tests</span></div>
+      <p>Binaries land in <code>studio/target/release/</code>, and the app under
+        <code>studio/target/release/bundle/</code>. To make the plugin use a local build instead of downloading a release,
+        set <code>BIOOKF_MCP_BIN=/path/to/studio/target/release/bokf-mcp</code>.</p>
+      <div class="note-box"><b>Repo dev plugin.</b> The repo also ships a developer-facing Claude Code extension at
+        <code>studio/.claude-plugin</code>: 8 <code>biookf-*</code> curation skills plus 4 guardrail hooks. Add
+        <code>studio/</code> as a marketplace to use them while working inside the repository.</div>
+      <p style="margin-top:26px"><a class="link" href="https://github.com/Broccolito/BioOKF" target="_blank" rel="noopener">Full source, spec, and issues on GitHub</a></p>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-bottom" style="border-top:none;margin-top:0;padding-top:0">
+      <span>© 2026 BioOKF · Apache-2.0 · <a href="index.html">Home</a> · <a href="index.html#demos">Demos</a></span>
+      <span><a href="https://github.com/Broccolito/BioOKF" target="_blank" rel="noopener">github.com/Broccolito/BioOKF</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

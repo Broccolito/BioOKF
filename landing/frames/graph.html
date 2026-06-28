@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BioOKF Studio</title>
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="frame.css" />
+</head>
+<body>
+<!-- HyperFrames composition: nodes + edges pulling into a force-directed layout -->
+<div id="root" data-composition-id="graph-pull" data-start="0" data-width="1280" data-height="720">
+  <div class="viewport"><div class="stage1280">
+    <div class="window">
+      <div class="titlebar">
+        <span class="lights"><i class="r"></i><i class="y"></i><i class="g"></i></span>
+        <span class="tb-title">COVID-19 immunology</span>
+        <span class="tb-sub" id="sub">0 nodes · 0 edges</span>
+        <span class="tb-spacer"></span>
+        <span class="lint-pill" id="lint" style="opacity:0"><span class="e">0</span> errors · <span class="w">2</span> warnings</span>
+        <span class="tb-search"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><line x1="11" y1="11" x2="14.5" y2="14.5"/></svg><span class="ph">Search nodes, types…</span><span class="tb-kbd">⌘K</span></span>
+        <span class="tb-btn"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.2 4.5l3 3-3 3"/><line x1="8.4" y1="11" x2="13" y2="11"/></svg> Terminal</span>
+        <span class="tb-btn"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.2"/><path d="M8 4.4V8l2.6 1.6"/></svg> Log</span>
+      </div>
+      <div class="wbody">
+        <aside class="sidebar">
+          <div class="sb-top"><span class="sb-name"><img class="lg" src="../assets/logo.svg" alt="BioOKF"/> Studio</span><span class="collapse">‹</span></div>
+          <div class="sb-label">Knowledge bases</div>
+          <div class="kb-list">
+            <div class="kb active"><span class="kb-text"><span class="kb-name">COVID-19 immunology</span><span class="kb-meta">16 nodes · 18 edges</span><span class="kb-when">updated just now</span></span></div>
+            <div class="kb"><span class="kb-text"><span class="kb-name">Lipid metabolism</span><span class="kb-meta">204 nodes · 318 edges</span><span class="kb-when">updated 2d ago</span></span></div>
+            <div class="kb"><span class="kb-text"><span class="kb-name">Pharmacogenomics</span><span class="kb-meta">142 nodes · 207 edges</span><span class="kb-when">updated 6d ago</span></span></div>
+          </div>
+          <div class="sb-foot"><span class="new-kb">＋  New base</span></div>
+        </aside>
+        <main class="main">
+          <div class="stage"><svg class="graph" id="g" preserveAspectRatio="xMidYMid meet"></svg></div>
+          <div class="legend">
+            <h4>Node types <span class="tg">hide</span></h4>
+            <div class="legend-fam"><div class="fam-name">Genomic</div><div class="swatches">
+              <span class="sw"><i style="background:#6366A8"></i><span>Gene</span></span>
+              <span class="sw"><i style="background:#8A86C4"></i><span>Variant</span></span></div></div>
+            <div class="legend-fam"><div class="fam-name">Molecular &amp; process</div><div class="swatches">
+              <span class="sw"><i style="background:#2E8C84"></i><span>Molecule</span></span>
+              <span class="sw"><i style="background:#4FA38C"></i><span>Pathway</span></span>
+              <span class="sw"><i style="background:#7CC3B0"></i><span>Function</span></span></div></div>
+            <div class="legend-fam"><div class="fam-name">Anatomy &amp; clinical</div><div class="swatches">
+              <span class="sw"><i style="background:#3F9E6E"></i><span>Anatomy</span></span>
+              <span class="sw"><i style="background:#62B889"></i><span>CellType</span></span>
+              <span class="sw"><i style="background:#C45B6B"></i><span>Disease</span></span>
+              <span class="sw"><i style="background:#D98AA0"></i><span>Phenotype</span></span></div></div>
+            <div class="legend-fam"><div class="fam-name">Provenance &amp; context</div><div class="swatches">
+              <span class="sw"><i style="background:#6B7280"></i><span>Publication</span></span>
+              <span class="sw"><i style="background:#7A828E"></i><span>Study</span></span>
+              <span class="sw ext"><i></i><span>External</span></span></div></div>
+          </div>
+          <div class="zoomctl"><button>+</button><button>−</button><button>⤢</button></div>
+        </main>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="frame.js"></script>
+<script>
+(function () {
+  var SVG = 'http://www.w3.org/2000/svg';
+  var g = document.getElementById('g');
+  g.setAttribute('viewBox', '0 0 1032 672');
+
+  // node positions are in svg-local coords (svg sits right of the 248px sidebar,
+  // below the 48px titlebar; local 0,0 = window 248,48). Layout avoids the
+  // bottom-left legend and bottom-right zoom control.
+  var nodes = [
+    {id:'IL6', l:'IL6', c:'#6366A8', x:520, y:300, hub:true},
+    {id:'IL6R', l:'IL6R', c:'#6366A8', x:380, y:250},
+    {id:'STAT3', l:'STAT3', c:'#6366A8', x:430, y:400},
+    {id:'rs1800795', l:'rs1800795', c:'#8A86C4', x:350, y:362},
+    {id:'Pathway', l:'IL-6 signaling', c:'#4FA38C', x:680, y:248},
+    {id:'Acute', l:'acute-phase response', c:'#7CC3B0', x:700, y:520},
+    {id:'CRP', l:'CRP', c:'#2E8C84', x:560, y:440},
+    {id:'Toci', l:'tocilizumab', c:'#2E8C84', x:820, y:300},
+    {id:'Hep', l:'hepatocyte', c:'#62B889', x:470, y:500},
+    {id:'Liver', l:'liver', c:'#3F9E6E', x:600, y:548},
+    {id:'COVID', l:'COVID-19', c:'#C45B6B', x:700, y:392, hub:true},
+    {id:'CRS', l:'cytokine release syndrome', c:'#D98AA0', x:812, y:452},
+    {id:'Severe', l:'severe COVID-19', c:'#D98AA0', x:884, y:212},
+    {id:'Pub', l:'Lapidus 2021', c:'#6B7280', x:540, y:132},
+    {id:'Study', l:'GTEx v8 (MR)', c:'#7A828E', x:360, y:158},
+    {id:'Ext', l:'SOCS3', c:'#D7DBE1', x:902, y:398, ext:true}
+  ];
+  var nmap = {}; nodes.forEach(function (n) { n.r = n.ext ? 5 : (n.hub ? 12 : 7); nmap[n.id] = n; });
+
+  var edges = [
+    ['IL6','IL6R','interacts_with','pos'],
+    ['IL6','STAT3','regulates','pos'],
+    ['IL6','Pathway','participates_in','pos'],
+    ['IL6','COVID','associated_with','pos'],
+    ['IL6','CRP','regulates','pos'],
+    ['rs1800795','IL6','located_in','pos'],
+    ['Hep','IL6','expressed_in','pos'],
+    ['Hep','Liver','part_of','pos'],
+    ['CRP','Acute','participates_in','pos'],
+    ['COVID','CRS','has_phenotype','pos'],
+    ['COVID','Severe','has_phenotype','pos'],
+    ['Toci','IL6R','binds','pos'],
+    ['Toci','CRS','treats','pos'],
+    ['Pathway','STAT3','part_of','pos'],
+    ['IL6','Pub','reported_in','syn'],
+    ['IL6','Study','reported_in','syn'],
+    ['Toci','Severe','not_prevents','neg'],
+    ['Ext','COVID','associated_with','pos']
+  ];
+
+  // build edges first (under nodes)
+  var edgeEls = [];
+  edges.forEach(function (e) {
+    var a = nmap[e[0]], b = nmap[e[1]];
+    var line = document.createElementNS(SVG, 'line');
+    line.setAttribute('x1', a.x); line.setAttribute('y1', a.y);
+    line.setAttribute('x2', b.x); line.setAttribute('y2', b.y);
+    line.setAttribute('class', 'edge' + (e[3] === 'syn' ? ' syn' : e[3] === 'neg' ? ' neg' : ''));
+    var len = Math.hypot(b.x - a.x, b.y - a.y);
+    line.setAttribute('stroke-dasharray', e[3] === 'syn' ? '2 3' : (e[3] === 'neg' ? '4 3' : len));
+    if (e[3] === 'pos') line.setAttribute('stroke-dashoffset', 0);
+    line._len = len; line._kind = e[3]; line._a = e[0]; line._b = e[1];
+    g.appendChild(line); edgeEls.push(line);
+  });
+
+  // build nodes
+  var nodeEls = [];
+  nodes.forEach(function (n) {
+    var grp = document.createElementNS(SVG, 'g');
+    grp.setAttribute('class', 'node' + (n.hub ? ' hub' : ''));
+    var c = document.createElementNS(SVG, 'circle');
+    c.setAttribute('cx', n.x); c.setAttribute('cy', n.y); c.setAttribute('r', n.r);
+    c.setAttribute('fill', n.c);
+    if (n.ext) { c.setAttribute('stroke', '#b9bfca'); c.setAttribute('stroke-dasharray', '2 2'); }
+    grp.appendChild(c);
+    var t = document.createElementNS(SVG, 'text');
+    t.setAttribute('class', 'nlabel'); t.setAttribute('x', n.x + n.r + 6); t.setAttribute('y', n.y + 4);
+    t.textContent = n.l;
+    grp.appendChild(t);
+    n._c = c; n._grp = grp;
+    g.appendChild(grp); nodeEls.push(grp);
+  });
+
+  if (!window.gsap) return;  // no GSAP → static, fully-drawn graph (graceful)
+  var gsap = window.gsap;
+
+  var tl = gsap.timeline({ paused: true });
+
+  // 1) nodes pull in from scattered positions and settle (spring)
+  nodes.forEach(function (n, i) {
+    var ang = (i * 137.5) * Math.PI / 180, rad = 230 + (i % 5) * 26;
+    var dx = Math.cos(ang) * rad, dy = Math.sin(ang) * rad * 0.7;
+    tl.from(n._grp, {
+      svgOrigin: n.x + ' ' + n.y, scale: 0, x: dx, y: dy, opacity: 0,
+      duration: 1.05, ease: 'back.out(1.5)'
+    }, 0.2 + i * 0.055);
+  });
+
+  // 2) edges draw once their endpoints have arrived
+  edgeEls.forEach(function (ln, i) {
+    if (ln._kind === 'pos') {
+      tl.from(ln, { strokeDashoffset: ln._len, duration: 0.55, ease: 'power2.out' }, 1.5 + i * 0.04);
+    } else {
+      tl.from(ln, { opacity: 0, duration: 0.5, ease: 'power1.out' }, 1.8 + i * 0.04);
+    }
+  });
+
+  // 3) titlebar counts tick up + lint pill appears
+  var counter = { n: 0, e: 0 };
+  tl.to(counter, {
+    n: 16, e: 18, duration: 2.4, ease: 'power1.out',
+    onUpdate: function () {
+      document.getElementById('sub').textContent =
+        Math.round(counter.n) + ' nodes · ' + Math.round(counter.e) + ' edges';
+    }
+  }, 0.4);
+  tl.to('#lint', { opacity: 1, duration: 0.4 }, 3.0);
+
+  // 4) neighbor-focus beat on the IL6 hub (mirrors click-to-focus dimming)
+  var hub = 'IL6';
+  var nbrs = {}; edges.forEach(function (e) {
+    if (e[0] === hub) nbrs[e[1]] = 1; if (e[1] === hub) nbrs[e[0]] = 1;
+  }); nbrs[hub] = 1;
+  tl.addLabel('focus', 3.7);
+  nodes.forEach(function (n) {
+    if (!nbrs[n.id]) tl.to(n._grp, { opacity: 0.32, duration: 0.4 }, 'focus');
+  });
+  edgeEls.forEach(function (ln) {
+    if (ln._a === hub || ln._b === hub) tl.to(ln, { attr: { class: 'edge hot' }, duration: 0.01 }, 'focus');
+    else tl.to(ln, { opacity: 0.18, duration: 0.4 }, 'focus');
+  });
+  // focus halo on the hub
+  var halo = document.createElementNS(SVG, 'circle');
+  halo.setAttribute('cx', nmap[hub].x); halo.setAttribute('cy', nmap[hub].y); halo.setAttribute('r', 12);
+  halo.setAttribute('fill', 'none'); halo.setAttribute('stroke', '#6366A8'); halo.setAttribute('stroke-opacity', '0.5');
+  halo.setAttribute('stroke-width', '2'); halo.style.opacity = 0;
+  nmap[hub]._grp.parentNode.insertBefore(halo, nmap[hub]._grp);
+  tl.to(halo, { opacity: 1, attr: { r: 26 }, duration: 0.9, ease: 'sine.out' }, 'focus');
+  tl.to(halo, { opacity: 0, duration: 0.6 }, 'focus+=1.0');
+
+  // 5) release focus, gentle settle, then loop
+  tl.addLabel('release', 5.2);
+  nodes.forEach(function (n) { if (!nbrs[n.id]) tl.to(n._grp, { opacity: 1, duration: 0.5 }, 'release'); });
+  edgeEls.forEach(function (ln) {
+    if (ln._a === hub || ln._b === hub) tl.to(ln, { attr: { class: 'edge' }, duration: 0.01 }, 'release');
+    else tl.to(ln, { opacity: 1, duration: 0.5 }, 'release');
+  });
+  tl.to('#g', { duration: 0.8 }, 'release');  // hold
+
+  window.HF.register('graph-pull', tl);
+})();
+</script>
+</body>
+</html>

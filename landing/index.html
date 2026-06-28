@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BioOKF: a biomedical knowledge graph you build with your AI agent</title>
+<meta name="description" content="BioOKF turns any biomedical source into a structured, version-controlled knowledge graph with 28 node types, 35 edge predicates, and provenance on every claim, plus a desktop Studio you and an AI agent explore together, live." />
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+<meta property="og:title" content="BioOKF: Biomedical Open Knowledge Format" />
+<meta property="og:description" content="Turn any paper, note, or dataset into a typed, provenance-tracked knowledge graph, and explore it live with your AI agent." />
+<meta property="og:type" content="website" />
+<link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body id="top">
+
+<!-- ============================== nav ============================== -->
+<nav class="top">
+  <a class="brand" href="#top" aria-label="BioOKF home">
+    <img src="assets/logo.svg" alt="BioOKF" height="22" />
+    <span class="tag">v0.5</span>
+  </a>
+  <button class="nav-burger" aria-label="Menu"><i></i><i></i><i></i></button>
+  <ul class="nav-links">
+    <li><a href="#about">What it is</a></li>
+    <li><a href="#demos">Demos</a></li>
+    <li><a href="#install">Install</a></li>
+    <li><a href="docs.html">Docs</a></li>
+    <li><a class="nav-cta" href="https://github.com/Broccolito/BioOKF" target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+      GitHub</a></li>
+  </ul>
+</nav>
+
+<!-- ============================== hero ============================== -->
+<header class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-glow"></div>
+  <div class="wrap">
+    <img class="hero-logo" src="assets/logo.svg" alt="BioOKF" />
+    <h1>A biomedical knowledge graph you and your<br/>AI agent <span class="accent">build together.</span></h1>
+    <p class="hero-sub">BioOKF turns any paper, note, or dataset into a structured, version-controlled
+      knowledge base, plus a desktop <strong>Studio</strong> where you and an agent explore it live.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="#install">Install in Claude Code</a>
+      <a class="btn btn-dark" href="https://github.com/Broccolito/BioOKF" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        View on GitHub</a>
+    </div>
+    <div class="hero-meta">
+      <span class="pill accent"><span class="dot"></span> Claude Code plugin</span>
+      <span class="pill">macOS, Apple Silicon &amp; Intel</span>
+      <span class="pill">Rust core, Tauri Studio</span>
+      <span class="pill">Apache-2.0</span>
+    </div>
+
+    <div class="pillars fade">
+      <div class="pillar">
+        <div class="pk"><svg class="ci" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5h16M4 12h16M4 19h10"/></svg> The format</div>
+        <div class="pv">A Git-shippable tree of Markdown and YAML. A closed universe of <strong>28 node types</strong> and <strong>35 edge predicates</strong>, with node-based provenance on every claim.</div>
+      </div>
+      <div class="pillar">
+        <div class="pk"><svg class="ci" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg> The toolchain</div>
+        <div class="pv">A Rust core, the scriptable <code>bokf</code> CLI (23 commands), and the <code>bokf-mcp</code> server (33 tools). The same engine, three surfaces.</div>
+      </div>
+      <div class="pillar">
+        <div class="pk"><svg class="ci" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="7" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="13" cy="17" r="2.4"/><path d="M8 8l4 7M16 8l-2 6"/></svg> The Studio</div>
+        <div class="pv">A Tauri desktop app that renders the base as an interactive, type-colored graph, with panels, an integrated terminal, and a live agent loop.</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============================== what it is ============================== -->
+<section class="section" id="about">
+  <div class="wrap">
+    <p class="eyebrow">What it is</p>
+    <h2 class="h-sec">From a paper to a queryable graph, without losing the provenance.</h2>
+    <p class="lead">BioOKF is a biomedical profile of Google Cloud's Open Knowledge Format. It keeps OKF's portable
+      substrate, a tree of Markdown you can <code>git</code> ship, and adds the one thing OKF leaves open:
+      a controlled vocabulary of meaning, so every entity and claim is typed, reused, and sourced.</p>
+
+    <div class="grid-3 fade" style="margin-top:34px">
+      <div class="cell">
+        <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 3v5h5"/><path d="M19 8v11a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1h8z"/></svg>
+        <h3>Ingest anything</h3>
+        <p>Convert a PDF, HTML, DOCX, PPTX, CSV, a URL, or inline text into immutable Markdown under <code>raw/</code>, the bytes you never edit.</p>
+      </div>
+      <div class="cell">
+        <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="7" cy="8" r="2.3"/><circle cx="17" cy="7" r="2.3"/><circle cx="12" cy="17" r="2.3"/><path d="M9 9l5 6M15 9l-2 6"/></svg>
+        <h3>Distill to typed concepts</h3>
+        <p>An agent writes one Markdown concept doc per entity, exactly one of 28 types, reusing existing nodes instead of forking duplicates.</p>
+      </div>
+      <div class="cell">
+        <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 4v5c0 5-3.4 7.7-8 9-4.6-1.3-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg>
+        <h3>Provenance on every claim</h3>
+        <p>Each edge carries its <code>knowledge_level</code>, <code>agent_type</code>, and a <code>primary_source</code> node. Quantitative claims live on edges, never prose.</p>
+      </div>
+      <div class="cell">
+        <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.3-4.3"/></svg>
+        <h3>Query as a graph</h3>
+        <p>BM25 full-text search, node and edge stats by type and predicate, and a render-ready graph export. Ask what the base knows and who backs it.</p>
+      </div>
+      <div class="cell">
+        <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><circle cx="18" cy="12" r="2.4"/><path d="M8 7l8 4M8 17l8-4"/></svg>
+        <h3>Version-controlled</h3>
+        <p>Every step commits atomically and appends a dated <code>log.md</code>. The base compounds over time, and you can forward-restore to any point.</p>
+      </div>
+      <div class="cell">
+        <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 4v6a5 5 0 005 5 5 5 0 005-5V4"/><path d="M12 15v5"/><path d="M7 20h10"/></svg>
+        <h3>Lint, verify, and merge</h3>
+        <p>A deterministic <code>verify</code> gate (lint plus structure) protects quality; merge a secondary base onto a canonical main without losing the source bytes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== demos ============================== -->
+<section class="section section-soft" id="demos">
+  <div class="wrap">
+    <div class="demo-head">
+      <p class="eyebrow">See it move</p>
+      <h2 class="h-sec">The Studio, recreated in motion.</h2>
+      <p class="lead">No screenshots. Each demo below is a live <a class="docbody" style="color:var(--accent-ink);border-bottom:1px solid var(--accent-line)" href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">HyperFrames</a>
+        mockup: the real app's chrome, palette, and node-type colors, animated in HTML to show how Studio actually feels.</p>
+    </div>
+
+    <!-- demo 1 -->
+    <div class="demo fade">
+      <div class="demo-card">
+        <div class="demo-bar"><span class="lights"><i></i><i></i><i></i></span><span class="dt">Studio · graph canvas</span><span class="dk">⌘K</span></div>
+        <div class="hf-embed" data-src="frames/graph.html" data-title="Graph nodes and edges pulling into a force-directed layout">
+          <div class="hf-loading">Loading interactive mockup…</div>
+        </div>
+        <div class="demo-note">
+          <div><b>Force-directed layout</b>Nodes pull into place and settle; hubs grow with their degree.</div>
+          <div><b>Type-colored</b>Every node is one of 28 types; the legend maps each family.</div>
+          <div><b>Honest edges</b>Negative <code>not_*</code> edges render struck; provenance edges render faint.</div>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:14px">How the graph <strong>pulls together</strong>: a knowledge base assembling itself, counts ticking up, then a neighbor-focus beat on the hub.</p>
+    </div>
+
+    <!-- demo 2 -->
+    <div class="demo fade">
+      <div class="demo-card">
+        <div class="demo-bar"><span class="lights"><i></i><i></i><i></i></span><span class="dt">Studio · inspector</span><span class="dk">click</span></div>
+        <div class="hf-embed" data-src="frames/inspect.html" data-title="Clicking a node then an edge to inspect details and distributions">
+          <div class="hf-loading">Loading interactive mockup…</div>
+        </div>
+        <div class="demo-note">
+          <div><b>Click a node</b>A detail panel pops in: type badge, frontmatter, edges grouped by predicate.</div>
+          <div><b>See distributions</b>An "edges by predicate" histogram; for edges, effect size with a 95% CI.</div>
+          <div><b>Click an edge</b>The panel cross-fades to the provenance triplet and quantitative attributes.</div>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:14px">How you <strong>invoke and inspect</strong>: click any node or edge to open its sidebar panel and read its distribution of relationships and evidence.</p>
+    </div>
+
+    <!-- demo 3 -->
+    <div class="demo fade">
+      <div class="demo-card">
+        <div class="demo-bar"><span class="lights"><i></i><i></i><i></i></span><span class="dt">Studio · agent + terminal</span><span class="dk">live</span></div>
+        <div class="hf-embed" data-src="frames/agents.html" data-title="An agent ingesting a paper with progress bars, terminal, and live graph updates">
+          <div class="hf-loading">Loading interactive mockup…</div>
+        </div>
+        <div class="demo-note">
+          <div><b>Ephemeral progress</b>Per-file progress bars appear over the nodes an agent is writing, then vanish.</div>
+          <div><b>Integrated terminal</b>The agent drives <code>bokf</code> in a real PTY while you watch each step.</div>
+          <div><b>Auto-updates</b>New nodes and edges appear in the graph the moment they're written.</div>
+        </div>
+      </div>
+      <p class="lead" style="margin-top:14px">How the <strong>agent and you</strong> work the same base: an in-app activity banner narrates, files fill in with progress bars, and the graph updates itself, all next to the terminal.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== install ============================== -->
+<section class="section" id="install">
+  <div class="wrap">
+    <p class="eyebrow">Install</p>
+    <h2 class="h-sec">One plugin. No compiling.</h2>
+    <p class="lead" style="margin-bottom:30px">The whole toolchain (the <code>bokf</code> MCP server, the <code>bokf</code> CLI, and the BioOKF Studio app)
+      installs as a single Claude Code plugin. The first time a tool runs, it downloads the prebuilt binaries for your platform.</p>
+
+    <div class="install-grid">
+      <div>
+        <div class="code">
+          <div class="code-bar"><i></i><i></i><i></i><span>Claude Code</span></div>
+<pre><span class="com"># 1 · add the marketplace</span>
+<span class="cmd">/plugin</span> marketplace add Broccolito/BioOKF
+
+<span class="com"># 2 · install the plugin, then restart Claude Code</span>
+<span class="cmd">/plugin</span> install biookf@biookf
+
+<span class="com"># the bokf_* tools are now available.</span>
+<span class="com"># launch the visualizer:</span>
+<span class="ok">bokf_studio_open</span></pre>
+        </div>
+        <div class="copyline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+          Run these two commands in Claude Code, then restart. That is all.
+        </div>
+      </div>
+      <div>
+        <div class="callout">
+          <b>Want your agent to do it?</b>
+          Paste this into Claude Code: <em>"Install the BioOKF plugin from github.com/Broccolito/BioOKF.
+          Run <code>/plugin marketplace add Broccolito/BioOKF</code>, then <code>/plugin install biookf@biookf</code>,
+          restart, and confirm <code>bokf_studio_open</code> works."</em>
+        </div>
+        <ul class="req-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg><span class="rq">Claude Code, plus <code>curl</code> and <code>tar</code></span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg><span class="rq">macOS on Apple Silicon or Intel; a self-contained <code>.app</code> is downloaded for you</span></li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12l4 4L19 6"/></svg><span class="rq">Linux and Windows builds land as the release pipeline ships them; until then, <a class="docbody" style="color:var(--accent-ink);border-bottom:1px solid var(--accent-line)" href="docs.html#build">build from source</a></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== what you get ============================== -->
+<section class="section section-soft">
+  <div class="wrap">
+    <p class="eyebrow">What you get</p>
+    <h2 class="h-sec">Three surfaces over one engine.</h2>
+    <p class="lead" style="margin-bottom:30px">The Studio, the MCP server, and the CLI all read and write a shared active base and registry,
+      so an agent and a human can work the same knowledge base at the same time.</p>
+
+    <div class="wyg fade">
+      <div class="row">
+        <div class="name"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18"/></svg> BioOKF Studio</div>
+        <p>A desktop app that renders a base as an interactive, type-colored graph, with node and edge detail panels, an integrated terminal, in-app editing, and a registry-driven sidebar of bundles that can live anywhere on disk.</p>
+      </div>
+      <div class="row">
+        <div class="name"><code>bokf-mcp</code></div>
+        <p>A stdio MCP server: <strong>33 tools</strong> for curation, analysis, and live control of the Studio GUI (<code>bokf_studio_*</code>). It ships an operating brief on <code>initialize</code>, so an agent knows the BioOKF rules.</p>
+      </div>
+      <div class="row">
+        <div class="name"><code>bokf</code></div>
+        <p>The same engine as a scriptable CLI: <strong>23 subcommands</strong> for scaffold, convert, ingest, lint, verify, query, and merge. The precise terminal surface for curation.</p>
+      </div>
+      <div class="row">
+        <div class="name"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v18"/><circle cx="12" cy="7" r="3"/><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/></svg> The live loop</div>
+        <p>The MCP server can open the Studio and drive or observe it in real time. An agent searches, selects, and navigates while you watch each action in an in-app activity banner, and reads the app's full status as JSON instead of taking screenshots.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== github cta ============================== -->
+<section class="section">
+  <div class="wrap">
+    <div class="cta">
+      <div class="hero-glow"></div>
+      <h2>Open source, Apache-2.0.</h2>
+      <p>The format spec, the Rust toolchain, and the Studio app all live in one repository. Read the spec, file an issue, or build from source.</p>
+      <div class="repo-chip">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 014 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        github.com/Broccolito/BioOKF
+      </div>
+      <div class="hero-cta">
+        <a class="btn btn-dark" href="https://github.com/Broccolito/BioOKF" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 014 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          View on GitHub</a>
+        <a class="btn btn-ghost" href="docs.html">Read the docs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== footer ============================== -->
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div style="max-width:300px">
+        <a class="brand" href="#top" style="margin-bottom:12px"><img src="assets/logo.svg" alt="BioOKF" height="22" /></a>
+        <p style="font-size:13px;color:var(--muted);margin:12px 0 0;line-height:1.6">Biomedical Open Knowledge Format:
+          a typed, provenance-tracked knowledge graph for biomedicine, built to be curated with an agent.</p>
+      </div>
+      <div class="fcol">
+        <h5>Product</h5>
+        <a href="#about">What it is</a>
+        <a href="#demos">Demos</a>
+        <a href="#install">Install</a>
+        <a href="docs.html">Documentation</a>
+      </div>
+      <div class="fcol">
+        <h5>Resources</h5>
+        <a href="https://github.com/Broccolito/BioOKF" target="_blank" rel="noopener">GitHub repository</a>
+        <a href="https://github.com/Broccolito/BioOKF/blob/main/SPEC.md" target="_blank" rel="noopener">Format spec</a>
+        <a href="https://github.com/Broccolito/BioOKF/blob/main/SCHEMA.md" target="_blank" rel="noopener">Schema and conventions</a>
+        <a href="https://github.com/Broccolito/BioOKF/releases" target="_blank" rel="noopener">Releases</a>
+      </div>
+      <div class="fcol">
+        <h5>Built on</h5>
+        <a href="https://github.com/GoogleCloudPlatform/knowledge-catalog" target="_blank" rel="noopener">Open Knowledge Format</a>
+        <a href="https://github.com/heygen-com/hyperframes" target="_blank" rel="noopener">HyperFrames (demos)</a>
+        <a href="https://tauri.app" target="_blank" rel="noopener">Tauri</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 BioOKF · Apache-2.0 · Wanjun Gu and contributors.</span>
+      <span><a href="https://github.com/Broccolito/BioOKF" target="_blank" rel="noopener">github.com/Broccolito/BioOKF</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

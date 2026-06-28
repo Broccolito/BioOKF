@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BioOKF Studio</title>
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="frame.css" />
+</head>
+<body>
+<!-- HyperFrames composition: an agent ingests a paper. Ephemeral progress
+     bars on node files, a live-streaming terminal, and the graph auto-updating. -->
+<div id="root" data-composition-id="agents" data-start="0" data-width="1280" data-height="720">
+  <div class="viewport"><div class="stage1280">
+    <div class="window">
+      <div class="titlebar">
+        <span class="lights"><i class="r"></i><i class="y"></i><i class="g"></i></span>
+        <span class="tb-title">COVID-19 immunology</span>
+        <span class="tb-sub" id="sub">14 nodes · 18 edges</span>
+        <span class="tb-spacer"></span>
+        <span class="lint-pill"><span class="e">0</span> errors · <span class="w">2</span> warnings</span>
+        <span class="tb-search"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><line x1="11" y1="11" x2="14.5" y2="14.5"/></svg><span class="ph">Search nodes, types…</span><span class="tb-kbd">⌘K</span></span>
+        <span class="tb-btn on"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.2 4.5l3 3-3 3"/><line x1="8.4" y1="11" x2="13" y2="11"/></svg> Terminal</span>
+      </div>
+      <div class="wbody">
+        <aside class="sidebar">
+          <div class="sb-top"><span class="sb-name"><img class="lg" src="../assets/logo.svg" alt="BioOKF"/> Studio</span><span class="collapse">‹</span></div>
+          <div class="sb-label">Knowledge bases</div>
+          <div class="kb-list">
+            <div class="kb active">
+              <span class="kb-text">
+                <span class="kb-name">COVID-19 immunology</span>
+                <span class="kb-meta" id="kbmeta">14 nodes · 18 edges</span>
+                <span class="bar" style="margin-top:6px"><i id="kbbar"></i></span>
+              </span>
+              <span class="kb-focus" title="agent active"></span>
+            </div>
+            <div class="kb"><span class="kb-text"><span class="kb-name">Lipid metabolism</span><span class="kb-meta">204 nodes · 318 edges</span></span></div>
+            <div class="kb"><span class="kb-text"><span class="kb-name">Pharmacogenomics</span><span class="kb-meta">142 nodes · 207 edges</span></span></div>
+          </div>
+          <div class="sb-label">Agent · writing files</div>
+          <div class="work-list">
+            <div class="work-row act"><div class="work-top"><i class="wi" style="background:#2E8C84"></i><span class="work-name"><code>tocilizumab.md</code></span><span class="work-pct" id="f1pct">0%</span></div><div class="bar"><i id="f1bar"></i></div></div>
+            <div class="work-row act"><div class="work-top"><i class="wi" style="background:#5FB0A8"></i><span class="work-name"><code>soluble-il6r.md</code></span><span class="work-pct" id="f2pct">0%</span></div><div class="bar"><i id="f2bar"></i></div></div>
+            <div class="work-row"><div class="work-top"><i class="wi" style="background:#6366A8"></i><span class="work-name"><code>il6.md</code></span><span class="work-pct work-done" id="f3pct">reused</span></div><div class="bar done"><i id="f3bar" style="width:100%"></i></div></div>
+          </div>
+        </aside>
+        <main class="main">
+          <div class="stage"><svg class="graph" id="g" preserveAspectRatio="xMidYMid meet"></svg></div>
+
+          <!-- live AI-agent activity banner -->
+          <div class="ai-banner"><span class="ai-tag">AI agent</span><span class="ai-act" id="act">converting paper.pdf…</span><span class="ai-dots"><i></i><i></i><i></i></span></div>
+
+          <!-- ephemeral node-anchored progress chips -->
+          <div class="node-chip" id="chip1" style="left:702px;top:96px;opacity:0">
+            <div class="nc-top"><i style="background:#2E8C84"></i> writing node <span class="nc-pct" id="c1pct">0%</span></div>
+            <div class="bar"><i id="c1bar"></i></div>
+          </div>
+          <div class="node-chip" id="chip2" style="left:706px;top:300px;opacity:0">
+            <div class="nc-top"><i style="background:#D98AA0"></i> +edge · treats <span class="nc-pct" id="c2pct">0%</span></div>
+            <div class="bar"><i id="c2bar"></i></div>
+          </div>
+
+          <!-- verified toast -->
+          <div class="toast ok" id="toast">✓ Verified · +2 nodes · +4 edges · committed a1f3c9</div>
+
+          <div class="legend">
+            <h4>Node types <span class="tg">hide</span></h4>
+            <div class="legend-fam"><div class="fam-name">Genomic · molecular</div><div class="swatches">
+              <span class="sw"><i style="background:#6366A8"></i><span>Gene</span></span>
+              <span class="sw"><i style="background:#2E8C84"></i><span>Molecule</span></span>
+              <span class="sw"><i style="background:#4FA38C"></i><span>Pathway</span></span></div></div>
+            <div class="legend-fam"><div class="fam-name">Clinical · provenance</div><div class="swatches">
+              <span class="sw"><i style="background:#C45B6B"></i><span>Disease</span></span>
+              <span class="sw"><i style="background:#D98AA0"></i><span>Phenotype</span></span>
+              <span class="sw"><i style="background:#6B7280"></i><span>Publication</span></span></div></div>
+          </div>
+
+          <!-- integrated terminal: the agent drives bokf here, live -->
+          <aside class="termpanel">
+            <div class="term-head">
+              <div class="term-tabs">
+                <span class="term-tab active">zsh · agent<span class="term-tab-x">×</span></span>
+                <span class="term-tab">node<span class="term-tab-x">×</span></span>
+              </div>
+              <span class="term-add">+</span>
+              <span class="term-actions"><span class="term-ico">×</span></span>
+            </div>
+            <div class="term-host" id="term">
+              <div class="t-line" data-i="0"><span class="t-prompt">➜</span> <span class="t-path">covid-immunology</span> <span class="t-cmd">bokf convert paper.pdf --into .</span></div>
+              <div class="t-line" data-i="1"><span class="t-ok">  ✓</span> <span class="t-dim">raw/lapidus-2021-il6-covid.md · 1 source · 8 figures</span></div>
+              <div class="t-line" data-i="2"><span class="t-prompt">➜</span> <span class="t-path">covid-immunology</span> <span class="t-cmd">bokf ingest</span> <span class="t-flag">--distill</span> <span class="t-dim">reuse before fork</span></div>
+              <div class="t-line" data-i="3"><span class="t-acc">  +</span> <span class="t-dim">Gene/</span>il6.md <span class="t-dim">reused</span> · <span class="t-acc">+</span> <span class="t-dim">Molecule/</span>tocilizumab.md <span class="t-ok">written</span></div>
+              <div class="t-line" data-i="4"><span class="t-acc">  +</span> <span class="t-dim">edge</span> tocilizumab <span class="t-acc">binds</span> IL6R · <span class="t-acc">+</span> tocilizumab <span class="t-acc">treats</span> cytokine-release-syndrome</div>
+              <div class="t-line" data-i="5"><span class="t-prompt">➜</span> <span class="t-path">covid-immunology</span> <span class="t-cmd">bokf verify</span> <span class="t-flag">--workflow ingest</span></div>
+              <div class="t-line" data-i="6"><span class="t-ok">  ✓</span> lint <span class="t-dim">0 errors · 2 warnings</span> · <span class="t-ok">✓</span> structure · <span class="t-ok">verified</span></div>
+              <div class="t-line" data-i="7"><span class="t-prompt">➜</span> <span class="t-path">covid-immunology</span> <span class="t-cmd">bokf log-sync</span> <span class="t-flag">--summary</span> <span class="t-warn">"ingest IL6/tocilizumab"</span><span class="t-cursor"></span></div>
+            </div>
+          </aside>
+        </main>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="frame.js"></script>
+<script>
+(function () {
+  var SVG = 'http://www.w3.org/2000/svg';
+  var g = document.getElementById('g');
+  g.setAttribute('viewBox', '0 0 1032 672');
+
+  // compact subgraph in the upper area (terminal occupies the lower ~248px)
+  var nodes = [
+    {id:'IL6', l:'IL6', c:'#6366A8', x:330, y:210, hub:true},
+    {id:'IL6R', l:'IL6R', c:'#6366A8', x:220, y:150},
+    {id:'STAT3', l:'STAT3', c:'#6366A8', x:250, y:300},
+    {id:'CRP', l:'CRP', c:'#2E8C84', x:430, y:288},
+    {id:'COVID', l:'COVID-19', c:'#C45B6B', x:470, y:182, hub:true},
+    {id:'CRS', l:'cytokine release syndrome', c:'#D98AA0', x:560, y:280},
+    {id:'rs', l:'rs1800795', c:'#8A86C4', x:150, y:228},
+    {id:'Pub', l:'Lapidus 2021', c:'#6B7280', x:330, y:78},
+    // new (agent-written), start hidden, revealed live
+    {id:'Toci', l:'tocilizumab', c:'#2E8C84', x:560, y:150, neu:true},
+    {id:'sIL6R', l:'soluble IL6R', c:'#5FB0A8', x:150, y:120, neu:true}
+  ];
+  var nmap = {}; nodes.forEach(function (n){ n.r = n.hub?12:7; nmap[n.id]=n; });
+  var edges = [
+    ['IL6','IL6R','interacts_with','pos'],['IL6','STAT3','regulates','pos'],
+    ['IL6','CRP','regulates','pos'],['IL6','COVID','associated_with','pos'],
+    ['COVID','CRS','has_phenotype','pos'],['rs','IL6','located_in','pos'],
+    ['IL6','Pub','reported_in','syn'],
+    // new edges
+    ['Toci','IL6R','binds','pos','neu'],['Toci','CRS','treats','pos','neu'],
+    ['sIL6R','IL6R','derives_from','pos','neu'],['sIL6R','IL6','interacts_with','pos','neu']
+  ];
+  var newEdges = [];
+  edges.forEach(function (e){
+    var a=nmap[e[0]], b=nmap[e[1]];
+    var ln=document.createElementNS(SVG,'line');
+    ln.setAttribute('x1',a.x);ln.setAttribute('y1',a.y);ln.setAttribute('x2',b.x);ln.setAttribute('y2',b.y);
+    ln.setAttribute('class','edge'+(e[3]==='syn'?' syn':''));
+    if(e[4]==='neu'){ ln.style.opacity=0; newEdges.push(ln); }
+    g.appendChild(ln);
+  });
+  nodes.forEach(function (n){
+    var grp=document.createElementNS(SVG,'g'); grp.setAttribute('class','node'+(n.hub?' hub':''));
+    if(n.neu) grp.style.opacity=0;
+    var c=document.createElementNS(SVG,'circle'); c.setAttribute('cx',n.x);c.setAttribute('cy',n.y);c.setAttribute('r',n.r);c.setAttribute('fill',n.c);
+    grp.appendChild(c);
+    var t=document.createElementNS(SVG,'text'); t.setAttribute('class','nlabel'); t.setAttribute('x',n.x+n.r+6); t.setAttribute('y',n.y+4); t.textContent=n.l;
+    grp.appendChild(t); n._grp=grp; g.appendChild(grp);
+  });
+
+  // terminal lines hidden initially
+  var lines = document.querySelectorAll('#term .t-line');
+
+  if (!window.gsap) {
+    nodes.forEach(function(n){ if(n._grp) n._grp.style.opacity=1; });
+    newEdges.forEach(function(e){ e.style.opacity=1; });
+    return;
+  }
+  var gsap = window.gsap;
+  gsap.set(lines, { opacity: 0, y: 4 });
+  var tl = gsap.timeline({ paused: true });
+
+  function act(t, txt){ tl.call(function(){ document.getElementById('act').textContent = txt; }, [], t); }
+  function line(t, i){ tl.to(lines[i], { opacity: 1, y: 0, duration: 0.25 }, t); }
+  function bar(t, barId, pctId, to, label){
+    var o = { v: 0 };
+    tl.to(o, { v: to, duration: 0.9, ease: 'power1.inOut', onUpdate: function(){
+      document.getElementById(barId).style.width = o.v + '%';
+      document.getElementById(pctId).textContent = label ? label : Math.round(o.v) + '%';
+    }}, t);
+  }
+
+  // KB counts + active-base progress bar tick up across the run
+  var cnt = { n: 14, e: 18 };
+  tl.to(cnt, { n: 16, e: 22, duration: 5.0, ease: 'none', onUpdate: function(){
+    var s = Math.round(cnt.n) + ' nodes · ' + Math.round(cnt.e) + ' edges';
+    document.getElementById('sub').textContent = s; document.getElementById('kbmeta').textContent = s;
+  }}, 1.2);
+  tl.fromTo('#kbbar', { width:'0%' }, { width:'100%', duration: 5.4, ease:'power1.inOut' }, 0.8);
+
+  // 0) convert
+  act(0.2, 'converting paper.pdf…');
+  line(0.3, 0); line(0.95, 1);
+  // 1) distill: write tocilizumab + soluble IL6R (sidebar file bars + node chip)
+  act(1.4, 'distilling entities, writing tocilizumab.md…');
+  line(1.5, 2); line(2.15, 3);
+  tl.to('#chip1', { opacity: 1, duration: 0.25 }, 1.7);
+  bar(1.7, 'c1bar', 'c1pct', 100); bar(1.7, 'f1bar', 'f1pct', 100);
+  tl.to(nmap.Toci._grp, { opacity: 1, duration: 0.4, ease: 'back.out(1.6)' }, 2.4);   // node appears live
+  bar(2.0, 'f2bar', 'f2pct', 100);
+  tl.to(nmap.sIL6R._grp, { opacity: 1, duration: 0.4, ease: 'back.out(1.6)' }, 2.7);
+  tl.to('#chip1', { opacity: 0, duration: 0.3 }, 3.0);   // ephemeral, fades when done
+  // 2) wire edges (live) + edge chip
+  act(2.9, 'wiring edges: binds, treats…');
+  line(2.85, 4);
+  tl.to('#chip2', { opacity: 1, duration: 0.25 }, 3.0);
+  bar(3.0, 'c2bar', 'c2pct', 100);
+  newEdges.forEach(function (ln, i){ tl.to(ln, { opacity: 1, duration: 0.5, ease:'power2.out' }, 3.1 + i*0.12); });
+  tl.to('#chip2', { opacity: 0, duration: 0.3 }, 3.9);
+  // 3) verify
+  act(4.0, 'verifying: lint + structure…');
+  line(3.95, 5); line(4.6, 6);
+  // 4) log-sync + toast
+  act(5.1, 'log-sync: committing…');
+  line(5.0, 7);
+  tl.fromTo('#toast', { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.3 }, 5.4);
+  tl.call(function(){ document.getElementById('act').textContent = 'done. watching for changes'; }, [], 5.7);
+  tl.to('#toast', { opacity: 0, duration: 0.4 }, 7.0);   // hold then fade
+  tl.to({}, { duration: 0.6 }, 7.2);
+
+  window.HF.register('agents', tl);
+})();
+</script>
+</body>
+</html>

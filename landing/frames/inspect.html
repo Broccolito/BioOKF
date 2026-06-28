@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>BioOKF Studio</title>
+<link rel="icon" href="../assets/logo.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="frame.css" />
+<style>
+  /* scene-local: two stacked panel layers that cross-fade, + a forest/CI plot */
+  .detail{height:540px;}
+  .panel-layer{position:absolute;inset:0;display:flex;flex-direction:column;background:var(--bg-elev);border-radius:var(--r-lg);overflow:hidden;}
+  .panel-layer.edge{opacity:0;}
+  .forest{position:relative;height:30px;margin:2px 2px 4px;}
+  .forest .axis{position:absolute;left:0;right:0;top:50%;height:1px;background:var(--hair);}
+  .forest .null{position:absolute;top:6px;bottom:6px;width:1px;background:var(--faint);}
+  .forest .null span{position:absolute;top:-15px;left:-7px;font-family:var(--mono);font-size:8.5px;color:var(--faint);}
+  .forest .ci{position:absolute;top:50%;height:2px;background:var(--accent);transform:translateY(-50%);border-radius:2px;width:0;}
+  .forest .pt{position:absolute;top:50%;width:9px;height:9px;border-radius:50%;background:var(--accent);transform:translate(-50%,-50%);box-shadow:0 0 0 2px #fff;opacity:0;}
+  .forest .lab{position:absolute;top:50%;transform:translate(6px,-50%);font-family:var(--mono);font-size:10px;color:var(--accent-ink);font-weight:600;opacity:0;}
+</style>
+</head>
+<body>
+<!-- HyperFrames composition: click a node, then an edge → inspector + distribution -->
+<div id="root" data-composition-id="inspect" data-start="0" data-width="1280" data-height="720">
+  <div class="viewport"><div class="stage1280">
+    <div class="window">
+      <div class="titlebar">
+        <span class="lights"><i class="r"></i><i class="y"></i><i class="g"></i></span>
+        <span class="tb-title">COVID-19 immunology</span>
+        <span class="tb-sub">16 nodes · 18 edges</span>
+        <span class="tb-spacer"></span>
+        <span class="lint-pill"><span class="e">0</span> errors · <span class="w">2</span> warnings</span>
+        <span class="tb-search"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="7" cy="7" r="5"/><line x1="11" y1="11" x2="14.5" y2="14.5"/></svg><span class="ph">Search nodes, types…</span><span class="tb-kbd">⌘K</span></span>
+        <span class="tb-btn"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3.2 4.5l3 3-3 3"/><line x1="8.4" y1="11" x2="13" y2="11"/></svg> Terminal</span>
+      </div>
+      <div class="wbody">
+        <aside class="sidebar">
+          <div class="sb-top"><span class="sb-name"><img class="lg" src="../assets/logo.svg" alt="BioOKF"/> Studio</span><span class="collapse">‹</span></div>
+          <div class="sb-label">Knowledge bases</div>
+          <div class="kb-list">
+            <div class="kb active"><span class="kb-text"><span class="kb-name">COVID-19 immunology</span><span class="kb-meta">16 nodes · 18 edges</span><span class="kb-when">updated just now</span></span></div>
+            <div class="kb"><span class="kb-text"><span class="kb-name">Lipid metabolism</span><span class="kb-meta">204 nodes · 318 edges</span><span class="kb-when">updated 2d ago</span></span></div>
+            <div class="kb"><span class="kb-text"><span class="kb-name">Pharmacogenomics</span><span class="kb-meta">142 nodes · 207 edges</span><span class="kb-when">updated 6d ago</span></span></div>
+          </div>
+          <div class="sb-foot"><span class="new-kb">＋  New base</span></div>
+        </aside>
+        <main class="main">
+          <div class="stage"><svg class="graph" id="g" preserveAspectRatio="xMidYMid meet"></svg></div>
+
+          <!-- detail panel: node layer + edge layer (cross-fade) -->
+          <div class="detail" id="detail" style="opacity:0">
+            <div class="panel-layer node" id="panelNode">
+              <div class="d-head">
+                <span class="d-edit">Edit</span><span class="d-close">×</span>
+                <span class="d-badge" style="background:#6366A8">Gene</span><span class="d-sub">cytokine</span>
+                <div class="d-id">IL6</div>
+                <div class="d-desc">Interleukin-6, a pleiotropic cytokine and central driver of the acute-phase response.</div>
+                <div class="chips"><span class="chip xref">HGNC:6018</span><span class="chip xref">UniProt:P05231</span><span class="chip">syn · IFNB2</span></div>
+              </div>
+              <div class="d-body">
+                <div class="d-section"><h5>Edges by predicate · distribution</h5>
+                  <div class="dist" id="ndist">
+                    <div class="dist-row"><span class="dl">associated_with</span><span class="db"><i data-w="100"></i></span><span class="dv">4</span></div>
+                    <div class="dist-row"><span class="dl">regulates</span><span class="db"><i data-w="75"></i></span><span class="dv">3</span></div>
+                    <div class="dist-row"><span class="dl">interacts_with</span><span class="db"><i data-w="50"></i></span><span class="dv">2</span></div>
+                    <div class="dist-row"><span class="dl">participates_in</span><span class="db"><i data-w="50"></i></span><span class="dv">2</span></div>
+                    <div class="dist-row"><span class="dl">located_in</span><span class="db"><i data-w="25"></i></span><span class="dv">1</span></div>
+                    <div class="dist-row"><span class="dl">expressed_in</span><span class="db"><i data-w="25"></i></span><span class="dv">1</span></div>
+                  </div>
+                </div>
+                <div class="d-section"><h5>Edges → object</h5>
+                  <div class="edge-group"><span class="eg-pred">associated_with</span>
+                    <div class="erow"><span class="arrow">→</span><span class="tgt"><i style="background:#C45B6B"></i><span>COVID-19</span></span><span class="stat">OR 2.61</span></div>
+                  </div>
+                  <div class="edge-group"><span class="eg-pred">regulates</span>
+                    <div class="erow"><span class="arrow">→</span><span class="tgt"><i style="background:#6366A8"></i><span>STAT3</span></span><span class="stat">increases</span></div>
+                    <div class="erow"><span class="arrow">→</span><span class="tgt"><i style="background:#2E8C84"></i><span>CRP</span></span><span class="stat">increases</span></div>
+                  </div>
+                </div>
+                <div class="d-section"><h5>Referenced by</h5>
+                  <div class="erow"><span class="arrow">←</span><span class="tgt"><i style="background:#8A86C4"></i><span>rs1800795</span></span><span class="stat">located_in</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="panel-layer edge" id="panelEdge">
+              <div class="d-head">
+                <span class="d-edit">Edit</span><span class="d-close">×</span>
+                <span class="d-badge" style="background:#6b7280">EDGE</span>
+                <div class="edge-headline">
+                  <span class="n"><i style="background:#6366A8"></i>IL6</span>
+                  <span class="p">associated_with</span>
+                  <span class="n"><i style="background:#C45B6B"></i>COVID-19</span>
+                </div>
+                <div class="d-desc">Circulating IL-6 is elevated in and predicts severity of COVID-19.</div>
+              </div>
+              <div class="d-body">
+                <div class="d-section"><h5>Provenance triplet</h5>
+                  <div class="prov">
+                    <div class="cell"><div class="k">knowledge_level</div><div class="v">statistical_association</div></div>
+                    <div class="cell"><div class="k">agent_type</div><div class="v">data_analysis_pipeline</div></div>
+                    <div class="cell"><div class="k">primary_source</div><div class="v cite">Lapidus 2021</div></div>
+                    <div class="cell"><div class="k">direction</div><div class="v">increased</div></div>
+                  </div>
+                </div>
+                <div class="d-section"><h5>Quantitative · distribution</h5>
+                  <div class="forest" id="forest">
+                    <div class="axis"></div>
+                    <div class="null" style="left:20%"><span>1.0</span></div>
+                    <div class="ci" id="ci"></div>
+                    <div class="pt" id="pt"></div>
+                    <div class="lab" id="flab" style="left:52%">OR 2.61</div>
+                  </div>
+                  <div class="dist">
+                    <div class="kv"><div class="kv-row"><span class="kv-k">95% CI</span><span class="kv-v"><code>1.94 – 3.55</code></span></div>
+                    <div class="kv-row"><span class="kv-k">p-value</span><span class="kv-v"><code>3.2 × 10⁻⁸</code></span></div>
+                    <div class="kv-row"><span class="kv-k">studies</span><span class="kv-v"><code>n = 4</code></span></div></div>
+                  </div>
+                </div>
+                <div class="d-section"><h5>Publications</h5>
+                  <div class="erow"><span class="arrow">·</span><span class="tgt"><i style="background:#6B7280"></i><span>Lapidus et al., 2021 · DOI:10.1186/s13054-021-03499-4</span></span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="legend">
+            <h4>Node types <span class="tg">hide</span></h4>
+            <div class="legend-fam"><div class="fam-name">Genomic · molecular</div><div class="swatches">
+              <span class="sw"><i style="background:#6366A8"></i><span>Gene</span></span>
+              <span class="sw"><i style="background:#8A86C4"></i><span>Variant</span></span>
+              <span class="sw"><i style="background:#2E8C84"></i><span>Molecule</span></span></div></div>
+            <div class="legend-fam"><div class="fam-name">Clinical · provenance</div><div class="swatches">
+              <span class="sw"><i style="background:#C45B6B"></i><span>Disease</span></span>
+              <span class="sw"><i style="background:#D98AA0"></i><span>Phenotype</span></span>
+              <span class="sw"><i style="background:#6B7280"></i><span>Publication</span></span>
+              <span class="sw ext"><i></i><span>External</span></span></div></div>
+          </div>
+          <div class="zoomctl"><button>+</button><button>−</button><button>⤢</button></div>
+
+          <!-- pointer cursor -->
+          <div class="cursor" id="cursor" style="left:720px;top:560px">
+            <svg viewBox="0 0 24 24" width="22" height="22"><path d="M5 2.5l13.5 6.8-5.7 1.4L9.6 17 5 2.5z" fill="#1b1b1b" stroke="#fff" stroke-width="1.3" stroke-linejoin="round"/></svg>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="frame.js"></script>
+<script>
+(function () {
+  var SVG = 'http://www.w3.org/2000/svg';
+  var g = document.getElementById('g');
+  g.setAttribute('viewBox', '0 0 1032 672');
+
+  // left-clustered graph (right side reserved for the detail panel)
+  var nodes = [
+    {id:'IL6', l:'IL6', c:'#6366A8', x:300, y:300, hub:true},
+    {id:'IL6R', l:'IL6R', c:'#6366A8', x:196, y:232},
+    {id:'STAT3', l:'STAT3', c:'#6366A8', x:236, y:404},
+    {id:'rs', l:'rs1800795', c:'#8A86C4', x:170, y:332},
+    {id:'Pathway', l:'IL-6 signaling', c:'#4FA38C', x:432, y:236},
+    {id:'CRP', l:'CRP', c:'#2E8C84', x:382, y:418},
+    {id:'COVID', l:'COVID-19', c:'#C45B6B', x:452, y:356, hub:true},
+    {id:'CRS', l:'cytokine release syndrome', c:'#D98AA0', x:470, y:474},
+    {id:'Hep', l:'hepatocyte', c:'#62B889', x:286, y:476},
+    {id:'Pub', l:'Lapidus 2021', c:'#6B7280', x:316, y:152}
+  ];
+  var nmap = {}; nodes.forEach(function (n) { n.r = n.hub ? 12 : 7; nmap[n.id] = n; });
+  var edges = [
+    ['IL6','IL6R','interacts_with','pos'],
+    ['IL6','STAT3','regulates','pos'],
+    ['IL6','Pathway','participates_in','pos'],
+    ['IL6','COVID','associated_with','pos'],   // the edge we click
+    ['IL6','CRP','regulates','pos'],
+    ['rs','IL6','located_in','pos'],
+    ['Hep','IL6','expressed_in','pos'],
+    ['COVID','CRS','has_phenotype','pos'],
+    ['Pathway','STAT3','part_of','pos'],
+    ['IL6','Pub','reported_in','syn']
+  ];
+
+  var edgeEls = {}, clickEdge;
+  edges.forEach(function (e) {
+    var a = nmap[e[0]], b = nmap[e[1]];
+    var ln = document.createElementNS(SVG, 'line');
+    ln.setAttribute('x1', a.x); ln.setAttribute('y1', a.y); ln.setAttribute('x2', b.x); ln.setAttribute('y2', b.y);
+    ln.setAttribute('class', 'edge' + (e[3] === 'syn' ? ' syn' : ''));
+    g.appendChild(ln);
+    var key = e[0] + '>' + e[1]; edgeEls[key] = ln;
+    if (e[0] === 'IL6' && e[1] === 'COVID') clickEdge = ln;
+  });
+  nodes.forEach(function (n) {
+    var grp = document.createElementNS(SVG, 'g'); grp.setAttribute('class', 'node' + (n.hub ? ' hub' : ''));
+    var c = document.createElementNS(SVG, 'circle'); c.setAttribute('cx', n.x); c.setAttribute('cy', n.y);
+    c.setAttribute('r', n.r); c.setAttribute('fill', n.c); grp.appendChild(c);
+    var t = document.createElementNS(SVG, 'text'); t.setAttribute('class', 'nlabel');
+    t.setAttribute('x', n.x + n.r + 6); t.setAttribute('y', n.y + 4); t.textContent = n.l; grp.appendChild(t);
+    n._grp = grp; n._c = c; g.appendChild(grp);
+  });
+
+  if (!window.gsap) { document.getElementById('detail').style.opacity = 1; return; }
+  var gsap = window.gsap, tl = gsap.timeline({ paused: true });
+
+  // IL6 neighbours (for focus dimming)
+  var nbr = { IL6:1 }; edges.forEach(function (e){ if(e[0]==='IL6')nbr[e[1]]=1; if(e[1]==='IL6')nbr[e[0]]=1; });
+
+  // window-coords helper: svg local (lx,ly) -> stage coords (+248 sidebar, +48 titlebar)
+  function win(lx, ly){ return { x: lx + 248, y: ly + 48 }; }
+  var pIL6 = win(300, 300);
+  var midX = (nmap.IL6.x + nmap.COVID.x)/2, midY = (nmap.IL6.y + nmap.COVID.y)/2;
+  var pEdge = win(midX, midY);
+
+  // 1) move cursor to IL6, click
+  tl.to('#cursor', { left: pIL6.x, top: pIL6.y, duration: 0.9, ease: 'power2.inOut' }, 0.4);
+  tl.to('#cursor', { scale: 0.82, duration: 0.1, yoyo: true, repeat: 1 }, 1.35);   // click
+  tl.to(nmap.IL6._c, { attr: { r: 15 }, duration: 0.12, yoyo: true, repeat: 1 }, 1.35);
+
+  // focus dimming + open node panel
+  nodes.forEach(function (n){ if(!nbr[n.id]) tl.to(n._grp,{opacity:.3,duration:.35},1.45); });
+  Object.keys(edgeEls).forEach(function (k){
+    var inc = k.indexOf('IL6')>-1; if(!inc) tl.to(edgeEls[k],{opacity:.18,duration:.35},1.45);
+  });
+  tl.fromTo('#detail', { opacity:0, y:-6, scale:.99 }, { opacity:1, y:0, scale:1, duration:.22, ease:'back.out(1.4)' }, 1.5);
+  tl.set('#panelNode', { opacity:1 }, 1.5);
+  tl.set('#panelEdge', { opacity:0 }, 1.5);
+
+  // node distribution bars fill
+  document.querySelectorAll('#ndist .db > i').forEach(function (el, i){
+    tl.fromTo(el, { width:'0%' }, { width: el.dataset.w + '%', duration:.5, ease:'power2.out' }, 1.7 + i*0.06);
+  });
+
+  // 2) move cursor to the IL6–COVID edge, click → swap to edge panel
+  tl.to('#cursor', { left: pEdge.x, top: pEdge.y, duration: 0.8, ease: 'power2.inOut' }, 3.7);
+  tl.to(clickEdge, { attr: { class: 'edge hot' }, duration: 0.01 }, 4.4);
+  tl.to('#cursor', { scale: 0.82, duration: 0.1, yoyo: true, repeat: 1 }, 4.5);   // click
+  // highlight the two endpoints, fade COVID back up
+  tl.to(nmap.COVID._grp, { opacity: 1, duration: 0.3 }, 4.5);
+  tl.to('#panelNode', { opacity: 0, duration: 0.28 }, 4.55);
+  tl.to('#panelEdge', { opacity: 1, duration: 0.34 }, 4.62);
+
+  // edge quantitative distribution (forest/CI) animates in
+  tl.fromTo('#ci', { left:'52%', width:'0%' }, { left:'38.8%', width:'32.2%', duration:.5, ease:'power2.out' }, 4.95);
+  tl.fromTo('#pt', { opacity:0, left:'52%' }, { opacity:1, left:'52.2%', duration:.4 }, 5.15);
+  tl.to('#flab', { opacity:1, duration:.3 }, 5.3);
+
+  // hold for reading, then loop
+  tl.to({}, { duration: 1.4 }, 5.6);
+
+  window.HF.register('inspect', tl);
+})();
+</script>
+</body>
+</html>
