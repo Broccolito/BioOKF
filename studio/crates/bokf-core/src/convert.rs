@@ -30,10 +30,24 @@ pub struct Converted {
 pub enum SourceInput {
     Path(PathBuf),
     Text { text: String, title: Option<String> },
+    Url(String),
+}
+
+/// On-disk inventory entry for one extracted figure under `raw/<id>/figures/`.
+#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+pub struct FigureMeta {
+    /// Path relative to `raw/<id>/`, e.g. "figures/kaplan-meier-by-arm.png".
+    pub file: String,
+    /// True until the figure is named by content.
+    pub provisional: bool,
+    /// True once `source.md` carries a non-empty description for this figure.
+    pub described: bool,
+    /// Where the figure came from: "word/media/image1.png", "data-uri", "folder:figure3.png", etc.
+    pub origin: String,
 }
 
 /// On-disk provenance for a stored raw source.
-#[derive(Debug, Clone, Serialize, Deserialize, PartialEq)]
+#[derive(Debug, Clone, Default, Serialize, Deserialize, PartialEq)]
 pub struct SourceMeta {
     pub id: String,
     pub title: String,
@@ -43,6 +57,23 @@ pub struct SourceMeta {
     pub original_filename: Option<String>,
     pub ingested_at: String,
     pub needs_llm_fallback: bool,
+    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    pub figures: Vec<FigureMeta>,
+    /// The URL this source was fetched from (URL ingestion only).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub url: Option<String>,
+    /// The post-redirect URL actually downloaded (URL ingestion only).
+    #[serde(default, skip_serializing_if = "Option::is_none")]
+    pub final_url: Option<String>,
+    /// Origin/kind of the source, distinct from how much it is trusted.
+    #[serde(default, skip_serializing_if = "crate::credibility::SourceType::is_unknown")]
+    pub source_type: crate::credibility::SourceType,
+    /// Credibility verdict (tier, confidence, retraction, reasoning).
+    #[serde(default, skip_serializing_if = "crate::credibility::Credibility::is_unset")]
+    pub credibility: crate::credibility::Credibility,
+    /// Bibliographic identifiers extracted during ingestion.
+    #[serde(default, skip_serializing_if = "crate::credibility::SourceIds::is_empty")]
+    pub ids: crate::credibility::SourceIds,
 }
 
 /// A stored raw source after ingestion.
@@ -60,10 +91,155 @@ pub struct SourceRecord {
 // Conversion dispatch
 // ---------------------------------------------------------------------------
 
+/// True when `ext` names a raster or vector image format we copy verbatim as a figure.
+pub fn is_image_ext(ext: &str) -> bool {
+    matches!(ext.to_ascii_lowercase().as_str(), "png" | "jpg" | "jpeg" | "gif" | "webp" | "tiff" | "tif" | "bmp" | "svg")
+}
+
+/// One image pulled out of a source during conversion.
+#[derive(Debug, Clone)]
+pub struct ExtractedFigure {
+    /// Provisional name (e.g. "fig-001.png") until renamed by content.
+    pub provisional_name: String,
+    /// The image bytes, copied verbatim.
+    pub bytes: Vec<u8>,
+    /// Where the figure came from inside the source.
+    pub origin: String,
+}
+
+/// Map a `data:image/<subtype>` MIME subtype to a file extension.
+fn mime_subtype_to_ext(sub: &str) -> String {
+    match sub {
+        "jpeg" => "jpg".to_string(),
+        "svg+xml" => "svg".to_string(),
+        other => other.to_string(),
+    }
+}
+
+/// Decode a standard base64 string (no whitespace) into bytes. Returns None on any
+/// invalid character or malformed padding. No new dependency.
+fn b64_decode(s: &str) -> Option<Vec<u8>> {
+    fn val(c: u8) -> Option<u32> {
+        match c {
+            b'A'..=b'Z' => Some((c - b'A') as u32),
+            b'a'..=b'z' => Some((c - b'a' + 26) as u32),
+            b'0'..=b'9' => Some((c - b'0' + 52) as u32),
+            b'+' => Some(62),
+            b'/' => Some(63),
+            _ => None,
+        }
+    }
+    let bytes: Vec<u8> = s.bytes().filter(|&c| c != b'\n' && c != b'\r').collect();
+    let mut out = Vec::new();
+    let mut chunk = [0u32; 4];
+    let mut n = 0usize;
+    let mut pad = 0usize;
+    for &c in &bytes {
+        if c == b'=' {
+            chunk[n] = 0;
+            pad += 1;
+            n += 1;
+        } else {
+            chunk[n] = val(c)?;
+            n += 1;
+        }
+        if n == 4 {
+            let triple = (chunk[0] << 18) | (chunk[1] << 12) | (chunk[2] << 6) | chunk[3];
+            out.push((triple >> 16) as u8);
+            if pad < 2 {
+                out.push((triple >> 8) as u8);
+            }
+            if pad < 1 {
+                out.push(triple as u8);
+            }
+            n = 0;
+            pad = 0;
+        }
+    }
+    if n != 0 {
+        return None;
+    }
+    Some(out)
+}
+
+/// Extract embedded figures from a source. Returns the figures plus an optionally
+/// rewritten Markdown (None for zip-media formats; for html/md the data URIs are
+/// rewritten to local figure references).
+pub fn extract_figures(ext: &str, bytes: &[u8], markdown: &str) -> (Vec<ExtractedFigure>, Option<String>) {
+    let ext = ext.to_ascii_lowercase();
+    // html/md: decode inline base64 data URIs into figures and rewrite the references.
+    if matches!(ext.as_str(), "html" | "htm" | "md" | "markdown") {
+        let re = regex::Regex::new(r"data:image/([a-z0-9.+-]+);base64,([A-Za-z0-9+/=]+)").unwrap();
+        let mut figs = Vec::new();
+        let mut rewritten = String::new();
+        let mut last = 0usize;
+        for cap in re.captures_iter(markdown) {
+            let whole = cap.get(0).unwrap();
+            let sub = cap.get(1).unwrap().as_str();
+            let b64 = cap.get(2).unwrap().as_str();
+            let data = match b64_decode(b64) {
+                Some(d) => d,
+                None => continue,
+            };
+            let fext = mime_subtype_to_ext(sub);
+            let name = format!("fig-{:03}.{}", figs.len() + 1, fext);
+            rewritten.push_str(&markdown[last..whole.start()]);
+            rewritten.push_str(&format!("figures/{name}"));
+            last = whole.end();
+            figs.push(ExtractedFigure { provisional_name: name, bytes: data, origin: "data-uri".into() });
+        }
+        if figs.is_empty() {
+            return (figs, None);
+        }
+        rewritten.push_str(&markdown[last..]);
+        return (figs, Some(rewritten));
+    }
+    // docx/pptx/xlsx/ods: copy image members out of the zip media folder.
+    let media_prefix = match ext.as_str() {
+        "docx" => "word/media/",
+        "pptx" => "ppt/media/",
+        "xlsx" | "ods" => "xl/media/",
+        _ => return (vec![], None),
+    };
+    let mut figs = Vec::new();
+    if let Ok(mut zip) = zip::ZipArchive::new(Cursor::new(bytes.to_vec())) {
+        let mut names: Vec<String> = zip
+            .file_names()
+            .filter(|n| n.starts_with(media_prefix) && is_image_ext(&ext_of(n)))
+            .map(|s| s.to_string())
+            .collect();
+        names.sort();
+        for (i, name) in names.iter().enumerate() {
+            let mut buf = Vec::new();
+            match zip.by_name(name) {
+                Ok(mut f) => {
+                    if f.read_to_end(&mut buf).is_err() {
+                        continue;
+                    }
+                }
+                Err(_) => continue,
+            }
+            let ie = ext_of(name).to_ascii_lowercase();
+            figs.push(ExtractedFigure {
+                provisional_name: format!("fig-{:03}.{}", i + 1, ie),
+                bytes: buf,
+                origin: name.clone(),
+            });
+        }
+    }
+    (figs, None)
+}
+
 /// Convert a single file's bytes to Markdown, dispatching on extension.
 pub fn convert_bytes(ext: &str, filename: &str, bytes: &[u8]) -> Converted {
     let ext = ext.to_ascii_lowercase();
     match ext.as_str() {
+        e if is_image_ext(e) => Converted {
+            markdown: format!("![{filename}](figures/{filename})\n"),
+            title: String::new(),
+            format: "image".into(),
+            needs_llm_fallback: true,
+        },
         "md" | "markdown" | "txt" | "text" | "" | "xml" | "yaml" | "yml" | "rst" | "log" | "tex" | "org" => passthrough(bytes, "text"),
         "json" => {
             let body = String::from_utf8_lossy(bytes);
@@ -348,12 +524,12 @@ fn is_junk(name: &str) -> bool {
 // Naming + storage
 // ---------------------------------------------------------------------------
 
-fn ext_of(name: &str) -> String {
+pub(crate) fn ext_of(name: &str) -> String {
     Path::new(name).extension().and_then(|e| e.to_str()).unwrap_or("").to_string()
 }
 
 /// A human-readable slug from a title (lowercase, non-alnum → `-`, ≤40 chars).
-fn slug(s: &str) -> String {
+pub(crate) fn slug(s: &str) -> String {
     let mut out = String::new();
     for c in s.chars() {
         if c.is_ascii_alphanumeric() {
@@ -436,9 +612,49 @@ fn find_existing(bundle_root: &Path, sha: &str) -> Option<String> {
     None
 }
 
+/// Write each figure's bytes under `dir/figures/<name>`, append a reference for any
+/// figure not already referenced in `markdown`, and return the (possibly appended)
+/// markdown together with a `FigureMeta` per figure. Provisional numbering continues
+/// from `start_index` so callers can append extra figures after a document's own.
+fn write_figures(dir: &Path, figs: &[ExtractedFigure], markdown: &str, start_index: usize) -> Result<(String, Vec<FigureMeta>), String> {
+    let mut md = markdown.to_string();
+    let mut metas = Vec::new();
+    if figs.is_empty() {
+        return Ok((md, metas));
+    }
+    let figdir = dir.join("figures");
+    std::fs::create_dir_all(&figdir).map_err(|e| e.to_string())?;
+    for (i, f) in figs.iter().enumerate() {
+        // Renumber provisional names to a continuous fig-NNN sequence per source.
+        let fext = ext_of(&f.provisional_name);
+        let name = if fext.is_empty() {
+            f.provisional_name.clone()
+        } else {
+            format!("fig-{:03}.{}", start_index + i + 1, fext.to_ascii_lowercase())
+        };
+        std::fs::write(figdir.join(&name), &f.bytes).map_err(|e| e.to_string())?;
+        let rel = format!("figures/{name}");
+        if !md.contains(&rel) {
+            if !md.ends_with('\n') {
+                md.push('\n');
+            }
+            md.push_str(&format!("\n![{name}](figures/{name})\n"));
+        }
+        metas.push(FigureMeta { file: rel, provisional: true, described: false, origin: f.origin.clone() });
+    }
+    Ok((md, metas))
+}
+
 /// Convert + store one source's bytes under `raw/<id>/`. Returns the record (with
 /// `reused=true` when an identical source already exists).
 fn store(bundle_root: &Path, filename: &str, bytes: &[u8]) -> Result<SourceRecord, String> {
+    store_with_extra_figures(bundle_root, filename, bytes, Vec::new())
+}
+
+/// Convert + store one source, optionally attaching `extra` loose images (from a folder
+/// or zip) as additional figures of this document. Each extra is `(member_name, bytes)`
+/// and is recorded with `origin = "folder:<member_name>"`.
+fn store_with_extra_figures(bundle_root: &Path, filename: &str, bytes: &[u8], extra: Vec<(String, Vec<u8>)>) -> Result<SourceRecord, String> {
     let sha = hash_bytes(bytes);
     if let Some(id) = find_existing(bundle_root, &sha) {
         return Ok(SourceRecord {
@@ -459,13 +675,37 @@ fn store(bundle_root: &Path, filename: &str, bytes: &[u8]) -> Result<SourceRecor
     // original bytes (immutable; gitignored)
     let orig_ext = if ext.is_empty() { "bin".to_string() } else { ext.clone() };
     std::fs::write(dir.join(format!("original.{orig_ext}")), bytes).map_err(|e| e.to_string())?;
+
+    // Extract embedded figures (may rewrite the markdown for html/md data URIs).
+    let (embedded, rewritten) = extract_figures(&ext, bytes, &converted.markdown);
+    let mut body = rewritten.unwrap_or_else(|| converted.markdown.clone());
+
+    // Write embedded figures, then append loose folder/zip images as further figures.
+    let (body2, mut figmeta) = write_figures(&dir, &embedded, &body, 0)?;
+    body = body2;
+    if !extra.is_empty() {
+        let extras: Vec<ExtractedFigure> = extra
+            .into_iter()
+            .map(|(member, ib)| {
+                let e = ext_of(&member);
+                let nm = if e.is_empty() { member.clone() } else { format!("x.{e}") };
+                ExtractedFigure { provisional_name: nm, bytes: ib, origin: format!("folder:{member}") }
+            })
+            .collect();
+        let (body3, more) = write_figures(&dir, &extras, &body, figmeta.len())?;
+        body = body3;
+        figmeta.extend(more);
+    }
+
+    let has_figures = !figmeta.is_empty();
+    let needs = converted.needs_llm_fallback || has_figures;
     // derived markdown (prepend a machine-detectable marker when an LLM rendering is still needed)
-    let banner = if converted.needs_llm_fallback {
+    let banner = if needs {
         format!("{NEEDS_CONVERSION_MARKER}\n> ⚠️ Needs faithful Markdown conversion (unknown/binary format or scanned PDF). Read `original.*`, render ALL content to Markdown preserving every detail, then overwrite this file (removing this marker).\n\n")
     } else {
         String::new()
     };
-    std::fs::write(dir.join("source.md"), format!("{banner}{}", converted.markdown)).map_err(|e| e.to_string())?;
+    std::fs::write(dir.join("source.md"), format!("{banner}{body}")).map_err(|e| e.to_string())?;
     // meta
     let meta = SourceMeta {
         id: id.clone(),
@@ -474,7 +714,9 @@ fn store(bundle_root: &Path, filename: &str, bytes: &[u8]) -> Result<SourceRecor
         format: converted.format,
         original_filename: Some(filename.to_string()),
         ingested_at: today_iso(),
-        needs_llm_fallback: converted.needs_llm_fallback,
+        needs_llm_fallback: needs,
+        figures: figmeta,
+        ..Default::default()
     };
     std::fs::write(dir.join("meta.yaml"), serde_yaml::to_string(&meta).map_err(|e| e.to_string())?).map_err(|e| e.to_string())?;
     Ok(SourceRecord {
@@ -487,11 +729,186 @@ fn store(bundle_root: &Path, filename: &str, bytes: &[u8]) -> Result<SourceRecor
     })
 }
 
+/// Download a URL's content. Returns `(bytes, final_url, ext)` where `final_url` is the
+/// post-redirect URL and `ext` is inferred from the URL path, the Content-Type, then the bytes.
+pub fn fetch_url(url: &str) -> Result<(Vec<u8>, String, String), String> {
+    let client = reqwest::blocking::Client::builder()
+        .timeout(std::time::Duration::from_secs(30))
+        .user_agent(concat!("BioOKF/", env!("CARGO_PKG_VERSION")))
+        .build()
+        .map_err(|e| e.to_string())?;
+    let resp = client.get(url).send().map_err(|e| e.to_string())?;
+    let final_url = resp.url().to_string();
+    let ctype = resp
+        .headers()
+        .get(reqwest::header::CONTENT_TYPE)
+        .and_then(|v| v.to_str().ok())
+        .unwrap_or("")
+        .to_string();
+    let bytes = resp.bytes().map_err(|e| e.to_string())?.to_vec();
+    let ext = ext_from_url_or_mime(&final_url, &ctype, &bytes);
+    Ok((bytes, final_url, ext))
+}
+
+/// Infer a file extension from the URL path, then the Content-Type, then byte sniffing.
+fn ext_from_url_or_mime(url: &str, ctype: &str, bytes: &[u8]) -> String {
+    let path = url.split(['?', '#']).next().unwrap_or(url);
+    let url_ext = ext_of(path);
+    if !url_ext.is_empty() && url_ext.len() <= 5 {
+        return url_ext;
+    }
+    let c = ctype.to_ascii_lowercase();
+    if c.contains("pdf") {
+        return "pdf".into();
+    }
+    if c.contains("html") {
+        return "html".into();
+    }
+    if c.contains("json") {
+        return "json".into();
+    }
+    if c.contains("csv") {
+        return "csv".into();
+    }
+    if c.contains("plain") {
+        return "txt".into();
+    }
+    if bytes.starts_with(b"%PDF") {
+        return "pdf".into();
+    }
+    let head = String::from_utf8_lossy(&bytes[..bytes.len().min(256)]).to_ascii_lowercase();
+    if head.contains("<html") || head.contains("<!doctype html") {
+        return "html".into();
+    }
+    "html".into()
+}
+
+/// A filename for a downloaded source: the URL's last path segment, with an extension.
+fn url_filename(url: &str, ext: &str) -> String {
+    let path = url.split(['?', '#']).next().unwrap_or(url);
+    let last = path.rsplit('/').find(|s| !s.is_empty()).unwrap_or("source");
+    if last.contains('.') {
+        last.to_string()
+    } else {
+        format!("{last}.{ext}")
+    }
+}
+
+/// Find an already-ingested source with the same source URL (URL-level dedup).
+fn find_by_url(bundle_root: &Path, url: &str) -> Option<String> {
+    let raw = bundle_root.join("raw");
+    let entries = std::fs::read_dir(&raw).ok()?;
+    for e in entries.flatten() {
+        if let Ok(txt) = std::fs::read_to_string(e.path().join("meta.yaml")) {
+            if let Ok(m) = serde_yaml::from_str::<SourceMeta>(&txt) {
+                if m.url.as_deref() == Some(url) {
+                    return Some(m.id);
+                }
+            }
+        }
+    }
+    None
+}
+
+fn reused_record(id: String) -> SourceRecord {
+    SourceRecord {
+        source_md_path: format!("raw/{id}/source.md"),
+        meta_path: format!("raw/{id}/meta.yaml"),
+        title: id.clone(),
+        source_id: id,
+        needs_llm_fallback: false,
+        reused: true,
+    }
+}
+
+/// Convert + store a downloaded source under `raw/<id>/`, classifying its origin and
+/// credibility. `online` gates the Crossref/OpenAlex network calls inside the classifier.
+/// Dedups by source URL first, then by content sha256.
+fn store_url(bundle_root: &Path, url: &str, final_url: &str, bytes: &[u8], ext: &str, online: bool) -> Result<SourceRecord, String> {
+    if let Some(id) = find_by_url(bundle_root, url) {
+        return Ok(reused_record(id));
+    }
+    let sha = hash_bytes(bytes);
+    if let Some(id) = find_existing(bundle_root, &sha) {
+        return Ok(reused_record(id));
+    }
+    let filename = url_filename(final_url, ext);
+    let converted = convert_bytes(ext, &filename, bytes);
+    let title = title_from(&converted.markdown, &filename, None);
+    let id = new_source_id(&title, &sha);
+    let dir = bundle_root.join("raw").join(&id);
+    std::fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
+    // original bytes (immutable; gitignored). URL ingests keep the raw download for fidelity.
+    let orig_ext = if ext.is_empty() { "bin".to_string() } else { ext.to_string() };
+    std::fs::write(dir.join(format!("original.{orig_ext}")), bytes).map_err(|e| e.to_string())?;
+
+    let (embedded, rewritten) = extract_figures(ext, bytes, &converted.markdown);
+    let mut body = rewritten.unwrap_or_else(|| converted.markdown.clone());
+    let (body2, figmeta) = write_figures(&dir, &embedded, &body, 0)?;
+    body = body2;
+
+    let (source_type, credibility, ids) = crate::credibility::classify(&crate::credibility::ClassifyInput {
+        url: Some(url),
+        filename: Some(&filename),
+        body: &converted.markdown,
+        online,
+    });
+
+    let needs = converted.needs_llm_fallback || !figmeta.is_empty();
+    let banner = if needs {
+        format!("{NEEDS_CONVERSION_MARKER}\n> ⚠️ Needs faithful Markdown conversion (unknown/binary format or scanned PDF). Read `original.*`, render ALL content to Markdown preserving every detail, then overwrite this file (removing this marker).\n\n")
+    } else {
+        String::new()
+    };
+    std::fs::write(dir.join("source.md"), format!("{banner}{body}")).map_err(|e| e.to_string())?;
+    let meta = SourceMeta {
+        id: id.clone(),
+        title: title.clone(),
+        sha256: sha,
+        format: converted.format,
+        original_filename: Some(filename),
+        ingested_at: today_iso(),
+        needs_llm_fallback: needs,
+        figures: figmeta,
+        url: Some(url.to_string()),
+        final_url: Some(final_url.to_string()),
+        source_type,
+        credibility,
+        ids,
+    };
+    std::fs::write(dir.join("meta.yaml"), serde_yaml::to_string(&meta).map_err(|e| e.to_string())?).map_err(|e| e.to_string())?;
+    Ok(SourceRecord {
+        source_md_path: format!("raw/{id}/source.md"),
+        meta_path: format!("raw/{id}/meta.yaml"),
+        title,
+        source_id: id,
+        needs_llm_fallback: needs,
+        reused: false,
+    })
+}
+
+/// Ingest a list of URLs sequentially, failing soft: each result is independent so one
+/// download error does not abort the batch.
+pub fn ingest_urls(bundle_root: &Path, urls: Vec<String>) -> Vec<Result<SourceRecord, String>> {
+    urls
+        .into_iter()
+        .map(|u| match fetch_url(&u) {
+            Ok((bytes, final_url, ext)) => store_url(bundle_root, &u, &final_url, &bytes, &ext, true),
+            Err(e) => Err(format!("{u}: {e}")),
+        })
+        .collect()
+}
+
 /// Ingest a source into a bundle's `raw/`. A `.zip` or folder expands to one source
 /// per member unless `combined`, which concatenates members into a single source.
 pub fn ingest(bundle_root: &Path, input: SourceInput, combined: bool) -> Result<Vec<SourceRecord>, String> {
     // Resolve to (filename, bytes) members.
     let members: Vec<(String, Vec<u8>)> = match input {
+        SourceInput::Url(u) => {
+            // URL ingestion captures provenance, so it does not go through the member path.
+            let (bytes, final_url, ext) = fetch_url(&u)?;
+            return Ok(vec![store_url(bundle_root, &u, &final_url, &bytes, &ext, true)?]);
+        }
         SourceInput::Text { text, title } => {
             let name = title.as_deref().map(|t| format!("{}.md", slug(t))).unwrap_or_else(|| "note.md".into());
             vec![(name, text.into_bytes())]
@@ -531,6 +948,38 @@ pub fn ingest(bundle_root: &Path, input: SourceInput, combined: bool) -> Result<
         });
     }
 
+    // Folder/zip grouping: loose image members attach as figures of the primary
+    // document, rather than each becoming its own image-source.
+    if !combined && members.len() > 1 {
+        let (images, docs): (Vec<(String, Vec<u8>)>, Vec<(String, Vec<u8>)>) =
+            members.into_iter().partition(|(name, _)| is_image_ext(&ext_of(name)));
+        if !docs.is_empty() {
+            // Primary document: the sole doc, else the largest by byte length.
+            let primary_idx = docs
+                .iter()
+                .enumerate()
+                .max_by_key(|(_, (_, b))| b.len())
+                .map(|(i, _)| i)
+                .unwrap_or(0);
+            let mut records = Vec::new();
+            let extra: Vec<(String, Vec<u8>)> = images;
+            for (i, (name, bytes)) in docs.iter().enumerate() {
+                if i == primary_idx {
+                    records.push(store_with_extra_figures(bundle_root, name, bytes, extra.clone())?);
+                } else {
+                    records.push(store(bundle_root, name, bytes)?);
+                }
+            }
+            return Ok(records);
+        }
+        // No documents: fall back to one image-source per image.
+        let mut records = Vec::new();
+        for (name, bytes) in images {
+            records.push(store(bundle_root, &name, &bytes)?);
+        }
+        return Ok(records);
+    }
+
     let mut records = Vec::new();
     for (name, bytes) in members {
         records.push(store(bundle_root, &name, &bytes)?);
@@ -548,6 +997,25 @@ mod tests {
         assert!(md.contains("| gene | role |"));
         assert!(md.contains("| BRAF | kinase |"));
         assert!(md.contains("| --- |"));
+    }
+
+    #[test]
+    fn store_url_records_provenance_offline() {
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        std::fs::create_dir_all(root.join("raw")).unwrap();
+        let html = b"<html><body><h1>Study</h1><p>doi:10.1101/2020.01.02.123456 received: accepted:</p></body></html>";
+        let rec = store_url(root, "https://www.biorxiv.org/x", "https://www.biorxiv.org/x", html, "html", false).unwrap();
+        let meta: SourceMeta = serde_yaml::from_str(&std::fs::read_to_string(root.join(&rec.meta_path)).unwrap()).unwrap();
+        assert_eq!(meta.url.as_deref(), Some("https://www.biorxiv.org/x"));
+        assert!(matches!(meta.credibility.tier, crate::credibility::CredibilityTier::Preprint));
+        assert!(meta.ids.doi.is_some());
+        assert!(root.join(format!("raw/{}/original.html", rec.source_id)).exists());
+
+        // URL-level dedup: the same URL reuses the existing source.
+        let rec2 = store_url(root, "https://www.biorxiv.org/x", "https://www.biorxiv.org/x", html, "html", false).unwrap();
+        assert!(rec2.reused);
+        assert_eq!(rec2.source_id, rec.source_id);
     }
 
     #[test]
@@ -603,6 +1071,107 @@ mod tests {
         // the marker is present until the agent renders it
         let report = crate::lint::lint(&crate::bundle::Bundle::open(root).unwrap());
         assert!(report.findings.iter().any(|f| f.rule == "source.needs_conversion"), "{:?}", report.findings);
+    }
+
+    #[test]
+    fn folder_attaches_loose_images_to_primary_doc() {
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        std::fs::create_dir_all(root.join("raw")).unwrap();
+        let folder = tempfile::tempdir().unwrap();
+        std::fs::write(folder.path().join("paper.md"), "# Paper\n\nBody with two figures.").unwrap();
+        std::fs::write(folder.path().join("figure1.png"), [0x89, b'P', b'N', b'G', 1]).unwrap();
+        std::fs::write(folder.path().join("figure2.png"), [0x89, b'P', b'N', b'G', 2]).unwrap();
+        let recs = ingest(root, SourceInput::Path(folder.path().to_path_buf()), false).unwrap();
+        assert_eq!(recs.len(), 1, "one doc-source, images attached: {recs:?}");
+        let id = &recs[0].source_id;
+        let figdir = root.join("raw").join(id).join("figures");
+        assert!(figdir.join("fig-001.png").exists() || figdir.read_dir().unwrap().count() == 2);
+        let meta: SourceMeta = serde_yaml::from_str(&std::fs::read_to_string(root.join(&recs[0].meta_path)).unwrap()).unwrap();
+        assert_eq!(meta.figures.len(), 2);
+    }
+
+    #[test]
+    fn store_writes_figures_and_meta() {
+        use std::io::Write;
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        std::fs::create_dir_all(root.join("raw")).unwrap();
+        let mut buf = Vec::new();
+        {
+            let mut zw = zip::ZipWriter::new(Cursor::new(&mut buf));
+            let opts: zip::write::FileOptions<()> = zip::write::FileOptions::default();
+            zw.start_file("ppt/slides/slide1.xml", opts).unwrap();
+            zw.write_all(b"<a:p><a:t>Slide</a:t></a:p>").unwrap();
+            zw.start_file("ppt/media/image1.png", opts).unwrap();
+            zw.write_all(&[0x89, b'P', b'N', b'G']).unwrap();
+            zw.finish().unwrap();
+        }
+        let rec = store(root, "deck.pptx", &buf).unwrap();
+        let figdir = root.join("raw").join(&rec.source_id).join("figures");
+        assert!(figdir.join("fig-001.png").exists());
+        let src = std::fs::read_to_string(root.join(&rec.source_md_path)).unwrap();
+        assert!(src.contains("figures/fig-001.png"));
+        let meta: SourceMeta = serde_yaml::from_str(&std::fs::read_to_string(root.join(&rec.meta_path)).unwrap()).unwrap();
+        assert_eq!(meta.figures.len(), 1);
+        assert!(meta.figures[0].provisional && !meta.figures[0].described);
+    }
+
+    #[test]
+    fn extract_figures_decodes_data_uris() {
+        // "AAEC" base64 decodes to bytes [0,1,2]
+        let md = "text ![x](data:image/png;base64,AAEC) more";
+        let (figs, rewritten) = extract_figures("md", b"", md);
+        assert_eq!(figs.len(), 1);
+        assert_eq!(figs[0].provisional_name, "fig-001.png");
+        assert_eq!(figs[0].bytes, vec![0u8, 1, 2]);
+        assert!(rewritten.unwrap().contains("figures/fig-001.png"));
+    }
+
+    #[test]
+    fn extract_figures_pulls_office_media() {
+        use std::io::Write;
+        let mut buf = Vec::new();
+        {
+            let mut zw = zip::ZipWriter::new(Cursor::new(&mut buf));
+            let opts: zip::write::FileOptions<()> = zip::write::FileOptions::default();
+            zw.start_file("word/document.xml", opts).unwrap();
+            zw.write_all(b"<w:p><w:t>hi</w:t></w:p>").unwrap();
+            zw.start_file("word/media/image1.png", opts).unwrap();
+            zw.write_all(&[0x89, b'P', b'N', b'G', 1, 2, 3]).unwrap();
+            zw.finish().unwrap();
+        }
+        let (figs, _md) = extract_figures("docx", &buf, "");
+        assert_eq!(figs.len(), 1);
+        assert_eq!(figs[0].provisional_name, "fig-001.png");
+        assert_eq!(figs[0].origin, "word/media/image1.png");
+        assert_eq!(figs[0].bytes, vec![0x89, b'P', b'N', b'G', 1, 2, 3]);
+    }
+
+    #[test]
+    fn image_file_becomes_image_source() {
+        assert!(is_image_ext("PNG"));
+        let c = convert_bytes("png", "Figure_3.png", &[0x89, b'P', b'N', b'G']);
+        assert_eq!(c.format, "image");
+        assert!(c.needs_llm_fallback);
+        assert!(c.markdown.contains("![Figure_3.png](figures/Figure_3.png)"), "{}", c.markdown);
+    }
+
+    #[test]
+    fn source_meta_roundtrips_figures() {
+        let m = SourceMeta {
+            id: "x-abc123".into(), title: "X".into(), sha256: "deadbeef".into(),
+            format: "docx".into(), original_filename: Some("x.docx".into()),
+            ingested_at: "2026-06-27".into(), needs_llm_fallback: false,
+            figures: vec![FigureMeta { file: "figures/fig-001.png".into(), provisional: true, described: false, origin: "word/media/image1.png".into() }],
+            ..Default::default()
+        };
+        let y = serde_yaml::to_string(&m).unwrap();
+        let back: SourceMeta = serde_yaml::from_str(&y).unwrap();
+        assert_eq!(m, back);
+        // empty figures is omitted from yaml
+        let mut m2 = m.clone(); m2.figures.clear();
+        assert!(!serde_yaml::to_string(&m2).unwrap().contains("figures"));
     }
 
     #[test]

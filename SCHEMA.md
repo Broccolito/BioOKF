@@ -245,9 +245,16 @@ genuinely unknown origin, never the default. Full rule:
 
 ### Ingest a source
 
-1. Save the source into `raw/` unchanged. Note its modality.
+1. Convert the source into `raw/` with `bokf convert` (a file/folder/zip, inline `--text`, or a
+`--url`/`--urls <file>` download). It writes `raw/<id>/{original.*, source.md, meta.yaml}` with a
+content-derived id, extracts embedded images into `raw/<id>/figures/`, and for a URL classifies the
+source's origin and credibility (see "Source provenance" below). `raw/` originals are immutable.
 
-2. Read/parse it fully (OCR images, parse tables, transcribe slides/tweets).
+2. Finish the rendering: read `original.*` and render ALL content faithfully into `source.md`
+(parse tables, transcribe slides). For each image under `raw/<id>/figures/`, write a description
+beside its reference and run `bokf name-figure` to give it a content name; then clear every
+`source.needs_conversion`, `source.figure_unnamed`, and `source.figure_undescribed` finding. View
+the figures during extraction too: figure content yields nodes and edges, not just captions.
 
 3. Create a `Publication`/`Study`/`Dataset` node **for the source itself**, and give it a
 `raw_source` listing the `raw/…` path(s) you just saved.
@@ -272,6 +279,25 @@ its `identifier` as `primary_source`.
 
 > A single source typically creates/updates **10 to 15 concept pages**. That bookkeeping is
 > your job, not the human's.
+
+### Source provenance: origin and credibility
+
+A converted source carries provenance in `raw/<id>/meta.yaml`, kept separate from the graph:
+
+- **`source_type`** (origin): `journal_article`, `preprint`, `review`, `book`, `dataset`,
+  `database`, `clinical_guideline`, `gov_report`, `web_page`, `personal`, or `unknown`. It maps
+  onto the source NODE you create: a scholarly article is a `Publication`, a study is a `Study`, a
+  dataset or database is a `Dataset`.
+- **`credibility`** (trust): a `tier` (`peer_reviewed` > `preprint` > `archive` > `gray_lit` >
+  `web` > `unknown`), a `confidence`, a `retracted` flag, and a `reasoning` string. For a URL,
+  `bokf convert` resolves any DOI against Crossref then OpenAlex, then falls back to host patterns
+  and a conservative text heuristic.
+- **`ids`**: extracted `doi`/`pmid`/`pmcid`/`arxiv`/`isbn`. Put the ones you have into the source
+  node's `xref`.
+
+Lint warns when a source cited as a `primary_source` is not scholarly (`source.not_scholarly`,
+tier `web`/`unknown`) or is retracted (`source.retracted`), so weak evidence is visible at a
+glance.
 
 ### Answer a query
 

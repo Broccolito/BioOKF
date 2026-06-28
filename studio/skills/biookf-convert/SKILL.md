@@ -21,12 +21,26 @@ preserved.** Never hand-edit `raw/` originals.
    `source.md`. **You must finish it:** read `raw/<id>/original.*`, render **all** content (text,
    tables, figure/caption text) faithfully to Markdown, and overwrite `raw/<id>/source.md`,
    **removing the marker**. Preserve raw detail; do not summarize.
-4. Re-check: `bokf verify <bundle>` (or `bokf lint`) flags `source.needs_conversion` for any source
-   still carrying the marker; clear them all.
-5. Record it: `bokf log-sync <bundle> --kind convert --summary "converted N sources"`.
+4. **Figures pass.** `bokf convert` pulls every embedded image (docx/pptx/xlsx media, html/md
+   data URIs, loose folder/zip images) into `raw/<id>/figures/` with a provisional name like
+   `fig-001.png`, references each in `source.md`, and records them in `meta.yaml`. For each figure:
+   - View the image file under `raw/<id>/figures/*` (use `bokf_read_page` on the figure path).
+   - Write a faithful description of what the figure shows beside its reference in `source.md`,
+     filling in the `![...]` alt text so the reference reads `![<description>](figures/<name>)`.
+   - Run `bokf name-figure <bundle> --source <id> --figure figures/fig-001.png --as "<caption>"`
+     to give the figure a content name. This renames the file, rewrites the `source.md` reference,
+     and updates `meta.yaml`.
+   - Repeat until `bokf verify`/`bokf lint` reports no `source.figure_unnamed` and no
+     `source.figure_undescribed`.
+5. Re-check: `bokf verify <bundle>` (or `bokf lint`) flags `source.needs_conversion` for any source
+   still carrying the marker, plus `source.figure_unnamed`/`source.figure_undescribed` for figures
+   still provisional or without a description; clear them all.
+6. Record it: `bokf log-sync <bundle> --kind convert --summary "converted N sources"`.
 
 ## Rules
-- `raw/` originals are immutable; only `source.md` (the rendering) is yours to (re)write.
+- `raw/` originals are immutable; only `source.md` (the rendering) is yours to (re)write. Figures
+  under `raw/<id>/figures/` are written by `bokf`; rename them with `bokf name-figure`, never by hand.
 - Everything ends as faithful Markdown: the deterministic converter handles what it can, you handle
   the rest. Nothing is left binary-only.
+- Every figure ends both named by content and described in `source.md`.
 - Then proceed to **biookf-ingest** (Step 2+): extract typed nodes and provenance-stamped edges.

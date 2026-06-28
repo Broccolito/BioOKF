@@ -1,6 +1,6 @@
 ---
 name: biookf-merge
-description: Use to merge a Secondary KB (SKB) onto a canonical Main KB (MKB): candidate matching, true-match collapse, carry-over, source-node union, raw/ relocation, subtype harmonization, integrity check.
+description: Use to merge a Secondary KB (SKB) onto a canonical Main KB (MKB): candidate matching, true-match collapse, carry-over, source-node union, raw/ relocation, documentation style/language harmonization, subtype harmonization, integrity check.
 ---
 
 # Skill: biookf-merge
@@ -27,9 +27,14 @@ renamed/moved/collapsed. **Lose no information, break no links.** (Follow `Merge
 6. **`raw/`.** Relocate SKB `raw/` files into the MKB `raw/` (rename on filename collision; drop a
    true duplicate by content), and update `raw_source` paths. **Do not dedupe edges** here; that is
    a future lint pass.
-7. **Subtype resolution.** Harmonize equivalent-but-differently-named subtypes to the **MKB** name;
+7. **Documentation harmonization.** Bring every SKB-origin doc now in the MKB into the MKB's house
+   style and language: rewrite/condense verbose prose to the MKB's concision and section structure,
+   and translate into the MKB's language when the SKB differs. Change **prose only**. Keep
+   frontmatter, `edges:`, `raw_source`, `xref`, statistics, notes, and all links **byte-identical**,
+   and preserve every fact, number, and citation exactly. The raw originals stay untouched in `raw/`.
+8. **Subtype resolution.** Harmonize equivalent-but-differently-named subtypes to the **MKB** name;
    find-and-replace the token on **both nodes and edges**; update the subtypes-in-use list.
-8. **Log + gate.** `bokf log-sync <mkb> --kind merge --summary "merged <skb>" --counts`, then
+9. **Log + gate.** `bokf log-sync <mkb> --kind merge --summary "merged <skb>" --counts`, then
    `bokf verify --workflow merge`. Final integrity: no duplicate identifiers; no dangling
    `object`/`primary_source`/`reported_in`; every `raw_source` resolves; subtypes harmonized; the
    MKB's own identifiers/paths/`raw/` unchanged except where a genuine merge required it.

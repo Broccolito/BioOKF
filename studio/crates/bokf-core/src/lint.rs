@@ -207,6 +207,12 @@ pub fn lint(bundle: &Bundle) -> LintReport {
     // --- raw sources still awaiting faithful LLM conversion to Markdown ---
     lint_raw_conversion(&mut r, bundle);
 
+    // --- figures still provisional or referenced without a description ---
+    lint_figures(&mut r, bundle);
+
+    // --- credibility of cited sources (peer-reviewed / preprint / archive vs web) ---
+    lint_provenance(&mut r, bundle);
+
     // --- index.md currency ---
     if bundle.has_index_md {
         for id in crate::index::missing_from_index(bundle) {
@@ -240,6 +246,73 @@ fn lint_raw_conversion(r: &mut LintReport, bundle: &Bundle) {
             }
         }
     }
+}
+
+/// Walk `raw/*/meta.yaml` and flag figures that are still provisional (`source.figure_unnamed`)
+/// or referenced in `source.md` without a non-empty description (`source.figure_undescribed`).
+fn lint_figures(r: &mut LintReport, bundle: &Bundle) {
+    let raw = bundle.root.join("raw");
+    let entries = match std::fs::read_dir(&raw) {
+        Ok(e) => e,
+        Err(_) => return,
+    };
+    for e in entries.flatten() {
+        let dir = e.path();
+        let meta_path = dir.join("meta.yaml");
+        let txt = match std::fs::read_to_string(&meta_path) {
+            Ok(t) => t,
+            Err(_) => continue,
+        };
+        let meta: crate::convert::SourceMeta = match serde_yaml::from_str(&txt) {
+            Ok(m) => m,
+            Err(_) => continue,
+        };
+        if meta.figures.is_empty() {
+            continue;
+        }
+        let id = e.file_name().to_string_lossy().to_string();
+        let src_md = std::fs::read_to_string(dir.join("source.md")).unwrap_or_default();
+        for f in &meta.figures {
+            if f.provisional {
+                r.push(
+                    Severity::Warn,
+                    "source.figure_unnamed",
+                    &id,
+                    format!("figure `{}` still has a provisional name; run `bokf name-figure` to give it a content name", f.file),
+                    Some(format!("raw/{id}/{}", f.file)),
+                );
+            }
+            // Described when source.md carries `[<non-empty>](<file>)` for this figure.
+            if !figure_is_described(&src_md, &f.file) {
+                r.push(
+                    Severity::Warn,
+                    "source.figure_undescribed",
+                    &id,
+                    format!("figure `{}` is referenced without a description; write a faithful description beside its reference in source.md", f.file),
+                    Some(format!("raw/{id}/source.md")),
+                );
+            }
+        }
+    }
+}
+
+/// True when `source.md` references `file` with a non-empty alt/description, i.e.
+/// `[<non-empty>](<file>)` (the leading `!` of an image reference is optional).
+fn figure_is_described(md: &str, file: &str) -> bool {
+    let needle = format!("]({file})");
+    let mut from = 0;
+    while let Some(rel) = md[from..].find(&needle) {
+        let close = from + rel; // index of the `]` before `(`
+        // Walk back to the matching `[` and read the alt text between them.
+        if let Some(open_rel) = md[..close].rfind('[') {
+            let alt = md[open_rel + 1..close].trim();
+            if !alt.is_empty() {
+                return true;
+            }
+        }
+        from = close + needle.len();
+    }
+    false
 }
 
 /// Within each node type, flag distinct `subtype` tokens that normalize to the same
@@ -427,6 +500,75 @@ fn lint_domain_range(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, pa
     }
 }
 
+/// Read the `meta.yaml` of an ingested source node by following its `raw_source` path.
+/// Returns `None` for external-reference sources (xref only, no raw bytes) or unreadable meta.
+fn read_source_meta(bundle: &Bundle, src: &Node) -> Option<crate::convert::SourceMeta> {
+    for rs in &src.raw_source {
+        let p = std::path::Path::new(rs);
+        let dir = if p.extension().is_some() { p.parent()? } else { p };
+        let meta = bundle.root.join(dir).join("meta.yaml");
+        if let Ok(txt) = std::fs::read_to_string(&meta) {
+            if let Ok(m) = serde_yaml::from_str::<crate::convert::SourceMeta>(&txt) {
+                return Some(m);
+            }
+        }
+    }
+    None
+}
+
+/// Warn when a source used as a `primary_source` is not a recognized scholarly source: a
+/// classified `web`/`unknown` tier (`source.not_scholarly`), or a retracted source
+/// (`source.retracted`). Unclassified file sources (no credibility verdict) are not flagged.
+fn lint_provenance(r: &mut LintReport, bundle: &Bundle) {
+    use crate::credibility::CredibilityTier;
+    use std::collections::HashSet;
+    let mut seen: HashSet<String> = HashSet::new();
+    for n in &bundle.nodes {
+        for e in &n.edges {
+            let ps = match &e.primary_source {
+                Some(ps) if ps != "not_provided" => ps,
+                _ => continue,
+            };
+            if !seen.insert(ps.clone()) {
+                continue;
+            }
+            let src = match bundle.get(ps) {
+                Some(s) => s,
+                None => continue,
+            };
+            let meta = match read_source_meta(bundle, src) {
+                Some(m) => m,
+                None => continue,
+            };
+            if meta.credibility.classifier_version == 0 {
+                continue; // never classified: no signal, do not warn
+            }
+            if matches!(meta.credibility.tier, CredibilityTier::Web | CredibilityTier::Unknown) {
+                r.push(
+                    Severity::Warn,
+                    "source.not_scholarly",
+                    &src.identifier,
+                    format!(
+                        "source `{}` is cited as primary_source but classifies as `{}` (not peer-reviewed, a preprint archive, or a recognized database)",
+                        src.identifier,
+                        serde_yaml::to_string(&meta.credibility.tier).unwrap_or_default().trim()
+                    ),
+                    None,
+                );
+            }
+            if meta.credibility.retracted {
+                r.push(
+                    Severity::Warn,
+                    "source.retracted",
+                    &src.identifier,
+                    format!("source `{}` is cited as primary_source but is marked retracted", src.identifier),
+                    None,
+                );
+            }
+        }
+    }
+}
+
 fn lint_contradictions(r: &mut LintReport, bundle: &Bundle) {
     use std::collections::HashMap;
     // key: (subject, BASE predicate, object) -> (positive_seen, negative_seen)
@@ -467,6 +609,54 @@ mod tests {
             std::fs::write(&p, body).unwrap();
         }
         crate::lint::lint(&Bundle::open(dir.path()).unwrap())
+    }
+
+    #[test]
+    fn lints_flag_not_scholarly_and_retracted_sources() {
+        use crate::credibility::{Credibility, CredibilityTier};
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        std::fs::create_dir_all(root.join("knowledge/gene")).unwrap();
+        std::fs::create_dir_all(root.join("knowledge/publication")).unwrap();
+        std::fs::create_dir_all(root.join("raw/web-src")).unwrap();
+        let gene = "---\ntype: Gene\nidentifier: BRAF\nsubtype: protein_coding\nedges:\n  - predicate: associated_with\n    object: Type 2 Diabetes\n    knowledge_level: knowledge_assertion\n    agent_type: manual_assertion\n    primary_source: WebPaper\n---\n# BRAF\n";
+        let pubsrc = "---\ntype: Publication\nidentifier: WebPaper\nsubtype: web_page\nraw_source: [raw/web-src/source.md]\n---\n# WebPaper\n";
+        std::fs::write(root.join("knowledge/gene/braf.md"), gene).unwrap();
+        std::fs::write(root.join("knowledge/publication/webpaper.md"), pubsrc).unwrap();
+        std::fs::write(root.join("raw/web-src/source.md"), "body").unwrap();
+        let mut meta = crate::convert::SourceMeta {
+            id: "web-src".into(), title: "Blog".into(), sha256: "d".into(), format: "html".into(),
+            original_filename: None, ingested_at: "2026-06-27".into(), needs_llm_fallback: false,
+            figures: vec![],
+            url: Some("https://example.com/x".into()),
+            credibility: Credibility { tier: CredibilityTier::Web, confidence: 0.6, retracted: false, venue: None, publisher: None, reasoning: "host".into(), classifier_version: 1 },
+            ..Default::default()
+        };
+        std::fs::write(root.join("raw/web-src/meta.yaml"), serde_yaml::to_string(&meta).unwrap()).unwrap();
+        let rep = crate::lint::lint(&Bundle::open(root).unwrap());
+        assert!(rep.findings.iter().any(|f| f.rule == "source.not_scholarly"), "{:?}", rep.findings);
+
+        // A retracted but peer-reviewed source: source.retracted fires, source.not_scholarly does not.
+        meta.credibility = Credibility { tier: CredibilityTier::PeerReviewed, confidence: 0.9, retracted: true, venue: None, publisher: None, reasoning: "x".into(), classifier_version: 1 };
+        std::fs::write(root.join("raw/web-src/meta.yaml"), serde_yaml::to_string(&meta).unwrap()).unwrap();
+        let rep2 = crate::lint::lint(&Bundle::open(root).unwrap());
+        assert!(rep2.findings.iter().any(|f| f.rule == "source.retracted"), "{:?}", rep2.findings);
+        assert!(!rep2.findings.iter().any(|f| f.rule == "source.not_scholarly"));
+    }
+
+    #[test]
+    fn lints_flag_unnamed_and_undescribed_figures() {
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        std::fs::create_dir_all(root.join("raw/x-1/figures")).unwrap();
+        std::fs::create_dir_all(root.join("knowledge")).unwrap();
+        std::fs::write(root.join("raw/x-1/figures/fig-001.png"), b"i").unwrap();
+        std::fs::write(root.join("raw/x-1/source.md"), "![](figures/fig-001.png)").unwrap();
+        let meta = crate::convert::SourceMeta { id:"x-1".into(), title:"X".into(), sha256:"d".into(), format:"image".into(), original_filename:None, ingested_at:"2026-06-27".into(), needs_llm_fallback:true, figures: vec![crate::convert::FigureMeta{ file:"figures/fig-001.png".into(), provisional:true, described:false, origin:"data-uri".into() }], ..Default::default() };
+        std::fs::write(root.join("raw/x-1/meta.yaml"), serde_yaml::to_string(&meta).unwrap()).unwrap();
+        let rep = crate::lint::lint(&crate::bundle::Bundle::open(root).unwrap());
+        assert!(rep.findings.iter().any(|f| f.rule == "source.figure_unnamed"));
+        assert!(rep.findings.iter().any(|f| f.rule == "source.figure_undescribed"));
     }
 
     #[test]
