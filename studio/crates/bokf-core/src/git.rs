@@ -109,7 +109,9 @@ impl GitRepo {
         self.run(&["config", "commit.gpgsign", "false"])?;
         let gi = self.root.join(".gitignore");
         if !gi.exists() {
-            std::fs::write(&gi, "raw/**/original.*\n").map_err(|e| e.to_string())?;
+            // Immutable raw originals and the regenerable PDF page-image cache stay local; the
+            // committed truth is the curated knowledge/ docs and each source's source.md.
+            std::fs::write(&gi, "raw/**/original.*\nraw/**/pages/\n").map_err(|e| e.to_string())?;
         }
         Ok(())
     }

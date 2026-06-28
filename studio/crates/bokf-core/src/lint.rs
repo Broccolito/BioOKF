@@ -213,6 +213,9 @@ pub fn lint(bundle: &Bundle) -> LintReport {
     // --- credibility of cited sources (peer-reviewed / preprint / archive vs web) ---
     lint_provenance(&mut r, bundle);
 
+    // --- vision-rendered PDFs: did the rendering drop large sections? (coverage guardrail) ---
+    lint_pdf_coverage(&mut r, bundle);
+
     // --- index.md currency ---
     if bundle.has_index_md {
         for id in crate::index::missing_from_index(bundle) {
@@ -563,6 +566,60 @@ fn lint_provenance(r: &mut LintReport, bundle: &Bundle) {
                     &src.identifier,
                     format!("source `{}` is cited as primary_source but is marked retracted", src.identifier),
                     None,
+                );
+            }
+        }
+    }
+}
+
+/// For each PDF source already rendered by vision (its `source.md` no longer carries the
+/// needs-conversion marker), re-extract the PDF's deterministic text layer and warn when the
+/// rendering covers too little of it (`source.low_coverage`), catching silent omissions. Skips
+/// scanned PDFs (no text layer to compare against) and PDFs still awaiting rendering.
+fn lint_pdf_coverage(r: &mut LintReport, bundle: &Bundle) {
+    let raw = bundle.root.join("raw");
+    let entries = match std::fs::read_dir(&raw) {
+        Ok(e) => e,
+        Err(_) => return,
+    };
+    for e in entries.flatten() {
+        let dir = e.path();
+        if !dir.is_dir() {
+            continue;
+        }
+        let meta: crate::convert::SourceMeta = match std::fs::read_to_string(dir.join("meta.yaml"))
+            .ok()
+            .and_then(|t| serde_yaml::from_str(&t).ok())
+        {
+            Some(m) => m,
+            None => continue,
+        };
+        if meta.format != "pdf" {
+            continue;
+        }
+        let src = match std::fs::read_to_string(dir.join("source.md")) {
+            Ok(s) => s,
+            Err(_) => continue,
+        };
+        // Still awaiting the vision rendering: nothing to check yet.
+        if src.contains(crate::convert::NEEDS_CONVERSION_MARKER) {
+            continue;
+        }
+        let bytes = match std::fs::read(dir.join("original.pdf")) {
+            Ok(b) => b,
+            Err(_) => continue,
+        };
+        if let Some(cov) = crate::pdf_coverage::pdf_coverage(&bytes, &src) {
+            if cov < 0.6 {
+                r.push(
+                    Severity::Warn,
+                    "source.low_coverage",
+                    &meta.id,
+                    format!(
+                        "vision rendering covers only {:.0}% of the PDF's deterministic text; it may have dropped sections, verify against original.pdf",
+                        cov * 100.0
+                    ),
+                    Some(format!("raw/{}/source.md", meta.id)),
                 );
             }
         }

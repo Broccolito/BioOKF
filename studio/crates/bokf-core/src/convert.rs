@@ -257,7 +257,18 @@ pub fn convert_bytes(ext: &str, filename: &str, bytes: &[u8]) -> Converted {
         "docx" => office_to_md(bytes, "word/document.xml", "</w:p>", None).unwrap_or_else(|e| Converted { markdown: format!("> docx conversion failed: {e}\n"), title: String::new(), format: "docx".into(), needs_llm_fallback: true }),
         "pptx" => pptx_to_md(bytes).unwrap_or_else(|e| Converted { markdown: format!("> pptx conversion failed: {e}\n"), title: String::new(), format: "pptx".into(), needs_llm_fallback: true }),
         "pdf" => Converted {
-            markdown: format!("> **PDF source: needs OCR/LLM extraction.** `{filename}` was stored verbatim under `raw/`; produce a faithful Markdown rendering in the next step.\n"),
+            // PDFs are rendered by LLM vision, not a deterministic parser: pure-Rust text
+            // extraction silently corrupts mathematical formulas and special characters, and the
+            // key findings of a manuscript often live in its figures. The agent reads the original
+            // PDF directly with its vision and produces faithful Markdown.
+            markdown: format!(
+                "> **PDF source: render with vision.** `{filename}` is stored verbatim under this source's `raw/<id>/original.pdf`. Convert it to faithful Markdown using your vision capabilities: read the high-resolution page images in this source's `pages/` folder (`pages/page-001.jpg`, `pages/page-002.jpg`, ...) if present, otherwise read `original.pdf` directly. Then overwrite this file with the rendering and remove this marker. Requirements:\n\
+                 >\n\
+                 > - **Text:** transcribe ALL body text, headings, tables, captions, footnotes, and references exactly, preserving structure and reading order.\n\
+                 > - **Formulas:** render every equation and inline mathematical expression correctly as LaTeX (`$...$` / `$$...$$`). Do not approximate, drop, or guess symbols, subscripts, or superscripts.\n\
+                 > - **Figures:** for EACH figure, chart, diagram, gel, micrograph, or plot, write a faithful description of what it shows AND transcribe its axes, labels, legend, and any data values. Key findings often live in the figures, not only the text.\n\
+                 > - **Figure-derived knowledge:** treat figures as first-class evidence. When you extract nodes and edges, mine the figures too (a survival curve yields outcome edges; a pathway diagram yields regulates/activates edges; a bar chart yields quantitative associations), each provenance-stamped to this source.\n"
+            ),
             title: String::new(),
             format: "pdf".into(),
             needs_llm_fallback: true,
@@ -651,6 +662,25 @@ fn store(bundle_root: &Path, filename: &str, bytes: &[u8]) -> Result<SourceRecor
     store_with_extra_figures(bundle_root, filename, bytes, Vec::new())
 }
 
+/// Render PDF pages to `raw/<id>/pages/page-NNN.png` so the agent (and the GUI) can read the
+/// original typesetting, tables, equations, and figures with vision. A no-op for non-PDF sources,
+/// and when the PDFium native library is unavailable (the agent then reads `original.pdf` directly).
+fn write_pdf_pages(dir: &Path, ext: &str, bytes: &[u8]) -> Result<(), String> {
+    if ext != "pdf" {
+        return Ok(());
+    }
+    let pages = crate::pdf_raster::pdf_rasterize_pages(bytes, 200);
+    if pages.is_empty() {
+        return Ok(());
+    }
+    let pdir = dir.join("pages");
+    std::fs::create_dir_all(&pdir).map_err(|e| e.to_string())?;
+    for (name, png) in &pages {
+        std::fs::write(pdir.join(name), png).map_err(|e| e.to_string())?;
+    }
+    Ok(())
+}
+
 /// Convert + store one source, optionally attaching `extra` loose images (from a folder
 /// or zip) as additional figures of this document. Each extra is `(member_name, bytes)`
 /// and is recorded with `origin = "folder:<member_name>"`.
@@ -706,6 +736,7 @@ fn store_with_extra_figures(bundle_root: &Path, filename: &str, bytes: &[u8], ex
         String::new()
     };
     std::fs::write(dir.join("source.md"), format!("{banner}{body}")).map_err(|e| e.to_string())?;
+    write_pdf_pages(&dir, &ext, bytes)?;
     // meta
     let meta = SourceMeta {
         id: id.clone(),
@@ -861,6 +892,7 @@ fn store_url(bundle_root: &Path, url: &str, final_url: &str, bytes: &[u8], ext: 
         String::new()
     };
     std::fs::write(dir.join("source.md"), format!("{banner}{body}")).map_err(|e| e.to_string())?;
+    write_pdf_pages(&dir, ext, bytes)?;
     let meta = SourceMeta {
         id: id.clone(),
         title: title.clone(),
