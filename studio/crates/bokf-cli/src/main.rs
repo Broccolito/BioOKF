@@ -143,6 +143,18 @@ enum Cmd {
         #[arg(long)]
         json: bool,
     },
+    /// Rename a provisional figure to a content name and rewrite every reference.
+    NameFigure {
+        bundle: PathBuf,
+        #[arg(long)]
+        source: String,
+        #[arg(long)]
+        figure: String,
+        #[arg(long = "as")]
+        caption: String,
+        #[arg(long)]
+        json: bool,
+    },
     /// Regenerate index.md (identifier registry + by-type catalog + subtypes-in-use), or --check it.
     Index {
         path: PathBuf,
@@ -191,6 +203,7 @@ fn run() -> Result<()> {
         Cmd::Register { root, kb_id, path, list, unregister } => cmd_register(root, kb_id, path, list, unregister),
         Cmd::Verify { path, workflow, json } => cmd_verify(path, workflow, json),
         Cmd::Convert { path, text, title, into, combined, json } => cmd_convert(path, text, title, into, combined, json),
+        Cmd::NameFigure { bundle, source, figure, caption, json } => cmd_name_figure(bundle, source, figure, caption, json),
         Cmd::Index { path, check } => cmd_index(path, check),
         Cmd::MergeRaw { mkb, skb, json } => cmd_merge_raw(mkb, skb, json),
         Cmd::MergeSnapshot { mkb, verify } => cmd_merge_snapshot(mkb, verify),
@@ -273,6 +286,16 @@ fn cmd_convert(path: Option<PathBuf>, text: Option<String>, title: Option<String
                 r.source_md_path
             );
         }
+    }
+    Ok(())
+}
+
+fn cmd_name_figure(bundle: PathBuf, source: String, figure: String, caption: String, json: bool) -> Result<()> {
+    let new_rel = bokf_core::figures::name_figure(&bundle, &source, &figure, &caption).map_err(anyhow::Error::msg)?;
+    if json {
+        println!("{}", serde_json::json!({ "source": source, "figure": new_rel }));
+    } else {
+        println!("{source}  {figure} -> {new_rel}");
     }
     Ok(())
 }
@@ -513,6 +536,17 @@ fn cmd_search(path: PathBuf, query: String, limit: usize, json: bool) -> Result<
         println!("\n{} hits", hits.len());
     }
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    #[test]
+    fn cli_parses_name_figure() {
+        use clap::Parser;
+        let c = Cli::try_parse_from(["bokf", "name-figure", "kb", "--source", "x-1", "--figure", "figures/fig-001.png", "--as", "A B"]).unwrap();
+        assert!(matches!(c.cmd, Cmd::NameFigure { .. }));
+    }
 }
 
 fn cmd_stats(path: PathBuf) -> Result<()> {

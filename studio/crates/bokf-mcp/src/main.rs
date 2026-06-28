@@ -80,6 +80,12 @@ param!(ConvertParam {
     #[doc = "Title for inline text."] title: Option<String>,
     #[doc = "Concatenate archive/folder members into one source."] combined: Option<bool>,
 });
+param!(NameFigureParam {
+    #[doc = "Bundle directory."] bundle: String,
+    #[doc = "Source id (the raw/<id> folder name)."] source: String,
+    #[doc = "Current figure path relative to raw/<id>, e.g. figures/fig-001.png."] figure: String,
+    #[doc = "Content caption to name the figure by."] caption: String,
+});
 param!(IndexParam {
     #[doc = "Bundle directory."] bundle: String,
     #[doc = "Only check currency (don't rewrite index.md)."] check: Option<bool>,
@@ -307,6 +313,14 @@ impl BokfServer {
         };
         match ingest(Path::new(&p.0.bundle), input, p.0.combined.unwrap_or(false)) {
             Ok(recs) => ok(serde_json::to_string_pretty(&recs).unwrap_or_default()),
+            Err(e) => ok(format!("ERROR: {e}")),
+        }
+    }
+
+    #[tool(name = "bokf_name_figure", description = "Rename a provisional figure (raw/<id>/figures/fig-NNN.ext) to a content name, rewriting its source.md reference and meta.yaml. Writes via bokf-core, so raw/ guards don't block it.")]
+    pub async fn name_figure(&self, p: Parameters<NameFigureParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        match bokf_core::figures::name_figure(Path::new(&p.0.bundle), &p.0.source, &p.0.figure, &p.0.caption) {
+            Ok(new_rel) => ok(serde_json::json!({"source": p.0.source, "figure": new_rel}).to_string()),
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
