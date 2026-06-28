@@ -756,6 +756,38 @@ pub fn ingest(bundle_root: &Path, input: SourceInput, combined: bool) -> Result<
         });
     }
 
+    // Folder/zip grouping: loose image members attach as figures of the primary
+    // document, rather than each becoming its own image-source.
+    if !combined && members.len() > 1 {
+        let (images, docs): (Vec<(String, Vec<u8>)>, Vec<(String, Vec<u8>)>) =
+            members.into_iter().partition(|(name, _)| is_image_ext(&ext_of(name)));
+        if !docs.is_empty() {
+            // Primary document: the sole doc, else the largest by byte length.
+            let primary_idx = docs
+                .iter()
+                .enumerate()
+                .max_by_key(|(_, (_, b))| b.len())
+                .map(|(i, _)| i)
+                .unwrap_or(0);
+            let mut records = Vec::new();
+            let extra: Vec<(String, Vec<u8>)> = images;
+            for (i, (name, bytes)) in docs.iter().enumerate() {
+                if i == primary_idx {
+                    records.push(store_with_extra_figures(bundle_root, name, bytes, extra.clone())?);
+                } else {
+                    records.push(store(bundle_root, name, bytes)?);
+                }
+            }
+            return Ok(records);
+        }
+        // No documents: fall back to one image-source per image.
+        let mut records = Vec::new();
+        for (name, bytes) in images {
+            records.push(store(bundle_root, &name, &bytes)?);
+        }
+        return Ok(records);
+    }
+
     let mut records = Vec::new();
     for (name, bytes) in members {
         records.push(store(bundle_root, &name, &bytes)?);
@@ -828,6 +860,24 @@ mod tests {
         // the marker is present until the agent renders it
         let report = crate::lint::lint(&crate::bundle::Bundle::open(root).unwrap());
         assert!(report.findings.iter().any(|f| f.rule == "source.needs_conversion"), "{:?}", report.findings);
+    }
+
+    #[test]
+    fn folder_attaches_loose_images_to_primary_doc() {
+        let dir = tempfile::tempdir().unwrap();
+        let root = dir.path();
+        std::fs::create_dir_all(root.join("raw")).unwrap();
+        let folder = tempfile::tempdir().unwrap();
+        std::fs::write(folder.path().join("paper.md"), "# Paper\n\nBody with two figures.").unwrap();
+        std::fs::write(folder.path().join("figure1.png"), [0x89, b'P', b'N', b'G', 1]).unwrap();
+        std::fs::write(folder.path().join("figure2.png"), [0x89, b'P', b'N', b'G', 2]).unwrap();
+        let recs = ingest(root, SourceInput::Path(folder.path().to_path_buf()), false).unwrap();
+        assert_eq!(recs.len(), 1, "one doc-source, images attached: {recs:?}");
+        let id = &recs[0].source_id;
+        let figdir = root.join("raw").join(id).join("figures");
+        assert!(figdir.join("fig-001.png").exists() || figdir.read_dir().unwrap().count() == 2);
+        let meta: SourceMeta = serde_yaml::from_str(&std::fs::read_to_string(root.join(&recs[0].meta_path)).unwrap()).unwrap();
+        assert_eq!(meta.figures.len(), 2);
     }
 
     #[test]
