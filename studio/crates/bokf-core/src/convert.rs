@@ -508,12 +508,12 @@ fn is_junk(name: &str) -> bool {
 // Naming + storage
 // ---------------------------------------------------------------------------
 
-fn ext_of(name: &str) -> String {
+pub(crate) fn ext_of(name: &str) -> String {
     Path::new(name).extension().and_then(|e| e.to_str()).unwrap_or("").to_string()
 }
 
 /// A human-readable slug from a title (lowercase, non-alnum → `-`, ≤40 chars).
-fn slug(s: &str) -> String {
+pub(crate) fn slug(s: &str) -> String {
     let mut out = String::new();
     for c in s.chars() {
         if c.is_ascii_alphanumeric() {
