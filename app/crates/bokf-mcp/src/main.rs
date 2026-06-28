@@ -420,7 +420,7 @@ impl BokfServer {
         match spawn_studio(p.0.root.as_deref()) {
             Ok(bin) => {
                 // Poll up to ~20s for BOTH the control socket AND the webview/frontend
-                // (window.__bokf) to be ready — the socket answers ping early in setup,
+                // (window.__bokf) to be ready; the socket answers ping early in setup,
                 // before the window exists, so callers that immediately run execute_js
                 // would otherwise hit "Webview not found: main".
                 let mut running = false;
@@ -470,7 +470,7 @@ impl BokfServer {
         ok(serde_json::json!({"running": running, "socket": studio_client::socket_path(), "info": info}).to_string())
     }
 
-    #[tool(name = "bokf_studio_state", description = "The complete GUI status as structured JSON — the way to know what the app is doing WITHOUT a screenshot. Returns {base, baseName, basePath, loading, counts, query, selectedNode, selectedEdge, panelOpen, sidebarCollapsed, terminalOpen, lint, lastAgentAction, bases[]}.")]
+    #[tool(name = "bokf_studio_state", description = "The complete GUI status as structured JSON, the way to know what the app is doing WITHOUT a screenshot. Returns {base, baseName, basePath, loading, counts, query, selectedNode, selectedEdge, panelOpen, sidebarCollapsed, terminalOpen, lint, lastAgentAction, bases[]}.")]
     pub async fn studio_state(&self) -> Result<CallToolResult, rmcp::model::ErrorData> {
         studio_json("JSON.stringify(window.__bokf.getState())")
     }
@@ -493,7 +493,7 @@ impl BokfServer {
             return ok("ERROR: bokf_studio_select needs `base` and/or `node`".to_string());
         }
         // Fire the side-effecting calls, wait for any bundle load to settle, then
-        // read back state — so switching base returns the NEW base's data, not the
+        // read back state, so switching base returns the NEW base's data, not the
         // previous bundle's (selectBase loads the bundle asynchronously).
         if let Err(e) = studio_client::execute_js(&format!("(function(){{{calls}return true;}})()")) {
             return ok(format!("ERROR: {e}"));
@@ -520,7 +520,7 @@ impl BokfServer {
         studio_json(&code)
     }
 
-    #[tool(name = "bokf_studio_screenshot", description = "Capture a screenshot of the Studio GUI window (returned as an image). For visual inspection only — use bokf_studio_state to READ status.")]
+    #[tool(name = "bokf_studio_screenshot", description = "Capture a screenshot of the Studio GUI window (returned as an image). For visual inspection only; use bokf_studio_state to READ status.")]
     pub async fn studio_screenshot(&self) -> Result<CallToolResult, rmcp::model::ErrorData> {
         match studio_client::screenshot("main") {
             Ok(b64) => Ok(CallToolResult::success(vec![Content::image(b64, "image/jpeg")])),
@@ -542,7 +542,7 @@ fn kb_name(path: &str) -> &str {
 
 /// Best-effort: tell the running Studio GUI what the agent is doing, so its live
 /// "AI agent" banner narrates the action to a watching human. Fire-and-forget in a
-/// detached thread — never blocks the tool; silently no-ops if the GUI is closed.
+/// detached thread; never blocks the tool; silently no-ops if the GUI is closed.
 fn narrate_to_studio(action: &str) {
     let a = action.to_string();
     std::thread::spawn(move || {
@@ -575,7 +575,7 @@ fn studio_json(code: &str) -> Result<CallToolResult, rmcp::model::ErrorData> {
     match studio_client::execute_js(code) {
         Ok(s) => match serde_json::from_str::<serde_json::Value>(&s) {
             Ok(v) => ok(serde_json::to_string_pretty(&v).unwrap_or(s)),
-            // Not JSON (shouldn't happen for these expressions) — pass through.
+            // Not JSON (shouldn't happen for these expressions); pass through.
             Err(_) => ok(s),
         },
         Err(e) => ok(format!("ERROR: {e}")),

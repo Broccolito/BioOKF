@@ -4,6 +4,7 @@ BioOKF Studio is, first, an **agentic backend** (an MCP server + CLI over `bokf-
 second, a **Tauri visualizer** front-end over that backend. The tests cover both, plus the
 three agentic loops (ingest / lint / query) exercised on the real `reviews/` corpus.
 
+
 ## How to run
 
 ```bash
@@ -18,7 +19,7 @@ npx playwright test app/tests/visual.spec.mjs # frontend assertions (needs @play
 
 The live-control plane ships in normal builds (default `control` feature); the socket
 server + guest-inject only attach when `BIOOKF_STUDIO_CONTROL=1`, which `bokf_studio_open`
-sets automatically — no special feature flag or build is required.
+sets automatically, so no special feature flag or build is required.
 
 ## 1. Backend: `bokf-core` (library)  ✅ 40+ unit + 4 integration suites
 
@@ -66,7 +67,7 @@ procedures. The 33 tools, grouped:
 ### MCP ↔ Studio GUI control
 
 The `bokf_studio_*` tools drive and observe the *running* GUI over a Unix control socket via the
-`studio_client` bridge — newline-delimited JSON at `/tmp/biookf-tauri-mcp.sock` (override with
+`studio_client` bridge (newline-delimited JSON) at `/tmp/biookf-tauri-mcp.sock` (override with
 `BIOOKF_STUDIO_IPC`). `bokf_studio_open` spawns `biookf-studio` with `BIOOKF_STUDIO_CONTROL=1` and
 waits for the webview to come up; `bokf_studio_state` returns the complete GUI status as structured
 JSON (base, counts, query, selection, panel/sidebar/terminal flags, lint, lastAgentAction, bases[]),
@@ -96,7 +97,7 @@ The frontend (`app/dist`, identical to the Tauri webview) was driven with Playwr
 - Loads the 6-base sidebar; selecting a base renders the typed, color-coded graph (verified on the
   examples bundle and the agentic Type-2-diabetes KB: 29 nodes / 92 edges). The sidebar is now
   **registry-driven**: bundles are registered by absolute path (in `registry.yaml`) and can live
-  ANYWHERE on disk — the example/corpus bundles were moved out of the repo onto the user's Desktop
+  ANYWHERE on disk. The example/corpus bundles were moved out of the repo onto the user's Desktop
   and are registry-linked. Broken/missing registry paths auto-drop from the sidebar, and newly
   registered ones auto-appear without a restart (a live re-sync poll). `app/test-kb` no longer
   exists.
@@ -112,10 +113,10 @@ The frontend (`app/dist`, identical to the Tauri webview) was driven with Playwr
 
 `cargo build -p biookf-studio` compiles the desktop app (tauri 2). The backend now exposes many
 commands beyond the original four `list_bases` / `get_bundle` / `lint_bundle` / `search_bundle`
-(which delegate to `bokf-core`) — e.g. `add_base`, `set_active_kb` / `get_active_kb`, `source_info`,
+(which delegate to `bokf-core`), e.g. `add_base`, `set_active_kb` / `get_active_kb`, `source_info`,
 the `term_*` PTY terminal commands (`term_open` / `term_write` / `term_resize` / `term_close`), and
 the node/edge save commands. The live-control plane is wired through the **default `control`
 feature** (`tauri-plugin-mcp`; `debug-mcp` is kept only as a back-compat alias), so it ships in
-normal builds — the socket server + guest-inject only attach when `BIOOKF_STUDIO_CONTROL=1` (set
+normal builds. The socket server + guest-inject only attach when `BIOOKF_STUDIO_CONTROL=1` (set
 automatically by `bokf_studio_open`). The GUI is not launched in CI (headless has no window server);
 the webview content is the tested `app/dist` frontend.
