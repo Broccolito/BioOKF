@@ -150,7 +150,8 @@ function tick(a){
   const root=new QNode(mnx-qs*0.1, mny-qs*0.1, qs*1.2, qs*1.2);
   for(let i=0;i<M;i++) root.insert(nodes[i].x, nodes[i].y, nodes[i]);
   for(let i=0;i<M;i++) root.force(nodes[i].x, nodes[i].y, nodes[i], a);
-  // --- edge spring forces (unchanged) ---
+  // --- edge spring forces ---
+	const L=92;
   edges.forEach(e=>{const s=byId[e.source],t=byId[e.target]; if(!s||!t)return;
     let dx=t.x-s.x,dy=t.y-s.y,d=Math.sqrt(dx*dx+dy*dy)||0.01;
     const f=(d-L)*0.045*a,fx=(dx/d)*f,fy=(dy/d)*f;
@@ -303,7 +304,12 @@ function negBase(p){return isNegPred(p)?p.slice(4):p;}
 function predLabel(p){return isNegPred(p)?('not '+negBase(p)):p;}
 function loop(){
   const needW=Math.round(cv.clientWidth*DPR), needH=Math.round(cv.clientHeight*DPR);
-  if(needW>0&&needH>0&&(cv.width!==needW||cv.height!==needH)){W=cv.clientWidth;H=cv.clientHeight;cv.width=needW;cv.height=needH;}
+  if(needW>0&&needH>0&&(cv.width!==needW||cv.height!==needH)){
+    const wasZero=(W===0||H===0); W=cv.clientWidth;H=cv.clientHeight;cv.width=needW;cv.height=needH;
+    // fitView() was called during loadGraph() before Tauri had real dimensions (W=0,H=0),
+    // so view.k is ~10-20x too small. Re-fit once the canvas has a real size.
+    if(wasZero&&nodes.length) fitView();
+  }
   if(alpha>0.005){
     tick(alpha); alpha*=0.94;
     // energy-based settle: freeze when total kinetic energy is very low for several frames
