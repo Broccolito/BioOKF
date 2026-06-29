@@ -34,3 +34,6 @@ notarization/
 # Bundled CLI binaries staged into the Tauri app (rebuilt each release)
 app/studio/src-tauri/bin/bokf
 app/studio/src-tauri/bin/bokf-mcp
+
+# Local testing knowledge bases (standalone git repos; moved/managed separately)
+testing/

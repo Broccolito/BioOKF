@@ -1,5 +1,23 @@
 # BioOKF: Biomedical Open Knowledge Format
 
+## Abstract
+
+The adoption of AI agents has reimagined how biomedical knowledge is structured, typed, and sourced.
+We present the Biomedical Open Knowledge Format (BioOKF), a knowledge harness defining a closed,
+molecularly grounded vocabulary of entities (genes, variants, molecules) and relationships, with
+provenance required on every claim. Within it, an agent reading unstructured sources (manuscripts,
+slide decks, posts) ingests concepts and relationships in a knowledge base that follows one standard
+across curators, models, and topics, and these knowledge bases can be merged with others to give
+agents persistent, well-sourced context. BioOKF extends Google's Open Knowledge Format and ships as
+an open-source stack, an MCP server, a command-line tool, and a desktop interface, linking curation,
+querying, linting, and visualization to the agent. In benchmarks holding the model and source text
+fixed, curating under BioOKF captured more biologically meaningful entities and relationships,
+represented them more accurately, and yielded more explainable bases than a bare model or generic
+OKF. With BioOKF, we aim to build a periodic table of biomedical knowledge that grows collaboratively
+in the generative-AI era.
+
+## Overview
+
 **BioOKF is a periodic table for agentic biomedical research: a closed, controlled vocabulary of 28
 entity types and 35 relationship predicates that maps any biomedical source (a paper, preprint,
 bench note, slide deck, CSV, figure, or tweet) into a structured, interlinked, version-controlled
@@ -306,8 +324,9 @@ brief, a `raw/`-immutability guard, a post-write lint nudge, and a `bokf verify`
 
 ## Authors
 
-Wanjun Gu (<wanjun.gu@ucsf.edu>), Gianmarco Bellucci, Ilan Ladabaum, James Xue, Jonathan Xue, and
-Xi Zheng.
+Wanjun Gu (<wanjun.gu@ucsf.edu>), Gianmarco Bellucci (<Gianmarco.Bellucci@ucsf.edu>), Ilan Ladabaum
+(<Ilan.Ladabaum@ucsf.edu>), James Xue (<jinxuejim@gmail.com>), Jonathan Xue (<jonathanx622@gmail.com>),
+and Xi Zheng (<zhx2031558@gmail.com>).
 
 ## License
 
