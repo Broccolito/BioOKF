@@ -55,9 +55,11 @@ Download the notarized **`BioOKF Studio_<version>_aarch64.dmg`** from the
 no Gatekeeper warning and no quarantine prompt.
 
 The bundle includes `bokf` (CLI) and `bokf-mcp` (MCP server) as signed binaries inside the
-`.app`. On first launch the Studio offers to install **`bokf`** to `/usr/local/bin` (one admin
-prompt) so it is available in every terminal. The Studio also has a built-in terminal where `bokf`
-is already on the PATH.
+`.app`. On startup the Studio checks the latest GitHub Release; when a newer notarized build is
+available it offers to install the updated Studio plus the bundled CLI/MCP tools, then restarts
+itself. If the app is current but the tools are not on PATH, Studio offers to install **`bokf`**
+and **`bokf-mcp`** to `/usr/local/bin` (one admin prompt). The Studio also has a built-in terminal
+where both tools are already on the PATH.
 
 All configuration (the knowledge-base registry and the active-KB pointer) lives under
 `~/.config/biookf-studio`, shared by the Studio, the CLI, and the MCP server.

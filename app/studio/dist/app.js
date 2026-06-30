@@ -1339,38 +1339,81 @@ async function boot(){
 }
 boot();
 
-// --- CLI install popup -------------------------------------------------------
-// Shown 5s after launch when the bokf CLI is not on PATH. `?forceCliPopup=1`
-// forces it open (the visual test runs in a plain browser with no Tauri bridge).
+// --- Startup install/update popup -------------------------------------------
+// Shown 5s after launch. It checks for a newer Studio release first (which
+// installs Studio + bundled CLI/MCP), then falls back to installing the bundled
+// command-line tools if the app is already current. `?forceCliPopup=1` and
+// `?forceUpdatePopup=1` force visual test states in a plain browser.
 (function(){
   const NEVER_KEY='bokf.cliPopup.never';
+  const SKIP_UPDATE_KEY='bokf.updatePopup.skipTag';
   const forced=new URLSearchParams(location.search).get('forceCliPopup')==='1';
+  const forcedUpdate=new URLSearchParams(location.search).get('forceUpdatePopup')==='1';
   const $=id=>document.getElementById(id);
-  const show=()=>{ const m=$('cli-modal'); if(m) m.hidden=false; };
+  let mode='cli', updateInfo=null;
+  const setText=(id,text)=>{ const el=$(id); if(el) el.textContent=text; };
+  const setHtml=(id,html)=>{ const el=$(id); if(el) el.innerHTML=html; };
   const hide=()=>{ const m=$('cli-modal'); if(m) m.hidden=true; };
   const setError=msg=>{ const e=$('cli-modal-error'); if(!e) return; e.textContent=msg||''; e.hidden=!msg; };
+  const showCli=()=>{
+    mode='cli'; updateInfo=null; setError('');
+    setText('cli-modal-title','Install BioOKF command-line tools');
+    setHtml('cli-modal-body','BioOKF Studio ships with <code>bokf</code> and <code>bokf-mcp</code>. Install them to <code>/usr/local/bin</code> so the CLI and MCP server work in any terminal or agent client. You will be asked for your password once.');
+    setText('cli-install','Install tools'); setText('cli-never',"Don't ask again");
+    const m=$('cli-modal'); if(m) m.hidden=false;
+  };
+  const showUpdate=(info)=>{
+    mode='update'; updateInfo=info||{}; setError('');
+    const latest=esc(updateInfo.latestTag||updateInfo.latestVersion||'the newest release');
+    const current=esc(updateInfo.currentVersion||'this version');
+    setText('cli-modal-title','Update BioOKF Studio');
+    setHtml('cli-modal-body',`BioOKF ${latest} is available. This update installs the newest Studio app plus the bundled <code>bokf</code> CLI and <code>bokf-mcp</code> server, then restarts Studio. Current version: <code>${current}</code>.`);
+    setText('cli-install','Install update'); setText('cli-never','Skip this version');
+    const m=$('cli-modal'); if(m) m.hidden=false;
+  };
 
   async function maybeShow(){
-    if(localStorage.getItem(NEVER_KEY)==='1') return;
     if(!isDesktop) return;                       // only meaningful inside the app
     try{
+      const u=await tauriInvoke('update_status');
+      if(u && u.updateAvailable && u.installSupported && localStorage.getItem(SKIP_UPDATE_KEY)!==(u.latestTag||u.latestVersion||'')){
+        showUpdate(u); return;
+      }
+    }catch(_){/* release check is best-effort; fall through to CLI status */}
+    if(localStorage.getItem(NEVER_KEY)==='1') return;
+    try{
       const s=await tauriInvoke('cli_status');
-      if(s && s.installed===false) show();
+      if(s && (s.installed===false || s.mcpInstalled===false)) showCli();
     }catch(_){/* not running under Tauri, or command missing */}
   }
 
   function wire(){
     const install=$('cli-install'), later=$('cli-later'), never=$('cli-never');
     if(install) install.onclick=async()=>{
-      setError(''); install.disabled=true; install.textContent='Installing...';
-      try{ await tauriInvoke('install_cli'); hide(); }
-      catch(e){ setError(String(e && e.message ? e.message : e)); }
-      finally{ install.disabled=false; install.textContent='Install CLI'; }
+      setError(''); install.disabled=true;
+      const original=install.textContent;
+      install.textContent=mode==='update'?'Downloading...':'Installing...';
+      try{
+        if(mode==='update'){
+          await tauriInvoke('install_update');
+          install.textContent='Restarting...';
+        }else{
+          await tauriInvoke('install_cli'); hide();
+        }
+      }
+      catch(e){ setError(String(e && e.message ? e.message : e)); install.disabled=false; install.textContent=original; return; }
+      if(mode!=='update'){ install.disabled=false; install.textContent=original; }
     };
     if(later) later.onclick=hide;
-    if(never) never.onclick=()=>{ localStorage.setItem(NEVER_KEY,'1'); hide(); };
+    if(never) never.onclick=()=>{
+      if(mode==='update' && updateInfo){ localStorage.setItem(SKIP_UPDATE_KEY, updateInfo.latestTag||updateInfo.latestVersion||''); }
+      else localStorage.setItem(NEVER_KEY,'1');
+      hide();
+    };
   }
 
   wire();
-  if(forced) show(); else setTimeout(maybeShow, 5000);
+  if(forcedUpdate) showUpdate({latestTag:'v9.9.9',currentVersion:'0.0.0'});
+  else if(forced) showCli();
+  else setTimeout(maybeShow, 5000);
 })();

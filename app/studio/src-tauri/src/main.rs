@@ -5,7 +5,7 @@
 
 use std::collections::HashMap;
 use std::io::{Read, Write};
-use std::path::PathBuf;
+use std::path::{Path, PathBuf};
 use std::sync::atomic::{AtomicU64, Ordering};
 use std::sync::{Mutex, OnceLock};
 
@@ -857,6 +857,14 @@ fn bokf_exe_name() -> &'static str {
     }
 }
 
+fn bokf_mcp_exe_name() -> &'static str {
+    if cfg!(windows) {
+        "bokf-mcp.exe"
+    } else {
+        "bokf-mcp"
+    }
+}
+
 /// Directory inside the app bundle that holds the shipped `bokf`/`bokf-mcp`.
 /// In a packaged `.app` this is `Contents/Resources/bin`; under `cargo run` it
 /// falls back to the workspace target dir next to the studio exe.
@@ -878,21 +886,29 @@ fn bundled_bin_dir(app: &AppHandle) -> Option<PathBuf> {
     None
 }
 
-/// The install path of `bokf` on the user's PATH (or the standard install
-/// location), if any.
-fn bokf_on_path() -> Option<String> {
-    let std_path = std::path::Path::new("/usr/local/bin/bokf");
+/// The install path of a bundled BioOKF tool on the user's PATH (or the standard
+/// install location), if any.
+fn tool_on_path(exe_name: &str) -> Option<String> {
+    let std_path = Path::new("/usr/local/bin").join(exe_name);
     if std_path.exists() {
         return Some(std_path.display().to_string());
     }
     let path = std::env::var_os("PATH")?;
     for dir in std::env::split_paths(&path) {
-        let cand = dir.join(bokf_exe_name());
+        let cand = dir.join(exe_name);
         if cand.exists() {
             return Some(cand.display().to_string());
         }
     }
     None
+}
+
+fn bokf_on_path() -> Option<String> {
+    tool_on_path(bokf_exe_name())
+}
+
+fn bokf_mcp_on_path() -> Option<String> {
+    tool_on_path(bokf_mcp_exe_name())
 }
 
 fn bokf_version(bin: &std::path::Path) -> Option<String> {
@@ -908,6 +924,10 @@ fn bokf_version(bin: &std::path::Path) -> Option<String> {
     }
 }
 
+fn current_studio_version() -> &'static str {
+    env!("CARGO_PKG_VERSION")
+}
+
 fn sh_quote(s: &str) -> String {
     format!("'{}'", s.replace('\'', "'\\''"))
 }
@@ -916,13 +936,232 @@ fn applescript_string(s: &str) -> String {
     format!("\"{}\"", s.replace('\\', "\\\\").replace('"', "\\\""))
 }
 
+fn version_parts(v: &str) -> Vec<u64> {
+    v.trim()
+        .trim_start_matches('v')
+        .split(|c: char| !c.is_ascii_digit())
+        .filter(|s| !s.is_empty())
+        .filter_map(|s| s.parse::<u64>().ok())
+        .collect()
+}
+
+fn version_newer(latest: &str, current: &str) -> bool {
+    let mut a = version_parts(latest);
+    let mut b = version_parts(current);
+    let n = a.len().max(b.len());
+    a.resize(n, 0);
+    b.resize(n, 0);
+    a > b
+}
+
+#[derive(Debug, serde::Deserialize)]
+struct GhRelease {
+    tag_name: String,
+    html_url: Option<String>,
+    assets: Vec<GhAsset>,
+}
+
+#[derive(Debug, Clone, serde::Deserialize)]
+struct GhAsset {
+    name: String,
+    browser_download_url: String,
+}
+
+fn fetch_latest_release() -> Result<GhRelease, String> {
+    if let Ok(raw) = std::env::var("BIOOKF_UPDATE_RELEASE_JSON") {
+        return serde_json::from_str(&raw).map_err(|e| format!("bad BIOOKF_UPDATE_RELEASE_JSON: {e}"));
+    }
+    let url = std::env::var("BIOOKF_UPDATE_API_URL")
+        .unwrap_or_else(|_| "https://api.github.com/repos/Broccolito/BioOKF/releases/latest".to_string());
+    let out = std::process::Command::new("curl")
+        .arg("-fsSL")
+        .arg("--connect-timeout")
+        .arg("5")
+        .arg("--max-time")
+        .arg("15")
+        .arg("-H")
+        .arg("Accept: application/vnd.github+json")
+        .arg("-H")
+        .arg(format!("User-Agent: BioOKF-Studio/{}", current_studio_version()))
+        .arg(&url)
+        .output()
+        .map_err(|e| format!("failed to run curl for release check: {e}"))?;
+    if !out.status.success() {
+        return Err(format!(
+            "release check failed: {}",
+            String::from_utf8_lossy(&out.stderr).trim()
+        ));
+    }
+    serde_json::from_slice(&out.stdout).map_err(|e| format!("bad release response: {e}"))
+}
+
+fn current_platform_tokens() -> (&'static str, &'static [&'static str]) {
+    match (std::env::consts::OS, std::env::consts::ARCH) {
+        ("macos", "aarch64") => ("macos-arm64", &["aarch64", "arm64", "macos-arm64"]),
+        ("macos", "x86_64") => ("macos-x64", &["x86_64", "x64", "macos-x64"]),
+        ("linux", "x86_64") => ("linux-x64", &["linux-x64", "x86_64"]),
+        ("windows", "x86_64") => ("windows-x64", &["windows-x64", "x64"]),
+        _ => ("unsupported", &[]),
+    }
+}
+
+fn asset_for_current_platform(release: &GhRelease) -> Option<GhAsset> {
+    let (platform, tokens) = current_platform_tokens();
+    let is_archive = |name: &str| {
+        let n = name.to_ascii_lowercase();
+        n.ends_with(".dmg") || n.ends_with(".tar.gz") || n.ends_with(".tgz") || n.ends_with(".zip")
+    };
+    release
+        .assets
+        .iter()
+        .find(|a| {
+            let n = a.name.to_ascii_lowercase();
+            is_archive(&n) && tokens.iter().any(|t| n.contains(t))
+        })
+        .or_else(|| {
+            release.assets.iter().find(|a| {
+                let n = a.name.to_ascii_lowercase();
+                is_archive(&n) && n.contains(platform)
+            })
+        })
+        .or_else(|| {
+            if std::env::consts::OS == "macos" {
+                release.assets.iter().find(|a| a.name.to_ascii_lowercase().ends_with(".dmg"))
+            } else {
+                None
+            }
+        })
+        .cloned()
+}
+
+fn install_supported_for_asset(asset_name: &str) -> bool {
+    if std::env::consts::OS != "macos" {
+        return false;
+    }
+    let n = asset_name.to_ascii_lowercase();
+    n.ends_with(".dmg") || n.ends_with(".tar.gz") || n.ends_with(".tgz")
+}
+
+fn app_bundle_path() -> Option<PathBuf> {
+    let exe = std::env::current_exe().ok()?;
+    for ancestor in exe.ancestors() {
+        if ancestor.extension().and_then(|s| s.to_str()) == Some("app") {
+            return Some(ancestor.to_path_buf());
+        }
+    }
+    None
+}
+
+fn download_asset(asset: &GhAsset) -> Result<PathBuf, String> {
+    let mut dir = std::env::temp_dir();
+    dir.push(format!("biookf-update-{}", std::process::id()));
+    std::fs::create_dir_all(&dir).map_err(|e| format!("failed to create update temp dir: {e}"))?;
+    let safe_name = asset.name.replace('/', "_");
+    let dest = dir.join(safe_name);
+    let out = std::process::Command::new("curl")
+        .arg("-fL")
+        .arg("--connect-timeout")
+        .arg("10")
+        .arg("--max-time")
+        .arg("300")
+        .arg("-H")
+        .arg(format!("User-Agent: BioOKF-Studio/{}", current_studio_version()))
+        .arg("-o")
+        .arg(&dest)
+        .arg(&asset.browser_download_url)
+        .output()
+        .map_err(|e| format!("failed to run curl for update download: {e}"))?;
+    if out.status.success() {
+        Ok(dest)
+    } else {
+        Err(format!(
+            "update download failed: {}",
+            String::from_utf8_lossy(&out.stderr).trim()
+        ))
+    }
+}
+
+fn write_macos_relauncher(asset: &Path, dest_app: &Path) -> Result<PathBuf, String> {
+    let mut script = std::env::temp_dir();
+    script.push(format!("biookf-relaunch-{}.sh", std::process::id()));
+    let body = format!(
+        r#"#!/bin/bash
+set -euo pipefail
+PID={pid}
+ASSET={asset}
+DEST={dest}
+APP_NAME="BioOKF Studio.app"
+LOG="$HOME/Library/Logs/BioOKF Studio Updater.log"
+mkdir -p "$(dirname "$LOG")"
+exec >> "$LOG" 2>&1
+echo "$(date): starting BioOKF update from $ASSET"
+while kill -0 "$PID" 2>/dev/null; do sleep 0.2; done
+WORK="$(mktemp -d /tmp/biookf-update.XXXXXX)"
+cleanup() {{
+  if [ -n "${{MOUNT:-}}" ]; then hdiutil detach "$MOUNT" -quiet || true; fi
+  rm -rf "$WORK"
+}}
+trap cleanup EXIT
+SRC=""
+case "$ASSET" in
+  *.dmg)
+    MOUNT="$WORK/mount"
+    mkdir -p "$MOUNT"
+    hdiutil attach "$ASSET" -nobrowse -quiet -mountpoint "$MOUNT"
+    SRC="$(find "$MOUNT" -maxdepth 3 -name "$APP_NAME" -type d -print -quit)"
+    ;;
+  *.tar.gz|*.tgz)
+    mkdir -p "$WORK/extract"
+    tar -xzf "$ASSET" -C "$WORK/extract"
+    SRC="$(find "$WORK/extract" -maxdepth 5 -name "$APP_NAME" -type d -print -quit)"
+    ;;
+esac
+if [ -z "$SRC" ] || [ ! -d "$SRC" ]; then
+  echo "BioOKF update failed: BioOKF Studio.app not found in downloaded asset"
+  open "$DEST" || true
+  exit 1
+fi
+codesign --verify --deep --strict "$SRC"
+spctl --assess --type execute "$SRC"
+install_cmd="rm -rf $(printf '%q' "$DEST") && ditto $(printf '%q' "$SRC") $(printf '%q' "$DEST") && mkdir -p /usr/local/bin"
+for tool in bokf bokf-mcp; do
+  bundled="$DEST/Contents/Resources/bin/$tool"
+  target="/usr/local/bin/$tool"
+  install_cmd="$install_cmd && if [ -x $(printf '%q' "$bundled") ]; then cp $(printf '%q' "$bundled") $(printf '%q' "$target") && chmod 755 $(printf '%q' "$target"); fi"
+done
+escaped="${{install_cmd//\\/\\\\}}"
+escaped="${{escaped//\"/\\\"}}"
+osascript -e "do shell script \"$escaped\" with administrator privileges"
+echo "$(date): BioOKF update installed; reopening $DEST"
+open "$DEST"
+"#,
+        pid = std::process::id(),
+        asset = sh_quote(&asset.to_string_lossy()),
+        dest = sh_quote(&dest_app.to_string_lossy()),
+    );
+    std::fs::write(&script, body).map_err(|e| format!("failed to write relauncher: {e}"))?;
+    #[cfg(unix)]
+    {
+        use std::os::unix::fs::PermissionsExt;
+        let mut perms = std::fs::metadata(&script)
+            .map_err(|e| e.to_string())?
+            .permissions();
+        perms.set_mode(0o700);
+        std::fs::set_permissions(&script, perms).map_err(|e| e.to_string())?;
+    }
+    Ok(script)
+}
+
 /// Report whether the `bokf` CLI is installed on PATH, plus version info. The
 /// front-end uses `installed == false` to decide whether to show the install
 /// popup 5 seconds after launch.
 #[tauri::command]
 fn cli_status(app: AppHandle) -> serde_json::Value {
     let installed_path = bokf_on_path();
+    let installed_mcp_path = bokf_mcp_on_path();
     let bundled = bundled_bin_dir(&app).map(|d| d.join(bokf_exe_name()));
+    let bundled_mcp = bundled_bin_dir(&app)
+        .map(|d| d.join(bokf_mcp_exe_name()).to_string_lossy().to_string());
     let bundled_version = bundled.as_deref().and_then(bokf_version);
     let installed_version = installed_path
         .as_deref()
@@ -931,27 +1170,38 @@ fn cli_status(app: AppHandle) -> serde_json::Value {
     serde_json::json!({
         "installed": installed_path.is_some(),
         "path": installed_path,
+        "mcpInstalled": installed_mcp_path.is_some(),
+        "mcpPath": installed_mcp_path,
         "version": installed_version,
         "bundledVersion": bundled_version,
+        "bundledMcpPath": bundled_mcp,
     })
 }
 
-/// Copy the bundled `bokf` to `/usr/local/bin/bokf` with one admin prompt.
+/// Copy the bundled `bokf` and `bokf-mcp` to `/usr/local/bin` with one admin prompt.
 #[tauri::command]
 fn install_cli(app: AppHandle) -> Result<String, String> {
     let dir = bundled_bin_dir(&app).ok_or("bundled bokf binary not found")?;
-    let src = dir.join(bokf_exe_name());
-    if !src.exists() {
-        return Err(format!("bundled bokf not found at {}", src.display()));
+    let src_cli = dir.join(bokf_exe_name());
+    let src_mcp = dir.join(bokf_mcp_exe_name());
+    if !src_cli.exists() {
+        return Err(format!("bundled bokf not found at {}", src_cli.display()));
     }
-    let dest = "/usr/local/bin/bokf";
-    // One admin prompt: ensure /usr/local/bin exists, copy, mark executable.
+    if !src_mcp.exists() {
+        return Err(format!("bundled bokf-mcp not found at {}", src_mcp.display()));
+    }
+    let dest_cli = "/usr/local/bin/bokf";
+    let dest_mcp = "/usr/local/bin/bokf-mcp";
+    // One admin prompt: ensure /usr/local/bin exists, copy both tools, mark executable.
     let shell = format!(
-        "mkdir -p {} && cp {} {} && chmod 755 {}",
+        "mkdir -p {} && cp {} {} && cp {} {} && chmod 755 {} {}",
         sh_quote("/usr/local/bin"),
-        sh_quote(&src.to_string_lossy()),
-        sh_quote(dest),
-        sh_quote(dest)
+        sh_quote(&src_cli.to_string_lossy()),
+        sh_quote(dest_cli),
+        sh_quote(&src_mcp.to_string_lossy()),
+        sh_quote(dest_mcp),
+        sh_quote(dest_cli),
+        sh_quote(dest_mcp)
     );
     let script = format!(
         "do shell script {} with administrator privileges",
@@ -963,7 +1213,7 @@ fn install_cli(app: AppHandle) -> Result<String, String> {
         .output()
         .map_err(|e| format!("failed to launch osascript: {e}"))?;
     if out.status.success() {
-        Ok(dest.to_string())
+        Ok(format!("{dest_cli} and {dest_mcp}"))
     } else {
         let err = String::from_utf8_lossy(&out.stderr);
         if err.contains("-128") || err.to_lowercase().contains("cancel") {
@@ -972,6 +1222,72 @@ fn install_cli(app: AppHandle) -> Result<String, String> {
             Err(format!("install failed: {}", err.trim()))
         }
     }
+}
+
+#[tauri::command]
+fn update_status() -> serde_json::Value {
+    let current = current_studio_version();
+    match fetch_latest_release() {
+        Ok(release) => {
+            let asset = asset_for_current_platform(&release);
+            let latest = release.tag_name.trim_start_matches('v').to_string();
+            let update_available = version_newer(&release.tag_name, current);
+            serde_json::json!({
+                "ok": true,
+                "currentVersion": current,
+                "latestVersion": latest,
+                "latestTag": release.tag_name,
+                "releaseUrl": release.html_url,
+                "updateAvailable": update_available,
+                "platform": current_platform_tokens().0,
+                "assetName": asset.as_ref().map(|a| a.name.clone()),
+                "assetUrl": asset.as_ref().map(|a| a.browser_download_url.clone()),
+                "installSupported": asset.as_ref().map(|a| install_supported_for_asset(&a.name)).unwrap_or(false),
+            })
+        }
+        Err(e) => serde_json::json!({
+            "ok": false,
+            "currentVersion": current,
+            "updateAvailable": false,
+            "error": e,
+        }),
+    }
+}
+
+#[tauri::command]
+fn install_update(app: AppHandle) -> Result<String, String> {
+    let current = current_studio_version();
+    let release = fetch_latest_release()?;
+    if !version_newer(&release.tag_name, current) {
+        return Ok("BioOKF Studio is already up to date.".to_string());
+    }
+    let asset = asset_for_current_platform(&release)
+        .ok_or_else(|| format!("no release asset found for {}", current_platform_tokens().0))?;
+    if !install_supported_for_asset(&asset.name) {
+        return Err(format!(
+            "automatic install is not supported for this asset yet: {}",
+            asset.name
+        ));
+    }
+    let downloaded = download_asset(&asset)?;
+    let dest_app = app_bundle_path().unwrap_or_else(|| PathBuf::from("/Applications/BioOKF Studio.app"));
+    let relauncher = write_macos_relauncher(&downloaded, &dest_app)?;
+    std::process::Command::new("/bin/bash")
+        .arg(&relauncher)
+        .stdin(std::process::Stdio::null())
+        .stdout(std::process::Stdio::null())
+        .stderr(std::process::Stdio::null())
+        .spawn()
+        .map_err(|e| format!("failed to start updater: {e}"))?;
+    let app_for_exit = app.clone();
+    std::thread::spawn(move || {
+        std::thread::sleep(std::time::Duration::from_millis(250));
+        app_for_exit.exit(0);
+    });
+    Ok(format!(
+        "Installing BioOKF {} from {}; Studio will restart.",
+        release.tag_name, asset.name
+    ))
 }
 
 fn main() {
@@ -1019,7 +1335,9 @@ fn main() {
             term_close,
             source_info,
             cli_status,
-            install_cli
+            install_cli,
+            update_status,
+            install_update
         ])
         // Native menu so macOS actually delivers Cmd+K: WKWebView swallows Cmd-key
         // combos as key equivalents before they reach the webview's JS keydown, so the
@@ -1090,6 +1408,30 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use super::replace_body;
+
+    #[test]
+    fn update_version_compare_handles_v_prefixes() {
+        assert!(super::version_newer("v0.2.3", "0.2.2"));
+        assert!(super::version_newer("0.10.0", "0.9.9"));
+        assert!(!super::version_newer("v0.2.2", "0.2.2"));
+        assert!(!super::version_newer("v0.2.1", "0.2.2"));
+    }
+
+    #[test]
+    fn update_asset_selection_finds_current_macos_dmg() {
+        let release = super::GhRelease {
+            tag_name: "v0.2.3".into(),
+            html_url: None,
+            assets: vec![super::GhAsset {
+                name: "BioOKF.Studio_0.2.3_aarch64.dmg".into(),
+                browser_download_url: "https://example.invalid/BioOKF.dmg".into(),
+            }],
+        };
+        let asset = super::asset_for_current_platform(&release);
+        if std::env::consts::OS == "macos" && std::env::consts::ARCH == "aarch64" {
+            assert_eq!(asset.unwrap().name, "BioOKF.Studio_0.2.3_aarch64.dmg");
+        }
+    }
 
     #[test]
     fn preserves_frontmatter_replaces_body() {
