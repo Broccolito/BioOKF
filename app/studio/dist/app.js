@@ -1118,7 +1118,7 @@ function renderSidebar(){
   BASES.forEach(b=>{const el=document.createElement('div');el.className='kb'+(b.id===activeBaseId?' active':'');el.title=b.path?b.name+'\n'+b.path:b.name;
     // Path lives in the hover tooltip (el.title) only — permanent gray text is just counts + updated.
     const when = b.updated ? `<span class="kb-when">updated ${esc(b.updated)}</span>` : '';
-    const focus = b.id===aiFocusKb ? `<span class="kb-focus" title="AI agent is focused on this knowledge base"></span>` : '';
+    const focus = b.id===aiFocusKb ? `<span class="kb-focus" title="AI agent is working on this knowledge base"></span>` : '';
     el.innerHTML=`<span class="kb-mono">${esc(monogram(b.name))}</span><span class="kb-text"><span class="kb-name">${esc(b.name)}</span><span class="kb-meta">${b.node_count!=null?b.node_count+' nodes':''}${b.edge_count!=null?' · '+b.edge_count+' edges':''}</span>${when}</span>${focus}`;
     el.onclick=()=>{hideKbMenu();selectBase(b);};
     el.oncontextmenu=ev=>showKbMenu(ev,b);
@@ -1339,8 +1339,13 @@ window.addEventListener('resize',resize);
    (User-driven clicks call the internal selectBase/selectNode directly and are
    NOT narrated — only agent-driven __bokf.* calls are.) */
 let aiBannerTimer=null;
-function aiNarrate(action){
-  window.__bokfLastAction={action, at:Date.now()};
+function markAgentFocus(baseId){
+  const id=baseId || activeBaseId;
+  if(id && BASES.some(b=>b.id===id) && aiFocusKb!==id){ aiFocusKb=id; renderSidebar(); }
+}
+function aiNarrate(action, baseId){
+  markAgentFocus(baseId);
+  window.__bokfLastAction={action, base:baseId||activeBaseId||null, at:Date.now()};
   let el=document.getElementById('aiBanner');
   if(!el){ el=document.createElement('div'); el.id='aiBanner'; el.className='ai-banner'; (document.querySelector('.main')||document.body).appendChild(el); }
   el.innerHTML=`<span class="ai-tag">AI agent</span><span class="ai-act">${esc(action)}</span><span class="ai-dots"><i></i><i></i><i></i></span>`;
@@ -1354,10 +1359,10 @@ window.__bokf = {
   //     (linting, merging, building, querying, parsing…) so it shows live here ---
   narrate:(msg)=>{ if(msg!=null && String(msg).trim()) aiNarrate(String(msg)); return true; },
   // --- actions: drive the GUI (visible to the watching user) + narrate ---
-  selectBase:(id)=>{const b=BASES.find(x=>x.id===id);if(b){aiNarrate('opening · '+b.name);return selectBase(b);}},
-  selectNode:(id)=>{const n=byId[id];if(n){aiNarrate('inspecting node · '+(n.label||n.id));selected=n;selectedEdge=null;recomputeFocus();focusOn(n);showNodeDetail(n);return true;}return false;},
-  search:(q)=>{aiNarrate(q?('searching · "'+q+'"'):'clearing search');searchTerm=(q||'').toLowerCase();if(searchInput)searchInput.value=q||'';return true;},
-  reload:()=>{ const b=BASES.find(x=>x.id===activeBaseId); if(b){aiNarrate('reloading · '+b.name);return selectBase(b);} return null; },
+  selectBase:(id)=>{const b=BASES.find(x=>x.id===id);if(b){aiNarrate('opening · '+b.name,b.id);return selectBase(b);}},
+  selectNode:(id)=>{const n=byId[id];if(n){aiNarrate('inspecting node · '+(n.label||n.id),activeBaseId);selected=n;selectedEdge=null;recomputeFocus();focusOn(n);showNodeDetail(n);return true;}return false;},
+  search:(q)=>{aiNarrate(q?('searching · "'+q+'"'):'clearing search',activeBaseId);searchTerm=(q||'').toLowerCase();if(searchInput)searchInput.value=q||'';return true;},
+  reload:()=>{ const b=BASES.find(x=>x.id===activeBaseId); if(b){aiNarrate('reloading · '+b.name,b.id);return selectBase(b);} return null; },
   // --- observation: the complete app status, so the agent never needs a screenshot ---
   getState:()=>{
     const ab=BASES.find(x=>x.id===activeBaseId)||{};
@@ -1375,6 +1380,7 @@ window.__bokf = {
       sidebarCollapsed: !!(sb && sb.classList.contains('collapsed')),
       terminalOpen: !!(tp && tp.classList.contains('open')),
       lint: currentLint?{errors:currentLint.errors, warnings:currentLint.warnings, infos:currentLint.infos}:null,
+      aiFocusKb,
       lastAgentAction: window.__bokfLastAction||null,
       bases: BASES.map(b=>({id:b.id,name:b.name,path:b.path,node_count:b.node_count,edge_count:b.edge_count}))
     };
@@ -1416,13 +1422,12 @@ async function addNewBase(){
 /* ---------- .active-kb poll: follow a CLI/agent changing the shared pointer ---------- */
 let activeKbSyncing=false, aiFocusKb=null;
 /* The AI agent setting the active KB (.active-kb, e.g. via bokf_set_active) does
-   NOT force the user's view to switch — instead we mark that KB in the sidebar as
-   the agent's current focus. When the agent explicitly drives the GUI (selectBase)
-   the active KB equals the displayed base, so no separate marker is shown. */
+   NOT force the user's view to switch. We still mark that KB in the sidebar as
+   the agent's current focus, including when it is already the displayed graph. */
 async function pollActiveKb(){
   if(!isDesktop || !BASES.length) return;
   let id; try{ id=await tauriInvoke('get_active_kb'); }catch(e){ return; }
-  const focus=(id && id!==activeBaseId && BASES.some(b=>b.id===id)) ? id : null;
+  const focus=(id && BASES.some(b=>b.id===id)) ? id : null;
   if(focus!==aiFocusKb){ aiFocusKb=focus; renderSidebar(); }
 }
 

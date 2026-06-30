@@ -126,8 +126,8 @@
   .kb-meta{display:block;font-size:11.5px;color:var(--faint);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-variant-numeric:tabular-nums;}
   .kb-path{display:block;font-family:var(--mono);font-size:10px;color:var(--faint);opacity:.7;margin-top:2px;direction:rtl;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
   .kb-when{display:block;font-size:10.5px;color:var(--faint);opacity:.85;margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-  /* AI-focus marker: shown on the KB the agent set active when it is NOT the KB
-     the user is viewing (the view does not auto-switch). Neutral gray, pulsing. */
+  /* AI-activity marker: shown on the KB the agent is currently acting on, even
+     when that KB is also the visible active graph. Neutral gray, pulsing. */
   .kb-focus{flex:none;width:7px;height:7px;border-radius:50%;background:var(--faint);align-self:center;
     box-shadow:0 0 0 0 rgba(142,142,160,.5);animation:kbFocus 1.7s ease-out infinite;}
   @keyframes kbFocus{0%{box-shadow:0 0 0 0 rgba(142,142,160,.5);}70%{box-shadow:0 0 0 6px rgba(142,142,160,0);}100%{box-shadow:0 0 0 0 rgba(142,142,160,0);}}
