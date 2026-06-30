@@ -3,28 +3,38 @@
 //! in `bokf-core`.
 
 use bokf_core::parse::parse_node;
-use std::path::{Path, PathBuf};
+use std::path::{Component, Path, PathBuf};
+
+fn safe_relative(page: &str) -> Result<&Path, String> {
+    let p = Path::new(page);
+    if p.is_absolute()
+        || p.components().any(|c| {
+            matches!(
+                c,
+                Component::ParentDir | Component::Prefix(_) | Component::RootDir
+            )
+        })
+    {
+        return Err("absolute paths and path traversal are not allowed".into());
+    }
+    Ok(p)
+}
 
 /// Validate a page path for WRITING: under `knowledge/` or a reserved root file;
 /// never `raw/` (immutable); never `..` traversal.
 fn writable_path(bundle: &Path, page: &str) -> Result<PathBuf, String> {
-    if page.contains("..") {
-        return Err("path traversal ('..') is not allowed".into());
-    }
+    let rel = safe_relative(page)?;
     let allowed = page.starts_with("knowledge/")
         || matches!(page, "index.md" | "log.md" | "SCHEMA.md" | "README.md");
     if !allowed {
         return Err("page must be under knowledge/ or one of index.md/log.md/SCHEMA.md".into());
     }
-    Ok(bundle.join(page))
+    Ok(bundle.join(rel))
 }
 
 /// Validate a page path for READING: anything in the bundle except `..`.
 fn readable_path(bundle: &Path, page: &str) -> Result<PathBuf, String> {
-    if page.contains("..") {
-        return Err("path traversal ('..') is not allowed".into());
-    }
-    Ok(bundle.join(page))
+    Ok(bundle.join(safe_relative(page)?))
 }
 
 pub fn write_page(bundle: &Path, page: &str, content: &str) -> Result<String, String> {
@@ -87,17 +97,30 @@ pub fn validate_page(content: &str) -> Result<String, String> {
         Ok(n) => {
             let mut notes = Vec::new();
             if !n.node_type.is_valid() {
-                notes.push(format!("type `{}` is NOT one of the 28 controlled types", n.raw_type));
+                notes.push(format!(
+                    "type `{}` is NOT one of the 28 controlled types",
+                    n.raw_type
+                ));
             }
             if n.subtype.is_none() {
                 notes.push("no subtype (expected, agent-coined)".into());
             }
             for e in &n.edges {
                 if !e.predicate.is_valid() {
-                    notes.push(format!("predicate `{}` is NOT one of the 23", e.raw_predicate));
+                    notes.push(format!(
+                        "predicate `{}` is NOT one of the 35",
+                        e.raw_predicate
+                    ));
                 }
-                if e.knowledge_level.is_none() || e.agent_type.is_none() || e.primary_source.is_none() {
-                    notes.push(format!("edge `{} -> {}` is missing part of the provenance triplet", e.predicate.as_str(), e.object));
+                if e.knowledge_level.is_none()
+                    || e.agent_type.is_none()
+                    || e.primary_source.is_none()
+                {
+                    notes.push(format!(
+                        "edge `{} -> {}` is missing part of the provenance triplet",
+                        e.predicate.as_str(),
+                        e.object
+                    ));
                 }
             }
             Ok(format!(
@@ -105,7 +128,11 @@ pub fn validate_page(content: &str) -> Result<String, String> {
                 n.node_type.as_str(),
                 n.identifier,
                 n.edges.len(),
-                if notes.is_empty() { String::new() } else { format!("\nNotes:\n - {}", notes.join("\n - ")) }
+                if notes.is_empty() {
+                    String::new()
+                } else {
+                    format!("\nNotes:\n - {}", notes.join("\n - "))
+                }
             ))
         }
         Err(e) => Err(format!("INVALID: {e}")),
@@ -124,7 +151,9 @@ pub fn scaffold(bundle: &Path, name: &str) -> Result<String, String> {
     };
     write_absent(
         "index.md",
-        format!("# {name}\n\nokf_version: 0.5\nbiookf_version: 0.5\n\n> Catalog of concept pages.\n"),
+        format!(
+            "# {name}\n\nokf_version: 0.5\nbiookf_version: 0.5\n\n> Catalog of concept pages.\n"
+        ),
     )?;
     write_absent("log.md", format!("# Change log: {name}\n"))?;
     write_absent(
@@ -135,16 +164,28 @@ pub fn scaffold(bundle: &Path, name: &str) -> Result<String, String> {
     // version-track + register + activate the new bundle (mirror the CLI).
     let repo = bokf_core::git::GitRepo::open(bundle);
     if repo.ensure_repo().is_ok() {
-        let _ = repo.commit_all(bokf_core::git::ChangeKind::Manual, &format!("create knowledge base {name}"), None);
+        let _ = repo.commit_all(
+            bokf_core::git::ChangeKind::Manual,
+            &format!("create knowledge base {name}"),
+            None,
+        );
     }
-    if let (Some(id), Ok(root)) = (bundle.file_name().map(|s| s.to_string_lossy().to_lowercase()), bokf_core::config::ensure_config_dir()) {
+    if let (Some(id), Ok(root)) = (
+        bundle
+            .file_name()
+            .map(|s| s.to_string_lossy().to_lowercase()),
+        bokf_core::config::ensure_config_dir(),
+    ) {
         if bokf_core::registry::validate_kb_id(&id).is_ok() {
             let abs = std::fs::canonicalize(bundle).unwrap_or_else(|_| bundle.to_path_buf());
             let _ = bokf_core::registry::register(&root, &id, &abs.to_string_lossy());
             let _ = bokf_core::active::set_active(&root, Some(&id));
         }
     }
-    Ok(format!("scaffolded BioOKF bundle '{name}' at {}", bundle.display()))
+    Ok(format!(
+        "scaffolded BioOKF bundle '{name}' at {}",
+        bundle.display()
+    ))
 }
 
 pub fn list_bases(root: &Path) -> Result<Vec<String>, String> {
@@ -153,7 +194,12 @@ pub fn list_bases(root: &Path) -> Result<Vec<String>, String> {
         for e in entries.flatten() {
             let p = e.path();
             if p.is_dir() && (p.join("knowledge").is_dir() || p.join("index.md").is_file()) {
-                out.push(p.file_name().unwrap_or_default().to_string_lossy().to_string());
+                out.push(
+                    p.file_name()
+                        .unwrap_or_default()
+                        .to_string_lossy()
+                        .to_string(),
+                );
             }
         }
     }

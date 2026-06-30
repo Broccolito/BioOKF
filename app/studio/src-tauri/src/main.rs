@@ -43,7 +43,10 @@ fn base_entry(id: &str, p: &std::path::Path) -> Result<serde_json::Value, String
     let mut info = bokf_core::export::base_info(p).map_err(|e| e.to_string())?;
     if let Some(obj) = info.as_object_mut() {
         obj.insert("id".into(), serde_json::Value::String(id.to_string()));
-        obj.insert("path".into(), serde_json::Value::String(p.to_string_lossy().to_string()));
+        obj.insert(
+            "path".into(),
+            serde_json::Value::String(p.to_string_lossy().to_string()),
+        );
     }
     Ok(info)
 }
@@ -88,7 +91,11 @@ fn kb_id_from_dir_name(name: &str) -> String {
         }
     }
     let trimmed = out.trim_matches('-').to_string();
-    if trimmed.is_empty() { "base".to_string() } else { trimmed }
+    if trimmed.is_empty() {
+        "base".to_string()
+    } else {
+        trimmed
+    }
 }
 
 /// Validate a folder is a real BioOKF bundle and register it. Returns the same
@@ -103,15 +110,18 @@ fn add_base(path: String) -> Result<serde_json::Value, String> {
     }
     if !(p.join("knowledge").is_dir() || p.join("index.md").is_file()) {
         return Err(
-            "Not a valid BioOKF knowledge base: missing `knowledge/` directory or `index.md`".into(),
+            "Not a valid BioOKF knowledge base: missing `knowledge/` directory or `index.md`"
+                .into(),
         );
     }
     // It must parse as a bundle (lint errors are tolerated — only structure matters).
-    bokf_core::open_bundle(&p)
-        .map_err(|e| format!("Not a valid BioOKF knowledge base: {e}"))?;
+    bokf_core::open_bundle(&p).map_err(|e| format!("Not a valid BioOKF knowledge base: {e}"))?;
 
     let root = config_root();
-    let dir_name = p.file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_default();
+    let dir_name = p
+        .file_name()
+        .map(|s| s.to_string_lossy().to_string())
+        .unwrap_or_default();
     let base_id = kb_id_from_dir_name(&dir_name);
 
     // If this exact path is already registered, return its existing entry.
@@ -137,7 +147,7 @@ fn add_base(path: String) -> Result<serde_json::Value, String> {
 #[tauri::command]
 fn get_bundle(id: String) -> Result<serde_json::Value, String> {
     let path = resolve(&id).ok_or_else(|| format!("unknown bundle: {id}"))?;
-    bokf_core::export::bundle_doc(&path, None).map_err(|e| e.to_string())
+    bokf_core::export::studio_bundle_doc(&path, None).map_err(|e| e.to_string())
 }
 
 #[tauri::command]
@@ -149,7 +159,11 @@ fn lint_bundle(id: String) -> Result<serde_json::Value, String> {
 }
 
 #[tauri::command]
-fn search_bundle(id: String, query: String, limit: Option<usize>) -> Result<serde_json::Value, String> {
+fn search_bundle(
+    id: String,
+    query: String,
+    limit: Option<usize>,
+) -> Result<serde_json::Value, String> {
     let path = resolve(&id).ok_or_else(|| format!("unknown bundle: {id}"))?;
     let bundle = bokf_core::open_bundle(&path).map_err(|e| e.to_string())?;
     let index = bokf_core::SearchIndex::build(&bundle);
@@ -236,8 +250,12 @@ fn safe_bundle_path(base: &str, rel: &str) -> Result<PathBuf, String> {
     let root = resolve(base).ok_or_else(|| format!("unknown bundle: {base}"))?;
     let r = std::path::Path::new(rel);
     if r.is_absolute()
-        || r.components()
-            .any(|c| matches!(c, std::path::Component::ParentDir | std::path::Component::Prefix(_)))
+        || r.components().any(|c| {
+            matches!(
+                c,
+                std::path::Component::ParentDir | std::path::Component::Prefix(_)
+            )
+        })
     {
         return Err("invalid path".into());
     }
@@ -265,31 +283,6 @@ fn read_bundle_file(base: String, path: String) -> Result<String, String> {
     std::fs::read_to_string(&full).map_err(|e| e.to_string())
 }
 
-/// Standard base64 (RFC 4648) encode, std-only — used to ship binary bundle files
-/// (e.g. `raw/<id>/figures/*.png`) to the webview as data URIs.
-fn base64_encode(bytes: &[u8]) -> String {
-    const T: &[u8; 64] = b"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
-    let mut out = String::with_capacity((bytes.len() + 2) / 3 * 4);
-    for c in bytes.chunks(3) {
-        let b = [c[0], *c.get(1).unwrap_or(&0), *c.get(2).unwrap_or(&0)];
-        let n = (b[0] as usize) << 16 | (b[1] as usize) << 8 | b[2] as usize;
-        out.push(T[(n >> 18) & 63] as char);
-        out.push(T[(n >> 12) & 63] as char);
-        out.push(if c.len() > 1 { T[(n >> 6) & 63] as char } else { '=' });
-        out.push(if c.len() > 2 { T[n & 63] as char } else { '=' });
-    }
-    out
-}
-
-/// Read a binary file inside a bundle (path-guarded) and return it base64-encoded,
-/// so figures and other non-text assets can be inlined as data URIs in the webview.
-#[tauri::command]
-fn read_bundle_bytes(base: String, path: String) -> Result<String, String> {
-    let full = safe_bundle_path(&base, &path)?;
-    let bytes = std::fs::read(&full).map_err(|e| e.to_string())?;
-    Ok(base64_encode(&bytes))
-}
-
 /// Persist an edited frontmatter block, preserving the document body verbatim.
 #[tauri::command]
 fn save_node_frontmatter(
@@ -301,8 +294,13 @@ fn save_node_frontmatter(
 ) -> Result<(), String> {
     let full = safe_bundle_path(&base, &path)?;
     let existing = std::fs::read_to_string(&full).map_err(|e| e.to_string())?;
-    std::fs::write(&full, replace_frontmatter(&existing, &frontmatter)).map_err(|e| e.to_string())?;
-    append_log_entry(&base, &date, &format!("- Edited frontmatter of `{}`", label))?;
+    std::fs::write(&full, replace_frontmatter(&existing, &frontmatter))
+        .map_err(|e| e.to_string())?;
+    append_log_entry(
+        &base,
+        &date,
+        &format!("- Edited frontmatter of `{}`", label),
+    )?;
     Ok(())
 }
 
@@ -353,7 +351,11 @@ fn upsert_notes_section(body: &str, notes: &str) -> String {
         kept.extend_from_slice(&lines[end..]);
         let joined = kept.join("\n");
         let trimmed = joined.trim_end_matches('\n');
-        return if trimmed.is_empty() { String::new() } else { format!("{trimmed}\n") };
+        return if trimmed.is_empty() {
+            String::new()
+        } else {
+            format!("{trimmed}\n")
+        };
     }
 
     let notes_body = notes.trim_end_matches('\n');
@@ -417,7 +419,11 @@ fn save_node_notes(
         &date,
         &format!(
             "- {} notes on `{}`",
-            if notes.trim().is_empty() { "Cleared" } else { "Updated" },
+            if notes.trim().is_empty() {
+                "Cleared"
+            } else {
+                "Updated"
+            },
             label
         ),
     )?;
@@ -647,7 +653,11 @@ fn save_edge_note(
         &date,
         &format!(
             "- {} note on edge `{}`",
-            if note.trim().is_empty() { "Cleared" } else { "Set" },
+            if note.trim().is_empty() {
+                "Cleared"
+            } else {
+                "Set"
+            },
             label
         ),
     )?;
@@ -748,7 +758,12 @@ static TERM_SEQ: AtomicU64 = AtomicU64::new(1);
 #[tauri::command]
 fn term_open(app: AppHandle, rows: u16, cols: u16) -> Result<String, String> {
     let pair = native_pty_system()
-        .openpty(PtySize { rows: rows.max(1), cols: cols.max(1), pixel_width: 0, pixel_height: 0 })
+        .openpty(PtySize {
+            rows: rows.max(1),
+            cols: cols.max(1),
+            pixel_width: 0,
+            pixel_height: 0,
+        })
         .map_err(|e| e.to_string())?;
     let shell = std::env::var("SHELL").unwrap_or_else(|_| "/bin/zsh".to_string());
     let mut cmd = CommandBuilder::new(shell);
@@ -778,15 +793,22 @@ fn term_open(app: AppHandle, rows: u16, cols: u16) -> Result<String, String> {
                 }
                 Ok(n) => {
                     let data = String::from_utf8_lossy(&buf[..n]).to_string();
-                    let _ = eapp.emit("term-output", serde_json::json!({ "id": eid, "data": data }));
+                    let _ = eapp.emit(
+                        "term-output",
+                        serde_json::json!({ "id": eid, "data": data }),
+                    );
                 }
             }
         }
     });
-    sessions()
-        .lock()
-        .unwrap()
-        .insert(id.clone(), PtySession { master: pair.master, writer, child });
+    sessions().lock().unwrap().insert(
+        id.clone(),
+        PtySession {
+            master: pair.master,
+            writer,
+            child,
+        },
+    );
     Ok(id)
 }
 
@@ -795,7 +817,9 @@ fn term_open(app: AppHandle, rows: u16, cols: u16) -> Result<String, String> {
 fn term_write(id: String, data: String) -> Result<(), String> {
     let mut s = sessions().lock().unwrap();
     let sess = s.get_mut(&id).ok_or("no such terminal")?;
-    sess.writer.write_all(data.as_bytes()).map_err(|e| e.to_string())?;
+    sess.writer
+        .write_all(data.as_bytes())
+        .map_err(|e| e.to_string())?;
     sess.writer.flush().map_err(|e| e.to_string())
 }
 
@@ -805,7 +829,12 @@ fn term_resize(id: String, rows: u16, cols: u16) -> Result<(), String> {
     let s = sessions().lock().unwrap();
     let sess = s.get(&id).ok_or("no such terminal")?;
     sess.master
-        .resize(PtySize { rows: rows.max(1), cols: cols.max(1), pixel_width: 0, pixel_height: 0 })
+        .resize(PtySize {
+            rows: rows.max(1),
+            cols: cols.max(1),
+            pixel_width: 0,
+            pixel_height: 0,
+        })
         .map_err(|e| e.to_string())
 }
 
@@ -821,7 +850,11 @@ fn term_close(id: String) -> Result<(), String> {
 // --- bundled CLI: detect + install ------------------------------------------
 
 fn bokf_exe_name() -> &'static str {
-    if cfg!(windows) { "bokf.exe" } else { "bokf" }
+    if cfg!(windows) {
+        "bokf.exe"
+    } else {
+        "bokf"
+    }
 }
 
 /// Directory inside the app bundle that holds the shipped `bokf`/`bokf-mcp`.
@@ -863,9 +896,24 @@ fn bokf_on_path() -> Option<String> {
 }
 
 fn bokf_version(bin: &std::path::Path) -> Option<String> {
-    let out = std::process::Command::new(bin).arg("--version").output().ok()?;
+    let out = std::process::Command::new(bin)
+        .arg("--version")
+        .output()
+        .ok()?;
     let s = String::from_utf8_lossy(&out.stdout).trim().to_string();
-    if s.is_empty() { None } else { Some(s) }
+    if s.is_empty() {
+        None
+    } else {
+        Some(s)
+    }
+}
+
+fn sh_quote(s: &str) -> String {
+    format!("'{}'", s.replace('\'', "'\\''"))
+}
+
+fn applescript_string(s: &str) -> String {
+    format!("\"{}\"", s.replace('\\', "\\\\").replace('"', "\\\""))
 }
 
 /// Report whether the `bokf` CLI is installed on PATH, plus version info. The
@@ -876,7 +924,10 @@ fn cli_status(app: AppHandle) -> serde_json::Value {
     let installed_path = bokf_on_path();
     let bundled = bundled_bin_dir(&app).map(|d| d.join(bokf_exe_name()));
     let bundled_version = bundled.as_deref().and_then(bokf_version);
-    let installed_version = installed_path.as_deref().map(std::path::Path::new).and_then(bokf_version);
+    let installed_version = installed_path
+        .as_deref()
+        .map(std::path::Path::new)
+        .and_then(bokf_version);
     serde_json::json!({
         "installed": installed_path.is_some(),
         "path": installed_path,
@@ -895,11 +946,16 @@ fn install_cli(app: AppHandle) -> Result<String, String> {
     }
     let dest = "/usr/local/bin/bokf";
     // One admin prompt: ensure /usr/local/bin exists, copy, mark executable.
+    let shell = format!(
+        "mkdir -p {} && cp {} {} && chmod 755 {}",
+        sh_quote("/usr/local/bin"),
+        sh_quote(&src.to_string_lossy()),
+        sh_quote(dest),
+        sh_quote(dest)
+    );
     let script = format!(
-        "do shell script \"mkdir -p /usr/local/bin && cp '{}' '{}' && chmod 755 '{}'\" with administrator privileges",
-        src.display(),
-        dest,
-        dest
+        "do shell script {} with administrator privileges",
+        applescript_string(&shell)
     );
     let out = std::process::Command::new("osascript")
         .arg("-e")
@@ -928,7 +984,9 @@ fn main() {
             // blurred desktop and the app's own surfaces layer on top.
             #[cfg(target_os = "macos")]
             {
-                use window_vibrancy::{apply_vibrancy, NSVisualEffectMaterial, NSVisualEffectState};
+                use window_vibrancy::{
+                    apply_vibrancy, NSVisualEffectMaterial, NSVisualEffectState,
+                };
                 if let Some(win) = _app.get_webview_window("main") {
                     let _ = apply_vibrancy(
                         &win,
@@ -950,7 +1008,6 @@ fn main() {
             search_bundle,
             save_node_body,
             read_bundle_file,
-            read_bundle_bytes,
             save_node_frontmatter,
             save_node_notes,
             save_node_file,
@@ -973,7 +1030,9 @@ fn main() {
             let search = tauri::menu::MenuItemBuilder::with_id("search", "Search")
                 .accelerator("CmdOrCtrl+K")
                 .build(app)?;
-            let go = tauri::menu::SubmenuBuilder::new(app, "Go").item(&search).build()?;
+            let go = tauri::menu::SubmenuBuilder::new(app, "Go")
+                .item(&search)
+                .build()?;
             menu.append(&go)?;
             Ok(menu)
         })
@@ -1012,7 +1071,9 @@ fn main() {
                         "\n}"
                     );
                     if let Err(e) = webview.eval(js) {
-                        eprintln!("[biookf-control-guest] failed to inject MCP guest listeners: {e}");
+                        eprintln!(
+                            "[biookf-control-guest] failed to inject MCP guest listeners: {e}"
+                        );
                     }
                 })
                 .build(),
@@ -1055,19 +1116,25 @@ mod tests {
     }
 
     // End-to-end exercise of the command (resolve + path guard + write) against a
-    // throwaway bundle under a temp OKF_ROOT, so no real knowledge file is touched.
+    // throwaway bundle under a temp BIOOKF_CONFIG_DIR, so no real knowledge file is touched.
     #[test]
     fn save_node_body_writes_file_and_guards_traversal() {
         let tmp = std::env::temp_dir().join(format!("bokf-save-test-{}", std::process::id()));
+        let cfg = tmp.join("cfg");
         let base = tmp.join("mybase");
         std::fs::create_dir_all(base.join("knowledge/gene")).unwrap();
+        std::fs::create_dir_all(&cfg).unwrap();
         let file = base.join("knowledge/gene/x.md");
-        std::fs::write(&file, "---\ntype: Gene\nidentifier: X\n---\n\n# X\n\nold body\n").unwrap();
+        std::fs::write(
+            &file,
+            "---\ntype: Gene\nidentifier: X\n---\n\n# X\n\nold body\n",
+        )
+        .unwrap();
 
-        std::env::set_var("OKF_ROOT", &tmp);
+        std::env::set_var("BIOOKF_CONFIG_DIR", &cfg);
         // Registry is the source of truth now: register the temp bundle so
         // `resolve("mybase")` finds it.
-        bokf_core::registry::register(&tmp, "mybase", &base.to_string_lossy()).unwrap();
+        bokf_core::registry::register(&cfg, "mybase", &base.to_string_lossy()).unwrap();
         super::save_node_body(
             "mybase".into(),
             "knowledge/gene/x.md".into(),
@@ -1081,7 +1148,10 @@ mod tests {
         );
 
         // a path that tries to escape the bundle is rejected
-        assert!(super::save_node_body("mybase".into(), "../../escape.md".into(), "x".into()).is_err());
+        assert!(
+            super::save_node_body("mybase".into(), "../../escape.md".into(), "x".into()).is_err()
+        );
+        std::env::remove_var("BIOOKF_CONFIG_DIR");
 
         std::env::remove_var("OKF_ROOT");
         std::fs::remove_dir_all(&tmp).ok();
@@ -1091,10 +1161,16 @@ mod tests {
     fn replace_frontmatter_preserves_body_and_round_trips() {
         let original = "---\ntype: Gene\nidentifier: BRAF\n---\n\n# BRAF\n\nBody stays.\n";
         // unchanged frontmatter round-trips byte-for-byte
-        assert_eq!(super::replace_frontmatter(original, "type: Gene\nidentifier: BRAF"), original);
+        assert_eq!(
+            super::replace_frontmatter(original, "type: Gene\nidentifier: BRAF"),
+            original
+        );
         // edited frontmatter, body untouched
         let out = super::replace_frontmatter(original, "type: Gene\nidentifier: BRAF\nnote: mine");
-        assert_eq!(out, "---\ntype: Gene\nidentifier: BRAF\nnote: mine\n---\n\n# BRAF\n\nBody stays.\n");
+        assert_eq!(
+            out,
+            "---\ntype: Gene\nidentifier: BRAF\nnote: mine\n---\n\n# BRAF\n\nBody stays.\n"
+        );
     }
 
     use super::{set_edge_note_in_fm, upsert_notes_section};
@@ -1103,7 +1179,10 @@ mod tests {
     fn upsert_notes_appends_when_absent() {
         let body = "# BRAF\n\nProse about BRAF.\n";
         let out = upsert_notes_section(body, "My first note.");
-        assert_eq!(out, "# BRAF\n\nProse about BRAF.\n\n# Notes\n\nMy first note.\n");
+        assert_eq!(
+            out,
+            "# BRAF\n\nProse about BRAF.\n\n# Notes\n\nMy first note.\n"
+        );
     }
 
     #[test]
@@ -1124,7 +1203,10 @@ mod tests {
         // A `# Notes` section in the middle, with another top-level heading after it.
         let body = "# BRAF\n\nIntro.\n\n# Notes\n\nOld.\n\n# References\n\nstuff\n";
         let out = upsert_notes_section(body, "Updated.");
-        assert_eq!(out, "# BRAF\n\nIntro.\n\n# Notes\n\nUpdated.\n\n# References\n\nstuff\n");
+        assert_eq!(
+            out,
+            "# BRAF\n\nIntro.\n\n# Notes\n\nUpdated.\n\n# References\n\nstuff\n"
+        );
     }
 
     #[test]
@@ -1207,8 +1289,8 @@ mod tests {
 
     #[test]
     fn set_edge_note_errors_when_not_found() {
-        let err = set_edge_note_in_fm(EDGES_FM, "predisposes_to", "Nonexistent object", "x")
-            .unwrap_err();
+        let err =
+            set_edge_note_in_fm(EDGES_FM, "predisposes_to", "Nonexistent object", "x").unwrap_err();
         assert_eq!(err, "edge not found");
     }
 

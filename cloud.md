@@ -12,8 +12,9 @@ BioOKF ships as two separately installed pieces:
    `BioOKF Studio_<version>_aarch64.dmg`. On first launch it offers to install the
    `bokf` CLI to `/usr/local/bin`. All Studio config (`registry.yaml`, `.active-kb`)
    lives under `~/.config/biookf-studio`.
-2. **The `biookf` Claude Code plugin (the "cloud plugin")** — the primary way users
-   drive the Studio, via Claude over MCP. Installed with `/plugin install biookf@biookf`.
+2. **The `biookf` agent plugin** — the primary way users drive the Studio from
+   Claude Code or Codex over MCP. The published plugin root contains `.claude-plugin`
+   and `.codex-plugin` manifests side by side and both use `plugins/biookf/scripts/bokf-mcp`.
 
 The DMG is built, signed, and notarized **locally** on a Mac that holds the UCSF
 Developer ID certificate. CI (`.github/workflows/release.yml`) separately builds the
@@ -56,7 +57,8 @@ Set the new version in all of:
 - `app/Cargo.toml` `[workspace.package] version`
 - `app/studio/src-tauri/Cargo.toml` `version`
 - `app/studio/src-tauri/tauri.conf.json` `version` (drives the DMG filename)
-- `plugins/biookf/.claude-plugin/plugin.json` and `app/.claude-plugin/plugin.json`
+- `plugins/biookf/.claude-plugin/plugin.json`, `plugins/biookf/.codex-plugin/plugin.json`,
+  and `app/.claude-plugin/plugin.json`
 
 Then `cd app && cargo build` to refresh `Cargo.lock`.
 

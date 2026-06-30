@@ -7,12 +7,14 @@ use crate::git::today_iso;
 use serde::{Deserialize, Serialize};
 use sha2::{Digest, Sha256};
 use std::io::{Cursor, Read};
+use std::net::IpAddr;
 use std::path::{Path, PathBuf};
 
 /// Marker prepended to a `source.md` that still needs a faithful LLM conversion (unknown
 /// format, scanned PDF, or failed extraction). The agent removes it once the rendering is
 /// complete; `bokf lint`/`bokf verify` flag any source still carrying it.
 pub const NEEDS_CONVERSION_MARKER: &str = "<!-- bokf:needs-conversion -->";
+const MAX_URL_BYTES: u64 = 50 * 1024 * 1024;
 
 /// The result of converting one source's bytes to Markdown.
 #[derive(Debug, Clone)]
@@ -66,13 +68,22 @@ pub struct SourceMeta {
     #[serde(default, skip_serializing_if = "Option::is_none")]
     pub final_url: Option<String>,
     /// Origin/kind of the source, distinct from how much it is trusted.
-    #[serde(default, skip_serializing_if = "crate::credibility::SourceType::is_unknown")]
+    #[serde(
+        default,
+        skip_serializing_if = "crate::credibility::SourceType::is_unknown"
+    )]
     pub source_type: crate::credibility::SourceType,
     /// Credibility verdict (tier, confidence, retraction, reasoning).
-    #[serde(default, skip_serializing_if = "crate::credibility::Credibility::is_unset")]
+    #[serde(
+        default,
+        skip_serializing_if = "crate::credibility::Credibility::is_unset"
+    )]
     pub credibility: crate::credibility::Credibility,
     /// Bibliographic identifiers extracted during ingestion.
-    #[serde(default, skip_serializing_if = "crate::credibility::SourceIds::is_empty")]
+    #[serde(
+        default,
+        skip_serializing_if = "crate::credibility::SourceIds::is_empty"
+    )]
     pub ids: crate::credibility::SourceIds,
 }
 
@@ -93,7 +104,10 @@ pub struct SourceRecord {
 
 /// True when `ext` names a raster or vector image format we copy verbatim as a figure.
 pub fn is_image_ext(ext: &str) -> bool {
-    matches!(ext.to_ascii_lowercase().as_str(), "png" | "jpg" | "jpeg" | "gif" | "webp" | "tiff" | "tif" | "bmp" | "svg")
+    matches!(
+        ext.to_ascii_lowercase().as_str(),
+        "png" | "jpg" | "jpeg" | "gif" | "webp" | "tiff" | "tif" | "bmp" | "svg"
+    )
 }
 
 /// One image pulled out of a source during conversion.
@@ -165,7 +179,11 @@ fn b64_decode(s: &str) -> Option<Vec<u8>> {
 /// Extract embedded figures from a source. Returns the figures plus an optionally
 /// rewritten Markdown (None for zip-media formats; for html/md the data URIs are
 /// rewritten to local figure references).
-pub fn extract_figures(ext: &str, bytes: &[u8], markdown: &str) -> (Vec<ExtractedFigure>, Option<String>) {
+pub fn extract_figures(
+    ext: &str,
+    bytes: &[u8],
+    markdown: &str,
+) -> (Vec<ExtractedFigure>, Option<String>) {
     let ext = ext.to_ascii_lowercase();
     // html/md: decode inline base64 data URIs into figures and rewrite the references.
     if matches!(ext.as_str(), "html" | "htm" | "md" | "markdown") {
@@ -186,7 +204,11 @@ pub fn extract_figures(ext: &str, bytes: &[u8], markdown: &str) -> (Vec<Extracte
             rewritten.push_str(&markdown[last..whole.start()]);
             rewritten.push_str(&format!("figures/{name}"));
             last = whole.end();
-            figs.push(ExtractedFigure { provisional_name: name, bytes: data, origin: "data-uri".into() });
+            figs.push(ExtractedFigure {
+                provisional_name: name,
+                bytes: data,
+                origin: "data-uri".into(),
+            });
         }
         if figs.is_empty() {
             return (figs, None);
@@ -292,7 +314,12 @@ pub fn convert_bytes(ext: &str, filename: &str, bytes: &[u8]) -> Converted {
 }
 
 fn passthrough(bytes: &[u8], format: &str) -> Converted {
-    Converted { markdown: String::from_utf8_lossy(bytes).to_string(), title: String::new(), format: format.into(), needs_llm_fallback: false }
+    Converted {
+        markdown: String::from_utf8_lossy(bytes).to_string(),
+        title: String::new(),
+        format: format.into(),
+        needs_llm_fallback: false,
+    }
 }
 
 fn csv_to_md(bytes: &[u8], delim: char) -> String {
@@ -354,7 +381,8 @@ fn split_delimited(line: &str, delim: char) -> Vec<String> {
 
 fn xlsx_to_md(bytes: &[u8]) -> Result<String, String> {
     use calamine::{open_workbook_auto_from_rs, Reader};
-    let mut wb = open_workbook_auto_from_rs(Cursor::new(bytes.to_vec())).map_err(|e| e.to_string())?;
+    let mut wb =
+        open_workbook_auto_from_rs(Cursor::new(bytes.to_vec())).map_err(|e| e.to_string())?;
     let mut out = String::new();
     let names = wb.sheet_names().to_owned();
     for name in names {
@@ -372,7 +400,10 @@ fn xlsx_to_md(bytes: &[u8]) -> Result<String, String> {
                 out.push_str("\n_(truncated at 500 rows)_\n");
                 break;
             }
-            let cells: Vec<String> = row.iter().map(|c| c.to_string().trim().replace('|', "\\|")).collect();
+            let cells: Vec<String> = row
+                .iter()
+                .map(|c| c.to_string().trim().replace('|', "\\|"))
+                .collect();
             out.push_str("| ");
             out.push_str(&cells.join(" | "));
             out.push_str(" |\n");
@@ -392,16 +423,29 @@ fn xlsx_to_md(bytes: &[u8]) -> Result<String, String> {
 
 /// Extract text from a single XML part inside a zip (docx). `para_close` marks
 /// paragraph boundaries; `title` is an optional section heading.
-fn office_to_md(bytes: &[u8], part: &str, para_close: &str, title: Option<&str>) -> Result<Converted, String> {
+fn office_to_md(
+    bytes: &[u8],
+    part: &str,
+    para_close: &str,
+    title: Option<&str>,
+) -> Result<Converted, String> {
     let mut zip = zip::ZipArchive::new(Cursor::new(bytes.to_vec())).map_err(|e| e.to_string())?;
     let mut xml = String::new();
-    zip.by_name(part).map_err(|e| e.to_string())?.read_to_string(&mut xml).map_err(|e| e.to_string())?;
+    zip.by_name(part)
+        .map_err(|e| e.to_string())?
+        .read_to_string(&mut xml)
+        .map_err(|e| e.to_string())?;
     let mut md = String::new();
     if let Some(t) = title {
         md.push_str(&format!("## {t}\n\n"));
     }
     md.push_str(&xml_text(&xml, para_close));
-    Ok(Converted { markdown: md, title: String::new(), format: "docx".into(), needs_llm_fallback: false })
+    Ok(Converted {
+        markdown: md,
+        title: String::new(),
+        format: "docx".into(),
+        needs_llm_fallback: false,
+    })
 }
 
 fn pptx_to_md(bytes: &[u8]) -> Result<Converted, String> {
@@ -415,7 +459,11 @@ fn pptx_to_md(bytes: &[u8]) -> Result<Converted, String> {
     let mut md = String::new();
     for (i, name) in slides.iter().enumerate() {
         let mut xml = String::new();
-        if zip.by_name(name).and_then(|mut f| Ok(f.read_to_string(&mut xml))).is_err() {
+        if zip
+            .by_name(name)
+            .and_then(|mut f| Ok(f.read_to_string(&mut xml)))
+            .is_err()
+        {
             continue;
         }
         let text = xml_text(&xml, "</a:p>");
@@ -423,11 +471,19 @@ fn pptx_to_md(bytes: &[u8]) -> Result<Converted, String> {
             md.push_str(&format!("## Slide {}\n\n{}\n\n", i + 1, text.trim()));
         }
     }
-    Ok(Converted { markdown: md, title: String::new(), format: "pptx".into(), needs_llm_fallback: false })
+    Ok(Converted {
+        markdown: md,
+        title: String::new(),
+        format: "pptx".into(),
+        needs_llm_fallback: false,
+    })
 }
 
 fn slide_num(name: &str) -> u32 {
-    name.trim_start_matches("ppt/slides/slide").trim_end_matches(".xml").parse().unwrap_or(0)
+    name.trim_start_matches("ppt/slides/slide")
+        .trim_end_matches(".xml")
+        .parse()
+        .unwrap_or(0)
 }
 
 /// Strip XML tags, inserting a paragraph break at each `para_close`, and decode the
@@ -518,7 +574,11 @@ fn walk(base: &Path, dir: &Path, out: &mut Vec<(String, Vec<u8>)>) {
         if p.is_dir() {
             walk(base, &p, out);
         } else if let Ok(bytes) = std::fs::read(&p) {
-            let rel = p.strip_prefix(base).unwrap_or(&p).to_string_lossy().to_string();
+            let rel = p
+                .strip_prefix(base)
+                .unwrap_or(&p)
+                .to_string_lossy()
+                .to_string();
             if !is_junk(&rel) {
                 out.push((rel, bytes));
             }
@@ -536,7 +596,11 @@ fn is_junk(name: &str) -> bool {
 // ---------------------------------------------------------------------------
 
 pub(crate) fn ext_of(name: &str) -> String {
-    Path::new(name).extension().and_then(|e| e.to_str()).unwrap_or("").to_string()
+    Path::new(name)
+        .extension()
+        .and_then(|e| e.to_str())
+        .unwrap_or("")
+        .to_string()
 }
 
 /// A human-readable slug from a title (lowercase, non-alnum → `-`, ≤40 chars).
@@ -585,7 +649,10 @@ pub fn title_from(markdown: &str, filename: &str, explicit: Option<&str>) -> Str
             return l.chars().take(80).collect();
         }
     }
-    let stem = Path::new(filename).file_stem().and_then(|s| s.to_str()).unwrap_or("");
+    let stem = Path::new(filename)
+        .file_stem()
+        .and_then(|s| s.to_str())
+        .unwrap_or("");
     let cleaned = stem.replace(['_', '-'], " ");
     if !cleaned.trim().is_empty() && !looks_machine_generated(&cleaned) {
         return cleaned.trim().to_string();
@@ -602,7 +669,11 @@ fn hash_bytes(bytes: &[u8]) -> String {
 /// `<title-slug>-<6 hex>`: content-derived and human-readable, never a bare hash.
 fn new_source_id(title: &str, sha: &str) -> String {
     let s = slug(title);
-    let base = if s.is_empty() { "source".to_string() } else { s };
+    let base = if s.is_empty() {
+        "source".to_string()
+    } else {
+        s
+    };
     format!("{base}-{}", &sha[..6])
 }
 
@@ -627,7 +698,12 @@ fn find_existing(bundle_root: &Path, sha: &str) -> Option<String> {
 /// figure not already referenced in `markdown`, and return the (possibly appended)
 /// markdown together with a `FigureMeta` per figure. Provisional numbering continues
 /// from `start_index` so callers can append extra figures after a document's own.
-fn write_figures(dir: &Path, figs: &[ExtractedFigure], markdown: &str, start_index: usize) -> Result<(String, Vec<FigureMeta>), String> {
+fn write_figures(
+    dir: &Path,
+    figs: &[ExtractedFigure],
+    markdown: &str,
+    start_index: usize,
+) -> Result<(String, Vec<FigureMeta>), String> {
     let mut md = markdown.to_string();
     let mut metas = Vec::new();
     if figs.is_empty() {
@@ -641,7 +717,11 @@ fn write_figures(dir: &Path, figs: &[ExtractedFigure], markdown: &str, start_ind
         let name = if fext.is_empty() {
             f.provisional_name.clone()
         } else {
-            format!("fig-{:03}.{}", start_index + i + 1, fext.to_ascii_lowercase())
+            format!(
+                "fig-{:03}.{}",
+                start_index + i + 1,
+                fext.to_ascii_lowercase()
+            )
         };
         std::fs::write(figdir.join(&name), &f.bytes).map_err(|e| e.to_string())?;
         let rel = format!("figures/{name}");
@@ -651,7 +731,12 @@ fn write_figures(dir: &Path, figs: &[ExtractedFigure], markdown: &str, start_ind
             }
             md.push_str(&format!("\n![{name}](figures/{name})\n"));
         }
-        metas.push(FigureMeta { file: rel, provisional: true, described: false, origin: f.origin.clone() });
+        metas.push(FigureMeta {
+            file: rel,
+            provisional: true,
+            described: false,
+            origin: f.origin.clone(),
+        });
     }
     Ok((md, metas))
 }
@@ -684,7 +769,12 @@ fn write_pdf_pages(dir: &Path, ext: &str, bytes: &[u8]) -> Result<(), String> {
 /// Convert + store one source, optionally attaching `extra` loose images (from a folder
 /// or zip) as additional figures of this document. Each extra is `(member_name, bytes)`
 /// and is recorded with `origin = "folder:<member_name>"`.
-fn store_with_extra_figures(bundle_root: &Path, filename: &str, bytes: &[u8], extra: Vec<(String, Vec<u8>)>) -> Result<SourceRecord, String> {
+fn store_with_extra_figures(
+    bundle_root: &Path,
+    filename: &str,
+    bytes: &[u8],
+    extra: Vec<(String, Vec<u8>)>,
+) -> Result<SourceRecord, String> {
     let sha = hash_bytes(bytes);
     if let Some(id) = find_existing(bundle_root, &sha) {
         return Ok(SourceRecord {
@@ -703,7 +793,11 @@ fn store_with_extra_figures(bundle_root: &Path, filename: &str, bytes: &[u8], ex
     let dir = bundle_root.join("raw").join(&id);
     std::fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
     // original bytes (immutable; gitignored)
-    let orig_ext = if ext.is_empty() { "bin".to_string() } else { ext.clone() };
+    let orig_ext = if ext.is_empty() {
+        "bin".to_string()
+    } else {
+        ext.clone()
+    };
     std::fs::write(dir.join(format!("original.{orig_ext}")), bytes).map_err(|e| e.to_string())?;
 
     // Extract embedded figures (may rewrite the markdown for html/md data URIs).
@@ -718,8 +812,16 @@ fn store_with_extra_figures(bundle_root: &Path, filename: &str, bytes: &[u8], ex
             .into_iter()
             .map(|(member, ib)| {
                 let e = ext_of(&member);
-                let nm = if e.is_empty() { member.clone() } else { format!("x.{e}") };
-                ExtractedFigure { provisional_name: nm, bytes: ib, origin: format!("folder:{member}") }
+                let nm = if e.is_empty() {
+                    member.clone()
+                } else {
+                    format!("x.{e}")
+                };
+                ExtractedFigure {
+                    provisional_name: nm,
+                    bytes: ib,
+                    origin: format!("folder:{member}"),
+                }
             })
             .collect();
         let (body3, more) = write_figures(&dir, &extras, &body, figmeta.len())?;
@@ -749,7 +851,11 @@ fn store_with_extra_figures(bundle_root: &Path, filename: &str, bytes: &[u8], ex
         figures: figmeta,
         ..Default::default()
     };
-    std::fs::write(dir.join("meta.yaml"), serde_yaml::to_string(&meta).map_err(|e| e.to_string())?).map_err(|e| e.to_string())?;
+    std::fs::write(
+        dir.join("meta.yaml"),
+        serde_yaml::to_string(&meta).map_err(|e| e.to_string())?,
+    )
+    .map_err(|e| e.to_string())?;
     Ok(SourceRecord {
         source_id: id.clone(),
         source_md_path: format!("raw/{id}/source.md"),
@@ -763,22 +869,99 @@ fn store_with_extra_figures(bundle_root: &Path, filename: &str, bytes: &[u8], ex
 /// Download a URL's content. Returns `(bytes, final_url, ext)` where `final_url` is the
 /// post-redirect URL and `ext` is inferred from the URL path, the Content-Type, then the bytes.
 pub fn fetch_url(url: &str) -> Result<(Vec<u8>, String, String), String> {
+    let parsed = reqwest::Url::parse(url).map_err(|e| format!("invalid URL: {e}"))?;
+    validate_fetch_url(&parsed)?;
     let client = reqwest::blocking::Client::builder()
         .timeout(std::time::Duration::from_secs(30))
+        .redirect(reqwest::redirect::Policy::custom(|attempt| {
+            if attempt.previous().len() >= 10 {
+                attempt.error("too many redirects")
+            } else if validate_fetch_url(attempt.url()).is_ok() {
+                attempt.follow()
+            } else {
+                attempt.error("redirect target is not allowed")
+            }
+        }))
         .user_agent(concat!("BioOKF/", env!("CARGO_PKG_VERSION")))
         .build()
         .map_err(|e| e.to_string())?;
-    let resp = client.get(url).send().map_err(|e| e.to_string())?;
+    let resp = client
+        .get(parsed)
+        .send()
+        .and_then(|r| r.error_for_status())
+        .map_err(|e| e.to_string())?;
     let final_url = resp.url().to_string();
+    validate_fetch_url(resp.url())?;
     let ctype = resp
         .headers()
         .get(reqwest::header::CONTENT_TYPE)
         .and_then(|v| v.to_str().ok())
         .unwrap_or("")
         .to_string();
-    let bytes = resp.bytes().map_err(|e| e.to_string())?.to_vec();
+    let mut bytes = Vec::new();
+    let mut limited = resp.take(MAX_URL_BYTES + 1);
+    limited.read_to_end(&mut bytes).map_err(|e| e.to_string())?;
+    if bytes.len() as u64 > MAX_URL_BYTES {
+        return Err(format!(
+            "download exceeds {} MiB limit",
+            MAX_URL_BYTES / 1024 / 1024
+        ));
+    }
     let ext = ext_from_url_or_mime(&final_url, &ctype, &bytes);
     Ok((bytes, final_url, ext))
+}
+
+fn validate_fetch_url(url: &reqwest::Url) -> Result<(), String> {
+    match url.scheme() {
+        "http" | "https" => {}
+        s => {
+            return Err(format!(
+                "unsupported URL scheme `{s}`; only http/https are allowed"
+            ))
+        }
+    }
+    let host = url
+        .host_str()
+        .ok_or_else(|| "URL must include a host".to_string())?;
+    let host_lc = host.trim_end_matches('.').to_ascii_lowercase();
+    if host_lc == "localhost" || host_lc.ends_with(".localhost") {
+        return Err("localhost URLs are not allowed".into());
+    }
+    let addrs = url
+        .socket_addrs(|| url.port_or_known_default())
+        .map_err(|e| format!("resolving URL host failed: {e}"))?;
+    if addrs.is_empty() {
+        return Err("URL host did not resolve".into());
+    }
+    if let Some(ip) = addrs
+        .iter()
+        .map(|addr| addr.ip())
+        .find(|ip| !is_public_ip(*ip))
+    {
+        return Err(format!("URL resolves to a non-public address ({ip})"));
+    }
+    Ok(())
+}
+
+fn is_public_ip(ip: IpAddr) -> bool {
+    match ip {
+        IpAddr::V4(ip) => {
+            !(ip.is_private()
+                || ip.is_loopback()
+                || ip.is_link_local()
+                || ip.is_broadcast()
+                || ip.is_multicast()
+                || ip.is_unspecified())
+        }
+        IpAddr::V6(ip) => {
+            let first = ip.segments()[0];
+            !(ip.is_loopback()
+                || ip.is_unspecified()
+                || ip.is_multicast()
+                || (first & 0xfe00) == 0xfc00
+                || (first & 0xffc0) == 0xfe80)
+        }
+    }
 }
 
 /// Infer a file extension from the URL path, then the Content-Type, then byte sniffing.
@@ -855,7 +1038,14 @@ fn reused_record(id: String) -> SourceRecord {
 /// Convert + store a downloaded source under `raw/<id>/`, classifying its origin and
 /// credibility. `online` gates the Crossref/OpenAlex network calls inside the classifier.
 /// Dedups by source URL first, then by content sha256.
-fn store_url(bundle_root: &Path, url: &str, final_url: &str, bytes: &[u8], ext: &str, online: bool) -> Result<SourceRecord, String> {
+fn store_url(
+    bundle_root: &Path,
+    url: &str,
+    final_url: &str,
+    bytes: &[u8],
+    ext: &str,
+    online: bool,
+) -> Result<SourceRecord, String> {
     if let Some(id) = find_by_url(bundle_root, url) {
         return Ok(reused_record(id));
     }
@@ -870,7 +1060,11 @@ fn store_url(bundle_root: &Path, url: &str, final_url: &str, bytes: &[u8], ext: 
     let dir = bundle_root.join("raw").join(&id);
     std::fs::create_dir_all(&dir).map_err(|e| e.to_string())?;
     // original bytes (immutable; gitignored). URL ingests keep the raw download for fidelity.
-    let orig_ext = if ext.is_empty() { "bin".to_string() } else { ext.to_string() };
+    let orig_ext = if ext.is_empty() {
+        "bin".to_string()
+    } else {
+        ext.to_string()
+    };
     std::fs::write(dir.join(format!("original.{orig_ext}")), bytes).map_err(|e| e.to_string())?;
 
     let (embedded, rewritten) = extract_figures(ext, bytes, &converted.markdown);
@@ -878,12 +1072,13 @@ fn store_url(bundle_root: &Path, url: &str, final_url: &str, bytes: &[u8], ext: 
     let (body2, figmeta) = write_figures(&dir, &embedded, &body, 0)?;
     body = body2;
 
-    let (source_type, credibility, ids) = crate::credibility::classify(&crate::credibility::ClassifyInput {
-        url: Some(url),
-        filename: Some(&filename),
-        body: &converted.markdown,
-        online,
-    });
+    let (source_type, credibility, ids) =
+        crate::credibility::classify(&crate::credibility::ClassifyInput {
+            url: Some(url),
+            filename: Some(&filename),
+            body: &converted.markdown,
+            online,
+        });
 
     let needs = converted.needs_llm_fallback || !figmeta.is_empty();
     let banner = if needs {
@@ -908,7 +1103,11 @@ fn store_url(bundle_root: &Path, url: &str, final_url: &str, bytes: &[u8], ext: 
         credibility,
         ids,
     };
-    std::fs::write(dir.join("meta.yaml"), serde_yaml::to_string(&meta).map_err(|e| e.to_string())?).map_err(|e| e.to_string())?;
+    std::fs::write(
+        dir.join("meta.yaml"),
+        serde_yaml::to_string(&meta).map_err(|e| e.to_string())?,
+    )
+    .map_err(|e| e.to_string())?;
     Ok(SourceRecord {
         source_md_path: format!("raw/{id}/source.md"),
         meta_path: format!("raw/{id}/meta.yaml"),
@@ -922,10 +1121,11 @@ fn store_url(bundle_root: &Path, url: &str, final_url: &str, bytes: &[u8], ext: 
 /// Ingest a list of URLs sequentially, failing soft: each result is independent so one
 /// download error does not abort the batch.
 pub fn ingest_urls(bundle_root: &Path, urls: Vec<String>) -> Vec<Result<SourceRecord, String>> {
-    urls
-        .into_iter()
+    urls.into_iter()
         .map(|u| match fetch_url(&u) {
-            Ok((bytes, final_url, ext)) => store_url(bundle_root, &u, &final_url, &bytes, &ext, true),
+            Ok((bytes, final_url, ext)) => {
+                store_url(bundle_root, &u, &final_url, &bytes, &ext, true)
+            }
             Err(e) => Err(format!("{u}: {e}")),
         })
         .collect()
@@ -933,16 +1133,30 @@ pub fn ingest_urls(bundle_root: &Path, urls: Vec<String>) -> Vec<Result<SourceRe
 
 /// Ingest a source into a bundle's `raw/`. A `.zip` or folder expands to one source
 /// per member unless `combined`, which concatenates members into a single source.
-pub fn ingest(bundle_root: &Path, input: SourceInput, combined: bool) -> Result<Vec<SourceRecord>, String> {
+pub fn ingest(
+    bundle_root: &Path,
+    input: SourceInput,
+    combined: bool,
+) -> Result<Vec<SourceRecord>, String> {
     // Resolve to (filename, bytes) members.
     let members: Vec<(String, Vec<u8>)> = match input {
         SourceInput::Url(u) => {
             // URL ingestion captures provenance, so it does not go through the member path.
             let (bytes, final_url, ext) = fetch_url(&u)?;
-            return Ok(vec![store_url(bundle_root, &u, &final_url, &bytes, &ext, true)?]);
+            return Ok(vec![store_url(
+                bundle_root,
+                &u,
+                &final_url,
+                &bytes,
+                &ext,
+                true,
+            )?]);
         }
         SourceInput::Text { text, title } => {
-            let name = title.as_deref().map(|t| format!("{}.md", slug(t))).unwrap_or_else(|| "note.md".into());
+            let name = title
+                .as_deref()
+                .map(|t| format!("{}.md", slug(t)))
+                .unwrap_or_else(|| "note.md".into());
             vec![(name, text.into_bytes())]
         }
         SourceInput::Path(p) => {
@@ -950,7 +1164,10 @@ pub fn ingest(bundle_root: &Path, input: SourceInput, combined: bool) -> Result<
                 expand_folder(&p)
             } else {
                 let bytes = std::fs::read(&p).map_err(|e| e.to_string())?;
-                let name = p.file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_else(|| "source".into());
+                let name = p
+                    .file_name()
+                    .map(|s| s.to_string_lossy().to_string())
+                    .unwrap_or_else(|| "source".into());
                 if ext_of(&name) == "zip" {
                     expand_zip(&bytes)?
                 } else {
@@ -983,8 +1200,9 @@ pub fn ingest(bundle_root: &Path, input: SourceInput, combined: bool) -> Result<
     // Folder/zip grouping: loose image members attach as figures of the primary
     // document, rather than each becoming its own image-source.
     if !combined && members.len() > 1 {
-        let (images, docs): (Vec<(String, Vec<u8>)>, Vec<(String, Vec<u8>)>) =
-            members.into_iter().partition(|(name, _)| is_image_ext(&ext_of(name)));
+        let (images, docs): (Vec<(String, Vec<u8>)>, Vec<(String, Vec<u8>)>) = members
+            .into_iter()
+            .partition(|(name, _)| is_image_ext(&ext_of(name)));
         if !docs.is_empty() {
             // Primary document: the sole doc, else the largest by byte length.
             let primary_idx = docs
@@ -997,7 +1215,12 @@ pub fn ingest(bundle_root: &Path, input: SourceInput, combined: bool) -> Result<
             let extra: Vec<(String, Vec<u8>)> = images;
             for (i, (name, bytes)) in docs.iter().enumerate() {
                 if i == primary_idx {
-                    records.push(store_with_extra_figures(bundle_root, name, bytes, extra.clone())?);
+                    records.push(store_with_extra_figures(
+                        bundle_root,
+                        name,
+                        bytes,
+                        extra.clone(),
+                    )?);
                 } else {
                     records.push(store(bundle_root, name, bytes)?);
                 }
@@ -1037,24 +1260,70 @@ mod tests {
         let root = dir.path();
         std::fs::create_dir_all(root.join("raw")).unwrap();
         let html = b"<html><body><h1>Study</h1><p>doi:10.1101/2020.01.02.123456 received: accepted:</p></body></html>";
-        let rec = store_url(root, "https://www.biorxiv.org/x", "https://www.biorxiv.org/x", html, "html", false).unwrap();
-        let meta: SourceMeta = serde_yaml::from_str(&std::fs::read_to_string(root.join(&rec.meta_path)).unwrap()).unwrap();
+        let rec = store_url(
+            root,
+            "https://www.biorxiv.org/x",
+            "https://www.biorxiv.org/x",
+            html,
+            "html",
+            false,
+        )
+        .unwrap();
+        let meta: SourceMeta =
+            serde_yaml::from_str(&std::fs::read_to_string(root.join(&rec.meta_path)).unwrap())
+                .unwrap();
         assert_eq!(meta.url.as_deref(), Some("https://www.biorxiv.org/x"));
-        assert!(matches!(meta.credibility.tier, crate::credibility::CredibilityTier::Preprint));
+        assert!(matches!(
+            meta.credibility.tier,
+            crate::credibility::CredibilityTier::Preprint
+        ));
         assert!(meta.ids.doi.is_some());
-        assert!(root.join(format!("raw/{}/original.html", rec.source_id)).exists());
+        assert!(root
+            .join(format!("raw/{}/original.html", rec.source_id))
+            .exists());
 
         // URL-level dedup: the same URL reuses the existing source.
-        let rec2 = store_url(root, "https://www.biorxiv.org/x", "https://www.biorxiv.org/x", html, "html", false).unwrap();
+        let rec2 = store_url(
+            root,
+            "https://www.biorxiv.org/x",
+            "https://www.biorxiv.org/x",
+            html,
+            "html",
+            false,
+        )
+        .unwrap();
         assert!(rec2.reused);
         assert_eq!(rec2.source_id, rec.source_id);
     }
 
     #[test]
+    fn url_fetch_rejects_local_and_private_targets() {
+        for u in [
+            "file:///tmp/a.pdf",
+            "http://localhost/a",
+            "http://127.0.0.1/a",
+            "http://10.0.0.1/a",
+            "http://[::1]/a",
+        ] {
+            let parsed = reqwest::Url::parse(u).unwrap();
+            assert!(
+                validate_fetch_url(&parsed).is_err(),
+                "{u} should be rejected"
+            );
+        }
+    }
+
+    #[test]
     fn title_prefers_heading_rejects_hash() {
-        assert_eq!(title_from("# Tocilizumab in COVID-19\n\nbody", "x.md", None), "Tocilizumab in COVID-19");
+        assert_eq!(
+            title_from("# Tocilizumab in COVID-19\n\nbody", "x.md", None),
+            "Tocilizumab in COVID-19"
+        );
         // a hex-hash title is rejected; falls back to the filename
-        assert_eq!(title_from("body", "the-recovery-trial.pdf", Some("deadbeefcafe1234")), "the recovery trial");
+        assert_eq!(
+            title_from("body", "the-recovery-trial.pdf", Some("deadbeefcafe1234")),
+            "the recovery trial"
+        );
         assert!(looks_machine_generated("deadbeefcafe1234"));
         assert!(!looks_machine_generated("Tocilizumab"));
     }
@@ -1074,18 +1343,34 @@ mod tests {
         std::fs::create_dir_all(root.join("raw")).unwrap();
         // a single markdown source
         let src = tempfile::tempdir().unwrap();
-        std::fs::write(src.path().join("recovery-trial.md"), "# RECOVERY Trial\n\nDexamethasone reduced mortality.").unwrap();
-        let recs = ingest(root, SourceInput::Path(src.path().join("recovery-trial.md")), false).unwrap();
+        std::fs::write(
+            src.path().join("recovery-trial.md"),
+            "# RECOVERY Trial\n\nDexamethasone reduced mortality.",
+        )
+        .unwrap();
+        let recs = ingest(
+            root,
+            SourceInput::Path(src.path().join("recovery-trial.md")),
+            false,
+        )
+        .unwrap();
         assert_eq!(recs.len(), 1);
         let id = &recs[0].source_id;
         assert!(id.starts_with("recovery-trial-"), "id was {id}");
         // id is content-derived, not a bare hash/uuid
-        assert!(!looks_machine_generated(id.rsplit('-').next().unwrap()) || id.contains("recovery"));
+        assert!(
+            !looks_machine_generated(id.rsplit('-').next().unwrap()) || id.contains("recovery")
+        );
         assert!(root.join(&recs[0].source_md_path).exists());
         assert!(root.join(&recs[0].meta_path).exists());
 
         // dedup: ingesting the same bytes again reuses
-        let recs2 = ingest(root, SourceInput::Path(src.path().join("recovery-trial.md")), false).unwrap();
+        let recs2 = ingest(
+            root,
+            SourceInput::Path(src.path().join("recovery-trial.md")),
+            false,
+        )
+        .unwrap();
         assert!(recs2[0].reused);
         assert_eq!(recs2[0].source_id, *id);
     }
@@ -1097,12 +1382,26 @@ mod tests {
         std::fs::create_dir_all(root.join("raw")).unwrap();
         std::fs::create_dir_all(root.join("knowledge")).unwrap();
         let src = tempfile::tempdir().unwrap();
-        std::fs::write(src.path().join("weird.xyz"), b"\x00\x01 some bytes that are not a known format").unwrap();
+        std::fs::write(
+            src.path().join("weird.xyz"),
+            b"\x00\x01 some bytes that are not a known format",
+        )
+        .unwrap();
         let recs = ingest(root, SourceInput::Path(src.path().join("weird.xyz")), false).unwrap();
-        assert!(recs[0].needs_llm_fallback, "unknown format must flag LLM fallback");
+        assert!(
+            recs[0].needs_llm_fallback,
+            "unknown format must flag LLM fallback"
+        );
         // the marker is present until the agent renders it
         let report = crate::lint::lint(&crate::bundle::Bundle::open(root).unwrap());
-        assert!(report.findings.iter().any(|f| f.rule == "source.needs_conversion"), "{:?}", report.findings);
+        assert!(
+            report
+                .findings
+                .iter()
+                .any(|f| f.rule == "source.needs_conversion"),
+            "{:?}",
+            report.findings
+        );
     }
 
     #[test]
@@ -1111,15 +1410,29 @@ mod tests {
         let root = dir.path();
         std::fs::create_dir_all(root.join("raw")).unwrap();
         let folder = tempfile::tempdir().unwrap();
-        std::fs::write(folder.path().join("paper.md"), "# Paper\n\nBody with two figures.").unwrap();
-        std::fs::write(folder.path().join("figure1.png"), [0x89, b'P', b'N', b'G', 1]).unwrap();
-        std::fs::write(folder.path().join("figure2.png"), [0x89, b'P', b'N', b'G', 2]).unwrap();
+        std::fs::write(
+            folder.path().join("paper.md"),
+            "# Paper\n\nBody with two figures.",
+        )
+        .unwrap();
+        std::fs::write(
+            folder.path().join("figure1.png"),
+            [0x89, b'P', b'N', b'G', 1],
+        )
+        .unwrap();
+        std::fs::write(
+            folder.path().join("figure2.png"),
+            [0x89, b'P', b'N', b'G', 2],
+        )
+        .unwrap();
         let recs = ingest(root, SourceInput::Path(folder.path().to_path_buf()), false).unwrap();
         assert_eq!(recs.len(), 1, "one doc-source, images attached: {recs:?}");
         let id = &recs[0].source_id;
         let figdir = root.join("raw").join(id).join("figures");
         assert!(figdir.join("fig-001.png").exists() || figdir.read_dir().unwrap().count() == 2);
-        let meta: SourceMeta = serde_yaml::from_str(&std::fs::read_to_string(root.join(&recs[0].meta_path)).unwrap()).unwrap();
+        let meta: SourceMeta =
+            serde_yaml::from_str(&std::fs::read_to_string(root.join(&recs[0].meta_path)).unwrap())
+                .unwrap();
         assert_eq!(meta.figures.len(), 2);
     }
 
@@ -1144,7 +1457,9 @@ mod tests {
         assert!(figdir.join("fig-001.png").exists());
         let src = std::fs::read_to_string(root.join(&rec.source_md_path)).unwrap();
         assert!(src.contains("figures/fig-001.png"));
-        let meta: SourceMeta = serde_yaml::from_str(&std::fs::read_to_string(root.join(&rec.meta_path)).unwrap()).unwrap();
+        let meta: SourceMeta =
+            serde_yaml::from_str(&std::fs::read_to_string(root.join(&rec.meta_path)).unwrap())
+                .unwrap();
         assert_eq!(meta.figures.len(), 1);
         assert!(meta.figures[0].provisional && !meta.figures[0].described);
     }
@@ -1186,23 +1501,37 @@ mod tests {
         let c = convert_bytes("png", "Figure_3.png", &[0x89, b'P', b'N', b'G']);
         assert_eq!(c.format, "image");
         assert!(c.needs_llm_fallback);
-        assert!(c.markdown.contains("![Figure_3.png](figures/Figure_3.png)"), "{}", c.markdown);
+        assert!(
+            c.markdown.contains("![Figure_3.png](figures/Figure_3.png)"),
+            "{}",
+            c.markdown
+        );
     }
 
     #[test]
     fn source_meta_roundtrips_figures() {
         let m = SourceMeta {
-            id: "x-abc123".into(), title: "X".into(), sha256: "deadbeef".into(),
-            format: "docx".into(), original_filename: Some("x.docx".into()),
-            ingested_at: "2026-06-27".into(), needs_llm_fallback: false,
-            figures: vec![FigureMeta { file: "figures/fig-001.png".into(), provisional: true, described: false, origin: "word/media/image1.png".into() }],
+            id: "x-abc123".into(),
+            title: "X".into(),
+            sha256: "deadbeef".into(),
+            format: "docx".into(),
+            original_filename: Some("x.docx".into()),
+            ingested_at: "2026-06-27".into(),
+            needs_llm_fallback: false,
+            figures: vec![FigureMeta {
+                file: "figures/fig-001.png".into(),
+                provisional: true,
+                described: false,
+                origin: "word/media/image1.png".into(),
+            }],
             ..Default::default()
         };
         let y = serde_yaml::to_string(&m).unwrap();
         let back: SourceMeta = serde_yaml::from_str(&y).unwrap();
         assert_eq!(m, back);
         // empty figures is omitted from yaml
-        let mut m2 = m.clone(); m2.figures.clear();
+        let mut m2 = m.clone();
+        m2.figures.clear();
         assert!(!serde_yaml::to_string(&m2).unwrap().contains("figures"));
     }
 

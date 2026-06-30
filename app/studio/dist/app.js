@@ -37,6 +37,11 @@ let BASES=[], activeBaseId=null, currentLog='', currentUpdated=null, currentLint
 let simSettled=false, settledFrames=0; // for auto-freeze after layout stabilises
 let currentDetailPath=null;           // path of the open node doc, for resolving body links
 let currentNoteCtx=null;              // notes context (node/edge) for the open panel
+let graphComponents=[];               // component anchors keep disconnected islands close
+let edgeSpatial=null, edgeSpatialVersion=0, edgeSpatialBuildAt=0;
+const bundleCache=new Map();          // base id -> live bundle payload
+const layoutCache=new Map();          // base id -> node positions after first layout
+let selectSeq=0;
 
 /* ---------- data loading ---------- */
 /* Graph data always loads from the exported static JSON, which carries the
@@ -73,14 +78,56 @@ async function loadBundle(base){
   return await (await fetch(base.file+cb())).json();
 }
 
-function loadGraph(g){
+function componentLayout(graphNodes, graphEdges){
+  const adj=new Map(); graphNodes.forEach(n=>adj.set(n.id,[]));
+  graphEdges.forEach(e=>{ if(adj.has(e.source)&&adj.has(e.target)){ adj.get(e.source).push(e.target); adj.get(e.target).push(e.source); } });
+  const seen=new Set(), comps=[];
+  graphNodes.forEach(n=>{
+    if(seen.has(n.id)) return;
+    const q=[n.id], ids=[]; seen.add(n.id);
+    for(let i=0;i<q.length;i++){
+      const id=q[i]; ids.push(id);
+      (adj.get(id)||[]).forEach(nb=>{ if(!seen.has(nb)){ seen.add(nb); q.push(nb); } });
+    }
+    comps.push(ids);
+  });
+  comps.sort((a,b)=>b.length-a.length);
+  const root=Math.max(180, Math.sqrt(graphNodes.length)*42), placed=[];
+  let ring=0, used=0;
+  const anchors=comps.map((ids,i)=>{
+    if(i===0) return { ids, x:0, y:0, r:Math.max(130, Math.sqrt(ids.length)*24) };
+    if(used>=Math.max(6, ring*6)){ ring++; used=0; }
+    const slots=Math.max(6, ring*6), a=(used++/slots)*Math.PI*2 + ring*0.37;
+    const dist=root + ring*170;
+    return { ids, x:Math.cos(a)*dist, y:Math.sin(a)*dist, r:Math.max(50, Math.sqrt(ids.length)*24) };
+  });
+  const pos=new Map();
+  anchors.forEach((c,ci)=>{
+    const count=c.ids.length;
+    c.ids.sort((a,b)=>(adj.get(b)||[]).length-(adj.get(a)||[]).length || a.localeCompare(b));
+    c.ids.forEach((id,i)=>{
+      const deg=(adj.get(id)||[]).length;
+      if(count===1){ pos.set(id,{x:c.x,y:c.y,c:ci}); return; }
+      const turns=Math.ceil(Math.sqrt(count)), a=i*2.39996323;
+      const rr=(Math.sqrt(i+0.5)/Math.sqrt(count))*c.r + (deg?0:22);
+      pos.set(id,{x:c.x+Math.cos(a)*rr,y:c.y+Math.sin(a)*rr,c:ci});
+    });
+    placed.push(c);
+  });
+  return {pos, components:anchors};
+}
+
+function loadGraph(g, baseId){
+  const saved=baseId?layoutCache.get(baseId):null;
+  const layout = saved ? null : componentLayout(g.nodes, g.edges);
   byId={};
   nodes = g.nodes.map((n,i)=>{
-    const a=(i/g.nodes.length)*Math.PI*2, r=170+(i%6)*18;
-    const node=Object.assign({}, n, {x:Math.cos(a)*r, y:Math.sin(a)*r, vx:0, vy:0});
+    const p=(saved&&saved[n.id]) || (layout&&layout.pos.get(n.id)) || {x:0,y:0,c:0};
+    const node=Object.assign({}, n, {x:p.x, y:p.y, vx:0, vy:0, component:p.c||0});
     byId[n.id]=node; return node;
   });
   edges = g.edges.map(e=>Object.assign({}, e));
+  graphComponents = saved ? (saved.__components||[]) : (layout?layout.components:[]);
   // hub = top-6 by degree (real nodes)
   const ranked=[...nodes].filter(n=>!n.external).sort((a,b)=>b.degree-a.degree);
   const hubSet=new Set(ranked.slice(0,6).map(n=>n.id));
@@ -90,8 +137,11 @@ function loadGraph(g){
   edges.forEach(e=>{ const sn=neighborMap.get(e.source), tn=neighborMap.get(e.target); if(sn)sn.add(e.target); if(tn)tn.add(e.source); });
   selected=null;selectedEdge=null;hover=null;hoverEdge=null;focusNeighbors=new Set();closeDetail();
   alpha=1; simSettled=false; settledFrames=0;
-  // Quick warm-start: fewer iterations now that quadtree makes each tick fast
-  for(let i=0;i<20;i++) tick(0.9*Math.pow(0.985,i)+0.02);
+  edgeSpatial=null; edgeSpatialVersion++;
+  // Quick warm-start: skip it when reusing a cached layout; otherwise keep it bounded.
+  const warm=saved?0:(nodes.length>900?8:nodes.length>350?12:20);
+  for(let i=0;i<warm;i++) tick(0.9*Math.pow(0.985,i)+0.02);
+  if(baseId) rememberLayout(baseId);
   fitView();
 }
 
@@ -151,13 +201,19 @@ function tick(a){
   for(let i=0;i<M;i++) root.insert(nodes[i].x, nodes[i].y, nodes[i]);
   for(let i=0;i<M;i++) root.force(nodes[i].x, nodes[i].y, nodes[i], a);
   // --- edge spring forces ---
-	const L=92;
+  const L=92;
   edges.forEach(e=>{const s=byId[e.source],t=byId[e.target]; if(!s||!t)return;
     let dx=t.x-s.x,dy=t.y-s.y,d=Math.sqrt(dx*dx+dy*dy)||0.01;
     const f=(d-L)*0.045*a,fx=(dx/d)*f,fy=(dy/d)*f;
     s.vx+=fx;s.vy+=fy;t.vx-=fx;t.vy-=fy;});
-  nodes.forEach(n=>{n.vx+=-n.x*0.012*a;n.vy+=-n.y*0.012*a;});
+  nodes.forEach(n=>{
+    const c=graphComponents[n.component]||{x:0,y:0};
+    const pull=nodes.length>350?0.018:0.012;
+    n.vx+=(c.x-n.x)*pull*a;
+    n.vy+=(c.y-n.y)*pull*a;
+  });
   nodes.forEach(n=>{if(n===drag){n.vx=0;n.vy=0;return;}n.x+=n.vx;n.y+=n.vy;n.vx*=0.82;n.vy*=0.82;});
+  edgeSpatial=null; edgeSpatialVersion++;
 }
 function toScreen(x,y){return [(x*view.k)+view.x+W/2,(y*view.k)+view.y+H/2];}
 function toWorld(sx,sy){return [(sx-W/2-view.x)/view.k,(sy-H/2-view.y)/view.k];}
@@ -172,6 +228,27 @@ function fitView(){
 function neighborsOf(id){return neighborMap.get(id)||new Set();}
 function recomputeFocus(){const id=(selected&&selected.id)||(hover&&hover.id)||null;focusNeighbors=id?neighborsOf(id):new Set();}
 function matches(n){const q=searchTerm;if(!q)return true;return (n.id||'').toLowerCase().includes(q)||(n.type||'').toLowerCase().includes(q)||(n.subtype||'').toLowerCase().includes(q);}
+function rememberLayout(baseId){
+  if(!baseId || !nodes.length) return;
+  const saved={__components:graphComponents.map(c=>({ids:c.ids,x:c.x,y:c.y,r:c.r}))};
+  nodes.forEach(n=>{ saved[n.id]={x:n.x,y:n.y,c:n.component||0}; });
+  layoutCache.set(baseId,saved);
+}
+
+function edgeCellKey(ix,iy){return ix+','+iy;}
+function rebuildEdgeSpatial(){
+  const cell=Math.max(80,120/view.k), grid=new Map();
+  edges.forEach((e,i)=>{
+    const s=byId[e.source],t=byId[e.target]; if(!s||!t)return;
+    const mnx=Math.min(s.x,t.x)-12, mxx=Math.max(s.x,t.x)+12, mny=Math.min(s.y,t.y)-12, mxy=Math.max(s.y,t.y)+12;
+    const ix1=Math.floor(mnx/cell), ix2=Math.floor(mxx/cell), iy1=Math.floor(mny/cell), iy2=Math.floor(mxy/cell);
+    for(let ix=ix1;ix<=ix2;ix++)for(let iy=iy1;iy<=iy2;iy++){
+      const k=edgeCellKey(ix,iy); let arr=grid.get(k); if(!arr){arr=[];grid.set(k,arr);} arr.push(i);
+    }
+  });
+  edgeSpatial={cell,grid,version:edgeSpatialVersion,k:view.k};
+  edgeSpatialBuildAt=performance.now();
+}
 
 /* ---------- render ---------- */
 function draw(){
@@ -314,7 +391,7 @@ function loop(){
     tick(alpha); alpha*=0.94;
     // energy-based settle: freeze when total kinetic energy is very low for several frames
     let ke=0; for(const n of nodes) ke+=n.vx*n.vx+n.vy*n.vy;
-    if(ke < nodes.length*0.008){ settledFrames++; if(settledFrames>30){ alpha=0; simSettled=true; } }
+    if(ke < nodes.length*0.008){ settledFrames++; if(settledFrames>30){ alpha=0; simSettled=true; if(activeBaseId) rememberLayout(activeBaseId); } }
     else settledFrames=0;
   }
   draw(); requestAnimationFrame(loop);
@@ -322,7 +399,15 @@ function loop(){
 
 /* ---------- interaction ---------- */
 function pickNode(sx,sy){for(let i=nodes.length-1;i>=0;i--){const n=nodes[i],[x,y]=toScreen(n.x,n.y),r=nodeR(n)*view.k+4;if((sx-x)**2+(sy-y)**2<=r*r)return n;}return null;}
-function pickEdge(sx,sy){let best=null,bd=6;edges.forEach(e=>{const s=byId[e.source],t=byId[e.target];if(!s||!t)return;const [x1,y1]=toScreen(s.x,s.y),[x2,y2]=toScreen(t.x,t.y),d=distSeg(sx,sy,x1,y1,x2,y2);if(d<bd){bd=d;best=e;}});return best;}
+function pickEdge(sx,sy){
+  if(!edgeSpatial || edgeSpatial.version!==edgeSpatialVersion || Math.abs(edgeSpatial.k-view.k)>0.08) rebuildEdgeSpatial();
+  const [wx,wy]=toWorld(sx,sy), cell=edgeSpatial.cell, ix=Math.floor(wx/cell), iy=Math.floor(wy/cell);
+  const cand=new Set();
+  for(let dx=-1;dx<=1;dx++)for(let dy=-1;dy<=1;dy++){ (edgeSpatial.grid.get(edgeCellKey(ix+dx,iy+dy))||[]).forEach(i=>cand.add(i)); }
+  let best=null,bd=6;
+  cand.forEach(i=>{const e=edges[i],s=byId[e.source],t=byId[e.target];if(!s||!t)return;const [x1,y1]=toScreen(s.x,s.y),[x2,y2]=toScreen(t.x,t.y),d=distSeg(sx,sy,x1,y1,x2,y2);if(d<bd){bd=d;best=e;}});
+  return best;
+}
 function distSeg(px,py,x1,y1,x2,y2){const dx=x2-x1,dy=y2-y1,l2=dx*dx+dy*dy;if(l2===0)return Math.hypot(px-x1,py-y1);let t=((px-x1)*dx+(py-y1)*dy)/l2;t=Math.max(0,Math.min(1,t));return Math.hypot(px-(x1+t*dx),py-(y1+t*dy));}
 const tip=document.getElementById('tip');
 window.addEventListener('mousemove',ev=>{
@@ -473,10 +558,9 @@ async function hydrateSourceProvenance(pg){
   const figs=Array.isArray(info.figures)?info.figures:[];
   let figHtml='';
   if(figs.length){
-    figHtml=`<div class="src-figs">${figs.map((f,i)=>{
+    figHtml=`<div class="src-figs text-only">${figs.map((f,i)=>{
       const flags=[]; if(f.provisional)flags.push('<span class="fig-flag prov">provisional</span>'); if(f.described===false||f.described==='false')flags.push('<span class="fig-flag undesc">undescribed</span>'); if(f.origin)flags.push(`<span class="fig-flag">${esc(f.origin)}</span>`);
-      // FigureMeta.file is already relative to raw/<id>/ (e.g. "figures/foo.png") — do not re-prefix.
-      return `<figure class="src-fig"><img class="md-img" data-md-raw="raw/${esc(source_id)}/${esc(f.file||'')}" alt="${esc(f.file||('figure '+i))}"><figcaption>${esc(f.file||'')} ${flags.join(' ')}</figcaption></figure>`;
+      return `<div class="src-fig text-ref"><code>${esc(f.file||('figure '+i))}</code> ${flags.join(' ')}</div>`;
     }).join('')}</div>`;
   }
   const credChips=`${info.source_type?`<span class="src-origin">${esc(info.source_type)}</span>`:''}<span class="src-tier ${tierClass}">${esc(tier)}</span>${cred.confidence!=null?`<span class="src-conf">conf ${esc(Number(cred.confidence).toFixed(2))}</span>`:''}${cred.retracted?'<span class="src-retracted">⚠ RETRACTED</span>':''}`;
@@ -494,7 +578,6 @@ async function hydrateSourceProvenance(pg){
       ${idLinks.length?kvRow('ids', idLinks.join(' ')):''}
       ${urlLinks.length?kvRow('links', urlLinks.join(' ')):''}
     </div>${figHtml}`;
-  hydrateMdImages(sec);
 }
 /* Document section — read-only rendered body (editing now happens on the
    frontmatter above, per the requested workflow). */
@@ -602,7 +685,6 @@ function openPreview(ref, fromPath){
     previewEl.innerHTML=`<div class="pv-head"><span class="pv-badge" style="background:${col}">${esc(typeStr(pg.node_type))}</span><div><div class="pv-eyebrow">Cited source</div><div class="pv-title">${esc(id)}</div></div><button class="pv-close" id="pvClose">×</button></div>
       <div class="pv-body">${pg.description?`<div class="d-desc" style="margin-bottom:10px">${esc(pg.description)}</div>`:''}<div class="md">${renderMd(pg.body||'')}</div>${rawBlock}</div>`;
     wireCites(previewEl, pg.path||null);
-    hydrateMdImages(previewEl);
     if(hasRaw) loadRawSource(activeBaseId, pg.raw_source[0]);
   }
   previewEl.classList.add('open'); previewScrim.classList.add('open');
@@ -615,7 +697,6 @@ async function loadRawSource(base, path){
   try{
     const text=await tauriInvoke('read_bundle_file', { base, path });
     el.innerHTML=renderMd(text||'');
-    hydrateMdImages(el);
   }catch(e){ el.innerHTML='<span class="pv-missing">Could not load source: '+esc(String((e&&e.message)||e))+'</span>'; }
 }
 function closePreview(){ previewEl.classList.remove('open'); previewScrim.classList.remove('open'); }
@@ -672,6 +753,7 @@ async function saveFileEditor(path, label){
     // reflect the edit, then re-open the same node/edge detail.
     const r=editorReturn; editorReturn=null;
     const b=BASES.find(x=>x.id===activeBaseId);
+    bundleCache.delete(activeBaseId); layoutCache.delete(activeBaseId);
     if(b) await selectBase(b);   // reloads pages/graph; clears selection + detail
     if(r&&r.kind==='node'){ const n=byId[r.node.id]; if(n){ selected=n;selectedEdge=null;recomputeFocus();showNodeDetail(n); } }
     else if(r&&r.kind==='edge'){ const e=edges.find(x=>x.source===r.edge.source&&x.predicate===r.edge.predicate&&x.target===r.edge.target); if(e){ selectedEdge=e;selected=null;recomputeFocus();showEdgeDetail(e); } else closeDetail(); }
@@ -776,39 +858,21 @@ function inl(s){
   s=esc(s);
   s=s.replace(/\*\*([^*]+)\*\*/g,'<b>$1</b>');
   s=s.replace(/`([^`]+)`/g,'<code>$1</code>');
-  // IMAGE rule — must run BEFORE the citation-link rule so `![alt](url)` isn't
-  // turned into a broken cite link. http(s) URLs render inline as-is; relative
-  // `raw/` paths are hydrated to a data URI on desktop (see hydrateMdImages).
+  // Text-only image rule — never create <img> tags or hydrate binary assets in
+  // Studio panels. Large figures/PDF-derived images stay on disk and render as
+  // compact references so graph navigation remains fast.
   s=s.replace(/!\[([^\]]*)\]\(([^)]*)\)/g,(m,alt,url)=>{
     const u=(url||'').trim();
-    if(/^https?:\/\//i.test(u)) return `<img class="md-img" src="${u}" alt="${alt}">`;
-    return `<img class="md-img" data-md-raw="${u}" alt="${alt}">`;
+    const label=(alt||'image').trim();
+    return `<code>image: ${label}${u?' ('+u+')':''}</code>`;
   });
   s=s.replace(/\[([^\]]+)\]\(([^)]*)\)/g,(m,t,u)=>`<a class="cite" data-cite="${u}">${t}</a>`);
   return s;
 }
-/* Hydrate relative `raw/` markdown images to data URIs (desktop only): figures in
-   ingested source papers live as binary files inside the bundle, so they can't be
-   loaded by relative URL in the webview. We read their raw bytes via the
-   read_bundle_bytes connector (base64) and inline them. http(s) images are left untouched. */
+/* Text-only Studio panels intentionally do not hydrate images or other binary
+   assets. Figure/image references are shown as text above by renderMd(). */
 async function hydrateMdImages(root){
-  if(!root || !isDesktop) return;
-  const imgs=root.querySelectorAll && root.querySelectorAll('img.md-img[data-md-raw]');
-  if(!imgs || !imgs.length) return;
-  for(const img of imgs){
-    const path=img.getAttribute('data-md-raw'); img.removeAttribute('data-md-raw');
-    if(!path || /^https?:\/\//i.test(path)){ if(path) img.src=path; continue; }
-    try{
-      const b64=await tauriInvoke('read_bundle_bytes', { base: activeBaseId, path });
-      if(typeof b64==='string' && b64){
-        img.src = b64.startsWith('data:') ? b64 : ('data:'+mimeForPath(path)+';base64,'+b64);
-      }
-    }catch(e){ /* missing figure — leave it unresolved */ }
-  }
-}
-function mimeForPath(p){
-  const ext=((p||'').split('.').pop()||'').toLowerCase();
-  return ({png:'image/png',jpg:'image/jpeg',jpeg:'image/jpeg',gif:'image/gif',webp:'image/webp',svg:'image/svg+xml'}[ext])||'image/png';
+  return;
 }
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
 
@@ -840,15 +904,21 @@ function updateChrome(b){
   closeLintPop();
 }
 async function selectBase(b){
+  const seq=++selectSeq;
   window.__bokfLoading=true;            // agent-visible: a bundle load is in flight
   activeBaseId=b.id;renderSidebar();closeLog();
   // Sync the shared .active-kb pointer so a CLI/agent sees the GUI's selection
   // (fire-and-forget; the poll below mirrors changes the other way).
   if(isDesktop) tauriInvoke('set_active_kb',{id:b.id}).catch(()=>{});
-  const bundle=await loadBundle(b);
+  let bundle=bundleCache.get(b.id);
+  if(!bundle){
+    bundle=await loadBundle(b);
+    bundleCache.set(b.id,bundle);
+  }
+  if(seq!==selectSeq) return;
   pages=bundle.pages||{};
   currentLog=bundle.log||''; currentUpdated=bundle.updated||null; currentLint=bundle.lint||null;
-  loadGraph(bundle.graph);
+  loadGraph(bundle.graph, b.id);
   // merge counts/lint from bundle if base index lacked them
   const merged=Object.assign({}, b, {node_count:bundle.node_count, edge_count:bundle.edge_count, lint:bundle.lint, name:b.name||bundle.name, updated:bundle.updated});
   updateChrome(merged);
@@ -1087,6 +1157,7 @@ async function addNewBase(){
   if(Array.isArray(path)) path=path[0];
   try{
     const added=await tauriInvoke('add_base',{path});
+    bundleCache.clear(); layoutCache.clear();
     BASES=await loadBases();renderSidebar();
     const b=(added&&added.id&&BASES.find(x=>x.id===added.id)) || BASES.find(x=>x.path===path);
     if(b) await selectBase(b);
@@ -1120,6 +1191,7 @@ async function syncBases(){
   const sig=basesSig(list);
   if(sig===lastBasesSig) return;        // registry unchanged on disk
   lastBasesSig=sig;
+  bundleCache.clear(); layoutCache.clear();
   BASES=list; renderSidebar();
   if(activeBaseId && !BASES.find(b=>b.id===activeBaseId)){
     // the active KB's folder was deleted/unregistered — move off it

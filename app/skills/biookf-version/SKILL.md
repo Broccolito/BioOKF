@@ -6,10 +6,10 @@ description: Use to inspect or operate the git-backed version tracking: review h
 # Skill: biookf-version
 
 Every curation step is committed through **`bokf log-sync <bundle> --kind <K> --summary S
-[--delta D] [--counts]`**: it appends a dated `## YYYY-MM-DD` block to `log.md` AND git-commits,
+[--delta D]`**: it appends a dated `## YYYY-MM-DD` block to `log.md` AND git-commits,
 atomically. It is the **sole step-committer**; do not hand-commit per tool. `--kind` is one of
-`ingest | convert | link | merge | lint | index | restore | manual`; `--counts` auto-fills
-node/edge/source counts from `bokf stats`.
+`ingest | convert | link | merge | lint | index | restore | manual`. Use `bokf stats` first when
+you want node/edge/source counts in the `--delta` text.
 
 ## Operations
 - `bokf log <bundle> [--limit N] [--json]`: history, newest-first (`sha`, `kind`, `summary`,

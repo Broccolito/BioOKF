@@ -30,7 +30,10 @@ pub fn validate_doc(content: &str) -> Validation {
             let mut issues = Vec::new();
             let mut hard = false;
             if !n.node_type.is_valid() {
-                issues.push(format!("type `{}` is not one of the 28 controlled types", n.raw_type));
+                issues.push(format!(
+                    "type `{}` is not one of the 28 controlled types",
+                    n.raw_type
+                ));
                 hard = true;
             }
             if n.identifier.contains(':') && !n.identifier.contains(' ') {
@@ -40,30 +43,54 @@ pub fn validate_doc(content: &str) -> Validation {
                 issues.push("no subtype (expected, agent-coined)".into());
             }
             if n.node_type.is_provenance() && n.raw_source.is_empty() && n.xref.is_empty() {
-                issues.push("source node has neither raw_source nor an external xref (unanchored)".into());
+                issues.push(
+                    "source node has neither raw_source nor an external xref (unanchored)".into(),
+                );
             }
             for e in &n.edges {
                 let tag = format!("{} -> {}", e.predicate.as_str(), e.object);
                 if !e.predicate.is_valid() {
-                    issues.push(format!("edge {tag}: predicate `{}` is not one of the 23", e.raw_predicate));
+                    issues.push(format!(
+                        "edge {tag}: predicate `{}` is not one of the 35",
+                        e.raw_predicate
+                    ));
                     hard = true;
                 }
                 match &e.knowledge_level {
-                    None => { issues.push(format!("edge {tag}: missing knowledge_level")); hard = true; }
-                    Some(v) if !KNOWLEDGE_LEVELS.contains(&v.as_str()) => { issues.push(format!("edge {tag}: invalid knowledge_level `{v}`")); hard = true; }
+                    None => {
+                        issues.push(format!("edge {tag}: missing knowledge_level"));
+                        hard = true;
+                    }
+                    Some(v) if !KNOWLEDGE_LEVELS.contains(&v.as_str()) => {
+                        issues.push(format!("edge {tag}: invalid knowledge_level `{v}`"));
+                        hard = true;
+                    }
                     _ => {}
                 }
                 match &e.agent_type {
-                    None => { issues.push(format!("edge {tag}: missing agent_type")); hard = true; }
-                    Some(v) if !AGENT_TYPES.contains(&v.as_str()) => { issues.push(format!("edge {tag}: invalid agent_type `{v}`")); hard = true; }
+                    None => {
+                        issues.push(format!("edge {tag}: missing agent_type"));
+                        hard = true;
+                    }
+                    Some(v) if !AGENT_TYPES.contains(&v.as_str()) => {
+                        issues.push(format!("edge {tag}: invalid agent_type `{v}`"));
+                        hard = true;
+                    }
                     _ => {}
                 }
                 if e.primary_source.is_none() {
-                    issues.push(format!("edge {tag}: missing primary_source (must name a source node)"));
+                    issues.push(format!(
+                        "edge {tag}: missing primary_source (must name a source node)"
+                    ));
                     hard = true;
                 }
-                if matches!(e.predicate, Predicate::Regulates | Predicate::ExpressedIn) && e.direction.is_none() {
-                    issues.push(format!("edge {tag}: `{}` should carry a direction", e.predicate.as_str()));
+                if matches!(e.predicate, Predicate::Regulates | Predicate::ExpressedIn)
+                    && e.direction.is_none()
+                {
+                    issues.push(format!(
+                        "edge {tag}: `{}` should carry a direction",
+                        e.predicate.as_str()
+                    ));
                 }
             }
             Validation {

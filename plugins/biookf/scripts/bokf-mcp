@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# BioOKF MCP launcher (Claude Code plugin entrypoint).
+# BioOKF MCP launcher (Claude Code and Codex plugin entrypoint).
 #
 # On first run this downloads the PREBUILT bokf binaries + the BioOKF Studio
 # desktop app for your platform from the project's GitHub Release (no local
 # compile), caches them under ~/.local/share/biookf, and then execs the bokf-mcp
-# server over stdio so Claude Code can use the tool family. Subsequent runs reuse
+# server over stdio so MCP clients can use the tool family. Subsequent runs reuse
 # the cache and start instantly.
 #
 # Overrides:
@@ -14,7 +14,7 @@
 #   BIOOKF_MCP_BIN   path to an existing bokf-mcp binary (skip download entirely)
 set -euo pipefail
 
-VERSION="${BIOOKF_VERSION:-v0.1.0}"
+VERSION="${BIOOKF_VERSION:-v0.2.2}"
 REPO="${BIOOKF_REPO:-Broccolito/BioOKF}"
 HOME_DIR="${BIOOKF_HOME:-$HOME/.local/share/biookf}"
 PREFIX="$HOME_DIR/$VERSION"

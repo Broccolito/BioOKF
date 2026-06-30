@@ -35,7 +35,8 @@ renamed/moved/collapsed. **Lose no information, break no links**: whenever an SK
    and preserve every fact, number, and citation exactly. The raw originals stay untouched in `raw/`.
 8. **Subtype resolution.** Harmonize equivalent-but-differently-named subtypes to the **MKB** name;
    find-and-replace the token on **both nodes and edges**; update the subtypes-in-use list.
-9. **Log + gate.** `bokf log-sync <mkb> --kind merge --summary "merged <skb>" --counts`, then
+9. **Log + gate.** `bokf stats <mkb>` if you need counts, then
+   `bokf log-sync <mkb> --kind merge --summary "merged <skb>" --delta "+N nodes, +M edges"`, then
    `bokf verify --workflow merge`. Final integrity: no duplicate identifiers; no dangling
    `object`/`primary_source`/`reported_in`; every `raw_source` resolves; subtypes harmonized; the
    MKB's own identifiers/paths/`raw/` unchanged except where a genuine merge required it.

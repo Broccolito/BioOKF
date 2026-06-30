@@ -1,12 +1,13 @@
 //! Canonical config dir for BioOKF: holds `registry.yaml` + `.active-kb`.
 //! Resolution order (highest precedence first):
 //!   1. `BIOOKF_CONFIG_DIR` env
-//!   2. `OKF_ROOT` env (back-compat)
-//!   3. `$XDG_CONFIG_HOME/biookf-studio` if `XDG_CONFIG_HOME` set (unix)
-//!   4. `~/.config/biookf-studio` (unix) / `%APPDATA%\biookf-studio` (windows)
+//!   2. `$XDG_CONFIG_HOME/biookf-studio` if `XDG_CONFIG_HOME` set (unix)
+//!   3. `~/.config/biookf-studio` (unix) / `%APPDATA%\biookf-studio` (windows)
 //!
 //! Centralizing this is what stops `registry.yaml`/`.active-kb` from scattering
 //! onto the Desktop: every caller (CLI, MCP, Studio) resolves the same dir here.
+//! `OKF_ROOT` is deliberately *not* a config-dir fallback anymore; it is only
+//! consulted as a legacy migration source by `ensure_config_dir`.
 
 use std::path::PathBuf;
 
@@ -15,11 +16,6 @@ const APP_DIR: &str = "biookf-studio";
 /// Resolve the config dir without creating it.
 pub fn config_dir() -> PathBuf {
     if let Some(p) = std::env::var_os("BIOOKF_CONFIG_DIR") {
-        if !p.is_empty() {
-            return PathBuf::from(p);
-        }
-    }
-    if let Some(p) = std::env::var_os("OKF_ROOT") {
         if !p.is_empty() {
             return PathBuf::from(p);
         }
@@ -120,6 +116,19 @@ mod tests {
     }
 
     #[test]
+    fn okf_root_does_not_override_global_config_location() {
+        let _g = ENV_LOCK.lock().unwrap();
+        clear();
+        if cfg!(windows) {
+            return;
+        }
+        std::env::set_var("XDG_CONFIG_HOME", "/tmp/xdg-global");
+        std::env::set_var("OKF_ROOT", "/tmp/project-local-kb-root");
+        assert_eq!(config_dir(), PathBuf::from("/tmp/xdg-global/biookf-studio"));
+        clear();
+    }
+
+    #[test]
     fn ensure_creates_and_migrates() {
         let _g = ENV_LOCK.lock().unwrap();
         clear();
@@ -128,7 +137,11 @@ mod tests {
         let cfg = tmp.join("cfg");
         let legacy = tmp.join("legacy");
         std::fs::create_dir_all(&legacy).unwrap();
-        std::fs::write(legacy.join("registry.yaml"), "bases:\n- id: x\n  path: /x\n").unwrap();
+        std::fs::write(
+            legacy.join("registry.yaml"),
+            "bases:\n- id: x\n  path: /x\n",
+        )
+        .unwrap();
         // BIOOKF_CONFIG_DIR points at the new config dir and takes precedence;
         // OKF_ROOT names the legacy dir to migrate from.
         std::env::set_var("BIOOKF_CONFIG_DIR", &cfg);

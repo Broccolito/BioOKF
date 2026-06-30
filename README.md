@@ -34,7 +34,7 @@ node types and 35 edge predicates with node-based provenance on every claim.
 
 This repository contains both the format (the [spec](SPEC.md)) and the toolchain that implements it:
 a Rust core, a CLI (`bokf`), an MCP server (`bokf-mcp`), and the **BioOKF Studio** desktop
-visualizer, all distributed together as a one-command Claude Code plugin.
+visualizer, distributed as a notarized desktop app plus Claude Code and Codex plugin manifests.
 
 > **🌐 Landing site → [broccolito.github.io/BioOKF](https://broccolito.github.io/BioOKF/)**:
 > what BioOKF does, how to install it, and live, interactive [HyperFrames](https://github.com/heygen-com/hyperframes)
@@ -44,8 +44,8 @@ visualizer, all distributed together as a one-command Claude Code plugin.
 ## Install
 
 BioOKF ships as two pieces you install separately: the **Studio desktop app** (which also
-installs the `bokf` CLI and `bokf-mcp` server), and the **Claude Code plugin** (the "cloud
-plugin"), which wires those tools into Claude.
+installs the `bokf` CLI and `bokf-mcp` server), and an **agent plugin** for Claude Code or Codex,
+which wires those tools into your MCP client.
 
 ### 1. BioOKF Studio (desktop app + CLI + MCP)
 
@@ -64,31 +64,40 @@ All configuration (the knowledge-base registry and the active-KB pointer) lives 
 
 (Apple Silicon for now; Intel and other platforms follow from the release pipeline.)
 
-### 2. The BioOKF Claude Code plugin (the cloud plugin)
+### 2. The BioOKF agent plugin (Claude Code or Codex)
 
-Once the Studio is installed, add the Claude Code plugin to get the `bokf_*` MCP tools in Claude.
-In Claude Code:
+Once the Studio is installed, add the plugin to get the `bokf_*` MCP tools in your agent.
+
+For Claude Code:
 
 ```
 /plugin marketplace add Broccolito/BioOKF
 /plugin install biookf@biookf
 ```
 
-Then restart Claude Code. The `bokf_*` tools are now available, and `bokf_studio_open` launches
-the visualizer. The plugin's MCP launcher finds and starts the `bokf-mcp` binary that shipped
-inside the Studio app; no separate download is needed on macOS.
+For Codex, the same published plugin root includes the Codex manifest at
+`plugins/biookf/.codex-plugin/plugin.json` and a Codex skill at `plugins/biookf/skills/biookf`.
+Install it through the Codex plugin manager from a marketplace entry that points at
+`plugins/biookf`:
 
-> **Want your coding agent to do it for you?** Paste this to Claude Code (or any agent that can
-> run slash commands):
+```
+codex plugin add biookf@<marketplace-name>
+```
+
+Then restart the client. The `bokf_*` tools are now available, and `bokf_studio_open` launches
+the visualizer. Both manifests use the same MCP launcher, which finds and starts the `bokf-mcp`
+binary that shipped inside the Studio app; no separate download is needed on macOS.
+
+> **Want your coding agent to do it for you?** Paste this to Claude Code:
 >
 > > Install the BioOKF plugin from `https://github.com/Broccolito/BioOKF`: run
 > > `/plugin marketplace add Broccolito/BioOKF`, then `/plugin install biookf@biookf`, restart,
 > > and confirm the `bokf_studio_open` tool works.
 
-**Requirements:** Claude Code; the BioOKF Studio DMG installed (step 1 above); macOS Apple
-Silicon. Intel and other platforms ship as the release pipeline adds them; until a prebuilt asset
-exists for your platform you can [build from source](#build-from-source) and point the plugin at
-your binary with `BIOOKF_MCP_BIN`.
+**Requirements:** Claude Code or Codex; the BioOKF Studio DMG installed (step 1 above); macOS
+Apple Silicon. Intel and other platforms ship as the release pipeline adds them; until a prebuilt
+asset exists for your platform you can [build from source](#build-from-source) and point the plugin
+at your binary with `BIOOKF_MCP_BIN`.
 
 **How the plugin finds the binaries.** The launcher (`plugins/biookf/scripts/bokf-mcp`) checks
 `BIOOKF_MCP_BIN` first (explicit override), then looks for `bokf-mcp` inside a locally installed
@@ -320,7 +329,10 @@ release, set `BIOOKF_MCP_BIN=/path/to/app/target/release/bokf-mcp`.
 extension at [`app/.claude-plugin`](app/.claude-plugin): 8 `biookf-*` curation skills
 (convert / ingest / merge / query / lint / verify / version) plus 4 guardrail hooks (a session
 brief, a `raw/`-immutability guard, a post-write lint nudge, and a `bokf verify` Stop gate). Add
-`app/` as a marketplace to use them while working inside this repository.
+`app/` as a marketplace to use them while working inside this repository. The published plugin root
+under [`plugins/biookf`](plugins/biookf) carries both `.claude-plugin` and `.codex-plugin`
+manifests side by side; Codex gets a dedicated `skills/biookf` workflow brief while sharing the
+same `bokf-mcp` launcher.
 
 ## Authors
 

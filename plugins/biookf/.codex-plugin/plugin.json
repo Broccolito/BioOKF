@@ -1,0 +1,49 @@
+{
+  "name": "biookf",
+  "version": "0.2.2",
+  "description": "BioOKF: curate, visualize, and reason over biomedical Open Knowledge Format bundles from Codex. Bundles the bokf MCP server (curation + analysis + live BioOKF Studio GUI control), the bokf CLI, and the prebuilt BioOKF Studio desktop app.",
+  "author": {
+    "name": "Broccolito",
+    "url": "https://github.com/Broccolito"
+  },
+  "homepage": "https://github.com/Broccolito/BioOKF",
+  "repository": "https://github.com/Broccolito/BioOKF",
+  "license": "Apache-2.0",
+  "keywords": [
+    "biomedical",
+    "knowledge-graph",
+    "ontology",
+    "mcp",
+    "curation",
+    "tauri"
+  ],
+  "skills": "./skills/",
+  "mcpServers": {
+    "biookf": {
+      "command": "bash",
+      "args": [
+        "-lc",
+        "root=\"${CODEX_PLUGIN_ROOT:-${CLAUDE_PLUGIN_ROOT:-$(pwd)}}\"; exec \"$root/scripts/bokf-mcp\""
+      ]
+    }
+  },
+  "interface": {
+    "displayName": "BioOKF",
+    "shortDescription": "Curate and visualize biomedical knowledge bases.",
+    "longDescription": "BioOKF gives Codex the bokf MCP tools, CLI launcher, and BioOKF Studio control loop for creating, validating, querying, and visualizing typed biomedical Open Knowledge Format bundles.",
+    "developerName": "Broccolito",
+    "category": "Knowledge",
+    "capabilities": [
+      "MCP",
+      "Skills",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/Broccolito/BioOKF",
+    "defaultPrompt": [
+      "Open BioOKF Studio and inspect the active knowledge base.",
+      "Ingest this review into a BioOKF bundle with provenance.",
+      "Verify this BioOKF bundle and fix every error."
+    ],
+    "brandColor": "#2D7D7B"
+  }
+}

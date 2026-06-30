@@ -1,4 +1,4 @@
-# biookf: Claude Code plugin
+# biookf: Claude Code and Codex plugin
 
 Curate, visualize, and reason over **BioOKF** (Biomedical Open Knowledge Format)
 knowledge bases directly from your coding agent. This plugin bundles three things:
@@ -9,7 +9,7 @@ knowledge bases directly from your coding agent. This plugin bundles three thing
 - **BioOKF Studio**: a desktop GUI that visualizes a knowledge base as an
   interactive graph. Shipped **prebuilt**, so you never compile it.
 
-## Install
+## Install: Claude Code
 
 In Claude Code:
 
@@ -22,10 +22,24 @@ Restart Claude Code. The first time a tool runs, the plugin downloads the prebui
 binaries for your platform from the project's GitHub Release and caches them under
 `~/.local/share/biookf`, with no build step.
 
+## Install: Codex
+
+The same plugin root also contains a Codex manifest at `.codex-plugin/plugin.json`
+and a Codex skill at `skills/biookf/SKILL.md`. Add this plugin through the Codex
+plugin manager from this repository or from a marketplace entry that points at
+`plugins/biookf`:
+
+```
+codex plugin add biookf@<marketplace-name>
+```
+
+Both Claude Code and Codex use the same MCP launcher, `scripts/bokf-mcp`, so
+release downloads, local overrides, and Studio control stay identical.
+
 ## How it works
 
-The plugin registers one MCP server whose command is `scripts/bokf-mcp`. That
-launcher:
+The Claude Code and Codex manifests each register one MCP server whose command is
+`scripts/bokf-mcp`. That launcher:
 
 1. Detects your OS/arch and, on first run, downloads
    `biookf-<platform>.tar.gz` from `Broccolito/BioOKF` Releases.

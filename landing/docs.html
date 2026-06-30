@@ -60,24 +60,27 @@
         controlled universe of meaning, with <strong>28 node types</strong>, <strong>35 edge predicates</strong>, and
         node-based provenance on every claim.</p>
       <p>The repository ships both the format (the spec) and the toolchain that implements it: a Rust core, the
-        <code>bokf</code> CLI, the <code>bokf-mcp</code> server, and the BioOKF Studio desktop visualizer, all
-        distributed together as a one-command Claude Code plugin.</p>
+        <code>bokf</code> CLI, the <code>bokf-mcp</code> server, and the BioOKF Studio desktop visualizer,
+        distributed as a notarized app plus Claude Code and Codex plugin manifests.</p>
       <div class="note-box"><b>Three surfaces, one engine.</b> The CLI, the MCP server, and the Studio GUI all delegate to
         <code>bokf-core</code> and share an active-base pointer, so a script, an agent, and a human can curate the same base.</div>
     </section>
 
     <section class="doc-sec" id="install-docs">
       <h2>Install</h2>
-      <p>The whole toolchain installs as a single Claude Code plugin. You never compile anything. The first time a tool
-        runs, the plugin downloads the prebuilt binaries for your platform and caches them under
-        <code>~/.local/share/biookf</code>.</p>
+      <p>Install the notarized Studio first, then add the plugin to Claude Code or Codex. You never compile
+        anything. The first time a tool runs, the shared launcher downloads any missing prebuilt binaries for
+        your platform and caches them under <code>~/.local/share/biookf</code>.</p>
       <div class="doc-code"><span class="com"># in Claude Code, run both, then restart</span>
 <span class="cmd">/plugin</span> marketplace add Broccolito/BioOKF
 <span class="cmd">/plugin</span> install biookf@biookf
 
+<span class="com"># in Codex, install from a marketplace entry pointing at plugins/biookf</span>
+<span class="cmd">codex</span> plugin add biookf@&lt;marketplace-name&gt;
+
 <span class="com"># the bokf_* tools are now available; launch the app with</span>
 <span class="ok">bokf_studio_open</span></div>
-      <p><strong>Requirements.</strong> Claude Code, plus <code>curl</code> and <code>tar</code>, on macOS (Apple Silicon
+      <p><strong>Requirements.</strong> Claude Code or Codex, plus <code>curl</code> and <code>tar</code>, on macOS (Apple Silicon
         or Intel), where a self-contained <code>.app</code> is downloaded for you. Linux and Windows builds are produced
         by the release pipeline as they become available; until a prebuilt asset exists for your platform you can
         <a class="link" href="#build">build from source</a> and point the plugin at your binary with <code>BIOOKF_MCP_BIN</code>.</p>
@@ -373,7 +376,8 @@
         set <code>BIOOKF_MCP_BIN=/path/to/app/target/release/bokf-mcp</code>.</p>
       <div class="note-box"><b>Repo dev plugin.</b> The repo also ships a developer-facing Claude Code extension at
         <code>app/.claude-plugin</code>: 8 <code>biookf-*</code> curation skills plus 4 guardrail hooks. Add
-        <code>app/</code> as a marketplace to use them while working inside the repository.</div>
+        <code>app/</code> as a marketplace to use them while working inside the repository. The published plugin at
+        <code>plugins/biookf</code> includes side-by-side Claude Code and Codex manifests over the same MCP launcher.</div>
       <p style="margin-top:26px"><a class="link" href="https://github.com/Broccolito/BioOKF" target="_blank" rel="noopener">Full source, spec, and issues on GitHub</a></p>
     </section>
 

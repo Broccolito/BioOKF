@@ -12,8 +12,8 @@ pub fn source_info(bundle_root: &Path, source_id: &str) -> Result<serde_json::Va
     let meta_path = bundle_root.join("raw").join(source_id).join("meta.yaml");
     let txt = std::fs::read_to_string(&meta_path)
         .map_err(|e| format!("cannot read {}: {e}", meta_path.display()))?;
-    let meta: crate::convert::SourceMeta =
-        serde_yaml::from_str(&txt).map_err(|e| format!("invalid meta.yaml for source `{source_id}`: {e}"))?;
+    let meta: crate::convert::SourceMeta = serde_yaml::from_str(&txt)
+        .map_err(|e| format!("invalid meta.yaml for source `{source_id}`: {e}"))?;
     serde_json::to_value(&meta).map_err(|e| e.to_string())
 }
 
@@ -53,11 +53,14 @@ pub fn change_log(root: impl AsRef<Path>) -> String {
     std::fs::read_to_string(root.as_ref().join("log.md")).unwrap_or_default()
 }
 
-pub fn bundle_doc(root: impl AsRef<Path>, name: Option<String>) -> std::io::Result<serde_json::Value> {
+fn bundle_doc_inner(
+    root: impl AsRef<Path>,
+    name: Option<String>,
+    include_lint: bool,
+) -> std::io::Result<serde_json::Value> {
     let root = root.as_ref();
     let bundle = Bundle::open(root)?;
     let graph = Graph::from_bundle(&bundle);
-    let report = lint(&bundle);
     let id = root
         .file_name()
         .map(|s| s.to_string_lossy().to_string())
@@ -71,32 +74,87 @@ pub fn bundle_doc(root: impl AsRef<Path>, name: Option<String>) -> std::io::Resu
         }
     }
 
-    Ok(serde_json::json!({
+    let mut doc = serde_json::json!({
         "id": id,
         "name": name,
         "node_count": bundle.nodes.len(),
         "edge_count": graph.edges.iter().filter(|e| !e.synthesized).count(),
         "updated": last_updated(root),
         "log": change_log(root),
-        "lint": { "errors": report.errors(), "warnings": report.warnings(), "infos": report.infos(), "findings": report.findings },
         "graph": graph.to_json(),
         "pages": pages,
-    }))
+    });
+    if include_lint {
+        let report = lint(&bundle);
+        doc["lint"] = serde_json::json!({
+            "errors": report.errors(),
+            "warnings": report.warnings(),
+            "infos": report.infos(),
+            "findings": report.findings
+        });
+    }
+    Ok(doc)
+}
+
+pub fn bundle_doc(
+    root: impl AsRef<Path>,
+    name: Option<String>,
+) -> std::io::Result<serde_json::Value> {
+    bundle_doc_inner(root, name, true)
+}
+
+/// Studio graph payload: graph + pages, but no expensive lint/raw-source checks.
+/// Lint remains available through the explicit CLI/MCP/Studio lint commands.
+pub fn studio_bundle_doc(
+    root: impl AsRef<Path>,
+    name: Option<String>,
+) -> std::io::Result<serde_json::Value> {
+    bundle_doc_inner(root, name, false)
+}
+
+fn count_concept_docs(dir: &Path) -> usize {
+    let Ok(entries) = std::fs::read_dir(dir) else {
+        return 0;
+    };
+    let mut count = 0;
+    for entry in entries.flatten() {
+        let path = entry.path();
+        let name = entry.file_name();
+        let name = name.to_string_lossy();
+        if path.is_dir() {
+            if name == "raw" || name == "citations" || name.starts_with('.') {
+                continue;
+            }
+            count += count_concept_docs(&path);
+        } else if path.extension().and_then(|e| e.to_str()) == Some("md")
+            && !matches!(
+                name.as_ref(),
+                "index.md" | "log.md" | "SCHEMA.md" | "README.md"
+            )
+        {
+            count += 1;
+        }
+    }
+    count
 }
 
 /// A lightweight index entry for the sidebar (no graph/pages payload).
 pub fn base_info(root: impl AsRef<Path>) -> std::io::Result<serde_json::Value> {
     let root = root.as_ref();
-    let bundle = Bundle::open(root)?;
-    let graph = Graph::from_bundle(&bundle);
-    let report = lint(&bundle);
-    let id = root.file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_default();
+    let id = root
+        .file_name()
+        .map(|s| s.to_string_lossy().to_string())
+        .unwrap_or_default();
+    let scan_root = if root.join("knowledge").is_dir() {
+        root.join("knowledge")
+    } else {
+        root.to_path_buf()
+    };
     Ok(serde_json::json!({
         "id": id,
         "name": id,
-        "node_count": bundle.nodes.len(),
-        "edge_count": graph.edges.iter().filter(|e| !e.synthesized).count(),
+        "node_count": count_concept_docs(&scan_root),
+        "edge_count": null,
         "updated": last_updated(root),
-        "lint": { "errors": report.errors(), "warnings": report.warnings(), "infos": report.infos(), "findings": report.findings },
     }))
 }

@@ -6,6 +6,9 @@
 //! rendering is authoritative for text, formulas, and figures. This only flags likely omissions.
 
 use std::collections::HashSet;
+use std::sync::Mutex;
+
+static PDF_EXTRACT_LOCK: Mutex<()> = Mutex::new(());
 
 /// Fraction (0.0..=1.0) of distinctive content words from the deterministic text that also appear
 /// in the rendered Markdown. Returns `None` when there is too little deterministic text to compare
@@ -30,11 +33,14 @@ pub fn coverage_of(deterministic_text: &str, rendered_md: &str) -> Option<f64> {
 /// Re-extract a PDF's text layer and report how much of it the rendered Markdown covers. Never
 /// panics; returns `None` when extraction fails or there is no usable text layer.
 pub fn pdf_coverage(pdf_bytes: &[u8], rendered_md: &str) -> Option<f64> {
-    let det = std::panic::catch_unwind(std::panic::AssertUnwindSafe(|| {
+    let _guard = PDF_EXTRACT_LOCK.lock().ok()?;
+    let original_hook = std::panic::take_hook();
+    std::panic::set_hook(Box::new(|_| {}));
+    let result = std::panic::catch_unwind(std::panic::AssertUnwindSafe(|| {
         pdf_extract::extract_text_from_mem(pdf_bytes)
-    }))
-    .ok()?
-    .ok()?;
+    }));
+    std::panic::set_hook(original_hook);
+    let det = result.ok()?.ok()?;
     coverage_of(&det, rendered_md)
 }
 
