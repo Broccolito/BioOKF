@@ -90,9 +90,9 @@ pub fn app_info() -> Result<Value, String> {
     call("get_app_info", serde_json::json!({}))
 }
 
-/// `manage_window` with `{action}` (close|focus|minimize|...). Targets "main".
+/// `manage_window` with `{operation}` (close|focus|minimize|...). Targets "main".
 pub fn manage_window(action: &str) -> Result<Value, String> {
-    call("manage_window", serde_json::json!({ "action": action, "windowLabel": "main" }))
+    call("manage_window", serde_json::json!({ "operation": action, "windowLabel": "main" }))
 }
 
 /// Strip a `data:<mime>;base64,` prefix, leaving raw base64.

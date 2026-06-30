@@ -42,6 +42,91 @@ let edgeSpatial=null, edgeSpatialVersion=0, edgeSpatialBuildAt=0;
 const bundleCache=new Map();          // base id -> live bundle payload
 const layoutCache=new Map();          // base id -> node positions after first layout
 let selectSeq=0;
+let layoutFrameCount=0, layoutStartedAt=0;
+let loadingHideTimer=null;
+
+function clamp(v,min,max){return Math.max(min,Math.min(max,v));}
+function finite(v){return Number.isFinite(v);}
+function graphTuning(){
+  const large=nodes.length>900, mid=nodes.length>350;
+  return {
+    edgeLength: large?68:(mid?78:92),
+    spring: large?0.0045:(mid?0.010:0.026),
+    springMax: large?1.4:(mid?2.4:4.2),
+    repulsion: large?1450:(mid?2200:3600),
+    repulsionMax: large?18:(mid?32:58),
+    componentPull: large?0.020:(mid?0.017:0.012),
+    maxVelocity: large?12:(mid?18:30),
+    alphaDecay: large?0.88:(mid?0.91:0.94),
+    settleEnergy: large?0.020:(mid?0.014:0.008),
+    maxFrames: large?96:(mid?140:240),
+    maxMs: large?1800:(mid?2400:4200)
+  };
+}
+function jitterUnit(id){
+  let h=2166136261;
+  const s=String(id||'node');
+  for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}
+  const a=((h>>>0)%6283)/1000;
+  return {x:Math.cos(a),y:Math.sin(a)};
+}
+function componentLimit(c){
+  if(!c) return 420;
+  return Math.max(220, Math.min(2400, (c.r||120)*1.72 + 90));
+}
+function containNode(n,c){
+  if(!c || n===drag) return;
+  let dx=n.x-c.x, dy=n.y-c.y, d=Math.hypot(dx,dy);
+  if(!finite(d) || d===0){
+    const j=jitterUnit(n.id); n.x=c.x+j.x*6; n.y=c.y+j.y*6; n.vx=0; n.vy=0; return;
+  }
+  const lim=componentLimit(c);
+  if(d>lim){
+    n.x=c.x+dx/d*lim;
+    n.y=c.y+dy/d*lim;
+    n.vx*=0.25; n.vy*=0.25;
+  }
+}
+function boundLayout(){
+  nodes.forEach(n=>{
+    const c=graphComponents[n.component]||graphComponents[0]||{x:0,y:0,r:180};
+    if(!finite(n.x)||!finite(n.y)){ const j=jitterUnit(n.id); n.x=c.x+j.x*8; n.y=c.y+j.y*8; n.vx=0; n.vy=0; }
+    containNode(n,c);
+  });
+}
+function layoutMetrics(){
+  if(!nodes.length) return {nodes:0,edges:0,alpha,simSettled};
+  let mnx=Infinity,mny=Infinity,mxx=-Infinity,mxy=-Infinity,maxComponentDistance=0,invalid=0;
+  nodes.forEach(n=>{
+    if(!finite(n.x)||!finite(n.y)){invalid++;return;}
+    mnx=Math.min(mnx,n.x);mny=Math.min(mny,n.y);mxx=Math.max(mxx,n.x);mxy=Math.max(mxy,n.y);
+    const c=graphComponents[n.component]||{x:0,y:0};
+    maxComponentDistance=Math.max(maxComponentDistance, Math.hypot(n.x-c.x,n.y-c.y));
+  });
+  return {
+    nodes:nodes.length, edges:edges.length, invalid,
+    bbox:{x:mnx,y:mny,w:mxx-mnx,h:mxy-mny},
+    view:{x:view.x,y:view.y,k:view.k,w:W,h:H},
+    maxComponentDistance, alpha, simSettled, layoutFrameCount
+  };
+}
+function nextFrame(){return new Promise(resolve=>requestAnimationFrame(()=>resolve()));}
+function setGraphLoading(open, title, sub, pct){
+  const el=document.getElementById('graphLoading');
+  if(!el) return;
+  clearTimeout(loadingHideTimer);
+  const titleEl=document.getElementById('glTitle'), subEl=document.getElementById('glSub'), fillEl=document.getElementById('glFill');
+  if(titleEl && title!=null) titleEl.textContent=title;
+  if(subEl && sub!=null) subEl.textContent=sub;
+  if(fillEl && pct!=null) fillEl.style.width=clamp(pct,0,1)*100+'%';
+  el.classList.toggle('open', !!open);
+}
+function finishGraphLoading(seq){
+  window.__bokfLoading=false;
+  window.__BOKF_READY=true;
+  clearTimeout(loadingHideTimer);
+  loadingHideTimer=setTimeout(()=>{ if(seq===selectSeq) setGraphLoading(false); }, 140);
+}
 
 /* ---------- data loading ---------- */
 /* Graph data always loads from the exported static JSON, which carries the
@@ -92,14 +177,16 @@ function componentLayout(graphNodes, graphEdges){
     comps.push(ids);
   });
   comps.sort((a,b)=>b.length-a.length);
-  const root=Math.max(180, Math.sqrt(graphNodes.length)*42), placed=[];
+  const root=Math.max(150, Math.sqrt(graphNodes.length)*32), placed=[];
   let ring=0, used=0;
   const anchors=comps.map((ids,i)=>{
-    if(i===0) return { ids, x:0, y:0, r:Math.max(130, Math.sqrt(ids.length)*24) };
-    if(used>=Math.max(6, ring*6)){ ring++; used=0; }
-    const slots=Math.max(6, ring*6), a=(used++/slots)*Math.PI*2 + ring*0.37;
-    const dist=root + ring*170;
-    return { ids, x:Math.cos(a)*dist, y:Math.sin(a)*dist, r:Math.max(50, Math.sqrt(ids.length)*24) };
+    const r=Math.max(i===0?130:44, Math.sqrt(ids.length)*20);
+    if(i===0) return { ids, x:0, y:0, r };
+    if(used>=Math.max(8, ring*8)){ ring++; used=0; }
+    const slots=Math.max(8, ring*8), a=(used++/slots)*Math.PI*2 + ring*0.37;
+    const mainR=Math.max(130, Math.sqrt(comps[0].length)*20);
+    const dist=Math.max(root, mainR + r + 90) + ring*110;
+    return { ids, x:Math.cos(a)*dist, y:Math.sin(a)*dist, r };
   });
   const pos=new Map();
   anchors.forEach((c,ci)=>{
@@ -137,10 +224,13 @@ function loadGraph(g, baseId){
   edges.forEach(e=>{ const sn=neighborMap.get(e.source), tn=neighborMap.get(e.target); if(sn)sn.add(e.target); if(tn)tn.add(e.source); });
   selected=null;selectedEdge=null;hover=null;hoverEdge=null;focusNeighbors=new Set();closeDetail();
   alpha=1; simSettled=false; settledFrames=0;
+  layoutFrameCount=0; layoutStartedAt=performance.now();
   edgeSpatial=null; edgeSpatialVersion++;
-  // Quick warm-start: skip it when reusing a cached layout; otherwise keep it bounded.
-  const warm=saved?0:(nodes.length>900?8:nodes.length>350?12:20);
+  // Keep first paint fast. Large KBs settle progressively on animation frames;
+  // synchronous warm ticks were the main source of startup stalls.
+  const warm=saved?0:(nodes.length>900?0:nodes.length>350?2:10);
   for(let i=0;i<warm;i++) tick(0.9*Math.pow(0.985,i)+0.02);
+  boundLayout();
   if(baseId) rememberLayout(baseId);
   fitView();
 }
@@ -154,6 +244,9 @@ class QNode{
     if(!this.children){
       // subdivide — push the existing single body into a child
       const ox=this.body.x, oy=this.body.y, old=this.body; this.body=null;
+      if(Math.abs(ox-nx)<0.001 && Math.abs(oy-ny)<0.001){
+        const j=jitterUnit(node.id); node.x+=j.x*0.6; node.y+=j.y*0.6; nx=node.x; ny=node.y;
+      }
       this.children=[null,null,null,null];
       const hw=this.w/2, hh=this.h/2;
       const qi0=this._quad(ox,oy,hw,hh); this.children[qi0]=new QNode(this.x+(qi0&1?hw:0),this.y+(qi0&2?hh:0),hw,hh);
@@ -167,52 +260,66 @@ class QNode{
     this.cmy=(this.cmy*(this.mass-1)+ny)/this.mass;
   }
   _quad(nx,ny,hw,hh){return (nx>=this.x+hw?1:0)|(ny>=this.y+hh?2:0);}
-  force(nx,ny,node,a){
+  force(nx,ny,node,a,cfg){
     if(this.mass===0)return;
     if(this.body&&this.body!==node){
       // leaf — direct force
       let dx=nx-this.body.x, dy=ny-this.body.y, d2=dx*dx+dy*dy;
-      if(d2<0.01){d2=0.01;dx=Math.random()-0.5;dy=Math.random()-0.5;}
-      const d=Math.sqrt(d2), rep=4200/d2, fx=(dx/d)*rep, fy=(dy/d)*rep;
+      if(d2<4){const j=jitterUnit(node.id);dx=j.x*2;dy=j.y*2;d2=4;}
+      const d=Math.sqrt(d2), rep=Math.min(cfg.repulsionMax,cfg.repulsion/d2), fx=(dx/d)*rep, fy=(dy/d)*rep;
       node.vx+=fx*a; node.vy+=fy*a;
       return;
     }
     if(this.children){
       // internal — use center-of-mass if far enough
       let dx=nx-this.cmx, dy=ny-this.cmy, d2=dx*dx+dy*dy, d=Math.sqrt(d2)||0.01;
+      if(d2<4){const j=jitterUnit(node.id);dx=j.x*2;dy=j.y*2;d2=4;d=2;}
       const s=Math.max(this.w,this.h);
       if(s/d < BH_THETA){
         // far enough — approximate with CoM
-        const rep=4200*this.mass/d2, fx=(dx/d)*rep, fy=(dy/d)*rep;
+        const rep=Math.min(cfg.repulsionMax,cfg.repulsion*this.mass/d2), fx=(dx/d)*rep, fy=(dy/d)*rep;
         node.vx+=fx*a; node.vy+=fy*a;
       } else {
-        for(const ch of this.children) if(ch) ch.force(nx,ny,node,a);
+        for(const ch of this.children) if(ch) ch.force(nx,ny,node,a,cfg);
       }
     }
   }
 }
 function tick(a){
   const M=nodes.length;
+  if(M===0) return;
+  const cfg=graphTuning();
   // --- Barnes-Hut: build quadtree, then compute forces via tree traversal ---
   let mnx=1e9,mny=1e9,mxx=-1e9,mxy=-1e9;
-  for(let i=0;i<M;i++){ const n=nodes[i]; mnx=Math.min(mnx,n.x); mny=Math.min(mny,n.y); mxx=Math.max(mxx,n.x); mxy=Math.max(mxy,n.y); }
+  for(let i=0;i<M;i++){
+    const n=nodes[i], c=graphComponents[n.component]||graphComponents[0]||{x:0,y:0};
+    if(!finite(n.x)||!finite(n.y)){ const j=jitterUnit(n.id); n.x=c.x+j.x*8; n.y=c.y+j.y*8; n.vx=0; n.vy=0; }
+    mnx=Math.min(mnx,n.x); mny=Math.min(mny,n.y); mxx=Math.max(mxx,n.x); mxy=Math.max(mxy,n.y);
+  }
   const qw=mxx-mnx||1, qh=mxy-mny||1, qs=Math.max(qw,qh);
   const root=new QNode(mnx-qs*0.1, mny-qs*0.1, qs*1.2, qs*1.2);
   for(let i=0;i<M;i++) root.insert(nodes[i].x, nodes[i].y, nodes[i]);
-  for(let i=0;i<M;i++) root.force(nodes[i].x, nodes[i].y, nodes[i], a);
+  for(let i=0;i<M;i++) root.force(nodes[i].x, nodes[i].y, nodes[i], a, cfg);
   // --- edge spring forces ---
-  const L=92;
+  const L=cfg.edgeLength;
   edges.forEach(e=>{const s=byId[e.source],t=byId[e.target]; if(!s||!t)return;
     let dx=t.x-s.x,dy=t.y-s.y,d=Math.sqrt(dx*dx+dy*dy)||0.01;
-    const f=(d-L)*0.045*a,fx=(dx/d)*f,fy=(dy/d)*f;
+    const degWeight=1/Math.sqrt(Math.max(1,((s.degree||1)+(t.degree||1))*0.5));
+    const f=clamp((d-L)*cfg.spring*a*degWeight,-cfg.springMax,cfg.springMax),fx=(dx/d)*f,fy=(dy/d)*f;
     s.vx+=fx;s.vy+=fy;t.vx-=fx;t.vy-=fy;});
   nodes.forEach(n=>{
     const c=graphComponents[n.component]||{x:0,y:0};
-    const pull=nodes.length>350?0.018:0.012;
+    const pull=cfg.componentPull;
     n.vx+=(c.x-n.x)*pull*a;
     n.vy+=(c.y-n.y)*pull*a;
   });
-  nodes.forEach(n=>{if(n===drag){n.vx=0;n.vy=0;return;}n.x+=n.vx;n.y+=n.vy;n.vx*=0.82;n.vy*=0.82;});
+  nodes.forEach(n=>{
+    if(n===drag){n.vx=0;n.vy=0;return;}
+    const v=Math.hypot(n.vx,n.vy);
+    if(v>cfg.maxVelocity){n.vx=n.vx/v*cfg.maxVelocity;n.vy=n.vy/v*cfg.maxVelocity;}
+    n.x+=n.vx;n.y+=n.vy;n.vx*=0.82;n.vy*=0.82;
+    containNode(n, graphComponents[n.component]||graphComponents[0]);
+  });
   edgeSpatial=null; edgeSpatialVersion++;
 }
 function toScreen(x,y){return [(x*view.k)+view.x+W/2,(y*view.k)+view.y+H/2];}
@@ -221,7 +328,8 @@ function nodeR(n){return n.external?5:(n.hub?10:6);}
 function fitView(){
   if(!nodes.length)return;
   let mnx=1e9,mny=1e9,mxx=-1e9,mxy=-1e9;
-  nodes.forEach(n=>{mnx=Math.min(mnx,n.x);mny=Math.min(mny,n.y);mxx=Math.max(mxx,n.x);mxy=Math.max(mxy,n.y);});
+  nodes.forEach(n=>{if(!finite(n.x)||!finite(n.y))return;mnx=Math.min(mnx,n.x);mny=Math.min(mny,n.y);mxx=Math.max(mxx,n.x);mxy=Math.max(mxy,n.y);});
+  if(!finite(mnx)||!finite(mxx))return;
   const pad=72,gw=mxx-mnx||1,gh=mxy-mny||1,usableW=Math.max(100,W-pad*2),usableH=Math.max(100,H-pad*2),k=Math.min(usableW/gw,usableH/gh,1.6);
   view.k=k;view.x=-((mnx+mxx)/2)*k;view.y=-((mny+mxy)/2)*k;
 }
@@ -388,11 +496,20 @@ function loop(){
     if(wasZero&&nodes.length) fitView();
   }
   if(alpha>0.005){
+    const cfg=graphTuning(), elapsed=performance.now()-layoutStartedAt;
+    if(layoutFrameCount>=cfg.maxFrames || elapsed>cfg.maxMs){
+      alpha=0; simSettled=true; if(activeBaseId) rememberLayout(activeBaseId);
+      draw(); requestAnimationFrame(loop); return;
+    }
     tick(alpha); alpha*=0.94;
+    layoutFrameCount++;
+    alpha*=cfg.alphaDecay/0.94;
     // energy-based settle: freeze when total kinetic energy is very low for several frames
     let ke=0; for(const n of nodes) ke+=n.vx*n.vx+n.vy*n.vy;
-    if(ke < nodes.length*0.008){ settledFrames++; if(settledFrames>30){ alpha=0; simSettled=true; if(activeBaseId) rememberLayout(activeBaseId); } }
+    if(ke < nodes.length*cfg.settleEnergy){ settledFrames++; if(settledFrames>24){ alpha=0; simSettled=true; if(activeBaseId) rememberLayout(activeBaseId); } }
     else settledFrames=0;
+  } else if(nodes.length && !simSettled){
+    alpha=0; simSettled=true; if(activeBaseId) rememberLayout(activeBaseId);
   }
   draw(); requestAnimationFrame(loop);
 }
@@ -906,24 +1023,33 @@ function updateChrome(b){
 async function selectBase(b){
   const seq=++selectSeq;
   window.__bokfLoading=true;            // agent-visible: a bundle load is in flight
+  window.__BOKF_READY=false;
   activeBaseId=b.id;renderSidebar();closeLog();
+  setGraphLoading(true, b.name||b.id, 'Preparing graph', 0.08);
+  await nextFrame();
   // Sync the shared .active-kb pointer so a CLI/agent sees the GUI's selection
   // (fire-and-forget; the poll below mirrors changes the other way).
   if(isDesktop) tauriInvoke('set_active_kb',{id:b.id}).catch(()=>{});
   let bundle=bundleCache.get(b.id);
   if(!bundle){
+    setGraphLoading(true, b.name||b.id, 'Reading knowledge base', 0.28);
     bundle=await loadBundle(b);
+    if(seq!==selectSeq) return;
     bundleCache.set(b.id,bundle);
   }
   if(seq!==selectSeq) return;
+  setGraphLoading(true, b.name||b.id, 'Indexing concepts and edges', 0.54);
+  await nextFrame();
   pages=bundle.pages||{};
   currentLog=bundle.log||''; currentUpdated=bundle.updated||null; currentLint=bundle.lint||null;
+  setGraphLoading(true, b.name||b.id, 'Laying out graph', 0.74);
+  await nextFrame();
   loadGraph(bundle.graph, b.id);
   // merge counts/lint from bundle if base index lacked them
   const merged=Object.assign({}, b, {node_count:bundle.node_count, edge_count:bundle.edge_count, lint:bundle.lint, name:b.name||bundle.name, updated:bundle.updated});
   updateChrome(merged);
-  window.__BOKF_READY=true;
-  window.__bokfLoading=false;
+  setGraphLoading(true, b.name||b.id, 'Ready', 1);
+  finishGraphLoading(seq);
 }
 
 /* ---------- change-log drawer (BioRouter-style history sheet) ---------- */
@@ -1133,6 +1259,7 @@ window.__bokf = {
       bases: BASES.map(b=>({id:b.id,name:b.name,path:b.path,node_count:b.node_count,edge_count:b.edge_count}))
     };
   },
+  getLayoutMetrics:()=>layoutMetrics(),
   getGraph:()=>({nodes: nodes.map(n=>({id:n.id, type:n.type, label:n.label, external:!!n.external, degree:n.degree})), edges: edges.map(e=>({source:e.source, target:e.target, predicate:e.predicate, symmetric:!!e.symmetric, synthesized:!!e.synthesized}))})
 };
 
@@ -1202,13 +1329,13 @@ async function syncBases(){
 
 async function boot(){
   renderLegend();resize();
+  requestAnimationFrame(loop);
   const nb=document.querySelector('.new-kb');
   if(nb){ if(isDesktop) nb.onclick=addNewBase; else nb.style.display='none'; }
   BASES=await loadBases();renderSidebar();
   lastBasesSig=basesSig(BASES);
   if(BASES.length)await selectBase(BASES[0]);
   if(isDesktop){ setInterval(pollActiveKb, 1500); setInterval(syncBases, 3000); }
-  requestAnimationFrame(loop);
 }
 boot();
 
