@@ -144,6 +144,21 @@ fn add_base(path: String) -> Result<serde_json::Value, String> {
     base_entry(&id, &p)
 }
 
+/// Remove a knowledge base from the global Studio/CLI/MCP registry. This is
+/// intentionally non-destructive: the bundle folder stays on disk.
+#[tauri::command]
+fn remove_base(id: String) -> Result<(), String> {
+    let root = config_root();
+    let registered = bokf_core::registry::list(&root);
+    if registered.iter().any(|b| b.id == id) {
+        bokf_core::registry::unregister(&root, &id)?;
+    }
+    if bokf_core::active::get_active(&root).as_deref() == Some(id.as_str()) {
+        bokf_core::active::set_active(&root, None)?;
+    }
+    Ok(())
+}
+
 #[tauri::command]
 fn get_bundle(id: String) -> Result<serde_json::Value, String> {
     let path = resolve(&id).ok_or_else(|| format!("unknown bundle: {id}"))?;
@@ -1319,6 +1334,7 @@ fn main() {
             set_active_kb,
             get_active_kb,
             add_base,
+            remove_base,
             get_bundle,
             lint_bundle,
             search_bundle,

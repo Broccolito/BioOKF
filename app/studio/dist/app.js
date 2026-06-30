@@ -995,6 +995,45 @@ function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','
 
 /* ---------- chrome ---------- */
 function monogram(name){return (name||'').split(/\s+/).slice(0,2).map(w=>w[0]||'').join('').toUpperCase();}
+let kbMenuBase=null;
+function hideKbMenu(){const m=document.getElementById('kbMenu');if(m)m.classList.remove('open');kbMenuBase=null;}
+function showKbMenu(ev,b){
+  if(!isDesktop)return;
+  ev.preventDefault();ev.stopPropagation();kbMenuBase=b;
+  const m=document.getElementById('kbMenu');if(!m)return;
+  m.style.left='0px';m.style.top='0px';m.classList.add('open');
+  const rect=m.getBoundingClientRect(), pad=8;
+  const x=Math.min(ev.clientX, window.innerWidth-rect.width-pad);
+  const y=Math.min(ev.clientY, window.innerHeight-rect.height-pad);
+  m.style.left=Math.max(pad,x)+'px';m.style.top=Math.max(pad,y)+'px';
+}
+function clearGraphView(){
+  activeBaseId=null; pages={}; currentLog=''; currentUpdated=null; currentLint=null;
+  nodes=[]; edges=[]; byId={}; graphComponents=[]; neighborMap=new Map(); bundleCache.clear(); layoutCache.clear();
+  selected=null; selectedEdge=null; hover=null; hoverEdge=null; focusNeighbors=new Set(); closeDetail(); closeLog(); hideTip();
+  document.getElementById('tbTitle').textContent='No knowledge bases';
+  document.getElementById('tbSub').textContent='0 nodes · 0 edges';
+  const pill=document.getElementById('lintPill'); if(pill) pill.style.display='none';
+  draw();
+}
+async function removeRegisteredBase(b){
+  if(!b||!isDesktop)return;
+  const ok=window.confirm(`Remove "${b.name||b.id}" from the BioOKF registry?\n\nThe knowledge-base folder will stay on disk.`);
+  if(!ok)return;
+  hideKbMenu();
+  try{
+    await tauriInvoke('remove_base',{id:b.id});
+    bundleCache.delete(b.id); layoutCache.delete(b.id);
+    BASES=await loadBases(); lastBasesSig=basesSig(BASES); renderSidebar();
+    if(activeBaseId===b.id){
+      if(BASES.length) await selectBase(BASES[0]);
+      else clearGraphView();
+    }
+    showToast('Removed from registry');
+  }catch(e){
+    showToast('Could not remove knowledge base: '+String((e&&e.message)||e),'err');
+  }
+}
 function renderSidebar(){
   const list=document.getElementById('kbList');list.innerHTML='';
   BASES.forEach(b=>{const el=document.createElement('div');el.className='kb'+(b.id===activeBaseId?' active':'');el.title=b.path?b.name+'\n'+b.path:b.name;
@@ -1002,7 +1041,9 @@ function renderSidebar(){
     const when = b.updated ? `<span class="kb-when">updated ${esc(b.updated)}</span>` : '';
     const focus = b.id===aiFocusKb ? `<span class="kb-focus" title="AI agent is focused on this knowledge base"></span>` : '';
     el.innerHTML=`<span class="kb-mono">${esc(monogram(b.name))}</span><span class="kb-text"><span class="kb-name">${esc(b.name)}</span><span class="kb-meta">${b.node_count!=null?b.node_count+' nodes':''}${b.edge_count!=null?' · '+b.edge_count+' edges':''}</span>${when}</span>${focus}`;
-    el.onclick=()=>selectBase(b);list.appendChild(el);});
+    el.onclick=()=>{hideKbMenu();selectBase(b);};
+    el.oncontextmenu=ev=>showKbMenu(ev,b);
+    list.appendChild(el);});
 }
 function renderLegend(){
   let h='';FAMILIES.forEach(([fam,types])=>{h+=`<div class="legend-fam"><div class="fam-name">${fam}</div><div class="swatches">`;types.forEach(t=>{h+=`<span class="sw"><i style="background:${TYPE_COLOR[t]}"></i><span>${t}</span></span>`;});
@@ -1332,6 +1373,12 @@ async function boot(){
   requestAnimationFrame(loop);
   const nb=document.querySelector('.new-kb');
   if(nb){ if(isDesktop) nb.onclick=addNewBase; else nb.style.display='none'; }
+  const kbRemove=document.getElementById('kbRemove');
+  if(kbRemove) kbRemove.onclick=()=>removeRegisteredBase(kbMenuBase);
+  window.addEventListener('click', ev=>{ if(!ev.target.closest || !ev.target.closest('#kbMenu')) hideKbMenu(); });
+  window.addEventListener('keydown', ev=>{ if(ev.key==='Escape') hideKbMenu(); });
+  const kbList=document.getElementById('kbList');
+  if(kbList) kbList.addEventListener('scroll', hideKbMenu);
   BASES=await loadBases();renderSidebar();
   lastBasesSig=basesSig(BASES);
   if(BASES.length)await selectBase(BASES[0]);
