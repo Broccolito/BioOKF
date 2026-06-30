@@ -49,7 +49,7 @@ which wires those tools into your MCP client.
 
 ### 1. BioOKF Studio (desktop app + CLI + MCP)
 
-Download the notarized **`BioOKF Studio_0.2.3_aarch64.dmg`** from the
+Download the notarized **`BioOKF.Studio_0.2.3_aarch64.dmg`** from the
 [latest release](https://github.com/Broccolito/BioOKF/releases/latest), open it, and drag
 **BioOKF Studio** into Applications. The DMG is signed and notarized by Apple, so it opens with
 no Gatekeeper warning and no quarantine prompt.
