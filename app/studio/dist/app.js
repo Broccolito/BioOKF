@@ -72,7 +72,7 @@ function jitterUnit(id){
 }
 function componentLimit(c){
   if(!c) return 420;
-  return Math.max(220, Math.min(2400, (c.r||120)*1.72 + 90));
+  return Math.max(150, Math.min(1500, (c.r||120)*1.18 + 46));
 }
 function containNode(n,c){
   if(!c || n===drag) return;
@@ -253,15 +253,16 @@ function componentLayout(graphNodes, graphEdges){
     comps.push(ids);
   });
   comps.sort((a,b)=>b.length-a.length);
-  const root=Math.max(150, Math.sqrt(graphNodes.length)*32), placed=[];
+  const root=Math.max(110, Math.sqrt(graphNodes.length)*14), placed=[];
   let ring=0, used=0;
   const anchors=comps.map((ids,i)=>{
-    const r=Math.max(i===0?130:44, Math.sqrt(ids.length)*20);
+    const r=Math.max(i===0?112:34, Math.sqrt(ids.length)*14);
     if(i===0) return { ids, x:0, y:0, r };
     if(used>=Math.max(8, ring*8)){ ring++; used=0; }
     const slots=Math.max(8, ring*8), a=(used++/slots)*Math.PI*2 + ring*0.37;
-    const mainR=Math.max(130, Math.sqrt(comps[0].length)*20);
-    const dist=Math.max(root, mainR + r + 90) + ring*110;
+    const mainR=Math.max(112, Math.sqrt(comps[0].length)*14);
+    const gap=ids.length>18?52:36;
+    const dist=Math.max(root, mainR + r + gap) + ring*48;
     return { ids, x:Math.cos(a)*dist, y:Math.sin(a)*dist, r };
   });
   const pos=new Map();
