@@ -337,7 +337,8 @@
     border-radius:var(--r-md);overflow:hidden;background:var(--bg-elev);box-shadow:var(--shadow-sm);}
   .zoomctl button{width:36px;height:36px;border:none;background:transparent;color:var(--muted);cursor:pointer;font-size:16px;line-height:1;
     border-bottom:1px solid var(--hair);font-family:var(--sans);transition:background .12s,color .12s;}
-  .zoomctl button:last-child{border-bottom:none;font-size:13px;} .zoomctl button:hover{background:var(--hover);color:var(--text);}
+  .zoomctl button:last-child{border-bottom:none;} .zoomctl button:hover{background:var(--hover);color:var(--text);}
+  .zoomctl svg{width:19px;height:19px;stroke-width:2.4;}
 
   /* ---------- hover tooltip ---------- */
   .tip{position:absolute;z-index:9;pointer-events:none;background:var(--text);color:#fff;font-size:11px;padding:5px 9px;border-radius:var(--r-sm);
@@ -463,7 +464,7 @@
         <div class="kb-menu" id="kbMenu" role="menu"><button id="kbRemove" class="danger" type="button" role="menuitem">Remove from registry</button></div>
         <div class="legend" id="legend"><h4>Node types <span class="tg" id="legendToggle">hide</span></h4><div class="legend-body" id="legendBody"></div></div>
         <div class="detail" id="detail"></div>
-        <div class="zoomctl"><button id="zoomIn" title="Zoom in">+</button><button id="zoomOut" title="Zoom out">−</button><button id="zoomFit" title="Fit to view">⤢</button></div>
+        <div class="zoomctl"><button id="zoomIn" title="Zoom in">+</button><button id="zoomOut" title="Zoom out">−</button><button id="zoomFit" title="Fit to view" aria-label="Fit to view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H3v5"/><path d="M3 3l6.5 6.5"/><path d="M16 3h5v5"/><path d="M21 3l-6.5 6.5"/><path d="M8 21H3v-5"/><path d="M3 21l6.5-6.5"/><path d="M16 21h5v-5"/><path d="M21 21l-6.5-6.5"/></svg></button></div>
         <div class="tip" id="tip"></div>
         <div class="previewscrim" id="previewScrim"></div>
         <aside class="preview" id="preview"></aside>
