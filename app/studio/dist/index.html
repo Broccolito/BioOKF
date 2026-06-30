@@ -489,13 +489,13 @@
   <div class="cli-modal__panel" role="dialog" aria-modal="true" aria-labelledby="cli-modal-title">
     <h2 id="cli-modal-title" class="cli-modal__title">Install BioOKF tools</h2>
     <p class="cli-modal__body" id="cli-modal-body">
-      BioOKF Studio ships with the <code>bokf</code> command-line tool. Install it to
-      <code>/usr/local/bin</code> so it works in any terminal. You will be asked for your
-      password once.
+      BioOKF Studio requires the <code>bokf</code> CLI and <code>bokf-mcp</code> server.
+      Install the bundled tools so CLI, MCP, registry, and agent workflows work in any
+      terminal. You will be asked for your password once.
     </p>
     <div id="cli-modal-error" class="cli-modal__error" hidden></div>
     <div class="cli-modal__actions">
-      <button id="cli-never" class="cli-btn cli-btn--ghost" type="button">Don't ask again</button>
+      <button id="cli-never" class="cli-btn cli-btn--ghost" type="button" hidden>Skip this version</button>
       <span class="cli-modal__spacer"></span>
       <button id="cli-later" class="cli-btn" type="button">Later</button>
       <button id="cli-install" class="cli-btn cli-btn--primary" type="button">Install tools</button>

@@ -94,6 +94,34 @@ function boundLayout(){
     containNode(n,c);
   });
 }
+function relaxNodeCollisions(iterations=1){
+  if(nodes.length<2) return;
+  const cell=40, key=(ix,iy)=>ix+','+iy;
+  for(let pass=0;pass<iterations;pass++){
+    const grid=new Map();
+    nodes.forEach((n,i)=>{
+      const ix=Math.floor(n.x/cell), iy=Math.floor(n.y/cell);
+      const k=key(ix,iy); let arr=grid.get(k); if(!arr){arr=[];grid.set(k,arr);} arr.push(i);
+    });
+    nodes.forEach((n,i)=>{
+      const ix=Math.floor(n.x/cell), iy=Math.floor(n.y/cell);
+      for(let gx=ix-1;gx<=ix+1;gx++)for(let gy=iy-1;gy<=iy+1;gy++){
+        const arr=grid.get(key(gx,gy)); if(!arr)continue;
+        arr.forEach(j=>{
+          if(j<=i)return;
+          const m=nodes[j];
+          let dx=m.x-n.x, dy=m.y-n.y, d=Math.hypot(dx,dy);
+          const sep=nodeR(n)+nodeR(m)+8;
+          if(d>=sep)return;
+          if(!d){const ju=jitterUnit(n.id+'|'+m.id);dx=ju.x;dy=ju.y;d=1;}
+          const push=(sep-d)*0.58, px=dx/d*push, py=dy/d*push;
+          if(n!==drag){n.x-=px;n.y-=py;n.vx*=0.75;n.vy*=0.75;containNode(n,graphComponents[n.component]||graphComponents[0]);}
+          if(m!==drag){m.x+=px;m.y+=py;m.vx*=0.75;m.vy*=0.75;containNode(m,graphComponents[m.component]||graphComponents[0]);}
+        });
+      }
+    });
+  }
+}
 function layoutMetrics(){
   if(!nodes.length) return {nodes:0,edges:0,alpha,simSettled};
   let mnx=Infinity,mny=Infinity,mxx=-Infinity,mxy=-Infinity,maxComponentDistance=0,invalid=0;
@@ -109,6 +137,54 @@ function layoutMetrics(){
     view:{x:view.x,y:view.y,k:view.k,w:W,h:H},
     maxComponentDistance, alpha, simSettled, layoutFrameCount
   };
+}
+function edgePairKey(e){
+  const a=String(e.source), b=String(e.target);
+  return a<b ? a+'\u0000'+b : b+'\u0000'+a;
+}
+function assignEdgeLanes(){
+  const groups=new Map();
+  edges.forEach((e,i)=>{
+    e._index=i;
+    const k=edgePairKey(e); let arr=groups.get(k); if(!arr){arr=[];groups.set(k,arr);} arr.push(e);
+  });
+  groups.forEach(arr=>{
+    const count=arr.length;
+    arr.forEach((e,i)=>{e._lane=count>1?i-(count-1)/2:0;e._laneCount=count;});
+  });
+}
+function edgeScreenLine(s,t,e,trim=true){
+  let [x1,y1]=toScreen(s.x,s.y),[x2,y2]=toScreen(t.x,t.y);
+  let dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy)||1;
+  const ux=dx/len,uy=dy/len,rawPx=-uy,rawPy=ux,lane=(e&&e._lane)||0,bend=Math.max(12,Math.min(44,14+view.k*6));
+  const canonicalForward=String(s.id)<=String(t.id), px=canonicalForward?rawPx:-rawPx, py=canonicalForward?rawPy:-rawPy;
+  if(trim){
+    const rs=nodeR(s)*view.k+1.5,rt=nodeR(t)*view.k+1.5;
+    x1+=ux*rs;y1+=uy*rs;x2-=ux*rt;y2-=uy*rt;
+    len=Math.max(1,len-rs-rt);
+  }
+  const off=lane*bend, cx=(x1+x2)/2+px*off, cy=(y1+y2)/2+py*off;
+  return {x1,y1,x2,y2,cx,cy,curved:Math.abs(lane)>0.001,len,ux,uy,px,py};
+}
+function edgePoint(line,t){
+  if(!line.curved)return {x:line.x1+(line.x2-line.x1)*t,y:line.y1+(line.y2-line.y1)*t};
+  const u=1-t;
+  return {x:u*u*line.x1+2*u*t*line.cx+t*t*line.x2,y:u*u*line.y1+2*u*t*line.cy+t*t*line.y2};
+}
+function strokeEdgeLine(line){
+  ctx.beginPath();ctx.moveTo(line.x1,line.y1);
+  if(line.curved)ctx.quadraticCurveTo(line.cx,line.cy,line.x2,line.y2);
+  else ctx.lineTo(line.x2,line.y2);
+  ctx.stroke();
+}
+function distQuad(px,py,line){
+  if(!line.curved)return distSeg(px,py,line.x1,line.y1,line.x2,line.y2);
+  let best=Infinity, prev=edgePoint(line,0);
+  for(let i=1;i<=12;i++){
+    const p=edgePoint(line,i/12), d=distSeg(px,py,prev.x,prev.y,p.x,p.y);
+    if(d<best)best=d; prev=p;
+  }
+  return best;
 }
 function nextFrame(){return new Promise(resolve=>requestAnimationFrame(()=>resolve()));}
 function setGraphLoading(open, title, sub, pct){
@@ -214,6 +290,7 @@ function loadGraph(g, baseId){
     byId[n.id]=node; return node;
   });
   edges = g.edges.map(e=>Object.assign({}, e));
+  assignEdgeLanes();
   graphComponents = saved ? (saved.__components||[]) : (layout?layout.components:[]);
   // hub = top-6 by degree (real nodes)
   const ranked=[...nodes].filter(n=>!n.external).sort((a,b)=>b.degree-a.degree);
@@ -231,6 +308,7 @@ function loadGraph(g, baseId){
   const warm=saved?0:(nodes.length>900?0:nodes.length>350?2:10);
   for(let i=0;i<warm;i++) tick(0.9*Math.pow(0.985,i)+0.02);
   boundLayout();
+  relaxNodeCollisions(saved?8:4);
   if(baseId) rememberLayout(baseId);
   fitView();
 }
@@ -320,6 +398,7 @@ function tick(a){
     n.x+=n.vx;n.y+=n.vy;n.vx*=0.82;n.vy*=0.82;
     containNode(n, graphComponents[n.component]||graphComponents[0]);
   });
+  relaxNodeCollisions();
   edgeSpatial=null; edgeSpatialVersion++;
 }
 function toScreen(x,y){return [(x*view.k)+view.x+W/2,(y*view.k)+view.y+H/2];}
@@ -348,7 +427,8 @@ function rebuildEdgeSpatial(){
   const cell=Math.max(80,120/view.k), grid=new Map();
   edges.forEach((e,i)=>{
     const s=byId[e.source],t=byId[e.target]; if(!s||!t)return;
-    const mnx=Math.min(s.x,t.x)-12, mxx=Math.max(s.x,t.x)+12, mny=Math.min(s.y,t.y)-12, mxy=Math.max(s.y,t.y)+12;
+    const line=edgeScreenLine(s,t,e,false), cWorld=toWorld(line.cx,line.cy);
+    const mnx=Math.min(s.x,t.x,cWorld[0])-18/view.k, mxx=Math.max(s.x,t.x,cWorld[0])+18/view.k, mny=Math.min(s.y,t.y,cWorld[1])-18/view.k, mxy=Math.max(s.y,t.y,cWorld[1])+18/view.k;
     const ix1=Math.floor(mnx/cell), ix2=Math.floor(mxx/cell), iy1=Math.floor(mny/cell), iy2=Math.floor(mxy/cell);
     for(let ix=ix1;ix<=ix2;ix++)for(let iy=iy1;iy<=iy2;iy++){
       const k=edgeCellKey(ix,iy); let arr=grid.get(k); if(!arr){arr=[];grid.set(k,arr);} arr.push(i);
@@ -399,16 +479,12 @@ function drawGrid(){
   for(let x=ox;x<W;x+=step)for(let y=oy;y<H;y+=step){ctx.beginPath();ctx.arc(x,y,0.8,0,7);ctx.fill();}
 }
 function drawEdge(s,t,e,emph,dim){
-  const [x1,y1]=toScreen(s.x,s.y),[x2,y2]=toScreen(t.x,t.y);
-  let dx=x2-x1,dy=y2-y1,len=Math.hypot(dx,dy)||1;
-  const ux=dx/len,uy=dy/len,px=-uy,py=ux;
-  const rs=nodeR(s)*view.k+1.5,rt=nodeR(t)*view.k+1.5;
-  const sx=x1+ux*rs,sy=y1+uy*rs,ex=x2-ux*rt,ey=y2-uy*rt;
+  const line=edgeScreenLine(s,t,e,true), sx=line.x1, sy=line.y1, ex=line.x2, ey=line.y2, len=line.len, px=line.px, py=line.py;
   if(e.synthesized){ // provenance edge — faint dashed, no taper
     ctx.save();ctx.setLineDash([2,3]);
     ctx.strokeStyle=dim?"rgba(28,33,40,0.05)":"rgba(28,33,40,0.13)";ctx.lineWidth=0.8;
-    ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(ex,ey);ctx.stroke();ctx.restore();
-    maybeLabel(e,emph,sx,sy,ex,ey,len);return;
+    strokeEdgeLine(line);ctx.restore();
+    maybeLabel(e,emph,line,len);return;
   }
   const neg=isNegPred(e.predicate);  // negative (`not_<X>`) — render dashed + reddish
   let col="rgba(28,33,40,0.18)";
@@ -418,21 +494,23 @@ function drawEdge(s,t,e,emph,dim){
   }
   if(e.symmetric){
     ctx.save();if(neg)ctx.setLineDash([4,3]);
-    ctx.strokeStyle=col;ctx.lineWidth=neg?1.1:0.9;ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(ex,ey);ctx.stroke();ctx.restore();
+    ctx.strokeStyle=col;ctx.lineWidth=neg?1.1:0.9;strokeEdgeLine(line);ctx.restore();
   }else if(neg){ // dashed stroked line (no solid taper) signals the negation
     ctx.save();ctx.setLineDash([4,3]);
-    ctx.strokeStyle=col;ctx.lineWidth=1.1;ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(ex,ey);ctx.stroke();ctx.restore();
+    ctx.strokeStyle=col;ctx.lineWidth=1.1;strokeEdgeLine(line);ctx.restore();
+  }else if(line.curved){
+    ctx.save();ctx.strokeStyle=col;ctx.lineWidth=emph===2?1.35:emph===1?1.05:0.85;strokeEdgeLine(line);ctx.restore();
   }else{
     const w0=0.85,w1=0.42; // subtle taper: source slightly thicker than object end
     ctx.fillStyle=col;ctx.beginPath();
     ctx.moveTo(sx+px*w0,sy+py*w0);ctx.lineTo(ex+px*w1,ey+py*w1);ctx.lineTo(ex-px*w1,ey-py*w1);ctx.lineTo(sx-px*w0,sy-py*w0);
     ctx.closePath();ctx.fill();
   }
-  maybeLabel(e,emph,sx,sy,ex,ey,len);
+  maybeLabel(e,emph,line,len);
 }
-function maybeLabel(e,emph,sx,sy,ex,ey,len){
+function maybeLabel(e,emph,line,len){
   if(emph===2&&len>26){
-    const mx=(sx+ex)/2,my=(sy+ey)/2;
+    const p=edgePoint(line,0.5), mx=p.x, my=p.y;
     const neg=isNegPred(e.predicate), lbl=predLabel(e.predicate);
     ctx.save();ctx.font="500 11px ui-monospace,Menlo,monospace";ctx.textAlign="center";ctx.textBaseline="middle";
     ctx.shadowColor="rgba(250,250,252,0.95)";ctx.shadowBlur=4;ctx.fillStyle=neg?"#c4564b":"#41474f";
@@ -522,7 +600,7 @@ function pickEdge(sx,sy){
   const cand=new Set();
   for(let dx=-1;dx<=1;dx++)for(let dy=-1;dy<=1;dy++){ (edgeSpatial.grid.get(edgeCellKey(ix+dx,iy+dy))||[]).forEach(i=>cand.add(i)); }
   let best=null,bd=6;
-  cand.forEach(i=>{const e=edges[i],s=byId[e.source],t=byId[e.target];if(!s||!t)return;const [x1,y1]=toScreen(s.x,s.y),[x2,y2]=toScreen(t.x,t.y),d=distSeg(sx,sy,x1,y1,x2,y2);if(d<bd){bd=d;best=e;}});
+  cand.forEach(i=>{const e=edges[i],s=byId[e.source],t=byId[e.target];if(!s||!t)return;const line=edgeScreenLine(s,t,e,true),d=distQuad(sx,sy,line);if(d<bd){bd=d;best=e;}});
   return best;
 }
 function distSeg(px,py,x1,y1,x2,y2){const dx=x2-x1,dy=y2-y1,l2=dx*dx+dy*dy;if(l2===0)return Math.hypot(px-x1,py-y1);let t=((px-x1)*dx+(py-y1)*dy)/l2;t=Math.max(0,Math.min(1,t));return Math.hypot(px-(x1+t*dx),py-(y1+t*dy));}
@@ -1392,7 +1470,6 @@ boot();
 // command-line tools if the app is already current. `?forceCliPopup=1` and
 // `?forceUpdatePopup=1` force visual test states in a plain browser.
 (function(){
-  const NEVER_KEY='bokf.cliPopup.never';
   const SKIP_UPDATE_KEY='bokf.updatePopup.skipTag';
   const forced=new URLSearchParams(location.search).get('forceCliPopup')==='1';
   const forcedUpdate=new URLSearchParams(location.search).get('forceUpdatePopup')==='1';
@@ -1405,8 +1482,9 @@ boot();
   const showCli=()=>{
     mode='cli'; updateInfo=null; setError('');
     setText('cli-modal-title','Install BioOKF command-line tools');
-    setHtml('cli-modal-body','BioOKF Studio ships with <code>bokf</code> and <code>bokf-mcp</code>. Install them to <code>/usr/local/bin</code> so the CLI and MCP server work in any terminal or agent client. You will be asked for your password once.');
-    setText('cli-install','Install tools'); setText('cli-never',"Don't ask again");
+    setHtml('cli-modal-body','BioOKF Studio requires <code>bokf</code> and <code>bokf-mcp</code> for CLI, MCP, registry, and agent workflows. Install the bundled tools so they work in any terminal or agent client. You will be asked for your password once.');
+    setText('cli-install','Install tools');
+    const never=$('cli-never'); if(never) never.hidden=true;
     const m=$('cli-modal'); if(m) m.hidden=false;
   };
   const showUpdate=(info)=>{
@@ -1416,6 +1494,7 @@ boot();
     setText('cli-modal-title','Update BioOKF Studio');
     setHtml('cli-modal-body',`BioOKF ${latest} is available. This update installs the newest Studio app plus the bundled <code>bokf</code> CLI and <code>bokf-mcp</code> server, then restarts Studio. Current version: <code>${current}</code>.`);
     setText('cli-install','Install update'); setText('cli-never','Skip this version');
+    const never=$('cli-never'); if(never) never.hidden=false;
     const m=$('cli-modal'); if(m) m.hidden=false;
   };
 
@@ -1427,7 +1506,6 @@ boot();
         showUpdate(u); return;
       }
     }catch(_){/* release check is best-effort; fall through to CLI status */}
-    if(localStorage.getItem(NEVER_KEY)==='1') return;
     try{
       const s=await tauriInvoke('cli_status');
       if(s && (s.installed===false || s.mcpInstalled===false)) showCli();
@@ -1454,7 +1532,6 @@ boot();
     if(later) later.onclick=hide;
     if(never) never.onclick=()=>{
       if(mode==='update' && updateInfo){ localStorage.setItem(SKIP_UPDATE_KEY, updateInfo.latestTag||updateInfo.latestVersion||''); }
-      else localStorage.setItem(NEVER_KEY,'1');
       hide();
     };
   }

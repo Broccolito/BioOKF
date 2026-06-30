@@ -15,20 +15,18 @@ test('loads bundles and renders the graph', async ({ page }) => {
   const bases = await page.locator('.kb').count();
   expect(bases).toBeGreaterThanOrEqual(1);
   const state = await page.evaluate(() => window.__bokf.getState());
-  expect(state.nodes).toBeGreaterThan(0);
-  expect(state.edges).toBeGreaterThan(0);
+  expect(state.counts.nodes).toBeGreaterThan(0);
+  expect(state.counts.edges).toBeGreaterThan(0);
 });
 
 test('node click opens a detail panel with frontmatter + edges', async ({ page }) => {
   await page.goto(URL);
   await page.waitForFunction(() => window.__BOKF_READY === true);
-  // pick the first real (non-external) node and open it
   const ok = await page.evaluate(() => {
-    const id = (window.__firstReal && window.__firstReal()) || null;
-    return id;
+    const node = window.__bokf.getGraph().nodes.find(n => !n.external);
+    return node ? window.__bokf.selectNode(node.id) : false;
   });
-  // fall back: select COVID-19 if present
-  await page.evaluate(() => window.__bokf.selectNode('COVID-19'));
+  expect(ok).toBeTruthy();
   await expect(page.locator('.detail.open .d-id')).toBeVisible();
   await expect(page.locator('.detail .fm')).toBeVisible();
 });
@@ -51,7 +49,8 @@ test('sidebar collapses', async ({ page }) => {
 test('cli install popup renders when forced', async ({ page }) => {
   await page.goto(URL + '?forceCliPopup=1');
   await page.waitForSelector('#cli-modal:not([hidden])', { timeout: 3000 });
-  await expect(page.locator('#cli-modal-title')).toHaveText(/Install the bokf CLI/);
+  await expect(page.locator('#cli-modal-title')).toHaveText(/Install BioOKF command-line tools/);
   await expect(page.locator('#cli-install')).toBeVisible();
+  await expect(page.locator('#cli-never')).toBeHidden();
   await page.screenshot({ path: 'screens/cli-popup.png' });
 });

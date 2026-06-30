@@ -904,9 +904,17 @@ fn bundled_bin_dir(app: &AppHandle) -> Option<PathBuf> {
 /// The install path of a bundled BioOKF tool on the user's PATH (or the standard
 /// install location), if any.
 fn tool_on_path(exe_name: &str) -> Option<String> {
-    let std_path = Path::new("/usr/local/bin").join(exe_name);
-    if std_path.exists() {
-        return Some(std_path.display().to_string());
+    let mut candidates = vec![
+        Path::new("/usr/local/bin").join(exe_name),
+        Path::new("/opt/homebrew/bin").join(exe_name),
+    ];
+    if let Some(home) = std::env::var_os("HOME") {
+        candidates.push(PathBuf::from(home).join(".cargo/bin").join(exe_name));
+    }
+    for cand in candidates {
+        if cand.exists() {
+            return Some(cand.display().to_string());
+        }
     }
     let path = std::env::var_os("PATH")?;
     for dir in std::env::split_paths(&path) {
