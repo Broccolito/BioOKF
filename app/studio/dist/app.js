@@ -408,9 +408,17 @@ function nodeR(n){return n.external?5:(n.hub?10:6);}
 function fitView(){
   if(!nodes.length)return;
   let mnx=1e9,mny=1e9,mxx=-1e9,mxy=-1e9;
-  nodes.forEach(n=>{if(!finite(n.x)||!finite(n.y))return;mnx=Math.min(mnx,n.x);mny=Math.min(mny,n.y);mxx=Math.max(mxx,n.x);mxy=Math.max(mxy,n.y);});
+  nodes.forEach(n=>{
+    if(!finite(n.x)||!finite(n.y))return;
+    const r=nodeR(n)+4;
+    mnx=Math.min(mnx,n.x-r);mny=Math.min(mny,n.y-r);mxx=Math.max(mxx,n.x+r);mxy=Math.max(mxy,n.y+r);
+  });
   if(!finite(mnx)||!finite(mxx))return;
-  const pad=72,gw=mxx-mnx||1,gh=mxy-mny||1,usableW=Math.max(100,W-pad*2),usableH=Math.max(100,H-pad*2),k=Math.min(usableW/gw,usableH/gh,1.6);
+  const edge=Math.min(W||900,H||600);
+  const pad=Math.max(56,Math.min(132,edge*0.085));
+  const gw=mxx-mnx||1,gh=mxy-mny||1,usableW=Math.max(100,W-pad*2),usableH=Math.max(100,H-pad*2);
+  const cap=nodes.length>1500?1.75:nodes.length>700?2.15:nodes.length>250?2.55:3.1;
+  const k=Math.min(usableW/gw,usableH/gh,cap);
   view.k=k;view.x=-((mnx+mxx)/2)*k;view.y=-((mny+mxy)/2)*k;
 }
 function neighborsOf(id){return neighborMap.get(id)||new Set();}

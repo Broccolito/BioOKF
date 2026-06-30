@@ -1,6 +1,6 @@
 [package]
 name = "biookf-studio"
-version = "0.2.2"
+version = "0.2.3"
 edition = "2021"
 description = "BioOKF Studio — Tauri desktop visualizer over bokf-core"
 license = "Apache-2.0"
