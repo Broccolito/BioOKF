@@ -1,0 +1,12 @@
+sandbox_mode = "danger-full-access"
+[mcp_servers.tauri-debug]
+command = "npx"
+args = [
+    "-y",
+    "-p",
+    "tauri-plugin-mcp-server",
+    "tauri-mcp-server",
+]
+
+[mcp_servers.tauri-debug.env]
+TAURI_MCP_IPC_PATH = "/tmp/biookf-tauri-mcp.sock"
