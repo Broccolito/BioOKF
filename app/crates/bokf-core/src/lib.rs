@@ -30,7 +30,7 @@ pub mod validate;
 pub use bundle::Bundle;
 pub use git::{ChangeKind, GitRepo, HistoryEntry, Txn};
 pub use graph::{Graph, GraphEdge, GraphNode};
-pub use lint::{lint, Finding, LintReport, Severity};
+pub use lint::{lint, lint_fast, Finding, LintReport, Severity};
 pub use model::{Edge, Node, NodeType, Predicate};
 pub use parse::parse_node;
 pub use search::{SearchHit, SearchIndex};

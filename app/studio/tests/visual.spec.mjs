@@ -28,7 +28,7 @@ test('node click opens a detail panel with frontmatter + edges', async ({ page }
   });
   expect(ok).toBeTruthy();
   await expect(page.locator('.detail.open .d-id')).toBeVisible();
-  await expect(page.locator('.detail .fm')).toBeVisible();
+  await expect(page.locator('.detail .kv')).toBeVisible();
 });
 
 test('search dims non-matching nodes', async ({ page }) => {

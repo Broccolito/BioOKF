@@ -59,6 +59,17 @@ fn looks_like_bare_curie(id: &str) -> bool {
 }
 
 pub fn lint(bundle: &Bundle) -> LintReport {
+    lint_inner(bundle, true)
+}
+
+/// Fast lint for interactive Studio rendering. It keeps graph/conformance checks
+/// and raw metadata/source.md checks, but skips the expensive PDF coverage pass
+/// that reads every `raw/*/original.pdf`.
+pub fn lint_fast(bundle: &Bundle) -> LintReport {
+    lint_inner(bundle, false)
+}
+
+fn lint_inner(bundle: &Bundle, include_pdf_coverage: bool) -> LintReport {
     let mut r = LintReport::default();
 
     // --- file-level parse errors ---
@@ -214,7 +225,9 @@ pub fn lint(bundle: &Bundle) -> LintReport {
     lint_provenance(&mut r, bundle);
 
     // --- vision-rendered PDFs: did the rendering drop large sections? (coverage guardrail) ---
-    lint_pdf_coverage(&mut r, bundle);
+    if include_pdf_coverage {
+        lint_pdf_coverage(&mut r, bundle);
+    }
 
     // --- index.md currency ---
     if bundle.has_index_md {
@@ -353,7 +366,7 @@ fn lint_similar_subtypes(r: &mut LintReport, bundle: &Bundle) {
 fn lint_edge(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, path: &Option<String>) {
     let subj = &n.identifier;
 
-    // predicate must be one of 23
+    // predicate must be one of the controlled 35.
     if !e.predicate.is_valid() {
         r.push(
             Severity::Error,

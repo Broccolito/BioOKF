@@ -112,6 +112,34 @@ pub fn studio_bundle_doc(
     bundle_doc_inner(root, name, false)
 }
 
+/// Studio's fast initial graph payload. It intentionally omits per-node markdown
+/// pages so large bundles do not hydrate thousands of document bodies before the
+/// canvas can render. Detail panels can fetch one knowledge node on demand.
+pub fn studio_graph_doc(
+    root: impl AsRef<Path>,
+    name: Option<String>,
+) -> std::io::Result<serde_json::Value> {
+    let root = root.as_ref();
+    let bundle = Bundle::open(root)?;
+    let graph = Graph::from_bundle(&bundle);
+    let id = root
+        .file_name()
+        .map(|s| s.to_string_lossy().to_string())
+        .unwrap_or_else(|| "bundle".to_string());
+    let name = name.unwrap_or_else(|| id.clone());
+    Ok(serde_json::json!({
+        "id": id,
+        "name": name,
+        "node_count": bundle.nodes.len(),
+        "edge_count": graph.edges.iter().filter(|e| !e.synthesized).count(),
+        "updated": last_updated(root),
+        "log": change_log(root),
+        "graph": graph.to_json(),
+        "pages": {},
+        "pages_deferred": true,
+    }))
+}
+
 fn count_concept_docs(dir: &Path) -> usize {
     let Ok(entries) = std::fs::read_dir(dir) else {
         return 0;
