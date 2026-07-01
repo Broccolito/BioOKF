@@ -49,8 +49,10 @@ which wires those tools into your MCP client.
 
 ### 1. BioOKF Studio (desktop app + CLI + MCP)
 
-Download the notarized **`BioOKF.Studio_0.2.3_aarch64.dmg`** from the
-[latest release](https://github.com/Broccolito/BioOKF/releases/latest), open it, and drag
+Download the notarized DMG for your Mac from the
+[latest release](https://github.com/Broccolito/BioOKF/releases/latest):
+**`BioOKF.Studio_0.2.3_aarch64.dmg`** for Apple Silicon or
+**`BioOKF.Studio_0.2.3_x64.dmg`** for Intel. Open it and drag
 **BioOKF Studio** into Applications. The DMG is signed and notarized by Apple, so it opens with
 no Gatekeeper warning and no quarantine prompt.
 
@@ -64,7 +66,8 @@ where both tools are already on the PATH.
 All configuration (the knowledge-base registry and the active-KB pointer) lives under
 `~/.config/biookf-studio`, shared by the Studio, the CLI, and the MCP server.
 
-(Apple Silicon for now; Intel and other platforms follow from the release pipeline.)
+Apple Silicon and Intel DMGs are both published for macOS. Linux and Windows builds follow from
+the release pipeline as prebuilt assets become available.
 
 ### 2. The BioOKF agent plugin (Claude Code or Codex)
 
@@ -97,9 +100,9 @@ binary that shipped inside the Studio app; no separate download is needed on mac
 > > and confirm the `bokf_studio_open` tool works.
 
 **Requirements:** Claude Code or Codex; the BioOKF Studio DMG installed (step 1 above); macOS
-Apple Silicon. Intel and other platforms ship as the release pipeline adds them; until a prebuilt
-asset exists for your platform you can [build from source](#build-from-source) and point the plugin
-at your binary with `BIOOKF_MCP_BIN`.
+Apple Silicon or Intel. Until a prebuilt asset exists for another platform you can
+[build from source](#build-from-source) and point the plugin at your binary with
+`BIOOKF_MCP_BIN`.
 
 **How the plugin finds the binaries.** The launcher (`plugins/biookf/scripts/bokf-mcp`) checks
 `BIOOKF_MCP_BIN` first (explicit override), then looks for `bokf-mcp` inside a locally installed

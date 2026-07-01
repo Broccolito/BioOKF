@@ -30,7 +30,7 @@ let DPR=Math.max(1,window.devicePixelRatio||1), W=0,H=0;
 let view={x:0,y:0,k:1};
 let nodes=[], edges=[], byId={}, pages={};
 let hover=null, hoverEdge=null, selected=null, selectedEdge=null;
-let drag=null, panning=null, moved=false, alpha=1, searchTerm='';
+let drag=null, dragRepel=null, panning=null, moved=false, alpha=1, searchTerm='';
 let focusNeighbors=new Set();
 let neighborMap=new Map(); // pre-built in loadGraph: id → Set of neighbor ids
 let BASES=[], activeBaseId=null, currentLog='', currentUpdated=null, currentLint=null;
@@ -39,28 +39,34 @@ let currentDetailPath=null;           // path of the open node doc, for resolvin
 let currentNoteCtx=null;              // notes context (node/edge) for the open panel
 let graphComponents=[];               // component anchors keep disconnected islands close
 let edgeSpatial=null, edgeSpatialVersion=0, edgeSpatialBuildAt=0;
+let renderDensity={fade:0,edgeAlpha:1,edgeWidth:1,nodeStrokeAlpha:1,nodeStrokeWidth:1.1,visibleNodes:0,visibleEdges:0};
 const bundleCache=new Map();          // base id -> live bundle payload
 const layoutCache=new Map();          // base id -> node positions after first layout
+const lintCache=new Map();            // base id -> lint report loaded after graph paint
+const pageLoadCache=new Map();        // base:id -> in-flight full node page load
 let selectSeq=0;
 let layoutFrameCount=0, layoutStartedAt=0;
 let loadingHideTimer=null;
 
 function clamp(v,min,max){return Math.max(min,Math.min(max,v));}
+function clamp01(v){return clamp(v,0,1);}
 function finite(v){return Number.isFinite(v);}
 function graphTuning(){
-  const large=nodes.length>900, mid=nodes.length>350;
+  const huge=nodes.length>1500, large=nodes.length>900, mid=nodes.length>350;
   return {
-    edgeLength: large?68:(mid?78:92),
-    spring: large?0.0045:(mid?0.010:0.026),
-    springMax: large?1.4:(mid?2.4:4.2),
-    repulsion: large?1450:(mid?2200:3600),
-    repulsionMax: large?18:(mid?32:58),
-    componentPull: large?0.020:(mid?0.017:0.012),
-    maxVelocity: large?12:(mid?18:30),
-    alphaDecay: large?0.88:(mid?0.91:0.94),
-    settleEnergy: large?0.020:(mid?0.014:0.008),
-    maxFrames: large?96:(mid?140:240),
-    maxMs: large?1800:(mid?2400:4200)
+    edgeLength: huge?96:(large?82:(mid?78:92)),
+    spring: huge?0.0028:(large?0.0036:(mid?0.010:0.026)),
+    springMax: huge?1.0:(large?1.2:(mid?2.4:4.2)),
+    repulsion: huge?4200:(large?3100:(mid?2200:3600)),
+    repulsionMax: huge?34:(large?28:(mid?32:58)),
+    componentPull: huge?0.0022:(large?0.0035:(mid?0.007:0.006)),
+    anchorPull: huge?0.0045:(large?0.0075:(mid?0.020:0.024)),
+    dragRepulsion: huge?18:(large?13:(mid?13:18)),
+    maxVelocity: huge?18:(large?15:(mid?18:30)),
+    alphaDecay: huge?0.91:(large?0.90:(mid?0.91:0.94)),
+    settleEnergy: huge?0.026:(large?0.022:(mid?0.014:0.008)),
+    maxFrames: huge?36:(large?124:(mid?140:240)),
+    maxMs: huge?900:(large?2600:(mid?2400:4200))
   };
 }
 function jitterUnit(id){
@@ -72,7 +78,7 @@ function jitterUnit(id){
 }
 function componentLimit(c){
   if(!c) return 420;
-  return Math.max(150, Math.min(1500, (c.r||120)*1.18 + 46));
+  return Math.max(220, Math.min(4200, (c.r||120)*1.10 + 120));
 }
 function containNode(n,c){
   if(!c || n===drag) return;
@@ -94,9 +100,33 @@ function boundLayout(){
     containNode(n,c);
   });
 }
-function relaxNodeCollisions(iterations=1){
+function collisionSep(n,m,extra=12){
+  return nodeR(n)+nodeR(m)+extra;
+}
+function separatePair(n,m,strength=0.62, protectedNode=drag){
+  let dx=m.x-n.x, dy=m.y-n.y, d=Math.hypot(dx,dy);
+  const sep=collisionSep(n,m);
+  if(d>=sep) return false;
+  if(!d){const ju=jitterUnit(n.id+'|'+m.id);dx=ju.x;dy=ju.y;d=1;}
+  const push=(sep-d)*strength, px=dx/d*push, py=dy/d*push;
+  const nShare=n===protectedNode?0:(m===protectedNode?1:0.5);
+  const mShare=m===protectedNode?0:(n===protectedNode?1:0.5);
+  if(nShare){
+    n.x-=px*nShare;n.y-=py*nShare;
+    n.vx-=px*nShare*0.08;n.vy-=py*nShare*0.08;
+    n.vx*=0.74;n.vy*=0.74;containNode(n,graphComponents[n.component]||graphComponents[0]);
+  }
+  if(mShare){
+    m.x+=px*mShare;m.y+=py*mShare;
+    m.vx+=px*mShare*0.08;m.vy+=py*mShare*0.08;
+    m.vx*=0.74;m.vy*=0.74;containNode(m,graphComponents[m.component]||graphComponents[0]);
+  }
+  return true;
+}
+function relaxNodeCollisions(iterations=1, protectedNode=drag){
   if(nodes.length<2) return;
-  const cell=40, key=(ix,iy)=>ix+','+iy;
+  const maxR=Math.max(8,...nodes.map(n=>nodeR(n)));
+  const cell=Math.max(48,maxR*2+24), reach=Math.max(1,Math.ceil((maxR*2+24)/cell)), key=(ix,iy)=>ix+','+iy;
   for(let pass=0;pass<iterations;pass++){
     const grid=new Map();
     nodes.forEach((n,i)=>{
@@ -105,37 +135,50 @@ function relaxNodeCollisions(iterations=1){
     });
     nodes.forEach((n,i)=>{
       const ix=Math.floor(n.x/cell), iy=Math.floor(n.y/cell);
-      for(let gx=ix-1;gx<=ix+1;gx++)for(let gy=iy-1;gy<=iy+1;gy++){
+      for(let gx=ix-reach;gx<=ix+reach;gx++)for(let gy=iy-reach;gy<=iy+reach;gy++){
         const arr=grid.get(key(gx,gy)); if(!arr)continue;
         arr.forEach(j=>{
           if(j<=i)return;
-          const m=nodes[j];
-          let dx=m.x-n.x, dy=m.y-n.y, d=Math.hypot(dx,dy);
-          const sep=nodeR(n)+nodeR(m)+8;
-          if(d>=sep)return;
-          if(!d){const ju=jitterUnit(n.id+'|'+m.id);dx=ju.x;dy=ju.y;d=1;}
-          const push=(sep-d)*0.58, px=dx/d*push, py=dy/d*push;
-          if(n!==drag){n.x-=px;n.y-=py;n.vx*=0.75;n.vy*=0.75;containNode(n,graphComponents[n.component]||graphComponents[0]);}
-          if(m!==drag){m.x+=px;m.y+=py;m.vx*=0.75;m.vy*=0.75;containNode(m,graphComponents[m.component]||graphComponents[0]);}
+          separatePair(n,nodes[j],0.64,protectedNode);
         });
       }
     });
   }
 }
+function clearSpaceAroundNode(source,iterations=8){
+  if(!source) return;
+  for(let pass=0;pass<iterations;pass++){
+    let moved=false;
+    nodes.forEach(n=>{
+      if(n===source) return;
+      if(separatePair(source,n,0.92,source)) moved=true;
+    });
+    if(!moved) break;
+  }
+  edgeSpatial=null; edgeSpatialVersion++;
+}
 function layoutMetrics(){
   if(!nodes.length) return {nodes:0,edges:0,alpha,simSettled};
-  let mnx=Infinity,mny=Infinity,mxx=-Infinity,mxy=-Infinity,maxComponentDistance=0,invalid=0;
+  let mnx=Infinity,mny=Infinity,mxx=-Infinity,mxy=-Infinity,maxComponentDistance=0,invalid=0,overlaps=0,minGap=Infinity;
   nodes.forEach(n=>{
     if(!finite(n.x)||!finite(n.y)){invalid++;return;}
     mnx=Math.min(mnx,n.x);mny=Math.min(mny,n.y);mxx=Math.max(mxx,n.x);mxy=Math.max(mxy,n.y);
     const c=graphComponents[n.component]||{x:0,y:0};
     maxComponentDistance=Math.max(maxComponentDistance, Math.hypot(n.x-c.x,n.y-c.y));
   });
+  for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){
+    const a=nodes[i],b=nodes[j]; if(!finite(a.x)||!finite(b.x))continue;
+    const gap=Math.hypot(a.x-b.x,a.y-b.y)-nodeR(a)-nodeR(b)-6;
+    minGap=Math.min(minGap,gap); if(gap<0)overlaps++;
+  }
   return {
     nodes:nodes.length, edges:edges.length, invalid,
     bbox:{x:mnx,y:mny,w:mxx-mnx,h:mxy-mny},
     view:{x:view.x,y:view.y,k:view.k,w:W,h:H},
-    maxComponentDistance, alpha, simSettled, layoutFrameCount
+    maxComponentDistance, overlaps, minGap:finite(minGap)?minGap:null,
+    hubs:nodes.filter(n=>n.hub).length, maxDegree:Math.max(0,...nodes.map(n=>n.degree||0)),
+    alpha, simSettled, layoutFrameCount,
+    renderDensity
   };
 }
 function edgePairKey(e){
@@ -238,10 +281,42 @@ async function loadBundle(base){
   if(isDesktop){ try{ return await tauriInvoke('get_bundle', { id: base.id }); }catch(e){ console.error('get_bundle failed; using snapshot', e); } }
   return await (await fetch(base.file+cb())).json();
 }
+function pageShellsFromGraph(g){
+  const out={};
+  ((g&&g.nodes)||[]).forEach(n=>{
+    if(n.external || !n.path) return;
+    out[n.id]={
+      identifier:n.id,
+      node_type:n.type,
+      subtype:n.subtype||null,
+      path:n.path,
+      body:'',
+      edges:[],
+      raw_source:[],
+      _partial:true
+    };
+  });
+  return out;
+}
+async function ensurePageFull(id){
+  const pg=pages[id];
+  if(!pg || !pg._partial || !isDesktop || !pg.path) return pg||null;
+  const key=(activeBaseId||'')+':'+id;
+  if(pageLoadCache.has(key)) return pageLoadCache.get(key);
+  const p=tauriInvoke('get_node_file', { base: activeBaseId, path: pg.path })
+    .then(full=>{
+      pages[id]=Object.assign({}, pg, full||{}, {_partial:false});
+      return pages[id];
+    })
+    .finally(()=>pageLoadCache.delete(key));
+  pageLoadCache.set(key,p);
+  return p;
+}
 
 function componentLayout(graphNodes, graphEdges){
   const adj=new Map(); graphNodes.forEach(n=>adj.set(n.id,[]));
   graphEdges.forEach(e=>{ if(adj.has(e.source)&&adj.has(e.target)){ adj.get(e.source).push(e.target); adj.get(e.target).push(e.source); } });
+  const adjSets=new Map(); adj.forEach((arr,id)=>adjSets.set(id,new Set(arr)));
   const seen=new Set(), comps=[];
   graphNodes.forEach(n=>{
     if(seen.has(n.id)) return;
@@ -253,50 +328,135 @@ function componentLayout(graphNodes, graphEdges){
     comps.push(ids);
   });
   comps.sort((a,b)=>b.length-a.length);
-  const root=Math.max(110, Math.sqrt(graphNodes.length)*14), placed=[];
+  const denseScale=graphNodes.length>1500?1.85:(graphNodes.length>900?1.52:(graphNodes.length>350?1.22:1));
+  const root=Math.max(140, Math.sqrt(graphNodes.length)*18*denseScale), placed=[];
   let ring=0, used=0;
   const anchors=comps.map((ids,i)=>{
-    const r=Math.max(i===0?112:34, Math.sqrt(ids.length)*14);
+    const r=Math.max(i===0?240:58, Math.sqrt(ids.length)*28*denseScale);
     if(i===0) return { ids, x:0, y:0, r };
     if(used>=Math.max(8, ring*8)){ ring++; used=0; }
     const slots=Math.max(8, ring*8), a=(used++/slots)*Math.PI*2 + ring*0.37;
-    const mainR=Math.max(112, Math.sqrt(comps[0].length)*14);
-    const gap=ids.length>18?52:36;
-    const dist=Math.max(root, mainR + r + gap) + ring*48;
+    const mainR=Math.max(240, Math.sqrt(comps[0].length)*28*denseScale);
+    const gap=ids.length>18?112:64;
+    const dist=Math.max(root, mainR + r + gap) + ring*64;
     return { ids, x:Math.cos(a)*dist, y:Math.sin(a)*dist, r };
   });
+  const nodeById=new Map(graphNodes.map(n=>[n.id,n]));
+  function degreeOf(id){return Math.max(0, (nodeById.get(id)&&nodeById.get(id).degree) || (adj.get(id)||[]).length);}
+  function chooseHubs(ids){
+    const ranked=[...ids].sort((a,b)=>degreeOf(b)-degreeOf(a) || a.localeCompare(b));
+    if(ids.length<=3) return ranked.slice(0,1);
+    const maxDeg=degreeOf(ranked[0]);
+    const count=Math.min(Math.max(1,Math.ceil(Math.sqrt(ids.length)/2)), ids.length>1200?18:ids.length>700?14:ids.length>70?10:ids.length>32?8:ids.length>14?5:3);
+    const threshold=Math.max(2, Math.min(maxDeg, Math.ceil(maxDeg*(ids.length>900?0.12:0.34))));
+    const minHubs=ids.length>1200?12:(ids.length>700?9:(ids.length>250?6:1));
+    const picked=ranked.filter(id=>degreeOf(id)>=threshold).slice(0,count);
+    ranked.forEach(id=>{ if(picked.length<Math.min(minHubs,count) && !picked.includes(id)) picked.push(id); });
+    return picked.slice(0,count);
+  }
   const pos=new Map();
   anchors.forEach((c,ci)=>{
     const count=c.ids.length;
     c.ids.sort((a,b)=>(adj.get(b)||[]).length-(adj.get(a)||[]).length || a.localeCompare(b));
+    if(count===1){ pos.set(c.ids[0],{x:c.x,y:c.y,c:ci,ax:c.x,ay:c.y}); placed.push(c); return; }
+    const hubs=chooseHubs(c.ids), hubSet=new Set(hubs);
+    const hubRing=Math.max(0, Math.min(c.r*0.66, 64 + hubs.length*26 + Math.sqrt(count)*13*denseScale));
+    hubs.forEach((id,i)=>{
+      const a=hubs.length===1?0:(i/hubs.length)*Math.PI*2 + ci*0.31;
+      const rr=hubs.length===1?0:hubRing;
+      const x=c.x+Math.cos(a)*rr, y=c.y+Math.sin(a)*rr;
+      pos.set(id,{x,y,c:ci,ax:x,ay:y});
+    });
+    const groups=new Map(hubs.map(id=>[id,[]]));
     c.ids.forEach((id,i)=>{
-      const deg=(adj.get(id)||[]).length;
-      if(count===1){ pos.set(id,{x:c.x,y:c.y,c:ci}); return; }
-      const turns=Math.ceil(Math.sqrt(count)), a=i*2.39996323;
-      const rr=(Math.sqrt(i+0.5)/Math.sqrt(count))*c.r + (deg?0:22);
-      pos.set(id,{x:c.x+Math.cos(a)*rr,y:c.y+Math.sin(a)*rr,c:ci});
+      if(hubSet.has(id)) return;
+      let best=hubs[0], bestScore=-Infinity;
+      const idNbs=adjSets.get(id)||new Set();
+      hubs.forEach((h,hi)=>{
+        const hubNbs=adjSets.get(h)||new Set();
+        const direct=idNbs.has(h)?4:0;
+        let shared=0; idNbs.forEach(nb=>{ if(hubNbs.has(nb)) shared++; });
+        const score=direct+shared*0.35+degreeOf(h)*0.025-hi*0.01;
+        if(score>bestScore){bestScore=score;best=h;}
+      });
+      if(!best) best=hubs[i%hubs.length];
+      groups.get(best).push(id);
+    });
+    groups.forEach((members,hid)=>{
+      const hp=pos.get(hid)||{x:c.x,y:c.y};
+      members.sort((a,b)=>degreeOf(b)-degreeOf(a) || a.localeCompare(b));
+      const m=members.length;
+      members.forEach((id,i)=>{
+        const deg=degreeOf(id), a=i*2.39996323 + (degreeOf(hid)%11)*0.17;
+        const localR=Math.max(52, Math.sqrt(m)*22*denseScale + 34);
+        const rr=localR*(0.62+0.82*Math.sqrt((i+0.5)/Math.max(1,m))) + (deg?0:24);
+        const x=hp.x+Math.cos(a)*rr, y=hp.y+Math.sin(a)*rr;
+        pos.set(id,{x,y,c:ci,ax:x,ay:y,hub:hid});
+      });
+    });
+    let maxR=0;
+    c.ids.forEach(id=>{ const p=pos.get(id); if(p) maxR=Math.max(maxR,Math.hypot(p.x-c.x,p.y-c.y)); });
+    c.r=Math.max(c.r,maxR+96);
+    c.hubs=hubs;
+    c.ids.forEach(id=>{
+      const p=pos.get(id);
+      if(p){ p.cx=c.x; p.cy=c.y; }
     });
     placed.push(c);
   });
   return {pos, components:anchors};
 }
 
+function graphDegreeStats(graphNodes, graphEdges){
+  const degree=new Map(graphNodes.map(n=>[n.id,0]));
+  graphEdges.forEach(e=>{
+    if(degree.has(e.source)) degree.set(e.source,(degree.get(e.source)||0)+1);
+    if(degree.has(e.target)) degree.set(e.target,(degree.get(e.target)||0)+1);
+  });
+  graphNodes.forEach(n=>{ if(degree.has(n.id)) degree.set(n.id,Math.max(degree.get(n.id)||0,Math.max(0,n.degree||0))); });
+  const vals=[...degree.values()].sort((a,b)=>a-b), max=vals[vals.length-1]||1;
+  const p75=vals.length?vals[Math.floor((vals.length-1)*0.75)]:1;
+  const pivot=Math.max(2, Math.min(Math.max(3,p75), Math.sqrt(max)*1.6));
+  const hubThreshold=Math.max(3, vals[Math.floor((vals.length-1)*0.82)]||3);
+  return {degree,max,pivot,hubThreshold};
+}
+
 function loadGraph(g, baseId){
   const saved=baseId?layoutCache.get(baseId):null;
+  const stats=graphDegreeStats(g.nodes, g.edges);
   const layout = saved ? null : componentLayout(g.nodes, g.edges);
   byId={};
   nodes = g.nodes.map((n,i)=>{
     const p=(saved&&saved[n.id]) || (layout&&layout.pos.get(n.id)) || {x:0,y:0,c:0};
-    const node=Object.assign({}, n, {x:p.x, y:p.y, vx:0, vy:0, component:p.c||0});
+    const deg=stats.degree.get(n.id) || n.degree || 0;
+    const centrality=stats.max>0 ? Math.log1p(deg)/Math.log1p(stats.max) : 0;
+    const radius=n.external?clamp(4.5+1.4*centrality,4.5,6.2):clamp(5.4+7.6*(1-Math.exp(-deg/stats.pivot)),5.6,13.4);
+    const node=Object.assign({}, n, {
+      degree:deg, centrality, radius,
+      x:p.x, y:p.y, vx:0, vy:0, component:p.c||0,
+      anchorX:finite(p.ax)?p.ax:p.x, anchorY:finite(p.ay)?p.ay:p.y,
+      homeX:finite(p.cx)?p.cx:((graphComponents[p.c]||{}).x||0),
+      homeY:finite(p.cy)?p.cy:((graphComponents[p.c]||{}).y||0),
+      hubParent:p.hub||null
+    });
     byId[n.id]=node; return node;
   });
   edges = g.edges.map(e=>Object.assign({}, e));
   assignEdgeLanes();
   graphComponents = saved ? (saved.__components||[]) : (layout?layout.components:[]);
-  // hub = top-6 by degree (real nodes)
-  const ranked=[...nodes].filter(n=>!n.external).sort((a,b)=>b.degree-a.degree);
-  const hubSet=new Set(ranked.slice(0,6).map(n=>n.id));
-  nodes.forEach(n=>n.hub=hubSet.has(n.id));
+  if(saved){
+    nodes.forEach(n=>{ n.anchorX=n.x; n.anchorY=n.y; const c=graphComponents[n.component]||{x:0,y:0}; n.homeX=c.x; n.homeY=c.y; });
+  }else{
+    graphComponents.forEach((c,ci)=>{
+      const ids=c.ids||[];
+      const ranked=ids.map(id=>byId[id]).filter(n=>n&&!n.external).sort((a,b)=>b.degree-a.degree || String(a.id).localeCompare(String(b.id)));
+      const count=Math.min(Math.max(1,Math.ceil(Math.sqrt(ranked.length)/2)), ranked.length>70?10:ranked.length>32?8:ranked.length>14?5:3);
+      const hubs=new Set((c.hubs&&c.hubs.length?c.hubs:ranked.filter(n=>n.degree>=stats.hubThreshold).slice(0,count).map(n=>n.id)));
+      ranked.forEach((n,i)=>{ if(i<count && n.degree>=Math.max(2,stats.hubThreshold*0.72)) hubs.add(n.id); });
+      ids.forEach(id=>{ const n=byId[id]; if(n){ n.hub=hubs.has(id); n.homeX=c.x; n.homeY=c.y; } });
+    });
+  }
+  nodes.forEach(n=>{ if(n.hub==null) n.hub=!n.external && n.degree>=stats.hubThreshold; });
   // pre-build neighbor map — O(1) lookup instead of O(e) per mousemove
   neighborMap=new Map(); nodes.forEach(n=>neighborMap.set(n.id,new Set()));
   edges.forEach(e=>{ const sn=neighborMap.get(e.source), tn=neighborMap.get(e.target); if(sn)sn.add(e.target); if(tn)tn.add(e.source); });
@@ -309,7 +469,13 @@ function loadGraph(g, baseId){
   const warm=saved?0:(nodes.length>900?0:nodes.length>350?2:10);
   for(let i=0;i<warm;i++) tick(0.9*Math.pow(0.985,i)+0.02);
   boundLayout();
-  relaxNodeCollisions(saved?8:4);
+  const hugeGraph=nodes.length>1500;
+  relaxNodeCollisions(saved?8:(hugeGraph?14:4));
+  if(hugeGraph && !saved){
+    alpha=0;
+    simSettled=true;
+    settledFrames=999;
+  }
   if(baseId) rememberLayout(baseId);
   fitView();
 }
@@ -364,6 +530,22 @@ class QNode{
     }
   }
 }
+function applyDragRepulsion(source,a,cfg){
+  if(!source) return;
+  const sx=source.x, sy=source.y, sr=nodeR(source);
+  const reach=clamp(92 + sr*7 + Math.sqrt(Math.max(1,source.degree||1))*18, 105, 260);
+  nodes.forEach(n=>{
+    if(n===source || n===drag) return;
+    let dx=n.x-sx, dy=n.y-sy, d=Math.hypot(dx,dy);
+    if(!d){const j=jitterUnit(source.id+'|drag|'+n.id);dx=j.x;dy=j.y;d=1;}
+    const sep=sr+nodeR(n)+18;
+    if(d>reach && d>sep) return;
+    const overlap=Math.max(0, sep-d);
+    const falloff=Math.max(0, 1-d/reach);
+    const f=Math.min(cfg.repulsionMax*1.8, overlap*0.22 + cfg.dragRepulsion*falloff*falloff) * Math.max(0.35,a);
+    n.vx+=(dx/d)*f; n.vy+=(dy/d)*f;
+  });
+}
 function tick(a){
   const M=nodes.length;
   if(M===0) return;
@@ -379,18 +561,27 @@ function tick(a){
   const root=new QNode(mnx-qs*0.1, mny-qs*0.1, qs*1.2, qs*1.2);
   for(let i=0;i<M;i++) root.insert(nodes[i].x, nodes[i].y, nodes[i]);
   for(let i=0;i<M;i++) root.force(nodes[i].x, nodes[i].y, nodes[i], a, cfg);
+  if(dragRepel && performance.now()>=dragRepel.until) dragRepel=null;
+  const activeRepel=drag || (dragRepel ? dragRepel.node : null);
+  applyDragRepulsion(activeRepel,a,cfg);
   // --- edge spring forces ---
   const L=cfg.edgeLength;
   edges.forEach(e=>{const s=byId[e.source],t=byId[e.target]; if(!s||!t)return;
     let dx=t.x-s.x,dy=t.y-s.y,d=Math.sqrt(dx*dx+dy*dy)||0.01;
+    const hubSlack=(s.hub||t.hub)?1.18:1;
+    const target=L*hubSlack + (nodeR(s)+nodeR(t))*1.8;
     const degWeight=1/Math.sqrt(Math.max(1,((s.degree||1)+(t.degree||1))*0.5));
-    const f=clamp((d-L)*cfg.spring*a*degWeight,-cfg.springMax,cfg.springMax),fx=(dx/d)*f,fy=(dy/d)*f;
+    const f=clamp((d-target)*cfg.spring*a*degWeight,-cfg.springMax,cfg.springMax),fx=(dx/d)*f,fy=(dy/d)*f;
     s.vx+=fx;s.vy+=fy;t.vx-=fx;t.vy-=fy;});
   nodes.forEach(n=>{
     const c=graphComponents[n.component]||{x:0,y:0};
-    const pull=cfg.componentPull;
+    const pull=cfg.componentPull, ap=cfg.anchorPull*(n.hub?0.78:1);
     n.vx+=(c.x-n.x)*pull*a;
     n.vy+=(c.y-n.y)*pull*a;
+    if(n!==drag && finite(n.anchorX) && finite(n.anchorY)){
+      n.vx+=(n.anchorX-n.x)*ap*a;
+      n.vy+=(n.anchorY-n.y)*ap*a;
+    }
   });
   nodes.forEach(n=>{
     if(n===drag){n.vx=0;n.vy=0;return;}
@@ -399,27 +590,42 @@ function tick(a){
     n.x+=n.vx;n.y+=n.vy;n.vx*=0.82;n.vy*=0.82;
     containNode(n, graphComponents[n.component]||graphComponents[0]);
   });
-  relaxNodeCollisions();
+  relaxNodeCollisions(activeRepel?3:1, activeRepel||drag);
   edgeSpatial=null; edgeSpatialVersion++;
 }
 function toScreen(x,y){return [(x*view.k)+view.x+W/2,(y*view.k)+view.y+H/2];}
 function toWorld(sx,sy){return [(sx-W/2-view.x)/view.k,(sy-H/2-view.y)/view.k];}
-function nodeR(n){return n.external?5:(n.hub?10:6);}
-function fitView(){
-  if(!nodes.length)return;
+function nodeR(n){return (n&&finite(n.radius))?n.radius:(n&&n.external?5:(n&&n.hub?10:6));}
+function graphBounds(){
+  if(!nodes.length) return null;
   let mnx=1e9,mny=1e9,mxx=-1e9,mxy=-1e9;
   nodes.forEach(n=>{
     if(!finite(n.x)||!finite(n.y))return;
     const r=nodeR(n)+4;
     mnx=Math.min(mnx,n.x-r);mny=Math.min(mny,n.y-r);mxx=Math.max(mxx,n.x+r);mxy=Math.max(mxy,n.y+r);
   });
-  if(!finite(mnx)||!finite(mxx))return;
+  if(!finite(mnx)||!finite(mxx))return null;
+  return {mnx,mny,mxx,mxy,gw:mxx-mnx||1,gh:mxy-mny||1};
+}
+function fitScale(bounds=graphBounds()){
+  if(!bounds)return 1;
   const edge=Math.min(W||900,H||600);
   const pad=Math.max(56,Math.min(132,edge*0.085));
-  const gw=mxx-mnx||1,gh=mxy-mny||1,usableW=Math.max(100,W-pad*2),usableH=Math.max(100,H-pad*2);
+  const usableW=Math.max(100,W-pad*2),usableH=Math.max(100,H-pad*2);
   const cap=nodes.length>1500?1.75:nodes.length>700?2.15:nodes.length>250?2.55:3.1;
-  const k=Math.min(usableW/gw,usableH/gh,cap);
-  view.k=k;view.x=-((mnx+mxx)/2)*k;view.y=-((mny+mxy)/2)*k;
+  return Math.min(usableW/bounds.gw,usableH/bounds.gh,cap);
+}
+function zoomMin(){
+  // Fit can be far below 0.25 on large graphs. Let users zoom well past fit,
+  // while keeping a tiny floor to avoid singular world/screen transforms.
+  return Math.max(0.0005, Math.min(0.02, fitScale()*0.08));
+}
+function zoomMax(){return 32;}
+function clampZoom(k){return Math.max(zoomMin(),Math.min(zoomMax(),k));}
+function fitView(){
+  const b=graphBounds(); if(!b)return;
+  const k=fitScale(b);
+  view.k=k;view.x=-((b.mnx+b.mxx)/2)*k;view.y=-((b.mny+b.mxy)/2)*k;
 }
 function neighborsOf(id){return neighborMap.get(id)||new Set();}
 function recomputeFocus(){const id=(selected&&selected.id)||(hover&&hover.id)||null;focusNeighbors=id?neighborsOf(id):new Set();}
@@ -462,6 +668,10 @@ function draw(){
   const wt = Math.min(y1, y2), wb = Math.max(y1, y2);
   function inView(n){ return n.x >= wl && n.x <= wr && n.y >= wt && n.y <= wb; }
   // ---
+  let visibleNodes=0, visibleEdges=0;
+  nodes.forEach(n=>{ if(inView(n)) visibleNodes++; });
+  edges.forEach(e=>{ const s=byId[e.source],t=byId[e.target]; if(s&&t&&(inView(s)||inView(t))) visibleEdges++; });
+  renderDensity=densityRenderStyle(visibleNodes,visibleEdges);
   edges.forEach(e=>{
     const s=byId[e.source],t=byId[e.target]; if(!s||!t)return;
     // cull: skip if both endpoints off-screen
@@ -481,6 +691,26 @@ function draw(){
   });
   drawLabels(focusId);
 }
+function densityRenderStyle(visibleNodes,visibleEdges){
+  const edgeDensity=clamp01((visibleEdges-260)/2200);
+  const nodeDensity=clamp01((visibleNodes-220)/1200);
+  const zoomCrowd=clamp01((0.72-view.k)/0.62);
+  const fade=clamp01(Math.max(edgeDensity,nodeDensity)*zoomCrowd);
+  const outlineFade=clamp01(Math.max(nodeDensity,edgeDensity*0.75)*zoomCrowd);
+  const nodeStrokeWidth=outlineFade>=0.72 ? 0 : 1.1*(1-outlineFade/0.72);
+  return {
+    fade, visibleNodes, visibleEdges,
+    edgeAlpha:1-0.82*fade,
+    edgeWidth:1-0.34*fade,
+    nodeStrokeAlpha:1-outlineFade,
+    nodeStrokeWidth
+  };
+}
+function densityRgba(r,g,b,a,emph=0){
+  const restore=emph===2?0.92:(emph===1?0.72:0);
+  const mul=Math.max(renderDensity.edgeAlpha,restore);
+  return `rgba(${r},${g},${b},${a*mul})`;
+}
 function drawGrid(){
   const step=34*view.k; if(step<11)return;
   const ox=((view.x+W/2)%step+step)%step, oy=((view.y+H/2)%step+step)%step;
@@ -491,28 +721,29 @@ function drawEdge(s,t,e,emph,dim){
   const line=edgeScreenLine(s,t,e,true), sx=line.x1, sy=line.y1, ex=line.x2, ey=line.y2, len=line.len, px=line.px, py=line.py;
   if(e.synthesized){ // provenance edge — faint dashed, no taper
     ctx.save();ctx.setLineDash([2,3]);
-    ctx.strokeStyle=dim?"rgba(28,33,40,0.05)":"rgba(28,33,40,0.13)";ctx.lineWidth=0.8;
+    ctx.strokeStyle=dim?densityRgba(28,33,40,0.05,emph):densityRgba(28,33,40,0.13,emph);ctx.lineWidth=0.8*renderDensity.edgeWidth;
     strokeEdgeLine(line);ctx.restore();
     maybeLabel(e,emph,line,len);return;
   }
   const neg=isNegPred(e.predicate);  // negative (`not_<X>`) — render dashed + reddish
-  let col="rgba(28,33,40,0.18)";
-  if(emph===1)col="rgba(28,33,40,0.32)"; if(emph===2)col="rgba(28,33,40,0.46)"; if(dim)col="rgba(28,33,40,0.07)";
+  let col=densityRgba(28,33,40,0.18,emph);
+  if(emph===1)col=densityRgba(28,33,40,0.32,emph); if(emph===2)col=densityRgba(28,33,40,0.46,emph); if(dim)col=densityRgba(28,33,40,0.07,emph);
   if(neg){ // reddish so a refuted relation reads as a negation on the canvas
-    col = dim?"rgba(193,75,75,0.10)":(emph===2?"rgba(193,75,75,0.62)":emph===1?"rgba(193,75,75,0.46)":"rgba(193,75,75,0.34)");
+    col = dim?densityRgba(193,75,75,0.10,emph):(emph===2?densityRgba(193,75,75,0.62,emph):emph===1?densityRgba(193,75,75,0.46,emph):densityRgba(193,75,75,0.34,emph));
   }
   if(e.symmetric){
     ctx.save();if(neg)ctx.setLineDash([4,3]);
-    ctx.strokeStyle=col;ctx.lineWidth=neg?1.1:0.9;strokeEdgeLine(line);ctx.restore();
+    ctx.strokeStyle=col;ctx.lineWidth=(neg?1.1:0.9)*renderDensity.edgeWidth;strokeEdgeLine(line);ctx.restore();
   }else if(neg){ // dashed stroked line (no solid taper) signals the negation
     ctx.save();ctx.setLineDash([4,3]);
-    ctx.strokeStyle=col;ctx.lineWidth=1.1;strokeEdgeLine(line);ctx.restore();
+    ctx.strokeStyle=col;ctx.lineWidth=1.1*renderDensity.edgeWidth;strokeEdgeLine(line);ctx.restore();
   }else if(line.curved){
-    ctx.save();ctx.strokeStyle=col;ctx.lineWidth=emph===2?1.35:emph===1?1.05:0.85;strokeEdgeLine(line);ctx.restore();
+    ctx.save();ctx.strokeStyle=col;ctx.lineWidth=(emph===2?1.35:emph===1?1.05:0.85)*renderDensity.edgeWidth;strokeEdgeLine(line);ctx.restore();
   }else{
     const w0=0.85,w1=0.42; // subtle taper: source slightly thicker than object end
+    const wm=renderDensity.edgeWidth;
     ctx.fillStyle=col;ctx.beginPath();
-    ctx.moveTo(sx+px*w0,sy+py*w0);ctx.lineTo(ex+px*w1,ey+py*w1);ctx.lineTo(ex-px*w1,ey-py*w1);ctx.lineTo(sx-px*w0,sy-py*w0);
+    ctx.moveTo(sx+px*w0*wm,sy+py*w0*wm);ctx.lineTo(ex+px*w1*wm,ey+py*w1*wm);ctx.lineTo(ex-px*w1*wm,ey-py*w1*wm);ctx.lineTo(sx-px*w0*wm,sy-py*w0*wm);
     ctx.closePath();ctx.fill();
   }
   maybeLabel(e,emph,line,len);
@@ -539,7 +770,11 @@ function drawNodeCircle(n,a,isFocus){
     ctx.beginPath();ctx.arc(x,y,r+13,0,7);ctx.fillStyle=g;ctx.fill();
   }
   ctx.beginPath();ctx.arc(x,y,r,0,7);ctx.fillStyle=col;ctx.fill();
-  ctx.lineWidth=1.1;ctx.strokeStyle="rgba(18,21,26,0.92)";ctx.stroke();
+  const sw=isFocus?Math.max(1.1,renderDensity.nodeStrokeWidth):renderDensity.nodeStrokeWidth;
+  const sa=isFocus?0.92:0.92*renderDensity.nodeStrokeAlpha;
+  if(sw>0.05 && sa>0.03 && r>1.2){
+    ctx.lineWidth=sw;ctx.strokeStyle=`rgba(18,21,26,${sa})`;ctx.stroke();
+  }
   ctx.globalAlpha=1;
 }
 function drawLabels(focusId){
@@ -585,6 +820,8 @@ function loop(){
   if(alpha>0.005){
     const cfg=graphTuning(), elapsed=performance.now()-layoutStartedAt;
     if(layoutFrameCount>=cfg.maxFrames || elapsed>cfg.maxMs){
+      relaxNodeCollisions(nodes.length>900?18:8);
+      boundLayout();
       alpha=0; simSettled=true; if(activeBaseId) rememberLayout(activeBaseId);
       draw(); requestAnimationFrame(loop); return;
     }
@@ -593,9 +830,11 @@ function loop(){
     alpha*=cfg.alphaDecay/0.94;
     // energy-based settle: freeze when total kinetic energy is very low for several frames
     let ke=0; for(const n of nodes) ke+=n.vx*n.vx+n.vy*n.vy;
-    if(ke < nodes.length*cfg.settleEnergy){ settledFrames++; if(settledFrames>24){ alpha=0; simSettled=true; if(activeBaseId) rememberLayout(activeBaseId); } }
+    if(ke < nodes.length*cfg.settleEnergy){ settledFrames++; if(settledFrames>24){ relaxNodeCollisions(nodes.length>900?18:8); boundLayout(); alpha=0; simSettled=true; if(activeBaseId) rememberLayout(activeBaseId); } }
     else settledFrames=0;
   } else if(nodes.length && !simSettled){
+    relaxNodeCollisions(nodes.length>900?18:8);
+    boundLayout();
     alpha=0; simSettled=true; if(activeBaseId) rememberLayout(activeBaseId);
   }
   draw(); requestAnimationFrame(loop);
@@ -616,18 +855,21 @@ function distSeg(px,py,x1,y1,x2,y2){const dx=x2-x1,dy=y2-y1,l2=dx*dx+dy*dy;if(l2
 const tip=document.getElementById('tip');
 window.addEventListener('mousemove',ev=>{
   const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top;
-  if(drag){const [wx,wy]=toWorld(sx,sy);drag.x=wx;drag.y=wy;moved=true;alpha=Math.max(alpha,0.25);hideTip();return;}
+  if(drag){
+    const [wx,wy]=toWorld(sx,sy);drag.x=wx;drag.y=wy;drag.anchorX=wx;drag.anchorY=wy;
+    moved=true;alpha=Math.max(alpha,0.38);simSettled=false;settledFrames=0;hideTip();return;
+  }
   if(panning){view.x+=sx-panning.x;view.y+=sy-panning.y;panning={x:sx,y:sy};moved=true;hideTip();return;}
   if(sx<0||sy<0||sx>rect.width||sy>rect.height){if(hover||hoverEdge){hover=null;hoverEdge=null;recomputeFocus();}hideTip();return;}
   const n=pickNode(sx,sy);hover=n;hoverEdge=n?null:pickEdge(sx,sy);recomputeFocus();
   cv.style.cursor=(n||hoverEdge)?'pointer':'grab';
-  if(n)showTip(sx,sy,n.label||n.id,(n.type||'')+(n.subtype?' · '+n.subtype:''));
+  if(n)showTip(sx,sy,n.label||n.id,(n.type||'')+(n.subtype?' · '+n.subtype:'')+' · degree '+(n.degree||0));
   else if(hoverEdge)showTip(sx,sy,predLabel(hoverEdge.predicate),hoverEdge.source+(hoverEdge.symmetric?' ⇄ ':' → ')+hoverEdge.target);
   else hideTip();
 });
 function showTip(sx,sy,a,b){tip.style.display='block';tip.style.left=(sx+14)+'px';tip.style.top=(sy+14)+'px';tip.innerHTML=`${esc(a)}<br><span class="tp">${esc(b)}</span>`;}
 function hideTip(){tip.style.display='none';}
-cv.addEventListener('mousedown',ev=>{const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top;moved=false;const n=pickNode(sx,sy);if(n){drag=n; if(simSettled){alpha=1;simSettled=false;settledFrames=0;}}else panning={x:sx,y:sy};cv.classList.add('grabbing');});
+cv.addEventListener('mousedown',ev=>{const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top;moved=false;const n=pickNode(sx,sy);if(n){drag=n;dragRepel=null;drag.anchorX=drag.x;drag.anchorY=drag.y;alpha=Math.max(alpha,simSettled?0.9:0.42);simSettled=false;settledFrames=0;}else panning={x:sx,y:sy};cv.classList.add('grabbing');});
 window.addEventListener('mouseup',ev=>{
   // Only handle releases that BEGAN on the canvas. A canvas mousedown always sets
   // drag (a node) or panning (empty space); a click on the detail panel, preview
@@ -641,9 +883,19 @@ window.addEventListener('mouseup',ev=>{
     if(n){selected=n;selectedEdge=null;recomputeFocus();showNodeDetail(n);}
     else{const e=pickEdge(sx,sy);if(e){selectedEdge=e;selected=null;recomputeFocus();showEdgeDetail(e);}else{selected=null;selectedEdge=null;recomputeFocus();closeDetail();}}
   }
+  if(drag&&moved){
+    drag.anchorX=drag.x;drag.anchorY=drag.y;
+    clearSpaceAroundNode(drag,10);
+    dragRepel={node:drag,until:performance.now()+1100};
+    alpha=Math.max(alpha,0.72);simSettled=false;settledFrames=0;
+  }
   drag=null;panning=null;
 });
-cv.addEventListener('wheel',ev=>{ev.preventDefault();const rect=cv.getBoundingClientRect(),sx=ev.clientX-rect.left,sy=ev.clientY-rect.top,[wx,wy]=toWorld(sx,sy);const nk=Math.max(0.25,Math.min(5,view.k*Math.exp(-ev.deltaY*0.0014)));view.k=nk;view.x=sx-W/2-wx*view.k;view.y=sy-H/2-wy*view.k; if(simSettled){alpha=0.25;simSettled=false;settledFrames=0;} },{passive:false});
+cv.addEventListener('wheel',ev=>{
+  ev.preventDefault();
+  const rect=cv.getBoundingClientRect(), sx=ev.clientX-rect.left, sy=ev.clientY-rect.top;
+  zoomAt(sx, sy, Math.exp(-ev.deltaY*0.0014));
+},{passive:false});
 
 /* ---------- detail panels ---------- */
 const detail=document.getElementById('detail');
@@ -665,6 +917,18 @@ function showNodeDetail(n){
       <div class="d-body">${incomingSection(n.id)}</div>`;
     currentDetailPath=null;detail.classList.add('open');wireDetail();return;
   }
+  if(pg && pg._partial && isDesktop){
+    detail.innerHTML=`<div class="d-head"><button class="d-close" id="dClose">×</button>
+      <span class="d-badge" style="background:${col}">${esc(typeStr(pg.node_type||n.type))}</span>
+      <div class="d-id">${esc(n.id)}</div></div>
+      <div class="d-body"><div class="d-section"><span class="pv-missing">Loading node details…</span></div></div>`;
+    currentDetailPath=pg.path||null; detail.classList.add('open'); wireDetail();
+    ensurePageFull(n.id)
+      .then(()=>{ if(selected===n) showNodeDetail(n); })
+      .catch(e=>{ if(selected===n) detail.querySelector('.d-body').innerHTML='<div class="d-section"><span class="pv-missing">Could not load node details: '+esc(String((e&&e.message)||e))+'</span></div>'; });
+    return;
+  }
+  if(!pg) return;
   const out=outEdges(n.id);
   const groups={};out.forEach(e=>{(groups[e.predicate]=groups[e.predicate]||[]).push(e);});
   let eh='';
@@ -728,10 +992,22 @@ function nodeFrontmatterHtml(pg,n){
   const body=rows.filter(Boolean).join('');
   return body?`<div class="kv">${body}</div>`:'';
 }
+function safeHref(url){
+  const raw=String(url||'').trim();
+  if(!raw) return '';
+  try{
+    const u=new URL(raw, window.location.href);
+    if(u.protocol==='http:' || u.protocol==='https:' || u.protocol==='mailto:') return esc(u.href);
+  }catch(e){}
+  return '';
+}
+function externalLink(label,url,text){
+  const href=safeHref(url), shown=text||label;
+  return href?`<a class="cite" href="${href}" target="_blank" rel="noopener noreferrer">${esc(shown)}</a>`:`<code>${esc(shown)}</code>`;
+}
 /* Source / Provenance — for a source node (one with raw_source[]) on desktop,
-   pull the ingested source's raw/<id>/meta.yaml via the source_info connector and
-   render origin + credibility + ids + figures. Mirrors loadRawSource()'s
-   desktop-only behaviour; a missing meta.yaml just omits the section. */
+   pull only the small ingested source metadata at raw/<id>/meta.yaml via the
+   source_info connector. Raw bodies, PDFs, and extracted images stay on disk. */
 async function hydrateSourceProvenance(pg){
   const sec=document.getElementById('sourceSection'); if(!sec) return;
   if(!pg || !pg.raw_source || !pg.raw_source.length) return;
@@ -750,15 +1026,15 @@ async function hydrateSourceProvenance(pg){
   const tier=cred.tier||'unknown';
   const tierClass = TIER_RANK[tier]>=5?'tier-hi':TIER_RANK[tier]>=3?'tier-mid':'tier-lo';
   const idLinks=[];
-  const idLink=(k,v,url)=>{ if(v) idLinks.push(url?`<a class="cite" href="${esc(url)}" target="_blank" rel="noopener">${esc(k)}:${esc(v)}</a>`:`<code>${esc(k)}:${esc(v)}</code>`); };
-  idLink('doi', ids.doi, ids.doi?('https://doi.org/'+ids.doi):null);
-  idLink('pmid', ids.pmid, ids.pmid?('https://pubmed.ncbi.nlm.nih.gov/'+ids.pmid):null);
-  idLink('pmcid', ids.pmcid, ids.pmcid?('https://www.ncbi.nlm.nih.gov/pmc/articles/'+ids.pmcid):null);
-  idLink('arxiv', ids.arxiv, ids.arxiv?('https://arxiv.org/abs/'+ids.arxiv):null);
+  const idLink=(k,v,url)=>{ if(v) idLinks.push(url?externalLink(k,url,`${k}:${v}`):`<code>${esc(k)}:${esc(v)}</code>`); };
+  idLink('doi', ids.doi, ids.doi?('https://doi.org/'+encodeURIComponent(String(ids.doi))):null);
+  idLink('pmid', ids.pmid, ids.pmid?('https://pubmed.ncbi.nlm.nih.gov/'+encodeURIComponent(String(ids.pmid))):null);
+  idLink('pmcid', ids.pmcid, ids.pmcid?('https://www.ncbi.nlm.nih.gov/pmc/articles/'+encodeURIComponent(String(ids.pmcid))):null);
+  idLink('arxiv', ids.arxiv, ids.arxiv?('https://arxiv.org/abs/'+encodeURIComponent(String(ids.arxiv))):null);
   idLink('isbn', ids.isbn, null);
   const urlLinks=[];
-  if(info.url) urlLinks.push(`<a class="cite" href="${esc(info.url)}" target="_blank" rel="noopener">url</a>`);
-  if(info.final_url && info.final_url!==info.url) urlLinks.push(`<a class="cite" href="${esc(info.final_url)}" target="_blank" rel="noopener">final_url</a>`);
+  if(info.url) urlLinks.push(externalLink('url', info.url));
+  if(info.final_url && info.final_url!==info.url) urlLinks.push(externalLink('final_url', info.final_url));
   const figs=Array.isArray(info.figures)?info.figures:[];
   let figHtml='';
   if(figs.length){
@@ -796,6 +1072,18 @@ function incomingSection(id){
   return h+`</div>`;
 }
 function showEdgeDetail(e){
+  const srcPg=pages[e.source];
+  if(srcPg && srcPg._partial && isDesktop){
+    detail.innerHTML=`<div class="d-head"><button class="d-close" id="dClose">×</button>
+      <span class="d-badge" style="background:#7a828e">EDGE</span>
+      <div class="d-id">${esc(e.source+' '+predLabel(e.predicate)+' '+e.target)}</div></div>
+      <div class="d-body"><div class="d-section"><span class="pv-missing">Loading edge source details…</span></div></div>`;
+    currentDetailPath=srcPg.path||null; detail.classList.add('open'); wireDetail();
+    ensurePageFull(e.source)
+      .then(()=>{ if(selectedEdge===e) showEdgeDetail(e); })
+      .catch(err=>{ if(selectedEdge===e) detail.querySelector('.d-body').innerHTML='<div class="d-section"><span class="pv-missing">Could not load edge details: '+esc(String((err&&err.message)||err))+'</span></div>'; });
+    return;
+  }
   const sc=nodeColor(e.source),tc=nodeColor(e.target),sym=e.symmetric,neg=isNegPred(e.predicate);
   // Prefer the full page-edge stats (complete bundle); fall back to the graph edge.
   const full=edgeFull(e), st=(full&&full.stats)||e.stats||{};
@@ -811,7 +1099,7 @@ function showEdgeDetail(e){
   const qualHtml=qRows.length?`<div class="d-section"><h5>Qualifiers</h5><div class="kv">${qRows.join('')}</div></div>`:'';
   // publications[] (out-links) from the full page edge — BEFORE stats (file order).
   const pubs=(full&&full.publications)||[];
-  const pubHtml=pubs.length?`<div class="d-section"><h5>Publications (${pubs.length})</h5><div class="pub-list">${pubs.map(p=>{const ext=/^https?:\/\//i.test(p);return ext?`<a class="cite" href="${esc(p)}" target="_blank" rel="noopener">${esc(p)}</a>`:`<span class="cite" data-cite="${esc(p)}">${esc(p)}</span>`;}).join('')}</div></div>`:'';
+  const pubHtml=pubs.length?`<div class="d-section"><h5>Publications (${pubs.length})</h5><div class="pub-list">${pubs.map(p=>{const href=safeHref(p);return href?`<a class="cite" href="${href}" target="_blank" rel="noopener noreferrer">${esc(p)}</a>`:`<span class="cite" data-cite="${esc(p)}">${esc(p)}</span>`;}).join('')}</div></div>`:'';
   // direction / aspect — plain rows, no privileged labels.
   const dir=(full&&full.direction)||st.direction, asp=(full&&full.aspect)||st.aspect;
   const dirRows=[kvPlain('direction',dir),kvPlain('aspect',asp)].filter(Boolean).join('');
@@ -877,31 +1165,27 @@ function wireCites(root, fromPath){
 const previewEl=document.getElementById('preview'), previewScrim=document.getElementById('previewScrim');
 function openPreview(ref, fromPath){
   const id=resolveCite(ref, fromPath);
+  previewEl.dataset.ref=String(ref||'');
   if(!id || !pages[id]){
     previewEl.innerHTML=`<div class="pv-head"><div><div class="pv-eyebrow">Citation</div><div class="pv-title">Source not in this base</div></div><button class="pv-close" id="pvClose">×</button></div>
       <div class="pv-body"><div class="pv-missing">“${esc(ref||'')}” isn’t a document in this knowledge base.</div></div>`;
   }else{
     const pg=pages[id], col=nodeColor(id);
-    const hasRaw = pg.raw_source && pg.raw_source.length;
-    const rawBlock = hasRaw
-      ? `<div class="pv-raw"><div class="pv-rawhead">Original paper · <code>${esc(pg.raw_source[0])}</code></div><div class="md" id="pvRawBody"><span class="pv-missing">Loading source…</span></div></div>`
+    if(pg._partial && isDesktop){
+      previewEl.innerHTML=`<div class="pv-head"><span class="pv-badge" style="background:${col}">${esc(typeStr(pg.node_type))}</span><div><div class="pv-eyebrow">Cited source</div><div class="pv-title">${esc(id)}</div></div><button class="pv-close" id="pvClose">×</button></div>
+        <div class="pv-body"><div class="pv-missing">Loading source details…</div></div>`;
+      ensurePageFull(id).then(()=>{ if(previewEl.classList.contains('open') && previewEl.dataset.ref===String(ref||'')) openPreview(ref, fromPath); }).catch(()=>{});
+    }else{
+    const sourcePath = pg.raw_source && pg.raw_source.length
+      ? `<div class="pv-raw text-only"><div class="pv-rawhead">Original source · <code>${esc(pg.raw_source[0])}</code></div><div class="pv-missing">Raw files are kept on disk and are not loaded in Studio.</div></div>`
       : '';
     previewEl.innerHTML=`<div class="pv-head"><span class="pv-badge" style="background:${col}">${esc(typeStr(pg.node_type))}</span><div><div class="pv-eyebrow">Cited source</div><div class="pv-title">${esc(id)}</div></div><button class="pv-close" id="pvClose">×</button></div>
-      <div class="pv-body">${pg.description?`<div class="d-desc" style="margin-bottom:10px">${esc(pg.description)}</div>`:''}<div class="md">${renderMd(pg.body||'')}</div>${rawBlock}</div>`;
+      <div class="pv-body">${pg.description?`<div class="d-desc" style="margin-bottom:10px">${esc(pg.description)}</div>`:''}<div class="md">${renderMd(pg.body||'')}</div>${sourcePath}</div>`;
     wireCites(previewEl, pg.path||null);
-    if(hasRaw) loadRawSource(activeBaseId, pg.raw_source[0]);
+    }
   }
   previewEl.classList.add('open'); previewScrim.classList.add('open');
   const c=document.getElementById('pvClose'); if(c) c.onclick=closePreview;
-}
-/* Load the original ingested paper (raw/source.md) into an open preview. */
-async function loadRawSource(base, path){
-  const el=document.getElementById('pvRawBody'); if(!el) return;
-  if(!isDesktop){ el.innerHTML='<span class="pv-missing">Open the desktop app to read the original source paper.</span>'; return; }
-  try{
-    const text=await tauriInvoke('read_bundle_file', { base, path });
-    el.innerHTML=renderMd(text||'');
-  }catch(e){ el.innerHTML='<span class="pv-missing">Could not load source: '+esc(String((e&&e.message)||e))+'</span>'; }
 }
 function closePreview(){ previewEl.classList.remove('open'); previewScrim.classList.remove('open'); }
 
@@ -957,7 +1241,7 @@ async function saveFileEditor(path, label){
     // reflect the edit, then re-open the same node/edge detail.
     const r=editorReturn; editorReturn=null;
     const b=BASES.find(x=>x.id===activeBaseId);
-    bundleCache.delete(activeBaseId); layoutCache.delete(activeBaseId);
+    bundleCache.delete(activeBaseId); layoutCache.delete(activeBaseId); pageLoadCache.clear();
     if(b) await selectBase(b);   // reloads pages/graph; clears selection + detail
     if(r&&r.kind==='node'){ const n=byId[r.node.id]; if(n){ selected=n;selectedEdge=null;recomputeFocus();showNodeDetail(n); } }
     else if(r&&r.kind==='edge'){ const e=edges.find(x=>x.source===r.edge.source&&x.predicate===r.edge.predicate&&x.target===r.edge.target); if(e){ selectedEdge=e;selected=null;recomputeFocus();showEdgeDetail(e); } else closeDetail(); }
@@ -1096,7 +1380,7 @@ function showKbMenu(ev,b){
 }
 function clearGraphView(){
   activeBaseId=null; pages={}; currentLog=''; currentUpdated=null; currentLint=null;
-  nodes=[]; edges=[]; byId={}; graphComponents=[]; neighborMap=new Map(); bundleCache.clear(); layoutCache.clear();
+  nodes=[]; edges=[]; byId={}; graphComponents=[]; neighborMap=new Map(); bundleCache.clear(); layoutCache.clear(); lintCache.clear(); pageLoadCache.clear();
   selected=null; selectedEdge=null; hover=null; hoverEdge=null; focusNeighbors=new Set(); closeDetail(); closeLog(); hideTip();
   document.getElementById('tbTitle').textContent='No knowledge bases';
   document.getElementById('tbSub').textContent='0 nodes · 0 edges';
@@ -1110,7 +1394,7 @@ async function removeRegisteredBase(b){
   hideKbMenu();
   try{
     await tauriInvoke('remove_base',{id:b.id});
-    bundleCache.delete(b.id); layoutCache.delete(b.id);
+    bundleCache.delete(b.id); layoutCache.delete(b.id); pageLoadCache.clear();
     BASES=await loadBases(); lastBasesSig=basesSig(BASES); renderSidebar();
     if(activeBaseId===b.id){
       if(BASES.length) await selectBase(BASES[0]);
@@ -1144,9 +1428,41 @@ function updateChrome(b){
   document.getElementById('tbTitle').textContent=b.name;
   document.getElementById('tbSub').textContent=`${b.node_count!=null?b.node_count:nodes.filter(n=>!n.external).length} nodes · ${b.edge_count!=null?b.edge_count:edges.filter(e=>!e.synthesized).length} edges`;
   const pill=document.getElementById('lintPill');
-  if(b.lint){pill.style.display='inline-flex';pill.innerHTML=`<span class="e">${b.lint.errors}</span> err · <span class="w">${b.lint.warnings}</span> warn`;currentLintFindings=(b.lint&&b.lint.findings)||[];}
-  else {pill.style.display='none';currentLintFindings=[];}
+  const lint=(b&&b.lint) || (activeBaseId&&lintCache.get(activeBaseId)) || currentLint || null;
+  const counts=lintCounts(lint), errors=counts.errors, warnings=counts.warnings;
+  pill.style.display='inline-flex';
+  pill.innerHTML=`<span class="e">${errors}</span> err · <span class="w">${warnings}</span> warn`;
+  pill.title=(lint&&lint.findings)?'Show issues':'Lint report loading';
+  currentLintFindings=(lint&&lint.findings)||[];
   closeLintPop();
+}
+function lintCounts(lint){
+  if(!lint) return {errors:0,warnings:0,infos:0};
+  if(Array.isArray(lint.findings)){
+    return {
+      errors:lint.findings.filter(f=>f&&f.severity==='error').length,
+      warnings:lint.findings.filter(f=>f&&f.severity==='warn').length,
+      infos:lint.findings.filter(f=>f&&f.severity==='info').length
+    };
+  }
+  return {errors:Number(lint.errors)||0,warnings:Number(lint.warnings)||0,infos:Number(lint.infos)||0};
+}
+async function refreshLintForActiveBase(baseId, seq){
+  if(!baseId) return;
+  const known=lintCache.get(baseId);
+  if(known){ currentLint=known; updateChrome(BASES.find(x=>x.id===baseId)||{name:baseId,lint:known}); return; }
+  if(!isDesktop) return;
+  try{
+    const report=await tauriInvoke('lint_bundle', { id: baseId });
+    if(seq!==selectSeq || activeBaseId!==baseId) return;
+    lintCache.set(baseId, report);
+    currentLint=report;
+    const b=BASES.find(x=>x.id===baseId)||{};
+    b.lint=report;
+    updateChrome(Object.assign({}, b, {lint:report}));
+  }catch(e){
+    // Keep the pill visible with any index/bundle summary we already have.
+  }
 }
 async function selectBase(b){
   const seq=++selectSeq;
@@ -1168,7 +1484,7 @@ async function selectBase(b){
   if(seq!==selectSeq) return;
   setGraphLoading(true, b.name||b.id, 'Indexing concepts and edges', 0.54);
   await nextFrame();
-  pages=bundle.pages||{};
+  pages=(bundle.pages && Object.keys(bundle.pages).length) ? bundle.pages : pageShellsFromGraph(bundle.graph);
   currentLog=bundle.log||''; currentUpdated=bundle.updated||null; currentLint=bundle.lint||null;
   setGraphLoading(true, b.name||b.id, 'Laying out graph', 0.74);
   await nextFrame();
@@ -1176,6 +1492,7 @@ async function selectBase(b){
   // merge counts/lint from bundle if base index lacked them
   const merged=Object.assign({}, b, {node_count:bundle.node_count, edge_count:bundle.edge_count, lint:bundle.lint, name:b.name||bundle.name, updated:bundle.updated});
   updateChrome(merged);
+  refreshLintForActiveBase(b.id, seq);
   setGraphLoading(true, b.name||b.id, 'Ready', 1);
   finishGraphLoading(seq);
 }
@@ -1222,7 +1539,14 @@ function toggleLintPop(){ document.getElementById('lintPop').classList.contains(
 document.getElementById('collapseBtn').onclick=()=>{const wb=document.getElementById('wbody'),btn=document.getElementById('collapseBtn');wb.classList.toggle('collapsed');const c=wb.classList.contains('collapsed');btn.textContent=c?'›':'‹';btn.title=c?'Expand':'Collapse';setTimeout(resize,280);};
 document.getElementById('legendToggle').onclick=()=>{const lg=document.getElementById('legend');lg.classList.toggle('min');document.getElementById('legendToggle').textContent=lg.classList.contains('min')?'show':'hide';};
 const searchInput=document.getElementById('searchInput');searchInput.addEventListener('input',e=>{searchTerm=e.target.value.trim().toLowerCase();});
-function zoomBy(f){const cx=W/2,cy=H/2,[wx,wy]=toWorld(cx,cy);view.k=Math.max(0.25,Math.min(5,view.k*f));view.x=cx-W/2-wx*view.k;view.y=cy-H/2-wy*view.k;}
+function zoomAt(sx,sy,f){
+  const [wx,wy]=toWorld(sx,sy);
+  view.k=clampZoom(view.k*f);
+  view.x=sx-W/2-wx*view.k;
+  view.y=sy-H/2-wy*view.k;
+  edgeSpatial=null;
+}
+function zoomBy(f){zoomAt(W/2,H/2,f);}
 document.getElementById('zoomIn').onclick=()=>zoomBy(1.25);document.getElementById('zoomOut').onclick=()=>zoomBy(0.8);document.getElementById('zoomFit').onclick=()=>fitView();
 document.getElementById('logBtn').onclick=()=>{ document.getElementById('logDrawer').classList.contains('open') ? closeLog() : openLog(); };
 document.getElementById('logClose').onclick=closeLog;
@@ -1387,14 +1711,14 @@ window.__bokf = {
       panelOpen: !!(typeof detail!=='undefined' && detail && detail.classList.contains('open')),
       sidebarCollapsed: !!(sb && sb.classList.contains('collapsed')),
       terminalOpen: !!(tp && tp.classList.contains('open')),
-      lint: currentLint?{errors:currentLint.errors, warnings:currentLint.warnings, infos:currentLint.infos}:null,
+      lint: currentLint?lintCounts(currentLint):null,
       aiFocusKb,
       lastAgentAction: window.__bokfLastAction||null,
       bases: BASES.map(b=>({id:b.id,name:b.name,path:b.path,node_count:b.node_count,edge_count:b.edge_count}))
     };
   },
   getLayoutMetrics:()=>layoutMetrics(),
-  getGraph:()=>({nodes: nodes.map(n=>({id:n.id, type:n.type, label:n.label, external:!!n.external, degree:n.degree})), edges: edges.map(e=>({source:e.source, target:e.target, predicate:e.predicate, symmetric:!!e.symmetric, synthesized:!!e.synthesized}))})
+  getGraph:()=>({nodes: nodes.map(n=>({id:n.id, type:n.type, label:n.label, external:!!n.external, degree:n.degree, centrality:n.centrality, radius:nodeR(n), hub:!!n.hub, hubParent:n.hubParent||null})), edges: edges.map(e=>({source:e.source, target:e.target, predicate:e.predicate, symmetric:!!e.symmetric, synthesized:!!e.synthesized}))})
 };
 
 /* ---------- on-brand toast (flat banner, top-centre of the stage) ---------- */
@@ -1418,7 +1742,7 @@ async function addNewBase(){
   if(Array.isArray(path)) path=path[0];
   try{
     const added=await tauriInvoke('add_base',{path});
-    bundleCache.clear(); layoutCache.clear();
+    bundleCache.clear(); layoutCache.clear(); lintCache.clear(); pageLoadCache.clear();
     BASES=await loadBases();renderSidebar();
     const b=(added&&added.id&&BASES.find(x=>x.id===added.id)) || BASES.find(x=>x.path===path);
     if(b) await selectBase(b);
@@ -1451,7 +1775,7 @@ async function syncBases(){
   const sig=basesSig(list);
   if(sig===lastBasesSig) return;        // registry unchanged on disk
   lastBasesSig=sig;
-  bundleCache.clear(); layoutCache.clear();
+  bundleCache.clear(); layoutCache.clear(); lintCache.clear(); pageLoadCache.clear();
   BASES=list; renderSidebar();
   if(activeBaseId && !BASES.find(b=>b.id===activeBaseId)){
     // the active KB's folder was deleted/unregistered — move off it

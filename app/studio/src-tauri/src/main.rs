@@ -162,14 +162,26 @@ fn remove_base(id: String) -> Result<(), String> {
 #[tauri::command]
 fn get_bundle(id: String) -> Result<serde_json::Value, String> {
     let path = resolve(&id).ok_or_else(|| format!("unknown bundle: {id}"))?;
-    bokf_core::export::studio_bundle_doc(&path, None).map_err(|e| e.to_string())
+    bokf_core::export::studio_graph_doc(&path, None).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+fn get_node_file(base: String, path: String) -> Result<serde_json::Value, String> {
+    let rel = clean_bundle_rel(&path)?;
+    if !is_knowledge_markdown(&rel) {
+        return Err("Studio node details are limited to knowledge/*.md files".into());
+    }
+    let full = safe_existing_bundle_path(&base, &path)?;
+    let text = std::fs::read_to_string(&full).map_err(|e| e.to_string())?;
+    let node = bokf_core::parse_node(&text, &rel).map_err(|e| e.to_string())?;
+    serde_json::to_value(node).map_err(|e| e.to_string())
 }
 
 #[tauri::command]
 fn lint_bundle(id: String) -> Result<serde_json::Value, String> {
     let path = resolve(&id).ok_or_else(|| format!("unknown bundle: {id}"))?;
     let bundle = bokf_core::open_bundle(&path).map_err(|e| e.to_string())?;
-    let report = bokf_core::lint(&bundle);
+    let report = bokf_core::lint_fast(&bundle);
     serde_json::to_value(&report).map_err(|e| e.to_string())
 }
 
@@ -197,6 +209,7 @@ fn source_info(base: String, source_id: String) -> Result<serde_json::Value, Str
         || source_id.contains('/')
         || source_id.contains('\\')
         || source_id.contains("..")
+        || source_id.starts_with('.')
     {
         return Err("invalid source id".into());
     }
@@ -259,10 +272,9 @@ fn replace_frontmatter(existing: &str, new_fm: &str) -> String {
     }
 }
 
-/// Resolve `rel` inside the bundle for `base`, rejecting path traversal. The file
-/// must already exist (it is canonicalized and checked to stay under the root).
-fn safe_bundle_path(base: &str, rel: &str) -> Result<PathBuf, String> {
-    let root = resolve(base).ok_or_else(|| format!("unknown bundle: {base}"))?;
+const ROOT_TEXT_FILES: [&str; 4] = ["index.md", "log.md", "SCHEMA.md", "README.md"];
+
+fn clean_bundle_rel(rel: &str) -> Result<PathBuf, String> {
     let r = std::path::Path::new(rel);
     if r.is_absolute()
         || r.components().any(|c| {
@@ -274,27 +286,74 @@ fn safe_bundle_path(base: &str, rel: &str) -> Result<PathBuf, String> {
     {
         return Err("invalid path".into());
     }
+    if r.components().any(|c| match c {
+        std::path::Component::Normal(s) => s.to_string_lossy().starts_with('.'),
+        _ => false,
+    }) {
+        return Err("hidden files and directories are not addressable from Studio".into());
+    }
+    Ok(r.to_path_buf())
+}
+
+fn is_root_text_file(rel: &std::path::Path) -> bool {
+    rel.components().count() == 1
+        && rel
+            .to_str()
+            .map(|s| ROOT_TEXT_FILES.contains(&s))
+            .unwrap_or(false)
+}
+
+fn is_knowledge_markdown(rel: &std::path::Path) -> bool {
+    rel.starts_with("knowledge") && rel.extension().and_then(|e| e.to_str()) == Some("md")
+}
+
+fn is_readable_bundle_content(rel: &std::path::Path) -> bool {
+    is_knowledge_markdown(rel) || is_root_text_file(rel)
+}
+
+/// Resolve an existing file inside the bundle for `base`, after the caller has
+/// checked which BioOKF content areas are allowed for the operation.
+fn safe_existing_bundle_path(base: &str, rel: &str) -> Result<PathBuf, String> {
+    let root = resolve(base).ok_or_else(|| format!("unknown bundle: {base}"))?;
+    let r = clean_bundle_rel(rel)?;
     let root_c = root.canonicalize().map_err(|e| e.to_string())?;
-    let full_c = root.join(r).canonicalize().map_err(|e| e.to_string())?;
+    let full_c = root.join(&r).canonicalize().map_err(|e| e.to_string())?;
     if !full_c.starts_with(&root_c) {
         return Err("path escapes bundle".into());
     }
     Ok(full_c)
 }
 
+fn safe_read_bundle_path(base: &str, rel: &str) -> Result<PathBuf, String> {
+    let r = clean_bundle_rel(rel)?;
+    if !is_readable_bundle_content(&r) {
+        return Err("path must be under knowledge/ or a BioOKF root text file".into());
+    }
+    safe_existing_bundle_path(base, rel)
+}
+
+fn safe_write_node_path(base: &str, rel: &str) -> Result<PathBuf, String> {
+    let r = clean_bundle_rel(rel)?;
+    if !is_knowledge_markdown(&r) {
+        return Err("Studio edits are limited to existing knowledge/*.md files".into());
+    }
+    safe_existing_bundle_path(base, rel)
+}
+
 /// Persist a user edit to a node's document body, preserving its frontmatter.
 #[tauri::command]
 fn save_node_body(base: String, path: String, body: String) -> Result<(), String> {
-    let full = safe_bundle_path(&base, &path)?;
+    let full = safe_write_node_path(&base, &path)?;
     let existing = std::fs::read_to_string(&full).map_err(|e| e.to_string())?;
     std::fs::write(&full, replace_body(&existing, &body)).map_err(|e| e.to_string())?;
     Ok(())
 }
 
-/// Read a file inside a bundle as text (e.g. the raw source paper, a node `.md`).
+/// Read a text file inside a bundle. Studio deliberately excludes `raw/` here:
+/// raw papers, PDFs, and extracted images can be large and are not part of graph rendering.
 #[tauri::command]
 fn read_bundle_file(base: String, path: String) -> Result<String, String> {
-    let full = safe_bundle_path(&base, &path)?;
+    let full = safe_read_bundle_path(&base, &path)?;
     std::fs::read_to_string(&full).map_err(|e| e.to_string())
 }
 
@@ -307,7 +366,7 @@ fn save_node_frontmatter(
     label: String,
     date: String,
 ) -> Result<(), String> {
-    let full = safe_bundle_path(&base, &path)?;
+    let full = safe_write_node_path(&base, &path)?;
     let existing = std::fs::read_to_string(&full).map_err(|e| e.to_string())?;
     std::fs::write(&full, replace_frontmatter(&existing, &frontmatter))
         .map_err(|e| e.to_string())?;
@@ -423,7 +482,7 @@ fn save_node_notes(
     label: String,
     date: String,
 ) -> Result<(), String> {
-    let full = safe_bundle_path(&base, &path)?;
+    let full = safe_write_node_path(&base, &path)?;
     let existing = std::fs::read_to_string(&full).map_err(|e| e.to_string())?;
     let body = body_after_frontmatter(&existing).unwrap_or_else(|| existing.clone());
     let body_trimmed = body.trim_start_matches('\n');
@@ -446,9 +505,9 @@ fn save_node_notes(
 }
 
 /// Persist an entire node/edge `.md` file in a single write, taking the full-file
-/// editor's text verbatim (frontmatter + body). The path is guarded by
-/// `safe_bundle_path`, which requires the file to already exist — correct here,
-/// since the editor only edits existing nodes. Logs the change.
+/// editor's text verbatim (frontmatter + body). The path is limited to an existing
+/// `knowledge/*.md` file, which is correct here since the editor only edits nodes.
+/// Logs the change.
 #[tauri::command]
 fn save_node_file(
     base: String,
@@ -457,7 +516,7 @@ fn save_node_file(
     label: String,
     date: String,
 ) -> Result<(), String> {
-    let full = safe_bundle_path(&base, &path)?;
+    let full = safe_write_node_path(&base, &path)?;
     std::fs::write(&full, content).map_err(|e| e.to_string())?;
     append_log_entry(&base, &date, &format!("- Edited `{}`", label))?;
     Ok(())
@@ -658,7 +717,7 @@ fn save_edge_note(
     label: String,
     date: String,
 ) -> Result<(), String> {
-    let full = safe_bundle_path(&base, &path)?;
+    let full = safe_write_node_path(&base, &path)?;
     let existing = std::fs::read_to_string(&full).map_err(|e| e.to_string())?;
     let fm = frontmatter_yaml(&existing).ok_or_else(|| "no frontmatter".to_string())?;
     let edited_fm = set_edge_note_in_fm(&fm, &predicate, &object, &note)?;
@@ -740,7 +799,7 @@ fn append_log_entry(base: &str, date: &str, entry: &str) -> Result<(), String> {
 /// Reveal a bundle file in the macOS Finder (selecting it).
 #[tauri::command]
 fn reveal_in_finder(base: String, path: String) -> Result<(), String> {
-    let full = safe_bundle_path(&base, &path)?;
+    let full = safe_read_bundle_path(&base, &path)?;
     #[cfg(target_os = "macos")]
     {
         std::process::Command::new("open")
@@ -1344,6 +1403,7 @@ fn main() {
             add_base,
             remove_base,
             get_bundle,
+            get_node_file,
             lint_bundle,
             search_bundle,
             save_node_body,
@@ -1517,6 +1577,13 @@ mod tests {
         assert!(
             super::save_node_body("mybase".into(), "../../escape.md".into(), "x".into()).is_err()
         );
+        std::fs::create_dir_all(base.join("raw/s")).unwrap();
+        std::fs::write(base.join("raw/s/source.md"), "# raw\n").unwrap();
+        std::fs::create_dir_all(base.join(".git")).unwrap();
+        std::fs::write(base.join(".git/config"), "[core]\n").unwrap();
+        assert!(super::safe_read_bundle_path("mybase", "raw/s/source.md").is_err());
+        assert!(super::safe_read_bundle_path("mybase", ".git/config").is_err());
+        assert!(super::safe_write_node_path("mybase", "raw/s/source.md").is_err());
         std::env::remove_var("BIOOKF_CONFIG_DIR");
 
         std::env::remove_var("OKF_ROOT");
