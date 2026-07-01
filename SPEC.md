@@ -622,7 +622,7 @@ non-negatable predicate it is rejected (`edge.not_negatable`).
 `ci_lower` · `ci_upper` · `standard_error` · `sample_size` · `sensitivity` · `specificity`
 · `auc` · `frequency` · `clinical_phase` · `response_direction` · `unit`.
 
-> **The required set is deliberately tiny** (3 fields per node, 5 per edge), exactly
+> **The required set is deliberately tiny** (2 fields per node, 5 fields per edge), exactly
 > following Biolink's precedent that only `knowledge_level` \+ `agent_type` are mandatory
 > association metadata. A one-line curated edge is never over-burdened; a GWAS edge can
 > carry its full statistics. Everything quantitative is optional but **first-class**: it

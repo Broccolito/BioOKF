@@ -61,7 +61,7 @@ enum Cmd {
         #[arg(long)]
         name: Option<String>,
     },
-    /// Print the active controlled vocabulary (28 types, 24 predicates, enums).
+    /// Print the active controlled vocabulary (28 types, 35 predicates, enums).
     Predicates {
         #[arg(long)]
         json: bool,
