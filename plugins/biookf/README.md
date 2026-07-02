@@ -3,7 +3,7 @@
 Curate, visualize, and reason over **BioOKF** (Biomedical Open Knowledge Format)
 knowledge bases directly from your coding agent. This plugin bundles three things:
 
-- **`bokf` MCP server**: 33 tools for curation, analysis, and **live control of the
+- **`bokf` MCP server**: 35 tools for curation, analysis, and **live control of the
   BioOKF Studio desktop app** (the `bokf_studio_*` family).
 - **`bokf` CLI**: the same engine as a command-line tool.
 - **BioOKF Studio**: a desktop GUI that visualizes a knowledge base as an

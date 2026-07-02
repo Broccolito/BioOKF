@@ -25,6 +25,7 @@ pub mod pdf_coverage;
 pub mod pdf_raster;
 pub mod registry;
 pub mod search;
+pub mod stats;
 pub mod validate;
 
 pub use bundle::Bundle;
@@ -34,6 +35,7 @@ pub use lint::{lint, lint_fast, Finding, LintReport, Severity};
 pub use model::{Edge, Node, NodeType, Predicate};
 pub use parse::parse_node;
 pub use search::{SearchHit, SearchIndex};
+pub use stats::{GraphFilter, GraphStats};
 
 /// Open a bundle, returning the parsed `Bundle`.
 pub fn open_bundle(root: impl AsRef<std::path::Path>) -> std::io::Result<Bundle> {
@@ -87,7 +89,11 @@ The gene.
         assert!(node.xref.contains(&"HGNC:6018".to_string()));
         assert_eq!(node.edges.len(), 2);
         // inverse predicate normalized to forward + reversed flag
-        let caused = node.edges.iter().find(|e| e.raw_predicate == "caused_by").unwrap();
+        let caused = node
+            .edges
+            .iter()
+            .find(|e| e.raw_predicate == "caused_by")
+            .unwrap();
         assert_eq!(caused.predicate, Predicate::Causes);
         assert!(caused.reversed);
     }

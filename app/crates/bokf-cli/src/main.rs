@@ -2,9 +2,9 @@
 //! the primary terminal surface an AI agent (or human) drives.
 
 use anyhow::{Context, Result};
-use clap::{Parser, Subcommand};
 use bokf_core::git::{today_iso, ChangeKind, GitRepo};
 use bokf_core::lint::Severity;
+use clap::{Parser, Subcommand};
 use std::collections::BTreeMap;
 use std::path::PathBuf;
 
@@ -40,8 +40,43 @@ enum Cmd {
         #[arg(long)]
         json: bool,
     },
-    /// Summary statistics: node/edge counts by type/predicate.
-    Stats { path: PathBuf },
+    /// Summary statistics over the render-ready graph, with optional filters.
+    Stats {
+        path: PathBuf,
+        /// Include only these node types (repeatable). Omit for all node types.
+        #[arg(long = "node-type")]
+        node_types: Vec<String>,
+        /// Include only these edge predicates (repeatable). Omit for all predicates.
+        #[arg(long = "edge-type")]
+        edge_types: Vec<String>,
+        /// Exclude synthesized provenance edges.
+        #[arg(long)]
+        no_synthesized: bool,
+        /// Emit the report as JSON.
+        #[arg(long)]
+        json: bool,
+    },
+    /// Control the live Studio graph filter over the GUI control socket.
+    StudioFilter {
+        /// Visible node types (repeatable). Omit to leave the current node filter unchanged.
+        #[arg(long = "node-type")]
+        node_types: Vec<String>,
+        /// Visible edge predicates (repeatable). Omit to leave the current edge filter unchanged.
+        #[arg(long = "edge-type")]
+        edge_types: Vec<String>,
+        /// Clear all graph filters in the running Studio.
+        #[arg(long)]
+        reset: bool,
+        /// Emit the resulting Studio filter state as JSON.
+        #[arg(long)]
+        json: bool,
+    },
+    /// Read post-filter statistics from the running Studio graph.
+    StudioStats {
+        /// Emit JSON. Human output is compact by default.
+        #[arg(long)]
+        json: bool,
+    },
     /// Scaffold an empty BioOKF bundle (raw/, knowledge/, index.md, log.md, SCHEMA.md).
     Scaffold {
         path: PathBuf,
@@ -216,24 +251,77 @@ fn run() -> Result<()> {
     match Cli::parse().cmd {
         Cmd::Lint { path, json } => cmd_lint(path, json),
         Cmd::Graph { path, out } => cmd_graph(path, out),
-        Cmd::Search { path, query, limit, json } => cmd_search(path, query, limit, json),
-        Cmd::Stats { path } => cmd_stats(path),
+        Cmd::Search {
+            path,
+            query,
+            limit,
+            json,
+        } => cmd_search(path, query, limit, json),
+        Cmd::Stats {
+            path,
+            node_types,
+            edge_types,
+            no_synthesized,
+            json,
+        } => cmd_stats(path, node_types, edge_types, !no_synthesized, json),
+        Cmd::StudioFilter {
+            node_types,
+            edge_types,
+            reset,
+            json,
+        } => cmd_studio_filter(node_types, edge_types, reset, json),
+        Cmd::StudioStats { json } => cmd_studio_stats(json),
         Cmd::Scaffold { path, name } => cmd_scaffold(path, name),
         Cmd::Validate { file } => cmd_validate(file),
         Cmd::Get { path, identifier } => cmd_get(path, identifier),
         Cmd::Export { path, out, name } => cmd_export(path, out, name),
         Cmd::Predicates { json } => cmd_predicates(json),
-        Cmd::LogSync { path, kind, summary, delta } => cmd_log_sync(path, kind, summary, delta),
-        Cmd::Commit { path, kind, summary, delta } => cmd_commit(path, kind, summary, delta),
+        Cmd::LogSync {
+            path,
+            kind,
+            summary,
+            delta,
+        } => cmd_log_sync(path, kind, summary, delta),
+        Cmd::Commit {
+            path,
+            kind,
+            summary,
+            delta,
+        } => cmd_commit(path, kind, summary, delta),
         Cmd::Log { path, limit, json } => cmd_log(path, limit, json),
         Cmd::Restore { path, sha, summary } => cmd_restore(path, sha, summary),
         Cmd::SetActive { root, kb_id } => cmd_set_active(resolve_root(root), kb_id),
         Cmd::GetActive { root, json } => cmd_get_active(resolve_root(root), json),
-        Cmd::Register { root, kb_id, path, list, unregister } => cmd_register(resolve_root(root), kb_id, path, list, unregister),
-        Cmd::Verify { path, workflow, json } => cmd_verify(path, workflow, json),
-        Cmd::Convert { path, text, title, url, urls, into, combined, json } => cmd_convert(path, text, title, url, urls, into, combined, json),
+        Cmd::Register {
+            root,
+            kb_id,
+            path,
+            list,
+            unregister,
+        } => cmd_register(resolve_root(root), kb_id, path, list, unregister),
+        Cmd::Verify {
+            path,
+            workflow,
+            json,
+        } => cmd_verify(path, workflow, json),
+        Cmd::Convert {
+            path,
+            text,
+            title,
+            url,
+            urls,
+            into,
+            combined,
+            json,
+        } => cmd_convert(path, text, title, url, urls, into, combined, json),
         Cmd::InstallPdfium { dir, check } => cmd_install_pdfium(dir, check),
-        Cmd::NameFigure { bundle, source, figure, caption, json } => cmd_name_figure(bundle, source, figure, caption, json),
+        Cmd::NameFigure {
+            bundle,
+            source,
+            figure,
+            caption,
+            json,
+        } => cmd_name_figure(bundle, source, figure, caption, json),
         Cmd::Index { path, check } => cmd_index(path, check),
         Cmd::MergeRaw { mkb, skb, json } => cmd_merge_raw(mkb, skb, json),
         Cmd::MergeSnapshot { mkb, verify } => cmd_merge_snapshot(mkb, verify),
@@ -253,7 +341,10 @@ fn cmd_index(path: PathBuf, check: bool) -> Result<()> {
             std::process::exit(1);
         }
     } else {
-        let name = path.file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_else(|| "Knowledge base".into());
+        let name = path
+            .file_name()
+            .map(|s| s.to_string_lossy().to_string())
+            .unwrap_or_else(|| "Knowledge base".into());
         bokf_core::index::write_index(&bundle, &name)?;
         eprintln!("regenerated index.md ({} nodes)", bundle.nodes.len());
     }
@@ -265,7 +356,12 @@ fn cmd_merge_raw(mkb: PathBuf, skb: PathBuf, json: bool) -> Result<()> {
     if json {
         println!("{}", serde_json::to_string_pretty(&res)?);
     } else {
-        eprintln!("merge-raw: {} moved, {} renamed, {} dropped (duplicates)", res.moved.len(), res.renamed.len(), res.dropped_duplicates.len());
+        eprintln!(
+            "merge-raw: {} moved, {} renamed, {} dropped (duplicates)",
+            res.moved.len(),
+            res.renamed.len(),
+            res.dropped_duplicates.len()
+        );
         for (old, new) in &res.id_map {
             if old != new {
                 println!("raw/{old} -> raw/{new}");
@@ -278,7 +374,8 @@ fn cmd_merge_raw(mkb: PathBuf, skb: PathBuf, json: bool) -> Result<()> {
 fn cmd_merge_snapshot(mkb: PathBuf, verify: bool) -> Result<()> {
     let bundle = bokf_core::open_bundle(&mkb)?;
     if verify {
-        let issues = bokf_core::merge::verify_snapshot(&mkb, &bundle).map_err(anyhow::Error::msg)?;
+        let issues =
+            bokf_core::merge::verify_snapshot(&mkb, &bundle).map_err(anyhow::Error::msg)?;
         if issues.is_empty() {
             println!("MKB unchanged since snapshot ✓");
         } else {
@@ -288,14 +385,27 @@ fn cmd_merge_snapshot(mkb: PathBuf, verify: bool) -> Result<()> {
             std::process::exit(1);
         }
     } else {
-        bokf_core::merge::write_snapshot(&mkb, &bokf_core::merge::snapshot(&bundle)).map_err(anyhow::Error::msg)?;
-        eprintln!("pre-merge snapshot written ({} identifiers)", bundle.nodes.len());
+        bokf_core::merge::write_snapshot(&mkb, &bokf_core::merge::snapshot(&bundle))
+            .map_err(anyhow::Error::msg)?;
+        eprintln!(
+            "pre-merge snapshot written ({} identifiers)",
+            bundle.nodes.len()
+        );
     }
     Ok(())
 }
 
 #[allow(clippy::too_many_arguments)]
-fn cmd_convert(path: Option<PathBuf>, text: Option<String>, title: Option<String>, url: Option<String>, urls: Option<PathBuf>, into: PathBuf, combined: bool, json: bool) -> Result<()> {
+fn cmd_convert(
+    path: Option<PathBuf>,
+    text: Option<String>,
+    title: Option<String>,
+    url: Option<String>,
+    urls: Option<PathBuf>,
+    into: PathBuf,
+    combined: bool,
+    json: bool,
+) -> Result<()> {
     use bokf_core::convert::{ingest, ingest_urls, SourceInput, SourceRecord};
     let results: Vec<std::result::Result<SourceRecord, String>> = if let Some(urls_file) = urls {
         let content = std::fs::read_to_string(&urls_file)
@@ -340,7 +450,11 @@ fn cmd_convert(path: Option<PathBuf>, text: Option<String>, title: Option<String
                     "{}  ({}{})  -> {}",
                     rec.source_id,
                     if rec.reused { "reused" } else { "new" },
-                    if rec.needs_llm_fallback { ", needs OCR/LLM" } else { "" },
+                    if rec.needs_llm_fallback {
+                        ", needs OCR/LLM"
+                    } else {
+                        ""
+                    },
                     rec.source_md_path
                 ),
                 Err(e) => eprintln!("FAILED: {e}"),
@@ -350,7 +464,8 @@ fn cmd_convert(path: Option<PathBuf>, text: Option<String>, title: Option<String
     // If a PDF was just ingested but page rasterization is unavailable, surface the one optional
     // step. PDFs still convert without it (the agent reads the PDF directly with vision).
     let ingested_pdf = results.iter().filter_map(|r| r.as_ref().ok()).any(|r| {
-        into.join(format!("raw/{}/original.pdf", r.source_id)).exists()
+        into.join(format!("raw/{}/original.pdf", r.source_id))
+            .exists()
     });
     if ingested_pdf && !bokf_core::pdf_raster::is_available() {
         eprintln!("Tip: run `bokf install-pdfium` once to render PDF pages as images for higher-fidelity vision reading. PDFs already convert without it.");
@@ -373,14 +488,27 @@ fn cmd_install_pdfium(dir: Option<PathBuf>, check: bool) -> Result<()> {
     }
     eprintln!("Downloading the PDFium library (one-time, a few MB)...");
     let path = bokf_core::pdf_raster::install_pdfium(dir).map_err(anyhow::Error::msg)?;
-    println!("Installed PDFium to {}. PDF page rendering is now enabled.", path.display());
+    println!(
+        "Installed PDFium to {}. PDF page rendering is now enabled.",
+        path.display()
+    );
     Ok(())
 }
 
-fn cmd_name_figure(bundle: PathBuf, source: String, figure: String, caption: String, json: bool) -> Result<()> {
-    let new_rel = bokf_core::figures::name_figure(&bundle, &source, &figure, &caption).map_err(anyhow::Error::msg)?;
+fn cmd_name_figure(
+    bundle: PathBuf,
+    source: String,
+    figure: String,
+    caption: String,
+    json: bool,
+) -> Result<()> {
+    let new_rel = bokf_core::figures::name_figure(&bundle, &source, &figure, &caption)
+        .map_err(anyhow::Error::msg)?;
     if json {
-        println!("{}", serde_json::json!({ "source": source, "figure": new_rel }));
+        println!(
+            "{}",
+            serde_json::json!({ "source": source, "figure": new_rel })
+        );
     } else {
         println!("{source}  {figure} -> {new_rel}");
     }
@@ -388,7 +516,8 @@ fn cmd_name_figure(bundle: PathBuf, source: String, figure: String, caption: Str
 }
 
 fn cmd_verify(path: PathBuf, workflow: Option<String>, json: bool) -> Result<()> {
-    let bundle = bokf_core::open_bundle(&path).with_context(|| format!("opening {}", path.display()))?;
+    let bundle =
+        bokf_core::open_bundle(&path).with_context(|| format!("opening {}", path.display()))?;
     let report = bokf_core::lint(&bundle);
     let ok = report.errors() == 0;
     let wf = workflow.unwrap_or_else(|| "any".to_string());
@@ -414,8 +543,16 @@ fn cmd_verify(path: PathBuf, workflow: Option<String>, json: bool) -> Result<()>
             bundle.has_index_md,
             bundle.has_log_md
         );
-        for f in report.findings.iter().filter(|f| f.severity != Severity::Info) {
-            let tag = if f.severity == Severity::Error { "ERROR" } else { "WARN " };
+        for f in report
+            .findings
+            .iter()
+            .filter(|f| f.severity != Severity::Info)
+        {
+            let tag = if f.severity == Severity::Error {
+                "ERROR"
+            } else {
+                "WARN "
+            };
             println!("  {tag} [{}] {}: {}", f.rule, f.subject, f.message);
         }
     }
@@ -452,7 +589,13 @@ fn cmd_get_active(root: PathBuf, json: bool) -> Result<()> {
     Ok(())
 }
 
-fn cmd_register(root: PathBuf, kb_id: Option<String>, path: Option<PathBuf>, list: bool, unregister: Option<String>) -> Result<()> {
+fn cmd_register(
+    root: PathBuf,
+    kb_id: Option<String>,
+    path: Option<PathBuf>,
+    list: bool,
+    unregister: Option<String>,
+) -> Result<()> {
     if list {
         for b in bokf_core::registry::list(&root) {
             println!("{}  {}", b.id, b.path);
@@ -464,15 +607,22 @@ fn cmd_register(root: PathBuf, kb_id: Option<String>, path: Option<PathBuf>, lis
         return Ok(());
     }
     match (kb_id, path) {
-        (Some(id), Some(p)) => bokf_core::registry::register(&root, &id, &p.to_string_lossy()).map_err(anyhow::Error::msg)?,
+        (Some(id), Some(p)) => bokf_core::registry::register(&root, &id, &p.to_string_lossy())
+            .map_err(anyhow::Error::msg)?,
         _ => anyhow::bail!("register needs <kb_id> <path>, or --list, or --unregister <id>"),
     }
     Ok(())
 }
 
 fn cmd_log_sync(path: PathBuf, kind: String, summary: String, delta: Option<String>) -> Result<()> {
-    let sha = bokf_core::log_sync::log_sync(&path, ChangeKind::parse(&kind), &summary, delta.as_deref(), &today_iso())
-        .map_err(anyhow::Error::msg)?;
+    let sha = bokf_core::log_sync::log_sync(
+        &path,
+        ChangeKind::parse(&kind),
+        &summary,
+        delta.as_deref(),
+        &today_iso(),
+    )
+    .map_err(anyhow::Error::msg)?;
     eprintln!("[{}] {}: {}", kind, summary, &sha[..8.min(sha.len())]);
     Ok(())
 }
@@ -486,19 +636,29 @@ fn cmd_commit(path: PathBuf, kind: String, summary: String, delta: Option<String
 }
 
 fn cmd_log(path: PathBuf, limit: usize, json: bool) -> Result<()> {
-    let entries = GitRepo::open(&path).log(limit).map_err(anyhow::Error::msg)?;
+    let entries = GitRepo::open(&path)
+        .log(limit)
+        .map_err(anyhow::Error::msg)?;
     if json {
         println!("{}", serde_json::to_string_pretty(&entries)?);
     } else {
         for e in &entries {
-            println!("{}  [{}] {}  {}", &e.commit_sha[..8.min(e.commit_sha.len())], e.kind.as_str(), e.summary, e.delta.as_deref().unwrap_or(""));
+            println!(
+                "{}  [{}] {}  {}",
+                &e.commit_sha[..8.min(e.commit_sha.len())],
+                e.kind.as_str(),
+                e.summary,
+                e.delta.as_deref().unwrap_or("")
+            );
         }
     }
     Ok(())
 }
 
 fn cmd_restore(path: PathBuf, sha: String, summary: Option<String>) -> Result<()> {
-    let new = GitRepo::open(&path).restore_to(&sha, summary.as_deref()).map_err(anyhow::Error::msg)?;
+    let new = GitRepo::open(&path)
+        .restore_to(&sha, summary.as_deref())
+        .map_err(anyhow::Error::msg)?;
     eprintln!("restored; new commit {}", &new[..8.min(new.len())]);
     Ok(())
 }
@@ -514,8 +674,16 @@ fn cmd_predicates(json: bool) -> Result<()> {
         });
         println!("{}", serde_json::to_string_pretty(&v)?);
     } else {
-        println!("node types ({}):\n  {}", NODE_TYPES.len(), NODE_TYPES.join(", "));
-        println!("predicates ({}):\n  {}", PREDICATES.len(), PREDICATES.join(", "));
+        println!(
+            "node types ({}):\n  {}",
+            NODE_TYPES.len(),
+            NODE_TYPES.join(", ")
+        );
+        println!(
+            "predicates ({}):\n  {}",
+            PREDICATES.len(),
+            PREDICATES.join(", ")
+        );
         println!("knowledge_level: {}", KNOWLEDGE_LEVELS.join(", "));
         println!("agent_type: {}", AGENT_TYPES.join(", "));
     }
@@ -523,12 +691,19 @@ fn cmd_predicates(json: bool) -> Result<()> {
 }
 
 fn cmd_validate(file: PathBuf) -> Result<()> {
-    let content = std::fs::read_to_string(&file).with_context(|| format!("reading {}", file.display()))?;
+    let content =
+        std::fs::read_to_string(&file).with_context(|| format!("reading {}", file.display()))?;
     let v = bokf_core::validate::validate_doc(&content);
     if v.valid {
-        println!("VALID: type={} identifier={:?} {} edge(s)", v.node_type, v.identifier, v.edge_count);
+        println!(
+            "VALID: type={} identifier={:?} {} edge(s)",
+            v.node_type, v.identifier, v.edge_count
+        );
     } else {
-        println!("INVALID: type={} identifier={:?}", v.node_type, v.identifier);
+        println!(
+            "INVALID: type={} identifier={:?}",
+            v.node_type, v.identifier
+        );
     }
     for issue in &v.issues {
         println!("  - {issue}");
@@ -569,7 +744,8 @@ fn cmd_export(path: PathBuf, out: PathBuf, name: Option<String>) -> Result<()> {
 }
 
 fn cmd_lint(path: PathBuf, json: bool) -> Result<()> {
-    let bundle = bokf_core::open_bundle(&path).with_context(|| format!("opening {}", path.display()))?;
+    let bundle =
+        bokf_core::open_bundle(&path).with_context(|| format!("opening {}", path.display()))?;
     let report = bokf_core::lint(&bundle);
     if json {
         println!("{}", serde_json::to_string_pretty(&report)?);
@@ -603,7 +779,12 @@ fn cmd_graph(path: PathBuf, out: Option<PathBuf>) -> Result<()> {
     match out {
         Some(p) => {
             std::fs::write(&p, json)?;
-            eprintln!("wrote {} nodes, {} edges to {}", graph.nodes.len(), graph.edges.len(), p.display());
+            eprintln!(
+                "wrote {} nodes, {} edges to {}",
+                graph.nodes.len(),
+                graph.edges.len(),
+                p.display()
+            );
         }
         None => println!("{json}"),
     }
@@ -618,7 +799,10 @@ fn cmd_search(path: PathBuf, query: String, limit: usize, json: bool) -> Result<
         println!("{}", serde_json::to_string_pretty(&hits)?);
     } else {
         for h in &hits {
-            println!("{:.3}  [{}] {}\n        {}", h.score, h.node_type, h.identifier, h.snippet);
+            println!(
+                "{:.3}  [{}] {}\n        {}",
+                h.score, h.node_type, h.identifier, h.snippet
+            );
         }
         println!("\n{} hits", hits.len());
     }
@@ -631,14 +815,33 @@ mod tests {
     #[test]
     fn cli_parses_name_figure() {
         use clap::Parser;
-        let c = Cli::try_parse_from(["bokf", "name-figure", "kb", "--source", "x-1", "--figure", "figures/fig-001.png", "--as", "A B"]).unwrap();
+        let c = Cli::try_parse_from([
+            "bokf",
+            "name-figure",
+            "kb",
+            "--source",
+            "x-1",
+            "--figure",
+            "figures/fig-001.png",
+            "--as",
+            "A B",
+        ])
+        .unwrap();
         assert!(matches!(c.cmd, Cmd::NameFigure { .. }));
     }
 
     #[test]
     fn cli_parses_convert_url() {
         use clap::Parser;
-        let c = Cli::try_parse_from(["bokf", "convert", "--url", "https://x.org/a", "--into", "kb"]).unwrap();
+        let c = Cli::try_parse_from([
+            "bokf",
+            "convert",
+            "--url",
+            "https://x.org/a",
+            "--into",
+            "kb",
+        ])
+        .unwrap();
         if let Cmd::Convert { url, .. } = c.cmd {
             assert_eq!(url.as_deref(), Some("https://x.org/a"));
         } else {
@@ -647,33 +850,197 @@ mod tests {
     }
 }
 
-fn cmd_stats(path: PathBuf) -> Result<()> {
+fn cmd_stats(
+    path: PathBuf,
+    node_types: Vec<String>,
+    edge_types: Vec<String>,
+    include_synthesized: bool,
+    json: bool,
+) -> Result<()> {
     let bundle = bokf_core::open_bundle(&path)?;
-    let mut by_type: BTreeMap<String, usize> = BTreeMap::new();
-    let mut by_pred: BTreeMap<String, usize> = BTreeMap::new();
-    let mut edge_count = 0;
-    for n in &bundle.nodes {
-        *by_type.entry(n.node_type.as_str().to_string()).or_default() += 1;
-        for e in &n.edges {
-            edge_count += 1;
-            *by_pred.entry(e.predicate.as_str().to_string()).or_default() += 1;
-        }
+    let graph = bokf_core::Graph::from_bundle(&bundle);
+    let filter = bokf_core::GraphFilter {
+        node_types,
+        edge_predicates: edge_types,
+        include_synthesized,
+    };
+    let stats = bokf_core::GraphStats::from_graph(&graph, &filter);
+    if json {
+        println!("{}", serde_json::to_string_pretty(&stats)?);
+        return Ok(());
     }
     println!("Bundle: {}", path.display());
-    println!("  {} nodes, {} edges", bundle.nodes.len(), edge_count);
-    println!("  reserved: index.md={} log.md={} SCHEMA.md={}", bundle.has_index_md, bundle.has_log_md, bundle.has_schema_md);
+    println!("  {} nodes, {} edges", stats.nodes, stats.edges);
+    println!(
+        "  density: {:.6} · components: {} (largest {}) · isolated: {}",
+        stats.density, stats.components.count, stats.components.largest, stats.isolated_nodes
+    );
+    println!(
+        "  reserved: index.md={} log.md={} SCHEMA.md={}",
+        bundle.has_index_md, bundle.has_log_md, bundle.has_schema_md
+    );
     if !bundle.parse_errors.is_empty() {
         println!("  parse errors: {}", bundle.parse_errors.len());
     }
     println!("\nNodes by type:");
-    for (t, c) in &by_type {
+    for (t, c) in count_desc(&stats.by_node_type) {
         println!("  {c:>4}  {t}");
     }
     println!("\nEdges by predicate:");
-    for (p, c) in &by_pred {
+    for (p, c) in count_desc(&stats.by_edge_predicate) {
         println!("  {c:>4}  {p}");
     }
+    println!("\nTop degree:");
+    for n in &stats.top_degree {
+        println!(
+            "  {:>7.3}  {:>4}  [{}] {}",
+            n.score, n.degree, n.node_type, n.id
+        );
+    }
+    println!("\nTop PageRank:");
+    for n in &stats.top_pagerank {
+        println!(
+            "  {:>7.5}  {:>4}  [{}] {}",
+            n.score, n.degree, n.node_type, n.id
+        );
+    }
     Ok(())
+}
+
+fn count_desc(map: &BTreeMap<String, usize>) -> Vec<(&str, usize)> {
+    let mut rows: Vec<_> = map.iter().map(|(k, v)| (k.as_str(), *v)).collect();
+    rows.sort_by(|a, b| b.1.cmp(&a.1).then_with(|| a.0.cmp(b.0)));
+    rows
+}
+
+fn cmd_studio_filter(
+    node_types: Vec<String>,
+    edge_types: Vec<String>,
+    reset: bool,
+    json: bool,
+) -> Result<()> {
+    let mut payload = serde_json::Map::new();
+    if reset {
+        payload.insert("reset".into(), serde_json::Value::Bool(true));
+    }
+    if !node_types.is_empty() {
+        payload.insert("nodeTypes".into(), serde_json::to_value(node_types)?);
+    }
+    if !edge_types.is_empty() {
+        payload.insert("edgeTypes".into(), serde_json::to_value(edge_types)?);
+    }
+    let arg = serde_json::Value::Object(payload);
+    let code = format!("JSON.stringify(window.__bokf.setGraphFilter({arg}))");
+    let value = studio_json(&code)?;
+    if json {
+        println!("{}", serde_json::to_string_pretty(&value)?);
+    } else {
+        print_studio_filter(&value);
+    }
+    Ok(())
+}
+
+fn cmd_studio_stats(json: bool) -> Result<()> {
+    let value = studio_json("JSON.stringify(window.__bokf.getGraphStats())")?;
+    if json {
+        println!("{}", serde_json::to_string_pretty(&value)?);
+    } else {
+        let nodes = value.get("nodes").and_then(|v| v.as_u64()).unwrap_or(0);
+        let edges = value.get("edges").and_then(|v| v.as_u64()).unwrap_or(0);
+        let density = value.get("density").and_then(|v| v.as_f64()).unwrap_or(0.0);
+        println!("Studio graph: {nodes} nodes, {edges} edges · density {density:.6}");
+        if let Some(obj) = value.get("by_node_type").and_then(|v| v.as_object()) {
+            println!("\nNodes by type:");
+            for (k, v) in json_count_desc(obj) {
+                println!("  {v:>4}  {k}");
+            }
+        }
+        if let Some(obj) = value.get("by_edge_predicate").and_then(|v| v.as_object()) {
+            println!("\nEdges by predicate:");
+            for (k, v) in json_count_desc(obj) {
+                println!("  {v:>4}  {k}");
+            }
+        }
+    }
+    Ok(())
+}
+
+fn print_studio_filter(value: &serde_json::Value) {
+    let node_hidden = value
+        .pointer("/filter/hiddenNodeTypes")
+        .and_then(|v| v.as_array())
+        .map(|v| v.len())
+        .unwrap_or(0);
+    let edge_hidden = value
+        .pointer("/filter/hiddenEdgeTypes")
+        .and_then(|v| v.as_array())
+        .map(|v| v.len())
+        .unwrap_or(0);
+    let nodes = value
+        .pointer("/stats/nodes")
+        .and_then(|v| v.as_u64())
+        .unwrap_or(0);
+    let edges = value
+        .pointer("/stats/edges")
+        .and_then(|v| v.as_u64())
+        .unwrap_or(0);
+    println!("Studio filter: {node_hidden} hidden node type(s), {edge_hidden} hidden edge type(s)");
+    println!("Visible graph: {nodes} nodes, {edges} edges");
+}
+
+fn json_count_desc(map: &serde_json::Map<String, serde_json::Value>) -> Vec<(&str, u64)> {
+    let mut rows: Vec<_> = map
+        .iter()
+        .map(|(k, v)| (k.as_str(), v.as_u64().unwrap_or(0)))
+        .collect();
+    rows.sort_by(|a, b| b.1.cmp(&a.1).then_with(|| a.0.cmp(b.0)));
+    rows
+}
+
+#[cfg(unix)]
+fn studio_json(code: &str) -> Result<serde_json::Value> {
+    use std::io::{BufRead, BufReader, Write};
+    use std::os::unix::net::{SocketAddr, UnixStream};
+
+    let path = std::env::var("BIOOKF_STUDIO_IPC")
+        .unwrap_or_else(|_| "/tmp/biookf-tauri-mcp.sock".to_string());
+    let addr = SocketAddr::from_pathname(&path)
+        .map_err(|e| anyhow::anyhow!("bad Studio socket path {path}: {e}"))?;
+    let stream = UnixStream::connect_addr(&addr)
+        .map_err(|e| anyhow::anyhow!("Studio GUI not reachable on {path} ({e}); open Studio with the control channel enabled"))?;
+    let mut writer = stream.try_clone()?;
+    let line = serde_json::json!({ "command": "execute_js", "payload": { "code": code }, "id": "bokf-cli" }).to_string();
+    writer.write_all(line.as_bytes())?;
+    writer.write_all(b"\n")?;
+    writer.flush()?;
+
+    let mut reader = BufReader::new(stream);
+    let mut resp = String::new();
+    reader.read_line(&mut resp)?;
+    let value: serde_json::Value = serde_json::from_str(&resp)?;
+    if !value
+        .get("success")
+        .and_then(|v| v.as_bool())
+        .unwrap_or(false)
+    {
+        anyhow::bail!(
+            "{}",
+            value
+                .get("error")
+                .and_then(|v| v.as_str())
+                .unwrap_or("Studio command failed")
+        );
+    }
+    let result = value
+        .pointer("/data/result")
+        .and_then(|v| v.as_str())
+        .ok_or_else(|| anyhow::anyhow!("Studio returned no JavaScript result"))?;
+    Ok(serde_json::from_str(result)?)
+}
+
+#[cfg(not(unix))]
+fn studio_json(_code: &str) -> Result<serde_json::Value> {
+    anyhow::bail!("Studio live control is only available on Unix-like platforms in this build")
 }
 
 fn cmd_scaffold(path: PathBuf, name: String) -> Result<()> {
@@ -693,7 +1060,11 @@ fn cmd_scaffold(path: PathBuf, name: String) -> Result<()> {
     // convert/ingest is not denied by the require-active guardrail).
     let repo = GitRepo::open(&path);
     if repo.ensure_repo().is_ok() {
-        let _ = repo.commit_all(ChangeKind::Manual, &format!("create knowledge base {name}"), None);
+        let _ = repo.commit_all(
+            ChangeKind::Manual,
+            &format!("create knowledge base {name}"),
+            None,
+        );
     }
     let kb_id = path.file_name().map(|s| s.to_string_lossy().to_lowercase());
     if let (Some(id), Ok(root)) = (kb_id, bokf_core::config::ensure_config_dir()) {

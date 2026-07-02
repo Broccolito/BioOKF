@@ -116,8 +116,8 @@ Apple Silicon or Intel. Until a prebuilt asset exists for another platform you c
 | Piece | What it is |
 |---|---|
 | **BioOKF Studio** | A desktop app that renders a knowledge base as an interactive, type-colored graph, with node/edge detail panels, an integrated terminal, in-app editing, and a registry-driven sidebar of bundles that can live anywhere on disk. |
-| **`bokf-mcp`** | A stdio MCP server: **33 tools** for curation, analysis, **and live control of the Studio GUI** (`bokf_studio_*`). It ships an operating brief on `initialize`, so an agent knows the BioOKF rules. |
-| **`bokf`** | The same engine as a scriptable CLI (23 subcommands): the precise terminal surface for curation. |
+| **`bokf-mcp`** | A stdio MCP server: **35 tools** for curation, analysis, **and live control of the Studio GUI** (`bokf_studio_*`). It ships an operating brief on `initialize`, so an agent knows the BioOKF rules. |
+| **`bokf`** | The same engine as a scriptable CLI (25 subcommands): the precise terminal surface for curation. |
 | **The live loop** | The MCP server can open the Studio and **drive/observe it in real time**: an agent searches, selects, and moves around the graph while a human watches each action in an in-app "AI agent" banner, and reads the app's full status as structured JSON instead of taking screenshots. |
 
 ## The bundle format
@@ -195,7 +195,8 @@ at the same time:
   marker in the sidebar.
 - **The agent drives the GUI.** The `bokf_studio_*` tools open the Studio and steer it:
   `bokf_studio_select` / `bokf_studio_search` / `bokf_studio_reload` move around the graph,
-  `bokf_studio_state` / `bokf_studio_graph` observe it. The control channel is a Unix socket; it
+  `bokf_studio_filter` controls visible node and edge types, and
+  `bokf_studio_state` / `bokf_studio_graph` / `bokf_studio_stats` observe it. The control channel is a Unix socket; it
   ships in normal builds and only listens when `BIOOKF_STUDIO_CONTROL=1` (set automatically when the
   agent opens the app).
 - **Status without screenshots.** `bokf_studio_state` returns the GUI's complete status as
@@ -297,7 +298,7 @@ bokf predicates                                 # print the controlled vocabular
 
 ## MCP tool reference
 
-`bokf-mcp` exposes 33 tools in three groups.
+`bokf-mcp` exposes 35 tools in three groups.
 
 **Curation:** `bokf_list_bases`, `bokf_scaffold`, `bokf_set_active`, `bokf_get_active`,
 `bokf_list_pages`, `bokf_read_page`, `bokf_write_page` (validates concept docs on write),
@@ -309,8 +310,8 @@ bokf predicates                                 # print the controlled vocabular
 
 **Studio GUI control:** `bokf_studio_open`, `bokf_studio_close`, `bokf_studio_status`,
 `bokf_studio_state` (the complete GUI status as JSON; read this instead of a screenshot),
-`bokf_studio_graph`, `bokf_studio_select`, `bokf_studio_reload`, `bokf_studio_search`,
-`bokf_studio_screenshot`, `bokf_studio_narrate`.
+`bokf_studio_graph`, `bokf_studio_stats`, `bokf_studio_filter`, `bokf_studio_select`,
+`bokf_studio_reload`, `bokf_studio_search`, `bokf_studio_screenshot`, `bokf_studio_narrate`.
 
 ## Build from source
 

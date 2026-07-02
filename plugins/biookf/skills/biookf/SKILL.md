@@ -23,5 +23,6 @@ Core rules:
   There is no `--counts` flag; use `bokf_stats` first when you want counts in the delta.
 - Finish ingest or merge work with `bokf_verify`; fix every error before calling the bundle clean.
 
-For visual QA, use `bokf_studio_open` and prefer `bokf_studio_state` / `bokf_studio_graph` over
+For visual QA, use `bokf_studio_open`; use `bokf_studio_filter` for visible node/edge types and
+prefer `bokf_studio_state` / `bokf_studio_graph` / `bokf_studio_stats` over
 screenshots unless the user explicitly asks for a visual screenshot.

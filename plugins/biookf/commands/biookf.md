@@ -14,7 +14,8 @@ MCP server is connected and exposes two tool families:
 - **Live Studio control** (`bokf_studio_*`): launch and drive the BioOKF Studio
   desktop app via `bokf_studio_open`, `bokf_studio_status`,
   `bokf_studio_state` (the GUI's full status as JSON, so **read this instead of
-  taking screenshots**), `bokf_studio_graph`, `bokf_studio_select`,
+  taking screenshots**), `bokf_studio_graph`, `bokf_studio_stats`,
+  `bokf_studio_filter`, `bokf_studio_select`,
   `bokf_studio_search`, `bokf_studio_reload`, `bokf_studio_narrate`,
   `bokf_studio_screenshot`, `bokf_studio_close`.
 
@@ -25,7 +26,7 @@ To get going:
    knowledge base can live **anywhere on disk**; register one with `bokf register`
    or the Studio's **+ New base** button.
 3. Use `bokf_studio_state` to know what the app is showing, then drive the graph
-   with `bokf_studio_select` / `bokf_studio_search`. Each action you take is shown
+   with `bokf_studio_select` / `bokf_studio_search` / `bokf_studio_filter`. Each action you take is shown
    live in the app's "AI agent" banner so the user can watch you explore.
 
 $ARGUMENTS
