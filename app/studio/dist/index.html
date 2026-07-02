@@ -74,8 +74,8 @@
   .tb-search input{border:none;background:transparent;outline:none;flex:1;min-width:0;font-family:var(--sans);font-size:13px;color:var(--text);letter-spacing:-0.006em;}
   .tb-search input::placeholder{color:var(--faint);}
   .tb-kbd{font-family:var(--mono);font-size:10.5px;color:var(--faint);border:1px solid var(--hair);border-radius:5px;padding:1px 5px;}
-  .lint-pill{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;color:var(--muted);
-    background:var(--bg-sunken);border:1px solid var(--hair-2);border-radius:999px;padding:3px 10px;white-space:nowrap;
+  .lint-pill{display:inline-flex;align-items:center;gap:6px;height:30px;font-size:12.5px;color:var(--muted);
+    background:var(--bg-elev);border:1px solid var(--hair);border-radius:var(--r-md);padding:0 11px;white-space:nowrap;
     cursor:pointer;transition:background .12s,border-color .12s;}
   .lint-pill:hover{background:var(--hover);border-color:var(--hair);}
   .lint-pill .e{color:var(--danger);font-weight:650;} .lint-pill .w{color:var(--warn);font-weight:650;}
@@ -461,10 +461,10 @@
       </aside>
       <main class="main">
         <div class="stage"><canvas id="graph"></canvas><div class="graph-loading" id="graphLoading" aria-live="polite"><div class="gl-card"><div class="gl-title" id="glTitle">Loading knowledge base</div><div class="gl-sub" id="glSub">Preparing graph</div><div class="gl-track"><div class="gl-fill" id="glFill"></div></div></div></div></div>
-        <div class="kb-menu" id="kbMenu" role="menu"><button id="kbRemove" class="danger" type="button" role="menuitem">Remove from registry</button></div>
+        <div class="kb-menu" id="kbMenu" role="menu"><button id="kbOpenFolder" type="button" role="menuitem">Open folder</button><button id="kbRemove" class="danger" type="button" role="menuitem">Remove from registry</button></div>
         <div class="legend" id="legend"><h4>Node types <span class="tg" id="legendToggle">hide</span></h4><div class="legend-body" id="legendBody"></div></div>
         <div class="detail" id="detail"></div>
-        <div class="zoomctl"><button id="zoomIn" title="Zoom in">+</button><button id="zoomOut" title="Zoom out">−</button><button id="zoomFit" title="Fit to view" aria-label="Fit to view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 5h5v5"/><path d="M19 5l-6 6"/><path d="M10 19H5v-5"/><path d="M5 19l6-6"/></svg></button></div>
+        <div class="zoomctl"><button id="zoomIn" title="Zoom in">+</button><button id="zoomOut" title="Zoom out">−</button><button id="zoomFit" title="Fit to view" aria-label="Fit to view"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.25 10.75l5-5"/><path d="M18.25 5.75l-3.35 1.05"/><path d="M18.25 5.75l-1.05 3.35"/><path d="M10.75 13.25l-5 5"/><path d="M5.75 18.25l3.35-1.05"/><path d="M5.75 18.25l1.05-3.35"/></svg></button></div>
         <div class="tip" id="tip"></div>
         <div class="previewscrim" id="previewScrim"></div>
         <aside class="preview" id="preview"></aside>
