@@ -166,6 +166,12 @@ fn get_bundle(id: String) -> Result<serde_json::Value, String> {
 }
 
 #[tauri::command]
+fn get_export_bundle(id: String) -> Result<serde_json::Value, String> {
+    let path = resolve(&id).ok_or_else(|| format!("unknown bundle: {id}"))?;
+    bokf_core::export::studio_bundle_doc(&path, None).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
 fn get_node_file(base: String, path: String) -> Result<serde_json::Value, String> {
     let rel = clean_bundle_rel(&path)?;
     if !is_knowledge_markdown(&rel) {
@@ -815,6 +821,41 @@ fn reveal_in_finder(base: String, path: String) -> Result<(), String> {
     }
 }
 
+fn normalize_export_html_path(path: &str) -> Result<PathBuf, String> {
+    let trimmed = path.trim();
+    if trimmed.is_empty() {
+        return Err("export path is empty".into());
+    }
+    let mut out = PathBuf::from(trimmed);
+    if out.file_name().is_none() {
+        return Err("export path must include a file name".into());
+    }
+    match out.extension().and_then(|e| e.to_str()) {
+        Some(ext) if ext.eq_ignore_ascii_case("html") || ext.eq_ignore_ascii_case("htm") => {}
+        None => {
+            out.set_extension("html");
+        }
+        _ => return Err("export file must use .html or .htm".into()),
+    }
+    Ok(out)
+}
+
+#[tauri::command]
+fn write_export_html(path: String, html: String) -> Result<String, String> {
+    let out = normalize_export_html_path(&path)?;
+    if html.len() > 128 * 1024 * 1024 {
+        return Err("export is unexpectedly large".into());
+    }
+    let parent = out
+        .parent()
+        .ok_or_else(|| "export path must include a parent directory".to_string())?;
+    if !parent.is_dir() {
+        return Err("export directory does not exist".into());
+    }
+    std::fs::write(&out, html).map_err(|e| e.to_string())?;
+    Ok(out.to_string_lossy().to_string())
+}
+
 /* ---------- integrated terminal (real pseudo-terminal) ---------- */
 struct PtySession {
     master: Box<dyn MasterPty + Send>,
@@ -1403,6 +1444,7 @@ fn main() {
             add_base,
             remove_base,
             get_bundle,
+            get_export_bundle,
             get_node_file,
             lint_bundle,
             search_bundle,
@@ -1413,6 +1455,7 @@ fn main() {
             save_node_file,
             save_edge_note,
             reveal_in_finder,
+            write_export_html,
             term_open,
             term_write,
             term_resize,
@@ -1515,6 +1558,15 @@ mod tests {
         if std::env::consts::OS == "macos" && std::env::consts::ARCH == "aarch64" {
             assert_eq!(asset.unwrap().name, "BioOKF.Studio_0.2.3_aarch64.dmg");
         }
+    }
+
+    #[test]
+    fn export_html_path_normalizes_and_guards_extension() {
+        let p = super::normalize_export_html_path("/tmp/biookf-export").unwrap();
+        assert_eq!(p.extension().and_then(|e| e.to_str()), Some("html"));
+        assert!(super::normalize_export_html_path("/tmp/biookf-export.htm").is_ok());
+        assert!(super::normalize_export_html_path("/tmp/biookf-export.txt").is_err());
+        assert!(super::normalize_export_html_path("   ").is_err());
     }
 
     #[test]
