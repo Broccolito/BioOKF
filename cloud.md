@@ -8,8 +8,9 @@ lives in the gitignored `notarization/` folder on the build machine (see below).
 
 BioOKF ships as two separately installed pieces:
 
-1. **BioOKF Studio** — the standalone desktop app, distributed as a notarized
-   `BioOKF Studio_<version>_aarch64.dmg`. On first launch it offers to install the
+1. **BioOKF Studio** — the standalone desktop app, built locally as a notarized
+   `BioOKF Studio_<version>_aarch64.dmg` and uploaded publicly as
+   `BioOKF.Studio_<version>_aarch64.dmg`. On first launch it offers to install the
    `bokf` CLI to `/usr/local/bin`. All Studio config (`registry.yaml`, `.active-kb`)
    lives under `~/.config/biookf-studio`.
 2. **The `biookf` agent plugin** — the primary way users drive the Studio from
@@ -19,7 +20,8 @@ BioOKF ships as two separately installed pieces:
 The DMG is built, signed, and notarized **locally** on a Mac that holds the UCSF
 Developer ID certificate. CI (`.github/workflows/release.yml`) separately builds the
 unsigned multi-platform `tar.gz`/`zip` bundles on tag push; the notarized macOS DMG is
-the locally produced asset uploaded on top.
+the locally produced asset uploaded on top. After upload, verify the public asset names
+with `gh release view <tag> --json assets --jq '.assets[].name'`.
 
 ## The `notarization/` folder (gitignored — never committed)
 

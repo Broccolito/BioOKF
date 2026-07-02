@@ -7,7 +7,8 @@ knowledge bases directly from your coding agent. This plugin bundles three thing
   BioOKF Studio desktop app** (the `bokf_studio_*` family).
 - **`bokf` CLI**: the same engine as a command-line tool.
 - **BioOKF Studio**: a desktop GUI that visualizes a knowledge base as an
-  interactive graph. Shipped **prebuilt**, so you never compile it.
+  interactive graph and can export a shareable, self-contained HTML graph view.
+  Shipped **prebuilt**, so you never compile it.
 
 ## Install: Claude Code
 

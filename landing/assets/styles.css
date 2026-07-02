@@ -300,6 +300,7 @@ footer{border-top:1px solid var(--border);padding:42px 0 56px;background:var(--b
 .docbody strong{color:var(--ink);font-weight:650;}
 .docbody a.link{color:var(--accent-ink);border-bottom:1px solid var(--accent-line);}
 .docbody a.link:hover{border-bottom-color:var(--accent-ink);}
+.docbody p code,.docbody li code,.note-box code{overflow-wrap:anywhere;word-break:break-word;}
 
 table.doc-table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--border);
   border-radius:var(--r);overflow:hidden;margin:18px 0;font-size:13.5px;}
@@ -346,6 +347,7 @@ table.doc-table td.desc code{background:var(--bg-sunken);color:var(--muted);}
 .def-v code{font-family:var(--mono);font-size:11.5px;background:var(--bg-sunken);color:var(--accent-ink);padding:1px 5px;border-radius:4px;}
 @media (max-width:560px){
   .defrow,.deflist.preds .defrow{grid-template-columns:1fr;gap:6px;}
+  .docbody p code,.docbody li code,.note-box code{word-break:break-all;}
 }
 
 .doc-code{background:#0f1115;border-radius:var(--r);padding:16px 18px;overflow-x:auto;margin:16px 0;

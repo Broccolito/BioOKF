@@ -1538,7 +1538,7 @@ mod tests {
 
     #[test]
     fn update_version_compare_handles_v_prefixes() {
-        assert!(super::version_newer("v0.2.3", "0.2.2"));
+        assert!(super::version_newer("v0.3.0", "0.2.3"));
         assert!(super::version_newer("0.10.0", "0.9.9"));
         assert!(!super::version_newer("v0.2.2", "0.2.2"));
         assert!(!super::version_newer("v0.2.1", "0.2.2"));
@@ -1547,16 +1547,16 @@ mod tests {
     #[test]
     fn update_asset_selection_finds_current_macos_dmg() {
         let release = super::GhRelease {
-            tag_name: "v0.2.3".into(),
+            tag_name: "v0.3.0".into(),
             html_url: None,
             assets: vec![super::GhAsset {
-                name: "BioOKF.Studio_0.2.3_aarch64.dmg".into(),
+                name: "BioOKF.Studio_0.3.0_aarch64.dmg".into(),
                 browser_download_url: "https://example.invalid/BioOKF.dmg".into(),
             }],
         };
         let asset = super::asset_for_current_platform(&release);
         if std::env::consts::OS == "macos" && std::env::consts::ARCH == "aarch64" {
-            assert_eq!(asset.unwrap().name, "BioOKF.Studio_0.2.3_aarch64.dmg");
+            assert_eq!(asset.unwrap().name, "BioOKF.Studio_0.3.0_aarch64.dmg");
         }
     }
 
