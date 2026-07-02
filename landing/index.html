@@ -9,7 +9,7 @@
 <meta property="og:title" content="BioOKF: Biomedical Open Knowledge Format" />
 <meta property="og:description" content="A periodic table for agentic biomedical research: a closed vocabulary of 28 node types and 35 predicates that maps any source into a typed, provenance-tracked graph your AI agent curates and explores." />
 <meta property="og:type" content="website" />
-<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/styles.css?v=0.3.0" />
 </head>
 <body id="top">
 
@@ -17,7 +17,7 @@
 <nav class="top">
   <a class="brand" href="#top" aria-label="BioOKF home">
     <img src="assets/logo.svg" alt="BioOKF" height="22" />
-    <span class="tag">v0.5</span>
+    <span class="tag">v0.3.0</span>
   </a>
   <button class="nav-burger" aria-label="Menu"><i></i><i></i><i></i></button>
   <ul class="nav-links">
@@ -40,8 +40,8 @@
     <h1>The <span class="accent">periodic table</span> of agentic biomedical research.</h1>
     <p class="hero-sub">BioOKF, the Biomedical Open Knowledge Format, is a typed and structured open format for
       biomedical research. Its 28 node types and 35 relationship predicates let an AI agent curate knowledge
-      bases that are grounded in the standardized rules and entities of biomedical science, then explore them
-      in a desktop <strong>Studio</strong>.</p>
+      bases that are grounded in the standardized rules and entities of biomedical science, then explore and
+      share them in a desktop <strong>Studio</strong>.</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#install">Install BioOKF</a>
       <a class="btn btn-dark" href="https://github.com/Broccolito/BioOKF" target="_blank" rel="noopener">
@@ -50,6 +50,7 @@
     </div>
     <div class="hero-meta">
       <span class="pill accent"><span class="dot"></span> Claude Code + Codex plugin</span>
+      <span class="pill">Studio 0.3.0 graph export</span>
       <span class="pill">macOS, Apple Silicon &amp; Intel</span>
       <span class="pill">Rust core, Tauri Studio</span>
       <span class="pill">Apache-2.0</span>
@@ -66,7 +67,7 @@
       </div>
       <div class="pillar">
         <div class="pk"><svg class="ci" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="7" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="13" cy="17" r="2.4"/><path d="M8 8l4 7M16 8l-2 6"/></svg> The Studio</div>
-        <div class="pv">A Tauri desktop app that renders the base as an interactive, type-colored graph, with panels, an integrated terminal, and a live agent loop.</div>
+        <div class="pv">A Tauri desktop app that renders the base as an interactive, type-colored graph, with polished zoom, fit-to-view, self-contained HTML export controls, panels, an integrated terminal, and a live agent loop.</div>
       </div>
     </div>
   </div>
@@ -101,7 +102,7 @@
       <div class="cell">
         <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.3-4.3"/></svg>
         <h3>Query as a graph</h3>
-        <p>BM25 full-text search, node and edge stats by type and predicate, and a render-ready graph export. Ask what the base knows and who backs it.</p>
+        <p>BM25 full-text search, node and edge stats by type and predicate, plus self-contained HTML graph export. Ask what the base knows and who backs it.</p>
       </div>
       <div class="cell">
         <svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="6" cy="6" r="2.4"/><circle cx="6" cy="18" r="2.4"/><circle cx="18" cy="12" r="2.4"/><path d="M8 7l8 4M8 17l8-4"/></svg>
@@ -140,7 +141,7 @@
           <div><b>Honest edges</b>Negative <code>not_*</code> edges render struck; provenance edges render faint.</div>
         </div>
       </div>
-      <p class="lead" style="margin-top:14px">How the graph <strong>pulls together</strong>: a knowledge base assembling itself, counts ticking up, then a neighbor-focus beat on the hub.</p>
+      <p class="lead" style="margin-top:14px">How the graph <strong>pulls together</strong>: a knowledge base assembling itself, counts ticking up, then a neighbor-focus beat on the hub. Studio 0.3.0 adds a compact export control for saving the whole graph as a standalone HTML view.</p>
     </div>
 
     <!-- demo 2 -->
@@ -188,16 +189,16 @@
       <div>
         <div class="code">
           <div class="code-bar"><i></i><i></i><i></i><span>Step 1 &mdash; Studio + CLI + MCP</span></div>
-<pre><span class="com"># Download the signed DMG from GitHub Releases:</span>
-<span class="com"># BioOKF.Studio_0.2.3_aarch64.dmg</span>
-<span class="com"># BioOKF.Studio_0.2.3_x64.dmg</span>
+<pre><span class="com"># Download BioOKF Studio 0.3.0 from GitHub Releases:</span>
+<span class="com"># BioOKF.Studio_0.3.0_aarch64.dmg  (Apple Silicon)</span>
+<span class="com"># BioOKF.Studio_0.3.0_x64.dmg      (Intel)</span>
 <span class="com"># Open it, drag BioOKF Studio to Applications.</span>
 <span class="com"># On first launch, accept the prompt to install</span>
 <span class="com"># bokf to /usr/local/bin.</span></pre>
         </div>
         <div class="copyline">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
-          <a href="https://github.com/Broccolito/BioOKF/releases/latest" target="_blank" rel="noopener" style="color:var(--accent-ink)">Download the latest release &rarr;</a>
+          <a href="https://github.com/Broccolito/BioOKF/releases/tag/v0.3.0" target="_blank" rel="noopener" style="color:var(--accent-ink)">Download BioOKF Studio 0.3.0 &rarr;</a>
         </div>
         <div class="code" style="margin-top:16px">
           <div class="code-bar"><i></i><i></i><i></i><span>Step 2 &mdash; Agent plugin</span></div>
@@ -242,7 +243,7 @@
     <div class="wyg fade">
       <div class="row">
         <div class="name"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M3 8h18"/></svg> BioOKF Studio</div>
-        <p>A desktop app that renders a base as an interactive, type-colored graph, with node and edge detail panels, an integrated terminal, in-app editing, and a registry-driven sidebar of bundles that can live anywhere on disk.</p>
+        <p>A desktop app that renders a base as an interactive, type-colored graph, with node and edge detail panels, polished zoom/fit/export graph controls, self-contained HTML graph export, an integrated terminal, in-app editing, and a registry-driven sidebar of bundles that can live anywhere on disk.</p>
       </div>
       <div class="row">
         <div class="name"><code>bokf-mcp</code></div>

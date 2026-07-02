@@ -51,8 +51,8 @@ which wires those tools into your MCP client.
 
 Download the notarized DMG for your Mac from the
 [latest release](https://github.com/Broccolito/BioOKF/releases/latest):
-**`BioOKF.Studio_0.2.3_aarch64.dmg`** for Apple Silicon or
-**`BioOKF.Studio_0.2.3_x64.dmg`** for Intel. Open it and drag
+**`BioOKF.Studio_0.3.0_aarch64.dmg`** for Apple Silicon or
+**`BioOKF.Studio_0.3.0_x64.dmg`** for Intel. Open it and drag
 **BioOKF Studio** into Applications. The DMG is signed and notarized by Apple, so it opens with
 no Gatekeeper warning and no quarantine prompt.
 
@@ -115,7 +115,7 @@ Apple Silicon or Intel. Until a prebuilt asset exists for another platform you c
 
 | Piece | What it is |
 |---|---|
-| **BioOKF Studio** | A desktop app that renders a knowledge base as an interactive, type-colored graph, with node/edge detail panels, an integrated terminal, in-app editing, and a registry-driven sidebar of bundles that can live anywhere on disk. |
+| **BioOKF Studio** | A desktop app that renders a knowledge base as an interactive, type-colored graph, with node/edge detail panels, self-contained HTML graph exports, an integrated terminal, in-app editing, and a registry-driven sidebar of bundles that can live anywhere on disk. |
 | **`bokf-mcp`** | A stdio MCP server: **33 tools** for curation, analysis, **and live control of the Studio GUI** (`bokf_studio_*`). It ships an operating brief on `initialize`, so an agent knows the BioOKF rules. |
 | **`bokf`** | The same engine as a scriptable CLI (23 subcommands): the precise terminal surface for curation. |
 | **The live loop** | The MCP server can open the Studio and **drive/observe it in real time**: an agent searches, selects, and moves around the graph while a human watches each action in an in-app "AI agent" banner, and reads the app's full status as structured JSON instead of taking screenshots. |
@@ -167,8 +167,12 @@ Studio is a Tauri desktop app and a pure visualizer; every operation delegates t
 - **Interactive graph canvas.** A force-directed, type-colored graph with pan/zoom/drag,
   fit-to-view, hub emphasis, hover tooltips, and neighbor-focus dimming. Negative `not_<X>` edges
   render struck-through; synthesized provenance edges render faint; symmetric edges are styled
-  distinctly. A type-family legend covers all 28 types plus the light "External" swatch for
+  distinctly. The compact canvas control stack includes zoom in, zoom out, fit-to-view, and export.
+  A type-family legend covers all 28 types plus the light "External" swatch for
   referenced-but-undocumented entities.
+- **Self-contained HTML exports.** Export the current graph to a standalone HTML file with embedded
+  data, pan/zoom, search, clickable nodes and edges, and a polished detail drawer for fields,
+  provenance, notes, and document text. The exported file opens without a server or external assets.
 - **Detail panels.** Click a node for its type badge, frontmatter (subtype, `xref`/synonyms/tags
   chips, `raw_source`, description, notes), outgoing edges grouped by predicate, incoming
   "referenced by" edges, the rendered Markdown body, and, for source nodes, a Source/Provenance

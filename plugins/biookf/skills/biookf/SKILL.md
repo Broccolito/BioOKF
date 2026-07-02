@@ -24,4 +24,6 @@ Core rules:
 - Finish ingest or merge work with `bokf_verify`; fix every error before calling the bundle clean.
 
 For visual QA, use `bokf_studio_open` and prefer `bokf_studio_state` / `bokf_studio_graph` over
-screenshots unless the user explicitly asks for a visual screenshot.
+screenshots unless the user explicitly asks for a visual screenshot. Studio can export a shareable
+self-contained HTML graph for human review; keep using `bokf_graph` or `bokf export` for JSON
+automation paths.

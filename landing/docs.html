@@ -6,7 +6,7 @@
 <title>BioOKF Documentation</title>
 <meta name="description" content="BioOKF documentation: the bundle format, all 28 node types and 35 edge predicates defined, node-based provenance, the Studio, the live agent loop, and the full bokf CLI and MCP tool reference." />
 <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
-<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="assets/styles.css?v=0.3.0" />
 </head>
 <body id="top">
 
@@ -69,8 +69,10 @@
     <section class="doc-sec" id="install-docs">
       <h2>Install</h2>
       <p>Install the notarized Studio first, then add the plugin to Claude Code or Codex. You never compile
-        anything. The first time a tool runs, the shared launcher downloads any missing prebuilt binaries for
-        your platform and caches them under <code>~/.local/share/biookf</code>.</p>
+        anything. BioOKF Studio 0.3.0 is published as <code>BioOKF.Studio_0.3.0_aarch64.dmg</code> for
+        Apple Silicon and <code>BioOKF.Studio_0.3.0_x64.dmg</code> for Intel Macs. The first time a tool runs,
+        the shared launcher downloads any missing prebuilt binaries for your platform and caches them under
+        <code>~/.local/share/biookf</code>.</p>
       <div class="doc-code"><span class="com"># in Claude Code, run both, then restart</span>
 <span class="cmd">/plugin</span> marketplace add Broccolito/BioOKF
 <span class="cmd">/plugin</span> install biookf@biookf
@@ -248,9 +250,10 @@
         registering it.</p>
       <h3>Interactive graph canvas</h3>
       <p>A force-directed, type-colored graph with pan, zoom, drag, fit-to-view, hub emphasis, hover tooltips, and
-        neighbor-focus dimming. Negative <code>not_&lt;X&gt;</code> edges render struck-through; synthesized provenance
-        edges render faint; symmetric edges are styled distinctly. A type-family legend covers all 28 types plus the
-        light "External" swatch.</p>
+        neighbor-focus dimming. The lower-right graph controls provide zoom in, zoom out, fit-to-view, and export to
+        a self-contained HTML graph with embedded data and clickable details. Negative <code>not_&lt;X&gt;</code> edges
+        render struck-through; synthesized provenance edges render faint; symmetric edges are styled distinctly. A
+        type-family legend covers all 28 types plus the light "External" swatch.</p>
       <h3>Detail panels</h3>
       <p>Click a node for its type badge, frontmatter (subtype, <code>xref</code>, synonyms, tags chips,
         <code>raw_source</code>, description, notes), outgoing edges grouped by predicate, incoming "referenced by" edges,

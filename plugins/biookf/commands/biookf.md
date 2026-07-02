@@ -27,5 +27,7 @@ To get going:
 3. Use `bokf_studio_state` to know what the app is showing, then drive the graph
    with `bokf_studio_select` / `bokf_studio_search`. Each action you take is shown
    live in the app's "AI agent" banner so the user can watch you explore.
+   Studio can also export the current graph as a shareable self-contained HTML
+   view; use `bokf_graph` or `bokf export` when you need JSON for automation.
 
 $ARGUMENTS
