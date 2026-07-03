@@ -1,9 +1,11 @@
 name: release
 
-# Build the prebuilt BioOKF bundle (bokf CLI + bokf-mcp server + BioOKF Studio
-# desktop app) for each platform and publish them as assets on a GitHub Release.
+# Build the prebuilt macOS BioOKF bundle (bokf CLI + bokf-mcp server + BioOKF
+# Studio desktop app) and publish it as assets on a GitHub Release.
 # The `biookf` Claude Code plugin downloads the asset matching the user's platform
-# on first run, so users never compile anything.
+# on first run, so users never compile anything. Linux/Windows packaging is
+# intentionally omitted until their Studio and MCP control transports are
+# platform-complete.
 #
 # Trigger: push a tag like `v0.1.0`, or run manually with a tag input.
 
@@ -33,12 +35,6 @@ jobs:
           - os: macos-13      # Intel
             target: macos-x64
             rust_target: x86_64-apple-darwin
-          - os: ubuntu-22.04
-            target: linux-x64
-            rust_target: x86_64-unknown-linux-gnu
-          - os: windows-2022
-            target: windows-x64
-            rust_target: x86_64-pc-windows-msvc
 
     defaults:
       run:
