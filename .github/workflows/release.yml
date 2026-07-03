@@ -45,11 +45,13 @@ jobs:
         shell: bash
 
     steps:
-      - uses: actions/checkout@v4
-
       - name: Resolve tag
         id: tag
         run: echo "tag=${{ github.event.inputs.tag || github.ref_name }}" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.tag.outputs.tag }}
 
       - uses: dtolnay/rust-toolchain@stable
         with:
@@ -68,6 +70,7 @@ jobs:
             libayatana-appindicator3-dev librsvg2-dev patchelf
 
       - name: Install tauri-cli
+        if: startsWith(matrix.os, 'macos-')
         run: cargo install tauri-cli --version "^2.0" --locked
 
       - name: Build bokf + bokf-mcp (release)
@@ -75,8 +78,14 @@ jobs:
         run: cargo build --release -p bokf-cli -p bokf-mcp
 
       - name: Build BioOKF Studio app (release)
-        working-directory: app/studio/src-tauri
-        run: cargo tauri build --bundles app
+        working-directory: app
+        run: |
+          set -euo pipefail
+          if [[ "${{ matrix.os }}" == macos-* ]]; then
+            ( cd studio/src-tauri && cargo tauri build --bundles app )
+          else
+            cargo build --release -p biookf-studio
+          fi
 
       - name: Stage package
         id: stage
