@@ -32,7 +32,7 @@ jobs:
           - os: macos-14      # Apple Silicon
             target: macos-arm64
             rust_target: aarch64-apple-darwin
-          - os: macos-13      # Intel
+          - os: macos-15-intel # Intel
             target: macos-x64
             rust_target: x86_64-apple-darwin
 
