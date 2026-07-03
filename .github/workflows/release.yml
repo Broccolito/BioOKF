@@ -73,6 +73,14 @@ jobs:
         working-directory: app
         run: cargo build --release -p bokf-cli -p bokf-mcp
 
+      - name: Prepare Studio sidecars
+        working-directory: app
+        run: |
+          set -euo pipefail
+          mkdir -p studio/src-tauri/bin
+          cp target/release/bokf studio/src-tauri/bin/bokf
+          cp target/release/bokf-mcp studio/src-tauri/bin/bokf-mcp
+
       - name: Build BioOKF Studio app (release)
         working-directory: app
         run: |
