@@ -86,7 +86,7 @@ jobs:
         run: |
           set -euo pipefail
           if [[ "${{ matrix.os }}" == macos-* ]]; then
-            ( cd studio/src-tauri && cargo tauri build --bundles app )
+            ( cd studio/src-tauri && cargo tauri build --bundles app --no-sign --ci )
           else
             cargo build --release -p biookf-studio
           fi
