@@ -1,0 +1,107 @@
+# BioOKF predicate -> SPOKE relationship-type family crosswalk (spin 1, from reltype research).
+# families: glob patterns matched against the reltypes actually found between two mapped nodes.
+# negatable: whether a not_<X> form exists (the 11 effect predicates); a not_<X> that finds a
+#   positive family member => contradicts_spoke.
+# Endpoint constraints are enforced implicitly: a predicate's edge is only checked between its own
+#   two endpoints, so a wildcard that also covers an unrelated reltype cannot mis-fire.
+version: 1
+
+# predicates that never correspond to a SPOKE relationship (pure provenance / context axis)
+provenance_only:
+  - reported_in
+
+predicates:
+  # ---- structural / definitional ----
+  is_a:
+    families: ["ISA_*"]
+    negatable: false
+  part_of:
+    # genomic partonomy: a Variant is part_of a Gene -> SPOKE MAPS/BELONGS; a Gene product is
+    # part_of a cellular component -> GO-CC. (verified crosswalk gap, round 4)
+    families: ["PARTOF_*", "MAPS_VmG", "BELONGS_VbG", "BELONGS_VbH", "PARTICIPATES_GpCC"]
+    negatable: false
+  member_of:
+    families: ["MEMBEROF_*", "ISA_*"]
+    negatable: false
+  derives_from:
+    families: ["DERIVES_FROM_*", "CLEAVESTO_PctP"]
+    negatable: false
+  encodes:
+    families: ["ENCODES_*"]
+    negatable: false
+  located_in:
+    # anatomical (Disease->Anatomy), subcellular (GO-CC), genomic (variant/gene->chromosome/gene),
+    # and "present at location" senses
+    families: ["LOCALIZES_DlA", "PARTICIPATES_GpCC", "FOUNDIN_*", "ISOLATEDIN_*",
+               "CONTAINS_CcG", "MAPS_VmG", "BELONGS_VbG", "PARTOF_GpPG", "PARTOF_CpC"]
+    negatable: false
+  expressed_in:
+    families: ["EXPRESSEDIN_*", "EXPRESSES_AeG", "ENRICHED_IN_*"]
+    negatable: true
+  measures:
+    families: ["MEASURES_*", "MEASURESIN_*"]
+    negatable: false
+  used_to_study:
+    # RESEARCH: clinical-trial edges are the SPOKE analogue of "investigated against"
+    families: ["IN_CLINICAL_TRIALS_FOR_CictD"]
+    negatable: false
+
+  # ---- effect / interaction ----
+  interacts_with:
+    families: ["INTERACTS_*", "TRANSPORTS_PtC"]
+    negatable: true
+  binds:
+    families: ["BINDS_*"]
+    # a compound that binds a gene product often up/down-regulates it — related, not identical
+    related_families: ["UPREGULATES_*", "DOWNREGULATES_*"]
+    negatable: true
+  regulates:
+    # BioOKF collapses UP/DOWN-regulation; miRNA targeting is post-transcriptional regulation
+    families: ["UPREGULATES_*", "DOWNREGULATES_*", "REGULATES_*", "TARGETS_MtG"]
+    # gene regulating a process is related to gene participating in it
+    related_families: ["PARTICIPATES_GpBP", "PARTICIPATES_GpMF", "PARTICIPATES_GpPW"]
+    negatable: true
+  catalyzes:
+    families: ["CATALYZES_ECcR", "PARTICIPATES_GpMF"]
+    negatable: false
+  converts_to:
+    families: ["CONSUMES_RcC", "PRODUCES_RpC", "CLEAVESTO_PctP"]
+    negatable: false
+  participates_in:
+    families: ["PARTICIPATES_CpR", "PARTICIPATES_GpBP", "PARTICIPATES_GpMF",
+               "PARTICIPATES_GpPW", "PARTICIPATES_GpR", "PARTICIPATES_PGpR", "PARTICIPATES_PpR"]
+    negatable: false
+  causes:
+    families: ["CAUSES_*"]
+    # a curated ASSOCIATION (gene/variant-disease) is weaker evidence related to a causal claim
+    related_families: ["ASSOCIATES_DaG", "ASSOCIATES_VaP", "ASSOCIATES_GaS"]
+    negatable: true
+  predisposes_to:
+    families: ["ASSOCIATES_DaG", "ASSOCIATES_VaP", "ASSOCIATES_GaS"]
+    negatable: true
+  treats:
+    families: ["TREATS_CtD"]
+    # a compound merely IN TRIALS FOR a disease is related, not a confirmed treatment
+    related_families: ["IN_CLINICAL_TRIALS_FOR_CictD"]
+    negatable: true
+  prevents:
+    families: []            # SPOKE has no protective/prevention edge
+    # closest evidence: the compound treats / is associated with the disease
+    related_families: ["TREATS_CtD", "IN_CLINICAL_TRIALS_FOR_CictD", "ASSOCIATES_*"]
+    negatable: true
+  contraindicated_in:
+    families: ["CONTRAINDICATES_CcD"]
+    negatable: false
+  affects_response_to:
+    families: ["AFFECTS_CamG", "AFFECT_VaC", "ADVRESPONSE_TO_mGarC", "RESPONDS_TO_OrC",
+               "RESISTANT_TO_mGrC", "REDUCES_SEN_mGrsC", "RESPONSE_TO_mGrC"]
+    negatable: true
+  has_phenotype:
+    families: ["PRESENTS_DpS", "ASSOCIATES_GaS"]
+    negatable: true
+  associated_with:
+    families: ["ASSOCIATES_*", "CORRELATES_*", "MARKER_POS_GmpD",
+               "MARKER_NEG_GmnD", "MARKER_OF_GmoPCT", "CAUSES_OcD"]
+    # disease-disease RESEMBLES is symptom-similarity, not a direct association (edge-verify round 5)
+    related_families: ["RESEMBLES_DrD"]
+    negatable: true

@@ -1,0 +1,205 @@
+# BioOKF type -> SPOKE label crosswalk  (spin 1 draft; refined from research corpus)
+# labels: ordered candidate SPOKE labels, most-likely first. [] => not_mappable (no SPOKE analogue).
+# subtype_routing: BioOKF subtype (agent-coined, lowercase) -> narrowed/reordered label list.
+version: 1
+
+types:
+  # ---- biomedical entities (20) ----
+  Gene:
+    labels: [Gene]
+    subtype_routing:
+      mirna: [MiRNA, Gene]
+      ncrna: [Gene, MiRNA]
+
+  Molecule:
+    labels: [Compound, Protein, PharmacologicClass]
+    subtype_routing:
+      protein: [Protein, Compound]
+      antibody: [Protein, Compound]
+      enzyme: [Protein, Compound]
+      complex: [Complex, Protein]
+      drug: [Compound]
+      small_molecule: [Compound]
+      metabolite: [Compound]
+      ion: [Compound]
+      rna: [Compound]                 # SPOKE has no RNA-species node; weak
+
+  MolecularClass:
+    labels: [PharmacologicClass, ProteinFamily, ProteinDomain]
+    subtype_routing:
+      pharmacologic: [PharmacologicClass]
+      protein_family: [ProteinFamily]
+      protein_domain: [ProteinDomain]
+      gene_set: [PwGroup, PharmacologicClass]
+      chemical_class: [PharmacologicClass]
+
+  Variant:
+    labels: [Variant]                 # identifier = dbSNP rsID; name-matching mostly fails -> not_found
+
+  SequenceFeature:
+    # STRESS TEST: SPOKE has no regulatory-element node; routing enhancers/promoters/TFBS to
+    # ProteinDomain produced 100 nonsense ambiguities. Default not_mappable; only true protein
+    # domains have a home.
+    labels: []
+    subtype_routing:
+      protein_domain: [ProteinDomain]
+      domain: [ProteinDomain]
+
+  Structure:
+    # benchmark "Structure" nodes are subcellular structures (caveolae, desmosome) -> CellularComponent.
+    labels: [CellularComponent, Anatomy, Complex]
+    subtype_routing:
+      # PDB 3D coordinate entries have no SPOKE node -> not_mappable (was 91 nonsense ambiguities)
+      xray: []
+      cryo_em: []
+      nmr: []
+      predicted: []
+      pdb: []
+
+  Anatomy:
+    labels: [Anatomy, CellularComponent]
+    subtype_routing:
+      subcellular: [CellularComponent, Anatomy]
+      organelle: [CellularComponent, Anatomy]
+      body_fluid: [Anatomy]
+      organ: [Anatomy]
+      tissue: [Anatomy]
+
+  CellType:
+    labels: [CellType]
+    subtype_routing:
+      cell_line: [CellLine, CellType]
+      organoid: [CellType]
+
+  Organism:
+    labels: [Organism]
+
+  BiologicalPathway:
+    labels: [Pathway, BiologicalProcess, Reaction]
+    subtype_routing:
+      go_bp: [BiologicalProcess]
+      physiologic: [BiologicalProcess]
+      pathologic: [BiologicalProcess]
+      behavior: [BiologicalProcess]
+      pathway: [Pathway, BiologicalProcess]
+      signaling: [Pathway, BiologicalProcess]
+      reaction: [Reaction, Pathway]
+
+  BiologicalFunction:
+    # RESEARCH: most benchmark "BiologicalFunction" nodes are broad processes (apoptosis,
+    # angiogenesis) that live in BiologicalProcess, not MolecularFunction. Try BP first.
+    labels: [BiologicalProcess, MolecularFunction]
+
+  Disease:
+    labels: [Disease]
+
+  Phenotype:
+    labels: [Symptom, SideEffect, Disease]
+    subtype_routing:
+      symptom: [Symptom, Disease]
+      sign: [Symptom, Disease]
+      side_effect: [SideEffect, Symptom]
+      trait: [Symptom, Disease]
+      morphologic: [Symptom, Disease]
+      behavioral: [Symptom]
+
+  BiomedicalMeasure:
+    labels: [ClinicalLab]
+
+  MethodOrProcedure:
+    labels: []                        # SPOKE has no procedure/assay node -> not_mappable
+
+  Exposure:
+    # RESEARCH: chemical exposures (arsenic, ethanol, caffeine) map cleanly to Compound; SPOKE has
+    # no ExposureEvent node. Compound first so defined chemicals resolve.
+    labels: [Compound, Environment]
+    subtype_routing:
+      dietary: [Food, Compound]
+      environmental: [Compound, Environment]
+      occupational: [Compound, Environment]
+      behavioral: [Compound, Environment]   # alcohol/tobacco/caffeine are chemical exposures
+
+  SocialFactor:
+    labels: [SDoH]
+
+  Food:
+    labels: [Food, Nutrient]
+    subtype_routing:
+      food_group: [Food]
+      dietary_product: [Food, DietarySupplement]
+
+  Device:
+    labels: []                        # not_mappable
+
+  MaterialSample:
+    labels: []                        # not_mappable
+
+  # ---- provenance & context (8) : structurally outside SPOKE ----
+  Publication:        { labels: [] }
+  Study:              { labels: [] }
+  Dataset:            { labels: [] }
+  Agent:              { labels: [] }
+  Population:         { labels: [] }
+  GeographicLocation: { labels: [Location] }   # SPOKE Location is geographic (iso3, country/region)
+  Concept:            { labels: [] }
+  Other:              { labels: [] }
+
+# xref CURIE namespace -> SPOKE identifier template, per SPOKE label.
+# Only fires when a BioOKF node carries an xref in a scheme SPOKE uses as its identifier.
+xref_to_identifier:
+  Gene:
+    NCBIGene: "{id}"
+    NCBIGENE: "{id}"
+  Disease:
+    DOID: "DOID:{id}"
+  Anatomy:
+    UBERON: "UBERON:{id}"
+  CellType:
+    CL: "CL:{id}"
+  MolecularFunction:
+    GO: "GO:{id}"
+  BiologicalProcess:
+    GO: "GO:{id}"
+  CellularComponent:
+    GO: "GO:{id}"
+  Protein:
+    UniProtKB: "{id}"
+    UNIPROTKB: "{id}"
+  Compound:
+    inchikey: "inchikey:{id}"
+
+# ---- per-label tie-breakers ----
+# When an exact-NAME match returns several SPOKE nodes that share the name (duplicate records),
+# retry with these extra property equalities to pick the canonical one. Applied before the
+# multiplicity guard fires, so a preferred unique hit maps confidently instead of going to review.
+label_preferences:
+  Organism:
+    # SPOKE stores one species node + many strain nodes per organism name; prefer the species.
+    prefer_props: {level: species}
+
+# ---- name aliases (SPOKE has ZERO organism synonyms, so old->new taxonomic names can't be
+# bridged from within SPOKE). This is a small stand-in for the NCBI Taxonomy synonym table
+# (names.dmp): in production, load every scientific-name synonym -> canonical name for Organism.
+name_aliases:
+  Organism:
+    "Lactobacillus rhamnosus": "Lacticaseibacillus rhamnosus"
+    "Mycoplasma pneumoniae": "Mycoplasmoides pneumoniae"
+    "Mycoplasma genitalium": "Mycoplasmoides genitalium"
+    "Candida glabrata": "Nakaseomyces glabratus"
+    "Prevotella copri": "Segatella copri"
+    "Vibrio fischeri": "Aliivibrio fischeri"
+    "Mycobacterium abscessus": "Mycobacteroides abscessus"
+    "Mycobacterium smegmatis": "Mycolicibacterium smegmatis"
+    "Rhodobacter sphaeroides": "Cereibacter sphaeroides"
+    "Borrelia burgdorferi": "Borreliella burgdorferi"
+    "Lactobacillus casei": "Lacticaseibacillus casei"
+    "Enterobacter aerogenes": "Klebsiella aerogenes"
+    # viral taxonomic renames (ICTV). Values are the exact SPOKE canonical names (case-sensitive);
+    # these taxa are level='no rank' so they resolve via the alias plain-exact fallback, not species.
+    "Herpes simplex virus 1": "Human alphaherpesvirus 1"
+    "Herpes simplex virus type 1": "Human alphaherpesvirus 1"
+    "Herpes simplex virus": "Human alphaherpesvirus 1"
+    "Herpes simplex virus 2": "Human alphaherpesvirus 2"
+    "Herpes simplex virus type 2": "Human alphaherpesvirus 2"
+    "Hepatitis C virus": "Hepacivirus hominis"
+    "Epstein-Barr virus": "human gammaherpesvirus 4"

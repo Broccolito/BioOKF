@@ -1,0 +1,12 @@
+# Live SPOKE Neo4j credentials — never commit (see .env.example).
+.env
+# Rust build artifacts.
+/target
+# Compiled binary staged into bin/ (rebuilt from source; do not commit ~7 MB).
+/bin
+# Generated mapping outputs — large (~260 MB); regenerate via runs/sweep/sweep.sh.
+# The sweep script itself is kept (it is source), only its outputs are ignored.
+runs/**/*.json
+runs/**/*.err
+runs/.spoke_cache
+.DS_Store
