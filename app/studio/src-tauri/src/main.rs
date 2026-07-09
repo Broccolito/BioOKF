@@ -2072,29 +2072,45 @@ mod tests {
         assert_eq!(status["assetName"].as_str(), expected_macos_dmg());
     }
 
-    /// Real published artifacts, checked without a network fetch. Point it at
-    /// assets you already downloaded:
-    ///   BIOOKF_TEST_DMG=…/BioOKF.Studio_0.3.0_aarch64.dmg \
-    ///   BIOOKF_TEST_TARBALL=…/biookf-macos-arm64.tar.gz \
+    /// Real release artifacts, checked without a network fetch. Point it at
+    /// archives you already downloaded. Every asset published from v0.3.1 on is
+    /// signed — including the tarball — so the unsigned side needs an older
+    /// artifact, or a local `--no-sign` build, to stay meaningful:
+    ///   BIOOKF_TEST_SIGNED_ASSET=…/BioOKF.Studio_0.3.1_aarch64.dmg \
+    ///   BIOOKF_TEST_UNSIGNED_ASSET=…/v0.3.0/biookf-macos-arm64.tar.gz \
     ///   cargo test -p biookf-studio -- --ignored real_release_assets
+    ///
+    /// Either variable may be omitted to check only one side.
     #[test]
     #[ignore]
     #[cfg(target_os = "macos")]
     fn real_release_assets_install_only_when_signed() {
         let root = scratch("real-assets");
-        let dmg = std::env::var("BIOOKF_TEST_DMG").expect("set BIOOKF_TEST_DMG");
-        let staged = super::stage_app_from_asset(Path::new(&dmg), &root.join("dmg")).unwrap();
-        super::verify_staged_app(&staged, &staged).expect("the signed dmg must be installable");
-        assert_eq!(
-            super::codesign_team_id(&staged).as_deref(),
-            Some("F3YYBXAFJ8")
-        );
+        let mut checked = 0;
 
-        let tgz = std::env::var("BIOOKF_TEST_TARBALL").expect("set BIOOKF_TEST_TARBALL");
-        let staged = super::stage_app_from_asset(Path::new(&tgz), &root.join("tgz")).unwrap();
-        let err = super::verify_staged_app(&staged, &staged)
-            .expect_err("the --no-sign CI tarball must be rejected");
-        assert!(err.contains("not correctly code-signed"), "{err}");
+        if let Ok(signed) = std::env::var("BIOOKF_TEST_SIGNED_ASSET") {
+            let staged = super::stage_app_from_asset(Path::new(&signed), &root.join("ok")).unwrap();
+            super::verify_staged_app(&staged, &staged).expect("a signed asset must be installable");
+            assert_eq!(
+                super::codesign_team_id(&staged).as_deref(),
+                Some("F3YYBXAFJ8")
+            );
+            checked += 1;
+        }
+
+        if let Ok(unsigned) = std::env::var("BIOOKF_TEST_UNSIGNED_ASSET") {
+            let staged =
+                super::stage_app_from_asset(Path::new(&unsigned), &root.join("bad")).unwrap();
+            let err = super::verify_staged_app(&staged, &staged)
+                .expect_err("an unsigned asset must be rejected before Studio quits");
+            assert!(err.contains("not correctly code-signed"), "{err}");
+            checked += 1;
+        }
+
+        assert!(
+            checked > 0,
+            "set BIOOKF_TEST_SIGNED_ASSET and/or BIOOKF_TEST_UNSIGNED_ASSET"
+        );
     }
 
     #[test]
