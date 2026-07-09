@@ -1095,10 +1095,12 @@ struct GhAsset {
 
 fn fetch_latest_release() -> Result<GhRelease, String> {
     if let Ok(raw) = std::env::var("BIOOKF_UPDATE_RELEASE_JSON") {
-        return serde_json::from_str(&raw).map_err(|e| format!("bad BIOOKF_UPDATE_RELEASE_JSON: {e}"));
+        return serde_json::from_str(&raw)
+            .map_err(|e| format!("bad BIOOKF_UPDATE_RELEASE_JSON: {e}"));
     }
-    let url = std::env::var("BIOOKF_UPDATE_API_URL")
-        .unwrap_or_else(|_| "https://api.github.com/repos/Broccolito/BioOKF/releases/latest".to_string());
+    let url = std::env::var("BIOOKF_UPDATE_API_URL").unwrap_or_else(|_| {
+        "https://api.github.com/repos/Broccolito/BioOKF/releases/latest".to_string()
+    });
     let out = std::process::Command::new("curl")
         .arg("-fsSL")
         .arg("--connect-timeout")
@@ -1108,7 +1110,10 @@ fn fetch_latest_release() -> Result<GhRelease, String> {
         .arg("-H")
         .arg("Accept: application/vnd.github+json")
         .arg("-H")
-        .arg(format!("User-Agent: BioOKF-Studio/{}", current_studio_version()))
+        .arg(format!(
+            "User-Agent: BioOKF-Studio/{}",
+            current_studio_version()
+        ))
         .arg(&url)
         .output()
         .map_err(|e| format!("failed to run curl for release check: {e}"))?;
@@ -1168,7 +1173,10 @@ fn asset_for_current_platform(release: &GhRelease) -> Option<GhAsset> {
         .or_else(|| best(&|n: &str| n.contains(platform)))
         .or_else(|| {
             if std::env::consts::OS == "macos" {
-                release.assets.iter().find(|a| a.name.to_ascii_lowercase().ends_with(".dmg"))
+                release
+                    .assets
+                    .iter()
+                    .find(|a| a.name.to_ascii_lowercase().ends_with(".dmg"))
             } else {
                 None
             }
@@ -1232,7 +1240,9 @@ fn find_app_bundle(root: &Path, depth: usize) -> Option<PathBuf> {
     }
     let mut subdirs = Vec::new();
     for entry in std::fs::read_dir(root).ok()?.flatten() {
-        let Ok(kind) = entry.file_type() else { continue };
+        let Ok(kind) = entry.file_type() else {
+            continue;
+        };
         if kind.is_symlink() || !kind.is_dir() {
             continue;
         }
@@ -1242,7 +1252,9 @@ fn find_app_bundle(root: &Path, depth: usize) -> Option<PathBuf> {
         }
         subdirs.push(path);
     }
-    subdirs.into_iter().find_map(|d| find_app_bundle(&d, depth - 1))
+    subdirs
+        .into_iter()
+        .find_map(|d| find_app_bundle(&d, depth - 1))
 }
 
 /// Unpack the asset and copy the app out to a stable staging path. Copying
@@ -1296,7 +1308,8 @@ fn stage_app_from_asset(asset: &Path, root: &Path) -> Result<PathBuf, String> {
     } else if name.ends_with(".tar.gz") || name.ends_with(".tgz") {
         let extract = root.join("extract");
         let _ = std::fs::remove_dir_all(&extract);
-        std::fs::create_dir_all(&extract).map_err(|e| format!("failed to create extract dir: {e}"))?;
+        std::fs::create_dir_all(&extract)
+            .map_err(|e| format!("failed to create extract dir: {e}"))?;
         run_checked(
             "tar",
             [
@@ -1421,7 +1434,10 @@ fn download_asset(asset: &GhAsset) -> Result<PathBuf, String> {
         .arg("--max-time")
         .arg("300")
         .arg("-H")
-        .arg(format!("User-Agent: BioOKF-Studio/{}", current_studio_version()))
+        .arg(format!(
+            "User-Agent: BioOKF-Studio/{}",
+            current_studio_version()
+        ))
         .arg("-o")
         .arg(&dest)
         .arg(&asset.browser_download_url)
@@ -1461,6 +1477,9 @@ fn privileged_installer_body(staged_app: &Path, dest_app: &Path, owner: &str) ->
     format!(
         r#"#!/bin/bash
 set -uo pipefail
+# `do shell script` hands us a minimal environment, and `chown` lives in /usr/sbin.
+# Append rather than replace so a caller-provided PATH still wins (used by tests).
+export PATH="${{PATH:-}}:/usr/bin:/bin:/usr/sbin:/sbin"
 STAGED={staged}
 DEST={dest}
 OWNER={owner}
@@ -1550,6 +1569,7 @@ fn relauncher_body(
     format!(
         r#"#!/bin/bash
 set -uo pipefail
+export PATH="${{PATH:-}}:/usr/bin:/bin:/usr/sbin:/sbin"
 PID={pid}
 STAGED={staged}
 DEST={dest}
@@ -1628,8 +1648,8 @@ fn cli_status(app: AppHandle) -> serde_json::Value {
     let installed_path = bokf_on_path();
     let installed_mcp_path = bokf_mcp_on_path();
     let bundled = bundled_bin_dir(&app).map(|d| d.join(bokf_exe_name()));
-    let bundled_mcp = bundled_bin_dir(&app)
-        .map(|d| d.join(bokf_mcp_exe_name()).to_string_lossy().to_string());
+    let bundled_mcp =
+        bundled_bin_dir(&app).map(|d| d.join(bokf_mcp_exe_name()).to_string_lossy().to_string());
     let bundled_version = bundled.as_deref().and_then(bokf_version);
     let installed_version = installed_path
         .as_deref()
@@ -1656,7 +1676,10 @@ fn install_cli(app: AppHandle) -> Result<String, String> {
         return Err(format!("bundled bokf not found at {}", src_cli.display()));
     }
     if !src_mcp.exists() {
-        return Err(format!("bundled bokf-mcp not found at {}", src_mcp.display()));
+        return Err(format!(
+            "bundled bokf-mcp not found at {}",
+            src_mcp.display()
+        ));
     }
     let dest_cli = "/usr/local/bin/bokf";
     let dest_mcp = "/usr/local/bin/bokf-mcp";
@@ -1740,12 +1763,17 @@ fn install_update(app: AppHandle) -> Result<String, String> {
     let dest_app =
         app_bundle_path().unwrap_or_else(|| PathBuf::from("/Applications/BioOKF Studio.app"));
 
-    // Download, unpack, and signature-check while the window is still up, so a
-    // bad asset surfaces in the modal instead of silently killing the app: every
-    // `?` below returns an error the front-end shows with Studio still running.
-    let downloaded = download_asset(&asset)?;
-    let staged = stage_app_from_asset(&downloaded, &update_staging_root())?;
-    verify_staged_app(&staged, &dest_app)?;
+    // Download, unpack, and signature-check while the window is still up, so a bad
+    // asset surfaces in the modal instead of silently killing the app. Studio only
+    // quits below, once there is a verified bundle to install.
+    let staging = update_staging_root();
+    let staged = download_asset(&asset)
+        .and_then(|archive| stage_app_from_asset(&archive, &staging))
+        .and_then(|app| verify_staged_app(&app, &dest_app).map(|()| app))
+        .inspect_err(|_| {
+            // Don't strand a rejected download (tens of MB) in the temp dir.
+            let _ = std::fs::remove_dir_all(&staging);
+        })?;
 
     let installer = write_privileged_installer(&staged, &dest_app)?;
     let relauncher = write_macos_relauncher(&staged, &dest_app, &installer)?;
@@ -2001,7 +2029,9 @@ mod tests {
         let release = release_with(&["biookf-macos-arm64.tar.gz", "biookf-macos-x64.tar.gz"]);
         let picked = super::asset_for_current_platform(&release).map(|a| a.name);
         match (std::env::consts::OS, std::env::consts::ARCH) {
-            ("macos", "aarch64") => assert_eq!(picked.as_deref(), Some("biookf-macos-arm64.tar.gz")),
+            ("macos", "aarch64") => {
+                assert_eq!(picked.as_deref(), Some("biookf-macos-arm64.tar.gz"))
+            }
             ("macos", "x86_64") => assert_eq!(picked.as_deref(), Some("biookf-macos-x64.tar.gz")),
             _ => {}
         }
@@ -2021,11 +2051,60 @@ mod tests {
         }
     }
 
+    /// End-to-end through the command the popup actually calls, over the exact
+    /// asset list the GitHub API returns for v0.3.0 (tag bumped so an update is
+    /// on offer). This is where the unsigned tarball used to win.
+    #[test]
+    #[cfg(target_os = "macos")]
+    fn update_status_offers_the_signed_dmg_for_the_real_release_payload() {
+        let payload = r#"{"tag_name":"v9.9.9","html_url":"https://example.invalid/r","assets":[
+          {"name":"biookf-macos-arm64.tar.gz","browser_download_url":"https://example.invalid/a.tgz"},
+          {"name":"biookf-macos-x64.tar.gz","browser_download_url":"https://example.invalid/b.tgz"},
+          {"name":"BioOKF.Studio_0.3.0_aarch64.dmg","browser_download_url":"https://example.invalid/a.dmg"},
+          {"name":"BioOKF.Studio_0.3.0_x64.dmg","browser_download_url":"https://example.invalid/b.dmg"}]}"#;
+        std::env::set_var("BIOOKF_UPDATE_RELEASE_JSON", payload);
+        let status = super::update_status();
+        std::env::remove_var("BIOOKF_UPDATE_RELEASE_JSON");
+
+        assert_eq!(status["ok"], true);
+        assert_eq!(status["updateAvailable"], true);
+        assert_eq!(status["installSupported"], true);
+        assert_eq!(status["assetName"].as_str(), expected_macos_dmg());
+    }
+
+    /// Real published artifacts, checked without a network fetch. Point it at
+    /// assets you already downloaded:
+    ///   BIOOKF_TEST_DMG=…/BioOKF.Studio_0.3.0_aarch64.dmg \
+    ///   BIOOKF_TEST_TARBALL=…/biookf-macos-arm64.tar.gz \
+    ///   cargo test -p biookf-studio -- --ignored real_release_assets
+    #[test]
+    #[ignore]
+    #[cfg(target_os = "macos")]
+    fn real_release_assets_install_only_when_signed() {
+        let root = scratch("real-assets");
+        let dmg = std::env::var("BIOOKF_TEST_DMG").expect("set BIOOKF_TEST_DMG");
+        let staged = super::stage_app_from_asset(Path::new(&dmg), &root.join("dmg")).unwrap();
+        super::verify_staged_app(&staged, &staged).expect("the signed dmg must be installable");
+        assert_eq!(
+            super::codesign_team_id(&staged).as_deref(),
+            Some("F3YYBXAFJ8")
+        );
+
+        let tgz = std::env::var("BIOOKF_TEST_TARBALL").expect("set BIOOKF_TEST_TARBALL");
+        let staged = super::stage_app_from_asset(Path::new(&tgz), &root.join("tgz")).unwrap();
+        let err = super::verify_staged_app(&staged, &staged)
+            .expect_err("the --no-sign CI tarball must be rejected");
+        assert!(err.contains("not correctly code-signed"), "{err}");
+    }
+
     #[test]
     fn asset_kind_rank_prefers_dmg_then_tarball() {
         assert!(super::asset_kind_rank("a.dmg") < super::asset_kind_rank("a.tar.gz"));
         assert!(super::asset_kind_rank("a.tar.gz") < super::asset_kind_rank("a.zip"));
-        assert_eq!(super::asset_kind_rank("a.tgz"), super::asset_kind_rank("a.tar.gz"));
+        assert_eq!(
+            super::asset_kind_rank("a.tgz"),
+            super::asset_kind_rank("a.tar.gz")
+        );
         assert_eq!(super::asset_kind_rank("notes.txt"), None);
     }
 
@@ -2034,7 +2113,10 @@ mod tests {
         let adhoc = "Identifier=com.biookf.studio\nSignature=adhoc\nTeamIdentifier=not set\n";
         assert_eq!(super::parse_team_identifier(adhoc), None);
         let real = "Identifier=com.biookf.studio\nTeamIdentifier=F3YYBXAFJ8\n";
-        assert_eq!(super::parse_team_identifier(real).as_deref(), Some("F3YYBXAFJ8"));
+        assert_eq!(
+            super::parse_team_identifier(real).as_deref(),
+            Some("F3YYBXAFJ8")
+        );
         assert_eq!(super::parse_team_identifier("Identifier=x\n"), None);
     }
 
@@ -2121,7 +2203,10 @@ mod tests {
 
         let found = super::find_app_bundle(&scan, 5).unwrap();
         assert_eq!(found, scan.join("real").join(super::STUDIO_APP_NAME));
-        assert!(super::find_app_bundle(&scan, 1).is_none(), "depth is honored");
+        assert!(
+            super::find_app_bundle(&scan, 1).is_none(),
+            "depth is honored"
+        );
     }
 
     // --- the actual regression: an unsigned update must not reach the installer
@@ -2206,7 +2291,13 @@ mod tests {
         let mounted = Command::new("hdiutil").args(["info"]).output().unwrap();
         let info = String::from_utf8_lossy(&mounted.stdout);
         assert!(
-            !info.contains(&root.join("work").join("mount").to_string_lossy().to_string()),
+            !info.contains(
+                &root
+                    .join("work")
+                    .join("mount")
+                    .to_string_lossy()
+                    .to_string()
+            ),
             "disk image left attached"
         );
     }
@@ -2261,7 +2352,10 @@ mod tests {
         let (out, dest, bin_dir) = run_installer("install-ok", true);
         assert!(out.status.success(), "installer failed: {out:?}");
         assert!(dest.is_dir(), "app installed");
-        assert!(!dest.join("Contents/OLD-MARKER").exists(), "old bundle replaced");
+        assert!(
+            !dest.join("Contents/OLD-MARKER").exists(),
+            "old bundle replaced"
+        );
         super::codesign_verify(&dest).unwrap();
         assert!(bin_dir.join("bokf").is_file(), "bundled CLI refreshed");
         assert!(
@@ -2278,14 +2372,55 @@ mod tests {
         let (out, dest, bin_dir) = run_installer("install-rollback", false);
         assert!(!out.status.success(), "unsigned update must not install");
         let stderr = String::from_utf8_lossy(&out.stderr);
-        assert!(stderr.contains("rolling back"), "unexpected stderr: {stderr}");
+        assert!(
+            stderr.contains("rolling back"),
+            "unexpected stderr: {stderr}"
+        );
         assert!(dest.is_dir(), "the previously installed app survives");
         assert!(
             dest.join("Contents/OLD-MARKER").exists(),
             "the original bundle is restored, not a partial copy"
         );
         assert!(!bin_dir.join("bokf").exists(), "CLI untouched on failure");
-        assert!(leftovers(dest.parent().unwrap()).is_empty(), "backup cleaned up");
+        assert!(
+            leftovers(dest.parent().unwrap()).is_empty(),
+            "backup cleaned up"
+        );
+    }
+
+    /// `osascript`'s `do shell script` runs with a bare PATH. `chown` is in
+    /// /usr/sbin, so without an explicit PATH the ownership restore silently
+    /// no-ops and the bundle is left owned by root.
+    #[test]
+    #[cfg(target_os = "macos")]
+    fn installer_finds_its_tools_under_a_minimal_path() {
+        let root = scratch("install-path");
+        let staged = make_app(&root.join("staged"), super::STUDIO_APP_NAME);
+        adhoc_sign(&staged);
+        let apps = root.join("Applications");
+        std::fs::create_dir_all(&apps).unwrap();
+        let dest = make_app(&apps, super::STUDIO_APP_NAME);
+
+        let script = root.join("install.sh");
+        std::fs::write(
+            &script,
+            super::privileged_installer_body(&staged, &dest, &super::dest_owner(&dest)),
+        )
+        .unwrap();
+
+        let out = Command::new("/bin/bash")
+            .arg(&script)
+            .env("PATH", "") // what `do shell script` effectively gives a bad script
+            .env("BIOOKF_UPDATE_BIN_DIR", root.join("bin"))
+            .output()
+            .unwrap();
+
+        assert!(out.status.success(), "installer failed: {out:?}");
+        let stderr = String::from_utf8_lossy(&out.stderr);
+        assert!(
+            !stderr.contains("command not found"),
+            "installer relies on an inherited PATH: {stderr}"
+        );
     }
 
     #[test]
@@ -2308,6 +2443,134 @@ mod tests {
         assert!(!out.status.success());
         assert!(dest.join("Contents/OLD-MARKER").exists(), "app untouched");
         assert!(leftovers(&apps).is_empty());
+    }
+
+    // --- the relauncher must never strand the user without an app ---------------
+
+    fn write_stub(path: &Path, body: &str) {
+        use std::os::unix::fs::PermissionsExt;
+        std::fs::write(path, body).unwrap();
+        std::fs::set_permissions(path, std::fs::Permissions::from_mode(0o755)).unwrap();
+    }
+
+    fn open_stub(dir: &Path, marker: &Path) {
+        write_stub(
+            &dir.join("open"),
+            &format!(
+                "#!/bin/sh\nprintf '%s\\n' \"$@\" >> '{}'\n",
+                marker.display()
+            ),
+        );
+    }
+
+    /// The shipped relauncher ran under `set -e`, so a failing `codesign` check
+    /// aborted it *after* Studio had already quit: no install, no relaunch, and
+    /// no message. Whatever happens, the app on disk has to be reopened.
+    #[test]
+    #[cfg(target_os = "macos")]
+    fn relauncher_reopens_the_app_on_success_and_on_failure() {
+        for (case, osascript_exit, expect_success, expect_log) in [
+            ("relaunch-install-fails", 1, false, "update FAILED"),
+            ("relaunch-install-works", 0, true, "update complete"),
+        ] {
+            let root = scratch(case);
+            let home = root.join("home");
+            std::fs::create_dir_all(&home).unwrap();
+            let staged = make_app(&root.join("staged"), super::STUDIO_APP_NAME);
+            adhoc_sign(&staged);
+            let dest = make_app(&root.join("Applications"), super::STUDIO_APP_NAME);
+
+            let stub = root.join("stub");
+            std::fs::create_dir_all(&stub).unwrap();
+            let marker = root.join("open-was-called");
+            open_stub(&stub, &marker);
+            write_stub(
+                &stub.join("osascript"),
+                &format!("#!/bin/sh\nexit {osascript_exit}\n"),
+            );
+
+            let staging = root.join("staging");
+            std::fs::create_dir_all(&staging).unwrap();
+            let script = root.join("relaunch.sh");
+            std::fs::write(
+                &script,
+                // u32::MAX is never a live pid, so the wait loop falls straight through.
+                super::relauncher_body(
+                    u32::MAX,
+                    &staged,
+                    &dest,
+                    &staging,
+                    &root.join("install.sh"),
+                ),
+            )
+            .unwrap();
+
+            let out = Command::new("/bin/bash")
+                .arg(&script)
+                .env("HOME", &home)
+                .env("PATH", format!("{}:/usr/bin:/bin", stub.display()))
+                .output()
+                .unwrap();
+
+            assert_eq!(
+                out.status.success(),
+                expect_success,
+                "{case}: wrong exit status"
+            );
+            assert!(
+                marker.is_file(),
+                "{case}: the app was never reopened -- this is the bug users hit"
+            );
+            let log = std::fs::read_to_string(home.join("Library/Logs/BioOKF Studio Updater.log"))
+                .unwrap();
+            assert!(log.contains(expect_log), "{case}: log said {log}");
+            assert!(log.contains("reopening"), "{case}: log said {log}");
+        }
+    }
+
+    /// An unsigned staged bundle must be stopped before the root install step,
+    /// and must still leave the user with a running app.
+    #[test]
+    #[cfg(target_os = "macos")]
+    fn relauncher_refuses_an_unsigned_staged_bundle_but_still_reopens() {
+        let root = scratch("relaunch-unsigned");
+        let home = root.join("home");
+        std::fs::create_dir_all(&home).unwrap();
+        let staged = make_app(&root.join("staged"), super::STUDIO_APP_NAME); // never signed
+        let dest = make_app(&root.join("Applications"), super::STUDIO_APP_NAME);
+
+        let stub = root.join("stub");
+        std::fs::create_dir_all(&stub).unwrap();
+        let marker = root.join("open-was-called");
+        open_stub(&stub, &marker);
+        let privileged_ran = root.join("PRIVILEGED-RAN");
+        write_stub(
+            &stub.join("osascript"),
+            &format!("#!/bin/sh\ntouch '{}'\n", privileged_ran.display()),
+        );
+
+        let staging = root.join("staging");
+        std::fs::create_dir_all(&staging).unwrap();
+        let script = root.join("relaunch.sh");
+        std::fs::write(
+            &script,
+            super::relauncher_body(u32::MAX, &staged, &dest, &staging, &root.join("install.sh")),
+        )
+        .unwrap();
+
+        let out = Command::new("/bin/bash")
+            .arg(&script)
+            .env("HOME", &home)
+            .env("PATH", format!("{}:/usr/bin:/bin", stub.display()))
+            .output()
+            .unwrap();
+
+        assert!(!out.status.success());
+        assert!(
+            !privileged_ran.exists(),
+            "an unsigned bundle reached the root install step"
+        );
+        assert!(marker.is_file(), "the app must still be reopened");
     }
 
     // --- generated shell / AppleScript must be syntactically valid ---------------
@@ -2386,7 +2649,9 @@ mod tests {
             "AppleScript did not parse: {}",
             String::from_utf8_lossy(&decoded.stderr)
         );
-        let shell_cmd = String::from_utf8_lossy(&decoded.stdout).trim_end().to_string();
+        let shell_cmd = String::from_utf8_lossy(&decoded.stdout)
+            .trim_end()
+            .to_string();
         let quoted_installer = super::sh_quote(&installer.to_string_lossy());
         assert_eq!(shell_cmd, format!("/bin/bash {quoted_installer}"));
 
