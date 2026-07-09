@@ -1,11 +1,18 @@
 name: release
 
 # Build the prebuilt macOS BioOKF bundle (bokf CLI + bokf-mcp server + BioOKF
-# Studio desktop app) and publish it as assets on a GitHub Release.
-# The `biookf` Claude Code plugin downloads the asset matching the user's platform
-# on first run, so users never compile anything. Linux/Windows packaging is
-# intentionally omitted until their Studio and MCP control transports are
-# platform-complete.
+# Studio desktop app) as a tag-time verification build.
+#
+# This workflow does NOT publish release assets. Its runners hold no Developer ID
+# certificate, so everything it produces is unsigned (`--no-sign`). Studio's
+# in-app updater installs into /Applications with administrator rights and
+# therefore refuses any bundle that fails `codesign --verify`; publishing an
+# unsigned archive here silently breaks self-update for every existing user.
+#
+# The macOS release assets — the signed/notarized/stapled DMGs *and* the
+# `biookf-<target>.tar.gz` archives the `biookf` Claude Code plugin downloads —
+# are built, signed, notarized, and uploaded from a machine holding the UCSF
+# Developer ID certificate. See `notarization/notarization.md`.
 #
 # Trigger: push a tag like `v0.1.0`, or run manually with a tag input.
 
@@ -15,11 +22,11 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Release tag to publish assets to (e.g. v0.1.0)"
+        description: "Release tag to build against (e.g. v0.1.0)"
         required: true
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   build:
@@ -124,11 +131,12 @@ jobs:
           fi
           echo "asset=$ASSET" >> "$GITHUB_OUTPUT"
 
-      - name: Publish to release
-        uses: softprops/action-gh-release@v2
+      # Kept as a build artifact for debugging only. Uploading this to the
+      # release would replace the signed archive and break Studio's updater,
+      # which requires a bundle that passes `codesign --verify`.
+      - name: Upload verification build
+        uses: actions/upload-artifact@v4
         with:
-          tag_name: ${{ steps.tag.outputs.tag }}
-          name: BioOKF ${{ steps.tag.outputs.tag }}
-          files: ${{ steps.stage.outputs.asset }}
-          fail_on_unmatched_files: true
-          generate_release_notes: true
+          name: unsigned-${{ matrix.target }}
+          path: ${{ steps.stage.outputs.asset }}
+          retention-days: 7

@@ -51,8 +51,8 @@ which wires those tools into your MCP client.
 
 Download the notarized DMG for your Mac from the
 [latest release](https://github.com/Broccolito/BioOKF/releases/latest):
-**`BioOKF.Studio_0.3.0_aarch64.dmg`** for Apple Silicon or
-**`BioOKF.Studio_0.3.0_x64.dmg`** for Intel. Open it and drag
+**`BioOKF.Studio_0.3.1_aarch64.dmg`** for Apple Silicon or
+**`BioOKF.Studio_0.3.1_x64.dmg`** for Intel. Open it and drag
 **BioOKF Studio** into Applications. The DMG is signed and notarized by Apple, so it opens with
 no Gatekeeper warning and no quarantine prompt.
 
