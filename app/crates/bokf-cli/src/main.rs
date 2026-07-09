@@ -651,16 +651,20 @@ fn cmd_stats(path: PathBuf) -> Result<()> {
     let bundle = bokf_core::open_bundle(&path)?;
     let mut by_type: BTreeMap<String, usize> = BTreeMap::new();
     let mut by_pred: BTreeMap<String, usize> = BTreeMap::new();
-    let mut edge_count = 0;
+    // Authored edges only (as written in frontmatter). The export document's
+    // `edge_count` reports the total in `graph.edges`, which additionally includes
+    // synthesized `reported_in` provenance edges (AUDIT C1) — the two counts
+    // differ by design; this one is the "authored" total.
+    let mut authored_edges = 0;
     for n in &bundle.nodes {
         *by_type.entry(n.node_type.as_str().to_string()).or_default() += 1;
         for e in &n.edges {
-            edge_count += 1;
+            authored_edges += 1;
             *by_pred.entry(e.predicate.as_str().to_string()).or_default() += 1;
         }
     }
     println!("Bundle: {}", path.display());
-    println!("  {} nodes, {} edges", bundle.nodes.len(), edge_count);
+    println!("  {} nodes, {} authored edges", bundle.nodes.len(), authored_edges);
     println!("  reserved: index.md={} log.md={} SCHEMA.md={}", bundle.has_index_md, bundle.has_log_md, bundle.has_schema_md);
     if !bundle.parse_errors.is_empty() {
         println!("  parse errors: {}", bundle.parse_errors.len());

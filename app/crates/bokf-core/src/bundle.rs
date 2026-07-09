@@ -23,6 +23,10 @@ pub struct Bundle {
 
 const RESERVED: [&str; 4] = ["index.md", "log.md", "SCHEMA.md", "README.md"];
 
+/// Per-file read cap for on-disk concept documents (AUDIT C5): a hostile bundle
+/// must not be able to OOM the parser with an enormous single file.
+const MAX_FILE_BYTES: u64 = 16 * 1024 * 1024;
+
 fn is_reserved(path: &Path) -> bool {
     path.file_name()
         .and_then(|n| n.to_str())
@@ -72,6 +76,20 @@ impl Bundle {
 
         for file in files {
             let rel = file.strip_prefix(&root).unwrap_or(&file).to_path_buf();
+            // Size cap before reading into memory (AUDIT C5).
+            if let Ok(meta) = std::fs::metadata(&file) {
+                if meta.len() > MAX_FILE_BYTES {
+                    parse_errors.push((
+                        rel,
+                        format!(
+                            "file exceeds {} MiB read cap ({} bytes)",
+                            MAX_FILE_BYTES / 1024 / 1024,
+                            meta.len()
+                        ),
+                    ));
+                    continue;
+                }
+            }
             let content = match std::fs::read_to_string(&file) {
                 Ok(c) => c,
                 Err(e) => {

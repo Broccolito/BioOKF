@@ -210,15 +210,11 @@ fn search_bundle(
 #[tauri::command]
 fn source_info(base: String, source_id: String) -> Result<serde_json::Value, String> {
     let root = resolve(&base).ok_or_else(|| format!("unknown bundle: {base}"))?;
-    // Guard the source id against path traversal: it is a single dir name under `raw/`.
-    if source_id.is_empty()
-        || source_id.contains('/')
-        || source_id.contains('\\')
-        || source_id.contains("..")
-        || source_id.starts_with('.')
-    {
-        return Err("invalid source id".into());
-    }
+    // Path-traversal containment for `source_id` lives in one place: the core
+    // `bokf_core::export::source_info`, which canonicalizes the resolved path and
+    // confines it under `raw/` (AUDIT C8). We deliberately do NOT add a second,
+    // string-based guard here — two divergent guards is the inconsistency AUDIT
+    // M10 flagged (a string check can accept/reject differently than canonicalize).
     bokf_core::export::source_info(&root, &source_id)
 }
 
@@ -866,6 +862,13 @@ fn sessions() -> &'static Mutex<HashMap<String, PtySession>> {
     static S: OnceLock<Mutex<HashMap<String, PtySession>>> = OnceLock::new();
     S.get_or_init(|| Mutex::new(HashMap::new()))
 }
+/// Lock the session map, recovering from a poisoned mutex instead of panicking
+/// (AUDIT M9). A panic in one terminal's reader thread must not permanently
+/// wedge the whole terminal feature; the map holds independent `PtySession`
+/// handles, so a poisoned guard's contents remain safe to use.
+fn sessions_lock() -> std::sync::MutexGuard<'static, HashMap<String, PtySession>> {
+    sessions().lock().unwrap_or_else(|e| e.into_inner())
+}
 static TERM_SEQ: AtomicU64 = AtomicU64::new(1);
 
 /// Open a PTY running the user's `$SHELL`. Output streams to the frontend as
@@ -916,7 +919,7 @@ fn term_open(app: AppHandle, rows: u16, cols: u16) -> Result<String, String> {
             }
         }
     });
-    sessions().lock().unwrap().insert(
+    sessions_lock().insert(
         id.clone(),
         PtySession {
             master: pair.master,
@@ -930,7 +933,7 @@ fn term_open(app: AppHandle, rows: u16, cols: u16) -> Result<String, String> {
 /// Forward user keystrokes to the PTY.
 #[tauri::command]
 fn term_write(id: String, data: String) -> Result<(), String> {
-    let mut s = sessions().lock().unwrap();
+    let mut s = sessions_lock();
     let sess = s.get_mut(&id).ok_or("no such terminal")?;
     sess.writer
         .write_all(data.as_bytes())
@@ -941,7 +944,7 @@ fn term_write(id: String, data: String) -> Result<(), String> {
 /// Resize the PTY to match the front-end grid.
 #[tauri::command]
 fn term_resize(id: String, rows: u16, cols: u16) -> Result<(), String> {
-    let s = sessions().lock().unwrap();
+    let s = sessions_lock();
     let sess = s.get(&id).ok_or("no such terminal")?;
     sess.master
         .resize(PtySize {
@@ -956,7 +959,7 @@ fn term_resize(id: String, rows: u16, cols: u16) -> Result<(), String> {
 /// Kill the shell and drop the session.
 #[tauri::command]
 fn term_close(id: String) -> Result<(), String> {
-    if let Some(mut sess) = sessions().lock().unwrap().remove(&id) {
+    if let Some(mut sess) = sessions_lock().remove(&id) {
         let _ = sess.child.kill();
     }
     Ok(())
@@ -1128,25 +1131,41 @@ fn current_platform_tokens() -> (&'static str, &'static [&'static str]) {
     }
 }
 
+/// Install preference for an asset, lowest wins; `None` means "not an archive".
+///
+/// A macOS release carries both a signed `.dmg` and the CI `.tar.gz`, which is
+/// built with `--no-sign`. The updater replaces `/Applications/BioOKF Studio.app`
+/// with administrator rights, so it must always reach for the signed disk image;
+/// picking whichever asset the GitHub API happened to list first is how the
+/// updater ended up trying to install an unsigned bundle.
+fn asset_kind_rank(name: &str) -> Option<u8> {
+    let n = name.to_ascii_lowercase();
+    if n.ends_with(".dmg") {
+        Some(0)
+    } else if n.ends_with(".tar.gz") || n.ends_with(".tgz") {
+        Some(1)
+    } else if n.ends_with(".zip") {
+        Some(2)
+    } else {
+        None
+    }
+}
+
 fn asset_for_current_platform(release: &GhRelease) -> Option<GhAsset> {
     let (platform, tokens) = current_platform_tokens();
-    let is_archive = |name: &str| {
-        let n = name.to_ascii_lowercase();
-        n.ends_with(".dmg") || n.ends_with(".tar.gz") || n.ends_with(".tgz") || n.ends_with(".zip")
+    // `min_by_key` keeps the first asset of the best rank, so equally-ranked
+    // assets still fall back to release order.
+    let best = |matches: &dyn Fn(&str) -> bool| -> Option<&GhAsset> {
+        release
+            .assets
+            .iter()
+            .filter(|a| matches(&a.name.to_ascii_lowercase()))
+            .filter_map(|a| asset_kind_rank(&a.name).map(|rank| (rank, a)))
+            .min_by_key(|(rank, _)| *rank)
+            .map(|(_, a)| a)
     };
-    release
-        .assets
-        .iter()
-        .find(|a| {
-            let n = a.name.to_ascii_lowercase();
-            is_archive(&n) && tokens.iter().any(|t| n.contains(t))
-        })
-        .or_else(|| {
-            release.assets.iter().find(|a| {
-                let n = a.name.to_ascii_lowercase();
-                is_archive(&n) && n.contains(platform)
-            })
-        })
+    best(&|n: &str| tokens.iter().any(|t| n.contains(t)))
+        .or_else(|| best(&|n: &str| n.contains(platform)))
         .or_else(|| {
             if std::env::consts::OS == "macos" {
                 release.assets.iter().find(|a| a.name.to_ascii_lowercase().ends_with(".dmg"))
@@ -1175,9 +1194,223 @@ fn app_bundle_path() -> Option<PathBuf> {
     None
 }
 
-fn download_asset(asset: &GhAsset) -> Result<PathBuf, String> {
+const STUDIO_APP_NAME: &str = "BioOKF Studio.app";
+
+/// Scratch dir holding the downloaded asset and the unpacked app. The relauncher
+/// removes it once the install is done.
+fn update_staging_root() -> PathBuf {
     let mut dir = std::env::temp_dir();
     dir.push(format!("biookf-update-{}", std::process::id()));
+    dir
+}
+
+fn run_checked<I, S>(program: &str, args: I, what: &str) -> Result<(), String>
+where
+    I: IntoIterator<Item = S>,
+    S: AsRef<std::ffi::OsStr>,
+{
+    let out = std::process::Command::new(program)
+        .args(args)
+        .output()
+        .map_err(|e| format!("failed to run {program} while {what}: {e}"))?;
+    if out.status.success() {
+        return Ok(());
+    }
+    let err = String::from_utf8_lossy(&out.stderr);
+    match err.trim() {
+        "" => Err(format!("{what} failed")),
+        msg => Err(format!("{what} failed: {msg}")),
+    }
+}
+
+/// Locate `BioOKF Studio.app` under `root`. Symlinks are skipped on purpose: a
+/// mounted `.dmg` usually contains an `/Applications` alias, and following it
+/// would "find" the app that is already installed.
+fn find_app_bundle(root: &Path, depth: usize) -> Option<PathBuf> {
+    if depth == 0 {
+        return None;
+    }
+    let mut subdirs = Vec::new();
+    for entry in std::fs::read_dir(root).ok()?.flatten() {
+        let Ok(kind) = entry.file_type() else { continue };
+        if kind.is_symlink() || !kind.is_dir() {
+            continue;
+        }
+        let path = entry.path();
+        if path.file_name().and_then(|s| s.to_str()) == Some(STUDIO_APP_NAME) {
+            return Some(path);
+        }
+        subdirs.push(path);
+    }
+    subdirs.into_iter().find_map(|d| find_app_bundle(&d, depth - 1))
+}
+
+/// Unpack the asset and copy the app out to a stable staging path. Copying
+/// matters for `.dmg`: the mount is detached here, so the relauncher never has
+/// to keep a disk image attached across the app's exit.
+fn stage_app_from_asset(asset: &Path, root: &Path) -> Result<PathBuf, String> {
+    let staging = root.join("staged");
+    let _ = std::fs::remove_dir_all(&staging);
+    std::fs::create_dir_all(&staging).map_err(|e| format!("failed to create staging dir: {e}"))?;
+    let staged_app = staging.join(STUDIO_APP_NAME);
+    let missing = || format!("{STUDIO_APP_NAME} not found in {}", asset.display());
+
+    let name = asset
+        .file_name()
+        .unwrap_or_default()
+        .to_string_lossy()
+        .to_ascii_lowercase();
+
+    if name.ends_with(".dmg") {
+        let mount = root.join("mount");
+        let _ = std::fs::remove_dir_all(&mount);
+        std::fs::create_dir_all(&mount).map_err(|e| format!("failed to create mount dir: {e}"))?;
+        run_checked(
+            "hdiutil",
+            [
+                std::ffi::OsStr::new("attach"),
+                asset.as_os_str(),
+                std::ffi::OsStr::new("-nobrowse"),
+                std::ffi::OsStr::new("-readonly"),
+                std::ffi::OsStr::new("-quiet"),
+                std::ffi::OsStr::new("-mountpoint"),
+                mount.as_os_str(),
+            ],
+            "mounting the downloaded disk image",
+        )?;
+        let copied = match find_app_bundle(&mount, 3) {
+            Some(src) => run_checked(
+                "ditto",
+                [src.as_os_str(), staged_app.as_os_str()],
+                "copying the app out of the disk image",
+            ),
+            None => Err(missing()),
+        };
+        // Detach before reporting the copy result, or a failed copy leaks the mount.
+        let _ = std::process::Command::new("hdiutil")
+            .arg("detach")
+            .arg(&mount)
+            .arg("-quiet")
+            .output();
+        copied?;
+    } else if name.ends_with(".tar.gz") || name.ends_with(".tgz") {
+        let extract = root.join("extract");
+        let _ = std::fs::remove_dir_all(&extract);
+        std::fs::create_dir_all(&extract).map_err(|e| format!("failed to create extract dir: {e}"))?;
+        run_checked(
+            "tar",
+            [
+                std::ffi::OsStr::new("-xzf"),
+                asset.as_os_str(),
+                std::ffi::OsStr::new("-C"),
+                extract.as_os_str(),
+            ],
+            "extracting the downloaded archive",
+        )?;
+        let src = find_app_bundle(&extract, 5).ok_or_else(missing)?;
+        run_checked(
+            "ditto",
+            [src.as_os_str(), staged_app.as_os_str()],
+            "staging the extracted app",
+        )?;
+    } else {
+        return Err(format!("unsupported update asset: {}", asset.display()));
+    }
+
+    if !staged_app.is_dir() {
+        return Err(missing());
+    }
+    Ok(staged_app)
+}
+
+fn codesign_verify(app: &Path) -> Result<(), String> {
+    let out = std::process::Command::new("codesign")
+        .arg("--verify")
+        .arg("--deep")
+        .arg("--strict")
+        .arg("--")
+        .arg(app)
+        .output()
+        .map_err(|e| format!("failed to run codesign: {e}"))?;
+    if out.status.success() {
+        return Ok(());
+    }
+    Err(String::from_utf8_lossy(&out.stderr).trim().to_string())
+}
+
+/// `codesign -dv` prints its bundle summary on stderr; ad-hoc signatures report
+/// `TeamIdentifier=not set`, which is not an identity we can pin against.
+fn parse_team_identifier(codesign_output: &str) -> Option<String> {
+    codesign_output
+        .lines()
+        .find_map(|l| l.trim().strip_prefix("TeamIdentifier="))
+        .map(str::trim)
+        .filter(|t| !t.is_empty() && *t != "not set")
+        .map(str::to_string)
+}
+
+fn codesign_team_id(app: &Path) -> Option<String> {
+    let out = std::process::Command::new("codesign")
+        .arg("-dv")
+        .arg("--verbose=2")
+        .arg("--")
+        .arg(app)
+        .output()
+        .ok()?;
+    parse_team_identifier(&String::from_utf8_lossy(&out.stderr))
+}
+
+/// Gate the update *before* Studio quits. The staged bundle is about to be
+/// `ditto`ed into `/Applications` as root, so it has to carry a valid signature
+/// from the same Developer ID team as the app that is running.
+///
+/// `spctl --assess` is deliberately not used: it succeeds unconditionally on
+/// machines where Gatekeeper assessments are disabled and rejects merely
+/// un-notarized builds elsewhere, so it decides the update's fate based on a
+/// setting that has nothing to do with the download.
+fn verify_staged_app(staged: &Path, current_app: &Path) -> Result<(), String> {
+    codesign_verify(staged).map_err(|e| {
+        format!("the downloaded update is not correctly code-signed, so it was not installed: {e}")
+    })?;
+    check_team_identity(
+        codesign_team_id(current_app).as_deref(),
+        codesign_team_id(staged).as_deref(),
+    )
+}
+
+/// An unsigned or ad-hoc-signed running app has no identity to pin against, so
+/// nothing is required of the update. Once we do have one, the update must match.
+fn check_team_identity(expected: Option<&str>, found: Option<&str>) -> Result<(), String> {
+    let Some(expected) = expected else {
+        return Ok(());
+    };
+    match found {
+        Some(found) if found == expected => Ok(()),
+        Some(found) => Err(format!(
+            "the downloaded update is signed by team {found}, but this app is signed by {expected}; refusing to install it"
+        )),
+        None => Err(
+            "the downloaded update carries no Developer ID team identifier; refusing to install it"
+                .to_string(),
+        ),
+    }
+}
+
+/// `uid:gid` of the app being replaced, so a root install does not leave the
+/// bundle owned by `root:wheel`. Empty when the app is not on disk yet.
+fn dest_owner(dest: &Path) -> String {
+    #[cfg(unix)]
+    {
+        use std::os::unix::fs::MetadataExt;
+        if let Ok(md) = std::fs::metadata(dest) {
+            return format!("{}:{}", md.uid(), md.gid());
+        }
+    }
+    String::new()
+}
+
+fn download_asset(asset: &GhAsset) -> Result<PathBuf, String> {
+    let dir = update_staging_root();
     std::fs::create_dir_all(&dir).map_err(|e| format!("failed to create update temp dir: {e}"))?;
     let safe_name = asset.name.replace('/', "_");
     let dest = dir.join(safe_name);
@@ -1204,74 +1437,186 @@ fn download_asset(asset: &GhAsset) -> Result<PathBuf, String> {
     }
 }
 
-fn write_macos_relauncher(asset: &Path, dest_app: &Path) -> Result<PathBuf, String> {
-    let mut script = std::env::temp_dir();
-    script.push(format!("biookf-relaunch-{}.sh", std::process::id()));
-    let body = format!(
-        r#"#!/bin/bash
-set -euo pipefail
-PID={pid}
-ASSET={asset}
-DEST={dest}
-APP_NAME="BioOKF Studio.app"
-LOG="$HOME/Library/Logs/BioOKF Studio Updater.log"
-mkdir -p "$(dirname "$LOG")"
-exec >> "$LOG" 2>&1
-echo "$(date): starting BioOKF update from $ASSET"
-while kill -0 "$PID" 2>/dev/null; do sleep 0.2; done
-WORK="$(mktemp -d /tmp/biookf-update.XXXXXX)"
-cleanup() {{
-  if [ -n "${{MOUNT:-}}" ]; then hdiutil detach "$MOUNT" -quiet || true; fi
-  rm -rf "$WORK"
-}}
-trap cleanup EXIT
-SRC=""
-case "$ASSET" in
-  *.dmg)
-    MOUNT="$WORK/mount"
-    mkdir -p "$MOUNT"
-    hdiutil attach "$ASSET" -nobrowse -quiet -mountpoint "$MOUNT"
-    SRC="$(find "$MOUNT" -maxdepth 3 -name "$APP_NAME" -type d -print -quit)"
-    ;;
-  *.tar.gz|*.tgz)
-    mkdir -p "$WORK/extract"
-    tar -xzf "$ASSET" -C "$WORK/extract"
-    SRC="$(find "$WORK/extract" -maxdepth 5 -name "$APP_NAME" -type d -print -quit)"
-    ;;
-esac
-if [ -z "$SRC" ] || [ ! -d "$SRC" ]; then
-  echo "BioOKF update failed: BioOKF Studio.app not found in downloaded asset"
-  open "$DEST" || true
-  exit 1
-fi
-codesign --verify --deep --strict "$SRC"
-spctl --assess --type execute "$SRC"
-install_cmd="rm -rf $(printf '%q' "$DEST") && ditto $(printf '%q' "$SRC") $(printf '%q' "$DEST") && mkdir -p /usr/local/bin"
-for tool in bokf bokf-mcp; do
-  bundled="$DEST/Contents/Resources/bin/$tool"
-  target="/usr/local/bin/$tool"
-  install_cmd="$install_cmd && if [ -x $(printf '%q' "$bundled") ]; then cp $(printf '%q' "$bundled") $(printf '%q' "$target") && chmod 755 $(printf '%q' "$target"); fi"
-done
-escaped="${{install_cmd//\\/\\\\}}"
-escaped="${{escaped//\"/\\\"}}"
-osascript -e "do shell script \"$escaped\" with administrator privileges"
-echo "$(date): BioOKF update installed; reopening $DEST"
-open "$DEST"
-"#,
-        pid = std::process::id(),
-        asset = sh_quote(&asset.to_string_lossy()),
-        dest = sh_quote(&dest_app.to_string_lossy()),
-    );
-    std::fs::write(&script, body).map_err(|e| format!("failed to write relauncher: {e}"))?;
+fn write_script(path: &Path, body: String) -> Result<(), String> {
+    std::fs::write(path, body).map_err(|e| format!("failed to write {}: {e}", path.display()))?;
     #[cfg(unix)]
     {
         use std::os::unix::fs::PermissionsExt;
-        let mut perms = std::fs::metadata(&script)
+        let mut perms = std::fs::metadata(path)
             .map_err(|e| e.to_string())?
             .permissions();
         perms.set_mode(0o700);
-        std::fs::set_permissions(&script, perms).map_err(|e| e.to_string())?;
+        std::fs::set_permissions(path, perms).map_err(|e| e.to_string())?;
     }
+    Ok(())
+}
+
+/// The privileged half of the update, run as root through one `osascript` prompt.
+///
+/// Ordering is the whole point: the replacement bundle is copied in fully before
+/// the running app is moved aside, and every failure puts the old app back. The
+/// previous version ran `rm -rf "$DEST" && ditto ...`, which destroys the
+/// installed app if anything after the `rm` goes wrong.
+fn privileged_installer_body(staged_app: &Path, dest_app: &Path, owner: &str) -> String {
+    format!(
+        r#"#!/bin/bash
+set -uo pipefail
+STAGED={staged}
+DEST={dest}
+OWNER={owner}
+BIN_DIR="${{BIOOKF_UPDATE_BIN_DIR:-/usr/local/bin}}"
+PARENT="$(dirname "$DEST")"
+NEW="$PARENT/.biookf-update-new-$$"
+BACKUP="$PARENT/.biookf-update-backup-$$"
+
+rm -rf "$NEW" "$BACKUP"
+
+if ! ditto "$STAGED" "$NEW"; then
+  echo "could not copy the new app into $PARENT" >&2
+  rm -rf "$NEW"
+  exit 1
+fi
+
+if [ -e "$DEST" ] && ! mv "$DEST" "$BACKUP"; then
+  echo "could not move the existing app aside" >&2
+  rm -rf "$NEW"
+  exit 1
+fi
+
+if ! mv "$NEW" "$DEST"; then
+  echo "could not move the new app into place" >&2
+  if [ -e "$BACKUP" ]; then mv "$BACKUP" "$DEST"; fi
+  rm -rf "$NEW"
+  exit 1
+fi
+
+if ! codesign --verify --deep --strict -- "$DEST"; then
+  echo "the installed app failed signature verification; rolling back" >&2
+  rm -rf "$DEST"
+  if [ -e "$BACKUP" ]; then mv "$BACKUP" "$DEST"; fi
+  exit 1
+fi
+
+if [ -n "$OWNER" ]; then chown -R "$OWNER" "$DEST" || true; fi
+
+# Refreshing the command-line tools is best effort: the app is already installed
+# and must not be rolled back just because $BIN_DIR is unwritable.
+mkdir -p "$BIN_DIR" 2>/dev/null || true
+for tool in bokf bokf-mcp; do
+  src="$DEST/Contents/Resources/bin/$tool"
+  if [ -x "$src" ]; then
+    cp "$src" "$BIN_DIR/$tool" 2>/dev/null && chmod 755 "$BIN_DIR/$tool" 2>/dev/null || true
+  fi
+done
+
+rm -rf "$BACKUP"
+exit 0
+"#,
+        staged = sh_quote(&staged_app.to_string_lossy()),
+        dest = sh_quote(&dest_app.to_string_lossy()),
+        owner = sh_quote(owner),
+    )
+}
+
+fn write_privileged_installer(staged_app: &Path, dest_app: &Path) -> Result<PathBuf, String> {
+    let mut script = update_staging_root();
+    script.push("install.sh");
+    let body = privileged_installer_body(staged_app, dest_app, &dest_owner(dest_app));
+    write_script(&script, body)?;
+    Ok(script)
+}
+
+/// The detached half: waits for Studio to exit, runs the privileged installer,
+/// and reopens the app.
+///
+/// Every exit path calls `reopen`, because by the time this script runs Studio
+/// has already quit. A bare `set -e` abort here — which is what a failing
+/// `codesign` check used to cause — leaves the user staring at a closed app with
+/// the only explanation buried in a log file.
+fn relauncher_body(
+    pid: u32,
+    staged_app: &Path,
+    dest_app: &Path,
+    staging_root: &Path,
+    installer: &Path,
+) -> String {
+    let osascript_cmd = sh_quote(&format!(
+        "do shell script {} with administrator privileges",
+        applescript_string(&format!(
+            "/bin/bash {}",
+            sh_quote(&installer.to_string_lossy())
+        ))
+    ));
+    format!(
+        r#"#!/bin/bash
+set -uo pipefail
+PID={pid}
+STAGED={staged}
+DEST={dest}
+STAGING_ROOT={staging_root}
+LOG="$HOME/Library/Logs/BioOKF Studio Updater.log"
+mkdir -p "$(dirname "$LOG")"
+exec >> "$LOG" 2>&1
+
+log() {{ echo "$(date '+%Y-%m-%d %H:%M:%S') $*"; }}
+cleanup() {{ rm -rf "$STAGING_ROOT" "$0" >/dev/null 2>&1 || true; }}
+trap cleanup EXIT
+
+reopen() {{
+  if [ -d "$DEST" ]; then
+    log "reopening $DEST"
+    open "$DEST" || log "WARNING: could not reopen $DEST"
+  else
+    log "ERROR: no app at $DEST to reopen"
+  fi
+}}
+
+fail() {{ log "update FAILED: $*"; reopen; exit 1; }}
+
+log "starting update: staged=$STAGED dest=$DEST"
+
+waited=0
+while kill -0 "$PID" 2>/dev/null; do
+  sleep 0.2
+  waited=$((waited + 1))
+  if [ "$waited" -ge 300 ]; then fail "timed out waiting for Studio (pid $PID) to exit"; fi
+done
+
+if [ ! -d "$STAGED" ]; then fail "staged app missing at $STAGED"; fi
+if ! codesign --verify --deep --strict -- "$STAGED"; then fail "staged app failed signature verification"; fi
+
+if osascript -e {osascript_cmd}; then
+  log "installed $DEST"
+else
+  fail "privileged install step failed or was cancelled"
+fi
+
+reopen
+log "update complete"
+"#,
+        pid = pid,
+        staged = sh_quote(&staged_app.to_string_lossy()),
+        dest = sh_quote(&dest_app.to_string_lossy()),
+        staging_root = sh_quote(&staging_root.to_string_lossy()),
+        osascript_cmd = osascript_cmd,
+    )
+}
+
+fn write_macos_relauncher(
+    staged_app: &Path,
+    dest_app: &Path,
+    installer: &Path,
+) -> Result<PathBuf, String> {
+    let mut script = std::env::temp_dir();
+    script.push(format!("biookf-relaunch-{}.sh", std::process::id()));
+    let body = relauncher_body(
+        std::process::id(),
+        staged_app,
+        dest_app,
+        &update_staging_root(),
+        installer,
+    );
+    write_script(&script, body)?;
     Ok(script)
 }
 
@@ -1392,9 +1737,18 @@ fn install_update(app: AppHandle) -> Result<String, String> {
             asset.name
         ));
     }
+    let dest_app =
+        app_bundle_path().unwrap_or_else(|| PathBuf::from("/Applications/BioOKF Studio.app"));
+
+    // Download, unpack, and signature-check while the window is still up, so a
+    // bad asset surfaces in the modal instead of silently killing the app: every
+    // `?` below returns an error the front-end shows with Studio still running.
     let downloaded = download_asset(&asset)?;
-    let dest_app = app_bundle_path().unwrap_or_else(|| PathBuf::from("/Applications/BioOKF Studio.app"));
-    let relauncher = write_macos_relauncher(&downloaded, &dest_app)?;
+    let staged = stage_app_from_asset(&downloaded, &update_staging_root())?;
+    verify_staged_app(&staged, &dest_app)?;
+
+    let installer = write_privileged_installer(&staged, &dest_app)?;
+    let relauncher = write_macos_relauncher(&staged, &dest_app, &installer)?;
     std::process::Command::new("/bin/bash")
         .arg(&relauncher)
         .stdin(std::process::Stdio::null())
@@ -1411,6 +1765,36 @@ fn install_update(app: AppHandle) -> Result<String, String> {
         "Installing BioOKF {} from {}; Studio will restart.",
         release.tag_name, asset.name
     ))
+}
+
+/// Control-plane socket path (AUDIT M1). Must match `bokf-mcp`'s
+/// `studio_client::socket_path()`: `$BIOOKF_STUDIO_IPC`, else
+/// `$HOME/.biookf/studio-mcp.sock` (a per-user, 0700 directory).
+#[cfg(feature = "control")]
+fn biookf_control_socket_path() -> std::path::PathBuf {
+    if let Some(p) = std::env::var_os("BIOOKF_STUDIO_IPC") {
+        return std::path::PathBuf::from(p);
+    }
+    let home = std::env::var_os("HOME")
+        .map(std::path::PathBuf::from)
+        .unwrap_or_else(std::env::temp_dir);
+    home.join(".biookf").join("studio-mcp.sock")
+}
+
+/// A random per-run auth token for the control socket (AUDIT M1). The plugin
+/// writes it to `<socket>.token` (0600); only same-user processes that can read
+/// that file may drive the GUI. 32 bytes of `/dev/urandom`, hex-encoded, with a
+/// weak pid fallback (the 0700 dir + 0600 file still bound reachability).
+#[cfg(feature = "control")]
+fn biookf_control_auth_token() -> String {
+    use std::io::Read;
+    let mut buf = [0u8; 32];
+    if let Ok(mut f) = std::fs::File::open("/dev/urandom") {
+        if f.read_exact(&mut buf).is_ok() {
+            return buf.iter().map(|b| format!("{b:02x}")).collect();
+        }
+    }
+    format!("biookf-{}", std::process::id())
 }
 
 fn main() {
@@ -1494,10 +1878,27 @@ fn main() {
     #[cfg(feature = "control")]
     let builder = if std::env::var_os("BIOOKF_STUDIO_CONTROL").is_some() {
         // Expose the webview to AI agents over the socket (drive/inspect/screenshot).
+        //
+        // AUDIT M1: the control socket is a full local-RCE surface (execute_js on
+        // the privileged webview). It must NOT live at a fixed, world-reachable
+        // /tmp path with no auth. We (a) put it in a per-user 0700 directory so
+        // other users can't reach it, and (b) require a random per-run auth token
+        // that the plugin writes next to the socket (0600); only same-user
+        // processes that can read that file can drive the GUI.
+        let sock = biookf_control_socket_path();
+        if let Some(dir) = sock.parent() {
+            let _ = std::fs::create_dir_all(dir);
+            #[cfg(unix)]
+            {
+                use std::os::unix::fs::PermissionsExt;
+                let _ = std::fs::set_permissions(dir, std::fs::Permissions::from_mode(0o700));
+            }
+        }
         let builder = builder.plugin(tauri_plugin_mcp::init_with_config(
             tauri_plugin_mcp::PluginConfig::new("BioOKF Studio".to_string())
                 .start_socket_server(true)
-                .socket_path(std::path::PathBuf::from("/tmp/biookf-tauri-mcp.sock")),
+                .auth_token(biookf_control_auth_token())
+                .socket_path(sock),
         ));
 
         // Inject the tauri-plugin-mcp guest listeners so the webview answers the
@@ -1544,20 +1945,442 @@ mod tests {
         assert!(!super::version_newer("v0.2.1", "0.2.2"));
     }
 
-    #[test]
-    fn update_asset_selection_finds_current_macos_dmg() {
-        let release = super::GhRelease {
+    use std::path::{Path, PathBuf};
+    use std::process::Command;
+
+    fn release_with(names: &[&str]) -> super::GhRelease {
+        super::GhRelease {
             tag_name: "v0.3.0".into(),
             html_url: None,
-            assets: vec![super::GhAsset {
-                name: "BioOKF.Studio_0.3.0_aarch64.dmg".into(),
-                browser_download_url: "https://example.invalid/BioOKF.dmg".into(),
-            }],
-        };
+            assets: names
+                .iter()
+                .map(|n| super::GhAsset {
+                    name: (*n).to_string(),
+                    browser_download_url: format!("https://example.invalid/{n}"),
+                })
+                .collect(),
+        }
+    }
+
+    fn expected_macos_dmg() -> Option<&'static str> {
+        match (std::env::consts::OS, std::env::consts::ARCH) {
+            ("macos", "aarch64") => Some("BioOKF.Studio_0.3.0_aarch64.dmg"),
+            ("macos", "x86_64") => Some("BioOKF.Studio_0.3.0_x64.dmg"),
+            _ => None,
+        }
+    }
+
+    #[test]
+    fn update_asset_selection_finds_current_macos_dmg() {
+        let release = release_with(&["BioOKF.Studio_0.3.0_aarch64.dmg"]);
         let asset = super::asset_for_current_platform(&release);
         if std::env::consts::OS == "macos" && std::env::consts::ARCH == "aarch64" {
             assert_eq!(asset.unwrap().name, "BioOKF.Studio_0.3.0_aarch64.dmg");
         }
+    }
+
+    /// Regression: the v0.3.0 release lists the CI `.tar.gz` (built `--no-sign`)
+    /// before the signed `.dmg`, and the old first-match selection installed the
+    /// unsigned tarball, which then failed `codesign --verify` in the relauncher.
+    #[test]
+    fn update_prefers_signed_dmg_over_unsigned_tarball() {
+        let release = release_with(&[
+            "biookf-macos-arm64.tar.gz",
+            "biookf-macos-x64.tar.gz",
+            "BioOKF.Studio_0.3.0_aarch64.dmg",
+            "BioOKF.Studio_0.3.0_x64.dmg",
+        ]);
+        let picked = super::asset_for_current_platform(&release).map(|a| a.name);
+        if let Some(want) = expected_macos_dmg() {
+            assert_eq!(picked.as_deref(), Some(want));
+        }
+    }
+
+    #[test]
+    fn update_asset_selection_falls_back_to_tarball_without_a_dmg() {
+        let release = release_with(&["biookf-macos-arm64.tar.gz", "biookf-macos-x64.tar.gz"]);
+        let picked = super::asset_for_current_platform(&release).map(|a| a.name);
+        match (std::env::consts::OS, std::env::consts::ARCH) {
+            ("macos", "aarch64") => assert_eq!(picked.as_deref(), Some("biookf-macos-arm64.tar.gz")),
+            ("macos", "x86_64") => assert_eq!(picked.as_deref(), Some("biookf-macos-x64.tar.gz")),
+            _ => {}
+        }
+    }
+
+    #[test]
+    fn update_asset_selection_ignores_the_other_architecture() {
+        let other = match std::env::consts::ARCH {
+            "aarch64" => "BioOKF.Studio_0.3.0_x64.dmg",
+            _ => "BioOKF.Studio_0.3.0_aarch64.dmg",
+        };
+        let release = release_with(&[other, "biookf-sources.zip"]);
+        if std::env::consts::OS == "macos" {
+            // Only the last-ditch "any macOS dmg" fallback may fire; never the zip.
+            let picked = super::asset_for_current_platform(&release).map(|a| a.name);
+            assert_ne!(picked.as_deref(), Some("biookf-sources.zip"));
+        }
+    }
+
+    #[test]
+    fn asset_kind_rank_prefers_dmg_then_tarball() {
+        assert!(super::asset_kind_rank("a.dmg") < super::asset_kind_rank("a.tar.gz"));
+        assert!(super::asset_kind_rank("a.tar.gz") < super::asset_kind_rank("a.zip"));
+        assert_eq!(super::asset_kind_rank("a.tgz"), super::asset_kind_rank("a.tar.gz"));
+        assert_eq!(super::asset_kind_rank("notes.txt"), None);
+    }
+
+    #[test]
+    fn team_identifier_parsing_ignores_adhoc_signatures() {
+        let adhoc = "Identifier=com.biookf.studio\nSignature=adhoc\nTeamIdentifier=not set\n";
+        assert_eq!(super::parse_team_identifier(adhoc), None);
+        let real = "Identifier=com.biookf.studio\nTeamIdentifier=F3YYBXAFJ8\n";
+        assert_eq!(super::parse_team_identifier(real).as_deref(), Some("F3YYBXAFJ8"));
+        assert_eq!(super::parse_team_identifier("Identifier=x\n"), None);
+    }
+
+    #[test]
+    fn team_identity_pins_the_update_to_the_running_apps_team() {
+        assert!(super::check_team_identity(None, None).is_ok());
+        assert!(super::check_team_identity(None, Some("ANY")).is_ok());
+        assert!(super::check_team_identity(Some("F3YYBXAFJ8"), Some("F3YYBXAFJ8")).is_ok());
+        assert!(super::check_team_identity(Some("F3YYBXAFJ8"), Some("EVIL")).is_err());
+        assert!(super::check_team_identity(Some("F3YYBXAFJ8"), None).is_err());
+    }
+
+    // --- macOS bundle fixtures ------------------------------------------------
+
+    fn scratch(name: &str) -> PathBuf {
+        let dir = std::env::temp_dir().join(format!("biookf-test-{}-{name}", std::process::id()));
+        let _ = std::fs::remove_dir_all(&dir);
+        std::fs::create_dir_all(&dir).unwrap();
+        dir
+    }
+
+    /// A minimal but real `.app`: `codesign` needs a Mach-O main executable, so
+    /// borrow `/bin/echo`.
+    fn make_app(parent: &Path, name: &str) -> PathBuf {
+        let app = parent.join(name);
+        std::fs::create_dir_all(app.join("Contents/MacOS")).unwrap();
+        std::fs::create_dir_all(app.join("Contents/Resources")).unwrap();
+        std::fs::copy("/bin/echo", app.join("Contents/MacOS/app")).unwrap();
+        std::fs::write(
+            app.join("Contents/Info.plist"),
+            r#"<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleExecutable</key><string>app</string>
+<key>CFBundleIdentifier</key><string>com.biookf.studio.test</string>
+<key>CFBundleName</key><string>BioOKF Studio</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+</dict></plist>
+"#,
+        )
+        .unwrap();
+        app
+    }
+
+    fn adhoc_sign(app: &Path) {
+        let out = Command::new("codesign")
+            .args(["-s", "-", "--force", "--deep"])
+            .arg(app)
+            .output()
+            .unwrap();
+        assert!(out.status.success(), "codesign fixture failed: {out:?}");
+    }
+
+    fn bash(script: &Path, env: &[(&str, &str)]) -> std::process::Output {
+        let mut cmd = Command::new("/bin/bash");
+        cmd.arg(script);
+        for (k, v) in env {
+            cmd.env(k, v);
+        }
+        cmd.output().unwrap()
+    }
+
+    /// `.app` bundles left over from a failed swap would be re-registered by
+    /// LaunchServices, so the installer must leave none behind.
+    fn leftovers(parent: &Path) -> Vec<String> {
+        std::fs::read_dir(parent)
+            .unwrap()
+            .flatten()
+            .map(|e| e.file_name().to_string_lossy().to_string())
+            .filter(|n| n.starts_with(".biookf-update-"))
+            .collect()
+    }
+
+    #[test]
+    fn find_app_bundle_skips_symlinked_directories() {
+        let root = scratch("findapp");
+        let decoy = root.join("decoy");
+        std::fs::create_dir_all(&decoy).unwrap();
+        std::fs::create_dir_all(decoy.join(super::STUDIO_APP_NAME)).unwrap();
+        let scan = root.join("scan");
+        std::fs::create_dir_all(scan.join("real")).unwrap();
+        std::fs::create_dir_all(scan.join("real").join(super::STUDIO_APP_NAME)).unwrap();
+        std::os::unix::fs::symlink(&decoy, scan.join("link")).unwrap();
+
+        let found = super::find_app_bundle(&scan, 5).unwrap();
+        assert_eq!(found, scan.join("real").join(super::STUDIO_APP_NAME));
+        assert!(super::find_app_bundle(&scan, 1).is_none(), "depth is honored");
+    }
+
+    // --- the actual regression: an unsigned update must not reach the installer
+
+    #[test]
+    #[cfg(target_os = "macos")]
+    fn verify_staged_app_rejects_an_unsigned_bundle() {
+        let root = scratch("unsigned");
+        let app = make_app(&root, super::STUDIO_APP_NAME);
+        let err = super::verify_staged_app(&app, &app).unwrap_err();
+        assert!(
+            err.contains("not correctly code-signed"),
+            "unexpected error: {err}"
+        );
+    }
+
+    #[test]
+    #[cfg(target_os = "macos")]
+    fn verify_staged_app_accepts_a_validly_signed_bundle() {
+        let root = scratch("signed");
+        let app = make_app(&root, super::STUDIO_APP_NAME);
+        adhoc_sign(&app);
+        let current = make_app(&root.join("cur"), super::STUDIO_APP_NAME);
+        adhoc_sign(&current);
+        super::verify_staged_app(&app, &current).unwrap();
+    }
+
+    #[test]
+    #[cfg(target_os = "macos")]
+    fn staging_extracts_and_locates_the_app_in_a_tarball() {
+        let root = scratch("stage-tgz");
+        let src = root.join("src");
+        std::fs::create_dir_all(&src).unwrap();
+        let app = make_app(&src, super::STUDIO_APP_NAME);
+        adhoc_sign(&app);
+        std::fs::create_dir_all(src.join("bin")).unwrap();
+        let tarball = root.join("biookf-macos.tar.gz");
+        assert!(Command::new("tar")
+            .arg("-czf")
+            .arg(&tarball)
+            .arg("-C")
+            .arg(&src)
+            .arg(".")
+            .status()
+            .unwrap()
+            .success());
+
+        let staged = super::stage_app_from_asset(&tarball, &root.join("work")).unwrap();
+        assert!(staged.is_dir());
+        assert_eq!(staged.file_name().unwrap(), super::STUDIO_APP_NAME);
+        // ditto must preserve the signature, or the pre-quit gate would reject it.
+        super::codesign_verify(&staged).unwrap();
+    }
+
+    #[test]
+    #[cfg(target_os = "macos")]
+    fn staging_mounts_a_dmg_and_detaches_it() {
+        let root = scratch("stage-dmg");
+        let src = root.join("src");
+        std::fs::create_dir_all(&src).unwrap();
+        adhoc_sign(&make_app(&src, super::STUDIO_APP_NAME));
+        // Real releases ship an /Applications alias next to the app.
+        std::os::unix::fs::symlink("/Applications", src.join("Applications")).unwrap();
+
+        let dmg = root.join("BioOKF.Studio_0.0.0_test.dmg");
+        let out = Command::new("hdiutil")
+            .args(["create", "-quiet", "-srcfolder"])
+            .arg(&src)
+            .args(["-volname", "BioOKF Test", "-ov", "-format", "UDZO"])
+            .arg(&dmg)
+            .output()
+            .unwrap();
+        assert!(out.status.success(), "hdiutil create failed: {out:?}");
+
+        let staged = super::stage_app_from_asset(&dmg, &root.join("work")).unwrap();
+        assert!(staged.is_dir(), "app copied out of the image");
+        super::codesign_verify(&staged).unwrap();
+        // The staged copy must outlive the mount: nothing may still be attached.
+        let mounted = Command::new("hdiutil").args(["info"]).output().unwrap();
+        let info = String::from_utf8_lossy(&mounted.stdout);
+        assert!(
+            !info.contains(&root.join("work").join("mount").to_string_lossy().to_string()),
+            "disk image left attached"
+        );
+    }
+
+    // --- the privileged installer, exercised without root -----------------------
+
+    /// Build `staged` + `dest` fixtures and run the generated installer directly.
+    /// `chown` to our own uid and a temp `BIN_DIR` keep it root-free.
+    fn run_installer(case: &str, sign_staged: bool) -> (std::process::Output, PathBuf, PathBuf) {
+        let root = scratch(case);
+        let staged = make_app(&root.join("staged"), super::STUDIO_APP_NAME);
+        std::fs::create_dir_all(staged.join("Contents/Resources/bin")).unwrap();
+        std::fs::write(
+            staged.join("Contents/Resources/bin/bokf"),
+            "#!/bin/sh\necho new-bokf\n",
+        )
+        .unwrap();
+        {
+            use std::os::unix::fs::PermissionsExt;
+            std::fs::set_permissions(
+                staged.join("Contents/Resources/bin/bokf"),
+                std::fs::Permissions::from_mode(0o755),
+            )
+            .unwrap();
+        }
+        if sign_staged {
+            adhoc_sign(&staged);
+        }
+
+        let apps = root.join("Applications");
+        std::fs::create_dir_all(&apps).unwrap();
+        let dest = make_app(&apps, super::STUDIO_APP_NAME);
+        std::fs::write(dest.join("Contents/OLD-MARKER"), "old").unwrap();
+
+        let bin_dir = root.join("bin");
+        std::fs::create_dir_all(&bin_dir).unwrap();
+
+        let script = root.join("install.sh");
+        std::fs::write(
+            &script,
+            super::privileged_installer_body(&staged, &dest, &super::dest_owner(&dest)),
+        )
+        .unwrap();
+        let out = bash(&script, &[("BIOOKF_UPDATE_BIN_DIR", &bin_dir.to_string_lossy())]);
+        (out, dest, bin_dir)
+    }
+
+    #[test]
+    #[cfg(target_os = "macos")]
+    fn installer_replaces_the_app_and_refreshes_the_cli() {
+        let (out, dest, bin_dir) = run_installer("install-ok", true);
+        assert!(out.status.success(), "installer failed: {out:?}");
+        assert!(dest.is_dir(), "app installed");
+        assert!(!dest.join("Contents/OLD-MARKER").exists(), "old bundle replaced");
+        super::codesign_verify(&dest).unwrap();
+        assert!(bin_dir.join("bokf").is_file(), "bundled CLI refreshed");
+        assert!(
+            leftovers(dest.parent().unwrap()).is_empty(),
+            "no scratch bundles left behind"
+        );
+    }
+
+    /// The old installer ran `rm -rf "$DEST" && ditto ...`, so any later failure
+    /// left the user with no app at all — which is exactly what shipped.
+    #[test]
+    #[cfg(target_os = "macos")]
+    fn installer_rolls_back_and_keeps_the_old_app_when_the_update_is_unsigned() {
+        let (out, dest, bin_dir) = run_installer("install-rollback", false);
+        assert!(!out.status.success(), "unsigned update must not install");
+        let stderr = String::from_utf8_lossy(&out.stderr);
+        assert!(stderr.contains("rolling back"), "unexpected stderr: {stderr}");
+        assert!(dest.is_dir(), "the previously installed app survives");
+        assert!(
+            dest.join("Contents/OLD-MARKER").exists(),
+            "the original bundle is restored, not a partial copy"
+        );
+        assert!(!bin_dir.join("bokf").exists(), "CLI untouched on failure");
+        assert!(leftovers(dest.parent().unwrap()).is_empty(), "backup cleaned up");
+    }
+
+    #[test]
+    #[cfg(target_os = "macos")]
+    fn installer_leaves_the_app_alone_when_the_staged_bundle_is_missing() {
+        let root = scratch("install-missing");
+        let apps = root.join("Applications");
+        std::fs::create_dir_all(&apps).unwrap();
+        let dest = make_app(&apps, super::STUDIO_APP_NAME);
+        std::fs::write(dest.join("Contents/OLD-MARKER"), "old").unwrap();
+        let script = root.join("install.sh");
+        std::fs::write(
+            &script,
+            super::privileged_installer_body(&root.join("nope").join("Missing.app"), &dest, ""),
+        )
+        .unwrap();
+
+        let out = bash(&script, &[("BIOOKF_UPDATE_BIN_DIR", &root.join("bin").to_string_lossy())]);
+        assert!(!out.status.success());
+        assert!(dest.join("Contents/OLD-MARKER").exists(), "app untouched");
+        assert!(leftovers(&apps).is_empty());
+    }
+
+    // --- generated shell / AppleScript must be syntactically valid ---------------
+
+    fn tricky_paths() -> (PathBuf, PathBuf, PathBuf, PathBuf) {
+        (
+            PathBuf::from("/tmp/bio okf's stage/BioOKF Studio.app"),
+            PathBuf::from("/Applications/BioOKF Studio.app"),
+            PathBuf::from("/tmp/bio okf's stage"),
+            PathBuf::from("/tmp/bio okf's stage/install.sh"),
+        )
+    }
+
+    #[test]
+    fn generated_scripts_are_valid_bash_even_with_awkward_paths() {
+        let (staged, dest, root, installer) = tricky_paths();
+        let dir = scratch("syntax");
+        for (name, body) in [
+            (
+                "install.sh",
+                super::privileged_installer_body(&staged, &dest, "501:80"),
+            ),
+            (
+                "relaunch.sh",
+                super::relauncher_body(1234, &staged, &dest, &root, &installer),
+            ),
+        ] {
+            let p = dir.join(name);
+            std::fs::write(&p, &body).unwrap();
+            let out = Command::new("bash").arg("-n").arg(&p).output().unwrap();
+            assert!(
+                out.status.success(),
+                "{name} is not valid bash: {}",
+                String::from_utf8_lossy(&out.stderr)
+            );
+        }
+    }
+
+    /// The install command crosses bash -> AppleScript -> shell. Pull the
+    /// `osascript -e` argument back out through bash and check both that it is
+    /// the AppleScript we meant and that `osacompile` accepts it.
+    #[test]
+    #[cfg(target_os = "macos")]
+    fn relauncher_quotes_the_installer_path_through_applescript() {
+        let (staged, dest, root, installer) = tricky_paths();
+        let body = super::relauncher_body(1234, &staged, &dest, &root, &installer);
+        let line = body
+            .lines()
+            .find(|l| l.trim_start().starts_with("if osascript -e "))
+            .expect("osascript invocation present");
+        let literal = line.trim_start().trim_start_matches("if osascript -e ");
+        let literal = literal.trim_end().trim_end_matches("; then");
+
+        let out = Command::new("bash")
+            .arg("-c")
+            .arg(format!("printf '%s' {literal}"))
+            .output()
+            .unwrap();
+        assert!(out.status.success());
+        let applescript = String::from_utf8_lossy(&out.stdout).to_string();
+        assert_eq!(
+            applescript,
+            "do shell script \"/bin/bash '/tmp/bio okf'\\''s stage/install.sh'\" with administrator privileges"
+        );
+
+        let dir = scratch("osacompile");
+        let compiled = Command::new("osacompile")
+            .arg("-o")
+            .arg(dir.join("t.scpt"))
+            .arg("-e")
+            .arg(&applescript)
+            .output()
+            .unwrap();
+        assert!(
+            compiled.status.success(),
+            "osacompile rejected the generated AppleScript: {}",
+            String::from_utf8_lossy(&compiled.stderr)
+        );
     }
 
     #[test]

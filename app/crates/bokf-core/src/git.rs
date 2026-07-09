@@ -192,15 +192,47 @@ impl GitRepo {
 
     /// Forward-only restore: reproduce the tree of `sha` exactly (removing files
     /// added since) and record it as a NEW `[restore]` commit on top of HEAD.
+    ///
+    /// `sha` is validated before it touches the working tree (AUDIT C2): it must
+    /// not look like an option, it must resolve to a commit, and that commit must
+    /// be an ancestor of HEAD — so this can only restore to a *prior* commit in
+    /// this repo's history, never a tag/stash/other-branch tree-ish.
     pub fn restore_to(&self, sha: &str, summary: Option<&str>) -> Result<String, String> {
         self.ensure_repo()?;
+        // Reject anything that could be misparsed as a git option.
+        if sha.starts_with('-') {
+            return Err(format!("invalid commit `{sha}`: must not start with '-'"));
+        }
+        // Resolve to a concrete commit object (fails for unknown/non-commit refs).
+        let resolved = self
+            .run(&["rev-parse", "--verify", "--quiet", &format!("{sha}^{{commit}}")])
+            .map_err(|_| format!("`{sha}` does not resolve to a commit in this repo"))?
+            .trim()
+            .to_string();
+        // Enforce forward-only: the target must be an ancestor of HEAD.
+        let is_ancestor = Command::new("git")
+            .arg("-C")
+            .arg(&self.root)
+            .args(["merge-base", "--is-ancestor", &resolved, "HEAD"])
+            .output()
+            .map(|o| o.status.success())
+            .unwrap_or(false);
+        if !is_ancestor {
+            return Err(format!(
+                "`{sha}` is not an ancestor of HEAD; restore is forward-only (to a prior commit)"
+            ));
+        }
         // read-tree -u --reset makes index + worktree match `sha` exactly (incl.
         // deletions) without moving HEAD; commit_all then commits that tree forward.
-        self.run(&["read-tree", "-u", "--reset", sha])?;
-        let s = summary
-            .map(|s| s.to_string())
-            .unwrap_or_else(|| format!("restore to {}", &sha[..sha.len().min(8)]));
-        self.commit_all(ChangeKind::Restore, &s, Some(&format!("restored tree of {sha}")))
+        // `--` terminates option parsing before the (validated) tree-ish.
+        self.run(&["read-tree", "-u", "--reset", "--", &resolved])?;
+        let s = summary.map(|s| s.to_string()).unwrap_or_else(|| {
+            // Char-safe short-sha: a git object id is ASCII hex, but `[..8]`
+            // byte-slicing would panic on any multibyte boundary (AUDIT M8).
+            let short: String = resolved.chars().take(8).collect();
+            format!("restore to {short}")
+        });
+        self.commit_all(ChangeKind::Restore, &s, Some(&format!("restored tree of {resolved}")))
     }
 
     pub fn begin_txn(&self, label: &str) -> Result<Txn, String> {

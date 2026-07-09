@@ -34,8 +34,32 @@ fn save(root: &Path, reg: &Registry) -> Result<(), String> {
     std::fs::rename(&tmp, &p).map_err(|e| e.to_string())
 }
 
+/// Validate a base `path` before registering it (AUDIT C6): reject empty, reject
+/// a relative path containing a `..` component, and require the path to exist.
+fn validate_base_path(path: &str) -> Result<(), String> {
+    if path.trim().is_empty() {
+        return Err("base path must not be empty".into());
+    }
+    let p = Path::new(path);
+    if p.is_relative()
+        && p.components()
+            .any(|c| matches!(c, std::path::Component::ParentDir))
+    {
+        return Err(format!("base path `{path}` must not contain `..`"));
+    }
+    if !p.exists() {
+        return Err(format!("base path `{path}` does not exist"));
+    }
+    Ok(())
+}
+
 pub fn register(root: &Path, id: &str, path: &str) -> Result<(), String> {
     validate_kb_id(id)?;
+    validate_base_path(path)?;
+    // Best-effort against the load->save race (AUDIT C6): the CLI/MCP/Studio share
+    // this file, so we load immediately before save (narrowing the window) and
+    // save atomically via a temp-file rename. A cross-process advisory lock would
+    // be stronger but is intentionally kept simple here.
     let mut reg = load(root);
     if reg.bases.iter().any(|b| b.id == id) {
         return Err(format!("kb-id `{id}` already registered"));

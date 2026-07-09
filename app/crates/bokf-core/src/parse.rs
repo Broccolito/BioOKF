@@ -31,11 +31,13 @@ pub fn split_frontmatter(content: &str) -> Result<(&str, &str), ParseError> {
         .strip_prefix("---\n")
         .or_else(|| c.strip_prefix("---\r\n"))
         .ok_or(ParseError::NoFrontmatter)?;
-    // Find the closing delimiter at the start of a line.
+    // Find the closing delimiter at the start of a line. Only an exact `---`
+    // terminates the frontmatter; `...` is NOT treated as a terminator, as that
+    // silently truncated document bodies containing a `...` line (AUDIT C9).
     let mut idx = 0usize;
     for line in rest.split_inclusive('\n') {
         let trimmed = line.trim_end_matches(['\r', '\n']);
-        if trimmed == "---" || trimmed == "..." {
+        if trimmed == "---" {
             let fm = &rest[..idx];
             let body_start = idx + line.len();
             let body = rest.get(body_start..).unwrap_or("");
@@ -46,7 +48,18 @@ pub fn split_frontmatter(content: &str) -> Result<(&str, &str), ParseError> {
     Err(ParseError::UnterminatedFrontmatter)
 }
 
+/// Maximum YAML nesting depth converted (AUDIT C5): a hostile deeply-nested
+/// document must not blow the stack. Beyond this the subtree is dropped (Null).
+const MAX_YAML_DEPTH: usize = 64;
+
 fn yaml_to_json(y: &Yaml) -> serde_json::Value {
+    yaml_to_json_depth(y, 0)
+}
+
+fn yaml_to_json_depth(y: &Yaml, depth: usize) -> serde_json::Value {
+    if depth >= MAX_YAML_DEPTH {
+        return serde_json::Value::Null;
+    }
     match y {
         Yaml::Null => serde_json::Value::Null,
         Yaml::Bool(b) => serde_json::Value::Bool(*b),
@@ -60,15 +73,17 @@ fn yaml_to_json(y: &Yaml) -> serde_json::Value {
             }
         }
         Yaml::String(s) => serde_json::Value::String(s.clone()),
-        Yaml::Sequence(seq) => serde_json::Value::Array(seq.iter().map(yaml_to_json).collect()),
+        Yaml::Sequence(seq) => {
+            serde_json::Value::Array(seq.iter().map(|v| yaml_to_json_depth(v, depth + 1)).collect())
+        }
         Yaml::Mapping(m) => {
             let mut obj = serde_json::Map::new();
             for (k, v) in m {
-                obj.insert(yaml_key(k), yaml_to_json(v));
+                obj.insert(yaml_key(k), yaml_to_json_depth(v, depth + 1));
             }
             serde_json::Value::Object(obj)
         }
-        Yaml::Tagged(t) => yaml_to_json(&t.value),
+        Yaml::Tagged(t) => yaml_to_json_depth(&t.value, depth + 1),
     }
 }
 
@@ -103,10 +118,12 @@ fn get<'a>(m: &'a serde_yaml::Mapping, key: &str) -> Option<&'a Yaml> {
 /// Parse YAML frontmatter, retrying with a repair pass if strict parsing fails.
 /// The repair quotes plain scalar values that contain an unescaped `": "`, the
 /// single most common LLM-authoring mistake (e.g. `description: A: B`).
-fn parse_yaml_lenient(fm: &str) -> Result<Yaml, serde_yaml::Error> {
+/// Returns `(parsed, repaired)` where `repaired` is true iff the strict parse
+/// failed and the regex repair pass was applied (AUDIT C10: make it observable).
+fn parse_yaml_lenient(fm: &str) -> Result<(Yaml, bool), serde_yaml::Error> {
     match serde_yaml::from_str(fm) {
-        Ok(v) => Ok(v),
-        Err(_) => serde_yaml::from_str(&repair_frontmatter(fm)),
+        Ok(v) => Ok((v, false)),
+        Err(_) => serde_yaml::from_str(&repair_frontmatter(fm)).map(|v| (v, true)),
     }
 }
 
@@ -134,7 +151,15 @@ fn repair_frontmatter(fm: &str) -> String {
 /// Parse the frontmatter mapping + body into a `Node`.
 pub fn parse_node(content: &str, rel_path: &Path) -> Result<Node, ParseError> {
     let (fm_text, body) = split_frontmatter(content)?;
-    let value: Yaml = parse_yaml_lenient(fm_text)?;
+    let (value, repaired): (Yaml, bool) = parse_yaml_lenient(fm_text)?;
+    if repaired {
+        // Surface a silently-repaired document (AUDIT C10): the strict YAML parse
+        // failed and the regex line-repair rewrote value(s) before re-parsing.
+        eprintln!(
+            "bokf: repaired malformed YAML frontmatter in {} (values may have been re-quoted)",
+            rel_path.display()
+        );
+    }
     let map = value.as_mapping().ok_or(ParseError::NotMapping)?;
 
     // --- type (required) ---
@@ -162,6 +187,11 @@ pub fn parse_node(content: &str, rel_path: &Path) -> Result<Node, ParseError> {
             (None, None) => return Err(ParseError::MissingIdentifier),
         }
     };
+    // An empty (or whitespace-only) identifier is a hard error, same as missing
+    // (AUDIT C7): a node keyed on "" is meaningless and collides silently.
+    if identifier.trim().is_empty() {
+        return Err(ParseError::MissingIdentifier);
+    }
 
     // --- subtype (+ *_kind / class_basis / Structure `method` aliases) ---
     let subtype = get(map, "subtype")

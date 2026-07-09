@@ -1,10 +1,14 @@
 //! A tiny std-only client for the running Studio GUI's control socket.
 //!
 //! When `biookf-studio` runs with the control channel on, it listens on a Unix
-//! socket (`/tmp/biookf-tauri-mcp.sock` by default, override via
+//! socket (`$HOME/.biookf/studio-mcp.sock` by default, override via
 //! `BIOOKF_STUDIO_IPC`) speaking newline-delimited JSON:
-//!   request  `{"command":..,"payload":{..},"id":..}`
+//!   request  `{"command":..,"payload":{..},"id":..,"authToken":..}`
 //!   response `{"success":bool,"data":any,"error":string|null,"id":..}`
+//!
+//! The socket lives in a per-user 0700 directory and the GUI requires an auth
+//! token (AUDIT M1). The GUI writes that token to `<socket>.token` (0600); we
+//! read it and attach it as `authToken` on every request.
 //!
 //! `call()` connects, writes one JSON line, reads one JSON line, and returns the
 //! parsed `data` (or the `error`). A short connect timeout makes every call fail
@@ -15,15 +19,33 @@ use std::io::{BufRead, BufReader, Write};
 use std::os::unix::net::UnixStream;
 use std::time::Duration;
 
-/// Default control-socket path; matches the GUI's `socket_path(...)`.
-const DEFAULT_SOCK: &str = "/tmp/biookf-tauri-mcp.sock";
 /// Fail fast when the GUI isn't up: a short connect/read budget.
 const CONNECT_TIMEOUT: Duration = Duration::from_millis(800);
 const IO_TIMEOUT: Duration = Duration::from_secs(15);
 
-/// Resolve the control-socket path (env `BIOOKF_STUDIO_IPC`, else the default).
+/// Resolve the control-socket path (env `BIOOKF_STUDIO_IPC`, else
+/// `$HOME/.biookf/studio-mcp.sock`). Must match the GUI's
+/// `biookf_control_socket_path()` in `app/studio/src-tauri/src/main.rs`.
 pub fn socket_path() -> String {
-    std::env::var("BIOOKF_STUDIO_IPC").unwrap_or_else(|_| DEFAULT_SOCK.to_string())
+    if let Ok(p) = std::env::var("BIOOKF_STUDIO_IPC") {
+        return p;
+    }
+    let home = std::env::var("HOME").unwrap_or_else(|_| std::env::temp_dir().display().to_string());
+    format!("{home}/.biookf/studio-mcp.sock")
+}
+
+/// Read the auth token the GUI wrote next to the socket (`<socket>.token`, 0600).
+/// Returns `None` when absent (control channel off, or an older GUI) so calls
+/// still work against a token-less server; a new token-requiring GUI will
+/// reject a tokenless call with a clear "Authentication failed" error.
+fn auth_token(sock: &str) -> Option<String> {
+    let t = std::fs::read_to_string(format!("{sock}.token")).ok()?;
+    let t = t.trim();
+    if t.is_empty() {
+        None
+    } else {
+        Some(t.to_string())
+    }
 }
 
 /// Send one `{command,payload}` request and return the response's `data`
@@ -41,7 +63,11 @@ pub fn call(command: &str, payload: Value) -> Result<Value, String> {
     stream.set_write_timeout(Some(CONNECT_TIMEOUT)).ok();
 
     let mut writer = stream.try_clone().map_err(|e| e.to_string())?;
-    let line = serde_json::json!({ "command": command, "payload": payload, "id": "bokf-mcp" }).to_string();
+    let mut req = serde_json::json!({ "command": command, "payload": payload, "id": "bokf-mcp" });
+    if let Some(tok) = auth_token(&path) {
+        req["authToken"] = Value::String(tok);
+    }
+    let line = req.to_string();
     writer.write_all(line.as_bytes()).map_err(|e| format!("write failed: {e}"))?;
     writer.write_all(b"\n").map_err(|e| format!("write failed: {e}"))?;
     writer.flush().map_err(|e| format!("flush failed: {e}"))?;

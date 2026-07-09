@@ -194,11 +194,20 @@ fn lint_inner(bundle: &Bundle, include_pdf_coverage: bool) -> LintReport {
             r.push(Severity::Warn, "node.no_reported_in", &n.identifier,
                 "node has no `reported_in` edge linking it to a source".to_string(), path.clone());
         }
-        // raw_source paths must resolve to a real file under the bundle
+        // raw_source paths must resolve to a real file under the bundle. Confine
+        // the (frontmatter-derived, untrusted) path so a crafted `raw_source`
+        // cannot stat outside the bundle (AUDIT C8).
         for rs in &n.raw_source {
-            if !bundle.root.join(rs).exists() {
-                r.push(Severity::Warn, "source.raw_missing_file", &n.identifier,
-                    format!("raw_source `{rs}` does not exist under the bundle"), path.clone());
+            match crate::export::confine_to_bundle(&bundle.root, rs) {
+                Ok(p) if p.exists() => {}
+                Ok(_) => {
+                    r.push(Severity::Warn, "source.raw_missing_file", &n.identifier,
+                        format!("raw_source `{rs}` does not exist under the bundle"), path.clone());
+                }
+                Err(_) => {
+                    r.push(Severity::Warn, "source.raw_escapes_bundle", &n.identifier,
+                        format!("raw_source `{rs}` escapes the bundle (absolute or `..`)"), path.clone());
+                }
             }
         }
     }
@@ -522,7 +531,13 @@ fn read_source_meta(bundle: &Bundle, src: &Node) -> Option<crate::convert::Sourc
     for rs in &src.raw_source {
         let p = std::path::Path::new(rs);
         let dir = if p.extension().is_some() { p.parent()? } else { p };
-        let meta = bundle.root.join(dir).join("meta.yaml");
+        // Confine the untrusted, frontmatter-derived path (AUDIT C8) so a crafted
+        // `raw_source` cannot read meta.yaml from outside the bundle.
+        let dir = match crate::export::confine_to_bundle(&bundle.root, &dir.to_string_lossy()) {
+            Ok(d) => d,
+            Err(_) => continue,
+        };
+        let meta = dir.join("meta.yaml");
         if let Ok(txt) = std::fs::read_to_string(&meta) {
             if let Ok(m) = serde_yaml::from_str::<crate::convert::SourceMeta>(&txt) {
                 return Some(m);

@@ -5,69 +5,134 @@
 use bokf_core::parse::parse_node;
 use std::path::{Component, Path, PathBuf};
 
-fn safe_relative(page: &str) -> Result<&Path, String> {
+/// Reserved plain-text files that live at the bundle root and may be read/written.
+const ROOT_TEXT_FILES: [&str; 4] = ["index.md", "log.md", "SCHEMA.md", "README.md"];
+
+/// String-level sanitization of a caller-supplied relative page path: reject
+/// absolute paths, `..` traversal, drive prefixes, and hidden (dot) segments.
+/// This is only the first gate; real containment is enforced by canonicalizing
+/// against the bundle root (see [`contained_read_path`]/[`contained_write_path`]).
+fn clean_bundle_rel(page: &str) -> Result<PathBuf, String> {
     let p = Path::new(page);
     if p.is_absolute()
         || p.components().any(|c| {
-            matches!(
-                c,
-                Component::ParentDir | Component::Prefix(_) | Component::RootDir
-            )
+            matches!(c, Component::ParentDir | Component::Prefix(_) | Component::RootDir)
         })
     {
-        return Err("absolute paths and path traversal are not allowed".into());
+        return Err("path not permitted".into());
     }
-    Ok(p)
+    if p.components().any(|c| match c {
+        Component::Normal(s) => s.to_string_lossy().starts_with('.'),
+        _ => false,
+    }) {
+        return Err("path not permitted".into());
+    }
+    Ok(p.to_path_buf())
 }
 
-/// Validate a page path for WRITING: under `knowledge/` or a reserved root file;
-/// never `raw/` (immutable); never `..` traversal.
-fn writable_path(bundle: &Path, page: &str) -> Result<PathBuf, String> {
-    let rel = safe_relative(page)?;
-    let allowed = page.starts_with("knowledge/")
-        || matches!(page, "index.md" | "log.md" | "SCHEMA.md" | "README.md");
-    if !allowed {
-        return Err("page must be under knowledge/ or one of index.md/log.md/SCHEMA.md".into());
-    }
-    Ok(bundle.join(rel))
+fn is_root_text_file(rel: &Path) -> bool {
+    rel.components().count() == 1
+        && rel
+            .to_str()
+            .map(|s| ROOT_TEXT_FILES.contains(&s))
+            .unwrap_or(false)
 }
 
-/// Validate a page path for READING: anything in the bundle except `..`.
-fn readable_path(bundle: &Path, page: &str) -> Result<PathBuf, String> {
-    Ok(bundle.join(safe_relative(page)?))
+fn is_knowledge_markdown(rel: &Path) -> bool {
+    rel.starts_with("knowledge") && rel.extension().and_then(|e| e.to_str()) == Some("md")
+}
+
+/// Allow-list for pages that may be READ: knowledge/*.md + the root text files.
+fn is_readable_bundle_content(rel: &Path) -> bool {
+    is_knowledge_markdown(rel) || is_root_text_file(rel)
+}
+
+/// Resolve an EXISTING file inside the bundle, defeating symlink escapes by
+/// canonicalizing both the bundle root and the target and requiring the target
+/// to stay under the root. Mirrors the Studio's `safe_existing_bundle_path`.
+fn safe_existing_bundle_path(bundle: &Path, rel: &Path) -> Result<PathBuf, String> {
+    let root_c = bundle.canonicalize().map_err(|_| "path not permitted".to_string())?;
+    let full_c = bundle
+        .join(rel)
+        .canonicalize()
+        .map_err(|_| "path not permitted".to_string())?;
+    if !full_c.starts_with(&root_c) {
+        return Err("path not permitted".into());
+    }
+    Ok(full_c)
+}
+
+/// Resolve a WRITE target that may not exist yet. The file's parent directory is
+/// canonicalized (creating it under the bundle if needed) and required to stay
+/// inside the canonicalized bundle root, so a symlinked parent cannot escape.
+/// Returns the concrete path to write (canonical parent joined with the file name).
+fn safe_write_bundle_path(bundle: &Path, rel: &Path) -> Result<PathBuf, String> {
+    let root_c = bundle.canonicalize().map_err(|_| "path not permitted".to_string())?;
+    let file_name = rel
+        .file_name()
+        .ok_or_else(|| "path not permitted".to_string())?;
+    let parent_rel = rel.parent().unwrap_or_else(|| Path::new(""));
+    let parent = bundle.join(parent_rel);
+    std::fs::create_dir_all(&parent).map_err(|_| "path not permitted".to_string())?;
+    let parent_c = parent.canonicalize().map_err(|_| "path not permitted".to_string())?;
+    if !parent_c.starts_with(&root_c) {
+        return Err("path not permitted".into());
+    }
+    Ok(parent_c.join(file_name))
 }
 
 pub fn write_page(bundle: &Path, page: &str, content: &str) -> Result<String, String> {
-    let full = writable_path(bundle, page)?;
-    if let Some(parent) = full.parent() {
-        std::fs::create_dir_all(parent).map_err(|e| e.to_string())?;
+    let rel = clean_bundle_rel(page)?;
+    let is_concept = is_knowledge_markdown(&rel);
+    if !(is_concept || is_root_text_file(&rel)) {
+        return Err("path not permitted".into());
     }
-    let tmp = full.with_extension("md.tmp");
-    std::fs::write(&tmp, content).map_err(|e| e.to_string())?;
-    std::fs::rename(&tmp, &full).map_err(|e| e.to_string())?;
 
-    // If it's a concept doc, parse to validate and report back.
-    if page.starts_with("knowledge/") {
-        match parse_node(content, Path::new(page)) {
-            Ok(n) => Ok(format!(
+    // Validate concept documents BEFORE touching disk: a bad write must never
+    // land on (and corrupt) the node. Non-concept root files are written as-is.
+    let report = if is_concept {
+        match parse_node(content, &rel) {
+            Ok(n) => format!(
                 "wrote {page}; parsed OK: type={}, identifier={:?}, {} edge(s){}",
                 n.node_type.as_str(),
                 n.identifier,
                 n.edges.len(),
                 if n.node_type.is_valid() { "" } else { "  [WARNING: invalid type]" }
-            )),
-            Err(e) => Ok(format!(
-                "wrote {page}, but it does NOT parse as a valid concept document: {e}. Fix and rewrite."
-            )),
+            ),
+            Err(e) => {
+                return Err(format!(
+                    "not written: content does NOT parse as a valid concept document: {e}. Fix and rewrite."
+                ))
+            }
         }
     } else {
-        Ok(format!("wrote {page}"))
+        format!("wrote {page}")
+    };
+
+    let full = safe_write_bundle_path(bundle, &rel)?;
+    // Temp sibling with a distinct, collision-resistant name, then atomic rename.
+    let mut tmp_name = full
+        .file_name()
+        .map(|s| s.to_os_string())
+        .ok_or_else(|| "cannot write page".to_string())?;
+    tmp_name.push(".tmp");
+    let tmp = full.with_file_name(tmp_name);
+    std::fs::write(&tmp, content).map_err(|_| "cannot write page".to_string())?;
+    if std::fs::rename(&tmp, &full).is_err() {
+        let _ = std::fs::remove_file(&tmp);
+        return Err("cannot write page".into());
     }
+
+    Ok(report)
 }
 
 pub fn read_page(bundle: &Path, page: &str) -> Result<String, String> {
-    let full = readable_path(bundle, page)?;
-    std::fs::read_to_string(&full).map_err(|e| format!("cannot read {page}: {e}"))
+    let rel = clean_bundle_rel(page)?;
+    if !is_readable_bundle_content(&rel) {
+        return Err("path not permitted".into());
+    }
+    let full = safe_existing_bundle_path(bundle, &rel)?;
+    std::fs::read_to_string(&full).map_err(|_| "cannot read page".to_string())
 }
 
 pub fn list_pages(bundle: &Path) -> Result<Vec<String>, String> {
@@ -139,13 +204,34 @@ pub fn validate_page(content: &str) -> Result<String, String> {
     }
 }
 
+/// Validate a caller-supplied bundle location for scaffolding a NEW bundle.
+/// The bundle dir itself may not exist yet, but its parent must, and the path
+/// must not contain `..` traversal. Errors are generic (no path leaking).
+fn validate_scaffold_bundle(bundle: &Path) -> Result<(), String> {
+    if bundle.components().any(|c| matches!(c, Component::ParentDir)) {
+        return Err("path not permitted".into());
+    }
+    let parent = bundle.parent().unwrap_or_else(|| Path::new("."));
+    let parent = if parent.as_os_str().is_empty() {
+        Path::new(".")
+    } else {
+        parent
+    };
+    if !parent.is_dir() {
+        return Err("path not permitted".into());
+    }
+    Ok(())
+}
+
 pub fn scaffold(bundle: &Path, name: &str) -> Result<String, String> {
-    std::fs::create_dir_all(bundle.join("raw")).map_err(|e| e.to_string())?;
-    std::fs::create_dir_all(bundle.join("knowledge")).map_err(|e| e.to_string())?;
+    validate_scaffold_bundle(bundle)?;
+    std::fs::create_dir_all(bundle.join("raw")).map_err(|_| "cannot create bundle".to_string())?;
+    std::fs::create_dir_all(bundle.join("knowledge"))
+        .map_err(|_| "cannot create bundle".to_string())?;
     let write_absent = |rel: &str, content: String| -> Result<(), String> {
         let p = bundle.join(rel);
         if !p.exists() {
-            std::fs::write(&p, content).map_err(|e| e.to_string())?;
+            std::fs::write(&p, content).map_err(|_| "cannot create bundle".to_string())?;
         }
         Ok(())
     };
@@ -216,6 +302,6 @@ pub fn append_log(bundle: &Path, date: &str, entry: &str) -> Result<String, Stri
         Some(i) => format!("{}{}{}", &existing[..=i], block, &existing[i + 1..]),
         None => format!("{existing}{block}"),
     };
-    std::fs::write(&path, new).map_err(|e| e.to_string())?;
+    std::fs::write(&path, new).map_err(|_| "cannot write log".to_string())?;
     Ok(format!("appended log entry for {date}"))
 }

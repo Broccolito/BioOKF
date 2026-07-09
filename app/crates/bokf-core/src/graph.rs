@@ -159,6 +159,14 @@ impl Graph {
             }
         }
 
+        // Terminal deterministic ordering (see AUDIT C4): make serialization
+        // reproducible regardless of upstream iteration order. `index` is stale
+        // after this point but is no longer consulted.
+        nodes.sort_by(|a, b| a.id.cmp(&b.id));
+        edges.sort_by(|a, b| {
+            (&a.source, &a.predicate, &a.target).cmp(&(&b.source, &b.predicate, &b.target))
+        });
+
         Graph { nodes, edges }
     }
 

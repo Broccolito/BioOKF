@@ -3,13 +3,57 @@
 //! the Tauri commands so both surfaces return identical shapes.
 
 use crate::{lint, Bundle, Graph};
-use std::path::Path;
+use std::path::{Component, Path};
+
+/// Confine an untrusted relative path to `root`: reject absolute paths and any
+/// `..`/root/prefix components so a crafted `raw_source`/`source_id` can never
+/// stat or read outside the bundle (AUDIT C8). Returns the joined path on success.
+///
+/// This is a *lexical* guard only — it deliberately still returns a path for a
+/// target that does not exist yet, because the lint existence-probe relies on
+/// that to report a `raw_source` as missing. Callers that actually READ the
+/// resolved path must additionally defeat symlink escapes via
+/// [`confined_existing_path`].
+pub fn confine_to_bundle(root: &Path, rel: &str) -> Result<std::path::PathBuf, String> {
+    let rel_path = Path::new(rel);
+    for comp in rel_path.components() {
+        match comp {
+            Component::Normal(_) | Component::CurDir => {}
+            _ => return Err(format!("path `{rel}` escapes the bundle")),
+        }
+    }
+    Ok(root.join(rel_path))
+}
+
+/// Resolve an EXISTING path under `root`, defeating symlink escapes by
+/// canonicalizing both `root` and the lexically-confined target and requiring
+/// the target to stay under the canonical root (AUDIT C8). Mirrors the MCP
+/// server's `safe_existing_bundle_path` so the read side is guarded the same way
+/// a lexical `..` check alone cannot (a symlink inside the bundle can still point
+/// outside it).
+pub fn confined_existing_path(root: &Path, rel: &str) -> Result<std::path::PathBuf, String> {
+    let joined = confine_to_bundle(root, rel)?;
+    let root_c = root
+        .canonicalize()
+        .map_err(|_| format!("path `{rel}` escapes the bundle"))?;
+    let full_c = joined
+        .canonicalize()
+        .map_err(|e| format!("cannot read {}: {e}", joined.display()))?;
+    if !full_c.starts_with(&root_c) {
+        return Err(format!("path `{rel}` escapes the bundle"));
+    }
+    Ok(full_c)
+}
 
 /// Read and parse the on-disk provenance for one raw source: `<bundle_root>/raw/<source_id>/meta.yaml`.
 /// Returns the full [`crate::convert::SourceMeta`] (source type, credibility, figures, ids …) as JSON
 /// so the GUI can render figures / credibility / source type. Additive — does not touch the spec.
 pub fn source_info(bundle_root: &Path, source_id: &str) -> Result<serde_json::Value, String> {
-    let meta_path = bundle_root.join("raw").join(source_id).join("meta.yaml");
+    // `source_id` is caller-supplied; confine it to `raw/` AND canonicalize so a
+    // symlinked `raw/<id>` cannot make us read outside the bundle (AUDIT C8).
+    let raw = bundle_root.join("raw");
+    let rel = format!("{source_id}/meta.yaml");
+    let meta_path = confined_existing_path(&raw, &rel)?;
     let txt = std::fs::read_to_string(&meta_path)
         .map_err(|e| format!("cannot read {}: {e}", meta_path.display()))?;
     let meta: crate::convert::SourceMeta = serde_yaml::from_str(&txt)
@@ -53,6 +97,25 @@ pub fn change_log(root: impl AsRef<Path>) -> String {
     std::fs::read_to_string(root.as_ref().join("log.md")).unwrap_or_default()
 }
 
+/// Build the `parse_errors`/`duplicate_identifiers` JSON arrays so a consumer/GUI
+/// can see that files were dropped (AUDIT C3). Empty arrays when none.
+fn dropped_files(bundle: &Bundle) -> (serde_json::Value, serde_json::Value) {
+    let parse_errors: Vec<serde_json::Value> = bundle
+        .parse_errors
+        .iter()
+        .map(|(path, msg)| serde_json::json!({ "path": path.to_string_lossy(), "error": msg }))
+        .collect();
+    let duplicate_identifiers: Vec<serde_json::Value> = bundle
+        .duplicate_identifiers
+        .iter()
+        .map(|(id, path)| serde_json::json!({ "identifier": id, "path": path.to_string_lossy() }))
+        .collect();
+    (
+        serde_json::Value::Array(parse_errors),
+        serde_json::Value::Array(duplicate_identifiers),
+    )
+}
+
 fn bundle_doc_inner(
     root: impl AsRef<Path>,
     name: Option<String>,
@@ -74,15 +137,20 @@ fn bundle_doc_inner(
         }
     }
 
+    let (parse_errors, duplicate_identifiers) = dropped_files(&bundle);
     let mut doc = serde_json::json!({
         "id": id,
         "name": name,
         "node_count": bundle.nodes.len(),
-        "edge_count": graph.edges.iter().filter(|e| !e.synthesized).count(),
+        // Total edges actually emitted in `graph.edges` (authored + synthesized
+        // `reported_in`), so declared edge_count == graph.edges.length (AUDIT C1).
+        "edge_count": graph.edges.len(),
         "updated": last_updated(root),
         "log": change_log(root),
         "graph": graph.to_json(),
         "pages": pages,
+        "parse_errors": parse_errors,
+        "duplicate_identifiers": duplicate_identifiers,
     });
     if include_lint {
         let report = lint(&bundle);
@@ -127,16 +195,20 @@ pub fn studio_graph_doc(
         .map(|s| s.to_string_lossy().to_string())
         .unwrap_or_else(|| "bundle".to_string());
     let name = name.unwrap_or_else(|| id.clone());
+    let (parse_errors, duplicate_identifiers) = dropped_files(&bundle);
     Ok(serde_json::json!({
         "id": id,
         "name": name,
         "node_count": bundle.nodes.len(),
-        "edge_count": graph.edges.iter().filter(|e| !e.synthesized).count(),
+        // See AUDIT C1: total edges emitted in `graph.edges` (incl. synthesized).
+        "edge_count": graph.edges.len(),
         "updated": last_updated(root),
         "log": change_log(root),
         "graph": graph.to_json(),
         "pages": {},
         "pages_deferred": true,
+        "parse_errors": parse_errors,
+        "duplicate_identifiers": duplicate_identifiers,
     }))
 }
 

@@ -33,11 +33,11 @@ param!(ScaffoldParam {
 });
 param!(ReadParam {
     #[doc = "Path to the bundle directory."] bundle: String,
-    #[doc = "Logical page path, e.g. knowledge/gene/il6.md, index.md, or raw/<id>."] page: String,
+    #[doc = "Logical page path: a concept doc under knowledge/ (e.g. knowledge/gene/il6.md) or a root text file (index.md, log.md, SCHEMA.md, README.md). raw/ sources are NOT readable here (ingest them via bokf_convert)."] page: String,
 });
 param!(WriteParam {
     #[doc = "Path to the bundle directory."] bundle: String,
-    #[doc = "Page path under knowledge/ (or index.md/log.md/SCHEMA.md). raw/ is read-only."] page: String,
+    #[doc = "Page path under knowledge/ (or index.md/log.md/SCHEMA.md). raw/ is not writable here — ingest sources via bokf_convert."] page: String,
     #[doc = "Full file content (YAML frontmatter + Markdown body for concept docs)."] content: String,
 });
 param!(ValidateParam { #[doc = "Full concept-document content to validate (not written)."] content: String });
@@ -180,7 +180,7 @@ impl BokfServer {
         from_result(ops::list_pages(Path::new(&p.0.bundle)).map(|v| v.join("\n")))
     }
 
-    #[tool(name = "bokf_read_page", description = "Read one page (concept doc, raw source, or index/log/schema).")]
+    #[tool(name = "bokf_read_page", description = "Read one page: a concept doc under knowledge/ or a root text file (index.md/log.md/SCHEMA.md/README.md). raw/ sources are not readable through this tool (ingest them via bokf_convert).")]
     pub async fn read_page(&self, p: Parameters<ReadParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
         from_result(ops::read_page(Path::new(&p.0.bundle), &p.0.page))
     }
@@ -485,10 +485,12 @@ impl BokfServer {
     pub async fn studio_select(&self, p: Parameters<StudioSelectParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
         let mut calls = String::new();
         if let Some(base) = &p.0.base {
-            calls.push_str(&format!("window.__bokf.selectBase({});", json_str(base)));
+            calls.push_str(&js_call("window.__bokf.selectBase", &[base]));
+            calls.push(';');
         }
         if let Some(node) = &p.0.node {
-            calls.push_str(&format!("window.__bokf.selectNode({});", json_str(node)));
+            calls.push_str(&js_call("window.__bokf.selectNode", &[node]));
+            calls.push(';');
         }
         if calls.is_empty() {
             return ok("ERROR: bokf_studio_select needs `base` and/or `node`".to_string());
@@ -515,8 +517,8 @@ impl BokfServer {
     #[tool(name = "bokf_studio_search", description = "Drive the GUI's search box with a query, then return the resulting state.")]
     pub async fn studio_search(&self, p: Parameters<StudioSearchParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
         let code = format!(
-            "(function(){{window.__bokf.search({});return JSON.stringify(window.__bokf.getState());}})()",
-            json_str(&p.0.query)
+            "(function(){{{};return JSON.stringify(window.__bokf.getState());}})()",
+            js_call("window.__bokf.search", &[&p.0.query])
         );
         studio_json(&code)
     }
@@ -548,8 +550,8 @@ fn narrate_to_studio(action: &str) {
     let a = action.to_string();
     std::thread::spawn(move || {
         let code = format!(
-            "(window.__bokf&&window.__bokf.narrate)?window.__bokf.narrate({}):0",
-            serde_json::to_string(&a).unwrap_or_else(|_| "\"\"".into())
+            "(window.__bokf&&window.__bokf.narrate)?{}:0",
+            js_call("window.__bokf.narrate", &[&a])
         );
         let _ = studio_client::execute_js(&code);
     });
@@ -586,6 +588,17 @@ fn studio_json(code: &str) -> Result<CallToolResult, rmcp::model::ErrorData> {
 /// JSON-encode a string for safe interpolation into a JS expression.
 fn json_str(s: &str) -> String {
     serde_json::Value::String(s.to_string()).to_string()
+}
+
+/// Build a JS call expression `method(arg0, arg1, …)` with every argument
+/// JSON-encoded (AUDIT M4). `execute_js` evaluates raw JS in the privileged
+/// webview, so any dynamic value spliced into it MUST be escaped; routing all
+/// dynamic construction through this helper makes forgetting to escape
+/// structurally impossible (hand-built `format!` interpolation is the footgun
+/// the audit flagged). `method` is a trusted code literal, never caller data.
+fn js_call(method: &str, args: &[&str]) -> String {
+    let encoded: Vec<String> = args.iter().map(|a| json_str(a)).collect();
+    format!("{method}({})", encoded.join(","))
 }
 
 /// Resolve the registry/active-pointer root: the caller-provided path if
