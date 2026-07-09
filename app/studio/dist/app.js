@@ -905,6 +905,70 @@ function typeStr(t){ if(typeof t==='string')return t; if(t&&typeof t==='object')
 function outEdges(id){return edges.filter(e=>e.source===id&&!e.synthesized);}
 function inEdges(id){return edges.filter(e=>e.target===id&&!e.synthesized);}
 
+/* SPOKE knowledge-graph annotation (added by the spoke-fabric). Reads n.spoke / e.spoke on the
+   graph node/edge. Rendered as a first-class card in the doc viewer.
+
+   PLACEMENT RULE (must match the harness annotation contract, fabric/spoke/README.md): the SPOKE
+   card is inserted AFTER all MANDATORY attributes and BEFORE all OPTIONAL attributes of the record.
+   Per SCHEMA.md "Required fields": a NODE's mandatory attrs are type + identifier (both in the
+   header), so the card is the first body section; an EDGE's mandatory attrs are predicate, object,
+   knowledge_level, agent_type, primary_source (the Provenance triplet), so the card follows it.
+
+   CONSISTENCY: the section is marked with the SAME square colour (SPOKE_SQUARE) and the SAME markup /
+   fonts / kv styles on BOTH nodes and edges — status is conveyed only in the value rows. */
+const SPOKE_SQUARE='#0ea5e9';
+/* status hues shared by nodes (mapping_status) and edges (support_status): green=good, amber=partial,
+   red=contradicted/none, grey=neutral/not-evaluated. */
+function spokeStatusColor(st){
+  return st==='mapped'?'#2e8c6a':st==='ambiguous'?'#b07d3a':st==='not_mappable'?'#8e8ea0':'#c4564b';
+}
+function spokeSupportColor(st){
+  return ({supported:'#2e8c6a',contradicted:'#c4564b',related:'#b07d3a',different_relation:'#8e8ea0',unsupported:'#8e8ea0',not_evaluated:'transparent'})[st]||'#8e8ea0';
+}
+function spokeSectionHtml(n){
+  const s=n&&n.spoke; if(!s||!s.mapping_status) return '';
+  const st=s.mapping_status, col=spokeStatusColor(st);
+  let rows=kvRow('mapping', `<span style="color:${col};font-weight:650">${esc(st)}</span>`);
+  if(st==='mapped'){
+    const via = s.match_method==='reviewed'
+      ? '<span class="chip" style="background:var(--accent-soft);color:var(--accent-ink)">LLM-reviewed</span>'
+      : '<span class="chip">harness</span>';
+    rows+=kvRow('SPOKE type', esc(s.target_type||'—'));
+    rows+=kvRow('SPOKE id', `<span class="chip xref">${esc(String(s.target_identifier))}</span>`);
+    if(s.target_name && s.target_name!==n.id) rows+=kvRow('SPOKE name', esc(s.target_name));
+    rows+=kvRow('match', `<span class="chip">${esc(s.match_method||'')}</span> ${via}`);
+  } else if(st==='ambiguous' && (s.candidates||[]).length){
+    rows+=kvRow('candidates', s.candidates.slice(0,5).map(c=>`<span class="chip" title="${esc(String(c.target_identifier))}">${esc(c.target_name||String(c.target_identifier))}</span>`).join(''));
+  } else if(st==='not_mappable'){
+    rows+=kvRow('reason', `<span style="color:var(--muted)">no SPOKE analogue for this node type</span>`);
+  }
+  if(s.notes) rows+=kvRow('notes', `<span style="color:var(--muted);font-size:12px">${esc(s.notes)}</span>`);
+  const dot=`<span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${SPOKE_SQUARE};margin-right:6px;vertical-align:middle"></span>`;
+  return `<div class="d-section"><h5>${dot}SPOKE knowledge graph</h5><div class="kv">${rows}</div></div>`;
+}
+/* SPOKE annotation for an EDGE. Always rendered (like the node card) so users always know the fabric
+   ran — even when the edge is not_evaluated because an endpoint didn't map to SPOKE. Shows the
+   support verdict, each endpoint's mapping status, and (when evaluated) the SPOKE relationships found. */
+function spokeEdgeSectionHtml(e){
+  const s=e&&e.spoke; if(!s||!s.support_status) return '';
+  const st=s.support_status, raw=spokeSupportColor(st), col=(raw==='transparent'?'#8e8ea0':raw);
+  let rows=kvRow('support', `<span style="color:${col};font-weight:650">${esc(st)}</span>`);
+  const ep=s.endpoints||{};
+  const epCell=(mapped,id)=> mapped ? `<span class="chip xref">${esc(String(id))}</span>` : `<span style="color:var(--muted)">not mapped</span>`;
+  rows+=kvRow('source → SPOKE', epCell(ep.source_mapped, ep.source_identifier));
+  rows+=kvRow('target → SPOKE', epCell(ep.target_mapped, ep.target_identifier));
+  if(s.evaluated){
+    if((s.found_relation_types||[]).length) rows+=kvRow('found relations', s.found_relation_types.map(r=>`<span class="chip">${esc(r)}</span>`).join(''));
+    const ev=s.evidence;
+    if(ev){
+      if(ev.relation_count) rows+=kvRow('relation count', String(ev.relation_count));
+      if((ev.sources||[]).length) rows+=kvRow('sources', ev.sources.slice(0,8).map(x=>`<span class="chip">${esc(x)}</span>`).join(''));
+    }
+  }
+  if(s.notes) rows+=kvRow('notes', `<span style="color:var(--muted);font-size:12px">${esc(s.notes)}</span>`);
+  const dot=`<span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:${SPOKE_SQUARE};margin-right:6px;vertical-align:middle"></span>`;
+  return `<div class="d-section"><h5>${dot}SPOKE knowledge graph</h5><div class="kv">${rows}</div></div>`;
+}
 function showNodeDetail(n){
   const pg=pages[n.id];
   const col=n.color||TYPE_COLOR[n.type]||"#9aa1ab";
@@ -936,13 +1000,16 @@ function showNodeDetail(n){
     const neg=isNegPred(p), sym=groups[p][0]&&groups[p][0].symmetric;
     eh+=`<div class="edge-group"><div class="eg-pred${neg?' neg':''}">${esc(predLabel(p))}</div>`;
     groups[p].forEach(e=>{const tc=nodeColor(e.target),st=fmtStat(e),isExt=byId[e.target]&&byId[e.target].external;
-      eh+=`<div class="erow" data-edge="${eid(e)}"><span class="arrow">${sym?'⇄':'→'}</span><span class="tgt"><i style="background:${tc}"></i><span>${esc(e.target)}</span>${isExt?'<span class="ext">ext</span>':''}</span>${st?`<span class="stat">${esc(st)}</span>`:''}</div>`;});
+      const sup=(e.spoke&&e.spoke.support_status)||null;
+      const supDot=(sup&&sup!=='not_evaluated')?`<span title="SPOKE: ${esc(sup)}" style="display:inline-block;width:7px;height:7px;border-radius:2px;background:${spokeSupportColor(sup)};margin-left:4px;flex:0 0 7px"></span>`:'';
+      eh+=`<div class="erow" data-edge="${eid(e)}"><span class="arrow">${sym?'⇄':'→'}</span><span class="tgt"><i style="background:${tc}"></i><span>${esc(e.target)}</span>${isExt?'<span class="ext">ext</span>':''}${supDot}</span>${st?`<span class="stat">${esc(st)}</span>`:''}</div>`;});
     eh+=`</div>`;
   });
   detail.innerHTML=`<div class="d-head">${headBtns(pg.path)}
     <span class="d-badge" style="background:${col}">${esc(typeStr(pg.node_type))}</span>
     <div class="d-id">${esc(n.id)}</div></div>
     <div class="d-body">
+      ${spokeSectionHtml(n)}
       <div class="d-section">${nodeFrontmatterHtml(pg,n)}</div>
       <div class="d-section" id="sourceSection"></div>
       ${eh?`<div class="d-section"><h5>Edges · this node → object (${out.length})</h5>${eh}</div>`:''}
@@ -1119,6 +1186,7 @@ function showEdgeDetail(e){
       <div class="cell"><div class="k">agent_type</div><div class="v">${esc(e.agent_type||'—')}</div></div>
       <div class="cell" style="grid-column:1/3"><div class="k">primary_source</div><div class="v${pages[e.primary_source]?' cite':''}"${pages[e.primary_source]?` data-cite="${esc(e.primary_source)}"`:''}>${esc(e.primary_source||'—')}</div></div>
     </div></div>`}
+    ${spokeEdgeSectionHtml(e)}
     ${dirHtml}
     ${pubHtml}
     ${statHtml}
