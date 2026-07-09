@@ -1,0 +1,566 @@
+<title>Grounding LLM Knowledge in SPOKE — Two Agents, One Map</title>
+<style>
+  :root{
+    --ink:#0C1220; --panel:#141d30; --panel2:#1b2540;
+    --paper:#FBFCFE; --surface:#FFFFFF; --text:#111726; --muted:#5B6678; --faint:#909AAB;
+    --line:#E5E9F0; --line2:#EFF2F7;
+    --claude:#12A594; --claude-d:#0C7A6E; --claude-soft:#DBF0ED;
+    --codex:#7C6BF0; --codex-d:#5B49CE; --codex-soft:#E7E3Fb;
+    --gold:#E0A83D; --gold-d:#B9821E; --gold-soft:#F7ECD4;
+    --good:#1F9D57; --warn:#C98A1E; --bad:#D6503C;
+    --good-soft:#DCF0E4; --warn-soft:#F6EAD2; --bad-soft:#F6DED9;
+    --serif:"Iowan Old Style","Palatino Linotype","Book Antiqua",Palatino,Georgia,serif;
+    --sans:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,"SF Mono","Cascadia Code",Menlo,Consolas,monospace;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);
+    line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.14;text-wrap:balance;margin:0}
+  p{margin:.6em 0}
+  .mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+  .num{font-family:var(--mono);font-variant-numeric:tabular-nums;font-weight:600}
+  .eyebrow{font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+  .wrap{max-width:980px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+  .narrow{max-width:760px}
+  section{padding:clamp(46px,7vw,88px) 0;border-top:1px solid var(--line)}
+  .lede{font-size:clamp(1.05rem,1.6vw,1.2rem);color:var(--muted)}
+  .sec-h{font-size:clamp(1.7rem,3.4vw,2.4rem);letter-spacing:-.015em;margin:.25em 0 .35em}
+  .kicker{display:flex;align-items:center;gap:12px;margin-bottom:6px}
+  .kicker .no{font-family:var(--mono);font-size:.8rem;color:var(--gold-d);font-weight:600}
+  .kicker .rule{height:1px;flex:1;background:var(--line);max-width:60px}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;background:var(--ink);color:#EAF0F7;overflow:hidden;border-top:none}
+  #net{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .hero-veil{position:absolute;inset:0;background:
+    radial-gradient(120% 90% at 50% 8%,rgba(12,18,32,0) 30%,rgba(12,18,32,.72) 78%,rgba(12,18,32,.96) 100%)}
+  .hero-in{position:relative;padding:clamp(70px,13vw,150px) 0 clamp(50px,8vw,96px)}
+  .hero .tag{font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;
+    color:#9fb0c7}
+  .hero h1{font-size:clamp(2.3rem,6.2vw,4.4rem);letter-spacing:-.025em;margin:.28em 0 .3em;color:#fff}
+  .hero h1 .a{color:var(--claude)} .hero h1 .b{color:var(--codex)} .hero h1 .c{color:var(--gold)}
+  .hero p.sub{font-size:clamp(1.05rem,1.7vw,1.28rem);color:#B9C6D8;max-width:640px}
+  .hero-stats{display:flex;flex-wrap:wrap;gap:clamp(20px,4vw,46px);margin-top:clamp(30px,5vw,52px)}
+  .hstat .v{font-family:var(--serif);font-size:clamp(1.7rem,3.6vw,2.5rem);color:#fff;line-height:1}
+  .hstat .v .u{font-size:.5em;color:#8fa1ba;font-family:var(--mono)}
+  .hstat .k{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+    color:#8695ad;margin-top:8px}
+  .hstat.cl .v{color:var(--claude)} .hstat.cx .v{color:var(--codex)}
+  .scrollcue{margin-top:44px;font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;
+    text-transform:uppercase;color:#6f7f97;display:flex;align-items:center;gap:9px}
+  .scrollcue .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);
+    animation:pulse 2.4s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+  @media(prefers-reduced-motion:reduce){.scrollcue .dot{animation:none;opacity:.8}}
+
+  /* ---------- sticky nav ---------- */
+  nav{position:sticky;top:0;z-index:20;background:rgba(251,252,254,.86);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;gap:6px;height:52px;overflow-x:auto;scrollbar-width:none}
+  nav .wrap::-webkit-scrollbar{display:none}
+  nav .brand{font-family:var(--mono);font-size:.74rem;font-weight:600;letter-spacing:.02em;
+    margin-right:auto;white-space:nowrap;color:var(--text)}
+  nav a{font-family:var(--mono);font-size:.74rem;color:var(--muted);text-decoration:none;
+    padding:6px 10px;border-radius:5px;white-space:nowrap}
+  nav a:hover{color:var(--text);background:var(--line2)}
+
+  /* ---------- generic ---------- */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .callout{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:22px 24px}
+  .pillrow{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .pill{font-family:var(--mono);font-size:.74rem;padding:4px 10px;border-radius:20px;
+    border:1px solid var(--line);color:var(--muted);background:var(--surface)}
+  .pill b{color:var(--text)}
+
+  /* ---------- waterfall diagram ---------- */
+  .fall{display:flex;flex-direction:column;gap:10px;margin-top:26px}
+  .tier{display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:16px;
+    background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--claude);
+    border-radius:8px;padding:13px 18px;position:relative}
+  .tier .ti{font-family:var(--mono);font-weight:700;color:var(--faint);font-size:.85rem}
+  .tier h4{font-size:1rem;font-family:var(--sans);font-weight:650}
+  .tier p{margin:2px 0 0;font-size:.88rem;color:var(--muted)}
+  .tier .conf{font-family:var(--mono);font-size:.74rem;color:var(--muted);text-align:right;white-space:nowrap}
+  .tier.t-llm{border-left-color:var(--gold)}
+  .tier.t-hum{border-left-color:var(--codex)}
+  .fall .drop{height:8px;width:2px;background:linear-gradient(var(--line),transparent);margin:0 0 0 16px}
+  .edgekinds{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:22px}
+  .ek{border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:var(--surface)}
+  .ek .h{font-family:var(--mono);font-size:.78rem;font-weight:650;display:flex;align-items:center;gap:8px}
+  .ek .h .d{width:9px;height:9px;border-radius:2px}
+  .ek p{margin:5px 0 0;font-size:.84rem;color:var(--muted)}
+
+  /* ---------- two journeys ---------- */
+  .tracks{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:26px}
+  .track{border-radius:12px;padding:4px 22px 24px;background:var(--surface);border:1px solid var(--line)}
+  .track.cl{border-top:4px solid var(--claude)} .track.cx{border-top:4px solid var(--codex)}
+  .track .thead{display:flex;align-items:baseline;justify-content:space-between;gap:10px;
+    padding:18px 0 6px;border-bottom:1px solid var(--line2);margin-bottom:6px}
+  .track .thead .name{font-family:var(--mono);font-size:.82rem;font-weight:700;letter-spacing:.02em}
+  .track.cl .name{color:var(--claude-d)} .track.cx .name{color:var(--codex-d)}
+  .track .thead .tagline{font-size:.8rem;color:var(--muted);text-align:right}
+  .stepline{position:relative;padding-left:26px}
+  .stepline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line)}
+  .ev{position:relative;padding:11px 0}
+  .ev::before{content:"";position:absolute;left:-22px;top:16px;width:11px;height:11px;border-radius:50%;
+    background:var(--surface);border:2px solid var(--claude)}
+  .track.cx .ev::before{border-color:var(--codex)}
+  .ev.bug::before{border-color:var(--bad);background:var(--bad-soft)}
+  .ev .et{font-weight:650;font-size:.94rem}
+  .ev .ed{font-size:.86rem;color:var(--muted);margin-top:1px}
+  .ev .tagm{font-family:var(--mono);font-size:.72rem;color:var(--faint)}
+  .track .result{margin-top:16px;padding:14px 16px;border-radius:8px;background:var(--paper);
+    border:1px solid var(--line);display:flex;flex-wrap:wrap;gap:18px}
+  .track .result .r .v{font-family:var(--serif);font-size:1.5rem}
+  .track.cl .result .r .v{color:var(--claude-d)} .track.cx .result .r .v{color:var(--codex-d)}
+  .track .result .r .k{font-family:var(--mono);font-size:.68rem;text-transform:uppercase;
+    letter-spacing:.06em;color:var(--faint);margin-top:2px}
+
+  /* ---------- overlap viz ---------- */
+  .overlap{display:grid;grid-template-columns:1fr;gap:10px;margin-top:24px}
+  .obar{display:grid;grid-template-columns:150px 1fr 58px;align-items:center;gap:14px}
+  .obar .ol{font-size:.9rem;color:var(--muted)} .obar .ol b{color:var(--text)}
+  .obar .track2{height:26px;background:var(--line2);border-radius:5px;overflow:hidden;position:relative}
+  .obar .fillx{height:100%;border-radius:5px}
+  .obar .ov{font-family:var(--mono);font-weight:600;text-align:right;font-variant-numeric:tabular-nums}
+
+  /* ---------- scorecard ---------- */
+  .legend{display:flex;flex-wrap:wrap;gap:16px;margin:14px 0 18px;font-size:.82rem;color:var(--muted)}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .swatch{width:12px;height:12px;border-radius:2px}
+  .score{display:flex;flex-direction:column;gap:22px}
+  .srow .slabel{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;gap:10px}
+  .srow .slabel .cap{color:var(--muted);font-size:.84rem}
+  .sbar{display:flex;height:36px;border-radius:5px;overflow:hidden;border:1px solid var(--line)}
+  .seg{display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--mono);
+    font-size:.8rem;font-weight:700;min-width:0}
+  .seg.sm{color:var(--text)}
+  .s-cl{background:var(--claude)} .s-cx{background:var(--codex)} .s-good{background:var(--good)}
+  .s-warn{background:var(--warn)} .s-bad{background:var(--bad)}
+  .note{font-size:.85rem;color:var(--muted);margin:.4em 0 0}
+
+  /* ---------- gene table ---------- */
+  .twrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface);margin-top:20px}
+  table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:520px}
+  th,td{text-align:left;padding:11px 15px;border-bottom:1px solid var(--line2);vertical-align:top}
+  thead th{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--faint);background:#FAFBFD}
+  tbody tr:last-child td{border-bottom:none}
+  .wrong{color:var(--bad);font-weight:600} .right{color:var(--good);font-weight:600}
+
+  /* ---------- contradictions ---------- */
+  .contra{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px;margin-top:24px}
+  .cc{border:1px solid var(--line);border-left:4px solid var(--bad);border-radius:8px;padding:14px 16px;
+    background:var(--surface)}
+  .cc .claim{font-family:var(--mono);font-size:.84rem}
+  .cc .claim .neg{color:var(--bad);font-weight:700}
+  .cc .spoke{font-size:.82rem;color:var(--muted);margin-top:7px}
+  .cc .spoke b{color:var(--good)}
+
+  /* ---------- combined pipeline ---------- */
+  .combined{background:var(--ink);color:#E7EDF5;border-radius:16px;padding:clamp(24px,4vw,44px);margin-top:28px}
+  .combined h3{color:#fff;font-size:1.5rem}
+  .pipe{counter-reset:s;display:flex;flex-direction:column;margin-top:22px}
+  .pstep{display:grid;grid-template-columns:44px 1fr;gap:18px;padding:16px 0;border-top:1px solid rgba(255,255,255,.09)}
+  .pstep:first-child{border-top:none}
+  .pstep .sn{counter-increment:s;font-family:var(--mono);font-weight:700;color:var(--gold);font-size:1.05rem}
+  .pstep .sn::before{content:counter(s,decimal-leading-zero)}
+  .pstep .pt{font-weight:650;color:#fff;font-size:1.02rem}
+  .pstep .pd{font-size:.9rem;color:#AEBBCD;margin-top:2px}
+  .src{font-family:var(--mono);font-size:.66rem;letter-spacing:.03em;text-transform:uppercase;
+    padding:2px 8px;border-radius:20px;margin-left:8px;vertical-align:middle;white-space:nowrap}
+  .src.cl{background:rgba(18,165,148,.18);color:#63d8c8} .src.cx{background:rgba(124,107,240,.2);color:#b3a7fb}
+  .src.new{background:rgba(224,168,61,.18);color:var(--gold)}
+  .outcome{margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);
+    font-size:1.05rem;color:#DCE4EF}
+  .outcome b{color:var(--gold)}
+
+  footer{padding:44px 0 60px;border-top:1px solid var(--line);color:var(--faint);
+    font-family:var(--mono);font-size:.78rem}
+  footer a{color:var(--claude-d)}
+
+  /* reveal (motion-safe) */
+  @media(prefers-reduced-motion:no-preference){
+    .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.in{opacity:1;transform:none}
+  }
+  @media(max-width:720px){
+    .grid2,.tracks{grid-template-columns:1fr}
+    .obar{grid-template-columns:110px 1fr 46px;gap:10px}
+  }
+</style>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero">
+  <canvas id="net" aria-hidden="true"></canvas>
+  <div class="hero-veil"></div>
+  <div class="wrap hero-in">
+    <div class="tag">BioOKF × SPOKE · a mapping study</div>
+    <h1>Two agents drew<br>the same <span class="c">map</span>.<br>
+      <span class="a">One</span> drew it better —<br><span class="b">both</span> taught the other.</h1>
+    <p class="sub">An LLM-curated biomedical graph, grounded against SPOKE's 40-million-node knowledge
+      base. Claude Code and Codex each built a linker; here is the whole process — and the combined
+      design that beats both.</p>
+    <div class="hero-stats">
+      <div class="hstat cl"><div class="v">68.7<span class="u">%</span></div><div class="k">Claude · of mappable nodes</div></div>
+      <div class="hstat cx"><div class="v">~57<span class="u">%</span></div><div class="k">Codex · of mappable nodes</div></div>
+      <div class="hstat"><div class="v">171</div><div class="k">disagreements re-judged vs SPOKE</div></div>
+      <div class="hstat"><div class="v">14</div><div class="k">curated claims SPOKE contradicts</div></div>
+    </div>
+    <div class="scrollcue"><span class="dot"></span>scroll — the whole story</div>
+  </div>
+</header>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">BioOKF → SPOKE</span>
+    <a href="#problem">Problem</a>
+    <a href="#method">Method</a>
+    <a href="#journeys">Two journeys</a>
+    <a href="#head">Head-to-head</a>
+    <a href="#science">What SPOKE said</a>
+    <a href="#combined">Combined design</a>
+  </div>
+</nav>
+
+<!-- ======================= 01 PROBLEM ======================= -->
+<section id="problem">
+  <div class="wrap narrow">
+    <div class="kicker"><span class="no">01</span><span class="rule"></span><span class="eyebrow">The problem</span></div>
+    <h2 class="sec-h">Narrative knowledge, meet structured ground truth</h2>
+    <p class="lede">An LLM can read a paper and assert “<span class="mono">PTPN22 associated_with type 1
+      diabetes</span>.” But is that claim already in a curated biomedical knowledge graph? Does the
+      graph <em>agree</em>, or does it hold the opposite? Answering that means mapping the LLM's entities
+      and relationships onto <b>SPOKE</b> — the UCSF Baranzini Lab's knowledge graph.</p>
+  </div>
+  <div class="wrap">
+    <div class="grid2" style="margin-top:26px">
+      <div class="callout">
+        <div class="eyebrow" style="color:var(--claude-d)">Source · BioOKF</div>
+        <h3 style="font-size:1.2rem;margin:.3em 0">The LLM-curated graph</h3>
+        <p style="font-size:.92rem;color:var(--muted)">A git-shippable bundle of typed concept
+          documents authored by an agent from literature. Closed vocabulary, human-readable names.</p>
+        <div class="pillrow">
+          <span class="pill"><b>28</b> node types</span>
+          <span class="pill"><b>35</b> predicates</span>
+          <span class="pill">names, not CURIEs</span>
+        </div>
+      </div>
+      <div class="callout">
+        <div class="eyebrow" style="color:var(--codex-d)">Target · SPOKE</div>
+        <h3 style="font-size:1.2rem;margin:.3em 0">The curated ground truth</h3>
+        <p style="font-size:.92rem;color:var(--muted)">A production biomedical knowledge graph:
+          Genes, Compounds, Diseases, Variants, Proteins and the relationships between them, from
+          dozens of source databases.</p>
+        <div class="pillrow">
+          <span class="pill"><b>42</b> node labels</span>
+          <span class="pill"><b>129</b> edge types</span>
+          <span class="pill"><b>40M+</b> nodes</span>
+        </div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:20px;border-left:4px solid var(--gold)">
+      <div class="eyebrow" style="color:var(--gold-d)">The catch that shaped everything</div>
+      <p style="margin:.3em 0 0">The benchmark bundle — <span class="mono">benchmark-biored</span>,
+        <b class="num">2,550</b> nodes and <b class="num">5,360</b> edges — carries <b>almost no CURIE
+        cross-references</b> on its biomedical entities. Only publications have PMIDs. So mapping can't
+        lean on identifiers; it hinges on matching <b>names and synonyms</b>, constrained by
+        <b>type</b>. That single fact is why both agents converged on a “waterfall,” and why the hard
+        cases needed judgment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 02 METHOD ======================= -->
+<section id="method">
+  <div class="wrap narrow">
+    <div class="kicker"><span class="no">02</span><span class="rule"></span><span class="eyebrow">The method</span></div>
+    <h2 class="sec-h">A confidence waterfall</h2>
+    <p class="lede">Both agents built the same shape: cheap, high-precision matches first; expensive
+      judgment only for what falls through. Each node runs the tiers top to bottom and stops at the
+      first confident hit.</p>
+  </div>
+  <div class="wrap">
+    <div class="fall">
+      <div class="tier"><span class="ti">1</span><div><h4>Exact identifier</h4><p>A CURIE (or an rsID hiding in the synonyms) that <em>is</em> a SPOKE identifier.</p></div><span class="conf">conf 1.00</span></div>
+      <div class="drop"></div>
+      <div class="tier"><span class="ti">2</span><div><h4>Exact canonical name</h4><p>Index-backed name match — the official symbol, not an alias.</p></div><span class="conf">conf 0.98</span></div>
+      <div class="drop"></div>
+      <div class="tier"><span class="ti">3</span><div><h4>Case-insensitive / synonym</h4><p>Normalized name &amp; synonym equality, greek letters and punctuation folded.</p></div><span class="conf">conf 0.90–0.95</span></div>
+      <div class="drop"></div>
+      <div class="tier t-llm"><span class="ti">4</span><div><h4>LLM adjudication <span class="mono" style="font-size:.72rem;color:var(--gold-d)">the residue</span></h4><p>An agent queries SPOKE, weighs candidates, and either commits or declines — every id then verified to exist.</p></div><span class="conf">conf ≤0.88</span></div>
+      <div class="drop"></div>
+      <div class="tier t-hum"><span class="ti">5</span><div><h4>Curation &amp; review queue</h4><p>The low-confidence tail, left for a human or curator to sign off — never auto-applied.</p></div><span class="conf">reviewed</span></div>
+    </div>
+
+    <div class="wrap narrow" style="padding:0;margin-top:44px">
+      <h3 style="font-size:1.25rem">Then: do the edges agree?</h3>
+      <p style="color:var(--muted);font-size:.95rem">For any edge whose <em>both</em> endpoints
+        mapped, look for a SPOKE relationship in the predicate's family. The verdict is the scientific
+        payload.</p>
+    </div>
+    <div class="edgekinds">
+      <div class="ek"><div class="h"><span class="d" style="background:var(--good)"></span>agrees_with_spoke</div><p>SPOKE has a matching relationship. Its evidence is attached.</p></div>
+      <div class="ek"><div class="h"><span class="d" style="background:var(--bad)"></span>contradicts_spoke</div><p>The claim is a <span class="mono">not_*</span> negative, yet SPOKE positively asserts it.</p></div>
+      <div class="ek"><div class="h"><span class="d" style="background:var(--warn)"></span>found_but_unmapped_predicate</div><p>A SPOKE edge exists, but of a different relationship family.</p></div>
+      <div class="ek"><div class="h"><span class="d" style="background:var(--faint)"></span>not_found_in_spoke</div><p>Both nodes mapped, but no relationship connects them.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 03 TWO JOURNEYS ======================= -->
+<section id="journeys">
+  <div class="wrap narrow">
+    <div class="kicker"><span class="no">03</span><span class="rule"></span><span class="eyebrow">The process</span></div>
+    <h2 class="sec-h">Two agents, two journeys</h2>
+    <p class="lede">Same problem, same benchmark, two temperaments. Both hit the same SPOKE
+      gotchas — and fixed them. Where they diverged was what to do with the hard cases.</p>
+  </div>
+  <div class="wrap">
+    <div class="tracks">
+      <!-- CLAUDE -->
+      <div class="track cl">
+        <div class="thead"><span class="name">CLAUDE · spoke-mapper</span><span class="tagline">coverage + precision,<br>autonomous LLM-in-the-loop</span></div>
+        <div class="stepline">
+          <div class="ev"><div class="et">Research the terrain</div><div class="ed">25 agents characterized every SPOKE label &amp; edge type against live data.</div><div class="tagm">1.18M tokens · 417 queries</div></div>
+          <div class="ev"><div class="et">Build a modular waterfall</div><div class="ed">Crosswalk YAMLs + resolver + edge checker + CLI + MCP.</div></div>
+          <div class="ev bug"><div class="et">Spin 1 — two bugs surface</div><div class="ed">Unindexed <span class="mono">Variant</span> name-scan (1M rows); write-guard tripping on “set shifting impairment”. Fixed: index-guard + word-splitting.</div></div>
+          <div class="ev bug"><div class="et">Spin 2 → 3 — the big one</div><div class="ed">Gene identifiers are integers; quoting them broke <em>every</em> gene edge. Fixed → agreements <b class="num">28 → 110</b>.</div></div>
+          <div class="ev"><div class="et">Spin 4–5 — LLM adjudication</div><div class="ed">52 agents resolved the ambiguous + not-found residue: <b class="num">+402</b> maps.</div></div>
+          <div class="ev"><div class="et">Guardrail</div><div class="ed">Every LLM identifier verified in SPOKE — <b class="num">4</b> hallucinated ids caught &amp; demoted.</div></div>
+        </div>
+        <div class="result">
+          <div class="r"><div class="v">1,460</div><div class="k">nodes mapped</div></div>
+          <div class="r"><div class="v">197</div><div class="k">edges agree</div></div>
+          <div class="r"><div class="v">14</div><div class="k">contradictions</div></div>
+        </div>
+      </div>
+      <!-- CODEX -->
+      <div class="track cx">
+        <div class="thead"><span class="name">CODEX · spoke-fabric</span><span class="tagline">precision-first,<br>human-in-the-loop</span></div>
+        <div class="stepline">
+          <div class="ev"><div class="et">Research &amp; schema summary</div><div class="ed">Captured SPOKE labels &amp; relationship types; wrote a deliberate design doc.</div></div>
+          <div class="ev"><div class="et">Deterministic waterfall</div><div class="ed">Exact identifier → name → synonym, ranked by match type. One 1,760-line engine.</div></div>
+          <div class="ev bug"><div class="et">Same gotchas, fixed differently</div><div class="ed">Write-guard terms <em>dropped</em>; expensive labels restricted to identifier-only lookups.</div></div>
+          <div class="ev"><div class="et">Synonym-as-identifier rescue</div><div class="ed">Pulled rsIDs out of synonyms — mapped named variants (R620W → rs2476601) that others missed.</div></div>
+          <div class="ev"><div class="et">Review queue, not fuzzy</div><div class="ed">120 hard nodes routed to a <span class="mono">curation_overrides.yaml</span> for a curator/LLM to confirm — verified before apply.</div></div>
+          <div class="ev"><div class="et">Audit harness</div><div class="ed"><span class="mono">verify-run</span>, topology checks, <span class="mono">--fail-on-query-warning</span> so coverage can't silently drop.</div></div>
+        </div>
+        <div class="result">
+          <div class="r"><div class="v">1,236</div><div class="k">nodes mapped</div></div>
+          <div class="r"><div class="v">158</div><div class="k">edges agree</div></div>
+          <div class="r"><div class="v">8</div><div class="k">contradictions</div></div>
+        </div>
+      </div>
+    </div>
+    <p class="note" style="text-align:center;max-width:640px;margin:22px auto 0">Both preserve the graph
+      exactly — every original node and edge kept, an annotation added. Downstream users filter;
+      nothing is thrown away.</p>
+  </div>
+</section>
+
+<!-- ======================= 04 HEAD TO HEAD ======================= -->
+<section id="head">
+  <div class="wrap narrow">
+    <div class="kicker"><span class="no">04</span><span class="rule"></span><span class="eyebrow">Head-to-head</span></div>
+    <h2 class="sec-h">Where they overlap — and who's right</h2>
+    <p class="lede">Aligned node by node, the two maps agree far more than they differ. The interesting
+      story is in the margins, so neutral judge agents re-ruled every contested case against live SPOKE.</p>
+  </div>
+  <div class="wrap">
+    <div class="overlap">
+      <div class="obar"><span class="ol"><b>Both</b> mapped, same node</span><div class="track2"><div class="fillx" style="width:74.4%;background:var(--good)"></div></div><span class="ov">1,115</span></div>
+      <div class="obar"><span class="ol"><b>Both</b>, different node</span><div class="track2"><div class="fillx" style="width:5.7%;background:var(--warn)"></div></div><span class="ov">85</span></div>
+      <div class="obar"><span class="ol"><b class="mono" style="color:var(--claude-d)">Claude</b> only</span><div class="track2"><div class="fillx" style="width:17.3%;background:var(--claude)"></div></div><span class="ov">260</span></div>
+      <div class="obar"><span class="ol"><b class="mono" style="color:var(--codex-d)">Codex</b> only</span><div class="track2"><div class="fillx" style="width:2.4%;background:var(--codex)"></div></div><span class="ov">36</span></div>
+    </div>
+
+    <h3 style="font-size:1.25rem;margin:44px 0 0">The scorecard, judged against SPOKE</h3>
+    <div class="legend">
+      <span><i class="swatch" style="background:var(--claude)"></i>Claude correct</span>
+      <span><i class="swatch" style="background:var(--codex)"></i>Codex correct</span>
+      <span><i class="swatch" style="background:var(--warn)"></i>both valid (SPOKE duplicates)</span>
+      <span><i class="swatch" style="background:var(--bad)"></i>false positive</span>
+    </div>
+    <div class="score">
+      <div class="srow">
+        <div class="slabel"><b>85 disagreements</b><span class="cap">same node, different SPOKE target</span></div>
+        <div class="sbar">
+          <div class="seg s-cl" style="flex:39" title="Claude 39">39</div>
+          <div class="seg s-warn" style="flex:43" title="both valid 43">43</div>
+          <div class="seg s-cx" style="flex:2" title="Codex 2"></div>
+          <div class="seg s-bad" style="flex:1" title="both wrong 1"></div>
+        </div>
+        <p class="note">Where decisive, <b>Claude is right 39 / 41 (95%)</b>. The 43 “both valid” are
+          SPOKE <em>duplicate records</em> — a drug under both a <span class="mono">CHEBI:</span> and an
+          <span class="mono">inchikey:</span> node.</p>
+      </div>
+      <div class="srow">
+        <div class="slabel"><b>36 Codex-only maps</b><span class="cap">coverage Claude lacked</span></div>
+        <div class="sbar">
+          <div class="seg s-cx" style="flex:14" title="genuine win 14">14</div>
+          <div class="seg s-bad" style="flex:16" title="false positive 16">16</div>
+          <div class="seg s-warn sm" style="flex:6" title="defensible 6">6</div>
+        </div>
+        <p class="note"><b class="wrong">44% are false positives</b> — a generic name force-mapped to
+          one gene via an alias (<span class="mono">cyclooxygenase→COX8A</span>,
+          <span class="mono">PI3K→PIK3CA</span>). The genuine wins are the variant rsIDs.</p>
+      </div>
+      <div class="srow">
+        <div class="slabel"><b>50 Claude-only maps</b><span class="cap">all LLM-adjudicated · sampled</span></div>
+        <div class="sbar">
+          <div class="seg s-cl" style="flex:48" title="correct 48">48 correct</div>
+          <div class="seg s-warn sm" style="flex:2" title="defensible 2"></div>
+        </div>
+        <p class="note"><b class="right">96% correct, zero false positives.</b> The LLM tier recovered
+          matches while <em>refusing</em> to force ambiguous terms.</p>
+      </div>
+    </div>
+
+    <h3 style="font-size:1.25rem;margin:46px 0 0">Root cause — canonical vs alias genes</h3>
+    <p class="note" style="max-width:660px">26 disagreements are genes. Codex resolves a symbol to a
+      different gene that merely lists it as an <em>alias</em>; Claude matches the official symbol first.</p>
+    <div class="twrap">
+      <table>
+        <thead><tr><th>Symbol</th><th>Claude → canonical</th><th>Codex → alias / paralog</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">AR</td><td class="mono"><span class="right">367</span> androgen receptor</td><td class="mono"><span class="wrong">231</span> AKR1B1</td></tr>
+          <tr><td class="mono">NOS1/2/3</td><td class="mono"><span class="right">4842…</span> nitric oxide synthase</td><td class="mono"><span class="wrong">340719…</span> NANOS1/2/3</td></tr>
+          <tr><td class="mono">CDH1</td><td class="mono"><span class="right">999</span> cadherin-1</td><td class="mono"><span class="wrong">51343</span> FZR1</td></tr>
+          <tr><td class="mono">FAS</td><td class="mono"><span class="right">355</span> death receptor</td><td class="mono"><span class="wrong">2194</span> FASN</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 05 SCIENCE ======================= -->
+<section id="science">
+  <div class="wrap narrow">
+    <div class="kicker"><span class="no">05</span><span class="rule"></span><span class="eyebrow">The payoff</span></div>
+    <h2 class="sec-h">What SPOKE confirmed — and contradicted</h2>
+    <p class="lede">The point of grounding isn't a bigger graph; it's judgment. When a paper reports a
+      <em>negative</em> finding that SPOKE's curated evidence positively asserts, that tension is worth
+      a scientist's attention. These surfaced automatically.</p>
+  </div>
+  <div class="wrap">
+    <div class="contra">
+      <div class="cc"><div class="claim">HFE <span class="neg">not_associated_with</span> hemochromatosis</div><div class="spoke">SPOKE: <b>ASSOCIATES_DaG</b> — HFE is the classic hemochromatosis gene.</div></div>
+      <div class="cc"><div class="claim">C2 · C3 · CFB <span class="neg">not_associated_with</span> age-related macular degeneration</div><div class="spoke">SPOKE: <b>ASSOCIATES_DaG</b> — complement genes are landmark AMD associations.</div></div>
+      <div class="cc"><div class="claim">GCK · GLP1R · HNF4A <span class="neg">not_associated_with</span> type 2 diabetes</div><div class="spoke">SPOKE: <b>ASSOCIATES_DaG</b> — all established T2D genes.</div></div>
+      <div class="cc"><div class="claim">sevoflurane <span class="neg">not_causes</span> convulsions</div><div class="spoke">SPOKE: <b>CAUSES_CcSE</b> — a documented adverse effect.</div></div>
+    </div>
+    <p class="note" style="margin-top:20px">These are the negatives worth a second look — not errors,
+      but places where a single paper's finding runs against the weight of curated evidence. The
+      combined map surfaced <b class="num">14</b> such contradictions and <b class="num">197</b>
+      agreements, each carrying SPOKE's supporting evidence.</p>
+  </div>
+</section>
+
+<!-- ======================= 06 COMBINED ======================= -->
+<section id="combined">
+  <div class="wrap narrow">
+    <div class="kicker"><span class="no">06</span><span class="rule"></span><span class="eyebrow">The synthesis</span></div>
+    <h2 class="sec-h">The optimized combined approach</h2>
+    <p class="lede">Neither agent's design is the answer alone. Codex's rigor and synonym/edge
+      techniques make the chassis; Claude's LLM adjudication and canonical-name resolution make the
+      engine. One waterfall, best of both — cheap and deterministic first, LLM for the residue, humans
+      only for the tail.</p>
+  </div>
+  <div class="wrap">
+    <div class="combined">
+      <h3>One waterfall, eight moves</h3>
+      <div class="pipe">
+        <div class="pstep"><span class="sn"></span><div><span class="pt">Exact identifier — from xref <em>and synonyms</em><span class="src cx">borrow · codex</span></span><div class="pd">Extract rsIDs / CURIEs buried in synonyms and match as identifiers. Wins named variants for free.</div></div></div>
+        <div class="pstep"><span class="sn"></span><div><span class="pt">Exact canonical name<span class="src cl">borrow · claude</span></span><div class="pd">Name index first; a name hit beats a synonym hit; multiple hits ⇒ ambiguous. Kills the alias-collision errors.</div></div></div>
+        <div class="pstep"><span class="sn"></span><div><span class="pt">Exact synonym + disambiguation guard<span class="src new">merge</span></span><div class="pd">Accept a synonym match only when it's unique and the term isn't a family/generic. Keeps ENT3→SLC29A3, blocks cyclooxygenase→one gene.</div></div></div>
+        <div class="pstep"><span class="sn"></span><div><span class="pt">LLM adjudication of the residue — id-verified<span class="src cl">borrow · claude</span></span><div class="pd">Agents resolve ambiguous / not-found nodes against live SPOKE; every returned id is verified to exist before it's applied.</div></div></div>
+        <div class="pstep"><span class="sn"></span><div><span class="pt">Curation-override file for the tail<span class="src cx">borrow · codex</span></span><div class="pd">Low-confidence decisions await human sign-off; only high-confidence LLM calls auto-apply.</div></div></div>
+        <div class="pstep"><span class="sn"></span><div><span class="pt">Canonicalize SPOKE duplicates<span class="src new">new</span></span><div class="pd">Collapse CHEBI/inchikey and GO/Pathway twins — that's what most “both valid” splits actually are.</div></div></div>
+        <div class="pstep"><span class="sn"></span><div><span class="pt">Edge layer: rich evidence + a <span class="mono">related_in_spoke</span> status<span class="src new">new</span></span><div class="pd">Keep Codex's per-relationship evidence; add a distinct partial-match status for family-broadened predicates instead of loosening “agrees”.</div></div></div>
+        <div class="pstep"><span class="sn"></span><div><span class="pt">Wrap in the audit harness<span class="src cx">borrow · codex</span></span><div class="pd">Topology preservation, override verification, <span class="mono">--fail-on-query-warning</span> for reproducible runs.</div></div></div>
+      </div>
+      <div class="outcome">Codex's chassis, Claude's engine → <b>&gt;70% of-mappable coverage at
+        Claude's precision, with Codex-grade auditability.</b></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    Evidence base — 2,550-node alignment of both outputs · 171 SPOKE-grounded judge verdicts
+    (85 disagreements, 36 Codex-only, 50 Claude-only) · full write-up in
+    docs/04-comparison-claude-vs-codex.md · verdicts in runs/benchmark-biored/compare-verdicts.json.
+    <br><br>A study in grounding LLM-curated knowledge against curated biomedical graphs.
+  </div>
+</footer>
+
+<script>
+(function(){
+  var c=document.getElementById('net'); if(!c) return;
+  var ctx=c.getContext('2d'), W,H,DPR,nodes=[],raf=null;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var COL={cl:'#12A594',cx:'#7C6BF0',gold:'#E0A83D'};
+  function size(){
+    DPR=Math.min(window.devicePixelRatio||1,2);
+    W=c.clientWidth; H=c.clientHeight;
+    c.width=W*DPR; c.height=H*DPR; ctx.setTransform(DPR,0,0,DPR,0,0);
+  }
+  function build(){
+    nodes=[];
+    var n=Math.max(34,Math.min(64,Math.round(W/22)));
+    for(var i=0;i<n;i++){
+      var side=Math.random(), col;
+      var x=Math.random()*W, y=Math.random()*H;
+      if(side<0.42){col=COL.cl; x=Math.random()*W*0.5;}
+      else if(side<0.84){col=COL.cx; x=W*0.5+Math.random()*W*0.5;}
+      else {col=COL.gold; x=W*0.5+(Math.random()-0.5)*W*0.24; y=H*0.5+(Math.random()-0.5)*H*0.4;}
+      nodes.push({x:x,y:y,vx:(Math.random()-0.5)*0.25,vy:(Math.random()-0.5)*0.25,
+        r:col===COL.gold?2.6:1.8,col:col});
+    }
+  }
+  function frame(){
+    ctx.clearRect(0,0,W,H);
+    for(var i=0;i<nodes.length;i++){
+      var a=nodes[i];
+      a.x+=a.vx; a.y+=a.vy;
+      if(a.x<0||a.x>W)a.vx*=-1; if(a.y<0||a.y>H)a.vy*=-1;
+      for(var j=i+1;j<nodes.length;j++){
+        var b=nodes[j], dx=a.x-b.x, dy=a.y-b.y, d=Math.sqrt(dx*dx+dy*dy);
+        if(d<118){
+          var op=(1-d/118)*0.5;
+          var gold=(a.col===COL.gold||b.col===COL.gold);
+          ctx.strokeStyle=gold?'rgba(224,168,61,'+op+')':(a.col===b.col
+            ? (a.col===COL.cl?'rgba(18,165,148,':'rgba(124,107,240,')+op+')'
+            : 'rgba(150,165,190,'+(op*0.7)+')');
+          ctx.lineWidth=gold?0.9:0.6;
+          ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
+        }
+      }
+    }
+    for(var k=0;k<nodes.length;k++){
+      var p=nodes[k];
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,6.2832);
+      ctx.fillStyle=p.col; ctx.globalAlpha=p.col===COL.gold?1:0.85;
+      ctx.fill(); ctx.globalAlpha=1;
+    }
+    if(!reduce) raf=requestAnimationFrame(frame);
+  }
+  function start(){ size(); build(); if(raf)cancelAnimationFrame(raf); frame(); }
+  window.addEventListener('resize',function(){ size(); build(); if(reduce) frame(); });
+  start();
+
+  // scroll reveal
+  var els=document.querySelectorAll('section .callout, .tier, .track, .ek, .cc, .pstep, .srow, .obar, .twrap');
+  if('IntersectionObserver' in window && !reduce){
+    els.forEach(function(el){el.classList.add('reveal');});
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{threshold:0.12});
+    els.forEach(function(el){io.observe(el);});
+  }
+})();
+</script>
