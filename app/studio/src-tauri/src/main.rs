@@ -2171,7 +2171,10 @@ mod tests {
 
         let staged = super::stage_app_from_asset(&tarball, &root.join("work")).unwrap();
         assert!(staged.is_dir());
-        assert_eq!(staged.file_name().unwrap(), super::STUDIO_APP_NAME);
+        assert_eq!(
+            staged.file_name().and_then(|s| s.to_str()),
+            Some(super::STUDIO_APP_NAME)
+        );
         // ditto must preserve the signature, or the pre-quit gate would reject it.
         super::codesign_verify(&staged).unwrap();
     }
@@ -2247,7 +2250,8 @@ mod tests {
             super::privileged_installer_body(&staged, &dest, &super::dest_owner(&dest)),
         )
         .unwrap();
-        let out = bash(&script, &[("BIOOKF_UPDATE_BIN_DIR", &bin_dir.to_string_lossy())]);
+        let bin = bin_dir.to_string_lossy().to_string();
+        let out = bash(&script, &[("BIOOKF_UPDATE_BIN_DIR", bin.as_str())]);
         (out, dest, bin_dir)
     }
 
@@ -2299,7 +2303,8 @@ mod tests {
         )
         .unwrap();
 
-        let out = bash(&script, &[("BIOOKF_UPDATE_BIN_DIR", &root.join("bin").to_string_lossy())]);
+        let bin = root.join("bin").to_string_lossy().to_string();
+        let out = bash(&script, &[("BIOOKF_UPDATE_BIN_DIR", bin.as_str())]);
         assert!(!out.status.success());
         assert!(dest.join("Contents/OLD-MARKER").exists(), "app untouched");
         assert!(leftovers(&apps).is_empty());
@@ -2356,6 +2361,7 @@ mod tests {
         let literal = line.trim_start().trim_start_matches("if osascript -e ");
         let literal = literal.trim_end().trim_end_matches("; then");
 
+        // Layer 1: bash unquotes the `-e` argument back to AppleScript source.
         let out = Command::new("bash")
             .arg("-c")
             .arg(format!("printf '%s' {literal}"))
@@ -2363,23 +2369,36 @@ mod tests {
             .unwrap();
         assert!(out.status.success());
         let applescript = String::from_utf8_lossy(&out.stdout).to_string();
-        assert_eq!(
-            applescript,
-            "do shell script \"/bin/bash '/tmp/bio okf'\\''s stage/install.sh'\" with administrator privileges"
-        );
 
-        let dir = scratch("osacompile");
-        let compiled = Command::new("osacompile")
-            .arg("-o")
-            .arg(dir.join("t.scpt"))
+        // Layer 2: AppleScript itself unescapes the string literal. Evaluating
+        // `return "..."` decodes it without running the shell command.
+        let inner = applescript
+            .strip_prefix("do shell script ")
+            .and_then(|s| s.strip_suffix(" with administrator privileges"))
+            .unwrap_or_else(|| panic!("unexpected AppleScript: {applescript}"));
+        let decoded = Command::new("osascript")
             .arg("-e")
-            .arg(&applescript)
+            .arg(format!("return {inner}"))
             .output()
             .unwrap();
         assert!(
-            compiled.status.success(),
-            "osacompile rejected the generated AppleScript: {}",
-            String::from_utf8_lossy(&compiled.stderr)
+            decoded.status.success(),
+            "AppleScript did not parse: {}",
+            String::from_utf8_lossy(&decoded.stderr)
+        );
+        let shell_cmd = String::from_utf8_lossy(&decoded.stdout).trim_end().to_string();
+        let quoted_installer = super::sh_quote(&installer.to_string_lossy());
+        assert_eq!(shell_cmd, format!("/bin/bash {quoted_installer}"));
+
+        // Layer 3: the shell unquotes that back into the real installer path.
+        let unquoted = Command::new("bash")
+            .arg("-c")
+            .arg(format!("printf '%s' {quoted_installer}"))
+            .output()
+            .unwrap();
+        assert_eq!(
+            String::from_utf8_lossy(&unquoted.stdout),
+            installer.to_string_lossy()
         );
     }
 
