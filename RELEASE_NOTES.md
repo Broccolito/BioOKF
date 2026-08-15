@@ -44,6 +44,20 @@ On any Mac that had installed the DMG, the consequences were:
   `BIOOKF_STUDIO_BIN` and so masked the bug). A sibling still wins, so a local
   development build is never shadowed by an installed app.
 
+### Studio
+
+- The knowledge-base context menu's **Open folder** item now works. `index.html`
+  declared the button but `app.js` never referenced its id, so it rendered,
+  highlighted on hover, and did nothing; there was also no command behind it,
+  since `reveal_in_finder` is restricted to `knowledge/` documents and root text
+  files and cannot open a bundle root. Adds an `open_base_folder` command that
+  resolves the registered id (no caller-supplied path, so nothing to escape) and
+  wires the menu item to it.
+- `app/studio/tests/test-wiring.sh` guards the class of bug rather than the
+  instance: the no-bundler frontend has nothing linking `index.html` to `app.js`,
+  so it now asserts that every interactive element with an id is referenced by
+  `app.js`, and that every `tauriInvoke` target is registered in `main.rs`.
+
 ### Release Hygiene
 
 - `scripts/check-versions.sh` asserts that all sixteen places carrying the

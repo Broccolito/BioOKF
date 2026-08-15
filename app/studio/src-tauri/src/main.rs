@@ -798,6 +798,50 @@ fn append_log_entry(base: &str, date: &str, entry: &str) -> Result<(), String> {
     Ok(())
 }
 
+/// Open a registered bundle's own folder in the OS file manager.
+///
+/// Distinct from `reveal_in_finder`, which selects a FILE inside the bundle and
+/// is deliberately restricted to `knowledge/` documents and root text files.
+/// The sidebar's "Open folder" wants the bundle root itself, so it resolves the
+/// registered id rather than accepting a caller-supplied path — there is no path
+/// to escape from.
+#[tauri::command]
+fn open_base_folder(base: String) -> Result<(), String> {
+    let root = resolve(&base).ok_or_else(|| format!("unknown bundle: {base}"))?;
+    let root = root.canonicalize().map_err(|e| e.to_string())?;
+    if !root.is_dir() {
+        return Err(format!("not a directory: {}", root.display()));
+    }
+    #[cfg(target_os = "macos")]
+    {
+        std::process::Command::new("open")
+            .arg(&root)
+            .status()
+            .map_err(|e| e.to_string())?;
+        Ok(())
+    }
+    #[cfg(target_os = "linux")]
+    {
+        std::process::Command::new("xdg-open")
+            .arg(&root)
+            .status()
+            .map_err(|e| e.to_string())?;
+        Ok(())
+    }
+    #[cfg(target_os = "windows")]
+    {
+        std::process::Command::new("explorer")
+            .arg(&root)
+            .status()
+            .map_err(|e| e.to_string())?;
+        Ok(())
+    }
+    #[cfg(not(any(target_os = "macos", target_os = "linux", target_os = "windows")))]
+    {
+        Err("opening a folder is not supported on this platform".into())
+    }
+}
+
 /// Reveal a bundle file in the macOS Finder (selecting it).
 #[tauri::command]
 fn reveal_in_finder(base: String, path: String) -> Result<(), String> {
@@ -1867,6 +1911,7 @@ fn main() {
             save_node_file,
             save_edge_note,
             reveal_in_finder,
+            open_base_folder,
             write_export_html,
             term_open,
             term_write,

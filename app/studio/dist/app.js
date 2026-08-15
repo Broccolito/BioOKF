@@ -1669,6 +1669,12 @@ function clearGraphView(){
   const pill=document.getElementById('lintPill'); if(pill) pill.style.display='none';
   draw();
 }
+async function openBaseFolder(b){
+  if(!b||!isDesktop)return;
+  hideKbMenu();   // takes kbMenuBase with it, hence the captured `b`
+  try{ await tauriInvoke('open_base_folder',{base:b.id}); }
+  catch(e){ showToast('Could not open folder: '+String((e&&e.message)||e),'err'); }
+}
 async function removeRegisteredBase(b){
   if(!b||!isDesktop)return;
   const ok=window.confirm(`Remove "${b.name||b.id}" from the BioOKF registry?\n\nThe knowledge-base folder will stay on disk.`);
@@ -2071,6 +2077,8 @@ async function boot(){
   requestAnimationFrame(loop);
   const nb=document.querySelector('.new-kb');
   if(nb){ if(isDesktop) nb.onclick=addNewBase; else nb.style.display='none'; }
+  const kbOpenFolder=document.getElementById('kbOpenFolder');
+  if(kbOpenFolder) kbOpenFolder.onclick=()=>openBaseFolder(kbMenuBase);
   const kbRemove=document.getElementById('kbRemove');
   if(kbRemove) kbRemove.onclick=()=>removeRegisteredBase(kbMenuBase);
   window.addEventListener('click', ev=>{ if(!ev.target.closest || !ev.target.closest('#kbMenu')) hideKbMenu(); });
