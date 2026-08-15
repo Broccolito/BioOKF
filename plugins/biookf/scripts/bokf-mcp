@@ -1,20 +1,25 @@
 #!/usr/bin/env bash
 # BioOKF MCP launcher (Claude Code and Codex plugin entrypoint).
 #
-# On first run this downloads the PREBUILT bokf binaries + the BioOKF Studio
-# desktop app for your platform from the project's GitHub Release (no local
-# compile), caches them under ~/.local/share/biookf, and then execs the bokf-mcp
-# server over stdio so MCP clients can use the tool family. Subsequent runs reuse
-# the cache and start instantly.
+# Resolution order for the bokf-mcp binary:
+#   1. $BIOOKF_MCP_BIN            — explicit override, for local/dev builds
+#   2. an installed BioOKF Studio.app — the DMG already ships signed, notarized
+#      bokf/bokf-mcp inside the bundle, so we use those rather than fetching a
+#      second, unsigned copy of binaries that are already on disk
+#   3. the GitHub Release tarball — cached under ~/.local/share/biookf for
+#      machines with no Studio installed. Subsequent runs reuse the cache.
+# Then it execs bokf-mcp over stdio so MCP clients can use the tool family.
 #
 # Overrides:
-#   BIOOKF_VERSION   release tag to install (default: the plugin's pinned version)
-#   BIOOKF_HOME      cache root (default: ~/.local/share/biookf)
-#   BIOOKF_REPO      owner/repo of the release (default: Broccolito/BioOKF)
-#   BIOOKF_MCP_BIN   path to an existing bokf-mcp binary (skip download entirely)
+#   BIOOKF_VERSION    release tag to install (default: the plugin's pinned version)
+#   BIOOKF_HOME       cache root (default: ~/.local/share/biookf)
+#   BIOOKF_REPO       owner/repo of the release (default: Broccolito/BioOKF)
+#   BIOOKF_MCP_BIN    path to an existing bokf-mcp binary (skip everything else)
+#   BIOOKF_STUDIO_APP path to an installed Studio bundle, replacing the
+#                     /Applications default in step 2
 set -euo pipefail
 
-VERSION="${BIOOKF_VERSION:-v0.3.1}"
+VERSION="${BIOOKF_VERSION:-v0.3.2}"
 REPO="${BIOOKF_REPO:-Broccolito/BioOKF}"
 HOME_DIR="${BIOOKF_HOME:-$HOME/.local/share/biookf}"
 PREFIX="$HOME_DIR/$VERSION"
@@ -26,6 +31,54 @@ log() { printf '[biookf] %s\n' "$*" >&2; }
 if [ -n "${BIOOKF_MCP_BIN:-}" ] && [ -x "${BIOOKF_MCP_BIN:-}" ]; then
   exec "$BIOOKF_MCP_BIN"
 fi
+
+# True when dotted version $1 is >= $2. Missing/non-numeric parts count as 0.
+version_ge() {
+  local a b i x y
+  IFS=. read -r -a a <<< "${1%%-*}" || :
+  IFS=. read -r -a b <<< "${2%%-*}" || :
+  for i in 0 1 2; do
+    x="${a[i]:-0}"; y="${b[i]:-0}"
+    x="${x//[!0-9]/}"; y="${y//[!0-9]/}"   # drop any stray non-digits
+    x=$((10#${x:-0})); y=$((10#${y:-0}))   # 10# so "007" isn't read as octal
+    if [ "$x" -gt "$y" ]; then return 0; fi
+    if [ "$x" -lt "$y" ]; then return 1; fi
+  done
+  return 0
+}
+
+# Version of the tools inside Studio bundle $1, via the `bokf` that sits beside
+# bokf-mcp (which prints "bokf X.Y.Z"). Empty when it can't be determined.
+bundle_version() {
+  local bokf="$1/Contents/Resources/bin/bokf"
+  [ -x "$bokf" ] || return 1
+  "$bokf" --version 2>/dev/null | awk 'NR==1 {print $NF}'
+}
+
+# Prefer the signed binaries inside an installed Studio over a download. A
+# bundle NEWER than the pin is fine (the Studio self-updates ahead of the
+# plugin); an OLDER one is refused, so the pin stays a floor on the tool surface.
+use_installed_studio() {
+  local app bin ver
+  for app in "${BIOOKF_STUDIO_APP:-/Applications/BioOKF Studio.app}" \
+             "$HOME/Applications/BioOKF Studio.app"; do
+    bin="$app/Contents/Resources/bin"
+    [ -x "$bin/bokf-mcp" ] || continue
+    ver="$(bundle_version "$app" || :)"
+    if [ -n "$ver" ] && ! version_ge "$ver" "${VERSION#v}"; then
+      log "skipping $app: its tools ($ver) are older than the pinned ${VERSION#v}"
+      continue
+    fi
+    log "using the installed Studio at $app (${ver:-version unknown})"
+    export PATH="$bin:$PATH"
+    if [ -x "$app/Contents/MacOS/biookf-studio" ]; then
+      export BIOOKF_STUDIO_BIN="$app/Contents/MacOS/biookf-studio"
+    fi
+    exec "$bin/bokf-mcp"
+  done
+}
+
+use_installed_studio
 
 detect_target() {
   local os arch

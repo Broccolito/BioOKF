@@ -29,8 +29,30 @@ permissions:
   contents: read
 
 jobs:
+  # Cheap text-only gate, ahead of any macOS runner time: the tag being built
+  # must agree with every version string in the repo, and the plugin launcher
+  # must still resolve its binary in the documented order.
+  checks:
+    name: version consistency
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve tag
+        id: tag
+        run: echo "tag=${{ github.event.inputs.tag || github.ref_name }}" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.tag.outputs.tag }}
+
+      - name: Every version must match the tag
+        run: ./scripts/check-versions.sh "${{ steps.tag.outputs.tag }}"
+
+      - name: MCP launcher resolution order
+        run: ./plugins/biookf/scripts/tests/test-launcher.sh
+
   build:
     name: build (${{ matrix.target }})
+    needs: checks
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false

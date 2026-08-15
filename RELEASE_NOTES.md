@@ -1,5 +1,82 @@
 # BioOKF Release Notes
 
+## v0.3.2 - 2026-08-15
+
+BioOKF 0.3.2 makes the agent plugin use the Studio you already installed. On
+0.3.1 the MCP launcher ignored the installed app and always downloaded its own
+copy of the binaries, which meant a machine with a notarized Studio in
+`/Applications` still ran unsigned tools out of a cache directory.
+
+### The Bug
+
+`plugins/biookf/scripts/bokf-mcp` documented a three-step search — `BIOOKF_MCP_BIN`,
+then an installed `BioOKF Studio.app`, then the release tarball — but only ever
+implemented the first and third. The middle step did not exist in the script.
+
+On any Mac that had installed the DMG, the consequences were:
+
+- a redundant ~25 MB download of binaries already sitting inside the `.app`;
+- the cached copies were the **unsigned** tarball builds (the launcher strips
+  `com.apple.quarantine` from them), while the bundle ships Developer
+  ID-signed, notarized ones;
+- `BIOOKF_STUDIO_BIN` then pointed into the cache, so `bokf_studio_open`
+  launched a second, hidden copy of Studio instead of the one in
+  `/Applications`.
+
+### Fixes
+
+- The launcher now probes `/Applications/BioOKF Studio.app` and
+  `~/Applications/BioOKF Studio.app` before downloading anything, and execs the
+  `bokf-mcp` inside the bundle. `BIOOKF_STUDIO_APP` overrides the location.
+- `PATH` and `BIOOKF_STUDIO_BIN` are exported from that same bundle, so
+  `bokf_studio_open` drives the app you actually installed.
+- The pinned release is treated as a floor, not an equality: a bundle newer than
+  the pin is used as-is (Studio self-updates ahead of the plugin), while an older
+  one is skipped with a note on stderr and the pinned version is downloaded.
+- `BIOOKF_MCP_BIN` still takes precedence over everything, and machines with no
+  Studio installed keep the unchanged download-and-cache path.
+
+### Release Hygiene
+
+- `scripts/check-versions.sh` asserts that all sixteen places carrying the
+  version — the Rust workspace, the Tauri manifest, `Cargo.lock`, both plugin
+  manifests, both marketplace fields, the launcher's pinned release, the DMG
+  names quoted in the README and landing pages, and these notes — agree with the
+  tag being built. `release.yml` runs it before any build step, so a tag can no
+  longer ship with a stale version anywhere.
+
+### For Studio Users
+
+- Download `BioOKF.Studio_0.3.2_aarch64.dmg` for Apple Silicon Macs.
+- Download `BioOKF.Studio_0.3.2_x64.dmg` for Intel Macs.
+- Nothing in the app itself changed in this release; if you are on 0.3.1 you can
+  stay there. The fix matters to Claude Code and Codex users.
+
+### For Agent And Plugin Users
+
+- The plugin and marketplace metadata now point at `v0.3.2`, and the launcher
+  default `BIOOKF_VERSION` is `v0.3.2`, still overridable through the
+  environment.
+- Update with `/plugin marketplace update biookf` then
+  `/plugin update biookf@biookf`, and restart the client.
+- After updating, the launcher logs which binary it chose on stderr
+  (`using the installed Studio at ...`). A stale cache under
+  `~/.local/share/biookf` is no longer consulted when a Studio is installed and
+  can be deleted.
+- Existing MCP tool names and CLI commands remain compatible with 0.3.x.
+
+### Verification Targets
+
+- `plugins/biookf/scripts/tests/test-launcher.sh`: 13 assertions over the
+  resolution order, run against fake `.app` bundles with an offline `curl` shim,
+  covering the bundle probe, the `PATH`/`BIOOKF_STUDIO_BIN` exports, the
+  `~/Applications` location, `BIOOKF_MCP_BIN` precedence, newer/older/prerelease/
+  unreadable bundle versions, and the unchanged cache fallback.
+- The suite passes under bash 3.2, the macOS system shell.
+- A real `initialize` + `tools/list` handshake against an installed 0.3.2 Studio
+  with an empty cache: 33 tools, nothing downloaded.
+- `scripts/check-versions.sh v0.3.2`.
+
 ## v0.3.1 - 2026-07-08
 
 BioOKF 0.3.1 repairs Studio's in-app updater. On 0.3.0, accepting an update quit

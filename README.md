@@ -51,8 +51,8 @@ which wires those tools into your MCP client.
 
 Download the notarized DMG for your Mac from the
 [latest release](https://github.com/Broccolito/BioOKF/releases/latest):
-**`BioOKF.Studio_0.3.1_aarch64.dmg`** for Apple Silicon or
-**`BioOKF.Studio_0.3.1_x64.dmg`** for Intel. Open it and drag
+**`BioOKF.Studio_0.3.2_aarch64.dmg`** for Apple Silicon or
+**`BioOKF.Studio_0.3.2_x64.dmg`** for Intel. Open it and drag
 **BioOKF Studio** into Applications. The DMG is signed and notarized by Apple, so it opens with
 no Gatekeeper warning and no quarantine prompt.
 
@@ -106,10 +106,16 @@ Apple Silicon or Intel. Until a prebuilt asset exists for another platform you c
 
 **How the plugin finds the binaries.** The launcher (`plugins/biookf/scripts/bokf-mcp`) checks
 `BIOOKF_MCP_BIN` first (explicit override), then looks for `bokf-mcp` inside a locally installed
-`BioOKF Studio.app`, and falls back to downloading `biookf-<platform>.tar.gz` from this repo's
+`BioOKF Studio.app` — `/Applications` first, then `~/Applications` — and falls back to downloading
+`biookf-<platform>.tar.gz` from this repo's
 [GitHub Release](https://github.com/Broccolito/BioOKF/releases) and caching it under
-`~/.local/share/biookf`. Override the version, cache root, or source repo via `BIOOKF_VERSION`,
-`BIOOKF_HOME`, and `BIOOKF_REPO`.
+`~/.local/share/biookf`. Using the installed bundle means the DMG's signed, notarized `bokf` and
+`bokf-mcp` are what runs, no second copy is downloaded, and `bokf_studio_open` launches the very
+app in `/Applications` rather than a private copy. A bundle newer than the launcher's pinned
+version is used as-is (the Studio self-updates ahead of the plugin); an older one is skipped with a
+note on stderr, so the pin stays a floor on the tool surface. Override the bundle location, version,
+cache root, or source repo via `BIOOKF_STUDIO_APP`, `BIOOKF_VERSION`, `BIOOKF_HOME`, and
+`BIOOKF_REPO`.
 
 ## What you get
 

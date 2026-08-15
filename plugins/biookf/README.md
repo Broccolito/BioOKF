@@ -40,13 +40,19 @@ release downloads, local overrides, and Studio control stay identical.
 ## How it works
 
 The Claude Code and Codex manifests each register one MCP server whose command is
-`scripts/bokf-mcp`. That launcher:
+`scripts/bokf-mcp`. That launcher resolves `bokf-mcp` in this order:
 
-1. Detects your OS/arch and, on first run, downloads
-   `biookf-<platform>.tar.gz` from `Broccolito/BioOKF` Releases.
-2. De-quarantines the unsigned binaries (macOS) so they launch cleanly.
-3. Execs `bokf-mcp`, with `BIOOKF_STUDIO_BIN` pointed at the bundled Studio app so that
-   `bokf_studio_open` can launch the GUI.
+1. `BIOOKF_MCP_BIN`, if set — the escape hatch for a local `cargo build`.
+2. An installed `BioOKF Studio.app` (`/Applications`, then `~/Applications`). The DMG already
+   ships signed, notarized `bokf` and `bokf-mcp` inside the bundle, so these are used directly:
+   no download, and `bokf_studio_open` launches the app you actually installed. A bundle newer
+   than the pinned version is used as-is; an older one is skipped with a note on stderr.
+3. Otherwise, on first run, it detects your OS/arch, downloads `biookf-<platform>.tar.gz` from
+   `Broccolito/BioOKF` Releases into `~/.local/share/biookf`, and de-quarantines the unsigned
+   binaries (macOS) so they launch cleanly.
+
+In every case it execs `bokf-mcp` with `BIOOKF_STUDIO_BIN` pointed at the matching Studio app, so
+`bokf_studio_open` can launch the GUI.
 
 ### Overrides (env)
 
@@ -55,7 +61,17 @@ The Claude Code and Codex manifests each register one MCP server whose command i
 | `BIOOKF_VERSION` | Release tag to install (default: the plugin's pinned version). |
 | `BIOOKF_HOME` | Cache root (default: `~/.local/share/biookf`). |
 | `BIOOKF_REPO` | `owner/repo` of the release (default: `Broccolito/BioOKF`). |
-| `BIOOKF_MCP_BIN` | Path to an existing `bokf-mcp` binary, which skips the download entirely (use a local `cargo build` for development). |
+| `BIOOKF_MCP_BIN` | Path to an existing `bokf-mcp` binary, which skips everything else (use a local `cargo build` for development). |
+| `BIOOKF_STUDIO_APP` | Path to an installed Studio bundle, replacing the `/Applications` default in step 2. |
+
+### Tests
+
+`scripts/tests/test-launcher.sh` covers the resolution order with fake `.app` bundles and a
+`curl` shim, so it never touches the network or the real cache:
+
+```bash
+./plugins/biookf/scripts/tests/test-launcher.sh   # prints "launcher OK"
+```
 
 See the [project README](https://github.com/Broccolito/BioOKF#readme) for the full
 tool reference and the knowledge-base format.
