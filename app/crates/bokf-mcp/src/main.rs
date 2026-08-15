@@ -633,6 +633,37 @@ fn spawn_studio(root: Option<&str>) -> Result<String, String> {
     Ok(bin.display().to_string())
 }
 
+/// Locate the Studio executable relative to a `bokf-mcp` sitting at `exe`.
+///
+/// Two layouts matter and only one of them is "next to the exe":
+///   * a dev build — `cargo build` drops `bokf-mcp` and `biookf-studio` in the
+///     same `target/<profile>` directory;
+///   * the shipped `.app` — the DMG puts `bokf-mcp` in `Contents/Resources/bin`
+///     while the Studio executable lives in `Contents/MacOS`, so a sibling
+///     lookup alone always misses and `bokf_studio_open` fails on exactly the
+///     installation path most users have.
+///
+/// A sibling wins, so a developer's local build is never shadowed by an
+/// installed app.
+fn studio_bin_near(exe: &std::path::Path) -> Option<std::path::PathBuf> {
+    let name = if cfg!(windows) { "biookf-studio.exe" } else { "biookf-studio" };
+    let dir = exe.parent()?;
+
+    let sibling = dir.join(name);
+    if sibling.exists() {
+        return Some(sibling);
+    }
+
+    // .../Contents/Resources/bin/bokf-mcp  ->  .../Contents/MacOS/biookf-studio
+    let contents = dir.parent()?.parent()?;
+    let bundled = contents.join("MacOS").join(name);
+    if bundled.exists() {
+        return Some(bundled);
+    }
+
+    None
+}
+
 /// Find the `biookf-studio` executable.
 fn locate_studio_bin() -> Result<std::path::PathBuf, String> {
     if let Ok(p) = std::env::var("BIOOKF_STUDIO_BIN") {
@@ -643,17 +674,80 @@ fn locate_studio_bin() -> Result<std::path::PathBuf, String> {
         return Err(format!("BIOOKF_STUDIO_BIN points at a missing file: {}", p.display()));
     }
     let exe = std::env::current_exe().map_err(|e| format!("cannot find current exe: {e}"))?;
-    let dir = exe.parent().ok_or("current exe has no parent dir")?;
-    let name = if cfg!(windows) { "biookf-studio.exe" } else { "biookf-studio" };
-    let candidate = dir.join(name);
-    if candidate.exists() {
-        return Ok(candidate);
+    if let Some(p) = studio_bin_near(&exe) {
+        return Ok(p);
     }
     Err(format!(
-        "biookf-studio not found next to {} (looked for {}); set BIOOKF_STUDIO_BIN",
-        dir.display(),
-        candidate.display()
+        "biookf-studio not found near {} (looked beside it and in ../../MacOS \
+         for an .app bundle); set BIOOKF_STUDIO_BIN",
+        exe.display()
     ))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::studio_bin_near;
+    use std::fs;
+    use std::path::PathBuf;
+
+    fn scratch(tag: &str) -> PathBuf {
+        let d = std::env::temp_dir().join(format!("bokf-mcp-test-{tag}-{}", std::process::id()));
+        let _ = fs::remove_dir_all(&d);
+        fs::create_dir_all(&d).unwrap();
+        d
+    }
+
+    fn touch_exe(p: &PathBuf) {
+        fs::create_dir_all(p.parent().unwrap()).unwrap();
+        fs::write(p, b"#!/bin/sh\n").unwrap();
+    }
+
+    /// Dev layout: `cargo build` puts bokf-mcp and biookf-studio side by side.
+    #[test]
+    fn finds_studio_next_to_the_running_exe() {
+        let root = scratch("sibling");
+        let exe = root.join("target/release/bokf-mcp");
+        let studio = root.join("target/release/biookf-studio");
+        touch_exe(&exe);
+        touch_exe(&studio);
+        assert_eq!(studio_bin_near(&exe), Some(studio));
+    }
+
+    /// Shipped layout: the DMG puts bokf-mcp in Contents/Resources/bin and the
+    /// Studio executable in Contents/MacOS, so "next to the exe" never matches.
+    #[test]
+    fn finds_studio_inside_the_app_bundle_from_resources_bin() {
+        let root = scratch("bundle");
+        let app = root.join("BioOKF Studio.app");
+        let exe = app.join("Contents/Resources/bin/bokf-mcp");
+        let studio = app.join("Contents/MacOS/biookf-studio");
+        touch_exe(&exe);
+        touch_exe(&studio);
+        assert_eq!(studio_bin_near(&exe), Some(studio));
+    }
+
+    /// A sibling match must win over the bundle walk-up, so a developer's local
+    /// build is never shadowed by an installed app.
+    #[test]
+    fn prefers_a_sibling_over_the_bundle_macos_dir() {
+        let root = scratch("prefer");
+        let app = root.join("BioOKF Studio.app");
+        let exe = app.join("Contents/Resources/bin/bokf-mcp");
+        let sibling = app.join("Contents/Resources/bin/biookf-studio");
+        let bundled = app.join("Contents/MacOS/biookf-studio");
+        touch_exe(&exe);
+        touch_exe(&sibling);
+        touch_exe(&bundled);
+        assert_eq!(studio_bin_near(&exe), Some(sibling));
+    }
+
+    #[test]
+    fn returns_none_when_no_studio_binary_exists() {
+        let root = scratch("missing");
+        let exe = root.join("Contents/Resources/bin/bokf-mcp");
+        touch_exe(&exe);
+        assert_eq!(studio_bin_near(&exe), None);
+    }
 }
 
 #[tokio::main]
