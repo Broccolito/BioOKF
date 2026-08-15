@@ -35,6 +35,14 @@ On any Mac that had installed the DMG, the consequences were:
   one is skipped with a note on stderr and the pinned version is downloaded.
 - `BIOOKF_MCP_BIN` still takes precedence over everything, and machines with no
   Studio installed keep the unchanged download-and-cache path.
+- `bokf_studio_open` now finds the Studio executable inside the shipped `.app`.
+  `locate_studio_bin()` only looked *next to* the running `bokf-mcp`, which is
+  true of a `cargo build` but not of the DMG layout — `bokf-mcp` ships in
+  `Contents/Resources/bin` and `biookf-studio` in `Contents/MacOS` — so opening
+  the GUI failed with "biookf-studio not found next to …" for anyone invoking the
+  bundled binary directly rather than through the plugin launcher (which sets
+  `BIOOKF_STUDIO_BIN` and so masked the bug). A sibling still wins, so a local
+  development build is never shadowed by an installed app.
 
 ### Release Hygiene
 
