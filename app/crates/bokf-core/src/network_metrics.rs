@@ -352,13 +352,13 @@ fn shortest_paths_and_betweenness(
                 }
             }
         }
-        for target in 0..n {
-            if target == source || distance[target] <= 0 {
+        for (target, &target_distance) in distance.iter().enumerate() {
+            if target == source || target_distance <= 0 {
                 continue;
             }
-            inverse_distance_sum += 1.0 / distance[target] as f64;
+            inverse_distance_sum += 1.0 / target_distance as f64;
             if giant.contains(&source) && giant.contains(&target) {
-                distance_sum_giant += distance[target] as f64;
+                distance_sum_giant += target_distance as f64;
                 distance_pairs_giant += 1;
             }
         }
@@ -501,9 +501,11 @@ fn leiden(graph: &SimpleGraph) -> (Option<f64>, Vec<Option<usize>>, Vec<usize>) 
     let Ok(data) = builder.build() else {
         return (None, vec![None; graph.ids.len()], Vec::new());
     };
-    let mut config = LeidenConfig::default();
-    config.seed = Some(42);
-    config.skip_refinement = false;
+    let config = LeidenConfig {
+        seed: Some(42),
+        skip_refinement: false,
+        ..LeidenConfig::default()
+    };
     let Ok(output) = Leiden::new(config).run(&data) else {
         return (None, vec![None; graph.ids.len()], Vec::new());
     };
@@ -581,11 +583,11 @@ pub fn analyze(bundle: &Bundle, options: NetworkOptions) -> Result<NetworkReport
 
     let mut degree_counts = BTreeMap::<usize, usize>::new();
     let mut clustering_degree = BTreeMap::<usize, (f64, usize)>::new();
-    for i in 0..n {
+    for (i, &clustering_value) in clustering.iter().enumerate() {
         let degree = graph.adjacency[i].len();
         *degree_counts.entry(degree).or_default() += 1;
         let entry = clustering_degree.entry(degree).or_default();
-        entry.0 += clustering[i];
+        entry.0 += clustering_value;
         entry.1 += 1;
     }
     let degree_ccdf = degree_counts

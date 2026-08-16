@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>paperclip2bioOKF</title>
+  <style>
+    :root{color-scheme:light dark;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0b1210;color:#e8f0ed}
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;background:radial-gradient(circle at 15% 0%,#16362c 0,transparent 30%),#0b1210;color:#e8f0ed}
+    button,input,select,textarea{font:inherit} button{cursor:pointer}.app{min-height:100vh;display:grid;grid-template-columns:230px 1fr}
+    aside{border-right:1px solid #23332d;background:rgba(12,21,18,.88);padding:22px 16px;display:flex;flex-direction:column;gap:24px}
+    .brand{display:flex;gap:11px;align-items:center}.logo{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:#abebd0;color:#113226;font-weight:700}.brand strong{display:block;font-weight:600}.brand small,.muted{color:#91a39c}
+    nav{display:grid;gap:6px}.nav-item{padding:10px;border-radius:10px;color:#a9bab3;background:transparent;border:0;text-align:left}.nav-item.active{background:#193128;color:#c9f5df}.system{margin-top:auto;border-top:1px solid #23332d;padding-top:15px;display:grid;gap:9px}.health{display:flex;justify-content:space-between;font-size:11px;color:#91a39c}.health i{width:8px;height:8px;border-radius:50%;background:#65756f}.health i.ok{background:#43bd83;box-shadow:0 0 0 4px rgba(67,189,131,.12)}
+    main{min-width:0}.topbar{height:68px;border-bottom:1px solid #23332d;padding:0 30px;display:flex;align-items:center;justify-content:space-between;background:rgba(13,23,20,.72);backdrop-filter:blur(16px)}.topbar h1{font-size:15px;font-weight:600;margin:0}.topbar span{font-size:11px;color:#91a39c}
+    .workspace{max-width:1240px;margin:0 auto;padding:26px 30px 50px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(330px,.85fr);gap:18px}.panel{border:1px solid #263831;background:#111d19;border-radius:16px;overflow:hidden}.panel-head{padding:15px 17px;border-bottom:1px solid #263831;display:flex;align-items:center;justify-content:space-between}.panel-head strong{font-size:12px;font-weight:600}.step{font-size:10px;color:#77c9a6;text-transform:uppercase;letter-spacing:.08em}.panel-body{padding:17px}
+    label.legend{font-size:10px;color:#91a39c;text-transform:uppercase;letter-spacing:.07em;display:block;margin-bottom:9px}.source-group+.source-group{margin-top:15px}.source-title{font-size:11px;color:#b6c5bf;margin-bottom:7px}.toggles{display:flex;flex-wrap:wrap;gap:7px}.source-toggle input{position:absolute;opacity:0;pointer-events:none}.source-toggle span{display:block;padding:7px 9px;border:1px solid #30443c;border-radius:9px;color:#9eb0a9;font-size:11px;background:#14221d;transition:.18s}.source-toggle input:checked+span{color:#d4f9e8;border-color:#3f8e70;background:#1a3b2e;box-shadow:inset 0 0 0 1px rgba(96,214,164,.12)}
+    .field{margin-top:17px}.field label{display:flex;justify-content:space-between;gap:10px;color:#b8c6c1;font-size:11px;margin-bottom:7px}.field label em{font-style:normal;color:#72847c}input[type=text],input[type=number],select,textarea{width:100%;border:1px solid #30443c;border-radius:10px;background:#0d1814;color:#e7f0ec;padding:10px 11px;outline:none}textarea{min-height:86px;resize:vertical;line-height:1.45}input:focus,select:focus,textarea:focus{border-color:#55aa86;box-shadow:0 0 0 3px rgba(85,170,134,.12)}
+    .row{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.row.two{grid-template-columns:1fr 1fr}.inline-checks{display:flex;flex-wrap:wrap;gap:14px;margin-top:15px;font-size:11px;color:#aabbb4}.inline-checks label{display:flex;gap:7px;align-items:center}.inline-checks input{accent-color:#4eae83}.actions{display:flex;gap:9px;margin-top:20px}.actions button{border-radius:10px;padding:10px 14px;border:1px solid #3a5147;background:#17251f;color:#b9cbc3}.actions button.primary{flex:1;border-color:transparent;background:#a9e9ce;color:#102f24;font-weight:600}.actions button:disabled{opacity:.5;cursor:wait}
+    .standard-contract{border:1px solid #30443c;border-radius:11px;background:#0d1814;padding:12px 13px;color:#aabbb4;font-size:11px;line-height:1.5}.standard-contract strong{display:block;color:#e3ece8;margin-bottom:3px}.standard-contract a{color:#83cbaa;text-decoration:none}.generation-grid{display:grid;grid-template-columns:1fr 1.35fr .7fr;gap:9px}.control-label{display:block;color:#858f8b;font-size:9px;text-transform:uppercase;letter-spacing:.06em;margin:0 0 5px}.custom-model{margin-top:8px}.custom-model[hidden]{display:none}
+    .library-view{display:none;grid-column:1/-1}.library-view.visible{display:block}.library-list{display:grid;gap:10px}.library-item{border:1px solid #293c34;border-radius:12px;padding:14px;background:#0e1915;display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center}.library-item h3{font-size:12px;margin:0 0 6px}.library-meta{display:flex;gap:9px;flex-wrap:wrap;color:#82958d;font-size:10px}.library-actions button{border:1px solid #3a5147;border-radius:9px;background:#17251f;color:#b9cbc3;padding:8px 10px}.status-chip{border-radius:999px;padding:2px 7px;border:1px solid #345046}.status-chip.complete{color:#398663;background:#edf8f3}.status-chip.failed{color:#a34252;background:#fff2f4}.empty-library{padding:38px;text-align:center;color:#8d90a0}
+    .right{display:grid;align-content:start;gap:18px}.status-empty{min-height:260px;display:grid;place-items:center;text-align:center;color:#73847d;padding:25px}.orb{width:64px;height:64px;border:1px solid #315044;border-radius:50%;display:grid;place-items:center;margin:0 auto 14px;position:relative}.orb:before,.orb:after{content:"";position:absolute;border:1px solid #315044;border-radius:50%}.orb:before{width:40px;height:40px}.orb:after{width:18px;height:18px;background:#2c8d68;border:0;box-shadow:0 0 24px rgba(76,192,143,.45)}
+    .progress{padding:17px}.phase-title{display:flex;justify-content:space-between;gap:10px;align-items:center}.phase-title strong{font-size:13px;font-weight:600}.phase-title span{font-size:10px;color:#75cba5}.track{height:5px;background:#263831;border-radius:10px;margin:13px 0 18px;overflow:hidden}.track i{display:block;height:100%;width:8%;border-radius:10px;background:linear-gradient(90deg,#3b9c74,#9de5c5);transition:width .45s ease}.events{display:grid;gap:8px;max-height:292px;overflow:auto}.event{display:grid;grid-template-columns:18px 1fr;gap:8px;font-size:10px;color:#91a39c}.event i{width:16px;height:16px;border-radius:50%;display:grid;place-items:center;background:#1d3b2f;color:#8ee0bc;font-style:normal}.event:last-child{color:#d2dfda}
+    .results{display:none}.results.visible{display:block}.paper{padding:12px 0;border-bottom:1px solid #24352e}.paper:last-child{border:0}.paper strong{font-size:11px;line-height:1.4;display:block;font-weight:600}.paper-meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px;font-size:9px;color:#82958d}.badge{border:1px solid #345046;border-radius:999px;padding:2px 6px;color:#9ed8bf}.result-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:10px}.metric{border:1px solid #293c34;border-radius:10px;padding:9px;background:#0e1915}.metric span{font-size:9px;color:#7e9189;display:block}.metric strong{font-size:16px;font-weight:600;display:block;margin-top:3px}.path{font:10px/1.5 ui-monospace,SFMono-Regular,Menlo,monospace;color:#92bea9;word-break:break-all;background:#0d1814;border-radius:9px;padding:9px;margin-top:10px}.error{border-color:#6d3540}.error .panel-head{background:#2b171b}.error-text{color:#ef9ba8;font-size:11px;line-height:1.45;white-space:pre-wrap}
+    .pulse{animation:pulse 1.6s infinite}@keyframes pulse{50%{opacity:.38}}@media(max-width:900px){.app{grid-template-columns:1fr}aside{display:none}.workspace{grid-template-columns:1fr;padding:18px}.topbar{padding:0 18px}}@media(max-width:520px){.row,.row.two{grid-template-columns:1fr}.actions{flex-direction:column}.workspace{padding:12px}.topbar span{display:none}}
+  </style>
+  <style id="biookf-studio-theme">
+    :root{color-scheme:light;background:#eef0f2;color:#1c1c1f}
+    body{background:#eef0f2;color:#1c1c1f}
+    body:before{content:"";position:fixed;inset:0 0 0 260px;pointer-events:none;background-image:radial-gradient(#d8dadd 1px,transparent 1px);background-size:30px 30px;opacity:.34}
+    .app{grid-template-columns:260px 1fr}
+    aside{border-right:1px solid #dedfe2;background:#fafafa;padding:25px 18px 16px;gap:30px;box-shadow:1px 0 0 rgba(0,0,0,.02)}
+    .brand{gap:12px}.logo{width:38px;height:38px;border-radius:11px;background:#666cac;color:#fff;box-shadow:inset 0 0 0 1px rgba(0,0,0,.08)}
+    .brand strong{color:#1a1a1c}.brand small,.muted{color:#8f91a4}.nav-item{color:#5f616c;border:1px solid transparent;padding:11px 12px}.nav-item.active{background:#fff;color:#202125;border-color:#dedfe2;box-shadow:0 1px 3px rgba(30,30,36,.05)}
+    .system{border-top:1px solid #e1e2e5}.health{color:#858798}.health i{background:#c9cbd0}.health i.ok{background:#55ae83;box-shadow:0 0 0 4px rgba(85,174,131,.1)}
+    main{position:relative}.topbar{height:72px;border-bottom:1px solid #dedfe2;background:rgba(255,255,255,.94);padding:0 28px;box-shadow:0 1px 2px rgba(24,24,30,.03)}.topbar h1{color:#565965;font-weight:500}.topbar span{color:#9092a3}
+    .workspace{position:relative;max-width:1280px;padding:28px 30px 55px;gap:20px}.panel{border-color:#dcdde1;background:#fff;border-radius:18px;box-shadow:0 12px 34px rgba(42,45,50,.08)}.panel-head{border-color:#e5e6e9}.panel-head strong{color:#303138}.step{color:#777a90}
+    label.legend{color:#8e90a4}.source-title{color:#77798c}.source-toggle span{border-color:#dcdee3;color:#595b66;background:#fafafa}.source-toggle input:checked+span{color:#33343c;border-color:#a8aacf;background:#f0f0fa;box-shadow:inset 3px 0 0 #676db0}.source-group:nth-of-type(2) .source-toggle input:checked+span{border-color:#d6b27b;background:#fbf5ea;box-shadow:inset 3px 0 0 #ce964b}.source-group:nth-of-type(3) .source-toggle input:checked+span{border-color:#76b8a2;background:#edf8f4;box-shadow:inset 3px 0 0 #3e9e7c}
+    .field label{color:#555762}.field label em{color:#9799a7}input[type=text],input[type=number],select,textarea{border-color:#d9dade;background:#f8f8f9;color:#25262c}input::placeholder,textarea::placeholder{color:#aaaeba}input:focus,select:focus,textarea:focus{border-color:#8b8db6;box-shadow:0 0 0 3px rgba(103,109,176,.1);background:#fff}.inline-checks{color:#666873}.inline-checks input{accent-color:#696eaf}
+    .standard-contract{border-color:#dedfe4;background:#f7f7fa;color:#737582}.standard-contract strong{color:#383943}.standard-contract a{color:#6268a8}
+    .library-item{border-color:#e1e2e6;background:#fafafa}.library-item h3{color:#33343a}.library-actions button{border-color:#d7d8dc;background:#fff;color:#5c5e68}
+    .actions button{border-color:#d7d8dc;background:#fff;color:#5c5e68;box-shadow:0 1px 2px rgba(0,0,0,.03)}.actions button.primary{background:#6268a8;color:#fff;box-shadow:0 5px 14px rgba(98,104,168,.22)}
+    .status-empty{color:#8d90a0}.orb{border-color:#c8cad9;background:#f7f7fb}.orb:before{border-color:#a9acd0}.orb:after{background:#676dad;box-shadow:0 0 22px rgba(103,109,173,.32)}
+    .phase-title strong{color:#34353c}.phase-title span{color:#7275a3}.track{background:#ececf0}.track i{background:linear-gradient(90deg,#777bb4,#53a98a)}.events{scrollbar-color:#c8cad0 transparent}.event{color:#898b98}.event i{background:#edf6f2;color:#43926f}.event:last-child{color:#34353d}
+    .paper{border-color:#e6e7e9}.paper strong{color:#33343a}.paper-meta{color:#8a8c99}.badge{border-color:#c9cadc;color:#696c9e;background:#f7f7fc}.metric{border-color:#e1e2e6;background:#f8f8f9}.metric span{color:#898b98}.metric strong{color:#313239}.path{background:#f5f5f7;color:#65778a;border:1px solid #e0e1e4}.error{border-color:#dbb9bf}.error .panel-head{background:#fff5f6}.error-text{color:#a34252}
+    @media(max-width:900px){body:before{inset:0}.app{grid-template-columns:1fr}}@media(max-width:520px){.generation-grid{grid-template-columns:1fr}.library-item{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <aside>
+    <div aria-hidden="true" style="display:flex;gap:9px;align-items:center"><i style="width:13px;height:13px;border-radius:50%;background:#ff5f57;border:1px solid #e0443e"></i><i style="width:13px;height:13px;border-radius:50%;background:#febc2e;border:1px solid #dca31f"></i><i style="width:13px;height:13px;border-radius:50%;background:#28c840;border:1px solid #20a935"></i></div>
+    <div class="brand"><div class="logo">p2B</div><div><strong>paperclip2bioOKF</strong><small>evidence → knowledge</small></div></div>
+    <nav><button class="nav-item active" data-view="new">New knowledge base</button><button class="nav-item" data-view="history">Run history</button><button class="nav-item" data-view="bundles">Generated bundles</button></nav>
+    <div class="system">
+      <div class="health"><span>Paperclip</span><i id="health-paperclip"></i></div>
+      <div class="health"><span>Codex subscription</span><i id="health-codex"></i></div>
+      <div class="health"><span>Claude subscription</span><i id="health-claude"></i></div>
+      <div class="health"><span>BioOKF Studio</span><i id="health-studio"></i></div>
+    </div>
+  </aside>
+  <main>
+    <header class="topbar"><h1>Build a provenance-first biomedical knowledge base</h1><span>Local pipeline · subscription agents · BioOKF v0.5</span></header>
+    <div class="workspace">
+      <form class="panel" id="builder-form">
+        <div class="panel-head"><strong>Evidence request</strong><span class="step">01 · Discover</span></div>
+        <div class="panel-body">
+          <label class="legend">Paperclip databases</label>
+          <div class="source-group"><div class="source-title">Literature</div><div class="toggles">
+            <label class="source-toggle"><input type="checkbox" name="source" value="pmc" checked><span>PMC full text</span></label>
+            <label class="source-toggle"><input type="checkbox" name="source" value="biorxiv"><span>bioRxiv</span></label>
+            <label class="source-toggle"><input type="checkbox" name="source" value="medrxiv"><span>medRxiv</span></label>
+            <label class="source-toggle"><input type="checkbox" name="source" value="arxiv"><span>arXiv</span></label>
+            <label class="source-toggle"><input type="checkbox" name="source" value="abstracts"><span>Abstracts</span></label>
+          </div></div>
+          <div class="source-group"><div class="source-title">Regulatory</div><div class="toggles">
+            <label class="source-toggle"><input type="checkbox" name="source" value="fda/us"><span>FDA · US</span></label>
+            <label class="source-toggle"><input type="checkbox" name="source" value="fda/eu"><span>EMA · EU</span></label>
+            <label class="source-toggle"><input type="checkbox" name="source" value="fda/jp"><span>PMDA · Japan</span></label>
+          </div></div>
+          <div class="source-group"><div class="source-title">Clinical trials</div><div class="toggles">
+            <label class="source-toggle"><input type="checkbox" name="source" value="trials/us"><span>ClinicalTrials.gov</span></label>
+            <label class="source-toggle"><input type="checkbox" name="source" value="trials/eu"><span>EU Trials</span></label>
+            <label class="source-toggle"><input type="checkbox" name="source" value="trials/jp"><span>Japan Trials</span></label>
+            <label class="source-toggle"><input type="checkbox" name="source" value="trials/cn"><span>China Trials</span></label>
+          </div></div>
+
+          <div class="field"><label for="query"><span>Keywords / search prompt</span><em>Paperclip discovery</em></label><textarea id="query" required placeholder="e.g. acquired resistance to BRAF inhibitors in melanoma"></textarea></div>
+          <div class="field"><label><span>Curation standard</span><em>fixed · reproducible</em></label><div class="standard-contract"><strong>BioOKF v0.5 curation is always enforced</strong>The agent uses the repository’s controlled vocabulary (28 node types, 35 predicates), atomic evidence-backed relations, node-based provenance, quantitative edge fields, and the deterministic <code>bokf verify</code> gate. No extra prompt is required. <a href="https://github.com/Broccolito/BioOKF" target="_blank" rel="noreferrer">View specification ↗</a></div></div>
+          <div class="field"><label><span>Temporal scope</span><em>as-published filtering</em></label><div class="row">
+            <input id="year-min" type="number" min="1800" max="2100" placeholder="From year">
+            <input id="year-max" type="number" min="1800" max="2100" placeholder="To year">
+            <input id="since" type="text" placeholder="or 30d / 6m / 1y">
+          </div></div>
+          <div class="field"><label><span>Generation</span><em>subscription-backed</em></label><div class="generation-grid">
+            <div><span class="control-label">Provider</span><select id="agent"><option value="claude" selected>Claude subscription</option><option value="codex">Codex subscription</option></select></div>
+            <div><span class="control-label">Model</span><select id="model"><option value="">Subscription default</option></select></div>
+            <div><span class="control-label">Papers / database</span><input id="limit" type="number" min="1" max="25" value="1" aria-label="Papers per database"></div>
+          </div><div class="custom-model" id="custom-model-wrap" hidden><span class="control-label">Exact model ID</span><input id="model-custom" type="text" placeholder="Enter the full provider model identifier"></div></div>
+          <div class="field"><label for="kb-name"><span>Knowledge-base name</span><em>new staging bundle</em></label><input id="kb-name" type="text" required placeholder="BRAF resistance landscape"></div>
+          <div class="inline-checks"><label><input type="checkbox" id="register" checked> Register in BioOKF Studio</label><label><input type="checkbox" id="open-studio" checked> Open Studio when ready</label></div>
+          <div class="actions"><button type="button" id="search-button">Preview evidence</button><button class="primary" type="submit" id="build-button">Generate BioOKF KB</button></div>
+        </div>
+      </form>
+
+      <div class="right">
+        <section class="panel" id="status-panel"><div class="status-empty"><div><div class="orb"></div><strong>Ready to discover</strong><p class="muted">Select sources and define an evidence question.</p></div></div></section>
+        <section class="panel results" id="results-panel"><div class="panel-head"><strong>Evidence preview</strong><span class="step" id="result-count">0 sources</span></div><div class="panel-body" id="results-body"></div></section>
+      </div>
+      <section class="panel library-view" id="library-view"><div class="panel-head"><strong id="library-title">Run history</strong><span class="step" id="library-count">0 items</span></div><div class="panel-body library-list" id="library-list"></div></section>
+    </div>
+  </main>
+</div>
+<script>
+  const form=document.getElementById('builder-form'),statusPanel=document.getElementById('status-panel'),resultsPanel=document.getElementById('results-panel'),resultsBody=document.getElementById('results-body');
+  const buildButton=document.getElementById('build-button'),searchButton=document.getElementById('search-button');
+  const phaseOrder=['queued','search','snapshot','extract','build','studio','done'];
+  let pollTimer=null,modelCatalog={codex:[],claude:[]};
+  fetch('/api/doctor').then(r=>r.json()).then(d=>{
+    setHealth('paperclip',d.paperclip?.ok);setHealth('codex',d.agents?.codex?.ok&&d.agents?.codex?.authenticated);setHealth('claude',d.agents?.claude?.ok&&d.agents?.claude?.authenticated);setHealth('studio',d.studio?.ok);
+  }).catch(()=>{});
+  fetch('/api/models').then(r=>r.json()).then(d=>{modelCatalog=d;refreshModels()}).catch(()=>refreshModels());
+  function setHealth(name,ok){document.getElementById('health-'+name).classList.toggle('ok',Boolean(ok))}
+  function refreshModels(){const provider=value('agent'),select=document.getElementById('model'),previous=select.value;select.innerHTML='<option value="">Subscription default (recommended)</option>'+((modelCatalog[provider]||[]).map(m=>`<option value="${escape(m.id)}">${escape(m.label)}</option>`).join(''))+'<option value="__custom__">Custom model ID…</option>';if([...select.options].some(o=>o.value===previous))select.value=previous;toggleCustomModel()}
+  function toggleCustomModel(){document.getElementById('custom-model-wrap').hidden=value('model')!=='__custom__'}
+  function selectedModel(){return value('model')==='__custom__'?value('model-custom'):value('model')}
+  function payload(){
+    return {query:document.getElementById('query').value,sources:[...document.querySelectorAll('input[name=source]:checked')].map(i=>i.value),prompt:'',year_min:value('year-min'),year_max:value('year-max'),since:value('since'),agent:value('agent'),model:selectedModel(),limit:Number(value('limit')||1),kb_name:value('kb-name'),register:document.getElementById('register').checked,open_studio:document.getElementById('open-studio').checked};
+  }
+  function value(id){return document.getElementById(id).value.trim()||null}
+  form.addEventListener('submit',e=>{e.preventDefault();start('/api/run')});searchButton.addEventListener('click',()=>start('/api/search'));
+  document.getElementById('agent').addEventListener('change',refreshModels);document.getElementById('model').addEventListener('change',toggleCustomModel);
+  document.querySelectorAll('.nav-item').forEach(button=>button.addEventListener('click',()=>switchView(button.dataset.view)));
+  document.getElementById('open-studio').addEventListener('change',e=>{if(e.target.checked)document.getElementById('register').checked=true});
+  async function switchView(view){document.querySelectorAll('.nav-item').forEach(b=>b.classList.toggle('active',b.dataset.view===view));form.style.display=view==='new'?'block':'none';document.querySelector('.right').style.display=view==='new'?'grid':'none';document.getElementById('library-view').classList.toggle('visible',view!=='new');if(view==='history')await loadHistory();if(view==='bundles')await loadBundles()}
+  async function loadHistory(){const title=document.getElementById('library-title'),list=document.getElementById('library-list'),count=document.getElementById('library-count');title.textContent='Run history';list.innerHTML='<div class="empty-library pulse">Loading runs…</div>';try{const data=await fetch('/api/history').then(r=>r.json());count.textContent=data.runs.length+' runs';list.innerHTML=data.runs.map(run=>`<article class="library-item"><div><h3>${escape(run.query)}</h3><div class="library-meta"><span class="status-chip ${escape(run.status)}">${escape(run.status)}</span><span>${run.documents} documents</span><span>${run.successful} extracted</span><span>${run.failed} failed</span><span>${escape((run.sources||[]).join(', '))}</span></div><div class="path">${escape(run.path)}</div></div></article>`).join('')||'<div class="empty-library">No runs yet.</div>'}catch(error){list.innerHTML='<div class="error-text">'+escape(error.message)+'</div>'}}
+  async function loadBundles(){const title=document.getElementById('library-title'),list=document.getElementById('library-list'),count=document.getElementById('library-count');title.textContent='Generated bundles';list.innerHTML='<div class="empty-library pulse">Loading knowledge bases…</div>';try{const data=await fetch('/api/bundles').then(r=>r.json());count.textContent=data.bundles.length+' bundles';list.innerHTML=data.bundles.map(bundle=>`<article class="library-item"><div><h3>${escape(bundle.name)}</h3><div class="library-meta"><span class="status-chip ${bundle.verified?'complete':'failed'}">${bundle.verified?'verified':'check required'}</span><span>${bundle.source_count} sources</span><span>${bundle.node_count} nodes</span><span>${bundle.edge_count} edges</span><span>${escape(bundle.query||'')}</span></div><div class="path">${escape(bundle.bundle)}</div></div><div class="library-actions"><button type="button" data-open-bundle="${escape(bundle.bundle)}" data-bundle-name="${escape(bundle.name)}">Open in Studio</button></div></article>`).join('')||'<div class="empty-library">No generated bundles yet.</div>';list.querySelectorAll('[data-open-bundle]').forEach(button=>button.addEventListener('click',()=>openBundle(button)))}catch(error){list.innerHTML='<div class="error-text">'+escape(error.message)+'</div>'}}
+  async function openBundle(button){const original=button.textContent;button.disabled=true;button.textContent='Opening…';try{const response=await fetch('/api/bundles/open',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({bundle:button.dataset.openBundle,name:button.dataset.bundleName})});const data=await response.json();if(!response.ok)throw new Error(data.error||'Could not open Studio');button.textContent='Opened ✓'}catch(error){button.textContent='Failed';alert(error.message);setTimeout(()=>{button.textContent=original;button.disabled=false},1800)}}
+  async function start(endpoint){
+    clearInterval(pollTimer);setBusy(true);renderProgress({phase:'queued',message:'Submitting request',events:[]});
+    try{const response=await fetch(endpoint,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload())});const data=await response.json();if(!response.ok)throw new Error(data.error||'Request failed');await poll(data.job_id)}catch(error){renderError(error.message);setBusy(false)}
+  }
+  async function poll(jobId){
+    const tick=async()=>{try{const response=await fetch('/api/jobs/'+jobId);const job=await response.json();if(job.status==='failed'){clearInterval(pollTimer);renderError(job.error);setBusy(false);return}renderProgress(job);if(job.status==='complete'){clearInterval(pollTimer);setBusy(false);renderResult(job)}}catch(error){clearInterval(pollTimer);renderError(error.message);setBusy(false)}};
+    await tick();pollTimer=setInterval(tick,1100);
+  }
+  function setBusy(busy){buildButton.disabled=busy;searchButton.disabled=busy;buildButton.textContent=busy?'Working…':'Generate BioOKF KB'}
+  function renderProgress(job){const idx=Math.max(0,phaseOrder.indexOf(job.phase));const width=Math.max(8,(idx/(phaseOrder.length-1))*100);statusPanel.className='panel';statusPanel.innerHTML=`<div class="panel-head"><strong>Pipeline activity</strong><span class="step">${escape(job.phase||'queued')}</span></div><div class="progress"><div class="phase-title"><strong>${escape(job.message||'Working')}</strong><span>${Math.round(width)}%</span></div><div class="track"><i style="width:${width}%"></i></div><div class="events">${(job.events||[]).slice().reverse().map(e=>`<div class="event"><i>✓</i><span>${escape(e.message)}</span></div>`).join('')||'<div class="event pulse"><i>·</i><span>Starting pipeline…</span></div>'}</div></div>`}
+  function renderResult(job){const r=job.result;if(job.kind==='search'){showPapers(r);statusPanel.innerHTML=`<div class="panel-head"><strong>Search complete</strong><span class="step">${r.count} unique results</span></div><div class="progress"><div class="phase-title"><strong>Evidence cohort ready</strong><span>preview only</span></div><div class="track"><i style="width:100%"></i></div><p class="muted">Review the sources below, refine the query if needed, then generate the knowledge base.</p></div>`;return}showBuild(r)}
+  function showPapers(r){resultsPanel.classList.add('visible');document.getElementById('result-count').textContent=r.count+' unique sources';resultsBody.innerHTML=(r.papers||[]).slice(0,30).map(p=>`<article class="paper"><strong>${escape(p.title||p.document_id)}</strong><div class="paper-meta"><span class="badge">${escape(p.source||'source')}</span><span>${escape(String(p.pub_year||'year unknown'))}</span><span>${escape(p.journal_title||p.article_type||'')}</span></div></article>`).join('')||'<p class="muted">No matching evidence.</p>'}
+  function showBuild(r){const m=r.manifest||{},warnings=m.verification?.bokf?.report?.warnings||0;statusPanel.innerHTML=`<div class="panel-head"><strong>Knowledge base ready</strong><span class="step">candidate bundle</span></div><div class="progress"><div class="result-summary"><div class="metric"><span>Sources</span><strong>${m.source_count||0}</strong></div><div class="metric"><span>Nodes</span><strong>${m.node_count||0}</strong></div><div class="metric"><span>Edges</span><strong>${m.edge_count||0}</strong></div></div><p class="muted">The bundle passed deterministic generation checks and remains marked for scientific judgment review.${warnings?' BioOKF reported '+warnings+' review warning'+(warnings===1?'.':'s.') :''}</p><div class="path">${escape(r.bundle)}</div>${r.studio?.registered?'<div class="event" style="margin-top:12px"><i>✓</i><span>Registered in BioOKF Studio as '+escape(r.studio.kb_id)+'</span></div>':''}</div>`;if(r.failed_documents?.length){resultsPanel.classList.add('visible');document.getElementById('result-count').textContent=r.failed_documents.length+' extraction warnings';resultsBody.innerHTML=r.failed_documents.map(d=>`<article class="paper"><strong>${escape(d.title)}</strong><div class="paper-meta"><span class="badge">failed</span><span>${escape(d.error)}</span></div></article>`).join('')}}
+  function renderError(message){statusPanel.className='panel error';statusPanel.innerHTML=`<div class="panel-head"><strong>Pipeline stopped</strong><span class="step">action required</span></div><div class="panel-body"><div class="error-text">${escape(message||'Unknown error')}</div></div>`}
+  function escape(value){return String(value??'').replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+</script>
+</body>
+</html>

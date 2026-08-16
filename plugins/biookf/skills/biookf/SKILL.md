@@ -22,6 +22,12 @@ Core rules:
 - Track curation steps with `bokf_log_sync --kind <kind> --summary <summary> --delta <delta>`.
   There is no `--counts` flag; use `bokf_stats` first when you want counts in the delta.
 - Finish ingest or merge work with `bokf_verify`; fix every error before calling the bundle clean.
+- Use `bokf network-metrics BUNDLE` for deterministic topology, Leiden communities, node
+  centralities, and explicit source-year evidence growth. Keep projection settings identical when
+  comparing bundles; use `--include-provenance` only for questions about the evidence layer.
+- Use `bokf connections`, `generate-from-paperclip`, `create-local`, `chat`, `merge-agent`, and
+  `doctor` for local Paperclip/Codex/Claude subscription workflows. Never request API keys for
+  these workflows; native CLI sessions own authentication.
 
 For visual QA, use `bokf_studio_open` and prefer `bokf_studio_state` / `bokf_studio_graph` over
 screenshots unless the user explicitly asks for a visual screenshot. Studio can export a shareable

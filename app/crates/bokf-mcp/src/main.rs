@@ -920,7 +920,11 @@ fn spawn_studio(root: Option<&str>) -> Result<String, String> {
 /// A sibling wins, so a developer's local build is never shadowed by an
 /// installed app.
 fn studio_bin_near(exe: &std::path::Path) -> Option<std::path::PathBuf> {
-    let name = if cfg!(windows) { "biookf-studio.exe" } else { "biookf-studio" };
+    let name = if cfg!(windows) {
+        "biookf-studio.exe"
+    } else {
+        "biookf-studio"
+    };
     let dir = exe.parent()?;
 
     let sibling = dir.join(name);
@@ -962,6 +966,7 @@ fn locate_studio_bin() -> Result<std::path::PathBuf, String> {
 }
 
 #[cfg(test)]
+#[allow(clippy::items_after_test_module)]
 mod tests {
     use super::studio_bin_near;
     use std::fs;

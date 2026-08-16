@@ -7,7 +7,9 @@ knowledge bases directly from your coding agent. This plugin bundles three thing
   BioOKF Studio desktop app** (the `bokf_studio_*` family).
 - **`bokf` CLI**: the same engine as a command-line tool.
 - **BioOKF Studio**: a desktop GUI that visualizes a knowledge base as an
-  interactive graph and can export a shareable, self-contained HTML graph view.
+  interactive graph, provides grounded Chat and evidence-backed Doctor revision,
+  computes network metrics and source-year evidence timelines, and exports a
+  shareable, self-contained HTML graph view.
   Shipped **prebuilt**, so you never compile it.
 
 ## Install: Claude Code
@@ -36,6 +38,21 @@ codex plugin add biookf@<marketplace-name>
 
 Both Claude Code and Codex use the same MCP launcher, `scripts/bokf-mcp`, so
 release downloads, local overrides, and Studio control stay identical.
+
+## Paperclip and local-subscription workflows
+
+The CLI and Studio expose `generate-from-paperclip`, `create-local`, `chat`,
+`merge-agent`, `doctor`, and `network-metrics`. Install the dependency-free bridge
+from `integrations/paperclip2biookf` when using Paperclip generation:
+
+```bash
+python3 -m pip install -e ./integrations/paperclip2biookf
+pc-biookf doctor
+```
+
+Codex and Claude Code authenticate through their native subscription CLIs. The
+workflows remove API-key and cloud-provider variables before launching either
+agent; BioOKF does not read or store subscription tokens.
 
 ## How it works
 

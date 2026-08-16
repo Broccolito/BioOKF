@@ -536,8 +536,8 @@ fn paperclip_biookf_bin() -> String {
 }
 
 fn agent_python() -> String {
-    if let Ok(value) = std::env::var("PAPERCLIP2BIOOKF_PYTHON")
-        .or_else(|_| std::env::var("BIOOKF_AGENT_PYTHON"))
+    if let Ok(value) =
+        std::env::var("PAPERCLIP2BIOOKF_PYTHON").or_else(|_| std::env::var("BIOOKF_AGENT_PYTHON"))
     {
         return value;
     }
@@ -1259,47 +1259,6 @@ fn cmd_search(path: PathBuf, query: String, limit: usize, json: bool) -> Result<
     Ok(())
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-    #[test]
-    fn cli_parses_name_figure() {
-        use clap::Parser;
-        let c = Cli::try_parse_from([
-            "bokf",
-            "name-figure",
-            "kb",
-            "--source",
-            "x-1",
-            "--figure",
-            "figures/fig-001.png",
-            "--as",
-            "A B",
-        ])
-        .unwrap();
-        assert!(matches!(c.cmd, Cmd::NameFigure { .. }));
-    }
-
-    #[test]
-    fn cli_parses_convert_url() {
-        use clap::Parser;
-        let c = Cli::try_parse_from([
-            "bokf",
-            "convert",
-            "--url",
-            "https://x.org/a",
-            "--into",
-            "kb",
-        ])
-        .unwrap();
-        if let Cmd::Convert { url, .. } = c.cmd {
-            assert_eq!(url.as_deref(), Some("https://x.org/a"));
-        } else {
-            panic!("expected Convert");
-        }
-    }
-}
-
 fn cmd_stats(path: PathBuf) -> Result<()> {
     let bundle = bokf_core::open_bundle(&path)?;
     let mut by_type: BTreeMap<String, usize> = BTreeMap::new();
@@ -1380,4 +1339,46 @@ fn write_if_absent(path: &std::path::Path, content: &str) -> Result<()> {
         std::fs::write(path, content)?;
     }
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn cli_parses_name_figure() {
+        use clap::Parser;
+        let c = Cli::try_parse_from([
+            "bokf",
+            "name-figure",
+            "kb",
+            "--source",
+            "x-1",
+            "--figure",
+            "figures/fig-001.png",
+            "--as",
+            "A B",
+        ])
+        .unwrap();
+        assert!(matches!(c.cmd, Cmd::NameFigure { .. }));
+    }
+
+    #[test]
+    fn cli_parses_convert_url() {
+        use clap::Parser;
+        let c = Cli::try_parse_from([
+            "bokf",
+            "convert",
+            "--url",
+            "https://x.org/a",
+            "--into",
+            "kb",
+        ])
+        .unwrap();
+        if let Cmd::Convert { url, .. } = c.cmd {
+            assert_eq!(url.as_deref(), Some("https://x.org/a"));
+        } else {
+            panic!("expected Convert");
+        }
+    }
 }

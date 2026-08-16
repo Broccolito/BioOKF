@@ -1,0 +1,33 @@
+[
+  {
+    "status": "success",
+    "title": "BRAF inhibitor resistance in melanoma",
+    "document_id": "PMC123456",
+    "agent": {"provider": "codex", "model": "subscription default"},
+    "extraction": {
+      "nodes": [
+        {"identifier": "BRAF", "type": "Gene", "subtype": "protein_coding", "description": "A kinase gene implicated in melanoma.", "synonyms": [], "xref": []},
+        {"identifier": "Melanoma", "type": "Disease", "subtype": "neoplasm", "description": "A malignant melanocytic neoplasm.", "synonyms": [], "xref": []},
+        {"identifier": "Vemurafenib", "type": "Molecule", "subtype": "drug", "description": "A BRAF inhibitor.", "synonyms": [], "xref": []}
+      ],
+      "edges": [
+        {
+          "subject": "Vemurafenib", "predicate": "treats", "object": "Melanoma",
+          "knowledge_level": "statistical_association",
+          "statement": "Vemurafenib improved outcomes in BRAF-mutant melanoma.",
+          "evidence_lines": ["L120-L126"], "effect_metric": "hazard_ratio",
+          "effect_size": 0.72, "ci_lower": 0.60, "ci_upper": 0.86,
+          "p_value": 0.001, "sample_size": 320, "direction": null
+        },
+        {
+          "subject": "BRAF", "predicate": "associated_with", "object": "Melanoma",
+          "knowledge_level": "statistical_association",
+          "statement": "BRAF alteration was associated with melanoma.",
+          "evidence_lines": ["L88"], "effect_metric": null, "effect_size": null,
+          "ci_lower": null, "ci_upper": null, "p_value": null,
+          "sample_size": null, "direction": null
+        }
+      ]
+    }
+  }
+]

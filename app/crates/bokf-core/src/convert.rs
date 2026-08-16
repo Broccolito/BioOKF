@@ -10,6 +10,8 @@ use std::io::{Cursor, Read};
 use std::net::IpAddr;
 use std::path::{Path, PathBuf};
 
+type NamedBytes = (String, Vec<u8>);
+
 /// Marker prepended to a `source.md` that still needs a faithful LLM conversion (unknown
 /// format, scanned PDF, or failed extraction). The agent removes it once the rendering is
 /// complete; `bokf lint`/`bokf verify` flag any source still carrying it.
@@ -455,13 +457,13 @@ fn pptx_to_md(bytes: &[u8]) -> Result<Converted, String> {
         .filter(|n| n.starts_with("ppt/slides/slide") && n.ends_with(".xml"))
         .map(|s| s.to_string())
         .collect();
-    slides.sort_by(|a, b| slide_num(a).cmp(&slide_num(b)));
+    slides.sort_by_key(|slide| slide_num(slide));
     let mut md = String::new();
     for (i, name) in slides.iter().enumerate() {
         let mut xml = String::new();
         if zip
             .by_name(name)
-            .and_then(|mut f| Ok(f.read_to_string(&mut xml)))
+            .map(|mut f| f.read_to_string(&mut xml))
             .is_err()
         {
             continue;
@@ -1200,7 +1202,7 @@ pub fn ingest(
     // Folder/zip grouping: loose image members attach as figures of the primary
     // document, rather than each becoming its own image-source.
     if !combined && members.len() > 1 {
-        let (images, docs): (Vec<(String, Vec<u8>)>, Vec<(String, Vec<u8>)>) = members
+        let (images, docs): (Vec<NamedBytes>, Vec<NamedBytes>) = members
             .into_iter()
             .partition(|(name, _)| is_image_ext(&ext_of(name)));
         if !docs.is_empty() {

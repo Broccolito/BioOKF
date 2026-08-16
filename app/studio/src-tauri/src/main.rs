@@ -1328,7 +1328,8 @@ fn run_paperclip_generation(
 ) -> Result<serde_json::Value, String> {
     validate_paperclip_request(&request)?;
     let binary = paperclip_harness_binary().ok_or_else(|| {
-        "paperclip2bioOKF was not found; install `pc-biookf` or set PAPERCLIP2BIOOKF_BIN".to_string()
+        "paperclip2bioOKF was not found; install `pc-biookf` or set PAPERCLIP2BIOOKF_BIN"
+            .to_string()
     })?;
     let workspace = paperclip_workspace();
     std::fs::create_dir_all(&workspace)
@@ -1858,7 +1859,12 @@ fn workflow_python() -> Option<PathBuf> {
             }
         }
     }
-    tool_on_path(if cfg!(windows) { "python.exe" } else { "python3" }).map(PathBuf::from)
+    tool_on_path(if cfg!(windows) {
+        "python.exe"
+    } else {
+        "python3"
+    })
+    .map(PathBuf::from)
 }
 
 fn run_agent_workflow(app: AppHandle, args: Vec<String>) -> Result<serde_json::Value, String> {

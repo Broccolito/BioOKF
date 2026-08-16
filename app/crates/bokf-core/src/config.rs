@@ -67,15 +67,13 @@ fn migrate_legacy(dir: &std::path::Path) {
     }
     for c in candidates {
         let legacy = c.join("registry.yaml");
-        if legacy.exists() && legacy != target {
-            if std::fs::copy(&legacy, &target).is_ok() {
-                let la = c.join(".active-kb");
-                let ta = dir.join(".active-kb");
-                if la.exists() && !ta.exists() {
-                    let _ = std::fs::copy(&la, &ta);
-                }
-                return;
+        if legacy.exists() && legacy != target && std::fs::copy(&legacy, &target).is_ok() {
+            let la = c.join(".active-kb");
+            let ta = dir.join(".active-kb");
+            if la.exists() && !ta.exists() {
+                let _ = std::fs::copy(&la, &ta);
             }
+            return;
         }
     }
 }

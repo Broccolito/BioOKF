@@ -121,9 +121,9 @@ cache root, or source repo via `BIOOKF_STUDIO_APP`, `BIOOKF_VERSION`, `BIOOKF_HO
 
 | Piece | What it is |
 |---|---|
-| **BioOKF Studio** | A desktop app that renders a knowledge base as an interactive, type-colored graph, with node/edge detail panels, self-contained HTML graph exports, an integrated terminal, in-app editing, and a registry-driven sidebar of bundles that can live anywhere on disk. |
+| **BioOKF Studio** | A desktop app that renders a knowledge base as an interactive graph and adds Paperclip/local generation, grounded chat, evidence-backed Doctor revision, semantic merge, topology metrics, source-year timelines, HTML exports, a terminal, and in-app editing. |
 | **`bokf-mcp`** | A stdio MCP server: **33 tools** for curation, analysis, **and live control of the Studio GUI** (`bokf_studio_*`). It ships an operating brief on `initialize`, so an agent knows the BioOKF rules. |
-| **`bokf`** | The same engine as a scriptable CLI (23 subcommands): the precise terminal surface for curation. |
+| **`bokf`** | The same engine as a scriptable CLI: the precise terminal surface for curation, local subscription workflows, and deterministic network analysis. |
 | **The live loop** | The MCP server can open the Studio and **drive/observe it in real time**: an agent searches, selects, and moves around the graph while a human watches each action in an in-app "AI agent" banner, and reads the app's full status as structured JSON instead of taking screenshots. |
 
 ## The bundle format
@@ -168,7 +168,7 @@ Studio is a Tauri desktop app and a pure visualizer; every operation delegates t
   live **anywhere on disk**; there is no fixed "knowledge bases" directory. Each entry shows its
   name, node/edge counts, and last-updated date (the full path is the hover tooltip). Delete or move
   a bundle's folder and it drops from the sidebar automatically; register one elsewhere and it
-  appears, no restart needed. The **+ New base** button opens a native folder picker that validates the
+  appears, no restart needed. The **Import knowledge base** button opens a native folder picker that validates the
   folder as a real BioOKF bundle before registering it.
 - **Interactive graph canvas.** A force-directed, type-colored graph with pan/zoom/drag,
   fit-to-view, hub emphasis, hover tooltips, and neighbor-focus dimming. Negative `not_<X>` edges
@@ -188,6 +188,14 @@ Studio is a Tauri desktop app and a pure visualizer; every operation delegates t
 - **In-app editing (desktop).** Edit a concept doc's full Markdown, a per-node notes section, or a
   per-edge note. Each one writes live to disk and appends a dated `log.md` entry. A reveal-in-Finder
   button opens the file in macOS Finder.
+- **Evidence workflows.** Create a KB from local resources or selected Paperclip databases, chat
+  with the selected KB, merge two or more registered bases, or use **Doctor** to transactionally
+  recheck and revise claims against their cited raw evidence. Codex and Claude authentication stays
+  in their native subscription CLIs; Studio does not read API keys or subscription tokens.
+- **Network metrics.** The separate **Metrics** window reports density/mean degree, transitivity,
+  distance scale, efficiency, Leiden modularity, assortativity, giant-component fraction,
+  algebraic connectivity, node centralities, k-core, participation, community plots, and annual
+  plus cumulative source growth. Unknown source dates remain explicit rather than inferred.
 - **Integrated terminal.** Multi-tab real PTY (`xterm.js`) running your `$SHELL`, with a resizable
   panel, so you can run `bokf` without leaving the app.
 - **Lint pill, search, history.** A toolbar lint pill opens a grouped findings popup; the search box
@@ -292,6 +300,7 @@ bokf predicates                                 # print the controlled vocabular
 | `graph` | Derive the render-ready graph (nodes + directional edges). |
 | `search` | BM25 full-text search over concept documents. |
 | `stats` | Node/edge counts by type and predicate. |
+| `network-metrics` | Deterministic topology, Leiden communities, node metrics, and source-year evidence growth as JSON. |
 | `predicates` | Print the controlled vocabulary (28 types, 35 predicates, enums). |
 | `export` | Export a self-contained bundle JSON (graph + per-node detail) for the GUI. |
 | `log-sync` | Append a dated `log.md` entry AND commit, atomically (the sole step-committer). |
@@ -304,6 +313,12 @@ bokf predicates                                 # print the controlled vocabular
 | `merge-snapshot` | Snapshot the Main KB before a merge, or `--verify` after. |
 | `name-figure` | Rename a provisional figure to a content caption and rewrite every reference. |
 | `install-pdfium` | Install PDFium so PDF pages render to images for vision (one-time). |
+| `connections` | Inspect Paperclip, Codex subscription, and Claude subscription availability. |
+| `generate-from-paperclip` | Discover selected Paperclip databases and generate a verified BioOKF staging KB. |
+| `create-local` | Generate a verified KB from a local folder of papers. |
+| `chat` | Answer from retrieved nodes and provenance in one selected KB. |
+| `merge-agent` | Semantically reconcile two or more KBs in an isolated verified workflow. |
+| `doctor` | Transactionally inspect or revise a KB against its cited raw evidence. |
 
 ## MCP tool reference
 

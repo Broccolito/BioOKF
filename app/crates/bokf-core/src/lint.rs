@@ -543,13 +543,8 @@ fn lint_edge(r: &mut LintReport, bundle: &Bundle, n: &Node, e: &Edge, path: &Opt
 
     // object resolution (skip the always-external case is impossible to know; warn)
     if !bundle.contains(&e.object) {
-        let sev = if looks_like_bare_curie(&e.object) {
-            Severity::Warn
-        } else {
-            Severity::Warn
-        };
         r.push(
-            sev,
+            Severity::Warn,
             "edge.object_unresolved",
             subj,
             format!(
@@ -697,7 +692,7 @@ fn lint_domain_range(
                 warn(r, format!("`reported_in` should target a Publication/Study/Dataset/Agent, but `{}` is a {}", e.object, obj.node_type.as_str()));
             }
         }
-        Predicate::UsedToStudy => {
+        Predicate::UsedToStudy
             if !matches!(
                 obj.node_type,
                 Disease
@@ -707,9 +702,9 @@ fn lint_domain_range(
                     | Gene
                     | Variant
                     | Molecule
-            ) {
-                warn(r, format!("`used_to_study` should target a studied entity (Disease/Phenotype/BiologicalPathway/BiologicalFunction/Gene/Variant/Molecule), but `{}` is a {}", e.object, obj.node_type.as_str()));
-            }
+            ) =>
+        {
+            warn(r, format!("`used_to_study` should target a studied entity (Disease/Phenotype/BiologicalPathway/BiologicalFunction/Gene/Variant/Molecule), but `{}` is a {}", e.object, obj.node_type.as_str()));
         }
         _ => {}
     }

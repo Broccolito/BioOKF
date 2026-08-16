@@ -136,7 +136,7 @@ fn snippet(text: &str, q_terms: &[String]) -> String {
         .collect::<Vec<_>>()
         .join(" ");
     if start > 0 {
-        s.insert_str(0, "…");
+        s.insert(0, '…');
     }
     if end < text.len() {
         s.push('…');

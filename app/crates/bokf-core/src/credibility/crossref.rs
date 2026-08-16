@@ -2,19 +2,11 @@
 //!
 //! Keep the signatures stable; the waterfall (B8) depends on them.
 
-use super::{CredibilityTier, SourceType};
+use super::{CredibilityTier, ResolverVerdict, SourceType};
 use serde_json::Value;
 
 /// Map a Crossref `message` object to `(source_type, tier, venue, publisher, retracted)`.
-pub fn map_work(
-    v: &Value,
-) -> Option<(
-    SourceType,
-    CredibilityTier,
-    Option<String>,
-    Option<String>,
-    bool,
-)> {
+pub fn map_work(v: &Value) -> Option<ResolverVerdict> {
     let work_type = v["type"].as_str()?;
 
     let (source_type, tier) = match work_type {
@@ -58,7 +50,7 @@ pub fn fetch(doi: &str) -> Option<Value> {
     let resp = client.get(url).send().ok()?;
     let json: Value = resp.json().ok()?;
 
-    json.get("message").map(|m| m.clone())
+    json.get("message").cloned()
 }
 
 #[cfg(test)]

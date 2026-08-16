@@ -2,21 +2,13 @@
 //!
 //! The waterfall (B8) depends on these signatures; keep them stable.
 
-use super::{CredibilityTier, SourceType};
+use super::{CredibilityTier, ResolverVerdict, SourceType};
 use serde_json::Value;
 
 /// Map an OpenAlex work object to `(source_type, tier, venue, publisher, retracted)`.
 ///
 /// Returns `None` for work types we don't classify.
-pub fn map_work(
-    v: &Value,
-) -> Option<(
-    SourceType,
-    CredibilityTier,
-    Option<String>,
-    Option<String>,
-    bool,
-)> {
+pub fn map_work(v: &Value) -> Option<ResolverVerdict> {
     let work_type = v.get("type").and_then(Value::as_str)?;
 
     let (source_type, tier) = match work_type {

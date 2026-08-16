@@ -15,7 +15,7 @@ pub mod openalex;
 pub mod text_signal;
 
 /// The kind/origin of a source, distinct from how much it is trusted.
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, Default, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum SourceType {
     JournalArticle,
@@ -28,13 +28,8 @@ pub enum SourceType {
     GovReport,
     WebPage,
     Personal,
+    #[default]
     Unknown,
-}
-
-impl Default for SourceType {
-    fn default() -> Self {
-        SourceType::Unknown
-    }
 }
 
 impl SourceType {
@@ -45,7 +40,7 @@ impl SourceType {
 }
 
 /// Trust tier, an ordered ramp from peer-reviewed down to an unverified web page.
-#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+#[derive(Debug, Clone, Default, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(rename_all = "snake_case")]
 pub enum CredibilityTier {
     PeerReviewed,
@@ -53,14 +48,17 @@ pub enum CredibilityTier {
     Archive,
     GrayLit,
     Web,
+    #[default]
     Unknown,
 }
 
-impl Default for CredibilityTier {
-    fn default() -> Self {
-        CredibilityTier::Unknown
-    }
-}
+pub type ResolverVerdict = (
+    SourceType,
+    CredibilityTier,
+    Option<String>,
+    Option<String>,
+    bool,
+);
 
 /// A classification verdict for one source.
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]

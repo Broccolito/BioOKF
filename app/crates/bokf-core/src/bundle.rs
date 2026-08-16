@@ -3,7 +3,7 @@
 
 use crate::model::Node;
 use crate::parse::parse_node;
-use std::collections::HashMap;
+use std::collections::{hash_map::Entry, HashMap};
 use std::path::{Path, PathBuf};
 
 #[derive(Debug)]
@@ -104,10 +104,13 @@ impl Bundle {
             match parse_node(&content, &rel) {
                 Ok(node) => {
                     let id = node.identifier.clone();
-                    if by_identifier.contains_key(&id) {
-                        duplicate_identifiers.push((id, node.path.clone()));
-                    } else {
-                        by_identifier.insert(id, nodes.len());
+                    match by_identifier.entry(id) {
+                        Entry::Occupied(entry) => {
+                            duplicate_identifiers.push((entry.key().clone(), node.path.clone()));
+                        }
+                        Entry::Vacant(entry) => {
+                            entry.insert(nodes.len());
+                        }
                     }
                     nodes.push(node);
                 }
