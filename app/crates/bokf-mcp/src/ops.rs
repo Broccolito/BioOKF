@@ -16,7 +16,10 @@ fn clean_bundle_rel(page: &str) -> Result<PathBuf, String> {
     let p = Path::new(page);
     if p.is_absolute()
         || p.components().any(|c| {
-            matches!(c, Component::ParentDir | Component::Prefix(_) | Component::RootDir)
+            matches!(
+                c,
+                Component::ParentDir | Component::Prefix(_) | Component::RootDir
+            )
         })
     {
         return Err("path not permitted".into());
@@ -51,7 +54,9 @@ fn is_readable_bundle_content(rel: &Path) -> bool {
 /// canonicalizing both the bundle root and the target and requiring the target
 /// to stay under the root. Mirrors the Studio's `safe_existing_bundle_path`.
 fn safe_existing_bundle_path(bundle: &Path, rel: &Path) -> Result<PathBuf, String> {
-    let root_c = bundle.canonicalize().map_err(|_| "path not permitted".to_string())?;
+    let root_c = bundle
+        .canonicalize()
+        .map_err(|_| "path not permitted".to_string())?;
     let full_c = bundle
         .join(rel)
         .canonicalize()
@@ -67,14 +72,18 @@ fn safe_existing_bundle_path(bundle: &Path, rel: &Path) -> Result<PathBuf, Strin
 /// inside the canonicalized bundle root, so a symlinked parent cannot escape.
 /// Returns the concrete path to write (canonical parent joined with the file name).
 fn safe_write_bundle_path(bundle: &Path, rel: &Path) -> Result<PathBuf, String> {
-    let root_c = bundle.canonicalize().map_err(|_| "path not permitted".to_string())?;
+    let root_c = bundle
+        .canonicalize()
+        .map_err(|_| "path not permitted".to_string())?;
     let file_name = rel
         .file_name()
         .ok_or_else(|| "path not permitted".to_string())?;
     let parent_rel = rel.parent().unwrap_or_else(|| Path::new(""));
     let parent = bundle.join(parent_rel);
     std::fs::create_dir_all(&parent).map_err(|_| "path not permitted".to_string())?;
-    let parent_c = parent.canonicalize().map_err(|_| "path not permitted".to_string())?;
+    let parent_c = parent
+        .canonicalize()
+        .map_err(|_| "path not permitted".to_string())?;
     if !parent_c.starts_with(&root_c) {
         return Err("path not permitted".into());
     }
@@ -208,7 +217,10 @@ pub fn validate_page(content: &str) -> Result<String, String> {
 /// The bundle dir itself may not exist yet, but its parent must, and the path
 /// must not contain `..` traversal. Errors are generic (no path leaking).
 fn validate_scaffold_bundle(bundle: &Path) -> Result<(), String> {
-    if bundle.components().any(|c| matches!(c, Component::ParentDir)) {
+    if bundle
+        .components()
+        .any(|c| matches!(c, Component::ParentDir))
+    {
         return Err("path not permitted".into());
     }
     let parent = bundle.parent().unwrap_or_else(|| Path::new("."));

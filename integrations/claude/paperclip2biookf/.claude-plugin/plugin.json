@@ -1,0 +1,7 @@
+{
+  "name": "paperclip2biookf",
+  "version": "0.1.0",
+  "description": "Generate, query, revise, refresh, and merge BioOKF knowledge bases with Paperclip and local subscription agents.",
+  "author": {"name": "BioOKF"},
+  "homepage": "https://github.com/Broccolito/BioOKF"
+}

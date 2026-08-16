@@ -25,26 +25,43 @@ macro_rules! param {
     };
 }
 
-param!(BundleParam { #[doc = "Path to the BioOKF bundle directory."] bundle: String });
-param!(RootParam { #[doc = "Path to a directory that contains one or more bundles."] root: String });
+param!(BundleParam {
+    #[doc = "Path to the BioOKF bundle directory."]
+    bundle: String
+});
+param!(RootParam {
+    #[doc = "Path to a directory that contains one or more bundles."]
+    root: String
+});
 param!(ScaffoldParam {
     #[doc = "Path where the new bundle directory should be created."] bundle: String,
     #[doc = "Human-readable name for the knowledge base."] name: Option<String>,
 });
 param!(ReadParam {
-    #[doc = "Path to the bundle directory."] bundle: String,
-    #[doc = "Logical page path: a concept doc under knowledge/ (e.g. knowledge/gene/il6.md) or a root text file (index.md, log.md, SCHEMA.md, README.md). raw/ sources are NOT readable here (ingest them via bokf_convert)."] page: String,
+    #[doc = "Path to the bundle directory."]
+    bundle: String,
+    #[doc = "Logical page path: a concept doc under knowledge/ (e.g. knowledge/gene/il6.md) or a root text file (index.md, log.md, SCHEMA.md, README.md). raw/ sources are NOT readable here (ingest them via bokf_convert)."]
+    page: String,
 });
 param!(WriteParam {
-    #[doc = "Path to the bundle directory."] bundle: String,
-    #[doc = "Page path under knowledge/ (or index.md/log.md/SCHEMA.md). raw/ is not writable here — ingest sources via bokf_convert."] page: String,
-    #[doc = "Full file content (YAML frontmatter + Markdown body for concept docs)."] content: String,
+    #[doc = "Path to the bundle directory."]
+    bundle: String,
+    #[doc = "Page path under knowledge/ (or index.md/log.md/SCHEMA.md). raw/ is not writable here — ingest sources via bokf_convert."]
+    page: String,
+    #[doc = "Full file content (YAML frontmatter + Markdown body for concept docs)."]
+    content: String,
 });
-param!(ValidateParam { #[doc = "Full concept-document content to validate (not written)."] content: String });
+param!(ValidateParam {
+    #[doc = "Full concept-document content to validate (not written)."]
+    content: String
+});
 param!(AppendLogParam {
-    #[doc = "Path to the bundle directory."] bundle: String,
-    #[doc = "ISO date, e.g. 2026-06-27."] date: String,
-    #[doc = "Markdown summary of what changed."] entry: String,
+    #[doc = "Path to the bundle directory."]
+    bundle: String,
+    #[doc = "ISO date, e.g. 2026-06-27."]
+    date: String,
+    #[doc = "Markdown summary of what changed."]
+    entry: String,
 });
 param!(SearchParam {
     #[doc = "Path to the bundle directory."] bundle: String,
@@ -67,8 +84,10 @@ param!(RestoreParam {
     #[doc = "Optional summary."] summary: Option<String>,
 });
 param!(RootKbParam {
-    #[doc = "Root directory that contains bundles."] root: String,
-    #[doc = "KB id to make active."] kb_id: String,
+    #[doc = "Root directory that contains bundles."]
+    root: String,
+    #[doc = "KB id to make active."]
+    kb_id: String,
 });
 param!(VerifyParam {
     #[doc = "Path to the bundle directory."] bundle: String,
@@ -84,18 +103,24 @@ param!(ConvertParam {
     #[doc = "Concatenate archive/folder members into one source."] combined: Option<bool>,
 });
 param!(NameFigureParam {
-    #[doc = "Bundle directory."] bundle: String,
-    #[doc = "Source id (the raw/<id> folder name)."] source: String,
-    #[doc = "Current figure path relative to raw/<id>, e.g. figures/fig-001.png."] figure: String,
-    #[doc = "Content caption to name the figure by."] caption: String,
+    #[doc = "Bundle directory."]
+    bundle: String,
+    #[doc = "Source id (the raw/<id> folder name)."]
+    source: String,
+    #[doc = "Current figure path relative to raw/<id>, e.g. figures/fig-001.png."]
+    figure: String,
+    #[doc = "Content caption to name the figure by."]
+    caption: String,
 });
 param!(IndexParam {
     #[doc = "Bundle directory."] bundle: String,
     #[doc = "Only check currency (don't rewrite index.md)."] check: Option<bool>,
 });
 param!(MergeRawParam {
-    #[doc = "Main KB (canonical) bundle dir."] mkb: String,
-    #[doc = "Secondary KB bundle dir to relocate raw/ from."] skb: String,
+    #[doc = "Main KB (canonical) bundle dir."]
+    mkb: String,
+    #[doc = "Secondary KB bundle dir to relocate raw/ from."]
+    skb: String,
 });
 param!(MergeSnapshotParam {
     #[doc = "Main KB bundle dir."] mkb: String,
@@ -111,10 +136,12 @@ param!(StudioSelectParam {
     #[doc = "Node identifier to select + focus (calls window.__bokf.selectNode)."] node: Option<String>,
 });
 param!(StudioSearchParam {
-    #[doc = "Query string to push into the GUI's search box (window.__bokf.search)."] query: String,
+    #[doc = "Query string to push into the GUI's search box (window.__bokf.search)."]
+    query: String,
 });
 param!(StudioNarrateParam {
-    #[doc = "Short status message to show in the GUI's live 'AI agent' banner (e.g. 'merging diabetes KB')."] action: String,
+    #[doc = "Short status message to show in the GUI's live 'AI agent' banner (e.g. 'merging diabetes KB')."]
+    action: String,
 });
 
 #[derive(Clone)]
@@ -161,47 +188,107 @@ fn from_result(r: Result<String, String>) -> Result<CallToolResult, rmcp::model:
 #[tool_router(router = tool_router)]
 impl BokfServer {
     pub fn new() -> Self {
-        Self { tool_router: Self::tool_router() }
+        Self {
+            tool_router: Self::tool_router(),
+        }
     }
 
-    #[tool(name = "bokf_list_bases", description = "List BioOKF bundles found under a root directory.")]
-    pub async fn list_bases(&self, p: Parameters<RootParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_list_bases",
+        description = "List BioOKF bundles found under a root directory."
+    )]
+    pub async fn list_bases(
+        &self,
+        p: Parameters<RootParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         from_result(ops::list_bases(Path::new(&p.0.root)).map(|v| v.join("\n")))
     }
 
-    #[tool(name = "bokf_scaffold", description = "Create an empty BioOKF bundle (raw/, knowledge/, index.md, log.md, SCHEMA.md).")]
-    pub async fn scaffold(&self, p: Parameters<ScaffoldParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        let name = p.0.name.unwrap_or_else(|| "Untitled knowledge base".to_string());
+    #[tool(
+        name = "bokf_scaffold",
+        description = "Create an empty BioOKF bundle (raw/, knowledge/, index.md, log.md, SCHEMA.md)."
+    )]
+    pub async fn scaffold(
+        &self,
+        p: Parameters<ScaffoldParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        let name =
+            p.0.name
+                .unwrap_or_else(|| "Untitled knowledge base".to_string());
         from_result(ops::scaffold(Path::new(&p.0.bundle), &name))
     }
 
-    #[tool(name = "bokf_list_pages", description = "List the concept-document pages under knowledge/.")]
-    pub async fn list_pages(&self, p: Parameters<BundleParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_list_pages",
+        description = "List the concept-document pages under knowledge/."
+    )]
+    pub async fn list_pages(
+        &self,
+        p: Parameters<BundleParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         from_result(ops::list_pages(Path::new(&p.0.bundle)).map(|v| v.join("\n")))
     }
 
-    #[tool(name = "bokf_read_page", description = "Read one page: a concept doc under knowledge/ or a root text file (index.md/log.md/SCHEMA.md/README.md). raw/ sources are not readable through this tool (ingest them via bokf_convert).")]
-    pub async fn read_page(&self, p: Parameters<ReadParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_read_page",
+        description = "Read one page: a concept doc under knowledge/ or a root text file (index.md/log.md/SCHEMA.md/README.md). raw/ sources are not readable through this tool (ingest them via bokf_convert)."
+    )]
+    pub async fn read_page(
+        &self,
+        p: Parameters<ReadParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         from_result(ops::read_page(Path::new(&p.0.bundle), &p.0.page))
     }
 
-    #[tool(name = "bokf_write_page", description = "Create/overwrite a concept doc (or index/log/schema); validates concept docs on write.")]
-    pub async fn write_page(&self, p: Parameters<WriteParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        from_result(ops::write_page(Path::new(&p.0.bundle), &p.0.page, &p.0.content))
+    #[tool(
+        name = "bokf_write_page",
+        description = "Create/overwrite a concept doc (or index/log/schema); validates concept docs on write."
+    )]
+    pub async fn write_page(
+        &self,
+        p: Parameters<WriteParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        from_result(ops::write_page(
+            Path::new(&p.0.bundle),
+            &p.0.page,
+            &p.0.content,
+        ))
     }
 
-    #[tool(name = "bokf_validate_page", description = "Validate a concept-document draft (type/identifier/predicates/provenance) WITHOUT writing it.")]
-    pub async fn validate_page(&self, p: Parameters<ValidateParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_validate_page",
+        description = "Validate a concept-document draft (type/identifier/predicates/provenance) WITHOUT writing it."
+    )]
+    pub async fn validate_page(
+        &self,
+        p: Parameters<ValidateParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         from_result(ops::validate_page(&p.0.content))
     }
 
-    #[tool(name = "bokf_append_log", description = "Append a dated entry to the bundle's log.md (newest-first).")]
-    pub async fn append_log(&self, p: Parameters<AppendLogParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        from_result(ops::append_log(Path::new(&p.0.bundle), &p.0.date, &p.0.entry))
+    #[tool(
+        name = "bokf_append_log",
+        description = "Append a dated entry to the bundle's log.md (newest-first)."
+    )]
+    pub async fn append_log(
+        &self,
+        p: Parameters<AppendLogParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        from_result(ops::append_log(
+            Path::new(&p.0.bundle),
+            &p.0.date,
+            &p.0.entry,
+        ))
     }
 
-    #[tool(name = "bokf_lint", description = "Lint a bundle against BioOKF v0.5 conformance rules; returns a JSON report.")]
-    pub async fn lint(&self, p: Parameters<BundleParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_lint",
+        description = "Lint a bundle against BioOKF v0.5 conformance rules; returns a JSON report."
+    )]
+    pub async fn lint(
+        &self,
+        p: Parameters<BundleParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         narrate_to_studio(&format!("linting · {}", kb_name(&p.0.bundle)));
         match bokf_core::open_bundle(&p.0.bundle) {
             Ok(b) => {
@@ -216,8 +303,14 @@ impl BokfServer {
         }
     }
 
-    #[tool(name = "bokf_graph", description = "Return the render-ready graph (nodes + directional edges) as JSON.")]
-    pub async fn graph(&self, p: Parameters<BundleParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_graph",
+        description = "Return the render-ready graph (nodes + directional edges) as JSON."
+    )]
+    pub async fn graph(
+        &self,
+        p: Parameters<BundleParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         narrate_to_studio(&format!("building graph · {}", kb_name(&p.0.bundle)));
         match bokf_core::graph_of(&p.0.bundle) {
             Ok(g) => ok(serde_json::to_string_pretty(&g.to_json()).unwrap_or_default()),
@@ -225,8 +318,14 @@ impl BokfServer {
         }
     }
 
-    #[tool(name = "bokf_search", description = "BM25 full-text search over the bundle's concept documents.")]
-    pub async fn search(&self, p: Parameters<SearchParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_search",
+        description = "BM25 full-text search over the bundle's concept documents."
+    )]
+    pub async fn search(
+        &self,
+        p: Parameters<SearchParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         narrate_to_studio(&format!("searching · \"{}\"", p.0.query));
         match bokf_core::open_bundle(&p.0.bundle) {
             Ok(b) => {
@@ -238,8 +337,14 @@ impl BokfServer {
         }
     }
 
-    #[tool(name = "bokf_stats", description = "Summary statistics: node/edge counts by type and predicate.")]
-    pub async fn stats(&self, p: Parameters<BundleParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_stats",
+        description = "Summary statistics: node/edge counts by type and predicate."
+    )]
+    pub async fn stats(
+        &self,
+        p: Parameters<BundleParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         narrate_to_studio(&format!("computing stats · {}", kb_name(&p.0.bundle)));
         match bokf_core::open_bundle(&p.0.bundle) {
             Ok(b) => {
@@ -256,40 +361,80 @@ impl BokfServer {
         }
     }
 
-    #[tool(name = "bokf_predicates", description = "Print the active BioOKF vocabulary: 28 node types, 35 predicates (24 positive + 11 negative not_<X>), knowledge_level/agent_type enums.")]
+    #[tool(
+        name = "bokf_predicates",
+        description = "Print the active BioOKF vocabulary: 28 node types, 35 predicates (24 positive + 11 negative not_<X>), knowledge_level/agent_type enums."
+    )]
     pub async fn predicates(&self) -> Result<CallToolResult, rmcp::model::ErrorData> {
         use bokf_core::model::{AGENT_TYPES, KNOWLEDGE_LEVELS, NODE_TYPES, PREDICATES};
         let v = serde_json::json!({"node_types": NODE_TYPES.as_slice(), "predicates": PREDICATES.as_slice(), "knowledge_levels": KNOWLEDGE_LEVELS.as_slice(), "agent_types": AGENT_TYPES.as_slice()});
         ok(serde_json::to_string_pretty(&v).unwrap_or_default())
     }
 
-    #[tool(name = "bokf_log_sync", description = "Append a dated log.md entry AND commit atomically (the sole step-committer). kind = ingest|convert|link|merge|lint|index|restore|manual.")]
-    pub async fn log_sync(&self, p: Parameters<LogSyncParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_log_sync",
+        description = "Append a dated log.md entry AND commit atomically (the sole step-committer). kind = ingest|convert|link|merge|lint|index|restore|manual."
+    )]
+    pub async fn log_sync(
+        &self,
+        p: Parameters<LogSyncParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         use bokf_core::git::{today_iso, ChangeKind};
-        match bokf_core::log_sync::log_sync(Path::new(&p.0.bundle), ChangeKind::parse(&p.0.kind), &p.0.summary, p.0.delta.as_deref(), &today_iso()) {
-            Ok(sha) => ok(format!("committed {} [{}] {}", &sha[..8.min(sha.len())], p.0.kind, p.0.summary)),
+        match bokf_core::log_sync::log_sync(
+            Path::new(&p.0.bundle),
+            ChangeKind::parse(&p.0.kind),
+            &p.0.summary,
+            p.0.delta.as_deref(),
+            &today_iso(),
+        ) {
+            Ok(sha) => ok(format!(
+                "committed {} [{}] {}",
+                &sha[..8.min(sha.len())],
+                p.0.kind,
+                p.0.summary
+            )),
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
 
-    #[tool(name = "bokf_log", description = "Show commit history (newest-first) as JSON.")]
-    pub async fn log(&self, p: Parameters<LogParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_log",
+        description = "Show commit history (newest-first) as JSON."
+    )]
+    pub async fn log(
+        &self,
+        p: Parameters<LogParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         match bokf_core::git::GitRepo::open(&p.0.bundle).log(p.0.limit.unwrap_or(20)) {
             Ok(es) => ok(serde_json::to_string_pretty(&es).unwrap_or_default()),
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
 
-    #[tool(name = "bokf_restore", description = "Forward-only restore the bundle to a prior commit sha.")]
-    pub async fn restore(&self, p: Parameters<RestoreParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        match bokf_core::git::GitRepo::open(&p.0.bundle).restore_to(&p.0.sha, p.0.summary.as_deref()) {
+    #[tool(
+        name = "bokf_restore",
+        description = "Forward-only restore the bundle to a prior commit sha."
+    )]
+    pub async fn restore(
+        &self,
+        p: Parameters<RestoreParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        match bokf_core::git::GitRepo::open(&p.0.bundle)
+            .restore_to(&p.0.sha, p.0.summary.as_deref())
+        {
             Ok(sha) => ok(format!("restored; new commit {}", &sha[..8.min(sha.len())])),
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
 
-    #[tool(name = "bokf_set_active", description = "Set which KB is active under <root>.")]
-    pub async fn set_active(&self, p: Parameters<RootKbParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_set_active",
+        description = "Set which KB is active under <root>."
+    )]
+    pub async fn set_active(
+        &self,
+        p: Parameters<RootKbParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         narrate_to_studio(&format!("switching active KB · {}", p.0.kb_id));
         match bokf_core::active::set_active(&mcp_root(&p.0.root), Some(&p.0.kb_id)) {
             Ok(()) => ok(format!("active KB = {}", p.0.kb_id)),
@@ -297,18 +442,33 @@ impl BokfServer {
         }
     }
 
-    #[tool(name = "bokf_get_active", description = "Get the active KB id + resolved path under <root>.")]
-    pub async fn get_active(&self, p: Parameters<RootParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_get_active",
+        description = "Get the active KB id + resolved path under <root>."
+    )]
+    pub async fn get_active(
+        &self,
+        p: Parameters<RootParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         let root = mcp_root(&p.0.root);
         let root = root.as_path();
         match bokf_core::active::get_active(root) {
-            Some(id) => ok(serde_json::json!({"id": id, "path": bokf_core::registry::resolve(root, &id)}).to_string()),
+            Some(id) => ok(
+                serde_json::json!({"id": id, "path": bokf_core::registry::resolve(root, &id)})
+                    .to_string(),
+            ),
             None => ok(serde_json::json!({ "id": null }).to_string()),
         }
     }
 
-    #[tool(name = "bokf_verify", description = "Deterministic accountability gate: lint + structure checks; returns ok=true iff zero errors. Use at the end of an ingest/merge run.")]
-    pub async fn verify(&self, p: Parameters<VerifyParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_verify",
+        description = "Deterministic accountability gate: lint + structure checks; returns ok=true iff zero errors. Use at the end of an ingest/merge run."
+    )]
+    pub async fn verify(
+        &self,
+        p: Parameters<VerifyParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         narrate_to_studio(&format!("verifying · {}", kb_name(&p.0.bundle)));
         match bokf_core::open_bundle(&p.0.bundle) {
             Ok(b) => {
@@ -326,20 +486,32 @@ impl BokfServer {
         }
     }
 
-    #[tool(name = "bokf_convert", description = "Convert a file/folder/zip (pdf/html/docx/pptx/csv/xlsx), inline text, or a URL/list of URLs into raw Markdown under the bundle's raw/, with a human-readable content-derived source id. URL ingestion classifies source provenance (peer-reviewed/preprint/web). Writes via bokf-core (not Edit), so raw/ guards don't block it.")]
-    pub async fn convert(&self, p: Parameters<ConvertParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_convert",
+        description = "Convert a file/folder/zip (pdf/html/docx/pptx/csv/xlsx), inline text, or a URL/list of URLs into raw Markdown under the bundle's raw/, with a human-readable content-derived source id. URL ingestion classifies source provenance (peer-reviewed/preprint/web). Writes via bokf-core (not Edit), so raw/ guards don't block it."
+    )]
+    pub async fn convert(
+        &self,
+        p: Parameters<ConvertParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         use bokf_core::convert::{ingest, ingest_urls, SourceInput};
         if let Some(urls) = p.0.urls {
             let results = ingest_urls(Path::new(&p.0.bundle), urls);
             let sources: Vec<_> = results.iter().filter_map(|r| r.as_ref().ok()).collect();
-            let errors: Vec<String> = results.iter().filter_map(|r| r.as_ref().err().cloned()).collect();
+            let errors: Vec<String> = results
+                .iter()
+                .filter_map(|r| r.as_ref().err().cloned())
+                .collect();
             let out = serde_json::json!({ "sources": sources, "errors": errors });
             return ok(serde_json::to_string_pretty(&out).unwrap_or_default());
         }
         let input = if let Some(u) = p.0.url {
             SourceInput::Url(u)
         } else if let Some(t) = p.0.text {
-            SourceInput::Text { text: t, title: p.0.title }
+            SourceInput::Text {
+                text: t,
+                title: p.0.title,
+            }
         } else if let Some(path) = p.0.path {
             SourceInput::Path(path.into())
         } else {
@@ -351,23 +523,48 @@ impl BokfServer {
         }
     }
 
-    #[tool(name = "bokf_name_figure", description = "Rename a provisional figure (raw/<id>/figures/fig-NNN.ext) to a content name, rewriting its source.md reference and meta.yaml. Writes via bokf-core, so raw/ guards don't block it.")]
-    pub async fn name_figure(&self, p: Parameters<NameFigureParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        match bokf_core::figures::name_figure(Path::new(&p.0.bundle), &p.0.source, &p.0.figure, &p.0.caption) {
-            Ok(new_rel) => ok(serde_json::json!({"source": p.0.source, "figure": new_rel}).to_string()),
+    #[tool(
+        name = "bokf_name_figure",
+        description = "Rename a provisional figure (raw/<id>/figures/fig-NNN.ext) to a content name, rewriting its source.md reference and meta.yaml. Writes via bokf-core, so raw/ guards don't block it."
+    )]
+    pub async fn name_figure(
+        &self,
+        p: Parameters<NameFigureParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        match bokf_core::figures::name_figure(
+            Path::new(&p.0.bundle),
+            &p.0.source,
+            &p.0.figure,
+            &p.0.caption,
+        ) {
+            Ok(new_rel) => {
+                ok(serde_json::json!({"source": p.0.source, "figure": new_rel}).to_string())
+            }
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
 
-    #[tool(name = "bokf_index", description = "Regenerate index.md (identifier registry + by-type catalog + subtypes-in-use), or check=true to list identifiers missing from it.")]
-    pub async fn index(&self, p: Parameters<IndexParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_index",
+        description = "Regenerate index.md (identifier registry + by-type catalog + subtypes-in-use), or check=true to list identifiers missing from it."
+    )]
+    pub async fn index(
+        &self,
+        p: Parameters<IndexParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         match bokf_core::open_bundle(&p.0.bundle) {
             Ok(b) => {
                 if p.0.check.unwrap_or(false) {
                     let missing = bokf_core::index::missing_from_index(&b);
-                    ok(serde_json::json!({"current": missing.is_empty(), "missing": missing}).to_string())
+                    ok(
+                        serde_json::json!({"current": missing.is_empty(), "missing": missing})
+                            .to_string(),
+                    )
                 } else {
-                    let name = Path::new(&p.0.bundle).file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_else(|| "Knowledge base".into());
+                    let name = Path::new(&p.0.bundle)
+                        .file_name()
+                        .map(|s| s.to_string_lossy().to_string())
+                        .unwrap_or_else(|| "Knowledge base".into());
                     match bokf_core::index::write_index(&b, &name) {
                         Ok(()) => ok(format!("regenerated index.md ({} nodes)", b.nodes.len())),
                         Err(e) => ok(format!("ERROR: {e}")),
@@ -378,23 +575,42 @@ impl BokfServer {
         }
     }
 
-    #[tool(name = "bokf_merge_raw", description = "Relocate the SKB's raw/ into the MKB's raw/ (dedup by content, rename on collision); returns the source-id remapping for rewriting raw_source refs.")]
-    pub async fn merge_raw(&self, p: Parameters<MergeRawParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
-        narrate_to_studio(&format!("merging · {} ← {}", kb_name(&p.0.mkb), kb_name(&p.0.skb)));
+    #[tool(
+        name = "bokf_merge_raw",
+        description = "Relocate the SKB's raw/ into the MKB's raw/ (dedup by content, rename on collision); returns the source-id remapping for rewriting raw_source refs."
+    )]
+    pub async fn merge_raw(
+        &self,
+        p: Parameters<MergeRawParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
+        narrate_to_studio(&format!(
+            "merging · {} ← {}",
+            kb_name(&p.0.mkb),
+            kb_name(&p.0.skb)
+        ));
         match bokf_core::merge::merge_raw(Path::new(&p.0.mkb), Path::new(&p.0.skb)) {
             Ok(res) => ok(serde_json::to_string_pretty(&res).unwrap_or_default()),
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
 
-    #[tool(name = "bokf_merge_snapshot", description = "Snapshot the MKB identifier/path set before a merge, or verify=true to confirm the MKB stayed canonical afterward.")]
-    pub async fn merge_snapshot(&self, p: Parameters<MergeSnapshotParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_merge_snapshot",
+        description = "Snapshot the MKB identifier/path set before a merge, or verify=true to confirm the MKB stayed canonical afterward."
+    )]
+    pub async fn merge_snapshot(
+        &self,
+        p: Parameters<MergeSnapshotParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         let root = Path::new(&p.0.mkb);
         match bokf_core::open_bundle(&p.0.mkb) {
             Ok(b) => {
                 if p.0.verify.unwrap_or(false) {
                     match bokf_core::merge::verify_snapshot(root, &b) {
-                        Ok(issues) => ok(serde_json::json!({"unchanged": issues.is_empty(), "issues": issues}).to_string()),
+                        Ok(issues) => ok(
+                            serde_json::json!({"unchanged": issues.is_empty(), "issues": issues})
+                                .to_string(),
+                        ),
                         Err(e) => ok(format!("ERROR: {e}")),
                     }
                 } else {
@@ -413,8 +629,14 @@ impl BokfServer {
     // newline-delimited-JSON control socket (see studio_client). When the GUI
     // isn't running, calls fail fast and surface as readable ERROR text.
 
-    #[tool(name = "bokf_studio_open", description = "Launch the BioOKF Studio GUI (with its agent control channel on), or report it's already running.")]
-    pub async fn studio_open(&self, p: Parameters<StudioOpenParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_studio_open",
+        description = "Launch the BioOKF Studio GUI (with its agent control channel on), or report it's already running."
+    )]
+    pub async fn studio_open(
+        &self,
+        p: Parameters<StudioOpenParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         if studio_client::ping() {
             return ok(serde_json::json!({"running": true, "note": "already running"}).to_string());
         }
@@ -432,9 +654,9 @@ impl BokfServer {
                         running = studio_client::ping();
                     }
                     if running {
-                        if let Ok(r) =
-                            studio_client::execute_js("(window.__bokf && window.__BOKF_READY) ? '1' : '0'")
-                        {
+                        if let Ok(r) = studio_client::execute_js(
+                            "(window.__bokf && window.__BOKF_READY) ? '1' : '0'",
+                        ) {
                             if r.trim().trim_matches('"') == "1" {
                                 ready = true;
                                 break;
@@ -450,13 +672,17 @@ impl BokfServer {
                     "note": if ready { "launched (webview ready)" }
                             else if running { "socket up but webview not ready within ~20s" }
                             else { "spawned but control socket did not answer within ~20s" },
-                }).to_string())
+                })
+                .to_string())
             }
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
 
-    #[tool(name = "bokf_studio_close", description = "Close the running Studio GUI window (via its control socket).")]
+    #[tool(
+        name = "bokf_studio_close",
+        description = "Close the running Studio GUI window (via its control socket)."
+    )]
     pub async fn studio_close(&self) -> Result<CallToolResult, rmcp::model::ErrorData> {
         match studio_client::manage_window("close") {
             Ok(v) => ok(serde_json::json!({"closed": true, "result": v}).to_string()),
@@ -464,25 +690,44 @@ impl BokfServer {
         }
     }
 
-    #[tool(name = "bokf_studio_status", description = "Whether the Studio GUI is running, plus its app/window info if reachable.")]
+    #[tool(
+        name = "bokf_studio_status",
+        description = "Whether the Studio GUI is running, plus its app/window info if reachable."
+    )]
     pub async fn studio_status(&self) -> Result<CallToolResult, rmcp::model::ErrorData> {
         let running = studio_client::ping();
-        let info = if running { studio_client::app_info().ok() } else { None };
+        let info = if running {
+            studio_client::app_info().ok()
+        } else {
+            None
+        };
         ok(serde_json::json!({"running": running, "socket": studio_client::socket_path(), "info": info}).to_string())
     }
 
-    #[tool(name = "bokf_studio_state", description = "The complete GUI status as structured JSON, the way to know what the app is doing WITHOUT a screenshot. Returns {base, baseName, basePath, loading, counts, query, selectedNode, selectedEdge, panelOpen, sidebarCollapsed, terminalOpen, lint, lastAgentAction, bases[]}.")]
+    #[tool(
+        name = "bokf_studio_state",
+        description = "The complete GUI status as structured JSON, the way to know what the app is doing WITHOUT a screenshot. Returns {base, baseName, basePath, loading, counts, query, selectedNode, selectedEdge, panelOpen, sidebarCollapsed, terminalOpen, lint, lastAgentAction, bases[]}."
+    )]
     pub async fn studio_state(&self) -> Result<CallToolResult, rmcp::model::ErrorData> {
         studio_json("JSON.stringify(window.__bokf.getState())")
     }
 
-    #[tool(name = "bokf_studio_graph", description = "Read the graph the GUI is currently rendering: {nodes, edges}.")]
+    #[tool(
+        name = "bokf_studio_graph",
+        description = "Read the graph the GUI is currently rendering: {nodes, edges}."
+    )]
     pub async fn studio_graph(&self) -> Result<CallToolResult, rmcp::model::ErrorData> {
         studio_json("JSON.stringify(window.__bokf.getGraph())")
     }
 
-    #[tool(name = "bokf_studio_select", description = "Drive the GUI: select a base and/or a node, then return the resulting state.")]
-    pub async fn studio_select(&self, p: Parameters<StudioSelectParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_studio_select",
+        description = "Drive the GUI: select a base and/or a node, then return the resulting state."
+    )]
+    pub async fn studio_select(
+        &self,
+        p: Parameters<StudioSelectParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         let mut calls = String::new();
         if let Some(base) = &p.0.base {
             calls.push_str(&js_call("window.__bokf.selectBase", &[base]));
@@ -498,14 +743,18 @@ impl BokfServer {
         // Fire the side-effecting calls, wait for any bundle load to settle, then
         // read back state, so switching base returns the NEW base's data, not the
         // previous bundle's (selectBase loads the bundle asynchronously).
-        if let Err(e) = studio_client::execute_js(&format!("(function(){{{calls}return true;}})()")) {
+        if let Err(e) = studio_client::execute_js(&format!("(function(){{{calls}return true;}})()"))
+        {
             return ok(format!("ERROR: {e}"));
         }
         studio_wait_settled();
         studio_json("JSON.stringify(window.__bokf.getState())")
     }
 
-    #[tool(name = "bokf_studio_reload", description = "Reload the GUI's data from disk, then return the settled state.")]
+    #[tool(
+        name = "bokf_studio_reload",
+        description = "Reload the GUI's data from disk, then return the settled state."
+    )]
     pub async fn studio_reload(&self) -> Result<CallToolResult, rmcp::model::ErrorData> {
         if let Err(e) = studio_client::execute_js("(window.__bokf.reload(), true)") {
             return ok(format!("ERROR: {e}"));
@@ -514,8 +763,14 @@ impl BokfServer {
         studio_json("JSON.stringify(window.__bokf.getState())")
     }
 
-    #[tool(name = "bokf_studio_search", description = "Drive the GUI's search box with a query, then return the resulting state.")]
-    pub async fn studio_search(&self, p: Parameters<StudioSearchParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_studio_search",
+        description = "Drive the GUI's search box with a query, then return the resulting state."
+    )]
+    pub async fn studio_search(
+        &self,
+        p: Parameters<StudioSearchParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         let code = format!(
             "(function(){{{};return JSON.stringify(window.__bokf.getState());}})()",
             js_call("window.__bokf.search", &[&p.0.query])
@@ -523,16 +778,28 @@ impl BokfServer {
         studio_json(&code)
     }
 
-    #[tool(name = "bokf_studio_screenshot", description = "Capture a screenshot of the Studio GUI window (returned as an image). For visual inspection only; use bokf_studio_state to READ status.")]
+    #[tool(
+        name = "bokf_studio_screenshot",
+        description = "Capture a screenshot of the Studio GUI window (returned as an image). For visual inspection only; use bokf_studio_state to READ status."
+    )]
     pub async fn studio_screenshot(&self) -> Result<CallToolResult, rmcp::model::ErrorData> {
         match studio_client::screenshot("main") {
-            Ok(b64) => Ok(CallToolResult::success(vec![Content::image(b64, "image/jpeg")])),
+            Ok(b64) => Ok(CallToolResult::success(vec![Content::image(
+                b64,
+                "image/jpeg",
+            )])),
             Err(e) => ok(format!("ERROR: {e}")),
         }
     }
 
-    #[tool(name = "bokf_studio_narrate", description = "Show a short status line in the Studio GUI's live 'AI agent' banner so a human watching sees what you're doing (e.g. before a long merge/lint/convert). No-op if the GUI isn't open.")]
-    pub async fn studio_narrate(&self, p: Parameters<StudioNarrateParam>) -> Result<CallToolResult, rmcp::model::ErrorData> {
+    #[tool(
+        name = "bokf_studio_narrate",
+        description = "Show a short status line in the Studio GUI's live 'AI agent' banner so a human watching sees what you're doing (e.g. before a long merge/lint/convert). No-op if the GUI isn't open."
+    )]
+    pub async fn studio_narrate(
+        &self,
+        p: Parameters<StudioNarrateParam>,
+    ) -> Result<CallToolResult, rmcp::model::ErrorData> {
         narrate_to_studio(&p.0.action);
         ok(serde_json::json!({"narrated": p.0.action}).to_string())
     }
@@ -540,7 +807,10 @@ impl BokfServer {
 
 /// Short display name for a bundle path (its final path component).
 fn kb_name(path: &str) -> &str {
-    std::path::Path::new(path).file_name().and_then(|s| s.to_str()).unwrap_or(path)
+    std::path::Path::new(path)
+        .file_name()
+        .and_then(|s| s.to_str())
+        .unwrap_or(path)
 }
 
 /// Best-effort: tell the running Studio GUI what the agent is doing, so its live
@@ -627,9 +897,13 @@ fn spawn_studio(root: Option<&str>) -> Result<String, String> {
     let r = root
         .filter(|s| !s.trim().is_empty())
         .map(std::path::PathBuf::from)
-        .unwrap_or_else(|| bokf_core::config::ensure_config_dir().unwrap_or_else(|_| bokf_core::config::config_dir()));
+        .unwrap_or_else(|| {
+            bokf_core::config::ensure_config_dir()
+                .unwrap_or_else(|_| bokf_core::config::config_dir())
+        });
     cmd.env("OKF_ROOT", r);
-    cmd.spawn().map_err(|e| format!("failed to spawn {}: {e}", bin.display()))?;
+    cmd.spawn()
+        .map_err(|e| format!("failed to spawn {}: {e}", bin.display()))?;
     Ok(bin.display().to_string())
 }
 
@@ -671,7 +945,10 @@ fn locate_studio_bin() -> Result<std::path::PathBuf, String> {
         if p.exists() {
             return Ok(p);
         }
-        return Err(format!("BIOOKF_STUDIO_BIN points at a missing file: {}", p.display()));
+        return Err(format!(
+            "BIOOKF_STUDIO_BIN points at a missing file: {}",
+            p.display()
+        ));
     }
     let exe = std::env::current_exe().map_err(|e| format!("cannot find current exe: {e}"))?;
     if let Some(p) = studio_bin_near(&exe) {

@@ -10,7 +10,12 @@ use std::path::Path;
 ///
 /// `current_rel` is the figure's current path relative to `raw/<id>/`, e.g.
 /// "figures/fig-001.png". Returns the new relative figure path.
-pub fn name_figure(bundle_root: &Path, source_id: &str, current_rel: &str, caption: &str) -> Result<String, String> {
+pub fn name_figure(
+    bundle_root: &Path,
+    source_id: &str,
+    current_rel: &str,
+    caption: &str,
+) -> Result<String, String> {
     let src_dir = bundle_root.join("raw").join(source_id);
     let cur_path = src_dir.join(current_rel);
     if !cur_path.exists() {
@@ -18,8 +23,16 @@ pub fn name_figure(bundle_root: &Path, source_id: &str, current_rel: &str, capti
     }
     let ext = ext_of(current_rel);
     let base = slug(caption);
-    let base = if base.is_empty() { "figure".to_string() } else { base };
-    let new_name = if ext.is_empty() { base } else { format!("{base}.{ext}") };
+    let base = if base.is_empty() {
+        "figure".to_string()
+    } else {
+        base
+    };
+    let new_name = if ext.is_empty() {
+        base
+    } else {
+        format!("{base}.{ext}")
+    };
     let new_rel = format!("figures/{new_name}");
     let new_path = src_dir.join(&new_rel);
 
@@ -50,7 +63,11 @@ pub fn name_figure(bundle_root: &Path, source_id: &str, current_rel: &str, capti
             f.provisional = false;
         }
     }
-    std::fs::write(&meta_path, serde_yaml::to_string(&meta).map_err(|e| e.to_string())?).map_err(|e| e.to_string())?;
+    std::fs::write(
+        &meta_path,
+        serde_yaml::to_string(&meta).map_err(|e| e.to_string())?,
+    )
+    .map_err(|e| e.to_string())?;
 
     Ok(new_rel)
 }
@@ -65,21 +82,48 @@ mod tests {
         let figs = root.join("raw/x-abc123/figures");
         std::fs::create_dir_all(&figs).unwrap();
         std::fs::write(figs.join("fig-001.png"), b"img").unwrap();
-        std::fs::write(root.join("raw/x-abc123/source.md"), "see ![fig-001](figures/fig-001.png)").unwrap();
+        std::fs::write(
+            root.join("raw/x-abc123/source.md"),
+            "see ![fig-001](figures/fig-001.png)",
+        )
+        .unwrap();
         let meta = crate::convert::SourceMeta {
-            id: "x-abc123".into(), title: "X".into(), sha256: "d".into(), format: "image".into(),
-            original_filename: None, ingested_at: "2026-06-27".into(), needs_llm_fallback: true,
-            figures: vec![crate::convert::FigureMeta { file: "figures/fig-001.png".into(), provisional: true, described: false, origin: "data-uri".into() }],
+            id: "x-abc123".into(),
+            title: "X".into(),
+            sha256: "d".into(),
+            format: "image".into(),
+            original_filename: None,
+            ingested_at: "2026-06-27".into(),
+            needs_llm_fallback: true,
+            figures: vec![crate::convert::FigureMeta {
+                file: "figures/fig-001.png".into(),
+                provisional: true,
+                described: false,
+                origin: "data-uri".into(),
+            }],
             ..Default::default()
         };
-        std::fs::write(root.join("raw/x-abc123/meta.yaml"), serde_yaml::to_string(&meta).unwrap()).unwrap();
-        let newp = name_figure(root, "x-abc123", "figures/fig-001.png", "Kaplan-Meier by arm").unwrap();
+        std::fs::write(
+            root.join("raw/x-abc123/meta.yaml"),
+            serde_yaml::to_string(&meta).unwrap(),
+        )
+        .unwrap();
+        let newp = name_figure(
+            root,
+            "x-abc123",
+            "figures/fig-001.png",
+            "Kaplan-Meier by arm",
+        )
+        .unwrap();
         assert_eq!(newp, "figures/kaplan-meier-by-arm.png");
         assert!(figs.join("kaplan-meier-by-arm.png").exists());
         assert!(!figs.join("fig-001.png").exists());
         let src = std::fs::read_to_string(root.join("raw/x-abc123/source.md")).unwrap();
         assert!(src.contains("figures/kaplan-meier-by-arm.png"));
-        let back: crate::convert::SourceMeta = serde_yaml::from_str(&std::fs::read_to_string(root.join("raw/x-abc123/meta.yaml")).unwrap()).unwrap();
+        let back: crate::convert::SourceMeta = serde_yaml::from_str(
+            &std::fs::read_to_string(root.join("raw/x-abc123/meta.yaml")).unwrap(),
+        )
+        .unwrap();
         assert!(!back.figures[0].provisional);
         assert_eq!(back.figures[0].file, "figures/kaplan-meier-by-arm.png");
     }

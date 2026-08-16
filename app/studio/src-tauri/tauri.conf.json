@@ -38,7 +38,8 @@
     ],
     "resources": [
       "bin/bokf",
-      "bin/bokf-mcp"
+      "bin/bokf-mcp",
+      "resources/agent_workflows.py"
     ],
     "icon": [
       "icons/32x32.png",

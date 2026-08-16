@@ -153,7 +153,10 @@ pub fn classify(input: &ClassifyInput) -> (SourceType, Credibility, SourceIds) {
                 .and_then(|m| crossref::map_work(&m))
                 .or_else(|| openalex::fetch(doi).and_then(|m| openalex::map_work(&m)));
             if let Some((st, tier, venue, publisher, retracted)) = resolved {
-                let allowlisted = publisher.as_deref().map(allowlist::is_allowlisted).unwrap_or(false);
+                let allowlisted = publisher
+                    .as_deref()
+                    .map(allowlist::is_allowlisted)
+                    .unwrap_or(false);
                 let cred = Credibility {
                     tier,
                     confidence: if allowlisted { 0.95 } else { 0.85 },
@@ -172,7 +175,9 @@ pub fn classify(input: &ClassifyInput) -> (SourceType, Credibility, SourceIds) {
     if let Some(url) = input.url {
         if let Some((st, tier, conf)) = host_patterns::classify_url(url) {
             if matches!(tier, CredibilityTier::Web) {
-                if let Some((st2, tier2, conf2)) = text_signal::scholarly_text_signal(input.body, &ids) {
+                if let Some((st2, tier2, conf2)) =
+                    text_signal::scholarly_text_signal(input.body, &ids)
+                {
                     let cred = Credibility {
                         tier: tier2,
                         confidence: conf2,
@@ -214,9 +219,19 @@ pub fn classify(input: &ClassifyInput) -> (SourceType, Credibility, SourceIds) {
 
     // 4. Default: a web page when there is a URL/file, otherwise unattributed personal text.
     let (st, tier, confidence, reasoning) = if input.url.is_some() || input.filename.is_some() {
-        (SourceType::WebPage, CredibilityTier::Web, 0.5, "no scholarly signal")
+        (
+            SourceType::WebPage,
+            CredibilityTier::Web,
+            0.5,
+            "no scholarly signal",
+        )
     } else {
-        (SourceType::Personal, CredibilityTier::Unknown, 0.3, "no provenance")
+        (
+            SourceType::Personal,
+            CredibilityTier::Unknown,
+            0.3,
+            "no provenance",
+        )
     };
     let cred = Credibility {
         tier,

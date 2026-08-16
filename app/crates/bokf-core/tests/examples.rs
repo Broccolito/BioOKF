@@ -46,10 +46,21 @@ macro_rules! require_examples {
 fn opens_examples_bundle() {
     let bundle = bokf_core::open_bundle(require_examples!()).expect("open bundle");
     // 6 concept docs ship under examples/knowledge/
-    assert!(bundle.nodes.len() >= 6, "expected >=6 nodes, got {}", bundle.nodes.len());
-    assert!(bundle.parse_errors.is_empty(), "parse errors: {:?}", bundle.parse_errors);
+    assert!(
+        bundle.nodes.len() >= 6,
+        "expected >=6 nodes, got {}",
+        bundle.nodes.len()
+    );
+    assert!(
+        bundle.parse_errors.is_empty(),
+        "parse errors: {:?}",
+        bundle.parse_errors
+    );
     // identifiers resolved (title/id merge)
-    assert!(bundle.contains("IL6") || bundle.contains("COVID-19"), "expected known identifiers");
+    assert!(
+        bundle.contains("IL6") || bundle.contains("COVID-19"),
+        "expected known identifiers"
+    );
 }
 
 #[test]
@@ -71,7 +82,10 @@ fn lints_examples_bundle() {
     let report = bokf_core::lint(&bundle);
     // v0.4 examples use infores: primary_source + CURIE objects -> lint should
     // produce findings (warnings), and must not panic.
-    assert!(!report.findings.is_empty(), "expected lint findings on legacy examples");
+    assert!(
+        !report.findings.is_empty(),
+        "expected lint findings on legacy examples"
+    );
     println!(
         "lint: {} errors, {} warnings, {} infos",
         report.errors(),

@@ -20,7 +20,13 @@ pub fn generate(bundle: &Bundle) -> String {
             .description
             .clone()
             .or_else(|| n.note.clone())
-            .or_else(|| n.body.lines().map(str::trim).find(|l| !l.is_empty() && !l.starts_with('#')).map(|s| s.to_string()))
+            .or_else(|| {
+                n.body
+                    .lines()
+                    .map(str::trim)
+                    .find(|l| !l.is_empty() && !l.starts_with('#'))
+                    .map(|s| s.to_string())
+            })
             .unwrap_or_default();
         let desc: String = desc.replace(['\n', '|'], " ").chars().take(80).collect();
         registry.push_str(&format!(
@@ -35,11 +41,19 @@ pub fn generate(bundle: &Bundle) -> String {
     // by-type catalog
     let mut by_type: BTreeMap<&str, Vec<&str>> = BTreeMap::new();
     for n in &nodes {
-        by_type.entry(n.node_type.as_str()).or_default().push(&n.identifier);
+        by_type
+            .entry(n.node_type.as_str())
+            .or_default()
+            .push(&n.identifier);
     }
     let mut catalog = String::from("\n## By type\n\n");
     for (t, ids) in &by_type {
-        catalog.push_str(&format!("- **{}** ({}): {}\n", t, ids.len(), ids.join(", ")));
+        catalog.push_str(&format!(
+            "- **{}** ({}): {}\n",
+            t,
+            ids.len(),
+            ids.join(", ")
+        ));
     }
 
     // subtypes in use (node subtypes per type + edge subtypes)
@@ -57,10 +71,17 @@ pub fn generate(bundle: &Bundle) -> String {
     }
     let mut subs = String::from("\n## Subtypes in use\n\n");
     for (t, set) in &node_sub {
-        subs.push_str(&format!("- **{}**: {}\n", t, set.iter().copied().collect::<Vec<_>>().join(", ")));
+        subs.push_str(&format!(
+            "- **{}**: {}\n",
+            t,
+            set.iter().copied().collect::<Vec<_>>().join(", ")
+        ));
     }
     if !edge_sub.is_empty() {
-        subs.push_str(&format!("- **edges**: {}\n", edge_sub.iter().cloned().collect::<Vec<_>>().join(", ")));
+        subs.push_str(&format!(
+            "- **edges**: {}\n",
+            edge_sub.iter().cloned().collect::<Vec<_>>().join(", ")
+        ));
     }
 
     format!("{START}\n{registry}{catalog}{subs}{END}\n")
@@ -117,6 +138,9 @@ mod tests {
         assert!(idx.contains("**Gene** (1): BRAF"));
         assert!(idx.contains("protein_coding"));
         let b2 = Bundle::open(dir.path()).unwrap();
-        assert!(missing_from_index(&b2).is_empty(), "index should be current after write");
+        assert!(
+            missing_from_index(&b2).is_empty(),
+            "index should be current after write"
+        );
     }
 }

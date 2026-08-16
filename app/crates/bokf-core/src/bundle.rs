@@ -63,7 +63,11 @@ impl Bundle {
     pub fn open(root: impl AsRef<Path>) -> std::io::Result<Bundle> {
         let root = root.as_ref().to_path_buf();
         let knowledge = root.join("knowledge");
-        let scan_root = if knowledge.is_dir() { knowledge.clone() } else { root.clone() };
+        let scan_root = if knowledge.is_dir() {
+            knowledge.clone()
+        } else {
+            root.clone()
+        };
 
         let mut files = Vec::new();
         collect_md(&scan_root, &mut files);

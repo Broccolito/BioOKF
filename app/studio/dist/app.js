@@ -1779,6 +1779,8 @@ async function selectBase(b){
   loadGraph(bundle.graph, b.id);
   // merge counts/lint from bundle if base index lacked them
   const merged=Object.assign({}, b, {node_count:bundle.node_count, edge_count:bundle.edge_count, lint:bundle.lint, name:b.name||bundle.name, updated:bundle.updated});
+  Object.assign(b, merged); // keep side panels and the sidebar on the live graph counts
+  renderSidebar();
   updateChrome(merged);
   refreshLintForActiveBase(b.id, seq);
   setGraphLoading(true, b.name||b.id, 'Ready', 1);
@@ -2018,13 +2020,13 @@ function showToast(msg, kind){
   clearTimeout(toastTimer); toastTimer=setTimeout(()=>{ t.classList.remove('open'); }, 4200);
 }
 
-/* ---------- "+ New base": native folder picker -> add_base -> refresh ---------- */
+/* ---------- "Import knowledge base": native folder picker -> add_base -> refresh ---------- */
 async function addNewBase(){
   if(!isDesktop) return;
   const dlg=window.__TAURI__&&window.__TAURI__.dialog;
   if(!dlg||!dlg.open){ showToast('Folder picker unavailable in this build.','err'); return; }
   let path;
-  try{ path=await dlg.open({ directory:true, multiple:false, title:'Select a BioOKF knowledge base folder' }); }
+  try{ path=await dlg.open({ directory:true, multiple:false, title:'Select a BioOKF knowledge base folder to import' }); }
   catch(e){ console.error(e); return; }
   if(path==null) return;                         // user cancelled
   if(Array.isArray(path)) path=path[0];

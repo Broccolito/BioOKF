@@ -212,32 +212,6 @@ pub fn studio_graph_doc(
     }))
 }
 
-fn count_concept_docs(dir: &Path) -> usize {
-    let Ok(entries) = std::fs::read_dir(dir) else {
-        return 0;
-    };
-    let mut count = 0;
-    for entry in entries.flatten() {
-        let path = entry.path();
-        let name = entry.file_name();
-        let name = name.to_string_lossy();
-        if path.is_dir() {
-            if name == "raw" || name == "citations" || name.starts_with('.') {
-                continue;
-            }
-            count += count_concept_docs(&path);
-        } else if path.extension().and_then(|e| e.to_str()) == Some("md")
-            && !matches!(
-                name.as_ref(),
-                "index.md" | "log.md" | "SCHEMA.md" | "README.md"
-            )
-        {
-            count += 1;
-        }
-    }
-    count
-}
-
 /// A lightweight index entry for the sidebar (no graph/pages payload).
 pub fn base_info(root: impl AsRef<Path>) -> std::io::Result<serde_json::Value> {
     let root = root.as_ref();
@@ -245,16 +219,38 @@ pub fn base_info(root: impl AsRef<Path>) -> std::io::Result<serde_json::Value> {
         .file_name()
         .map(|s| s.to_string_lossy().to_string())
         .unwrap_or_default();
-    let scan_root = if root.join("knowledge").is_dir() {
-        root.join("knowledge")
-    } else {
-        root.to_path_buf()
-    };
+    let bundle = Bundle::open(root)?;
+    let graph = Graph::from_bundle(&bundle);
     Ok(serde_json::json!({
         "id": id,
         "name": id,
-        "node_count": count_concept_docs(&scan_root),
-        "edge_count": null,
+        "node_count": bundle.nodes.len(),
+        "edge_count": graph.edges.len(),
         "updated": last_updated(root),
     }))
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn sidebar_base_info_reports_displayed_graph_edges() {
+        let root = tempfile::tempdir().unwrap();
+        let knowledge = root.path().join("knowledge/gene");
+        std::fs::create_dir_all(&knowledge).unwrap();
+        std::fs::write(
+            knowledge.join("a.md"),
+            "---\ntype: Gene\nidentifier: A\nedges:\n  - predicate: associated_with\n    object: B\n    knowledge_level: knowledge_assertion\n    agent_type: manual_agent\n    primary_source: B\n---\n# A\n",
+        )
+        .unwrap();
+        std::fs::write(
+            knowledge.join("b.md"),
+            "---\ntype: Gene\nidentifier: B\n---\n# B\n",
+        )
+        .unwrap();
+        let info = base_info(root.path()).unwrap();
+        assert_eq!(info["node_count"], 2);
+        assert_eq!(info["edge_count"], 2);
+    }
 }

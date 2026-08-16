@@ -194,7 +194,9 @@ pub fn adjacency(bundle: &Bundle) -> HashMap<String, Vec<(String, Predicate)>> {
             } else {
                 (n.identifier.clone(), e.object.clone())
             };
-            adj.entry(a.clone()).or_default().push((b.clone(), e.predicate.clone()));
+            adj.entry(a.clone())
+                .or_default()
+                .push((b.clone(), e.predicate.clone()));
             adj.entry(b).or_default().push((a, e.predicate.clone()));
         }
     }

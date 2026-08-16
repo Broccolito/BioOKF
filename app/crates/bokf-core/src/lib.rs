@@ -20,6 +20,7 @@ pub mod lint;
 pub mod log_sync;
 pub mod merge;
 pub mod model;
+pub mod network_metrics;
 pub mod parse;
 pub mod pdf_coverage;
 pub mod pdf_raster;
@@ -87,7 +88,11 @@ The gene.
         assert!(node.xref.contains(&"HGNC:6018".to_string()));
         assert_eq!(node.edges.len(), 2);
         // inverse predicate normalized to forward + reversed flag
-        let caused = node.edges.iter().find(|e| e.raw_predicate == "caused_by").unwrap();
+        let caused = node
+            .edges
+            .iter()
+            .find(|e| e.raw_predicate == "caused_by")
+            .unwrap();
         assert_eq!(caused.predicate, Predicate::Causes);
         assert!(caused.reversed);
     }

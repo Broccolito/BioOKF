@@ -73,9 +73,11 @@ fn yaml_to_json_depth(y: &Yaml, depth: usize) -> serde_json::Value {
             }
         }
         Yaml::String(s) => serde_json::Value::String(s.clone()),
-        Yaml::Sequence(seq) => {
-            serde_json::Value::Array(seq.iter().map(|v| yaml_to_json_depth(v, depth + 1)).collect())
-        }
+        Yaml::Sequence(seq) => serde_json::Value::Array(
+            seq.iter()
+                .map(|v| yaml_to_json_depth(v, depth + 1))
+                .collect(),
+        ),
         Yaml::Mapping(m) => {
             let mut obj = serde_json::Map::new();
             for (k, v) in m {
@@ -215,7 +217,9 @@ pub fn parse_node(content: &str, rel_path: &Path) -> Result<Node, ParseError> {
     let note = get(map, "note").and_then(as_string);
     let description = get(map, "description").and_then(as_string);
     let tags = get(map, "tags").map(as_string_list).unwrap_or_default();
-    let raw_source = get(map, "raw_source").map(as_string_list).unwrap_or_default();
+    let raw_source = get(map, "raw_source")
+        .map(as_string_list)
+        .unwrap_or_default();
     let timestamp = get(map, "timestamp").and_then(as_string);
 
     // --- edges ---
@@ -249,8 +253,20 @@ pub fn parse_node(content: &str, rel_path: &Path) -> Result<Node, ParseError> {
 
     // --- preserve any unrecognized top-level keys ---
     let known: [&str; 14] = [
-        "type", "identifier", "title", "id", "subtype", "synonyms", "xref", "in_taxon", "note",
-        "description", "tags", "raw_source", "timestamp", "edges",
+        "type",
+        "identifier",
+        "title",
+        "id",
+        "subtype",
+        "synonyms",
+        "xref",
+        "in_taxon",
+        "note",
+        "description",
+        "tags",
+        "raw_source",
+        "timestamp",
+        "edges",
     ];
     let mut extra: BTreeMap<String, serde_json::Value> = BTreeMap::new();
     for (k, v) in map {
@@ -344,7 +360,9 @@ fn parse_edge(item: &Yaml) -> Option<Edge> {
         primary_source,
         negated,
         direction: get(m, "direction").and_then(as_string),
-        publications: get(m, "publications").map(as_string_list).unwrap_or_default(),
+        publications: get(m, "publications")
+            .map(as_string_list)
+            .unwrap_or_default(),
         stats,
         qualifiers,
         note,

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Analyze BioOKF Network"
+  short_description: "Compute topology and evidence timelines"
+  default_prompt: "Use $analyze-biookf-network to analyze this knowledge base."

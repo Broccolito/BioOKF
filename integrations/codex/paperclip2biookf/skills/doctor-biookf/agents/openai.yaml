@@ -1,0 +1,4 @@
+interface:
+  display_name: "BioOKF Doctor"
+  short_description: "Evidence-backed transactional KB revision"
+  default_prompt: "Use BioOKF Doctor to inspect and safely revise the selected knowledge base."

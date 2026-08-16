@@ -1,0 +1,12 @@
+{
+  "name": "biookf-local",
+  "description": "Machine-local BioOKF and Paperclip workflows for Claude Code.",
+  "owner": {"name": "BioOKF"},
+  "plugins": [
+    {
+      "name": "paperclip2biookf",
+      "source": "./paperclip2biookf",
+      "description": "Paperclip and local-subscription workflows for BioOKF Studio"
+    }
+  ]
+}
