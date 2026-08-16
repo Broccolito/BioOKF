@@ -1093,7 +1093,20 @@ fn tool_on_path(exe_name: &str) -> Option<String> {
         Path::new("/opt/homebrew/bin").join(exe_name),
     ];
     if let Some(home) = std::env::var_os("HOME") {
-        candidates.push(PathBuf::from(home).join(".cargo/bin").join(exe_name));
+        let home = PathBuf::from(home);
+        candidates.push(home.join(".cargo/bin").join(exe_name));
+        candidates.push(home.join(".local/bin").join(exe_name));
+        if cfg!(target_os = "macos") {
+            let python_root = home.join("Library/Python");
+            if let Ok(entries) = std::fs::read_dir(python_root) {
+                let mut python_bins = entries
+                    .flatten()
+                    .map(|entry| entry.path().join("bin").join(exe_name))
+                    .collect::<Vec<_>>();
+                python_bins.sort_by(|a, b| b.cmp(a));
+                candidates.extend(python_bins);
+            }
+        }
     }
     for cand in candidates {
         if cand.exists() {
