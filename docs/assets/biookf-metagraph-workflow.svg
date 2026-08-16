@@ -18,10 +18,6 @@
     </style>
   </defs>
 
-  <text x="45" y="44" class="eyebrow">BIOOKF KNOWLEDGE GRAPH</text>
-  <text x="45" y="69" class="subtitle">15 symbolic node types · representative structural, mechanistic, clinical and provenance edges</text>
-  <g transform="translate(1150 45)"><line class="edge main" x1="0" y1="0" x2="38" y2="0" marker-end="none"/><text class="key" x="48" y="4">positive</text><line class="edge neg" x1="122" y1="0" x2="160" y2="0" marker-end="none"/><text class="key" x="170" y="4">refuted</text><line class="edge prov" x1="245" y1="0" x2="283" y2="0" marker-end="none"/><text class="key" x="293" y="4">provenance</text></g>
-
   <g aria-label="Dense positive graph edges">
     <path class="edge main" d="M447 194 Q518 219 579 257"/><text class="edge-label" x="515" y="213">part_of</text>
     <path class="edge main" d="M617 288 Q675 353 719 408"/><text class="edge-label" x="663" y="348">encodes</text>
