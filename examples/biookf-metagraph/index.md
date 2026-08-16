@@ -12,6 +12,10 @@ map, not a replacement for the normative domain/range guidance in `SCHEMA.md`.
 
 ![BioOKF force-directed metagraph mockup](../../docs/assets/biookf-metagraph-mockup.svg)
 
+## Compact workflow figure
+
+![BioOKF compact 15-node workflow metagraph](../../docs/assets/biookf-metagraph-workflow.svg)
+
 ## Complete predicate overview
 
 ![BioOKF metagraph](../../docs/assets/biookf-metagraph.svg)
