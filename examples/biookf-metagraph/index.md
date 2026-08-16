@@ -8,6 +8,8 @@ map, not a replacement for the normative domain/range guidance in `SCHEMA.md`.
 `Phenotype (alternative)` is a second Phenotype instance used only to demonstrate
 `not_has_phenotype` without asserting both polarities for the same subject/object pair.
 
+![BioOKF metagraph](../../docs/assets/biookf-metagraph.svg)
+
 <!-- bokf:index:start -->
 ## Identifier registry
 
