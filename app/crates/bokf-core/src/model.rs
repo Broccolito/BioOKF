@@ -47,11 +47,34 @@ pub enum NodeType {
 
 /// The canonical 28 type names, in spec order.
 pub const NODE_TYPES: [&str; 28] = [
-    "Gene", "Molecule", "MolecularClass", "Variant", "SequenceFeature", "Structure", "Anatomy",
-    "CellType", "Organism", "BiologicalPathway", "BiologicalFunction", "Disease", "Phenotype",
-    "BiomedicalMeasure", "MethodOrProcedure", "Exposure", "SocialFactor", "Food", "Device",
-    "MaterialSample", "Publication", "Study", "Dataset", "Agent", "Population",
-    "GeographicLocation", "Concept", "Other",
+    "Gene",
+    "Molecule",
+    "MolecularClass",
+    "Variant",
+    "SequenceFeature",
+    "Structure",
+    "Anatomy",
+    "CellType",
+    "Organism",
+    "BiologicalPathway",
+    "BiologicalFunction",
+    "Disease",
+    "Phenotype",
+    "BiomedicalMeasure",
+    "MethodOrProcedure",
+    "Exposure",
+    "SocialFactor",
+    "Food",
+    "Device",
+    "MaterialSample",
+    "Publication",
+    "Study",
+    "Dataset",
+    "Agent",
+    "Population",
+    "GeographicLocation",
+    "Concept",
+    "Other",
 ];
 
 /// Source-node types that may serve as a `primary_source` / `reported_in` target.
@@ -151,9 +174,10 @@ impl NodeType {
     /// Family used for hue grouping in the visualizer.
     pub fn category(&self) -> &'static str {
         match self {
-            NodeType::Gene | NodeType::Variant | NodeType::SequenceFeature | NodeType::Structure => {
-                "genomic"
-            }
+            NodeType::Gene
+            | NodeType::Variant
+            | NodeType::SequenceFeature
+            | NodeType::Structure => "genomic",
             NodeType::Molecule
             | NodeType::MolecularClass
             | NodeType::BiologicalPathway
@@ -257,27 +281,68 @@ pub enum Predicate {
 }
 
 pub const PREDICATES: [&str; 35] = [
-    "is_a", "part_of", "member_of", "derives_from", "located_in", "expressed_in", "encodes",
-    "interacts_with", "binds", "regulates", "catalyzes", "converts_to", "participates_in", "causes",
-    "predisposes_to", "treats", "prevents", "contraindicated_in", "affects_response_to",
-    "has_phenotype", "measures", "associated_with", "used_to_study", "reported_in",
+    "is_a",
+    "part_of",
+    "member_of",
+    "derives_from",
+    "located_in",
+    "expressed_in",
+    "encodes",
+    "interacts_with",
+    "binds",
+    "regulates",
+    "catalyzes",
+    "converts_to",
+    "participates_in",
+    "causes",
+    "predisposes_to",
+    "treats",
+    "prevents",
+    "contraindicated_in",
+    "affects_response_to",
+    "has_phenotype",
+    "measures",
+    "associated_with",
+    "used_to_study",
+    "reported_in",
     // negative (polarity) predicates: canonical `not_<X>` for the 11 negatable predicates
-    "not_binds", "not_interacts_with", "not_causes", "not_predisposes_to", "not_prevents",
-    "not_treats", "not_affects_response_to", "not_associated_with", "not_expressed_in",
-    "not_regulates", "not_has_phenotype",
+    "not_binds",
+    "not_interacts_with",
+    "not_causes",
+    "not_predisposes_to",
+    "not_prevents",
+    "not_treats",
+    "not_affects_response_to",
+    "not_associated_with",
+    "not_expressed_in",
+    "not_regulates",
+    "not_has_phenotype",
 ];
 
 /// The positive predicates that may carry a negation (curated; canonical form `not_<X>`).
 /// Negating structural/definitional/provenance predicates is meaningless under
 /// open-world semantics, so only these effect predicates are negatable.
 pub const NEGATABLE: [&str; 11] = [
-    "binds", "interacts_with", "causes", "predisposes_to", "prevents", "treats",
-    "affects_response_to", "associated_with", "expressed_in", "regulates", "has_phenotype",
+    "binds",
+    "interacts_with",
+    "causes",
+    "predisposes_to",
+    "prevents",
+    "treats",
+    "affects_response_to",
+    "associated_with",
+    "expressed_in",
+    "regulates",
+    "has_phenotype",
 ];
 
 /// The symmetric predicates (rendered without a direction cue): positives + their negatives.
-pub const SYMMETRIC: [&str; 4] =
-    ["interacts_with", "associated_with", "not_interacts_with", "not_associated_with"];
+pub const SYMMETRIC: [&str; 4] = [
+    "interacts_with",
+    "associated_with",
+    "not_interacts_with",
+    "not_associated_with",
+];
 
 /// Outcome of parsing a possibly-inverse predicate token.
 pub struct PredicateParse {
@@ -292,8 +357,14 @@ impl Predicate {
     /// inverse aliases map to their forward predicate with `reversed = true`.
     pub fn parse(raw: &str) -> PredicateParse {
         let p = raw.trim();
-        let fwd = |predicate| PredicateParse { predicate, reversed: false };
-        let rev = |predicate| PredicateParse { predicate, reversed: true };
+        let fwd = |predicate| PredicateParse {
+            predicate,
+            reversed: false,
+        };
+        let rev = |predicate| PredicateParse {
+            predicate,
+            reversed: true,
+        };
         match p {
             "is_a" => fwd(Predicate::IsA),
             "part_of" => fwd(Predicate::PartOf),

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">BioOKF metagraph</title>
+  <desc id="desc">The 28 BioOKF node types grouped into seven families, representative typed edges, and the complete vocabulary of 24 positive and 11 negative predicates.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#747A85"/></marker>
+    <marker id="arrow-neg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#B54A42"/></marker>
+    <style>
+      .family{fill:#FAFAFB;stroke:#E1E3E7;stroke-width:1.5}.family-title{font:600 14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:1.5px;fill:#8B8EA0}.node{stroke:#343941;stroke-opacity:.42;stroke-width:1.3}.node-label{font:600 14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#20242A;text-anchor:middle}.edge{fill:none;stroke:#747A85;stroke-width:1.6;stroke-opacity:.58;marker-end:url(#arrow)}.edge.neg{stroke:#B54A42;stroke-dasharray:7 5;marker-end:url(#arrow-neg)}.edge-label{font:500 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#4E5560;text-anchor:middle;paint-order:stroke;stroke:#FFF;stroke-width:5px;stroke-linejoin:round}.edge-label.neg{fill:#A3403B}.legend-title{font:700 22px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#20242A}.legend-head{font:700 13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:1px;fill:#777D89}.legend-text{font:500 14px ui-monospace,SFMono-Regular,Menlo,monospace;fill:#353B44}.legend-neg{fill:#A3403B}.small{font:500 12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:#777D89}
+    </style>
+  </defs>
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <text x="42" y="28" class="small">BIOOKF v0.5 · 28 NODE TYPES · 35 PREDICATES · SUBJECT → OBJECT</text>
+
+  <g aria-label="Node type families">
+    <rect class="family" x="40" y="45" width="260" height="250" rx="16"/><text class="family-title" x="58" y="72">GENOMIC</text>
+    <rect class="family" x="325" y="45" width="395" height="250" rx="16"/><text class="family-title" x="343" y="72">MOLECULAR &amp; PROCESS</text>
+    <rect class="family" x="745" y="45" width="365" height="250" rx="16"/><text class="family-title" x="763" y="72">ANATOMY &amp; ORGANISM</text>
+    <rect class="family" x="40" y="320" width="260" height="275" rx="16"/><text class="family-title" x="58" y="347">PHYSICAL</text>
+    <rect class="family" x="325" y="320" width="285" height="275" rx="16"/><text class="family-title" x="343" y="347">EXPOSOME</text>
+    <rect class="family" x="635" y="320" width="475" height="275" rx="16"/><text class="family-title" x="653" y="347">CLINICAL</text>
+    <rect class="family" x="40" y="620" width="1070" height="330" rx="16"/><text class="family-title" x="58" y="647">PROVENANCE &amp; CONTEXT</text>
+  </g>
+
+  <g aria-label="Representative positive edges">
+    <path class="edge" d="M123 103 C220 76 330 76 377 103"/><text class="edge-label" x="255" y="78">encodes</text>
+    <path class="edge" d="M117 119 C300 250 670 190 895 113"/><text class="edge-label" x="508" y="218">expressed_in</text>
+    <path class="edge" d="M205 105 C170 85 140 85 123 103"/><text class="edge-label" x="163" y="88">part_of</text>
+    <path class="edge" d="M213 127 C280 280 490 355 691 389"/><text class="edge-label" x="438" y="319">predisposes_to</text>
+    <path class="edge" d="M110 188 C113 163 112 142 108 126"/><text class="edge-label" x="73" y="159">regulates</text>
+    <path class="edge" d="M205 209 C260 180 325 143 380 119"/><text class="edge-label" x="291" y="160">derives_from</text>
+    <path class="edge" d="M423 105 C482 87 544 87 607 105"/><text class="edge-label" x="515" y="87">member_of</text>
+    <path class="edge" d="M382 120 C300 138 215 171 124 201"/><text class="edge-label" x="255" y="157">binds</text>
+    <path class="edge" d="M398 126 C393 148 393 170 398 190"/><text class="edge-label" x="352" y="160">participates_in</text>
+    <path class="edge" d="M420 117 C480 142 548 170 608 198"/><text class="edge-label" x="518" y="151">catalyzes</text>
+    <path class="edge" d="M416 122 C515 245 605 333 692 386"/><text class="edge-label" x="578" y="292">treats</text>
+    <path class="edge" d="M410 126 C413 260 425 414 454 501"/><text class="edge-label" x="382" y="331">converts_to</text>
+    <path class="edge" d="M414 388 C510 361 607 368 691 395"/><text class="edge-label" x="551" y="366">causes</text>
+    <path class="edge" d="M481 505 C555 474 625 429 692 405"/><text class="edge-label" x="588" y="458">prevents</text>
+    <path class="edge" d="M744 400 C773 400 796 400 820 400"/><text class="edge-label" x="782" y="386">has_phenotype</text>
+    <path class="edge" d="M950 400 C880 367 805 367 744 395"/><text class="edge-label" x="850" y="355">measures</text>
+    <path class="edge" d="M846 507 C812 471 775 432 738 412"/><text class="edge-label" x="812" y="465">used_to_study</text>
+    <path class="edge" d="M186 506 C310 310 565 183 792 118"/><text class="edge-label" x="491" y="291">derives_from</text>
+    <path class="edge" d="M907 104 C884 91 850 91 833 104"/><text class="edge-label" x="870" y="87">located_in</text>
+    <path class="edge" d="M261 708 C227 690 178 690 144 708"/><text class="edge-label" x="202" y="687">used_to_study</text>
+    <path class="edge" d="M401 708 C330 530 245 295 215 129"/><text class="edge-label" x="291" y="463">used_to_study</text>
+    <path class="edge" d="M517 718 C413 718 284 718 144 718"/><text class="edge-label" x="329" y="706">reported_in</text>
+    <path class="edge" d="M1020 823 C991 800 964 780 942 745"/><text class="edge-label" x="1001" y="782">associated_with</text>
+  </g>
+
+  <g aria-label="Representative negated edges">
+    <path class="edge neg" d="M384 96 C300 54 200 54 121 96"/><text class="edge-label neg" x="253" y="52">not_binds</text>
+    <path class="edge neg" d="M419 216 C530 253 628 314 697 381"/><text class="edge-label neg" x="575" y="285">not_causes</text>
+    <path class="edge neg" d="M739 412 C769 435 798 435 827 412"/><text class="edge-label neg" x="784" y="449">not_has_phenotype</text>
+    <path class="edge neg" d="M451 505 C430 363 413 228 407 129"/><text class="edge-label neg" x="459" y="319">not_affects_response_to</text>
+    <path class="edge neg" d="M124 207 C270 240 458 234 608 211"/><text class="edge-label neg" x="369" y="247">not_regulates</text>
+  </g>
+
+  <g aria-label="Nodes">
+    <circle class="node" cx="100" cy="105" r="24" fill="#6366A8"/><text class="node-label" x="100" y="146">Gene</text>
+    <circle class="node" cx="220" cy="105" r="24" fill="#8A86C4"/><text class="node-label" x="220" y="146">Variant</text>
+    <circle class="node" cx="100" cy="210" r="24" fill="#AAA6DA"/><text class="node-label" x="100" y="251">SequenceFeature</text>
+    <circle class="node" cx="220" cy="210" r="24" fill="#7C8FC9"/><text class="node-label" x="220" y="251">Structure</text>
+    <circle class="node" cx="400" cy="105" r="24" fill="#2E8C84"/><text class="node-label" x="400" y="146">Molecule</text>
+    <circle class="node" cx="630" cy="105" r="24" fill="#5FB0A8"/><text class="node-label" x="630" y="146">MolecularClass</text>
+    <circle class="node" cx="400" cy="210" r="24" fill="#4FA38C"/><text class="node-label" x="400" y="251">BiologicalPathway</text>
+    <circle class="node" cx="630" cy="210" r="24" fill="#7CC3B0"/><text class="node-label" x="630" y="251">BiologicalFunction</text>
+    <circle class="node" cx="815" cy="105" r="24" fill="#3F9E6E"/><text class="node-label" x="815" y="146">Anatomy</text>
+    <circle class="node" cx="930" cy="105" r="24" fill="#62B889"/><text class="node-label" x="930" y="146">CellType</text>
+    <circle class="node" cx="1040" cy="105" r="24" fill="#8FCBA6"/><text class="node-label" x="1040" y="146">Organism</text>
+    <circle class="node" cx="100" cy="400" r="24" fill="#6E87A3"/><text class="node-label" x="100" y="441">Device</text>
+    <circle class="node" cx="200" cy="525" r="24" fill="#92A6BC"/><text class="node-label" x="200" y="566">MaterialSample</text>
+    <circle class="node" cx="390" cy="400" r="24" fill="#B79A52"/><text class="node-label" x="390" y="441">Exposure</text>
+    <circle class="node" cx="535" cy="400" r="24" fill="#C2A86A"/><text class="node-label" x="535" y="441">SocialFactor</text>
+    <circle class="node" cx="460" cy="525" r="24" fill="#CBB87E"/><text class="node-label" x="460" y="566">Food</text>
+    <circle class="node" cx="720" cy="400" r="24" fill="#C45B6B"/><text class="node-label" x="720" y="441">Disease</text>
+    <circle class="node" cx="850" cy="400" r="24" fill="#D98AA0"/><text class="node-label" x="850" y="441">Phenotype</text>
+    <circle class="node" cx="975" cy="400" r="24" fill="#D98C5A"/><text class="node-label" x="975" y="441">BiomedicalMeasure</text>
+    <circle class="node" cx="850" cy="530" r="24" fill="#C99750"/><text class="node-label" x="850" y="571">MethodOrProcedure</text>
+    <circle class="node" cx="120" cy="720" r="24" fill="#6B7280"/><text class="node-label" x="120" y="761">Publication</text>
+    <circle class="node" cx="280" cy="720" r="24" fill="#7A828E"/><text class="node-label" x="280" y="761">Study</text>
+    <circle class="node" cx="420" cy="720" r="24" fill="#88909C"/><text class="node-label" x="420" y="761">Dataset</text>
+    <circle class="node" cx="540" cy="720" r="24" fill="#5E6672"/><text class="node-label" x="540" y="761">Agent</text>
+    <circle class="node" cx="670" cy="830" r="24" fill="#7E8896"/><text class="node-label" x="670" y="871">Population</text>
+    <circle class="node" cx="830" cy="830" r="24" fill="#94A0A0"/><text class="node-label" x="830" y="871">GeographicLocation</text>
+    <circle class="node" cx="930" cy="720" r="24" fill="#9AA0A8"/><text class="node-label" x="930" y="761">Concept</text>
+    <circle class="node" cx="1040" cy="830" r="24" fill="#AEB2B8"/><text class="node-label" x="1040" y="871">Other</text>
+  </g>
+
+  <g transform="translate(1160 55)" aria-label="Predicate vocabulary">
+    <text class="legend-title" x="0" y="0">Predicate vocabulary</text>
+    <text class="small" x="0" y="24">Solid = positive · dashed red = refuted finding</text>
+    <text class="legend-head" x="0" y="65">STRUCTURE &amp; LOCATION</text>
+    <text class="legend-text" x="0" y="92">is_a</text><text class="legend-text" x="180" y="92">part_of</text>
+    <text class="legend-text" x="0" y="118">member_of</text><text class="legend-text" x="180" y="118">derives_from</text>
+    <text class="legend-text" x="0" y="144">located_in</text><text class="legend-text" x="180" y="144">expressed_in</text>
+    <text class="legend-head" x="0" y="188">MOLECULAR MECHANISM</text>
+    <text class="legend-text" x="0" y="215">encodes</text><text class="legend-text" x="180" y="215">interacts_with</text>
+    <text class="legend-text" x="0" y="241">binds</text><text class="legend-text" x="180" y="241">regulates</text>
+    <text class="legend-text" x="0" y="267">catalyzes</text><text class="legend-text" x="180" y="267">converts_to</text>
+    <text class="legend-text" x="0" y="293">participates_in</text>
+    <text class="legend-head" x="0" y="337">CLINICAL &amp; ASSOCIATION</text>
+    <text class="legend-text" x="0" y="364">causes</text><text class="legend-text" x="180" y="364">predisposes_to</text>
+    <text class="legend-text" x="0" y="390">treats</text><text class="legend-text" x="180" y="390">prevents</text>
+    <text class="legend-text" x="0" y="416">contraindicated_in</text>
+    <text class="legend-text" x="0" y="442">affects_response_to</text>
+    <text class="legend-text" x="0" y="468">has_phenotype</text><text class="legend-text" x="180" y="468">measures</text>
+    <text class="legend-text" x="0" y="494">associated_with</text>
+    <text class="legend-head" x="0" y="538">RESEARCH &amp; PROVENANCE</text>
+    <text class="legend-text" x="0" y="565">used_to_study</text><text class="legend-text" x="180" y="565">reported_in</text>
+    <line x1="0" y1="600" x2="390" y2="600" stroke="#E1E3E7"/>
+    <text class="legend-head legend-neg" x="0" y="634">NEGATED / REFUTED</text>
+    <text class="legend-text legend-neg" x="0" y="661">not_binds</text><text class="legend-text legend-neg" x="180" y="661">not_interacts_with</text>
+    <text class="legend-text legend-neg" x="0" y="687">not_causes</text><text class="legend-text legend-neg" x="180" y="687">not_predisposes_to</text>
+    <text class="legend-text legend-neg" x="0" y="713">not_prevents</text><text class="legend-text legend-neg" x="180" y="713">not_treats</text>
+    <text class="legend-text legend-neg" x="0" y="739">not_affects_response_to</text>
+    <text class="legend-text legend-neg" x="0" y="765">not_associated_with</text>
+    <text class="legend-text legend-neg" x="0" y="791">not_expressed_in</text><text class="legend-text legend-neg" x="180" y="791">not_regulates</text>
+    <text class="legend-text legend-neg" x="0" y="817">not_has_phenotype</text>
+    <text class="small" x="0" y="875">Illustrative metagraph — SCHEMA.md remains normative.</text>
+  </g>
+</svg>

@@ -8,9 +8,13 @@ fn ensure_repo_then_commit_roundtrip() {
     assert!(!repo.is_repo());
     repo.ensure_repo().unwrap();
     assert!(repo.is_repo());
-    let sha = repo.commit_all(ChangeKind::Manual, "initial", None).unwrap();
+    let sha = repo
+        .commit_all(ChangeKind::Manual, "initial", None)
+        .unwrap();
     assert_eq!(sha.len(), 40);
-    assert!(std::fs::read_to_string(dir.path().join(".gitignore")).unwrap().contains("raw/**/original.*"));
+    assert!(std::fs::read_to_string(dir.path().join(".gitignore"))
+        .unwrap()
+        .contains("raw/**/original.*"));
 }
 
 #[test]
@@ -27,7 +31,9 @@ fn log_parses_kind_and_restore_is_forward_only() {
     let repo = GitRepo::open(dir.path());
     repo.ensure_repo().unwrap();
     std::fs::write(dir.path().join("a.md"), "v1").unwrap();
-    let first = repo.commit_all(ChangeKind::Ingest, "add a", Some("+1 node")).unwrap();
+    let first = repo
+        .commit_all(ChangeKind::Ingest, "add a", Some("+1 node"))
+        .unwrap();
     std::fs::write(dir.path().join("a.md"), "v2").unwrap();
     std::fs::write(dir.path().join("b.md"), "new file").unwrap();
     repo.commit_all(ChangeKind::Lint, "fix a", None).unwrap();
@@ -39,8 +45,14 @@ fn log_parses_kind_and_restore_is_forward_only() {
     // restore to first: a.md becomes v1, b.md (added later) is removed, history GROWS.
     let n_before = repo.log(50).unwrap().len();
     repo.restore_to(&first, Some("roll back a")).unwrap();
-    assert_eq!(std::fs::read_to_string(dir.path().join("a.md")).unwrap(), "v1");
-    assert!(!dir.path().join("b.md").exists(), "file added after the target must be removed");
+    assert_eq!(
+        std::fs::read_to_string(dir.path().join("a.md")).unwrap(),
+        "v1"
+    );
+    assert!(
+        !dir.path().join("b.md").exists(),
+        "file added after the target must be removed"
+    );
     assert_eq!(repo.log(50).unwrap().len(), n_before + 1);
     assert_eq!(repo.log(1).unwrap()[0].kind, ChangeKind::Restore);
 }
@@ -56,9 +68,12 @@ fn txn_squashes_to_one_entry() {
     let txn = repo.begin_txn("ingest paper").unwrap();
     for i in 0..3 {
         std::fs::write(dir.path().join(format!("n{i}.md")), "x").unwrap();
-        repo.commit_all(ChangeKind::Ingest, &format!("step {i}"), None).unwrap();
+        repo.commit_all(ChangeKind::Ingest, &format!("step {i}"), None)
+            .unwrap();
     }
-    let sha = repo.commit_txn(&txn, ChangeKind::Ingest, "ingest Paper X", Some("+3 nodes")).unwrap();
+    let sha = repo
+        .commit_txn(&txn, ChangeKind::Ingest, "ingest Paper X", Some("+3 nodes"))
+        .unwrap();
     assert_eq!(sha.len(), 40);
     assert_eq!(repo.log(50).unwrap().len(), base_n + 1);
     assert_eq!(repo.log(1).unwrap()[0].summary, "ingest Paper X");
@@ -70,7 +85,14 @@ fn log_sync_appends_and_commits_atomically() {
     let dir = tempfile::tempdir().unwrap();
     std::fs::write(dir.path().join("log.md"), "# Change log\n").unwrap();
     std::fs::write(dir.path().join("seed.md"), "x").unwrap();
-    let sha = bokf_core::log_sync::log_sync(dir.path(), ChangeKind::Ingest, "first source", Some("+1 source · 5 nodes"), "2026-06-27").unwrap();
+    let sha = bokf_core::log_sync::log_sync(
+        dir.path(),
+        ChangeKind::Ingest,
+        "first source",
+        Some("+1 source · 5 nodes"),
+        "2026-06-27",
+    )
+    .unwrap();
     let log = std::fs::read_to_string(dir.path().join("log.md")).unwrap();
     assert!(log.contains("## 2026-06-27"));
     assert!(log.contains("ingest | first source"));

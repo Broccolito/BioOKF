@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paperclip-biookf-harness"
+version = "0.1.0"
+description = "A provenance-first bridge from Paperclip evidence to BioOKF Studio bundles"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Evidence Atlas"}]
+dependencies = []
+
+[project.scripts]
+pc-biookf = "paperclip_biookf.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+paperclip_biookf = ["ui/*.html"]

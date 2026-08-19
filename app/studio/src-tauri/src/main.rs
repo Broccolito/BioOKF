@@ -4,9 +4,9 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 use std::collections::HashMap;
-use std::io::{Read, Write};
+use std::io::{BufRead, BufReader, Read, Write};
 use std::path::{Path, PathBuf};
-use std::sync::atomic::{AtomicU64, Ordering};
+use std::sync::atomic::{AtomicBool, AtomicU64, Ordering};
 use std::sync::{Mutex, OnceLock};
 
 use portable_pty::{native_pty_system, Child, CommandBuilder, MasterPty, PtySize};
@@ -169,6 +169,24 @@ fn get_bundle(id: String) -> Result<serde_json::Value, String> {
 fn get_export_bundle(id: String) -> Result<serde_json::Value, String> {
     let path = resolve(&id).ok_or_else(|| format!("unknown bundle: {id}"))?;
     bokf_core::export::studio_bundle_doc(&path, None).map_err(|e| e.to_string())
+}
+
+#[tauri::command]
+async fn network_metrics(
+    id: String,
+    exclude_provenance: bool,
+) -> Result<serde_json::Value, String> {
+    let path = resolve(&id).ok_or_else(|| format!("unknown bundle: {id}"))?;
+    tauri::async_runtime::spawn_blocking(move || {
+        let bundle = bokf_core::open_bundle(&path).map_err(|e| e.to_string())?;
+        let report = bokf_core::network_metrics::analyze(
+            &bundle,
+            bokf_core::network_metrics::NetworkOptions { exclude_provenance },
+        )?;
+        serde_json::to_value(report).map_err(|e| e.to_string())
+    })
+    .await
+    .map_err(|e| format!("network metrics task failed: {e}"))?
 }
 
 #[tauri::command]
@@ -896,6 +914,25 @@ fn write_export_html(path: String, html: String) -> Result<String, String> {
     Ok(out.to_string_lossy().to_string())
 }
 
+#[tauri::command]
+fn write_network_metrics_json(path: String, content: String) -> Result<String, String> {
+    if content.len() > 64 * 1024 * 1024 {
+        return Err("metrics export is unexpectedly large".into());
+    }
+    let mut out = PathBuf::from(path);
+    if out.extension().and_then(|value| value.to_str()) != Some("json") {
+        out.set_extension("json");
+    }
+    let parent = out
+        .parent()
+        .ok_or_else(|| "export path must include a parent directory".to_string())?;
+    if !parent.is_dir() {
+        return Err("export directory does not exist".into());
+    }
+    std::fs::write(&out, content).map_err(|e| e.to_string())?;
+    Ok(out.to_string_lossy().to_string())
+}
+
 /* ---------- integrated terminal (real pseudo-terminal) ---------- */
 struct PtySession {
     master: Box<dyn MasterPty + Send>,
@@ -1056,7 +1093,20 @@ fn tool_on_path(exe_name: &str) -> Option<String> {
         Path::new("/opt/homebrew/bin").join(exe_name),
     ];
     if let Some(home) = std::env::var_os("HOME") {
-        candidates.push(PathBuf::from(home).join(".cargo/bin").join(exe_name));
+        let home = PathBuf::from(home);
+        candidates.push(home.join(".cargo/bin").join(exe_name));
+        candidates.push(home.join(".local/bin").join(exe_name));
+        if cfg!(target_os = "macos") {
+            let python_root = home.join("Library/Python");
+            if let Ok(entries) = std::fs::read_dir(python_root) {
+                let mut python_bins = entries
+                    .flatten()
+                    .map(|entry| entry.path().join("bin").join(exe_name))
+                    .collect::<Vec<_>>();
+                python_bins.sort_by(|a, b| b.cmp(a));
+                candidates.extend(python_bins);
+            }
+        }
     }
     for cand in candidates {
         if cand.exists() {
@@ -1071,6 +1121,911 @@ fn tool_on_path(exe_name: &str) -> Option<String> {
         }
     }
     None
+}
+
+// --- Paperclip → BioOKF generator (machine-local Studio integration) -------
+
+static PAPERCLIP_GENERATION_RUNNING: AtomicBool = AtomicBool::new(false);
+
+#[derive(Debug, Clone, serde::Deserialize)]
+#[serde(rename_all = "camelCase")]
+struct PaperclipGenerateRequest {
+    query: String,
+    sources: Vec<String>,
+    limit: u8,
+    kb_name: String,
+    provider: String,
+    model: Option<String>,
+    year_min: Option<u16>,
+    year_max: Option<u16>,
+    since: Option<String>,
+}
+
+fn paperclip_harness_binary() -> Option<PathBuf> {
+    if let Some(path) = std::env::var_os("PAPERCLIP2BIOOKF_BIN") {
+        let path = PathBuf::from(path);
+        if path.is_file() {
+            return Some(path);
+        }
+    }
+    tool_on_path(if cfg!(windows) {
+        "pc-biookf.exe"
+    } else {
+        "pc-biookf"
+    })
+    .map(PathBuf::from)
+}
+
+fn paperclip_workspace() -> PathBuf {
+    std::env::var_os("PAPERCLIP2BIOOKF_WORKSPACE")
+        .map(PathBuf::from)
+        .unwrap_or_else(|| config_root().join("paperclip2biookf"))
+}
+
+fn paperclip_child_path() -> String {
+    let mut paths = Vec::<PathBuf>::new();
+    if let Some(home) = std::env::var_os("HOME") {
+        let home = PathBuf::from(home);
+        paths.push(home.join(".local/bin"));
+        paths.push(home.join(".cargo/bin"));
+    }
+    paths.extend(
+        [
+            "/opt/homebrew/bin",
+            "/usr/local/bin",
+            "/usr/bin",
+            "/bin",
+            "/usr/sbin",
+            "/sbin",
+        ]
+        .into_iter()
+        .map(PathBuf::from),
+    );
+    if let Some(inherited) = std::env::var_os("PATH") {
+        paths.extend(std::env::split_paths(&inherited));
+    }
+    std::env::join_paths(paths)
+        .unwrap_or_default()
+        .to_string_lossy()
+        .to_string()
+}
+
+fn paperclip_model_catalog() -> serde_json::Value {
+    let mut codex = Vec::new();
+    if let Some(home) = std::env::var_os("HOME") {
+        let cache = PathBuf::from(home).join(".codex/models_cache.json");
+        if let Ok(raw) = std::fs::read_to_string(cache) {
+            if let Ok(value) = serde_json::from_str::<serde_json::Value>(&raw) {
+                if let Some(models) = value.get("models").and_then(|v| v.as_array()) {
+                    for model in models {
+                        if model.get("visibility").and_then(|v| v.as_str()) != Some("list") {
+                            continue;
+                        }
+                        if let Some(id) = model.get("slug").and_then(|v| v.as_str()) {
+                            codex.push(serde_json::json!({
+                                "id": id,
+                                "label": model.get("display_name").and_then(|v| v.as_str()).unwrap_or(id)
+                            }));
+                        }
+                    }
+                }
+            }
+        }
+    }
+    serde_json::json!({
+        "codex": codex,
+        "claude": [
+            {"id": "sonnet", "label": "Claude Sonnet (latest)"},
+            {"id": "opus", "label": "Claude Opus (latest)"},
+            {"id": "fable", "label": "Claude Fable (latest)"}
+        ]
+    })
+}
+
+#[tauri::command]
+fn paperclip_generator_status() -> serde_json::Value {
+    let binary = paperclip_harness_binary();
+    let doctor = binary.as_ref().and_then(|path| {
+        let output = std::process::Command::new(path)
+            .arg("doctor")
+            .env("PATH", paperclip_child_path())
+            .output()
+            .ok()?;
+        if !output.status.success() {
+            return None;
+        }
+        serde_json::from_slice::<serde_json::Value>(&output.stdout).ok()
+    });
+    serde_json::json!({
+        "installed": binary.is_some(),
+        "binary": binary.map(|p| p.to_string_lossy().to_string()),
+        "workspace": paperclip_workspace().to_string_lossy(),
+        "doctor": doctor,
+        "models": paperclip_model_catalog(),
+        "running": PAPERCLIP_GENERATION_RUNNING.load(Ordering::SeqCst),
+        "standard": "BioOKF v0.5"
+    })
+}
+
+fn validate_paperclip_request(request: &PaperclipGenerateRequest) -> Result<(), String> {
+    const SOURCES: [&str; 13] = [
+        "pmc",
+        "biorxiv",
+        "medrxiv",
+        "arxiv",
+        "abstracts",
+        "fda/us",
+        "fda/eu",
+        "fda/jp",
+        "trials/us",
+        "trials/eu",
+        "trials/jp",
+        "trials/cn",
+        "trials",
+    ];
+    if request.query.trim().is_empty() {
+        return Err("Enter a Paperclip search query".into());
+    }
+    if request.kb_name.trim().is_empty() {
+        return Err("Enter a knowledge-base name".into());
+    }
+    if request.sources.is_empty()
+        || request
+            .sources
+            .iter()
+            .any(|s| !SOURCES.contains(&s.as_str()))
+    {
+        return Err("Select at least one supported Paperclip source".into());
+    }
+    if !(1..=25).contains(&request.limit) {
+        return Err("Papers per source must be between 1 and 25".into());
+    }
+    if !matches!(request.provider.as_str(), "codex" | "claude") {
+        return Err("Choose Codex or Claude".into());
+    }
+    if let (Some(start), Some(end)) = (request.year_min, request.year_max) {
+        if start > end {
+            return Err("Start year must not exceed end year".into());
+        }
+    }
+    Ok(())
+}
+
+fn paperclip_generate_args(request: &PaperclipGenerateRequest, workspace: &Path) -> Vec<String> {
+    let mut args = vec![
+        "--workspace".into(),
+        workspace.to_string_lossy().to_string(),
+        "run".into(),
+        "--query".into(),
+        request.query.trim().into(),
+        "--limit".into(),
+        request.limit.to_string(),
+        "--kb-name".into(),
+        request.kb_name.trim().into(),
+        "--agent".into(),
+        request.provider.clone(),
+        "--register".into(),
+    ];
+    for source in &request.sources {
+        args.push("--source".into());
+        args.push(source.clone());
+    }
+    if let Some(model) = request
+        .model
+        .as_deref()
+        .map(str::trim)
+        .filter(|v| !v.is_empty())
+    {
+        args.extend(["--model".into(), model.into()]);
+    }
+    if let Some(year) = request.year_min {
+        args.extend(["--year-min".into(), year.to_string()]);
+    }
+    if let Some(year) = request.year_max {
+        args.extend(["--year-max".into(), year.to_string()]);
+    }
+    if let Some(since) = request
+        .since
+        .as_deref()
+        .map(str::trim)
+        .filter(|v| !v.is_empty())
+    {
+        args.extend(["--since".into(), since.into()]);
+    }
+    args
+}
+
+fn run_paperclip_generation(
+    app: AppHandle,
+    request: PaperclipGenerateRequest,
+) -> Result<serde_json::Value, String> {
+    validate_paperclip_request(&request)?;
+    let binary = paperclip_harness_binary().ok_or_else(|| {
+        "paperclip2bioOKF was not found; install `pc-biookf` or set PAPERCLIP2BIOOKF_BIN"
+            .to_string()
+    })?;
+    let workspace = paperclip_workspace();
+    std::fs::create_dir_all(&workspace)
+        .map_err(|e| format!("cannot create Paperclip workspace: {e}"))?;
+    let args = paperclip_generate_args(&request, &workspace);
+    let mut command = std::process::Command::new(&binary);
+    command.args(&args).env("PATH", paperclip_child_path());
+    let mut child = subscription_only_environment(&mut command)
+        .stdout(std::process::Stdio::piped())
+        .stderr(std::process::Stdio::piped())
+        .spawn()
+        .map_err(|e| format!("failed to launch {}: {e}", binary.display()))?;
+    let stderr = child
+        .stderr
+        .take()
+        .ok_or("failed to capture generator progress")?;
+    let mut progress = Vec::new();
+    for line in BufReader::new(stderr).lines() {
+        let line = line.map_err(|e| format!("failed reading generator progress: {e}"))?;
+        let _ = app.emit(
+            "paperclip2biookf-progress",
+            serde_json::json!({"message": line}),
+        );
+        progress.push(line);
+    }
+    let mut stdout = String::new();
+    child
+        .stdout
+        .take()
+        .ok_or("failed to capture generator output")?
+        .read_to_string(&mut stdout)
+        .map_err(|e| format!("failed reading generator output: {e}"))?;
+    let status = child
+        .wait()
+        .map_err(|e| format!("generator wait failed: {e}"))?;
+    if !status.success() {
+        return Err(progress
+            .last()
+            .cloned()
+            .unwrap_or_else(|| format!("paperclip2bioOKF exited with status {status}")));
+    }
+    serde_json::from_str(&stdout).map_err(|e| format!("generator returned invalid JSON: {e}"))
+}
+
+#[tauri::command]
+async fn paperclip_generate_base(
+    app: AppHandle,
+    request: PaperclipGenerateRequest,
+) -> Result<serde_json::Value, String> {
+    require_connection("paperclip")?;
+    require_subscription(&request.provider)?;
+    if PAPERCLIP_GENERATION_RUNNING
+        .compare_exchange(false, true, Ordering::SeqCst, Ordering::SeqCst)
+        .is_err()
+    {
+        return Err("A Paperclip generation is already running".into());
+    }
+    let joined =
+        tauri::async_runtime::spawn_blocking(move || run_paperclip_generation(app, request)).await;
+    PAPERCLIP_GENERATION_RUNNING.store(false, Ordering::SeqCst);
+    joined.map_err(|e| format!("Paperclip generation task failed: {e}"))?
+}
+
+// --- Local subscription connections + agent workflows --------------------
+
+static BIOOKF_AGENT_WORKFLOW_RUNNING: AtomicBool = AtomicBool::new(false);
+static BIOOKF_AGENT_TEMP_ID: AtomicU64 = AtomicU64::new(1);
+
+#[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
+#[serde(default)]
+struct LocalConnections {
+    codex: bool,
+    claude: bool,
+    paperclip: bool,
+}
+
+impl Default for LocalConnections {
+    fn default() -> Self {
+        Self {
+            codex: true,
+            claude: true,
+            paperclip: true,
+        }
+    }
+}
+
+fn connections_path() -> PathBuf {
+    config_root().join("connections.json")
+}
+
+fn load_connections() -> LocalConnections {
+    std::fs::read_to_string(connections_path())
+        .ok()
+        .and_then(|raw| serde_json::from_str(&raw).ok())
+        .unwrap_or_default()
+}
+
+fn write_connections(value: &LocalConnections) -> Result<(), String> {
+    let path = connections_path();
+    if let Some(parent) = path.parent() {
+        std::fs::create_dir_all(parent).map_err(|e| e.to_string())?;
+    }
+    let raw = serde_json::to_string_pretty(value).map_err(|e| e.to_string())?;
+    std::fs::write(path, raw + "\n").map_err(|e| e.to_string())
+}
+
+fn require_connection(name: &str) -> Result<(), String> {
+    let value = load_connections();
+    let enabled = match name {
+        "codex" => value.codex,
+        "claude" => value.claude,
+        "paperclip" => value.paperclip,
+        _ => false,
+    };
+    if enabled {
+        Ok(())
+    } else {
+        Err(format!("{name} is disabled in BioOKF Studio Connections"))
+    }
+}
+
+fn require_subscription(provider: &str) -> Result<(), String> {
+    require_connection(provider)?;
+    let status = paperclip_generator_status();
+    let agent = status
+        .get("doctor")
+        .and_then(|value| value.get("agents"))
+        .and_then(|value| value.get(provider))
+        .ok_or_else(|| format!("could not inspect {provider} authentication"))?;
+    let authenticated = agent.get("authenticated").and_then(|value| value.as_bool()) == Some(true);
+    let method = agent
+        .get("auth_method")
+        .and_then(|value| value.as_str())
+        .unwrap_or("");
+    let subscription = match provider {
+        "codex" => method == "ChatGPT subscription",
+        "claude" => {
+            method == "claude.ai"
+                && agent
+                    .get("subscription_type")
+                    .and_then(|value| value.as_str())
+                    .is_some_and(|value| !value.is_empty())
+        }
+        _ => false,
+    };
+    if authenticated && subscription {
+        Ok(())
+    } else {
+        Err(format!(
+            "{provider} is not authenticated with a supported local subscription; sign in with the native CLI, then refresh Connections"
+        ))
+    }
+}
+
+fn subscription_only_environment(
+    command: &mut std::process::Command,
+) -> &mut std::process::Command {
+    for name in [
+        "OPENAI_API_KEY",
+        "CODEX_API_KEY",
+        "ANTHROPIC_API_KEY",
+        "CLAUDE_CODE_USE_BEDROCK",
+        "CLAUDE_CODE_USE_VERTEX",
+        "CLAUDE_CODE_USE_FOUNDRY",
+        "AWS_BEARER_TOKEN_BEDROCK",
+        "ANTHROPIC_VERTEX_PROJECT_ID",
+    ] {
+        command.env_remove(name);
+    }
+    command
+}
+
+#[tauri::command]
+fn local_connections_status() -> serde_json::Value {
+    let configured = load_connections();
+    let generator = paperclip_generator_status();
+    serde_json::json!({
+        "configured": configured,
+        "detected": generator.get("doctor").cloned().unwrap_or(serde_json::Value::Null),
+        "models": paperclip_model_catalog(),
+        "settingsPath": connections_path().to_string_lossy(),
+    })
+}
+
+#[tauri::command]
+fn save_local_connections(connections: LocalConnections) -> Result<serde_json::Value, String> {
+    write_connections(&connections)?;
+    Ok(local_connections_status())
+}
+
+#[derive(Debug, Clone, serde::Deserialize)]
+#[serde(rename_all = "camelCase")]
+struct ChatMessage {
+    role: String,
+    content: String,
+}
+
+#[derive(Debug, Clone, serde::Deserialize)]
+#[serde(rename_all = "camelCase")]
+struct KnowledgeChatRequest {
+    base_id: String,
+    provider: String,
+    model: Option<String>,
+    question: String,
+    #[serde(default)]
+    history: Vec<ChatMessage>,
+}
+
+#[derive(Debug, Clone, serde::Deserialize)]
+#[serde(rename_all = "camelCase")]
+struct DoctorKnowledgeRequest {
+    base_id: String,
+    provider: String,
+    model: Option<String>,
+    instruction: String,
+    #[serde(default)]
+    history: Vec<ChatMessage>,
+}
+
+fn validate_agent(provider: &str, model: Option<&str>) -> Result<(), String> {
+    if !matches!(provider, "codex" | "claude") {
+        return Err("Choose Codex or Claude".into());
+    }
+    require_subscription(provider)?;
+    if model.is_some_and(|value| value.len() > 160) {
+        return Err("Model identifier is too long".into());
+    }
+    Ok(())
+}
+
+fn chat_context(base_id: &str, question: &str) -> Result<(PathBuf, String, usize), String> {
+    let path = resolve(base_id).ok_or_else(|| format!("unknown bundle: {base_id}"))?;
+    let bundle = bokf_core::open_bundle(&path).map_err(|e| e.to_string())?;
+    let hits = bokf_core::SearchIndex::build(&bundle).search(question, 14);
+    let mut wanted = std::collections::HashSet::new();
+    for hit in &hits {
+        wanted.insert(hit.identifier.clone());
+    }
+    if wanted.is_empty() {
+        wanted.extend(
+            bundle
+                .nodes
+                .iter()
+                .take(10)
+                .map(|node| node.identifier.clone()),
+        );
+    }
+    let first_hop: Vec<String> = wanted.iter().cloned().collect();
+    for identifier in first_hop {
+        if let Some(index) = bundle.by_identifier.get(&identifier) {
+            for edge in bundle.nodes[*index].edges.iter().take(16) {
+                if wanted.len() >= 36 {
+                    break;
+                }
+                wanted.insert(edge.object.clone());
+                if let Some(source) = &edge.primary_source {
+                    wanted.insert(source.clone());
+                }
+            }
+        }
+    }
+    let selected: Vec<&bokf_core::Node> = bundle
+        .nodes
+        .iter()
+        .filter(|node| wanted.contains(&node.identifier))
+        .take(36)
+        .collect();
+    let value = serde_json::json!({
+        "knowledge_base": base_id,
+        "retrieval_query": question,
+        "retrieval_hits": hits,
+        "nodes": selected,
+    });
+    let mut raw = serde_json::to_string_pretty(&value).map_err(|e| e.to_string())?;
+    if raw.len() > 300_000 {
+        raw.truncate(300_000);
+    }
+    Ok((path, raw, selected.len()))
+}
+
+fn subscription_prompt(
+    provider: &str,
+    model: Option<&str>,
+    cwd: &Path,
+    prompt: &str,
+) -> Result<String, String> {
+    validate_agent(provider, model)?;
+    if provider == "codex" {
+        let id = BIOOKF_AGENT_TEMP_ID.fetch_add(1, Ordering::SeqCst);
+        let output =
+            std::env::temp_dir().join(format!("biookf-chat-{}-{id}.txt", std::process::id()));
+        let mut command = std::process::Command::new("codex");
+        command.args([
+            "exec",
+            "--ephemeral",
+            "--skip-git-repo-check",
+            "--ignore-user-config",
+            "--ignore-rules",
+            "--sandbox",
+            "read-only",
+            "--cd",
+        ]);
+        command
+            .arg(cwd)
+            .arg("--output-last-message")
+            .arg(&output)
+            .args(["--color", "never"]);
+        if let Some(model) = model.filter(|value| !value.trim().is_empty()) {
+            command.arg("--model").arg(model);
+        }
+        command.arg(prompt).env("PATH", paperclip_child_path());
+        let completed = subscription_only_environment(&mut command)
+            .output()
+            .map_err(|e| format!("failed to launch Codex: {e}"))?;
+        if !completed.status.success() {
+            return Err(format!(
+                "Codex failed: {}",
+                String::from_utf8_lossy(&completed.stderr).trim()
+            ));
+        }
+        let answer = std::fs::read_to_string(&output)
+            .map_err(|e| format!("Codex returned no answer: {e}"))?;
+        let _ = std::fs::remove_file(output);
+        return Ok(answer.trim().to_string());
+    }
+
+    let mut command = std::process::Command::new("claude");
+    command.args([
+        "--print",
+        "--no-session-persistence",
+        "--safe-mode",
+        "--permission-mode",
+        "dontAsk",
+        "--tools",
+        "",
+        "--output-format",
+        "text",
+    ]);
+    if let Some(model) = model.filter(|value| !value.trim().is_empty()) {
+        command.arg("--model").arg(model);
+    }
+    command.current_dir(cwd).env("PATH", paperclip_child_path());
+    let mut child = subscription_only_environment(&mut command)
+        .stdin(std::process::Stdio::piped())
+        .stdout(std::process::Stdio::piped())
+        .stderr(std::process::Stdio::piped())
+        .spawn()
+        .map_err(|e| format!("failed to launch Claude: {e}"))?;
+    child
+        .stdin
+        .take()
+        .ok_or("failed to open Claude input")?
+        .write_all(prompt.as_bytes())
+        .map_err(|e| format!("failed to send prompt to Claude: {e}"))?;
+    let completed = child.wait_with_output().map_err(|e| e.to_string())?;
+    if !completed.status.success() {
+        return Err(format!(
+            "Claude failed: {}",
+            String::from_utf8_lossy(&completed.stderr).trim()
+        ));
+    }
+    Ok(String::from_utf8_lossy(&completed.stdout)
+        .trim()
+        .to_string())
+}
+
+fn run_knowledge_chat(request: KnowledgeChatRequest) -> Result<serde_json::Value, String> {
+    if request.question.trim().is_empty() {
+        return Err("Enter a question for the selected knowledge base".into());
+    }
+    if request.question.len() > 12_000 {
+        return Err("Question is too long".into());
+    }
+    validate_agent(&request.provider, request.model.as_deref())?;
+    let (path, context, context_nodes) = chat_context(&request.base_id, &request.question)?;
+    let history = request
+        .history
+        .iter()
+        .rev()
+        .take(8)
+        .collect::<Vec<_>>()
+        .into_iter()
+        .rev()
+        .map(|message| format!("{}: {}", message.role, message.content))
+        .collect::<Vec<_>>()
+        .join("\n");
+    let prompt = format!(
+        "You are BioOKF Studio's knowledge-base analyst. Answer only from the supplied retrieved BioOKF nodes and their edges. Distinguish explicit evidence, statistical association, prediction and absence of evidence. Preserve negative findings and contradictions. Cite supporting node identifiers in square brackets and, when present, include evidence_url values. If the retrieved context is insufficient, say exactly what is missing. Do not use external knowledge or access the network.\n\nCONVERSATION\n{history}\n\nQUESTION\n{}\n\nRETRIEVED BIOOKF CONTEXT\n{context}",
+        request.question.trim()
+    );
+    let answer = subscription_prompt(&request.provider, request.model.as_deref(), &path, &prompt)?;
+    Ok(serde_json::json!({
+        "answer": answer,
+        "baseId": request.base_id,
+        "provider": request.provider,
+        "model": request.model.unwrap_or_else(|| "subscription default".into()),
+        "contextNodes": context_nodes,
+    }))
+}
+
+#[tauri::command]
+async fn chat_with_knowledge_base(
+    request: KnowledgeChatRequest,
+) -> Result<serde_json::Value, String> {
+    tauri::async_runtime::spawn_blocking(move || run_knowledge_chat(request))
+        .await
+        .map_err(|e| format!("knowledge chat task failed: {e}"))?
+}
+
+#[tauri::command]
+async fn doctor_knowledge_base(
+    app: AppHandle,
+    request: DoctorKnowledgeRequest,
+) -> Result<serde_json::Value, String> {
+    let instruction = request.instruction.trim();
+    if instruction.is_empty() {
+        return Err("Tell Doctor what to inspect or revise".into());
+    }
+    if instruction.len() > 12_000 {
+        return Err("Doctor instruction is too long".into());
+    }
+    validate_agent(&request.provider, request.model.as_deref())?;
+    let bundle =
+        resolve(&request.base_id).ok_or_else(|| format!("unknown bundle: {}", request.base_id))?;
+    if BIOOKF_AGENT_WORKFLOW_RUNNING
+        .compare_exchange(false, true, Ordering::SeqCst, Ordering::SeqCst)
+        .is_err()
+    {
+        return Err("Another BioOKF agent workflow is already running".into());
+    }
+    let history = request
+        .history
+        .iter()
+        .rev()
+        .take(6)
+        .collect::<Vec<_>>()
+        .into_iter()
+        .rev()
+        .map(|message| format!("{}: {}", message.role, message.content))
+        .collect::<Vec<_>>()
+        .join("\n");
+    let contextual_instruction = if history.is_empty() {
+        instruction.to_string()
+    } else {
+        format!(
+            "Prior Doctor conversation (context only):\n{history}\n\nCurrent revision request:\n{instruction}"
+        )
+    };
+    let mut args = vec![
+        "doctor".into(),
+        "--bundle".into(),
+        bundle.to_string_lossy().to_string(),
+        "--workspace".into(),
+        paperclip_workspace().to_string_lossy().to_string(),
+        "--instruction".into(),
+        contextual_instruction,
+        "--provider".into(),
+        request.provider,
+    ];
+    if let Some(model) = request.model.filter(|value| !value.trim().is_empty()) {
+        args.extend(["--model".into(), model]);
+    }
+    let joined = tauri::async_runtime::spawn_blocking(move || run_agent_workflow(app, args)).await;
+    BIOOKF_AGENT_WORKFLOW_RUNNING.store(false, Ordering::SeqCst);
+    joined.map_err(|e| format!("Doctor workflow failed: {e}"))?
+}
+
+#[derive(Debug, Clone, serde::Deserialize)]
+#[serde(rename_all = "camelCase")]
+struct LocalKnowledgeRequest {
+    source_path: String,
+    kb_name: String,
+    provider: String,
+    model: Option<String>,
+    max_files: Option<u8>,
+}
+
+#[derive(Debug, Clone, serde::Deserialize)]
+#[serde(rename_all = "camelCase")]
+struct MergeKnowledgeRequest {
+    base_ids: Vec<String>,
+    kb_name: String,
+    provider: String,
+    model: Option<String>,
+}
+
+fn workflow_helper(app: &AppHandle) -> Result<PathBuf, String> {
+    let source = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("resources/agent_workflows.py");
+    if source.is_file() {
+        return Ok(source);
+    }
+    let resource = app
+        .path()
+        .resource_dir()
+        .map_err(|e| format!("cannot resolve Studio resources: {e}"))?;
+    for candidate in [
+        resource.join("resources/agent_workflows.py"),
+        resource.join("agent_workflows.py"),
+    ] {
+        if candidate.is_file() {
+            return Ok(candidate);
+        }
+    }
+    Err("BioOKF local workflow helper is missing from this build".into())
+}
+
+fn workflow_python() -> Option<PathBuf> {
+    if let Some(path) = std::env::var_os("PAPERCLIP2BIOOKF_PYTHON") {
+        let path = PathBuf::from(path);
+        if path.is_file() {
+            return Some(path);
+        }
+    }
+    if let Some(harness) = paperclip_harness_binary() {
+        if let Ok(content) = std::fs::read_to_string(harness) {
+            if let Some(interpreter) = content
+                .lines()
+                .next()
+                .and_then(|line| line.strip_prefix("#!"))
+                .map(str::trim)
+                .filter(|value| !value.is_empty())
+            {
+                let path = PathBuf::from(interpreter);
+                if path.is_file() {
+                    return Some(path);
+                }
+            }
+        }
+    }
+    tool_on_path(if cfg!(windows) {
+        "python.exe"
+    } else {
+        "python3"
+    })
+    .map(PathBuf::from)
+}
+
+fn run_agent_workflow(app: AppHandle, args: Vec<String>) -> Result<serde_json::Value, String> {
+    let helper = workflow_helper(&app)?;
+    let python = workflow_python().ok_or_else(|| {
+        "subscription workflow Python is missing; set PAPERCLIP2BIOOKF_PYTHON or install pc-biookf"
+            .to_string()
+    })?;
+    let mut command = std::process::Command::new(&python);
+    command
+        .arg(helper)
+        .args(args)
+        .env("PATH", paperclip_child_path());
+    let mut child = subscription_only_environment(&mut command)
+        .stdout(std::process::Stdio::piped())
+        .stderr(std::process::Stdio::piped())
+        .spawn()
+        .map_err(|e| format!("failed to launch BioOKF agent workflow: {e}"))?;
+    let stderr = child
+        .stderr
+        .take()
+        .ok_or("failed to capture workflow progress")?;
+    let mut progress_lines = Vec::new();
+    for line in BufReader::new(stderr).lines() {
+        let line = line.map_err(|e| format!("failed reading workflow progress: {e}"))?;
+        let _ = app.emit(
+            "biookf-agent-progress",
+            serde_json::json!({"message": line}),
+        );
+        progress_lines.push(line);
+    }
+    let mut stdout = String::new();
+    child
+        .stdout
+        .take()
+        .ok_or("failed to capture workflow result")?
+        .read_to_string(&mut stdout)
+        .map_err(|e| e.to_string())?;
+    let status = child.wait().map_err(|e| e.to_string())?;
+    let value: serde_json::Value = serde_json::from_str(stdout.trim())
+        .map_err(|e| format!("workflow returned invalid JSON: {e}"))?;
+    if !status.success() || value.get("ok").and_then(|v| v.as_bool()) != Some(true) {
+        return Err(value
+            .get("error")
+            .and_then(|v| v.as_str())
+            .map(str::to_string)
+            .or_else(|| progress_lines.last().cloned())
+            .unwrap_or_else(|| format!("workflow exited with {status}")));
+    }
+    Ok(value)
+}
+
+fn validate_kb_name(value: &str) -> Result<(), String> {
+    if value.trim().is_empty() {
+        Err("Enter a knowledge-base name".into())
+    } else if value.len() > 160 {
+        Err("Knowledge-base name is too long".into())
+    } else {
+        Ok(())
+    }
+}
+
+#[tauri::command]
+async fn create_local_knowledge_base(
+    app: AppHandle,
+    request: LocalKnowledgeRequest,
+) -> Result<serde_json::Value, String> {
+    validate_kb_name(&request.kb_name)?;
+    validate_agent(&request.provider, request.model.as_deref())?;
+    let source = PathBuf::from(&request.source_path)
+        .canonicalize()
+        .map_err(|e| format!("invalid local papers folder: {e}"))?;
+    if !source.is_dir() {
+        return Err("Select a local papers folder".into());
+    }
+    if BIOOKF_AGENT_WORKFLOW_RUNNING
+        .compare_exchange(false, true, Ordering::SeqCst, Ordering::SeqCst)
+        .is_err()
+    {
+        return Err("Another BioOKF agent workflow is already running".into());
+    }
+    let args = vec![
+        "local".into(),
+        "--source".into(),
+        source.to_string_lossy().to_string(),
+        "--workspace".into(),
+        paperclip_workspace().to_string_lossy().to_string(),
+        "--name".into(),
+        request.kb_name,
+        "--provider".into(),
+        request.provider,
+        "--max-files".into(),
+        request.max_files.unwrap_or(25).clamp(1, 50).to_string(),
+    ];
+    let mut args = args;
+    if let Some(model) = request.model.filter(|value| !value.trim().is_empty()) {
+        args.extend(["--model".into(), model]);
+    }
+    let joined = tauri::async_runtime::spawn_blocking(move || run_agent_workflow(app, args)).await;
+    BIOOKF_AGENT_WORKFLOW_RUNNING.store(false, Ordering::SeqCst);
+    joined.map_err(|e| format!("local knowledge workflow failed: {e}"))?
+}
+
+#[tauri::command]
+async fn merge_knowledge_bases(
+    app: AppHandle,
+    request: MergeKnowledgeRequest,
+) -> Result<serde_json::Value, String> {
+    validate_kb_name(&request.kb_name)?;
+    validate_agent(&request.provider, request.model.as_deref())?;
+    if request.base_ids.len() < 2 {
+        return Err("Select at least two knowledge bases to merge".into());
+    }
+    let mut paths = Vec::new();
+    let mut seen = std::collections::HashSet::new();
+    for id in &request.base_ids {
+        if !seen.insert(id) {
+            continue;
+        }
+        paths.push(resolve(id).ok_or_else(|| format!("unknown bundle: {id}"))?);
+    }
+    if paths.len() < 2 {
+        return Err("Select at least two distinct knowledge bases".into());
+    }
+    if BIOOKF_AGENT_WORKFLOW_RUNNING
+        .compare_exchange(false, true, Ordering::SeqCst, Ordering::SeqCst)
+        .is_err()
+    {
+        return Err("Another BioOKF agent workflow is already running".into());
+    }
+    let mut args = vec![
+        "merge".into(),
+        "--workspace".into(),
+        paperclip_workspace().to_string_lossy().to_string(),
+        "--name".into(),
+        request.kb_name,
+        "--provider".into(),
+        request.provider,
+    ];
+    if let Some(model) = request.model.filter(|value| !value.trim().is_empty()) {
+        args.extend(["--model".into(), model]);
+    }
+    for path in paths {
+        args.extend(["--input".into(), path.to_string_lossy().to_string()]);
+    }
+    let joined = tauri::async_runtime::spawn_blocking(move || run_agent_workflow(app, args)).await;
+    BIOOKF_AGENT_WORKFLOW_RUNNING.store(false, Ordering::SeqCst);
+    joined.map_err(|e| format!("merge workflow failed: {e}"))?
 }
 
 fn bokf_on_path() -> Option<String> {
@@ -1901,6 +2856,7 @@ fn main() {
             remove_base,
             get_bundle,
             get_export_bundle,
+            network_metrics,
             get_node_file,
             lint_bundle,
             search_bundle,
@@ -1913,11 +2869,20 @@ fn main() {
             reveal_in_finder,
             open_base_folder,
             write_export_html,
+            write_network_metrics_json,
             term_open,
             term_write,
             term_resize,
             term_close,
             source_info,
+            paperclip_generator_status,
+            paperclip_generate_base,
+            local_connections_status,
+            save_local_connections,
+            chat_with_knowledge_base,
+            doctor_knowledge_base,
+            create_local_knowledge_base,
+            merge_knowledge_bases,
             cli_status,
             install_cli,
             update_status,
@@ -2009,6 +2974,66 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use super::replace_body;
+
+    #[test]
+    fn local_subscription_connections_default_to_enabled() {
+        let value = super::LocalConnections::default();
+        assert!(value.codex && value.claude && value.paperclip);
+        let path = super::paperclip_child_path();
+        if let Some(home) = std::env::var_os("HOME") {
+            let local = std::path::PathBuf::from(home).join(".local/bin");
+            assert!(path.contains(local.to_string_lossy().as_ref()));
+        }
+        assert!(path.contains("/opt/homebrew/bin"));
+        assert!(path.contains("/usr/local/bin"));
+    }
+
+    #[test]
+    fn agent_workflows_require_a_bounded_kb_name() {
+        assert!(super::validate_kb_name("Local evidence").is_ok());
+        assert!(super::validate_kb_name("  ").is_err());
+        assert!(super::validate_kb_name(&"x".repeat(161)).is_err());
+    }
+
+    #[test]
+    fn paperclip_generation_builds_safe_argv_with_standard_curation() {
+        let request = super::PaperclipGenerateRequest {
+            query: "tolebrutinib multiple sclerosis".into(),
+            sources: vec!["pmc".into(), "trials/us".into()],
+            limit: 1,
+            kb_name: "Tolebrutinib MS".into(),
+            provider: "claude".into(),
+            model: Some("sonnet".into()),
+            year_min: Some(2020),
+            year_max: Some(2026),
+            since: None,
+        };
+        super::validate_paperclip_request(&request).unwrap();
+        let args = super::paperclip_generate_args(&request, std::path::Path::new("/tmp/p2b"));
+        assert!(args.windows(2).any(|pair| pair == ["--model", "sonnet"]));
+        assert_eq!(
+            args.iter().filter(|arg| arg.as_str() == "--source").count(),
+            2
+        );
+        assert!(!args.iter().any(|arg| arg == "--prompt"));
+        assert!(args.iter().any(|arg| arg == "--register"));
+    }
+
+    #[test]
+    fn paperclip_generation_rejects_invalid_source_and_year_range() {
+        let request = super::PaperclipGenerateRequest {
+            query: "x".into(),
+            sources: vec!["unknown".into()],
+            limit: 1,
+            kb_name: "x".into(),
+            provider: "codex".into(),
+            model: None,
+            year_min: Some(2026),
+            year_max: Some(2020),
+            since: None,
+        };
+        assert!(super::validate_paperclip_request(&request).is_err());
+    }
 
     #[test]
     fn update_version_compare_handles_v_prefixes() {

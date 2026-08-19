@@ -1,0 +1,4 @@
+interface:
+  display_name: "chat-with-biookf"
+  short_description: "BioOKF local subscription workflow"
+  default_prompt: "Use the local BioOKF CLI workflow safely."

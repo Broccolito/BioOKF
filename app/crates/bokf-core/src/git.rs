@@ -69,13 +69,17 @@ pub struct GitRepo {
 
 impl GitRepo {
     pub fn open(root: impl AsRef<Path>) -> GitRepo {
-        GitRepo { root: root.as_ref().to_path_buf() }
+        GitRepo {
+            root: root.as_ref().to_path_buf(),
+        }
     }
 
     pub fn preflight() -> Result<(), String> {
         match Command::new("git").arg("--version").output() {
             Ok(o) if o.status.success() => Ok(()),
-            _ => Err("`git` not found on PATH; install git to enable BioOKF version tracking".into()),
+            _ => {
+                Err("`git` not found on PATH; install git to enable BioOKF version tracking".into())
+            }
         }
     }
 
@@ -91,7 +95,10 @@ impl GitRepo {
             .output()
             .map_err(|e| format!("git {args:?}: {e}"))?;
         if !out.status.success() {
-            return Err(format!("git {args:?} failed: {}", String::from_utf8_lossy(&out.stderr).trim()));
+            return Err(format!(
+                "git {args:?} failed: {}",
+                String::from_utf8_lossy(&out.stderr).trim()
+            ));
         }
         Ok(String::from_utf8_lossy(&out.stdout).to_string())
     }
@@ -131,12 +138,20 @@ impl GitRepo {
     }
 
     pub fn current_branch(&self) -> Result<String, String> {
-        Ok(self.run(&["rev-parse", "--abbrev-ref", "HEAD"])?.trim().to_string())
+        Ok(self
+            .run(&["rev-parse", "--abbrev-ref", "HEAD"])?
+            .trim()
+            .to_string())
     }
 
     /// Stage everything and commit `[<kind>] <summary>` (+ optional `delta:` body).
     /// No-op (returns current HEAD) when there is nothing to commit.
-    pub fn commit_all(&self, kind: ChangeKind, summary: &str, delta: Option<&str>) -> Result<String, String> {
+    pub fn commit_all(
+        &self,
+        kind: ChangeKind,
+        summary: &str,
+        delta: Option<&str>,
+    ) -> Result<String, String> {
         self.ensure_repo()?;
         self.run(&["add", "-A"])?;
         let dirty = !self.run(&["status", "--porcelain"])?.trim().is_empty();
@@ -162,7 +177,11 @@ impl GitRepo {
         if !self.has_head() {
             return Ok(vec![]);
         }
-        let raw = self.run(&["log", &format!("-n{limit}"), "--pretty=format:%H%x1f%s%x1f%b%x1f%cI%x1e"])?;
+        let raw = self.run(&[
+            "log",
+            &format!("-n{limit}"),
+            "--pretty=format:%H%x1f%s%x1f%b%x1f%cI%x1e",
+        ])?;
         let mut entries = Vec::new();
         for rec in raw.split('\x1e') {
             let rec = rec.trim_start_matches('\n');
@@ -175,10 +194,15 @@ impl GitRepo {
             }
             let subject = p[1];
             let (kind, summary) = match (subject.find('['), subject.find(']')) {
-                (Some(0), Some(close)) => (ChangeKind::parse(&subject[1..close]), subject[close + 1..].trim().to_string()),
+                (Some(0), Some(close)) => (
+                    ChangeKind::parse(&subject[1..close]),
+                    subject[close + 1..].trim().to_string(),
+                ),
                 _ => (ChangeKind::Manual, subject.to_string()),
             };
-            let delta = p[2].lines().find_map(|l| l.strip_prefix("delta: ").map(|s| s.to_string()));
+            let delta = p[2]
+                .lines()
+                .find_map(|l| l.strip_prefix("delta: ").map(|s| s.to_string()));
             entries.push(HistoryEntry {
                 commit_sha: p[0].to_string(),
                 kind,
@@ -205,7 +229,12 @@ impl GitRepo {
         }
         // Resolve to a concrete commit object (fails for unknown/non-commit refs).
         let resolved = self
-            .run(&["rev-parse", "--verify", "--quiet", &format!("{sha}^{{commit}}")])
+            .run(&[
+                "rev-parse",
+                "--verify",
+                "--quiet",
+                &format!("{sha}^{{commit}}"),
+            ])
             .map_err(|_| format!("`{sha}` does not resolve to a commit in this repo"))?
             .trim()
             .to_string();
@@ -232,7 +261,11 @@ impl GitRepo {
             let short: String = resolved.chars().take(8).collect();
             format!("restore to {short}")
         });
-        self.commit_all(ChangeKind::Restore, &s, Some(&format!("restored tree of {resolved}")))
+        self.commit_all(
+            ChangeKind::Restore,
+            &s,
+            Some(&format!("restored tree of {resolved}")),
+        )
     }
 
     pub fn begin_txn(&self, label: &str) -> Result<Txn, String> {
@@ -246,7 +279,13 @@ impl GitRepo {
         Ok(Txn { branch, base })
     }
 
-    pub fn commit_txn(&self, txn: &Txn, kind: ChangeKind, summary: &str, delta: Option<&str>) -> Result<String, String> {
+    pub fn commit_txn(
+        &self,
+        txn: &Txn,
+        kind: ChangeKind,
+        summary: &str,
+        delta: Option<&str>,
+    ) -> Result<String, String> {
         self.run(&["checkout", "-q", &txn.base])?;
         self.run(&["merge", "--squash", &txn.branch])?;
         let sha = self.commit_all(kind, summary, delta)?;
@@ -311,7 +350,12 @@ mod tests {
     }
     #[test]
     fn changekind_roundtrip() {
-        for k in [ChangeKind::Ingest, ChangeKind::Merge, ChangeKind::Index, ChangeKind::Manual] {
+        for k in [
+            ChangeKind::Ingest,
+            ChangeKind::Merge,
+            ChangeKind::Index,
+            ChangeKind::Manual,
+        ] {
             assert_eq!(ChangeKind::parse(k.as_str()), k);
         }
     }

@@ -97,7 +97,9 @@ fn rasterize_inner(bytes: &[u8], max_pages: usize) -> Vec<(String, Vec<u8>)> {
 /// first set of bindings that loads successfully.
 fn bind_pdfium() -> Option<Box<dyn PdfiumLibraryBindings>> {
     // 1. Working-directory `./libpdfium.<ext>`.
-    if let Ok(bindings) = Pdfium::bind_to_library(Pdfium::pdfium_platform_library_name_at_path("./")) {
+    if let Ok(bindings) =
+        Pdfium::bind_to_library(Pdfium::pdfium_platform_library_name_at_path("./"))
+    {
         return Some(bindings);
     }
 
@@ -144,7 +146,9 @@ pub fn default_pdfium_dir() -> Option<PathBuf> {
             return Some(PathBuf::from(d));
         }
     }
-    let home = std::env::var("HOME").or_else(|_| std::env::var("USERPROFILE")).ok()?;
+    let home = std::env::var("HOME")
+        .or_else(|_| std::env::var("USERPROFILE"))
+        .ok()?;
     Some(PathBuf::from(home).join(".biookf"))
 }
 
@@ -153,8 +157,16 @@ pub fn default_pdfium_dir() -> Option<PathBuf> {
 fn pdfium_asset() -> Option<(&'static str, &'static str, &'static str)> {
     use std::env::consts::{ARCH, OS};
     Some(match (OS, ARCH) {
-        ("macos", "aarch64") => ("pdfium-mac-arm64.tgz", "lib/libpdfium.dylib", "libpdfium.dylib"),
-        ("macos", "x86_64") => ("pdfium-mac-x64.tgz", "lib/libpdfium.dylib", "libpdfium.dylib"),
+        ("macos", "aarch64") => (
+            "pdfium-mac-arm64.tgz",
+            "lib/libpdfium.dylib",
+            "libpdfium.dylib",
+        ),
+        ("macos", "x86_64") => (
+            "pdfium-mac-x64.tgz",
+            "lib/libpdfium.dylib",
+            "libpdfium.dylib",
+        ),
         ("linux", "x86_64") => ("pdfium-linux-x64.tgz", "lib/libpdfium.so", "libpdfium.so"),
         ("linux", "aarch64") => ("pdfium-linux-arm64.tgz", "lib/libpdfium.so", "libpdfium.so"),
         ("windows", "x86_64") => ("pdfium-win-x64.tgz", "bin/pdfium.dll", "pdfium.dll"),
@@ -206,7 +218,10 @@ pub fn install_pdfium(dir: Option<PathBuf>) -> Result<PathBuf, String> {
     }
     let libpath = target.join(libname);
     if !libpath.exists() {
-        return Err(format!("PDFium library not found after extraction at {}", libpath.display()));
+        return Err(format!(
+            "PDFium library not found after extraction at {}",
+            libpath.display()
+        ));
     }
     Ok(libpath)
 }
@@ -220,7 +235,11 @@ mod tests {
     #[test]
     fn non_pdf_input_returns_empty_and_does_not_panic() {
         let out = pdf_rasterize_pages(b"not a pdf", 5);
-        assert!(out.is_empty(), "expected empty result for non-PDF input, got {} entries", out.len());
+        assert!(
+            out.is_empty(),
+            "expected empty result for non-PDF input, got {} entries",
+            out.len()
+        );
     }
 
     #[test]
@@ -245,18 +264,40 @@ mod tests {
         use printpdf::*;
 
         let mut doc = PdfDocument::new("rasterizer-test");
-        let page1 = PdfPage::new(Mm(210.0), Mm(297.0), vec![Op::Marker { id: "page-1".to_string() }]);
-        let page2 = PdfPage::new(Mm(210.0), Mm(297.0), vec![Op::Marker { id: "page-2".to_string() }]);
+        let page1 = PdfPage::new(
+            Mm(210.0),
+            Mm(297.0),
+            vec![Op::Marker {
+                id: "page-1".to_string(),
+            }],
+        );
+        let page2 = PdfPage::new(
+            Mm(210.0),
+            Mm(297.0),
+            vec![Op::Marker {
+                id: "page-2".to_string(),
+            }],
+        );
         let mut warnings = Vec::new();
-        let pdf_bytes: Vec<u8> = doc.with_pages(vec![page1, page2]).save(&PdfSaveOptions::default(), &mut warnings);
+        let pdf_bytes: Vec<u8> = doc
+            .with_pages(vec![page1, page2])
+            .save(&PdfSaveOptions::default(), &mut warnings);
 
         let pages = pdf_rasterize_pages(&pdf_bytes, 5);
-        assert_eq!(pages.len(), 2, "expected 2 rasterized pages, got {} (is libpdfium reachable?)", pages.len());
+        assert_eq!(
+            pages.len(),
+            2,
+            "expected 2 rasterized pages, got {} (is libpdfium reachable?)",
+            pages.len()
+        );
 
         const JPEG_MAGIC: [u8; 2] = [0xFF, 0xD8];
         for (i, (name, jpg)) in pages.iter().enumerate() {
             assert_eq!(name, &format!("page-{:03}.jpg", i + 1));
-            assert!(jpg.len() >= 2 && jpg[0..2] == JPEG_MAGIC, "page {name} does not start with the JPEG magic bytes");
+            assert!(
+                jpg.len() >= 2 && jpg[0..2] == JPEG_MAGIC,
+                "page {name} does not start with the JPEG magic bytes"
+            );
             assert!(jpg.len() > 100, "page {name} JPEG is suspiciously small");
         }
     }

@@ -72,7 +72,11 @@ impl SearchIndex {
                 raw,
             });
         }
-        let avgdl = if docs.is_empty() { 1.0 } else { total_len as f64 / docs.len() as f64 };
+        let avgdl = if docs.is_empty() {
+            1.0
+        } else {
+            total_len as f64 / docs.len() as f64
+        };
         SearchIndex { docs, df, avgdl }
     }
 
@@ -120,11 +124,19 @@ fn snippet(text: &str, q_terms: &[String]) -> String {
     let start = pos.saturating_sub(40);
     let end = (start + 160).min(text.len());
     // align to char boundaries
-    let start = (0..=start).rev().find(|&i| text.is_char_boundary(i)).unwrap_or(0);
-    let end = (end..=text.len()).find(|&i| text.is_char_boundary(i)).unwrap_or(text.len());
-    let mut s: String = text[start..end].split_whitespace().collect::<Vec<_>>().join(" ");
+    let start = (0..=start)
+        .rev()
+        .find(|&i| text.is_char_boundary(i))
+        .unwrap_or(0);
+    let end = (end..=text.len())
+        .find(|&i| text.is_char_boundary(i))
+        .unwrap_or(text.len());
+    let mut s: String = text[start..end]
+        .split_whitespace()
+        .collect::<Vec<_>>()
+        .join(" ");
     if start > 0 {
-        s.insert_str(0, "…");
+        s.insert(0, '…');
     }
     if end < text.len() {
         s.push('…');

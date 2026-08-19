@@ -2,11 +2,11 @@
 //!
 //! Keep the signatures stable; the waterfall (B8) depends on them.
 
-use super::{CredibilityTier, SourceType};
+use super::{CredibilityTier, ResolverVerdict, SourceType};
 use serde_json::Value;
 
 /// Map a Crossref `message` object to `(source_type, tier, venue, publisher, retracted)`.
-pub fn map_work(v: &Value) -> Option<(SourceType, CredibilityTier, Option<String>, Option<String>, bool)> {
+pub fn map_work(v: &Value) -> Option<ResolverVerdict> {
     let work_type = v["type"].as_str()?;
 
     let (source_type, tier) = match work_type {
@@ -50,7 +50,7 @@ pub fn fetch(doi: &str) -> Option<Value> {
     let resp = client.get(url).send().ok()?;
     let json: Value = resp.json().ok()?;
 
-    json.get("message").map(|m| m.clone())
+    json.get("message").cloned()
 }
 
 #[cfg(test)]
@@ -59,11 +59,14 @@ mod tests {
 
     #[test]
     fn maps_crossref_journal_article() {
-        let v: serde_json::Value = serde_json::from_str(r#"{
+        let v: serde_json::Value = serde_json::from_str(
+            r#"{
           "type":"journal-article","publisher":"Springer Nature",
           "container-title":["Nature Medicine"],
           "update-to":[{"type":"retraction"}]
-        }"#).unwrap();
+        }"#,
+        )
+        .unwrap();
         let (st, tier, venue, pubr, retracted) = map_work(&v).unwrap();
         assert!(matches!(st, SourceType::JournalArticle));
         assert!(matches!(tier, CredibilityTier::PeerReviewed));
@@ -74,5 +77,7 @@ mod tests {
 
     #[test]
     #[ignore]
-    fn fetch_crossref_live() { assert!(fetch("10.1038/s41591-020-0968-3").is_some()); }
+    fn fetch_crossref_live() {
+        assert!(fetch("10.1038/s41591-020-0968-3").is_some());
+    }
 }

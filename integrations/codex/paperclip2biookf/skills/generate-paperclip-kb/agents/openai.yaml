@@ -1,0 +1,4 @@
+interface:
+  display_name: "generate-paperclip-kb"
+  short_description: "BioOKF local subscription workflow"
+  default_prompt: "Use the local BioOKF CLI workflow safely."

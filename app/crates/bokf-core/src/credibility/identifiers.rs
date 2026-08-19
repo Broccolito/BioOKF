@@ -70,7 +70,8 @@ mod tests {
 
     #[test]
     fn extracts_identifiers_and_biorxiv() {
-        let t = "See https://doi.org/10.1101/2020.01.02.123456 and PMID: 31234567 and arXiv:2003.01234";
+        let t =
+            "See https://doi.org/10.1101/2020.01.02.123456 and PMID: 31234567 and arXiv:2003.01234";
         let ids = extract(t);
         assert_eq!(ids.doi.as_deref(), Some("10.1101/2020.01.02.123456"));
         assert_eq!(ids.pmid.as_deref(), Some("31234567"));

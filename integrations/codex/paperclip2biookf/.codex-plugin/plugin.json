@@ -1,0 +1,23 @@
+{
+  "name": "paperclip2biookf",
+  "version": "0.1.0",
+  "description": "Generate, query, revise, refresh, and merge BioOKF knowledge bases with Paperclip and local subscription agents.",
+  "author": {
+    "name": "BioOKF"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Paperclip2BioOKF",
+    "shortDescription": "Build and query BioOKF knowledge bases locally.",
+    "longDescription": "Uses Paperclip, the BioOKF CLI, and authenticated local Codex or Claude subscriptions to generate, query, evidence-check, revise, refresh, and merge provenance-rich biomedical knowledge bases without API keys.",
+    "developerName": "BioOKF",
+    "category": "Developer Tools",
+    "capabilities": ["biomedical search", "knowledge-base generation", "grounded chat", "evidence-backed revision", "semantic merge"],
+    "defaultPrompt": [
+      "Build a BioOKF knowledge base from Paperclip evidence.",
+      "Chat with and trace provenance in this BioOKF base.",
+      "Review this BioOKF edge with Doctor."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

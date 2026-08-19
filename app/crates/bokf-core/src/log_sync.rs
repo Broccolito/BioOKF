@@ -6,9 +6,16 @@ use std::path::Path;
 
 /// Append a newest-first `## <date>` block (seeding `# Change log` if absent) and
 /// commit it (with any other staged bundle changes) in one call. Returns the sha.
-pub fn log_sync(bundle: &Path, kind: ChangeKind, summary: &str, delta: Option<&str>, date: &str) -> Result<String, String> {
+pub fn log_sync(
+    bundle: &Path,
+    kind: ChangeKind,
+    summary: &str,
+    delta: Option<&str>,
+    date: &str,
+) -> Result<String, String> {
     let log_path = bundle.join("log.md");
-    let existing = std::fs::read_to_string(&log_path).unwrap_or_else(|_| "# Change log\n".to_string());
+    let existing =
+        std::fs::read_to_string(&log_path).unwrap_or_else(|_| "# Change log\n".to_string());
     let block = match delta {
         Some(d) => format!("\n## {date}\n\n{} | {summary}\n\n{d}\n", kind.as_str()),
         None => format!("\n## {date}\n\n{} | {summary}\n", kind.as_str()),

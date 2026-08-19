@@ -57,8 +57,11 @@ pub fn call(command: &str, payload: Value) -> Result<Value, String> {
     // resolve the path to a SocketAddr to use connect_timeout.
     let addr = std::os::unix::net::SocketAddr::from_pathname(&path)
         .map_err(|e| format!("bad socket path {path}: {e}"))?;
-    let stream = UnixStream::connect_addr(&addr)
-        .map_err(|e| format!("Studio GUI not reachable on {path} ({e}); is it running with the control channel on?"))?;
+    let stream = UnixStream::connect_addr(&addr).map_err(|e| {
+        format!(
+            "Studio GUI not reachable on {path} ({e}); is it running with the control channel on?"
+        )
+    })?;
     stream.set_read_timeout(Some(IO_TIMEOUT)).ok();
     stream.set_write_timeout(Some(CONNECT_TIMEOUT)).ok();
 
@@ -68,13 +71,19 @@ pub fn call(command: &str, payload: Value) -> Result<Value, String> {
         req["authToken"] = Value::String(tok);
     }
     let line = req.to_string();
-    writer.write_all(line.as_bytes()).map_err(|e| format!("write failed: {e}"))?;
-    writer.write_all(b"\n").map_err(|e| format!("write failed: {e}"))?;
+    writer
+        .write_all(line.as_bytes())
+        .map_err(|e| format!("write failed: {e}"))?;
+    writer
+        .write_all(b"\n")
+        .map_err(|e| format!("write failed: {e}"))?;
     writer.flush().map_err(|e| format!("flush failed: {e}"))?;
 
     let mut reader = BufReader::new(stream);
     let mut resp = String::new();
-    reader.read_line(&mut resp).map_err(|e| format!("read failed: {e}"))?;
+    reader
+        .read_line(&mut resp)
+        .map_err(|e| format!("read failed: {e}"))?;
     if resp.trim().is_empty() {
         return Err("empty response from Studio control socket".to_string());
     }
@@ -82,7 +91,11 @@ pub fn call(command: &str, payload: Value) -> Result<Value, String> {
     if v.get("success").and_then(Value::as_bool).unwrap_or(false) {
         Ok(v.get("data").cloned().unwrap_or(Value::Null))
     } else {
-        Err(v.get("error").and_then(Value::as_str).unwrap_or("unknown error").to_string())
+        Err(v
+            .get("error")
+            .and_then(Value::as_str)
+            .unwrap_or("unknown error")
+            .to_string())
     }
 }
 
@@ -106,7 +119,10 @@ pub fn execute_js(code: &str) -> Result<String, String> {
 /// (the data-URL prefix, if any, is stripped so it can be handed to an image
 /// content block directly).
 pub fn screenshot(window_label: &str) -> Result<String, String> {
-    let data = call("take_screenshot", serde_json::json!({ "windowLabel": window_label }))?;
+    let data = call(
+        "take_screenshot",
+        serde_json::json!({ "windowLabel": window_label }),
+    )?;
     let raw = first_base64(&data).ok_or_else(|| "screenshot returned no image data".to_string())?;
     Ok(strip_data_url(&raw))
 }
@@ -118,7 +134,10 @@ pub fn app_info() -> Result<Value, String> {
 
 /// `manage_window` with `{operation}` (close|focus|minimize|...). Targets "main".
 pub fn manage_window(action: &str) -> Result<Value, String> {
-    call("manage_window", serde_json::json!({ "operation": action, "windowLabel": "main" }))
+    call(
+        "manage_window",
+        serde_json::json!({ "operation": action, "windowLabel": "main" }),
+    )
 }
 
 /// Strip a `data:<mime>;base64,` prefix, leaving raw base64.

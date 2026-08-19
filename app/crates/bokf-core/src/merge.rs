@@ -48,7 +48,10 @@ fn move_dir(from: &Path, to: &Path) -> Result<(), String> {
 
 fn copy_dir(from: &Path, to: &Path) -> Result<(), String> {
     std::fs::create_dir_all(to).map_err(|e| e.to_string())?;
-    for e in std::fs::read_dir(from).map_err(|e| e.to_string())?.flatten() {
+    for e in std::fs::read_dir(from)
+        .map_err(|e| e.to_string())?
+        .flatten()
+    {
         let p = e.path();
         let dest = to.join(e.file_name());
         if p.is_dir() {
@@ -66,7 +69,12 @@ pub fn merge_raw(mkb: &Path, skb: &Path) -> Result<MergeRawResult, String> {
     let skb_raw = skb.join("raw");
     let mkb_raw = mkb.join("raw");
     std::fs::create_dir_all(&mkb_raw).map_err(|e| e.to_string())?;
-    let mut res = MergeRawResult { moved: vec![], renamed: vec![], dropped_duplicates: vec![], id_map: BTreeMap::new() };
+    let mut res = MergeRawResult {
+        moved: vec![],
+        renamed: vec![],
+        dropped_duplicates: vec![],
+        id_map: BTreeMap::new(),
+    };
     let mkb_by_sha = raw_sha_map(&mkb_raw);
 
     let entries = match std::fs::read_dir(&skb_raw) {
@@ -114,25 +122,42 @@ const SNAPSHOT_FILE: &str = ".bokf-premerge.json";
 
 pub fn snapshot(bundle: &Bundle) -> Snapshot {
     Snapshot {
-        identifiers: bundle.nodes.iter().map(|n| (n.identifier.clone(), n.path.to_string_lossy().to_string())).collect(),
+        identifiers: bundle
+            .nodes
+            .iter()
+            .map(|n| (n.identifier.clone(), n.path.to_string_lossy().to_string()))
+            .collect(),
     }
 }
 
 pub fn write_snapshot(root: &Path, snap: &Snapshot) -> Result<(), String> {
-    std::fs::write(root.join(SNAPSHOT_FILE), serde_json::to_string_pretty(snap).map_err(|e| e.to_string())?).map_err(|e| e.to_string())
+    std::fs::write(
+        root.join(SNAPSHOT_FILE),
+        serde_json::to_string_pretty(snap).map_err(|e| e.to_string())?,
+    )
+    .map_err(|e| e.to_string())
 }
 
 /// Compare the current MKB against a pre-merge snapshot; report any MKB identifier that was
 /// removed/renamed or whose path changed (the MKB must stay canonical through a merge).
 pub fn verify_snapshot(root: &Path, current: &Bundle) -> Result<Vec<String>, String> {
-    let txt = std::fs::read_to_string(root.join(SNAPSHOT_FILE)).map_err(|e| format!("no snapshot: {e}"))?;
+    let txt = std::fs::read_to_string(root.join(SNAPSHOT_FILE))
+        .map_err(|e| format!("no snapshot: {e}"))?;
     let snap: Snapshot = serde_json::from_str(&txt).map_err(|e| e.to_string())?;
-    let cur: BTreeMap<String, String> = current.nodes.iter().map(|n| (n.identifier.clone(), n.path.to_string_lossy().to_string())).collect();
+    let cur: BTreeMap<String, String> = current
+        .nodes
+        .iter()
+        .map(|n| (n.identifier.clone(), n.path.to_string_lossy().to_string()))
+        .collect();
     let mut issues = Vec::new();
     for (id, path) in &snap.identifiers {
         match cur.get(id) {
-            None => issues.push(format!("MKB identifier `{id}` was removed/renamed; not allowed in a merge")),
-            Some(p) if p != path => issues.push(format!("MKB identifier `{id}` moved `{path}` → `{p}`; MKB paths must stay stable")),
+            None => issues.push(format!(
+                "MKB identifier `{id}` was removed/renamed; not allowed in a merge"
+            )),
+            Some(p) if p != path => issues.push(format!(
+                "MKB identifier `{id}` moved `{path}` → `{p}`; MKB paths must stay stable"
+            )),
             _ => {}
         }
     }
@@ -153,8 +178,18 @@ mod tests {
         std::fs::create_dir_all(skb.join("raw")).unwrap();
         let shared = tempfile::tempdir().unwrap();
         std::fs::write(shared.path().join("shared.md"), "# Shared Source\nbody").unwrap();
-        ingest(&mkb, SourceInput::Path(shared.path().join("shared.md")), false).unwrap();
-        ingest(&skb, SourceInput::Path(shared.path().join("shared.md")), false).unwrap();
+        ingest(
+            &mkb,
+            SourceInput::Path(shared.path().join("shared.md")),
+            false,
+        )
+        .unwrap();
+        ingest(
+            &skb,
+            SourceInput::Path(shared.path().join("shared.md")),
+            false,
+        )
+        .unwrap();
         let only = tempfile::tempdir().unwrap();
         std::fs::write(only.path().join("only.md"), "# Only In SKB\nbody").unwrap();
         ingest(&skb, SourceInput::Path(only.path().join("only.md")), false).unwrap();
@@ -162,7 +197,11 @@ mod tests {
         let res = merge_raw(&mkb, &skb).unwrap();
         assert_eq!(res.dropped_duplicates.len(), 1, "{res:?}");
         assert_eq!(res.moved.len(), 1, "{res:?}");
-        assert!(mkb.join("raw").join(&res.moved[0]).join("source.md").exists());
+        assert!(mkb
+            .join("raw")
+            .join(&res.moved[0])
+            .join("source.md")
+            .exists());
     }
 
     #[test]
@@ -170,12 +209,19 @@ mod tests {
         let dir = tempfile::tempdir().unwrap();
         let root = dir.path();
         std::fs::create_dir_all(root.join("knowledge/gene")).unwrap();
-        std::fs::write(root.join("knowledge/gene/braf.md"), "---\ntype: Gene\nidentifier: BRAF\nsubtype: protein_coding\n---\n# BRAF\n").unwrap();
+        std::fs::write(
+            root.join("knowledge/gene/braf.md"),
+            "---\ntype: Gene\nidentifier: BRAF\nsubtype: protein_coding\n---\n# BRAF\n",
+        )
+        .unwrap();
         let b = crate::bundle::Bundle::open(root).unwrap();
         write_snapshot(root, &snapshot(&b)).unwrap();
         assert!(verify_snapshot(root, &b).unwrap().is_empty());
         std::fs::remove_file(root.join("knowledge/gene/braf.md")).unwrap();
         let b2 = crate::bundle::Bundle::open(root).unwrap();
-        assert!(verify_snapshot(root, &b2).unwrap().iter().any(|i| i.contains("BRAF")));
+        assert!(verify_snapshot(root, &b2)
+            .unwrap()
+            .iter()
+            .any(|i| i.contains("BRAF")));
     }
 }

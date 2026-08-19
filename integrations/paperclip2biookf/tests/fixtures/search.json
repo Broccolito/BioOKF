@@ -1,0 +1,21 @@
+{
+  "format": "paperclip2biookf-search/v1",
+  "query": "BRAF inhibitor resistance melanoma",
+  "sources": ["pmc"],
+  "results_id": "fixture-search",
+  "count": 1,
+  "papers": [
+    {
+      "document_id": "PMC123456",
+      "source": "pmc",
+      "title": "BRAF inhibitor resistance in melanoma",
+      "article_type": "research-article",
+      "pub_year": 2021,
+      "pub_date": "2021-04-18",
+      "pmc_id": "PMC123456",
+      "pmid": "34567890",
+      "doi": "10.1000/example",
+      "abstract_snippet": "A study of molecular mechanisms of resistance."
+    }
+  ]
+}

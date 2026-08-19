@@ -8,7 +8,7 @@ MCP server is connected and exposes two tool families:
 - **Curation & analysis** (`bokf_*`): `bokf_scaffold`, `bokf_convert` (ingest a
   PDF/HTML/text source), `bokf_write_page` / `bokf_validate_page`, `bokf_lint`,
   `bokf_verify` (the accountability gate), `bokf_search`, `bokf_stats`,
-  `bokf_graph`, `bokf_index`, `bokf_merge_raw` / `bokf_merge_snapshot`,
+  `bokf_graph`, `bokf network-metrics`, `bokf_index`, `bokf_merge_raw` / `bokf_merge_snapshot`,
   `bokf_list_bases`, `bokf_set_active` / `bokf_get_active`, `bokf_predicates`
   (the controlled vocabulary: node types, predicates, knowledge levels, agent types).
 - **Live Studio control** (`bokf_studio_*`): launch and drive the BioOKF Studio
@@ -29,5 +29,9 @@ To get going:
    live in the app's "AI agent" banner so the user can watch you explore.
    Studio can also export the current graph as a shareable self-contained HTML
    view; use `bokf_graph` or `bokf export` when you need JSON for automation.
+4. Use Studio's **Chat**, **Doctor**, and **Metrics** surfaces for grounded Q&A,
+   evidence-backed transactional revision, topology plots, and source-year growth.
+   The CLI also exposes `connections`, `generate-from-paperclip`, `create-local`,
+   `chat`, `merge-agent`, `doctor`, and `network-metrics`.
 
 $ARGUMENTS
