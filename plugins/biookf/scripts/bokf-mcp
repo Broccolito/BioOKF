@@ -19,7 +19,7 @@
 #                     /Applications default in step 2
 set -euo pipefail
 
-VERSION="${BIOOKF_VERSION:-v0.3.2}"
+VERSION="${BIOOKF_VERSION:-v0.4.0}"
 REPO="${BIOOKF_REPO:-Broccolito/BioOKF}"
 HOME_DIR="${BIOOKF_HOME:-$HOME/.local/share/biookf}"
 PREFIX="$HOME_DIR/$VERSION"

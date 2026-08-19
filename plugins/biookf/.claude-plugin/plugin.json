@@ -1,6 +1,6 @@
 {
   "name": "biookf",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "BioOKF: create, curate, query, revise, merge, visualize, and analyze biomedical Open Knowledge Format bundles with local subscription workflows and network metrics. The first run downloads the CLI and Studio binaries from GitHub Releases.",
   "author": {
     "name": "Broccolito",

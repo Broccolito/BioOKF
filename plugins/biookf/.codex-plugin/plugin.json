@@ -1,6 +1,6 @@
 {
   "name": "biookf",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "BioOKF: create, curate, query, revise, merge, visualize, and analyze biomedical Open Knowledge Format bundles from Codex, including local subscription workflows and network metrics.",
   "author": {
     "name": "Broccolito",

@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "BioOKF: the BioOKF Studio GUI + MCP server + CLI for curating, visualizing, and reasoning over biomedical Open Knowledge Format knowledge bases.",
-    "version": "0.3.2"
+    "version": "0.4.0"
   },
   "plugins": [
     {
       "name": "biookf",
       "source": "./plugins/biookf",
       "description": "Create, curate, query, revise, merge, visualize, and analyze BioOKF knowledge bases with local subscription workflows, topology metrics, the bokf MCP/CLI, and BioOKF Studio.",
-      "version": "0.3.2",
+      "version": "0.4.0",
       "category": "knowledge",
       "keywords": ["biomedical", "knowledge-graph", "ontology", "mcp", "curation", "tauri"]
     }

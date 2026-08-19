@@ -9,7 +9,7 @@
 #
 # Usage:
 #   scripts/check-versions.sh            # compare against $GITHUB_REF_NAME, else app/Cargo.toml
-#   scripts/check-versions.sh v0.3.2     # compare against an explicit tag
+#   scripts/check-versions.sh v0.4.0     # compare against an explicit tag
 #
 # Exits 0 when everything matches, 1 (listing every mismatch) when it doesn't.
 set -uo pipefail

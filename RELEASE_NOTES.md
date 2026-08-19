@@ -1,103 +1,121 @@
 # BioOKF Release Notes
 
-## v0.3.2 - 2026-08-15
+## v0.4.0 - 2026-08-18
 
-BioOKF 0.3.2 makes the agent plugin use the Studio you already installed. On
-0.3.1 the MCP launcher ignored the installed app and always downloaded its own
-copy of the binaries, which meant a machine with a notarized Studio in
-`/Applications` still ran unsigned tools out of a cache directory.
+BioOKF 0.4.0 turns Studio from a graph viewer and curator into a complete local
+knowledge workflow. It can now discover biomedical evidence through Paperclip,
+build reviewable BioOKF bundles with a locally authenticated Codex or Claude
+subscription, create bases from local documents, answer grounded questions,
+revise evidence with Doctor, merge bases, and inspect network structure without
+requiring API keys or sending credentials through Studio.
 
-### The Bug
+### Paperclip-to-BioOKF generation
 
-`plugins/biookf/scripts/bokf-mcp` documented a three-step search — `BIOOKF_MCP_BIN`,
-then an installed `BioOKF Studio.app`, then the release tarball — but only ever
-implemented the first and third. The middle step did not exist in the script.
+- Added the `paperclip2biookf` integration, including multi-database discovery,
+  date and source filters, line-addressable evidence snapshots, subscription-LLM
+  extraction, deterministic BioOKF materialization, verification, Studio
+  registration, and a local browser UI.
+- Added a dedicated **Create from Paperclip** Studio workflow with provider and
+  model selection, live progress, evidence previews, generation results, and
+  explicit scientific-review status for candidate bundles.
+- Preserved source identifiers and evidence URLs while using collision-resistant
+  local storage names. Unsafe document identifiers are rejected before any path
+  is created, and identifiers that normalize to the same slug no longer
+  overwrite one another.
+- Added portable Claude Code and Codex integration packages with workflows for
+  generation, local-resource creation, grounded chat, Doctor review, semantic
+  merge, diagnostics, and network analysis.
 
-On any Mac that had installed the DMG, the consequences were:
+### Local knowledge workflows
 
-- a redundant ~25 MB download of binaries already sitting inside the `.app`;
-- the cached copies were the **unsigned** tarball builds (the launcher strips
-  `com.apple.quarantine` from them), while the bundle ships Developer
-  ID-signed, notarized ones;
-- `BIOOKF_STUDIO_BIN` then pointed into the cache, so `bokf_studio_open`
-  launched a second, hidden copy of Studio instead of the one in
-  `/Applications`.
+- Added **Create from local resources** for turning documents and folders into a
+  staged BioOKF bundle with provenance and verification.
+- Added grounded **Chat** over the active base, including bounded context and
+  source-aware answers.
+- Added Doctor-backed evidence review and revision, multi-base semantic merge,
+  and workflow progress surfaces inside Studio.
+- Added CLI and MCP coverage for the same workflows so desktop, terminal, Claude
+  Code, and Codex operate on the same registered bases and active-base state.
 
-### Fixes
+### Network analysis and evidence timelines
 
-- The launcher now probes `/Applications/BioOKF Studio.app` and
-  `~/Applications/BioOKF Studio.app` before downloading anything, and execs the
-  `bokf-mcp` inside the bundle. `BIOOKF_STUDIO_APP` overrides the location.
-- `PATH` and `BIOOKF_STUDIO_BIN` are exported from that same bundle, so
-  `bokf_studio_open` drives the app you actually installed.
-- The pinned release is treated as a floor, not an equality: a bundle newer than
-  the pin is used as-is (Studio self-updates ahead of the plugin), while an older
-  one is skipped with a note on stderr and the pinned version is downloaded.
-- `BIOOKF_MCP_BIN` still takes precedence over everything, and machines with no
-  Studio installed keep the unchanged download-and-cache path.
-- `bokf_studio_open` now finds the Studio executable inside the shipped `.app`.
-  `locate_studio_bin()` only looked *next to* the running `bokf-mcp`, which is
-  true of a `cargo build` but not of the DMG layout — `bokf-mcp` ships in
-  `Contents/Resources/bin` and `biookf-studio` in `Contents/MacOS` — so opening
-  the GUI failed with "biookf-studio not found next to …" for anyone invoking the
-  bundled binary directly rather than through the plugin launcher (which sets
-  `BIOOKF_STUDIO_BIN` and so masked the bug). A sibling still wins, so a local
-  development build is never shadowed by an installed app.
+- Added a network-metrics engine covering graph size, density, components,
+  degree and weighted-degree rankings, PageRank, betweenness, closeness,
+  articulation points, bridges, triangles, transitivity, community structure,
+  shortest paths, and source-year distributions.
+- Added the Studio **Metrics** panel for topology summaries, rankings,
+  communities, evidence timelines, and path exploration.
+- Added CLI and MCP interfaces for programmatic network analysis and an
+  `analyze-biookf-network` skill for agent-driven interpretation.
 
-### Studio
+### BioOKF metagraph and workflow documentation
 
-- The knowledge-base context menu's **Open folder** item now works. `index.html`
-  declared the button but `app.js` never referenced its id, so it rendered,
-  highlighted on hover, and did nothing; there was also no command behind it,
-  since `reveal_in_finder` is restricted to `knowledge/` documents and root text
-  files and cannot open a bundle root. Adds an `open_base_folder` command that
-  resolves the registered id (no caller-supplied path, so nothing to escape) and
-  wires the menu item to it.
-- `app/studio/tests/test-wiring.sh` guards the class of bug rather than the
-  instance: the no-bundler frontend has nothing linking `index.html` to `app.js`,
-  so it now asserts that every interactive element with an id is referenced by
-  `app.js`, and that every `tauriInvoke` target is registered in `main.rs`.
+- Added a complete BioOKF metagraph example covering the controlled node types
+  and representative relationships.
+- Added SVG and PNG schema/workflow diagrams, including transparent and compact
+  variants suitable for documentation and presentations.
+- Archived the non-superseded SPOKE mapping lineage, research corpus, guardrails,
+  adjudication tools, and comparison reports under `fabric/spoke/archive`.
 
-### Release Hygiene
+### Studio, plugin, and updater fixes
 
-- `scripts/check-versions.sh` asserts that all sixteen places carrying the
-  version — the Rust workspace, the Tauri manifest, `Cargo.lock`, both plugin
-  manifests, both marketplace fields, the launcher's pinned release, the DMG
-  names quoted in the README and landing pages, and these notes — agree with the
-  tag being built. `release.yml` runs it before any build step, so a tag can no
-  longer ship with a stale version anywhere.
+- The main BioOKF plugin now uses `bokf-mcp` from an installed, sufficiently new
+  `BioOKF Studio.app` before downloading a duplicate archive. It exports the
+  matching Studio executable and resource path, respects explicit overrides,
+  and keeps the signed installed bundle as the source of truth.
+- `bokf_studio_open` now resolves the Studio executable from the shipped `.app`
+  layout as well as local sibling builds.
+- The knowledge-base context menu's **Open folder** command is implemented and
+  constrained to a registered base identifier.
+- The frontend wiring gate now checks every local script loaded by `index.html`,
+  every interactive control, and every registered Tauri invocation.
 
-### For Studio Users
+### Security and reliability hardening
 
-- Download `BioOKF.Studio_0.3.2_aarch64.dmg` for Apple Silicon Macs.
-- Download `BioOKF.Studio_0.3.2_x64.dmg` for Intel Macs.
-- Nothing in the app itself changed in this release; if you are on 0.3.1 you can
-  stay there. The fix matters to Claude Code and Codex users.
+- Restricted the Paperclip UI to loopback interfaces, validate its `Host`
+  header, require a per-process request token for API reads and writes, enforce
+  JSON request bodies and size limits, and send anti-framing, no-referrer,
+  no-sniff, no-store, and content-security headers.
+- Removed a reverse-DNS lookup that could stall local UI startup.
+- Prevented subprocess pipe deadlocks by draining workflow results and progress
+  concurrently, and made large UTF-8 chat-context truncation character-safe.
+- Expanded subscription-only environment sanitization across Studio, status
+  checks, Paperclip, and embedded workflows so API keys, cloud credentials,
+  alternate endpoints, and hosted-provider switches cannot silently override the
+  intended local subscription route.
+- Updated the MCP protocol stack, spreadsheet/PDF dependencies, Tauri MCP plugin,
+  and vulnerable transitive crates. Current macOS release targets contain none of
+  the two remaining all-target `quick-xml` advisories reported through `xcb`'s
+  build-only dependency.
 
-### For Agent And Plugin Users
+### For Studio users
 
-- The plugin and marketplace metadata now point at `v0.3.2`, and the launcher
-  default `BIOOKF_VERSION` is `v0.3.2`, still overridable through the
-  environment.
-- Update with `/plugin marketplace update biookf` then
+- Download `BioOKF.Studio_0.4.0_aarch64.dmg` for Apple Silicon Macs.
+- Download `BioOKF.Studio_0.4.0_x64.dmg` for Intel Macs.
+- Both DMGs and both plugin tar archives are Developer ID signed, notarized by
+  Apple, stapled where the format supports it, and verified before publication.
+
+### For agent and plugin users
+
+- The plugin and marketplace metadata now point at `v0.4.0`; the launcher uses
+  that version as its download floor while still allowing `BIOOKF_VERSION` and
+  explicit binary overrides.
+- Update with `/plugin marketplace update biookf`, then
   `/plugin update biookf@biookf`, and restart the client.
-- After updating, the launcher logs which binary it chose on stderr
-  (`using the installed Studio at ...`). A stale cache under
-  `~/.local/share/biookf` is no longer consulted when a Studio is installed and
-  can be deleted.
-- Existing MCP tool names and CLI commands remain compatible with 0.3.x.
+- Existing 0.3.x bundle content remains readable; this is a feature release, not
+  a BioOKF file-format migration.
 
-### Verification Targets
+### Verification targets
 
-- `plugins/biookf/scripts/tests/test-launcher.sh`: 13 assertions over the
-  resolution order, run against fake `.app` bundles with an offline `curl` shim,
-  covering the bundle probe, the `PATH`/`BIOOKF_STUDIO_BIN` exports, the
-  `~/Applications` location, `BIOOKF_MCP_BIN` precedence, newer/older/prerelease/
-  unreadable bundle versions, and the unchanged cache fallback.
-- The suite passes under bash 3.2, the macOS system shell.
-- A real `initialize` + `tools/list` handshake against an installed 0.3.2 Studio
-  with an empty cache: 33 tools, nothing downloaded.
-- `scripts/check-versions.sh v0.3.2`.
+- Full Rust workspace tests and strict Clippy across every target.
+- Python integration tests, frontend wiring checks, launcher-resolution tests,
+  version consistency, JavaScript syntax checks, and browser-driven Studio
+  graph/search/sidebar/detail-panel smoke tests.
+- Release-mode Studio builds for Apple Silicon and Intel with signed bundled CLI
+  and MCP executables.
+- Strict nested code-signature verification, Apple notarization, stapler and
+  Gatekeeper assessment, read-only DMG mounting, signed tar round-trips, and
+  SHA-256 checksums for every published artifact.
 
 ## v0.3.1 - 2026-07-08
 
