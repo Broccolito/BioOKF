@@ -1,21 +1,45 @@
 import json
+import os
 import tempfile
 import unittest
 from pathlib import Path
 from subprocess import CompletedProcess
 from unittest.mock import patch
 
-from paperclip_biookf.agents import _claude_schema, model_catalog
+from paperclip_biookf.agents import _claude_schema, _subscription_env, model_catalog
 from paperclip_biookf.biookf import BioOKFBuilder, validate_extraction
 from paperclip_biookf.constants import EXTRACTION_SCHEMA
-from paperclip_biookf.paperclip import parse_map_export
-from paperclip_biookf.server import _generated_bundles, _resolve_bundle, _run_history, _validate_request
+from paperclip_biookf.paperclip import PaperclipError, document_storage_id, parse_map_export
+from paperclip_biookf.pipeline import HarnessPipeline
+from paperclip_biookf.server import (
+    _generated_bundles, _is_json_content_type, _is_loopback_host,
+    _is_trusted_host_header,
+    _resolve_bundle, _run_history, _validate_request,
+)
 
 
 FIXTURES = Path(__file__).parent / "fixtures"
 
 
 class ExtractionTests(unittest.TestCase):
+    def test_subscription_environment_strips_cloud_credentials(self):
+        with patch.dict(os.environ, {
+            "AWS_ACCESS_KEY_ID": "secret",
+            "GOOGLE_APPLICATION_CREDENTIALS": "/tmp/key.json",
+            "AZURE_CLIENT_SECRET": "secret",
+            "BIOOKF_SAFE_SENTINEL": "preserved",
+        }):
+            env = _subscription_env()
+        self.assertNotIn("AWS_ACCESS_KEY_ID", env)
+        self.assertNotIn("GOOGLE_APPLICATION_CREDENTIALS", env)
+        self.assertNotIn("AZURE_CLIENT_SECRET", env)
+        self.assertEqual(env["BIOOKF_SAFE_SENTINEL"], "preserved")
+
+    def test_document_storage_id_rejects_traversal_and_avoids_collisions(self):
+        with self.assertRaises(PaperclipError):
+            document_storage_id("../../escape")
+        self.assertNotEqual(document_storage_id("study:1"), document_storage_id("study-1"))
+
     def test_model_catalog_exposes_provider_specific_choices(self):
         catalog = model_catalog()
         self.assertIn("codex", catalog)
@@ -57,6 +81,14 @@ class BundleTests(unittest.TestCase):
         self.assertEqual(aliases["one"][("Multiple sclerosis", "Disease")], "Multiple sclerosis")
         self.assertEqual(aliases["two"][("multiple sclerosis", "Disease")], "Multiple sclerosis")
 
+    def test_colliding_identifier_slugs_get_distinct_node_paths(self):
+        paths = BioOKFBuilder._node_output_paths({
+            "IL-6": {"type": "Molecule"},
+            "IL 6": {"type": "Molecule"},
+        })
+        self.assertNotEqual(paths["IL-6"], paths["IL 6"])
+        self.assertEqual(paths["IL-6"].parent, Path("knowledge/molecule"))
+
     def test_opening_an_already_registered_bundle_is_idempotent(self):
         with tempfile.TemporaryDirectory() as temp:
             bundle = Path(temp) / "kb"
@@ -77,7 +109,7 @@ class BundleTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             run_dir = root / "runs" / "fixture"
-            source = run_dir / "sources" / "PMC123456"
+            source = run_dir / "sources" / document_storage_id("PMC123456")
             source.mkdir(parents=True)
             (source / "source.md").write_text("# Demo\n\nL88 claim\nL120-L126 outcome\n")
             (source / "content.lines").write_text("L88 claim\nL120-L126 outcome\n")
@@ -96,6 +128,31 @@ class BundleTests(unittest.TestCase):
 
 
 class RequestTests(unittest.TestCase):
+    def test_local_ui_rejects_remote_bindings_and_non_json_posts(self):
+        self.assertTrue(_is_loopback_host("127.0.0.1"))
+        self.assertTrue(_is_loopback_host("::1"))
+        self.assertTrue(_is_loopback_host("localhost"))
+        self.assertFalse(_is_loopback_host("0.0.0.0"))
+        self.assertFalse(_is_loopback_host("example.com"))
+        self.assertTrue(_is_json_content_type("application/json; charset=utf-8"))
+        self.assertFalse(_is_json_content_type("text/plain"))
+        self.assertTrue(_is_trusted_host_header("127.0.0.1:8765", "127.0.0.1", 8765))
+        self.assertTrue(_is_trusted_host_header("[::1]:8765", "::1", 8765))
+        self.assertFalse(_is_trusted_host_header("attacker.example:8765", "127.0.0.1", 8765))
+
+    def test_discovery_rejects_hostile_document_ids_before_writing(self):
+        with tempfile.TemporaryDirectory() as temp:
+            escape = Path(temp) / "escape"
+            class FakePaperclip:
+                def search(self, *args, **kwargs):
+                    return {"papers": [{"document_id": str(escape), "source": "pmc"}]}
+
+            pipeline = HarnessPipeline(Path(temp))
+            pipeline.paperclip = FakePaperclip()
+            with self.assertRaises(PaperclipError):
+                pipeline.discover("query", ["pmc"], 1)
+            self.assertFalse(escape.exists())
+
     def test_history_and_bundle_views_are_backed_by_workspace_files(self):
         with tempfile.TemporaryDirectory() as temp:
             workspace = Path(temp)

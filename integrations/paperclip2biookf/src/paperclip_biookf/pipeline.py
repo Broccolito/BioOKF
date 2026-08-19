@@ -11,7 +11,7 @@ from typing import Any, Callable, Dict, List, Optional
 from .agents import SubscriptionAgent
 from .biookf import BioOKFBuilder, slugify, validate_extraction
 from .constants import EXTRACTION_SCHEMA
-from .paperclip import PaperclipClient
+from .paperclip import PaperclipClient, document_storage_id, validate_document_id
 
 
 Progress = Callable[[str, str, Optional[Dict[str, Any]]], None]
@@ -56,6 +56,7 @@ class HarnessPipeline:
             })
             for paper in result.get("papers", []):
                 normalized = dict(paper)
+                normalized["document_id"] = validate_document_id(paper.get("document_id"))
                 normalized["paperclip_source_label"] = paper.get("source")
                 normalized["source"] = source
                 papers.setdefault(normalized["document_id"], normalized)
@@ -116,20 +117,23 @@ class HarnessPipeline:
         _progress(progress, "snapshot", f"Snapshotting {len(search['papers'])} sources", None)
         for index, document in enumerate(search["papers"], start=1):
             _progress(progress, "snapshot", f"Fetching {index}/{len(search['papers'])}: {document.get('title', document['document_id'])}", {"document_id": document["document_id"]})
-            self.paperclip.snapshot_document(document, source_root / document["document_id"])
+            self.paperclip.snapshot_document(
+                document, source_root / document_storage_id(document["document_id"])
+            )
 
         _progress(progress, "extract", f"Curating with {agent.provider}", agent.describe())
         records = []
         for index, document in enumerate(search["papers"], start=1):
             doc_id = document["document_id"]
+            stored_id = document_storage_id(doc_id)
             _progress(progress, "extract", f"Curating {index}/{len(search['papers'])}: {document.get('title', doc_id)}", {"document_id": doc_id})
-            output = run_dir / f"extraction-{doc_id}.json"
+            output = run_dir / f"extraction-{stored_id}.json"
             try:
-                payload = agent.extract(source_root / doc_id, output, schema_path, custom_prompt)
+                payload = agent.extract(source_root / stored_id, output, schema_path, custom_prompt)
                 errors = validate_extraction(payload)
                 if errors:
                     raise RuntimeError("; ".join(errors))
-                source_bytes = (source_root / doc_id / "source.md").read_bytes()
+                source_bytes = (source_root / stored_id / "source.md").read_bytes()
                 extraction_bytes = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
                 records.append({
                     "status": "success", "title": document.get("title", doc_id),

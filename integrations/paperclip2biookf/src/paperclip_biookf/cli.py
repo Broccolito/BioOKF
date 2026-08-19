@@ -9,7 +9,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from .agents import SubscriptionAgent
+from .agents import SubscriptionAgent, _subscription_env
 from .biookf import BioOKFBuilder
 from .paperclip import PaperclipClient
 from .pipeline import HarnessPipeline
@@ -111,7 +111,9 @@ def doctor():
 
 def _subscription_status(provider):
     argv = ["codex", "login", "status"] if provider == "codex" else ["claude", "auth", "status"]
-    completed = subprocess.run(argv, text=True, capture_output=True, timeout=20)
+    completed = subprocess.run(
+        argv, text=True, capture_output=True, timeout=20, env=_subscription_env()
+    )
     output = (completed.stdout + "\n" + completed.stderr).strip()
     if provider == "claude" and completed.returncode == 0:
         try:

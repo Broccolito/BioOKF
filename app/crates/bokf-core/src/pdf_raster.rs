@@ -261,27 +261,39 @@ mod tests {
     #[test]
     #[ignore = "requires the native PDFium dynamic library at runtime"]
     fn renders_two_page_pdf_to_pngs() {
-        use printpdf::*;
+        use lopdf::{dictionary, Document, Object, Stream};
 
-        let mut doc = PdfDocument::new("rasterizer-test");
-        let page1 = PdfPage::new(
-            Mm(210.0),
-            Mm(297.0),
-            vec![Op::Marker {
-                id: "page-1".to_string(),
-            }],
+        let mut doc = Document::with_version("1.5");
+        let pages_id = doc.new_object_id();
+        let empty_contents = || Stream::new(dictionary! {}, Vec::new());
+        let contents1 = doc.add_object(empty_contents());
+        let contents2 = doc.add_object(empty_contents());
+        let page1 = doc.add_object(dictionary! {
+            "Type" => "Page",
+            "Parent" => pages_id,
+            "MediaBox" => vec![0.into(), 0.into(), 595.into(), 842.into()],
+            "Resources" => dictionary! {},
+            "Contents" => contents1,
+        });
+        let page2 = doc.add_object(dictionary! {
+            "Type" => "Page",
+            "Parent" => pages_id,
+            "MediaBox" => vec![0.into(), 0.into(), 595.into(), 842.into()],
+            "Resources" => dictionary! {},
+            "Contents" => contents2,
+        });
+        doc.objects.insert(
+            pages_id,
+            Object::Dictionary(dictionary! {
+                "Type" => "Pages",
+                "Kids" => vec![page1.into(), page2.into()],
+                "Count" => 2,
+            }),
         );
-        let page2 = PdfPage::new(
-            Mm(210.0),
-            Mm(297.0),
-            vec![Op::Marker {
-                id: "page-2".to_string(),
-            }],
-        );
-        let mut warnings = Vec::new();
-        let pdf_bytes: Vec<u8> = doc
-            .with_pages(vec![page1, page2])
-            .save(&PdfSaveOptions::default(), &mut warnings);
+        let catalog_id = doc.add_object(dictionary! {"Type" => "Catalog", "Pages" => pages_id});
+        doc.trailer.set("Root", catalog_id);
+        let mut pdf_bytes = Vec::new();
+        doc.save_to(&mut pdf_bytes).expect("write test PDF");
 
         let pages = pdf_rasterize_pages(&pdf_bytes, 5);
         assert_eq!(

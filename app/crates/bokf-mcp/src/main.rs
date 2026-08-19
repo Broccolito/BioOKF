@@ -158,18 +158,12 @@ impl Default for BokfServer {
 #[tool_handler(router = self.tool_router)]
 impl ServerHandler for BokfServer {
     fn get_info(&self) -> ServerInfo {
-        ServerInfo {
-            server_info: Implementation {
-                name: "biookf".to_string(),
-                version: env!("CARGO_PKG_VERSION").to_owned(),
-                title: Some("BioOKF Studio".to_string()),
-                icons: None,
-                website_url: None,
-            },
-            capabilities: ServerCapabilities::builder().enable_tools().build(),
-            instructions: Some(instructions::INSTRUCTIONS.to_string()),
-            ..Default::default()
-        }
+        ServerInfo::new(ServerCapabilities::builder().enable_tools().build())
+            .with_server_info(
+                Implementation::new("biookf", env!("CARGO_PKG_VERSION"))
+                    .with_title("BioOKF Studio"),
+            )
+            .with_instructions(instructions::INSTRUCTIONS)
     }
 }
 

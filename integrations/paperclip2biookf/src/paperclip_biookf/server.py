@@ -2,7 +2,10 @@
 
 from __future__ import annotations
 
+import hmac
+import ipaddress
 import json
+import secrets
 import threading
 import traceback
 import uuid
@@ -10,6 +13,7 @@ import webbrowser
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+from socketserver import TCPServer
 from typing import Any, Dict
 from urllib.parse import urlparse
 
@@ -24,6 +28,39 @@ ALLOWED_SOURCES = {
     "fda/us", "fda/eu", "fda/jp",
     "trials/us", "trials/eu", "trials/jp", "trials/cn", "trials",
 }
+REQUEST_TOKEN_HEADER = "X-Paperclip-Request-Token"
+
+
+class LoopbackHTTPServer(ThreadingHTTPServer):
+    """Bind without a reverse-DNS lookup that can stall local UI startup."""
+
+    def server_bind(self) -> None:
+        TCPServer.server_bind(self)
+        host, port = self.server_address[:2]
+        self.server_name = host
+        self.server_port = port
+
+
+def _is_loopback_host(host: str) -> bool:
+    value = host.strip().strip("[]")
+    if value.lower() == "localhost":
+        return True
+    try:
+        return ipaddress.ip_address(value).is_loopback
+    except ValueError:
+        return False
+
+
+def _is_json_content_type(value: str) -> bool:
+    return value.split(";", 1)[0].strip().lower() == "application/json"
+
+
+def _is_trusted_host_header(value: str, host: str, port: int) -> bool:
+    display_host = f"[{host}]" if ":" in host and not host.startswith("[") else host
+    return value.strip().lower() in {
+        display_host.lower(),
+        f"{display_host}:{port}".lower(),
+    }
 
 
 class JobStore:
@@ -59,16 +96,33 @@ class JobStore:
 
 
 def serve(workspace: Path, host: str, port: int, open_browser: bool) -> None:
+    if not _is_loopback_host(host):
+        raise ValueError("the local UI may bind only to localhost or a loopback IP address")
     pipeline = HarnessPipeline(workspace)
     store = JobStore()
     ui_path = Path(__file__).parent / "ui" / "index.html"
-    html = ui_path.read_bytes()
+    request_token = secrets.token_urlsafe(32)
+    bootstrap = (
+        "<script>window.__PAPERCLIP_REQUEST_TOKEN__="
+        + json.dumps(request_token)
+        + ";</script>"
+    )
+    html = ui_path.read_text(encoding="utf-8").replace("</head>", bootstrap + "</head>", 1).encode("utf-8")
+    display_host = f"[{host}]" if ":" in host and not host.startswith("[") else host
 
     class Handler(BaseHTTPRequestHandler):
         server_version = "paperclip2bioOKF/0.1"
 
         def do_GET(self) -> None:
+            if not _is_trusted_host_header(self.headers.get("Host", ""), host, port):
+                self._json(HTTPStatus.FORBIDDEN, {"error": "invalid host"})
+                return
             path = urlparse(self.path).path
+            if path.startswith("/api/"):
+                provided = self.headers.get(REQUEST_TOKEN_HEADER, "")
+                if not hmac.compare_digest(provided, request_token):
+                    self._json(HTTPStatus.FORBIDDEN, {"error": "invalid request token"})
+                    return
             if path == "/":
                 self._bytes(HTTPStatus.OK, html, "text/html; charset=utf-8")
             elif path == "/api/doctor":
@@ -91,6 +145,16 @@ def serve(workspace: Path, host: str, port: int, open_browser: bool) -> None:
                 self._json(HTTPStatus.NOT_FOUND, {"error": "not found"})
 
         def do_POST(self) -> None:
+            if not _is_trusted_host_header(self.headers.get("Host", ""), host, port):
+                self._json(HTTPStatus.FORBIDDEN, {"error": "invalid host"})
+                return
+            provided = self.headers.get(REQUEST_TOKEN_HEADER, "")
+            if not hmac.compare_digest(provided, request_token):
+                self._json(HTTPStatus.FORBIDDEN, {"error": "invalid request token"})
+                return
+            if not _is_json_content_type(self.headers.get("Content-Type", "")):
+                self._json(HTTPStatus.UNSUPPORTED_MEDIA_TYPE, {"error": "application/json required"})
+                return
             path = urlparse(self.path).path
             if path == "/api/bundles/open":
                 try:
@@ -121,8 +185,11 @@ def serve(workspace: Path, host: str, port: int, open_browser: bool) -> None:
             return
 
         def _body(self) -> Dict[str, Any]:
-            length = int(self.headers.get("Content-Length", "0"))
-            if length > 200_000:
+            try:
+                length = int(self.headers.get("Content-Length", "0"))
+            except ValueError as exc:
+                raise ValueError("invalid content length") from exc
+            if length < 0 or length > 200_000:
                 raise ValueError("request too large")
             value = json.loads(self.rfile.read(length).decode("utf-8"))
             if not isinstance(value, dict):
@@ -138,12 +205,14 @@ def serve(workspace: Path, host: str, port: int, open_browser: bool) -> None:
             self.send_header("Content-Length", str(len(value)))
             self.send_header("Cache-Control", "no-store")
             self.send_header("X-Content-Type-Options", "nosniff")
+            self.send_header("Referrer-Policy", "no-referrer")
+            self.send_header("X-Frame-Options", "DENY")
             self.send_header("Content-Security-Policy", "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'")
             self.end_headers()
             self.wfile.write(value)
 
-    server = ThreadingHTTPServer((host, port), Handler)
-    url = f"http://{host}:{port}"
+    server = LoopbackHTTPServer((host, port), Handler)
+    url = f"http://{display_host}:{port}"
     print(f"paperclip2bioOKF listening on {url}")
     print(f"workspace: {pipeline.workspace}")
     if open_browser:

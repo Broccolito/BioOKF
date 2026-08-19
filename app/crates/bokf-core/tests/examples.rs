@@ -1,4 +1,4 @@
-//! Integration test against the real BioOKF `examples/` bundle (v0.4-era format),
+//! Integration test against a real BioOKF bundle shipped under `examples/`,
 //! exercising parse -> normalize -> graph -> lint -> search end to end.
 
 use std::path::PathBuf;
@@ -8,21 +8,36 @@ use std::path::PathBuf;
 /// order: `OKF_EXAMPLES_DIR` override -> in-repo `examples/` -> registry id
 /// `examples` under the repo root. Returns `None` if it is not present anywhere,
 /// so the tests skip cleanly on a checkout that doesn't ship the bundle.
+fn is_bundle(path: &std::path::Path) -> bool {
+    path.is_dir() && path.join("knowledge").is_dir() && path.join("index.md").is_file()
+}
+
 fn examples_root() -> Option<PathBuf> {
     if let Ok(p) = std::env::var("OKF_EXAMPLES_DIR") {
         let pb = PathBuf::from(p);
-        if pb.is_dir() {
+        if is_bundle(&pb) {
             return pb.canonicalize().ok();
         }
     }
     let repo = PathBuf::from(env!("CARGO_MANIFEST_DIR")).join("../../..");
     let in_repo = repo.join("examples");
-    if in_repo.is_dir() {
+    if is_bundle(&in_repo) {
         return in_repo.canonicalize().ok();
+    }
+    if let Ok(entries) = std::fs::read_dir(&in_repo) {
+        let mut bundles = entries
+            .flatten()
+            .map(|entry| entry.path())
+            .filter(|path| is_bundle(path))
+            .collect::<Vec<_>>();
+        bundles.sort();
+        if let Some(bundle) = bundles.into_iter().next() {
+            return bundle.canonicalize().ok();
+        }
     }
     if let Some(p) = bokf_core::registry::resolve(&repo, "examples") {
         let pb = PathBuf::from(p);
-        if pb.is_dir() {
+        if is_bundle(&pb) {
             return pb.canonicalize().ok();
         }
     }
@@ -45,7 +60,7 @@ macro_rules! require_examples {
 #[test]
 fn opens_examples_bundle() {
     let bundle = bokf_core::open_bundle(require_examples!()).expect("open bundle");
-    // 6 concept docs ship under examples/knowledge/
+    // The example must contain a nontrivial, parseable graph.
     assert!(
         bundle.nodes.len() >= 6,
         "expected >=6 nodes, got {}",
@@ -56,9 +71,9 @@ fn opens_examples_bundle() {
         "parse errors: {:?}",
         bundle.parse_errors
     );
-    // identifiers resolved (title/id merge)
+    // The metagraph example includes canonical controlled-type identifiers.
     assert!(
-        bundle.contains("IL6") || bundle.contains("COVID-19"),
+        bundle.contains("Gene") && bundle.contains("Publication"),
         "expected known identifiers"
     );
 }
@@ -80,12 +95,8 @@ fn derives_graph_from_examples() {
 fn lints_examples_bundle() {
     let bundle = bokf_core::open_bundle(require_examples!()).expect("open");
     let report = bokf_core::lint(&bundle);
-    // v0.4 examples use infores: primary_source + CURIE objects -> lint should
-    // produce findings (warnings), and must not panic.
-    assert!(
-        !report.findings.is_empty(),
-        "expected lint findings on legacy examples"
-    );
+    // Linting a repository example must complete without panicking. Examples may
+    // intentionally be clean or demonstrate warnings depending on their purpose.
     println!(
         "lint: {} errors, {} warnings, {} infos",
         report.errors(),
@@ -98,7 +109,7 @@ fn lints_examples_bundle() {
 fn searches_examples_bundle() {
     let bundle = bokf_core::open_bundle(require_examples!()).expect("open");
     let index = bokf_core::SearchIndex::build(&bundle);
-    let hits = index.search("interleukin cytokine", 5);
-    assert!(!hits.is_empty(), "expected search hits for 'interleukin'");
+    let hits = index.search("gene molecule", 5);
+    assert!(!hits.is_empty(), "expected search hits for 'gene molecule'");
     assert!(hits[0].score > 0.0);
 }

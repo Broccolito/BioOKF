@@ -20,7 +20,7 @@ import sys
 import tempfile
 from pathlib import Path
 
-from paperclip_biookf.agents import SubscriptionAgent
+from paperclip_biookf.agents import SUBSCRIPTION_BLOCKED_ENV, SubscriptionAgent
 from paperclip_biookf.biookf import BioOKFBuilder, slugify, validate_extraction
 from paperclip_biookf.constants import EXTRACTION_SCHEMA
 
@@ -34,12 +34,7 @@ def progress(phase: str, message: str) -> None:
 
 def checked(argv: list[str], **kwargs) -> subprocess.CompletedProcess[str]:
     env = dict(os.environ)
-    for name in (
-        "OPENAI_API_KEY", "CODEX_API_KEY", "ANTHROPIC_API_KEY",
-        "CLAUDE_CODE_USE_BEDROCK", "CLAUDE_CODE_USE_VERTEX",
-        "CLAUDE_CODE_USE_FOUNDRY", "AWS_BEARER_TOKEN_BEDROCK",
-        "ANTHROPIC_VERTEX_PROJECT_ID",
-    ):
+    for name in SUBSCRIPTION_BLOCKED_ENV:
         env.pop(name, None)
     kwargs.setdefault("env", env)
     completed = subprocess.run(argv, text=True, capture_output=True, **kwargs)

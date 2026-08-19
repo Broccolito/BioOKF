@@ -1226,11 +1226,9 @@ fn paperclip_model_catalog() -> serde_json::Value {
 fn paperclip_generator_status() -> serde_json::Value {
     let binary = paperclip_harness_binary();
     let doctor = binary.as_ref().and_then(|path| {
-        let output = std::process::Command::new(path)
-            .arg("doctor")
-            .env("PATH", paperclip_child_path())
-            .output()
-            .ok()?;
+        let mut command = std::process::Command::new(path);
+        command.arg("doctor").env("PATH", paperclip_child_path());
+        let output = subscription_only_environment(&mut command).output().ok()?;
         if !output.status.success() {
             return None;
         }
@@ -1335,6 +1333,49 @@ fn paperclip_generate_args(request: &PaperclipGenerateRequest, workspace: &Path)
     args
 }
 
+fn collect_child_output<F>(
+    mut child: std::process::Child,
+    mut on_progress: F,
+) -> Result<(std::process::ExitStatus, String, Vec<String>), String>
+where
+    F: FnMut(&str),
+{
+    let mut stdout = child
+        .stdout
+        .take()
+        .ok_or("failed to capture child output")?;
+    let stderr = child
+        .stderr
+        .take()
+        .ok_or("failed to capture child progress")?;
+    // Drain stdout concurrently. Reading stderr to EOF first can deadlock once a
+    // JSON result fills the child's stdout pipe and the child cannot exit.
+    let stdout_thread = std::thread::spawn(move || {
+        let mut output = String::new();
+        stdout
+            .read_to_string(&mut output)
+            .map(|_| output)
+            .map_err(|e| format!("failed reading child output: {e}"))
+    });
+    let mut progress = Vec::new();
+    let stderr_result: Result<(), String> = (|| {
+        for line in BufReader::new(stderr).lines() {
+            let line = line.map_err(|e| format!("failed reading child progress: {e}"))?;
+            on_progress(&line);
+            progress.push(line);
+        }
+        Ok(())
+    })();
+    let status = child
+        .wait()
+        .map_err(|e| format!("child wait failed: {e}"))?;
+    let stdout = stdout_thread
+        .join()
+        .map_err(|_| "child output reader panicked".to_string())??;
+    stderr_result?;
+    Ok((status, stdout, progress))
+}
+
 fn run_paperclip_generation(
     app: AppHandle,
     request: PaperclipGenerateRequest,
@@ -1350,34 +1391,17 @@ fn run_paperclip_generation(
     let args = paperclip_generate_args(&request, &workspace);
     let mut command = std::process::Command::new(&binary);
     command.args(&args).env("PATH", paperclip_child_path());
-    let mut child = subscription_only_environment(&mut command)
+    let child = subscription_only_environment(&mut command)
         .stdout(std::process::Stdio::piped())
         .stderr(std::process::Stdio::piped())
         .spawn()
         .map_err(|e| format!("failed to launch {}: {e}", binary.display()))?;
-    let stderr = child
-        .stderr
-        .take()
-        .ok_or("failed to capture generator progress")?;
-    let mut progress = Vec::new();
-    for line in BufReader::new(stderr).lines() {
-        let line = line.map_err(|e| format!("failed reading generator progress: {e}"))?;
+    let (status, stdout, progress) = collect_child_output(child, |line| {
         let _ = app.emit(
             "paperclip2biookf-progress",
             serde_json::json!({"message": line}),
         );
-        progress.push(line);
-    }
-    let mut stdout = String::new();
-    child
-        .stdout
-        .take()
-        .ok_or("failed to capture generator output")?
-        .read_to_string(&mut stdout)
-        .map_err(|e| format!("failed reading generator output: {e}"))?;
-    let status = child
-        .wait()
-        .map_err(|e| format!("generator wait failed: {e}"))?;
+    })?;
     if !status.success() {
         return Err(progress
             .last()
@@ -1504,11 +1528,34 @@ fn subscription_only_environment(
         "OPENAI_API_KEY",
         "CODEX_API_KEY",
         "ANTHROPIC_API_KEY",
+        "OPENAI_BASE_URL",
+        "OPENAI_API_BASE",
+        "ANTHROPIC_BASE_URL",
         "CLAUDE_CODE_USE_BEDROCK",
         "CLAUDE_CODE_USE_VERTEX",
         "CLAUDE_CODE_USE_FOUNDRY",
         "AWS_BEARER_TOKEN_BEDROCK",
+        "AWS_ACCESS_KEY_ID",
+        "AWS_SECRET_ACCESS_KEY",
+        "AWS_SESSION_TOKEN",
+        "AWS_SECURITY_TOKEN",
+        "AWS_PROFILE",
+        "AWS_DEFAULT_PROFILE",
+        "AWS_WEB_IDENTITY_TOKEN_FILE",
+        "AWS_CONTAINER_CREDENTIALS_RELATIVE_URI",
+        "AWS_CONTAINER_CREDENTIALS_FULL_URI",
+        "AWS_REGION",
+        "AWS_DEFAULT_REGION",
         "ANTHROPIC_VERTEX_PROJECT_ID",
+        "GOOGLE_APPLICATION_CREDENTIALS",
+        "GOOGLE_CLOUD_PROJECT",
+        "GCLOUD_PROJECT",
+        "CLOUD_ML_REGION",
+        "AZURE_OPENAI_API_KEY",
+        "AZURE_OPENAI_ENDPOINT",
+        "AZURE_CLIENT_ID",
+        "AZURE_CLIENT_SECRET",
+        "AZURE_TENANT_ID",
     ] {
         command.env_remove(name);
     }
@@ -1617,10 +1664,19 @@ fn chat_context(base_id: &str, question: &str) -> Result<(PathBuf, String, usize
         "nodes": selected,
     });
     let mut raw = serde_json::to_string_pretty(&value).map_err(|e| e.to_string())?;
-    if raw.len() > 300_000 {
-        raw.truncate(300_000);
-    }
+    truncate_utf8(&mut raw, 300_000);
     Ok((path, raw, selected.len()))
+}
+
+fn truncate_utf8(value: &mut String, maximum_bytes: usize) {
+    if value.len() <= maximum_bytes {
+        return;
+    }
+    let mut end = maximum_bytes;
+    while !value.is_char_boundary(end) {
+        end -= 1;
+    }
+    value.truncate(end);
 }
 
 fn subscription_prompt(
@@ -1891,32 +1947,17 @@ fn run_agent_workflow(app: AppHandle, args: Vec<String>) -> Result<serde_json::V
         .arg(helper)
         .args(args)
         .env("PATH", paperclip_child_path());
-    let mut child = subscription_only_environment(&mut command)
+    let child = subscription_only_environment(&mut command)
         .stdout(std::process::Stdio::piped())
         .stderr(std::process::Stdio::piped())
         .spawn()
         .map_err(|e| format!("failed to launch BioOKF agent workflow: {e}"))?;
-    let stderr = child
-        .stderr
-        .take()
-        .ok_or("failed to capture workflow progress")?;
-    let mut progress_lines = Vec::new();
-    for line in BufReader::new(stderr).lines() {
-        let line = line.map_err(|e| format!("failed reading workflow progress: {e}"))?;
+    let (status, stdout, progress_lines) = collect_child_output(child, |line| {
         let _ = app.emit(
             "biookf-agent-progress",
             serde_json::json!({"message": line}),
         );
-        progress_lines.push(line);
-    }
-    let mut stdout = String::new();
-    child
-        .stdout
-        .take()
-        .ok_or("failed to capture workflow result")?
-        .read_to_string(&mut stdout)
-        .map_err(|e| e.to_string())?;
-    let status = child.wait().map_err(|e| e.to_string())?;
+    })?;
     let value: serde_json::Value = serde_json::from_str(stdout.trim())
         .map_err(|e| format!("workflow returned invalid JSON: {e}"))?;
     if !status.success() || value.get("ok").and_then(|v| v.as_bool()) != Some(true) {
@@ -2974,6 +3015,60 @@ fn main() {
 #[cfg(test)]
 mod tests {
     use super::replace_body;
+
+    #[test]
+    fn utf8_truncation_never_splits_a_character() {
+        let mut value = "a".repeat(299_999) + "βtail";
+        super::truncate_utf8(&mut value, 300_000);
+        assert_eq!(value.len(), 299_999);
+        assert!(value.is_char_boundary(value.len()));
+    }
+
+    #[test]
+    fn subscription_environment_removes_cloud_credentials() {
+        let mut command = std::process::Command::new("unused");
+        command
+            .env("AWS_ACCESS_KEY_ID", "secret")
+            .env("GOOGLE_APPLICATION_CREDENTIALS", "/tmp/key.json")
+            .env("AZURE_CLIENT_SECRET", "secret")
+            .env("BIOOKF_SAFE_SENTINEL", "preserved");
+        super::subscription_only_environment(&mut command);
+        let values = command
+            .get_envs()
+            .map(|(key, value)| {
+                (
+                    key.to_string_lossy().to_string(),
+                    value.map(|item| item.to_string_lossy().to_string()),
+                )
+            })
+            .collect::<std::collections::HashMap<_, _>>();
+        assert_eq!(values.get("AWS_ACCESS_KEY_ID"), Some(&None));
+        assert_eq!(values.get("GOOGLE_APPLICATION_CREDENTIALS"), Some(&None));
+        assert_eq!(values.get("AZURE_CLIENT_SECRET"), Some(&None));
+        assert_eq!(
+            values.get("BIOOKF_SAFE_SENTINEL"),
+            Some(&Some("preserved".into()))
+        );
+    }
+
+    #[cfg(unix)]
+    #[test]
+    fn child_output_is_drained_while_progress_is_streamed() {
+        let mut command = std::process::Command::new("/bin/sh");
+        command
+            .arg("-c")
+            .arg("i=0; while [ $i -lt 20000 ]; do printf 0123456789; i=$((i+1)); done; printf 'done\\n' >&2")
+            .stdout(std::process::Stdio::piped())
+            .stderr(std::process::Stdio::piped());
+        let child = command.spawn().unwrap();
+        let mut observed = Vec::new();
+        let (status, stdout, progress) =
+            super::collect_child_output(child, |line| observed.push(line.to_string())).unwrap();
+        assert!(status.success());
+        assert_eq!(stdout.len(), 200_000);
+        assert_eq!(progress, vec!["done"]);
+        assert_eq!(observed, vec!["done"]);
+    }
 
     #[test]
     fn local_subscription_connections_default_to_enabled() {

@@ -16,7 +16,7 @@ dirs = { workspace = true }
 uuid = { version = "1", features = ["v4"] }
 sha2 = "0.10"
 zip = { version = "2", default-features = false, features = ["deflate"] }
-calamine = "0.26"
+calamine = "0.36"
 html2md = "0.2"
 reqwest = { version = "0.12", default-features = false, features = ["blocking", "rustls-tls", "json"] }
 # Used ONLY as a coverage guardrail (lint), never as the PDF converter: it reliably captures prose
@@ -30,4 +30,4 @@ leiden-rs = "0.8.1"
 
 [dev-dependencies]
 tempfile = "3"
-printpdf = "0.9.1"
+lopdf = { version = "0.42", default-features = false }

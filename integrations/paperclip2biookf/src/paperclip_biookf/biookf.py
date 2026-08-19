@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import datetime as dt
+import hashlib
 import json
 import re
 import shutil
@@ -11,8 +12,10 @@ import unicodedata
 from collections import defaultdict
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
+from urllib.parse import quote
 
 from .constants import KNOWLEDGE_LEVELS, NODE_TYPES, PREDICATES
+from .paperclip import document_storage_id
 
 
 class BioOKFError(RuntimeError):
@@ -129,8 +132,9 @@ class BioOKFBuilder:
                 canonical = local_alias[(candidate["identifier"], candidate["type"])]
                 self._append_unique_edge(nodes[canonical]["edges"], self._reported_in(source_identifier))
 
+        output_paths = self._node_output_paths(nodes)
         for identifier, node in nodes.items():
-            self._write_node(node, evidence.get(identifier, []))
+            self._write_node(node, evidence.get(identifier, []), output_paths[identifier])
         self._write_index(nodes.values())
         self._write_log(len(nodes), successful)
         manifest = self._write_manifest(run_dir, search, successful, nodes)
@@ -227,10 +231,11 @@ class BioOKFBuilder:
             log.write_text("# Change log\n\n", encoding="utf-8")
 
     def _copy_raw_snapshot(self, run_dir: Path, doc_id: str) -> str:
-        source = run_dir / "sources" / doc_id
+        stored_id = document_storage_id(doc_id)
+        source = run_dir / "sources" / stored_id
         if not source.is_dir():
             raise BioOKFError(f"missing Paperclip snapshot for {doc_id}: {source}")
-        raw_id = "paperclip-" + slugify(doc_id)
+        raw_id = "paperclip-" + stored_id
         destination = self.bundle / "raw" / raw_id
         if destination.exists():
             raise BioOKFError(f"raw destination already exists: {destination}")
@@ -338,10 +343,11 @@ class BioOKFBuilder:
         anchor = ",".join(_normalize_line(value) for value in lines)
         source_kind = str(document.get("source", ""))
         if source_kind == "local":
-            url = f"raw/paperclip-{slugify(document['document_id'])}/source.md#{anchor}"
+            url = f"raw/paperclip-{document_storage_id(document['document_id'])}/source.md#{anchor}"
         else:
             family = "trials" if source_kind.startswith("trial") else "fda" if source_kind.startswith("fda") else "papers"
-            url = f"https://paperclip.gxl.ai/citations/{family}/{document['document_id']}#{anchor}"
+            encoded_id = quote(str(document["document_id"]), safe="")
+            url = f"https://paperclip.gxl.ai/citations/{family}/{encoded_id}#{anchor}"
         edge: Dict[str, Any] = {
             "predicate": candidate["predicate"], "object": object_,
             "knowledge_level": candidate["knowledge_level"],
@@ -372,10 +378,25 @@ class BioOKFBuilder:
                 return
         edges.append(edge)
 
-    def _write_node(self, node: Dict[str, Any], evidence: List[Dict[str, str]]) -> None:
-        type_dir = self.bundle / "knowledge" / node["type"].lower()
-        type_dir.mkdir(parents=True, exist_ok=True)
-        path = type_dir / f"{slugify(node['identifier'])}.md"
+    @staticmethod
+    def _node_output_paths(nodes: Dict[str, Dict[str, Any]]) -> Dict[str, Path]:
+        groups: Dict[Tuple[str, str], List[str]] = defaultdict(list)
+        for identifier, node in nodes.items():
+            groups[(node["type"].lower(), slugify(identifier))].append(identifier)
+        paths: Dict[str, Path] = {}
+        for (node_type, stem), identifiers in groups.items():
+            for identifier in sorted(identifiers, key=str.casefold):
+                suffix = ""
+                if len(identifiers) > 1:
+                    suffix = "-" + hashlib.sha256(identifier.encode("utf-8")).hexdigest()[:10]
+                paths[identifier] = Path("knowledge") / node_type / f"{stem}{suffix}.md"
+        return paths
+
+    def _write_node(
+        self, node: Dict[str, Any], evidence: List[Dict[str, str]], relative_path: Path
+    ) -> None:
+        path = self.bundle / relative_path
+        path.parent.mkdir(parents=True, exist_ok=True)
         frontmatter = _node_yaml(node)
         body = [f"# {node['identifier']}", ""]
         if node.get("description"):

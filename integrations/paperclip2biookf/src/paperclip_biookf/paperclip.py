@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import shutil
@@ -10,12 +11,31 @@ import uuid
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+from urllib.parse import quote
 
 from .constants import EXTRACTION_PROMPT, EXTRACTION_SCHEMA
 
 
 class PaperclipError(RuntimeError):
     pass
+
+
+DOCUMENT_ID = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._:-]{0,255}$")
+
+
+def validate_document_id(value: Any) -> str:
+    """Accept only one path-free Paperclip VFS identifier segment."""
+    if not isinstance(value, str) or not DOCUMENT_ID.fullmatch(value):
+        raise PaperclipError("Paperclip returned an unsafe document_id")
+    return value
+
+
+def document_storage_id(value: Any) -> str:
+    """Return a collision-resistant local filename for a validated document id."""
+    document_id = validate_document_id(value)
+    stem = re.sub(r"[^A-Za-z0-9._-]+", "-", document_id).strip("-.")[:80] or "document"
+    digest = hashlib.sha256(document_id.encode("utf-8")).hexdigest()[:12]
+    return f"{stem}-{digest}"
 
 
 @dataclass
@@ -91,7 +111,7 @@ class PaperclipClient:
         }
 
     def snapshot_document(self, document: Dict[str, Any], destination: Path) -> Dict[str, str]:
-        doc_id = document["document_id"]
+        doc_id = validate_document_id(document.get("document_id"))
         source = document.get("source", "pmc")
         vfs_root = _vfs_root(source, doc_id)
         destination.mkdir(parents=True, exist_ok=True)
@@ -169,7 +189,8 @@ def _vfs_root(source: str, doc_id: str) -> str:
 
 def _content_lines_to_markdown(document: Dict[str, Any], content: str) -> str:
     title = document.get("title") or document["document_id"]
-    source_url = f"https://paperclip.gxl.ai/citations/papers/{document['document_id']}"
+    doc_id = quote(validate_document_id(document.get("document_id")), safe="")
+    source_url = f"https://paperclip.gxl.ai/citations/papers/{doc_id}"
     return (
         f"# {title}\n\n"
         f"Paperclip full-text snapshot. Canonical line-addressable source: {source_url}\n\n"

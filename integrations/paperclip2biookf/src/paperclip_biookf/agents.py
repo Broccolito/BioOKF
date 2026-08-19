@@ -17,6 +17,22 @@ class AgentError(RuntimeError):
     pass
 
 
+SUBSCRIPTION_BLOCKED_ENV = (
+    "OPENAI_API_KEY", "CODEX_API_KEY", "ANTHROPIC_API_KEY",
+    "OPENAI_BASE_URL", "OPENAI_API_BASE", "ANTHROPIC_BASE_URL",
+    "CLAUDE_CODE_USE_BEDROCK", "CLAUDE_CODE_USE_VERTEX",
+    "CLAUDE_CODE_USE_FOUNDRY", "AWS_BEARER_TOKEN_BEDROCK",
+    "AWS_ACCESS_KEY_ID", "AWS_SECRET_ACCESS_KEY", "AWS_SESSION_TOKEN",
+    "AWS_SECURITY_TOKEN", "AWS_PROFILE", "AWS_DEFAULT_PROFILE",
+    "AWS_WEB_IDENTITY_TOKEN_FILE", "AWS_CONTAINER_CREDENTIALS_RELATIVE_URI",
+    "AWS_CONTAINER_CREDENTIALS_FULL_URI", "AWS_REGION", "AWS_DEFAULT_REGION",
+    "ANTHROPIC_VERTEX_PROJECT_ID", "GOOGLE_APPLICATION_CREDENTIALS",
+    "GOOGLE_CLOUD_PROJECT", "GCLOUD_PROJECT", "CLOUD_ML_REGION",
+    "AZURE_OPENAI_API_KEY", "AZURE_OPENAI_ENDPOINT", "AZURE_CLIENT_ID",
+    "AZURE_CLIENT_SECRET", "AZURE_TENANT_ID",
+)
+
+
 def model_catalog() -> Dict[str, List[Dict[str, str]]]:
     """Models selectable through the two installed subscription CLIs.
 
@@ -195,12 +211,7 @@ def _failure(provider: str, completed: subprocess.CompletedProcess) -> str:
 
 def _subscription_env() -> Dict[str, str]:
     env = dict(os.environ)
-    for name in (
-        "OPENAI_API_KEY", "CODEX_API_KEY", "ANTHROPIC_API_KEY",
-        "CLAUDE_CODE_USE_BEDROCK", "CLAUDE_CODE_USE_VERTEX",
-        "CLAUDE_CODE_USE_FOUNDRY", "AWS_BEARER_TOKEN_BEDROCK",
-        "ANTHROPIC_VERTEX_PROJECT_ID",
-    ):
+    for name in SUBSCRIPTION_BLOCKED_ENV:
         env.pop(name, None)
     return env
 
